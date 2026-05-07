@@ -1,358 +1,290 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kebijakan Privasi – Baby Mo 🌙</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <title>Kebijakan Privasi – Baby Mo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --green:     #27ae60;
-      --green-mid: #2ecc71;
-      --green-lt:  #a8f0c6;
-      --cream:     #fffef5;
-      --orange:    #f39c12;
-      --red-soft:  #e74c3c;
-      --shadow:    0 8px 32px rgba(39,174,96,.22);
-      --radius:    24px;
+      --g900:#064e3b; --g800:#065f46; --g700:#047857;
+      --g600:#059669; --g500:#10b981; --g400:#34d399;
+      --g300:#6ee7b7; --g100:#d1fae5; --g50:#ecfdf5;
+      --gold:#f59e0b; --gold-lt:#fef3c7;
+      --surface:#ffffff; --bg:#f5fdf8;
+      --text:#1c4532; --muted:#52796f;
+      --sh-sm:0 2px 8px rgba(6,78,59,.07);
+      --sh-md:0 6px 28px rgba(6,78,59,.10);
+      --sh-lg:0 18px 56px rgba(6,78,59,.13);
+      --r:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Nunito',sans-serif;
+      background:var(--bg);
+      color:var(--text);
+      min-height:100vh;
+      overflow-x:hidden;
+    }
+    /* subtle dot grid */
+    body::before{
+      content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+      background-image:radial-gradient(circle,rgba(16,185,129,.08) 1px,transparent 1px);
+      background-size:32px 32px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    /* ── sticky nav ── */
+    .navbar{
+      position:sticky;top:0;z-index:200;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 48px;height:64px;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+      box-shadow:0 1px 0 rgba(6,78,59,.07);
+    }
+    .nb-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nb-brand img{height:38px;width:38px;object-fit:contain;}
+    .nb-brand span{font-weight:900;font-size:1.1rem;color:var(--g800);letter-spacing:-.3px;}
+    .nb-links{display:flex;gap:4px;}
+    .nb-links a{
+      font-size:.88rem;font-weight:800;color:var(--muted);
+      text-decoration:none;padding:7px 15px;border-radius:50px;
+      transition:background .2s,color .2s;
+    }
+    .nb-links a:hover{color:var(--g800);background:var(--g50);}
+    .nb-links a.active{color:var(--g800);background:var(--g100);}
 
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(160deg, #e8faf0 0%, #d4f5e2 40%, #c3f0d8 100%);
-      min-height: 100vh;
-      color: #1a472a;
-      overflow-x: hidden;
+    /* ── hero ── */
+    .hero{
+      position:relative;z-index:1;
+      text-align:center;padding:64px 24px 52px;
     }
-
-    /* ── floating stars ── */
-    .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
-    .star {
-      position: absolute;
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: #ffd700;
-      opacity: 0;
-      animation: twinkle var(--d, 4s) ease-in-out var(--delay, 0s) infinite;
+    .hero-mascot{
+      display:inline-block;
+      animation:float 4s ease-in-out infinite;
+      margin-bottom:18px;
     }
-    @keyframes twinkle {
-      0%,100% { opacity: 0; transform: scale(.5); }
-      50%      { opacity: .9; transform: scale(1.4); }
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+    .hero-mascot img{
+      width:112px;height:112px;object-fit:contain;
+      filter:drop-shadow(0 10px 24px rgba(6,78,59,.18));
     }
-
-    /* ── header ── */
-    header {
-      position: relative; z-index: 10;
-      text-align: center;
-      padding: 48px 20px 24px;
-      animation: slideDown .7s cubic-bezier(.34,1.56,.64,1) both;
+    .hero h1{
+      font-size:clamp(1.9rem,4.5vw,2.85rem);font-weight:900;
+      color:var(--g900);letter-spacing:-.5px;line-height:1.18;
     }
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to   { opacity: 1; transform: translateY(0); }
+    .pill-tag{
+      display:inline-flex;align-items:center;gap:5px;
+      margin-top:12px;padding:5px 14px;
+      background:var(--g100);border-radius:50px;
+      font-size:.85rem;font-weight:800;color:var(--g800);
     }
-    .logo-wrap {
-      display: inline-block;
-      animation: float 3.6s ease-in-out infinite;
-      filter: drop-shadow(0 12px 24px rgba(39,174,96,.35));
-    }
-    @keyframes float {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-14px); }
-    }
-    .logo-wrap img { width: 140px; height: 140px; object-fit: contain; }
-
-    header h1 {
-      font-family: 'Fredoka One', cursive;
-      font-size: clamp(2rem, 6vw, 3.4rem);
-      color: var(--green);
-      text-shadow: 3px 4px 0 rgba(39,174,96,.18);
-      margin-top: 12px;
-      letter-spacing: .5px;
-    }
-    header p.sub {
-      font-size: 1.05rem;
-      color: #3d8b5e;
-      margin-top: 6px;
-      font-weight: 700;
+    .hero-sub{
+      margin-top:10px;font-size:1rem;color:var(--muted);font-weight:700;
+      max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6;
     }
 
-    /* ── nav ── */
-    nav {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 12px; padding: 0 20px 36px;
-      position: relative; z-index: 10;
-      animation: fadeUp .6s .3s both;
+    /* sparkle dots */
+    .sp{
+      position:absolute;border-radius:50%;pointer-events:none;
+      animation:sparkle var(--d,3s) ease-in-out var(--dl,0s) infinite;
     }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    nav a {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1rem;
-      background: white;
-      color: var(--green);
-      border: 3px solid var(--green);
-      border-radius: 50px;
-      padding: 9px 22px;
-      text-decoration: none;
-      transition: all .25s;
-      box-shadow: 0 4px 14px rgba(39,174,96,.15);
-    }
-    nav a:hover, nav a.active {
-      background: var(--green);
-      color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(39,174,96,.38);
-    }
+    @keyframes sparkle{0%,100%{opacity:.15;transform:scale(.6);}50%{opacity:.7;transform:scale(1.3);}}
 
-    /* ── main card ── */
-    main {
-      position: relative; z-index: 10;
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 0 20px 80px;
-    }
-    .card {
-      background: white;
-      border-radius: var(--radius);
-      padding: 40px 44px;
-      margin-bottom: 28px;
-      box-shadow: var(--shadow);
-      border: 2.5px solid var(--green-lt);
-      animation: popIn .55s cubic-bezier(.34,1.56,.64,1) both;
-    }
-    .card:nth-child(1) { animation-delay: .1s; }
-    .card:nth-child(2) { animation-delay: .2s; }
-    .card:nth-child(3) { animation-delay: .3s; }
-    .card:nth-child(4) { animation-delay: .4s; }
-    .card:nth-child(5) { animation-delay: .5s; }
-    .card:nth-child(6) { animation-delay: .6s; }
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(.88) translateY(24px); }
-      to   { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(39,174,96,.28);
-      transition: all .3s ease;
-    }
+    /* ── cards ── */
+    main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:0 24px 80px;}
 
-    .card-icon {
-      font-size: 2.4rem;
-      display: inline-block;
-      margin-bottom: 10px;
-      animation: bounce 2.5s ease-in-out infinite;
+    .card{
+      background:var(--surface);border-radius:var(--r);
+      padding:34px 38px;margin-bottom:18px;
+      box-shadow:var(--sh-md);
+      opacity:0;transform:translateY(18px);
+      transition:opacity .45s ease,transform .45s ease,box-shadow .25s;
     }
-    @keyframes bounce {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-8px); }
-    }
-    .card h2 {
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.55rem;
-      color: var(--green);
-      margin-bottom: 14px;
-    }
-    .card p, .card li {
-      font-size: 1.02rem;
-      line-height: 1.85;
-      color: #2d6a4a;
-      font-weight: 600;
-    }
-    .card ul { padding-left: 22px; margin-top: 8px; }
-    .card ul li { margin-bottom: 8px; }
-    .card ul li::marker { color: var(--green); font-size: 1.2em; }
+    .card.visible{opacity:1;transform:translateY(0);}
+    .card:hover{box-shadow:var(--sh-lg);transform:translateY(-3px) !important;}
 
-    /* ── highlight box ── */
-    .highlight {
-      background: linear-gradient(135deg, #e8f8f0, #d4f0e2);
-      border-left: 5px solid var(--green);
-      border-radius: 14px;
-      padding: 18px 22px;
-      margin-top: 16px;
-      font-weight: 700;
-      color: #1a6940;
-      display: flex; align-items: flex-start; gap: 12px;
+    .card-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+    .card-ico{
+      width:42px;height:42px;border-radius:12px;
+      background:var(--g50);
+      display:flex;align-items:center;justify-content:center;
+      font-size:1.25rem;flex-shrink:0;
     }
-    .highlight .hl-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+    .card h2{font-size:1.18rem;font-weight:900;color:var(--g900);letter-spacing:-.2px;}
 
-    /* ── date badge ── */
-    .date-badge {
-      display: inline-block;
-      background: var(--orange);
-      color: white;
-      font-family: 'Fredoka One', cursive;
-      font-size: .9rem;
-      border-radius: 50px;
-      padding: 5px 16px;
-      margin-bottom: 20px;
-      box-shadow: 0 4px 12px rgba(243,156,18,.3);
+    .card p{font-size:.96rem;line-height:1.82;color:var(--text);font-weight:600;}
+    .card + p{margin-top:10px;}
+
+    .item-list{list-style:none;margin-top:12px;}
+    .item-list li{
+      display:flex;align-items:flex-start;gap:10px;
+      padding:8px 0;font-size:.95rem;font-weight:600;
+      color:var(--text);line-height:1.65;
+      border-bottom:1px solid var(--g50);
     }
+    .item-list li:last-child{border-bottom:none;padding-bottom:0;}
+    .item-list li em{flex-shrink:0;font-style:normal;font-size:1rem;margin-top:1px;}
+
+    /* callout */
+    .callout{
+      display:flex;gap:13px;align-items:flex-start;
+      background:var(--g50);border-radius:12px;
+      padding:16px 18px;margin-top:14px;
+      border-left:3px solid var(--g500);
+    }
+    .callout em{font-style:normal;font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+    .callout p{font-size:.92rem;font-weight:700;color:var(--g800);line-height:1.7;}
+    .callout a{color:var(--g600);}
 
     /* ── footer ── */
-    footer {
-      position: relative; z-index: 10;
-      text-align: center;
-      padding: 24px 20px 40px;
-      font-family: 'Fredoka One', cursive;
-      font-size: 1.1rem;
-      color: var(--green);
-      animation: fadeUp .6s .8s both;
+    footer{
+      position:relative;z-index:1;text-align:center;
+      padding:28px 24px 48px;
+      font-size:.86rem;font-weight:700;color:var(--muted);
     }
-    footer .heart { display: inline-block; animation: heartbeat 1.4s ease-in-out infinite; }
-    @keyframes heartbeat {
-      0%,100% { transform: scale(1); }
-      15%      { transform: scale(1.35); }
-      30%      { transform: scale(1); }
-      45%      { transform: scale(1.18); }
-    }
+    footer .hrt{display:inline-block;color:var(--g500);animation:hb 2s ease-in-out infinite;}
+    @keyframes hb{0%,60%,100%{transform:scale(1);}30%{transform:scale(1.28);}}
+    footer a{color:var(--g700);text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+    footer .cr{display:block;margin-top:6px;font-size:.8rem;color:#9ca3af;}
 
-    /* ── wave bottom ── */
-    .wave-bg {
-      position: fixed; bottom: 0; left: 0; right: 0;
-      pointer-events: none; z-index: 0;
-    }
-
-    @media (max-width: 600px) {
-      .card { padding: 28px 22px; }
+    @media(max-width:620px){
+      .navbar{padding:0 20px;}
+      .nb-links a{font-size:.78rem;padding:6px 10px;}
+      .card{padding:26px 22px;}
+      .hero{padding:48px 20px 40px;}
     }
   </style>
 </head>
 <body>
 
-<!-- Stars -->
-<div class="stars" id="stars"></div>
-
-<!-- Header -->
-<header>
-  <div class="logo-wrap">
-    <img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo Logo"/>
-  </div>
-  <h1>Kebijakan Privasi 🔒</h1>
-  <p class="sub">Keamanan si Kecil adalah prioritas utama kami ✨</p>
-</header>
+<!-- sparkle deco -->
+<span class="sp" style="top:9%;left:6%;width:7px;height:7px;background:var(--gold);--d:3.4s;--dl:.2s"></span>
+<span class="sp" style="top:14%;right:8%;width:5px;height:5px;background:var(--g400);--d:4.1s;--dl:.9s"></span>
+<span class="sp" style="top:52%;left:4%;width:6px;height:6px;background:var(--g400);--d:3.8s;--dl:.5s"></span>
+<span class="sp" style="top:68%;right:5%;width:5px;height:5px;background:var(--gold);--d:4.6s;--dl:1.3s"></span>
+<span class="sp" style="top:37%;right:3.5%;width:4px;height:4px;background:var(--g300);--d:3.2s;--dl:.7s"></span>
 
 <!-- Nav -->
-<nav>
-  <a href="privacy.html" class="active">🔒 Privasi</a>
-  <a href="terms.html">📜 Ketentuan</a>
-  <a href="contact.html">💌 Kontak</a>
-  <a href="index.html">🏠 Beranda</a>
+<nav class="navbar">
+  <a href="index.html" class="nb-brand">
+    <img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo"/>
+    <span>Baby Mo</span>
+  </a>
+  <div class="nb-links">
+    <a href="privacy.html" class="active">Privasi</a>
+    <a href="terms.html">Ketentuan</a>
+    <a href="contact.html">Kontak</a>
+  </div>
 </nav>
 
-<!-- Content -->
+<!-- Hero -->
+<div class="hero">
+  <div class="hero-mascot"><img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo"/></div>
+  <h1>Kebijakan Privasi</h1>
+  <div class="pill-tag">🔒 Berlaku sejak 1 Januari 2025</div>
+  <p class="hero-sub">Privasi si kecil dan keluarga Anda dijaga dengan sepenuh hati.</p>
+</div>
+
 <main>
 
   <div class="card">
-    <span class="date-badge">📅 Berlaku sejak 1 Januari 2026</span>
-    <div class="card-icon">👋</div>
-    <h2>Halo, Para Orang Tua!</h2>
-    <p>
-      Selamat datang di halaman Kebijakan Privasi <strong>Baby Mo</strong> — teman belajar Islami si kecil! 🌙
-      Kami sangat menghormati privasi anak-anak dan keluarga Anda. Halaman ini menjelaskan dengan sederhana
-      bagaimana kami mengelola informasi Anda saat menggunakan layanan Baby Mo.
-    </p>
-    <div class="highlight">
-      <span class="hl-icon">💚</span>
-      <span>Baby Mo dibuat sepenuh hati untuk anak-anak Muslim usia dini. Kami berkomitmen menjaga keamanan mereka di setiap konten yang kami hadirkan.</span>
+    <div class="card-header">
+      <div class="card-ico">👋</div>
+      <h2>Salam untuk Para Orang Tua</h2>
+    </div>
+    <p>Selamat datang di halaman Kebijakan Privasi <strong>Baby Mo</strong> — teman belajar Islami si kecil. Halaman ini menjelaskan dengan sederhana bagaimana kami mengelola informasi Anda ketika menggunakan platform dan konten Baby Mo.</p>
+    <div class="callout">
+      <em>💚</em>
+      <p>Baby Mo dibuat sepenuh hati untuk anak-anak Muslim usia dini. Keamanan dan kenyamanan keluarga Anda adalah prioritas utama kami di setiap konten yang kami hadirkan.</p>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-icon">📊</div>
-    <h2>Informasi yang Kami Kumpulkan</h2>
-    <p>Kami hanya mengumpulkan informasi yang benar-benar diperlukan, yaitu:</p>
-    <ul>
-      <li>🎬 <strong>Data penggunaan anonim</strong> — seperti video yang ditonton dan durasi menonton, untuk memperbaiki konten kami.</li>
-      <li>📧 <strong>Alamat email</strong> — hanya jika Anda berlangganan newsletter atau menghubungi kami.</li>
-      <li>🌐 <strong>Data teknis</strong> — informasi perangkat dan browser standar melalui YouTube & platform terkait.</li>
-      <li>💬 <strong>Komentar & pesan</strong> — jika Anda berinteraksi di media sosial kami.</li>
+    <div class="card-header">
+      <div class="card-ico">📊</div>
+      <h2>Informasi yang Kami Kumpulkan</h2>
+    </div>
+    <p>Kami hanya mengumpulkan data yang benar-benar diperlukan:</p>
+    <ul class="item-list">
+      <li><em>🎬</em><span><strong>Data penggunaan anonim</strong> — seperti video yang ditonton dan durasi, untuk meningkatkan kualitas konten.</span></li>
+      <li><em>📧</em><span><strong>Alamat email</strong> — hanya jika Anda berlangganan newsletter atau menghubungi kami langsung.</span></li>
+      <li><em>🌐</em><span><strong>Data teknis standar</strong> — informasi perangkat melalui YouTube dan platform media sosial terkait.</span></li>
     </ul>
-    <div class="highlight">
-      <span class="hl-icon">🚫</span>
-      <span>Kami <strong>TIDAK PERNAH</strong> mengumpulkan data pribadi anak-anak secara langsung. Semua konten Baby Mo bebas dari formulir pendaftaran untuk anak.</span>
+    <div class="callout">
+      <em>🚫</em>
+      <p>Kami <strong>tidak pernah</strong> mengumpulkan data pribadi anak-anak secara langsung. Semua konten Baby Mo bebas dari formulir pendaftaran untuk anak.</p>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-icon">🛡️</div>
-    <h2>Bagaimana Kami Melindungi Data Anda</h2>
-    <ul>
-      <li>🔐 Semua data dienkripsi menggunakan standar keamanan industri.</li>
-      <li>🙅 Kami tidak menjual, menyewakan, atau berbagi data pribadi kepada pihak ketiga untuk tujuan iklan.</li>
-      <li>👀 Akses data dibatasi hanya untuk tim Baby Mo yang berwenang.</li>
-      <li>🗑️ Data yang tidak lagi diperlukan akan dihapus secara berkala.</li>
+    <div class="card-header">
+      <div class="card-ico">🛡️</div>
+      <h2>Perlindungan Data Anda</h2>
+    </div>
+    <ul class="item-list">
+      <li><em>🔐</em><span>Semua data dienkripsi menggunakan standar keamanan industri.</span></li>
+      <li><em>🤝</em><span>Kami tidak menjual, menyewakan, atau berbagi data pribadi kepada pihak ketiga untuk tujuan iklan.</span></li>
+      <li><em>👁️</em><span>Akses data dibatasi hanya untuk tim Baby Mo yang berwenang.</span></li>
+      <li><em>🗑️</em><span>Data yang tidak lagi diperlukan akan dihapus secara berkala.</span></li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-icon">📺</div>
-    <h2>Platform Pihak Ketiga</h2>
-    <p>
-      Konten Baby Mo tersedia melalui <strong>YouTube</strong>, <strong>Instagram</strong>, dan platform lainnya.
-      Platform-platform tersebut memiliki kebijakan privasi masing-masing. Kami mendorong orang tua untuk:
-    </p>
-    <ul>
-      <li>📖 Membaca kebijakan privasi YouTube Kids / YouTube.</li>
-      <li>⚙️ Menggunakan fitur Parental Controls di perangkat anak.</li>
-      <li>🤝 Mendampingi anak saat menonton konten online.</li>
+    <div class="card-header">
+      <div class="card-ico">📺</div>
+      <h2>Platform Pihak Ketiga</h2>
+    </div>
+    <p>Konten Baby Mo tersedia di YouTube, Instagram, TikTok, dan platform lainnya — masing-masing memiliki kebijakan privasi tersendiri. Kami mendorong orang tua untuk:</p>
+    <ul class="item-list">
+      <li><em>📖</em><span>Membaca kebijakan privasi YouTube Kids / YouTube.</span></li>
+      <li><em>⚙️</em><span>Menggunakan fitur Parental Controls di perangkat anak.</span></li>
+      <li><em>🤗</em><span>Mendampingi anak saat menonton konten online.</span></li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-icon">🍪</div>
-    <h2>Cookie & Teknologi Pelacak</h2>
-    <p>
-      Website ini menggunakan cookie dasar untuk memastikan pengalaman browsing yang nyaman. Cookie ini
-      tidak digunakan untuk melacak perilaku anak-anak atau membuat profil pengguna. Anda bisa menonaktifkan
-      cookie di pengaturan browser Anda kapan saja.
-    </p>
+    <div class="card-header">
+      <div class="card-ico">🍪</div>
+      <h2>Cookie</h2>
+    </div>
+    <p>Website ini menggunakan cookie dasar untuk pengalaman browsing yang nyaman. Cookie ini tidak digunakan untuk melacak perilaku anak-anak atau membuat profil pengguna. Anda dapat menonaktifkan cookie melalui pengaturan browser kapan saja.</p>
   </div>
 
   <div class="card">
-    <div class="card-icon">✉️</div>
-    <h2>Hubungi Kami</h2>
-    <p>Punya pertanyaan tentang privasi? Kami dengan senang hati membantu!</p>
-    <div class="highlight">
-      <span class="hl-icon">💌</span>
-      <span>Kirim email ke: <strong>hello@babymo.id</strong> atau kunjungi halaman <a href="contact.html" style="color:var(--green);">Kontak</a> kami.</span>
+    <div class="card-header">
+      <div class="card-ico">✉️</div>
+      <h2>Ada Pertanyaan?</h2>
+    </div>
+    <p>Kami dengan senang hati membantu menjawab pertanyaan Anda terkait privasi.</p>
+    <div class="callout">
+      <em>💌</em>
+      <p>Kirim email ke <strong>babymo.studio@gmail.com</strong> atau kunjungi halaman <a href="contact.html">Kontak</a> kami.</p>
     </div>
   </div>
 
 </main>
 
-<!-- Footer -->
 <footer>
-  Dibuat dengan <span class="heart">💚</span> untuk Si Kecil yang Sholeh & Sholehah 🌙⭐
-  <br/><small style="font-family:'Nunito',sans-serif;font-size:.85rem;color:#5aac7e;font-weight:700;">© 2026 Baby Mo · Semua Hak Dilindungi</small>
+  Dibuat dengan <span class="hrt">♥</span> untuk Si Kecil yang Sholeh &amp; Sholehah &nbsp;·&nbsp;
+  <a href="index.html">Baby Mo</a> &nbsp;·&nbsp;
+  <a href="terms.html">Ketentuan</a> &nbsp;·&nbsp;
+  <a href="contact.html">Kontak</a>
+  <span class="cr">© 2025 Baby Mo · Semua hak dilindungi</span>
 </footer>
 
-<!-- Wave -->
-<svg class="wave-bg" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
-  <path fill="rgba(39,174,96,0.10)" d="M0,60 C240,110 480,10 720,60 C960,110 1200,10 1440,60 L1440,120 L0,120 Z"/>
-</svg>
-
 <script>
-  // Generate random stars
-  const starsEl = document.getElementById('stars');
-  for (let i = 0; i < 50; i++) {
-    const s = document.createElement('div');
-    s.className = 'star';
-    s.style.cssText = `
-      left:${Math.random()*100}%;
-      top:${Math.random()*100}%;
-      --d:${3+Math.random()*4}s;
-      --delay:${Math.random()*5}s;
-      width:${4+Math.random()*8}px;
-      height:${4+Math.random()*8}px;
-      background:${Math.random()>.5?'#ffd700':'#27ae60'};
-    `;
-    starsEl.appendChild(s);
-  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('visible'), i*70);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.08});
+  document.querySelectorAll('.card').forEach(c=>io.observe(c));
 </script>
 </body>
 </html>

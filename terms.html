@@ -1,344 +1,314 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ketentuan Penggunaan – Baby Mo 🌙</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <title>Ketentuan Penggunaan – Baby Mo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;0,900;1,700&display=swap" rel="stylesheet"/>
   <style>
     :root {
-      --purple:    #8e44ad;
-      --purple-lt: #e8d5f5;
-      --blue:      #3498db;
-      --green:     #27ae60;
-      --green-lt:  #a8f0c6;
-      --orange:    #e67e22;
-      --cream:     #fffef5;
-      --shadow:    0 8px 32px rgba(142,68,173,.18);
-      --radius:    24px;
+      --g900:#064e3b; --g800:#065f46; --g700:#047857;
+      --g600:#059669; --g500:#10b981; --g400:#34d399;
+      --g300:#6ee7b7; --g100:#d1fae5; --g50:#ecfdf5;
+      --gold:#f59e0b; --gold-lt:#fef3c7;
+      --amber:#d97706; --amber-lt:#fffbeb;
+      --red:#dc2626; --red-lt:#fef2f2;
+      --surface:#ffffff; --bg:#f5fdf8;
+      --text:#1c4532; --muted:#52796f;
+      --sh-sm:0 2px 8px rgba(6,78,59,.07);
+      --sh-md:0 6px 28px rgba(6,78,59,.10);
+      --sh-lg:0 18px 56px rgba(6,78,59,.13);
+      --r:18px;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Nunito',sans-serif;
+      background:var(--bg);color:var(--text);
+      min-height:100vh;overflow-x:hidden;
+    }
+    body::before{
+      content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+      background-image:radial-gradient(circle,rgba(16,185,129,.08) 1px,transparent 1px);
+      background-size:32px 32px;
+    }
+    .navbar{
+      position:sticky;top:0;z-index:200;
+      display:flex;align-items:center;justify-content:space-between;
+      padding:0 48px;height:64px;
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);
+      box-shadow:0 1px 0 rgba(6,78,59,.07);
+    }
+    .nb-brand{display:flex;align-items:center;gap:10px;text-decoration:none;}
+    .nb-brand img{height:38px;width:38px;object-fit:contain;}
+    .nb-brand span{font-weight:900;font-size:1.1rem;color:var(--g800);letter-spacing:-.3px;}
+    .nb-links{display:flex;gap:4px;}
+    .nb-links a{
+      font-size:.88rem;font-weight:800;color:var(--muted);
+      text-decoration:none;padding:7px 15px;border-radius:50px;
+      transition:background .2s,color .2s;
+    }
+    .nb-links a:hover{color:var(--g800);background:var(--g50);}
+    .nb-links a.active{color:var(--g800);background:var(--g100);}
+
+    .hero{
+      position:relative;z-index:1;
+      text-align:center;padding:64px 24px 52px;
+    }
+    .hero-mascot{display:inline-block;animation:float 4s ease-in-out infinite;margin-bottom:18px;}
+    @keyframes float{0%,100%{transform:translateY(0);}50%{transform:translateY(-11px);}}
+    .hero-mascot img{
+      width:112px;height:112px;object-fit:contain;
+      filter:drop-shadow(0 10px 24px rgba(6,78,59,.18));
+    }
+    .hero h1{font-size:clamp(1.9rem,4.5vw,2.85rem);font-weight:900;color:var(--g900);letter-spacing:-.5px;line-height:1.18;}
+    .pill-tag{
+      display:inline-flex;align-items:center;gap:5px;
+      margin-top:12px;padding:5px 14px;
+      background:var(--g100);border-radius:50px;
+      font-size:.85rem;font-weight:800;color:var(--g800);
+    }
+    .hero-sub{margin-top:10px;font-size:1rem;color:var(--muted);font-weight:700;max-width:460px;margin-left:auto;margin-right:auto;line-height:1.6;}
+
+    .sp{position:absolute;border-radius:50%;pointer-events:none;animation:sparkle var(--d,3s) ease-in-out var(--dl,0s) infinite;}
+    @keyframes sparkle{0%,100%{opacity:.15;transform:scale(.6);}50%{opacity:.7;transform:scale(1.3);}}
+
+    main{position:relative;z-index:1;max-width:780px;margin:0 auto;padding:0 24px 80px;}
+
+    .card{
+      background:var(--surface);border-radius:var(--r);
+      padding:34px 38px;margin-bottom:18px;
+      box-shadow:var(--sh-md);
+      opacity:0;transform:translateY(18px);
+      transition:opacity .45s ease,transform .45s ease,box-shadow .25s;
+    }
+    .card.visible{opacity:1;transform:translateY(0);}
+    .card:hover{box-shadow:var(--sh-lg);transform:translateY(-3px) !important;}
+
+    .card-header{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+    .card-ico{width:42px;height:42px;border-radius:12px;background:var(--g50);display:flex;align-items:center;justify-content:center;font-size:1.25rem;flex-shrink:0;}
+    .card h2{font-size:1.18rem;font-weight:900;color:var(--g900);letter-spacing:-.2px;}
+    .card p{font-size:.96rem;line-height:1.82;color:var(--text);font-weight:600;}
+
+    .item-list{list-style:none;margin-top:12px;}
+    .item-list li{
+      display:flex;align-items:flex-start;gap:10px;
+      padding:8px 0;font-size:.95rem;font-weight:600;
+      color:var(--text);line-height:1.65;
+      border-bottom:1px solid var(--g50);
+    }
+    .item-list li:last-child{border-bottom:none;padding-bottom:0;}
+    .item-list li em{flex-shrink:0;font-style:normal;font-size:1rem;margin-top:1px;}
+
+    /* numbered list */
+    .steps-list{list-style:none;margin-top:12px;counter-reset:step;}
+    .steps-list li{
+      counter-increment:step;
+      display:flex;align-items:flex-start;gap:12px;
+      padding:9px 0;font-size:.95rem;font-weight:600;
+      color:var(--text);line-height:1.65;
+      border-bottom:1px solid var(--g50);
+    }
+    .steps-list li:last-child{border-bottom:none;padding-bottom:0;}
+    .steps-list li::before{
+      content:counter(step);
+      flex-shrink:0;
+      width:26px;height:26px;
+      background:var(--g100);color:var(--g800);
+      border-radius:8px;
+      font-size:.82rem;font-weight:900;
+      display:flex;align-items:center;justify-content:center;
+      margin-top:1px;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    .callout{
+      display:flex;gap:13px;align-items:flex-start;
+      border-radius:12px;padding:16px 18px;margin-top:14px;
+    }
+    .callout.green{background:var(--g50);border-left:3px solid var(--g500);}
+    .callout.amber{background:var(--amber-lt);border-left:3px solid var(--amber);}
+    .callout.red{background:var(--red-lt);border-left:3px solid var(--red);}
+    .callout em{font-style:normal;font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+    .callout p{font-size:.92rem;font-weight:700;line-height:1.7;}
+    .callout.green p{color:var(--g800);}
+    .callout.amber p{color:var(--amber);}
+    .callout.red p{color:var(--red);}
+    .callout a{color:var(--g600);}
 
-    body {
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(160deg, #f3e8ff 0%, #e8d5f5 40%, #ddd0f0 100%);
-      min-height: 100vh;
-      color: #3d1a5c;
-      overflow-x: hidden;
+    /* two-column for allowed/disallowed */
+    .split-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:12px;}
+    .split-col{background:var(--g50);border-radius:12px;padding:16px 18px;}
+    .split-col.bad{background:var(--red-lt);}
+    .split-col h4{font-size:.9rem;font-weight:900;margin-bottom:10px;}
+    .split-col.ok h4{color:var(--g700);}
+    .split-col.bad h4{color:var(--red);}
+    .split-col ul{list-style:none;}
+    .split-col ul li{
+      font-size:.88rem;font-weight:600;color:var(--text);
+      padding:5px 0;border-bottom:1px solid rgba(0,0,0,.04);
+      display:flex;gap:8px;line-height:1.55;
     }
+    .split-col ul li:last-child{border-bottom:none;}
+    .split-col ul li em{flex-shrink:0;font-style:normal;}
+    @media(max-width:560px){.split-grid{grid-template-columns:1fr;}}
 
-    /* floating bubbles */
-    .bubbles { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
-    .bubble {
-      position: absolute;
-      border-radius: 50%;
-      opacity: 0;
-      animation: rise var(--d,8s) ease-in var(--delay,0s) infinite;
+    footer{
+      position:relative;z-index:1;text-align:center;
+      padding:28px 24px 48px;font-size:.86rem;font-weight:700;color:var(--muted);
     }
-    @keyframes rise {
-      0%   { opacity: 0; transform: translateY(0) scale(.5); }
-      10%  { opacity: .55; }
-      80%  { opacity: .4; }
-      100% { opacity: 0; transform: translateY(-110vh) scale(1.1); }
-    }
+    footer .hrt{display:inline-block;color:var(--g500);animation:hb 2s ease-in-out infinite;}
+    @keyframes hb{0%,60%,100%{transform:scale(1);}30%{transform:scale(1.28);}}
+    footer a{color:var(--g700);text-decoration:none;}
+    footer a:hover{text-decoration:underline;}
+    footer .cr{display:block;margin-top:6px;font-size:.8rem;color:#9ca3af;}
 
-    /* header */
-    header {
-      position: relative; z-index: 10;
-      text-align: center;
-      padding: 48px 20px 24px;
-      animation: slideDown .7s cubic-bezier(.34,1.56,.64,1) both;
+    @media(max-width:620px){
+      .navbar{padding:0 20px;}
+      .nb-links a{font-size:.78rem;padding:6px 10px;}
+      .card{padding:26px 22px;}
+      .hero{padding:48px 20px 40px;}
     }
-    @keyframes slideDown {
-      from { opacity: 0; transform: translateY(-50px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    .logo-wrap {
-      display: inline-block;
-      animation: float 3.6s ease-in-out infinite;
-      filter: drop-shadow(0 12px 28px rgba(142,68,173,.35));
-    }
-    @keyframes float {
-      0%,100% { transform: translateY(0) rotate(-2deg); }
-      50%      { transform: translateY(-14px) rotate(2deg); }
-    }
-    .logo-wrap img { width: 140px; height: 140px; object-fit: contain; }
-
-    header h1 {
-      font-family: 'Fredoka One', cursive;
-      font-size: clamp(2rem, 6vw, 3.4rem);
-      color: var(--purple);
-      text-shadow: 3px 4px 0 rgba(142,68,173,.18);
-      margin-top: 12px;
-    }
-    header p.sub {
-      font-size: 1.05rem; color: #6c3483; margin-top: 6px; font-weight: 700;
-    }
-
-    /* nav */
-    nav {
-      display: flex; flex-wrap: wrap; justify-content: center;
-      gap: 12px; padding: 0 20px 36px;
-      position: relative; z-index: 10;
-      animation: fadeUp .6s .3s both;
-    }
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to   { opacity: 1; transform: translateY(0); }
-    }
-    nav a {
-      font-family: 'Fredoka One', cursive; font-size: 1rem;
-      background: white; color: var(--purple);
-      border: 3px solid var(--purple); border-radius: 50px;
-      padding: 9px 22px; text-decoration: none;
-      transition: all .25s;
-      box-shadow: 0 4px 14px rgba(142,68,173,.15);
-    }
-    nav a:hover, nav a.active {
-      background: var(--purple); color: white;
-      transform: translateY(-3px);
-      box-shadow: 0 8px 24px rgba(142,68,173,.38);
-    }
-
-    /* main */
-    main {
-      position: relative; z-index: 10;
-      max-width: 860px; margin: 0 auto; padding: 0 20px 80px;
-    }
-
-    .card {
-      background: white; border-radius: var(--radius);
-      padding: 40px 44px; margin-bottom: 28px;
-      box-shadow: var(--shadow);
-      border: 2.5px solid var(--purple-lt);
-      animation: popIn .55s cubic-bezier(.34,1.56,.64,1) both;
-    }
-    .card:nth-child(1) { animation-delay:.1s; border-top: 5px solid #8e44ad; }
-    .card:nth-child(2) { animation-delay:.18s; border-top: 5px solid #3498db; }
-    .card:nth-child(3) { animation-delay:.26s; border-top: 5px solid #27ae60; }
-    .card:nth-child(4) { animation-delay:.34s; border-top: 5px solid #e67e22; }
-    .card:nth-child(5) { animation-delay:.42s; border-top: 5px solid #e74c3c; }
-    .card:nth-child(6) { animation-delay:.50s; border-top: 5px solid #8e44ad; }
-    .card:nth-child(7) { animation-delay:.58s; border-top: 5px solid #27ae60; }
-    @keyframes popIn {
-      from { opacity: 0; transform: scale(.88) translateY(24px); }
-      to   { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 16px 48px rgba(142,68,173,.28);
-      transition: all .3s ease;
-    }
-
-    .card-icon {
-      font-size: 2.4rem; display: inline-block; margin-bottom: 10px;
-      animation: wiggle 3s ease-in-out infinite;
-    }
-    @keyframes wiggle {
-      0%,100% { transform: rotate(0); }
-      20%     { transform: rotate(-10deg); }
-      40%     { transform: rotate(10deg); }
-      60%     { transform: rotate(-6deg); }
-      80%     { transform: rotate(6deg); }
-    }
-    .card h2 { font-family:'Fredoka One',cursive; font-size:1.55rem; color:var(--purple); margin-bottom:14px; }
-    .card p, .card li { font-size:1.02rem; line-height:1.85; color:#4a235a; font-weight:600; }
-    .card ul { padding-left:22px; margin-top:8px; }
-    .card ul li { margin-bottom:8px; }
-    .card ul li::marker { color:var(--purple); font-size:1.2em; }
-
-    .highlight {
-      background: linear-gradient(135deg,#f3e8ff,#ead5f5);
-      border-left: 5px solid var(--purple);
-      border-radius: 14px; padding: 18px 22px; margin-top: 16px;
-      font-weight: 700; color: #5b2c6f;
-      display: flex; align-items: flex-start; gap: 12px;
-    }
-    .highlight.green { background: linear-gradient(135deg,#e8faf0,#d4f0e2); border-left-color: var(--green); color:#1a6940; }
-    .highlight.orange { background: linear-gradient(135deg,#fef5e7,#fdebd0); border-left-color: var(--orange); color:#784212; }
-    .hl-icon { font-size:1.5rem; flex-shrink:0; margin-top:2px; }
-
-    .date-badge {
-      display:inline-block; background:var(--blue); color:white;
-      font-family:'Fredoka One',cursive; font-size:.9rem;
-      border-radius:50px; padding:5px 16px; margin-bottom:20px;
-      box-shadow:0 4px 12px rgba(52,152,219,.3);
-    }
-
-    /* numbered steps */
-    .steps { counter-reset: step; margin-top: 12px; }
-    .steps li {
-      counter-increment: step; list-style: none;
-      padding-left: 44px; position: relative; margin-bottom: 14px;
-    }
-    .steps li::before {
-      content: counter(step);
-      position: absolute; left: 0; top: 0;
-      width: 30px; height: 30px;
-      background: var(--purple); color: white;
-      border-radius: 50%;
-      font-family: 'Fredoka One', cursive;
-      font-size: .95rem;
-      display: flex; align-items: center; justify-content: center;
-    }
-
-    footer {
-      position:relative; z-index:10; text-align:center;
-      padding:24px 20px 40px;
-      font-family:'Fredoka One',cursive; font-size:1.1rem; color:var(--purple);
-      animation:fadeUp .6s .9s both;
-    }
-    footer .heart { display:inline-block; animation:heartbeat 1.4s ease-in-out infinite; }
-    @keyframes heartbeat {
-      0%,100%{transform:scale(1)}15%{transform:scale(1.35)}30%{transform:scale(1)}45%{transform:scale(1.18)}
-    }
-    .wave-bg { position:fixed;bottom:0;left:0;right:0;pointer-events:none;z-index:0; }
-
-    @media(max-width:600px){ .card{padding:28px 22px;} }
   </style>
 </head>
 <body>
 
-<div class="bubbles" id="bubbles"></div>
+<span class="sp" style="top:9%;left:6%;width:7px;height:7px;background:var(--gold);--d:3.4s;--dl:.2s"></span>
+<span class="sp" style="top:14%;right:8%;width:5px;height:5px;background:var(--g400);--d:4.1s;--dl:.9s"></span>
+<span class="sp" style="top:52%;left:4%;width:6px;height:6px;background:var(--g400);--d:3.8s;--dl:.5s"></span>
+<span class="sp" style="top:68%;right:5%;width:5px;height:5px;background:var(--gold);--d:4.6s;--dl:1.3s"></span>
+<span class="sp" style="top:37%;right:3.5%;width:4px;height:4px;background:var(--g300);--d:3.2s;--dl:.7s"></span>
 
-<header>
-  <div class="logo-wrap">
-    <img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo Logo"/>
+<nav class="navbar">
+  <a href="index.html" class="nb-brand">
+    <img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo"/>
+    <span>Baby Mo</span>
+  </a>
+  <div class="nb-links">
+    <a href="privacy.html">Privasi</a>
+    <a href="terms.html" class="active">Ketentuan</a>
+    <a href="contact.html">Kontak</a>
   </div>
-  <h1>Ketentuan Penggunaan 📜</h1>
-  <p class="sub">Yuk, kita main dan belajar bersama Baby Mo dengan aman! 🌟</p>
-</header>
-
-<nav>
-  <a href="privacy.html">🔒 Privasi</a>
-  <a href="terms.html" class="active">📜 Ketentuan</a>
-  <a href="contact.html">💌 Kontak</a>
-  <a href="index.html">🏠 Beranda</a>
 </nav>
+
+<div class="hero">
+  <div class="hero-mascot"><img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo"/></div>
+  <h1>Ketentuan Penggunaan</h1>
+  <div class="pill-tag">📜 Berlaku sejak 1 Januari 2025</div>
+  <p class="hero-sub">Panduan sederhana untuk menggunakan konten Baby Mo dengan bijak bersama keluarga.</p>
+</div>
 
 <main>
 
   <div class="card">
-    <span class="date-badge">📅 Berlaku sejak 1 Januari 2026</span>
-    <div class="card-icon">🤝</div>
-    <h2>Selamat Datang di Dunia Baby Mo!</h2>
-    <p>
-      Dengan menggunakan konten dan layanan <strong>Baby Mo</strong>, Anda menyetujui ketentuan-ketentuan
-      berikut ini. Ketentuan ini dibuat secara sederhana agar mudah dipahami oleh seluruh keluarga. 💛
-    </p>
-    <div class="highlight">
-      <span class="hl-icon">⭐</span>
-      <span>Baby Mo adalah konten edukasi Islami untuk anak usia dini. Semua materi dirancang aman, menyenangkan, dan sesuai nilai-nilai Islam yang rahmatan lil 'aalamiin.</span>
+    <div class="card-header">
+      <div class="card-ico">🤝</div>
+      <h2>Selamat Datang di Dunia Baby Mo</h2>
+    </div>
+    <p>Dengan menggunakan konten dan layanan <strong>Baby Mo</strong>, Anda menyetujui ketentuan-ketentuan berikut ini yang kami buat sesederhana mungkin agar mudah dipahami seluruh keluarga.</p>
+    <div class="callout green">
+      <em>⭐</em>
+      <p>Baby Mo adalah konten edukasi Islami untuk anak usia dini. Semua materi dirancang aman, menyenangkan, dan sesuai nilai-nilai Islam yang rahmatan lil 'aalamiin.</p>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-icon">🎨</div>
-    <h2>Hak Cipta & Kepemilikan Konten</h2>
-    <p>Semua konten Baby Mo — termasuk video, musik, karakter, logo, dan nama — adalah milik Baby Mo dan dilindungi hak cipta:</p>
-    <ul>
-      <li>🎵 Lagu dan musik Baby Mo tidak boleh digunakan untuk keperluan komersial tanpa izin tertulis.</li>
-      <li>🎬 Video Baby Mo boleh dibagikan untuk keperluan dakwah & edukasi non-komersial dengan mencantumkan kredit.</li>
-      <li>🚫 Dilarang keras mengunduh dan menjual ulang konten Baby Mo.</li>
-      <li>📝 Kutipan konten untuk keperluan review atau edukasi diperbolehkan dengan menyebut sumber.</li>
+    <div class="card-header">
+      <div class="card-ico">🎨</div>
+      <h2>Hak Cipta &amp; Kepemilikan Konten</h2>
+    </div>
+    <p>Semua konten Baby Mo — video, musik, karakter, logo, dan nama — adalah milik Baby Mo dan dilindungi undang-undang hak cipta Indonesia.</p>
+    <ul class="item-list">
+      <li><em>🎵</em><span>Lagu dan musik Baby Mo tidak boleh digunakan untuk keperluan komersial tanpa izin tertulis.</span></li>
+      <li><em>🎬</em><span>Video boleh dibagikan untuk keperluan dakwah &amp; edukasi non-komersial dengan mencantumkan kredit.</span></li>
+      <li><em>📝</em><span>Kutipan untuk review atau edukasi diperbolehkan dengan menyebut sumber.</span></li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-icon">✅</div>
-    <h2>Penggunaan yang Diperbolehkan</h2>
-    <ul class="steps">
-      <li>Menonton dan menikmati konten Baby Mo secara pribadi / keluarga.</li>
-      <li>Berbagi tautan video Baby Mo di grup keluarga, sekolah, atau komunitas dakwah.</li>
-      <li>Menggunakan konten sebagai referensi untuk kegiatan belajar mengajar di sekolah PAUD/TK.</li>
-      <li>Memberikan ulasan atau komentar positif yang membangun di platform resmi Baby Mo.</li>
-    </ul>
-    <div class="highlight green">
-      <span class="hl-icon">💚</span>
-      <span>Kami sangat mendukung penyebaran ilmu yang bermanfaat! Silakan share video Baby Mo kepada keluarga dan teman Anda. 🌙</span>
+    <div class="card-header">
+      <div class="card-ico">📋</div>
+      <h2>Apa yang Boleh &amp; Tidak Boleh</h2>
+    </div>
+    <div class="split-grid">
+      <div class="split-col ok">
+        <h4>✅ Diperbolehkan</h4>
+        <ul>
+          <li><em>🏠</em><span>Menonton untuk keluarga atau kegiatan sekolah</span></li>
+          <li><em>🔗</em><span>Berbagi tautan video di grup komunitas</span></li>
+          <li><em>🏫</em><span>Pakai sebagai referensi belajar di PAUD/TK</span></li>
+          <li><em>💬</em><span>Memberikan ulasan yang membangun</span></li>
+        </ul>
+      </div>
+      <div class="split-col bad">
+        <h4>🚫 Tidak Diperbolehkan</h4>
+        <ul>
+          <li><em>💰</em><span>Menjual atau memonetisasi ulang konten</span></li>
+          <li><em>✂️</em><span>Memodifikasi konten tanpa izin tertulis</span></li>
+          <li><em>🏷️</em><span>Menggunakan nama/logo Baby Mo secara menyesatkan</span></li>
+          <li><em>🖼️</em><span>Menghapus watermark atau kredit dalam konten</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="callout amber">
+      <em>⚠️</em>
+      <p>Pelanggaran hak cipta akan ditindaklanjuti sesuai ketentuan hukum yang berlaku di Indonesia.</p>
     </div>
   </div>
 
   <div class="card">
-    <div class="card-icon">🚧</div>
-    <h2>Yang Tidak Diperbolehkan</h2>
-    <ul>
-      <li>🚫 Mengunduh, mendistribusikan, atau menjual konten Baby Mo secara komersial.</li>
-      <li>🚫 Membuat konten turunan (derivative works) tanpa izin tertulis.</li>
-      <li>🚫 Menggunakan nama, logo, atau karakter Baby Mo untuk keperluan apapun yang menyesatkan.</li>
-      <li>🚫 Menghapus atau memodifikasi watermark / kredit yang terdapat dalam konten.</li>
-      <li>🚫 Menggunakan konten untuk tujuan yang bertentangan dengan nilai-nilai Islam atau merugikan anak.</li>
-    </ul>
-    <div class="highlight orange">
-      <span class="hl-icon">⚠️</span>
-      <span>Pelanggaran hak cipta akan ditindaklanjuti sesuai dengan ketentuan hukum yang berlaku di Indonesia.</span>
+    <div class="card-header">
+      <div class="card-ico">👨‍👩‍👧</div>
+      <h2>Peran Orang Tua</h2>
     </div>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">👨‍👩‍👧</div>
-    <h2>Tanggung Jawab Orang Tua</h2>
-    <p>Konten Baby Mo dirancang untuk anak usia dini (0–8 tahun). Kami mendorong orang tua untuk:</p>
-    <ul>
-      <li>🤗 Mendampingi anak saat menonton konten Baby Mo.</li>
-      <li>💬 Berdiskusi bersama anak tentang nilai-nilai yang dipelajari.</li>
-      <li>⏰ Mengatur durasi menonton yang sehat sesuai usia anak.</li>
-      <li>🛡️ Mengaktifkan parental controls pada perangkat yang digunakan.</li>
+    <p>Konten Baby Mo ditujukan untuk anak usia dini (0–8 tahun). Kami menganjurkan orang tua untuk:</p>
+    <ul class="steps-list">
+      <li>Mendampingi anak saat menonton dan berdiskusi tentang nilai yang dipelajari.</li>
+      <li>Mengatur durasi menonton yang sehat sesuai usia anak.</li>
+      <li>Mengaktifkan Parental Controls pada perangkat yang digunakan.</li>
+      <li>Menjadikan konten Baby Mo sebagai pelengkap, bukan pengganti interaksi langsung.</li>
     </ul>
   </div>
 
   <div class="card">
-    <div class="card-icon">🔄</div>
-    <h2>Perubahan Ketentuan</h2>
-    <p>
-      Baby Mo berhak memperbarui ketentuan ini sewaktu-waktu demi meningkatkan pelayanan.
-      Setiap perubahan akan diumumkan melalui kanal resmi kami. Dengan terus menggunakan layanan Baby Mo
-      setelah perubahan, Anda dianggap menyetujui ketentuan terbaru.
-    </p>
+    <div class="card-header">
+      <div class="card-ico">🔄</div>
+      <h2>Perubahan Ketentuan</h2>
+    </div>
+    <p>Baby Mo berhak memperbarui ketentuan ini kapan saja untuk meningkatkan layanan. Setiap perubahan akan diumumkan melalui kanal resmi kami. Penggunaan layanan yang dilanjutkan setelah perubahan dianggap sebagai persetujuan atas ketentuan terbaru.</p>
   </div>
 
   <div class="card">
-    <div class="card-icon">⚖️</div>
-    <h2>Hukum yang Berlaku</h2>
-    <p>
-      Ketentuan ini tunduk pada hukum Republik Indonesia. Segala sengketa yang timbul akan diselesaikan
-      secara musyawarah terlebih dahulu, dan jika diperlukan, melalui jalur hukum yang berlaku di Indonesia.
-    </p>
-    <div class="highlight">
-      <span class="hl-icon">💌</span>
-      <span>Ada pertanyaan? Kami selalu siap membantu! Hubungi kami di <strong>hello@babymo.id</strong> atau kunjungi halaman <a href="contact.html" style="color:var(--purple);">Kontak</a>.</span>
+    <div class="card-header">
+      <div class="card-ico">⚖️</div>
+      <h2>Hukum yang Berlaku</h2>
+    </div>
+    <p>Ketentuan ini tunduk pada hukum Republik Indonesia. Segala sengketa akan diselesaikan secara musyawarah terlebih dahulu, dan jika diperlukan, melalui jalur hukum yang berlaku.</p>
+    <div class="callout green">
+      <em>💌</em>
+      <p>Ada pertanyaan? Hubungi kami di <strong>babymo.studio@gmail.com</strong> atau kunjungi halaman <a href="contact.html">Kontak</a>.</p>
     </div>
   </div>
 
 </main>
 
 <footer>
-  Semoga ilmu yang bermanfaat menjadi amal jariyah kita semua <span class="heart">💜</span> Aamiin!
-  <br/><small style="font-family:'Nunito',sans-serif;font-size:.85rem;color:#9b59b6;font-weight:700;">© 2026 Baby Mo · Semua Hak Dilindungi</small>
+  Semoga ilmu yang bermanfaat menjadi amal jariyah kita semua <span class="hrt">♥</span> Aamiin &nbsp;·&nbsp;
+  <a href="privacy.html">Privasi</a> &nbsp;·&nbsp;
+  <a href="contact.html">Kontak</a>
+  <span class="cr">© 2025 Baby Mo · Semua hak dilindungi</span>
 </footer>
 
-<svg class="wave-bg" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
-  <path fill="rgba(142,68,173,0.09)" d="M0,60 C360,110 720,10 1080,60 C1260,85 1380,40 1440,60 L1440,120 L0,120 Z"/>
-</svg>
-
 <script>
-  const b = document.getElementById('bubbles');
-  const colors = ['#e8d5f5','#d4f0e2','#fdebd0','#d6eaf8','#fce4ec'];
-  for(let i=0;i<30;i++){
-    const el=document.createElement('div');
-    el.className='bubble';
-    const size=15+Math.random()*35;
-    el.style.cssText=`
-      left:${Math.random()*100}%;
-      bottom:-60px;
-      width:${size}px; height:${size}px;
-      background:${colors[Math.floor(Math.random()*colors.length)]};
-      --d:${6+Math.random()*8}s;
-      --delay:${Math.random()*8}s;
-    `;
-    b.appendChild(el);
-  }
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e,i) => {
+      if(e.isIntersecting){
+        setTimeout(()=>e.target.classList.add('visible'),i*70);
+        io.unobserve(e.target);
+      }
+    });
+  },{threshold:.08});
+  document.querySelectorAll('.card').forEach(c=>io.observe(c));
 </script>
 </body>
 </html>
