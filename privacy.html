@@ -1,396 +1,358 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kebijakan Privasi — Baby Mo</title>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;600;700;800&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-  :root {
-    --green: #3BAA72;
-    --green-light: #E8F7EF;
-    --green-dark: #1E7A4E;
-    --yellow: #F9C846;
-    --yellow-light: #FEF7E0;
-    --peach: #FF8C5A;
-    --peach-light: #FFF0E8;
-    --blue: #4CA9E4;
-    --blue-light: #E8F4FD;
-    --cream: #FFFDF7;
-    --text: #2D3A2E;
-    --text-soft: #6B7A6C;
-    --white: #FFFFFF;
-    --radius: 20px;
-    --radius-sm: 12px;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  body {
-    font-family: 'Nunito', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    min-height: 100vh;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kebijakan Privasi – Baby Mo 🌙</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --green:     #27ae60;
+      --green-mid: #2ecc71;
+      --green-lt:  #a8f0c6;
+      --cream:     #fffef5;
+      --orange:    #f39c12;
+      --red-soft:  #e74c3c;
+      --shadow:    0 8px 32px rgba(39,174,96,.22);
+      --radius:    24px;
+    }
 
-  /* NAV */
-  nav {
-    background: var(--white);
-    padding: 16px 32px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 2px solid var(--green-light);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  .nav-logo {
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
-    font-size: 22px;
-    color: var(--green-dark);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-  .logo-dot {
-    width: 10px; height: 10px;
-    background: var(--yellow);
-    border-radius: 50%;
-    display: inline-block;
-  }
-  .nav-links {
-    display: flex;
-    gap: 24px;
-    list-style: none;
-  }
-  .nav-links a {
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--text-soft);
-    text-decoration: none;
-    transition: color .2s;
-  }
-  .nav-links a:hover { color: var(--green); }
-  .nav-links a.active { color: var(--green-dark); }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* HERO */
-  .hero {
-    background: linear-gradient(135deg, var(--green-light) 0%, var(--yellow-light) 100%);
-    padding: 60px 32px 48px;
-    text-align: center;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero::before {
-    content: '🌿';
-    font-size: 80px;
-    position: absolute;
-    top: -10px; left: 40px;
-    opacity: .15;
-  }
-  .hero::after {
-    content: '⭐';
-    font-size: 60px;
-    position: absolute;
-    bottom: 10px; right: 60px;
-    opacity: .15;
-  }
-  .hero-badge {
-    display: inline-block;
-    background: var(--green);
-    color: var(--white);
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    padding: 6px 18px;
-    border-radius: 50px;
-    margin-bottom: 20px;
-    letter-spacing: .5px;
-  }
-  .hero h1 {
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
-    font-size: 40px;
-    color: var(--green-dark);
-    line-height: 1.2;
-    margin-bottom: 14px;
-  }
-  .hero p {
-    font-size: 16px;
-    color: var(--text-soft);
-    max-width: 560px;
-    margin: 0 auto;
-    line-height: 1.7;
-  }
-  .hero-date {
-    margin-top: 20px;
-    font-size: 13px;
-    color: var(--text-soft);
-    font-weight: 600;
-  }
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: linear-gradient(160deg, #e8faf0 0%, #d4f5e2 40%, #c3f0d8 100%);
+      min-height: 100vh;
+      color: #1a472a;
+      overflow-x: hidden;
+    }
 
-  /* MAIN */
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 48px 24px 80px;
-  }
+    /* ── floating stars ── */
+    .stars { position: fixed; inset: 0; pointer-events: none; z-index: 0; }
+    .star {
+      position: absolute;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: #ffd700;
+      opacity: 0;
+      animation: twinkle var(--d, 4s) ease-in-out var(--delay, 0s) infinite;
+    }
+    @keyframes twinkle {
+      0%,100% { opacity: 0; transform: scale(.5); }
+      50%      { opacity: .9; transform: scale(1.4); }
+    }
 
-  /* SECTION CARDS */
-  .section-card {
-    background: var(--white);
-    border-radius: var(--radius);
-    padding: 32px 36px;
-    margin-bottom: 24px;
-    border: 1.5px solid #E8F0EA;
-    position: relative;
-    overflow: hidden;
-  }
-  .section-card::before {
-    content: '';
-    position: absolute;
-    top: 0; left: 0;
-    width: 5px;
-    height: 100%;
-    background: var(--green);
-    border-radius: 4px 0 0 4px;
-  }
-  .section-card.yellow::before { background: var(--yellow); }
-  .section-card.peach::before { background: var(--peach); }
-  .section-card.blue::before { background: var(--blue); }
+    /* ── header ── */
+    header {
+      position: relative; z-index: 10;
+      text-align: center;
+      padding: 48px 20px 24px;
+      animation: slideDown .7s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    @keyframes slideDown {
+      from { opacity: 0; transform: translateY(-50px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .logo-wrap {
+      display: inline-block;
+      animation: float 3.6s ease-in-out infinite;
+      filter: drop-shadow(0 12px 24px rgba(39,174,96,.35));
+    }
+    @keyframes float {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-14px); }
+    }
+    .logo-wrap img { width: 140px; height: 140px; object-fit: contain; }
 
-  .section-num {
-    font-family: 'Baloo 2', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    color: var(--green);
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 8px;
-  }
-  .section-card.yellow .section-num { color: #C9900D; }
-  .section-card.peach .section-num { color: var(--peach); }
-  .section-card.blue .section-num { color: var(--blue); }
+    header h1 {
+      font-family: 'Fredoka One', cursive;
+      font-size: clamp(2rem, 6vw, 3.4rem);
+      color: var(--green);
+      text-shadow: 3px 4px 0 rgba(39,174,96,.18);
+      margin-top: 12px;
+      letter-spacing: .5px;
+    }
+    header p.sub {
+      font-size: 1.05rem;
+      color: #3d8b5e;
+      margin-top: 6px;
+      font-weight: 700;
+    }
 
-  .section-card h2 {
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 700;
-    font-size: 22px;
-    color: var(--text);
-    margin-bottom: 16px;
-  }
-  .section-card p {
-    font-size: 15px;
-    line-height: 1.75;
-    color: #4A5C4C;
-    margin-bottom: 12px;
-  }
-  .section-card p:last-child { margin-bottom: 0; }
-  .section-card ul {
-    padding-left: 0;
-    list-style: none;
-    margin-top: 8px;
-  }
-  .section-card ul li {
-    font-size: 15px;
-    line-height: 1.7;
-    color: #4A5C4C;
-    padding: 6px 0 6px 28px;
-    position: relative;
-    border-bottom: 1px dashed #E8F0EA;
-  }
-  .section-card ul li:last-child { border-bottom: none; }
-  .section-card ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    font-weight: 700;
-    color: var(--green);
-  }
-  .section-card.yellow ul li::before { color: #C9900D; }
-  .section-card.peach ul li::before { color: var(--peach); }
-  .section-card.blue ul li::before { color: var(--blue); }
+    /* ── nav ── */
+    nav {
+      display: flex; flex-wrap: wrap; justify-content: center;
+      gap: 12px; padding: 0 20px 36px;
+      position: relative; z-index: 10;
+      animation: fadeUp .6s .3s both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    nav a {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1rem;
+      background: white;
+      color: var(--green);
+      border: 3px solid var(--green);
+      border-radius: 50px;
+      padding: 9px 22px;
+      text-decoration: none;
+      transition: all .25s;
+      box-shadow: 0 4px 14px rgba(39,174,96,.15);
+    }
+    nav a:hover, nav a.active {
+      background: var(--green);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(39,174,96,.38);
+    }
 
-  /* INFO BOX */
-  .info-box {
-    background: var(--green-light);
-    border: 1.5px solid #B6E2CC;
-    border-radius: var(--radius-sm);
-    padding: 20px 24px;
-    margin-top: 16px;
-    font-size: 14px;
-    line-height: 1.7;
-    color: var(--green-dark);
-    font-weight: 600;
-  }
+    /* ── main card ── */
+    main {
+      position: relative; z-index: 10;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 20px 80px;
+    }
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      padding: 40px 44px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow);
+      border: 2.5px solid var(--green-lt);
+      animation: popIn .55s cubic-bezier(.34,1.56,.64,1) both;
+    }
+    .card:nth-child(1) { animation-delay: .1s; }
+    .card:nth-child(2) { animation-delay: .2s; }
+    .card:nth-child(3) { animation-delay: .3s; }
+    .card:nth-child(4) { animation-delay: .4s; }
+    .card:nth-child(5) { animation-delay: .5s; }
+    .card:nth-child(6) { animation-delay: .6s; }
+    @keyframes popIn {
+      from { opacity: 0; transform: scale(.88) translateY(24px); }
+      to   { opacity: 1; transform: scale(1) translateY(0); }
+    }
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(39,174,96,.28);
+      transition: all .3s ease;
+    }
 
-  /* FOOTER */
-  footer {
-    background: var(--green-dark);
-    color: var(--white);
-    text-align: center;
-    padding: 32px 24px;
-    font-size: 14px;
-    font-family: 'Nunito', sans-serif;
-  }
-  footer .footer-logo {
-    font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
-    font-size: 20px;
-    margin-bottom: 8px;
-    opacity: .95;
-  }
-  footer p { opacity: .75; font-size: 13px; margin-top: 4px; }
-  footer .footer-links {
-    display: flex;
-    justify-content: center;
-    gap: 24px;
-    margin-top: 16px;
-  }
-  footer .footer-links a {
-    color: rgba(255,255,255,.7);
-    text-decoration: none;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color .2s;
-  }
-  footer .footer-links a:hover { color: var(--white); }
+    .card-icon {
+      font-size: 2.4rem;
+      display: inline-block;
+      margin-bottom: 10px;
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50%      { transform: translateY(-8px); }
+    }
+    .card h2 {
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.55rem;
+      color: var(--green);
+      margin-bottom: 14px;
+    }
+    .card p, .card li {
+      font-size: 1.02rem;
+      line-height: 1.85;
+      color: #2d6a4a;
+      font-weight: 600;
+    }
+    .card ul { padding-left: 22px; margin-top: 8px; }
+    .card ul li { margin-bottom: 8px; }
+    .card ul li::marker { color: var(--green); font-size: 1.2em; }
 
-  @media (max-width: 600px) {
-    .hero h1 { font-size: 28px; }
-    .section-card { padding: 24px 20px; }
-    nav { padding: 14px 20px; }
-    .nav-links { gap: 16px; }
-    .nav-links a { font-size: 13px; }
-  }
-</style>
+    /* ── highlight box ── */
+    .highlight {
+      background: linear-gradient(135deg, #e8f8f0, #d4f0e2);
+      border-left: 5px solid var(--green);
+      border-radius: 14px;
+      padding: 18px 22px;
+      margin-top: 16px;
+      font-weight: 700;
+      color: #1a6940;
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .highlight .hl-icon { font-size: 1.5rem; flex-shrink: 0; margin-top: 2px; }
+
+    /* ── date badge ── */
+    .date-badge {
+      display: inline-block;
+      background: var(--orange);
+      color: white;
+      font-family: 'Fredoka One', cursive;
+      font-size: .9rem;
+      border-radius: 50px;
+      padding: 5px 16px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(243,156,18,.3);
+    }
+
+    /* ── footer ── */
+    footer {
+      position: relative; z-index: 10;
+      text-align: center;
+      padding: 24px 20px 40px;
+      font-family: 'Fredoka One', cursive;
+      font-size: 1.1rem;
+      color: var(--green);
+      animation: fadeUp .6s .8s both;
+    }
+    footer .heart { display: inline-block; animation: heartbeat 1.4s ease-in-out infinite; }
+    @keyframes heartbeat {
+      0%,100% { transform: scale(1); }
+      15%      { transform: scale(1.35); }
+      30%      { transform: scale(1); }
+      45%      { transform: scale(1.18); }
+    }
+
+    /* ── wave bottom ── */
+    .wave-bg {
+      position: fixed; bottom: 0; left: 0; right: 0;
+      pointer-events: none; z-index: 0;
+    }
+
+    @media (max-width: 600px) {
+      .card { padding: 28px 22px; }
+    }
+  </style>
 </head>
 <body>
 
+<!-- Stars -->
+<div class="stars" id="stars"></div>
+
+<!-- Header -->
+<header>
+  <div class="logo-wrap">
+    <img src="Logo_Baby_Mo_Transparant.png" alt="Baby Mo Logo"/>
+  </div>
+  <h1>Kebijakan Privasi 🔒</h1>
+  <p class="sub">Keamanan si Kecil adalah prioritas utama kami ✨</p>
+</header>
+
+<!-- Nav -->
 <nav>
-  <a class="nav-logo" href="https://babymo.id">
-    <span class="logo-dot"></span> Baby Mo
-  </a>
-  <ul class="nav-links">
-    <li><a href="https://babymo.id">Home</a></li>
-    <li><a href="https://babymo.id/about">About</a></li>
-    <li><a href="contact.html">Kontak</a></li>
-    <li><a href="privacy.html" class="active">Privasi</a></li>
-    <li><a href="terms.html">Ketentuan</a></li>
-  </ul>
+  <a href="privacy.html" class="active">🔒 Privasi</a>
+  <a href="terms.html">📜 Ketentuan</a>
+  <a href="contact.html">💌 Kontak</a>
+  <a href="index.html">🏠 Beranda</a>
 </nav>
 
-<div class="hero">
-  <div class="hero-badge">Bismillahirrahmanirrahim</div>
-  <h1>Kebijakan Privasi</h1>
-  <p>Baby Mo berkomitmen menjaga kepercayaan dan privasi setiap pengguna, terutama keluarga dan anak-anak yang menjadi bagian dari komunitas Baby Mo World.</p>
-  <div class="hero-date">Berlaku sejak: 1 Januari 2026</div>
-</div>
-
+<!-- Content -->
 <main>
 
-  <div class="section-card">
-    <div class="section-num">01 — Pendahuluan</div>
-    <h2>Selamat Datang di Baby Mo World</h2>
-    <p>Assalamualaikum, Ayah Bunda dan Teman-teman!</p>
-    <p>Baby Mo ("kami", "kita") adalah platform konten Islami ramah anak yang hadir melalui YouTube, Instagram, TikTok, dan website resmi babymo.id. Kami sangat menghargai kepercayaan Anda kepada kami, terlebih karena konten kami ditujukan untuk si kecil yang Anda cintai.</p>
-    <p>Kebijakan Privasi ini menjelaskan bagaimana kami mengumpulkan, menggunakan, dan melindungi informasi Anda saat berinteraksi dengan konten dan layanan Baby Mo.</p>
-    <div class="info-box">
-      💚 Dengan mengakses konten Baby Mo, Anda menyetujui kebijakan privasi yang tertera pada halaman ini.
+  <div class="card">
+    <span class="date-badge">📅 Berlaku sejak 1 Januari 2026</span>
+    <div class="card-icon">👋</div>
+    <h2>Halo, Para Orang Tua!</h2>
+    <p>
+      Selamat datang di halaman Kebijakan Privasi <strong>Baby Mo</strong> — teman belajar Islami si kecil! 🌙
+      Kami sangat menghormati privasi anak-anak dan keluarga Anda. Halaman ini menjelaskan dengan sederhana
+      bagaimana kami mengelola informasi Anda saat menggunakan layanan Baby Mo.
+    </p>
+    <div class="highlight">
+      <span class="hl-icon">💚</span>
+      <span>Baby Mo dibuat sepenuh hati untuk anak-anak Muslim usia dini. Kami berkomitmen menjaga keamanan mereka di setiap konten yang kami hadirkan.</span>
     </div>
   </div>
 
-  <div class="section-card yellow">
-    <div class="section-num">02 — Informasi yang Dikumpulkan</div>
-    <h2>Data yang Kami Terima</h2>
-    <p>Baby Mo hanya mengumpulkan informasi yang diperlukan untuk memberikan pengalaman terbaik. Informasi tersebut dapat berupa:</p>
+  <div class="card">
+    <div class="card-icon">📊</div>
+    <h2>Informasi yang Kami Kumpulkan</h2>
+    <p>Kami hanya mengumpulkan informasi yang benar-benar diperlukan, yaitu:</p>
     <ul>
-      <li>Nama dan alamat email saat Anda menghubungi kami atau berlangganan newsletter</li>
-      <li>Informasi teknis seperti jenis perangkat, browser, dan halaman yang dikunjungi di babymo.id</li>
-      <li>Pesan dan pertanyaan yang dikirimkan melalui email atau WhatsApp Baby Mo</li>
-      <li>Komentar dan interaksi di platform media sosial Baby Mo (diatur oleh kebijakan masing-masing platform)</li>
-      <li>Data anonim penggunaan website untuk keperluan analitik (melalui Google Analytics)</li>
+      <li>🎬 <strong>Data penggunaan anonim</strong> — seperti video yang ditonton dan durasi menonton, untuk memperbaiki konten kami.</li>
+      <li>📧 <strong>Alamat email</strong> — hanya jika Anda berlangganan newsletter atau menghubungi kami.</li>
+      <li>🌐 <strong>Data teknis</strong> — informasi perangkat dan browser standar melalui YouTube & platform terkait.</li>
+      <li>💬 <strong>Komentar & pesan</strong> — jika Anda berinteraksi di media sosial kami.</li>
     </ul>
-  </div>
-
-  <div class="section-card peach">
-    <div class="section-num">03 — Penggunaan Informasi</div>
-    <h2>Untuk Apa Data Digunakan?</h2>
-    <p>Kami menggunakan informasi yang dikumpulkan semata-mata untuk tujuan yang bermanfaat bagi Anda dan komunitas Baby Mo:</p>
-    <ul>
-      <li>Merespons pertanyaan, saran, dan masukan dari orang tua dan komunitas</li>
-      <li>Meningkatkan kualitas konten Islami yang relevan bagi anak dan keluarga</li>
-      <li>Mengirimkan informasi terbaru tentang konten, kolaborasi, dan kegiatan Baby Mo</li>
-      <li>Memastikan pengalaman website yang aman, nyaman, dan optimal</li>
-      <li>Keperluan riset dan pengembangan konten edukatif untuk anak</li>
-    </ul>
-    <p style="margin-top:14px;">Kami <strong>tidak pernah</strong> menjual, menyewakan, atau membagikan data pribadi Anda kepada pihak ketiga untuk keperluan komersial.</p>
-  </div>
-
-  <div class="section-card blue">
-    <div class="section-num">04 — Perlindungan Anak</div>
-    <h2>Komitmen Kami untuk Anak-anak</h2>
-    <p>Baby Mo diperuntukkan bagi konten anak-anak. Kami sangat serius dalam melindungi privasi anak:</p>
-    <ul>
-      <li>Kami tidak secara sengaja mengumpulkan data pribadi dari anak di bawah usia 13 tahun</li>
-      <li>Seluruh konten dirancang aman dan ramah anak sesuai nilai-nilai Islam</li>
-      <li>Orang tua atau wali yang menemukan data anak terkumpul tanpa izin dapat menghubungi kami untuk penghapusan</li>
-      <li>Kami mendorong orang tua untuk mendampingi anak saat menikmati konten Baby Mo</li>
-    </ul>
-    <div class="info-box" style="background:#E8F4FD; border-color:#B5D4F4; color:#185FA5;">
-      👶 Perlindungan si kecil adalah prioritas utama kami. Konten Baby Mo selalu melalui proses kurasi yang teliti dan penuh kasih sayang.
+    <div class="highlight">
+      <span class="hl-icon">🚫</span>
+      <span>Kami <strong>TIDAK PERNAH</strong> mengumpulkan data pribadi anak-anak secara langsung. Semua konten Baby Mo bebas dari formulir pendaftaran untuk anak.</span>
     </div>
   </div>
 
-  <div class="section-card">
-    <div class="section-num">05 — Cookie & Teknologi Serupa</div>
-    <h2>Penggunaan Cookie</h2>
-    <p>Website babymo.id menggunakan cookie untuk meningkatkan performa dan pengalaman pengguna. Cookie adalah file kecil yang tersimpan di perangkat Anda dan membantu kami memahami cara penggunaan website.</p>
+  <div class="card">
+    <div class="card-icon">🛡️</div>
+    <h2>Bagaimana Kami Melindungi Data Anda</h2>
     <ul>
-      <li>Cookie esensial — diperlukan untuk fungsi dasar website</li>
-      <li>Cookie analitik — membantu kami memahami pola kunjungan (anonim)</li>
-      <li>Cookie preferensi — mengingat pengaturan yang Anda pilih</li>
+      <li>🔐 Semua data dienkripsi menggunakan standar keamanan industri.</li>
+      <li>🙅 Kami tidak menjual, menyewakan, atau berbagi data pribadi kepada pihak ketiga untuk tujuan iklan.</li>
+      <li>👀 Akses data dibatasi hanya untuk tim Baby Mo yang berwenang.</li>
+      <li>🗑️ Data yang tidak lagi diperlukan akan dihapus secara berkala.</li>
     </ul>
-    <p style="margin-top:12px;">Anda dapat menonaktifkan cookie melalui pengaturan browser kapan saja, namun beberapa fitur website mungkin tidak berfungsi optimal.</p>
   </div>
 
-  <div class="section-card yellow">
-    <div class="section-num">06 — Hak Anda</div>
-    <h2>Hak Pengguna Baby Mo</h2>
-    <p>Sebagai pengguna, Anda memiliki hak penuh atas data pribadi Anda:</p>
+  <div class="card">
+    <div class="card-icon">📺</div>
+    <h2>Platform Pihak Ketiga</h2>
+    <p>
+      Konten Baby Mo tersedia melalui <strong>YouTube</strong>, <strong>Instagram</strong>, dan platform lainnya.
+      Platform-platform tersebut memiliki kebijakan privasi masing-masing. Kami mendorong orang tua untuk:
+    </p>
     <ul>
-      <li>Hak untuk mengetahui data apa saja yang kami simpan tentang Anda</li>
-      <li>Hak untuk meminta koreksi data yang tidak akurat</li>
-      <li>Hak untuk meminta penghapusan data pribadi Anda dari sistem kami</li>
-      <li>Hak untuk menarik persetujuan penggunaan data kapan saja</li>
-      <li>Hak untuk mengajukan keluhan terkait penggunaan data Anda</li>
+      <li>📖 Membaca kebijakan privasi YouTube Kids / YouTube.</li>
+      <li>⚙️ Menggunakan fitur Parental Controls di perangkat anak.</li>
+      <li>🤝 Mendampingi anak saat menonton konten online.</li>
     </ul>
-    <p style="margin-top:12px;">Untuk menggunakan hak-hak di atas, silakan hubungi kami melalui email <strong>babymo.studio@gmail.com</strong> atau WhatsApp <strong>0823-1597-1002</strong>.</p>
   </div>
 
-  <div class="section-card peach">
-    <div class="section-num">07 — Pembaruan Kebijakan</div>
-    <h2>Perubahan Kebijakan Privasi</h2>
-    <p>Baby Mo dapat memperbarui Kebijakan Privasi ini dari waktu ke waktu untuk mencerminkan perubahan layanan atau regulasi yang berlaku. Setiap perubahan signifikan akan kami informasikan melalui konten media sosial kami atau notifikasi di website.</p>
-    <p>Kami menganjurkan Anda untuk meninjau halaman ini secara berkala. Tanggal "Berlaku sejak" di bagian atas halaman menunjukkan pembaruan terakhir kebijakan ini.</p>
-    <p>Pertanyaan mengenai kebijakan privasi? Silakan hubungi kami — kami dengan senang hati membantu! 🌿</p>
+  <div class="card">
+    <div class="card-icon">🍪</div>
+    <h2>Cookie & Teknologi Pelacak</h2>
+    <p>
+      Website ini menggunakan cookie dasar untuk memastikan pengalaman browsing yang nyaman. Cookie ini
+      tidak digunakan untuk melacak perilaku anak-anak atau membuat profil pengguna. Anda bisa menonaktifkan
+      cookie di pengaturan browser Anda kapan saja.
+    </p>
+  </div>
+
+  <div class="card">
+    <div class="card-icon">✉️</div>
+    <h2>Hubungi Kami</h2>
+    <p>Punya pertanyaan tentang privasi? Kami dengan senang hati membantu!</p>
+    <div class="highlight">
+      <span class="hl-icon">💌</span>
+      <span>Kirim email ke: <strong>hello@babymo.id</strong> atau kunjungi halaman <a href="contact.html" style="color:var(--green);">Kontak</a> kami.</span>
+    </div>
   </div>
 
 </main>
 
+<!-- Footer -->
 <footer>
-  <div class="footer-logo">🌿 Baby Mo</div>
-  <p>Lagu Anak & Cerita Islami • babymo.id</p>
-  <p>babymo.studio@gmail.com</p>
-  <div class="footer-links">
-    <a href="https://babymo.id">Home</a>
-    <a href="privacy.html">Privasi</a>
-    <a href="terms.html">Ketentuan</a>
-    <a href="contact.html">Kontak</a>
-  </div>
-  <p style="margin-top:16px; font-size:12px;">© 2026 Baby Mo. Bismillah dalam setiap langkah.</p>
+  Dibuat dengan <span class="heart">💚</span> untuk Si Kecil yang Sholeh & Sholehah 🌙⭐
+  <br/><small style="font-family:'Nunito',sans-serif;font-size:.85rem;color:#5aac7e;font-weight:700;">© 2026 Baby Mo · Semua Hak Dilindungi</small>
 </footer>
 
+<!-- Wave -->
+<svg class="wave-bg" viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg">
+  <path fill="rgba(39,174,96,0.10)" d="M0,60 C240,110 480,10 720,60 C960,110 1200,10 1440,60 L1440,120 L0,120 Z"/>
+</svg>
+
+<script>
+  // Generate random stars
+  const starsEl = document.getElementById('stars');
+  for (let i = 0; i < 50; i++) {
+    const s = document.createElement('div');
+    s.className = 'star';
+    s.style.cssText = `
+      left:${Math.random()*100}%;
+      top:${Math.random()*100}%;
+      --d:${3+Math.random()*4}s;
+      --delay:${Math.random()*5}s;
+      width:${4+Math.random()*8}px;
+      height:${4+Math.random()*8}px;
+      background:${Math.random()>.5?'#ffd700':'#27ae60'};
+    `;
+    starsEl.appendChild(s);
+  }
+</script>
 </body>
 </html>
