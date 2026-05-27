@@ -1,0 +1,68 @@
+name: YouTube sync
+
+# Refresh public/data/videos.json from the YouTube Data API every day,
+# then trigger the regular deploy workflow.
+#
+# Setup:
+#   1. Get a YouTube Data API v3 key from
+#      https://console.cloud.google.com → APIs & Services → Credentials
+#   2. Repo Settings → Secrets and variables → Actions → New repository
+#      secret: name=YOUTUBE_API_KEY, value=<your key>
+#
+# Without the secret, the fetch script writes a fallback file and the
+# site keeps working with current data.
+
+on:
+  schedule:
+    # 05:00 UTC = 12:00 WIB. Once a day is plenty for a small channel.
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: youtube-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Fetch YouTube data
+        env:
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+        run: node scripts/fetch-youtube.mjs
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://babymo.id
+        run: |
+          npm ci
+          npm run build
+
+      - name: Stamp .nojekyll + CNAME on output
+        run: |
+          touch out/.nojekyll
+          echo "babymo.id" > out/CNAME
+
+      - name: Force-push out/ to gh-pages
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          cd out
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -qm "YouTube sync $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          git push --force --quiet \
+            "https://x-access-token:${TOKEN}@github.com/${REPO}" gh-pages

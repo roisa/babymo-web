@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "og": "node scripts/generate-og.mjs",
-    "moments": "node scripts/generate-moments-thumbnails.mjs",
-    "prebuild": "node scripts/generate-og.mjs && node scripts/generate-moments-thumbnails.mjs",
+    "youtube": "node scripts/fetch-youtube.mjs",
+    "prebuild": "node scripts/fetch-youtube.mjs && node scripts/generate-og.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

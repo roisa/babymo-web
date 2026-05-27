@@ -4,7 +4,6 @@ import {
   type Locale,
   isLocale,
   locales,
-  absoluteUrl,
   pathFor,
 } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -12,33 +11,37 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
-import { MomentCard } from "@/components/MomentCard";
+import { VideoCard } from "@/components/video/VideoCard";
 import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
   graph,
   itemListSchema,
 } from "@/lib/seo/schemas";
+import { getAllVideos } from "@/lib/youtube/loader";
 import {
-  getAllMoments,
-  MOMENT_CATEGORIES,
   CATEGORY_LABEL,
-} from "@/lib/content/moments";
+  CATEGORY_ORDER,
+} from "@/lib/youtube/video-overlay";
 
 const COPY = {
   id: {
-    title: "Momen Baby Mo",
+    title: "Tonton Bareng Baby Mo",
     description:
-      "Kurasi singkat momen islami keluarga muslim — video YouTube dan Reels Instagram yang tenang, untuk ditonton bareng anak.",
-    sub: "Bukan feed otomatis. Setiap momen di sini dipilih agar tetap tenang, ramah anak, dan bermanfaat dibawa pulang.",
+      "Kurasi singkat video Baby Mo di YouTube — momen islami yang tenang, untuk ditonton bareng anak.",
+    sub: "Daftar ini diperbarui otomatis setiap hari dari channel @babymo.official.",
     follow: "Ikuti kanal kami:",
+    empty:
+      "Video baru segera hadir di channel @babymo.official. Ikuti dulu agar tidak ketinggalan.",
   },
   en: {
-    title: "Baby Mo Moments",
+    title: "Watch Together with Baby Mo",
     description:
-      "A curated set of calm Islamic family moments — YouTube videos and Instagram reels to watch with your child.",
-    sub: "Not an auto-feed. Every moment here is chosen to stay calm, child-friendly, and worth taking home.",
+      "A curated set of Baby Mo YouTube videos — calm Islamic moments to watch with your child.",
+    sub: "This list refreshes automatically every day from @babymo.official.",
     follow: "Follow our channels:",
+    empty:
+      "New videos coming soon on @babymo.official. Subscribe to stay close.",
   },
 } as const;
 
@@ -72,13 +75,14 @@ export default async function MomenPage({
   const l = locale as Locale;
   const dict = getDictionary(l);
   const c = COPY[l];
-  const all = getAllMoments();
+  const all = getAllVideos();
 
-  // Group by category, ordered as defined in MOMENT_CATEGORIES
-  const byCategory = MOMENT_CATEGORIES.map((cat) => ({
+  const byCategory = CATEGORY_ORDER.map((cat) => ({
     cat,
     label: CATEGORY_LABEL[l][cat],
-    items: all.filter((m) => m.category === cat),
+    items: all.filter(
+      (v) => (v.overlay.category ?? "family-activities") === cat,
+    ),
   })).filter((g) => g.items.length > 0);
 
   return (
@@ -93,7 +97,7 @@ export default async function MomenPage({
         </nav>
         <header className="max-w-2xl">
           <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-            {l === "id" ? "Tonton & Bagikan" : "Watch & Share"}
+            {l === "id" ? "Tonton & Ikuti" : "Watch & Follow"}
           </p>
           <h1 className="tracking-display mt-2 font-serif text-[36px] font-medium leading-[1.1] text-ink sm:text-[44px]">
             {c.title}
@@ -125,26 +129,31 @@ export default async function MomenPage({
           </div>
         </header>
 
-        {/* Category sections */}
-        <div className="mt-14 space-y-16">
-          {byCategory.map((g) => (
-            <section key={g.cat}>
-              <div className="mb-6 flex items-baseline gap-3">
-                <h2 className="font-serif text-2xl font-medium tracking-tight text-ink">
-                  {g.label}
-                </h2>
-                <span className="text-[12.5px] text-whisper">
-                  {g.items.length}
-                </span>
-              </div>
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {g.items.map((m) => (
-                  <MomentCard key={m.slug} moment={m} locale={l} />
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+        {all.length === 0 ? (
+          <div className="mt-14 rounded-[22px] border border-hairline bg-paper-2 p-8 text-center">
+            <p className="text-[15px] leading-relaxed text-whisper">{c.empty}</p>
+          </div>
+        ) : (
+          <div className="mt-14 space-y-16">
+            {byCategory.map((g) => (
+              <section key={g.cat}>
+                <div className="mb-6 flex items-baseline gap-3">
+                  <h2 className="font-serif text-2xl font-medium tracking-tight text-ink">
+                    {g.label}
+                  </h2>
+                  <span className="text-[12.5px] text-whisper">
+                    {g.items.length}
+                  </span>
+                </div>
+                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {g.items.map((v) => (
+                    <VideoCard key={v.id} video={v} locale={l} />
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        )}
       </main>
       <Footer locale={l} currentPath="/momen" />
       <MobileNav locale={l} />
@@ -157,27 +166,22 @@ export default async function MomenPage({
           itemListSchema(
             l,
             c.title,
-            all.map((m) => ({
-              name: m.title[l],
-              url: m.url,
+            all.map((v) => ({
+              name: v.overlay.title?.[l] ?? v.title,
+              url: v.url,
             })),
           ),
-          // VideoObject for each YouTube moment
-          ...all
-            .filter((m) => m.platform.startsWith("youtube"))
-            .map((m) => ({
-              "@type": "VideoObject",
-              name: m.title[l],
-              description: m.caption[l],
-              thumbnailUrl: `https://babymo.id${m.thumbnail}`,
-              uploadDate: m.publishedAt,
-              contentUrl: m.url,
-              embedUrl: m.url,
-              inLanguage: l === "id" ? "id-ID" : "en",
-              duration: m.duration
-                ? `PT${m.duration.split(":")[0]}M${m.duration.split(":")[1]}S`
-                : undefined,
-            })),
+          // VideoObject per video for rich results
+          ...all.map((v) => ({
+            "@type": "VideoObject",
+            name: v.overlay.title?.[l] ?? v.title,
+            description: v.overlay.caption?.[l] ?? v.description.slice(0, 280),
+            thumbnailUrl: v.thumbnail,
+            uploadDate: v.publishedAt,
+            contentUrl: v.url,
+            embedUrl: `https://www.youtube.com/embed/${v.id}`,
+            inLanguage: l === "id" ? "id-ID" : "en",
+          })),
         )}
       />
     </>

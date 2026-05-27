@@ -21,13 +21,12 @@ import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { HeroAura } from "@/components/HeroAura";
 import { AnimatedCount } from "@/components/AnimatedCount";
-import { MomentCard } from "@/components/MomentCard";
+import { VideoSection } from "@/components/video/VideoSection";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
-import { getFeaturedMoments } from "@/lib/content/moments";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -60,7 +59,6 @@ export default async function HomePage({
   const hadiths = allHadith.slice(0, 3);
   const situations = allParenting.slice(0, 3);
   const posts = allPosts.slice(0, 3);
-  const featuredMoments = getFeaturedMoments(3);
   const featured = getBlogPostBySlug("doa-awal-tahun-hijriyah-untuk-anak");
 
   // Pre-split hero title into spans for the word-rise animation
@@ -357,71 +355,10 @@ export default async function HomePage({
           </Reveal>
         </section>
 
-        {/* ── MOMENTS WITH BABY MO ── */}
-        {featuredMoments.length > 0 && (
-          <section className="border-t border-hairline bg-paper">
-            <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
-              <Reveal>
-                <div className="flex flex-wrap items-end justify-between gap-6">
-                  <div className="max-w-xl">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-                      {l === "id" ? "Momen Baby Mo" : "Baby Mo Moments"}
-                    </p>
-                    <h2 className="tracking-display mt-1 font-serif text-3xl font-medium text-ink sm:text-4xl">
-                      {l === "id"
-                        ? "Tumbuh Bareng Keluarga Muslim"
-                        : "Growing with Muslim Families"}
-                    </h2>
-                    <p className="mt-2 text-[15.5px] text-whisper">
-                      {l === "id"
-                        ? "Konten singkat kami di YouTube dan Instagram — momen islami yang tenang, untuk ditonton bareng anak."
-                        : "Our short YouTube and Instagram content — calm Islamic moments to watch with your child."}
-                    </p>
-                  </div>
-                  <Link
-                    href={pathFor(l, "/momen")}
-                    className="tap hidden whitespace-nowrap text-[13.5px] font-semibold text-sage-deep hover:underline sm:inline-flex"
-                  >
-                    {dict.home.viewAll} →
-                  </Link>
-                </div>
-              </Reveal>
-
-              <Reveal stagger>
-                <div className="mt-10 grid gap-4 md:grid-cols-3">
-                  {featuredMoments.map((m) => (
-                    <MomentCard key={m.slug} moment={m} locale={l} />
-                  ))}
-                </div>
-              </Reveal>
-
-              {/* Channel links — subtle trust signal, no follower-count flex */}
-              <Reveal>
-                <div className="mt-8 flex flex-wrap items-center gap-3 text-[13px] text-whisper">
-                  <span>
-                    {l === "id" ? "Ikuti kami di" : "Follow us on"}
-                  </span>
-                  <a
-                    href="https://www.youtube.com/@babymo.official"
-                    target="_blank"
-                    rel="noopener"
-                    className="tap inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-3 py-1 font-semibold text-ink-soft hover:border-sage/40"
-                  >
-                    <span className="text-[#c4302b]">●</span> YouTube
-                  </a>
-                  <a
-                    href="https://www.instagram.com/babymo.official"
-                    target="_blank"
-                    rel="noopener"
-                    className="tap inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-3 py-1 font-semibold text-ink-soft hover:border-sage/40"
-                  >
-                    <span className="text-[#c2185b]">●</span> Instagram
-                  </a>
-                </div>
-              </Reveal>
-            </div>
-          </section>
-        )}
+        {/* ── WATCH TOGETHER WITH BABY MO (auto-fed from YouTube) ── */}
+        <Reveal>
+          <VideoSection locale={l} />
+        </Reveal>
 
         {/* ── FOLLOW & SUPPORT ── */}
         <section className="border-t border-hairline bg-paper-2">
