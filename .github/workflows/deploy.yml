@@ -34,8 +34,9 @@ jobs:
 
       - name: Build (static export)
         env:
-          NEXT_PUBLIC_BASE_PATH: /babymo-web
-          NEXT_PUBLIC_SITE_URL: https://roisa.github.io/babymo-web
+          # Custom domain at apex — served from /, no path prefix.
+          NEXT_PUBLIC_BASE_PATH: ""
+          NEXT_PUBLIC_SITE_URL: https://babymo.id
         run: npm run build
 
       - name: Disable Jekyll on the deployed branch
