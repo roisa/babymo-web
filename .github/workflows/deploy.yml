@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - main
-      - claude/baby-mo-web-optimization-Sj3Nm
   workflow_dispatch:
 
+# Workflow-level permissions (must match deploy-pages requirements)
 permissions:
   contents: read
   pages: write
@@ -19,7 +19,18 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
+      - name: Diagnostic — show runner + workspace
+        run: |
+          echo "::group::Runner & workspace info"
+          echo "Runner OS: $RUNNER_OS"
+          echo "Node version (preinstalled):"
+          node --version || echo "node not yet available"
+          echo "Ref: $GITHUB_REF  SHA: $GITHUB_SHA"
+          echo "::endgroup::"
+
       - name: Checkout
         uses: actions/checkout@v4
 
@@ -30,16 +41,15 @@ jobs:
           cache: npm
 
       - name: Install dependencies
-        run: npm ci || npm install
+        run: npm ci
 
       - name: Build (static export)
         env:
-          # Custom domain at apex — served from /, no path prefix.
           NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_SITE_URL: https://babymo.id
         run: npm run build
 
-      - name: Disable Jekyll on the deployed branch
+      - name: Disable Jekyll on deployed artifact
         run: touch out/.nojekyll
 
       - name: Upload artifact
@@ -50,6 +60,9 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
