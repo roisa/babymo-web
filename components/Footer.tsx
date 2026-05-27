@@ -59,7 +59,7 @@ export function Footer({ locale, currentPath }: Props) {
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-mist pt-6 text-xs text-whisper sm:flex-row sm:items-center">
           <p>© {year} Baby Mo. {dict.footer.rights}</p>
           <p>
-            {locale === "id" ? "Dikembangkan oleh" : "Powered by"}{" "}
+            Powered by{" "}
             <a
               href="https://ibracreative.com"
               target="_blank"
