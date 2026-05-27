@@ -27,12 +27,16 @@ jobs:
           node-version: 22
           cache: npm
 
+      - name: Install OG image tooling
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends librsvg2-bin imagemagick
+
       - run: npm ci
 
       - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_SITE_URL: https://babymo.id
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run build
 
       - name: Stamp .nojekyll + CNAME on output

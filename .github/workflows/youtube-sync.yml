@@ -35,15 +35,14 @@ jobs:
         with:
           node-version: 22
 
-      - name: Fetch YouTube data
-        env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-        run: node scripts/fetch-youtube.mjs
+      - name: Install OG image tooling
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends librsvg2-bin imagemagick
 
       - name: Build static export
         env:
           NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_SITE_URL: https://babymo.id
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: |
           npm ci
           npm run build
