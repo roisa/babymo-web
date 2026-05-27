@@ -33,6 +33,9 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/hadith">{dict.nav.hadith}</FooterLink>
             <FooterLink locale={locale} href="/parenting">{dict.nav.parenting}</FooterLink>
             <FooterLink locale={locale} href="/blog">{dict.nav.blog}</FooterLink>
+            <FooterLink locale={locale} href="/momen">
+              {locale === "id" ? "Momen" : "Moments"}
+            </FooterLink>
             <FooterLink locale={locale} href="/permainan">{dict.nav.games}</FooterLink>
             <FooterLink locale={locale} href="/faq">{dict.nav.faq}</FooterLink>
           </FooterCol>

@@ -12,6 +12,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
 import { Byline } from "@/components/Byline";
 import { MultiplicationKit } from "@/components/MultiplicationKit";
+import { WatchTogether } from "@/components/WatchTogether";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -89,6 +90,8 @@ export default async function BlogDetail({
           className="prose"
           dangerouslySetInnerHTML={{ __html: renderBody(post.body[l], l) }}
         />
+
+        <WatchTogether refKey={`blog/${slug}`} locale={l} />
 
         {post.kit && <MultiplicationKit kit={post.kit} locale={l} />}
       </main>

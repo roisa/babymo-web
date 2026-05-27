@@ -8,6 +8,45 @@ export type DoaSource = {
   grade: Grade;
 };
 
+export type MomentPlatform =
+  | "youtube"
+  | "youtube-shorts"
+  | "ig-post"
+  | "ig-reel";
+
+export type MomentCategory =
+  | "before-sleep"
+  | "morning-routine"
+  | "daily-adab"
+  | "quran-learning"
+  | "ramadan-moments"
+  | "muharram-activities"
+  | "prophet-stories"
+  | "family-activities";
+
+export type Moment = {
+  slug: string;
+  platform: MomentPlatform;
+  /** Canonical external URL (YouTube video, IG post, IG reel) */
+  url: string;
+  /** YouTube video id — required for click-to-load embed; null for IG */
+  youtubeId?: string;
+  /** Path to local thumbnail under public/, e.g. /moments/<slug>.jpg */
+  thumbnail: string;
+  /** Display duration "0:45" or "12:30". Optional. */
+  duration?: string;
+  title: Record<Locale, string>;
+  /** Short caption — appears under title on cards (<= 120 chars) */
+  caption: Record<Locale, string>;
+  category: MomentCategory;
+  /** Pin to "Featured" rail on homepage */
+  featured?: boolean;
+  /** Slugs of related doa/hadith/blog/parenting for cross-linking */
+  related?: string[];
+  /** ISO date used for sorting; falls back to publish time of the content. */
+  publishedAt: string;
+};
+
 export type Person = {
   slug: string;
   name: string;

@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
 import { Byline } from "@/components/Byline";
+import { WatchTogether } from "@/components/WatchTogether";
 import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
 import { DoaCard } from "@/components/DoaCard";
@@ -185,6 +186,8 @@ export default async function DoaDetail({
             </div>
           </section>
         )}
+
+        <WatchTogether refKey={`doa/${slug}`} locale={l} />
       </main>
 
       <Footer locale={l} currentPath={`/doa/${slug}`} />
