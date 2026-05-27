@@ -1,163 +1,380 @@
 // Generates a unique 1200x630 OG image for every blog post in both locales.
 //
-// Reads lib/content/blog.ts directly via a tiny parse-and-eval trick (we
-// only need slug + title, no MDX runtime). Emits PNGs into
-// public/og/blog/{locale}/{slug}.jpg. Runs before `next build` so the
-// images are present in the static export.
+// Renders via SVG → PNG (rsvg-convert) for reliable text rendering.
+// SVG gives us proper typography, brand colors, and wrapping control.
 //
-// Renders via ImageMagick using a brand-aligned template:
-// - Sage gradient background
-// - Big serif title (Newsreader-ish via DejaVu Serif as fallback)
-// - Small "Baby Mo" mark + URL
-// - Decorative subtle dot pattern
+// Design:
+// - Cream paper background with subtle paper texture
+// - Sage gradient accent in the corner
+// - Small Baby Mo brand mark (top-left)
+// - Large serif title (auto-wraps to 2-4 lines)
+// - Optional excerpt snippet below title
+// - Domain + reading-time strip at bottom
+// - Small mascot watermark (bottom-right, semi-transparent)
+//
+// Idempotent — already-generated files are skipped unless --force passed.
 
 import { execSync } from "node:child_process";
-import { readFileSync, writeFileSync, mkdirSync, existsSync } from "node:fs";
+import {
+  readFileSync,
+  writeFileSync,
+  mkdirSync,
+  existsSync,
+  rmSync,
+} from "node:fs";
 import { join, dirname } from "node:path";
 
 const ROOT = process.cwd();
 const BLOG_FILE = join(ROOT, "lib/content/blog.ts");
 const OUT_DIR = join(ROOT, "public/og/blog");
-const LOGO = join(ROOT, "public/assets/logo-192.png");
+const FORCE = process.argv.includes("--force");
+
+const W = 1200;
+const H = 630;
+
+// Brand tokens — mirror globals.css
+const C = {
+  paper: "#FBFAF6",
+  paper2: "#F4F2EC",
+  ink: "#0E1213",
+  inkSoft: "#1B1F1F",
+  sage: "#5F8B5A",
+  sageDeep: "#3B5A38",
+  sageSoft: "#E8EFE6",
+  clay: "#C9A55B",
+  claySoft: "#F5EFE2",
+  hairline: "#E5E2D9",
+  whisper: "#6B7068",
+};
 
 // ────────────────────────────────────────────────────────────────────
-// Parse lib/content/blog.ts — extract slug + ID/EN titles per post.
-// Source-of-truth pattern: blogPosts: BlogPost[] = [{ slug: '...',
-// title: { id: '...', en: '...' }, ... }];
-// We do a regex pass instead of importing TS (no runtime).
+// Parse blog.ts for {slug, title.id, title.en, excerpt.id, excerpt.en,
+// tags, readingTimeMin}. Lightweight regex pass — we never eval TS.
 // ────────────────────────────────────────────────────────────────────
 const src = readFileSync(BLOG_FILE, "utf8");
 
 function extractPosts(s) {
   const posts = [];
-  // Find every slug + title.id + title.en triple
   const slugRe = /slug:\s*"([a-z0-9-]+)"/g;
   let m;
   while ((m = slugRe.exec(s))) {
     const slug = m[1];
-    // Look in a 1500-char window after the slug for title.id and title.en
-    const window = s.slice(m.index, m.index + 2000);
-    const idMatch = window.match(/id:\s*"((?:[^"\\]|\\.)*)"/);
-    const enMatch = window.match(/en:\s*"((?:[^"\\]|\\.)*)"/);
-    if (!idMatch || !enMatch) continue;
-    // The first id/en pair after slug is the title block
+    const windowSize = 3000;
+    const win = s.slice(m.index, m.index + windowSize);
+
+    // title.id and title.en — first pair after slug
+    const titleBlock = win.match(/title:\s*\{([^}]+)\}/);
+    if (!titleBlock) continue;
+    const tid = titleBlock[1].match(/id:\s*"((?:[^"\\]|\\.)*)"/);
+    const ten = titleBlock[1].match(/en:\s*"((?:[^"\\]|\\.)*)"/);
+    if (!tid || !ten) continue;
+
+    // excerpt.id and excerpt.en
+    let eid = "", een = "";
+    const excerptBlock = win.match(/excerpt:\s*\{([^}]+)\}/);
+    if (excerptBlock) {
+      const x1 = excerptBlock[1].match(/id:\s*"((?:[^"\\]|\\.)*)"/);
+      const x2 = excerptBlock[1].match(/en:\s*"((?:[^"\\]|\\.)*)"/);
+      eid = x1 ? unescape(x1[1]) : "";
+      een = x2 ? unescape(x2[1]) : "";
+    }
+
+    // First tag (eyebrow category)
+    const tagsMatch = win.match(/tags:\s*\[\s*"([a-z0-9-]+)"/);
+    const tag = tagsMatch ? tagsMatch[1] : "";
+
+    // Reading time
+    const rtMatch = win.match(/readingTimeMin:\s*(\d+)/);
+    const rt = rtMatch ? parseInt(rtMatch[1], 10) : 0;
+
     posts.push({
       slug,
-      id: idMatch[1].replace(/\\"/g, '"'),
-      en: enMatch[1].replace(/\\"/g, '"'),
+      id: unescape(tid[1]),
+      en: unescape(ten[1]),
+      excerptId: eid,
+      excerptEn: een,
+      tag,
+      rt,
     });
   }
   return posts;
 }
 
-const posts = extractPosts(src);
-console.log(`[og] Found ${posts.length} blog posts`);
-
-mkdirSync(join(OUT_DIR, "id"), { recursive: true });
-mkdirSync(join(OUT_DIR, "en"), { recursive: true });
-
-// ────────────────────────────────────────────────────────────────────
-// Render one OG image via ImageMagick `magick`/`convert`.
-// Card structure (1200x630):
-//   - Cream gradient background (#FBFAF6 → #F5EFE2)
-//   - Sage accent block on left edge
-//   - Eyebrow "BABY MO" + serif title centered-left
-//   - Logo bottom-right
-//   - babymo.id URL bottom-left
-// ────────────────────────────────────────────────────────────────────
-
-function escapeText(s) {
-  // Magick @-syntax safe: backslash quotes, no shell interpolation
-  return s.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
+function unescape(s) {
+  return s.replace(/\\"/g, '"').replace(/\\n/g, "\n");
 }
 
-function generate(slug, title, locale) {
-  const out = join(OUT_DIR, locale, `${slug}.jpg`);
-  if (existsSync(out)) return; // idempotent
-
-  mkdirSync(dirname(out), { recursive: true });
-
-  // Wrap title into 2–3 lines manually (rough heuristic; magick does its
-  // own line-wrapping but we cap at 75 chars per line by inserting \n).
-  const wrapped = wrapTitle(title, 32);
-
-  // Write title to temp file (handles unicode safely)
-  const titleFile = join(ROOT, ".og-title.txt");
-  writeFileSync(titleFile, wrapped, "utf8");
-
-  // Compose the image with magick
-  const cmd = [
-    "convert",
-    "-size 1200x630",
-    "gradient:'#FBFAF6'-'#ECEAE2'",
-    // Sage accent bar on the left
-    "-fill '#5F8B5A'",
-    "-draw 'rectangle 0,0 8,630'",
-    // Soft sage circle, top-right
-    "-fill '#E8EFE6' -draw 'circle 1050,90 1050,200'",
-    // Clay circle, bottom-left (small)
-    "-fill '#F5EFE2' -draw 'circle 90,560 90,610'",
-    // Eyebrow label
-    "-font DejaVu-Sans-Bold -pointsize 22 -fill '#3B5A38'",
-    `-draw "text 80,130 'BABY MO · ${locale === "id" ? "PARENTING ISLAMI" : "ISLAMIC PARENTING"}'"`,
-    // Main title — serif, large, centered around y=300
-    `-font DejaVu-Serif -pointsize 56 -fill '#0E1213' -size 1040x340`,
-    `caption:@"${escapeText(titleFile)}"`,
-    "-gravity NorthWest -geometry +80+170 -composite",
-    // Logo bottom-right
-    `\\( "${LOGO}" -resize 80x80 \\) -gravity SouthEast -geometry +60+50 -composite`,
-    // URL bottom-left
-    "-font DejaVu-Sans -pointsize 22 -fill '#6B7068'",
-    `-draw "text 80,580 'babymo.id'"`,
-    "-quality 88",
-    `"${out}"`,
-  ].join(" ");
-
-  try {
-    execSync(cmd, { stdio: "pipe" });
-  } catch (e) {
-    // Fallback: simpler one-line render if caption@file path fails
-    const fallback = [
-      "convert",
-      "-size 1200x630",
-      "gradient:'#FBFAF6'-'#ECEAE2'",
-      "-fill '#5F8B5A' -draw 'rectangle 0,0 8,630'",
-      "-font DejaVu-Sans-Bold -pointsize 22 -fill '#3B5A38'",
-      `-draw "text 80,130 'BABY MO'"`,
-      `-font DejaVu-Serif -pointsize 44 -fill '#0E1213'`,
-      `-size 1040x300 caption:"${escapeText(title)}"`,
-      "-gravity NorthWest -geometry +80+170 -composite",
-      `\\( "${LOGO}" -resize 80x80 \\) -gravity SouthEast -geometry +60+50 -composite`,
-      "-font DejaVu-Sans -pointsize 22 -fill '#6B7068'",
-      `-draw "text 80,580 'babymo.id'"`,
-      "-quality 88",
-      `"${out}"`,
-    ].join(" ");
-    execSync(fallback, { stdio: "pipe" });
-  }
+// XML-escape for SVG attribute / text content
+function xe(s) {
+  return s
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
 }
 
-function wrapTitle(t, width) {
-  const words = t.split(/\s+/);
+// Rough char-width-based wrap. SVG doesn't auto-wrap; we calculate.
+// Uses character count heuristic — good enough for our brand fonts.
+function wrap(text, maxCharsPerLine, maxLines) {
+  const words = text.split(/\s+/).filter(Boolean);
   const lines = [];
   let cur = "";
   for (const w of words) {
-    if ((cur + " " + w).trim().length > width) {
-      if (cur) lines.push(cur);
+    if (lines.length === maxLines - 1) {
+      // Last line — keep packing then ellipsize if overrunning
+      const candidate = cur ? cur + " " + w : w;
+      if (candidate.length > maxCharsPerLine - 1) {
+        cur = (cur + " …").trim();
+        break;
+      }
+      cur = candidate;
+    } else if ((cur + " " + w).trim().length > maxCharsPerLine) {
+      lines.push(cur);
       cur = w;
     } else {
       cur = (cur + " " + w).trim();
     }
   }
   if (cur) lines.push(cur);
-  return lines.slice(0, 4).join("\n");
+  return lines.slice(0, maxLines);
 }
 
+const TAG_LABEL_ID = {
+  muharram: "MUHARRAM",
+  "tahun-baru-hijriyah": "TAHUN BARU HIJRIYAH",
+  dzulhijjah: "DZULHIJJAH",
+  "idul-adha": "IDUL ADHA",
+  asyura: "ASYURA",
+  hijrah: "HIJRAH",
+  sholat: "SHOLAT",
+  doa: "DOA HARIAN",
+  hijaiyah: "HIJAIYAH",
+  parenting: "PARENTING",
+  saudara: "SAUDARA",
+  adab: "ADAB",
+  akhlak: "AKHLAK",
+  masjid: "MASJID",
+  "cerita-nabi": "KISAH NABI",
+  "kisah-nabi": "KISAH NABI",
+  dzikir: "DZIKIR",
+  emosi: "EMOSI",
+  sunnah: "SUNNAH",
+  perlindungan: "PERLINDUNGAN",
+  rutinitas: "RUTINITAS",
+  edukasi: "EDUKASI",
+  tarbiyah: "TARBIYAH",
+  identitas: "IDENTITAS",
+  "tujuh-tahun": "USIA 7 TAHUN",
+  balita: "BALITA",
+  "ibadah-musiman": "IBADAH MUSIMAN",
+  puasa: "PUASA",
+  "hijaiyah-doa": "DOA HARIAN",
+  "sejarah-islam": "SEJARAH ISLAM",
+};
+
+const TAG_LABEL_EN = {
+  muharram: "MUHARRAM",
+  "tahun-baru-hijriyah": "HIJRI NEW YEAR",
+  dzulhijjah: "DHUL HIJJAH",
+  "idul-adha": "EID AL-ADHA",
+  asyura: "ASYURA",
+  hijrah: "HIJRAH",
+  sholat: "PRAYER",
+  doa: "DAILY DUAS",
+  hijaiyah: "ARABIC ALPHABET",
+  parenting: "PARENTING",
+  saudara: "SIBLINGS",
+  adab: "MANNERS",
+  akhlak: "CHARACTER",
+  masjid: "MOSQUE",
+  "cerita-nabi": "PROPHET STORIES",
+  "kisah-nabi": "PROPHET STORIES",
+  dzikir: "DHIKR",
+  emosi: "EMOTION",
+  sunnah: "SUNNAH",
+  perlindungan: "PROTECTION",
+  rutinitas: "ROUTINE",
+  edukasi: "EDUCATION",
+  tarbiyah: "UPBRINGING",
+  identitas: "IDENTITY",
+  "tujuh-tahun": "AGE SEVEN",
+  balita: "TODDLER",
+  "ibadah-musiman": "SEASONAL",
+  puasa: "FASTING",
+  "hijaiyah-doa": "DAILY DUAS",
+  "sejarah-islam": "ISLAMIC HISTORY",
+};
+
+const STRINGS = {
+  id: {
+    brand: "BABY MO",
+    minRead: "menit baca",
+    domain: "babymo.id",
+  },
+  en: {
+    brand: "BABY MO",
+    minRead: "min read",
+    domain: "babymo.id",
+  },
+};
+
+// ────────────────────────────────────────────────────────────────────
+// Build the SVG markup for one card
+// ────────────────────────────────────────────────────────────────────
+function svgFor({ title, excerpt, tag, rt }, locale) {
+  const S = STRINGS[locale];
+  const eyebrowTag =
+    (locale === "id" ? TAG_LABEL_ID : TAG_LABEL_EN)[tag] ?? tag.toUpperCase();
+  const eyebrow = `${S.brand} · ${eyebrowTag}`;
+
+  const titleLines = wrap(title, 26, 4);
+  const titleLineHeight = 78;
+  const titleStartY = 220;
+
+  // Position excerpt below the title's actual height
+  const excerptStartY = titleStartY + titleLines.length * titleLineHeight + 32;
+  const excerptLines = excerpt
+    ? wrap(excerpt, 60, 2)
+    : [];
+
+  // Determine reading time string
+  const rtStr = rt ? `${rt} ${S.minRead}` : "";
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="${C.paper}"/>
+      <stop offset="100%" stop-color="${C.paper2}"/>
+    </linearGradient>
+    <radialGradient id="sage-aura" cx="100%" cy="0%" r="60%">
+      <stop offset="0%" stop-color="${C.sageSoft}" stop-opacity="1"/>
+      <stop offset="100%" stop-color="${C.sageSoft}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="clay-aura" cx="0%" cy="100%" r="50%">
+      <stop offset="0%" stop-color="${C.claySoft}" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="${C.claySoft}" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="${C.hairline}" fill-opacity="0.7"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <rect width="${W}" height="${H}" fill="url(#dots)"/>
+  <rect width="${W}" height="${H}" fill="url(#sage-aura)"/>
+  <rect width="${W}" height="${H}" fill="url(#clay-aura)"/>
+
+  <!-- Sage accent bar on the left edge -->
+  <rect x="0" y="0" width="10" height="${H}" fill="${C.sage}"/>
+
+  <!-- Sage corner mark (decorative) -->
+  <circle cx="${W - 90}" cy="90" r="120" fill="${C.sageSoft}" opacity="0.6"/>
+  <circle cx="${W - 90}" cy="90" r="60" fill="${C.sage}" opacity="0.18"/>
+
+  <!-- Eyebrow -->
+  <text x="80" y="120"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="22" letter-spacing="4"
+        fill="${C.sageDeep}">${xe(eyebrow)}</text>
+
+  <!-- Serif accent rule under eyebrow -->
+  <line x1="80" y1="148" x2="140" y2="148" stroke="${C.sage}" stroke-width="3"/>
+
+  <!-- Title — large serif, multi-line -->
+  ${titleLines
+    .map(
+      (line, i) =>
+        `<text x="80" y="${titleStartY + i * titleLineHeight}"
+        font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
+        font-weight="500" font-size="64" fill="${C.ink}"
+        letter-spacing="-1">${xe(line)}</text>`,
+    )
+    .join("\n  ")}
+
+  <!-- Excerpt — sans, smaller, two lines -->
+  ${excerptLines
+    .map(
+      (line, i) =>
+        `<text x="80" y="${excerptStartY + i * 36}"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="400" font-size="26" fill="${C.whisper}">${xe(line)}</text>`,
+    )
+    .join("\n  ")}
+
+  <!-- Bottom strip: domain (left) + reading time (right) -->
+  <line x1="80" y1="${H - 96}" x2="${W - 80}" y2="${H - 96}"
+        stroke="${C.hairline}" stroke-width="1"/>
+  <text x="80" y="${H - 60}"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="600" font-size="22" fill="${C.inkSoft}">
+    ${xe(S.domain)}
+  </text>
+  ${
+    rtStr
+      ? `<text x="${W - 80}" y="${H - 60}" text-anchor="end"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="400" font-size="22" fill="${C.whisper}">${xe(rtStr)}</text>`
+      : ""
+  }
+</svg>`;
+}
+
+// ────────────────────────────────────────────────────────────────────
+// Main
+// ────────────────────────────────────────────────────────────────────
+const posts = extractPosts(src);
+console.log(`[og] Found ${posts.length} blog posts`);
+
+mkdirSync(join(OUT_DIR, "id"), { recursive: true });
+mkdirSync(join(OUT_DIR, "en"), { recursive: true });
+
 let count = 0;
+let skipped = 0;
+
+const tmpSvg = join(ROOT, ".og-tmp.svg");
+
 for (const p of posts) {
   for (const locale of ["id", "en"]) {
-    generate(p.slug, p[locale], locale);
+    const out = join(OUT_DIR, locale, `${p.slug}.jpg`);
+    if (existsSync(out) && !FORCE) {
+      skipped++;
+      continue;
+    }
+    mkdirSync(dirname(out), { recursive: true });
+    const svg = svgFor(
+      {
+        title: locale === "id" ? p.id : p.en,
+        excerpt: locale === "id" ? p.excerptId : p.excerptEn,
+        tag: p.tag,
+        rt: p.rt,
+      },
+      locale,
+    );
+    writeFileSync(tmpSvg, svg, "utf8");
+
+    // Rasterize to PNG first (rsvg-convert), then encode as JPEG with convert
+    const tmpPng = join(ROOT, ".og-tmp.png");
+    execSync(
+      `rsvg-convert -w ${W} -h ${H} -o "${tmpPng}" "${tmpSvg}"`,
+      { stdio: "pipe" },
+    );
+    execSync(
+      `convert "${tmpPng}" -quality 88 -interlace plane "${out}"`,
+      { stdio: "pipe" },
+    );
+
     count++;
   }
 }
-console.log(`[og] Generated ${count} images into ${OUT_DIR}`);
+
+// Clean up
+try {
+  rmSync(tmpSvg, { force: true });
+  rmSync(join(ROOT, ".og-tmp.png"), { force: true });
+} catch (_) {}
+
+console.log(
+  `[og] Generated ${count} images (skipped ${skipped} cached) into ${OUT_DIR}`,
+);
