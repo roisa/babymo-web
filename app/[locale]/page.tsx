@@ -15,6 +15,8 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { DoaCard } from "@/components/DoaCard";
+import { HadithCard } from "@/components/HadithCard";
+import { SituationCard } from "@/components/SituationCard";
 import { JsonLd } from "@/components/JsonLd";
 import {
   faqSchema,
@@ -22,7 +24,9 @@ import {
   itemListSchema,
 } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
-import { getAllBlogPosts } from "@/lib/content/blog";
+import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
+import { getAllHadith } from "@/lib/content/hadith";
+import { getAllParenting } from "@/lib/content/parenting";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -48,7 +52,10 @@ export default async function HomePage({
   const l = locale as Locale;
   const dict = getDictionary(l);
   const doas = getAllDoa().slice(0, 4);
+  const hadiths = getAllHadith().slice(0, 3);
+  const situations = getAllParenting().slice(0, 3);
   const posts = getAllBlogPosts().slice(0, 3);
+  const featured = getBlogPostBySlug("10-hari-dzulhijjah-bareng-anak");
 
   return (
     <>
@@ -101,6 +108,38 @@ export default async function HomePage({
           </div>
         </section>
 
+        {/* ── Featured (seasonal) ── */}
+        {featured && (
+          <section className="mx-auto max-w-6xl px-5 pb-2 sm:px-7">
+            <Link
+              href={pathFor(l, `/blog/${featured.slug}`)}
+              className="tap group block overflow-hidden rounded-[28px] border border-hairline bg-paper transition hover:border-sage/40"
+            >
+              <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
+                <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-clay-soft text-clay sm:flex">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+                    <path d="M12 2a7 7 0 1 0 7 7c0-.3 0-.6-.1-.9A5.5 5.5 0 0 1 12 2Z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                    {l === "id" ? "Sedang berlangsung" : "Happening now"} · Dzulhijjah 1447
+                  </p>
+                  <h2 className="mt-1.5 font-serif text-[20px] font-medium leading-snug text-ink group-hover:text-sage-deep sm:text-[22px]">
+                    {featured.title[l]}
+                  </h2>
+                  <p className="mt-1 text-[14px] leading-relaxed text-whisper">
+                    {featured.excerpt[l]}
+                  </p>
+                </div>
+                <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-sage-deep sm:inline">
+                  {l === "id" ? "Baca panduan →" : "Read guide →"}
+                </span>
+              </div>
+            </Link>
+          </section>
+        )}
+
         {/* ── Values strip ── */}
         <section className="border-t border-hairline bg-paper-2">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
@@ -143,6 +182,44 @@ export default async function HomePage({
           <div className="mt-10 grid gap-5 md:grid-cols-2">
             {doas.map((d) => (
               <DoaCard key={d.slug} doa={d} locale={l} />
+            ))}
+          </div>
+        </section>
+
+        {/* ── Hadith sampler ── */}
+        <section className="border-t border-hairline bg-paper-2">
+          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
+            <SectionHead
+              title={dict.nav.hadith}
+              sub={
+                l === "id"
+                  ? "Hadith pilihan dengan catatan penerapan untuk orang tua."
+                  : "Curated hadith with applied parenting notes."
+              }
+              viewAll={{ href: pathFor(l, "/hadith"), label: dict.home.viewAll }}
+            />
+            <div className="mt-10 grid gap-4 md:grid-cols-3">
+              {hadiths.map((h) => (
+                <HadithCard key={h.slug} hadith={h} locale={l} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Parenting situations sampler ── */}
+        <section className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
+          <SectionHead
+            title={dict.nav.parenting}
+            sub={
+              l === "id"
+                ? "Panduan praktis untuk situasi yang sering dihadapi keluarga muslim."
+                : "Practical guides for situations Muslim families face often."
+            }
+            viewAll={{ href: pathFor(l, "/parenting"), label: dict.home.viewAll }}
+          />
+          <div className="mt-10 grid gap-4 md:grid-cols-3">
+            {situations.map((p) => (
+              <SituationCard key={p.slug} situation={p} locale={l} />
             ))}
           </div>
         </section>
