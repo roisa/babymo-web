@@ -1,5 +1,8 @@
 import { MomentCard } from "./MomentCard";
-import { getMomentsRelatedTo } from "@/lib/content/moments";
+import {
+  getMomentsRelatedTo,
+  WATCH_TOGETHER_ENABLED,
+} from "@/lib/content/moments";
 import type { Locale } from "@/lib/i18n/config";
 
 type Props = {
@@ -12,12 +15,16 @@ type Props = {
 
 /**
  * Embeddable block for article / doa / parenting detail pages.
- * Looks up moments whose `related` array contains the refKey, then
- * renders them as editorial cards. Silent if none match — so authors
- * can always include <WatchTogether refKey="..."/> and it only appears
- * when moments are curated for that entity.
+ * Hidden globally while the moments library is small —
+ * see WATCH_TOGETHER_ENABLED in lib/content/moments.ts.
+ *
+ * Even when enabled, silent if no moment references the refKey —
+ * so authors can always include <WatchTogether refKey="..."/> and
+ * it only appears when there's a real video to surface.
  */
 export function WatchTogether({ refKey, locale, heading }: Props) {
+  if (!WATCH_TOGETHER_ENABLED) return null;
+
   const moments = getMomentsRelatedTo(refKey).slice(0, 3);
   if (moments.length === 0) return null;
 
