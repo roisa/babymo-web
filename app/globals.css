@@ -1,0 +1,95 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────
+   Baby Mo design tokens — calm parenting platform
+   See: docs Phase 5
+   ─────────────────────────────────────────────── */
+@theme {
+  --color-ink: #0E1213;
+  --color-paper: #FAFAF7;
+  --color-sage: #5F8B5A;
+  --color-sage-deep: #3B5A38;
+  --color-sage-soft: #E8EFE6;
+  --color-clay: #C9A55B;
+  --color-clay-soft: #F5EFE2;
+  --color-mist: #ECEAE2;
+  --color-whisper: #6B7068;
+
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  --font-arabic: var(--font-arabic), "Noto Naskh Arabic", "Amiri", serif;
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reading defaults for long-form content */
+.prose {
+  font-size: 1.0625rem;
+  line-height: 1.75;
+  color: var(--color-ink);
+  max-width: 42rem;
+}
+.prose > * + * { margin-top: 1.1em; }
+.prose h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-top: 2em;
+  margin-bottom: 0.4em;
+  color: var(--color-ink);
+}
+.prose h3 {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em;
+}
+.prose p, .prose li { color: var(--color-ink); }
+.prose strong { color: var(--color-ink); font-weight: 600; }
+.prose em { color: var(--color-sage-deep); font-style: italic; }
+.prose a {
+  color: var(--color-sage-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in oklab, var(--color-sage-deep), transparent 60%);
+}
+.prose a:hover { text-decoration-color: currentColor; }
+.prose ul, .prose ol { padding-left: 1.4em; }
+.prose li { margin-top: 0.4em; }
+.prose blockquote {
+  border-left: 3px solid var(--color-clay);
+  padding-left: 1em;
+  font-style: italic;
+  color: var(--color-whisper);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-sage);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
