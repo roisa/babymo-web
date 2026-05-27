@@ -481,7 +481,266 @@ export const doaList: Doa[] = [
     },
     ages: [4, 5, 6, 7, 8],
     situations: ["belajar", "sekolah"],
+    related: ["setelah-belajar"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "setelah-belajar",
+    arabic:
+      "اللَّهُمَّ إِنِّي أَسْأَلُكَ عِلْمًا نَافِعًا وَرِزْقًا طَيِّبًا وَعَمَلًا مُتَقَبَّلًا",
+    transliteration:
+      "Allahumma inni as'aluka 'ilman nafi'an wa rizqan thayyiban wa 'amalan mutaqabbalan",
+    title: {
+      id: "Doa Setelah Belajar",
+      en: "Dua After Studying",
+    },
+    translation: {
+      id: "Ya Allah, sungguh aku memohon kepada-Mu ilmu yang bermanfaat, rezeki yang baik, dan amal yang diterima.",
+      en: "O Allah, I ask You for beneficial knowledge, wholesome provision, and accepted deeds.",
+    },
+    context: {
+      id: "Dibaca anak setelah selesai belajar — mengingat bahwa ilmu adalah pemberian Allah yang harus disyukuri.",
+      en: "Read after finishing study — a reminder that knowledge is a gift from Allah to be received with gratitude.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Ibnu Majah 925",
+      grade: "sahih",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["belajar", "sekolah", "syukur"],
+    related: ["sebelum-belajar"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "selesai-wudhu",
+    arabic:
+      "أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ",
+    transliteration:
+      "Asyhadu an la ilaha illallah wahdahu la syarika lah, wa asyhadu anna Muhammadan 'abduhu wa rasuluh",
+    title: {
+      id: "Doa Selesai Wudhu",
+      en: "Dua After Ablution",
+    },
+    translation: {
+      id: "Aku bersaksi bahwa tiada Tuhan selain Allah, Yang Maha Esa, tidak ada sekutu bagi-Nya. Dan aku bersaksi bahwa Muhammad adalah hamba-Nya dan utusan-Nya.",
+      en: "I bear witness that there is no god but Allah, Alone, without partner. And I bear witness that Muhammad is His servant and messenger.",
+    },
+    context: {
+      id: "Dibaca anak segera setelah selesai berwudhu — Rasulullah ﷺ menjanjikan delapan pintu surga terbuka untuk yang membacanya.",
+      en: "Recited immediately after completing wudu — the Prophet ﷺ promised that the eight gates of paradise open for the one who says it.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Muslim 234",
+      grade: "sahih",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["wudhu", "sholat"],
+    related: ["mendengar-adzan"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "doa-pagi",
+    arabic:
+      "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ، وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    transliteration:
+      "Bismillahilladzi la yadhurru ma'asmihi syai'un fil-ardhi wa la fis-sama'i, wa huwas-sami'ul-'alim",
+    title: {
+      id: "Doa Pagi (Perlindungan)",
+      en: "Morning Dua (Protection)",
+    },
+    translation: {
+      id: "Dengan nama Allah yang dengan menyebut nama-Nya, segala sesuatu di bumi dan di langit tidak akan memberi mudharat. Dan Dia-lah Yang Maha Mendengar lagi Maha Mengetahui.",
+      en: "In the name of Allah, with whose name nothing on earth or in heaven can do harm. He is the All-Hearing, the All-Knowing.",
+    },
+    context: {
+      id: "Dibaca 3 kali pada pagi hari — perlindungan menyeluruh sepanjang hari sampai petang.",
+      en: "Recited 3 times in the morning — complete protection through the day until evening.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Abu Dawud 5088, Tirmidzi 3388",
+      grade: "sahih",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["pagi", "perlindungan"],
+    related: ["doa-petang", "bangun-tidur"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "doa-petang",
+    arabic:
+      "بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ، وَهُوَ السَّمِيعُ الْعَلِيمُ",
+    transliteration:
+      "Bismillahilladzi la yadhurru ma'asmihi syai'un fil-ardhi wa la fis-sama'i, wa huwas-sami'ul-'alim",
+    title: {
+      id: "Doa Petang (Perlindungan)",
+      en: "Evening Dua (Protection)",
+    },
+    translation: {
+      id: "Dengan nama Allah yang dengan menyebut nama-Nya, segala sesuatu di bumi dan di langit tidak akan memberi mudharat. Dan Dia-lah Yang Maha Mendengar lagi Maha Mengetahui.",
+      en: "In the name of Allah, with whose name nothing on earth or in heaven can do harm. He is the All-Hearing, the All-Knowing.",
+    },
+    context: {
+      id: "Dibaca 3 kali pada sore hari setelah Ashar — perlindungan menyeluruh sepanjang malam sampai pagi.",
+      en: "Recited 3 times in the late afternoon after Asr — complete protection through the night until morning.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Abu Dawud 5088, Tirmidzi 3388",
+      grade: "sahih",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["petang", "perlindungan"],
+    related: ["doa-pagi", "sebelum-tidur"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "berbuka-puasa",
+    arabic:
+      "ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الْأَجْرُ إِنْ شَاءَ اللَّهُ",
+    transliteration:
+      "Dzahabazh-zhama'u wabtallatil-'uruqu wa tsabatal-ajru insya Allah",
+    title: {
+      id: "Doa Berbuka Puasa",
+      en: "Dua When Breaking Fast",
+    },
+    translation: {
+      id: "Telah hilang dahaga, telah basah urat-urat, dan telah tetap pahala, insya Allah.",
+      en: "The thirst is gone, the veins are moistened, and the reward is established, if Allah wills.",
+    },
+    context: {
+      id: "Dibaca anak segera setelah meneguk air berbuka — doa pendek, paling utama saat momen iftar.",
+      en: "Recited by the child immediately after the first sip at iftar — a short, deeply rewarding moment.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Abu Dawud 2357",
+      grade: "hasan",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["puasa", "ramadan"],
+    related: ["sebelum-makan", "sesudah-makan"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "melihat-bulan-baru",
+    arabic:
+      "اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ",
+    transliteration:
+      "Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-islam, rabbi wa rabbukallah",
+    title: {
+      id: "Doa Melihat Bulan Sabit Baru",
+      en: "Dua at the Sighting of the New Crescent",
+    },
+    translation: {
+      id: "Ya Allah, tampakkanlah bulan ini kepada kami dengan membawa keamanan dan keimanan, keselamatan dan Islam. Tuhanku dan Tuhanmu adalah Allah.",
+      en: "O Allah, let this crescent rise upon us with security, faith, safety, and Islam. My Lord and your Lord is Allah.",
+    },
+    context: {
+      id: "Dibaca anak ketika melihat bulan sabit baru — penanda bulan hijriyah baru, sangat baik dibiasakan menjelang Ramadan dan Idul Adha.",
+      en: "Recited by the child when sighting a new crescent — marking a new Hijri month, especially meaningful approaching Ramadan and Eid al-Adha.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Tirmidzi 3451",
+      grade: "hasan",
+    },
+    ages: [5, 6, 7, 8],
+    situations: ["bulan-hijriyah", "ramadan"],
     related: [],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "mendapat-rezeki",
+    arabic:
+      "اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا وَقِنَا عَذَابَ النَّارِ",
+    transliteration:
+      "Allahumma barik lana fima razaqtana wa qina 'adzaban-nar",
+    title: {
+      id: "Doa Memohon Berkah atas Rezeki",
+      en: "Dua for Blessing in Provision",
+    },
+    translation: {
+      id: "Ya Allah, berkahilah kami pada apa yang Engkau rezekikan kepada kami, dan jauhkanlah kami dari siksa neraka.",
+      en: "O Allah, bless for us what You have provided us with, and protect us from the punishment of the Fire.",
+    },
+    context: {
+      id: "Dibaca anak ketika menerima makanan, hadiah, atau apapun yang merupakan rezeki — menanamkan rasa syukur sejak kecil.",
+      en: "Recited by the child when receiving food, a gift, or any blessing — planting gratitude early.",
+    },
+    source: {
+      type: "hadith",
+      reference: "HR. Ibnu Sunni",
+      grade: "hasan",
+    },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["rezeki", "syukur", "makan"],
+    related: ["sesudah-makan"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "mendengar-petir",
+    arabic:
+      "سُبْحَانَ الَّذِي يُسَبِّحُ الرَّعْدُ بِحَمْدِهِ وَالْمَلَائِكَةُ مِنْ خِيفَتِهِ",
+    transliteration:
+      "Subhanalladzi yusabbihur-ra'du bihamdihi wal-mala'ikatu min khifatih",
+    title: {
+      id: "Doa Mendengar Petir",
+      en: "Dua When Hearing Thunder",
+    },
+    translation: {
+      id: "Maha Suci Dzat yang petir bertasbih dengan memuji-Nya, dan para malaikat (bertasbih) karena takut kepada-Nya.",
+      en: "Glory be to the One whom thunder glorifies with His praise, and the angels do so out of awe of Him.",
+    },
+    context: {
+      id: "Dibaca anak ketika mendengar suara petir — momen kecil untuk mengubah rasa takut menjadi pengingat akan kebesaran Allah.",
+      en: "Recited by the child when hearing thunder — a small moment to turn fear into a reminder of Allah's greatness.",
+    },
+    source: {
+      type: "hadith",
+      reference: "Muwatta' Imam Malik",
+      grade: "hasan",
+    },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["cuaca", "perlindungan"],
+    related: ["ketika-hujan"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+  },
+  {
+    slug: "mengucap-salam",
+    arabic: "السَّلَامُ عَلَيْكُمْ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ",
+    transliteration: "Assalamu'alaikum wa rahmatullahi wa barakatuh",
+    title: {
+      id: "Mengucap Salam",
+      en: "Saying Salam",
+    },
+    translation: {
+      id: "Semoga keselamatan, rahmat Allah, dan keberkahan-Nya tercurah kepadamu.",
+      en: "May the peace, mercy, and blessings of Allah be upon you.",
+    },
+    context: {
+      id: "Diucapkan anak ketika bertemu sesama muslim, masuk rumah, atau memasuki ruangan. Salam adalah doa kebaikan terkecil yang paling sering diucapkan seorang muslim.",
+      en: "Said by the child when meeting another Muslim, entering a home, or entering a room. Salam is the smallest, most-spoken dua of goodness in a Muslim's day.",
+    },
+    source: {
+      type: "quran",
+      reference: "QS. An-Nur 24:61",
+      grade: "quran",
+    },
+    ages: [2, 3, 4, 5, 6, 7, 8],
+    situations: ["sosial", "adab", "rumah"],
+    related: ["masuk-rumah"],
     published: "2026-05-27",
     updated: "2026-05-27",
   },

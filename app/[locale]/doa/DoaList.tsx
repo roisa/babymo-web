@@ -30,6 +30,13 @@ const SITUATION_LABEL: Record<Locale, Record<string, string>> = {
     sosial: "Sosial",
     belajar: "Belajar",
     sekolah: "Sekolah",
+    wudhu: "Wudhu",
+    petang: "Petang",
+    puasa: "Puasa",
+    ramadan: "Ramadan",
+    "bulan-hijriyah": "Bulan Hijriyah",
+    rezeki: "Rezeki",
+    adab: "Adab",
   },
   en: {
     all: "All",
@@ -54,6 +61,13 @@ const SITUATION_LABEL: Record<Locale, Record<string, string>> = {
     sosial: "Social",
     belajar: "Study",
     sekolah: "School",
+    wudhu: "Wudu",
+    petang: "Evening",
+    puasa: "Fasting",
+    ramadan: "Ramadan",
+    "bulan-hijriyah": "Hijri Month",
+    rezeki: "Provision",
+    adab: "Manners",
   },
 };
 
