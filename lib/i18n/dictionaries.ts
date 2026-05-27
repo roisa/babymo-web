@@ -10,6 +10,8 @@ type Dict = {
   nav: {
     home: string;
     doa: string;
+    hadith: string;
+    parenting: string;
     blog: string;
     games: string;
     faq: string;
@@ -98,6 +100,8 @@ const id: Dict = {
   nav: {
     home: "Beranda",
     doa: "Doa",
+    hadith: "Hadith",
+    parenting: "Parenting",
     blog: "Blog",
     games: "Permainan",
     faq: "FAQ",
@@ -257,6 +261,8 @@ const en: Dict = {
   nav: {
     home: "Home",
     doa: "Duas",
+    hadith: "Hadith",
+    parenting: "Parenting",
     blog: "Blog",
     games: "Games",
     faq: "FAQ",

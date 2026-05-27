@@ -1,27 +1,35 @@
 @import "tailwindcss";
 
 /* ───────────────────────────────────────────────
-   Baby Mo design tokens — calm parenting platform
-   See: docs Phase 5
+   Baby Mo — calm parenting platform (iOS-inspired)
+   Sage/clay palette over a warm paper neutral.
    ─────────────────────────────────────────────── */
 @theme {
   --color-ink: #0E1213;
-  --color-paper: #FAFAF7;
+  --color-ink-soft: #1B1F1F;
+  --color-paper: #FBFAF6;       /* warmer than #FAFAF7, more "cream" */
+  --color-paper-2: #F4F2EC;     /* card-on-card surface */
   --color-sage: #5F8B5A;
   --color-sage-deep: #3B5A38;
   --color-sage-soft: #E8EFE6;
   --color-clay: #C9A55B;
   --color-clay-soft: #F5EFE2;
   --color-mist: #ECEAE2;
+  --color-hairline: #E5E2D9;    /* the iOS "1px hairline" tone */
   --color-whisper: #6B7068;
+  --color-whisper-2: #8B9089;
 
-  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
   --font-arabic: var(--font-arabic), "Noto Naskh Arabic", "Amiri", serif;
 
-  --radius-sm: 10px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  /* iOS-style squircle radii */
+  --radius-xs: 8px;
+  --radius-sm: 12px;
+  --radius-md: 18px;
+  --radius-lg: 22px;
+  --radius-xl: 28px;
+  --radius-2xl: 36px;
 }
 
 html {
@@ -34,25 +42,43 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   font-feature-settings: "ss01", "cv11";
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Reading defaults for long-form content */
+/* Tight tracking on display type — iOS large-title style */
+.tracking-display {
+  letter-spacing: -0.022em;
+}
+
+/* iOS hairline divider — uses 1px border that auto-scales on retina */
+.hairline {
+  border-color: var(--color-hairline);
+}
+
+/* Glass header used by iOS, refined */
+.glass {
+  background: color-mix(in oklab, var(--color-paper), transparent 22%);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Reading defaults for long-form */
 .prose {
   font-size: 1.0625rem;
   line-height: 1.75;
   color: var(--color-ink);
-  max-width: 42rem;
+  max-width: 40rem;
 }
 .prose > * + * { margin-top: 1.1em; }
 .prose h2 {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
-  font-weight: 600;
+  font-size: 1.55rem;
+  font-weight: 500;
+  letter-spacing: -0.015em;
   margin-top: 2em;
   margin-bottom: 0.4em;
-  color: var(--color-ink);
 }
 .prose h3 {
   font-family: var(--font-serif);
@@ -61,7 +87,6 @@ body {
   margin-top: 1.6em;
   margin-bottom: 0.3em;
 }
-.prose p, .prose li { color: var(--color-ink); }
 .prose strong { color: var(--color-ink); font-weight: 600; }
 .prose em { color: var(--color-sage-deep); font-style: italic; }
 .prose a {
@@ -80,6 +105,24 @@ body {
   color: var(--color-whisper);
 }
 
+/* iOS-style press feedback */
+.tap {
+  transition: transform 120ms ease, opacity 120ms ease;
+}
+.tap:active {
+  transform: scale(0.97);
+  opacity: 0.85;
+}
+
+/* Horizontal pill scroller */
+.pillscroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-snap-type: x mandatory;
+}
+.pillscroll::-webkit-scrollbar { display: none; }
+.pillscroll > * { scroll-snap-align: start; }
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -87,9 +130,8 @@ body {
   }
 }
 
-/* Focus visible */
 :focus-visible {
   outline: 2px solid var(--color-sage);
   outline-offset: 2px;
-  border-radius: 4px;
+  border-radius: 6px;
 }

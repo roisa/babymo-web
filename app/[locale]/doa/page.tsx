@@ -1,5 +1,12 @@
 import Link from "next/link";
-import { type Locale, isLocale, locales, absoluteUrl, pathFor } from "@/lib/i18n/config";
+import { notFound } from "next/navigation";
+import {
+  type Locale,
+  isLocale,
+  locales,
+  absoluteUrl,
+  pathFor,
+} from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -13,7 +20,7 @@ import {
   itemListSchema,
 } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
-import { notFound } from "next/navigation";
+import { DoaList } from "./DoaList";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -49,25 +56,24 @@ export default async function DoaIndex({
   return (
     <>
       <Header locale={l} currentPath="/doa" />
-      <main className="mx-auto max-w-5xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
-        <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
+      <main className="mx-auto max-w-5xl px-5 pb-28 pt-10 sm:px-7 sm:pt-14 md:pb-16">
+        <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
           </Link>{" "}
           / <span className="text-ink">{dict.nav.doa}</span>
         </nav>
         <header className="max-w-2xl">
-          <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+          <h1 className="tracking-display font-serif text-[36px] font-medium leading-[1.1] text-ink sm:text-[44px]">
             {dict.doa.indexTitle}
           </h1>
-          <p className="mt-3 text-base leading-relaxed text-whisper">
+          <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
             {dict.doa.indexDescription}
           </p>
         </header>
-        <div className="mt-10 grid gap-5 md:grid-cols-2">
-          {all.map((d) => (
-            <DoaCard key={d.slug} doa={d} locale={l} />
-          ))}
+
+        <div className="mt-8">
+          <DoaList doas={all} locale={l} />
         </div>
       </main>
       <Footer locale={l} currentPath="/doa" />
@@ -84,8 +90,8 @@ export default async function DoaIndex({
             all.map((d) => ({
               name: d.title[l],
               url: absoluteUrl(l, `/doa/${d.slug}`),
-            }))
-          )
+            })),
+          ),
         )}
       />
     </>
