@@ -82,13 +82,13 @@ export default async function HomePage({
           <div className="mx-auto max-w-6xl px-5 pb-14 pt-12 sm:px-7 sm:pb-20 sm:pt-20">
             <div className="grid items-center gap-12 md:grid-cols-[1.05fr_0.95fr]">
               <div>
-                <span className="inline-flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-sage-deep">
-                  <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-sage text-sage" />
+                <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+                  <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
                   {dict.home.eyebrow}
                 </span>
-                <h1 className="tracking-display hero-words mt-5 font-serif text-[44px] leading-[1.05] text-ink sm:text-[56px] md:text-[64px]">
+                <h1 className="font-display hero-words mt-5 text-[46px] font-medium leading-[1.02] text-ink sm:text-[60px] md:text-[72px]">
                   {heroWords.map((w, i) => (
-                    <span key={i} className={i >= heroWords.length / 2 ? "text-sage-deep" : ""}>
+                    <span key={i} className={i >= heroWords.length / 2 ? "text-brave" : ""}>
                       {w}
                       {i < heroWords.length - 1 ? " " : ""}
                     </span>
@@ -100,13 +100,13 @@ export default async function HomePage({
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <Link
                     href={pathFor(l, "/doa")}
-                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-[14px] font-semibold text-paper hover:bg-sage-deep"
+                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(31,139,63,0.45)] hover:bg-brave-deep"
                   >
                     {dict.home.ctaPrimary}
                   </Link>
                   <Link
                     href={pathFor(l, "/parenting")}
-                    className="magnet tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-5 py-3 text-[14px] font-semibold text-ink backdrop-blur hover:border-sage/40"
+                    className="magnet tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-5 py-3 text-[14px] font-semibold text-ink backdrop-blur hover:border-brave/40"
                   >
                     {dict.nav.parenting ?? "Parenting"}
                   </Link>
@@ -532,7 +532,7 @@ function Stat({
 }) {
   return (
     <div>
-      <div className="font-serif text-[28px] font-medium leading-none text-ink sm:text-[32px]">
+      <div className="font-display text-[30px] font-medium leading-none text-ink sm:text-[34px]">
         <AnimatedCount to={n} locale={locale === "id" ? "id" : "en"} />
       </div>
       <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">

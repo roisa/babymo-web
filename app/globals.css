@@ -12,6 +12,10 @@
   --color-sage: #5F8B5A;
   --color-sage-deep: #3B5A38;
   --color-sage-soft: #E8EFE6;
+  /* Bold "Baby Mo" green — hero-only accent, not for body reading */
+  --color-brave: #1F8B3F;
+  --color-brave-deep: #155F2A;
+  --color-brave-soft: #DCEFE0;
   --color-clay: #C9A55B;
   --color-clay-soft: #F5EFE2;
   --color-mist: #ECEAE2;
@@ -21,6 +25,8 @@
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  /* Modern editorial display — used for hero / large titles only */
+  --font-display: var(--font-display), "Fraunces", "Newsreader", ui-serif, Georgia, serif;
   --font-arabic: var(--font-arabic), "Noto Naskh Arabic", "Amiri", serif;
 
   /* iOS-style squircle radii */
@@ -50,6 +56,16 @@ body {
 /* Tight tracking on display type — iOS large-title style */
 .tracking-display {
   letter-spacing: -0.022em;
+}
+
+/* Modern editorial display face — hero-only. Uses Fraunces variable
+   axes so optical sizing scales naturally with large type. */
+.font-display {
+  font-family: var(--font-display);
+  font-optical-sizing: auto;
+  font-variation-settings: "opsz" 96, "SOFT" 40;
+  letter-spacing: -0.028em;
+  font-feature-settings: "ss01", "ss02";
 }
 
 /* iOS hairline divider — uses 1px border that auto-scales on retina */

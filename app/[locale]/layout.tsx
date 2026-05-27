@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader, Noto_Naskh_Arabic } from "next/font/google";
+import { Inter, Newsreader, Noto_Naskh_Arabic, Fraunces } from "next/font/google";
 import {
   type Locale,
   isLocale,
@@ -29,6 +29,13 @@ const arabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
   weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+const fraunces = Fraunces({
+  subsets: ["latin"],
+  variable: "--font-display",
+  axes: ["opsz", "SOFT"],
   display: "swap",
 });
 
@@ -66,7 +73,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={localeHtmlLang[locale]}
-      className={`${inter.variable} ${newsreader.variable} ${arabic.variable}`}
+      className={`${inter.variable} ${newsreader.variable} ${arabic.variable} ${fraunces.variable}`}
     >
       <body>
         <JsonLd

@@ -68,7 +68,7 @@ export function HeroAura() {
           top: "-12%",
           left: "-8%",
           background:
-            "radial-gradient(circle, color-mix(in oklab, var(--color-sage) 32%, transparent), transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklab, var(--color-brave) 32%, transparent), transparent 70%)",
           animationDelay: "0s",
         }}
       />
@@ -99,7 +99,7 @@ export function HeroAura() {
           filter: "blur(60px)",
           opacity: 0.35,
           background:
-            "radial-gradient(circle, color-mix(in oklab, var(--color-sage) 45%, transparent), transparent 70%)",
+            "radial-gradient(circle, color-mix(in oklab, var(--color-brave) 45%, transparent), transparent 70%)",
           pointerEvents: "none",
           transform: "translate3d(-9999px, -9999px, 0)",
           transition: "opacity 400ms ease",
