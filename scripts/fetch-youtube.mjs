@@ -61,15 +61,17 @@ async function api(url) {
   return r.json();
 }
 
-// Known titles/durations for the 5 starter videos — used in the fallback
+// Known titles/durations for the starter videos — used in the fallback
 // path so the site doesn't ship blank cards before YOUTUBE_API_KEY is set.
-// Real API data wins when available.
+// Real API data wins when available. Verified 2026-05-27 against the live API.
 const KNOWN_DEFAULTS = {
-  L6bXkRuO5vc: { title: "Doa Sebelum Tidur – Baby Mo",            duration: "0:32", durationSeconds: 32 },
-  orXDAOHAKw8: { title: "Doa Bangun Tidur – Baby Mo",             duration: "0:42", durationSeconds: 42 },
-  X6ZGk_e7A00: { title: "Doa Sebelum Makan – Baby Mo",            duration: "0:40", durationSeconds: 40 },
-  cmK8ruUiCbA: { title: "Doa Sesudah Makan – Baby Mo",            duration: "0:42", durationSeconds: 42 },
+  orXDAOHAKw8: { title: "Doa Sebelum Tidur - Baby Mo",            duration: "0:32", durationSeconds: 32 },
+  L6bXkRuO5vc: { title: "Doa Bangun Tidur - Baby Mo",             duration: "0:42", durationSeconds: 42 },
+  cmK8ruUiCbA: { title: "Doa Sebelum Makan - Baby Mo",            duration: "0:40", durationSeconds: 40 },
+  X6ZGk_e7A00: { title: "Doa Sesudah Makan - Baby Mo",            duration: "0:42", durationSeconds: 42 },
   BhLRQP_Nfdk: { title: "Cari dan Temukan Perbedaan Bareng Baby Mo", duration: "17:27", durationSeconds: 1047 },
+  "9wa8_JPlkP0": { title: "Lagu 1 Baby Mo - Bismillah Dulu",      duration: "2:00", durationSeconds: 120 },
+  BKZLVWBRnL8: { title: "INTRO BABY MO VERSI 1",                  duration: "0:08", durationSeconds: 8 },
 };
 
 // ────────────────────────────────────────────────────────────────────
@@ -82,7 +84,8 @@ async function writeFallback(reason) {
   let ids = [];
   try {
     const src = readFileSync(OVERLAY_FILE, "utf8");
-    const re = /^\s*([A-Za-z0-9_-]{11}):\s*\{/gm;
+    // Match both quoted ("9wa8_JPlkP0":) and unquoted (orXDAOHAKw8:) keys.
+    const re = /^\s*"?([A-Za-z0-9_-]{11})"?:\s*\{/gm;
     let m;
     while ((m = re.exec(src))) ids.push(m[1]);
   } catch (e) {
