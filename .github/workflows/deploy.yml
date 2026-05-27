@@ -1,35 +1,38 @@
 name: Deploy to GitHub Pages
 
+# Path: build Next.js static export, then push the output to the gh-pages
+# branch. GitHub Pages serves directly from that branch.
+#
+# Why this approach (and not actions/deploy-pages):
+#   - No dependency on the `github-pages` environment or its protection rules
+#   - No `pages: write` or `id-token: write` token scopes required
+#   - Uses only first-party actions (actions/checkout, actions/setup-node) +
+#     native git, so it works regardless of repo "Allow third-party actions"
+#     settings
+#   - The CNAME file ships in the published artifact, preserving babymo.id
+
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
-# Workflow-level permissions (must match deploy-pages requirements)
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
   cancel-in-progress: false
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
     steps:
-      - name: Diagnostic — show runner + workspace
+      - name: Diagnostic — show runner info
         run: |
-          echo "::group::Runner & workspace info"
           echo "Runner OS: $RUNNER_OS"
-          echo "Node version (preinstalled):"
-          node --version || echo "node not yet available"
-          echo "Ref: $GITHUB_REF  SHA: $GITHUB_SHA"
-          echo "::endgroup::"
+          echo "Triggered by: ${{ github.event_name }} on ${{ github.ref }}"
+          echo "Commit: ${{ github.sha }}"
 
       - name: Checkout
         uses: actions/checkout@v4
@@ -49,24 +52,24 @@ jobs:
           NEXT_PUBLIC_SITE_URL: https://babymo.id
         run: npm run build
 
-      - name: Disable Jekyll on deployed artifact
-        run: touch out/.nojekyll
+      - name: Stamp publish artifact
+        run: |
+          touch out/.nojekyll
+          echo "babymo.id" > out/CNAME
+          echo "Listing of out/:"
+          ls -la out | head -25
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ./out
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - name: Deploy
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Push to gh-pages branch
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd out
+          git init -q -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -q -m "Deploy ${{ github.sha }}"
+          git push --force --quiet \
+            "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" \
+            gh-pages
+          echo "Deployed commit ${{ github.sha }} to gh-pages branch."
