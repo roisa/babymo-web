@@ -1,75 +1,55 @@
-name: Deploy to GitHub Pages
+name: Deploy to gh-pages
 
-# Path: build Next.js static export, then push the output to the gh-pages
-# branch. GitHub Pages serves directly from that branch.
+# Pushes the Next.js static export to the gh-pages branch on every push to
+# main. GitHub Pages serves directly from that branch (Settings → Pages →
+# Deploy from a branch → gh-pages → / (root)).
 #
-# Why this approach (and not actions/deploy-pages):
-#   - No dependency on the `github-pages` environment or its protection rules
-#   - No `pages: write` or `id-token: write` token scopes required
-#   - Uses only first-party actions (actions/checkout, actions/setup-node) +
-#     native git, so it works regardless of repo "Allow third-party actions"
-#     settings
-#   - The CNAME file ships in the published artifact, preserving babymo.id
+# Kept deliberately minimal: only first-party actions, only contents:write,
+# no environments, no concurrency group. Each push to main rebuilds and
+# force-pushes to gh-pages.
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: write
 
-concurrency:
-  group: pages
-  cancel-in-progress: false
-
 jobs:
-  build-and-deploy:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Diagnostic — show runner info
-        run: |
-          echo "Runner OS: $RUNNER_OS"
-          echo "Triggered by: ${{ github.event_name }} on ${{ github.ref }}"
-          echo "Commit: ${{ github.sha }}"
+      - uses: actions/checkout@v4
 
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: 22
           cache: npm
 
-      - name: Install dependencies
-        run: npm ci
+      - run: npm ci
 
-      - name: Build (static export)
+      - name: Build
         env:
           NEXT_PUBLIC_BASE_PATH: ""
           NEXT_PUBLIC_SITE_URL: https://babymo.id
         run: npm run build
 
-      - name: Stamp publish artifact
+      - name: Stamp .nojekyll + CNAME on output
         run: |
           touch out/.nojekyll
           echo "babymo.id" > out/CNAME
-          echo "Listing of out/:"
-          ls -la out | head -25
 
-      - name: Push to gh-pages branch
+      - name: Force-push out/ to gh-pages
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+          SHA: ${{ github.sha }}
         run: |
           cd out
           git init -q -b gh-pages
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add -A
-          git commit -q -m "Deploy ${{ github.sha }}"
-          git push --force --quiet \
-            "https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git" \
-            gh-pages
-          echo "Deployed commit ${{ github.sha }} to gh-pages branch."
+          git commit -qm "Deploy $SHA"
+          git push --force --quiet "https://x-access-token:${TOKEN}@github.com/${REPO}" gh-pages
