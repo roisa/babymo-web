@@ -114,19 +114,138 @@ body {
   opacity: 0.85;
 }
 
-/* Horizontal pill scroller */
-.pillscroll {
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  scroll-snap-type: x mandatory;
+/* ─── Progressive-enhancement motion utilities ──────────────────── */
+
+/* Scroll-triggered reveal (toggled by IntersectionObserver in <Reveal>) */
+.reveal {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms cubic-bezier(.2,.7,.2,1),
+              transform 600ms cubic-bezier(.2,.7,.2,1);
+  will-change: opacity, transform;
 }
-.pillscroll::-webkit-scrollbar { display: none; }
-.pillscroll > * { scroll-snap-align: start; }
+.reveal.in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger children — each child reveals with delay */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(14px);
+  transition: opacity 600ms cubic-bezier(.2,.7,.2,1),
+              transform 600ms cubic-bezier(.2,.7,.2,1);
+}
+.reveal-stagger.in > *:nth-child(1) { transition-delay: 0ms; }
+.reveal-stagger.in > *:nth-child(2) { transition-delay: 80ms; }
+.reveal-stagger.in > *:nth-child(3) { transition-delay: 160ms; }
+.reveal-stagger.in > *:nth-child(4) { transition-delay: 240ms; }
+.reveal-stagger.in > *:nth-child(5) { transition-delay: 320ms; }
+.reveal-stagger.in > *:nth-child(6) { transition-delay: 400ms; }
+.reveal-stagger.in > *:nth-child(7) { transition-delay: 480ms; }
+.reveal-stagger.in > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Big-headline word-by-word reveal on initial paint */
+@keyframes word-rise {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.hero-words > span {
+  display: inline-block;
+  opacity: 0;
+  animation: word-rise 700ms cubic-bezier(.2,.7,.2,1) forwards;
+}
+.hero-words > span:nth-child(1) { animation-delay:  60ms; }
+.hero-words > span:nth-child(2) { animation-delay: 130ms; }
+.hero-words > span:nth-child(3) { animation-delay: 200ms; }
+.hero-words > span:nth-child(4) { animation-delay: 270ms; }
+.hero-words > span:nth-child(5) { animation-delay: 340ms; }
+.hero-words > span:nth-child(6) { animation-delay: 410ms; }
+.hero-words > span:nth-child(7) { animation-delay: 480ms; }
+.hero-words > span:nth-child(8) { animation-delay: 550ms; }
+
+/* Mascot: gentle breathing float */
+@keyframes mascot-breathe {
+  0%, 100% { transform: translateY(0) rotate(-0.4deg); }
+  50%      { transform: translateY(-10px) rotate(0.4deg); }
+}
+.mascot-breathe {
+  animation: mascot-breathe 5s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Sparkles around mascot — staggered twinkle */
+@keyframes sparkle-twinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4); }
+  40%, 60% { opacity: 0.9; transform: scale(1); }
+}
+.sparkle {
+  position: absolute;
+  pointer-events: none;
+  font-size: var(--sz, 14px);
+  animation: sparkle-twinkle var(--dur, 3s) ease-in-out var(--delay, 0s) infinite;
+}
+
+/* Hero aura: animated gradient mesh */
+@keyframes aura-shift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  33%      { transform: translate3d(8%, -6%, 0) scale(1.08); }
+  66%      { transform: translate3d(-6%, 8%, 0) scale(0.94); }
+}
+.aura-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.55;
+  pointer-events: none;
+  animation: aura-shift 24s ease-in-out infinite;
+  will-change: transform;
+}
+
+/* Card lift on hover (iOS-style) */
+.lift {
+  transition: transform 320ms cubic-bezier(.2,.7,.2,1),
+              border-color 320ms ease,
+              box-shadow 320ms ease;
+}
+.lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 38px -22px rgba(15, 18, 19, 0.18),
+              0 4px 10px -4px rgba(15, 18, 19, 0.06);
+}
+
+/* Magnetic CTA — subtle scale + glow */
+.magnet {
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1),
+              box-shadow 240ms ease;
+}
+.magnet:hover {
+  transform: translateY(-1.5px) scale(1.02);
+  box-shadow: 0 14px 28px -12px rgba(15, 18, 19, 0.28);
+}
+
+/* Pulse dot — for "live" / seasonal indicators */
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 currentColor; opacity: 1; }
+  70%      { box-shadow: 0 0 0 6px transparent; opacity: 0.7; }
+}
+.pulse-dot { animation: pulse-dot 2.2s ease-out infinite; }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-stagger > * {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-words > span {
+    opacity: 1 !important;
+    animation: none !important;
   }
 }
 
