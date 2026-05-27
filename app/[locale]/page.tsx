@@ -436,6 +436,43 @@ export default async function HomePage({
           <VideoSection locale={l} />
         </Reveal>
 
+        {/* ── DOWNLOADS — lockscreen wallpapers ── */}
+        <Reveal>
+          <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
+            <Link
+              href={pathFor(l, "/unduh")}
+              className="lift tap group relative block overflow-hidden rounded-[28px] border border-hairline bg-brave-soft/40"
+            >
+              <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
+                <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-brave/15 text-brave-deep sm:flex">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                    <rect x="7" y="2" width="10" height="20" rx="2" />
+                    <path d="M11 5h2" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brave-deep">
+                    {l === "id" ? "Gratis · Untuk Lockscreen" : "Free · For Lockscreen"}
+                  </p>
+                  <h2 className="font-display mt-1.5 text-[22px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[24px]">
+                    {l === "id"
+                      ? "8 wallpaper doa harian untuk iPhone"
+                      : "8 daily-du'a wallpapers for iPhone"}
+                  </h2>
+                  <p className="mt-1 text-[14px] leading-relaxed text-whisper">
+                    {l === "id"
+                      ? "Supaya yang pertama dilihat tiap buka HP adalah pengingat lembut. Cetak biru cream + sage Baby Mo."
+                      : "So the first thing you see when you unlock is a gentle reminder. Cream + sage Baby Mo palette."}
+                  </p>
+                </div>
+                <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-brave-deep sm:inline">
+                  {l === "id" ? "Lihat semua →" : "Browse all →"}
+                </span>
+              </div>
+            </Link>
+          </section>
+        </Reveal>
+
         {/* ── FOLLOW & SUPPORT ── */}
         <section className="border-t border-hairline bg-paper-2">
           <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">

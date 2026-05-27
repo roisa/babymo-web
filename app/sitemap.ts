@@ -27,6 +27,7 @@ const STATIC_PATHS = [
   "/parenting",
   "/catatan",
   "/blog",
+  "/unduh",
   "/permainan",
   "/momen",
   "/faq",
