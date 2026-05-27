@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import type { EnrichedVideo } from "@/lib/youtube/types";
 import { CATEGORY_LABEL } from "@/lib/youtube/video-overlay";
 import type { Locale } from "@/lib/i18n/config";
@@ -12,7 +11,7 @@ type Props = { video: EnrichedVideo; locale: Locale };
 /**
  * Editorial card for a YouTube video.
  * - Thumbnail-first (no iframe loaded until clicked)
- * - Clicking opens the click-to-load modal
+ * - Click opens a click-to-load modal
  * - Calm, neutral background — NOT YouTube-styled
  */
 export function VideoCard({ video, locale }: Props) {
@@ -34,24 +33,27 @@ export function VideoCard({ video, locale }: Props) {
         aria-label={`${locale === "id" ? "Putar" : "Play"}: ${title}`}
         className="lift tap group flex h-full flex-col overflow-hidden rounded-[22px] border border-hairline bg-paper text-left"
       >
-        <div className="relative aspect-video w-full overflow-hidden">
+        {/* Aspect-ratio box for the thumbnail. We use inline padding-top
+            instead of Tailwind's aspect-video to be bulletproof against
+            CSS shake-out, and use a plain <img> because next/image with
+            output:export + unoptimized + fill misbehaves in some
+            browsers. */}
+        <div className="relative w-full bg-sage-soft" style={{ paddingTop: "56.25%" }}>
           {video.thumbnail ? (
-            <Image
+            <img
               src={video.thumbnail}
               alt={title}
-              fill
-              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
               loading="lazy"
               decoding="async"
-              unoptimized
-              className="object-cover transition duration-500 group-hover:scale-[1.03]"
+              className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-[1.03]"
             />
           ) : (
-            <div className="flex h-full w-full items-center justify-center bg-sage-soft text-sage-deep">
+            <div className="absolute inset-0 flex items-center justify-center text-sage-deep">
               <PlayIcon />
             </div>
           )}
 
+          {/* Soft top-gradient for legibility */}
           <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/25 to-transparent" />
 
           {/* Category pill */}
@@ -59,14 +61,14 @@ export function VideoCard({ video, locale }: Props) {
             {categoryLabel}
           </span>
 
-          {/* Duration */}
+          {/* Duration pill */}
           {video.duration && (
             <span className="absolute right-3 top-3 rounded-full bg-ink/85 px-2.5 py-1 text-[10.5px] font-semibold text-paper">
               {video.duration}
             </span>
           )}
 
-          {/* Center play */}
+          {/* Center play affordance */}
           <span className="absolute inset-0 flex items-center justify-center">
             <span className="flex h-14 w-14 items-center justify-center rounded-full bg-paper/90 text-ink shadow-[0_8px_20px_-8px_rgba(15,18,19,0.35)] transition group-hover:scale-110">
               <PlayIcon />
@@ -79,7 +81,7 @@ export function VideoCard({ video, locale }: Props) {
             {title.replace(/\s*[-–]\s*Baby Mo\s*$/, "")}
           </h3>
           {caption && (
-            <p className="text-[13.5px] leading-relaxed text-whisper line-clamp-2">
+            <p className="line-clamp-2 text-[13.5px] leading-relaxed text-whisper">
               {caption}
             </p>
           )}
