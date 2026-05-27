@@ -1,0 +1,35 @@
+{
+  "name": "Baby Mo — Konten Islami Ramah Anak",
+  "short_name": "Baby Mo",
+  "description": "9 game islami gratis, animasi YouTube, cerita & lagu untuk anak muslim Indonesia usia 2–8 tahun.",
+  "start_url": "/?utm_source=pwa",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FFFBF0",
+  "theme_color": "#338A2E",
+  "lang": "id-ID",
+  "dir": "ltr",
+  "categories": ["education", "kids", "lifestyle"],
+  "icons": [
+    { "src": "/assets/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "/assets/logo-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "/assets/logo-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    {
+      "name": "Game Hub",
+      "short_name": "Games",
+      "description": "Buka 9 game islami gratis",
+      "url": "/#games",
+      "icons": [{ "src": "/assets/logo-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "YouTube Baby Mo",
+      "short_name": "YouTube",
+      "description": "Animasi islami untuk anak",
+      "url": "https://www.youtube.com/@babymo.official"
+    }
+  ]
+}
