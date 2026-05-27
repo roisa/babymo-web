@@ -765,7 +765,589 @@ export const blogPosts: BlogPost[] = [
   },
 
   // ─────────────────────────────────────────────────────────────────
-  // 5. The original hijaiyah article — kept as-is
+  // 5. EVERGREEN — Mengajak anak ke masjid
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "mengajak-anak-ke-masjid",
+    title: {
+      id: "Mengajak Anak ke Masjid: Panduan untuk Orang Tua Muslim Indonesia",
+      en: "Bringing Your Child to the Mosque: A Guide for Muslim Parents",
+    },
+    excerpt: {
+      id: "Anak menangis di masjid bukan aib — itu suara generasi yang sedang dikenalkan dengan rumah Allah. Cara membawa anak ke masjid dengan persiapan yang tepat.",
+      en: "A crying child at the mosque is not a shame — it is the sound of a generation being introduced to Allah's house.",
+    },
+    body: {
+      id: `<p>Pertanyaan yang sering hidup di kepala orang tua muda: <em>"Apa anakku akan mengganggu jamaah?"</em> Lalu sholat berjamaah ditinggalkan, dan anak kehilangan satu pengalaman paling penting dalam pendidikan agamanya — melihat sendiri ayahnya rukuk.</p>
+
+<p>Rasulullah ﷺ sendiri membawa cucunya, Umamah, di pundak saat sholat. Bukan karena tidak ada penjaga di rumah. Karena bersama anak <em>di dalam ibadah</em> adalah bagian dari ibadah itu sendiri.</p>
+
+<h2>Mulai dari usia berapa</h2>
+
+<p>Tidak ada usia minimum. Tapi pengalaman <em>bermakna</em> dimulai sekitar usia 3 tahun — saat anak mulai bisa diajak komunikasi singkat dan menahan diri 5–10 menit.</p>
+
+<ul>
+  <li><strong>0–2 tahun:</strong> hanya hari raya atau acara khusus.</li>
+  <li><strong>3–5 tahun:</strong> sholat Maghrib di masjid dekat rumah, 1–2 kali seminggu.</li>
+  <li><strong>6+:</strong> sholat berjamaah lebih sering, mulai diajak Jum'at, ikut tarawih pendek.</li>
+</ul>
+
+<h2>Persiapan sebelum berangkat</h2>
+
+<ol>
+  <li><strong>Toilet dulu</strong> — sederhana, sering dilupakan.</li>
+  <li><strong>Beri makan ringan</strong> — anak lapar = anak rewel.</li>
+  <li><strong>Pakaian nyaman</strong> — bersih dan rapi, tapi tidak gatal.</li>
+  <li><strong>Kit darurat</strong> — tisu, buku gambar tipis, satu mainan kecil yang tenang.</li>
+  <li><strong>Cerita di mobil</strong> — "Kita ke rumah Allah. Adik tunggu mama selesai sholat ya."</li>
+</ol>
+
+<h2>Di dalam masjid</h2>
+
+<p>Pilih shaf di pinggir, dekat pintu. Bukan untuk bersembunyi — untuk mudah keluar jika anak benar-benar harus.</p>
+
+<ul>
+  <li>Anak berdiri di sebelah, bukan di belakang. Mereka harus melihat ayahnya rukuk.</li>
+  <li>Tunjukkan adab pelan-pelan: "Tangan di dada, kakinya lurus."</li>
+  <li>Jika anak gelisah di rakaat ketiga, biarkan. Mereka sudah memberi yang mereka bisa.</li>
+</ul>
+
+<h2>Jika anak menangis</h2>
+
+<p>Jangan panik. Ambil anak, keluar pelan, tenangkan. Tidak ada jamaah yang baik akan menegur ayah membawa anak. Fokus pada apa yang sedang kamu bangun.</p>
+
+<h2>Apa yang anakmu pelajari</h2>
+
+<p>Bukan tata cara sholat. Itu bisa diajarkan kapan saja.</p>
+
+<p>Yang dipelajari anak yang sering ke masjid adalah <strong>identitas</strong>: dia tahu masjid terdekat, dia kenal wajah jamaah tetap, dia tahu Maghrib datang berarti papa pakai baju koko dan kita keluar.</p>
+
+<p>Ketika dia berusia 7 dan disuruh sholat, dia tidak menolak — karena dia sudah <em>di sana</em> sejak dia berusia 3. Selengkapnya: <a href="/_/hadith/perintah-sholat-tujuh-tahun/">Hadith Perintah Sholat</a> dan <a href="/_/parenting/mulai-sholat/">Mengajarkan Sholat ke Anak</a>.</p>
+
+<h2>Penutup</h2>
+
+<p>Bawa anakmu ke masjid. Bawa walau dia tidak sempurna. Generasi berikutnya tumbuh di tempat yang sering kamu ajak mereka. Pastikan masjid adalah salah satu tempat itu.</p>`,
+
+      en: `<p>A question that lives in many young parents' heads: <em>"Will my child disturb the congregation?"</em> So congregational prayer gets skipped, and the child loses one of the most important experiences in their religious upbringing — seeing their father bow.</p>
+
+<p>The Prophet ﷺ himself carried his granddaughter Umamah on his shoulder during prayer. Because being with your child <em>inside worship</em> is part of worship.</p>
+
+<h2>From what age</h2>
+
+<p>No minimum. But <em>meaningful</em> experience starts around age 3 — when the child can manage short communication and stay still for 5–10 minutes.</p>
+
+<ul>
+  <li><strong>0–2:</strong> Eid or special occasions.</li>
+  <li><strong>3–5:</strong> Maghrib at the nearest mosque, 1–2 times a week.</li>
+  <li><strong>6+:</strong> more often, occasional Friday, short tarawih.</li>
+</ul>
+
+<h2>Before you leave</h2>
+
+<ol>
+  <li><strong>Toilet first</strong> — simplest, most forgotten.</li>
+  <li><strong>Light snack</strong> — hungry child = fussy child.</li>
+  <li><strong>Comfortable clothes</strong> — clean, but not itchy or restrictive.</li>
+  <li><strong>Emergency kit</strong> — tissues, a thin drawing book, one quiet small toy.</li>
+  <li><strong>Brief in the car</strong> — "We're going to Allah's house. You wait for daddy to finish, okay?"</li>
+</ol>
+
+<h2>Inside the mosque</h2>
+
+<p>Pick the edge row, near the door. Not to hide — for a clean exit if needed.</p>
+
+<ul>
+  <li>Stand them beside you, not behind. They should see their father bow.</li>
+  <li>Show adab slowly: "Hands on chest, feet straight."</li>
+  <li>If they get restless by the third raka'ah, let them. They've given what they could.</li>
+</ul>
+
+<h2>If your child cries</h2>
+
+<p>Don't panic. Pick them up, walk out quietly, settle them. No good congregant will scold a father with his child. Focus on what you're building.</p>
+
+<h2>What your child is actually learning</h2>
+
+<p>Not how to pray. That can be taught any time.</p>
+
+<p>A child who comes often is learning <strong>identity</strong>: they know where the nearest mosque is, they recognize regulars, they know Maghrib means dad puts on the kufi and we go.</p>
+
+<p>When they're 7 and asked to pray, they don't resist — because they've been <em>there</em> since they were 3. See <a href="/_/hadith/perintah-sholat-tujuh-tahun/">Hadith on Teaching Prayer at Seven</a> and <a href="/_/parenting/mulai-sholat/">Teaching a Child to Pray</a>.</p>
+
+<h2>Closing</h2>
+
+<p>Bring your child to the mosque. Even if imperfect. The next generation grows in the places you take them often.</p>`,
+    },
+    tags: ["masjid", "sholat", "parenting", "identitas"],
+    published: "2026-05-23",
+    updated: "2026-05-23",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 6. EVERGREEN — Cara bercerita kisah nabi
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "cara-bercerita-kisah-nabi-untuk-anak",
+    title: {
+      id: "Cara Bercerita Kisah Nabi yang Bikin Anak Mengingat Seumur Hidup",
+      en: "How to Tell Prophet Stories That Children Remember for Life",
+    },
+    excerpt: {
+      id: "Anak tidak mengingat informasi — anak mengingat perasaan. Cara bercerita kisah para nabi agar membekas di hati anak.",
+      en: "Children don't remember information — they remember feelings. How to tell prophet stories so they settle in your child's heart.",
+    },
+    body: {
+      id: `<p>Ada perbedaan besar antara <em>menyebut</em> Nabi Yunus berada di dalam ikan paus dan <em>membawa anak masuk</em> ke dalam perut ikan itu bersama Nabi Yunus.</p>
+
+<p>Yang pertama informasi. Yang kedua pengalaman. Hanya yang kedua yang diingat anak ketika dia berusia 25 tahun.</p>
+
+<h2>Tiga prinsip dasar</h2>
+
+<h3>1. Anak butuh karakter yang mereka kenali</h3>
+
+<p>"Nabi Musa AS yang shalih" — anak mengangguk dan lupa. "Anak kecil yang ibunya menaruhnya di keranjang, hanyut di sungai, dipungut istri Firaun" — anak ingat, karena karakternya adalah anak kecil seperti dia.</p>
+
+<h3>2. Detail kecil yang membuat dunia hidup</h3>
+
+<p>"Nabi Yusuf dilemparkan ke sumur" — informasi.</p>
+
+<p>"Nabi Yusuf yang masih kecil dilemparkan ke sumur oleh saudara-saudaranya. Sumurnya gelap, dingin, dan dia sendirian. Tapi tahukah adik, dia tidak menangis. Dia tahu Allah bisa melihat dia di mana saja." — pengalaman.</p>
+
+<h3>3. Bertanya, bukan menjelaskan</h3>
+
+<p>Setelah satu kejadian, berhenti. Tanya: "Menurut adik, gimana perasaan Nabi Yusuf di dalam sumur?" Jawaban anak akan membuat dia membayangkan — dan bayangan itu yang membekas.</p>
+
+<h2>Format praktis: 7 menit, 3× seminggu</h2>
+
+<ul>
+  <li>Pilih waktu yang sudah ada — sebelum tidur paling alami.</li>
+  <li>Satu cerita per minggu. Senin (kenalan), Rabu (puncak konflik), Jumat (resolusi).</li>
+  <li>Maksimal 7 menit. Anak yang ingin lebih akan minta sendiri.</li>
+</ul>
+
+<h2>Lima kisah untuk mulai</h2>
+
+<ol>
+  <li><strong>Nabi Ibrahim — anak yang memecahkan berhala.</strong> Berani bertanya, berani bersikap berbeda.</li>
+  <li><strong>Nabi Yusuf — saudara-saudara yang iri.</strong> Lihat <a href="/_/parenting/rivalitas-saudara/">Rivalitas Antar Saudara</a>.</li>
+  <li><strong>Nabi Musa — anak yang dihanyutkan di sungai Nil.</strong> Tawakal seorang ibu.</li>
+  <li><strong>Nabi Yunus — di dalam perut ikan.</strong> Doa di saat susah.</li>
+  <li><strong>Nabi Muhammad ﷺ — saat anak kecil di gurun bersama Halimah.</strong> Cinta orang tua angkat.</li>
+</ol>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li>Jangan menambah cerita dari sumber tidak jelas. Pilih dari Qur'an atau hadith shahih.</li>
+  <li>Jangan menakut-nakuti dengan detail siksa untuk anak 4 tahun.</li>
+  <li>Jangan moralisasi: "makanya kamu harus rajin sholat" di akhir cerita merusak pengalaman.</li>
+  <li>Jangan baca dari HP. Anak belajar bahwa cerita ini tidak cukup penting untuk dihafal.</li>
+</ul>
+
+<h2>Catatan akhir</h2>
+
+<p>Anak yang tumbuh dengan kisah para nabi punya cadangan emosi yang besar. Saat takut, mereka punya Yunus. Saat dikhianati teman, mereka punya Yusuf. Saat harus mengambil keputusan sulit, mereka punya Ibrahim.</p>
+
+<p>Itu warisan yang hanya bisa diberikan oleh suara orang tua, di kamar yang tenang, di waktu sebelum tidur.</p>`,
+
+      en: `<p>There's a big difference between <em>mentioning</em> that Prophet Yunus was inside the whale, and <em>taking your child inside</em> alongside him.</p>
+
+<p>The first is information. The second is experience. Only the second is remembered at 25.</p>
+
+<h2>Three core principles</h2>
+
+<h3>1. Children need characters they recognize</h3>
+
+<p>"The righteous Prophet Musa" — your child nods and forgets. "A baby whose mother put him in a basket and floated him down a river, where Pharaoh's wife found him" — your child remembers, because the character is a child like them.</p>
+
+<h3>2. Small details that make the world alive</h3>
+
+<p>"Prophet Yusuf was thrown into a well" — information.</p>
+
+<p>"Young Prophet Yusuf was thrown into a well by his brothers. The well was dark, cold, and he was alone. But do you know what? He didn't cry. He knew Allah could see him anywhere." — experience.</p>
+
+<h3>3. Ask, don't explain</h3>
+
+<p>After one event, pause. Ask: "How do you think Prophet Yusuf felt in that well?" Their answer makes them imagine — and that image is what sticks.</p>
+
+<h2>Practical format: 7 minutes, 3× a week</h2>
+
+<ul>
+  <li>Pick an existing time — bedtime is most natural.</li>
+  <li>One story per week. Monday (intro), Wednesday (peak), Friday (resolution).</li>
+  <li>Max 7 minutes. A child wanting more will ask.</li>
+</ul>
+
+<h2>Five stories to begin</h2>
+
+<ol>
+  <li><strong>Prophet Ibrahim — the child who broke the idols.</strong> Daring to ask, daring to stand apart.</li>
+  <li><strong>Prophet Yusuf — the jealous brothers.</strong> See <a href="/_/parenting/rivalitas-saudara/">Sibling Rivalry</a>.</li>
+  <li><strong>Prophet Musa — the baby floated down the Nile.</strong> A mother's tawakkul.</li>
+  <li><strong>Prophet Yunus — inside the whale.</strong> Dua in hardship.</li>
+  <li><strong>Prophet Muhammad ﷺ — as a small child with Halimah.</strong> Love of a foster parent.</li>
+</ol>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li>Don't add stories from unclear sources. Pick from Qur'an or authentic hadith.</li>
+  <li>Don't scare a 4-year-old with details of torment.</li>
+  <li>Don't moralize: "that's why you must pray" ruins the experience.</li>
+  <li>Don't read from a phone. Your child learns the story isn't important enough to know by heart.</li>
+</ul>
+
+<h2>Final note</h2>
+
+<p>A child raised on prophet stories carries a deep emotional reserve. When afraid, they have Yunus. When betrayed, Yusuf. When forced into a hard decision, Ibrahim.</p>
+
+<p>That inheritance is only given by a parent's voice, in a quiet room, at the time before sleep.</p>`,
+    },
+    tags: ["cerita-nabi", "parenting", "tarbiyah"],
+    published: "2026-05-22",
+    updated: "2026-05-22",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 7. EVERGREEN — Adab bersaudara
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "adab-bersaudara-mengurangi-pertengkaran",
+    title: {
+      id: "Adab Bersaudara dalam Islam: Mengurangi Pertengkaran Kakak-Adik",
+      en: "Sibling Manners in Islam: Reducing Brother-Sister Fights",
+    },
+    excerpt: {
+      id: "Pertengkaran antar saudara akan selalu ada — tapi adab yang ditanam sejak kecil bisa membuatnya jauh lebih pendek dan cepat selesai.",
+      en: "Sibling fights will always happen — but manners planted early make them much shorter and faster to resolve.",
+    },
+    body: {
+      id: `<p>Kalau kamu pernah berpikir "kenapa anak-anakku tidak bisa akur 30 menit saja", kamu tidak sendiri. Rumah dengan dua anak adalah arena negosiasi 24 jam.</p>
+
+<p>Tapi ada perbedaan besar antara rumah di mana pertengkaran berakhir dalam 5 menit dengan saling memaafkan, dan rumah di mana pertengkaran berlanjut menjadi dendam. Perbedaannya bukan jumlah anak — perbedaannya adalah <em>adab</em> yang ditanam.</p>
+
+<h2>Apa kata Islam tentang hubungan saudara</h2>
+
+<blockquote>"Bertakwalah kepada Allah dan berlaku adillah di antara anak-anak kalian." — <strong>HR. Bukhari 2587, Muslim 1623</strong></blockquote>
+
+<p>Hadith ini ditujukan kepada <strong>orang tua</strong>. Akar pertengkaran saudara sering bukan di anak — tapi di sikap orang tua. Lihat <a href="/_/hadith/adil-kepada-anak/">Berlaku Adil di Antara Anak</a>.</p>
+
+<h2>Empat adab yang harus dibiasakan</h2>
+
+<h3>1. Memanggil dengan panggilan yang baik</h3>
+
+<p>"Adik" dan "Kakak" adalah pengingat hierarki kasih sayang Islam. Jangan biarkan anak memanggil saudara dengan panggilan ejekan, walau bercanda.</p>
+
+<h3>2. Memberi salam dan minta izin</h3>
+
+<p>Sebelum masuk kamar saudara: ketuk pintu, ucap salam, tunggu jawaban. Lihat <a href="/_/doa/mengucap-salam/">Mengucap Salam</a>.</p>
+
+<h3>3. Berbagi tanpa dipaksa</h3>
+
+<ul>
+  <li>Setiap anak punya <em>satu</em> laci yang isinya hanya miliknya. Saudara tidak boleh ambil tanpa izin.</li>
+  <li>Mainan komunal disimpan terpisah.</li>
+  <li>Saat meminjam, ajarkan: "Boleh aku pinjam? Aku akan kembalikan."</li>
+</ul>
+
+<h3>4. Saling mendoakan</h3>
+
+<p>Ajarkan anak mendoakan saudaranya: saat sakit, saat ulang tahun, saat ujian. "Ya Allah, sembuhkan adek." Doa singkat dari kakak ke adek bisa menyembuhkan luka yang tidak terlihat.</p>
+
+<h2>Saat pertengkaran terjadi: 4 langkah</h2>
+
+<ol>
+  <li><strong>Pisahkan dulu.</strong> Setiap anak ke ruang masing-masing 5 menit.</li>
+  <li><strong>Dengar bergantian.</strong> Yang lebih muda bicara dulu, yang lebih tua menyusul.</li>
+  <li><strong>Cari fakta, bukan menyalahkan.</strong> "Jadi tadi, kakak ambil mainan, lalu adek dorong. Begitu?"</li>
+  <li><strong>Minta maaf, tatap mata.</strong> "Aku minta maaf karena tadi aku mendorongmu." Pelukan setelahnya.</li>
+</ol>
+
+<p>Lihat juga <a href="/_/parenting/rivalitas-saudara/">Rivalitas Antar Saudara</a>.</p>
+
+<h2>Yang harus dihindari oleh orang tua</h2>
+
+<ul>
+  <li><strong>"Kamu kan kakak, harus ngalah."</strong> Mengajarkan ketidakadilan.</li>
+  <li><strong>"Liat adek tuh, lebih pintar."</strong> Pembandingan menanam iri yang sulit dicabut.</li>
+  <li><strong>Tertawa di pertengkaran mereka.</strong> Terasa direndahkan di mata anak.</li>
+  <li><strong>Mengingat-ingat kesalahan lama.</strong> Setiap pertengkaran adalah pertengkaran baru.</li>
+</ul>
+
+<h2>Yang harus dibiasakan</h2>
+
+<ul>
+  <li><strong>Foto bareng yang dibingkai.</strong> Hubungan tumbuh dari momen yang diabadikan.</li>
+  <li><strong>Doakan bersama, sebut nama.</strong> "Ya Allah, sayangilah Aisyah dan Yusuf."</li>
+  <li><strong>Tugas berdua.</strong> Beli sayur, lipat baju, siapkan piring makan. Kerjasama membangun kasih.</li>
+  <li><strong>Cerita tentang Hasan dan Husain.</strong> Ajak anak <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">membayangkan kasih sayang di keluarga Rasul</a>.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Saudara adalah teman paling lama dalam hidup. Adab yang kamu tanam saat mereka 5 tahun adalah pelukan yang akan mereka berikan saat mereka 50 tahun.</p>`,
+
+      en: `<p>If you've ever thought "why can't my kids get along for 30 minutes", you are not alone. A home with two children is a 24-hour negotiation arena.</p>
+
+<p>But there's a big difference between a home where fights end in 5 minutes with forgiveness, and a home where fights become grudges. The difference isn't the number of children — it's the <em>adab</em> planted.</p>
+
+<h2>What Islam says about sibling relations</h2>
+
+<blockquote>"Fear Allah and treat your children with justice." — <strong>Bukhari 2587, Muslim 1623</strong></blockquote>
+
+<p>This hadith addresses <strong>parents</strong>. The root of sibling fights is often not the children — but the parents. See <a href="/_/hadith/adil-kepada-anak/">Be Just Between Your Children</a>.</p>
+
+<h2>Four manners to instill</h2>
+
+<h3>1. Calling each other by good names</h3>
+
+<p>"Sister" and "brother" are reminders of the hierarchy of mercy Islam teaches. Don't allow mocking nicknames, even in jest.</p>
+
+<h3>2. Greeting and asking permission</h3>
+
+<p>Before entering a sibling's room: knock, say salam, wait. See <a href="/_/doa/mengucap-salam/">Saying Salam</a>.</p>
+
+<h3>3. Sharing without coercion</h3>
+
+<ul>
+  <li>Each child has <em>one</em> drawer only theirs. A sibling can't take from it without permission.</li>
+  <li>Communal toys live separately.</li>
+  <li>When borrowing, teach: "May I borrow this? I'll return it."</li>
+</ul>
+
+<h3>4. Praying for each other</h3>
+
+<p>Teach the child to make dua for their sibling: when sick, on birthdays, before exams. "O Allah, heal my sister." A short dua from an older sibling can heal wounds parents don't see.</p>
+
+<h2>When a fight happens: 4 steps</h2>
+
+<ol>
+  <li><strong>Separate first.</strong> Each child to their room for 5 minutes.</li>
+  <li><strong>Listen in turn.</strong> Younger first, older after.</li>
+  <li><strong>Find facts, not blame.</strong> "So brother took the toy, then sister pushed. Is that right?"</li>
+  <li><strong>Apologize, eye contact.</strong> "I'm sorry I pushed you." A hug after.</li>
+</ol>
+
+<p>See also <a href="/_/parenting/rivalitas-saudara/">Sibling Rivalry</a>.</p>
+
+<h2>What parents should avoid</h2>
+
+<ul>
+  <li><strong>"You're the older one, you should give in."</strong> Teaches injustice.</li>
+  <li><strong>"Look at your sister, she's smarter."</strong> Plants envy that's hard to uproot.</li>
+  <li><strong>Laughing at their fights.</strong> Feels belittling to a child.</li>
+  <li><strong>Bringing up old offenses.</strong> Every fight is a new fight.</li>
+</ul>
+
+<h2>What to build</h2>
+
+<ul>
+  <li><strong>A framed photo of them together.</strong> Bonds grow from preserved moments.</li>
+  <li><strong>Pray for them by name, together.</strong> "O Allah, take care of Aisha and Yusuf."</li>
+  <li><strong>Tasks together.</strong> Buy vegetables, fold laundry, set the table. Cooperation builds love.</li>
+  <li><strong>Stories of Hasan and Husain.</strong> Invite your child to <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">imagine the affection in the Prophet's family</a>.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Siblings are the longest friends in life. The adab you plant when they're 5 is the embrace they'll give each other when they're 50.</p>`,
+    },
+    tags: ["saudara", "adab", "parenting", "akhlak"],
+    published: "2026-05-21",
+    updated: "2026-05-21",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 8. EVERGREEN — Dzikir pagi & petang rutinitas
+  // ─────────────────────────────────────────────────────────────────
+  {
+    slug: "doa-pagi-petang-rutinitas-perlindungan-anak",
+    title: {
+      id: "Doa Pagi & Petang sebagai Rutinitas Perlindungan Harian Anak",
+      en: "Morning & Evening Duas as Your Child's Daily Protection Routine",
+    },
+    excerpt: {
+      id: "Dzikir pagi dan petang adalah benteng spiritual yang Rasulullah ﷺ ajarkan. Cara membangun rutinitas sederhana untuk anak.",
+      en: "Morning and evening adhkar are spiritual shields the Prophet ﷺ taught. How to build a simple routine for your child.",
+    },
+    body: {
+      id: `<p>Setiap orang tua muslim pernah khawatir — anak yang main di luar, anak yang sakit, anak yang tertidur sendirian. Tapi Islam memberi kita lebih dari sekadar kekhawatiran: ada <em>amal</em> yang bisa kita ajarkan kepada anak yang menjadi perlindungan dirinya sendiri.</p>
+
+<p>Itulah dzikir pagi dan petang — amalan harian yang dianjurkan Rasulullah ﷺ untuk dewasa <em>dan</em> anak.</p>
+
+<h2>Mengapa pagi dan petang</h2>
+
+<blockquote>"Dan sebutlah nama Tuhanmu pada (waktu) pagi dan petang." — <strong>QS. Al-Insan 76:25</strong></blockquote>
+
+<p>Pagi adalah pintu masuk hari. Petang adalah pintu masuk malam. Untuk anak:</p>
+
+<ul>
+  <li><strong>Pagi:</strong> sebelum berangkat sekolah, sebelum bertemu dunia yang lebih besar dari rumah.</li>
+  <li><strong>Petang:</strong> sebelum malam, sebelum tidur sendirian di kamarnya.</li>
+</ul>
+
+<h2>Apa yang dibaca — versi paling sederhana</h2>
+
+<p>Untuk anak 3–6 tahun, mulai dari <strong>satu doa</strong> di pagi dan satu di petang. Tidak perlu hafal sepuluh.</p>
+
+<h3>Pagi & petang (dua-duanya doa yang sama)</h3>
+
+<p><strong>Bismillahilladzi la yadhurru ma'asmihi syai'un fil-ardhi wa la fis-sama', wa huwas-sami'ul-'alim</strong> (3×)</p>
+
+<p>"Dengan nama Allah yang dengan menyebut nama-Nya, segala sesuatu di bumi dan di langit tidak akan memberi mudharat. Dan Dia-lah Yang Maha Mendengar lagi Maha Mengetahui."</p>
+
+<p>Rasulullah ﷺ menjanjikan perlindungan menyeluruh bagi yang membacanya 3 kali di pagi/petang. Selengkapnya: <a href="/_/doa/doa-pagi/">Doa Pagi</a> dan <a href="/_/doa/doa-petang/">Doa Petang</a>.</p>
+
+<h2>Cara membangun rutinitas — 4 minggu</h2>
+
+<h3>Minggu 1: Orang tua dulu, anak mengamati</h3>
+
+<p>Setiap pagi sebelum sekolah, orang tua baca dengan suara terdengar. Tidak suruh anak ikut. Cukup dilihat.</p>
+
+<h3>Minggu 2: Ajak menirukan</h3>
+
+<p>Anak biasanya minta sendiri. Kalau belum: "Yuk baca bareng Mama." Sekali pagi, sekali petang.</p>
+
+<h3>Minggu 3: Anak yang memimpin</h3>
+
+<p>Balik posisi. Orang tua diam, anak yang memulai. Bantu jika lupa.</p>
+
+<h3>Minggu 4: Otomatis</h3>
+
+<p>Anak sudah membacanya tanpa diingatkan. Kalau belum, lanjut minggu kelima dengan ritme yang sama. Tidak ada balapan.</p>
+
+<h2>Cara membuat ini bukan beban</h2>
+
+<ul>
+  <li><strong>Waktu yang sudah ada</strong> — sambil pakai sepatu, sambil tunggu Maghrib.</li>
+  <li><strong>Pegang tangan anak saat membaca</strong> — sentuhan fisik membuat doa terasa bermakna.</li>
+  <li><strong>Jangan korelasikan dengan hukuman.</strong> Anak yang lupa tidak boleh dimarahi.</li>
+  <li><strong>Modelkan, jangan instruksikan.</strong> Anak yang melihat ayahnya membaca akan mengikuti tanpa diminta.</li>
+</ul>
+
+<h2>Apa yang berubah</h2>
+
+<p>Setelah 2–3 bulan:</p>
+
+<ul>
+  <li>Anak yang cemas berangkat sekolah jadi lebih tenang — karena "berangkat dengan Allah".</li>
+  <li>Anak yang sulit tidur jadi cepat tertidur — karena petang ditutup dengan dzikir.</li>
+  <li>Anak mulai mengajak orang tuanya membaca. Tanda paling jelas rutinitas sudah jadi miliknya.</li>
+</ul>
+
+<h2>Setelah anak terbiasa</h2>
+
+<p>Pada usia 7–8 tahun, tambahkan:</p>
+
+<ul>
+  <li>Surat Al-Ikhlas, Al-Falaq, An-Nas (3× pagi, 3× petang)</li>
+  <li>Ayat Kursi (1× pagi, 1× petang)</li>
+</ul>
+
+<p>Tapi jangan tambah sampai dasar benar-benar nyaman. Lebih baik 2 doa rutin daripada 10 doa terlupakan.</p>
+
+<h2>Penutup</h2>
+
+<p>Kamu tidak bisa menjaga anakmu 24 jam. Tapi kamu bisa mengajarinya meminta penjagaan dari Yang Maha Menjaga — setiap pagi sebelum dia keluar pintu, setiap petang sebelum tidur.</p>
+
+<p>Itu warisan yang tidak terlihat, tapi terasa seumur hidupnya.</p>`,
+
+      en: `<p>Every Muslim parent has felt anxious — the child playing outside, the sick child, the child falling asleep alone. But Islam gives us more than worry: there is an <em>act</em> we can teach our child that becomes their own protection.</p>
+
+<p>That is the morning and evening adhkar — daily acts the Prophet ﷺ taught for adults <em>and</em> children.</p>
+
+<h2>Why morning and evening</h2>
+
+<blockquote>"And mention the name of your Lord in the morning and the evening." — <strong>Qur'an 76:25</strong></blockquote>
+
+<p>Morning is the door of the day. Evening is the door of the night. For children:</p>
+
+<ul>
+  <li><strong>Morning:</strong> before school, before meeting a world bigger than home.</li>
+  <li><strong>Evening:</strong> before night, before sleeping alone in their room.</li>
+</ul>
+
+<h2>What to recite — the simplest version</h2>
+
+<p>For ages 3–6, start with <strong>one dua</strong> morning and one evening. No need to memorize ten.</p>
+
+<h3>Morning & evening (the same dua)</h3>
+
+<p><strong>Bismillahilladhi la yadhurru ma'asmihi shay'un fil-ardhi wa la fis-sama'i, wa huwas-sami'ul-'alim</strong> (3×)</p>
+
+<p>"In the name of Allah, with whose name nothing on earth or in heaven can do harm. He is the All-Hearing, the All-Knowing."</p>
+
+<p>The Prophet ﷺ promised complete protection for the one who says this 3 times in the morning/evening. See: <a href="/_/doa/doa-pagi/">Morning Dua</a> and <a href="/_/doa/doa-petang/">Evening Dua</a>.</p>
+
+<h2>How to build the routine — 4 weeks</h2>
+
+<h3>Week 1: Parent first, child watches</h3>
+
+<p>Every morning before school, parent recites aloud. Don't ask child to join. Just let them watch.</p>
+
+<h3>Week 2: Invite to echo</h3>
+
+<p>The child usually asks on their own. If not: "Let's recite together." Once morning, once evening.</p>
+
+<h3>Week 3: Child leads</h3>
+
+<p>Reverse roles. Parent silent; child starts. Help if they forget.</p>
+
+<h3>Week 4: Automatic</h3>
+
+<p>The child recites unprompted. If not, continue at the same rhythm. No race.</p>
+
+<h2>How to keep it from feeling like a burden</h2>
+
+<ul>
+  <li><strong>An existing time</strong> — while putting on shoes, while waiting for Maghrib.</li>
+  <li><strong>Hold their hand while reciting</strong> — physical touch makes the dua meaningful.</li>
+  <li><strong>Don't link it to punishment.</strong> A child who forgets shouldn't be scolded.</li>
+  <li><strong>Model, don't instruct.</strong> A child who sees their father recite will follow unprompted.</li>
+</ul>
+
+<h2>What changes</h2>
+
+<p>After 2–3 months:</p>
+
+<ul>
+  <li>A child anxious leaving for school becomes calmer — "going with Allah".</li>
+  <li>A child who struggled to sleep settles faster — evening closed with dhikr.</li>
+  <li>The child invites the parent to recite. The clearest sign the routine is theirs.</li>
+</ul>
+
+<h2>Once your child is comfortable</h2>
+
+<p>By 7–8, add:</p>
+
+<ul>
+  <li>Surahs Al-Ikhlas, Al-Falaq, An-Nas (3× morning, 3× evening)</li>
+  <li>Ayatul Kursi (1× morning, 1× evening)</li>
+</ul>
+
+<p>Don't add until the basics are comfortable. Better 2 duas recited daily than 10 forgotten.</p>
+
+<h2>Closing</h2>
+
+<p>You can't guard your child 24 hours. But you can teach them to ask for guarding from the Most Guarding — every morning before they walk out, every evening before sleep.</p>
+
+<p>That is an invisible inheritance — but felt, for the rest of your child's life.</p>`,
+    },
+    tags: ["dzikir", "doa", "perlindungan", "rutinitas"],
+    published: "2026-05-20",
+    updated: "2026-05-20",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+  },
+
+  // ─────────────────────────────────────────────────────────────────
+  // 9. The original hijaiyah article — kept as-is
   // ─────────────────────────────────────────────────────────────────
   {
     slug: "cara-mengenalkan-huruf-hijaiyah-pada-anak",
