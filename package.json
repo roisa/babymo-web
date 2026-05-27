@@ -5,6 +5,8 @@
   "description": "Baby Mo — Islamic parenting knowledge platform for Indonesian Muslim families.",
   "scripts": {
     "dev": "next dev",
+    "og": "node scripts/generate-og.mjs",
+    "prebuild": "node scripts/generate-og.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",

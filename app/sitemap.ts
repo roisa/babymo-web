@@ -13,6 +13,12 @@ function uniqueDoaTags(): string[] {
   return Array.from(t);
 }
 
+function uniqueHadithThemes(): string[] {
+  const t = new Set<string>();
+  for (const h of getAllHadith()) for (const th of h.themes) t.add(th);
+  return Array.from(t);
+}
+
 const STATIC_PATHS = [
   "",
   "/doa",
@@ -88,6 +94,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/hadith/${h.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const theme of uniqueHadithThemes()) {
+      out.push({
+        url: url(locale, `/hadith/tema/${theme}`),
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/hadith/tema/${theme}`)]),
           ),
         },
       });

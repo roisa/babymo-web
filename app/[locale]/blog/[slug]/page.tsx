@@ -36,6 +36,7 @@ export async function generateMetadata({
     title: post.title[locale],
     description: post.excerpt[locale],
     type: "article",
+    image: `https://babymo.id/og/blog/${locale}/${slug}.jpg`,
   });
 }
 
