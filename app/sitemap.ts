@@ -25,68 +25,75 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const out: MetadataRoute.Sitemap = [];
   const now = new Date();
 
+  // Trailing-slash URL builder — matches Next.js `trailingSlash: true` output
+  // and the canonical tag in every rendered page.
+  const url = (locale: string, p: string) => {
+    const path = p === "" ? "" : p.startsWith("/") ? p : `/${p}`;
+    return `${siteUrl}/${locale}${path}/`;
+  };
+
   for (const locale of locales) {
     for (const p of STATIC_PATHS) {
       out.push({
-        url: `${siteUrl}/${locale}${p}`,
+        url: url(locale, p),
         lastModified: now,
         changeFrequency: p === "" ? "weekly" : "monthly",
         priority: p === "" ? 1.0 : 0.7,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((l) => [l, `${siteUrl}/${l}${p}`])
+            locales.map((ll) => [ll, url(ll, p)]),
           ),
         },
       });
     }
     for (const d of getAllDoa()) {
       out.push({
-        url: `${siteUrl}/${locale}/doa/${d.slug}`,
+        url: url(locale, `/doa/${d.slug}`),
         lastModified: new Date(d.updated),
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((l) => [l, `${siteUrl}/${l}/doa/${d.slug}`])
+            locales.map((ll) => [ll, url(ll, `/doa/${d.slug}`)]),
           ),
         },
       });
     }
     for (const h of getAllHadith()) {
       out.push({
-        url: `${siteUrl}/${locale}/hadith/${h.slug}`,
+        url: url(locale, `/hadith/${h.slug}`),
         lastModified: new Date(h.updated),
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((ll) => [ll, `${siteUrl}/${ll}/hadith/${h.slug}`]),
+            locales.map((ll) => [ll, url(ll, `/hadith/${h.slug}`)]),
           ),
         },
       });
     }
     for (const p of getAllParenting()) {
       out.push({
-        url: `${siteUrl}/${locale}/parenting/${p.slug}`,
+        url: url(locale, `/parenting/${p.slug}`),
         lastModified: new Date(p.updated),
         changeFrequency: "monthly",
         priority: 0.85,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((ll) => [ll, `${siteUrl}/${ll}/parenting/${p.slug}`]),
+            locales.map((ll) => [ll, url(ll, `/parenting/${p.slug}`)]),
           ),
         },
       });
     }
     for (const b of getAllBlogPosts()) {
       out.push({
-        url: `${siteUrl}/${locale}/blog/${b.slug}`,
+        url: url(locale, `/blog/${b.slug}`),
         lastModified: new Date(b.updated),
         changeFrequency: "monthly",
         priority: 0.8,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((l) => [l, `${siteUrl}/${l}/blog/${b.slug}`])
+            locales.map((ll) => [ll, url(ll, `/blog/${b.slug}`)]),
           ),
         },
       });
