@@ -2,12 +2,16 @@ import type { MetadataRoute } from "next";
 import { locales, siteUrl } from "@/lib/i18n/config";
 import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts } from "@/lib/content/blog";
+import { getAllHadith } from "@/lib/content/hadith";
+import { getAllParenting } from "@/lib/content/parenting";
 
 export const dynamic = "force-static";
 
 const STATIC_PATHS = [
   "",
   "/doa",
+  "/hadith",
+  "/parenting",
   "/blog",
   "/permainan",
   "/faq",
@@ -44,6 +48,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((l) => [l, `${siteUrl}/${l}/doa/${d.slug}`])
+          ),
+        },
+      });
+    }
+    for (const h of getAllHadith()) {
+      out.push({
+        url: `${siteUrl}/${locale}/hadith/${h.slug}`,
+        lastModified: new Date(h.updated),
+        changeFrequency: "monthly",
+        priority: 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, `${siteUrl}/${ll}/hadith/${h.slug}`]),
+          ),
+        },
+      });
+    }
+    for (const p of getAllParenting()) {
+      out.push({
+        url: `${siteUrl}/${locale}/parenting/${p.slug}`,
+        lastModified: new Date(p.updated),
+        changeFrequency: "monthly",
+        priority: 0.85,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, `${siteUrl}/${ll}/parenting/${p.slug}`]),
           ),
         },
       });

@@ -59,6 +59,26 @@ type Dict = {
     copy: string;
     copied: string;
   };
+  hadith: {
+    indexTitle: string;
+    indexDescription: string;
+    narrator: string;
+    collection: string;
+    grade: string;
+    themes: string;
+    parentingNote: string;
+    relatedDoa: string;
+  };
+  parenting: {
+    indexTitle: string;
+    indexDescription: string;
+    signs: string;
+    steps: string;
+    islamicPerspective: string;
+    recommendedDoa: string;
+    supportingHadith: string;
+    ageRange: string;
+  };
   blog: {
     indexTitle: string;
     indexDescription: string;
@@ -170,6 +190,28 @@ const id: Dict = {
     related: "Doa terkait",
     copy: "Salin",
     copied: "Tersalin",
+  },
+  hadith: {
+    indexTitle: "Hadith Pilihan untuk Orang Tua Muslim",
+    indexDescription:
+      "Hadith pilihan yang relevan untuk parenting islami — dengan teks Arab, terjemahan, perawi, dan tingkat keshahihan. Setiap hadith disertai catatan singkat penerapan dalam mendidik anak.",
+    narrator: "Perawi",
+    collection: "Kitab",
+    grade: "Tingkat keshahihan",
+    themes: "Tema",
+    parentingNote: "Catatan untuk Orang Tua",
+    relatedDoa: "Doa terkait",
+  },
+  parenting: {
+    indexTitle: "Panduan Parenting Islami",
+    indexDescription:
+      "Panduan praktis untuk situasi yang sering dihadapi keluarga muslim — tantrum, susah tidur, susah makan, dan lainnya. Disertai langkah konkret, doa, dan hadith pendukung.",
+    signs: "Tanda yang muncul",
+    steps: "Langkah praktis",
+    islamicPerspective: "Perspektif islami",
+    recommendedDoa: "Doa yang dianjurkan",
+    supportingHadith: "Hadith pendukung",
+    ageRange: "Rentang usia",
   },
   blog: {
     indexTitle: "Blog Baby Mo",
@@ -331,6 +373,28 @@ const en: Dict = {
     related: "Related duas",
     copy: "Copy",
     copied: "Copied",
+  },
+  hadith: {
+    indexTitle: "Selected Hadith for Muslim Parents",
+    indexDescription:
+      "Curated hadith with practical parenting relevance — Arabic, translation, narrator, and authenticity grade. Each entry carries a short note on how to apply it in raising children.",
+    narrator: "Narrator",
+    collection: "Collection",
+    grade: "Authenticity",
+    themes: "Themes",
+    parentingNote: "Note for parents",
+    relatedDoa: "Related duas",
+  },
+  parenting: {
+    indexTitle: "Islamic Parenting Guides",
+    indexDescription:
+      "Practical guides for everyday situations in a Muslim family — tantrums, sleep, eating, and more. Each carries concrete steps, recommended duas, and supporting hadith.",
+    signs: "Signs",
+    steps: "What to do",
+    islamicPerspective: "Islamic perspective",
+    recommendedDoa: "Recommended duas",
+    supportingHadith: "Supporting hadith",
+    ageRange: "Age range",
   },
   blog: {
     indexTitle: "Baby Mo Blog",

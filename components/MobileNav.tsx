@@ -9,7 +9,7 @@ export function MobileNav({ locale }: Props) {
   const items = [
     { href: "/", label: dict.nav.home, icon: HomeIcon },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon },
-    { href: "/permainan", label: dict.nav.games, icon: GameIcon },
+    { href: "/parenting", label: dict.nav.parenting, icon: HeartIcon },
     { href: "/blog", label: dict.nav.blog, icon: PenIcon },
   ];
 
@@ -49,6 +49,13 @@ function BookIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M4 4h11a3 3 0 0 1 3 3v13" /><path d="M4 4v15a2 2 0 0 0 2 2h12" />
+    </svg>
+  );
+}
+function HeartIcon() {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M12 21s-7-4.5-9.3-9.1A5.4 5.4 0 0 1 7.1 4.4 5 5 0 0 1 12 7a5 5 0 0 1 4.9-2.6 5.4 5.4 0 0 1 4.4 7.5C19 16.5 12 21 12 21Z" />
     </svg>
   );
 }

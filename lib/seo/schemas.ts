@@ -1,5 +1,5 @@
 import { type Locale, absoluteUrl, siteUrl } from "../i18n/config";
-import type { BlogPost, Doa, Game } from "../content/types";
+import type { BlogPost, Doa, Game, Hadith, ParentingSituation } from "../content/types";
 import { getDictionary } from "../i18n/dictionaries";
 
 const logo = `${siteUrl}/assets/logo-512.png`;
@@ -114,6 +114,55 @@ export function itemListSchema(
       name: it.name,
       url: it.url,
     })),
+  };
+}
+
+export function hadithSchema(locale: Locale, h: Hadith) {
+  return {
+    "@type": ["Article", "Quotation"],
+    headline: h.title[locale],
+    name: h.title[locale],
+    text: h.translation[locale],
+    description: h.parentingNote[locale],
+    inLanguage: locale === "id" ? "id-ID" : "en",
+    datePublished: h.published,
+    dateModified: h.updated,
+    author: { "@id": `${siteUrl}/#org` },
+    publisher: { "@id": `${siteUrl}/#org` },
+    mainEntityOfPage: absoluteUrl(locale, `/hadith/${h.slug}`),
+    citation: h.source.reference,
+    spokenByCharacter: h.narrator,
+    keywords: h.themes.join(", "),
+    isBasedOn: {
+      "@type": "CreativeWork",
+      name: h.source.collection,
+      identifier: h.source.reference,
+    },
+  };
+}
+
+export function parentingSchema(locale: Locale, p: ParentingSituation) {
+  return {
+    "@type": ["Article", "HowTo"],
+    headline: p.title[locale],
+    name: p.title[locale],
+    description: p.excerpt[locale],
+    inLanguage: locale === "id" ? "id-ID" : "en",
+    datePublished: p.published,
+    dateModified: p.updated,
+    author: { "@id": `${siteUrl}/#org` },
+    publisher: { "@id": `${siteUrl}/#org` },
+    mainEntityOfPage: absoluteUrl(locale, `/parenting/${p.slug}`),
+    audience: {
+      "@type": "Audience",
+      audienceType: `Muslim parents with children aged ${p.ageMin}-${p.ageMax}`,
+    },
+    step: p.steps[locale].map((s, i) => ({
+      "@type": "HowToStep",
+      position: i + 1,
+      text: s,
+    })),
+    keywords: p.category,
   };
 }
 
