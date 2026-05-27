@@ -39,6 +39,7 @@ export function Footer({ locale, currentPath }: Props) {
 
           <FooterCol heading={dict.footer.info}>
             <FooterLink locale={locale} href="/tentang">{dict.nav.about}</FooterLink>
+            <FooterLink locale={locale} href="/tim">{locale === "id" ? "Tim & Reviewer" : "Team & Reviewers"}</FooterLink>
             <FooterLink locale={locale} href="/kontak">{dict.nav.contact}</FooterLink>
             <FooterLink locale={locale} href="/privasi">{dict.pages.privacy.title}</FooterLink>
             <FooterLink locale={locale} href="/syarat">{dict.pages.terms.title}</FooterLink>

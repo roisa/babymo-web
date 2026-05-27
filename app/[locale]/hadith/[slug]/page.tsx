@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
+import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, hadithSchema, graph } from "@/lib/seo/schemas";
 import { getAllHadith, getHadithBySlug } from "@/lib/content/hadith";
 import { getDoaBySlug } from "@/lib/content/doa";
@@ -86,6 +87,9 @@ export default async function HadithDetail({
           <h1 className="tracking-display font-serif text-[36px] font-medium leading-[1.08] text-ink sm:text-[44px]">
             {h.title[l]}
           </h1>
+          <div className="mt-4">
+            <Byline locale={l} reviewerSlug={h.reviewedBy} compact />
+          </div>
         </header>
 
         <section className="overflow-hidden rounded-[28px] border border-hairline bg-paper">

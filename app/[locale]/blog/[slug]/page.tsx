@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { blogPostingSchema, breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
+import { Byline } from "@/components/Byline";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -71,16 +72,14 @@ export default async function BlogDetail({
           <h1 className="mt-3 font-serif text-3xl font-medium leading-tight tracking-tight text-ink sm:text-4xl">
             {post.title[l]}
           </h1>
-          <div className="mt-4 flex flex-wrap items-center gap-2 text-xs text-whisper">
-            <span>
-              {dict.blog.by} <strong className="text-ink">{post.author}</strong>
-            </span>
-            <span>·</span>
-            <time dateTime={post.published}>{post.published}</time>
-            <span>·</span>
-            <span>
-              {post.readingTimeMin} {dict.blog.readingTime}
-            </span>
+          <div className="mt-4">
+            <Byline
+              locale={l}
+              authorSlug={post.author}
+              reviewerSlug={post.reviewedBy}
+              date={post.published}
+              readingTimeMin={post.readingTimeMin}
+            />
           </div>
         </header>
 

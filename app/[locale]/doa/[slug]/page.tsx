@@ -8,6 +8,7 @@ import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
+import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
 import { DoaCard } from "@/components/DoaCard";
@@ -88,6 +89,14 @@ export default async function DoaDetail({
           <p className="mt-3 text-[16px] leading-relaxed text-whisper">
             {doa.context[l]}
           </p>
+          <div className="mt-4">
+            <Byline
+              locale={l}
+              authorSlug={doa.author}
+              reviewerSlug={doa.reviewedBy}
+              compact
+            />
+          </div>
         </header>
 
         {/* Arabic / transliteration / translation — iOS card stack */}

@@ -8,6 +8,24 @@ export type DoaSource = {
   grade: Grade;
 };
 
+export type Person = {
+  slug: string;
+  name: string;
+  /** team = staff/editor, reviewer = scholar reviewer, founder = founding member */
+  role: "team" | "reviewer" | "founder";
+  title: Record<Locale, string>;
+  bio: Record<Locale, string>;
+  credentials?: string[];
+  /** Path to public/people/<slug>.png (optional — falls back to initials) */
+  photo?: string;
+  socials?: {
+    youtube?: string;
+    instagram?: string;
+    tiktok?: string;
+    website?: string;
+  };
+};
+
 export type Doa = {
   slug: string;
   /** Arabic text — same across locales */
@@ -27,6 +45,10 @@ export type Doa = {
   related: string[];
   published: string; // ISO date
   updated: string;
+  /** Slug of a Person who authored the entry — defaults to tim-baby-mo */
+  author?: string;
+  /** Slug of a Person who reviewed the entry (qualified scholar) */
+  reviewedBy?: string;
 };
 
 export type BlogPost = {
@@ -38,7 +60,9 @@ export type BlogPost = {
   published: string;
   updated: string;
   readingTimeMin: number;
+  /** Person slug — used to look up byline + JSON-LD author */
   author: string;
+  reviewedBy?: string;
 };
 
 export type Hadith = {
@@ -62,6 +86,7 @@ export type Hadith = {
   relatedSituations: string[];
   published: string;
   updated: string;
+  reviewedBy?: string;
 };
 
 export type ParentingSituation = {

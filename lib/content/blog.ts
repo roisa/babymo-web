@@ -176,7 +176,7 @@ export const blogPosts: BlogPost[] = [
     published: "2026-05-27",
     updated: "2026-05-27",
     readingTimeMin: 7,
-    author: "Tim Baby Mo",
+    author: "tim-baby-mo",
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -365,7 +365,7 @@ export const blogPosts: BlogPost[] = [
     published: "2026-05-26",
     updated: "2026-05-26",
     readingTimeMin: 9,
-    author: "Tim Baby Mo",
+    author: "tim-baby-mo",
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -552,7 +552,7 @@ export const blogPosts: BlogPost[] = [
     published: "2026-05-25",
     updated: "2026-05-25",
     readingTimeMin: 8,
-    author: "Tim Baby Mo",
+    author: "tim-baby-mo",
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -761,7 +761,7 @@ export const blogPosts: BlogPost[] = [
     published: "2026-05-24",
     updated: "2026-05-24",
     readingTimeMin: 9,
-    author: "Tim Baby Mo",
+    author: "tim-baby-mo",
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -834,7 +834,7 @@ export const blogPosts: BlogPost[] = [
     published: "2026-05-23",
     updated: "2026-05-23",
     readingTimeMin: 6,
-    author: "Tim Baby Mo",
+    author: "tim-baby-mo",
   },
 ];
 

@@ -16,6 +16,7 @@ const STATIC_PATHS = [
   "/permainan",
   "/faq",
   "/tentang",
+  "/tim",
   "/kontak",
   "/privasi",
   "/syarat",
