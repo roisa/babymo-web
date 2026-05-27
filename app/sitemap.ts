@@ -7,6 +7,12 @@ import { getAllParenting } from "@/lib/content/parenting";
 
 export const dynamic = "force-static";
 
+function uniqueDoaTags(): string[] {
+  const t = new Set<string>();
+  for (const d of getAllDoa()) for (const s of d.situations) t.add(s);
+  return Array.from(t);
+}
+
 const STATIC_PATHS = [
   "",
   "/doa",
@@ -56,6 +62,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/doa/${d.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const tag of uniqueDoaTags()) {
+      out.push({
+        url: url(locale, `/doa/kategori/${tag}`),
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/doa/kategori/${tag}`)]),
           ),
         },
       });
