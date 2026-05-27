@@ -32,11 +32,15 @@ export const WATCH_TOGETHER_ENABLED = false;
 
 export const moments: Moment[] = [
   // ── 5 published on @babymo.official YouTube (May 2026) ──────────
+  //
+  // ID-to-slug mapping (assumed from order received). If a deploy log
+  // shows a YouTube title that doesn't match the slug, swap the
+  // youtubeId values between two entries below.
   {
     slug: "doa-sebelum-tidur",
     platform: "youtube-shorts",
-    // youtubeId: fill in 11-char id once you copy it from the YouTube URL
-    url: "https://www.youtube.com/@babymo.official",
+    youtubeId: "L6bXkRuO5vc",
+    url: "https://www.youtube.com/watch?v=L6bXkRuO5vc",
     thumbnail: "/moments/doa-sebelum-tidur.jpg",
     duration: "0:32",
     title: {
@@ -55,7 +59,8 @@ export const moments: Moment[] = [
   {
     slug: "doa-bangun-tidur",
     platform: "youtube-shorts",
-    url: "https://www.youtube.com/@babymo.official",
+    youtubeId: "orXDAOHAKw8",
+    url: "https://www.youtube.com/watch?v=orXDAOHAKw8",
     thumbnail: "/moments/doa-bangun-tidur.jpg",
     duration: "0:42",
     title: {
@@ -74,7 +79,8 @@ export const moments: Moment[] = [
   {
     slug: "doa-sebelum-makan",
     platform: "youtube-shorts",
-    url: "https://www.youtube.com/@babymo.official",
+    youtubeId: "X6ZGk_e7A00",
+    url: "https://www.youtube.com/watch?v=X6ZGk_e7A00",
     thumbnail: "/moments/doa-sebelum-makan.jpg",
     duration: "0:40",
     title: {
@@ -93,7 +99,8 @@ export const moments: Moment[] = [
   {
     slug: "doa-sesudah-makan",
     platform: "youtube-shorts",
-    url: "https://www.youtube.com/@babymo.official",
+    youtubeId: "cmK8ruUiCbA",
+    url: "https://www.youtube.com/watch?v=cmK8ruUiCbA",
     thumbnail: "/moments/doa-sesudah-makan.jpg",
     duration: "0:42",
     title: {
@@ -111,7 +118,8 @@ export const moments: Moment[] = [
   {
     slug: "cari-dan-temukan-perbedaan",
     platform: "youtube",
-    url: "https://www.youtube.com/@babymo.official",
+    youtubeId: "BhLRQP_Nfdk",
+    url: "https://www.youtube.com/watch?v=BhLRQP_Nfdk",
     thumbnail: "/moments/cari-dan-temukan-perbedaan.jpg",
     duration: "17:27",
     title: {
