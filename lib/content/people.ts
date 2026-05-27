@@ -37,8 +37,8 @@ export const people: Person[] = [
     },
   },
   {
-    slug: "roisa",
-    name: "Roisatul Azizah",
+    slug: "salman",
+    name: "Salman Alfa",
     role: "founder",
     title: {
       id: "Pendiri & Lead Editor",
@@ -49,9 +49,6 @@ export const people: Person[] = [
       en: "Founder of Baby Mo. Focused on producing child-friendly Islamic content — games, animation, and parenting guides for Indonesian Muslim families.",
     },
     credentials: ["Founder @ Baby Mo"],
-    socials: {
-      instagram: "https://www.instagram.com/babymo.official",
-    },
   },
 ];
 

@@ -58,7 +58,17 @@ export function Footer({ locale, currentPath }: Props) {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-mist pt-6 text-xs text-whisper sm:flex-row sm:items-center">
           <p>© {year} Baby Mo. {dict.footer.rights}</p>
-          <p>babymo.id · roisa.github.io/babymo-web</p>
+          <p>
+            {locale === "id" ? "Dikembangkan oleh" : "Powered by"}{" "}
+            <a
+              href="https://ibracreative.com"
+              target="_blank"
+              rel="noopener"
+              className="font-semibold text-ink-soft hover:text-ink hover:underline"
+            >
+              ibracreative.com
+            </a>
+          </p>
         </div>
       </div>
     </footer>
