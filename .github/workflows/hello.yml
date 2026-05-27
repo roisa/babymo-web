@@ -1,0 +1,20 @@
+name: Hello
+
+# Diagnostic workflow — runs nothing but echo.
+# If this fails in 2 seconds with the same pattern as the deploy
+# workflow, the block is at the account / repo settings level (not
+# anything in the workflow YAML). Then we know where to look.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello from GitHub Actions. If you can read this, the deploy workflow's issue is specific to its YAML, not a repo-level block."
