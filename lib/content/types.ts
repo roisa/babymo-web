@@ -51,6 +51,19 @@ export type Doa = {
   reviewedBy?: string;
 };
 
+export type BlogKit = {
+  /** Strong 1–2 line quote — for WhatsApp share / image quote / Twitter */
+  quote: Record<Locale, string>;
+  /** 6–7 carousel slides for Instagram (each ~30–60 chars title, ~120–180 chars body) */
+  carousel: Record<Locale, { title: string; body: string }[]>;
+  /** 60-second script for TikTok / YouTube Shorts — hook + body + CTA */
+  shortScript: Record<Locale, string>;
+  /** Pinterest pin: catchy title + long-tail-keyword description */
+  pin: Record<Locale, { title: string; description: string }>;
+  /** Bullet list that prints well as a one-page PDF (≤ 10 items) */
+  checklist: Record<Locale, string[]>;
+};
+
 export type BlogPost = {
   slug: string;
   title: Record<Locale, string>;
@@ -63,6 +76,8 @@ export type BlogPost = {
   /** Person slug — used to look up byline + JSON-LD author */
   author: string;
   reviewedBy?: string;
+  /** Optional kit for cross-channel content multiplication */
+  kit?: BlogKit;
 };
 
 export type Hadith = {

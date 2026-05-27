@@ -11,6 +11,7 @@ import { blogPostingSchema, breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
 import { Byline } from "@/components/Byline";
+import { MultiplicationKit } from "@/components/MultiplicationKit";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -87,6 +88,8 @@ export default async function BlogDetail({
           className="prose"
           dangerouslySetInnerHTML={{ __html: renderBody(post.body[l], l) }}
         />
+
+        {post.kit && <MultiplicationKit kit={post.kit} locale={l} />}
       </main>
 
       <Footer locale={l} currentPath={`/blog/${slug}`} />

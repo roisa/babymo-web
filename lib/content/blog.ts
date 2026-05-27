@@ -12,6 +12,1200 @@ import type { BlogPost } from "./types";
  *   - Reading time ≈ words ÷ 230.
  */
 export const blogPosts: BlogPost[] = [
+  // ═════════════════════════════════════════════════════════════════
+  //  MUHARRAM 1448 H series — 5 posts for the Islamic New Year window
+  //  (~16 June 2026 = 1 Muharram, ~25 June = 10 Muharram / Asyura)
+  //  Each carries a full multiplication kit for IG / TikTok / Pinterest /
+  //  WhatsApp / printable PDF reuse.
+  // ═════════════════════════════════════════════════════════════════
+
+  {
+    slug: "doa-awal-tahun-hijriyah-untuk-anak",
+    title: {
+      id: "Doa Awal Tahun Hijriyah untuk Anak: Apa yang Diajarkan Sunnah",
+      en: "New Hijri Year Duas for Children: What the Sunnah Teaches",
+    },
+    excerpt: {
+      id: "Tahun baru Hijriyah datang dengan tenang, bukan dengan kembang api. Doa apa yang sebenarnya diajarkan Rasulullah ﷺ untuk menyambutnya, dan bagaimana mengajarkannya pada anak.",
+      en: "The Hijri new year arrives quietly, not with fireworks. The dua the Prophet ﷺ actually taught for it, and how to teach your child.",
+    },
+    body: {
+      id: `<p>Sebentar lagi, 1 Muharram 1448 H. Bagi keluarga muslim, ini adalah pintu masuk ke tahun baru — tapi sering lewat tanpa ditandai karena tidak ada pesta atau kembang api. Padahal momen ini punya nilai tarbiyah yang dalam untuk anak: mereka belajar bahwa waktu dihitung dengan cara yang berbeda — dengan bulan, dengan hijrah, dengan ibadah.</p>
+
+<h2>Doa yang shahih: melihat bulan sabit baru</h2>
+
+<p>Yang sering disangka "doa awal tahun" adalah doa yang sanadnya diperdebatkan. Doa yang <strong>shahih dan jelas sanadnya</strong> adalah doa melihat bulan sabit baru — yang dibaca ketika bulan sabit Muharram (atau bulan apapun) baru terlihat:</p>
+
+<blockquote dir="rtl" lang="ar" style="font-family:'Noto Naskh Arabic',serif;font-size:1.5em;">اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ</blockquote>
+
+<p><em>Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-islam, rabbi wa rabbukallah</em></p>
+
+<p>"Ya Allah, tampakkanlah bulan ini kepada kami dengan keamanan dan keimanan, keselamatan dan Islam. Tuhanku dan Tuhanmu adalah Allah." — <strong>HR. Tirmidzi 3451 (Hasan)</strong></p>
+
+<p>Selengkapnya: <a href="/_/doa/melihat-bulan-baru/">Doa Melihat Bulan Sabit Baru</a>.</p>
+
+<h2>Tentang "doa awal tahun" yang viral</h2>
+
+<p>Ada doa yang sering dibagikan menjelang 1 Muharram: <em>"Allahumma anta al-abadiyyul qadim..."</em>. Para ulama berbeda pendapat tentang keshahihan sanad doa ini. Beberapa menerima sebagai "amal yang baik tanpa keyakinan sunnah", lainnya menolak.</p>
+
+<p>Sikap kami: <strong>ajarkan yang paling shahih dulu</strong> kepada anak. Doa melihat bulan sabit sudah cukup. Doa-doa lain bisa diperkenalkan setelah anak besar dan bisa memahami diskusi sanad.</p>
+
+<h2>Bagaimana mengajarkan pada anak</h2>
+
+<p>Anak kecil tidak butuh penjelasan fiqih panjang. Mereka butuh momen yang terasa istimewa.</p>
+
+<ol>
+  <li><strong>Beberapa malam sebelum 1 Muharram</strong> — ajak anak melihat langit setelah Maghrib. Tunjukkan bulan yang makin tipis. "Lihat, sebentar lagi bulan baru. Itu tanda tahun baru dalam kalender muslim."</li>
+  <li><strong>Pada malam pertama bulan sabit terlihat</strong> — ajak anak ke teras/jendela. Baca doa bersama. Pegang tangan anak saat membaca.</li>
+  <li><strong>Pagi 1 Muharram</strong> — beri sarapan khusus. Tidak harus mewah. Cukup makanan favorit anak + ucapan "Selamat tahun baru Hijriyah, sayang." Anak akan ingat ucapan ini lebih dari penjelasan kalender mana pun.</li>
+</ol>
+
+<h2>Bahasa untuk anak 3–5 tahun</h2>
+
+<p>"Adik, bulan ini namanya Muharram. Ini bulan pertama dalam kalender muslim. Kayak kalau orang lain bilang Januari, muslim bilang Muharram. Yuk kita doa biar tahun ini banyak kebaikan."</p>
+
+<h2>Bahasa untuk anak 6–8 tahun</h2>
+
+<p>"Anak Mama, kalender muslim itu dimulai sejak Nabi Muhammad ﷺ pindah dari Makkah ke Madinah. Itu peristiwa penting banget — sampai jadi awal kalender kita. Bulan ini, Muharram, adalah bulan pertama. Yuk kita rayakan dengan doa."</p>
+
+<p>Lebih dalam: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">Kisah Hijrah Nabi untuk Anak</a>.</p>
+
+<h2>Apa yang sebenarnya kamu bangun</h2>
+
+<p>Anak yang besar dengan kalender Hijriyah <em>terlihat</em> di rumahnya — di kalkulator harian, dalam ucapan orang tua, dalam doa awal bulan — adalah anak yang waktunya bergerak menurut ritme Islam, bukan ritme komersial.</p>
+
+<p>Itu tidak datang dari satu malam 1 Muharram. Itu datang dari konsistensi mengulang kebiasaan kecil ini, setiap awal bulan, setiap tahun.</p>
+
+<p>Mulai tahun ini.</p>`,
+
+      en: `<p>Soon, 1 Muharram 1448 H. For Muslim families, this is the gateway to a new year — but it often passes unmarked because there are no fireworks. Yet the moment carries deep tarbiyah value: children learn that time is counted differently — by the moon, by hijrah, by worship.</p>
+
+<h2>The authentic dua: sighting the new crescent</h2>
+
+<p>What's often called "the new year dua" has a disputed chain. The dua with the <strong>clearest and most authentic chain</strong> is the one for sighting the new crescent — recited when the Muharram (or any month) crescent first appears:</p>
+
+<blockquote dir="rtl" lang="ar" style="font-family:'Noto Naskh Arabic',serif;font-size:1.5em;">اللَّهُمَّ أَهِلَّهُ عَلَيْنَا بِالْأَمْنِ وَالْإِيمَانِ، وَالسَّلَامَةِ وَالْإِسْلَامِ، رَبِّي وَرَبُّكَ اللَّهُ</blockquote>
+
+<p><em>Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-islam, rabbi wa rabbukallah</em></p>
+
+<p>"O Allah, let this crescent rise upon us with security, faith, safety, and Islam. My Lord and your Lord is Allah." — <strong>Tirmidhi 3451 (Hasan)</strong></p>
+
+<p>Full text: <a href="/_/doa/melihat-bulan-baru/">Dua at the Sighting of the New Crescent</a>.</p>
+
+<h2>About the "viral new year dua"</h2>
+
+<p>A different dua often circulates before 1 Muharram: <em>"Allahumma anta al-abadiyyul qadim..."</em>. Scholars differ on its chain. Some accept it as a generally good supplication, others reject it as not sunnah.</p>
+
+<p>Our stance: <strong>teach the most authentic first</strong>. The crescent-sighting dua is enough. Others can be introduced later, once the child is mature enough to discuss chain authenticity.</p>
+
+<h2>How to teach a child</h2>
+
+<p>Young children don't need long fiqh explanations. They need a moment that feels special.</p>
+
+<ol>
+  <li><strong>A few nights before 1 Muharram</strong> — sky-gaze with your child after Maghrib. Show them the moon thinning. "Look, soon there'll be a new crescent. That's the start of the new year on the Muslim calendar."</li>
+  <li><strong>On the night the crescent first appears</strong> — bring your child to the porch/window. Recite the dua together. Hold their hand while you do.</li>
+  <li><strong>The morning of 1 Muharram</strong> — give a special breakfast. Doesn't have to be lavish. A favorite food + "Happy Hijri new year, sweetheart" is enough. The child will remember those words more than any calendar explanation.</li>
+</ol>
+
+<h2>Language for ages 3–5</h2>
+
+<p>"Honey, this month is called Muharram. It's the first month on the Muslim calendar. Just like other people say January, Muslims say Muharram. Let's make dua for a year full of good."</p>
+
+<h2>Language for ages 6–8</h2>
+
+<p>"Sweetheart, the Muslim calendar starts from when Prophet Muhammad ﷺ moved from Makkah to Madinah. That was such an important event that it became the start of our calendar. This month, Muharram, is the first. Let's celebrate with a dua."</p>
+
+<p>Deeper: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">The Story of the Hijrah for Children</a>.</p>
+
+<h2>What you're actually building</h2>
+
+<p>A child raised seeing the Hijri calendar <em>present</em> at home — on the daily counter, in parents' greetings, in the new-month dua — is a child whose time moves to an Islamic rhythm, not a commercial one.</p>
+
+<p>That doesn't come from one 1-Muharram night. It comes from repeating this small habit every new month, every year.</p>
+
+<p>Start this year.</p>`,
+    },
+    tags: ["muharram", "tahun-baru-hijriyah", "doa", "parenting"],
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    readingTimeMin: 6,
+    author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Tahun baru Hijriyah datang dengan tenang, bukan dengan kembang api. Ajarkan anak menandai waktu dengan doa, bukan dengan bunyi.",
+        en: "The Hijri new year arrives quietly, not with fireworks. Teach your child to mark time with dua, not with noise.",
+      },
+      carousel: {
+        id: [
+          { title: "1 Muharram = tahun baru muslim", body: "Tahun baru Hijriyah dimulai dari hijrah Rasulullah ﷺ dari Makkah ke Madinah." },
+          { title: "Doa yang shahih", body: "Allahumma ahillahu 'alayna bil-amni wal-iman… (HR. Tirmidzi 3451, hasan)." },
+          { title: "Bukan kembang api", body: "Rayakan dengan langit, bukan dengan keramaian. Ajak anak melihat bulan sabit." },
+          { title: "Sarapan istimewa", body: "Tidak harus mewah. Makanan favorit + ucapan 'Selamat tahun baru' = momen yang anak ingat." },
+          { title: "Hindari doa lemah", body: "Doa awal tahun yang viral sanadnya diperdebatkan. Mulai dari yang shahih." },
+          { title: "Bahasa untuk anak", body: "'Bulan ini namanya Muharram, kayak Januari kalau di kalender lain.'" },
+          { title: "Konsistensi tahunan", body: "Anak yang melihat tahun baru Hijriyah dirayakan setiap tahun tumbuh dengan ritme Islam." },
+        ],
+        en: [
+          { title: "1 Muharram = the Muslim new year", body: "The Hijri new year starts from the Prophet's ﷺ migration from Makkah to Madinah." },
+          { title: "The authentic dua", body: "Allahumma ahillahu 'alayna bil-amni wal-iman… (Tirmidhi 3451, hasan)." },
+          { title: "Not fireworks", body: "Celebrate with the sky, not with noise. Take your child to see the new crescent." },
+          { title: "Special breakfast", body: "Doesn't have to be lavish. A favorite food + 'Happy new year' = a moment they remember." },
+          { title: "Skip weak duas", body: "The viral 'new year dua' has a disputed chain. Start with what's authentic." },
+          { title: "Words for the child", body: "'This month is Muharram, like January on the other calendar.'" },
+          { title: "Yearly consistency", body: "A child who sees the Hijri new year celebrated every year grows in an Islamic rhythm." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: "Tahun baru Hijriyah datang lusa. Tau ga doa yang dibaca?"
+
+[3–15 detik] PROBLEM: Banyak yang bagikan doa awal tahun yang viral — tapi sanadnya diperdebatkan. Yang shahih sebenarnya doa melihat bulan sabit.
+
+[15–35 detik] SOLUTION: Doa melihat bulan sabit dari HR. Tirmidzi 3451: "Allahumma ahillahu 'alayna bil-amni wal-iman…" Ajak anak lihat langit setelah Maghrib. Baca bareng. Pegang tangannya.
+
+[35–55 detik] PROOF: Anak yang melihat tahun baru Hijriyah dirayakan SETIAP tahun, tumbuh dengan ritme Islam. Bukan ritme komersial. Bukan dari satu malam — dari konsistensi kebiasaan kecil.
+
+[55–60 detik] CTA: "Save post ini buat 1 Muharram. Bagikan ke teman keluarga muslim yang butuh pengingat."`,
+        en: `[0–3 sec] HOOK: "The Hijri new year is days away. Do you know which dua to say?"
+
+[3–15 sec] PROBLEM: Many share a viral 'new year dua' — but its chain is disputed. The authentic one is the new-crescent dua.
+
+[15–35 sec] SOLUTION: From Tirmidhi 3451: "Allahumma ahillahu 'alayna bil-amni wal-iman…" Take your child to look at the sky after Maghrib. Recite together. Hold their hand.
+
+[35–55 sec] PROOF: A child who sees the Hijri new year celebrated EVERY year grows in an Islamic rhythm — not a commercial one. Not from one night, but from small habits repeated.
+
+[55–60 sec] CTA: "Save this for 1 Muharram. Share with a Muslim family who needs the reminder."`,
+      },
+      pin: {
+        id: {
+          title: "Doa Awal Tahun Hijriyah untuk Anak — Yang Sunnah dan Yang Tidak",
+          description: "Panduan doa shahih menyambut 1 Muharram bersama anak muslim usia 3–8 tahun. Doa melihat bulan sabit, langkah ritual sederhana, dan bahasa yang sesuai usia. Konten tarbiyah islami untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "New Hijri Year Duas for Children — Authentic vs Weak",
+          description: "A guide to authentic duas for welcoming 1 Muharram with Muslim children ages 3–8. The new-crescent dua, a simple ritual flow, and age-appropriate language. Islamic parenting content for Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Tunjukkan bulan tipis di langit pada 3–5 malam sebelum 1 Muharram",
+          "Pada malam pertama bulan sabit terlihat: ajak anak ke jendela",
+          "Baca doa melihat bulan sabit bersama, pegang tangan anak",
+          "Pagi 1 Muharram: sarapan favorit + ucapan 'Selamat Tahun Baru Hijriyah'",
+          "Jelaskan dengan kalimat sesuai usia (3–5 vs 6–8)",
+          "Hindari doa yang sanadnya diperdebatkan",
+          "Ulangi tahun depan, dan tahun depannya lagi",
+        ],
+        en: [
+          "Show the thinning moon 3–5 nights before 1 Muharram",
+          "On the night the crescent first appears: bring your child to the window",
+          "Recite the new-crescent dua together, hold their hand",
+          "Morning of 1 Muharram: favorite breakfast + 'Happy Hijri New Year'",
+          "Explain in age-appropriate language (3–5 vs 6–8)",
+          "Avoid duas with disputed chains",
+          "Repeat next year, and the year after",
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "aktivitas-muharram-untuk-anak",
+    title: {
+      id: "7 Aktivitas Muharram untuk Anak: Membuat Bulan Suci Terasa Istimewa",
+      en: "7 Muharram Activities for Children: Making the Sacred Month Feel Special",
+    },
+    excerpt: {
+      id: "Muharram adalah satu dari empat bulan suci dalam Islam. Tujuh aktivitas konkret untuk membuat bulan ini terasa nyata di rumah — bukan hanya tanggal di kalender.",
+      en: "Muharram is one of four sacred months in Islam. Seven concrete activities to make it real at home — not just a date on the calendar.",
+    },
+    body: {
+      id: `<p>Allah ﷻ menyebut empat bulan suci secara eksplisit dalam Al-Qur'an: Dzulqa'dah, Dzulhijjah, Muharram, dan Rajab (QS. At-Taubah 9:36). Tiga di antaranya berurutan — termasuk Muharram, yang menutup rangkaian. Tapi kebanyakan rumah muslim modern tidak punya cara untuk membuat anak <em>merasakan</em> bahwa bulan ini berbeda.</p>
+
+<p>Berikut tujuh aktivitas konkret yang bisa kamu lakukan sepanjang Muharram bareng anak. Tidak perlu semua. Pilih dua atau tiga yang paling cocok dengan ritme keluargamu.</p>
+
+<h2>1. Kalender Hijriyah di kulkas</h2>
+
+<p>Cetak kalender Muharram dengan tanggal Hijriyah dan Masehi berdampingan. Tempel di pintu kulkas. Setiap pagi, ajak anak coret tanggal kemarin. Aktivitas 5 detik — efeknya seumur hidup.</p>
+
+<h2>2. Sebut tanggal Hijriyah dalam doa harian</h2>
+
+<p>Saat anak baca doa makan, doa pagi, atau apapun — sebutkan tanggal Hijriyah hari itu. "Sekarang tanggal 3 Muharram." Ini menanam ritme di telinga anak tanpa pelajaran apapun.</p>
+
+<h2>3. Cerita Hijrah Nabi (mingguan)</h2>
+
+<p>Sepanjang Muharram, sisihkan satu sesi cerita per minggu tentang hijrah Rasulullah ﷺ. Minggu pertama: tekanan di Makkah. Minggu kedua: perjalanan ke Madinah. Minggu ketiga: kedatangan di Madinah. Minggu keempat: refleksi.</p>
+
+<p>Lebih dalam: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">Cara Menceritakan Kisah Hijrah</a>.</p>
+
+<h2>4. Persiapan puasa Asyura (10 Muharram)</h2>
+
+<p>Puasa Asyura jatuh pada tanggal 10 Muharram. Mulailah berbicara tentangnya seminggu sebelumnya, agar anak siap mental.</p>
+
+<ul>
+  <li>Untuk anak 4–6: tonton ayah/ibu yang puasa.</li>
+  <li>Untuk anak 6+: puasa setengah hari opsional.</li>
+  <li>Sahur bersama, tidak peduli siapa yang berpuasa.</li>
+</ul>
+
+<p>Detail: <a href="/_/blog/puasa-asyura-untuk-anak/">Puasa Asyura untuk Anak</a>.</p>
+
+<h2>5. Sedekah pertama tahun</h2>
+
+<p>Awal tahun adalah momen yang baik untuk anak melakukan sedekah pertama. Beri anak uang kecil (Rp 5.000–10.000), ajak ke tukang sayur tetangga atau ke kotak amal masjid. Sedekah yang anak <em>lakukan sendiri</em> berbeda nilainya dari sedekah orang tua.</p>
+
+<h2>6. Buku doa Muharram</h2>
+
+<p>Beli atau bikin buku kecil (10 halaman) berisi doa-doa yang anak akan hafal selama Muharram. Tidak perlu banyak — 3 doa baru selama satu bulan cukup. Anak ikut menggambar di tiap halaman.</p>
+
+<p>Doa yang cocok untuk Muharram: <a href="/_/doa/melihat-bulan-baru/">melihat bulan sabit</a>, <a href="/_/doa/doa-pagi/">doa pagi perlindungan</a>, dan <a href="/_/doa/doa-untuk-orang-tua/">doa untuk orang tua</a>.</p>
+
+<h2>7. Surat untuk diri sendiri di tahun depan</h2>
+
+<p>Untuk anak 7+, di 1 Muharram ajak anak menulis surat ke "aku tahun depan." Apa yang kamu doakan untuk dirimu? Apa yang ingin kamu pelajari? Lipat, simpan di amplop, buka 1 Muharram tahun depan.</p>
+
+<p>Ini bukan resolusi — ini doa yang ditulis. Tahun depan, anak akan lihat sendiri doa-doanya dikabulkan atau perlu dilanjutkan.</p>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li>Jangan paksa anak puasa Asyura penuh jika belum siap.</li>
+  <li>Jangan campur Muharram dengan tahun baru Masehi — keduanya berbeda, dan anak yang dipaksa "merayakan dua-duanya" kebingungan.</li>
+  <li>Jangan ciptakan "resolusi tahunan" ala Barat. Islam tidak mengenal ritual itu. Refleksi iya, kontrak diri tidak.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Muharram tidak butuh dekorasi mewah atau pesta. Cukup beberapa kebiasaan kecil yang anak bisa <em>lihat</em> di rumah. Setelah 2–3 tahun, mereka akan tahu sendiri bahwa Muharram berbeda — bukan karena kamu mengatakannya, tapi karena mereka mengalaminya.</p>`,
+
+      en: `<p>Allah ﷻ explicitly names four sacred months in the Qur'an: Dhulqa'dah, Dhulhijjah, Muharram, and Rajab (Qur'an 9:36). Three are consecutive — including Muharram, which closes the sequence. Yet most modern Muslim homes have no way of letting children <em>feel</em> that this month is different.</p>
+
+<p>Here are seven concrete activities for Muharram with your child. You don't need all. Pick two or three that fit your family's rhythm.</p>
+
+<h2>1. Hijri calendar on the fridge</h2>
+
+<p>Print a Muharram calendar with Hijri and Gregorian dates side by side. Stick it on the fridge door. Each morning, have your child cross off yesterday. A 5-second activity — with a lifelong effect.</p>
+
+<h2>2. Mention the Hijri date in daily duas</h2>
+
+<p>When your child says a meal dua, morning dua, or any — say today's Hijri date. "Today is 3 Muharram." It plants a rhythm in their ear without any lesson.</p>
+
+<h2>3. Hijrah story (weekly)</h2>
+
+<p>Through Muharram, set aside one story session a week about the Prophet's ﷺ hijrah. Week 1: pressure in Makkah. Week 2: journey to Madinah. Week 3: arrival. Week 4: reflection.</p>
+
+<p>Deeper: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">How to Tell the Hijrah Story</a>.</p>
+
+<h2>4. Asyura prep (10 Muharram)</h2>
+
+<p>The fast of Asyura falls on 10 Muharram. Start talking about it a week before, so your child can prepare mentally.</p>
+
+<ul>
+  <li>Ages 4–6: watch parents fast.</li>
+  <li>Ages 6+: optional half-day fast.</li>
+  <li>Suhoor together, no matter who is fasting.</li>
+</ul>
+
+<p>Details: <a href="/_/blog/puasa-asyura-untuk-anak/">Asyura Fast for Children</a>.</p>
+
+<h2>5. First sadaqah of the year</h2>
+
+<p>The start of the year is a good moment for your child's first sadaqah. Give them a small note (≈ a dollar), bring them to the neighborhood shop or a mosque donation box. A sadaqah the child <em>does themselves</em> hits differently from one a parent does.</p>
+
+<h2>6. A Muharram dua book</h2>
+
+<p>Buy or make a small (10-page) book of duas your child will memorize this month. Don't overload — 3 new duas in a month is enough. Let them draw on each page.</p>
+
+<p>Suitable duas: <a href="/_/doa/melihat-bulan-baru/">new crescent</a>, <a href="/_/doa/doa-pagi/">morning protection</a>, <a href="/_/doa/doa-untuk-orang-tua/">for parents</a>.</p>
+
+<h2>7. A letter to next-year-self</h2>
+
+<p>For ages 7+, on 1 Muharram have your child write a letter to "future me." What are you praying for yourself? What do you want to learn? Fold, seal, open on 1 Muharram next year.</p>
+
+<p>This isn't a resolution — it's a dua written down. Next year, the child sees their own duas answered, or continuing.</p>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li>Don't force a full Asyura fast on an unprepared child.</li>
+  <li>Don't blend Muharram with Gregorian new year — they're different, and a child forced to "celebrate both" gets confused.</li>
+  <li>Don't create Western-style "yearly resolutions." Islam doesn't have that ritual. Reflection yes, self-contracts no.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Muharram doesn't need lavish decoration or parties. Just a few small habits a child can <em>see</em> at home. After 2–3 years, they'll know on their own that Muharram is different — not because you told them, but because they lived it.</p>`,
+    },
+    tags: ["muharram", "tahun-baru-hijriyah", "aktivitas", "tarbiyah"],
+    published: "2026-05-26",
+    updated: "2026-05-26",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Anak akan tahu Muharram berbeda — bukan karena kamu mengatakannya, tapi karena mereka mengalaminya.",
+        en: "A child will know Muharram is different — not because you told them, but because they lived it.",
+      },
+      carousel: {
+        id: [
+          { title: "Muharram = bulan suci", body: "Satu dari empat bulan suci yang Allah sebut dalam QS. At-Taubah 9:36." },
+          { title: "1. Kalender di kulkas", body: "Cetak kalender Hijriyah + Masehi. Anak coret tanggal tiap pagi." },
+          { title: "2. Sebut tanggal Hijriyah", body: "'Sekarang 3 Muharram.' Tanam ritme tanpa pelajaran." },
+          { title: "3. Cerita Hijrah mingguan", body: "4 sesi mingguan: tekanan Makkah, perjalanan, kedatangan, refleksi." },
+          { title: "4. Siapkan Asyura", body: "Mulai bicara seminggu sebelum 10 Muharram. Puasa setengah hari opsional." },
+          { title: "5. Sedekah pertama", body: "Beri anak uang kecil. Ajak ke kotak amal masjid sendiri." },
+          { title: "6. Surat ke diri tahun depan", body: "Untuk anak 7+. Apa yang didoakan? Buka 1 Muharram tahun depan." },
+        ],
+        en: [
+          { title: "Muharram = sacred month", body: "One of four sacred months Allah names in Qur'an 9:36." },
+          { title: "1. Calendar on the fridge", body: "Print a Hijri + Gregorian calendar. Child crosses off each morning." },
+          { title: "2. Speak the Hijri date", body: "'Today is 3 Muharram.' Plant the rhythm without a lesson." },
+          { title: "3. Weekly Hijrah story", body: "4 weekly sessions: Makkah pressure, journey, arrival, reflection." },
+          { title: "4. Prep for Asyura", body: "Start talking a week before 10 Muharram. Half-day fast optional." },
+          { title: "5. First sadaqah", body: "Give the child a small note. Let them put it in the mosque box." },
+          { title: "6. Letter to future-self", body: "Ages 7+. What are they praying for? Open 1 Muharram next year." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: "Muharram itu bulan suci, tapi rumah-rumah muslim sering ngga ada bedanya. Ini 5 cara fix-nya."
+
+[3–15 detik] #1: Cetak kalender Hijriyah, tempel di kulkas. Anak coret tanggal tiap pagi.
+
+[15–25 detik] #2: Sebut tanggal Hijriyah dalam doa. "Sekarang 3 Muharram." Ritme masuk tanpa diajari.
+
+[25–35 detik] #3: Cerita Hijrah Nabi, 1 sesi per minggu, 4 minggu.
+
+[35–45 detik] #4: Siapkan Asyura. Anak 6+ boleh puasa setengah hari kalau siap.
+
+[45–55 detik] #5: Sedekah pertama tahun. Beri anak uang kecil. Ajak masuk masjid, taruh di kotak amal.
+
+[55–60 detik] CTA: "Save untuk Muharram. Tag teman keluarga muslim."`,
+        en: `[0–3 sec] HOOK: "Muharram is a sacred month, but most Muslim homes feel no different. 5 ways to fix that."
+
+[3–15 sec] #1: Print a Hijri calendar, stick it on the fridge. Child crosses off each morning.
+
+[15–25 sec] #2: Speak the Hijri date in daily duas. "Today is 3 Muharram." Rhythm enters without a lesson.
+
+[25–35 sec] #3: Tell the Hijrah story, 1 session a week, 4 weeks.
+
+[35–45 sec] #4: Prep for Asyura. Ages 6+ can try a half-day fast if ready.
+
+[45–55 sec] #5: First sadaqah of the year. Give the child a small note. Let them put it in the mosque box.
+
+[55–60 sec] CTA: "Save for Muharram. Tag a Muslim family friend."`,
+      },
+      pin: {
+        id: {
+          title: "7 Aktivitas Muharram untuk Anak Muslim — Tahun Baru Hijriyah",
+          description: "Tujuh aktivitas konkret untuk membuat bulan Muharram terasa istimewa bersama anak: kalender Hijriyah, cerita hijrah, persiapan puasa Asyura, sedekah pertama, dan surat ke diri tahun depan. Untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "7 Muharram Activities for Muslim Children — Hijri New Year Guide",
+          description: "Seven concrete activities to make Muharram feel special with your child: Hijri calendar, weekly Hijrah story, Asyura prep, first sadaqah, and a letter to next-year-self. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Cetak kalender Muharram (Hijriyah + Masehi)",
+          "Tempel di kulkas — anak coret setiap pagi",
+          "Sebutkan tanggal Hijriyah dalam doa harian",
+          "Sesi cerita Hijrah 1× per minggu (4 minggu)",
+          "Beli/cetak buku doa Muharram untuk anak",
+          "Siapkan sahur Asyura — diskusi 1 minggu sebelumnya",
+          "Sedekah pertama tahun — anak yang taruh sendiri",
+          "Surat ke diri tahun depan (untuk anak 7+)",
+          "Refleksi akhir bulan: apa yang dipelajari?",
+        ],
+        en: [
+          "Print a Muharram calendar (Hijri + Gregorian)",
+          "Stick on fridge — child crosses off daily",
+          "Speak the Hijri date in daily duas",
+          "1 Hijrah story session per week (4 weeks)",
+          "Buy/make a Muharram dua book for the child",
+          "Prepare Asyura suhoor — discuss 1 week prior",
+          "First sadaqah of the year — child places it themselves",
+          "Letter to future-self (ages 7+)",
+          "End-of-month reflection: what did we learn?",
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "menjelaskan-tahun-baru-islam-ke-anak",
+    title: {
+      id: "Cara Menjelaskan Tahun Baru Islam ke Anak: Bahasa untuk Tiap Usia",
+      en: "How to Explain the Islamic New Year to Your Child: Age-by-Age Language",
+    },
+    excerpt: {
+      id: "Anak yang melihat kembang api tahun baru Masehi di mall tapi tidak tahu Muharram membentuk identitas dari yang dirayakan di sekitarnya. Cara menjelaskan tahun baru Islam yang masuk akal di setiap usia.",
+      en: "A child who sees Gregorian new year fireworks at the mall but doesn't know Muharram forms identity from what's celebrated around them. How to explain the Islamic new year in a way that lands at every age.",
+    },
+    body: {
+      id: `<p>Anak yang tumbuh di Indonesia melihat dua tahun baru: 1 Januari yang riuh, dan 1 Muharram yang sering lewat tanpa suara. Tanpa penjelasan, mereka akan menyimpulkan sendiri bahwa yang pertama lebih penting — karena lebih ramai.</p>
+
+<p>Cara mengoreksi ini bukan dengan melarang tahun baru Masehi. Caranya adalah membuat tahun baru Islam <em>masuk akal</em>, dengan bahasa yang sesuai usia anakmu.</p>
+
+<h2>Inti yang harus disampaikan</h2>
+
+<p>Apapun usia anak, tiga ide ini harus mereka pahami pada akhirnya:</p>
+
+<ol>
+  <li><strong>Muslim punya kalender sendiri</strong> — bukan menggantikan kalender Masehi, tapi paralel.</li>
+  <li><strong>Tahun ini dihitung sejak hijrahnya Nabi ﷺ</strong> dari Makkah ke Madinah, bukan dari kelahiran beliau.</li>
+  <li><strong>Bulan pertama adalah Muharram</strong>, salah satu dari empat bulan suci.</li>
+</ol>
+
+<p>Bagaimana cara menyampaikan tiga ide ini berbeda untuk setiap usia.</p>
+
+<h2>Usia 3–5: konkret dan singkat</h2>
+
+<p>Anak di usia ini berpikir konkret. Hindari kata abstrak seperti "kalender" atau "hijrah" tanpa konteks.</p>
+
+<blockquote><em>"Adik, tahu ngga? Ada dua macam tahun baru. Yang satu, 1 Januari — yang biasa dirayakan dengan kembang api di mall. Yang satu lagi, 1 Muharram — tahun barunya muslim. Tahun baru muslim ngga ada kembang api. Tapi kita ada doa. Dan kita ada makan enak. Mau bantu mama bikin sarapan istimewa besok?"</em></blockquote>
+
+<p>Bahasa yang dipakai: dua, kembang api, doa, sarapan istimewa. Konkret semua.</p>
+
+<h2>Usia 6–8: cerita dan sebab-akibat</h2>
+
+<p>Anak di usia ini sudah bisa memahami sebab-akibat sederhana. Tahun baru Islam jadi cerita.</p>
+
+<blockquote><em>"Sayang, tahu ngga kenapa kalender muslim mulai dari Muharram? Karena dulu, Nabi Muhammad ﷺ dan sahabat-sahabatnya harus pindah dari Makkah ke Madinah. Itu perjalanan jauh, susah, penuh risiko. Sampai di Madinah, mereka mulai babak baru. Itu yang dirayakan sebagai awal kalender muslim. Bukan ulang tahun Nabi — tapi awal masa baru bagi umat Islam."</em></blockquote>
+
+<p>Setelah cerita itu, ajukan satu pertanyaan: <em>"Menurut adik, kenapa pindah ke Madinah itu penting?"</em> Biarkan dia menjawab. Jawabannya akan membuat dia mengingat.</p>
+
+<p>Detail lengkap: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">Kisah Hijrah Nabi untuk Anak</a>.</p>
+
+<h2>Usia 9+: nuansa dan refleksi</h2>
+
+<p>Anak di usia ini bisa memegang nuansa.</p>
+
+<blockquote><em>"Kak, ada perbedaan mendasar antara tahun baru Masehi dan tahun baru Hijriyah. Masehi dihitung dari perkiraan kelahiran Nabi Isa. Hijriyah dihitung dari peristiwa — bukan dari orang. Kita merayakan momen transisi, bukan ulang tahun. Itu cara berpikir yang berbeda."</em></blockquote>
+
+<p>Bahas juga: kenapa kalender Hijriyah lebih pendek 11 hari dari Masehi (lunar vs solar), kenapa Asyura penting, mengapa Rasulullah ﷺ tidak melarang puasa pada hari-hari ini.</p>
+
+<h2>Pertanyaan yang sering anak tanya</h2>
+
+<h3>"Kalau tahun baru muslim ngga seru, kenapa kita rayakan?"</h3>
+
+<p>"Karena seru bukan satu-satunya alasan merayakan. Ada hal yang dirayakan dengan kembang api, ada yang dirayakan dengan doa. Kita merayakan dengan doa karena ini hal yang besar — kita dapat tahun baru penuh, kesempatan baru untuk jadi lebih baik."</p>
+
+<h3>"Boleh ikut tahun baru Masehi?"</h3>
+
+<p>Jawaban realistis: tergantung. Kembang api di balkon dengan keluarga = silakan. Pesta dengan alkohol dan musik tidak halal = tidak. Tahun baru Masehi itu peristiwa kalender, bukan ritual agama lain. Tapi <em>cara orang merayakannya</em> bisa halal atau haram.</p>
+
+<h3>"Teman aku ngga tahu apa itu Muharram. Berarti aneh ya?"</h3>
+
+<p>"Kakak, bukan aneh — beda. Kita beruntung kenal dua kalender. Banyak teman cuma kenal satu. Mungkin kakak bisa ceritakan ke mereka."</p>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li><strong>Jangan bilang tahun baru Masehi haram.</strong> Itu hanya peristiwa kalender. Yang bisa haram adalah cara merayakannya.</li>
+  <li><strong>Jangan paksa anak menolak ucapan teman.</strong> "Happy New Year" tetap bisa dibalas "thanks, kamu juga."</li>
+  <li><strong>Jangan ciptakan rivalitas antara dua tahun baru.</strong> Anak akan kebingungan dan akhirnya tidak menghargai keduanya.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Yang anakmu butuhkan bukan ceramah tentang mana tahun baru yang lebih baik. Yang dia butuhkan adalah <em>melihat sendiri</em> bahwa di rumahnya, kedua tahun baru dirayakan secara berbeda — dan yang Islami dirayakan dengan cinta, bukan dengan kewajiban.</p>
+
+<p>Ulangi setiap tahun. Lihat sendiri hasilnya saat dia berusia 18.</p>`,
+
+      en: `<p>A child growing up in Indonesia sees two new years: a noisy January 1 and a 1 Muharram that often passes in silence. With no explanation, they'll conclude on their own that the first matters more — because it's louder.</p>
+
+<p>The fix isn't forbidding the Gregorian new year. The fix is making the Islamic new year <em>make sense</em>, in language that fits your child's age.</p>
+
+<h2>The core to communicate</h2>
+
+<p>Whatever the age, three ideas must eventually land:</p>
+
+<ol>
+  <li><strong>Muslims have their own calendar</strong> — not replacing the Gregorian, but parallel.</li>
+  <li><strong>This year is counted from the Prophet's hijrah</strong> from Makkah to Madinah, not from his birth.</li>
+  <li><strong>The first month is Muharram</strong>, one of four sacred months.</li>
+</ol>
+
+<p>How to deliver these three differs by age.</p>
+
+<h2>Ages 3–5: concrete and short</h2>
+
+<p>At this age, thinking is concrete. Avoid abstract words like "calendar" or "hijrah" without context.</p>
+
+<blockquote><em>"Honey, did you know? There are two kinds of new year. One is January 1 — the one with fireworks at the mall. The other is 1 Muharram — the Muslim new year. The Muslim new year doesn't have fireworks. But we have duas. And we have a special breakfast. Want to help mom make a special breakfast tomorrow?"</em></blockquote>
+
+<p>Vocabulary: two, fireworks, dua, special breakfast. All concrete.</p>
+
+<h2>Ages 6–8: story and cause-effect</h2>
+
+<p>Now they can hold simple cause-effect. The Islamic new year becomes a story.</p>
+
+<blockquote><em>"Sweetheart, do you know why the Muslim calendar starts in Muharram? Because long ago, Prophet Muhammad ﷺ and his companions had to move from Makkah to Madinah. It was a long, hard, risky journey. When they arrived in Madinah, a new chapter began. That's what's marked as the start of the Muslim calendar. Not the Prophet's birthday — the start of a new era for Muslims."</em></blockquote>
+
+<p>After the story, ask one question: <em>"Why do you think moving to Madinah mattered?"</em> Let them answer. Their answer is what makes them remember.</p>
+
+<p>Full story: <a href="/_/blog/kisah-hijrah-nabi-untuk-anak/">The Hijrah Story for Children</a>.</p>
+
+<h2>Ages 9+: nuance and reflection</h2>
+
+<p>They can hold nuance now.</p>
+
+<blockquote><em>"There's a deeper difference between the Gregorian and Hijri new year. The Gregorian is counted from the estimated birth of Prophet Jesus. The Hijri is counted from an event — not from a person. We're marking a moment of transition, not a birthday. That's a different way of thinking."</em></blockquote>
+
+<p>Discuss too: why the Hijri calendar is 11 days shorter than the Gregorian (lunar vs solar), why Asyura matters, why the Prophet ﷺ didn't forbid fasting on these days.</p>
+
+<h2>Questions children often ask</h2>
+
+<h3>"If the Muslim new year isn't fun, why celebrate it?"</h3>
+
+<p>"Because fun isn't the only reason to celebrate. Some things are celebrated with fireworks, some with dua. We celebrate this with dua because it's important — we get a whole new year, a new chance to become better."</p>
+
+<h3>"Can I join the Gregorian new year?"</h3>
+
+<p>Realistic answer: it depends. Fireworks on the balcony with family = fine. A party with alcohol and music that isn't halal = no. The Gregorian new year is a calendar event, not another religion's ritual. But <em>how people celebrate it</em> can be halal or haram.</p>
+
+<h3>"My friends don't know what Muharram is. Are we weird?"</h3>
+
+<p>"You're not weird — you're different. We're lucky to know two calendars. Many friends only know one. Maybe you can tell them about ours."</p>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li><strong>Don't say the Gregorian new year is haram.</strong> It's a calendar event. What can be haram is how it's celebrated.</li>
+  <li><strong>Don't force your child to reject friends' greetings.</strong> "Happy New Year" can still be answered "thanks, you too."</li>
+  <li><strong>Don't create rivalry between the two new years.</strong> The child gets confused and ends up valuing neither.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>What your child needs isn't a lecture on which new year is better. They need to <em>see</em> that in their home, both new years are marked differently — and the Islamic one is celebrated with love, not with obligation.</p>
+
+<p>Repeat every year. See for yourself when they're 18.</p>`,
+    },
+    tags: ["muharram", "tahun-baru-hijriyah", "parenting", "identitas"],
+    published: "2026-05-25",
+    updated: "2026-05-25",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Anak yang melihat kembang api tahun baru Masehi tapi tidak tahu Muharram, akan membentuk identitas dari yang dirayakan di sekitarnya.",
+        en: "A child who sees Gregorian new year fireworks but doesn't know Muharram will form identity from what's celebrated around them.",
+      },
+      carousel: {
+        id: [
+          { title: "Dua tahun baru", body: "Anak Indonesia melihat 1 Januari + 1 Muharram. Tanpa penjelasan, yang ramai dianggap lebih penting." },
+          { title: "Inti 3 ide", body: "1) Muslim punya kalender. 2) Mulai dari hijrah, bukan kelahiran. 3) Muharram = bulan pertama." },
+          { title: "Usia 3–5: konkret", body: "'Ada dua tahun baru. Yang Januari ada kembang api. Yang Muharram ada doa dan sarapan istimewa.'" },
+          { title: "Usia 6–8: cerita", body: "Nabi ﷺ pindah dari Makkah ke Madinah. Itu yang dirayakan — momen transisi, bukan ulang tahun." },
+          { title: "Usia 9+: nuansa", body: "Masehi dari kelahiran orang. Hijriyah dari peristiwa. Cara berpikir yang berbeda." },
+          { title: "Pertanyaan klasik", body: "'Boleh ikut tahun baru Masehi?' Jawaban: tergantung cara merayakannya, bukan tanggalnya." },
+          { title: "Tahun baru Masehi ≠ haram", body: "Itu peristiwa kalender. Yang haram bisa cara merayakan, bukan tanggalnya sendiri." },
+        ],
+        en: [
+          { title: "Two new years", body: "An Indonesian Muslim child sees Jan 1 + 1 Muharram. Without explanation, the louder one seems more important." },
+          { title: "3 core ideas", body: "1) Muslims have a calendar. 2) Starts from hijrah, not a birth. 3) Muharram = first month." },
+          { title: "Ages 3–5: concrete", body: "'There are two new years. One in January has fireworks. The Muharram one has duas and a special breakfast.'" },
+          { title: "Ages 6–8: story", body: "The Prophet ﷺ moved from Makkah to Madinah. That's what's marked — a transition, not a birthday." },
+          { title: "Ages 9+: nuance", body: "Gregorian from a person's birth. Hijri from an event. Two different ways of thinking." },
+          { title: "Classic question", body: "'Can I join Gregorian new year?' Answer: depends on how it's celebrated, not the date." },
+          { title: "Gregorian ≠ haram", body: "It's a calendar event. The how of celebration can be haram, not the date itself." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: "Anakmu liat kembang api tahun baru Masehi di TV, tapi ngga ada penjelasan apa-apa soal Muharram. Itu masalah."
+
+[3–15 detik] KENAPA: Anak membentuk identitas dari yang dirayakan di sekitarnya. Kalau di rumah Muharram lewat dalam diam, dia akan kesimpulan sendiri yang Masehi lebih penting.
+
+[15–35 detik] SOLUSI: Jelaskan sesuai usia. 3–5 tahun: konkret — "ada dua tahun baru". 6–8: cerita hijrah Nabi. 9+: nuansa — Masehi dari kelahiran, Hijriyah dari peristiwa.
+
+[35–50 detik] PERTANYAAN KLASIK: "Boleh ikut tahun baru Masehi?" Jawabannya: tergantung CARA merayakan. Kembang api di balkon ok. Pesta haram tidak.
+
+[50–60 detik] CTA: "Save buat 1 Muharram. Bagikan ke orang tua muslim yang anak-anaknya juga liat dua tahun baru."`,
+        en: `[0–3 sec] HOOK: "Your child sees Gregorian new year fireworks on TV, but hears nothing about Muharram. That's a problem."
+
+[3–15 sec] WHY: Children form identity from what's celebrated around them. If Muharram passes in silence at home, they'll conclude the Gregorian matters more.
+
+[15–35 sec] FIX: Explain by age. 3–5: concrete — "two new years". 6–8: the Hijrah story. 9+: nuance — Gregorian from a birth, Hijri from an event.
+
+[35–50 sec] CLASSIC QUESTION: "Can I join the Gregorian new year?" Answer: depends on HOW it's celebrated. Balcony fireworks fine. Haram parties no.
+
+[50–60 sec] CTA: "Save this for 1 Muharram. Share with Muslim parents whose kids also see two new years."`,
+      },
+      pin: {
+        id: {
+          title: "Cara Menjelaskan Tahun Baru Islam ke Anak — Bahasa untuk Tiap Usia",
+          description: "Panduan menjelaskan 1 Muharram / tahun baru Hijriyah ke anak muslim di setiap kelompok usia: 3–5, 6–8, 9+. Termasuk jawaban untuk pertanyaan yang sering anak ajukan tentang perbedaan dengan tahun baru Masehi. Tarbiyah islami untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "How to Explain the Islamic New Year to Your Child — Age-by-Age",
+          description: "A guide for explaining 1 Muharram / Hijri new year to Muslim children at every age group: 3–5, 6–8, 9+. Includes answers to common questions about the difference from the Gregorian new year. Islamic parenting for Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Tonton/lihat tahun baru Masehi bersama anak — tanpa komentar negatif",
+          "Sebut Muharram secara natural dalam percakapan minggu ini",
+          "Sesuaikan bahasa dengan usia anak (3–5 / 6–8 / 9+)",
+          "Siapkan jawaban untuk 'kenapa ngga seru?'",
+          "Hindari kata 'haram' untuk tahun baru Masehi sendiri",
+          "Ulangi cerita hijrah di awal Muharram",
+          "Rayakan 1 Muharram dengan doa + sarapan khusus",
+          "Refleksi keluarga di akhir Muharram",
+        ],
+        en: [
+          "Watch the Gregorian new year together — without negative commentary",
+          "Mention Muharram naturally in conversation this week",
+          "Match your language to your child's age (3–5 / 6–8 / 9+)",
+          "Prepare answers for 'why isn't ours fun?'",
+          "Avoid calling the Gregorian new year itself 'haram'",
+          "Repeat the hijrah story at the start of Muharram",
+          "Celebrate 1 Muharram with duas + special breakfast",
+          "Family reflection at the end of Muharram",
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "puasa-asyura-untuk-anak",
+    title: {
+      id: "Puasa Asyura untuk Anak: Sejarah, Hukum, dan Cara Mengajarkannya",
+      en: "The Asyura Fast for Children: History, Ruling, and How to Teach It",
+    },
+    excerpt: {
+      id: "Tanggal 10 Muharram adalah hari Asyura — puasa sunnah yang paling dianjurkan setelah Ramadan. Sejarahnya menarik, hukumnya jelas, dan untuk anak ada cara halus mengenalkannya.",
+      en: "10 Muharram is the day of Asyura — the most recommended optional fast after Ramadan. Its history is rich, its ruling clear, and there's a gentle way to introduce it to a child.",
+    },
+    body: {
+      id: `<p>Tahun ini, hari Asyura jatuh pada sekitar tanggal 25 Juni 2026 (tepatnya 10 Muharram 1448 H). Ini adalah salah satu puasa sunnah paling istimewa dalam Islam — dianjurkan kuat, mengampuni dosa setahun yang lalu, dan punya sejarah yang anak-anak akan suka mendengarnya.</p>
+
+<h2>Sejarah Asyura: Nabi Musa dan Bani Israil</h2>
+
+<p>Saat Rasulullah ﷺ hijrah ke Madinah, beliau melihat orang-orang Yahudi berpuasa pada tanggal 10 Muharram. Beliau bertanya kenapa. Mereka menjawab: "Ini hari Allah menyelamatkan Nabi Musa dan Bani Israil dari Firaun. Musa berpuasa sebagai syukur."</p>
+
+<p>Rasulullah ﷺ berkata: <em>"Aku lebih berhak atas Musa daripada kalian"</em> — dan beliau pun berpuasa, dan memerintahkan kaum muslimin untuk berpuasa juga. (HR. Bukhari 2004, Muslim 1130)</p>
+
+<p>Ini cerita yang anak-anak akan tertarik. Tentang Musa, Firaun, laut yang terbelah, perjuangan, kemudian syukur kepada Allah.</p>
+
+<h2>Hukum puasa Asyura</h2>
+
+<ul>
+  <li><strong>Sunnah muakkadah</strong> (sangat dianjurkan) untuk semua muslim dewasa yang mampu.</li>
+  <li><strong>Mengampuni dosa setahun yang lalu</strong> (HR. Muslim 1162) — dosa-dosa kecil, dengan syarat menjauhi dosa besar.</li>
+  <li><strong>Anjuran tambahan:</strong> puasa juga pada tanggal 9 Muharram (Tasu'a) — agar berbeda dengan praktik Yahudi yang hanya 10.</li>
+  <li><strong>Atau:</strong> puasa 10 dan 11 Muharram. Atau ketiganya: 9, 10, 11.</li>
+</ul>
+
+<h2>Hukum puasa untuk anak</h2>
+
+<p>Anak <em>belum baligh</em> tidak diwajibkan puasa apapun — termasuk Ramadan, apalagi Asyura. Tapi <strong>dilatih</strong> sejak usia 5–7 tahun adalah sunnah. Sahabat-sahabat di Madinah membiasakan anak-anak mereka berpuasa Asyura dengan memberikan mainan dari bulu domba — saat anak lapar, mereka bermain.</p>
+
+<p>Pelajaran: latih, jangan paksa. Beri pengalaman, bukan beban.</p>
+
+<h2>Cara mengajarkan, per usia</h2>
+
+<h3>Usia 3–5: cukup mengamati</h3>
+
+<p>Sahur bersama, walau anak tidak puasa. Bicarakan: "Hari ini Mama puasa. Namanya puasa Asyura, hari ke-10 bulan Muharram." Saat ibu/ayah berbuka, anak ikut menyaksikan. Itu sudah cukup.</p>
+
+<h3>Usia 6–8: setengah hari, jika tertarik</h3>
+
+<p>Kalau anak penasaran, ajak coba puasa <em>setengah hari</em> — dari sahur sampai dzuhur. Sediakan aktivitas yang membuat lupa lapar (buku, jalan pagi). Buka di waktu dzuhur dengan makanan favorit. Bahkan setengah hari penuh sudah pengalaman besar.</p>
+
+<p>Detail: <a href="/_/parenting/puasa-pertama/">Puasa Pertama Anak</a>.</p>
+
+<h3>Usia 9+: puasa penuh, jika sudah biasa</h3>
+
+<p>Anak yang sudah biasa puasa Ramadan setengah hari atau lebih, bisa diajak puasa Asyura penuh. Tapi pertimbangkan: apakah dia sekolah hari itu? Apakah aktivitas fisiknya berat? Sesuaikan.</p>
+
+<h2>Cerita sebagai pembuka</h2>
+
+<p>Beberapa hari sebelum 10 Muharram, ceritakan kisah Musa dan Firaun ke anak — sebagai pembukaan emosional. Ketika hari Asyura tiba, anak sudah punya konteks emosional kenapa hari ini istimewa.</p>
+
+<p>Lebih dalam: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">Cara Bercerita Kisah Nabi</a>.</p>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li><strong>Jangan paksa puasa penuh anak yang belum siap.</strong> Trauma puasa di usia 6 bisa membuat anak menolak puasa di usia 16.</li>
+  <li><strong>Jangan janjikan imbalan materi.</strong> "Kalau kamu puasa penuh, Mama belikan mainan." Itu mengajarkan transaksi, bukan ibadah.</li>
+  <li><strong>Jangan campur dengan budaya non-Islam.</strong> Asyura punya makna sendiri yang lengkap — tidak perlu pinjam dari Ashura kultural Syiah atau perayaan lain.</li>
+</ul>
+
+<h2>Yang harus dibiasakan</h2>
+
+<ul>
+  <li><strong>Sahur bersama,</strong> walau hanya 1–2 anggota keluarga yang puasa.</li>
+  <li><strong>Buka bersama,</strong> dengan kurma + air, seperti Ramadan.</li>
+  <li><strong>Doa berbuka</strong> tetap dibaca anak yang baru coba puasa setengah hari. Lihat <a href="/_/doa/berbuka-puasa/">Doa Berbuka Puasa</a>.</li>
+  <li><strong>Refleksi:</strong> "Bagaimana rasanya? Mau dicoba lagi tahun depan?"</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Asyura adalah salah satu hari yang Rasulullah ﷺ paling jaga setelah Ramadan. Mengenalkannya ke anak adalah menanam benih hubungan dengan ibadah yang akan tumbuh seumur hidupnya.</p>
+
+<p>Tidak perlu sempurna tahun ini. Cukup mulai. Tahun depan lebih baik dari tahun ini.</p>`,
+
+      en: `<p>This year, Asyura falls around June 25, 2026 (10 Muharram 1448 H). It's one of the most special optional fasts in Islam — strongly recommended, wipes a year of sins, and has a story children love.</p>
+
+<h2>The history: Prophet Musa and the Children of Israel</h2>
+
+<p>When the Prophet ﷺ migrated to Madinah, he saw Jews fasting on 10 Muharram. He asked why. They said: "This is the day Allah saved Prophet Musa and the Children of Israel from Pharaoh. Musa fasted in gratitude."</p>
+
+<p>The Prophet ﷺ said: <em>"I have more right to Musa than you"</em> — and fasted, and instructed the Muslims to fast too. (Bukhari 2004, Muslim 1130)</p>
+
+<p>This is a story children love. About Musa, Pharaoh, a sea splitting, struggle, then gratitude to Allah.</p>
+
+<h2>The ruling on Asyura fast</h2>
+
+<ul>
+  <li><strong>Strongly recommended (sunnah mu'akkadah)</strong> for every able adult Muslim.</li>
+  <li><strong>Wipes the sins of the past year</strong> (Muslim 1162) — minor sins, conditional on staying away from major ones.</li>
+  <li><strong>Extra recommendation:</strong> also fast on 9 Muharram (Tasu'a) — to differ from the Jewish practice of fasting only on 10.</li>
+  <li><strong>Or:</strong> fast 10 and 11 Muharram. Or all three: 9, 10, 11.</li>
+</ul>
+
+<h2>The ruling for children</h2>
+
+<p>Children who are <em>not yet baligh</em> are not obligated for any fast — not even Ramadan, let alone Asyura. But <strong>training</strong> from ages 5–7 is sunnah. The companions in Madinah trained their children to fast Asyura by giving them wool toys — when the child got hungry, they played.</p>
+
+<p>The lesson: train, don't force. Give experience, not burden.</p>
+
+<h2>How to teach, by age</h2>
+
+<h3>Ages 3–5: just observe</h3>
+
+<p>Suhoor together, even though the child won't fast. Mention: "Today mom is fasting. It's called Asyura, the 10th day of Muharram." When you break, the child watches. That's enough.</p>
+
+<h3>Ages 6–8: half-day, if interested</h3>
+
+<p>If they're curious, try a <em>half-day</em> — from suhoor until noon. Plan distractions (books, morning walks). Break at noon with a favorite food. Even half a day is a big experience.</p>
+
+<p>Details: <a href="/_/parenting/puasa-pertama/">Your Child's First Fast</a>.</p>
+
+<h3>Ages 9+: full day, if used to it</h3>
+
+<p>A child who already does half-day or more of Ramadan can try a full Asyura. But consider: school that day? Heavy physical activity? Adjust.</p>
+
+<h2>Story as the opener</h2>
+
+<p>A few days before 10 Muharram, tell the child the story of Musa and Pharaoh — as emotional preparation. By the time Asyura arrives, the child already has emotional context for why this day is special.</p>
+
+<p>Deeper: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">How to Tell Prophet Stories</a>.</p>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li><strong>Don't force a full fast on an unready child.</strong> Fasting trauma at 6 can make them refuse at 16.</li>
+  <li><strong>Don't promise material rewards.</strong> "If you fast the whole day I'll buy you a toy." That teaches transaction, not worship.</li>
+  <li><strong>Don't mix with non-Islamic culture.</strong> Asyura's meaning is complete on its own — no need to borrow from Shia Ashura culture or other observances.</li>
+</ul>
+
+<h2>What to build</h2>
+
+<ul>
+  <li><strong>Suhoor together,</strong> even if only 1–2 family members are fasting.</li>
+  <li><strong>Iftar together,</strong> with dates + water, like Ramadan.</li>
+  <li><strong>The break-fast dua</strong> for a child who just did a half-day. See <a href="/_/doa/berbuka-puasa/">Dua When Breaking Fast</a>.</li>
+  <li><strong>Reflection:</strong> "How did that feel? Want to try again next year?"</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Asyura is one of the days the Prophet ﷺ kept most consistently after Ramadan. Introducing it to your child plants the seed of a lifelong relationship with this worship.</p>
+
+<p>Doesn't need to be perfect this year. Just start. Next year will be better.</p>`,
+    },
+    tags: ["asyura", "puasa", "muharram", "ibadah-musiman"],
+    published: "2026-05-24",
+    updated: "2026-05-24",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Latih, jangan paksa. Beri anak pengalaman puasa, bukan beban. Trauma puasa di usia 6 bisa membuat anak menolak puasa di usia 16.",
+        en: "Train, don't force. Give your child experience, not burden. Fasting trauma at 6 can make them refuse at 16.",
+      },
+      carousel: {
+        id: [
+          { title: "10 Muharram = Asyura", body: "Puasa sunnah paling dianjurkan setelah Ramadan. Mengampuni dosa setahun yang lalu (HR. Muslim 1162)." },
+          { title: "Kisah Nabi Musa", body: "Asyura adalah hari Allah menyelamatkan Musa dari Firaun. Cerita yang anak akan suka." },
+          { title: "Anjuran tambahan", body: "Puasa 9 + 10 Muharram (atau 10 + 11) — agar berbeda dari praktik Yahudi yang hanya 1 hari." },
+          { title: "Untuk anak: belum wajib", body: "Anak belum baligh tidak diwajibkan. Tapi latih sejak 5–7 tahun adalah sunnah." },
+          { title: "Usia 3–5: amati", body: "Sahur bersama, tonton orang tua puasa. Itu sudah cukup pengalaman pertama." },
+          { title: "Usia 6–8: setengah hari", body: "Dari sahur sampai dzuhur. Aktivitas distraksi: buku, jalan pagi. Buka dengan favorit." },
+          { title: "Hindari", body: "Jangan paksa penuh. Jangan janjikan mainan. Jangan campur dengan budaya non-Islam." },
+        ],
+        en: [
+          { title: "10 Muharram = Asyura", body: "The most recommended optional fast after Ramadan. Wipes the past year's sins (Muslim 1162)." },
+          { title: "Story of Prophet Musa", body: "Asyura is when Allah saved Musa from Pharaoh. A story children will love." },
+          { title: "Extra recommendation", body: "Fast 9 + 10 (or 10 + 11) Muharram — to differ from Jewish practice of fasting only 1 day." },
+          { title: "For children: not obligatory", body: "Pre-baligh children aren't obligated. But training from 5–7 is sunnah." },
+          { title: "Ages 3–5: observe", body: "Suhoor together, watch parents fast. That alone is enough first experience." },
+          { title: "Ages 6–8: half-day", body: "From suhoor to noon. Distractions: books, morning walks. Break with a favorite." },
+          { title: "Avoid", body: "Don't force a full day. Don't promise toys. Don't mix with non-Islamic culture." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: "10 Muharram itu Asyura. Puasa sunnah yang paling utama setelah Ramadan."
+
+[3–15 detik] SEJARAH: Asyura adalah hari Allah menyelamatkan Nabi Musa dari Firaun. Rasulullah ﷺ puasa hari ini sebagai syukur. (HR. Bukhari 2004)
+
+[15–30 detik] KEUTAMAAN: Mengampuni dosa setahun yang lalu (HR. Muslim 1162). Anjuran: puasa 9 + 10 Muharram, bukan cuma 10.
+
+[30–45 detik] UNTUK ANAK: Anak ngga wajib puasa. Tapi latih sejak 5–7 tahun. Mulai dari setengah hari. Trauma puasa di 6 bisa bikin tolak puasa di 16. Latih, jangan paksa.
+
+[45–55 detik] CARA: Cerita kisah Musa beberapa hari sebelumnya. Sahur bersama walau anak ngga puasa. Buka pakai kurma + favorit. Doa berbuka.
+
+[55–60 detik] CTA: "Save buat 10 Muharram. Bagikan ke keluarga muslim."`,
+        en: `[0–3 sec] HOOK: "10 Muharram is Asyura. The most virtuous optional fast after Ramadan."
+
+[3–15 sec] HISTORY: Asyura is the day Allah saved Prophet Musa from Pharaoh. The Prophet ﷺ fasted in gratitude. (Bukhari 2004)
+
+[15–30 sec] REWARD: Wipes the past year's minor sins (Muslim 1162). Recommended: fast 9 + 10 Muharram, not just 10.
+
+[30–45 sec] FOR KIDS: Children aren't obligated. But training from 5–7 is sunnah. Start with half-day. Fasting trauma at 6 can make them refuse at 16. Train, don't force.
+
+[45–55 sec] HOW: Tell Musa's story days before. Suhoor together even if the child doesn't fast. Break with dates + favorite. Recite the iftar dua.
+
+[55–60 sec] CTA: "Save this for 10 Muharram. Share with Muslim families."`,
+      },
+      pin: {
+        id: {
+          title: "Puasa Asyura untuk Anak — Sejarah, Hukum, dan Panduan Latihan",
+          description: "Panduan lengkap puasa Asyura 10 Muharram untuk anak muslim. Sejarah Nabi Musa dan Firaun, hukum sunnah muakkadah, dan cara melatih anak puasa per kelompok usia: 3–5, 6–8, 9+. Tarbiyah islami untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "Asyura Fast for Children — History, Ruling, and Training Guide",
+          description: "A complete guide to the 10 Muharram Asyura fast for Muslim children. The story of Prophet Musa and Pharaoh, the strongly recommended ruling, and how to train children to fast at each age: 3–5, 6–8, 9+. Islamic parenting for Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Ceritakan kisah Nabi Musa & Firaun 3–4 hari sebelum 10 Muharram",
+          "Diskusi keluarga: siapa puasa, siapa coba setengah hari, siapa observasi",
+          "Sahur bersama (semua bangun, walau hanya 1–2 yang puasa)",
+          "Beri anak aktivitas distraksi: buku, jalan pagi, mainan kayu",
+          "Buka puasa: kurma + air + makanan favorit anak",
+          "Baca doa berbuka bersama",
+          "Refleksi: 'Bagaimana rasanya? Mau coba lagi tahun depan?'",
+          "Pertimbangkan puasa Tasu'a (9 Muharram) sebagai pelengkap",
+        ],
+        en: [
+          "Tell the story of Prophet Musa & Pharaoh 3–4 days before 10 Muharram",
+          "Family discussion: who fasts, who tries half-day, who observes",
+          "Suhoor together (everyone wakes, even if only 1–2 fast)",
+          "Give child distractions: books, morning walk, wooden toys",
+          "Iftar: dates + water + child's favorite food",
+          "Recite the iftar dua together",
+          "Reflection: 'How did that feel? Want to try again next year?'",
+          "Consider Tasu'a (9 Muharram) as a complement",
+        ],
+      },
+    },
+  },
+
+  {
+    slug: "kisah-hijrah-nabi-untuk-anak",
+    title: {
+      id: "Kisah Hijrah Nabi untuk Anak: Cerita yang Membentuk Kalender Muslim",
+      en: "The Story of the Hijrah for Children: The Tale That Shaped the Muslim Calendar",
+    },
+    excerpt: {
+      id: "Hijrah Nabi ﷺ dari Makkah ke Madinah bukan cuma pelajaran sejarah — itu cerita keberanian, kawan setia, dan harapan baru. Cara menyampaikannya kepada anak agar membekas seumur hidup.",
+      en: "The Prophet's ﷺ hijrah from Makkah to Madinah is not just a history lesson — it's a story of courage, loyal friendship, and renewed hope. How to tell it so it stays with a child for life.",
+    },
+    body: {
+      id: `<p>Setiap 1 Muharram, kita memulai tahun baru — dan tahun itu dihitung sejak satu peristiwa. Bukan kelahiran Nabi ﷺ. Bukan wahyu pertama. Tapi <em>hijrahnya</em> — perjalanan dari Makkah ke Madinah.</p>
+
+<p>Mengapa peristiwa ini, dari semua peristiwa hidup Nabi ﷺ, yang dipilih untuk menjadi awal kalender? Karena hijrah adalah ujian terbesar yang dilalui umat Islam awal — dan dari ujian itu, sebuah komunitas tumbuh.</p>
+
+<p>Berikut cara menceritakannya pada anak, dengan struktur tiga babak yang anak-anak suka.</p>
+
+<h2>Babak 1: Makkah yang semakin sulit</h2>
+
+<p>Mulai dengan keseharian. Rasulullah ﷺ tinggal di Makkah. Itu kota beliau. Di sana keluarga beliau, sahabat-sahabat beliau, masjid yang baru dibangun.</p>
+
+<p>Tapi kaum Quraisy makin marah dengan ajaran beliau. Mereka mengganggu sahabat-sahabat. Mereka menyiksa Bilal, Sumayyah, Yasir. Mereka memboikot Bani Hasyim selama tiga tahun — sampai anak-anak makan dedaunan.</p>
+
+<p>Beliau berdoa. Beliau bertahan. Tapi Allah memberinya wahyu: <em>"Saatnya pergi."</em></p>
+
+<p>Untuk anak: <em>"Bayangkan kalau adik harus pindah karena di rumah ada orang yang ngga suka adik dan terus ganggu. Susah ya? Itu yang Nabi rasakan."</em></p>
+
+<h2>Babak 2: Perjalanan dengan Abu Bakar</h2>
+
+<p>Ini babak yang paling kaya emosinya. Tiga elemen yang harus masuk:</p>
+
+<h3>Persiapan rahasia</h3>
+
+<p>Hanya Abu Bakar yang tahu rencana. Mereka berdua menyiapkan diam-diam: makanan, kendaraan unta, jalur yang berbeda dari yang dikira musuh.</p>
+
+<p>Ali bin Abi Thalib, sepupu Nabi yang masih muda, tidur di tempat tidur beliau — menjadi umpan agar pengejar mengira beliau masih di rumah. Berani sekali, anak muda itu.</p>
+
+<h3>Kejaran dan gua Tsur</h3>
+
+<p>Quraisy mengejar. Mereka sampai ke mulut gua Tsur — di mana Nabi dan Abu Bakar bersembunyi. Sangat dekat. Abu Bakar khawatir: <em>"Wahai Rasulullah, kalau salah satu dari mereka melihat ke bawah kakinya, dia akan melihat kita."</em></p>
+
+<p>Jawaban Rasulullah ﷺ yang anak-anak akan ingat seumur hidup:</p>
+
+<blockquote>"Apa pendapatmu tentang dua orang yang Allah adalah yang ketiganya?" — <strong>QS. At-Taubah 9:40</strong></blockquote>
+
+<p>Pengejar tidak melihat. Allah menjaga. Mereka pergi.</p>
+
+<h3>Sampai di Madinah</h3>
+
+<p>Setelah perjalanan panjang, mereka tiba di Madinah. Penduduk Madinah sudah lama menunggu. Anak-anak menari di jalan, menyanyikan lagu pelantun yang masih dinyanyikan sampai sekarang: <em>thala'al badru 'alayna...</em> "Telah terbit bulan purnama atas kami..."</p>
+
+<p>Untuk anak: <em>"Bayangkan adik baru pindah ke kota baru, dan saat sampai, semua orang di kota itu keluar menyambut adik dengan lagu. Itu rasa diterima yang Nabi rasakan setelah perjalanan susah."</em></p>
+
+<h2>Babak 3: Yang dibangun di Madinah</h2>
+
+<p>Hijrah bukan akhir cerita. Itu pembukaan.</p>
+
+<p>Di Madinah, Nabi ﷺ membangun:</p>
+
+<ul>
+  <li><strong>Masjid pertama</strong> — bersama, tangan beliau ikut mengangkat batu.</li>
+  <li><strong>Persaudaraan</strong> — Muhajirin (yang hijrah) dipersaudarakan dengan Anshar (yang menerima).</li>
+  <li><strong>Konstitusi</strong> — yang mengatur hidup bersama Yahudi dan orang non-muslim di kota itu.</li>
+</ul>
+
+<p>Dari sini, Islam menyebar ke seluruh dunia. Kalau hijrah tidak terjadi, mungkin kita semua di sini sekarang tidak akan menjadi muslim.</p>
+
+<h2>Pertanyaan yang biasa anak tanya</h2>
+
+<h3>"Kenapa Nabi tidak bertarung saja di Makkah?"</h3>
+
+<p>"Karena Allah belum mengizinkan. Ada waktu untuk berdoa, ada waktu untuk pindah, ada waktu untuk berjuang. Nabi taat pada waktu Allah."</p>
+
+<h3>"Apakah Abu Bakar takut?"</h3>
+
+<p>"Iya. Beliau takut. Tapi beliau tetap pergi bersama Nabi. Berani bukan berarti tidak takut — berani berarti pergi meski takut."</p>
+
+<h3>"Apakah anak-anak juga ikut hijrah?"</h3>
+
+<p>"Iya, banyak. Banyak keluarga yang membawa anak-anak mereka. Anak-anak itu jadi sahabat Anshar yang besarnya membantu menyebarkan Islam."</p>
+
+<h2>Format praktis: cerita 4 minggu di Muharram</h2>
+
+<ul>
+  <li><strong>Minggu 1:</strong> Babak 1 — tekanan di Makkah.</li>
+  <li><strong>Minggu 2:</strong> Babak 2 bagian A — persiapan dan keberangkatan.</li>
+  <li><strong>Minggu 3:</strong> Babak 2 bagian B — gua Tsur dan kedatangan.</li>
+  <li><strong>Minggu 4:</strong> Babak 3 — yang dibangun di Madinah.</li>
+</ul>
+
+<p>Satu sesi per minggu, 10–15 menit. Anak-anak akan menunggu sesi berikutnya.</p>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li><strong>Jangan tambahkan detail dari sumber tidak jelas.</strong> Kisah hijrah ada di Bukhari, Muslim, dan sirah klasik. Gunakan itu.</li>
+  <li><strong>Jangan jadikan Quraisy "jahat" satu dimensi.</strong> Mereka adalah orang-orang yang takut perubahan. Anak akan lebih sayang jika musuh punya alasan.</li>
+  <li><strong>Jangan moralisasi.</strong> Biarkan anak menemukan moralnya sendiri lewat pertanyaan.</li>
+</ul>
+
+<p>Lebih luas: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">Cara Bercerita Kisah Nabi yang Bikin Anak Mengingat</a>.</p>
+
+<h2>Penutup</h2>
+
+<p>Anak yang besar dengan kisah hijrah punya cetakan emosional yang dalam. Saat dia harus meninggalkan zona nyaman demi sesuatu yang lebih baik, dia punya Nabi untuk diingat. Saat dia takut tapi harus melangkah, dia punya Abu Bakar. Saat dia diterima di tempat baru, dia punya Anshar.</p>
+
+<p>Itu warisan yang tidak diberikan oleh ujian sekolah, oleh prestasi olahraga, oleh apapun.</p>
+
+<p>Mulai minggu pertama Muharram tahun ini.</p>`,
+
+      en: `<p>Every 1 Muharram, a new year begins — and that year is counted from one event. Not the Prophet's ﷺ birth. Not the first revelation. But his <em>hijrah</em> — the migration from Makkah to Madinah.</p>
+
+<p>Why this event, out of all the events of the Prophet's life, was chosen to begin the calendar? Because the hijrah was the greatest trial early Muslims passed through — and from that trial, a community grew.</p>
+
+<p>Here's how to tell it to a child, in a three-act structure children love.</p>
+
+<h2>Act 1: Makkah grows harder</h2>
+
+<p>Start in the everyday. The Prophet ﷺ lived in Makkah. It was his city. His family was there, his friends, the new mosque.</p>
+
+<p>But the Quraysh grew angrier at his teaching. They harassed his companions. They tortured Bilal, Sumayyah, Yasir. They boycotted Bani Hashim for three years — until children ate leaves.</p>
+
+<p>He made dua. He endured. Then Allah revealed: <em>"It is time to leave."</em></p>
+
+<p>For the child: <em>"Imagine if you had to move because someone at home didn't like you and kept bothering you. Hard, right? That's what the Prophet felt."</em></p>
+
+<h2>Act 2: The journey with Abu Bakr</h2>
+
+<p>The emotional heart of the story. Three elements must land:</p>
+
+<h3>Secret preparation</h3>
+
+<p>Only Abu Bakr knew the plan. Together they prepared quietly: food, camels, a route different from the one the enemy expected.</p>
+
+<p>Ali ibn Abi Talib, the Prophet's young cousin, slept in his bed — a decoy so pursuers thought he was still home. So brave, that young man.</p>
+
+<h3>The chase and Cave Thawr</h3>
+
+<p>Quraysh chased. They reached the mouth of Cave Thawr — where the Prophet and Abu Bakr were hiding. Very close. Abu Bakr was anxious: <em>"O Messenger of Allah, if one of them looks down at his feet, he'll see us."</em></p>
+
+<p>The Prophet's reply, which children will remember for life:</p>
+
+<blockquote>"What do you think of two whose third is Allah?" — <strong>Qur'an 9:40</strong></blockquote>
+
+<p>The pursuers didn't see. Allah protected them. They left.</p>
+
+<h3>Arrival in Madinah</h3>
+
+<p>After a long journey, they reached Madinah. The people had been waiting. Children danced in the streets, singing the song still sung today: <em>thala'al badru 'alayna...</em> "The full moon rose over us..."</p>
+
+<p>For the child: <em>"Imagine moving to a new city, and when you arrive, everyone comes out to greet you with a song. That's the welcome the Prophet felt after a hard journey."</em></p>
+
+<h2>Act 3: What was built in Madinah</h2>
+
+<p>The hijrah wasn't the end of the story. It was the opening.</p>
+
+<p>In Madinah, the Prophet ﷺ built:</p>
+
+<ul>
+  <li><strong>The first mosque</strong> — together, his own hand lifting stones.</li>
+  <li><strong>Brotherhood</strong> — the Muhajirin (migrants) paired with the Ansar (helpers).</li>
+  <li><strong>The Constitution</strong> — governing life with the Jews and non-Muslims of the city.</li>
+</ul>
+
+<p>From here, Islam spread to the world. If the hijrah hadn't happened, perhaps none of us reading this would be Muslim.</p>
+
+<h2>Questions children often ask</h2>
+
+<h3>"Why didn't the Prophet just fight in Makkah?"</h3>
+
+<p>"Because Allah hadn't permitted it yet. There's a time for dua, a time to move, a time to fight. The Prophet followed Allah's timing."</p>
+
+<h3>"Was Abu Bakr scared?"</h3>
+
+<p>"Yes. He was. But he went with the Prophet anyway. Brave doesn't mean unafraid — brave means going forward despite fear."</p>
+
+<h3>"Did children make the hijrah too?"</h3>
+
+<p>"Yes, many. Many families brought their children. Those children became Ansar companions who as adults helped spread Islam."</p>
+
+<h2>Practical format: a 4-week story in Muharram</h2>
+
+<ul>
+  <li><strong>Week 1:</strong> Act 1 — pressure in Makkah.</li>
+  <li><strong>Week 2:</strong> Act 2A — preparation and departure.</li>
+  <li><strong>Week 3:</strong> Act 2B — Cave Thawr and arrival.</li>
+  <li><strong>Week 4:</strong> Act 3 — what was built in Madinah.</li>
+</ul>
+
+<p>One session a week, 10–15 minutes. Children will look forward to the next.</p>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li><strong>Don't add details from unclear sources.</strong> The hijrah story is in Bukhari, Muslim, and classical sirah. Use them.</li>
+  <li><strong>Don't make Quraysh one-dimensionally "evil".</strong> They were people who feared change. Children connect more deeply when the antagonist has a reason.</li>
+  <li><strong>Don't moralize.</strong> Let the child find the moral themselves through questions.</li>
+</ul>
+
+<p>Broader guide: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">How to Tell Prophet Stories That Children Remember</a>.</p>
+
+<h2>Closing</h2>
+
+<p>A child raised on the hijrah story carries a deep emotional template. When they must leave a comfort zone for something better, they have the Prophet to remember. When they must move forward in fear, they have Abu Bakr. When they're welcomed somewhere new, they have the Ansar.</p>
+
+<p>That inheritance isn't given by school exams, sports trophies, or anything else.</p>
+
+<p>Start the first week of Muharram this year.</p>`,
+    },
+    tags: ["hijrah", "muharram", "kisah-nabi", "sejarah-islam"],
+    published: "2026-05-23",
+    updated: "2026-05-23",
+    readingTimeMin: 9,
+    author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Berani bukan berarti tidak takut. Berani berarti pergi meski takut — itu yang Abu Bakar ajarkan kepada anak-anak yang mendengar kisah hijrah.",
+        en: "Brave doesn't mean unafraid. Brave means going forward despite fear — that's what Abu Bakr teaches children who hear the hijrah story.",
+      },
+      carousel: {
+        id: [
+          { title: "Kenapa hijrah jadi awal kalender", body: "Bukan kelahiran Nabi ﷺ, bukan wahyu pertama. Tapi hijrah — karena dari sini umat tumbuh." },
+          { title: "Babak 1: tekanan di Makkah", body: "Quraisy memboikot Bani Hasyim 3 tahun. Sahabat disiksa. Allah berfirman: 'Saatnya pergi.'" },
+          { title: "Ali tidur di tempat tidur Nabi", body: "Anak muda yang menjadi umpan agar pengejar mengira Nabi masih di rumah. Berani." },
+          { title: "Gua Tsur", body: "Quraisy hampir menemukan. Abu Bakar khawatir. Nabi: 'Apa pendapatmu tentang dua orang yang Allah ketiganya?'" },
+          { title: "Disambut di Madinah", body: "Anak-anak menyanyikan thala'al badru 'alayna. Pengalaman diterima setelah perjalanan susah." },
+          { title: "Apa yang dibangun", body: "Masjid pertama. Persaudaraan Muhajirin–Anshar. Konstitusi. Dari sini Islam menyebar." },
+          { title: "4 minggu, 1 sesi/minggu", body: "Pisahkan jadi 4 babak: tekanan, persiapan, gua, kedatangan. Anak menunggu sesi berikutnya." },
+        ],
+        en: [
+          { title: "Why hijrah starts the calendar", body: "Not the Prophet's birth, not the first revelation. The hijrah — because from here a community grew." },
+          { title: "Act 1: pressure in Makkah", body: "Quraysh boycotted Bani Hashim 3 years. Companions tortured. Allah said: 'It is time to leave.'" },
+          { title: "Ali slept in the Prophet's bed", body: "A young man, a decoy so pursuers thought the Prophet was still home. Brave." },
+          { title: "Cave Thawr", body: "Quraysh nearly found them. Abu Bakr worried. The Prophet: 'What of two whose third is Allah?'" },
+          { title: "Welcomed in Madinah", body: "Children sang thala'al badru 'alayna. The feeling of arrival after a hard journey." },
+          { title: "What was built", body: "The first mosque. Brotherhood Muhajirin–Ansar. The Constitution. From here Islam spread." },
+          { title: "4 weeks, 1 session each", body: "Split into 4 acts: pressure, preparation, cave, arrival. The child anticipates the next." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: "Kalender muslim mulai dari satu peristiwa. Bukan kelahiran Nabi ﷺ. Bukan wahyu. Tapi hijrah."
+
+[3–15 detik] BABAK 1: Makkah makin sulit. Quraisy memboikot Bani Hasyim 3 tahun sampai anak-anak makan dedaunan. Allah berfirman: 'Saatnya pergi.'
+
+[15–35 detik] BABAK 2: Nabi ﷺ dan Abu Bakar pergi. Ali tidur di tempat tidur Nabi jadi umpan. Di gua Tsur, pengejar sangat dekat. Abu Bakar khawatir. Nabi: 'Apa pendapatmu tentang dua orang yang Allah ketiganya?' Allah menjaga.
+
+[35–50 detik] BABAK 3: Sampai di Madinah, anak-anak menyanyikan thala'al badru 'alayna. Nabi membangun masjid, persaudaraan, konstitusi. Dari sini Islam menyebar.
+
+[50–60 detik] PESAN: Berani bukan berarti tidak takut. Berani berarti pergi meski takut. Itu yang Abu Bakar ajarkan ke anak-anak yang mendengar kisah ini. CTA: "Save buat dibacakan ke anak."`,
+        en: `[0–3 sec] HOOK: "The Muslim calendar starts from one event. Not the Prophet's birth. Not revelation. The hijrah."
+
+[3–15 sec] ACT 1: Makkah grew harder. Quraysh boycotted Bani Hashim 3 years until children ate leaves. Allah said: 'It is time to leave.'
+
+[15–35 sec] ACT 2: Prophet ﷺ and Abu Bakr left. Ali slept in the Prophet's bed as a decoy. In Cave Thawr, pursuers very close. Abu Bakr worried. Prophet: 'What of two whose third is Allah?' Allah protected them.
+
+[35–50 sec] ACT 3: Arrived in Madinah, children sang thala'al badru 'alayna. Prophet built the mosque, brotherhood, constitution. From here Islam spread.
+
+[50–60 sec] MESSAGE: Brave doesn't mean unafraid. Brave means going forward despite fear. That's what Abu Bakr teaches children who hear this. CTA: "Save to read to your child."`,
+      },
+      pin: {
+        id: {
+          title: "Kisah Hijrah Nabi untuk Anak — Cerita 3 Babak yang Membekas Seumur Hidup",
+          description: "Panduan menceritakan kisah hijrah Nabi Muhammad ﷺ dari Makkah ke Madinah untuk anak muslim. Struktur 3 babak (tekanan Makkah, perjalanan, kedatangan Madinah), pertanyaan yang biasa anak tanyakan, dan format 4 minggu untuk dibacakan sepanjang Muharram. Tarbiyah islami untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "The Hijrah Story for Children — A 3-Act Tale That Lasts a Lifetime",
+          description: "How to tell the story of the Prophet's ﷺ hijrah from Makkah to Madinah to Muslim children. The 3-act structure (Makkah pressure, journey, Madinah arrival), common questions kids ask, and a 4-week format for Muharram. Islamic parenting for Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Sesi minggu 1: tekanan di Makkah (10–15 menit)",
+          "Sesi minggu 2: persiapan dan keberangkatan",
+          "Sesi minggu 3: gua Tsur dan perjalanan",
+          "Sesi minggu 4: kedatangan + apa yang dibangun di Madinah",
+          "Bertanya, jangan menjelaskan: biarkan anak menemukan moralnya",
+          "Hindari membuat Quraisy 'jahat' satu dimensi",
+          "Sebutkan nama-nama: Ali, Abu Bakar, Anshar, Muhajirin",
+          "Tutup tiap sesi dengan: 'Menurut adik, gimana perasaan Nabi tadi?'",
+        ],
+        en: [
+          "Week 1 session: pressure in Makkah (10–15 minutes)",
+          "Week 2 session: preparation and departure",
+          "Week 3 session: Cave Thawr and the journey",
+          "Week 4 session: arrival + what was built in Madinah",
+          "Ask, don't explain: let the child find the moral",
+          "Avoid making Quraysh one-dimensionally 'evil'",
+          "Use names: Ali, Abu Bakr, Ansar, Muhajirin",
+          "Close each session with: 'How do you think the Prophet felt?'",
+        ],
+      },
+    },
+  },
+
+  // ═════════════════════════════════════════════════════════════════
+  //  Pre-Muharram series (Dzulhijjah) and earlier evergreen posts
+  //  follow below.
+  // ═════════════════════════════════════════════════════════════════
+
   // ─────────────────────────────────────────────────────────────────
   // 1. SEASONAL — Dzulhijjah window (early June 2026, Eid al-Adha)
   // ─────────────────────────────────────────────────────────────────
