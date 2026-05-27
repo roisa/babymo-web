@@ -21,6 +21,7 @@ import { Reveal } from "@/components/Reveal";
 import { HeroAura } from "@/components/HeroAura";
 import { AnimatedCount } from "@/components/AnimatedCount";
 import { VideoSection } from "@/components/video/VideoSection";
+import { QuoteRibbon } from "@/components/QuoteRibbon";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
@@ -68,6 +69,7 @@ export default async function HomePage({
   return (
     <>
       <Header locale={l} currentPath="/" />
+      <div className="scroll-progress" aria-hidden />
 
       <main id="main" className="pb-28 md:pb-0">
         {/* ── HERO ── */}
@@ -184,6 +186,9 @@ export default async function HomePage({
             </section>
           </Reveal>
         )}
+
+        {/* ── Daily phrase ribbon — slow marquee ── */}
+        <QuoteRibbon locale={l} />
 
         {/* ── VALUES ── */}
         <section className="border-t border-hairline bg-paper-2">

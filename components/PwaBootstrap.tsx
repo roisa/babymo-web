@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { basePath } from "@/lib/i18n/config";
 import type { Locale } from "@/lib/i18n/config";
+import { SmoothScroll } from "./SmoothScroll";
 
 type Props = { locale: Locale };
 
@@ -103,7 +104,7 @@ export function PwaBootstrap({ locale }: Props) {
     }
   }
 
-  if (!show || !deferred) return null;
+  if (!show || !deferred) return <SmoothScroll />;
 
   const copy = {
     id: {
@@ -150,6 +151,7 @@ export function PwaBootstrap({ locale }: Props) {
           </button>
         </div>
       </div>
+      <SmoothScroll />
     </div>
   );
 }

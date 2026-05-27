@@ -234,6 +234,117 @@ body {
 }
 .pulse-dot { animation: pulse-dot 2.2s ease-out infinite; }
 
+/* ─────────────────────────────────────────────────────────────
+   Scroll-driven enhancements (Chrome 115+, Safari 17+, FF 134+).
+   Graceful fallback: animations simply don't run on older
+   browsers — the page reverts to static which is fine.
+   ───────────────────────────────────────────────────────────── */
+
+/* 1. Scroll progress hairline — slim sage bar at the very top */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--color-sage) 0%,
+    var(--color-sage-deep) 100%
+  );
+  transform-origin: 0 50%;
+  transform: scaleX(0);
+  z-index: 50;
+  pointer-events: none;
+  animation: scroll-progress-grow linear;
+  animation-timeline: scroll(root block);
+}
+@keyframes scroll-progress-grow {
+  to { transform: scaleX(1); }
+}
+
+/* 2. Hero parallax — mascot drifts slower than scroll (looks like
+   it's recessed into a "deeper" plane). Stacks on top of breathe. */
+.mascot-breathe {
+  animation:
+    mascot-breathe 5s ease-in-out infinite,
+    mascot-parallax linear;
+  animation-timeline: auto, scroll(root block);
+  animation-range: auto, 0 80vh;
+}
+@keyframes mascot-parallax {
+  from { translate: 0 0; }
+  to   { translate: 0 60px; }
+}
+
+/* Hero aura drifts opposite — gives counter-parallax depth */
+.aura-blob {
+  animation:
+    aura-shift 24s ease-in-out infinite,
+    aura-parallax linear;
+  animation-timeline: auto, scroll(root block);
+  animation-range: auto, 0 80vh;
+}
+@keyframes aura-parallax {
+  from { translate: 0 0; }
+  to   { translate: 0 -40px; }
+}
+
+/* 3. Adaptive header — densifies as you scroll past hero */
+header.glass {
+  animation: header-densify linear;
+  animation-timeline: scroll(root block);
+  animation-range: 0 220px;
+  will-change: box-shadow, background-color;
+}
+@keyframes header-densify {
+  from {
+    box-shadow: 0 0 0 0 rgba(15, 18, 19, 0);
+    background-color: color-mix(in oklab, var(--color-paper), transparent 30%);
+  }
+  to {
+    box-shadow: 0 4px 24px -12px rgba(15, 18, 19, 0.18);
+    background-color: color-mix(in oklab, var(--color-paper), transparent 8%);
+  }
+}
+
+/* 4. Marquee — slow drifting Arabic phrase ribbon */
+.marquee {
+  overflow: hidden;
+  white-space: nowrap;
+  mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent 0,
+    #000 5%,
+    #000 95%,
+    transparent 100%
+  );
+}
+.marquee-track {
+  display: inline-block;
+  animation: ribbon-drift 60s linear infinite;
+  will-change: transform;
+}
+@keyframes ribbon-drift {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Improve anchor-jump landing under sticky header */
+html {
+  scroll-padding-top: 96px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
@@ -247,6 +358,11 @@ body {
     opacity: 1 !important;
     animation: none !important;
   }
+  .scroll-progress,
+  .marquee-track {
+    animation: none !important;
+  }
+  .scroll-progress { display: none; }
 }
 
 :focus-visible {
