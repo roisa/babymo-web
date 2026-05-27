@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
+import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
 import { Byline } from "@/components/Byline";
@@ -65,7 +66,7 @@ export default async function HadithDetail({
   return (
     <>
       <Header locale={l} currentPath={`/hadith/${slug}`} />
-      <main className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-7 sm:pt-12 md:pb-20">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-7 sm:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -177,6 +178,12 @@ export default async function HadithDetail({
 
       <Footer locale={l} currentPath={`/hadith/${slug}`} />
       <MobileNav locale={l} />
+      <ShareBar
+        locale={l}
+        title={h.title[l]}
+        text={h.translation[l]}
+        url={absoluteUrl(l, `/hadith/${slug}`)}
+      />
 
       <JsonLd
         data={graph(

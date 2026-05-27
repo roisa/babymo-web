@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -70,7 +69,7 @@ export default async function HomePage({
     <>
       <Header locale={l} currentPath="/" />
 
-      <main className="pb-28 md:pb-0">
+      <main id="main" className="pb-28 md:pb-0">
         {/* ── HERO ── */}
         <section className="relative overflow-hidden">
           {/* Animated aura behind content */}
@@ -128,14 +127,24 @@ export default async function HomePage({
                 <span aria-hidden className="sparkle" style={{ bottom: "12%", right: "10%", "--sz": "14px", "--dur": "3.6s", "--delay": "2.1s" } as React.CSSProperties}>✦</span>
                 <span aria-hidden className="sparkle" style={{ top: "48%", right: "5%", "--sz": "9px", "--dur": "3.2s", "--delay": "1.6s" } as React.CSSProperties}>·</span>
 
-                <Image
-                  src={asset("/assets/baby-mo-hero.png")}
-                  alt="Baby Mo"
-                  width={900}
-                  height={900}
-                  priority
-                  className="mascot-breathe mx-auto h-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]"
-                />
+                {/* WebP-first hero. With output:export + unoptimized,
+                    next/image is just a sized <img>, so prefer plain
+                    <picture> for the LCP image: 229 KB PNG → 37 KB WebP. */}
+                <picture>
+                  <source
+                    type="image/webp"
+                    srcSet={asset("/assets/baby-mo-hero.webp")}
+                  />
+                  <img
+                    src={asset("/assets/baby-mo-hero.png")}
+                    alt="Baby Mo"
+                    width={900}
+                    height={900}
+                    fetchPriority="high"
+                    decoding="async"
+                    className="mascot-breathe mx-auto h-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]"
+                  />
+                </picture>
               </div>
             </div>
           </div>

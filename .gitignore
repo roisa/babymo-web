@@ -39,4 +39,6 @@ yarn-error.log*
 
 # Generated at build time
 public/data/videos.json
+public/data/search.json
 public/og/blog/
+public/og/doa/

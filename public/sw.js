@@ -1,41 +1,109 @@
-// ─── Kill-switch service worker ───────────────────────────────────
-// The earlier static-HTML build registered an aggressive caching SW.
-// That SW kept serving stale HTML even after the platform was migrated
-// to Next.js. This replacement, served at /sw.js, immediately:
-//   1. Unregisters itself (so no future SW interception)
-//   2. Wipes every cache the old SW created
-//   3. Tells every open tab to reload from network
+// Baby Mo service worker — v2 (2026-05)
 //
-// The browser fetches /sw.js periodically (every navigation if the
-// existing SW is > 24h old). Once it sees this new content, the cleanup
-// happens automatically — no user action required.
+// Strategy:
+//   - HTML navigations: network-first with stale-cache fallback
+//   - Static assets (fonts, images, JS chunks): cache-first
+//   - Search index + videos.json: stale-while-revalidate
 //
-// Safe to delete after ~30 days, once we're confident no returning
-// visitor still has the old SW installed.
+// The previous SW was a kill-switch (unregistering itself). Returning
+// visitors who still have that old SW will fetch this file on next
+// navigation, install + activate it cleanly. We clear unrelated caches
+// in activate to avoid carrying old kill-switch state forward.
 
-self.addEventListener('install', (event) => {
+const VERSION = "babymo-v2-20260527";
+const HTML_CACHE = `${VERSION}-html`;
+const STATIC_CACHE = `${VERSION}-static`;
+const DATA_CACHE = `${VERSION}-data`;
+
+self.addEventListener("install", (event) => {
   event.waitUntil(self.skipWaiting());
 });
 
-self.addEventListener('activate', (event) => {
-  event.waitUntil((async () => {
-    try {
+self.addEventListener("activate", (event) => {
+  event.waitUntil(
+    (async () => {
       const keys = await caches.keys();
-      await Promise.all(keys.map((k) => caches.delete(k)));
-    } catch (_) {}
-    try {
-      await self.registration.unregister();
-    } catch (_) {}
-    try {
-      const clients = await self.clients.matchAll({ type: 'window' });
-      for (const c of clients) {
-        try { c.navigate(c.url); } catch (_) {}
-      }
-    } catch (_) {}
-  })());
+      await Promise.all(
+        keys
+          .filter((k) => !k.startsWith(VERSION))
+          .map((k) => caches.delete(k)),
+      );
+      await self.clients.claim();
+    })(),
+  );
 });
 
-// Pass every fetch straight through — never serve from any old cache.
-self.addEventListener('fetch', (event) => {
-  event.respondWith(fetch(event.request));
+function isStatic(url) {
+  return (
+    url.pathname.includes("/_next/static/") ||
+    url.pathname.startsWith("/assets/") ||
+    url.pathname.includes("/babymo-web/_next/static/") ||
+    url.pathname.includes("/babymo-web/assets/") ||
+    /\.(woff2?|png|jpg|jpeg|svg|webp|ico)$/i.test(url.pathname)
+  );
+}
+
+function isData(url) {
+  return /\/data\/(search|videos)\.json$/.test(url.pathname);
+}
+
+self.addEventListener("fetch", (event) => {
+  const req = event.request;
+  if (req.method !== "GET") return;
+  const url = new URL(req.url);
+  if (url.origin !== self.location.origin) return;
+
+  // Static assets — cache-first
+  if (isStatic(url)) {
+    event.respondWith(
+      caches.match(req).then(
+        (hit) =>
+          hit ||
+          fetch(req).then((res) => {
+            const copy = res.clone();
+            caches.open(STATIC_CACHE).then((c) => c.put(req, copy));
+            return res;
+          }),
+      ),
+    );
+    return;
+  }
+
+  // Data files — SWR
+  if (isData(url)) {
+    event.respondWith(
+      caches.open(DATA_CACHE).then(async (cache) => {
+        const cached = await cache.match(req);
+        const network = fetch(req)
+          .then((res) => {
+            if (res.ok) cache.put(req, res.clone());
+            return res;
+          })
+          .catch(() => cached);
+        return cached || network;
+      }),
+    );
+    return;
+  }
+
+  // HTML navigations — network-first
+  const accept = req.headers.get("accept") || "";
+  if (req.mode === "navigate" || accept.includes("text/html")) {
+    event.respondWith(
+      fetch(req)
+        .then((res) => {
+          const copy = res.clone();
+          caches.open(HTML_CACHE).then((c) => c.put(req, copy));
+          return res;
+        })
+        .catch(async () => {
+          const cached = await caches.match(req);
+          if (cached) return cached;
+          return new Response(
+            "<h1>Offline</h1><p>Halaman ini belum tersimpan.</p>",
+            { headers: { "content-type": "text/html; charset=utf-8" } },
+          );
+        }),
+    );
+  }
 });
