@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { blogPostingSchema, breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
+import { renderBody } from "@/lib/content/render";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -85,7 +86,7 @@ export default async function BlogDetail({
 
         <article
           className="prose"
-          dangerouslySetInnerHTML={{ __html: post.body[l] }}
+          dangerouslySetInnerHTML={{ __html: renderBody(post.body[l], l) }}
         />
       </main>
 
