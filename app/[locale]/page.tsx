@@ -105,10 +105,10 @@ export default async function HomePage({
                     {dict.home.ctaPrimary}
                   </Link>
                   <Link
-                    href={pathFor(l, "/parenting")}
+                    href={pathFor(l, "/permainan")}
                     className="magnet tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-5 py-3 text-[14px] font-semibold text-ink backdrop-blur hover:border-brave/40"
                   >
-                    {dict.nav.parenting ?? "Parenting"}
+                    {dict.nav.games ?? (l === "id" ? "Permainan" : "Games")}
                   </Link>
                 </div>
 
