@@ -62,6 +62,14 @@ export const parentingList: ParentingSituation[] = [
     category: "emosi",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Anak yang sedang tantrum bukan anak nakal. Mereka anak yang belum tahu nama perasaan mereka — dan butuh kita ajarkan.",
+      en: "A tantrumming child isn't a naughty child. They're a child who hasn't yet learned the names of their feelings — and they need us to teach them.",
+    },
+    seoQuery: {
+      id: "cara mengatasi tantrum anak menurut islam",
+      en: "how to handle child tantrums islamic perspective",
+    },
   },
   {
     slug: "sulit-tidur",
@@ -114,6 +122,14 @@ export const parentingList: ParentingSituation[] = [
     category: "rutinitas",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Rutinitas yang sama, suara orang tua yang sama, doa yang sama — itulah jangkar tidur anak.",
+      en: "The same routine, the same parent's voice, the same du'a — that's a child's anchor for sleep.",
+    },
+    seoQuery: {
+      id: "anak susah tidur menurut islam",
+      en: "child won't sleep islamic guidance",
+    },
   },
   {
     slug: "susah-makan",
@@ -166,6 +182,14 @@ export const parentingList: ParentingSituation[] = [
     category: "rutinitas",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Anak yang dipaksa makan belajar menolak makan. Anak yang dihargai pilihannya belajar lapar dan kenyang.",
+      en: "A child forced to eat learns to refuse food. A child whose choices are respected learns hunger and fullness.",
+    },
+    seoQuery: {
+      id: "doa untuk anak susah makan",
+      en: "dua for child who won't eat",
+    },
   },
   {
     slug: "takut-gelap",
@@ -218,6 +242,14 @@ export const parentingList: ParentingSituation[] = [
     category: "emosi",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Ketakutan anak nyata bagi mereka — meski tidak nyata bagi kita. Tugas kita bukan menyangkalnya, tapi menemani sampai berani.",
+      en: "A child's fear is real to them — even if not to us. Our job isn't to deny it, but to stay beside them until they're brave.",
+    },
+    seoQuery: {
+      id: "anak takut gelap menurut islam",
+      en: "child fear of dark islamic perspective",
+    },
   },
   {
     slug: "marah-orang-tua",
@@ -270,6 +302,14 @@ export const parentingList: ParentingSituation[] = [
     category: "emosi",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Marah pada anak bukan dosa. Tapi setiap kali kita marah dan mereka tetap memeluk, itu adalah doa mereka untuk kita.",
+      en: "Anger toward a child isn't a sin. But every time we get angry and they still hug us back — that's their du'a for us.",
+    },
+    seoQuery: {
+      id: "marah pada anak dalam islam",
+      en: "anger toward child islamic perspective",
+    },
   },
   {
     slug: "mulai-sholat",
@@ -322,6 +362,14 @@ export const parentingList: ParentingSituation[] = [
     category: "spiritual",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Sholat dimulai dari meniru, bukan dari menghafal. Anak yang melihat orang tua sholat akan sholat sendiri pada waktunya.",
+      en: "Salah begins from imitation, not memorization. A child who sees their parents pray will pray on their own — in time.",
+    },
+    seoQuery: {
+      id: "kapan mulai ajarin sholat anak",
+      en: "when to start teaching child salah",
+    },
   },
   {
     slug: "puasa-pertama",
@@ -374,6 +422,14 @@ export const parentingList: ParentingSituation[] = [
     category: "spiritual",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Puasa pertama anak tidak harus sempurna. Yang penting mereka merasakan: 'aku bisa, dan Allah melihat usahaku.'",
+      en: "A child's first fast doesn't need to be perfect. What matters is the feeling: 'I can do this, and Allah sees my effort.'",
+    },
+    seoQuery: {
+      id: "kapan anak harus mulai puasa ramadhan",
+      en: "when can child start fasting ramadan",
+    },
   },
   {
     slug: "rivalitas-saudara",
@@ -426,6 +482,14 @@ export const parentingList: ParentingSituation[] = [
     category: "sosial",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Saudara yang sering bertengkar di rumah, biasanya saling membela di luar. Tugas kita memastikan rumah tetap aman bagi keduanya.",
+      en: "Siblings who fight at home usually defend each other outside. Our job is to keep the home a safe place for both.",
+    },
+    seoQuery: {
+      id: "cara mendamaikan anak yang bertengkar dengan saudara",
+      en: "how to handle sibling rivalry islamic parenting",
+    },
   },
   {
     slug: "screen-time",
@@ -478,6 +542,14 @@ export const parentingList: ParentingSituation[] = [
     category: "rutinitas",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Bukan layar yang buruk untuk anak. Yang buruk adalah ketika layar menggantikan suara orang tua di rumah.",
+      en: "It's not the screen that's bad for kids. What's bad is when the screen replaces the parent's voice at home.",
+    },
+    seoQuery: {
+      id: "berapa lama screen time anak menurut islam",
+      en: "screen time for kids islamic view",
+    },
   },
   {
     slug: "adab-sehari-hari",
@@ -540,6 +612,14 @@ export const parentingList: ParentingSituation[] = [
     category: "perilaku",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Adab tidak diajarkan lewat ceramah. Diajarkan lewat melakukan, di depan anak, setiap hari.",
+      en: "Adab isn't taught through lectures. It's taught by doing it — in front of your child, every day.",
+    },
+    seoQuery: {
+      id: "cara mengajarkan adab pada anak menurut islam",
+      en: "teaching adab to children islamic guidance",
+    },
   },
   {
     slug: "bersyukur",
@@ -592,6 +672,14 @@ export const parentingList: ParentingSituation[] = [
     category: "spiritual",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Anak belajar bersyukur dari orang tua yang mengucap 'alhamdulillah' atas hal-hal kecil — bukan dari ceramah tentang syukur.",
+      en: "Children learn gratitude from parents who say 'alhamdulillah' over small things — not from lectures about gratitude.",
+    },
+    seoQuery: {
+      id: "cara mengajarkan rasa syukur pada anak",
+      en: "teaching gratitude to children islamic",
+    },
   },
   {
     slug: "bonding-orangtua",
@@ -644,6 +732,14 @@ export const parentingList: ParentingSituation[] = [
     category: "sosial",
     published: "2026-05-27",
     updated: "2026-05-27",
+    quote: {
+      id: "Anak tidak butuh waktu berkualitas. Mereka butuh banyak waktu, dan menemukan kualitasnya sendiri.",
+      en: "Children don't need 'quality time'. They need a lot of time, and they'll find the quality in it themselves.",
+    },
+    seoQuery: {
+      id: "cara dekat dengan anak menurut islam",
+      en: "bonding with child islamic parenting",
+    },
   },
 ];
 

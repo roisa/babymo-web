@@ -28,6 +28,11 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
+import {
+  getCurrentIslamicEvent,
+  eventStatus,
+  daysUntil,
+} from "@/lib/islamic-calendar";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -61,7 +66,16 @@ export default async function HomePage({
   const hadiths = allHadith.slice(0, 3);
   const situations = allParenting.slice(0, 3);
   const posts = allPosts.slice(0, 3);
-  const featured = getBlogPostBySlug("doa-awal-tahun-hijriyah-untuk-anak");
+  // Auto-pick a seasonal event from the Islamic calendar. Falls back
+  // to the hard-coded Hijri new year post if the matching blog slug
+  // hasn't been written yet.
+  const currentEvent = getCurrentIslamicEvent();
+  const eventPost = currentEvent?.blogSlug
+    ? getBlogPostBySlug(currentEvent.blogSlug)
+    : null;
+  const featured = eventPost ?? getBlogPostBySlug("doa-awal-tahun-hijriyah-untuk-anak");
+  const eventState = currentEvent ? eventStatus(currentEvent) : null;
+  const eventDays = currentEvent ? daysUntil(currentEvent) : 0;
 
   // Pre-split hero title into spans for the word-rise animation
   const heroWords = (dict.home.heroTitleA + " " + dict.home.heroTitleB)
@@ -154,8 +168,8 @@ export default async function HomePage({
           </div>
         </section>
 
-        {/* ── Featured Hijri / Muharram banner ── */}
-        {featured && (
+        {/* ── Seasonal Islamic-calendar banner (auto-picked) ── */}
+        {featured && currentEvent && (
           <Reveal>
             <section className="mx-auto max-w-6xl px-5 pb-2 sm:px-7">
               <Link
@@ -171,13 +185,17 @@ export default async function HomePage({
                   <div>
                     <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
                       <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-clay text-clay" />
-                      {l === "id" ? "Sedang berlangsung" : "Happening now"} · Muharram 1448
+                      {eventState === "active"
+                        ? l === "id" ? "Sedang berlangsung" : "Happening now"
+                        : l === "id" ? `${eventDays} hari lagi` : `In ${eventDays} days`}
+                      {" · "}
+                      {currentEvent.hijri}
                     </p>
                     <h2 className="mt-1.5 font-serif text-[20px] font-medium leading-snug text-ink group-hover:text-sage-deep sm:text-[22px]">
                       {featured.title[l]}
                     </h2>
                     <p className="mt-1 text-[14px] leading-relaxed text-whisper">
-                      {featured.excerpt[l]}
+                      {currentEvent.caption[l]}
                     </p>
                   </div>
                   <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-sage-deep sm:inline">

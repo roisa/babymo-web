@@ -8,7 +8,12 @@ import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, parentingSchema, graph } from "@/lib/seo/schemas";
+import {
+  breadcrumbSchema,
+  parentingSchema,
+  parentingFaqSchema,
+  graph,
+} from "@/lib/seo/schemas";
 import {
   getAllParenting,
   getParentingBySlug,
@@ -17,6 +22,7 @@ import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
 import { DoaCard } from "@/components/DoaCard";
 import { HadithCard } from "@/components/HadithCard";
+import { CopyButton } from "@/components/CopyButton";
 
 export async function generateStaticParams() {
   const out: { locale: string; situation: string }[] = [];
@@ -137,6 +143,29 @@ export default async function ParentingDetail({
           </p>
         </section>
 
+        {/* WhatsApp-quotable takeaway — screenshot-shareable single line */}
+        {p.quote && (
+          <section className="mt-6 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
+            <div className="flex items-start justify-between gap-4">
+              <div className="min-w-0">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+                  {l === "id" ? "Kalau hanya satu kalimat" : "If just one line"}
+                </p>
+                <p className="font-display mt-3 text-[19px] leading-[1.5] text-ink sm:text-[21px]">
+                  {p.quote[l]}
+                </p>
+              </div>
+            </div>
+            <div className="mt-5">
+              <CopyButton
+                text={`"${p.quote[l]}"\n\n— Baby Mo · babymo.id/${l}/parenting/${situation}/`}
+                label={l === "id" ? "Salin kutipan" : "Copy quote"}
+                copiedLabel={l === "id" ? "Tersalin" : "Copied"}
+              />
+            </div>
+          </section>
+        )}
+
         {doas.length > 0 && (
           <section className="mt-14">
             <h2 className="tracking-display font-serif text-2xl font-medium text-ink">
@@ -181,6 +210,7 @@ export default async function ParentingDetail({
             { name: p.title[l], path: `/parenting/${situation}` },
           ]),
           parentingSchema(l, p),
+          ...(parentingFaqSchema(l, p) ? [parentingFaqSchema(l, p)!] : []),
         )}
       />
     </>

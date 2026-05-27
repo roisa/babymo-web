@@ -189,6 +189,30 @@ export function parentingSchema(locale: Locale, p: ParentingSituation) {
   };
 }
 
+/**
+ * FAQPage schema for a parenting situation — uses the seoQuery as
+ * the Question and the islamicNote + first step as the Answer so
+ * Google can show a rich snippet for that exact long-tail search.
+ */
+export function parentingFaqSchema(locale: Locale, p: ParentingSituation) {
+  if (!p.seoQuery) return null;
+  const firstStep = p.steps[locale][0] ?? "";
+  const answer = `${p.islamicNote[locale]} ${firstStep}`.trim();
+  return {
+    "@type": "FAQPage",
+    mainEntity: [
+      {
+        "@type": "Question",
+        name: p.seoQuery[locale],
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: answer,
+        },
+      },
+    ],
+  };
+}
+
 export function videoGameSchema(locale: Locale, game: Game) {
   return {
     "@type": "VideoGame",

@@ -163,6 +163,16 @@ export type ParentingSituation = {
   category: "perilaku" | "emosi" | "rutinitas" | "spiritual" | "sosial";
   published: string;
   updated: string;
+  /**
+   * One-line takeaway parents can screenshot and forward in WhatsApp.
+   * Surface in a brave-green pull-quote on the detail page.
+   */
+  quote?: Record<Locale, string>;
+  /**
+   * Long-tail Google search query this page targets. Used in JSON-LD
+   * FAQ schema (Question) so rich snippets show up for the exact query.
+   */
+  seoQuery?: Record<Locale, string>;
 };
 
 export type Game = {
