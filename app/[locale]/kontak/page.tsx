@@ -87,7 +87,7 @@ export default async function ContactPage({
   return (
     <>
       <Header locale={l} currentPath="/kontak" />
-      <main className="mx-auto max-w-4xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
+      <main id="main" className="mx-auto max-w-4xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
         <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}

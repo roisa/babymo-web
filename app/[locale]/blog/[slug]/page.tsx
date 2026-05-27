@@ -1,11 +1,12 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
+import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
 import { blogPostingSchema, breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
@@ -55,7 +56,7 @@ export default async function BlogDetail({
   return (
     <>
       <Header locale={l} currentPath={`/blog/${slug}`} />
-      <main className="mx-auto max-w-3xl px-5 pb-24 pt-10 sm:px-8 sm:pt-14 md:pb-16">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-24 pt-10 sm:px-8 sm:pt-14 md:pb-16">
         <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -95,6 +96,12 @@ export default async function BlogDetail({
 
       <Footer locale={l} currentPath={`/blog/${slug}`} />
       <MobileNav locale={l} />
+      <ShareBar
+        locale={l}
+        title={post.title[l]}
+        text={post.excerpt[l]}
+        url={absoluteUrl(l, `/blog/${slug}`)}
+      />
 
       <JsonLd
         data={graph(

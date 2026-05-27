@@ -8,6 +8,7 @@ import {
 } from "@/lib/i18n/config";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { JsonLd } from "@/components/JsonLd";
+import { PwaBootstrap } from "@/components/PwaBootstrap";
 import { organizationSchema, websiteSchema, graph } from "@/lib/seo/schemas";
 import { notFound } from "next/navigation";
 
@@ -68,18 +69,11 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${newsreader.variable} ${arabic.variable}`}
     >
       <body>
-        {/* Unregister any leftover service worker from the previous static-HTML
-            era. Without this, returning visitors see stale cached HTML and the
-            EN/ID toggle never appears for them. Safe to remove after ~30 days. */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `if('serviceWorker' in navigator){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister()));if(window.caches){caches.keys().then(ks=>ks.forEach(k=>caches.delete(k)))}}`,
-          }}
-        />
         <JsonLd
           data={graph(organizationSchema(), websiteSchema(locale as Locale))}
         />
         {children}
+        <PwaBootstrap locale={locale as Locale} />
       </body>
     </html>
   );

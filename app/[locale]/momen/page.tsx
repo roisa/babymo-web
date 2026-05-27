@@ -88,7 +88,7 @@ export default async function MomenPage({
   return (
     <>
       <Header locale={l} currentPath="/momen" />
-      <main className="mx-auto max-w-6xl px-5 pb-28 pt-10 sm:px-7 sm:pt-14 md:pb-16">
+      <main id="main" className="mx-auto max-w-6xl px-5 pb-28 pt-10 sm:px-7 sm:pt-14 md:pb-16">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
