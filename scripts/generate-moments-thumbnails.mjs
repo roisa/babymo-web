@@ -260,17 +260,15 @@ let skipped = 0;
 
 for (const m of list) {
   const out = join(OUT_DIR, `${m.slug}.jpg`);
-
-  // Heuristic for "file looks real vs generated placeholder":
-  // - Real YT thumbs are typically 80-200 KB
-  // - Placeholders are ~85 KB
-  // To force re-fetch (e.g. when a real ID was just added), use --force.
   const exists = existsSync(out);
-  if (exists && !FORCE) {
-    skipped++;
-    continue;
-  }
 
+  // If we have a youtubeId, ALWAYS attempt a real fetch — even if a file
+  // already exists locally. This way:
+  //  - CI runs always pull the freshest YT thumbnail
+  //  - Locally-committed placeholders never "win" over the real thumb
+  //  - Manually-uploaded thumbnails for an entry with no youtubeId
+  //    still skip (see else branch below)
+  // --force re-fetches even when no youtubeId.
   let usedReal = false;
   if (m.youtubeId) {
     process.stdout.write(`[moments] ${m.slug}: fetching from YouTube … `);
@@ -280,17 +278,24 @@ for (const m of list) {
       console.log(`✓ ${variant} (${kb} KB)`);
       usedReal = true;
       real++;
-
-      // Bonus: fetch and print the YouTube title so the user can
-      // verify the slug-to-id mapping is correct.
       const ytTitle = await tryFetchTitle(m.youtubeId);
       if (ytTitle) {
         console.log(`           youtube title: "${ytTitle}"`);
         console.log(`           our slug:      "${m.slug}"`);
       }
     } else {
-      console.log(`✗ unreachable, falling back to placeholder`);
+      console.log(`✗ unreachable`);
+      // Keep existing file if present (might be a manually-uploaded real
+      // thumbnail). Otherwise fall through to placeholder generation.
+      if (exists) {
+        console.log(`           keeping existing on-disk file`);
+        skipped++;
+        continue;
+      }
     }
+  } else if (exists && !FORCE) {
+    skipped++;
+    continue;
   }
 
   if (!usedReal) {

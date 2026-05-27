@@ -36,3 +36,7 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# Generated at build time — fetched from YouTube CDN or auto-generated
+public/moments/
+public/og/blog/
