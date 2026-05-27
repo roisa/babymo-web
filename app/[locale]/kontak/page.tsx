@@ -63,6 +63,15 @@ const CHANNELS = [
     url: "https://www.youtube.com/@babymo.official",
     desc: { id: "Animasi islami untuk anak.", en: "Islamic animation for children." },
   },
+  {
+    label: "PayPal",
+    handle: "paypal.me/ibracreative",
+    url: "https://paypal.me/ibracreative",
+    desc: {
+      id: "Dukung pengembangan Baby Mo via PayPal.",
+      en: "Support Baby Mo's development via PayPal.",
+    },
+  },
 ] as const;
 
 export default async function ContactPage({

@@ -49,6 +49,9 @@ export function Footer({ locale, currentPath }: Props) {
             <ExternalLink href="https://www.instagram.com/babymo.official">Instagram</ExternalLink>
             <ExternalLink href="https://www.tiktok.com/@babymo.official">TikTok</ExternalLink>
             <ExternalLink href="https://wa.me/6282315971002">WhatsApp</ExternalLink>
+            <ExternalLink href="https://paypal.me/ibracreative">
+              {locale === "id" ? "Dukung via PayPal" : "Donate via PayPal"}
+            </ExternalLink>
           </FooterCol>
         </div>
 

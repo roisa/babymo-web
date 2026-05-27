@@ -38,6 +38,8 @@ type Dict = {
       valuesSub: string;
       faqTitle: string;
       faqSub: string;
+      followTitle: string;
+      followSub: string;
       supportTitle: string;
       supportSub: string;
     };
@@ -152,6 +154,9 @@ const id: Dict = {
       valuesSub: "Tiga prinsip yang kami pegang dalam setiap konten.",
       faqTitle: "Pertanyaan Umum",
       faqSub: "Hal yang sering ditanyakan orang tua tentang Baby Mo.",
+      followTitle: "Ikuti & Dukung Baby Mo",
+      followSub:
+        "Konten harian di kanal favoritmu, plus cara mendukung pengembangan Baby Mo.",
       supportTitle: "Dukung Baby Mo",
       supportSub:
         "Setiap dukungan membantu kami menghadirkan konten islami yang lebih baik untuk keluarga muslim.",
@@ -335,6 +340,9 @@ const en: Dict = {
       valuesSub: "Three principles we hold in every piece of content.",
       faqTitle: "Common Questions",
       faqSub: "What parents most often ask about Baby Mo.",
+      followTitle: "Follow & Support Baby Mo",
+      followSub:
+        "Daily content on your favorite channels, plus how to support Baby Mo's development.",
       supportTitle: "Support Baby Mo",
       supportSub:
         "Every bit of support helps us bring better Islamic content to Muslim families.",
