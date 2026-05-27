@@ -741,6 +741,369 @@ export const parentingList: ParentingSituation[] = [
       en: "bonding with child islamic parenting",
     },
   },
+
+  // ─── Tier 1 expansion: 6 SEO-targeted long-tail problems ──────────
+  {
+    slug: "anak-pemalu",
+    title: {
+      id: "Anak Pemalu di Depan Orang",
+      en: "The Shy Child in Public",
+    },
+    excerpt: {
+      id: "Anak menarik diri saat bertemu orang baru — bagaimana orang tua memahami dan menemani tanpa memaksa.",
+      en: "When your child shrinks back from new people — how to understand and walk alongside without forcing.",
+    },
+    signs: {
+      id: [
+        "Menempel di kaki orang tua saat bertemu orang baru",
+        "Menolak menyapa atau menjawab pertanyaan dari kerabat",
+        "Lebih hidup di rumah, lebih diam di luar",
+      ],
+      en: [
+        "Clings to a parent's leg when meeting new people",
+        "Refuses to greet or answer questions from relatives",
+        "Lively at home, quiet outside",
+      ],
+    },
+    steps: {
+      id: [
+        "Jangan label 'pemalu' di depan anak — label menempel dan menjadi identitas.",
+        "Beri waktu pemanasan. Pegang tangannya, jangan dorong.",
+        "Pratekkan sapaan di rumah dulu lewat permainan boneka atau role-play.",
+        "Hargai usaha kecil — 'tadi adik berani senyum, alhamdulillah.'",
+        "Hindari membandingkan dengan saudara atau teman yang lebih ekstrover.",
+      ],
+      en: [
+        "Don't label 'shy' in front of the child — labels stick and become identity.",
+        "Give warm-up time. Hold their hand, don't push.",
+        "Practice greetings at home through puppet play or role-play.",
+        "Acknowledge small wins — 'you smiled, alhamdulillah.'",
+        "Avoid comparing with siblings or friends who are more extroverted.",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ mengenal anak-anak yang pemalu di sekitarnya dan tidak pernah mempermalukan mereka. Beliau memanggil dengan lembut, memberi waktu, dan memuji ketika mereka berani. Pemalu bukan kekurangan — tapi temperamen yang perlu ditemani.",
+      en: "The Prophet ﷺ knew shy children around him and never embarrassed them. He called them gently, gave them time, and praised them when they took courage. Shyness isn't a flaw — it's a temperament that needs company.",
+    },
+    recommendedDoa: ["keluar-rumah", "perlindungan-anak", "doa-pagi"],
+    supportingHadith: ["kelembutan-keindahan", "muliakan-anak"],
+    ageMin: 2,
+    ageMax: 8,
+    category: "sosial",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Anak pemalu bukan anak yang kurang berani. Mereka anak yang masih membaca situasi — dan butuh kita di sampingnya, bukan mendorong dari belakang.",
+      en: "A shy child isn't lacking in courage. They're still reading the room — and they need us beside them, not pushing from behind.",
+    },
+    seoQuery: {
+      id: "cara mengatasi anak pemalu menurut islam",
+      en: "how to help a shy child islamic parenting",
+    },
+  },
+
+  {
+    slug: "anak-bohong",
+    title: {
+      id: "Anak Mulai Berbohong",
+      en: "When the Child Starts Lying",
+    },
+    excerpt: {
+      id: "Bohong pada anak usia dini bukan tanda karakter buruk — biasanya tanda mereka takut, ingin disayang, atau belum bisa membedakan fantasi dan fakta.",
+      en: "Lying in early childhood isn't a sign of bad character — usually it's fear, a wish to be loved, or not yet separating fantasy from fact.",
+    },
+    signs: {
+      id: [
+        "Anak menyangkal sesuatu yang jelas mereka lakukan",
+        "Bohong sederhana untuk menghindari hukuman",
+        "Membuat cerita yang tidak masuk akal (sering tanda imajinasi, bukan bohong)",
+      ],
+      en: [
+        "Denies something they clearly did",
+        "Simple lies to avoid punishment",
+        "Tells unrealistic stories (often imagination, not lying)",
+      ],
+    },
+    steps: {
+      id: [
+        "Cari penyebabnya, bukan langsung menghukum. 'Adik takut Mama marah, ya?'",
+        "Jangan jebak — kalau sudah tahu jawabannya, jangan bertanya untuk memancing bohong.",
+        "Hargai kejujuran lebih keras dari hukuman atas kesalahan: 'Mama bangga adik jujur.'",
+        "Beri konsekuensi yang adil — jangan berlebihan, sehingga anak tidak takut jujur lain kali.",
+        "Tunjukkan kejujuran orang tua — bahkan dalam hal kecil seperti 'Maaf, Ayah salah ucap tadi.'",
+      ],
+      en: [
+        "Look for the cause before punishing. 'Are you afraid Mama will be upset?'",
+        "Don't set traps — if you already know the answer, don't ask in a way that invites a lie.",
+        "Reward honesty louder than you punish the mistake: 'I'm proud you told the truth.'",
+        "Use fair consequences — overreaction teaches children to lie next time.",
+        "Model honesty in small things — 'Sorry, Ayah misspoke just now.'",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ pernah menegur sahabat yang memanggil anak dengan 'kemari, akan kuberi sesuatu' lalu tidak memberinya — beliau berkata: 'Itu tercatat sebagai dusta atasmu.' Kejujuran pada anak dimulai dari kejujuran orang tua kepada anak.",
+      en: "The Prophet ﷺ once corrected a companion who called their child with 'come here, I'll give you something' then didn't — he said: 'That is recorded against you as a lie.' Honesty in children begins with parents' honesty toward children.",
+    },
+    recommendedDoa: ["doa-pagi", "doa-petang"],
+    supportingHadith: ["hadiah-terbaik-adab", "muliakan-anak"],
+    ageMin: 3,
+    ageMax: 9,
+    category: "perilaku",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Anak yang berbohong biasanya bukan kurang akhlak. Mereka anak yang takut, dan belum percaya bahwa jujur itu aman.",
+      en: "A lying child usually doesn't lack character. They're afraid — and don't yet trust that honesty is safe.",
+    },
+    seoQuery: {
+      id: "cara mengatasi anak suka berbohong menurut islam",
+      en: "child lying islamic parenting how to handle",
+    },
+  },
+
+  {
+    slug: "anak-sakit",
+    title: {
+      id: "Saat Anak Sedang Sakit",
+      en: "When Your Child Is Sick",
+    },
+    excerpt: {
+      id: "Yang harus orang tua lakukan saat anak demam atau sakit — perawatan praktis dan doa yang diajarkan Rasulullah ﷺ.",
+      en: "What to do when your child is sick — practical care and the du'as taught by the Prophet ﷺ.",
+    },
+    signs: {
+      id: [
+        "Demam, rewel berlebihan, atau tidak mau makan",
+        "Lebih banyak diam, lebih cepat lelah",
+        "Mencari pelukan lebih sering dari biasanya",
+      ],
+      en: [
+        "Fever, unusual fussiness, or refusing food",
+        "Quieter, tires more quickly",
+        "Seeks hugs more often than usual",
+      ],
+    },
+    steps: {
+      id: [
+        "Tenangkan diri dulu. Anak sakit menyerap kepanikan orang tua.",
+        "Pertahankan rutinitas dasar: minum cukup, makanan ringan, tidur lebih banyak.",
+        "Bacakan doa untuk yang sakit sambil mengusap kepala mereka.",
+        "Jangan tanya terus 'sakitnya di mana?' — anak butuh tenang, bukan diinterogasi.",
+        "Konsultasi ke dokter jika demam > 39°C, > 3 hari, atau ada gejala mengkhawatirkan.",
+        "Setelah sembuh, ajak anak ucap syukur — 'alhamdulillah Allah kasih kita sehat lagi.'",
+      ],
+      en: [
+        "Calm yourself first. A sick child absorbs parental panic.",
+        "Maintain the basics: enough fluids, light food, more sleep.",
+        "Recite the du'a for the sick while stroking their head.",
+        "Don't keep asking 'where does it hurt?' — they need calm, not interrogation.",
+        "See a doctor if fever > 39°C, > 3 days, or worrying symptoms appear.",
+        "Once they recover, lead them in gratitude — 'alhamdulillah, Allah gave us health again.'",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ mengusap kepala orang yang sakit sambil membaca doa, dan mengajarkan bahwa orang tua yang merawat anak sakit dengan sabar akan diganjar. Doa orang tua untuk anak yang sakit adalah salah satu yang paling mustajab — pakailah momen itu.",
+      en: "The Prophet ﷺ stroked the heads of the sick while reciting du'a, and taught that parents who patiently care for a sick child are rewarded. A parent's du'a for a sick child is among the most accepted — use that moment.",
+    },
+    recommendedDoa: ["perlindungan-anak", "doa-pagi", "doa-petang"],
+    supportingHadith: ["kasih-sayang-kepada-anak", "doa-orang-tua-mustajab"],
+    ageMin: 0,
+    ageMax: 12,
+    category: "rutinitas",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Saat anak sakit, mereka tidak butuh orang tua yang panik. Mereka butuh tangan yang mengusap kepalanya sambil membisikkan doa.",
+      en: "When a child is sick, they don't need a panicked parent. They need a hand stroking their head while whispering a du'a.",
+    },
+    seoQuery: {
+      id: "doa untuk anak yang sedang sakit demam",
+      en: "dua for sick child fever islamic",
+    },
+  },
+
+  {
+    slug: "mengajarkan-quran",
+    title: {
+      id: "Kapan Mulai Mengajarkan Qur'an",
+      en: "When to Start Teaching the Qur'an",
+    },
+    excerpt: {
+      id: "Tidak harus menunggu anak bisa baca latin. Pengenalan Al-Qur'an bisa mulai dari dalam rahim — dan terus berlanjut sepanjang hidup mereka.",
+      en: "You don't have to wait until a child can read. Introducing the Qur'an can begin in the womb — and continues their whole life.",
+    },
+    signs: {
+      id: [
+        "Anak tertarik melihat orang tua memegang mushaf",
+        "Anak mulai meniru gerakan ruku' / sujud",
+        "Mulai bertanya 'itu tulisan apa?' saat melihat huruf Arab",
+      ],
+      en: [
+        "Child shows interest when a parent holds the mushaf",
+        "Begins imitating bowing or prostration",
+        "Asks 'what's that writing?' when seeing Arabic letters",
+      ],
+    },
+    steps: {
+      id: [
+        "Mulai dari pendengaran — putar bacaan Qur'an lembut di rumah, terutama waktu pagi.",
+        "Pilih satu ayat / surah pendek favorit keluarga, ulang-ulang setiap hari.",
+        "Buat momen Qur'an menyenangkan: di pangkuan, sambil dipeluk, bukan di meja seperti PR.",
+        "Mulai pengenalan huruf hijaiyah lewat permainan, bukan drill.",
+        "Untuk usia 4–6 tahun, satu metode konsisten (Iqro, Tilawati, dll) lebih baik daripada gonta-ganti.",
+        "Hindari memarahi anak saat salah baca — Qur'an harus selalu jadi sumber rasa nyaman, bukan stres.",
+      ],
+      en: [
+        "Start with listening — play gentle Qur'an recitation at home, especially mornings.",
+        "Pick one favorite short surah/verse, repeat it daily.",
+        "Make Qur'an moments warm: on your lap, in a hug — not at a desk like homework.",
+        "Introduce Arabic letters through play, not drilling.",
+        "For ages 4–6, one consistent method (Iqro, Tilawati, etc.) beats switching often.",
+        "Don't scold mistakes — Qur'an should always be a source of comfort, not stress.",
+      ],
+    },
+    islamicNote: {
+      id: "Rumah yang dibacakan Al-Qur'an menjadi tempat yang dijauhi setan dan diisi malaikat. Anak yang tumbuh dengan suara Qur'an di rumah akan merasakan kerinduan padanya seumur hidup — bahkan ketika ia sedang jauh dari iman.",
+      en: "A home in which the Qur'an is recited becomes a place avoided by devils and filled with angels. A child raised with the Qur'an's sound in their home will feel a lifelong longing for it — even in seasons far from faith.",
+    },
+    recommendedDoa: ["sebelum-belajar", "setelah-belajar", "doa-pagi"],
+    supportingHadith: ["perintah-sholat-tujuh-tahun", "rumah-tempat-paling-utama"],
+    ageMin: 0,
+    ageMax: 10,
+    category: "spiritual",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Qur'an tidak diajarkan paling efektif lewat metode. Diajarkan lewat suara orang tua yang membacanya — di mobil, di dapur, sebelum tidur — sampai anak menganggapnya bagian dari rumah.",
+      en: "The Qur'an isn't most effectively taught through a method. It's taught through the parent's voice reading it — in the car, in the kitchen, at bedtime — until the child experiences it as part of home.",
+    },
+    seoQuery: {
+      id: "kapan mulai mengajarkan al quran pada anak",
+      en: "when to start teaching quran to child",
+    },
+  },
+
+  {
+    slug: "anak-tidak-mau-berbagi",
+    title: {
+      id: "Anak Tidak Mau Berbagi",
+      en: "When Your Child Won't Share",
+    },
+    excerpt: {
+      id: "Berbagi adalah keterampilan yang dipelajari — bukan instingnya. Anak usia 2–4 tahun secara perkembangan memang belum siap. Yang bisa kita lakukan: menemani prosesnya.",
+      en: "Sharing is a learned skill — not an instinct. Children 2–4 aren't developmentally ready yet. What we can do: walk them through it.",
+    },
+    signs: {
+      id: [
+        "Menangis atau marah saat mainannya dipakai temannya",
+        "Menyembunyikan benda favorit saat ada tamu anak",
+        "Bilang 'punyaku!' bahkan untuk benda yang bukan miliknya",
+      ],
+      en: [
+        "Cries or rages when a friend uses their toy",
+        "Hides favorite items when other children visit",
+        "Says 'mine!' even for things that aren't theirs",
+      ],
+    },
+    steps: {
+      id: [
+        "Akui kepemilikan dulu sebelum minta berbagi: 'Itu mainan adik, ya.'",
+        "Gunakan timer — 'lima menit lagi, baru gantian.' Konkret lebih dimengerti daripada 'sebentar.'",
+        "Beri pilihan: 'mau pinjamkan yang ini atau yang itu?'",
+        "Hargai usaha berbagi, sekecil apa pun: 'Alhamdulillah, terima kasih sudah pinjamkan.'",
+        "Contohkan dalam keseharian: 'Ayah pinjam HP Mama, ya' — anak menyerap dari kebiasaan rumah.",
+        "Jangan paksa berbagi setiap benda — anak juga berhak punya barang yang khusus miliknya.",
+      ],
+      en: [
+        "Acknowledge ownership first before asking to share: 'That's your toy.'",
+        "Use a timer — 'five more minutes, then it's their turn.' Concrete beats vague 'soon'.",
+        "Offer choices: 'do you want to lend this one or that one?'",
+        "Praise every effort to share, however small.",
+        "Model it daily: 'Ayah is borrowing Mama's phone' — kids absorb home patterns.",
+        "Don't force sharing of every item — children can have special things that are just theirs.",
+      ],
+    },
+    islamicNote: {
+      id: "Berbagi adalah induk dari banyak akhlak dalam Islam — sedekah, zakat, menyantuni tetangga. Tapi Rasulullah ﷺ juga mengajarkan keadilan: ketika ada anak yang sudah memegang sesuatu, sahabat lain tidak boleh merebut. Ajarkan berbagi dengan menghormati hak anak, bukan dengan memalsukan kemurahan.",
+      en: "Sharing is the parent of many virtues in Islam — sadaqah, zakat, neighborly kindness. But the Prophet ﷺ also taught fairness: when a child held something first, others couldn't snatch it. Teach sharing through respect for a child's right, not forced generosity.",
+    },
+    recommendedDoa: ["doa-pagi", "perlindungan-anak"],
+    supportingHadith: ["adil-kepada-anak", "tetangga-keluarga-luas"],
+    ageMin: 2,
+    ageMax: 6,
+    category: "sosial",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Berbagi tidak diajarkan lewat memaksa. Diajarkan lewat menghargai kepemilikan anak dulu — supaya mereka belajar bahwa memberi adalah pilihan, bukan kehilangan.",
+      en: "Sharing isn't taught by force. It's taught by respecting a child's ownership first — so they learn that giving is a choice, not a loss.",
+    },
+    seoQuery: {
+      id: "cara mengajarkan anak berbagi dengan teman",
+      en: "how to teach a child to share islamic parenting",
+    },
+  },
+
+  {
+    slug: "anak-tidak-mau-sholat",
+    title: {
+      id: "Anak Sudah 7 Tahun Tapi Belum Mau Sholat",
+      en: "When a 7-Year-Old Won't Pray",
+    },
+    excerpt: {
+      id: "Hadits menyuruh sholat anak di usia 7 tahun. Tapi 'menyuruh' tidak sama dengan 'memaksa' — dan cara kita menyampaikan jauh lebih penting daripada usia.",
+      en: "The hadith instructs prayer at age 7. But 'instruct' isn't 'force' — and how we deliver it matters far more than the age itself.",
+    },
+    signs: {
+      id: [
+        "Anak sudah cukup usia tapi masih malas atau menolak sholat",
+        "Sholat hanya saat dipaksa, ekspresinya tertekan",
+        "Mengelak dengan alasan ('capek', 'nanti dulu') secara konsisten",
+      ],
+      en: [
+        "Child is old enough but still resists or skips prayer",
+        "Prays only when forced, looking stressed",
+        "Consistently makes excuses ('tired', 'in a bit')",
+      ],
+    },
+    steps: {
+      id: [
+        "Audit dulu: apakah orang tua sholat tepat waktu dan tampak senang melakukannya?",
+        "Ajak sholat bersama, bukan menyuruh sendirian — anak ingin masuk komunitas, bukan diuji.",
+        "Ringankan rukun bagi pemula — selesaikan satu rakaat lebih baik daripada dipaksa empat lalu trauma.",
+        "Ceritakan keutamaan sholat dengan bahasa anak, bukan ancaman neraka di usia dini.",
+        "Beri ruang untuk bertanya 'kenapa kita harus sholat?' — itu tanda berpikir, bukan tanda durhaka.",
+        "Konsisten tanpa marah. Hadits 'pukul di usia 10' sering disalahpahami — itu opsi terakhir, bukan default.",
+      ],
+      en: [
+        "Audit first: do the parents pray on time and look glad doing it?",
+        "Pray together, don't just send them — children want to join the community, not be tested.",
+        "Lighten the practice for beginners — finishing one calm rak'ah beats four forced into trauma.",
+        "Share salah's beauty in their language — not threats of hellfire at a young age.",
+        "Allow questions like 'why do we have to pray?' — that's thinking, not disobedience.",
+        "Be consistent without anger. The 'strike at 10' hadith is often misread — it's a last resort, not a default.",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ memerintahkan kita menyuruh anak sholat di usia 7 dan memisahkan tempat tidur mereka di usia 10. Tapi beliau juga teladan kelembutan tertinggi pada anak. Anak yang dipaksa sholat dengan marah belajar bahwa Allah dikaitkan dengan marah — bukan dengan cinta. Sabar di usia 7–10 adalah investasi terbesar.",
+      en: "The Prophet ﷺ instructed us to command prayer at age 7 and separate sleeping mats at 10. But he was also the model of utmost gentleness with children. A child forced into salah with anger learns that Allah is tied to anger — not to love. Patience at ages 7–10 is the largest investment.",
+    },
+    recommendedDoa: ["sebelum-belajar", "doa-pagi"],
+    supportingHadith: ["perintah-sholat-tujuh-tahun", "kelembutan-keindahan"],
+    ageMin: 5,
+    ageMax: 12,
+    category: "spiritual",
+    published: "2026-05-27",
+    updated: "2026-05-27",
+    quote: {
+      id: "Anak yang menolak sholat jarang menolak Allah. Mereka menolak cara kita mengajarkannya — terlalu cepat, terlalu marah, atau tanpa kita ikut.",
+      en: "A child resisting salah is rarely resisting Allah. They're resisting how we teach it — too fast, too angry, or without us joining.",
+    },
+    seoQuery: {
+      id: "anak tidak mau sholat usia 7 tahun cara mengatasi",
+      en: "child won't pray age 7 islamic guidance",
+    },
+  },
 ];
 
 export function getAllParenting(): ParentingSituation[] {
