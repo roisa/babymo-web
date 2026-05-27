@@ -16,6 +16,7 @@ export function Header({ locale, currentPath }: Props) {
     { href: "/doa", label: dict.nav.doa },
     { href: "/hadith", label: dict.nav.hadith ?? "Hadith" },
     { href: "/parenting", label: dict.nav.parenting ?? "Parenting" },
+    { href: "/catatan", label: dict.nav.catatan ?? "Catatan" },
     { href: "/blog", label: dict.nav.blog },
     { href: "/permainan", label: dict.nav.games },
   ];

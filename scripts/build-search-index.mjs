@@ -161,6 +161,28 @@ const entries = [];
   }
 }
 
+// ── Catatan (first-person notes) ────────────────────────────────────
+{
+  const src = read("lib/content/catatan.ts");
+  for (const { slug, block } of iterateBlocks(src, "catatan")) {
+    const title = pluckBilingual(block, "title");
+    const hook = pluckBilingual(block, "hook");
+    const takeaway = pluckBilingual(block, "takeaway");
+    const tags = pluckStringArray(block, "tags");
+    entries.push({
+      type: "catatan",
+      slug,
+      url: `/catatan/${slug}`,
+      title,
+      excerpt: hook,
+      keywords: {
+        id: keywordsOf(title.id, hook.id, takeaway.id, ...tags),
+        en: keywordsOf(title.en, hook.en, takeaway.en, ...tags),
+      },
+    });
+  }
+}
+
 mkdirSync(join(ROOT, "public/data"), { recursive: true });
 writeFileSync(OUT, JSON.stringify(entries));
 

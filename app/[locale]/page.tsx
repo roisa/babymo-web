@@ -27,6 +27,7 @@ import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
+import { getAllCatatan } from "@/lib/content/catatan";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -55,6 +56,7 @@ export default async function HomePage({
   const allHadith = getAllHadith();
   const allParenting = getAllParenting();
   const allPosts = getAllBlogPosts();
+  const notes = getAllCatatan().slice(0, 3);
   const doas = allDoa.slice(0, 4);
   const hadiths = allHadith.slice(0, 3);
   const situations = allParenting.slice(0, 3);
@@ -368,6 +370,48 @@ export default async function HomePage({
             </div>
           </Reveal>
         </section>
+
+        {/* ── CATATAN — first-person notes by Salman ── */}
+        {notes.length > 0 && (
+          <section className="border-t border-hairline bg-paper-2">
+            <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
+              <Reveal>
+                <SectionHead
+                  title={dict.catatan.indexTitle}
+                  sub={dict.catatan.intro}
+                  viewAll={{
+                    href: pathFor(l, "/catatan"),
+                    label: dict.home.viewAll,
+                  }}
+                />
+              </Reveal>
+              <Reveal stagger>
+                <div className="mt-10 grid gap-5 md:grid-cols-3">
+                  {notes.map((n) => (
+                    <Link
+                      key={n.slug}
+                      href={pathFor(l, `/catatan/${n.slug}`)}
+                      className="lift tap group flex h-full flex-col gap-3 rounded-[22px] border border-hairline bg-paper p-6"
+                    >
+                      <span className="inline-flex w-fit items-center rounded-full bg-sage-soft px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+                        {dict.catatan.childChip[n.child]}
+                      </span>
+                      <h3 className="font-display text-[20px] font-medium leading-snug text-ink group-hover:text-brave-deep">
+                        {n.title[l]}
+                      </h3>
+                      <p className="line-clamp-3 text-[14px] leading-relaxed text-whisper">
+                        {n.hook[l]}
+                      </p>
+                      <p className="mt-auto text-[12px] text-whisper">
+                        — {dict.catatan.bySalman}
+                      </p>
+                    </Link>
+                  ))}
+                </div>
+              </Reveal>
+            </div>
+          </section>
+        )}
 
         {/* ── WATCH TOGETHER WITH BABY MO (auto-fed from YouTube) ── */}
         <Reveal>

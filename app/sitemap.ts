@@ -4,6 +4,7 @@ import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
+import { getAllCatatan } from "@/lib/content/catatan";
 
 export const dynamic = "force-static";
 
@@ -24,6 +25,7 @@ const STATIC_PATHS = [
   "/doa",
   "/hadith",
   "/parenting",
+  "/catatan",
   "/blog",
   "/permainan",
   "/momen",
@@ -134,6 +136,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/blog/${b.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const n of getAllCatatan()) {
+      out.push({
+        url: url(locale, `/catatan/${n.slug}`),
+        lastModified: new Date(n.published),
+        changeFrequency: "monthly",
+        priority: 0.75,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/catatan/${n.slug}`)]),
           ),
         },
       });

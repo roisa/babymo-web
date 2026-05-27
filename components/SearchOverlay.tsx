@@ -5,7 +5,7 @@ import Link from "next/link";
 import { type Locale, asset, basePath, pathFor } from "@/lib/i18n/config";
 
 type SearchEntry = {
-  type: "doa" | "hadith" | "parenting" | "blog";
+  type: "doa" | "hadith" | "parenting" | "blog" | "catatan";
   slug: string;
   url: string;
   title: { id: string; en: string };
@@ -20,6 +20,7 @@ const TYPE_LABEL: Record<SearchEntry["type"], { id: string; en: string }> = {
   hadith: { id: "Hadis", en: "Hadith" },
   parenting: { id: "Parenting", en: "Parenting" },
   blog: { id: "Artikel", en: "Article" },
+  catatan: { id: "Catatan", en: "Notes" },
 };
 
 const TYPE_COLOR: Record<SearchEntry["type"], string> = {
@@ -27,6 +28,7 @@ const TYPE_COLOR: Record<SearchEntry["type"], string> = {
   hadith: "bg-clay/15 text-clay",
   parenting: "bg-paper-2 text-ink-soft",
   blog: "bg-ink/8 text-ink",
+  catatan: "bg-brave-soft text-brave-deep",
 };
 
 export function SearchOverlay({ locale }: Props) {

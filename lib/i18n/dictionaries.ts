@@ -13,12 +13,24 @@ type Dict = {
     hadith: string;
     parenting: string;
     blog: string;
+    catatan: string;
     games: string;
     faq: string;
     about: string;
     contact: string;
     support: string;
     languageSwitch: string;
+  };
+  catatan: {
+    indexTitle: string;
+    indexDescription: string;
+    intro: string;
+    bySalman: string;
+    childChip: { ibra: string; azka: string; both: string };
+    privacyNote: string;
+    takeaway: string;
+    readMore: string;
+    relatedAnchor: string;
   };
   home: {
     eyebrow: string;
@@ -125,12 +137,31 @@ const id: Dict = {
     hadith: "Hadith",
     parenting: "Parenting",
     blog: "Blog",
+    catatan: "Catatan",
     games: "Permainan",
     faq: "FAQ",
     about: "Tentang",
     contact: "Kontak",
     support: "Dukung",
     languageSwitch: "Ganti bahasa",
+  },
+  catatan: {
+    indexTitle: "Catatan",
+    indexDescription:
+      "Cerita pendek Salman (pendiri Baby Mo) tentang momen-momen kecil bersama Ibra (6) dan Azka (2). Bukan artikel parenting — cuma catatan yang ditulis pelan-pelan setelah anak-anak tidur.",
+    intro:
+      "Cerita pendek dari Salman tentang momen-momen bersama Ibra (6) dan Azka (2). Diperbarui beberapa kali sebulan.",
+    bySalman: "Salman",
+    childChip: {
+      ibra: "Ibra (6)",
+      azka: "Azka (2)",
+      both: "Ibra & Azka",
+    },
+    privacyNote:
+      "Nama anak-anak ditulis atas izin keluarga. Detail yang bisa mengidentifikasi (sekolah, lingkungan, foto wajah) tidak dipublikasikan. Suatu saat di masa depan, jika Ibra atau Azka meminta, tulisan dapat di-anonimkan atau dihapus.",
+    takeaway: "Catatan untuk diri sendiri",
+    readMore: "Baca selengkapnya",
+    relatedAnchor: "Dasar dari catatan ini",
   },
   home: {
     eyebrow: "Konten islami ramah anak",
@@ -311,12 +342,31 @@ const en: Dict = {
     hadith: "Hadith",
     parenting: "Parenting",
     blog: "Blog",
+    catatan: "Notes",
     games: "Games",
     faq: "FAQ",
     about: "About",
     contact: "Contact",
     support: "Support",
     languageSwitch: "Switch language",
+  },
+  catatan: {
+    indexTitle: "Notes",
+    indexDescription:
+      "Short personal notes from Salman (Baby Mo's founder) about small moments with Ibra (6) and Azka (2). Not parenting articles — just notes written slowly after the kids are asleep.",
+    intro:
+      "Short notes from Salman about moments with Ibra (6) and Azka (2). Updated a few times a month.",
+    bySalman: "Salman",
+    childChip: {
+      ibra: "Ibra (6)",
+      azka: "Azka (2)",
+      both: "Ibra & Azka",
+    },
+    privacyNote:
+      "The children's first names are used with family consent. Identifying details (school, neighborhood, face photos) are not published. At any point in the future, if Ibra or Azka asks, posts can be anonymized or removed.",
+    takeaway: "A note to self",
+    readMore: "Read more",
+    relatedAnchor: "What this note rests on",
   },
   home: {
     eyebrow: "Child-friendly Islamic content",

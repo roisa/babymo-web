@@ -173,3 +173,32 @@ export type Game = {
   externalUrl: string;
   tags: string[];
 };
+
+/**
+ * Catatan Salman — first-person notebook entries from the founder
+ * about real moments with his kids. Different surface from blog:
+ *   - intimate, not encyclopedic
+ *   - one anchor (doa / hadith / parenting) per note, not bibliographies
+ *   - ID-primary; EN translations preserve voice when present
+ *   - title.id is required; en falls back to id
+ */
+export type CatatanAnchor = {
+  type: "doa" | "hadith" | "parenting";
+  slug: string;
+};
+
+export type Catatan = {
+  slug: string;
+  /** Which kid the note centers on — used for filtering chips */
+  child: "ibra" | "azka" | "both";
+  /** ISO date string */
+  published: string;
+  title: Record<Locale, string>;
+  hook: Record<Locale, string>;
+  body: Record<Locale, string>;
+  anchor: CatatanAnchor;
+  /** Closing one-liner — the screenshot-shareable bit */
+  takeaway: Record<Locale, string>;
+  tags: string[];
+  readingTimeMin: number;
+};

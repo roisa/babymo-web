@@ -98,6 +98,29 @@ export function blogPostingSchema(locale: Locale, post: BlogPost) {
   };
 }
 
+export function catatanSchema(
+  locale: Locale,
+  note: import("../content/types").Catatan,
+) {
+  return {
+    "@type": "BlogPosting",
+    headline: note.title[locale],
+    description: note.hook[locale],
+    inLanguage: locale === "id" ? "id-ID" : "en",
+    datePublished: note.published,
+    author: {
+      "@type": "Person",
+      name: "Salman Alfa",
+      "@id": `${siteUrl}/#person-salman`,
+    },
+    publisher: { "@id": `${siteUrl}/#org` },
+    mainEntityOfPage: absoluteUrl(locale, `/catatan/${note.slug}`),
+    image: [`${siteUrl}/assets/og-image.jpg`],
+    keywords: note.tags.join(", "),
+    articleSection: "Catatan",
+  };
+}
+
 export function itemListSchema(
   locale: Locale,
   name: string,
