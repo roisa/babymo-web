@@ -161,6 +161,37 @@ const entries = [];
   }
 }
 
+// ── Kalender (Islamic calendar events) ──────────────────────────────
+{
+  const src = read("lib/islamic-calendar.ts");
+  // Each event has shape: { id: "...", hijri: "...", name: { id, en }, caption: { id, en }, ... }
+  // Match top-level event objects in the islamicCalendar array.
+  const idRe = /id:\s*"([a-z0-9-]+)"/g;
+  let m;
+  const seen = new Set();
+  while ((m = idRe.exec(src))) {
+    const id = m[1];
+    if (seen.has(id)) continue;
+    seen.add(id);
+    const win = src.slice(m.index, m.index + 1200);
+    const name = pluckBilingual(win, "name");
+    const caption = pluckBilingual(win, "caption");
+    const hijri = pluckString(win, "hijri");
+    if (!name.id || !hijri) continue;
+    entries.push({
+      type: "kalender",
+      slug: id,
+      url: `/kalender`,
+      title: { id: name.id, en: name.en || name.id },
+      excerpt: { id: caption.id, en: caption.en || caption.id },
+      keywords: {
+        id: keywordsOf(name.id, hijri, caption.id),
+        en: keywordsOf(name.en, hijri, caption.en),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");

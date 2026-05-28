@@ -32,6 +32,7 @@ import {
   getCurrentIslamicEvent,
   eventStatus,
   daysUntil,
+  currentHijriMonth,
 } from "@/lib/islamic-calendar";
 
 export async function generateStaticParams() {
@@ -76,6 +77,7 @@ export default async function HomePage({
   const featured = eventPost ?? getBlogPostBySlug("doa-awal-tahun-hijriyah-untuk-anak");
   const eventState = currentEvent ? eventStatus(currentEvent) : null;
   const eventDays = currentEvent ? daysUntil(currentEvent) : 0;
+  const hijriMonthLabel = currentHijriMonth(l);
 
   // Pre-split hero title into spans for the word-rise animation
   const heroWords = (dict.home.heroTitleA + " " + dict.home.heroTitleB)
@@ -206,12 +208,17 @@ export default async function HomePage({
                 </Link>
                 <Link
                   href={pathFor(l, "/kalender")}
-                  className="tap flex items-center justify-between gap-3 border-t border-hairline bg-paper-2/60 px-7 py-3 text-[12.5px] text-whisper hover:bg-paper-2 sm:px-8"
+                  className="tap flex items-center justify-between gap-3 border-t border-hairline bg-paper-2/60 px-7 py-3 text-[12.5px] hover:bg-paper-2 sm:px-8"
                 >
-                  <span>
-                    {l === "id"
-                      ? "Lihat kalender islam lengkap — apa yang akan datang, doa & artikel terkait"
-                      : "Open the full Islamic calendar — what's coming, related du'as & articles"}
+                  <span className="flex items-center gap-2 text-whisper">
+                    <span aria-hidden>📅</span>
+                    <span className="font-medium text-ink">{hijriMonthLabel}</span>
+                    <span aria-hidden className="hidden sm:inline">·</span>
+                    <span className="hidden sm:inline">
+                      {l === "id"
+                        ? "Lihat kalender islam lengkap"
+                        : "Open the full Islamic calendar"}
+                    </span>
                   </span>
                   <span className="font-semibold text-brave-deep">
                     {l === "id" ? "Buka →" : "Open →"}

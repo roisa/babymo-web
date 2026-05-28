@@ -285,6 +285,105 @@ export function todayHijri(
   }
 }
 
+// ─── Hijri month helpers ────────────────────────────────────────────
+
+/**
+ * Localized Hijri month names. Indexed 0–11.
+ */
+export const HIJRI_MONTHS: Record<"id" | "en", string[]> = {
+  id: [
+    "Muharram",
+    "Safar",
+    "Rabi'ul Awwal",
+    "Rabi'ul Akhir",
+    "Jumadil Awwal",
+    "Jumadil Akhir",
+    "Rajab",
+    "Sya'ban",
+    "Ramadan",
+    "Syawal",
+    "Dzulqa'idah",
+    "Dzulhijjah",
+  ],
+  en: [
+    "Muharram",
+    "Safar",
+    "Rabi' al-Awwal",
+    "Rabi' al-Thani",
+    "Jumada al-Awwal",
+    "Jumada al-Thani",
+    "Rajab",
+    "Sha'ban",
+    "Ramadan",
+    "Shawwal",
+    "Dhul Qa'dah",
+    "Dhul Hijjah",
+  ],
+};
+
+/**
+ * Returns the Hijri month (1–12) and year for a given Gregorian date.
+ * Used to align events to a 12-month strip without depending on the
+ * exact day.
+ */
+export function hijriPosition(date: Date = new Date()): {
+  month: number;
+  year: number;
+} {
+  try {
+    const parts = new Intl.DateTimeFormat("en-u-ca-islamic", {
+      month: "numeric",
+      year: "numeric",
+    }).formatToParts(date);
+    const month = parseInt(parts.find((p) => p.type === "month")!.value, 10);
+    const year = parseInt(parts.find((p) => p.type === "year")!.value, 10);
+    return { month, year };
+  } catch {
+    return { month: 12, year: 1447 };
+  }
+}
+
+/**
+ * Compact current Hijri month string — for chips and small surfaces.
+ * Example: "Dzulhijjah 1447 H".
+ */
+export function currentHijriMonth(
+  locale: "id" | "en",
+  now: Date = new Date(),
+): string {
+  const { month, year } = hijriPosition(now);
+  return `${HIJRI_MONTHS[locale][month - 1]} ${year} H`;
+}
+
+/**
+ * 12 consecutive Hijri months starting from the current one — used
+ * by the /kalender 12-month strip.
+ */
+export function nextHijriMonths(
+  count: number = 12,
+  now: Date = new Date(),
+): { month: number; year: number }[] {
+  const { month, year } = hijriPosition(now);
+  const out: { month: number; year: number }[] = [];
+  for (let i = 0; i < count; i++) {
+    const m = ((month - 1 + i) % 12) + 1;
+    const y = year + Math.floor((month - 1 + i) / 12);
+    out.push({ month: m, year: y });
+  }
+  return out;
+}
+
+/**
+ * For each event, returns its Hijri start month/year. Used by the
+ * /kalender 12-month strip to mark which months contain events.
+ */
+export function eventHijriPosition(e: IslamicEvent): {
+  month: number;
+  year: number;
+} {
+  return hijriPosition(new Date(e.startISO));
+}
+
 /**
  * Gregorian date range as "DD MMM – DD MMM YYYY" or "DD MMM YYYY".
  */
