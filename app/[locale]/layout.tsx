@@ -9,6 +9,7 @@ import {
 import { buildMetadata } from "@/lib/seo/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { PwaBootstrap } from "@/components/PwaBootstrap";
+import { ScrollTop } from "@/components/ScrollTop";
 import { organizationSchema, websiteSchema, graph } from "@/lib/seo/schemas";
 import { notFound } from "next/navigation";
 
@@ -90,6 +91,7 @@ export default async function LocaleLayout({
           data={graph(organizationSchema(), websiteSchema(locale as Locale))}
         />
         {children}
+        <ScrollTop locale={locale as Locale} />
         <PwaBootstrap locale={locale as Locale} />
       </body>
     </html>
