@@ -197,6 +197,66 @@ export type Game = {
 };
 
 /**
+ * Short surah from Juz 30 — for memorization and bedtime recitation.
+ * Per-ayah breakdown lets us render line-by-line with the
+ * transliteration and translation aligned.
+ */
+export type SurahAyah = {
+  number: number;
+  arabic: string;
+  transliteration: string;
+  translation: Record<Locale, string>;
+};
+
+export type Surah = {
+  slug: string;
+  /** Surah number in the mushaf (1–114) */
+  number: number;
+  name: { id: string; en: string };
+  arabicName: string;
+  meaning: { id: string; en: string };
+  ayahCount: number;
+  /** Juz number (1–30); short surahs are all Juz 30 */
+  juz: number;
+  revelation: "makki" | "madani";
+  themes: string[];
+  /** Short intro for kids — why this surah matters, ~2 sentences */
+  introForKids: Record<Locale, string>;
+  ayahs: SurahAyah[];
+  /** Tafsir/explanation specifically written for children */
+  tafsirForKids: Record<Locale, string>;
+  /** When parents/kids typically recite this surah */
+  whenToRead: Record<Locale, string>;
+  searchQuery: Record<Locale, string>;
+  published: string;
+};
+
+/**
+ * Prophet story (Kisah 25 Nabi) — short, age-appropriate retellings
+ * of the 25 prophets named in the Qur'an.
+ */
+export type Prophet = {
+  slug: string;
+  /** Order in traditional listing (1–25, ending with Muhammad ﷺ) */
+  order: number;
+  name: { id: string; en: string };
+  arabicName: string;
+  era: { id: string; en: string };
+  /** One-line summary of who this prophet was */
+  keyMoment: { id: string; en: string };
+  /** Main story body — markdown-ish HTML, ~300–500 words */
+  story: Record<Locale, string>;
+  /** Three key lessons children take away */
+  lessons: Record<Locale, string[]>;
+  /** Related surah slugs (surahs that mention this prophet) */
+  relatedSurah?: string[];
+  /** Related doa slugs */
+  relatedDoa?: string[];
+  searchQuery: Record<Locale, string>;
+  published: string;
+};
+
+/**
  * Catatan Salman — first-person notebook entries from the founder
  * about real moments with his kids. Different surface from blog:
  *   - intimate, not encyclopedic

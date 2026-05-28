@@ -192,6 +192,51 @@ const entries = [];
   }
 }
 
+// ── Surat (short surahs) ────────────────────────────────────────────
+{
+  const src = read("lib/content/surah.ts");
+  for (const { slug, block } of iterateBlocks(src, "surah")) {
+    const name = pluckBilingual(block, "name");
+    const meaning = pluckBilingual(block, "meaning");
+    const introForKids = pluckBilingual(block, "introForKids");
+    const themes = pluckStringArray(block, "themes");
+    if (!name.id) continue;
+    entries.push({
+      type: "surah",
+      slug,
+      url: `/surat/${slug}`,
+      title: name,
+      excerpt: introForKids,
+      keywords: {
+        id: keywordsOf(name.id, meaning.id, introForKids.id, ...themes),
+        en: keywordsOf(name.en, meaning.en, introForKids.en, ...themes),
+      },
+    });
+  }
+}
+
+// ── Prophets (kisah 25 nabi) ────────────────────────────────────────
+{
+  const src = read("lib/content/prophets.ts");
+  for (const { slug, block } of iterateBlocks(src, "prophet")) {
+    const name = pluckBilingual(block, "name");
+    const era = pluckBilingual(block, "era");
+    const keyMoment = pluckBilingual(block, "keyMoment");
+    if (!name.id) continue;
+    entries.push({
+      type: "prophet",
+      slug,
+      url: `/kisah/${slug}`,
+      title: name,
+      excerpt: keyMoment,
+      keywords: {
+        id: keywordsOf(name.id, era.id, keyMoment.id),
+        en: keywordsOf(name.en, era.en, keyMoment.en),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");

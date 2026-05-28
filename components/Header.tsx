@@ -14,11 +14,12 @@ export function Header({ locale, currentPath }: Props) {
   const dict = getDictionary(locale);
   const items: { href: string; label: string }[] = [
     { href: "/doa", label: dict.nav.doa },
+    { href: "/surat", label: dict.nav.surah ?? "Surat" },
     { href: "/hadith", label: dict.nav.hadith ?? "Hadith" },
+    { href: "/kisah", label: dict.nav.kisah ?? "Kisah" },
     { href: "/parenting", label: dict.nav.parenting ?? "Parenting" },
     { href: "/catatan", label: dict.nav.catatan ?? "Catatan" },
     { href: "/blog", label: dict.nav.blog },
-    { href: "/permainan", label: dict.nav.games },
   ];
 
   return (

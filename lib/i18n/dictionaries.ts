@@ -14,6 +14,8 @@ type Dict = {
     parenting: string;
     blog: string;
     catatan: string;
+    surah: string;
+    kisah: string;
     games: string;
     faq: string;
     about: string;
@@ -138,6 +140,8 @@ const id: Dict = {
     parenting: "Parenting",
     blog: "Blog",
     catatan: "Catatan",
+    surah: "Surat Pendek",
+    kisah: "Kisah Nabi",
     games: "Permainan",
     faq: "FAQ",
     about: "Tentang",
@@ -343,6 +347,8 @@ const en: Dict = {
     parenting: "Parenting",
     blog: "Blog",
     catatan: "Notes",
+    surah: "Short Surahs",
+    kisah: "Prophet Stories",
     games: "Games",
     faq: "FAQ",
     about: "About",

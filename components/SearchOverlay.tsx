@@ -5,7 +5,15 @@ import Link from "next/link";
 import { type Locale, asset, basePath, pathFor } from "@/lib/i18n/config";
 
 type SearchEntry = {
-  type: "doa" | "hadith" | "parenting" | "blog" | "catatan" | "kalender";
+  type:
+    | "doa"
+    | "hadith"
+    | "parenting"
+    | "blog"
+    | "catatan"
+    | "kalender"
+    | "surah"
+    | "prophet";
   slug: string;
   url: string;
   title: { id: string; en: string };
@@ -22,6 +30,8 @@ const TYPE_LABEL: Record<SearchEntry["type"], { id: string; en: string }> = {
   blog: { id: "Artikel", en: "Article" },
   catatan: { id: "Catatan", en: "Notes" },
   kalender: { id: "Kalender", en: "Calendar" },
+  surah: { id: "Surat", en: "Surah" },
+  prophet: { id: "Kisah Nabi", en: "Prophet" },
 };
 
 const TYPE_COLOR: Record<SearchEntry["type"], string> = {
@@ -31,6 +41,8 @@ const TYPE_COLOR: Record<SearchEntry["type"], string> = {
   blog: "bg-ink/8 text-ink",
   catatan: "bg-brave-soft text-brave-deep",
   kalender: "bg-clay-soft text-clay",
+  surah: "bg-brave/15 text-brave-deep",
+  prophet: "bg-sage/15 text-sage-deep",
 };
 
 export function SearchOverlay({ locale }: Props) {

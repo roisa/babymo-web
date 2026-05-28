@@ -5,6 +5,8 @@ import { getAllBlogPosts } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { getAllSurah } from "@/lib/content/surah";
+import { getAllProphets } from "@/lib/content/prophets";
 
 export const dynamic = "force-static";
 
@@ -26,6 +28,8 @@ const STATIC_PATHS = [
   "/hadith",
   "/parenting",
   "/catatan",
+  "/surat",
+  "/kisah",
   "/blog",
   "/kalender",
   "/unduh",
@@ -151,6 +155,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/catatan/${n.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const s of getAllSurah()) {
+      out.push({
+        url: url(locale, `/surat/${s.slug}`),
+        lastModified: new Date(s.published),
+        changeFrequency: "yearly",
+        priority: 0.85,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/surat/${s.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const p of getAllProphets()) {
+      out.push({
+        url: url(locale, `/kisah/${p.slug}`),
+        lastModified: new Date(p.published),
+        changeFrequency: "yearly",
+        priority: 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/kisah/${p.slug}`)]),
           ),
         },
       });
