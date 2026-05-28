@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, isLocale, locales, pathFor, whatsappNumber } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -30,12 +30,16 @@ export async function generateMetadata({
 }
 
 const CHANNELS = [
-  {
-    label: "WhatsApp",
-    handle: "+62 823-1597-1002",
-    url: "https://wa.me/6282315971002",
-    desc: { id: "Chat langsung dengan tim kami.", en: "Chat directly with our team." },
-  },
+  ...(whatsappNumber
+    ? [
+        {
+          label: "WhatsApp",
+          handle: "+62 823-1597-1002",
+          url: `https://wa.me/${whatsappNumber}`,
+          desc: { id: "Chat langsung dengan tim kami.", en: "Chat directly with our team." },
+        },
+      ]
+    : []),
   {
     label: "Email",
     handle: "hello@babymo.id",

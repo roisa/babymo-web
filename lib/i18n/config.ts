@@ -25,6 +25,15 @@ export function isLocale(value: string): value is Locale {
 export const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL ?? "https://roisa.github.io/babymo-web";
 
+/**
+ * Baby Mo's WhatsApp number (digits only, country code first).
+ * Keep empty while the line is not yet registered on WhatsApp — every
+ * chat link checks this and hides itself when it's blank, so we never
+ * point people at a dead "isn't on WhatsApp" screen. Set it back to the
+ * real number once the account is active.
+ */
+export const whatsappNumber: string = "";
+
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/babymo-web";
 
 export function pathFor(locale: Locale, path: string = ""): string {
