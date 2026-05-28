@@ -17,6 +17,7 @@ export function MobileNav({ locale }: Props) {
   const items = [
     { href: "/", label: dict.nav.home, icon: HomeIcon },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon },
+    { href: "/permainan", label: "Games", icon: GameIcon },
     { href: "/parenting", label: dict.nav.parenting, icon: HeartIcon },
     { href: "/blog", label: dict.nav.blog, icon: PenIcon },
   ];
@@ -85,6 +86,14 @@ function PenIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M4 20h4l10-10-4-4L4 16Z" /><path d="m13.5 6.5 4 4" />
+    </svg>
+  );
+}
+function GameIcon({ filled }: IconProps) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M6 12h4M8 10v4" /><circle cx="15.5" cy="11" r="0.6" fill="currentColor" stroke="none" /><circle cx="18" cy="13" r="0.6" fill="currentColor" stroke="none" />
+      <path d="M17.5 6H6.5a4.5 4.5 0 0 0-4.4 3.6l-1 5A3 3 0 0 0 4 18c1 0 1.8-.5 2.4-1.3L7.5 15h9l1.1 1.7c.6.8 1.4 1.3 2.4 1.3a3 3 0 0 0 2.9-3.4l-1-5A4.5 4.5 0 0 0 17.5 6Z" />
     </svg>
   );
 }
