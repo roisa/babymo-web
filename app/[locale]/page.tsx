@@ -25,6 +25,7 @@ import { QuoteRibbon } from "@/components/QuoteRibbon";
 import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
+import { MascotGreeting } from "@/components/MascotGreeting";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
@@ -123,7 +124,7 @@ export default async function HomePage({
                 <div className="mt-9 flex flex-wrap items-center gap-3">
                   <Link
                     href={pathFor(l, "/doa")}
-                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(31,139,63,0.45)] hover:bg-brave-deep"
+                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(30,140,83,0.42)] hover:bg-brave-deep"
                   >
                     {dict.home.ctaPrimary}
                   </Link>
@@ -145,6 +146,8 @@ export default async function HomePage({
               </div>
 
               <div className="relative mx-auto w-full max-w-md md:max-w-none">
+                {/* Baby Mo speech bubble — random rotating greeting */}
+                <MascotGreeting locale={l} />
                 {/* Sparkles around mascot */}
                 <span aria-hidden className="sparkle" style={{ top: "8%", left: "12%", "--sz": "12px", "--dur": "3.4s", "--delay": "0.3s" } as React.CSSProperties}>✦</span>
                 <span aria-hidden className="sparkle" style={{ top: "20%", right: "18%", "--sz": "16px", "--dur": "4s", "--delay": "1.2s" } as React.CSSProperties}>✧</span>
@@ -261,7 +264,7 @@ export default async function HomePage({
                 <div className="mt-6 flex flex-wrap items-center gap-3">
                   <Link
                     href={pathFor(l, `/doa/${doaToday.slug}`)}
-                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(31,139,63,0.45)] hover:bg-brave-deep"
+                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(30,140,83,0.42)] hover:bg-brave-deep"
                   >
                     {l === "id" ? "Buka doa" : "Open du'a"}
                   </Link>

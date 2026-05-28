@@ -63,7 +63,7 @@ export function Header({ locale, currentPath }: Props) {
                     aria-current={isActive ? "page" : undefined}
                     className={
                       isActive
-                        ? "tap inline-flex items-center rounded-full bg-brave-soft px-3.5 py-1.5 text-[13.5px] font-semibold text-brave-deep shadow-[inset_0_0_0_1px_rgba(31,139,63,0.18)]"
+                        ? "tap inline-flex items-center rounded-full bg-brave-soft px-3.5 py-1.5 text-[13.5px] font-semibold text-brave-deep shadow-[inset_0_0_0_1px_rgba(30,140,83,0.18)]"
                         : "tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink"
                     }
                   >
