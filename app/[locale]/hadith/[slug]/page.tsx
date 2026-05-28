@@ -11,6 +11,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { Byline } from "@/components/Byline";
+import { VerificationBadge } from "@/components/VerificationBadge";
 import { breadcrumbSchema, hadithSchema, graph } from "@/lib/seo/schemas";
 import { getAllHadith, getHadithBySlug } from "@/lib/content/hadith";
 import { getDoaBySlug } from "@/lib/content/doa";
@@ -91,6 +92,15 @@ export default async function HadithDetail({
           </h1>
           <div className="mt-4">
             <Byline locale={l} reviewerSlug={h.reviewedBy} compact />
+          </div>
+          <div className="mt-4">
+            <VerificationBadge
+              locale={l}
+              reviewedBy={h.reviewedBy}
+              kindLabel={l === "id" ? "hadis" : "hadith"}
+              title={h.title[l]}
+              path={`/hadith/${slug}`}
+            />
           </div>
         </header>
 

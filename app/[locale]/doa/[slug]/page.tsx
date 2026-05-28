@@ -10,6 +10,7 @@ import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
 import { BookmarkButton } from "@/components/BookmarkButton";
+import { VerificationBadge } from "@/components/VerificationBadge";
 import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
@@ -98,6 +99,15 @@ export default async function DoaDetail({
               authorSlug={doa.author}
               reviewerSlug={doa.reviewedBy}
               compact
+            />
+          </div>
+          <div className="mt-4">
+            <VerificationBadge
+              locale={l}
+              reviewedBy={doa.reviewedBy}
+              kindLabel={l === "id" ? "doa" : "du'a"}
+              title={doa.title[l]}
+              path={`/doa/${slug}`}
             />
           </div>
         </header>
