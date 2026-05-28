@@ -30,8 +30,14 @@ export function MobileNav({ locale }: Props) {
   return (
     <nav
       aria-label="Mobile"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper/95 backdrop-blur md:hidden"
-      style={{ paddingBottom: "env(safe-area-inset-bottom)" }}
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper md:hidden"
+      style={{
+        paddingBottom: "env(safe-area-inset-bottom)",
+        // Promote to its own layer + solid (no backdrop-blur): stops the
+        // fixed bar from detaching/floating during momentum scroll in
+        // iOS in-app webviews (Gojek/IG/etc.).
+        transform: "translateZ(0)",
+      }}
     >
       <ul className="mx-auto flex max-w-md items-stretch justify-around">
         {items.map((it) => {
