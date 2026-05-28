@@ -11,7 +11,7 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
-import { VideoCard } from "@/components/video/VideoCard";
+import { MomenGrid } from "@/components/video/MomenGrid";
 import { JsonLd } from "@/components/JsonLd";
 import {
   breadcrumbSchema,
@@ -134,25 +134,7 @@ export default async function MomenPage({
             <p className="text-[15px] leading-relaxed text-whisper">{c.empty}</p>
           </div>
         ) : (
-          <div className="mt-14 space-y-16">
-            {byCategory.map((g) => (
-              <section key={g.cat}>
-                <div className="mb-6 flex items-baseline gap-3">
-                  <h2 className="font-serif text-2xl font-medium tracking-tight text-ink">
-                    {g.label}
-                  </h2>
-                  <span className="text-[12.5px] text-whisper">
-                    {g.items.length}
-                  </span>
-                </div>
-                <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {g.items.map((v) => (
-                    <VideoCard key={v.id} video={v} locale={l} />
-                  ))}
-                </div>
-              </section>
-            ))}
-          </div>
+          <MomenGrid groups={byCategory} locale={l} />
         )}
       </main>
       <Footer locale={l} currentPath="/momen" />
