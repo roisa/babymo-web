@@ -1,79 +1,110 @@
-# Baby Mo Web
+# Baby Mo
 
-Islamic parenting knowledge platform for Muslim families.
+Islamic parenting platform for Indonesian Muslim families — daily doa,
+hadith, short surahs, prophet stories, parenting guides, a founder's
+notebook, and an auto-updating Islamic calendar.
 
-- **Framework:** Next.js 15 (App Router, static export)
-- **Style:** Tailwind v4 (CSS-first tokens)
-- **Languages:** ID (default) + EN, routed under `/[locale]/...`
-- **Deploy:** GitHub Pages — `https://roisa.github.io/babymo-web/`
-- **Future:** custom domain `babymo.id` (DNS not yet pointed)
+**Live:** https://babymo.id · **Stack:** Next.js 15 (static export) ·
+Tailwind v4 · bilingual ID/EN
 
-## Develop
+---
+
+## Run it
 
 ```bash
 npm install
-npm run dev
+npm run dev        # http://localhost:3000  (/ redirects to /id)
+npm run build      # outputs static site to ./out
 ```
 
-Open <http://localhost:3000>. The site auto-redirects `/` → `/id/`.
+`npm run build` automatically (via `prebuild`) fetches YouTube videos,
+generates all share images, and builds the search index.
 
-## Build
+---
+
+## Where the content lives
+
+All content is plain TypeScript in `lib/content/`. To add or edit
+anything, open the matching file — no CMS, no database.
+
+| File                       | What it holds                          | Pages it builds        |
+| -------------------------- | -------------------------------------- | ---------------------- |
+| `doa.ts`                   | 26 daily duas (Arabic + arti + source) | `/doa/[slug]`          |
+| `surah.ts`                 | 15 short surahs, verse by verse        | `/surat/[slug]`        |
+| `hadith.ts`                | 20 parenting-framed hadith             | `/hadith/[slug]`       |
+| `prophets.ts`              | 25 prophet stories for kids            | `/kisah/[slug]`        |
+| `parenting.ts`             | 18 situation guides                    | `/parenting/[slug]`    |
+| `blog.ts`                  | Long-form articles + **social kits**   | `/blog/[slug]`         |
+| `catatan.ts`               | Abi's first-person notes               | `/catatan/[slug]`      |
+| `lib/islamic-calendar.ts`  | Seasonal events + cross-links          | `/kalender`            |
+
+Every new entry automatically flows into the sitemap, search index,
+homepage, and (for blog/doa) a generated share image — no extra wiring.
+
+> **Editorial rule:** every doa, hadith, and surah must be checked
+> against an authoritative source before publishing.
+
+---
+
+## Content for social media (team reference)
+
+Each blog post in `blog.ts` can carry a `kit` — ready-to-post content
+for every channel, so the team doesn't start from a blank page:
+
+```ts
+kit: {
+  quote:       // 1-line WhatsApp / image quote
+  carousel:    // 7 Instagram carousel slides (title + body)
+  shortScript: // 60-second TikTok / Reels script (hook → body → CTA)
+  pin:         // Pinterest title + keyword description
+  checklist:   // printable one-page checklist
+}
+```
+
+These render on the live blog post page under "Multiplication Kit," and
+are bilingual (ID + EN). Copy straight from the page when scheduling
+posts.
+
+### Generated design assets (auto-built, ready to download)
+
+| Asset                | Size       | Location                       |
+| -------------------- | ---------- | ------------------------------ |
+| Blog share images    | 1200×630   | `public/og/blog/{locale}/`     |
+| Doa share images     | 1200×630   | `public/og/doa/{locale}/`      |
+| Doa lockscreens      | 1170×2532  | `public/lockscreens/`          |
+
+Regenerate any of them:
 
 ```bash
-npm run build
-# Output: ./out — static, ready for any CDN
+npm run og          # blog share images (per-tag icon + brand colors)
+npm run og:doa      # doa share images
+npm run lockscreen  # phone lockscreen wallpapers
 ```
 
-When building for the GitHub Pages subpath, set:
+Edit the design in the matching `scripts/generate-*.mjs` file.
+
+---
+
+## Deploy
+
+Push to `main` → GitHub Actions builds and publishes to `babymo.id`
+(`.github/workflows/deploy.yml`). A daily cron
+(`.github/workflows/youtube-sync.yml`) rebuilds so the YouTube feed,
+"Doa Hari Ini," and the Islamic calendar stay current.
+
+Build env for the live domain:
 
 ```bash
-NEXT_PUBLIC_BASE_PATH=/babymo-web \
-NEXT_PUBLIC_SITE_URL=https://roisa.github.io/babymo-web \
-npm run build
+NEXT_PUBLIC_BASE_PATH= NEXT_PUBLIC_SITE_URL=https://babymo.id npm run build
 ```
 
-When the time comes to cut over to `babymo.id`:
-
-```bash
-NEXT_PUBLIC_BASE_PATH= \
-NEXT_PUBLIC_SITE_URL=https://babymo.id \
-npm run build
-```
-
-## Repo structure
-
-```
-app/                Next.js App Router pages + sitemap/robots/manifest
-  [locale]/         Locale-segmented routes (id, en)
-components/         UI components
-lib/
-  i18n/             Locale config + dictionaries
-  content/          Typed content collections (doa, blog, games)
-  seo/              Schema + metadata helpers
-public/assets/      Images, OG image, favicons
-```
-
-## Content authoring
-
-For now, content is typed TypeScript in `lib/content/*.ts`. v2 will move to MDX
-files in `content/` parsed by [Velite](https://velite.js.org/) — already planned,
-not yet wired.
-
-**Important:** every dua and hadith must be sourced and reviewed by a qualified
-ustadz before merge. See `/[locale]/tentang` for the editorial standard.
-
-## Deployment
-
-GitHub Actions (`.github/workflows/deploy.yml`) builds and pushes to GitHub
-Pages on every push to `main`.
-
-To enable in repository settings:
-
-1. Settings → Pages → Source: **GitHub Actions**.
-2. Push to `main`. The first build takes ~2 minutes.
+---
 
 ## Roadmap
 
-See the architecture plan in the project chat — Phase 1 (this commit) bootstraps
-the platform. Phases 2–8 layer in MDX content engine, hadith/parenting entity
-collections, programmatic SEO pages, EN locale content depth, and the mobile app.
+- [x] Bilingual content platform (doa, hadith, surah, kisah, parenting, blog)
+- [x] Islamic calendar with seasonal cross-linking
+- [x] Social-media multiplication kits + generated share assets
+- [x] Local bookmarks + Doa Hari Ini
+- [ ] Audio recitation for doa & surah
+- [ ] Merchandise shop (Baby Mo products)
