@@ -1,15 +1,20 @@
 /**
- * Islamic calendar context — used by the homepage banner and the
- * "Now in the Islamic calendar" widget to auto-promote seasonal content.
+ * Islamic calendar — drives the homepage banner, the /kalender page,
+ * and any seasonal cross-linking between blog, doa, parenting, etc.
  *
  * Each event has a Gregorian start + end (used for matching "is this
- * happening / coming up soon"), a slug pointing at the blog post that
- * goes with it, and a CTA label. The active event is picked by the
- * server at build time — for true real-time accuracy run a daily
- * rebuild (the youtube-sync cron already does this).
+ * happening / coming up soon"), a primary blog slug, and arrays of
+ * related content slugs (doa / parenting / hadith / catatan / extra
+ * blog posts). Server picks the active event at build time — for
+ * accurate "today" status, the youtube-sync cron triggers a daily
+ * rebuild.
  *
  * Hijri dates are approximate (±1 day depending on moon sighting).
  * For 2026–2027. Add more entries as the calendar advances.
+ *
+ * Order in this array matters when multiple events overlap — the
+ * homepage banner picks the first match. Put more-specific windows
+ * before broader ones.
  */
 export type IslamicEvent = {
   /** Stable identifier */
@@ -24,10 +29,18 @@ export type IslamicEvent = {
   startISO: string;
   /** ISO Gregorian end date (00:00 local) — exclusive */
   endISO: string;
-  /** Blog post slug to link to; falls back if not yet published */
+  /** Primary blog post slug — what the homepage banner links to */
   blogSlug?: string;
-  /** Doa slug for the auxiliary card (optional) */
-  doaSlug?: string;
+  /** Related doa slugs — surfaced as chips on the calendar page */
+  doaSlugs?: string[];
+  /** Related parenting situation slugs */
+  parentingSlugs?: string[];
+  /** Related hadith slugs */
+  hadithSlugs?: string[];
+  /** Related catatan slugs */
+  catatanSlugs?: string[];
+  /** Additional blog posts (beyond primary) — for events with multiple */
+  extraBlogSlugs?: string[];
 };
 
 export const islamicCalendar: IslamicEvent[] = [
@@ -44,6 +57,9 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-05-26",
     endISO: "2026-05-30",
     blogSlug: "panduan-idul-adha-dan-qurban-untuk-keluarga",
+    doaSlugs: ["mengucap-salam", "sebelum-makan", "mendapat-rezeki"],
+    parentingSlugs: ["adab-sehari-hari", "bersyukur"],
+    hadithSlugs: ["kasih-sayang-kepada-anak", "main-bersama-anak"],
   },
   {
     // Hajj-specific lead-up. Active May 24–25, then idul-adha-1447
@@ -58,64 +74,9 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-05-24",
     endISO: "2026-05-30",
     blogSlug: "panduan-haji-untuk-jamaah-indonesia",
-  },
-  {
-    id: "muharram-1448",
-    hijri: "Muharram 1448",
-    name: { id: "Awal Tahun Hijriyah 1448", en: "Islamic New Year 1448" },
-    caption: {
-      id: "Bulan suci pertama dalam kalender hijriyah — momen reset spiritual.",
-      en: "The first sacred month of the Hijri year — a moment for spiritual reset.",
-    },
-    startISO: "2026-06-26",
-    endISO: "2026-07-25",
-    blogSlug: "doa-awal-tahun-hijriyah-untuk-anak",
-  },
-  {
-    id: "asyura-1448",
-    hijri: "10 Muharram 1448",
-    name: { id: "Hari Asyura", en: "Day of Ashura" },
-    caption: {
-      id: "Hari ke-10 Muharram — puasa sunnah yang dianjurkan Rasulullah ﷺ.",
-      en: "The 10th of Muharram — a recommended fast of the Prophet ﷺ.",
-    },
-    startISO: "2026-07-04",
-    endISO: "2026-07-06",
-    blogSlug: "puasa-asyura-untuk-anak",
-  },
-  {
-    id: "rajab-1448",
-    hijri: "Rajab 1448",
-    name: { id: "Bulan Rajab", en: "Month of Rajab" },
-    caption: {
-      id: "Salah satu bulan haram — waktu yang baik untuk memperbanyak doa.",
-      en: "One of the sacred months — a good time to increase your du'as.",
-    },
-    startISO: "2026-12-22",
-    endISO: "2027-01-20",
-  },
-  {
-    id: "syaban-1448",
-    hijri: "Sya'ban 1448",
-    name: { id: "Bulan Sya'ban", en: "Month of Sha'ban" },
-    caption: {
-      id: "Persiapan menuju Ramadan — tradisi puasa sunnah dan amal kebaikan.",
-      en: "Preparation for Ramadan — sunnah fasting and good deeds.",
-    },
-    startISO: "2027-01-21",
-    endISO: "2027-02-18",
-  },
-  {
-    id: "ramadan-1448",
-    hijri: "Ramadan 1448",
-    name: { id: "Ramadan 1448", en: "Ramadan 1448" },
-    caption: {
-      id: "Bulan suci — puasa, qiyam, dan momen mengajarkan ibadah pada anak.",
-      en: "The holy month — fasting, qiyam, and teaching children worship.",
-    },
-    startISO: "2027-02-19",
-    endISO: "2027-03-20",
-    blogSlug: "ramadan-bersama-anak",
+    doaSlugs: ["doa-untuk-orang-tua", "perlindungan-anak"],
+    parentingSlugs: ["bonding-orangtua"],
+    hadithSlugs: ["doa-orang-tua-mustajab"],
   },
   {
     id: "dzulhijjah-1447",
@@ -128,8 +89,87 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-05-17",
     endISO: "2026-06-15",
     blogSlug: "10-hari-dzulhijjah-bareng-anak",
+    doaSlugs: ["doa-pagi", "doa-petang", "melihat-bulan-baru"],
+    parentingSlugs: ["mulai-sholat", "bersyukur"],
+    catatanSlugs: ["doa-relay-anak-kembar"],
+  },
+  {
+    id: "muharram-1448",
+    hijri: "Muharram 1448",
+    name: { id: "Awal Tahun Hijriyah 1448", en: "Islamic New Year 1448" },
+    caption: {
+      id: "Bulan suci pertama dalam kalender hijriyah — momen reset spiritual.",
+      en: "The first sacred month of the Hijri year — a moment for spiritual reset.",
+    },
+    startISO: "2026-06-26",
+    endISO: "2026-07-25",
+    blogSlug: "doa-awal-tahun-hijriyah-untuk-anak",
+    extraBlogSlugs: [
+      "aktivitas-muharram-untuk-anak",
+      "menjelaskan-tahun-baru-islam-ke-anak",
+      "kisah-hijrah-nabi-untuk-anak",
+    ],
+    doaSlugs: ["melihat-bulan-baru", "doa-pagi", "doa-petang"],
+    parentingSlugs: ["adab-sehari-hari"],
+  },
+  {
+    id: "asyura-1448",
+    hijri: "10 Muharram 1448",
+    name: { id: "Hari Asyura", en: "Day of Ashura" },
+    caption: {
+      id: "Hari ke-10 Muharram — puasa sunnah yang dianjurkan Rasulullah ﷺ.",
+      en: "The 10th of Muharram — a recommended fast of the Prophet ﷺ.",
+    },
+    startISO: "2026-07-04",
+    endISO: "2026-07-06",
+    blogSlug: "puasa-asyura-untuk-anak",
+    doaSlugs: ["berbuka-puasa"],
+    parentingSlugs: ["puasa-pertama"],
+  },
+  {
+    id: "rajab-1448",
+    hijri: "Rajab 1448",
+    name: { id: "Bulan Rajab", en: "Month of Rajab" },
+    caption: {
+      id: "Salah satu bulan haram — waktu yang baik untuk memperbanyak doa.",
+      en: "One of the sacred months — a good time to increase your du'as.",
+    },
+    startISO: "2026-12-22",
+    endISO: "2027-01-20",
+    doaSlugs: ["doa-pagi", "doa-petang", "perlindungan-anak"],
+    parentingSlugs: ["bersyukur"],
+  },
+  {
+    id: "syaban-1448",
+    hijri: "Sya'ban 1448",
+    name: { id: "Bulan Sya'ban", en: "Month of Sha'ban" },
+    caption: {
+      id: "Persiapan menuju Ramadan — tradisi puasa sunnah dan amal kebaikan.",
+      en: "Preparation for Ramadan — sunnah fasting and good deeds.",
+    },
+    startISO: "2027-01-21",
+    endISO: "2027-02-18",
+    doaSlugs: ["doa-pagi", "doa-petang"],
+    parentingSlugs: ["puasa-pertama", "mulai-sholat"],
+  },
+  {
+    id: "ramadan-1448",
+    hijri: "Ramadan 1448",
+    name: { id: "Ramadan 1448", en: "Ramadan 1448" },
+    caption: {
+      id: "Bulan suci — puasa, qiyam, dan momen mengajarkan ibadah pada anak.",
+      en: "The holy month — fasting, qiyam, and teaching children worship.",
+    },
+    startISO: "2027-02-19",
+    endISO: "2027-03-20",
+    blogSlug: "ramadan-bersama-anak",
+    doaSlugs: ["berbuka-puasa", "doa-pagi", "doa-petang"],
+    parentingSlugs: ["puasa-pertama", "adab-sehari-hari", "anak-tidak-mau-sholat"],
+    catatanSlugs: ["disindir-si-kembar-waktu-makan"],
   },
 ];
+
+// ─── Helpers ────────────────────────────────────────────────────────
 
 /**
  * Returns the event currently active OR coming up in the next 14 days.
@@ -181,4 +221,111 @@ export function daysUntil(e: IslamicEvent, now: Date = new Date()): number {
   const delta = s - now.getTime();
   if (delta <= 0) return 0;
   return Math.ceil(delta / (24 * 60 * 60 * 1000));
+}
+
+/**
+ * Days since an event ended (0 if active or upcoming).
+ */
+export function daysSince(e: IslamicEvent, now: Date = new Date()): number {
+  const x = new Date(e.endISO).getTime();
+  const delta = now.getTime() - x;
+  if (delta <= 0) return 0;
+  return Math.ceil(delta / (24 * 60 * 60 * 1000));
+}
+
+/**
+ * Groups all events by status, sorted within each bucket. Used by
+ * the /kalender page.
+ */
+export function groupEvents(now: Date = new Date()) {
+  const active: IslamicEvent[] = [];
+  const upcoming: IslamicEvent[] = [];
+  const past: IslamicEvent[] = [];
+  for (const e of islamicCalendar) {
+    const status = eventStatus(e, now);
+    if (status === "active") active.push(e);
+    else if (status === "upcoming") upcoming.push(e);
+    else past.push(e);
+  }
+  // Active sorted by start asc; upcoming by start asc; past by end desc
+  active.sort((a, b) => a.startISO.localeCompare(b.startISO));
+  upcoming.sort((a, b) => a.startISO.localeCompare(b.startISO));
+  past.sort((a, b) => b.endISO.localeCompare(a.endISO));
+  return { active, upcoming, past };
+}
+
+/**
+ * Current Hijri date formatted with native Intl Islamic calendar.
+ * Examples:
+ *   id → "12 Zulhijah 1447 H"
+ *   en → "Dhū al-Ḥijjah 12, 1447 AH"
+ *
+ * Note: the native Islamic calendar in Intl is the tabular calendar,
+ * which can be ±1 day off from sighting-based dates. Good enough for
+ * a "today is roughly..." display; never use for prayer-time precision.
+ */
+export function todayHijri(
+  locale: "id" | "en",
+  now: Date = new Date(),
+): string {
+  const tag = locale === "id" ? "id-ID-u-ca-islamic" : "en-u-ca-islamic";
+  try {
+    return new Intl.DateTimeFormat(tag, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(now);
+  } catch {
+    // Old runtime without islamic calendar — fall back to Gregorian
+    return new Intl.DateTimeFormat(locale === "id" ? "id-ID" : "en-US", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(now);
+  }
+}
+
+/**
+ * Gregorian date range as "DD MMM – DD MMM YYYY" or "DD MMM YYYY".
+ */
+export function formatGregorianRange(
+  e: IslamicEvent,
+  locale: "id" | "en",
+): string {
+  const start = new Date(e.startISO);
+  const end = new Date(e.endISO);
+  // Subtract 1 day from end (endISO is exclusive)
+  end.setDate(end.getDate() - 1);
+  const tag = locale === "id" ? "id-ID" : "en-US";
+  const sameDay = start.toDateString() === end.toDateString();
+  const sameYear = start.getFullYear() === end.getFullYear();
+  const sameMonth = sameYear && start.getMonth() === end.getMonth();
+
+  if (sameDay) {
+    return new Intl.DateTimeFormat(tag, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(start);
+  }
+  if (sameMonth) {
+    const day1 = new Intl.DateTimeFormat(tag, { day: "numeric" }).format(start);
+    const rest = new Intl.DateTimeFormat(tag, {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    }).format(end);
+    return `${day1} – ${rest}`;
+  }
+  const sFmt = new Intl.DateTimeFormat(tag, {
+    day: "numeric",
+    month: "long",
+    year: sameYear ? undefined : "numeric",
+  }).format(start);
+  const eFmt = new Intl.DateTimeFormat(tag, {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  }).format(end);
+  return `${sFmt} – ${eFmt}`;
 }

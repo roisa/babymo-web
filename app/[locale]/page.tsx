@@ -172,37 +172,52 @@ export default async function HomePage({
         {featured && currentEvent && (
           <Reveal>
             <section className="mx-auto max-w-6xl px-5 pb-2 sm:px-7">
-              <Link
-                href={pathFor(l, `/blog/${featured.slug}`)}
-                className="lift tap group relative block overflow-hidden rounded-[28px] border border-hairline bg-paper"
-              >
-                <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
-                  <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-clay-soft text-clay sm:flex">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
-                      <path d="M12 2a7 7 0 1 0 7 7c0-.3 0-.6-.1-.9A5.5 5.5 0 0 1 12 2Z" />
-                    </svg>
+              <div className="overflow-hidden rounded-[28px] border border-hairline bg-paper">
+                <Link
+                  href={pathFor(l, `/blog/${featured.slug}`)}
+                  className="lift tap group relative block"
+                >
+                  <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
+                    <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-clay-soft text-clay sm:flex">
+                      <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden>
+                        <path d="M12 2a7 7 0 1 0 7 7c0-.3 0-.6-.1-.9A5.5 5.5 0 0 1 12 2Z" />
+                      </svg>
+                    </div>
+                    <div>
+                      <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                        <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-clay text-clay" />
+                        {eventState === "active"
+                          ? l === "id" ? "Sedang berlangsung" : "Happening now"
+                          : l === "id" ? `${eventDays} hari lagi` : `In ${eventDays} days`}
+                        {" · "}
+                        {currentEvent.hijri}
+                      </p>
+                      <h2 className="mt-1.5 font-serif text-[20px] font-medium leading-snug text-ink group-hover:text-sage-deep sm:text-[22px]">
+                        {featured.title[l]}
+                      </h2>
+                      <p className="mt-1 text-[14px] leading-relaxed text-whisper">
+                        {currentEvent.caption[l]}
+                      </p>
+                    </div>
+                    <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-sage-deep sm:inline">
+                      {l === "id" ? "Baca panduan →" : "Read guide →"}
+                    </span>
                   </div>
-                  <div>
-                    <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-                      <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-clay text-clay" />
-                      {eventState === "active"
-                        ? l === "id" ? "Sedang berlangsung" : "Happening now"
-                        : l === "id" ? `${eventDays} hari lagi` : `In ${eventDays} days`}
-                      {" · "}
-                      {currentEvent.hijri}
-                    </p>
-                    <h2 className="mt-1.5 font-serif text-[20px] font-medium leading-snug text-ink group-hover:text-sage-deep sm:text-[22px]">
-                      {featured.title[l]}
-                    </h2>
-                    <p className="mt-1 text-[14px] leading-relaxed text-whisper">
-                      {currentEvent.caption[l]}
-                    </p>
-                  </div>
-                  <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-sage-deep sm:inline">
-                    {l === "id" ? "Baca panduan →" : "Read guide →"}
+                </Link>
+                <Link
+                  href={pathFor(l, "/kalender")}
+                  className="tap flex items-center justify-between gap-3 border-t border-hairline bg-paper-2/60 px-7 py-3 text-[12.5px] text-whisper hover:bg-paper-2 sm:px-8"
+                >
+                  <span>
+                    {l === "id"
+                      ? "Lihat kalender islam lengkap — apa yang akan datang, doa & artikel terkait"
+                      : "Open the full Islamic calendar — what's coming, related du'as & articles"}
                   </span>
-                </div>
-              </Link>
+                  <span className="font-semibold text-brave-deep">
+                    {l === "id" ? "Buka →" : "Open →"}
+                  </span>
+                </Link>
+              </div>
             </section>
           </Reveal>
         )}
