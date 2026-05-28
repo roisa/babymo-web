@@ -137,13 +137,20 @@ function pickIcon(tag) {
 const src = readFileSync(BLOG_FILE, "utf8");
 
 function extractPosts(s) {
-  const posts = [];
+  // Find all slug positions so each post can use the window between
+  // its own slug and the next one — works even for very long posts
+  // (hajj/ramadan have 20+ min bodies that overflow a fixed window).
+  const positions = [];
   const slugRe = /slug:\s*"([a-z0-9-]+)"/g;
   let m;
-  while ((m = slugRe.exec(s))) {
-    const slug = m[1];
-    const windowSize = 3000;
-    const win = s.slice(m.index, m.index + windowSize);
+  while ((m = slugRe.exec(s))) positions.push({ slug: m[1], idx: m.index });
+
+  const posts = [];
+  for (let i = 0; i < positions.length; i++) {
+    const slug = positions[i].slug;
+    const start = positions[i].idx;
+    const end = i + 1 < positions.length ? positions[i + 1].idx : s.length;
+    const win = s.slice(start, end);
 
     // title.id and title.en — first pair after slug
     const titleBlock = win.match(/title:\s*\{([^}]+)\}/);
@@ -162,7 +169,7 @@ function extractPosts(s) {
       een = x2 ? unescape(x2[1]) : "";
     }
 
-    // First tag (eyebrow category)
+    // First tag (eyebrow category + drives icon selection)
     const tagsMatch = win.match(/tags:\s*\[\s*"([a-z0-9-]+)"/);
     const tag = tagsMatch ? tagsMatch[1] : "";
 
