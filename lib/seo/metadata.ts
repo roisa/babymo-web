@@ -15,6 +15,8 @@ type Args = {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  /** When true, emits robots noindex (personal / utility pages). */
+  noindex?: boolean;
 };
 
 export function buildMetadata({
@@ -24,6 +26,7 @@ export function buildMetadata({
   description,
   image,
   type = "website",
+  noindex = false,
 }: Args): Metadata {
   const dict = getDictionary(locale);
   const fullTitle = title
@@ -68,10 +71,10 @@ export function buildMetadata({
       images: [ogImage],
     },
     robots: {
-      index: true,
+      index: !noindex,
       follow: true,
       googleBot: {
-        index: true,
+        index: !noindex,
         follow: true,
         "max-image-preview": "large",
         "max-snippet": -1,

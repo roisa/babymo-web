@@ -33,7 +33,11 @@ export function pathFor(locale: Locale, path: string = ""): string {
 }
 
 export function absoluteUrl(locale: Locale, path: string = ""): string {
-  return `${siteUrl}${pathFor(locale, path)}`;
+  // Append a trailing slash to match `trailingSlash: true` and the
+  // sitemap, so canonical / hreflang / JSON-LD URLs never disagree
+  // with the actually-served URL.
+  const p = pathFor(locale, path);
+  return `${siteUrl}${p}${p.endsWith("/") ? "" : "/"}`;
 }
 
 /** Prefix a /public asset path with the current basePath.

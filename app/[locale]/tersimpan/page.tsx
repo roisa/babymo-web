@@ -27,6 +27,8 @@ export async function generateMetadata({
       locale === "id"
         ? "Doa, hadis, surat, dan catatan yang kamu simpan di Baby Mo — siap dibaca bersama si kecil kapan saja."
         : "Du'as, hadith, surahs, and notes you've saved on Baby Mo — ready to read with your little one anytime.",
+    // Personal page — empty for crawlers (content is in localStorage).
+    noindex: true,
   });
 }
 
