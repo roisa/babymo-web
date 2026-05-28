@@ -324,24 +324,35 @@ function svgFor({ title, excerpt, tag, rt }, locale) {
   // (1200×630) gets corner decorations.
 
   const titleLen = title.length;
-  const titleSize = titleLen <= 30 ? 58 : titleLen <= 60 ? 48 : titleLen <= 100 ? 40 : 34;
-  const titleMaxChars = titleLen <= 30 ? 14 : titleLen <= 60 ? 18 : titleLen <= 100 ? 24 : 28;
-  const titleLines = wrap(title, titleMaxChars, 4);
-  const titleLineHeight = titleSize * 1.22;
+  // Cap at 3 lines max; titles that don't fit get truncated by wrap().
+  // Slightly smaller sizes so 3 lines always fits between eyebrow + bottom.
+  const titleSize = titleLen <= 30 ? 56 : titleLen <= 60 ? 44 : titleLen <= 100 ? 38 : 32;
+  const titleMaxChars = titleLen <= 30 ? 14 : titleLen <= 60 ? 20 : titleLen <= 100 ? 26 : 32;
+  const titleLines = wrap(title, titleMaxChars, 3);
+  const titleLineHeight = titleSize * 1.2;
   const titleBlockH = titleLines.length * titleLineHeight;
 
   // Layout: icon at top, then BABY MO label, eyebrow, title, excerpt,
-  // bottom wordmark. All vertically centered with icon biasing upward.
+  // bottom wordmark. Layout math anchored top-down with explicit
+  // gap to the bottom strip so titles + excerpt never overlap it.
   const iconY = 78;        // icon center
   const brandY = 168;       // BABY MO wordmark
   const eyebrowY = 200;     // category eyebrow
-  // Center title block in the remaining space
-  const titleAreaTop = eyebrowY + 30;
-  const titleAreaMid = (titleAreaTop + (H - 110)) / 2;
-  const titleStartY = titleAreaMid - titleBlockH / 2 + titleSize * 0.85;
+  const bottomStripY = H - 92;   // sage hairline above wordmark
+  const safeBottom = bottomStripY - 30; // last safe baseline above hairline
 
-  const excerptLines = excerpt ? wrap(excerpt, 48, 1) : [];
-  const excerptStartY = titleStartY + titleBlockH + 26;
+  // Title centered in the remaining space; if it would push into the
+  // safe bottom, shift it up.
+  const titleAreaTop = eyebrowY + 36;
+  const titleAreaMid = (titleAreaTop + safeBottom) / 2;
+  let titleStartY = titleAreaMid - titleBlockH / 2 + titleSize * 0.82;
+  const lastTitleBaseline = titleStartY + (titleLines.length - 1) * titleLineHeight;
+
+  // Decide whether excerpt fits. We need ~36px for the italic line
+  // PLUS a 28px gap above the bottom strip.
+  const wouldFitExcerpt = excerpt && safeBottom - lastTitleBaseline > 70;
+  const excerptLines = wouldFitExcerpt ? wrap(excerpt, 50, 1) : [];
+  const excerptStartY = lastTitleBaseline + 50;
 
   const rtStr = rt ? `${rt} ${S.minRead}` : "";
 
@@ -391,10 +402,13 @@ function svgFor({ title, excerpt, tag, rt }, locale) {
   <line x1="${W - 80}" y1="${H / 2 - 100}" x2="${W - 80}" y2="${H / 2 + 100}" stroke="${C.brave}" stroke-width="1.5" opacity="0.35"/>
 
   <!-- CENTER (square-safe) -->
-  <!-- Icon halo + icon -->
+  <!-- Icon halo + icon. Icons live in an 80×80 viewbox; we translate
+       the SVG group to the circle center, then scale to ~80% so the
+       icon sits inside the circle with breathing room, then offset by
+       -40/-40 to put viewbox center at the circle center. -->
   <circle cx="${W / 2}" cy="${iconY}" r="58" fill="url(#iconHalo)"/>
   <circle cx="${W / 2}" cy="${iconY}" r="42" fill="${C.paper}" stroke="${C.brave}" stroke-width="2.5" opacity="0.95"/>
-  <g transform="translate(${W / 2 - 30}, ${iconY - 30})" color="${C.braveDeep}">
+  <g transform="translate(${W / 2}, ${iconY}) scale(0.8) translate(-40, -40)" color="${C.braveDeep}">
     ${iconSvg}
   </g>
 
