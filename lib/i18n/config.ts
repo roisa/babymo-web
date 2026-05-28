@@ -29,10 +29,9 @@ export const siteUrl =
  * Baby Mo's WhatsApp number (digits only, country code first).
  * Keep empty while the line is not yet registered on WhatsApp — every
  * chat link checks this and hides itself when it's blank, so we never
- * point people at a dead "isn't on WhatsApp" screen. Set it back to the
- * real number once the account is active.
+ * point people at a dead "isn't on WhatsApp" screen.
  */
-export const whatsappNumber: string = "";
+export const whatsappNumber: string = "6282315971002";
 
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/babymo-web";
 

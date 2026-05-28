@@ -709,21 +709,6 @@ export default async function HomePage({
           faqSchema(dict.faq.items),
         )}
       />
-
-      {/* Floating WhatsApp */}
-      {whatsappNumber && (
-        <a
-          href={`https://wa.me/${whatsappNumber}`}
-          target="_blank"
-          rel="noopener"
-          aria-label="WhatsApp Baby Mo"
-          className="magnet tap fixed bottom-20 right-4 z-30 flex h-12 w-12 items-center justify-center rounded-full bg-sage text-paper shadow-[0_10px_24px_-8px_rgba(59,90,56,0.45)] md:bottom-6 md:right-6 md:h-14 md:w-14"
-        >
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-            <path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.2-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.3 0-1.6.8-2.4 1.1-2.7.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .8.6.3.6.9 2 1 2.1.1.1.1.3 0 .5l-.3.5c-.1.2-.2.3-.4.5l-.3.4c-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.3.4-.3.7-.2.3.1 2 1 2.3 1.1.3.2.5.2.6.4.1.2.1.7-.1 1.3Z" />
-          </svg>
-        </a>
-      )}
     </>
   );
 }
