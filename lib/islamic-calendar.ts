@@ -32,6 +32,19 @@ export type IslamicEvent = {
 
 export const islamicCalendar: IslamicEvent[] = [
   {
+    // Most specific window first — takes priority during overlap with dzulhijjah-1447
+    id: "hajj-1447",
+    hijri: "8–13 Dzulhijjah 1447",
+    name: { id: "Musim Haji 1447 H", en: "Hajj Season 1447 H" },
+    caption: {
+      id: "Jutaan jamaah dari seluruh dunia — termasuk 221.000+ jamaah Indonesia — sedang melaksanakan ibadah haji.",
+      en: "Millions of pilgrims worldwide — including 221,000+ from Indonesia — are performing Hajj right now.",
+    },
+    startISO: "2026-05-24",
+    endISO: "2026-05-30",
+    blogSlug: "panduan-haji-untuk-jamaah-indonesia",
+  },
+  {
     id: "muharram-1448",
     hijri: "Muharram 1448",
     name: { id: "Awal Tahun Hijriyah 1448", en: "Islamic New Year 1448" },

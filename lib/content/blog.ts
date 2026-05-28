@@ -2965,6 +2965,659 @@ export const blogPosts: BlogPost[] = [
       },
     },
   },
+
+  {
+    slug: "panduan-haji-untuk-jamaah-indonesia",
+    title: {
+      id: "Panduan Lengkap Ibadah Haji untuk Jamaah Indonesia: Jenis, Cara Daftar, dan Alur Pelaksanaan",
+      en: "Complete Hajj Guide for Indonesian Pilgrims: Types, Registration, and Step-by-Step Flow",
+    },
+    excerpt: {
+      id: "Penjelasan menyeluruh tentang ibadah haji untuk calon jamaah Indonesia: syarat wajib, tiga jalur pendaftaran (Reguler, Khusus, Furoda), alur pelaksanaan dari ihram sampai tawaf wada' lengkap dengan doa, dan jawaban atas pertanyaan paling umum.",
+      en: "A comprehensive guide to Hajj for Indonesian pilgrims: the five conditions, three registration paths (Regular, Plus, Furoda), the full performance flow from ihram to farewell tawaf with all duas, and answers to the most common questions.",
+    },
+    body: {
+      id: `<p>Saat tulisan ini diterbitkan (28 Mei 2026 / 12 Dzulhijjah 1447 H), jutaan jamaah haji dari seluruh dunia — termasuk lebih dari 221.000 jamaah Indonesia — sedang menyelesaikan tahapan terakhir ibadah haji di Mina. Panduan ini dirancang untuk siapa pun yang sedang mempertimbangkan untuk berangkat haji, sedang menunggu giliran, atau ingin memahami ibadah ini dengan lebih dalam.</p>
+
+<p>Konten dibagi menjadi: <strong>(1) konsep dasar haji</strong>, <strong>(2) lima syarat wajib</strong>, <strong>(3) tiga jenis pelaksanaan haji</strong>, <strong>(4) tiga jalur pendaftaran di Indonesia</strong>, <strong>(5) alur ibadah lengkap dengan doa</strong>, dan <strong>(6) tips persiapan</strong>.</p>
+
+<h2>Apa itu Ibadah Haji</h2>
+
+<p>Haji adalah rukun Islam kelima — kunjungan ke Baitullah (Ka'bah di Mekkah) pada waktu tertentu untuk melaksanakan rangkaian ibadah yang spesifik. Diwajibkan satu kali seumur hidup bagi muslim yang mampu (<em>istitha'ah</em>), sebagaimana firman Allah:</p>
+
+<blockquote>
+<p>"Dan kewajiban manusia terhadap Allah adalah melaksanakan ibadah haji ke Baitullah, yaitu bagi orang-orang yang mampu mengadakan perjalanan ke sana." <em>(QS. Ali Imran: 97)</em></p>
+</blockquote>
+
+<p>Waktu pelaksanaan: <strong>8 sampai 13 Dzulhijjah</strong> setiap tahun. Tempat: Mekkah, Mina, Arafah, dan Muzdalifah — keempat lokasi ini disebut <em>masya'ir muqaddasah</em> (tempat-tempat suci ibadah haji).</p>
+
+<h2>Lima Syarat Wajib Haji</h2>
+
+<p>Sebelum berbicara cara, harus jelas dulu siapa yang <em>wajib</em> berangkat. Para ulama menyepakati lima syarat:</p>
+
+<ol>
+  <li><strong>Islam</strong> — bukan kewajiban bagi non-muslim.</li>
+  <li><strong>Baligh</strong> — telah mencapai usia dewasa. Anak boleh ikut, hajinya sah (haji sunnah), tapi tetap wajib haji lagi setelah baligh jika mampu.</li>
+  <li><strong>Berakal</strong> — bukan dalam kondisi gangguan jiwa yang menghilangkan kesadaran.</li>
+  <li><strong>Merdeka</strong> — di masa lalu, status budak tidak diwajibkan haji.</li>
+  <li><strong>Mampu (<em>istitha'ah</em>)</strong> — punya kemampuan finansial, fisik, dan keamanan perjalanan.</li>
+</ol>
+
+<p>Syarat kelima yang paling sering diperdebatkan untuk konteks Indonesia. Mampu finansial artinya: punya bekal pulang-pergi, mencukupi nafkah keluarga selama ditinggal, dan tidak menggadaikan kebutuhan pokok (rumah, alat usaha). Mampu fisik artinya: kuat menjalani perjalanan dan rangkaian ibadah yang melelahkan.</p>
+
+<h2>Tiga Jenis Pelaksanaan Haji</h2>
+
+<p>Ini adalah pilihan tata cara — semua sah, masing-masing punya konsekuensi berbeda terkait umrah dan <em>dam</em> (denda hewan ternak).</p>
+
+<h3>1. Haji Ifrad — Haji Saja</h3>
+
+<p>Jamaah niat hanya untuk haji (tidak digabung umrah). Setelah haji selesai, baru bisa umrah secara terpisah. <strong>Tidak ada kewajiban dam.</strong></p>
+
+<p>Cocok untuk: jamaah yang sampai di Mekkah sangat dekat dengan tanggal 8 Dzulhijjah dan tidak sempat umrah dulu.</p>
+
+<h3>2. Haji Tamattu' — Umrah Dulu, Lalu Haji</h3>
+
+<p>Jamaah niat umrah dulu saat tiba di miqat. Setelah selesai umrah (tawaf, sa'i, tahallul), boleh keluar dari ihram. Pada tanggal 8 Dzulhijjah, niat ihram lagi untuk haji. <strong>Wajib dam</strong> (menyembelih satu kambing).</p>
+
+<p>Cocok untuk: <strong>mayoritas jamaah haji Indonesia</strong>, karena sebagian besar tiba di Mekkah/Madinah jauh hari sebelum hari haji dan punya waktu untuk umrah lebih dulu.</p>
+
+<h3>3. Haji Qiran — Haji dan Umrah Bersamaan</h3>
+
+<p>Jamaah niat haji dan umrah sekaligus dari miqat. Tetap dalam ihram dari awal sampai hari Idul Adha. Pelaksanaan tawaf dan sa'i bisa dilakukan satu kali untuk dua ibadah. <strong>Wajib dam</strong>.</p>
+
+<p>Cocok untuk: jamaah yang tidak melepas ihram sama sekali — kurang umum di Indonesia.</p>
+
+<h2>Tiga Jalur Pendaftaran Haji di Indonesia</h2>
+
+<p>Indonesia adalah negara dengan jamaah haji terbanyak di dunia — dan juga daftar tunggu terpanjang. Pemerintah (melalui Kementerian Agama) mengatur tiga jalur resmi.</p>
+
+<h3>Jalur 1: Haji Reguler</h3>
+
+<div style="display:grid;gap:0.5rem;margin:1rem 0;">
+  <div style="display:grid;grid-template-columns:140px 1fr;gap:0.5rem;font-size:14px;">
+    <div style="font-weight:600;color:var(--color-ink);">Pengelola</div>
+    <div style="color:var(--color-whisper);">Kementerian Agama RI</div>
+    <div style="font-weight:600;color:var(--color-ink);">Setoran awal</div>
+    <div style="color:var(--color-whisper);">Rp 25 juta</div>
+    <div style="font-weight:600;color:var(--color-ink);">BPIH 2026</div>
+    <div style="color:var(--color-whisper);">Sekitar Rp 56–60 juta (bervariasi per embarkasi)</div>
+    <div style="font-weight:600;color:var(--color-ink);">Waiting list</div>
+    <div style="color:var(--color-whisper);">15–48 tahun (paling pendek di Sulawesi Utara; paling panjang di Sulawesi Selatan, Kalimantan Selatan)</div>
+    <div style="font-weight:600;color:var(--color-ink);">Cocok untuk</div>
+    <div style="color:var(--color-whisper);">Mayoritas jamaah — biaya paling terjangkau</div>
+  </div>
+</div>
+
+<p><strong>Cara mendaftar haji reguler:</strong></p>
+
+<ol>
+  <li>Buka tabungan haji di Bank Penerima Setoran BPS BPIH (BNI, BSI, BRI Syariah, Mandiri Syariah, dll). Setor minimal Rp 25 juta.</li>
+  <li>Bank menerbitkan <strong>Bukti Setoran Awal (BSA)</strong>.</li>
+  <li>Bawa BSA + KTP + KK + paspor + buku tabungan ke Kantor Kementerian Agama (Kemenag) Kabupaten/Kota.</li>
+  <li>Petugas Kemenag mendaftarkan ke Sistem Informasi dan Komputerisasi Haji Terpadu (<strong>Siskohat</strong>). Anda dapat <strong>nomor porsi</strong> seumur hidup.</li>
+  <li>Tunggu giliran sesuai estimasi waktu di sertifikat. Cek berkala via <a href="https://haji.kemenag.go.id" rel="noopener nofollow">haji.kemenag.go.id</a>.</li>
+  <li>Sekitar 1–2 tahun sebelum keberangkatan, dipanggil untuk pelunasan, manasik, dan tes kesehatan.</li>
+</ol>
+
+<h3>Jalur 2: Haji Khusus (ONH Plus)</h3>
+
+<div style="display:grid;gap:0.5rem;margin:1rem 0;">
+  <div style="display:grid;grid-template-columns:140px 1fr;gap:0.5rem;font-size:14px;">
+    <div style="font-weight:600;color:var(--color-ink);">Pengelola</div>
+    <div style="color:var(--color-whisper);">Penyelenggara Ibadah Haji Khusus (PIHK) — biro swasta berizin Kemenag</div>
+    <div style="font-weight:600;color:var(--color-ink);">Setoran awal</div>
+    <div style="color:var(--color-whisper);">USD 5.000</div>
+    <div style="font-weight:600;color:var(--color-ink);">Total biaya</div>
+    <div style="color:var(--color-whisper);">USD 10.000–13.000 (bervariasi per PIHK)</div>
+    <div style="font-weight:600;color:var(--color-ink);">Waiting list</div>
+    <div style="color:var(--color-whisper);">5–9 tahun</div>
+    <div style="font-weight:600;color:var(--color-ink);">Cocok untuk</div>
+    <div style="color:var(--color-whisper);">Yang ingin berangkat lebih cepat dengan akomodasi premium</div>
+  </div>
+</div>
+
+<p>Haji Khusus tetap masuk kuota resmi Indonesia (15% dari total kuota nasional). Bedanya: pengelolaan oleh PIHK swasta, akomodasi hotel lebih dekat ke Masjidil Haram, jumlah jamaah per kelompok lebih kecil, makan/transport lebih nyaman.</p>
+
+<p><strong>Cara mendaftar:</strong> langsung ke PIHK terdaftar. Daftar PIHK resmi tersedia di <a href="https://haji.kemenag.go.id" rel="noopener nofollow">haji.kemenag.go.id</a>. Hati-hati biro tidak berizin — pastikan terdaftar di Kemenag dan punya izin operasional yang masih berlaku.</p>
+
+<h3>Jalur 3: Haji Furoda (Visa Mujamalah)</h3>
+
+<div style="display:grid;gap:0.5rem;margin:1rem 0;">
+  <div style="display:grid;grid-template-columns:140px 1fr;gap:0.5rem;font-size:14px;">
+    <div style="font-weight:600;color:var(--color-ink);">Pengelola</div>
+    <div style="color:var(--color-whisper);">Visa undangan dari pemerintah Arab Saudi, melalui agen resmi</div>
+    <div style="font-weight:600;color:var(--color-ink);">Total biaya</div>
+    <div style="color:var(--color-whisper);">USD 20.000–35.000</div>
+    <div style="font-weight:600;color:var(--color-ink);">Waiting list</div>
+    <div style="color:var(--color-whisper);">Tidak ada — berangkat tahun yang sama</div>
+    <div style="font-weight:600;color:var(--color-ink);">Cocok untuk</div>
+    <div style="color:var(--color-whisper);">Yang punya kemampuan finansial besar dan tidak bisa menunggu</div>
+  </div>
+</div>
+
+<p>Haji Furoda menggunakan kuota tambahan dari pemerintah Saudi (di luar kuota resmi Indonesia). Sejak 2022 pemerintah mensyaratkan: agen wajib berizin, jamaah wajib menggunakan PIHK terdaftar, tidak boleh visa turis untuk haji.</p>
+
+<p><strong>Peringatan:</strong> banyak penipuan di jalur ini. Pastikan agen punya izin Kemenag sebagai PIHK + perjanjian dengan muassasah resmi Saudi.</p>
+
+<h2>Alur Ibadah Haji — 6 Hari Inti</h2>
+
+<p>Ringkasan visual rangkaian ibadah dari 8 sampai 13 Dzulhijjah:</p>
+
+<div style="margin:1.5rem 0;padding:1.5rem;border:1px solid var(--color-hairline);border-radius:24px;background:var(--color-paper-2);">
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-brave-deep);margin-bottom:1rem;">Alur Ibadah Haji Tamattu' (Paling Umum untuk Jamaah Indonesia)</div>
+
+  <div style="display:grid;gap:0.75rem;">
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">8</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DZULH.</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Hari Tarwiyah — Berangkat ke Mina</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Pagi: mandi sunnah, kenakan pakaian ihram, niat haji di hotel. Berangkat ke Mina. Sholat lima waktu di Mina (qashar tanpa jama'). Mabit (menginap) semalam.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">9</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DZULH.</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">⭐ Wukuf di Arafah — Puncak Haji</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Pagi: bergerak ke Arafah. Sholat Dzuhur–Ashar dijama' qashar di awal waktu. Wukuf (berdiam) dari tergelincirnya matahari sampai terbenam — perbanyak doa, dzikir, istighfar. Setelah Maghrib: bergerak ke Muzdalifah, mabit di sana, kumpulkan kerikil untuk lempar jumrah.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">10</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">IDUL ADHA</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar Jumrah Aqabah · Sembelih Hadyu · Tahallul Awal</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Subuh: dari Muzdalifah ke Mina. Lempar 7 kerikil ke Jumrah Aqabah (yang terbesar). Sembelih dam (hadyu) — biasanya diuruskan petugas. Cukur/potong rambut → tahallul awal (larangan ihram dilepas, kecuali jima'). Bergerak ke Mekkah untuk tawaf ifadhah dan sa'i, lalu kembali ke Mina untuk mabit malam ke-10/11.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">11</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 1</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Mabit di Mina — Lempar 3 Jumrah</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Setelah dzuhur (waktu utama): lempar Jumrah Ula (7 kerikil) → Wustha (7) → Aqabah (7) = 21 kerikil. Mabit lagi di Mina.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">12</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 2</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar 3 Jumrah — Nafar Awal atau Nafar Tsani</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Lempar 21 kerikil lagi (3 jumrah × 7). Pilihan: <strong>Nafar Awal</strong> — pulang ke Mekkah sebelum maghrib (harus sudah keluar Mina sebelum matahari terbenam). <strong>Nafar Tsani</strong> — tetap di Mina sampai 13 Dzulhijjah untuk lempar 21 kerikil lagi.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">13</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 3</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar Jumrah (Jika Nafar Tsani) — Tawaf Wada'</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Bagi yang mengambil Nafar Tsani: lempar 21 kerikil terakhir setelah dzuhur. Lalu semua jamaah kembali ke Mekkah. Sebelum meninggalkan Mekkah: <strong>Tawaf Wada'</strong> (perpisahan) — sah jika Anda akan langsung pulang ke negara asal.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h2>Doa-Doa di Setiap Tahapan</h2>
+
+<h3>1. Niat Ihram</h3>
+
+<p>Dibaca setelah memakai pakaian ihram (kain putih), sebelum atau saat melewati miqat:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">لَبَّيْكَ اللَّهُمَّ حَجًّا</p>
+<p><em>Labbaika Allahumma hajjan.</em></p>
+<p>"Aku penuhi panggilan-Mu ya Allah, untuk berhaji."</p>
+</blockquote>
+
+<p>Untuk haji tamattu', niat umrah dulu: <em>Labbaika Allahumma 'umratan</em>. Untuk qiran: <em>Labbaika Allahumma hajjan wa 'umratan.</em></p>
+
+<h3>2. Talbiyah — Diulang-Ulang Sejak Ihram Sampai Mulai Tawaf</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.9;direction:rtl;text-align:right;" lang="ar">لَبَّيْكَ اللَّهُمَّ لَبَّيْكَ، لَبَّيْكَ لاَ شَرِيكَ لَكَ لَبَّيْكَ، إِنَّ الْحَمْدَ وَالنِّعْمَةَ لَكَ وَالْمُلْكَ، لاَ شَرِيكَ لَكَ</p>
+<p><em>Labbaika Allahumma labbaik. Labbaika laa syariika laka labbaik. Innal-hamda wan-ni'mata laka wal-mulk. Laa syariika laka.</em></p>
+<p>"Aku penuhi panggilan-Mu ya Allah, aku penuhi panggilan-Mu. Tidak ada sekutu bagi-Mu. Sesungguhnya segala pujian, kenikmatan, dan kerajaan adalah milik-Mu. Tidak ada sekutu bagi-Mu."</p>
+</blockquote>
+
+<p>Talbiyah adalah suara haji — diulang keras (untuk pria), pelan (untuk wanita), kapan saja: di kendaraan, saat berdiri, sambil jalan.</p>
+
+<h3>3. Doa Ketika Memandang Ka'bah</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">اَللَّهُمَّ زِدْ هَذَا الْبَيْتَ تَشْرِيفًا وَتَعْظِيمًا وَتَكْرِيمًا وَمَهَابَةً</p>
+<p><em>Allahumma zid haadzal-baita tasyriifan wa ta'dziiman wa takriiman wa mahaabah.</em></p>
+<p>"Ya Allah, tambahkanlah pada rumah ini kemuliaan, keagungan, kehormatan, dan kewibawaan."</p>
+</blockquote>
+
+<h3>4. Doa Sa'i — Dimulai dari Bukit Shafa</h3>
+
+<p>Di awal Shafa dan di awal Marwah, hadap kiblat, ucapkan:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">إِنَّ الصَّفَا وَالْمَرْوَةَ مِنْ شَعَائِرِ اللَّهِ</p>
+<p>"Sesungguhnya Shafa dan Marwah adalah sebagian dari syi'ar-syi'ar Allah." <em>(QS. Al-Baqarah: 158)</em></p>
+</blockquote>
+
+<p>Lalu Allahu Akbar 3x. Sa'i adalah satu putaran = Shafa → Marwah = 1. Total 7 putaran (selesai di Marwah).</p>
+
+<h3>5. Doa Wukuf di Arafah</h3>
+
+<p>Wukuf adalah <em>rukun</em> haji — tanpa wukuf, haji tidak sah. Tidak ada teks doa khusus yang diwajibkan; ini waktu paling utama untuk berdoa apa saja. Rasulullah ﷺ bersabda bahwa doa terbaik adalah doa hari Arafah:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">لاَ إِلَهَ إِلاَّ اللَّهُ وَحْدَهُ لاَ شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ</p>
+<p><em>Laa ilaaha illallahu wahdahu laa syariika lah, lahul-mulku wa lahul-hamdu wa huwa 'alaa kulli syai'in qadiir.</em></p>
+<p>"Tiada tuhan selain Allah, Yang Maha Esa, tidak ada sekutu bagi-Nya. Milik-Nya kerajaan, milik-Nya segala pujian, dan Dia Mahakuasa atas segala sesuatu." <em>(HR. Tirmidzi 3585)</em></p>
+</blockquote>
+
+<p>Selama wukuf: ucapkan dzikir ini berkali-kali, baca Al-Qur'an, dan paling penting — <strong>berdoa untuk diri sendiri, keluarga, dan kaum muslimin</strong>. Banyak ulama menyarankan menulis daftar nama orang yang ingin didoakan agar tidak terlewat.</p>
+
+<h3>6. Doa Lempar Jumrah</h3>
+
+<p>Setiap lemparan satu kerikil, ucapkan:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">اَللَّهُ أَكْبَر</p>
+<p><em>Allahu Akbar.</em></p>
+</blockquote>
+
+<p>Lempar dari jarak yang aman, kerikil masuk ke kolam — bukan ke tembok. Jangan berdesakan atau membahayakan diri.</p>
+
+<h3>7. Doa Tahallul (Cukur Rambut)</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">اَلْحَمْدُ لِلَّهِ عَلَى مَا هَدَانَا، اَللَّهُمَّ هَذِهِ نَاصِيَتِي بِيَدِكَ، فَتَقَبَّلْ مِنِّي</p>
+<p><em>Alhamdulillaahi 'alaa maa hadaanaa. Allahumma haadzihi naashiyatii bi yadika, fa taqabbal minnii.</em></p>
+<p>"Segala puji bagi Allah yang telah memberi kami petunjuk. Ya Allah, ubun-ubunku ada di tangan-Mu, terimalah dari hamba-Mu ini."</p>
+</blockquote>
+
+<h3>8. Tawaf Wada' — Doa Perpisahan</h3>
+
+<p>Tidak ada doa wajib khusus, tapi inilah momen yang banyak air mata. Lihat ke arah Ka'bah dan ucapkan apa yang ada di hati. Banyak jamaah mengulang:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:20px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">اَللَّهُمَّ لاَ تَجْعَلْ هَذَا آخِرَ الْعَهْدِ بِبَيْتِكَ الْحَرَامِ</p>
+<p><em>Allahumma laa taj'al haadzaa aakhiral-'ahdi bi baitikal-haraam.</em></p>
+<p>"Ya Allah, jangan jadikan ini kunjungan terakhir hamba-Mu ke rumah-Mu yang suci."</p>
+</blockquote>
+
+<h2>Tips Praktis untuk Jamaah Indonesia</h2>
+
+<h3>Sebelum Berangkat</h3>
+
+<ul>
+  <li><strong>Tes kesehatan jauh hari</strong> — jangan tunggu tes Kemenag. Cek jantung, paru, lutut, gula darah. Ada beberapa kondisi yang membuat dokter <em>melarang</em> berangkat haji demi keselamatan.</li>
+  <li><strong>Latihan fisik 3 bulan sebelumnya</strong> — jalan kaki minimal 5–7 km setiap hari. Naik tangga. Haji secara fisik berat: total jalan kaki bisa 100+ km.</li>
+  <li><strong>Tuntaskan hutang dan urusan keluarga</strong> — banyak ulama menganjurkan menulis wasiat sebelum berangkat haji.</li>
+  <li><strong>Mintalah maaf</strong> ke orang-orang sekitar — keluarga, tetangga, rekan kerja. Haji adalah pencucian besar; persiapkan hati dulu.</li>
+  <li><strong>Pelajari manasik sungguh-sungguh</strong> — manasik Kemenag bagus, tapi tambah dengan baca buku/menonton video. Pahami SETIAP tahapan sebelum berangkat.</li>
+</ul>
+
+<h3>Yang Harus Dibawa</h3>
+
+<ul>
+  <li>Dua kain ihram (laki-laki) atau pakaian putih longgar (perempuan) — bawa cadangan.</li>
+  <li>Sandal ihram (tidak menutupi mata kaki dan tumit).</li>
+  <li>Tas pinggang waterproof untuk paspor + uang tunai.</li>
+  <li>Botol semprot kosong (diisi air zamzam dingin selama wukuf — sangat membantu).</li>
+  <li>Payung kecil + topi (matahari Mekkah/Mina sangat terik, bisa 45°C+).</li>
+  <li>Obat pribadi minimal 60 hari + resep dokter (terjemahkan ke bahasa Inggris/Arab).</li>
+  <li>Sandwich/roti tahan lama untuk hari Tarwiyah & Wukuf (catering kadang terlambat saat traffic puncak).</li>
+</ul>
+
+<h3>Hal yang Sering Diabaikan</h3>
+
+<ul>
+  <li><strong>Identitas gelang</strong> — pakai gelang Kemenag SELAMA haji. Memudahkan petugas mengembalikan ke maktab jika tersesat.</li>
+  <li><strong>Foto wajah jamaah</strong> dengan keluarga rombongan — kalau hilang, lebih mudah mencari.</li>
+  <li><strong>Posisi tenda di Mina</strong> — hafal nomor maktab, sektor, dan jalan. Mina yang luas dan mirip-mirip menyesatkan ribuan jamaah setiap tahun.</li>
+  <li><strong>Hati-hati pickpocket di Masjidil Haram</strong> — terutama saat tawaf. Simpan paspor di hotel, bawa hanya fotokopi.</li>
+</ul>
+
+<h2>Catatan Penting Tentang Anak dan Haji</h2>
+
+<p>Anak <strong>belum baligh boleh ikut haji</strong> — hajinya sah dan dicatat sebagai haji sunnah. Tetapi setelah baligh tetap wajib haji lagi jika mampu. Bagi orang tua yang membawa anak: ini perjalanan fisik yang sangat berat; sebagian besar ulama dan dokter menyarankan menunda sampai anak minimal usia 7 tahun, idealnya 12+.</p>
+
+<p>Untuk anak yang ditinggal di rumah, lihat panduan: <a href="/_/parenting/bonding-orangtua/">Tetap Dekat dengan Anak yang Sibuk</a>, dan kalau Anda berangkat saat anak masih kecil, ajarkan mereka mengikuti haji secara virtual — tonton siaran wukuf di Arafah bersama mereka di rumah, ceritakan ulang setelah pulang.</p>
+
+<h2>Penutup</h2>
+
+<p>Haji adalah ibadah seumur hidup — secara harfiah satu kali wajib, tapi pengaruhnya bertahan seumur hidup. Untuk jamaah Indonesia yang menunggu giliran 15+ tahun, perjalanan haji bahkan dimulai jauh sebelum berangkat — dari setoran pertama, dari niat yang dijaga, dari persiapan harta dan tubuh dan hati.</p>
+
+<p>Bagi yang sedang menjalani haji saat tulisan ini diterbitkan: semoga haji mabrur, yang tidak ada balasannya kecuali surga. Bagi yang sedang menunggu giliran: <em>Labbaikallahumma labbaik</em> — Allah sudah memanggil Anda, tinggal jaga panggilan itu sampai waktunya.</p>
+
+<p>Bagi yang belum mampu: doa adalah ibadah. Mulai doakan diri Anda dapat panggilan haji. Mulai menabung sedikit. Allah Maha Tahu niat hamba-Nya — dan Allah <em>mendekatkan jarak</em> bagi yang tulus.</p>`,
+      en: `<p>As this is published (28 May 2026 / 12 Dhul Hijjah 1447 H), millions of pilgrims from around the world — including over 221,000 Indonesians — are completing the final stages of Hajj in Mina. This guide is for anyone considering performing Hajj, currently on the waiting list, or wanting to understand the ritual more deeply.</p>
+
+<p>It's structured as: <strong>(1) what Hajj is</strong>, <strong>(2) the five conditions</strong>, <strong>(3) the three types of Hajj performance</strong>, <strong>(4) the three registration paths available in Indonesia</strong>, <strong>(5) the full performance flow with all duas</strong>, and <strong>(6) practical preparation tips</strong>.</p>
+
+<h2>What is Hajj</h2>
+
+<p>Hajj is the fifth pillar of Islam — a visit to the House of Allah (the Ka'bah in Makkah) at a specific time to perform a specific sequence of acts of worship. It's obligatory once in a lifetime for every Muslim who is able (<em>istita'ah</em>), as Allah says:</p>
+
+<blockquote>
+<p>"And due to Allah from the people is a pilgrimage to the House — for whoever is able to find thereto a way." <em>(Qur'an 3:97)</em></p>
+</blockquote>
+
+<p>Time: <strong>8th to 13th of Dhul Hijjah</strong> each year. Places: Makkah, Mina, Arafah, and Muzdalifah — together called <em>masha'ir muqaddasah</em> (the sacred sites of Hajj).</p>
+
+<h2>The Five Conditions of Hajj</h2>
+
+<p>Before discussing how, it must be clear who is <em>obligated</em>. Scholars agree on five conditions:</p>
+
+<ol>
+  <li><strong>Islam</strong> — not obligatory for non-Muslims.</li>
+  <li><strong>Maturity</strong> (baligh) — children may join, their Hajj is valid (as supererogatory), but they must perform it again after reaching maturity if able.</li>
+  <li><strong>Sanity</strong> — not obligatory under mental impairment that removes awareness.</li>
+  <li><strong>Freedom</strong> — historically, slaves were not obligated.</li>
+  <li><strong>Ability</strong> (<em>istita'ah</em>) — financial means, physical fitness, and safety of travel.</li>
+</ol>
+
+<p>The fifth condition is the most debated in Indonesia's context. Financial ability means: round-trip funds, sufficient maintenance for family during your absence, and not mortgaging life essentials (home, livelihood). Physical ability means strength to handle the demanding journey and rites.</p>
+
+<h2>Three Types of Hajj Performance</h2>
+
+<p>This is a choice of method — all valid, with different consequences regarding umrah and the <em>dam</em> (sacrificial offering).</p>
+
+<h3>1. Hajj Ifrad — Hajj Only</h3>
+
+<p>Pilgrim intends only Hajj (not combined with umrah). After Hajj, umrah may be performed separately. <strong>No dam required.</strong></p>
+
+<p>Suited for: pilgrims arriving in Makkah very close to 8 Dhul Hijjah without time for umrah first.</p>
+
+<h3>2. Hajj Tamattu' — Umrah First, Then Hajj</h3>
+
+<p>Pilgrim intends umrah at the miqat. After completing umrah (tawaf, sa'i, tahallul), they leave ihram. On 8 Dhul Hijjah, they enter ihram again for Hajj. <strong>Dam required</strong> (one sheep).</p>
+
+<p>Suited for: <strong>most Indonesian pilgrims</strong>, since they typically arrive well before Hajj days and have time for umrah first.</p>
+
+<h3>3. Hajj Qiran — Hajj and Umrah Together</h3>
+
+<p>Pilgrim intends both Hajj and umrah simultaneously at the miqat. Remains in ihram from start through Eid. Tawaf and sa'i may be performed once for both. <strong>Dam required.</strong></p>
+
+<p>Suited for: pilgrims who don't break ihram at all — less common in Indonesia.</p>
+
+<h2>Three Registration Paths in Indonesia</h2>
+
+<p>Indonesia sends the largest national contingent in the world — and has the longest waiting list. The government (through the Ministry of Religious Affairs / Kemenag) regulates three official paths.</p>
+
+<h3>Path 1: Regular Hajj (Reguler)</h3>
+
+<ul>
+  <li><strong>Operator:</strong> Ministry of Religious Affairs (Kemenag)</li>
+  <li><strong>Initial deposit:</strong> IDR 25 million (~USD 1,600)</li>
+  <li><strong>2026 total fee:</strong> IDR 56–60 million (varies by embarkation point)</li>
+  <li><strong>Waiting list:</strong> 15–48 years (shortest in North Sulawesi; longest in South Sulawesi, South Kalimantan)</li>
+  <li><strong>Best for:</strong> majority of pilgrims — most affordable</li>
+</ul>
+
+<p><strong>How to register for regular Hajj:</strong></p>
+
+<ol>
+  <li>Open a Hajj savings account at a designated Sharia bank (BSI, BNI, BRI Syariah, Mandiri Syariah, etc.). Deposit at least IDR 25 million.</li>
+  <li>Bank issues a <strong>Bukti Setoran Awal (BSA)</strong> — initial deposit receipt.</li>
+  <li>Bring BSA + national ID + family card + passport + savings book to the local Kemenag office.</li>
+  <li>Kemenag staff registers you in the Integrated Hajj Information System (<strong>Siskohat</strong>). You receive a <strong>portion number</strong> for life.</li>
+  <li>Wait for your turn per estimated date. Check periodically at <a href="https://haji.kemenag.go.id" rel="noopener nofollow">haji.kemenag.go.id</a>.</li>
+  <li>About 1–2 years before departure, you'll be called for final payment, manasik training, and medical exams.</li>
+</ol>
+
+<h3>Path 2: Special Hajj (Khusus / ONH Plus)</h3>
+
+<ul>
+  <li><strong>Operator:</strong> Licensed private travel agencies (PIHK)</li>
+  <li><strong>Initial deposit:</strong> USD 5,000</li>
+  <li><strong>Total fee:</strong> USD 10,000–13,000</li>
+  <li><strong>Waiting list:</strong> 5–9 years</li>
+  <li><strong>Best for:</strong> those who want to depart sooner with premium accommodation</li>
+</ul>
+
+<p>Khusus pilgrims still use Indonesia's official quota (15% of national total). Difference: managed by private PIHK, hotels closer to the Haram, smaller group sizes, more comfortable food and transport.</p>
+
+<p><strong>To register:</strong> directly with a registered PIHK. List of registered PIHK is at <a href="https://haji.kemenag.go.id" rel="noopener nofollow">haji.kemenag.go.id</a>. Beware of unlicensed brokers.</p>
+
+<h3>Path 3: Hajj Furoda (Mujamalah Visa)</h3>
+
+<ul>
+  <li><strong>Operator:</strong> Invitation visa from the Saudi government, via approved agents</li>
+  <li><strong>Total fee:</strong> USD 20,000–35,000</li>
+  <li><strong>Waiting list:</strong> none — depart same year</li>
+  <li><strong>Best for:</strong> those with large financial capacity and no time to wait</li>
+</ul>
+
+<p>Hajj Furoda uses additional Saudi-issued quota (beyond Indonesia's official allocation). Since 2022, agents must be licensed, pilgrims must use a registered PIHK, and tourist visas may not be used for Hajj.</p>
+
+<p><strong>Warning:</strong> many scams in this path. Verify the agent has Kemenag PIHK licensing + valid arrangements with Saudi muassasah.</p>
+
+<h2>Hajj Flow — The 6 Core Days</h2>
+
+<p>Visual summary of acts from 8 to 13 Dhul Hijjah:</p>
+
+<div style="margin:1.5rem 0;padding:1.5rem;border:1px solid var(--color-hairline);border-radius:24px;background:var(--color-paper-2);">
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-brave-deep);margin-bottom:1rem;">Hajj Tamattu' Flow (Most Common for Indonesian Pilgrims)</div>
+
+  <div style="display:grid;gap:0.75rem;">
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">8</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DHU H.</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Day of Tarwiyah — Travel to Mina</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Morning: ritual bath, don ihram, intend Hajj at the hotel. Travel to Mina. Pray five prayers at Mina (shortened, not combined). Overnight stay.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">9</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DHU H.</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">⭐ Wuquf at Arafah — Peak of Hajj</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Morning: move to Arafah. Dhuhr and Asr combined-shortened at the start. Wuquf (standing) from noon until sunset — du'a, dhikr, istighfar. After Maghrib: move to Muzdalifah, overnight, collect pebbles for stoning.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">10</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">EID</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Stone Jamrat Aqabah · Sacrifice · First Tahallul</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Dawn: from Muzdalifah to Mina. Throw 7 pebbles at Jamrat Aqabah. Sacrifice (hadyu) — usually arranged by your operator. Cut/shave hair → first tahallul (ihram restrictions lifted, except marital relations). Travel to Makkah for tawaf ifadhah and sa'i, then back to Mina for the night.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">11</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 1</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Overnight at Mina — Stone All 3 Jamrat</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">After Dhuhr (prime time): stone Jamrat Ula (7) → Wustha (7) → Aqabah (7) = 21 pebbles total. Spend another night in Mina.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">12</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 2</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Stone 3 Jamrat — Nafr Awwal or Nafr Thani</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Stone another 21 pebbles. Choice: <strong>Nafr Awwal</strong> — leave Mina before sunset and return to Makkah. <strong>Nafr Thani</strong> — stay until 13 Dhul Hijjah for one more round of stoning.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+        <div style="font-size:18px;">13</div>
+        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 3</div>
+      </div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Final Stoning (Nafr Thani) — Farewell Tawaf</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">For Nafr Thani: stone 21 pebbles after Dhuhr. All pilgrims return to Makkah. Before leaving: <strong>Tawaf Wada'</strong> (farewell) — valid if you're heading straight home.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h2>Duas at Each Stage</h2>
+
+<p>(For brevity, see the Indonesian version above for full Arabic + transliteration of each du'a. Key ones in summary:)</p>
+
+<ul>
+  <li><strong>Intention for Ihram:</strong> "Labbaika Allahumma hajjan" (or 'umratan / hajjan wa 'umratan).</li>
+  <li><strong>Talbiyah</strong> (repeated from ihram to start of tawaf): "Labbaika Allahumma labbaik..."</li>
+  <li><strong>Upon seeing the Ka'bah:</strong> "Allahumma zid haadzal-baita tasyriifan..."</li>
+  <li><strong>Sa'i</strong> at Safa and Marwa: recite the verse from Al-Baqarah 158, then Allahu Akbar 3×.</li>
+  <li><strong>Wuquf at Arafah</strong> — no specific obligatory text; the Prophet ﷺ named "Laa ilaaha illallahu wahdahu laa syariika lah, lahul-mulku..." as the best du'a of that day.</li>
+  <li><strong>Stoning</strong> — say "Allahu Akbar" with each pebble.</li>
+  <li><strong>Tahallul:</strong> "Alhamdulillaahi 'alaa maa hadaanaa..."</li>
+  <li><strong>Farewell tawaf:</strong> "Allahumma laa taj'al haadzaa aakhiral-'ahdi bi baitikal-haraam."</li>
+</ul>
+
+<h2>Practical Tips</h2>
+
+<ul>
+  <li><strong>Health check months in advance</strong> — don't wait for Kemenag's. Heart, lungs, knees, blood sugar. Some conditions disqualify on safety grounds.</li>
+  <li><strong>Three months of physical training</strong> — walk 5–7 km daily. Climb stairs. Hajj is physically demanding: total walking can exceed 100 km.</li>
+  <li><strong>Settle debts and family matters</strong> — many scholars recommend writing a will before departing.</li>
+  <li><strong>Seek forgiveness</strong> from family, neighbors, colleagues. Hajj is a great cleansing; prepare the heart first.</li>
+  <li><strong>Study the manasik seriously</strong> — beyond what Kemenag provides. Understand each stage thoroughly before departing.</li>
+  <li><strong>Pack:</strong> two ihram cloths (men), modest white (women); ihram-compliant sandals; waterproof waist bag for passport + cash; spray bottle for cool zamzam; umbrella + hat; 60-day medications + prescriptions translated; durable food for Tarwiyah and Wuquf days.</li>
+  <li><strong>Wear your Kemenag wristband</strong> — helps officials return you to your maktab if lost.</li>
+  <li><strong>Memorize your tent location in Mina</strong> — maktab number, sector, road. Mina's similarity gets thousands lost yearly.</li>
+  <li><strong>Watch for pickpockets at the Haram</strong> — especially during tawaf. Leave passport at hotel; carry only a photocopy.</li>
+</ul>
+
+<h2>A Note on Children</h2>
+
+<p>Children before puberty <strong>may join Hajj</strong> — their Hajj is valid and counted as supererogatory. But once mature, they must perform Hajj again if able. For parents bringing children: the physical demands are significant; most scholars and doctors recommend waiting until at least age 7, ideally 12+.</p>
+
+<p>For children left at home, see: <a href="/_/parenting/bonding-orangtua/">Bonding with Children You're Away From</a>. And if you depart while your child is young, teach them to follow Hajj virtually — watch the Arafah livestream together with them at home, retell the journey when you return.</p>
+
+<h2>Closing</h2>
+
+<p>Hajj is a lifetime act of worship — literally obligatory once, but its effect lasts a lifetime. For Indonesian pilgrims waiting 15+ years, the journey begins long before departure — from the first deposit, the kept intention, the years of preparing wealth, body, and heart.</p>
+
+<p>For those performing Hajj as this is published: may yours be <em>mabrur</em>, the reward of which is nothing less than Paradise. For those waiting: <em>Labbaikallahumma labbaik</em> — Allah has already called you; keep that call alive until the time comes.</p>
+
+<p>For those not yet able: du'a is itself worship. Begin praying that you will be called. Begin saving, even a little. Allah knows His servants' intentions — and Allah <em>shortens the distance</em> for those who are sincere.</p>`,
+    },
+    tags: ["haji", "ibadah-haji", "jamaah-indonesia", "fiqh", "dzulhijjah"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 22,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apa saja jenis pendaftaran haji di Indonesia?",
+          en: "What are the registration types for Hajj in Indonesia?",
+        },
+        answer: {
+          id: "Ada tiga jalur resmi: <strong>Haji Reguler</strong> (Kemenag, biaya Rp 56–60 juta, waiting list 15–48 tahun), <strong>Haji Khusus / ONH Plus</strong> (PIHK swasta, USD 10–13 ribu, waiting list 5–9 tahun), dan <strong>Haji Furoda</strong> (visa undangan, USD 20–35 ribu, tanpa waiting list). Ketiganya legal dan diakui Kemenag. Pilih sesuai kemampuan dan urgensi.",
+          en: "Three official paths: <strong>Regular Hajj</strong> (Ministry of Religion, IDR 56–60 million, 15–48 year wait), <strong>Special Hajj (ONH Plus)</strong> (private PIHK, USD 10–13K, 5–9 year wait), and <strong>Hajj Furoda</strong> (invitation visa, USD 20–35K, no wait). All three are legal. Choose based on means and urgency.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa lama waiting list haji reguler di Indonesia?",
+          en: "How long is the regular Hajj waiting list in Indonesia?",
+        },
+        answer: {
+          id: "Bervariasi per provinsi: paling pendek di Sulawesi Utara sekitar 15 tahun, paling panjang di Sulawesi Selatan dan Kalimantan Selatan bisa 47–48 tahun. Provinsi Jawa rata-rata 25–35 tahun. Cek estimasi terkini di <a href=\"https://haji.kemenag.go.id\" rel=\"noopener nofollow\">haji.kemenag.go.id</a> setelah Anda mendapat nomor porsi.",
+          en: "Varies by province: shortest in North Sulawesi at ~15 years, longest in South Sulawesi and South Kalimantan reaching 47–48 years. Java provinces average 25–35 years. Check current estimates at haji.kemenag.go.id after you receive your portion number.",
+        },
+      },
+      {
+        question: {
+          id: "Apa beda haji reguler dan haji plus (ONH Plus)?",
+          en: "What's the difference between regular Hajj and ONH Plus?",
+        },
+        answer: {
+          id: "<strong>Reguler:</strong> dikelola Kemenag, biaya paling murah (Rp 56–60 juta), waiting list panjang (15–48 tahun), hotel agak jauh dari Masjidil Haram, rombongan besar. <strong>Plus:</strong> dikelola PIHK swasta, biaya 4–5× lebih mahal (USD 10–13 ribu), waiting list jauh lebih pendek (5–9 tahun), hotel premium dekat Haram, rombongan kecil, layanan lebih personal. Hukum dan rukun ibadahnya sama persis.",
+          en: "<strong>Regular:</strong> managed by Kemenag, cheapest (IDR 56–60M), long wait (15–48 years), hotels farther from the Haram, large groups. <strong>Plus:</strong> private PIHK, 4–5× more expensive (USD 10–13K), much shorter wait (5–9 years), premium hotels near the Haram, smaller groups, more personal service. The fiqh and rituals are identical.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana cara daftar haji reguler dari awal?",
+          en: "How do I register for regular Hajj from scratch?",
+        },
+        answer: {
+          id: "Lima langkah: (1) Buka tabungan haji di bank syariah (BSI, BNI, dll) dengan setoran awal minimal Rp 25 juta. (2) Dapatkan Bukti Setoran Awal (BSA) dari bank. (3) Bawa BSA + KTP + KK + paspor ke Kantor Kemenag kabupaten/kota. (4) Dapat nomor porsi seumur hidup di sistem Siskohat. (5) Tunggu giliran — saat dipanggil (1–2 tahun sebelum berangkat), lakukan pelunasan, manasik, dan tes kesehatan.",
+          en: "Five steps: (1) Open a Hajj savings account at a Sharia bank (BSI, BNI, etc.) with an initial deposit of at least IDR 25 million. (2) Get the Bukti Setoran Awal (BSA) receipt. (3) Bring BSA + ID + family card + passport to your local Kemenag office. (4) Receive a lifetime portion number in the Siskohat system. (5) Wait for your turn — when called (1–2 years before departure), pay the balance, complete manasik training, and get a medical exam.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah anak boleh ikut haji?",
+          en: "Can children join Hajj?",
+        },
+        answer: {
+          id: "Boleh, hajinya sah dan dicatat sebagai haji sunnah. <strong>Tetapi</strong> setelah baligh, dia tetap wajib haji lagi jika mampu. Ditambah lagi: haji secara fisik sangat berat untuk anak kecil — sebagian besar ulama dan dokter menyarankan menunda sampai anak minimal usia 7 tahun, idealnya 12 tahun ke atas. Pikirkan kesiapan fisik dan keamanan anak di kerumunan jutaan jamaah sebelum memutuskan.",
+          en: "Yes, the Hajj is valid and counted as supererogatory. <strong>However</strong>, after reaching puberty, they must perform Hajj again if able. Also: Hajj is physically very demanding for young children — most scholars and doctors recommend waiting until at least age 7, ideally 12+. Consider physical readiness and safety in crowds of millions before deciding.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hukumnya jika wanita haid saat haji?",
+          en: "What's the ruling if a woman menstruates during Hajj?",
+        },
+        answer: {
+          id: "Haid tidak menggagalkan haji. Wanita yang haid <strong>tetap melakukan semua manasik</strong> (ihram, wukuf di Arafah, mabit, lempar jumrah, sa'i) kecuali <strong>tawaf</strong> — yang harus ditunda sampai suci. Khusus untuk Tawaf Wada' (perpisahan), wanita haid <em>tidak diwajibkan</em>. Jika haid datang saat sudah memasuki tahallul awal, tinggal tunggu suci untuk Tawaf Ifadhah saja. Konsultasikan dengan ustadzah pembimbing rombongan untuk kasus spesifik.",
+          en: "Menstruation does not invalidate Hajj. A menstruating woman <strong>still performs all the rites</strong> (ihram, Wuquf at Arafah, overnight stays, stoning, sa'i) except <strong>tawaf</strong> — which is postponed until purification. For Farewell Tawaf, menstruating women are <em>exempted</em>. If menstruation starts after first tahallul, simply wait for purification before Tawaf Ifadhah. Consult your group's female religious guide for specific cases.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa biaya minimum untuk mulai daftar haji?",
+          en: "What's the minimum cost to start registering for Hajj?",
+        },
+        answer: {
+          id: "Untuk haji reguler, setoran awal yang masuk Siskohat adalah <strong>Rp 25 juta</strong>. Setelah itu Anda mendapat nomor porsi dan masuk antrian. BPIH (biaya pelunasan) sekitar Rp 30–35 juta lagi, dilakukan saat dipanggil berangkat (15–48 tahun lagi). Selama menunggu, dana setoran awal Anda dikelola oleh Badan Pengelola Keuangan Haji (BPKH) dan menghasilkan nilai manfaat yang ikut mengurangi BPIH. Untuk haji khusus, setoran awal USD 5.000.",
+          en: "For regular Hajj, the initial deposit recorded in Siskohat is <strong>IDR 25 million</strong>. After this you receive a portion number and join the queue. The final balance (BPIH) is around IDR 30–35 million more, paid when called to depart (15–48 years later). While waiting, your deposit is managed by BPKH and generates returns that offset the final BPIH. For special Hajj, the initial deposit is USD 5,000.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang dimaksud dengan haji mabrur?",
+          en: "What is a mabrur Hajj?",
+        },
+        answer: {
+          id: "Haji mabrur adalah haji yang diterima Allah. Rasulullah ﷺ bersabda bahwa balasannya tidak lain adalah surga (HR. Bukhari & Muslim). Tanda-tanda haji mabrur menurut ulama: (1) <em>akhlaknya lebih baik setelah pulang</em> dari sebelum berangkat, (2) lebih dekat dengan ibadah, (3) lebih lembut kepada keluarga, (4) lebih banyak sedekah, (5) tidak kembali kepada dosa lama. Jadi tolok ukur mabrur bukan sekadar di Tanah Suci, tapi <strong>perubahan hidup setelah pulang</strong>.",
+          en: "A mabrur Hajj is one that is accepted by Allah. The Prophet ﷺ said its reward is nothing less than Paradise (Bukhari & Muslim). Scholars identify signs: (1) <em>better character after return</em> than before departure, (2) closer to worship, (3) gentler with family, (4) more generous, (5) not returning to old sins. The measure isn't in Makkah — it's in the <strong>life change after coming home</strong>.",
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {

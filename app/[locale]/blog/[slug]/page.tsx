@@ -8,7 +8,12 @@ import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
-import { blogPostingSchema, breadcrumbSchema, graph } from "@/lib/seo/schemas";
+import {
+  blogPostingSchema,
+  blogFaqSchema,
+  breadcrumbSchema,
+  graph,
+} from "@/lib/seo/schemas";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
 import { Byline } from "@/components/Byline";
@@ -91,6 +96,30 @@ export default async function BlogDetail({
           dangerouslySetInnerHTML={{ __html: renderBody(post.body[l], l) }}
         />
 
+        {post.faq && post.faq.length > 0 && (
+          <section className="mt-14 border-t border-hairline pt-10">
+            <h2 className="font-serif text-2xl font-medium tracking-tight text-ink sm:text-3xl">
+              {l === "id" ? "Pertanyaan yang Sering Diajukan" : "Frequently Asked Questions"}
+            </h2>
+            <div className="mt-6 divide-y divide-hairline">
+              {post.faq.map((f, i) => (
+                <details key={i} className="group py-5">
+                  <summary className="flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink">
+                    <span>{f.question[l]}</span>
+                    <span className="text-whisper transition group-open:rotate-45">
+                      +
+                    </span>
+                  </summary>
+                  <div
+                    className="prose mt-3 text-[14.5px] leading-relaxed text-whisper"
+                    dangerouslySetInnerHTML={{ __html: renderBody(f.answer[l], l) }}
+                  />
+                </details>
+              ))}
+            </div>
+          </section>
+        )}
+
         {post.kit && <MultiplicationKit kit={post.kit} locale={l} />}
       </main>
 
@@ -110,7 +139,8 @@ export default async function BlogDetail({
             { name: dict.nav.blog, path: "/blog" },
             { name: post.title[l], path: `/blog/${slug}` },
           ]),
-          blogPostingSchema(l, post)
+          blogPostingSchema(l, post),
+          ...(blogFaqSchema(l, post) ? [blogFaqSchema(l, post)!] : []),
         )}
       />
     </>

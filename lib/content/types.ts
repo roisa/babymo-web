@@ -103,6 +103,16 @@ export type BlogKit = {
   checklist: Record<Locale, string[]>;
 };
 
+/**
+ * Optional FAQ block for SEO-targeted posts. When present, the blog
+ * detail page renders a visual accordion AND emits FAQPage JSON-LD
+ * so Google can show rich snippets for these exact questions.
+ */
+export type BlogFaq = {
+  question: Record<Locale, string>;
+  answer: Record<Locale, string>;
+};
+
 export type BlogPost = {
   slug: string;
   title: Record<Locale, string>;
@@ -117,6 +127,8 @@ export type BlogPost = {
   reviewedBy?: string;
   /** Optional kit for cross-channel content multiplication */
   kit?: BlogKit;
+  /** Optional FAQ — drives both visual section and FAQPage schema */
+  faq?: BlogFaq[];
 };
 
 export type Hadith = {

@@ -82,6 +82,26 @@ export function doaSchema(locale: Locale, doa: Doa) {
   };
 }
 
+/**
+ * FAQPage schema for a blog post that defines its own FAQ array.
+ * Returns null if the post has no FAQ — caller should spread the
+ * result conditionally.
+ */
+export function blogFaqSchema(locale: Locale, post: BlogPost) {
+  if (!post.faq || post.faq.length === 0) return null;
+  return {
+    "@type": "FAQPage",
+    mainEntity: post.faq.map((f) => ({
+      "@type": "Question",
+      name: f.question[locale],
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: f.answer[locale],
+      },
+    })),
+  };
+}
+
 export function blogPostingSchema(locale: Locale, post: BlogPost) {
   return {
     "@type": "BlogPosting",
