@@ -4,6 +4,7 @@ import { type Locale, asset, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { SearchOverlay } from "./SearchOverlay";
+import { ThemeToggle } from "./ThemeToggle";
 
 type Props = {
   locale: Locale;
@@ -76,6 +77,7 @@ export function Header({ locale, currentPath }: Props) {
 
         <div className="flex items-center gap-2">
           <SearchOverlay locale={locale} />
+          <ThemeToggle locale={locale} />
           <LanguageSwitcher currentLocale={locale} path={currentPath} />
         </div>
       </div>

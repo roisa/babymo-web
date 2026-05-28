@@ -40,8 +40,11 @@ const fraunces = Fraunces({
 });
 
 export const viewport: Viewport = {
-  themeColor: "#5F8B5A",
-  colorScheme: "light",
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "#FBFAF6" },
+    { media: "(prefers-color-scheme: dark)", color: "#15171B" },
+  ],
+  colorScheme: "light dark",
   width: "device-width",
   initialScale: 1,
 };
@@ -76,6 +79,13 @@ export default async function LocaleLayout({
       className={`${inter.variable} ${newsreader.variable} ${arabic.variable} ${fraunces.variable}`}
     >
       <body>
+        {/* Set theme before first paint to avoid a flash of the wrong
+            mode. Reads saved preference, else falls back to OS setting. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem('babymo.theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
+          }}
+        />
         <JsonLd
           data={graph(organizationSchema(), websiteSchema(locale as Locale))}
         />

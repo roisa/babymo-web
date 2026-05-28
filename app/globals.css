@@ -38,6 +38,34 @@
   --radius-2xl: 36px;
 }
 
+/* ───────────────────────────────────────────────
+   Dark mode — warm, eye-friendly night palette.
+   Activated by .dark on <html> (manual toggle, persisted in
+   localStorage). Deep accent colors flip light (they're used as
+   text on dark); soft tint colors flip to dark chip backgrounds.
+   Background is a warm near-black, text is warm off-white — never
+   pure #000 / #fff, which strains the eyes at night.
+   ─────────────────────────────────────────────── */
+html.dark {
+  --color-ink: #EAE8E0;        /* warm off-white — main text */
+  --color-ink-soft: #C5C3BA;
+  --color-paper: #15171B;      /* warm near-black — page bg */
+  --color-paper-2: #1E2127;    /* elevated card surface */
+  --color-sage: #84B57E;       /* brightened for dark contrast */
+  --color-sage-deep: #A8CFA2;  /* light — used as text accent */
+  --color-sage-soft: #243029;  /* dark sage tint — chip bg */
+  --color-brave: #43AE6E;      /* brightened brave green */
+  --color-brave-deep: #86D2A0; /* light green — text accent */
+  --color-brave-soft: #1B3325; /* dark green tint — chip bg */
+  --color-clay: #D8B871;
+  --color-clay-soft: #2E2A1D;  /* dark clay tint */
+  --color-mist: #23262C;
+  --color-hairline: #2C3037;   /* subtle visible border on dark */
+  --color-whisper: #989CA3;    /* muted text, lifted for legibility */
+  --color-whisper-2: #70747B;
+  color-scheme: dark;
+}
+
 html {
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
@@ -51,6 +79,7 @@ body {
   letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 300ms ease, color 300ms ease;
 }
 
 /* Tight tracking on display type — iOS large-title style */
