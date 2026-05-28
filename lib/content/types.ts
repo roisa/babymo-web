@@ -232,6 +232,17 @@ export type Surah = {
 };
 
 /**
+ * One of the 99 Names of Allah (Asmaul Husna).
+ */
+export type AsmaulHusna = {
+  /** 1–99 */
+  number: number;
+  arabic: string;
+  transliteration: string;
+  meaning: Record<Locale, string>;
+};
+
+/**
  * Prophet story (Kisah 25 Nabi) — short, age-appropriate retellings
  * of the 25 prophets named in the Qur'an.
  */
