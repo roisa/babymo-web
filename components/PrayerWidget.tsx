@@ -12,7 +12,35 @@ import { type Locale, pathFor } from "@/lib/i18n/config";
 
 const LOC_KEY = "babymo.location";
 
-// Fallback: Jakarta (used until the user grants location)
+// Major Indonesian cities — the reliable path. Geolocation is flaky in
+// in-app browsers (WhatsApp/IG) and when location services are off, so
+// a manual picker is the primary UX; GPS is an optional upgrade.
+const CITIES: { name: string; lat: number; lng: number }[] = [
+  { name: "Jakarta", lat: -6.2088, lng: 106.8456 },
+  { name: "Bandung", lat: -6.9175, lng: 107.6191 },
+  { name: "Surabaya", lat: -7.2575, lng: 112.7521 },
+  { name: "Semarang", lat: -6.9667, lng: 110.4167 },
+  { name: "Yogyakarta", lat: -7.7956, lng: 110.3695 },
+  { name: "Medan", lat: 3.5952, lng: 98.6722 },
+  { name: "Palembang", lat: -2.9761, lng: 104.7754 },
+  { name: "Makassar", lat: -5.1477, lng: 119.4327 },
+  { name: "Denpasar", lat: -8.6705, lng: 115.2126 },
+  { name: "Banjarmasin", lat: -3.3194, lng: 114.5908 },
+  { name: "Balikpapan", lat: -1.2379, lng: 116.8529 },
+  { name: "Pekanbaru", lat: 0.5071, lng: 101.4478 },
+  { name: "Padang", lat: -0.9471, lng: 100.4172 },
+  { name: "Malang", lat: -7.9666, lng: 112.6326 },
+  { name: "Pontianak", lat: -0.0263, lng: 109.3425 },
+  { name: "Bekasi", lat: -6.2383, lng: 106.9756 },
+  { name: "Tangerang", lat: -6.1781, lng: 106.6300 },
+  { name: "Depok", lat: -6.4025, lng: 106.7942 },
+  { name: "Banda Aceh", lat: 5.5483, lng: 95.3238 },
+  { name: "Mataram", lat: -8.5833, lng: 116.1167 },
+  { name: "Manado", lat: 1.4748, lng: 124.8421 },
+  { name: "Jayapura", lat: -2.5337, lng: 140.7181 },
+];
+
+// Fallback: Jakarta (used until the user picks a city or grants GPS)
 const DEFAULT = { lat: -6.2088, lng: 106.8456, label: "Jakarta" };
 
 type PrayerName = "fajr" | "dhuhr" | "asr" | "maghrib" | "isha";
@@ -82,6 +110,20 @@ export function PrayerWidget({ locale }: Props) {
     const t = setInterval(() => setNow(new Date()), 30_000);
     return () => clearInterval(t);
   }, []);
+
+  function pickCity(name: string) {
+    const city = CITIES.find((c) => c.name === name);
+    if (!city) return;
+    const c = { lat: city.lat, lng: city.lng, label: city.name };
+    setCoords(c);
+    setNow(new Date());
+    setDenied(false);
+    try {
+      localStorage.setItem(LOC_KEY, JSON.stringify(c));
+    } catch {
+      /* ignore */
+    }
+  }
 
   function useMyLocation() {
     if (!navigator.geolocation) {
@@ -157,33 +199,60 @@ export function PrayerWidget({ locale }: Props) {
   return (
     <div className="rounded-[24px] border border-hairline bg-paper p-6 sm:p-7">
       <div className="flex items-start justify-between gap-4">
-        <div>
-          <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
-            <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
-            {locale === "id" ? "Waktu Sholat" : "Prayer Times"}
-          </p>
-          <p className="mt-1 text-[12.5px] text-whisper">
-            {coords.label}
-            {" · "}
-            {now.toLocaleDateString(locale === "id" ? "id-ID" : "en-US", {
-              weekday: "long",
-              day: "numeric",
-              month: "short",
-            })}
-          </p>
+        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
+          {locale === "id" ? "Waktu Sholat" : "Prayer Times"}
+        </p>
+        <p className="text-[12.5px] text-whisper">
+          {now.toLocaleDateString(locale === "id" ? "id-ID" : "en-US", {
+            weekday: "long",
+            day: "numeric",
+            month: "short",
+          })}
+        </p>
+      </div>
+
+      {/* Location row: city dropdown (reliable) + GPS button (optional) */}
+      <div className="mt-3 flex items-center gap-2">
+        <div className="relative flex-1">
+          <select
+            value={CITIES.some((c) => c.name === coords.label) ? coords.label : ""}
+            onChange={(e) => pickCity(e.target.value)}
+            aria-label={locale === "id" ? "Pilih kota" : "Choose city"}
+            className="w-full appearance-none rounded-full border border-hairline bg-paper py-2 pl-4 pr-9 text-[13px] font-semibold text-ink transition hover:border-brave/40 focus:border-brave/60 focus:outline-none"
+          >
+            {!CITIES.some((c) => c.name === coords.label) && (
+              <option value="">{coords.label}</option>
+            )}
+            {CITIES.map((c) => (
+              <option key={c.name} value={c.name}>
+                {c.name}
+              </option>
+            ))}
+          </select>
+          <span className="pointer-events-none absolute right-3.5 top-1/2 -translate-y-1/2 text-whisper">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="m6 9 6 6 6-6" />
+            </svg>
+          </span>
         </div>
         <button
           type="button"
           onClick={useMyLocation}
           disabled={locating}
-          className="tap inline-flex shrink-0 items-center gap-1.5 rounded-full border border-hairline px-3 py-1.5 text-[11.5px] font-semibold text-ink-soft transition hover:border-brave/40 hover:text-brave-deep disabled:opacity-60"
+          aria-label={locale === "id" ? "Pakai lokasiku (GPS)" : "Use my location (GPS)"}
+          title={locale === "id" ? "Pakai lokasiku (GPS)" : "Use my location (GPS)"}
+          className="tap inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-hairline text-ink-soft transition hover:border-brave/40 hover:text-brave-deep disabled:opacity-60"
         >
-          {locating && (
-            <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-brave border-t-transparent" />
+          {locating ? (
+            <span className="inline-block h-3.5 w-3.5 animate-spin rounded-full border-2 border-brave border-t-transparent" />
+          ) : (
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <path d="M12 2v3M12 19v3M2 12h3M19 12h3" />
+              <circle cx="12" cy="12" r="7" />
+              <circle cx="12" cy="12" r="2.5" fill="currentColor" stroke="none" />
+            </svg>
           )}
-          {locating
-            ? locale === "id" ? "Mencari…" : "Locating…"
-            : locale === "id" ? "Pakai lokasiku" : "Use my location"}
         </button>
       </div>
 
@@ -241,10 +310,10 @@ export function PrayerWidget({ locale }: Props) {
       </Link>
 
       {denied && (
-        <p className="mt-3 text-[11.5px] text-whisper">
+        <p className="mt-3 text-[11.5px] leading-relaxed text-whisper">
           {locale === "id"
-            ? "Lokasi tidak diizinkan — menampilkan waktu untuk Jakarta. Aktifkan izin lokasi untuk kotamu sendiri."
-            : "Location denied — showing times for Jakarta. Allow location access for your own city."}
+            ? "GPS tidak tersedia (sering terjadi di browser dalam aplikasi). Pilih kotamu dari daftar di atas untuk waktu yang akurat."
+            : "GPS unavailable (common in in-app browsers). Pick your city from the list above for accurate times."}
         </p>
       )}
     </div>
