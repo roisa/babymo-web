@@ -33,6 +33,19 @@ export const siteUrl =
  */
 export const whatsappNumber: string = "6282315971002";
 
+/** Friendly opener pre-filled when someone taps a contact WhatsApp link. */
+const WHATSAPP_GREETING: Record<Locale, string> = {
+  id: "Assalamu'alaikum Tim Baby Mo! 😊 Saya menemukan Baby Mo di babymo.id dan ingin tahu lebih lanjut.",
+  en: "Assalamu'alaikum Baby Mo Team! 😊 I found Baby Mo on babymo.id and would love to know more.",
+};
+
+/** wa.me link to Baby Mo's line with a pre-filled greeting. Empty string
+ *  when no number is set, so callers can hide the link. */
+export function whatsappUrl(locale: Locale): string {
+  if (!whatsappNumber) return "";
+  return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(WHATSAPP_GREETING[locale])}`;
+}
+
 export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "/babymo-web";
 
 export function pathFor(locale: Locale, path: string = ""): string {

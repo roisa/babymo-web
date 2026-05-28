@@ -8,6 +8,7 @@ import {
   pathFor,
   absoluteUrl,
   whatsappNumber,
+  whatsappUrl,
 } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -619,7 +620,7 @@ export default async function HomePage({
                 />
                 {whatsappNumber && (
                   <SocialCard
-                    href={`https://wa.me/${whatsappNumber}`}
+                    href={whatsappUrl(l)}
                     icon={<WhatsAppIcon />}
                     label="WhatsApp"
                     handle="+62 823-1597-1002"

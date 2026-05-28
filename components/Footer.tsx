@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { type Locale, asset, pathFor, whatsappNumber } from "@/lib/i18n/config";
+import { type Locale, asset, pathFor, whatsappNumber, whatsappUrl } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 
@@ -66,7 +66,7 @@ export function Footer({ locale, currentPath }: Props) {
             <ExternalLink href="https://www.instagram.com/babymo.official">Instagram</ExternalLink>
             <ExternalLink href="https://www.tiktok.com/@babymo.official">TikTok</ExternalLink>
             {whatsappNumber && (
-              <ExternalLink href={`https://wa.me/${whatsappNumber}`}>WhatsApp</ExternalLink>
+              <ExternalLink href={whatsappUrl(locale)}>WhatsApp</ExternalLink>
             )}
             <ExternalLink href="https://paypal.me/ibracreative">
               {locale === "id" ? "Dukung via PayPal" : "Donate via PayPal"}
