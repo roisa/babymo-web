@@ -226,22 +226,22 @@ function svgFor({ title, excerpt, tag, rt }, locale) {
   const eyebrowTag =
     (locale === "id" ? TAG_LABEL_ID : TAG_LABEL_EN)[tag] ?? tag.toUpperCase();
 
-  // Title sizing — bigger for short titles, smaller for long ones.
-  // Centered composition so WhatsApp/Twitter center-crop still works.
+  // Title sizing — tuned smaller. Centered composition so WhatsApp /
+  // Twitter center-crop still works.
   const titleLen = title.length;
-  const titleSize = titleLen <= 40 ? 78 : titleLen <= 70 ? 66 : titleLen <= 110 ? 56 : 48;
-  const titleMaxChars = titleLen <= 40 ? 20 : titleLen <= 70 ? 26 : 32;
+  const titleSize = titleLen <= 40 ? 60 : titleLen <= 70 ? 52 : titleLen <= 110 ? 46 : 40;
+  const titleMaxChars = titleLen <= 40 ? 22 : titleLen <= 70 ? 28 : 34;
   const titleLines = wrap(title, titleMaxChars, 4);
-  const titleLineHeight = titleSize * 1.18;
+  const titleLineHeight = titleSize * 1.22;
   const titleBlockH = titleLines.length * titleLineHeight;
 
-  // Vertical centering with a slight upward bias (eye gravity)
-  const contentMid = H * 0.5 - 30;
+  // Vertically center the title block with a slight upward bias
+  const contentMid = H * 0.5 - 15;
   const titleStartY = contentMid - titleBlockH / 2 + titleSize * 0.85;
 
   // Excerpt is short — 1 line max
-  const excerptLines = excerpt ? wrap(excerpt, 70, 1) : [];
-  const excerptStartY = titleStartY + titleBlockH + 30;
+  const excerptLines = excerpt ? wrap(excerpt, 75, 1) : [];
+  const excerptStartY = titleStartY + titleBlockH + 28;
 
   const rtStr = rt ? `${rt} ${S.minRead}` : "";
 
@@ -250,72 +250,89 @@ function svgFor({ title, excerpt, tag, rt }, locale) {
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="${C.paper}"/>
-      <stop offset="100%" stop-color="${C.paper2}"/>
+      <stop offset="60%" stop-color="${C.sageSoft}" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="${C.sageSoft}"/>
     </linearGradient>
-    <radialGradient id="aura" cx="50%" cy="40%" r="55%">
-      <stop offset="0%" stop-color="${C.sageSoft}" stop-opacity="0.7"/>
-      <stop offset="100%" stop-color="${C.sageSoft}" stop-opacity="0"/>
+    <radialGradient id="topGlow" cx="50%" cy="0%" r="55%">
+      <stop offset="0%" stop-color="${C.sage}" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="${C.sage}" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="${C.hairline}" fill-opacity="0.5"/>
+    <radialGradient id="centerGlow" cx="50%" cy="50%" r="40%">
+      <stop offset="0%" stop-color="${C.paper}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="${C.paper}" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="${C.sageDeep}" fill-opacity="0.18"/>
     </pattern>
   </defs>
 
-  <!-- Background: vertical gradient + soft center glow -->
+  <!-- Background: cream → sage gradient with center glow that
+       protects title legibility -->
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
   <rect width="${W}" height="${H}" fill="url(#dots)"/>
-  <rect width="${W}" height="${H}" fill="url(#aura)"/>
+  <rect width="${W}" height="${H}" fill="url(#topGlow)"/>
+  <rect width="${W}" height="${H}" fill="url(#centerGlow)"/>
 
-  <!-- Corner decoration (won't be cropped by WA thumbnail center crop) -->
-  <circle cx="${W - 60}" cy="60" r="90" fill="${C.sageSoft}" opacity="0.5"/>
-  <circle cx="60" cy="${H - 60}" r="70" fill="${C.claySoft}" opacity="0.45"/>
+  <!-- Decorative crescent in top-left corner — Baby Mo signature mark -->
+  <g transform="translate(70, 75)" opacity="0.85">
+    <circle cx="0" cy="0" r="14" fill="${C.sageDeep}"/>
+    <circle cx="6" cy="-3" r="14" fill="${C.paper}"/>
+  </g>
+
+  <!-- Decorative star top-right + clay dot bottom-left — won't be
+       cropped by center-square thumbnail -->
+  <circle cx="${W - 70}" cy="75" r="3.5" fill="${C.clay}"/>
+  <circle cx="${W - 100}" cy="60" r="2" fill="${C.sageDeep}" opacity="0.6"/>
+  <circle cx="${W - 50}" cy="100" r="2" fill="${C.sageDeep}" opacity="0.6"/>
 
   <!-- BABY MO brand mark — centered, top -->
-  <text x="${W / 2}" y="85" text-anchor="middle"
+  <text x="${W / 2}" y="100" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="800" font-size="20" letter-spacing="8"
-        fill="${C.ink}">${xe(S.brand)}</text>
-  <line x1="${W / 2 - 40}" y1="108" x2="${W / 2 + 40}" y2="108"
-        stroke="${C.sageDeep}" stroke-width="3" stroke-linecap="round"/>
+        font-weight="700" font-size="17" letter-spacing="9"
+        fill="${C.sageDeep}">${xe(S.brand)}</text>
+  <line x1="${W / 2 - 24}" y1="120" x2="${W / 2 + 24}" y2="120"
+        stroke="${C.sage}" stroke-width="2" stroke-linecap="round"/>
 
-  <!-- Eyebrow: category tag, centered -->
-  <text x="${W / 2}" y="155" text-anchor="middle"
+  <!-- Eyebrow: category tag, centered, smaller -->
+  <text x="${W / 2}" y="160" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="700" font-size="20" letter-spacing="5"
-        fill="${C.sageDeep}">${xe(eyebrowTag)}</text>
+        font-weight="600" font-size="14" letter-spacing="6"
+        fill="${C.sageDeep}" opacity="0.85">${xe(eyebrowTag)}</text>
 
-  <!-- Title — centered, large serif, weight tuned by length -->
+  <!-- Title — centered, medium serif weight, refined size -->
   ${titleLines
     .map(
       (line, i) =>
         `<text x="${W / 2}" y="${titleStartY + i * titleLineHeight}" text-anchor="middle"
         font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
-        font-weight="600" font-size="${titleSize}" fill="${C.ink}"
-        letter-spacing="-1.5">${xe(line)}</text>`,
+        font-weight="500" font-size="${titleSize}" fill="${C.ink}"
+        letter-spacing="-1">${xe(line)}</text>`,
     )
     .join("\n  ")}
 
-  <!-- Excerpt — centered, single italic line if present -->
+  <!-- Excerpt — centered, single italic serif line in sage-deep -->
   ${excerptLines
     .map(
       (line, i) =>
-        `<text x="${W / 2}" y="${excerptStartY + i * 36}" text-anchor="middle"
+        `<text x="${W / 2}" y="${excerptStartY + i * 32}" text-anchor="middle"
         font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
-        font-weight="400" font-style="italic" font-size="26" fill="${C.whisper}">${xe(line)}</text>`,
+        font-weight="400" font-style="italic" font-size="22" fill="${C.sageDeep}" opacity="0.85">${xe(line)}</text>`,
     )
     .join("\n  ")}
 
-  <!-- Bottom strip: centered domain with small reading time -->
-  <text x="${W / 2}" y="${H - 60}" text-anchor="middle"
+  <!-- Bottom strip: thin sage line + babymo.id + reading time -->
+  <line x1="${W / 2 - 60}" y1="${H - 92}" x2="${W / 2 + 60}" y2="${H - 92}"
+        stroke="${C.sage}" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/>
+  <text x="${W / 2}" y="${H - 58}" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="600" font-size="22" letter-spacing="3"
-        fill="${C.ink}">${xe(S.domain.toUpperCase())}</text>
+        font-weight="600" font-size="18" letter-spacing="4"
+        fill="${C.sageDeep}">${xe(S.domain.toUpperCase())}</text>
   ${
     rtStr
-      ? `<text x="${W / 2}" y="${H - 30}" text-anchor="middle"
+      ? `<text x="${W / 2}" y="${H - 32}" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="400" font-size="16" letter-spacing="2"
-        fill="${C.whisper}">${xe(rtStr.toUpperCase())}</text>`
+        font-weight="400" font-size="13" letter-spacing="2"
+        fill="${C.whisper}" opacity="0.7">${xe(rtStr.toUpperCase())}</text>`
       : ""
   }
 </svg>`;
