@@ -225,97 +225,97 @@ function svgFor({ title, excerpt, tag, rt }, locale) {
   const S = STRINGS[locale];
   const eyebrowTag =
     (locale === "id" ? TAG_LABEL_ID : TAG_LABEL_EN)[tag] ?? tag.toUpperCase();
-  const eyebrow = `${S.brand} · ${eyebrowTag}`;
 
-  const titleLines = wrap(title, 26, 4);
-  const titleLineHeight = 78;
-  const titleStartY = 220;
+  // Title sizing — bigger for short titles, smaller for long ones.
+  // Centered composition so WhatsApp/Twitter center-crop still works.
+  const titleLen = title.length;
+  const titleSize = titleLen <= 40 ? 78 : titleLen <= 70 ? 66 : titleLen <= 110 ? 56 : 48;
+  const titleMaxChars = titleLen <= 40 ? 20 : titleLen <= 70 ? 26 : 32;
+  const titleLines = wrap(title, titleMaxChars, 4);
+  const titleLineHeight = titleSize * 1.18;
+  const titleBlockH = titleLines.length * titleLineHeight;
 
-  // Position excerpt below the title's actual height
-  const excerptStartY = titleStartY + titleLines.length * titleLineHeight + 32;
-  const excerptLines = excerpt
-    ? wrap(excerpt, 60, 2)
-    : [];
+  // Vertical centering with a slight upward bias (eye gravity)
+  const contentMid = H * 0.5 - 30;
+  const titleStartY = contentMid - titleBlockH / 2 + titleSize * 0.85;
 
-  // Determine reading time string
+  // Excerpt is short — 1 line max
+  const excerptLines = excerpt ? wrap(excerpt, 70, 1) : [];
+  const excerptStartY = titleStartY + titleBlockH + 30;
+
   const rtStr = rt ? `${rt} ${S.minRead}` : "";
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
-    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
       <stop offset="0%" stop-color="${C.paper}"/>
       <stop offset="100%" stop-color="${C.paper2}"/>
     </linearGradient>
-    <radialGradient id="sage-aura" cx="100%" cy="0%" r="60%">
-      <stop offset="0%" stop-color="${C.sageSoft}" stop-opacity="1"/>
+    <radialGradient id="aura" cx="50%" cy="40%" r="55%">
+      <stop offset="0%" stop-color="${C.sageSoft}" stop-opacity="0.7"/>
       <stop offset="100%" stop-color="${C.sageSoft}" stop-opacity="0"/>
     </radialGradient>
-    <radialGradient id="clay-aura" cx="0%" cy="100%" r="50%">
-      <stop offset="0%" stop-color="${C.claySoft}" stop-opacity="0.8"/>
-      <stop offset="100%" stop-color="${C.claySoft}" stop-opacity="0"/>
-    </radialGradient>
-    <pattern id="dots" x="0" y="0" width="32" height="32" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1" fill="${C.hairline}" fill-opacity="0.7"/>
+    <pattern id="dots" x="0" y="0" width="36" height="36" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="${C.hairline}" fill-opacity="0.5"/>
     </pattern>
   </defs>
 
-  <!-- Background -->
+  <!-- Background: vertical gradient + soft center glow -->
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
   <rect width="${W}" height="${H}" fill="url(#dots)"/>
-  <rect width="${W}" height="${H}" fill="url(#sage-aura)"/>
-  <rect width="${W}" height="${H}" fill="url(#clay-aura)"/>
+  <rect width="${W}" height="${H}" fill="url(#aura)"/>
 
-  <!-- Sage accent bar on the left edge -->
-  <rect x="0" y="0" width="10" height="${H}" fill="${C.sage}"/>
+  <!-- Corner decoration (won't be cropped by WA thumbnail center crop) -->
+  <circle cx="${W - 60}" cy="60" r="90" fill="${C.sageSoft}" opacity="0.5"/>
+  <circle cx="60" cy="${H - 60}" r="70" fill="${C.claySoft}" opacity="0.45"/>
 
-  <!-- Sage corner mark (decorative) -->
-  <circle cx="${W - 90}" cy="90" r="120" fill="${C.sageSoft}" opacity="0.6"/>
-  <circle cx="${W - 90}" cy="90" r="60" fill="${C.sage}" opacity="0.18"/>
-
-  <!-- Eyebrow -->
-  <text x="80" y="120"
+  <!-- BABY MO brand mark — centered, top -->
+  <text x="${W / 2}" y="85" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="700" font-size="22" letter-spacing="4"
-        fill="${C.sageDeep}">${xe(eyebrow)}</text>
+        font-weight="800" font-size="20" letter-spacing="8"
+        fill="${C.ink}">${xe(S.brand)}</text>
+  <line x1="${W / 2 - 40}" y1="108" x2="${W / 2 + 40}" y2="108"
+        stroke="${C.sageDeep}" stroke-width="3" stroke-linecap="round"/>
 
-  <!-- Serif accent rule under eyebrow -->
-  <line x1="80" y1="148" x2="140" y2="148" stroke="${C.sage}" stroke-width="3"/>
+  <!-- Eyebrow: category tag, centered -->
+  <text x="${W / 2}" y="155" text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="20" letter-spacing="5"
+        fill="${C.sageDeep}">${xe(eyebrowTag)}</text>
 
-  <!-- Title — large serif, multi-line -->
+  <!-- Title — centered, large serif, weight tuned by length -->
   ${titleLines
     .map(
       (line, i) =>
-        `<text x="80" y="${titleStartY + i * titleLineHeight}"
+        `<text x="${W / 2}" y="${titleStartY + i * titleLineHeight}" text-anchor="middle"
         font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
-        font-weight="500" font-size="64" fill="${C.ink}"
-        letter-spacing="-1">${xe(line)}</text>`,
+        font-weight="600" font-size="${titleSize}" fill="${C.ink}"
+        letter-spacing="-1.5">${xe(line)}</text>`,
     )
     .join("\n  ")}
 
-  <!-- Excerpt — sans, smaller, two lines -->
+  <!-- Excerpt — centered, single italic line if present -->
   ${excerptLines
     .map(
       (line, i) =>
-        `<text x="80" y="${excerptStartY + i * 36}"
-        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="400" font-size="26" fill="${C.whisper}">${xe(line)}</text>`,
+        `<text x="${W / 2}" y="${excerptStartY + i * 36}" text-anchor="middle"
+        font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
+        font-weight="400" font-style="italic" font-size="26" fill="${C.whisper}">${xe(line)}</text>`,
     )
     .join("\n  ")}
 
-  <!-- Bottom strip: domain (left) + reading time (right) -->
-  <line x1="80" y1="${H - 96}" x2="${W - 80}" y2="${H - 96}"
-        stroke="${C.hairline}" stroke-width="1"/>
-  <text x="80" y="${H - 60}"
+  <!-- Bottom strip: centered domain with small reading time -->
+  <text x="${W / 2}" y="${H - 60}" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="600" font-size="22" fill="${C.inkSoft}">
-    ${xe(S.domain)}
-  </text>
+        font-weight="600" font-size="22" letter-spacing="3"
+        fill="${C.ink}">${xe(S.domain.toUpperCase())}</text>
   ${
     rtStr
-      ? `<text x="${W - 80}" y="${H - 60}" text-anchor="end"
+      ? `<text x="${W / 2}" y="${H - 30}" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
-        font-weight="400" font-size="22" fill="${C.whisper}">${xe(rtStr)}</text>`
+        font-weight="400" font-size="16" letter-spacing="2"
+        fill="${C.whisper}">${xe(rtStr.toUpperCase())}</text>`
       : ""
   }
 </svg>`;

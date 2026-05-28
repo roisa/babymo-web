@@ -3109,9 +3109,9 @@ export const blogPosts: BlogPost[] = [
   <div style="display:grid;gap:0.75rem;">
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">8</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DZULH.</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">DZULH.</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Hari Tarwiyah — Berangkat ke Mina</div>
@@ -3120,9 +3120,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">9</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DZULH.</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">DZULH.</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">⭐ Wukuf di Arafah — Puncak Haji</div>
@@ -3131,9 +3131,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">10</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">IDUL ADHA</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">IDUL ADHA</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar Jumrah Aqabah · Sembelih Hadyu · Tahallul Awal</div>
@@ -3142,9 +3142,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">11</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 1</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASYRIQ 1</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Mabit di Mina — Lempar 3 Jumrah</div>
@@ -3153,9 +3153,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">12</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 2</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASYRIQ 2</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar 3 Jumrah — Nafar Awal atau Nafar Tsani</div>
@@ -3164,9 +3164,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">13</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASYRIQ 3</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASYRIQ 3</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Lempar Jumrah (Jika Nafar Tsani) — Tawaf Wada'</div>
@@ -3419,9 +3419,9 @@ export const blogPosts: BlogPost[] = [
   <div style="display:grid;gap:0.75rem;">
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">8</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DHU H.</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">DHU H.</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Day of Tarwiyah — Travel to Mina</div>
@@ -3430,9 +3430,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">9</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">DHU H.</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">DHU H.</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">⭐ Wuquf at Arafah — Peak of Hajj</div>
@@ -3441,9 +3441,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">10</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">EID</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">EID</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Stone Jamrat Aqabah · Sacrifice · First Tahallul</div>
@@ -3452,9 +3452,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">11</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 1</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASHR. 1</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Overnight at Mina — Stone All 3 Jamrat</div>
@@ -3463,9 +3463,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-clay);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">12</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 2</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASHR. 2</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Stone 3 Jamrat — Nafr Awwal or Nafr Thani</div>
@@ -3474,9 +3474,9 @@ export const blogPosts: BlogPost[] = [
     </div>
 
     <div style="display:flex;gap:1rem;align-items:flex-start;">
-      <div style="flex-shrink:0;width:56px;height:56px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1;">
+      <div style="width:84px;min-height:64px;padding:6px 4px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:13px;display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.1;">
         <div style="font-size:18px;">13</div>
-        <div style="font-size:9px;margin-top:2px;letter-spacing:0.1em;">TASHR. 3</div>
+        <div style="font-size:10.5px;margin-top:4px;letter-spacing:0.08em;white-space:nowrap;">TASHR. 3</div>
       </div>
       <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
         <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Final Stoning (Nafr Thani) — Farewell Tawaf</div>
