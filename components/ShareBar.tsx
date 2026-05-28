@@ -34,8 +34,21 @@ export function ShareBar({ locale, title, text, url }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Build a short, interesting share message.
+  // Format prefers a 1-line hook (the kit quote, takeaway, etc.) + URL.
+  // Falls back to title-only if no hook provided. Caps hook at 200 chars
+  // so the message stays digestible in WhatsApp/iMessage previews.
+  const hook =
+    text && text !== title && text.length <= 200 ? text : undefined;
+  const waMessage = hook ? `${hook}\n\n${url}` : `${title}\n${url}`;
+  const clipboardMessage = waMessage;
+
   async function onShare() {
-    const shareData: ShareData = { title, text: text ?? title, url };
+    const shareData: ShareData = {
+      title,
+      text: hook ?? title,
+      url,
+    };
     if (typeof navigator !== "undefined" && navigator.share) {
       try {
         await navigator.share(shareData);
@@ -46,7 +59,7 @@ export function ShareBar({ locale, title, text, url }: Props) {
       }
     }
     try {
-      await navigator.clipboard.writeText(`${title}\n${url}`);
+      await navigator.clipboard.writeText(clipboardMessage);
       setCopied(true);
       setTimeout(() => setCopied(false), 1800);
     } catch {
@@ -54,9 +67,7 @@ export function ShareBar({ locale, title, text, url }: Props) {
     }
   }
 
-  const waUrl = `https://wa.me/?text=${encodeURIComponent(
-    `${title}\n${url}`,
-  )}`;
+  const waUrl = `https://wa.me/?text=${encodeURIComponent(waMessage)}`;
   const labelShare = locale === "id" ? "Bagikan" : "Share";
   const labelCopied = locale === "id" ? "Tersalin" : "Copied";
   const labelWa = "WhatsApp";

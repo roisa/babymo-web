@@ -173,8 +173,8 @@ export default async function DownloadsPage({
 
         <p className="mt-10 rounded-[18px] border border-hairline bg-paper px-5 py-4 text-[12.5px] leading-relaxed text-whisper">
           {l === "id"
-            ? "Wallpaper ini hadiah dari Baby Mo. Bebas dibagikan ke siapa saja, dipasang di HP teman atau saudara, atau dicetak. Tidak untuk dijual ulang. Mohon doanya untuk keluarga kami."
-            : "These wallpapers are a gift from Baby Mo. Free to share with anyone, install on friends' or family's phones, or print. Not for resale. Please remember our family in your du'as."}
+            ? "Wallpaper ini hadiah dari Tim Baby Mo. Bebas dibagikan ke siapa saja, dipasang di HP teman atau saudara, atau dicetak. Tidak untuk dijual ulang. Mohon doanya agar Tim Baby Mo bisa terus berkarya untuk keluarga muslim Indonesia."
+            : "These wallpapers are a gift from the Baby Mo team. Free to share with anyone, install on friends' or family's phones, or print. Not for resale. Please remember the Baby Mo team in your du'as — that we may keep building for Muslim families everywhere."}
         </p>
       </main>
 

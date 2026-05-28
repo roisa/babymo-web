@@ -72,7 +72,7 @@ export default async function ParentingDetail({
   return (
     <>
       <Header locale={l} currentPath={`/parenting/${situation}`} />
-      <main id="main" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-7 sm:pt-12 md:pb-20">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-40 pt-8 sm:px-7 sm:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -198,7 +198,7 @@ export default async function ParentingDetail({
       <ShareBar
         locale={l}
         title={p.title[l]}
-        text={p.excerpt[l]}
+        text={p.quote?.[l] ?? p.title[l]}
         url={absoluteUrl(l, `/parenting/${situation}`)}
       />
 

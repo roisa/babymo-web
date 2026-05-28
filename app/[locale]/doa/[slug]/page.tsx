@@ -66,7 +66,7 @@ export default async function DoaDetail({
   return (
     <>
       <Header locale={l} currentPath={`/doa/${slug}`} />
-      <main id="main" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-7 sm:pt-12 md:pb-20">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-40 pt-8 sm:px-7 sm:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -195,7 +195,11 @@ export default async function DoaDetail({
       <ShareBar
         locale={l}
         title={doa.title[l]}
-        text={doa.translation[l]}
+        text={
+          l === "id"
+            ? `Doa harian dari Baby Mo: ${doa.title[l]}.`
+            : `A daily du'a from Baby Mo: ${doa.title[l]}.`
+        }
         url={absoluteUrl(l, `/doa/${slug}`)}
       />
 

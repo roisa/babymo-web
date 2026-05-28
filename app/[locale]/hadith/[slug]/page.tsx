@@ -66,7 +66,7 @@ export default async function HadithDetail({
   return (
     <>
       <Header locale={l} currentPath={`/hadith/${slug}`} />
-      <main id="main" className="mx-auto max-w-3xl px-5 pb-28 pt-8 sm:px-7 sm:pt-12 md:pb-20">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-40 pt-8 sm:px-7 sm:pt-12 md:pb-20">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -181,7 +181,11 @@ export default async function HadithDetail({
       <ShareBar
         locale={l}
         title={h.title[l]}
-        text={h.translation[l]}
+        text={
+          l === "id"
+            ? `Hadis pilihan dari Tim Baby Mo: ${h.title[l]}.`
+            : `A curated hadith from Baby Mo: ${h.title[l]}.`
+        }
         url={absoluteUrl(l, `/hadith/${slug}`)}
       />
 

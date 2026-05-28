@@ -1,7 +1,7 @@
 // Generates 1170×2532 (iPhone Pro size) lockscreen wallpapers for a
-// curated set of daily duas. Arabic-led vertical composition, calm
-// cream/sage gradient, Baby Mo wordmark at bottom. Output:
-//   public/lockscreens/{slug}.jpg
+// curated set of daily duas. Per-doa color themes (sage / brave /
+// clay / ink), bigger Arabic, richer gradient + decorative geometry.
+// Output: public/lockscreens/{slug}.jpg
 //
 // Runs at build time. Idempotent: skips existing files unless --force.
 
@@ -17,31 +17,90 @@ const FORCE = process.argv.includes("--force");
 const W = 1170;
 const H = 2532;
 
-// Curated subset — the most-recited daily duas. Order matters for
-// the downloads page (first one is the "featured" one shown larger).
+// Curated subset — the most-recited daily duas. Order matters: each
+// pick gets a theme from THEMES (cycled). Reorder to control which
+// doa gets which palette.
 const PICKS = [
-  "sebelum-tidur",
-  "bangun-tidur",
-  "sebelum-makan",
-  "sesudah-makan",
-  "doa-pagi",
-  "doa-petang",
-  "perlindungan-anak",
-  "doa-untuk-orang-tua",
+  "sebelum-tidur",       // brave
+  "bangun-tidur",        // sage
+  "sebelum-makan",       // clay
+  "sesudah-makan",       // ink
+  "doa-pagi",            // sage
+  "doa-petang",          // brave
+  "perlindungan-anak",   // ink
+  "doa-untuk-orang-tua", // clay
 ];
 
-const C = {
-  paper: "#FBFAF6",
-  paper2: "#F4F2EC",
-  ink: "#0E1213",
-  brave: "#1F8B3F",
-  braveDeep: "#155F2A",
-  braveSoft: "#DCEFE0",
-  sage: "#5F8B5A",
-  sageDeep: "#3B5A38",
-  sageSoft: "#E8EFE6",
-  whisper: "#6B7068",
-  hairline: "#E5E2D9",
+// ──────────────────────────────────────────────────────────────────
+// Per-doa color themes. Each theme defines:
+//   - paper / paper2 — background gradient stops
+//   - accent / accentDeep / accentSoft — color of glow, accent shapes, top eyebrow
+//   - text — main text color (Arabic + wordmark)
+//   - subtext — translation color
+//   - pattern — dot pattern color
+//   - sourceLine — source-reference text color
+//
+// All themes use cream paper as the base so they feel like the same
+// family. The accent + glow vary; that's the "brave variation".
+// ──────────────────────────────────────────────────────────────────
+const THEMES = {
+  brave: {
+    paper: "#FBFAF6",
+    paper2: "#E8F2E5",
+    accent: "#1F8B3F",
+    accentDeep: "#155F2A",
+    accentSoft: "#DCEFE0",
+    text: "#0E1213",
+    subtext: "#3B5A38",
+    pattern: "#155F2A",
+    sourceLine: "#155F2A",
+  },
+  sage: {
+    paper: "#FBFAF6",
+    paper2: "#E8EFE6",
+    accent: "#5F8B5A",
+    accentDeep: "#3B5A38",
+    accentSoft: "#E8EFE6",
+    text: "#0E1213",
+    subtext: "#3B5A38",
+    pattern: "#3B5A38",
+    sourceLine: "#3B5A38",
+  },
+  clay: {
+    paper: "#FBFAF6",
+    paper2: "#F5EFE2",
+    accent: "#C9A55B",
+    accentDeep: "#8A6E2F",
+    accentSoft: "#F5EFE2",
+    text: "#0E1213",
+    subtext: "#8A6E2F",
+    pattern: "#8A6E2F",
+    sourceLine: "#8A6E2F",
+  },
+  ink: {
+    paper: "#FBFAF6",
+    paper2: "#ECEAE2",
+    accent: "#1B1F1F",
+    accentDeep: "#0E1213",
+    accentSoft: "#ECEAE2",
+    text: "#0E1213",
+    subtext: "#1B1F1F",
+    pattern: "#1B1F1F",
+    sourceLine: "#1B1F1F",
+  },
+};
+
+// Map each pick to a theme. Hand-curated for variety; doa with similar
+// timing get distinct themes so the wallpaper page is visually rich.
+const THEME_FOR = {
+  "sebelum-tidur": "brave",
+  "bangun-tidur": "sage",
+  "sebelum-makan": "clay",
+  "sesudah-makan": "ink",
+  "doa-pagi": "sage",
+  "doa-petang": "brave",
+  "perlindungan-anak": "ink",
+  "doa-untuk-orang-tua": "clay",
 };
 
 // ──────────────────────────────────────────────────────────────────
@@ -107,98 +166,153 @@ function wrap(text, maxChars, maxLines) {
 }
 
 function svgFor(doa) {
-  // Reserve top ~30% for status bar / clock visibility on iOS,
-  // bottom ~22% for date/notifications widget area. Content fills
-  // the middle 48%.
+  const theme = THEMES[THEME_FOR[doa.slug] ?? "brave"];
+
+  // iPhone safe zones: top ~21% for clock, bottom ~22% for widgets.
+  // Content fills the middle ~57%.
   const SAFE_TOP = 540;
   const SAFE_BOTTOM = 560;
-  const CONTENT_TOP = SAFE_TOP + 100;
-  const CONTENT_BOTTOM = H - SAFE_BOTTOM - 100;
+  const CONTENT_TOP = SAFE_TOP + 90;
+  // CONTENT_BOTTOM reserved by layout math; not explicit anywhere below.
 
-  // Arabic sizing — bigger because portrait gives us room
+  // Arabic sizing — bumped up across the board for more visual presence.
   const arabicLen = doa.arabic.length;
   const arabicSize =
-    arabicLen <= 35 ? 96 : arabicLen <= 65 ? 76 : arabicLen <= 95 ? 60 : 48;
+    arabicLen <= 35 ? 110 : arabicLen <= 65 ? 88 : arabicLen <= 95 ? 70 : 56;
   const arabicMax = arabicLen <= 35 ? 14 : arabicLen <= 65 ? 22 : 28;
   const arabicLines = wrap(doa.arabic, arabicMax, 4);
-  const arabicLineHeight = arabicSize * 1.7;
+  const arabicLineHeight = arabicSize * 1.65;
   const arabicBlockH = arabicLines.length * arabicLineHeight;
 
   // Translation
-  const transLines = wrap(doa.translationId, 32, 4);
-  const transLineHeight = 44;
+  const transLines = wrap(doa.translationId, 34, 4);
+  const transLineHeight = 46;
 
-  // Layout: arabic block centered in upper content area, translation below
-  const arabicStartY = CONTENT_TOP + arabicBlockH / arabicLines.length * 0.5;
-  const transStartY = arabicStartY + arabicBlockH + 70;
+  // Layout: arabic block centered, translation below
+  const arabicStartY = CONTENT_TOP + 130;
+  const transStartY = arabicStartY + arabicBlockH + 80;
+
+  // Decorative 8-point star (subtle, behind everything in upper area)
+  const starCx = W / 2;
+  const starCy = CONTENT_TOP + arabicBlockH / 2 + 20;
+  const starR = 380;
 
   return `<?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
   <defs>
     <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" stop-color="${C.paper}"/>
-      <stop offset="50%" stop-color="${C.paper}"/>
-      <stop offset="100%" stop-color="${C.paper2}"/>
+      <stop offset="0%" stop-color="${theme.paper}"/>
+      <stop offset="40%" stop-color="${theme.paper}"/>
+      <stop offset="100%" stop-color="${theme.paper2}"/>
     </linearGradient>
-    <radialGradient id="aura" cx="50%" cy="35%" r="55%">
-      <stop offset="0%" stop-color="${C.braveSoft}" stop-opacity="0.85"/>
-      <stop offset="100%" stop-color="${C.braveSoft}" stop-opacity="0"/>
+    <radialGradient id="aura" cx="50%" cy="38%" r="60%">
+      <stop offset="0%" stop-color="${theme.accentSoft}" stop-opacity="0.95"/>
+      <stop offset="60%" stop-color="${theme.accentSoft}" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="${theme.accentSoft}" stop-opacity="0"/>
     </radialGradient>
-    <pattern id="dots" x="0" y="0" width="44" height="44" patternUnits="userSpaceOnUse">
-      <circle cx="2" cy="2" r="1.2" fill="${C.hairline}" fill-opacity="0.5"/>
+    <radialGradient id="topGlow" cx="50%" cy="0%" r="50%">
+      <stop offset="0%" stop-color="${theme.accent}" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="${theme.accent}" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bottomGlow" cx="50%" cy="100%" r="55%">
+      <stop offset="0%" stop-color="${theme.accent}" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="${theme.accent}" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="52" height="52" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="${theme.pattern}" fill-opacity="0.18"/>
     </pattern>
   </defs>
 
+  <!-- Layered background -->
   <rect width="${W}" height="${H}" fill="url(#bg)"/>
   <rect width="${W}" height="${H}" fill="url(#dots)"/>
+  <rect width="${W}" height="${H}" fill="url(#topGlow)"/>
+  <rect width="${W}" height="${H}" fill="url(#bottomGlow)"/>
   <rect width="${W}" height="${H}" fill="url(#aura)"/>
 
-  <!-- Decorative brave-green band near top of content area -->
-  <line x1="${W/2 - 60}" y1="${SAFE_TOP + 40}" x2="${W/2 + 60}" y2="${SAFE_TOP + 40}"
-        stroke="${C.brave}" stroke-width="4" stroke-linecap="round"/>
+  <!-- Decorative 8-point star (subtle frame behind arabic) -->
+  <g opacity="0.07" transform="translate(${starCx}, ${starCy})">
+    <path d="
+      M 0,${-starR}
+      L ${starR * 0.31},${-starR * 0.31}
+      L ${starR},0
+      L ${starR * 0.31},${starR * 0.31}
+      L 0,${starR}
+      L ${-starR * 0.31},${starR * 0.31}
+      L ${-starR},0
+      L ${-starR * 0.31},${-starR * 0.31}
+      Z" fill="${theme.accent}"/>
+    <path d="
+      M 0,${-starR}
+      L ${starR * 0.31},${-starR * 0.31}
+      L ${starR},0
+      L ${starR * 0.31},${starR * 0.31}
+      L 0,${starR}
+      L ${-starR * 0.31},${starR * 0.31}
+      L ${-starR},0
+      L ${-starR * 0.31},${-starR * 0.31}
+      Z" transform="rotate(22.5)" fill="${theme.accent}"/>
+  </g>
 
-  <!-- Eyebrow -->
-  <text x="${W/2}" y="${SAFE_TOP + 90}" text-anchor="middle"
+  <!-- Top accent — decorative crescent moon -->
+  <g transform="translate(${W / 2}, ${SAFE_TOP + 35})" opacity="0.85">
+    <circle cx="0" cy="0" r="22" fill="${theme.accent}"/>
+    <circle cx="9" cy="-4" r="22" fill="${theme.paper}"/>
+  </g>
+
+  <!-- Accent line beneath crescent -->
+  <line x1="${W / 2 - 80}" y1="${SAFE_TOP + 86}" x2="${W / 2 + 80}" y2="${SAFE_TOP + 86}"
+        stroke="${theme.accent}" stroke-width="3" stroke-linecap="round"/>
+
+  <!-- Eyebrow: doa title in caps -->
+  <text x="${W / 2}" y="${SAFE_TOP + 140}" text-anchor="middle"
         font-family="Inter, 'Helvetica Neue', sans-serif"
-        font-weight="700" font-size="26" letter-spacing="6"
-        fill="${C.braveDeep}">${xe(doa.titleId.toUpperCase())}</text>
+        font-weight="700" font-size="26" letter-spacing="7"
+        fill="${theme.accentDeep}">${xe(doa.titleId.toUpperCase())}</text>
 
   <!-- Arabic block - large, centered, RTL -->
   ${arabicLines
     .map(
       (line, i) =>
-        `<text x="${W/2}" y="${arabicStartY + i * arabicLineHeight}" text-anchor="middle"
+        `<text x="${W / 2}" y="${arabicStartY + i * arabicLineHeight}" text-anchor="middle"
         direction="rtl"
         font-family="'Noto Naskh Arabic', 'Amiri', serif"
-        font-weight="500" font-size="${arabicSize}" fill="${C.ink}">${xe(line)}</text>`,
+        font-weight="500" font-size="${arabicSize}" fill="${theme.text}">${xe(line)}</text>`,
     )
     .join("\n  ")}
+
+  <!-- Decorative bracket below Arabic -->
+  <line x1="${W / 2 - 50}" y1="${arabicStartY + arabicBlockH + 20}"
+        x2="${W / 2 + 50}" y2="${arabicStartY + arabicBlockH + 20}"
+        stroke="${theme.accent}" stroke-width="2" stroke-linecap="round" opacity="0.6"/>
 
   <!-- Translation -->
   ${transLines
     .map(
       (line, i) =>
-        `<text x="${W/2}" y="${transStartY + i * transLineHeight}" text-anchor="middle"
+        `<text x="${W / 2}" y="${transStartY + i * transLineHeight}" text-anchor="middle"
         font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
-        font-weight="400" font-style="italic" font-size="30"
-        fill="${C.whisper}">${xe(line)}</text>`,
+        font-weight="400" font-style="italic" font-size="32"
+        fill="${theme.subtext}">${xe(line)}</text>`,
     )
     .join("\n  ")}
 
   <!-- Source reference -->
   ${doa.source
-    ? `<text x="${W/2}" y="${transStartY + transLines.length * transLineHeight + 60}" text-anchor="middle"
-        font-family="Inter, sans-serif" font-weight="600" font-size="22"
-        fill="${C.sageDeep}">— ${xe(doa.source)}</text>`
+    ? `<text x="${W / 2}" y="${transStartY + transLines.length * transLineHeight + 70}" text-anchor="middle"
+        font-family="Inter, sans-serif" font-weight="600" font-size="22" letter-spacing="2"
+        fill="${theme.sourceLine}">— ${xe(doa.source).toUpperCase()}</text>`
     : ""}
 
-  <!-- Brand wordmark in safe-bottom area -->
-  <text x="${W/2}" y="${H - SAFE_BOTTOM + 50}" text-anchor="middle"
-        font-family="Inter, sans-serif" font-weight="700" font-size="24" letter-spacing="3"
-        fill="${C.ink}">BABY MO</text>
-  <text x="${W/2}" y="${H - SAFE_BOTTOM + 86}" text-anchor="middle"
-        font-family="Inter, sans-serif" font-weight="400" font-size="20"
-        fill="${C.whisper}">babymo.id</text>
+  <!-- Brand wordmark in safe-bottom area with accent line -->
+  <line x1="${W / 2 - 40}" y1="${H - SAFE_BOTTOM + 24}" x2="${W / 2 + 40}" y2="${H - SAFE_BOTTOM + 24}"
+        stroke="${theme.accent}" stroke-width="2" stroke-linecap="round"/>
+  <text x="${W / 2}" y="${H - SAFE_BOTTOM + 64}" text-anchor="middle"
+        font-family="Inter, sans-serif" font-weight="700" font-size="26" letter-spacing="5"
+        fill="${theme.text}">BABY MO</text>
+  <text x="${W / 2}" y="${H - SAFE_BOTTOM + 100}" text-anchor="middle"
+        font-family="Inter, sans-serif" font-weight="400" font-size="20" letter-spacing="3"
+        fill="${theme.subtext}" opacity="0.7">BABYMO.ID</text>
 </svg>`;
 }
 

@@ -50,16 +50,26 @@ export function Header({ locale, currentPath }: Props) {
 
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-0.5">
-            {items.map((it) => (
-              <li key={it.href}>
-                <Link
-                  href={pathFor(locale, it.href)}
-                  className="tap rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:text-ink"
-                >
-                  {it.label}
-                </Link>
-              </li>
-            ))}
+            {items.map((it) => {
+              const isActive =
+                currentPath === it.href ||
+                currentPath.startsWith(`${it.href}/`);
+              return (
+                <li key={it.href}>
+                  <Link
+                    href={pathFor(locale, it.href)}
+                    aria-current={isActive ? "page" : undefined}
+                    className={
+                      isActive
+                        ? "tap inline-flex items-center rounded-full bg-brave-soft px-3.5 py-1.5 text-[13.5px] font-semibold text-brave-deep shadow-[inset_0_0_0_1px_rgba(31,139,63,0.18)]"
+                        : "tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink"
+                    }
+                  >
+                    {it.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
         </nav>
 

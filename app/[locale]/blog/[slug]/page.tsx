@@ -61,7 +61,7 @@ export default async function BlogDetail({
   return (
     <>
       <Header locale={l} currentPath={`/blog/${slug}`} />
-      <main id="main" className="mx-auto max-w-3xl px-5 pb-24 pt-10 sm:px-8 sm:pt-14 md:pb-16">
+      <main id="main" className="mx-auto max-w-3xl px-5 pb-40 pt-10 sm:px-8 sm:pt-14 md:pb-16">
         <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -128,7 +128,7 @@ export default async function BlogDetail({
       <ShareBar
         locale={l}
         title={post.title[l]}
-        text={post.excerpt[l]}
+        text={post.kit?.quote[l] ?? post.title[l]}
         url={absoluteUrl(l, `/blog/${slug}`)}
       />
 
