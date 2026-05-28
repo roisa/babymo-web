@@ -3618,6 +3618,642 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  {
+    slug: "panduan-idul-adha-dan-qurban-untuk-keluarga",
+    title: {
+      id: "Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak",
+      en: "Eid al-Adha & Qurbani Guide for Families: Rituals, Duas, and Involving Children",
+    },
+    excerpt: {
+      id: "Panduan lengkap menyambut Hari Raya Idul Adha untuk keluarga Indonesia: kisah Nabi Ibrahim ﷺ, tata cara sholat Ied, syarat dan tata cara qurban (kambing/sapi/online), 3 hari Tasyriq, doa-doa penting, dan cara melibatkan anak sehingga Idul Adha jadi kenangan emosional yang dibawa seumur hidup.",
+      en: "A complete guide to celebrating Eid al-Adha for families: the story of Prophet Ibrahim ﷺ, the Eid prayer, qurbani requirements and procedure (goat/cow/online), the three Tashriq days, key duas, and how to involve children so Eid becomes an emotional memory carried for life.",
+    },
+    body: {
+      id: `<p>Saat tulisan ini diterbitkan (28 Mei 2026 / 12 Dzulhijjah 1447 H), umat Islam Indonesia sedang berada di hari kedua Tasyriq — dua hari setelah hari raya Idul Adha (Selasa, 26 Mei 2026). Masih dalam masa penyembelihan hewan kurban yang berlangsung hingga 13 Dzulhijjah (Jumat, 29 Mei).</p>
+
+<p>Panduan ini untuk keluarga muslim Indonesia: <strong>(1) makna Idul Adha</strong>, <strong>(2) kisah Nabi Ibrahim ﷺ untuk diceritakan ke anak</strong>, <strong>(3) tata cara Sholat Ied</strong>, <strong>(4) syarat dan tata cara qurban</strong>, <strong>(5) hari Tasyriq</strong>, <strong>(6) cara melibatkan anak</strong>, <strong>(7) doa-doa penting</strong>.</p>
+
+<h2>Apa itu Idul Adha</h2>
+
+<p>Idul Adha adalah salah satu dari dua hari raya umat Islam (yang satu lagi: Idul Fitri). Jatuh pada <strong>10 Dzulhijjah</strong> — hari ke-10 bulan terakhir dalam kalender Hijriyah. Disebut juga "Yaumun Nahr" (hari penyembelihan), karena di hari ini disunnahkan menyembelih hewan qurban sebagai napak tilas pengorbanan Nabi Ibrahim ﷺ.</p>
+
+<p>Di Indonesia, Idul Adha 1447 H jatuh pada <strong>Selasa, 26 Mei 2026</strong> berdasarkan pengumuman Kementerian Agama. Penyembelihan hewan qurban dilakukan setelah Sholat Ied (10 Dzulhijjah) sampai sebelum maghrib 13 Dzulhijjah (29 Mei).</p>
+
+<h2>Kisah Nabi Ibrahim ﷺ — Untuk Diceritakan ke Anak</h2>
+
+<p>Tidak ada Idul Adha tanpa kisah ini. Setiap anak muslim sebaiknya mendengarnya, kalau bisa setiap tahun.</p>
+
+<p>Nabi Ibrahim ﷺ — kekasih Allah — sudah tua dan lama menanti anak. Akhirnya Allah memberinya seorang putra: <strong>Ismail</strong>. Ketika Ismail menginjak usia yang sudah bisa berjalan dan membantu ayahnya, Nabi Ibrahim mendapat mimpi yang berulang-ulang — mimpi yang bagi seorang nabi adalah wahyu — yaitu perintah dari Allah untuk menyembelih anaknya sendiri.</p>
+
+<p>Yang luar biasa dari kisah ini bukan perintahnya. Tapi <strong>jawaban Nabi Ibrahim dan Ismail</strong>. Nabi Ibrahim berbicara dulu kepada anaknya. Tidak menyembunyikan. Tidak menipu. Beliau berkata:</p>
+
+<blockquote>
+<p>"Wahai anakku, sesungguhnya aku melihat dalam mimpi bahwa aku menyembelihmu. Bagaimana pendapatmu?"</p>
+</blockquote>
+
+<p>Ismail muda menjawab dengan kalimat yang membuat hati setiap orang tua bergetar:</p>
+
+<blockquote>
+<p>"Wahai ayahku, kerjakan apa yang diperintahkan kepadamu. Insya Allah engkau akan mendapatiku termasuk orang-orang yang sabar." <em>(QS. As-Saffat: 102)</em></p>
+</blockquote>
+
+<p>Mereka berdua pergi ke tempat penyembelihan. Saat pisau hampir menyentuh leher Ismail, Allah mengganti Ismail dengan seekor kibas (domba) besar dari surga. Ujian sudah lulus. Perintah itu memang bukan untuk benar-benar menyembelih anak — tapi untuk menguji apakah Ibrahim dan Ismail rela menyerahkan apa yang paling mereka cintai kepada Allah.</p>
+
+<p>Dari peristiwa inilah qurban Idul Adha berasal.</p>
+
+<h3>Cara Bercerita ke Anak (per Usia)</h3>
+
+<ul>
+  <li><strong>Usia 3–5:</strong> Cerita pendek dengan suara naratif. "Nabi Ibrahim sayang sekali sama anaknya, namanya Ismail..." Skip detail traumatis pisau/leher; cukup "Allah suruh ayahnya untuk... percaya saja sama Allah. Allah sayang. Akhirnya yang disembelih bukan Ismail, tapi domba dari surga."</li>
+  <li><strong>Usia 6–8:</strong> Lebih lengkap. Jelaskan kenapa Allah menguji. Tekankan jawaban Ismail. Ajak anak bertanya: "Kalau adik jadi Ismail, kira-kira bisa nggak bilang seperti itu ke Ayah?"</li>
+  <li><strong>Usia 9+:</strong> Diskusikan makna spiritualnya. Apa yang paling kita cintai di dunia ini? Apakah kita rela melepaskannya untuk Allah? Qurban hewan adalah simbol — yang dilihat Allah adalah ketakwaan di hati, bukan dagingnya.</li>
+</ul>
+
+<p>Lihat juga panduan: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">Cara Bercerita Kisah Nabi untuk Anak</a>.</p>
+
+<h2>Sholat Idul Adha</h2>
+
+<p>Sholat Ied adalah <strong>sunnah muakkadah</strong> (sangat dianjurkan), dikerjakan berjamaah di lapangan terbuka atau masjid pada pagi hari 10 Dzulhijjah. Dua rakaat. Dilakukan sebelum khutbah (kebalikan dari sholat Jumat).</p>
+
+<h3>Tata Cara Singkat</h3>
+
+<div style="margin:1.5rem 0;padding:1.5rem;border:1px solid var(--color-hairline);border-radius:24px;background:var(--color-paper-2);">
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-brave-deep);margin-bottom:1rem;">Tata Cara Sholat Idul Adha (2 Rakaat)</div>
+
+  <div style="display:grid;gap:0.75rem;">
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Niat dalam hati</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">"Aku niat sholat sunnah Idul Adha dua rakaat (sebagai imam/makmum) karena Allah Ta'ala."</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Takbiratul Ihram → 7 takbir tambahan</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Rakaat pertama: setelah takbir pembuka, baca doa iftitah, lalu <strong>7 takbir tambahan</strong> (mengangkat tangan setiap takbir). Di antara takbir, baca: "Subhanallah, walhamdulillah, wa laa ilaaha illallah, wallahu akbar."</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Al-Fatihah + Surah → Ruku' → Sujud (seperti biasa)</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Imam disunnahkan membaca surat panjang yang mengandung kisah Nabi Ibrahim atau ujian, seperti Surat Al-A'la atau Qaf.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">4</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Rakaat kedua: 5 takbir tambahan</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Setelah bangun dari sujud, takbir bangun, lalu <strong>5 takbir tambahan</strong> sebelum membaca Al-Fatihah. Sama dzikirnya di antara takbir.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">5</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Salam → Khutbah Idul Adha</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Setelah salam, jangan langsung pulang. Dengarkan khutbah (dua khutbah, dipisah duduk sebentar). Khutbah Ied adalah bagian dari ibadah.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h3>Adab Sebelum Berangkat Sholat Ied</h3>
+
+<ul>
+  <li>Mandi sunnah pagi-pagi.</li>
+  <li>Memakai pakaian terbaik yang dimiliki — bersih, harum, putih bila ada.</li>
+  <li><strong>Tidak makan sebelum sholat</strong> (kebalikan dari Idul Fitri — di Idul Adha justru sunnah menunda sarapan sampai setelah sholat / setelah daging qurban tersedia).</li>
+  <li>Berangkat lewat jalan yang berbeda dengan pulangnya (sunnah).</li>
+  <li>Bertakbir sepanjang perjalanan: "Allahu akbar, Allahu akbar, laa ilaaha illallah, wallahu akbar, Allahu akbar wa lillahil-hamd."</li>
+</ul>
+
+<h2>Qurban — Penyembelihan Hewan</h2>
+
+<p>Qurban adalah ibadah inti Idul Adha. Hukumnya <strong>sunnah muakkadah</strong> bagi yang mampu (sebagian ulama Hanafi menganggapnya wajib). Yang menyembelih satu kambing/domba = pahala untuk satu orang. Satu sapi/kerbau = pahala untuk maksimal 7 orang (patungan).</p>
+
+<h3>Syarat Hewan Qurban</h3>
+
+<ul>
+  <li><strong>Jenis:</strong> kambing, domba, sapi, kerbau, atau unta. (Ayam tidak sah untuk qurban.)</li>
+  <li><strong>Usia minimal:</strong>
+    <ul>
+      <li>Kambing: sudah berumur ≥1 tahun</li>
+      <li>Domba: sudah berumur ≥6 bulan dan giginya sudah berganti</li>
+      <li>Sapi/kerbau: sudah berumur ≥2 tahun</li>
+      <li>Unta: sudah berumur ≥5 tahun</li>
+    </ul>
+  </li>
+  <li><strong>Sehat sempurna</strong> — tidak ada cacat yang mempengaruhi daging. Tidak buta, tidak pincang parah, tidak terlalu kurus.</li>
+  <li><strong>Anggota tubuh utuh</strong> — tidak putus telinganya, tidak patah tanduknya sampai akarnya, tidak putus ekor.</li>
+</ul>
+
+<p>Cacat ringan (telinga belah sedikit, ekor terpotong sedikit) <strong>diperbolehkan</strong> oleh sebagian ulama, tapi pilih yang paling sempurna jika ada pilihan — qurban yang paling utama adalah yang paling baik.</p>
+
+<h3>Waktu Penyembelihan</h3>
+
+<p>Sah dilakukan mulai <strong>setelah sholat Idul Adha tanggal 10 Dzulhijjah</strong> sampai <strong>sebelum maghrib 13 Dzulhijjah</strong>. Untuk 1447 H di Indonesia: dari Selasa 26 Mei pagi sampai Jumat 29 Mei sore.</p>
+
+<p>Penyembelihan sebelum sholat Ied: <em>tidak sah</em> sebagai qurban (jadi sedekah biasa saja, kata Nabi ﷺ).</p>
+
+<h3>Tata Cara Menyembelih</h3>
+
+<ol>
+  <li>Hadapkan hewan ke arah kiblat.</li>
+  <li>Baringkan di sisi kiri, ikat kakinya kecuali kaki kanan belakang.</li>
+  <li>Pisau harus tajam — Rasulullah ﷺ memerintahkan menyembelih dengan cepat agar hewan tidak menderita.</li>
+  <li>Penyembelih membaca:
+    <blockquote>
+      <p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">بِسْمِ اللَّهِ، اَللَّهُ أَكْبَر، اَللَّهُمَّ هَذَا مِنْكَ وَلَكَ، تَقَبَّلْ مِنِّي يَا كَرِيم</p>
+      <p><em>Bismillah, Allahu akbar. Allahumma haadzaa minka wa laka, taqabbal minnii yaa Kariim.</em></p>
+      <p>"Dengan nama Allah, Allah Maha Besar. Ya Allah, ini dari-Mu dan untuk-Mu, terimalah dariku wahai Yang Maha Pemurah."</p>
+    </blockquote>
+  </li>
+  <li>Sembelih dengan satu gerakan tegas — putus saluran napas, saluran makanan, dan dua urat darah leher.</li>
+  <li>Tunggu hewan tenang sepenuhnya sebelum dikuliti.</li>
+</ol>
+
+<h3>Distribusi Daging Qurban</h3>
+
+<p>Daging qurban dibagi menjadi <strong>tiga bagian</strong> (umumnya):</p>
+
+<ul>
+  <li><strong>1/3 untuk keluarga</strong> yang berqurban — boleh dimakan, disimpan, dimasak menjadi hidangan.</li>
+  <li><strong>1/3 untuk kerabat dan tetangga</strong> — termasuk yang non-muslim.</li>
+  <li><strong>1/3 untuk fakir miskin</strong> — yang paling membutuhkan.</li>
+</ul>
+
+<p>Pembagian ini sunnah; pembagian lain juga sah selama tidak menjual sebagian darinya. Yang menyembelih tidak boleh menjual daging atau kulit qurban (kecuali untuk kepentingan fakir miskin lewat panitia).</p>
+
+<h2>Tiga Cara Berqurban di Indonesia 2026</h2>
+
+<h3>1. Qurban Langsung di Kampung / Masjid Setempat</h3>
+
+<p>Yang paling tradisional. Beli hewan di peternak/pasar hewan, bawa ke masjid, panitia menyembelih dan membagikan ke warga setempat.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Kambing Rp 3,5–6 juta; sapi 1/7 orang Rp 4–7 juta.</li>
+  <li><strong>Kelebihan:</strong> langsung kontribusi ke lingkungan sekitar, anak bisa ikut menyaksikan, suasana komunal.</li>
+  <li><strong>Kekurangan:</strong> di daerah perkotaan yang sudah surplus daging, manfaatnya tidak sebesar di daerah miskin.</li>
+</ul>
+
+<h3>2. Qurban Lewat Lembaga Amil (Online)</h3>
+
+<p>Lembaga seperti Dompet Dhuafa, BAZNAS, Aksi Cepat Tanggap (ACT), Rumah Zakat, dan banyak lainnya menerima qurban online. Hewan disembelih di daerah pelosok / luar negeri (Palestina, Yaman, Suriah) yang membutuhkan.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Kambing Rp 2,4–3 juta (program luar negeri lebih murah karena harga hewan beda).</li>
+  <li><strong>Kelebihan:</strong> dampak lebih besar di daerah yang benar-benar kekurangan, bisa qurban dari mana saja, transparan via laporan.</li>
+  <li><strong>Kekurangan:</strong> tidak menyaksikan langsung, anak tidak terlibat fisik.</li>
+</ul>
+
+<h3>3. Qurban Patungan Sapi 1/7</h3>
+
+<p>Tujuh orang patungan satu sapi. Setiap orang dapat porsi 1/7 dari biaya sapi. Lebih terjangkau dari beli kambing sendiri.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Rp 4–7 juta per orang (1/7 sapi).</li>
+  <li><strong>Cocok untuk:</strong> jamaah masjid, kantor, keluarga besar yang ingin berqurban bersama.</li>
+  <li><strong>Tata cara:</strong> niat ditetapkan masing-masing dari 7 orang. Bukan satu orang qurban dengan niat 7 orang.</li>
+</ul>
+
+<h2>Hari Tasyriq (11–13 Dzulhijjah)</h2>
+
+<p>Tiga hari setelah Idul Adha disebut <strong>hari Tasyriq</strong>. Untuk Indonesia 1447 H: Rabu 27 Mei – Jumat 29 Mei 2026.</p>
+
+<h3>Aturan Khusus Hari Tasyriq</h3>
+
+<ul>
+  <li><strong>Dilarang berpuasa</strong> — Nabi ﷺ bersabda hari-hari ini adalah "hari makan, minum, dan dzikir kepada Allah" (HR. Muslim). Yang sedang qadha puasa Ramadan pun ditunda.</li>
+  <li><strong>Masih dianjurkan takbir</strong> — Mulai dari subuh hari Arafah (9 Dzulhijjah) sampai ashar hari Tasyriq terakhir (13 Dzulhijjah), disunnahkan takbir setelah setiap sholat fardhu.</li>
+  <li><strong>Masih boleh menyembelih qurban</strong> — Penyembelihan sah sampai sebelum maghrib 13 Dzulhijjah.</li>
+  <li><strong>Banyak-banyak dzikir</strong> — Allah berfirman: "Dan berdzikirlah (dengan menyebut) nama Allah dalam hari-hari yang sudah ditentukan." (QS. Al-Baqarah: 203) — yang dimaksud adalah hari Tasyriq.</li>
+</ul>
+
+<h2>Cara Melibatkan Anak</h2>
+
+<p>Idul Adha tanpa keterlibatan anak hanya akan jadi "hari libur." Dengan keterlibatan, jadi kenangan emosional yang dibawa seumur hidup. Beberapa cara:</p>
+
+<h3>Sehari Sebelum (9 Dzulhijjah)</h3>
+
+<ul>
+  <li>Ceritakan ulang kisah Nabi Ibrahim dan Ismail sebelum tidur.</li>
+  <li>Siapkan pakaian Ied bersama — anak pilih baju sendiri yang akan dipakai esok.</li>
+  <li>Ajarkan takbir Idul Adha — anak ulang sambil bermain.</li>
+</ul>
+
+<h3>Pagi Idul Adha</h3>
+
+<ul>
+  <li>Bangunkan anak lebih awal — ini hari spesial, bukan hari biasa.</li>
+  <li>Mandi, pakai pakaian terbaik, parfum (untuk yang lebih besar).</li>
+  <li>Berangkat ke lapangan sholat Ied — kalau anak masih kecil dan lapangan terbuka, gendong/dorong stroller.</li>
+  <li>Pulang lewat jalan berbeda — sebagai aktivitas eksplorasi anak ("ayo coba jalan satunya").</li>
+</ul>
+
+<h3>Saat Penyembelihan Qurban</h3>
+
+<ul>
+  <li><strong>Usia 0–4:</strong> Jangan bawa ke tempat penyembelihan. Trauma visual + bau bisa lama menempel.</li>
+  <li><strong>Usia 5–7:</strong> Boleh saksikan dari jarak agak jauh, sambil dipegangi orang tua. Jelaskan pelan: "Hewan ini ibadah, untuk Allah, untuk dibagikan ke orang yang butuh." Jangan paksa kalau anak tidak mau melihat.</li>
+  <li><strong>Usia 8+:</strong> Bisa lebih dekat, bahkan ikut membantu memegang hewan (untuk anak yang siap). Banyak anak Indonesia merasakan momen ini sebagai pengalaman spiritual mendalam.</li>
+</ul>
+
+<h3>Saat Membagikan Daging</h3>
+
+<ul>
+  <li>Ajak anak ikut mengantar daging ke tetangga atau panti asuhan. Biarkan dia yang mengetuk pintu dan memberi langsung.</li>
+  <li>Jelaskan: "Daging ini bukan untuk kita semua — ini hadiah untuk orang yang jarang makan daging."</li>
+  <li>Ajarkan ucapan saat memberi: "Idul Adha Mubarak, semoga berkah."</li>
+</ul>
+
+<h3>Saat Makan Bersama</h3>
+
+<ul>
+  <li>Masak sate/gulai/rendang bersama anak (sesuai usia). Anak yang ikut memasak akan lebih menghargai daging tersebut.</li>
+  <li>Sebelum makan, baca <a href="/_/doa/sebelum-makan/">doa sebelum makan</a> bersama keras-keras.</li>
+  <li>Ceritakan ulang ke anak: "Dulu Nabi Ibrahim siap menyembelih Ismail untuk Allah. Sekarang kita menyembelih hewan untuk dibagikan. Itulah qurban."</li>
+</ul>
+
+<h2>Doa-Doa Penting Idul Adha</h2>
+
+<h3>1. Takbir Idul Adha (Sejak 9 Dzulhijjah Subuh – 13 Dzulhijjah Ashar)</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.9;direction:rtl;text-align:right;" lang="ar">اَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، لاَ إِلٰهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ</p>
+<p><em>Allahu akbar, Allahu akbar, Allahu akbar. Laa ilaaha illallah, wallahu akbar. Allahu akbar, wa lillahil-hamd.</em></p>
+<p>"Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Tiada Tuhan selain Allah, Allah Maha Besar. Allah Maha Besar, dan bagi-Nya segala pujian."</p>
+</blockquote>
+
+<h3>2. Doa Saat Berqurban</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">بِسْمِ اللَّهِ، اَللَّهُ أَكْبَر، اَللَّهُمَّ مِنْكَ وَلَكَ، عَنْ [نَامَ مَنْ يَضَحِّي]</p>
+<p><em>Bismillah, Allahu akbar. Allahumma minka wa laka, 'an [sebut nama orang yang berqurban].</em></p>
+<p>"Dengan nama Allah, Allah Maha Besar. Ya Allah, [qurban ini] dari-Mu dan untuk-Mu, dari [nama]."</p>
+</blockquote>
+
+<h3>3. Ucapan Selamat Idul Adha</h3>
+
+<p>Yang sunnah dari para sahabat:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</p>
+<p><em>Taqabbalallahu minnaa wa minkum.</em></p>
+<p>"Semoga Allah menerima (amal ibadah) dari kami dan dari kalian."</p>
+</blockquote>
+
+<p>Bukan "Selamat Idul Adha, Mohon Maaf Lahir Batin" — itu lebih khusus untuk Idul Fitri (di Idul Adha tidak ada konsep saling maaf-memaafkan secara khusus).</p>
+
+<h2>Yang Harus Dihindari</h2>
+
+<ul>
+  <li><strong>Berpuasa di hari Idul Adha dan Tasyriq</strong> — haram bagi muslim (kecuali jamaah haji yang qiran/tamattu' dan tidak punya hadyu, boleh puasa hari Tasyriq).</li>
+  <li><strong>Memamerkan qurban di media sosial</strong> — ibadah yang dipamerkan bisa hilang pahalanya. Boleh memberitahu sebagai dakwah, tapi hindari tonjolkan diri.</li>
+  <li><strong>Menyembelih sebelum sholat Ied</strong> — tidak sah sebagai qurban.</li>
+  <li><strong>Memilih hewan termurah dan jelek</strong> — qurban adalah pemberian terbaik untuk Allah. Pilih hewan yang sehat dan baik dalam batas kemampuan.</li>
+  <li><strong>Menjual kulit atau daging qurban</strong> — yang menyembelih tidak boleh menjual sebagian dari qurban. Boleh dimakan, dihadiahkan, atau disedekahkan.</li>
+  <li><strong>Mengejek atau memaksa anak yang takut melihat sembelihan</strong> — anak punya kepekaan berbeda; hormati.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Idul Adha adalah hari raya pengorbanan — bukan hanya pengorbanan hewan, tapi pengorbanan dari hal-hal yang paling kita cintai untuk Allah. Bagi anak, ini adalah satu-satunya hari raya yang melibatkan darah dan daging dan komunitas dan kisah heroik — campuran yang langka. Manfaatkan.</p>
+
+<p>Tahun depan, anak Anda akan ingat: "Tahun lalu Ayah/Ibu ajak saya bagi daging ke tetangga." Atau: "Tahun lalu saya pegang kambing pertama kali." Atau: "Tahun lalu Bunda cerita Nabi Ibrahim sebelum tidur dan saya nggak bisa tidur karena pikirin Ismail."</p>
+
+<p>Itulah Idul Adha. Bukan hari libur — hari yang membentuk identitas.</p>
+
+<p><em>Taqabbalallahu minnaa wa minkum.</em></p>`,
+      en: `<p>As this is published (28 May 2026 / 12 Dhul Hijjah 1447 H), Muslims in Indonesia are in the second day of Tashriq — two days after Eid al-Adha (Tuesday, 26 May 2026). Qurbani sacrifices continue through 13 Dhul Hijjah (Friday, 29 May).</p>
+
+<p>This guide is for Muslim families: <strong>(1) the meaning of Eid al-Adha</strong>, <strong>(2) the story of Prophet Ibrahim ﷺ to tell children</strong>, <strong>(3) how to perform the Eid prayer</strong>, <strong>(4) qurbani conditions and procedure</strong>, <strong>(5) the Tashriq days</strong>, <strong>(6) how to involve children</strong>, <strong>(7) the essential duas</strong>.</p>
+
+<h2>What is Eid al-Adha</h2>
+
+<p>Eid al-Adha is one of two Islamic celebrations (the other being Eid al-Fitr). It falls on <strong>10 Dhul Hijjah</strong> — the 10th day of the final month of the Hijri calendar. Also called "Yawm al-Nahr" (the Day of Sacrifice), because on this day Muslims are encouraged to sacrifice an animal — retracing the footsteps of Prophet Ibrahim's ﷺ sacrifice.</p>
+
+<p>In Indonesia, Eid al-Adha 1447 H falls on <strong>Tuesday, 26 May 2026</strong>. Animal sacrifices may be performed from after the Eid prayer (10 Dhul Hijjah) until before maghrib on 13 Dhul Hijjah (29 May).</p>
+
+<h2>The Story of Prophet Ibrahim ﷺ — For Children</h2>
+
+<p>There is no Eid al-Adha without this story. Every Muslim child should hear it, ideally every year.</p>
+
+<p>Prophet Ibrahim ﷺ — the beloved of Allah — was old and had long awaited a son. Finally Allah granted him <strong>Ismail</strong>. When Ismail reached the age where he could walk and help his father, Prophet Ibrahim had a recurring dream — and for a prophet, dreams are revelation — to sacrifice his own son.</p>
+
+<p>What's remarkable about this story isn't the command. It's <strong>the response of Ibrahim and Ismail</strong>. Ibrahim spoke to his son first. Didn't hide it. Didn't deceive him. He said:</p>
+
+<blockquote>
+<p>"O my son, I have seen in a dream that I am sacrificing you. So tell me — what do you think?"</p>
+</blockquote>
+
+<p>Young Ismail replied with words that make any parent's heart tremble:</p>
+
+<blockquote>
+<p>"O my father, do as you are commanded. You will find me — Allah willing — among the patient." <em>(Qur'an As-Saffat: 102)</em></p>
+</blockquote>
+
+<p>They went together to the place of sacrifice. As the knife was about to touch Ismail's neck, Allah replaced Ismail with a great ram from Paradise. The test was passed. The command was never to actually take a child's life — but to test whether Ibrahim and Ismail would surrender what they loved most to Allah.</p>
+
+<p>From this event, the Eid al-Adha qurbani originates.</p>
+
+<h3>How to Tell Children (by Age)</h3>
+
+<ul>
+  <li><strong>Ages 3–5:</strong> Short narrative voice. "Prophet Ibrahim loved his son Ismail very much..." Skip traumatic details (knife/neck); just "Allah asked his father to... trust Allah. Allah loves us. In the end it wasn't Ismail who was sacrificed but a ram from Paradise."</li>
+  <li><strong>Ages 6–8:</strong> More complete. Explain why Allah tested. Emphasize Ismail's reply. Ask: "If you were Ismail, could you say that to your dad?"</li>
+  <li><strong>Ages 9+:</strong> Discuss the spiritual meaning. What do we love most in this world? Are we willing to give it up for Allah? Animal sacrifice is symbol — what Allah sees is the taqwa in the heart, not the meat.</li>
+</ul>
+
+<p>See also: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">How to Tell Prophet Stories to Children</a>.</p>
+
+<h2>The Eid al-Adha Prayer</h2>
+
+<p>Eid prayer is <strong>sunnah muakkadah</strong> (strongly recommended), performed in congregation in an open field or mosque on the morning of 10 Dhul Hijjah. Two rakaat. Performed before the khutbah (opposite of Friday prayer).</p>
+
+<h3>Quick Procedure</h3>
+
+<ul>
+  <li><strong>Intention</strong> in the heart: "I intend the two-rakaat sunnah Eid al-Adha prayer for Allah."</li>
+  <li><strong>Opening takbir → 7 extra takbirs</strong> in the first rakat. Between takbirs, say: "Subhanallah, walhamdulillah, wa laa ilaaha illallah, wallahu akbar."</li>
+  <li><strong>Al-Fatihah + a surah</strong> → ruku → sujud (as normal). Imam preferably reads a surah with the story of Ibrahim or trials (Al-A'la, Qaf).</li>
+  <li><strong>Second rakat: 5 extra takbirs</strong> after rising from sujud, before Al-Fatihah. Same dhikr between takbirs.</li>
+  <li><strong>Salam → Khutbah</strong> — don't leave immediately. Listen to both khutbahs.</li>
+</ul>
+
+<h3>Etiquette Before Going</h3>
+
+<ul>
+  <li>Ritual bath in the early morning.</li>
+  <li>Wear your best clean clothes — white if you have them.</li>
+  <li><strong>Don't eat before the prayer</strong> (opposite of Eid al-Fitr — here it's sunnah to delay breakfast until after the prayer or until qurbani meat is available).</li>
+  <li>Take a different route home than the one you came (sunnah).</li>
+  <li>Recite takbir along the way.</li>
+</ul>
+
+<h2>Qurbani — The Animal Sacrifice</h2>
+
+<p>Qurbani is the core ritual of Eid al-Adha. It's <strong>sunnah muakkadah</strong> for those able (some Hanafi scholars consider it obligatory). One goat or sheep = reward for one person. One cow or buffalo = reward for up to 7 people (group qurbani).</p>
+
+<h3>Animal Requirements</h3>
+
+<ul>
+  <li><strong>Type:</strong> goat, sheep, cow, buffalo, or camel. (Chicken is not valid.)</li>
+  <li><strong>Minimum age:</strong> Goat ≥1 year; sheep ≥6 months with teeth replaced; cow/buffalo ≥2 years; camel ≥5 years.</li>
+  <li><strong>Fully healthy</strong> — no defects that affect the meat. Not blind, not severely lame, not emaciated.</li>
+  <li><strong>Intact body parts</strong> — no ears cut off, horns not broken to the root, tail not severed.</li>
+</ul>
+
+<h3>Time of Sacrifice</h3>
+
+<p>Valid from <strong>after the Eid prayer on 10 Dhul Hijjah</strong> until <strong>before maghrib on 13 Dhul Hijjah</strong>. For 1447 H in Indonesia: from Tuesday 26 May morning until Friday 29 May evening.</p>
+
+<p>Sacrifice before the Eid prayer is <em>not valid</em> as qurbani (it becomes regular sadaqah, the Prophet ﷺ said).</p>
+
+<h3>Procedure</h3>
+
+<ol>
+  <li>Face the animal toward the qiblah.</li>
+  <li>Lay it on its left side, tie its legs except the right hind leg.</li>
+  <li>The knife must be sharp — the Prophet ﷺ commanded slaughter to be quick so the animal doesn't suffer.</li>
+  <li>The one slaughtering recites: <em>"Bismillah, Allahu akbar. Allahumma minka wa laka, taqabbal minnii."</em></li>
+  <li>Cut with one decisive motion — through windpipe, esophagus, and both jugular veins.</li>
+  <li>Wait until the animal is fully still before skinning.</li>
+</ol>
+
+<h3>Meat Distribution</h3>
+
+<p>Qurbani meat is traditionally divided into thirds:</p>
+
+<ul>
+  <li><strong>1/3 for the family</strong> who performed the qurbani.</li>
+  <li><strong>1/3 for relatives and neighbors</strong> — including non-Muslims.</li>
+  <li><strong>1/3 for the poor</strong> — those most in need.</li>
+</ul>
+
+<p>This split is sunnah; other splits are valid as long as nothing is sold. The slaughterer may not sell the meat or skin (except for the benefit of the poor via the committee).</p>
+
+<h2>Three Ways to Perform Qurbani in Indonesia 2026</h2>
+
+<h3>1. Local at Village / Mosque</h3>
+
+<p>Most traditional. Buy from a farmer/livestock market, bring to mosque, the committee slaughters and distributes locally.</p>
+
+<ul>
+  <li><strong>2026 cost:</strong> Goat IDR 3.5–6M; 1/7 of a cow IDR 4–7M.</li>
+  <li><strong>Pros:</strong> direct community contribution, children can witness, communal feel.</li>
+  <li><strong>Cons:</strong> in urban areas with meat surplus, impact is smaller than in poorer regions.</li>
+</ul>
+
+<h3>2. Through Charity Institutions (Online)</h3>
+
+<p>Organizations like Dompet Dhuafa, BAZNAS, Rumah Zakat, and many others accept online qurbani. Animals are slaughtered in remote areas or abroad (Palestine, Yemen, Syria) where the meat is most needed.</p>
+
+<ul>
+  <li><strong>2026 cost:</strong> Goat IDR 2.4–3M (foreign programs cheaper due to lower local prices).</li>
+  <li><strong>Pros:</strong> bigger impact in actually-needy areas, qurbani from anywhere, transparent reports.</li>
+  <li><strong>Cons:</strong> no live witness, child not physically involved.</li>
+</ul>
+
+<h3>3. Group Cow Qurbani (1/7)</h3>
+
+<p>Seven people share one cow. Each gets 1/7 of the cost. More affordable than buying a goat alone.</p>
+
+<ul>
+  <li><strong>2026 cost:</strong> IDR 4–7M per person.</li>
+  <li><strong>Suited for:</strong> mosque congregations, offices, extended families wanting to do qurbani together.</li>
+  <li><strong>Procedure:</strong> each of the 7 has their own intention. Not one person intending on behalf of 7.</li>
+</ul>
+
+<h2>Tashriq Days (11–13 Dhul Hijjah)</h2>
+
+<p>The three days after Eid al-Adha are called <strong>Tashriq days</strong>. For Indonesia 1447 H: Wednesday 27 May – Friday 29 May 2026.</p>
+
+<h3>Special Rules</h3>
+
+<ul>
+  <li><strong>Fasting is prohibited</strong> — the Prophet ﷺ said these are "days of eating, drinking, and remembering Allah" (Muslim). Even those owing Ramadan fasts must wait.</li>
+  <li><strong>Takbir still recommended</strong> — From dawn on the Day of Arafah (9 Dhul Hijjah) until Asr of the final Tashriq day (13 Dhul Hijjah), takbir after every fard prayer is sunnah.</li>
+  <li><strong>Qurbani still valid</strong> — sacrifice is valid until before maghrib on 13 Dhul Hijjah.</li>
+  <li><strong>Increased dhikr</strong> — Allah says: "And remember Allah during the appointed days." (Qur'an 2:203) — referring to the Tashriq days.</li>
+</ul>
+
+<h2>How to Involve Children</h2>
+
+<p>Eid al-Adha without children's involvement is just a "day off." With involvement, it becomes an emotional memory carried for life.</p>
+
+<h3>The Day Before (9 Dhul Hijjah)</h3>
+
+<ul>
+  <li>Retell the story of Ibrahim and Ismail before bedtime.</li>
+  <li>Prepare Eid clothes together — child picks their outfit for tomorrow.</li>
+  <li>Teach Eid takbir — child repeats while playing.</li>
+</ul>
+
+<h3>Eid Morning</h3>
+
+<ul>
+  <li>Wake the child earlier than usual — this is a special day, not a regular one.</li>
+  <li>Bath, best clothes, perfume (for older ones).</li>
+  <li>Go to the open prayer ground — for small children, carry or stroller.</li>
+  <li>Return home a different way — frame as exploration ("let's try the other road").</li>
+</ul>
+
+<h3>During the Sacrifice</h3>
+
+<ul>
+  <li><strong>Ages 0–4:</strong> Don't bring to the slaughter site. Visual + smell trauma can linger.</li>
+  <li><strong>Ages 5–7:</strong> May watch from a slight distance, held by a parent. Gently explain: "This animal is for Allah, to be shared with people who need food." Don't force if they don't want to look.</li>
+  <li><strong>Ages 8+:</strong> Can come closer, even help hold the animal (for those ready). Many Indonesian children describe this as a deeply spiritual experience.</li>
+</ul>
+
+<h3>Distributing Meat</h3>
+
+<ul>
+  <li>Take the child along when delivering meat to neighbors or orphanages. Let them knock and hand over personally.</li>
+  <li>Explain: "This meat isn't all for us — it's a gift for people who rarely have meat."</li>
+  <li>Teach: "Eid Mubarak, may it bring blessing."</li>
+</ul>
+
+<h3>Eating Together</h3>
+
+<ul>
+  <li>Cook sate / gulai / rendang together (age-appropriate). A child who helps cook appreciates the meat more.</li>
+  <li>Before eating, recite <a href="/_/doa/sebelum-makan/">the meal du'a</a> together aloud.</li>
+  <li>Retell: "Long ago Prophet Ibrahim was willing to sacrifice Ismail for Allah. Today we sacrifice an animal to share. That is qurbani."</li>
+</ul>
+
+<h2>Key Duas</h2>
+
+<h3>1. Eid Takbir</h3>
+
+<p><em>Allahu akbar, Allahu akbar, Allahu akbar. Laa ilaaha illallah, wallahu akbar. Allahu akbar, wa lillahil-hamd.</em></p>
+
+<h3>2. During Sacrifice</h3>
+
+<p><em>Bismillah, Allahu akbar. Allahumma minka wa laka, 'an [name].</em></p>
+
+<h3>3. Eid Greeting</h3>
+
+<p>From the Companions: <em>"Taqabbalallahu minnaa wa minkum."</em> ("May Allah accept from us and from you.") — not "Eid Mubarak, mohon maaf lahir batin" which is more associated with Eid al-Fitr.</p>
+
+<h2>What to Avoid</h2>
+
+<ul>
+  <li><strong>Fasting on Eid al-Adha and Tashriq days</strong> — prohibited (except for hajj pilgrims who couldn't afford hadyu, who may fast Tashriq).</li>
+  <li><strong>Showing off qurbani on social media</strong> — worship that's publicly displayed can lose reward. Sharing as dawah is fine, but avoid self-prominence.</li>
+  <li><strong>Slaughtering before the Eid prayer</strong> — not valid as qurbani.</li>
+  <li><strong>Choosing the cheapest, poorest animal</strong> — qurbani is your best gift to Allah. Choose a healthy, good animal within your means.</li>
+  <li><strong>Selling qurbani skin or meat</strong> — the slaughterer may not sell any of it.</li>
+  <li><strong>Mocking or forcing children afraid to watch the sacrifice</strong> — children have different sensitivities; respect this.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Eid al-Adha is the festival of sacrifice — not just of animals, but of giving up what we love most for Allah. For a child, it's the only festival involving blood and meat and community and a heroic story — a rare combination. Make use of it.</p>
+
+<p>Next year, your child will remember: "Last year Dad/Mom took me to deliver meat to the neighbor." Or: "Last year I held a goat for the first time." Or: "Last year Mom told the story of Prophet Ibrahim before bed and I couldn't sleep thinking about Ismail."</p>
+
+<p>That is Eid al-Adha. Not a day off — a day that shapes identity.</p>
+
+<p><em>Taqabbalallahu minnaa wa minkum.</em></p>`,
+    },
+    tags: ["idul-adha", "qurban", "eid", "dzulhijjah", "fiqh", "anak"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 18,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan Idul Adha 1447 H di Indonesia?",
+          en: "When is Eid al-Adha 1447 H in Indonesia?",
+        },
+        answer: {
+          id: "Idul Adha 1447 H di Indonesia jatuh pada <strong>Selasa, 26 Mei 2026</strong>, berdasarkan pengumuman Kementerian Agama. Hari Tasyriq (di mana qurban masih bisa disembelih) berlangsung 27–29 Mei 2026.",
+          en: "Eid al-Adha 1447 H in Indonesia falls on <strong>Tuesday, 26 May 2026</strong>, per the Ministry of Religious Affairs. The Tashriq days (when qurbani may still be sacrificed) run 27–29 May 2026.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hukum berqurban — wajib atau sunnah?",
+          en: "Is qurbani obligatory or recommended?",
+        },
+        answer: {
+          id: "Mayoritas ulama (Maliki, Syafi'i, Hanbali) berpendapat qurban hukumnya <strong>sunnah muakkadah</strong> — sangat dianjurkan bagi yang mampu, tapi tidak berdosa kalau ditinggalkan. Mazhab Hanafi menganggap <strong>wajib</strong> bagi yang mampu (memiliki nisab). Yang disepakati semua: bagi yang mampu, jangan sampai meninggalkannya — Rasulullah ﷺ memperingatkan keras orang yang mampu tapi tidak berqurban.",
+          en: "Most schools (Maliki, Shafi'i, Hanbali) hold qurbani is <strong>sunnah muakkadah</strong> — strongly recommended for those able, but not sinful to skip. The Hanafi school considers it <strong>wajib</strong> for those who can afford it. All agree: those who can afford it shouldn't skip — the Prophet ﷺ warned strongly against this.",
+        },
+      },
+      {
+        question: {
+          id: "Apa syarat hewan qurban yang sah?",
+          en: "What are the requirements for a valid qurbani animal?",
+        },
+        answer: {
+          id: "Hewan harus: (1) jenis yang diizinkan — <strong>kambing, domba, sapi, kerbau, atau unta</strong> (ayam tidak sah); (2) usia minimum — kambing ≥1 tahun, domba ≥6 bulan dengan gigi sudah berganti, sapi/kerbau ≥2 tahun, unta ≥5 tahun; (3) sehat sempurna tanpa cacat yang mempengaruhi daging — tidak buta, tidak pincang parah, tidak terlalu kurus; (4) anggota tubuh utuh.",
+          en: "The animal must be: (1) of an allowed type — <strong>goat, sheep, cow, buffalo, or camel</strong> (chicken not valid); (2) of minimum age — goat ≥1 year, sheep ≥6 months with replaced teeth, cow/buffalo ≥2 years, camel ≥5 years; (3) fully healthy with no defects affecting meat — not blind, not severely lame, not emaciated; (4) intact body parts.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa biaya qurban kambing dan sapi 2026?",
+          en: "How much does qurbani cost for goat and cow in 2026?",
+        },
+        answer: {
+          id: "<strong>Kambing</strong> di Indonesia 2026: Rp 3,5–6 juta (lokal) atau Rp 2,4–3 juta (program luar negeri via lembaga amil). <strong>Sapi patungan 1/7 orang:</strong> Rp 4–7 juta per orang. Harga bervariasi berdasarkan daerah, berat hewan, dan rute distribusi. Untuk lokasi pelosok atau luar negeri biaya lebih murah karena harga ternak setempat lebih rendah.",
+          en: "<strong>Goat</strong> in Indonesia 2026: IDR 3.5–6M (local) or IDR 2.4–3M (overseas programs via charities). <strong>Group cow 1/7 share:</strong> IDR 4–7M per person. Prices vary by region, animal weight, and distribution route. Remote or overseas programs are cheaper due to lower local livestock prices.",
+        },
+      },
+      {
+        question: {
+          id: "Sampai kapan batas waktu menyembelih hewan qurban?",
+          en: "Until when is qurbani sacrifice valid?",
+        },
+        answer: {
+          id: "Penyembelihan qurban sah dilakukan mulai <strong>setelah Sholat Idul Adha pada 10 Dzulhijjah</strong> sampai <strong>sebelum maghrib 13 Dzulhijjah</strong>. Untuk Indonesia 1447 H: dari Selasa 26 Mei pagi (setelah Sholat Ied) sampai Jumat 29 Mei sore (sebelum maghrib). Yang menyembelih sebelum Sholat Ied: <strong>tidak sah sebagai qurban</strong>, hanya dianggap sedekah biasa.",
+          en: "Qurbani slaughter is valid from <strong>after the Eid prayer on 10 Dhul Hijjah</strong> until <strong>before maghrib on 13 Dhul Hijjah</strong>. For Indonesia 1447 H: from Tuesday 26 May morning (after Eid prayer) until Friday 29 May before maghrib. Slaughter before the Eid prayer is <strong>not valid as qurbani</strong> — it counts only as ordinary sadaqah.",
+        },
+      },
+      {
+        question: {
+          id: "Bolehkah qurban diniatkan untuk orang yang sudah meninggal?",
+          en: "Can qurbani be intended on behalf of a deceased person?",
+        },
+        answer: {
+          id: "Ada perbedaan pendapat ulama. <strong>Mazhab Hanafi dan Hanbali:</strong> sah, pahalanya sampai kepada yang meninggal. <strong>Mazhab Maliki dan Syafi'i:</strong> tidak sah kecuali jika almarhum berwasiat sebelum meninggal. Mayoritas ulama kontemporer membolehkan dengan catatan: qurban untuk diri sendiri tetap utama dulu, baru qurban untuk yang meninggal sebagai amalan tambahan.",
+          en: "Scholars differ. <strong>Hanafi and Hanbali:</strong> valid, reward reaches the deceased. <strong>Maliki and Shafi'i:</strong> not valid unless the deceased explicitly willed it. Most contemporary scholars permit it on the condition that one's own qurbani is prioritized first, then qurbani for the deceased as an additional act.",
+        },
+      },
+      {
+        question: {
+          id: "Apa beda qurban dan aqiqah?",
+          en: "What's the difference between qurbani and aqiqah?",
+        },
+        answer: {
+          id: "<strong>Qurban</strong> dilakukan setiap Idul Adha oleh muslim dewasa yang mampu — meneladani pengorbanan Nabi Ibrahim. <strong>Aqiqah</strong> dilakukan untuk seorang anak yang baru lahir (idealnya hari ke-7) — sebagai syukur atas kelahiran. Aqiqah: 2 kambing untuk anak laki-laki, 1 untuk perempuan. Daging aqiqah dimasak dulu, baru dibagikan; daging qurban boleh mentah. Hukum aqiqah: sunnah muakkadah untuk orang tua.",
+          en: "<strong>Qurbani</strong> is performed every Eid al-Adha by able adult Muslims — following the example of Prophet Ibrahim. <strong>Aqiqah</strong> is performed for a newborn (ideally on day 7) — as gratitude for the birth. Aqiqah: 2 goats for a boy, 1 for a girl. Aqiqah meat is cooked first, then distributed; qurbani meat may be distributed raw. Aqiqah ruling: sunnah muakkadah for parents.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hukum potong rambut dan kuku sebelum berqurban?",
+          en: "What's the ruling on cutting hair and nails before qurbani?",
+        },
+        answer: {
+          id: "Bagi yang berniat berqurban, disunnahkan tidak memotong rambut, kuku, atau kulit <strong>sejak masuk tanggal 1 Dzulhijjah sampai setelah menyembelih hewan qurban</strong> (HR. Muslim). Ini adalah <strong>sunnah, bukan wajib</strong> — kalau terlanjur potong, tetap sah qurbannya. Hikmahnya: menyerupai jamaah haji yang sedang ihram, dan menambah keistimewaan momen qurban.",
+          en: "For those intending qurbani, it's recommended <strong>not to cut hair, nails, or skin from 1 Dhul Hijjah until after the sacrifice</strong> (Muslim). This is <strong>sunnah, not obligatory</strong> — if you've already cut, the qurbani is still valid. The wisdom: resembling the pilgrims in ihram, and adding distinction to the qurbani moment.",
+        },
+      },
+    ],
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {

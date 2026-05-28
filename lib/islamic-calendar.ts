@@ -32,7 +32,22 @@ export type IslamicEvent = {
 
 export const islamicCalendar: IslamicEvent[] = [
   {
-    // Most specific window first — takes priority during overlap with dzulhijjah-1447
+    // Eid + Tashriq days — listed FIRST so it takes priority over hajj-1447
+    // during their overlap (most homepage visitors aren't on hajj).
+    id: "idul-adha-1447",
+    hijri: "10–13 Dzulhijjah 1447",
+    name: { id: "Idul Adha 1447 H", en: "Eid al-Adha 1447 H" },
+    caption: {
+      id: "Hari Raya Kurban — momen meneladani pengorbanan Nabi Ibrahim ﷺ bersama keluarga.",
+      en: "The Festival of Sacrifice — a moment to follow Prophet Ibrahim's example as a family.",
+    },
+    startISO: "2026-05-26",
+    endISO: "2026-05-30",
+    blogSlug: "panduan-idul-adha-dan-qurban-untuk-keluarga",
+  },
+  {
+    // Hajj-specific lead-up. Active May 24–25, then idul-adha-1447
+    // takes over from May 26.
     id: "hajj-1447",
     hijri: "8–13 Dzulhijjah 1447",
     name: { id: "Musim Haji 1447 H", en: "Hajj Season 1447 H" },
