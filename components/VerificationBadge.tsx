@@ -2,8 +2,6 @@ import Link from "next/link";
 import { type Locale, pathFor, absoluteUrl } from "@/lib/i18n/config";
 import { getPersonBySlug } from "@/lib/content/people";
 
-const WA_NUMBER = "6282315971002";
-
 type Props = {
   locale: Locale;
   /** Person slug of the reviewing scholar — set when verified */
@@ -50,7 +48,7 @@ export function VerificationBadge({
     locale === "id"
       ? `Assalamu'alaikum, mohon bantu periksa ${kindLabel} ini di Baby Mo:\n\n"${title}"\n${url}\n\nApakah teks Arab, transliterasi, terjemahan, dan sumbernya sudah tepat? Jazakallahu khairan.`
       : `Assalamu'alaikum, please help check this ${kindLabel} on Baby Mo:\n\n"${title}"\n${url}\n\nAre the Arabic text, transliteration, translation, and source accurate? Jazakallahu khairan.`;
-  const waUrl = `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
+  const waUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
   return (
     <a
