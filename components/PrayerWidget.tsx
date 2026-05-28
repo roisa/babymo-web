@@ -60,6 +60,7 @@ export function PrayerWidget({ locale }: Props) {
   const [coords, setCoords] = useState<{ lat: number; lng: number; label: string } | null>(null);
   const [now, setNow] = useState<Date>(new Date());
   const [denied, setDenied] = useState(false);
+  const [locating, setLocating] = useState(false);
 
   // Load saved location, else default to Jakarta. Try to upgrade to
   // real geolocation in the background (no blocking).
@@ -87,6 +88,8 @@ export function PrayerWidget({ locale }: Props) {
       setDenied(true);
       return;
     }
+    setDenied(false);
+    setLocating(true);
     navigator.geolocation.getCurrentPosition(
       (pos) => {
         const c = {
@@ -95,14 +98,19 @@ export function PrayerWidget({ locale }: Props) {
           label: locale === "id" ? "Lokasimu" : "Your location",
         };
         setCoords(c);
+        setNow(new Date()); // force fresh recompute with new coords
+        setLocating(false);
         try {
           localStorage.setItem(LOC_KEY, JSON.stringify(c));
         } catch {
           /* ignore */
         }
       },
-      () => setDenied(true),
-      { timeout: 8000 },
+      () => {
+        setDenied(true);
+        setLocating(false);
+      },
+      { enableHighAccuracy: false, timeout: 10000, maximumAge: 600000 },
     );
   }
 
@@ -167,9 +175,15 @@ export function PrayerWidget({ locale }: Props) {
         <button
           type="button"
           onClick={useMyLocation}
-          className="tap shrink-0 rounded-full border border-hairline px-3 py-1.5 text-[11.5px] font-semibold text-ink-soft transition hover:border-brave/40 hover:text-brave-deep"
+          disabled={locating}
+          className="tap inline-flex shrink-0 items-center gap-1.5 rounded-full border border-hairline px-3 py-1.5 text-[11.5px] font-semibold text-ink-soft transition hover:border-brave/40 hover:text-brave-deep disabled:opacity-60"
         >
-          {locale === "id" ? "Pakai lokasiku" : "Use my location"}
+          {locating && (
+            <span className="inline-block h-3 w-3 animate-spin rounded-full border-2 border-brave border-t-transparent" />
+          )}
+          {locating
+            ? locale === "id" ? "Mencari…" : "Locating…"
+            : locale === "id" ? "Pakai lokasiku" : "Use my location"}
         </button>
       </div>
 

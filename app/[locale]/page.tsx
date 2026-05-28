@@ -417,13 +417,13 @@ export default async function HomePage({
         {/* ── GAMES ── */}
         <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
           <Reveal>
-            <div className="overflow-hidden rounded-[28px] border border-hairline bg-clay-soft">
+            <div className="overflow-hidden rounded-[28px] border border-clay/30 bg-clay-soft/60">
               <div className="grid items-center gap-8 p-7 sm:grid-cols-[1.1fr_0.9fr] sm:p-10">
                 <div>
-                  <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                  <span className="inline-flex items-center rounded-full bg-clay/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
                     9 game gratis
                   </span>
-                  <h2 className="tracking-display mt-2 font-serif text-3xl font-medium text-ink sm:text-4xl">
+                  <h2 className="tracking-display mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
                     {dict.home.sections.gamesTitle}
                   </h2>
                   <p className="mt-3 max-w-md text-[15.5px] leading-relaxed text-whisper">
@@ -431,7 +431,7 @@ export default async function HomePage({
                   </p>
                   <Link
                     href={pathFor(l, "/permainan")}
-                    className="magnet tap mt-6 inline-flex items-center gap-2 rounded-full bg-ink px-5 py-3 text-[14px] font-semibold text-paper hover:bg-sage-deep"
+                    className="magnet tap mt-6 inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper hover:bg-brave-deep"
                   >
                     {dict.home.viewAll}
                   </Link>
@@ -440,7 +440,7 @@ export default async function HomePage({
                   {["🧩", "🤲", "🔤", "🌙", "🛌", "🎴", "🔍", "🎵", "🃏"].map((e, i) => (
                     <div
                       key={i}
-                      className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper text-xl"
+                      className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2 text-xl"
                       style={{ transitionDelay: `${i * 35}ms` }}
                     >
                       {e}
