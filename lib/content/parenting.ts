@@ -1104,6 +1104,188 @@ export const parentingList: ParentingSituation[] = [
       en: "child won't pray age 7 islamic guidance",
     },
   },
+
+  // ─── Shareable "big question" situations — high emotional value ───
+  {
+    slug: "anak-bertanya-allah-di-mana",
+    title: {
+      id: "Saat Anak Bertanya: \"Allah Di Mana?\"",
+      en: "When Your Child Asks: \"Where Is Allah?\"",
+    },
+    excerpt: {
+      id: "Pertanyaan yang membuat banyak orang tua kaku. Cara menjawab dengan jujur, sesuai akidah, dan dengan bahasa yang dimengerti anak kecil.",
+      en: "The question that freezes many parents. How to answer honestly, soundly, and in words a small child understands.",
+    },
+    signs: {
+      id: [
+        "Anak tiba-tiba bertanya \"Allah itu di mana?\" atau \"Allah seperti apa?\"",
+        "Anak menunjuk langit dan bertanya apakah Allah ada di sana",
+        "Anak bingung kenapa tidak bisa melihat Allah",
+      ],
+      en: [
+        "Child suddenly asks \"where is Allah?\" or \"what does Allah look like?\"",
+        "Child points to the sky asking if Allah is there",
+        "Child is confused about why they can't see Allah",
+      ],
+    },
+    steps: {
+      id: [
+        "Jangan panik atau menjawab \"jangan tanya begitu.\" Pertanyaan ini fitrah — tanda anak mulai berpikir tentang Penciptanya.",
+        "Jawab dengan dalil yang shahih: Allah berada di atas 'Arsy, di atas langit — sebagaimana disebut dalam Al-Qur'an. Saat ada hadits anak budak ditanya Rasulullah ﷺ \"di mana Allah?\", ia menjawab \"di langit,\" dan Nabi membenarkannya.",
+        "Tekankan: kita tidak bisa membayangkan bentuk Allah, karena \"tidak ada sesuatu pun yang serupa dengan-Nya\" (QS. Asy-Syura: 11). Allah Maha Besar, tidak seperti makhluk.",
+        "Hubungkan dengan hal yang anak rasakan: \"Walau kita tidak bisa lihat Allah, Allah selalu lihat kita, dengar kita, dan sayang kita.\"",
+        "Tutup dengan rasa aman, bukan kebingungan: \"Makanya kita berdoa — karena Allah pasti dengar, di mana pun kita berada.\"",
+      ],
+      en: [
+        "Don't panic or say \"don't ask that.\" This question is natural fitrah — a sign the child is starting to think about their Creator.",
+        "Answer with sound evidence: Allah is above the Throne, above the heavens — as stated in the Qur'an. When the Prophet ﷺ asked a servant girl \"where is Allah?\", she said \"in the heaven,\" and he affirmed her.",
+        "Emphasize: we cannot picture Allah's form, for \"there is nothing like unto Him\" (Ash-Shura: 11). Allah is Most Great, unlike any creation.",
+        "Connect to what the child feels: \"Even though we can't see Allah, Allah always sees us, hears us, and loves us.\"",
+        "Close with security, not confusion: \"That's why we pray — because Allah surely hears, wherever we are.\"",
+      ],
+    },
+    islamicNote: {
+      id: "Pertanyaan \"di mana Allah\" punya jawaban yang jelas dalam Islam, dan Rasulullah ﷺ sendiri menanyakannya kepada seorang budak perempuan untuk menguji imannya (HR. Muslim). Jawaban yang benar — Allah di atas langit, di atas 'Arsy, tanpa kita bisa membayangkan bentuk-Nya — justru menanamkan tauhid yang lurus sejak dini. Yang harus dihindari: jawaban panteistik seperti \"Allah ada di mana-mana / di dalam hatimu\" yang mengaburkan akidah.",
+      en: "The question \"where is Allah\" has a clear answer in Islam, and the Prophet ﷺ himself asked it of a servant girl to test her faith (Muslim). The correct answer — Allah is above the heavens, above the Throne, without us being able to imagine His form — plants sound tawhid early. Avoid pantheistic answers like \"Allah is everywhere / inside your heart\" that blur the creed.",
+    },
+    recommendedDoa: ["doa-pagi", "sebelum-tidur"],
+    supportingHadith: ["anak-mukmin-amanat", "muliakan-anak"],
+    ageMin: 3,
+    ageMax: 9,
+    category: "spiritual",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    quote: {
+      id: "\"Allah di mana?\" bukan pertanyaan nakal. Itu pertanyaan pertama seorang hamba kecil kepada Tuhannya — jawab dengan jujur dan penuh kasih.",
+      en: "\"Where is Allah?\" isn't a naughty question. It's a small servant's first question to their Lord — answer it honestly and with love.",
+    },
+    seoQuery: {
+      id: "cara menjawab anak bertanya allah di mana",
+      en: "how to answer child where is allah",
+    },
+  },
+
+  {
+    slug: "anak-bertanya-tentang-kematian",
+    title: {
+      id: "Saat Anak Bertanya Tentang Kematian",
+      en: "When Your Child Asks About Death",
+    },
+    excerpt: {
+      id: "Kakek meninggal, hewan peliharaan mati, atau anak tiba-tiba takut Mama akan pergi. Cara bicara tentang kematian dengan jujur, menenangkan, dan islami.",
+      en: "A grandparent passes, a pet dies, or a child suddenly fears Mama will leave. How to talk about death honestly, calmly, and through faith.",
+    },
+    signs: {
+      id: [
+        "Anak bertanya \"apa itu mati?\" atau \"apakah aku akan mati?\"",
+        "Anak takut orang tua akan meninggal dan meninggalkannya",
+        "Anak sedih atau bingung setelah ada anggota keluarga / hewan yang wafat",
+      ],
+      en: [
+        "Child asks \"what is death?\" or \"will I die?\"",
+        "Child fears a parent will die and leave them",
+        "Child is sad or confused after a family member or pet passes",
+      ],
+    },
+    steps: {
+      id: [
+        "Jangan menghindar atau berbohong (\"kakek cuma tidur panjang\") — itu membuat anak takut tidur. Gunakan kata yang jujur: \"meninggal\" / \"wafat.\"",
+        "Jelaskan dengan tenang: setiap makhluk yang bernyawa akan kembali kepada Allah. Itu bukan akhir — orang beriman akan bertemu lagi di surga, tempat yang jauh lebih indah.",
+        "Validasi kesedihan: \"Boleh sedih, Nak. Nabi Muhammad ﷺ pun menangis saat putranya wafat. Menangis karena sayang itu wajar.\"",
+        "Ajarkan respons islami: ucapkan \"Innaa lillaahi wa innaa ilaihi raji'uun\" dan doakan yang wafat.",
+        "Beri rasa aman: \"Hidup dan mati di tangan Allah. Tugas kita berbuat baik selama hidup, supaya nanti berkumpul di tempat yang bahagia.\"",
+        "Jangan beri detail yang menakutkan (siksa kubur, dll) pada anak kecil. Fokus pada kasih sayang Allah dan harapan berjumpa kembali.",
+      ],
+      en: [
+        "Don't avoid or lie (\"grandpa is just sleeping a long time\") — it makes children afraid of sleep. Use honest words: \"died\" / \"passed away.\"",
+        "Explain calmly: every living being returns to Allah. It's not the end — believers meet again in Paradise, a far more beautiful place.",
+        "Validate sadness: \"It's okay to be sad. Even the Prophet ﷺ wept when his son passed. Crying out of love is natural.\"",
+        "Teach the Islamic response: say \"Innaa lillaahi wa innaa ilaihi raji'uun\" and pray for the deceased.",
+        "Give security: \"Life and death are in Allah's hands. Our job is to do good while we live, so we gather later in a happy place.\"",
+        "Don't give frightening details (punishment of the grave, etc.) to small children. Focus on Allah's mercy and the hope of reunion.",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ menangis saat cucunya sekarat dan saat putranya Ibrahim wafat, sambil bersabda: \"Mata menangis, hati bersedih, tapi kami tidak mengucapkan kecuali yang diridhai Allah\" (HR. Bukhari). Islam tidak menyuruh anak menyembunyikan kesedihan — tapi mengarahkannya menjadi penerimaan atas takdir Allah dan harapan akan perjumpaan di akhirat. Kematian, bagi anak muslim, sebaiknya dibingkai sebagai perpindahan, bukan kehancuran.",
+      en: "The Prophet ﷺ wept as his grandson lay dying and when his son Ibrahim passed, saying: \"The eye weeps, the heart grieves, but we say only what pleases Allah\" (Bukhari). Islam doesn't ask a child to hide grief — it channels it into acceptance of Allah's decree and hope of reunion in the hereafter. Death, for a Muslim child, is best framed as a move, not a destruction.",
+    },
+    recommendedDoa: ["doa-untuk-orang-tua", "perlindungan-anak"],
+    supportingHadith: ["kasih-sayang-kepada-anak", "kelembutan-keindahan"],
+    ageMin: 3,
+    ageMax: 10,
+    category: "emosi",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    quote: {
+      id: "Anak tidak butuh kita menyembunyikan kematian. Mereka butuh kita menemaninya memahami: bahwa berpisah itu sementara, dan Allah Maha Penyayang.",
+      en: "Children don't need us to hide death from them. They need us beside them as they understand: that parting is temporary, and Allah is Most Merciful.",
+    },
+    seoQuery: {
+      id: "cara menjelaskan kematian pada anak menurut islam",
+      en: "how to explain death to a child islamic",
+    },
+  },
+
+  {
+    slug: "anak-melihat-orang-tua-bertengkar",
+    title: {
+      id: "Saat Anak Melihat Orang Tua Bertengkar",
+      en: "When Your Child Sees You Argue",
+    },
+    excerpt: {
+      id: "Tidak ada rumah tangga tanpa selisih. Yang membentuk anak bukan ketiadaan konflik, tapi bagaimana konflik diselesaikan dan diperbaiki di depan mereka.",
+      en: "No marriage is without disagreement. What shapes a child isn't the absence of conflict, but how conflict is resolved and repaired in front of them.",
+    },
+    signs: {
+      id: [
+        "Anak menjadi diam, menarik diri, atau menangis saat orang tua berselisih",
+        "Anak mencoba menengahi atau menyalahkan dirinya atas pertengkaran",
+        "Anak menjadi lebih rewel / sulit tidur setelah menyaksikan konflik",
+      ],
+      en: [
+        "Child goes quiet, withdraws, or cries when parents argue",
+        "Child tries to mediate or blames themselves for the fight",
+        "Child becomes fussier / sleeps poorly after witnessing conflict",
+      ],
+    },
+    steps: {
+      id: [
+        "Sadari: anak merekam nada suara dan wajah jauh sebelum mengerti kata-kata. Turunkan suara, bukan menaikkannya.",
+        "Kalau sudah terlanjur bertengkar di depan anak — jangan pura-pura tidak terjadi apa-apa. Anak tahu.",
+        "Lakukan 'perbaikan' di depan anak: saling minta maaf, berpelukan, atau bicara baik-baik. Anak yang melihat orang tua berdamai belajar bahwa konflik bisa diselesaikan dengan kasih.",
+        "Yakinkan anak: \"Ayah dan Bunda tadi beda pendapat, tapi kami tetap saling sayang, dan kami sangat sayang kamu. Ini bukan salahmu.\"",
+        "Hindari menjadikan anak sebagai penengah, kurir pesan, atau tempat mengadu tentang pasangan.",
+        "Jadikan rumah tempat aman: Rasulullah ﷺ adalah suami paling lembut di rumahnya, dan tidak pernah membentak keluarga.",
+      ],
+      en: [
+        "Realize: children record tone and faces long before they understand words. Lower your voice, don't raise it.",
+        "If you've already argued in front of them — don't pretend nothing happened. The child knows.",
+        "Do the 'repair' in front of the child: apologize to each other, hug, or talk it through kindly. A child who sees parents reconcile learns that conflict can be resolved with love.",
+        "Reassure the child: \"Ayah and Bunda disagreed, but we still love each other, and we love you very much. This is not your fault.\"",
+        "Don't make the child a mediator, a message courier, or a confidant for complaints about your spouse.",
+        "Make home a safe place: the Prophet ﷺ was the gentlest husband at home, and never shouted at his family.",
+      ],
+    },
+    islamicNote: {
+      id: "Rasulullah ﷺ bersabda: \"Sebaik-baik kalian adalah yang paling baik kepada keluarganya, dan aku adalah yang paling baik kepada keluargaku\" (HR. Tirmidzi). Rumah dalam Islam adalah tempat ketenangan (sakinah). Anak yang tumbuh menyaksikan orang tua menyelesaikan selisih dengan adab — bukan dengan teriakan atau diam berhari-hari — belajar model pernikahan yang sehat yang akan ia bawa kelak.",
+      en: "The Prophet ﷺ said: \"The best of you are the best to their families, and I am the best to my family\" (Tirmidhi). The home in Islam is a place of tranquility (sakinah). A child who grows up watching parents resolve differences with adab — not with shouting or days of silence — learns a healthy marriage model they'll carry forward.",
+    },
+    recommendedDoa: ["masuk-rumah", "doa-untuk-orang-tua"],
+    supportingHadith: ["kelembutan-keindahan", "rumah-tempat-paling-utama"],
+    ageMin: 1,
+    ageMax: 12,
+    category: "emosi",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    quote: {
+      id: "Yang membekas pada anak bukan bahwa orang tuanya pernah bertengkar — tapi apakah mereka melihat orang tuanya berbaikan.",
+      en: "What stays with a child isn't that their parents argued — it's whether they saw their parents make up.",
+    },
+    seoQuery: {
+      id: "dampak anak melihat orang tua bertengkar islam",
+      en: "child witnessing parents argue islamic parenting",
+    },
+  },
 ];
 
 export function getAllParenting(): ParentingSituation[] {
