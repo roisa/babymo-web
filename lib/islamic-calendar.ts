@@ -53,7 +53,7 @@ export const islamicCalendar: IslamicEvent[] = [
     },
     startISO: "2026-07-04",
     endISO: "2026-07-06",
-    blogSlug: "puasa-asyura-anak",
+    blogSlug: "puasa-asyura-untuk-anak",
   },
   {
     id: "rajab-1448",
@@ -99,7 +99,7 @@ export const islamicCalendar: IslamicEvent[] = [
     },
     startISO: "2026-05-17",
     endISO: "2026-06-15",
-    blogSlug: "sepuluh-hari-pertama-dzulhijjah-bersama-keluarga",
+    blogSlug: "10-hari-dzulhijjah-bareng-anak",
   },
 ];
 

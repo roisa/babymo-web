@@ -2612,6 +2612,359 @@ export const blogPosts: BlogPost[] = [
     readingTimeMin: 6,
     author: "tim-baby-mo",
   },
+
+  {
+    slug: "ramadan-bersama-anak",
+    title: {
+      id: "Ramadan Bersama Anak: Panduan Praktis untuk Keluarga dengan Anak Kecil",
+      en: "Ramadan with Kids: A Practical Guide for Families with Young Children",
+    },
+    excerpt: {
+      id: "Ramadan tahun ini dimulai sekitar 19 Februari 2027 (1 Ramadan 1448 H). Panduan untuk membantu anak — dari yang masih bayi sampai yang sudah coba puasa pertama — merasakan bulan suci sebagai bulan yang ditunggu, bukan bulan yang ditakuti.",
+      en: "Ramadan this year begins around 19 February 2027 (1 Ramadan 1448 H). A guide to help children — from infants to first-time fasters — feel the holy month as one to look forward to, not to fear.",
+    },
+    body: {
+      id: `<p>Ramadan adalah bulan paling berharga dalam kalender Islam — dan juga bulan yang paling membentuk identitas Muslim seorang anak. Yang anak rasakan di Ramadan-Ramadan kecil mereka — apakah hangat dan ditunggu, atau melelahkan dan menakutkan — ikut menentukan hubungan mereka dengan ibadah seumur hidup.</p>
+
+<p>Tulisan ini dirancang untuk orang tua dengan anak usia 0–10 tahun. Tidak ada satu pun anak di rentang ini yang <em>diwajibkan</em> puasa. Yang ada hanya satu tugas kita: membuat Ramadan terasa istimewa.</p>
+
+<h2>Sebelum Ramadan: bangun antisipasi</h2>
+
+<p>Tujuan minggu-minggu sebelum Ramadan: anak menanti, bukan mendadak ditodong perubahan rutinitas.</p>
+
+<ul>
+  <li><strong>Hitung mundur visual</strong> — tempel kalender Ramadan di kulkas, anak mencoret satu kotak setiap pagi sambil bilang "Sebentar lagi Ramadan!"</li>
+  <li><strong>Ceritakan apa yang akan berubah</strong> — sahur subuh-subuh, buka sore, banyak doa, banyak tamu, banyak ketupat di akhir. Anak yang tahu apa yang akan datang lebih kooperatif.</li>
+  <li><strong>Beli atau buat dekorasi</strong> — lampu bulan-bintang di kamar, taplak meja baru, satu mainan/buku tema Ramadan yang baru dibuka pas malam pertama.</li>
+  <li><strong>Latih puasa Sya'ban</strong> — kalau anak >7 dan minat puasa, satu dua hari Sya'ban setengah hari = pemanasan yang baik.</li>
+</ul>
+
+<h2>Anak usia 0–3: cukup ada di tengah suasana</h2>
+
+<p>Bayi dan balita tidak perlu puasa, tidak perlu sholat tarawih, tidak perlu diajarkan apa-apa secara formal. Yang mereka serap di usia ini: <strong>nada rumah</strong>.</p>
+
+<ul>
+  <li>Saat sahur dan buka, tetap libatkan mereka di meja — walau cuma duduk dengan dot atau susu.</li>
+  <li>Putar bacaan Qur'an di rumah lebih sering. Sediakan satu surah favorit yang berulang.</li>
+  <li>Saat sholat tarawih, kalau di rumah — ajak mereka di pangkuan atau di sajadah sebelah.</li>
+  <li>Jangan stres kalau rutinitas tidur kacau. Tidur siang lebih panjang untuk yang masih napping.</li>
+</ul>
+
+<p>Yang menempel: ingatan emosional. "Ramadan = rumah lebih sibuk, lebih banyak cium, lebih banyak makanan enak."</p>
+
+<h2>Anak usia 4–6: latihan tanpa beban</h2>
+
+<p>Ini fase mengenalkan, bukan menuntut. Anak penasaran dengan apa yang orang tua lakukan dan mau coba meniru.</p>
+
+<ul>
+  <li><strong>Sahur opsional</strong> — kalau anak mau bangun, beri makanan ringan kesukaan. Kalau tidak, biarkan tidur.</li>
+  <li><strong>Puasa "mainan"</strong> — beberapa keluarga punya tradisi "puasa beduk" (sahur sampai Dzuhur). Untuk usia ini, itu sudah pencapaian besar.</li>
+  <li><strong>Buka bersama setiap hari</strong> — anak ikut menunggu maghrib, diberi kurma dan air, ikut baca <a href="/_/doa/berbuka-puasa/">doa berbuka</a>.</li>
+  <li><strong>Satu doa harian baru</strong> — kenalkan satu doa pendek per minggu Ramadan. Empat doa baru dalam satu bulan = bagus.</li>
+  <li><strong>Hadiah sederhana untuk usaha kecil</strong> — bukan transaksional, tapi penanda momen.</li>
+</ul>
+
+<p>Lihat juga: <a href="/_/parenting/puasa-pertama/">Puasa Pertama Anak</a> — panduan praktis menghadapi pertanyaan-pertanyaan emosional.</p>
+
+<h2>Anak usia 7–10: mulai puasa, dengan kelembutan</h2>
+
+<p>Hadits "perintahkan anak sholat di usia 7" sering dibaca sebagai "perintahkan puasa juga di usia 7." Tapi konsensus ulama: <strong>puasa tidak wajib sampai baligh.</strong> Latihan ya, paksaan tidak.</p>
+
+<ul>
+  <li><strong>Mulai dari setengah hari</strong> — sahur subuh sampai Dzuhur, atau sampai jam 12. Penuh hari adalah pencapaian tahap lanjut, bukan target tahun pertama.</li>
+  <li><strong>Sediakan aktivitas yang membuat lupa lapar</strong> — buku baru, jadwal jalan pagi ringan, main bersama saudara.</li>
+  <li><strong>Hormati ketika anak menyerah</strong> — tidak ada hadiah untuk yang sampai maghrib, tidak ada hukuman untuk yang batal di Dzuhur. Yang penting: mau coba lagi besok.</li>
+  <li><strong>Bicarakan rasa lapar dengan empati</strong> — "Iya, lapar itu nggak enak. Mama juga lapar. Tapi kita lagi belajar pelan-pelan."</li>
+  <li><strong>Bedakan rasa lapar dari rasa haus</strong> — anak usia ini boleh diingatkan: kalau benar-benar haus parah dan masih siang, lebih baik batal puasa daripada dehidrasi.</li>
+</ul>
+
+<h2>Tarawih dengan anak kecil</h2>
+
+<p>Tarawih bersama keluarga adalah salah satu kenangan paling kuat seorang anak Muslim. Tapi 8–20 rakaat dengan anak balita bisa jadi medan perang. Strateginya:</p>
+
+<ul>
+  <li><strong>Lakukan di rumah pertama-pertama</strong> — anak usia <5 lebih baik mulai dari sholat di rumah, baru ke masjid setelah bisa duduk tenang ~20 menit.</li>
+  <li><strong>Cukup beberapa rakaat dulu</strong> — 2 atau 4 rakaat tarawih dengan keluarga, lalu anak tidur, lalu orang dewasa lanjutkan.</li>
+  <li><strong>Ke masjid kalau memungkinkan</strong> — anak yang dibawa rutin ke masjid sejak kecil menganggap masjid sebagai "rumah kedua." Tapi pilih masjid yang ramah anak (lihat <a href="/_/parenting/screen-time/">menyiapkan anak untuk ruang publik</a>).</li>
+  <li><strong>Sediakan ransel masjid</strong> — sajadah kecil, buku tenang, botol air, biskuit. Aktivitas darurat saat anak gelisah.</li>
+</ul>
+
+<h2>Membuat rumah terasa "Ramadan"</h2>
+
+<p>Anak menyerap <em>suasana</em> sebelum mereka memahami <em>makna</em>. Investasi terbesar: bikin rumah terasa berbeda di bulan Ramadan.</p>
+
+<ul>
+  <li>Lampu bulan-bintang yang dinyalakan setiap maghrib (LED warna hangat, batere atau colok).</li>
+  <li>Kotak kurma di meja, selalu terbuka, dengan air mineral di sebelahnya — siap untuk siapa pun yang berbuka.</li>
+  <li>Sticker chart sederhana untuk anak: ✓ untuk sahur, ✓ untuk buka bersama, ✓ untuk sedekah hari ini.</li>
+  <li>Resep buka yang sama setiap minggu (kolak Senin, gorengan Selasa, dst) — anak mengenang Ramadan lewat rasa.</li>
+  <li>Sediakan satu sudut "tilawah" — bantal di lantai dekat jendela, mushaf kecil yang anak boleh pegang, lampu khusus.</li>
+</ul>
+
+<h2>10 hari terakhir: Lailatul Qadr untuk anak</h2>
+
+<p>10 hari terakhir Ramadan istimewa karena di dalamnya ada <strong>Lailatul Qadr</strong> — malam yang lebih baik dari 1000 bulan. Untuk anak kecil, ini sulit dijelaskan. Tapi <em>dirasakan</em> bisa.</p>
+
+<ul>
+  <li>Beberapa keluarga mengizinkan anak tidur sebentar setelah Maghrib, lalu bangun jam 21:00 untuk "menemani" orang tua tilawah/sholat sebentar — anak merasa diikutsertakan dalam sesuatu yang istimewa.</li>
+  <li>Cerita pendek tentang Lailatul Qadr setiap malam — Allah turunkan banyak rahmat, banyak malaikat, banyak ampunan.</li>
+  <li>Untuk anak yang lebih besar (>7): ajak baca doa Lailatul Qadr — <em>"Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'annii."</em> Ringkas, mudah dihafal.</li>
+  <li>Iktikaf di masjid untuk anak >8 selama satu-dua malam terakhir — pengalaman seumur hidup.</li>
+</ul>
+
+<h2>Idul Fitri: puncak yang ditunggu</h2>
+
+<p>Anak yang sudah sebulan dalam ritme Ramadan akan merasakan Idul Fitri sebagai hadiah — bukan sebagai liburan biasa. Yang penting:</p>
+
+<ul>
+  <li>Baju baru — tidak mewah, tapi <em>baru</em>. Anak ingat ini seumur hidup.</li>
+  <li>Sholat Ied di tanah lapang atau masjid bersama keluarga besar. Bawa anak <strong>walau menangis di tengah jamaah</strong> — itu kenangan, bukan masalah.</li>
+  <li>Saling memaafkan dengan ucapan singkat ke anak: "Maaf ya Nak, kalau Ayah marah-marah selama Ramadan." Mereka belajar bahwa orang tua juga bisa salah.</li>
+  <li>Silaturahmi dengan ritme yang santai — tidak harus 10 rumah dalam satu hari.</li>
+</ul>
+
+<h2>Yang harus dihindari</h2>
+
+<ul>
+  <li><strong>Memaksa puasa penuh anak yang belum siap</strong> — bukan kebaikan, bukan kemandirian. Itu trauma yang anak ingat di Ramadan-Ramadan dewasa.</li>
+  <li><strong>Membandingkan dengan anak lain</strong> — "Si Ahmad sudah puasa penuh padahal seumuran kamu." Hindari, selalu.</li>
+  <li><strong>Marah-marah karena lapar</strong> — orang tua yang puasa dengan emosi pendek mengajarkan: "puasa = marah." Hubungan jangka panjang anak dengan puasa rusak. Lebih baik makan kurma dan ngopi sebelum subuh.</li>
+  <li><strong>Janji hadiah materi besar untuk puasa</strong> — transaksional. Ramadan adalah ibadah, bukan kontrak.</li>
+  <li><strong>Stres soal kesempurnaan</strong> — kalau anak melewatkan sahur, kalau tarawih tidak khusyuk, kalau anak rewel di masjid — semua wajar. Ramadan adalah perjalanan keluarga, bukan ujian.</li>
+</ul>
+
+<h2>Yang harus dibiasakan</h2>
+
+<ul>
+  <li><strong>Sahur bersama</strong> — walau anak cuma minum susu.</li>
+  <li><strong>Buka bersama</strong> — wajib, tidak boleh anak buka sendiri di kamar.</li>
+  <li><strong>Doa berbuka bareng</strong> — anak ikut, walau dia tidak puasa. Lihat <a href="/_/doa/berbuka-puasa/">Doa Berbuka Puasa</a>.</li>
+  <li><strong>Satu sedekah sebagai keluarga setiap pekan Ramadan</strong> — anak ikut. Beri ke tukang sapu, ke pengamen kecil, ke tetangga.</li>
+  <li><strong>Refleksi malam terakhir</strong> — "Apa yang paling kamu suka dari Ramadan tahun ini?" Anak akan ingat jawaban mereka tahun depan.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Ramadan tahun ini tidak harus sempurna. Anak tidak harus puasa penuh, sholat semua tarawih, hafal semua doa. Yang anak butuh: orang tua yang hadir, suasana rumah yang berbeda, dan pesan diam-diam bahwa bulan ini adalah bulan yang dirindukan.</p>
+
+<p>Dari Ramadan ke Ramadan, sedikit demi sedikit, anak tumbuh ke dalam ibadah. Tugas kita hanyalah menjaga pintu tetap terbuka — lebar dan hangat — sampai mereka siap masuk dengan langkah mereka sendiri.</p>
+
+<p>Insya Allah, Ramadan tahun ini lebih hangat dari tahun lalu. Dan tahun depan, lebih hangat dari tahun ini.</p>`,
+      en: `<p>Ramadan is the most valuable month in the Islamic calendar — and also the month that most shapes a child's Muslim identity. What a child feels in their small Ramadans — whether warm and anticipated, or exhausting and frightening — helps determine their lifelong relationship with worship.</p>
+
+<p>This guide is for parents with children aged 0–10. Not a single child in this range is <em>obligated</em> to fast. Our only task: make Ramadan feel special.</p>
+
+<h2>Before Ramadan: build anticipation</h2>
+
+<p>Goal of the weeks before Ramadan: the child waits for it, not gets blindsided by a routine change.</p>
+
+<ul>
+  <li><strong>Visual countdown</strong> — stick a Ramadan calendar on the fridge; the child crosses out a box each morning, saying "Ramadan is almost here!"</li>
+  <li><strong>Tell them what changes</strong> — eating before dawn, breaking after sunset, more du'a, more guests, more ketupat at the end. A child who knows what's coming is more cooperative.</li>
+  <li><strong>Buy or make decorations</strong> — moon-and-star string lights, a new tablecloth, one Ramadan-themed toy or book opened on the first night.</li>
+  <li><strong>Practice with Sha'ban fasts</strong> — if the child is >7 and curious, one or two half-day fasts in Sha'ban are good warm-ups.</li>
+</ul>
+
+<h2>Ages 0–3: just be in the atmosphere</h2>
+
+<p>Babies and toddlers don't need to fast, don't need tarawih, don't need formal teaching. What they absorb at this age: <strong>the tone of the home</strong>.</p>
+
+<ul>
+  <li>At sahur and iftar, keep them at the table — even just sitting with a bottle.</li>
+  <li>Play Qur'an recitation more often in the home. Pick one favorite surah that repeats.</li>
+  <li>At tarawih, if at home — let them on your lap or on the prayer rug beside you.</li>
+  <li>Don't stress if sleep routines fall apart. Longer naps for those still napping.</li>
+</ul>
+
+<p>What sticks: emotional memory. "Ramadan = a busier home, more kisses, more good food."</p>
+
+<h2>Ages 4–6: practice without pressure</h2>
+
+<p>This is the introduction phase, not the demand phase. The child is curious about what parents are doing and wants to copy.</p>
+
+<ul>
+  <li><strong>Optional sahur</strong> — if the child wants to wake up, give them a favorite light snack. If not, let them sleep.</li>
+  <li><strong>"Practice" fast</strong> — some families have a "puasa beduk" tradition (sahur until Dzuhur). For this age, that's a big achievement.</li>
+  <li><strong>Iftar together every day</strong> — the child waits for maghrib, gets a date and water, reads <a href="/_/doa/berbuka-puasa/">the iftar du'a</a>.</li>
+  <li><strong>One new daily du'a per week</strong> — four new du'as in a month = good.</li>
+  <li><strong>Simple gifts for small efforts</strong> — not transactional, just markers of moments.</li>
+</ul>
+
+<p>Also see: <a href="/_/parenting/puasa-pertama/">A Child's First Fast</a> — practical guide for the emotional questions.</p>
+
+<h2>Ages 7–10: start fasting, with gentleness</h2>
+
+<p>The hadith "command prayer at age 7" is often read as "command fasting at 7 too." But scholarly consensus: <strong>fasting isn't obligatory until puberty.</strong> Training yes, forcing no.</p>
+
+<ul>
+  <li><strong>Start with half-day fasts</strong> — sahur to Dzuhur, or to noon. Full day is a later milestone, not a year-one target.</li>
+  <li><strong>Provide distractions from hunger</strong> — new books, light morning walks, play with siblings.</li>
+  <li><strong>Respect when the child gives up</strong> — no reward for reaching maghrib, no punishment for breaking at Dzuhur. What matters: willingness to try again tomorrow.</li>
+  <li><strong>Talk about hunger with empathy</strong> — "Yes, hunger doesn't feel good. Mama's hungry too. But we're learning, little by little."</li>
+  <li><strong>Distinguish hunger from thirst</strong> — children this age can be reminded: if truly thirsty and still daytime, breaking the fast is better than dehydration.</li>
+</ul>
+
+<h2>Tarawih with small children</h2>
+
+<p>Family tarawih is one of the strongest memories a Muslim child carries. But 8–20 rakaat with toddlers can be a battlefield. The strategy:</p>
+
+<ul>
+  <li><strong>Start at home</strong> — children under 5 are better off starting with home prayer, moving to the mosque once they can sit still for ~20 minutes.</li>
+  <li><strong>A few rakaat first</strong> — 2 or 4 rakaat of tarawih as a family, then the child sleeps, then adults continue.</li>
+  <li><strong>Mosque if possible</strong> — children brought to the mosque early consider it a "second home." But pick a child-friendly mosque.</li>
+  <li><strong>Pack a mosque bag</strong> — small prayer rug, quiet book, water bottle, biscuit. Emergency activities for restless moments.</li>
+</ul>
+
+<h2>Making the home feel "Ramadan"</h2>
+
+<p>Children absorb <em>atmosphere</em> before they understand <em>meaning</em>. Biggest investment: make the home feel different in Ramadan.</p>
+
+<ul>
+  <li>Moon-and-star lights turned on every maghrib (warm LED, battery or plug-in).</li>
+  <li>A box of dates always open on the table with water beside it — ready for anyone breaking their fast.</li>
+  <li>Simple sticker chart for the child: ✓ for sahur, ✓ for iftar together, ✓ for today's sadaqah.</li>
+  <li>The same iftar recipe each week (compote Mondays, fried snacks Tuesdays, etc.) — children remember Ramadan through taste.</li>
+  <li>Set up a "tilawah corner" — a floor cushion near a window, a small mushaf the child can hold, a dedicated lamp.</li>
+</ul>
+
+<h2>The last 10 days: Lailatul Qadr for children</h2>
+
+<p>The last 10 days of Ramadan are special because they contain <strong>Lailatul Qadr</strong> — the night better than 1000 months. For small children, this is hard to explain. But it can be <em>felt</em>.</p>
+
+<ul>
+  <li>Some families let the child nap after Maghrib, then wake at 21:00 to "join" parents reading Qur'an / praying briefly — the child feels included in something special.</li>
+  <li>A short story about Lailatul Qadr each night — Allah pours down mercy, angels descend, forgiveness flows.</li>
+  <li>For older children (>7): teach the Lailatul Qadr du'a — <em>"Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'annii."</em> Short, easy to memorize.</li>
+  <li>I'tikaf at the mosque for children >8 for one or two of the final nights — a lifelong experience.</li>
+</ul>
+
+<h2>Eid al-Fitr: the awaited peak</h2>
+
+<p>A child who has spent a month in Ramadan's rhythm experiences Eid as a gift — not just an ordinary holiday. What matters:</p>
+
+<ul>
+  <li>New clothes — not lavish, but <em>new</em>. The child remembers this for life.</li>
+  <li>Eid prayer in an open field or mosque with extended family. Bring the child <strong>even if they cry in the middle of the jama'ah</strong> — that's a memory, not a problem.</li>
+  <li>Mutual forgiveness with a short word to your child: "Sorry, kid, if Mama got grumpy during Ramadan." They learn that parents can be wrong too.</li>
+  <li>Silaturahmi (visiting family) at a calm pace — doesn't have to be 10 houses in one day.</li>
+</ul>
+
+<h2>What to avoid</h2>
+
+<ul>
+  <li><strong>Forcing a child to complete a full fast before they're ready</strong> — not kindness, not maturity. It's the trauma they remember in adult Ramadans.</li>
+  <li><strong>Comparing to other children</strong> — "Ahmad already fasts the full day at your age." Avoid, always.</li>
+  <li><strong>Anger from hunger</strong> — parents who fast with short fuses teach: "fasting = anger." The child's long-term relationship with worship is damaged. Better to eat dates and have coffee before fajr.</li>
+  <li><strong>Big material rewards for fasting</strong> — transactional. Ramadan is worship, not a contract.</li>
+  <li><strong>Stressing over perfection</strong> — missed sahur, distracted tarawih, restless child at the mosque — all normal. Ramadan is a family journey, not an exam.</li>
+</ul>
+
+<h2>What to make habit</h2>
+
+<ul>
+  <li><strong>Sahur together</strong> — even if the child only has milk.</li>
+  <li><strong>Iftar together</strong> — no exception; no child breaks fast alone in their room.</li>
+  <li><strong>Iftar du'a together</strong> — the child joins, even when not fasting. See <a href="/_/doa/berbuka-puasa/">Iftar Du'a</a>.</li>
+  <li><strong>One family sadaqah each week of Ramadan</strong> — the child participates. Give to the street sweeper, the small busker, the neighbor.</li>
+  <li><strong>Last-night reflection</strong> — "What did you like best about Ramadan this year?" The child will remember their answer next year.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>This year's Ramadan doesn't have to be perfect. The child doesn't have to complete every fast, attend every tarawih, memorize every du'a. What the child needs: present parents, a different feel in the home, and the quiet message that this month is one to long for.</p>
+
+<p>From Ramadan to Ramadan, little by little, the child grows into worship. Our job is simply to keep the door open — wide and warm — until they're ready to walk in on their own.</p>
+
+<p>Insha Allah, this Ramadan will be warmer than last year's. And next year, warmer still.</p>`,
+    },
+    tags: ["ramadan", "puasa", "anak", "ibadah", "keluarga"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 14,
+    author: "salman",
+    kit: {
+      quote: {
+        id: "Ramadan tahun ini tidak harus sempurna. Anak tidak harus puasa penuh, sholat semua tarawih, hafal semua doa. Yang anak butuh: orang tua yang hadir, suasana rumah yang berbeda, dan pesan diam-diam bahwa bulan ini adalah bulan yang dirindukan.",
+        en: "This Ramadan doesn't have to be perfect. The child doesn't have to complete every fast, attend every tarawih, memorize every du'a. They need present parents, a different feel in the home, and the quiet message that this month is one to long for.",
+      },
+      carousel: {
+        id: [
+          { title: "Ramadan dengan Anak — 1/7", body: "Sebelum Ramadan, bangun antisipasi. Hitung mundur visual di kulkas. Anak yang tahu apa yang datang lebih kooperatif." },
+          { title: "Usia 0–3: Cukup ada", body: "Bayi tidak perlu puasa, tidak perlu tarawih. Yang mereka serap: nada rumah. Lebih banyak cium, lebih banyak makanan enak, suara Qur'an." },
+          { title: "Usia 4–6: Latihan tanpa beban", body: "Sahur opsional. Puasa beduk (sahur sampai Dzuhur) = pencapaian besar. Buka bersama setiap hari. Empat doa baru dalam sebulan." },
+          { title: "Usia 7–10: Setengah hari dulu", body: "Penuh hari adalah tahap lanjut, bukan target tahun pertama. Hormati ketika anak menyerah. Yang penting: mau coba lagi besok." },
+          { title: "Tarawih dengan balita", body: "Mulai di rumah. 2–4 rakaat keluarga, lalu anak tidur, lalu lanjutkan. Bawa ransel masjid: sajadah, buku, air, biskuit." },
+          { title: "10 hari terakhir = Lailatul Qadr", body: "Untuk anak: tidur sore, bangun jam 21:00 menemani orang tua sebentar. Itu kenangan seumur hidup." },
+          { title: "Hindari ini", body: "Memaksa puasa penuh. Membandingkan anak. Marah karena lapar. Janji hadiah materi. Stres soal kesempurnaan." },
+        ],
+        en: [
+          { title: "Ramadan with Kids — 1/7", body: "Before Ramadan, build anticipation. Visual countdown on the fridge. A child who knows what's coming is more cooperative." },
+          { title: "Ages 0–3: Just be present", body: "Babies don't need to fast or pray tarawih. What they absorb: the home's tone. More kisses, more good food, more Qur'an in the background." },
+          { title: "Ages 4–6: Practice without pressure", body: "Optional sahur. Half-day fast (sahur to Dzuhur) = big achievement. Iftar together daily. Four new du'as in a month." },
+          { title: "Ages 7–10: Half day first", body: "Full day is a later milestone, not a year-one target. Respect when they give up. What matters: willing to try again tomorrow." },
+          { title: "Tarawih with toddlers", body: "Start at home. 2–4 rakaat as family, child sleeps, adults continue. Pack a mosque bag: small rug, quiet book, water, biscuit." },
+          { title: "Last 10 days = Lailatul Qadr", body: "For children: nap after Maghrib, wake at 21:00 to join parents briefly. That's a lifelong memory." },
+          { title: "Avoid these", body: "Forcing a full fast. Comparing to other children. Anger from hunger. Big material rewards. Stressing over perfection." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Pertanyaan terbesar orang tua Ramadan ini: anak saya harus puasa atau tidak?
+
+[3–15 detik] MASALAH: Anak <belum baligh> tidak diwajibkan puasa apapun. Tapi banyak orang tua memaksa puasa penuh di usia 6–7. Hasil: anak yang menolak puasa di usia 16.
+
+[15–35 detik] SOLUSI: Untuk usia 0–3, cukup mereka ada di suasana rumah. Untuk 4–6, sahur opsional dan puasa setengah hari. Untuk 7–10, mulai setengah hari, hormati kalau menyerah. Tidak ada hadiah, tidak ada hukuman.
+
+[35–55 detik] BUKTI: Sahabat Nabi melatih anak puasa Asyura dengan kasih mainan bulu domba. Saat anak lapar, mereka main. Latihan, bukan paksaan. Itu yang membuat hubungan dengan ibadah bertahan.
+
+[55–60 detik] CTA: "Simpan sebelum Ramadan datang. Bagikan ke orang tua muslim yang lagi cari panduan."`,
+        en: `[0–3s] HOOK: The biggest parent question this Ramadan: should my child fast or not?
+
+[3–15s] PROBLEM: Children <before puberty> aren't obligated to fast at all. But many parents force full fasts at age 6–7. Result: children who refuse to fast at 16.
+
+[15–35s] SOLUTION: Ages 0–3, just be in the atmosphere. Ages 4–6, optional sahur and half-day fast. Ages 7–10, start half-day, respect when they give up. No rewards, no punishments.
+
+[35–55s] PROOF: The Companions trained children on Asyura by giving them wool toys. When the child got hungry, they'd play. Training, not forcing. That's what makes the relationship with worship last.
+
+[55–60s] CTA: "Save this before Ramadan arrives. Share with a Muslim parent looking for guidance."`,
+      },
+      pin: {
+        id: {
+          title: "Ramadan Bersama Anak — Panduan Praktis per Usia",
+          description: "Cara mengenalkan Ramadan ke anak usia 0–10 tahun. Sahur, tarawih, puasa pertama, Lailatul Qadr, dan Idul Fitri. Tanpa memaksa, tanpa membandingkan. Untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "Ramadan with Kids — A Practical Age-by-Age Guide",
+          description: "How to introduce Ramadan to children ages 0–10. Sahur, tarawih, first fasts, Lailatul Qadr, and Eid. Without forcing, without comparing. For Muslim families everywhere.",
+        },
+      },
+      checklist: {
+        id: [
+          "Sebelum Ramadan: hitung mundur visual di kulkas",
+          "Beli/buat satu dekorasi baru — lampu bulan-bintang, taplak baru",
+          "Sediakan kotak kurma + air di meja, selalu terbuka",
+          "Usia 0–3: tetap libatkan di sahur/buka, jangan stres rutinitas",
+          "Usia 4–6: sahur opsional, ajak buka tiap hari, satu doa baru per minggu",
+          "Usia 7–10: mulai puasa setengah hari, hormati kalau menyerah",
+          "Tarawih: mulai di rumah dulu, 2–4 rakaat keluarga",
+          "10 hari terakhir: ajak anak menemani 30 menit sebelum tidur lagi",
+          "Idul Fitri: baju baru + sholat Ied + maafkan anak walau dia tidak salah",
+          "Refleksi malam terakhir: 'Apa yang paling kamu suka dari Ramadan tahun ini?'",
+        ],
+        en: [
+          "Before Ramadan: visual countdown on the fridge",
+          "Buy or make one new decoration — moon-star lights, new tablecloth",
+          "Always-open box of dates + water on the table",
+          "Ages 0–3: keep them at sahur/iftar, don't stress about routine",
+          "Ages 4–6: optional sahur, daily iftar together, one new du'a per week",
+          "Ages 7–10: start half-day fasts, respect when they give up",
+          "Tarawih: start at home, 2–4 rakaat as a family",
+          "Last 10 days: invite the child to join you 30 minutes before sleeping again",
+          "Eid: new clothes + Eid prayer + ask the child's forgiveness even if no wrong",
+          "Last-night reflection: 'What did you like best about Ramadan this year?'",
+        ],
+      },
+    },
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
