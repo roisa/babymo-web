@@ -4254,6 +4254,377 @@ export const blogPosts: BlogPost[] = [
       },
     ],
   },
+
+  {
+    slug: "rajab-bulan-haram-bersama-anak",
+    title: {
+      id: "Bulan Rajab Bersama Anak: Bulan Haram dan Persiapan Menuju Ramadan",
+      en: "The Month of Rajab with Kids: A Sacred Month and the Road to Ramadan",
+    },
+    excerpt: {
+      id: "Rajab adalah satu dari empat bulan haram yang dimuliakan Allah. Cara mengenalkannya kepada anak, amalan yang dianjurkan, dan menghindari amalan yang tidak ada tuntunannya.",
+      en: "Rajab is one of the four sacred months Allah honored. How to introduce it to children, the recommended deeds, and avoiding baseless practices.",
+    },
+    body: {
+      id: `<p>Rajab adalah bulan ketujuh dalam kalender Hijriyah, dan termasuk salah satu dari <strong>empat bulan haram</strong> (bulan yang dimuliakan) bersama Dzulqa'idah, Dzulhijjah, dan Muharram. Allah berfirman bahwa di bulan-bulan ini kita dianjurkan memperbanyak kebaikan dan menjauhi kezaliman.</p>
+
+<h2>Apa yang istimewa dari Rajab</h2>
+
+<p>Rajab adalah "bulan pembuka" — orang-orang dahulu mengatakan: Rajab menanam, Sya'ban menyirami, Ramadan memanen. Artinya, Rajab adalah waktu mulai mempersiapkan hati menuju Ramadan yang tinggal dua bulan lagi.</p>
+
+<ul>
+  <li><strong>Termasuk bulan haram</strong> — pahala kebaikan dilipatgandakan, dan dosa juga lebih berat. Waktu yang baik untuk lebih hati-hati menjaga lisan dan perbuatan.</li>
+  <li><strong>Waktu memperbanyak doa</strong> — terutama doa yang masyhur: <em>"Allahumma baarik lanaa fii Rajab wa Sya'baan, wa ballighnaa Ramadhaan"</em> (Ya Allah, berkahilah kami di bulan Rajab dan Sya'ban, dan sampaikanlah kami ke bulan Ramadan).</li>
+</ul>
+
+<h2>Cara mengenalkan Rajab kepada anak</h2>
+
+<ul>
+  <li><strong>Mulai hitung mundur Ramadan</strong> — "Dua bulan lagi Ramadan, lho! Yuk siap-siap dari sekarang." Anak jadi menanti, bukan kaget.</li>
+  <li><strong>Ajarkan doa Rajab yang singkat</strong> di atas — mudah dihafal anak, dibaca tiap pagi.</li>
+  <li><strong>Latih satu kebaikan kecil</strong> sebagai "proyek Rajab" — misalnya rutin sholat Subuh, atau bersedekah seribu rupiah tiap hari ke celengan masjid.</li>
+</ul>
+
+<h2>Yang perlu diluruskan</h2>
+
+<p>Banyak amalan yang beredar di bulan Rajab tetapi <strong>tidak memiliki dasar yang kuat</strong> dalam sunnah, seperti puasa khusus "puasa Rajab" yang dianggap wajib, atau ritual malam tertentu dengan keutamaan yang dibuat-buat. Para ulama mengingatkan: berpuasa sunnah di bulan Rajab boleh (sebagai puasa sunnah biasa, seperti Senin-Kamis), tetapi tidak ada puasa khusus yang dikhususkan untuk Rajab dengan dalil yang sahih.</p>
+
+<p>Untuk anak: ajarkan yang jelas dan benar — memperbanyak doa, menjaga sholat, berbuat baik. Itu sudah cukup memuliakan bulan Rajab.</p>
+
+<h2>Penutup</h2>
+
+<p>Rajab adalah undangan halus dari Allah: "Ramadan sudah dekat, siapkan hatimu." Mengajak anak menyambut Rajab berarti mengajarkan mereka satu keterampilan hidup yang besar — mempersiapkan sesuatu yang penting jauh-jauh hari, dengan penuh kegembiraan.</p>`,
+      en: `<p>Rajab is the seventh month of the Hijri calendar and one of the <strong>four sacred months</strong> (the honored months) along with Dhul Qa'dah, Dhul Hijjah, and Muharram. Allah states that in these months we are encouraged to increase good deeds and avoid wrongdoing.</p>
+
+<h2>What makes Rajab special</h2>
+
+<p>Rajab is the "opening month" — the early Muslims used to say: Rajab is for planting, Sha'ban for watering, Ramadan for harvesting. Meaning Rajab is the time to begin preparing the heart for Ramadan, now just two months away.</p>
+
+<ul>
+  <li><strong>One of the sacred months</strong> — rewards for good are multiplied, and sins weigh heavier. A good time to be extra careful with one's tongue and actions.</li>
+  <li><strong>A time to increase du'a</strong> — especially the well-known one: <em>"Allahumma baarik lanaa fii Rajab wa Sya'baan, wa ballighnaa Ramadhaan"</em> (O Allah, bless us in Rajab and Sha'ban, and let us reach Ramadan).</li>
+</ul>
+
+<h2>How to introduce Rajab to children</h2>
+
+<ul>
+  <li><strong>Start the Ramadan countdown</strong> — "Two months until Ramadan! Let's get ready now." The child anticipates rather than being surprised.</li>
+  <li><strong>Teach the short Rajab du'a</strong> above — easy for kids to memorize, recited each morning.</li>
+  <li><strong>Practice one small good deed</strong> as a "Rajab project" — like praying Fajr consistently, or putting a small coin in the mosque box daily.</li>
+</ul>
+
+<h2>What to clarify</h2>
+
+<p>Many practices circulate in Rajab that <strong>have no strong basis</strong> in the sunnah — like a special obligatory "Rajab fast," or specific night rituals with invented virtues. Scholars remind us: optional fasting in Rajab is fine (as a normal voluntary fast, like Monday-Thursday), but there is no fast singled out specifically for Rajab with authentic evidence.</p>
+
+<p>For children: teach what is clear and correct — increasing du'a, guarding prayer, doing good. That alone honors Rajab.</p>
+
+<h2>Closing</h2>
+
+<p>Rajab is Allah's gentle invitation: "Ramadan is near, prepare your heart." Inviting children to welcome Rajab teaches them a great life skill — preparing for something important well in advance, with joy.</p>`,
+    },
+    tags: ["rajab", "bulan-haram", "ramadan", "ibadah-musiman"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+  },
+
+  {
+    slug: "syaban-menyiapkan-hati-menuju-ramadan",
+    title: {
+      id: "Bulan Sya'ban: Menyiapkan Hati (dan Anak) Menuju Ramadan",
+      en: "The Month of Sha'ban: Preparing Hearts (and Kids) for Ramadan",
+    },
+    excerpt: {
+      id: "Sya'ban adalah bulan terakhir sebelum Ramadan — bulan yang sering dilupakan, padahal Rasulullah ﷺ paling banyak berpuasa di bulan ini. Cara memanfaatkannya bersama keluarga.",
+      en: "Sha'ban is the last month before Ramadan — often forgotten, yet the Prophet ﷺ fasted most in this month. How to make the most of it as a family.",
+    },
+    body: {
+      id: `<p>Sya'ban adalah bulan kedelapan dalam kalender Hijriyah, tepat sebelum Ramadan. Bulan ini sering "terlewat" karena berada di antara dua bulan istimewa: Rajab dan Ramadan. Padahal, Rasulullah ﷺ justru paling banyak berpuasa sunnah di bulan Sya'ban.</p>
+
+<h2>Kenapa Rasulullah ﷺ memperbanyak puasa di Sya'ban</h2>
+
+<p>Usamah bin Zaid pernah bertanya kepada Rasulullah ﷺ kenapa beliau banyak berpuasa di Sya'ban. Beliau menjawab bahwa Sya'ban adalah bulan yang sering dilalaikan manusia (karena di antara Rajab dan Ramadan), padahal di bulan ini amal-amal diangkat kepada Allah — dan beliau senang amalnya diangkat dalam keadaan berpuasa. (HR. Nasa'i)</p>
+
+<h2>Cara memanfaatkan Sya'ban bersama anak</h2>
+
+<ul>
+  <li><strong>Latihan puasa untuk anak</strong> — Sya'ban adalah waktu sempurna untuk anak (usia 7+) mencoba puasa setengah hari, supaya saat Ramadan tiba mereka sudah terbiasa. Lihat panduan <a href="/_/parenting/puasa-pertama/">Puasa Pertama Anak</a>.</li>
+  <li><strong>Beres-beres rumah dan hati</strong> — ajak anak menata kamar, merapikan mainan, dan saling memaafkan. "Sebentar lagi Ramadan, kita siapkan rumah yang bersih dan hati yang bersih."</li>
+  <li><strong>Mulai jadwal mengaji</strong> — bangun kebiasaan membaca Al-Qur'an bersama, sehingga saat Ramadan rutinitasnya sudah jalan.</li>
+  <li><strong>Lunasi utang puasa</strong> — bagi yang sudah baligh dan punya utang puasa Ramadan lalu, Sya'ban adalah kesempatan terakhir untuk meng-qadha sebelum Ramadan berikutnya.</li>
+</ul>
+
+<h2>Tentang Nisfu Sya'ban</h2>
+
+<p>Malam pertengahan Sya'ban (Nisfu Sya'ban) memang disebut dalam beberapa hadits sebagai malam yang Allah memberikan ampunan luas kepada hamba-hamba-Nya. Namun para ulama berbeda pendapat tentang amalan khusus malam itu. Pendekatan yang aman: perbanyak doa dan istighfar seperti malam-malam lainnya, tanpa ritual khusus yang tidak ada tuntunannya. Yang disepakati: perbanyak amal di sepanjang Sya'ban, bukan hanya satu malam.</p>
+
+<h2>Penutup</h2>
+
+<p>Kalau Rajab menanam dan Ramadan memanen, maka Sya'ban adalah bulan menyirami — bulan kerja yang tenang yang membuat panen Ramadan jadi melimpah. Anak yang memasuki Ramadan dengan tubuh dan kebiasaan yang sudah disiapkan di Sya'ban akan menjalani Ramadan jauh lebih ringan dan gembira.</p>`,
+      en: `<p>Sha'ban is the eighth month of the Hijri calendar, right before Ramadan. It's often "skipped" because it sits between two special months: Rajab and Ramadan. Yet the Prophet ﷺ actually fasted most in Sha'ban.</p>
+
+<h2>Why the Prophet ﷺ fasted often in Sha'ban</h2>
+
+<p>Usamah ibn Zaid once asked the Prophet ﷺ why he fasted so much in Sha'ban. He answered that Sha'ban is a month people often neglect (being between Rajab and Ramadan), yet in it deeds are raised to Allah — and he loved for his deeds to be raised while fasting. (Nasa'i)</p>
+
+<h2>How to use Sha'ban as a family</h2>
+
+<ul>
+  <li><strong>Fasting practice for kids</strong> — Sha'ban is the perfect time for a child (age 7+) to try half-day fasts, so by Ramadan they're already used to it. See <a href="/_/parenting/puasa-pertama/">A Child's First Fast</a>.</li>
+  <li><strong>Tidy the home and the heart</strong> — have kids tidy their room, organize toys, and forgive one another. "Ramadan is near, let's prepare a clean home and a clean heart."</li>
+  <li><strong>Start a Qur'an schedule</strong> — build a habit of reading the Qur'an together so the routine is running by Ramadan.</li>
+  <li><strong>Pay off missed fasts</strong> — for those past puberty with missed fasts from last Ramadan, Sha'ban is the last chance to make them up.</li>
+</ul>
+
+<h2>About Nisfu Sha'ban</h2>
+
+<p>The mid-Sha'ban night (Nisfu Sha'ban) is mentioned in some narrations as a night Allah extends wide forgiveness. However, scholars differ on specific practices for that night. The safe approach: increase du'a and istighfar as on any night, without invented special rituals. What's agreed upon: increase good deeds throughout Sha'ban, not just one night.</p>
+
+<h2>Closing</h2>
+
+<p>If Rajab is for planting and Ramadan for harvesting, Sha'ban is for watering — the quiet working month that makes the Ramadan harvest abundant. A child who enters Ramadan with a body and habits prepared in Sha'ban will find Ramadan far lighter and more joyful.</p>`,
+    },
+    tags: ["syaban", "ramadan", "puasa", "ibadah-musiman"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 7,
+    author: "tim-baby-mo",
+  },
+
+  {
+    slug: "maulid-mengenalkan-rasulullah-pada-anak",
+    title: {
+      id: "Maulid Nabi: Cara Mengenalkan Sosok Rasulullah ﷺ kepada Anak",
+      en: "Mawlid: How to Introduce the Prophet ﷺ to Your Child",
+    },
+    excerpt: {
+      id: "Bulan Rabi'ul Awal mengingatkan kita pada kelahiran Rasulullah ﷺ. Lepas dari perbedaan pendapat tentang perayaannya, ini momen emas mengenalkan akhlak dan kisah Nabi kepada anak.",
+      en: "The month of Rabi' al-Awwal reminds us of the Prophet's ﷺ birth. Beyond differences over celebration, it's a golden moment to introduce his character and story to children.",
+    },
+    body: {
+      id: `<p>Setiap bulan Rabi'ul Awal, umat Islam teringat pada kelahiran manusia terbaik sepanjang sejarah: Nabi Muhammad ﷺ. Tentang hukum merayakan Maulid secara khusus, ulama berbeda pendapat — sebagian membolehkan sebagai sarana mengingat dan mencintai Nabi, sebagian tidak menganjurkan karena tidak dilakukan di masa salaf. Tulisan ini tidak masuk ke perdebatan itu; fokusnya satu hal yang disepakati semua: <strong>mengenal dan mencintai Rasulullah ﷺ adalah kewajiban setiap muslim, termasuk anak-anak kita.</strong></p>
+
+<h2>Kenapa anak perlu mengenal Rasulullah ﷺ sejak dini</h2>
+
+<p>Anak-anak meniru tokoh yang mereka kagumi. Kalau kita tidak mengisi hati mereka dengan kekaguman pada Rasulullah ﷺ, dunia akan mengisinya dengan tokoh lain. Mencintai Nabi bukan sekadar emosi — itu pintu untuk mencintai akhlaknya, lalu menirunya.</p>
+
+<h2>Cara mengenalkan, sesuai usia</h2>
+
+<h3>Usia 3–5: Nabi yang penyayang</h3>
+<p>Ceritakan sisi lembut Rasulullah ﷺ: beliau menyayangi anak-anak, mencium cucu-cucunya, memendekkan sholat saat mendengar bayi menangis, dan tersenyum kepada siapa saja. Anak kecil paling mudah terhubung dengan kasih sayang.</p>
+
+<h3>Usia 6–8: Nabi yang jujur dan adil</h3>
+<p>Ceritakan gelar "Al-Amin" (yang terpercaya) yang diberikan penduduk Mekkah sebelum beliau menjadi nabi. Ceritakan bagaimana beliau jujur dalam berdagang dan adil kepada semua orang. Lihat <a href="/_/kisah/muhammad/">Kisah Nabi Muhammad ﷺ</a>.</p>
+
+<h3>Usia 9+: Nabi sebagai teladan hidup</h3>
+<p>Diskusikan bagaimana Rasulullah ﷺ menyikapi kesulitan, memaafkan musuh, dan tetap rendah hati meski menjadi pemimpin. Ajak anak memilih satu sunnah untuk ditiru pekan ini — senyum, memberi salam, atau membantu pekerjaan rumah (Nabi pun membantu istrinya di rumah).</p>
+
+<h2>Aktivitas keluarga di Rabi'ul Awal</h2>
+
+<ul>
+  <li><strong>Bacakan satu kisah Nabi setiap malam</strong> sepanjang bulan ini — dari kelahiran sampai dakwah di Madinah.</li>
+  <li><strong>Perbanyak sholawat</strong> bersama: "Allahumma shalli 'ala Sayyidina Muhammad." Anak suka mengulang kalimat berirama.</li>
+  <li><strong>Pilih satu akhlak Nabi</strong> untuk dilatih sekeluarga sepekan — misalnya menjaga lisan, atau memuliakan tamu.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Apa pun pandangan keluarga tentang perayaan Maulid, satu hal pasti: anak yang tumbuh dengan kisah dan akhlak Rasulullah ﷺ tertanam di hatinya, memiliki teladan terbaik yang akan menemaninya seumur hidup. Itulah hadiah terindah yang bisa kita berikan.</p>`,
+      en: `<p>Every month of Rabi' al-Awwal, Muslims remember the birth of the best human in history: Prophet Muhammad ﷺ. On the ruling of specifically celebrating the Mawlid, scholars differ — some permit it as a means of remembering and loving the Prophet, others discourage it as not practiced by the early generations. This article doesn't enter that debate; it focuses on the one thing all agree upon: <strong>knowing and loving the Prophet ﷺ is an obligation upon every Muslim, including our children.</strong></p>
+
+<h2>Why children need to know the Prophet ﷺ early</h2>
+
+<p>Children imitate the figures they admire. If we don't fill their hearts with admiration for the Prophet ﷺ, the world will fill it with other figures. Loving the Prophet isn't just emotion — it's the door to loving his character, then imitating it.</p>
+
+<h2>How to introduce him, by age</h2>
+
+<h3>Ages 3–5: The loving Prophet</h3>
+<p>Tell of his gentleness: he loved children, kissed his grandchildren, shortened his prayer when he heard a baby cry, and smiled at everyone. Small children connect most easily with love.</p>
+
+<h3>Ages 6–8: The honest and just Prophet</h3>
+<p>Tell of the title "Al-Amin" (the trustworthy) given by the people of Makkah before he became a prophet. Tell how he was honest in trade and just to all. See <a href="/_/kisah/muhammad/">The Story of Prophet Muhammad ﷺ</a>.</p>
+
+<h3>Ages 9+: The Prophet as a life model</h3>
+<p>Discuss how the Prophet ﷺ faced hardship, forgave enemies, and stayed humble despite leading. Have your child pick one sunnah to imitate this week — smiling, giving salam, or helping with chores (the Prophet helped his wife at home too).</p>
+
+<h2>Family activities in Rabi' al-Awwal</h2>
+
+<ul>
+  <li><strong>Read one story of the Prophet each night</strong> through the month — from his birth to his mission in Madinah.</li>
+  <li><strong>Increase salawat</strong> together: "Allahumma salli 'ala Sayyidina Muhammad." Children love repeating rhythmic phrases.</li>
+  <li><strong>Pick one of the Prophet's traits</strong> to practice as a family for a week — guarding speech, or honoring guests.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Whatever your family's view on celebrating the Mawlid, one thing is certain: a child who grows up with the Prophet's ﷺ stories and character planted in their heart has the best role model to accompany them for life. That is the most beautiful gift we can give.</p>`,
+    },
+    tags: ["maulid", "rabiul-awal", "kisah-nabi", "akhlak"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+  },
+
+  {
+    slug: "isra-miraj-untuk-anak",
+    title: {
+      id: "Isra Mi'raj untuk Anak: Kisah Perjalanan Malam dan Asal-Usul Sholat 5 Waktu",
+      en: "Isra Mi'raj for Kids: The Night Journey and the Origin of the Five Daily Prayers",
+    },
+    excerpt: {
+      id: "Salah satu mukjizat terbesar Rasulullah ﷺ — perjalanan malam dari Mekkah ke Baitul Maqdis lalu naik ke langit. Dari peristiwa inilah perintah sholat 5 waktu turun.",
+      en: "One of the Prophet's ﷺ greatest miracles — the night journey from Makkah to Jerusalem and the ascension. From this event came the command of the five daily prayers.",
+    },
+    body: {
+      id: `<p>Isra Mi'raj adalah dua peristiwa luar biasa yang terjadi dalam satu malam, sekitar setahun sebelum hijrah Rasulullah ﷺ ke Madinah. Diperingati pada 27 Rajab. Ini salah satu kisah paling menakjubkan untuk diceritakan kepada anak — penuh mukjizat, dan berakhir dengan hadiah terbesar: sholat.</p>
+
+<h2>Dua bagian perjalanan</h2>
+
+<h3>Isra — perjalanan mendatar</h3>
+<p>Pada suatu malam, Rasulullah ﷺ diberangkatkan oleh Allah dari Masjidil Haram di Mekkah ke Masjidil Aqsa di Baitul Maqdis (Yerusalem), dengan kendaraan istimewa bernama Buraq — secepat kilat. Di sana beliau mengimami para nabi terdahulu dalam sholat.</p>
+
+<h3>Mi'raj — perjalanan naik</h3>
+<p>Dari Baitul Maqdis, Rasulullah ﷺ dinaikkan ke langit, melewati langit demi langit, bertemu para nabi: Adam, Isa, Yahya, Yusuf, Idris, Harun, Musa, hingga Ibrahim. Beliau sampai ke Sidratul Muntaha — batas yang tidak pernah dicapai makhluk mana pun.</p>
+
+<h2>Hadiah terbesar: perintah sholat</h2>
+
+<p>Di puncak perjalanan, Allah memberikan perintah sholat — mulanya 50 kali sehari. Saat turun, Nabi Musa menyarankan Rasulullah ﷺ kembali memohon keringanan kepada Allah. Beliau bolak-balik memohon, hingga akhirnya menjadi <strong>5 kali sehari</strong> — tetapi pahalanya senilai 50. Inilah asal-usul sholat lima waktu yang kita kerjakan hari ini.</p>
+
+<blockquote>
+<p>Pelajaran besar untuk anak: sholat adalah <em>hadiah</em>, bukan beban. Hadiah ini begitu istimewa sampai-sampai perintahnya diberikan langsung di langit, bukan melalui perantara seperti perintah lain.</p>
+</blockquote>
+
+<h2>Cara menceritakan kepada anak</h2>
+
+<ul>
+  <li><strong>Usia 3–5:</strong> Fokus pada keajaibannya — Buraq yang super cepat, naik ke langit, bertemu para nabi. Anak suka petualangan.</li>
+  <li><strong>Usia 6–8:</strong> Tekankan bahwa dari perjalanan ini turun perintah sholat. "Sholat itu oleh-oleh Rasulullah dari langit untuk kita."</li>
+  <li><strong>Usia 9+:</strong> Diskusikan makna iman terhadap hal gaib — Abu Bakar langsung percaya saat orang lain ragu, sehingga digelari "Ash-Shiddiq" (yang membenarkan).</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Isra Mi'raj mengubah cara kita memandang sholat. Lima kali sehari kita berdiri menghadap Allah — itu bukan rutinitas kosong, tapi hadiah yang Rasulullah ﷺ bawa langsung dari perjalanan paling mulia dalam sejarah. Ceritakan ini ke anak, dan sholat lima waktu akan terasa berbeda di hati mereka.</p>`,
+      en: `<p>Isra Mi'raj is two extraordinary events that happened in one night, about a year before the Prophet's ﷺ migration to Madinah. Commemorated on 27 Rajab. It's one of the most amazing stories to tell children — full of miracles, ending with the greatest gift: prayer.</p>
+
+<h2>Two parts of the journey</h2>
+
+<h3>Isra — the horizontal journey</h3>
+<p>One night, Allah took the Prophet ﷺ from the Sacred Mosque in Makkah to the Aqsa Mosque in Jerusalem, on a special mount called Buraq — fast as lightning. There he led the earlier prophets in prayer.</p>
+
+<h3>Mi'raj — the ascension</h3>
+<p>From Jerusalem, the Prophet ﷺ was raised through the heavens, level by level, meeting the prophets: Adam, Isa, Yahya, Yusuf, Idris, Harun, Musa, and Ibrahim. He reached Sidratul Muntaha — a boundary no creation had ever reached.</p>
+
+<h2>The greatest gift: the command of prayer</h2>
+
+<p>At the journey's peak, Allah gave the command of prayer — initially 50 times a day. On the way down, Prophet Musa advised the Prophet ﷺ to return and ask Allah for ease. He went back repeatedly until it became <strong>five times a day</strong> — yet rewarded as fifty. This is the origin of the five daily prayers we perform today.</p>
+
+<blockquote>
+<p>A great lesson for children: prayer is a <em>gift</em>, not a burden. So special that its command was given directly in the heavens, not through an intermediary like other commands.</p>
+</blockquote>
+
+<h2>How to tell it to children</h2>
+
+<ul>
+  <li><strong>Ages 3–5:</strong> Focus on the wonder — the super-fast Buraq, rising to the heavens, meeting the prophets. Children love adventure.</li>
+  <li><strong>Ages 6–8:</strong> Emphasize that this journey brought the command of prayer. "Prayer is the Prophet's gift from the heavens for us."</li>
+  <li><strong>Ages 9+:</strong> Discuss faith in the unseen — Abu Bakr believed instantly when others doubted, earning the title "Ash-Siddiq" (the affirmer of truth).</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Isra Mi'raj changes how we see prayer. Five times a day we stand before Allah — not an empty routine, but a gift the Prophet ﷺ brought back from the noblest journey in history. Tell this to your child, and the five daily prayers will feel different in their heart.</p>`,
+    },
+    tags: ["isra-miraj", "rajab", "sholat", "kisah-nabi"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+  },
+
+  {
+    slug: "nuzulul-quran-untuk-anak",
+    title: {
+      id: "Nuzulul Qur'an untuk Anak: Saat Al-Qur'an Pertama Kali Turun",
+      en: "Nuzulul Qur'an for Kids: When the Qur'an First Descended",
+    },
+    excerpt: {
+      id: "Diperingati pada 17 Ramadan, Nuzulul Qur'an mengingatkan kita pada wahyu pertama di Gua Hira. Momen istimewa untuk menanamkan cinta Al-Qur'an pada anak.",
+      en: "Commemorated on 17 Ramadan, Nuzulul Qur'an reminds us of the first revelation in Cave Hira. A special moment to instill love of the Qur'an in children.",
+    },
+    body: {
+      id: `<p>Nuzulul Qur'an adalah peringatan turunnya wahyu pertama Al-Qur'an kepada Rasulullah ﷺ. Di Indonesia, biasa diperingati setiap <strong>17 Ramadan</strong>. Ini adalah momen yang sangat tepat untuk mengenalkan anak pada kisah lahirnya Al-Qur'an — kitab yang akan menemani mereka seumur hidup.</p>
+
+<h2>Kisah wahyu pertama</h2>
+
+<p>Sebelum menjadi nabi, Rasulullah ﷺ sering menyendiri di Gua Hira di atas Jabal Nur (Gunung Cahaya) dekat Mekkah, untuk merenung. Pada suatu malam di bulan Ramadan, datanglah Malaikat Jibril dan memeluk beliau erat sambil berkata: <em>"Iqra!"</em> (Bacalah!).</p>
+
+<p>Rasulullah ﷺ menjawab, "Aku tidak bisa membaca." Jibril mengulang tiga kali, lalu menyampaikan ayat pertama Al-Qur'an:</p>
+
+<blockquote>
+<p style="font-family: var(--font-arabic); font-size: 24px; text-align: right; direction: rtl;">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</p>
+<p><em>"Bacalah dengan (menyebut) nama Tuhanmu yang menciptakan."</em> (QS. Al-'Alaq: 1)</p>
+</blockquote>
+
+<p>Beliau pulang dengan gemetar dan ketakutan. Istrinya, Khadijah, menyelimuti dan menenangkannya: "Allah tidak akan pernah menelantarkanmu, karena engkau menyambung silaturahmi, jujur, dan membantu yang lemah."</p>
+
+<h2>Pelajaran besar dari ayat pertama</h2>
+
+<p>Sangat istimewa bahwa kata pertama yang Allah turunkan adalah <strong>"Bacalah"</strong> — bukan "sholatlah" atau "puasalah." Ini menunjukkan betapa Islam memuliakan ilmu dan membaca. Untuk anak: belajar membaca, membaca Al-Qur'an, mencari ilmu — semuanya adalah perintah pertama Allah.</p>
+
+<h2>Cara memperingati bersama anak</h2>
+
+<ul>
+  <li><strong>Ceritakan kisah Gua Hira</strong> menjelang 17 Ramadan — anak suka detailnya: gua di atas gunung, malaikat, kata "Iqra."</li>
+  <li><strong>Tambah waktu mengaji</strong> di malam itu — walau hanya beberapa ayat, sebagai penghormatan pada hari turunnya Al-Qur'an.</li>
+  <li><strong>Jelaskan kenapa kita sayang Al-Qur'an</strong> — "Ini surat cinta dari Allah untuk kita. Sudah 1400 tahun, tidak berubah satu huruf pun."</li>
+  <li><strong>Buat target kecil</strong> — hafal satu surah pendek baru selama Ramadan. Lihat koleksi <a href="/_/surat/">Surat Pendek</a>.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Nuzulul Qur'an bukan sekadar tanggal di kalender — ini perayaan atas hadiah terbesar yang Allah berikan kepada manusia: petunjuk hidup. Anak yang memahami bahwa Al-Qur'an adalah "surat cinta dari Allah" akan memegangnya dengan hati yang berbeda — bukan sebagai kewajiban, tapi sebagai harta.</p>`,
+      en: `<p>Nuzulul Qur'an commemorates the descent of the first revelation of the Qur'an to the Prophet ﷺ. In Indonesia, it's usually observed on <strong>17 Ramadan</strong>. It's a fitting moment to introduce children to the story of how the Qur'an was born — the book that will accompany them for life.</p>
+
+<h2>The story of the first revelation</h2>
+
+<p>Before becoming a prophet, the Prophet ﷺ would often retreat alone to Cave Hira atop Jabal Nur (the Mountain of Light) near Makkah, to reflect. On a night in Ramadan, the Angel Jibril came and embraced him firmly, saying: <em>"Iqra!"</em> (Read!).</p>
+
+<p>The Prophet ﷺ replied, "I cannot read." Jibril repeated three times, then conveyed the first verse of the Qur'an:</p>
+
+<blockquote>
+<p style="font-family: var(--font-arabic); font-size: 24px; text-align: right; direction: rtl;">اقْرَأْ بِاسْمِ رَبِّكَ الَّذِي خَلَقَ</p>
+<p><em>"Read in the name of your Lord who created."</em> (Al-'Alaq: 1)</p>
+</blockquote>
+
+<p>He returned home trembling and afraid. His wife, Khadijah, wrapped him in a cloak and comforted him: "Allah will never forsake you, for you maintain kinship, you are honest, and you help the weak."</p>
+
+<h2>The great lesson of the first verse</h2>
+
+<p>It's deeply significant that the first word Allah revealed was <strong>"Read"</strong> — not "pray" or "fast." This shows how Islam honors knowledge and reading. For children: learning to read, reading the Qur'an, seeking knowledge — all are Allah's first command.</p>
+
+<h2>How to observe it with children</h2>
+
+<ul>
+  <li><strong>Tell the Cave Hira story</strong> approaching 17 Ramadan — kids love the details: a cave atop a mountain, an angel, the word "Iqra."</li>
+  <li><strong>Add Qur'an time</strong> that night — even just a few verses, honoring the day the Qur'an descended.</li>
+  <li><strong>Explain why we love the Qur'an</strong> — "It's a love letter from Allah to us. 1400 years and not one letter has changed."</li>
+  <li><strong>Set a small goal</strong> — memorize one new short surah during Ramadan. See the <a href="/_/surat/">Short Surahs</a> collection.</li>
+</ul>
+
+<h2>Closing</h2>
+
+<p>Nuzulul Qur'an isn't just a date on the calendar — it's a celebration of the greatest gift Allah gave humanity: guidance for life. A child who understands the Qur'an as "a love letter from Allah" will hold it with a different heart — not as an obligation, but as a treasure.</p>`,
+    },
+    tags: ["nuzulul-quran", "ramadan", "al-quran", "kisah-nabi"],
+    published: "2026-05-28",
+    updated: "2026-05-28",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
