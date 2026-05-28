@@ -34,12 +34,11 @@ export function ShareBar({ locale, title, text, url }: Props) {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Build a short, interesting share message.
-  // Format prefers a 1-line hook (the kit quote, takeaway, etc.) + URL.
-  // Falls back to title-only if no hook provided. Caps hook at 200 chars
-  // so the message stays digestible in WhatsApp/iMessage previews.
-  const hook =
-    text && text !== title && text.length <= 200 ? text : undefined;
+  // Build a short, interesting share message: a 1-line hook + URL.
+  // Long bodies (e.g. a catatan takeaway) collapse to their first
+  // sentence — or a word-boundary cut — so the caption stays digestible
+  // next to the link's rich preview instead of becoming a wall of text.
+  const hook = makeHook(text, title);
   const waMessage = hook ? `${hook}\n\n${url}` : `${title}\n${url}`;
   const clipboardMessage = waMessage;
 
@@ -110,6 +109,19 @@ export function ShareBar({ locale, title, text, url }: Props) {
       </div>
     </div>
   );
+}
+
+const HOOK_MAX = 120;
+
+function makeHook(text: string | undefined, title: string): string | undefined {
+  if (!text || text === title) return undefined;
+  const t = text.trim();
+  if (t.length <= HOOK_MAX) return t;
+  const firstSentence = t.match(/^.*?[.!?](?=\s|$)/)?.[0]?.trim();
+  if (firstSentence && firstSentence.length <= HOOK_MAX) return firstSentence;
+  const cut = t.slice(0, HOOK_MAX);
+  const lastSpace = cut.lastIndexOf(" ");
+  return `${cut.slice(0, lastSpace > 0 ? lastSpace : HOOK_MAX).trimEnd()}…`;
 }
 
 function ShareIcon() {
