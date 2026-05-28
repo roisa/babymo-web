@@ -43,6 +43,26 @@ const CITIES: { name: string; lat: number; lng: number }[] = [
 // Fallback: Jakarta (used until the user picks a city or grants GPS)
 const DEFAULT = { lat: -6.2088, lng: 106.8456, label: "Jakarta" };
 
+/** Closest major city to a GPS fix — lets us label "Lokasimu · Malang"
+ *  so users can sanity-check that their location looks right. */
+function nearestCity(lat: number, lng: number) {
+  let best = CITIES[0]!;
+  let bestD = Infinity;
+  for (const c of CITIES) {
+    const d = (c.lat - lat) ** 2 + (c.lng - lng) ** 2;
+    if (d < bestD) {
+      bestD = d;
+      best = c;
+    }
+  }
+  return best;
+}
+
+function myLocationLabel(locale: Locale, lat: number, lng: number) {
+  const base = locale === "id" ? "Lokasimu" : "Your location";
+  return `${base} · ${nearestCity(lat, lng).name}`;
+}
+
 type PrayerName = "fajr" | "dhuhr" | "asr" | "maghrib" | "isha";
 
 // Each prayer → a Baby Mo suggestion + a link into the content.
@@ -96,14 +116,24 @@ export function PrayerWidget({ locale }: Props) {
     try {
       const saved = localStorage.getItem(LOC_KEY);
       if (saved) {
-        setCoords(JSON.parse(saved));
+        const parsed = JSON.parse(saved);
+        // Older saves used a bare "Lokasimu" GPS label — re-tag it with the
+        // nearest city so it reads as a real, verifiable location.
+        if (
+          parsed &&
+          typeof parsed.lat === "number" &&
+          (parsed.label === "Lokasimu" || parsed.label === "Your location")
+        ) {
+          parsed.label = myLocationLabel(locale, parsed.lat, parsed.lng);
+        }
+        setCoords(parsed);
         return;
       }
     } catch {
       /* ignore */
     }
     setCoords(DEFAULT);
-  }, []);
+  }, [locale]);
 
   // Tick every 30s so the countdown stays fresh
   useEffect(() => {
@@ -137,7 +167,7 @@ export function PrayerWidget({ locale }: Props) {
         const c = {
           lat: pos.coords.latitude,
           lng: pos.coords.longitude,
-          label: locale === "id" ? "Lokasimu" : "Your location",
+          label: myLocationLabel(locale, pos.coords.latitude, pos.coords.longitude),
         };
         setCoords(c);
         setNow(new Date()); // force fresh recompute with new coords

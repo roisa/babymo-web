@@ -67,7 +67,8 @@ html.dark {
 }
 
 html {
-  scroll-behavior: smooth;
+  /* No global smooth-scroll: it makes trackpad/wheel scrolling feel laggy
+     on macOS. The back-to-top button animates explicitly via JS instead. */
   -webkit-text-size-adjust: 100%;
 }
 
@@ -102,11 +103,12 @@ body {
   border-color: var(--color-hairline);
 }
 
-/* Glass header used by iOS, refined */
+/* Glass header used by iOS, refined. Blur kept modest so re-rasterizing
+   the backdrop during scroll doesn't stutter on macOS. */
 .glass {
-  background: color-mix(in oklab, var(--color-paper), transparent 22%);
-  backdrop-filter: saturate(180%) blur(20px);
-  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  background: color-mix(in oklab, var(--color-paper), transparent 18%);
+  backdrop-filter: saturate(160%) blur(12px);
+  -webkit-backdrop-filter: saturate(160%) blur(12px);
 }
 
 /* Reading defaults for long-form */
@@ -335,22 +337,11 @@ body {
   to   { translate: 0 -40px; }
 }
 
-/* 3. Adaptive header — densifies as you scroll past hero */
+/* 3. Header elevation — a static subtle shadow. (Previously a
+   scroll-driven background-color animation, which forced the blurred
+   backdrop to re-rasterize every frame and stuttered scrolling.) */
 header.glass {
-  animation: header-densify linear;
-  animation-timeline: scroll(root block);
-  animation-range: 0 220px;
-  will-change: box-shadow, background-color;
-}
-@keyframes header-densify {
-  from {
-    box-shadow: 0 0 0 0 rgba(15, 18, 19, 0);
-    background-color: color-mix(in oklab, var(--color-paper), transparent 30%);
-  }
-  to {
-    box-shadow: 0 4px 24px -12px rgba(15, 18, 19, 0.18);
-    background-color: color-mix(in oklab, var(--color-paper), transparent 8%);
-  }
+  box-shadow: 0 4px 20px -16px rgba(15, 18, 19, 0.16);
 }
 
 /* 4. Marquee — slow drifting Arabic phrase ribbon */
