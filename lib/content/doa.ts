@@ -744,6 +744,204 @@ export const doaList: Doa[] = [
     published: "2026-05-27",
     updated: "2026-05-27",
   },
+
+  // ─── High-frequency additions ─────────────────────────────────────
+  {
+    slug: "masuk-masjid",
+    arabic: "اللَّهُمَّ افْتَحْ لِي أَبْوَابَ رَحْمَتِكَ",
+    transliteration: "Allahummaftah lii abwaaba rahmatik",
+    title: {
+      id: "Doa Masuk Masjid",
+      en: "Dua Entering the Mosque",
+    },
+    translation: {
+      id: "Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu.",
+      en: "O Allah, open for me the gates of Your mercy.",
+    },
+    context: {
+      id: "Dibaca saat melangkah masuk ke masjid dengan kaki kanan terlebih dahulu.",
+      en: "Recited when stepping into the mosque, leading with the right foot.",
+    },
+    source: { type: "hadith", reference: "HR. Muslim 713", grade: "sahih" },
+    ages: [3, 4, 5, 6, 7, 8],
+    situations: ["masjid", "ibadah", "adab"],
+    related: ["keluar-masjid", "mendengar-adzan"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "keluar-masjid",
+    arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ مِنْ فَضْلِكَ",
+    transliteration: "Allahumma innii as-aluka min fadhlik",
+    title: {
+      id: "Doa Keluar Masjid",
+      en: "Dua Leaving the Mosque",
+    },
+    translation: {
+      id: "Ya Allah, sesungguhnya aku memohon karunia-Mu.",
+      en: "O Allah, I ask You of Your bounty.",
+    },
+    context: {
+      id: "Dibaca saat keluar dari masjid dengan kaki kiri terlebih dahulu.",
+      en: "Recited when leaving the mosque, leading with the left foot.",
+    },
+    source: { type: "hadith", reference: "HR. Muslim 713", grade: "sahih" },
+    ages: [3, 4, 5, 6, 7, 8],
+    situations: ["masjid", "ibadah", "adab"],
+    related: ["masuk-masjid"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "kebaikan-dunia-akhirat",
+    arabic:
+      "رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ",
+    transliteration:
+      "Rabbanaa aatinaa fid-dunyaa hasanah, wa fil-aakhirati hasanah, wa qinaa 'adzaaban-naar",
+    title: {
+      id: "Doa Sapu Jagat (Kebaikan Dunia & Akhirat)",
+      en: "Dua for Good in This World & the Next",
+    },
+    translation: {
+      id: "Ya Tuhan kami, berilah kami kebaikan di dunia dan kebaikan di akhirat, dan lindungilah kami dari azab neraka.",
+      en: "Our Lord, give us good in this world and good in the Hereafter, and protect us from the punishment of the Fire.",
+    },
+    context: {
+      id: "Doa paling lengkap dan paling sering dibaca Rasulullah ﷺ — meminta kebaikan dunia sekaligus akhirat.",
+      en: "The most comprehensive du'a, the one the Prophet ﷺ recited most — asking for good in both this life and the next.",
+    },
+    source: { type: "quran", reference: "QS. Al-Baqarah 2:201", grade: "quran" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["umum", "harian"],
+    related: ["doa-pagi", "doa-petang"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "minta-ilmu-bermanfaat",
+    arabic: "رَبِّ زِدْنِي عِلْمًا",
+    transliteration: "Rabbi zidnii 'ilmaa",
+    title: {
+      id: "Doa Minta Tambahan Ilmu",
+      en: "Dua for Increase in Knowledge",
+    },
+    translation: {
+      id: "Ya Tuhanku, tambahkanlah ilmu kepadaku.",
+      en: "My Lord, increase me in knowledge.",
+    },
+    context: {
+      id: "Doa singkat yang bisa diajarkan anak sebelum belajar atau berangkat sekolah.",
+      en: "A short du'a children can say before studying or heading to school.",
+    },
+    source: { type: "quran", reference: "QS. Taha 20:114", grade: "quran" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["belajar", "sekolah"],
+    related: ["sebelum-belajar", "setelah-belajar"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "ketika-sakit",
+    arabic: "اللَّهُمَّ رَبَّ النَّاسِ أَذْهِبِ الْبَأْسَ اشْفِ أَنْتَ الشَّافِي",
+    transliteration: "Allahumma rabban-naas, adzhibil-ba's, isyfi antasy-syaafii",
+    title: {
+      id: "Doa Ketika Sakit",
+      en: "Dua When Sick",
+    },
+    translation: {
+      id: "Ya Allah, Tuhan manusia, hilangkanlah penyakit. Sembuhkanlah, Engkaulah Yang Maha Menyembuhkan.",
+      en: "O Allah, Lord of mankind, remove the affliction. Cure, for You are the Healer.",
+    },
+    context: {
+      id: "Doa yang dibaca Rasulullah ﷺ sambil mengusap orang yang sakit — orang tua bisa membacakannya untuk anak yang demam.",
+      en: "The du'a the Prophet ﷺ recited while wiping the sick — parents can recite it over a feverish child.",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 5675, Muslim 2191", grade: "sahih" },
+    ages: [0, 1, 2, 3, 4, 5, 6, 7, 8],
+    situations: ["sakit", "perlindungan"],
+    related: ["perlindungan-anak"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "ketika-marah",
+    arabic: "أَعُوذُ بِاللَّهِ مِنَ الشَّيْطَانِ الرَّجِيمِ",
+    transliteration: "A'uudzu billaahi minasy-syaithaanir-rajiim",
+    title: {
+      id: "Doa Ketika Marah",
+      en: "Dua When Angry",
+    },
+    translation: {
+      id: "Aku berlindung kepada Allah dari setan yang terkutuk.",
+      en: "I seek refuge in Allah from the accursed devil.",
+    },
+    context: {
+      id: "Rasulullah ﷺ mengajarkan kalimat ini untuk meredam amarah. Cocok diajarkan anak yang sedang belajar mengelola emosi.",
+      en: "The Prophet ﷺ taught this phrase to cool anger. Good for a child learning to manage big feelings.",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 3282, Muslim 2610", grade: "sahih" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["emosi", "perlindungan"],
+    related: ["perlindungan-anak"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "doa-kedua-orang-tua",
+    arabic:
+      "رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ وَارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيرًا",
+    transliteration:
+      "Rabbighfir lii wa li waalidayya warhamhumaa kamaa rabbayaanii shaghiiraa",
+    title: {
+      id: "Doa untuk Kedua Orang Tua",
+      en: "Dua for One's Parents",
+    },
+    translation: {
+      id: "Ya Tuhanku, ampunilah aku dan kedua orang tuaku, dan sayangilah mereka sebagaimana mereka menyayangiku sewaktu kecil.",
+      en: "My Lord, forgive me and my parents, and have mercy on them as they raised me when I was small.",
+    },
+    context: {
+      id: "Doa indah yang mengajarkan anak mendoakan orang tua — penuhi hati anak dengan rasa terima kasih sejak dini.",
+      en: "A beautiful du'a teaching children to pray for their parents — fill a child's heart with gratitude early.",
+    },
+    source: { type: "quran", reference: "QS. Al-Isra 17:24", grade: "quran" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["keluarga", "adab", "harian"],
+    related: ["doa-untuk-orang-tua"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
+  {
+    slug: "naik-turun-kendaraan-selamat",
+    arabic: "سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ",
+    transliteration: "Subhaanalladzii sakhkhara lanaa haadzaa wa maa kunnaa lahuu muqriniin",
+    title: {
+      id: "Doa Naik Kendaraan (Tasbih Safar)",
+      en: "Dua When Boarding a Vehicle",
+    },
+    translation: {
+      id: "Mahasuci Allah yang telah menundukkan kendaraan ini untuk kami, padahal kami sebelumnya tidak mampu menguasainya.",
+      en: "Glory to Him who has subjected this to us, when we could never have managed it ourselves.",
+    },
+    context: {
+      id: "Dibaca anak saat naik mobil atau motor bersama keluarga — mengingat bahwa keselamatan dari Allah.",
+      en: "Recited when boarding a car or motorbike with family — remembering that safety comes from Allah.",
+    },
+    source: { type: "quran", reference: "QS. Az-Zukhruf 43:13", grade: "quran" },
+    ages: [3, 4, 5, 6, 7, 8],
+    situations: ["perjalanan", "keluarga"],
+    related: ["naik-kendaraan", "keluar-rumah"],
+    author: "tim-baby-mo",
+    published: "2026-05-28",
+    updated: "2026-05-28",
+  },
 ];
 
 export function getAllDoa(): Doa[] {
