@@ -24,6 +24,7 @@ import { VideoSection } from "@/components/video/VideoSection";
 import { QuoteRibbon } from "@/components/QuoteRibbon";
 import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
+import { PrayerWidget } from "@/components/PrayerWidget";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
@@ -291,6 +292,15 @@ export default async function HomePage({
                   — {doaToday.source.reference}
                 </p>
               </Link>
+            </div>
+          </section>
+        </Reveal>
+
+        {/* ── WAKTU SHOLAT — client-side, location-aware ── */}
+        <Reveal>
+          <section className="mx-auto max-w-6xl px-5 pt-8 sm:px-7 sm:pt-10">
+            <div className="mx-auto max-w-2xl">
+              <PrayerWidget locale={l} />
             </div>
           </section>
         </Reveal>
