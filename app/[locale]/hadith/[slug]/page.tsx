@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
+import { BookmarkButton } from "@/components/BookmarkButton";
 import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, hadithSchema, graph } from "@/lib/seo/schemas";
 import { getAllHadith, getHadithBySlug } from "@/lib/content/hadith";
@@ -111,15 +112,25 @@ export default async function HadithDetail({
               {h.translation[l]}
             </p>
           </div>
-          <div className="flex items-center justify-between border-t border-hairline px-6 py-4 sm:px-10">
+          <div className="flex items-center justify-between gap-3 border-t border-hairline px-6 py-4 sm:px-10">
             <span className="text-[12.5px] text-whisper">
               {dict.hadith.narrator}: {h.narrator}
             </span>
-            <CopyButton
-              text={copyText}
-              label={dict.doa.copy}
-              copiedLabel={dict.doa.copied}
-            />
+            <div className="flex items-center gap-2">
+              <BookmarkButton
+                type="hadith"
+                slug={slug}
+                title={h.title[l]}
+                url={`/hadith/${slug}`}
+                locale={l}
+                variant="icon"
+              />
+              <CopyButton
+                text={copyText}
+                label={dict.doa.copy}
+                copiedLabel={dict.doa.copied}
+              />
+            </div>
           </div>
         </section>
 

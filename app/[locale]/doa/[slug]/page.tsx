@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { JsonLd } from "@/components/JsonLd";
 import { CopyButton } from "@/components/CopyButton";
+import { BookmarkButton } from "@/components/BookmarkButton";
 import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
@@ -130,15 +131,25 @@ export default async function DoaDetail({
               </p>
             </div>
           </div>
-          <div className="flex items-center justify-between border-t border-hairline px-6 py-4 sm:px-10">
+          <div className="flex items-center justify-between gap-3 border-t border-hairline px-6 py-4 sm:px-10">
             <span className="text-[12.5px] text-whisper">
               {dict.doa.source}: {doa.source.reference}
             </span>
-            <CopyButton
-              text={copyText}
-              label={dict.doa.copy}
-              copiedLabel={dict.doa.copied}
-            />
+            <div className="flex items-center gap-2">
+              <BookmarkButton
+                type="doa"
+                slug={slug}
+                title={doa.title[l]}
+                url={`/doa/${slug}`}
+                locale={l}
+                variant="icon"
+              />
+              <CopyButton
+                text={copyText}
+                label={dict.doa.copy}
+                copiedLabel={dict.doa.copied}
+              />
+            </div>
           </div>
         </section>
 

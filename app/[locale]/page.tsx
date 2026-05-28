@@ -22,6 +22,9 @@ import { HeroAura } from "@/components/HeroAura";
 import { AnimatedCount } from "@/components/AnimatedCount";
 import { VideoSection } from "@/components/video/VideoSection";
 import { QuoteRibbon } from "@/components/QuoteRibbon";
+import { SavedHomeSection } from "@/components/SavedShelf";
+import { BookmarkButton } from "@/components/BookmarkButton";
+import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
@@ -63,6 +66,7 @@ export default async function HomePage({
   const allParenting = getAllParenting();
   const allPosts = getAllBlogPosts();
   const notes = getAllCatatan().slice(0, 3);
+  const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const doas = allDoa.slice(0, 4);
   const hadiths = allHadith.slice(0, 3);
   const situations = allParenting.slice(0, 3);
@@ -231,6 +235,68 @@ export default async function HomePage({
 
         {/* ── Daily phrase ribbon — slow marquee ── */}
         <QuoteRibbon locale={l} />
+
+        {/* ── DOA HARI INI — rotates daily, calendar-aware ── */}
+        <Reveal>
+          <section className="mx-auto max-w-6xl px-5 pt-14 sm:px-7 sm:pt-20">
+            <div className="grid items-stretch gap-5 md:grid-cols-[0.95fr_1.05fr]">
+              <div className="flex flex-col justify-center">
+                <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+                  <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
+                  {l === "id" ? "Doa Hari Ini" : "Du'a of the Day"}
+                </p>
+                <h2 className="font-display mt-3 text-[30px] font-medium leading-tight text-ink sm:text-[38px]">
+                  {doaToday.title[l]}
+                </h2>
+                <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
+                  {doaEvent
+                    ? l === "id"
+                      ? `Bertepatan dengan ${doaEvent.name.id} — baik untuk dibaca bersama si kecil hari ini.`
+                      : `Coinciding with ${doaEvent.name.en} — lovely to read with your little one today.`
+                    : l === "id"
+                      ? "Satu doa untuk dibaca bersama si kecil hari ini. Berganti setiap hari."
+                      : "One du'a to read with your little one today. It changes each day."}
+                </p>
+                <div className="mt-6 flex flex-wrap items-center gap-3">
+                  <Link
+                    href={pathFor(l, `/doa/${doaToday.slug}`)}
+                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(31,139,63,0.45)] hover:bg-brave-deep"
+                  >
+                    {l === "id" ? "Buka doa" : "Open du'a"}
+                  </Link>
+                  <BookmarkButton
+                    type="doa"
+                    slug={doaToday.slug}
+                    title={doaToday.title[l]}
+                    url={`/doa/${doaToday.slug}`}
+                    locale={l}
+                  />
+                </div>
+              </div>
+              <Link
+                href={pathFor(l, `/doa/${doaToday.slug}`)}
+                className="lift tap group flex flex-col justify-center rounded-[28px] border border-hairline bg-paper p-8 sm:p-10"
+              >
+                <p
+                  dir="rtl"
+                  lang="ar"
+                  className="font-arabic text-[30px] leading-[1.9] text-ink sm:text-[38px]"
+                >
+                  {doaToday.arabic}
+                </p>
+                <p className="mt-5 text-[15px] leading-relaxed text-whisper group-hover:text-ink-soft">
+                  {doaToday.translation[l]}
+                </p>
+                <p className="mt-4 text-[12.5px] text-whisper">
+                  — {doaToday.source.reference}
+                </p>
+              </Link>
+            </div>
+          </section>
+        </Reveal>
+
+        {/* ── TERSIMPAN UNTUKMU — only renders if user has saves ── */}
+        <SavedHomeSection locale={l} />
 
         {/* ── VALUES ── */}
         <section className="border-t border-hairline bg-paper-2">

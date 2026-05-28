@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
+import { BookmarkButton } from "@/components/BookmarkButton";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
@@ -87,6 +88,15 @@ export default async function CatatanDetail({
           <p className="mt-4 text-[17px] leading-[1.6] text-whisper">
             {n.hook[l]}
           </p>
+          <div className="mt-5">
+            <BookmarkButton
+              type="catatan"
+              slug={slug}
+              title={n.title[l]}
+              url={`/catatan/${slug}`}
+              locale={l}
+            />
+          </div>
         </header>
 
         <div className="catatan-body">

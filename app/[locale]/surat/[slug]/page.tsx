@@ -7,6 +7,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
+import { BookmarkButton } from "@/components/BookmarkButton";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllSurah, getSurahBySlug } from "@/lib/content/surah";
@@ -105,6 +106,15 @@ export default async function SurahDetail({
           <p className="mt-4 text-[16.5px] leading-[1.65] text-whisper">
             {s.introForKids[l]}
           </p>
+          <div className="mt-5">
+            <BookmarkButton
+              type="surah"
+              slug={slug}
+              title={s.name[l]}
+              url={`/surat/${slug}`}
+              locale={l}
+            />
+          </div>
         </header>
 
         {/* Verse-by-verse cards */}
