@@ -200,7 +200,7 @@ export type CatatanAnchor = {
 export type Catatan = {
   slug: string;
   /** Which kid the note centers on — used for filtering chips */
-  child: "ibra" | "azka" | "both";
+  child: "mo" | "ais" | "both";
   /** ISO date string */
   published: string;
   title: Record<Locale, string>;

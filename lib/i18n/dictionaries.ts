@@ -26,7 +26,7 @@ type Dict = {
     indexDescription: string;
     intro: string;
     bySalman: string;
-    childChip: { ibra: string; azka: string; both: string };
+    childChip: { mo: string; ais: string; both: string };
     privacyNote: string;
     takeaway: string;
     readMore: string;
@@ -148,17 +148,17 @@ const id: Dict = {
   catatan: {
     indexTitle: "Catatan",
     indexDescription:
-      "Cerita pendek Salman (pendiri Baby Mo) tentang momen-momen kecil bersama Ibra (6) dan Azka (2). Bukan artikel parenting — cuma catatan yang ditulis pelan-pelan setelah anak-anak tidur.",
+      "Catatan singkat dari Abi (Salman, pendiri Baby Mo) tentang momen-momen kecil bersama Baby Mo dan Baby Ais — kembar usia 2 tahun. Bukan artikel parenting — cuma catatan yang ditulis pelan-pelan setelah anak-anak tidur.",
     intro:
-      "Cerita pendek dari Salman tentang momen-momen bersama Ibra (6) dan Azka (2). Diperbarui beberapa kali sebulan.",
-    bySalman: "Salman",
+      "Catatan singkat dari Abi tentang momen-momen bersama Baby Mo & Baby Ais (kembar, 2 tahun). Diperbarui beberapa kali sebulan.",
+    bySalman: "Abi",
     childChip: {
-      ibra: "Ibra (6)",
-      azka: "Azka (2)",
-      both: "Ibra & Azka",
+      mo: "Baby Mo (2)",
+      ais: "Baby Ais (2)",
+      both: "Baby Mo & Baby Ais",
     },
     privacyNote:
-      "Nama anak-anak ditulis atas izin keluarga. Detail yang bisa mengidentifikasi (sekolah, lingkungan, foto wajah) tidak dipublikasikan. Suatu saat di masa depan, jika Ibra atau Azka meminta, tulisan dapat di-anonimkan atau dihapus.",
+      "Nama anak-anak ditulis atas izin keluarga. Detail yang bisa mengidentifikasi (sekolah, lingkungan, foto wajah) tidak dipublikasikan. Suatu saat di masa depan, jika Baby Mo atau Baby Ais meminta, tulisan dapat di-anonimkan atau dihapus.",
     takeaway: "Catatan untuk diri sendiri",
     readMore: "Baca selengkapnya",
     relatedAnchor: "Dasar dari catatan ini",
@@ -353,17 +353,17 @@ const en: Dict = {
   catatan: {
     indexTitle: "Notes",
     indexDescription:
-      "Short personal notes from Salman (Baby Mo's founder) about small moments with Ibra (6) and Azka (2). Not parenting articles — just notes written slowly after the kids are asleep.",
+      "Short personal notes from Abi (Salman, Baby Mo's founder) about small moments with Baby Mo and Baby Ais — two-year-old twins. Not parenting articles — just notes written slowly after the kids are asleep.",
     intro:
-      "Short notes from Salman about moments with Ibra (6) and Azka (2). Updated a few times a month.",
-    bySalman: "Salman",
+      "Short notes from Abi about moments with Baby Mo & Baby Ais (twins, age 2). Updated a few times a month.",
+    bySalman: "Abi",
     childChip: {
-      ibra: "Ibra (6)",
-      azka: "Azka (2)",
-      both: "Ibra & Azka",
+      mo: "Baby Mo (2)",
+      ais: "Baby Ais (2)",
+      both: "Baby Mo & Baby Ais",
     },
     privacyNote:
-      "The children's first names are used with family consent. Identifying details (school, neighborhood, face photos) are not published. At any point in the future, if Ibra or Azka asks, posts can be anonymized or removed.",
+      "The children's first names are used with family consent. Identifying details (school, neighborhood, face photos) are not published. At any point in the future, if Baby Mo or Baby Ais asks, posts can be anonymized or removed.",
     takeaway: "A note to self",
     readMore: "Read more",
     relatedAnchor: "What this note rests on",
