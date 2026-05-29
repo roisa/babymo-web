@@ -181,7 +181,7 @@ const id: Dict = {
         "Kumpulan doa pilihan dengan teks Arab, transliterasi, dan terjemahan — siap dibaca bersama si kecil.",
       gamesTitle: "Permainan Edukatif",
       gamesSub:
-        "Sembilan permainan gratis untuk anak muslim — belajar hijaiyah, doa, dan akhlak baik sambil bermain.",
+        "Permainan gratis untuk anak muslim — belajar hijaiyah, doa, dan akhlak baik sambil bermain.",
       blogTitle: "Bacaan untuk Orang Tua",
       blogSub:
         "Panduan parenting islami berbasis sumber yang shahih, ditulis dengan empati.",
@@ -285,7 +285,7 @@ const id: Dict = {
     games: {
       title: "Permainan Baby Mo",
       description:
-        "Sembilan permainan islami gratis untuk anak muslim — hijaiyah, doa harian, kosa kata Arab, dan banyak lagi.",
+        "Permainan islami gratis untuk anak muslim — hijaiyah, doa harian, kosa kata Arab, dan banyak lagi.",
     },
     faq: {
       title: "Pertanyaan yang Sering Ditanyakan",
@@ -388,7 +388,7 @@ const en: Dict = {
         "A curated collection with Arabic, transliteration, and translation — ready to read with your little one.",
       gamesTitle: "Educational Games",
       gamesSub:
-        "Nine free games for Muslim children — learn the Arabic alphabet, duas, and good manners through play.",
+        "Free games for Muslim children — learn the Arabic alphabet, duas, and good manners through play.",
       blogTitle: "Reading for Parents",
       blogSub:
         "Islamic parenting guidance grounded in authentic sources, written with empathy.",
@@ -491,7 +491,7 @@ const en: Dict = {
     games: {
       title: "Baby Mo Games",
       description:
-        "Nine free Islamic games for Muslim children — hijaiyah, daily duas, Arabic vocabulary, and more.",
+        "Free Islamic games for Muslim children — hijaiyah, daily duas, Arabic vocabulary, and more.",
     },
     faq: {
       title: "Frequently Asked Questions",

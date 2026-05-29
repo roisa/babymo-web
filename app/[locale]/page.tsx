@@ -35,6 +35,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { getAllGames } from "@/lib/content/games";
 import {
   getCurrentIslamicEvent,
   eventStatus,
@@ -68,6 +69,7 @@ export default async function HomePage({
   const allDoa = getAllDoa();
   const allHadith = getAllHadith();
   const allParenting = getAllParenting();
+  const allGames = getAllGames();
   const allPosts = getAllBlogPosts();
   const notes = getAllCatatan().slice(0, 3);
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
@@ -426,7 +428,7 @@ export default async function HomePage({
               <div className="grid items-center gap-8 p-7 sm:grid-cols-[1.1fr_0.9fr] sm:p-10">
                 <div>
                   <span className="inline-flex items-center rounded-full bg-clay/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-                    9 game gratis
+                    {allGames.length} {l === "id" ? "game gratis" : "free games"}
                   </span>
                   <h2 className="tracking-display mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
                     {dict.home.sections.gamesTitle}
@@ -442,13 +444,13 @@ export default async function HomePage({
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 gap-2.5">
-                  {["🧩", "🤲", "🔤", "🌙", "🛌", "🎴", "🔍", "🎵", "🃏"].map((e, i) => (
+                  {allGames.slice(0, 9).map((g, i) => (
                     <div
-                      key={i}
+                      key={g.slug}
                       className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2 text-xl"
                       style={{ transitionDelay: `${i * 35}ms` }}
                     >
-                      {e}
+                      {g.emoji}
                     </div>
                   ))}
                 </div>
