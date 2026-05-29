@@ -239,6 +239,7 @@ export function videoGameSchema(locale: Locale, game: Game) {
     name: game.title[locale],
     description: game.description[locale],
     url: game.externalUrl,
+    ...(game.image ? { image: game.image } : {}),
     applicationCategory: "EducationalApplication",
     operatingSystem: "Any (Web)",
     inLanguage: locale === "id" ? "id-ID" : "en",

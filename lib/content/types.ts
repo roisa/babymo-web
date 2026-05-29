@@ -193,6 +193,8 @@ export type Game = {
   title: Record<Locale, string>;
   description: Record<Locale, string>;
   externalUrl: string;
+  /** Branded OG card on play.babymo.id; derived from externalUrl when omitted. */
+  image?: string;
   tags: string[];
 };
 

@@ -35,6 +35,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { getAllGames } from "@/lib/content/games";
 import {
   getCurrentIslamicEvent,
   eventStatus,
@@ -68,6 +69,7 @@ export default async function HomePage({
   const allDoa = getAllDoa();
   const allHadith = getAllHadith();
   const allParenting = getAllParenting();
+  const allGames = getAllGames();
   const allPosts = getAllBlogPosts();
   const notes = getAllCatatan().slice(0, 3);
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
@@ -426,7 +428,7 @@ export default async function HomePage({
               <div className="grid items-center gap-8 p-7 sm:grid-cols-[1.1fr_0.9fr] sm:p-10">
                 <div>
                   <span className="inline-flex items-center rounded-full bg-clay/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-                    9 game gratis
+                    {allGames.length} {l === "id" ? "game gratis" : "free games"}
                   </span>
                   <h2 className="tracking-display mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
                     {dict.home.sections.gamesTitle}
@@ -442,13 +444,13 @@ export default async function HomePage({
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 gap-2.5">
-                  {["🧩", "🤲", "🔤", "🌙", "🛌", "🎴", "🔍", "🎵", "🃏"].map((e, i) => (
+                  {allGames.slice(0, 9).map((g, i) => (
                     <div
-                      key={i}
+                      key={g.slug}
                       className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2 text-xl"
                       style={{ transitionDelay: `${i * 35}ms` }}
                     >
-                      {e}
+                      {g.emoji}
                     </div>
                   ))}
                 </div>
@@ -632,10 +634,8 @@ export default async function HomePage({
             </Reveal>
 
             <Reveal>
-              <a
-                href="https://paypal.me/ibracreative"
-                target="_blank"
-                rel="noopener"
+              <Link
+                href={pathFor(l, "/dukung")}
                 className="lift tap mt-3 flex items-center justify-between gap-4 rounded-[22px] border border-hairline bg-paper p-6"
               >
                 <div className="flex min-w-0 items-center gap-4">
@@ -647,19 +647,19 @@ export default async function HomePage({
                       {dict.home.sections.supportTitle}
                     </p>
                     <p className="mt-0.5 font-serif text-[18px] font-medium text-ink">
-                      {l === "id"
-                        ? "Dukung via PayPal"
-                        : "Donate via PayPal"}
+                      {l === "id" ? "Dukung Baby Mo" : "Support Baby Mo"}
                     </p>
                     <p className="mt-0.5 truncate text-[13.5px] text-whisper">
-                      paypal.me/ibracreative
+                      {l === "id"
+                        ? "QRIS · Saweria · PayPal — sedekah jariyah"
+                        : "QRIS · Saweria · PayPal — sadaqah jariyah"}
                     </p>
                   </div>
                 </div>
                 <span className="hidden text-[13.5px] font-semibold text-clay sm:inline">
-                  {l === "id" ? "Buka PayPal →" : "Open PayPal →"}
+                  {l === "id" ? "Lihat cara dukung →" : "See how to give →"}
                 </span>
-              </a>
+              </Link>
             </Reveal>
           </div>
         </section>

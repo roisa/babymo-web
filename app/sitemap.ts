@@ -39,6 +39,7 @@ const STATIC_PATHS = [
   "/faq",
   "/tentang",
   "/tim",
+  "/dukung",
   "/kontak",
   "/privasi",
   "/syarat",
