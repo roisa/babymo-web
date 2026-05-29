@@ -17,6 +17,7 @@ type Dict = {
     surah: string;
     kisah: string;
     games: string;
+    apps: string;
     faq: string;
     about: string;
     contact: string;
@@ -109,6 +110,7 @@ type Dict = {
     privacy: { title: string; description: string };
     terms: { title: string; description: string };
     games: { title: string; description: string };
+    apps: { title: string; description: string };
     support: { title: string; description: string };
     faq: { title: string; description: string };
   };
@@ -144,6 +146,7 @@ const id: Dict = {
     surah: "Surat Pendek",
     kisah: "Kisah Nabi",
     games: "Permainan",
+    apps: "Aplikasi",
     faq: "FAQ",
     about: "Tentang",
     contact: "Kontak",
@@ -288,6 +291,11 @@ const id: Dict = {
       description:
         "Permainan islami gratis untuk anak muslim — hijaiyah, doa harian, kosa kata Arab, dan banyak lagi.",
     },
+    apps: {
+      title: "Aplikasi",
+      description:
+        "Kumpulan alat & aplikasi yang bisa langsung dipakai orang tua bersama anak — bukan sekadar bacaan.",
+    },
     support: {
       title: "Dukung Baby Mo",
       description:
@@ -356,6 +364,7 @@ const en: Dict = {
     surah: "Short Surahs",
     kisah: "Prophet Stories",
     games: "Games",
+    apps: "Apps",
     faq: "FAQ",
     about: "About",
     contact: "Contact",
@@ -498,6 +507,11 @@ const en: Dict = {
       title: "Baby Mo Games",
       description:
         "Free Islamic games for Muslim children — hijaiyah, daily duas, Arabic vocabulary, and more.",
+    },
+    apps: {
+      title: "Apps",
+      description:
+        "A growing set of tools parents can use with their kids — not just things to read.",
     },
     support: {
       title: "Support Baby Mo",

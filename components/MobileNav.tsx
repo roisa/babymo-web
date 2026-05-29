@@ -18,6 +18,7 @@ export function MobileNav({ locale }: Props) {
     { href: "/", label: dict.nav.home, icon: HomeIcon },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon },
     { href: "/permainan", label: "Games", icon: GameIcon },
+    { href: "/apps", label: dict.nav.apps ?? "Apps", icon: AppsIcon },
     { href: "/parenting", label: dict.nav.parenting, icon: HeartIcon },
     { href: "/blog", label: dict.nav.blog, icon: PenIcon },
   ];
@@ -93,6 +94,13 @@ function PenIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M4 20h4l10-10-4-4L4 16Z" /><path d="m13.5 6.5 4 4" />
+    </svg>
+  );
+}
+function AppsIcon({ filled }: IconProps) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="3" y="3" width="7" height="7" rx="1.6" /><rect x="14" y="3" width="7" height="7" rx="1.6" /><rect x="3" y="14" width="7" height="7" rx="1.6" /><rect x="14" y="14" width="7" height="7" rx="1.6" />
     </svg>
   );
 }
