@@ -128,6 +128,15 @@ export const games: Game[] = [
   },
 ];
 
+// The app generates one branded OG card per game at /og/<file-stem>.jpg.
+// Derive it from the externalUrl so the two repos can't drift out of sync.
+function ogImageFor(externalUrl: string): string {
+  const trimmed = externalUrl.replace(/\/+$/, "");
+  const origin = trimmed.slice(0, trimmed.indexOf("/", "https://".length));
+  const stem = trimmed.slice(trimmed.lastIndexOf("/") + 1).replace(/\.html$/, "");
+  return `${origin}/og/${stem}.jpg`;
+}
+
 export function getAllGames(): Game[] {
-  return games;
+  return games.map((g) => ({ ...g, image: g.image ?? ogImageFor(g.externalUrl) }));
 }

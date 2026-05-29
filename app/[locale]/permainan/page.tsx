@@ -66,20 +66,33 @@ export default async function GamesIndex({
                 href={g.externalUrl}
                 target="_blank"
                 rel="noopener"
-                className="group flex h-full flex-col rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
+                className="group flex h-full flex-col overflow-hidden rounded-2xl border border-mist bg-paper transition hover:-translate-y-0.5 hover:border-sage/40"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
-                  {g.emoji}
+                <div className="relative aspect-[1200/630] w-full overflow-hidden bg-clay-soft">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img
+                    src={g.image}
+                    alt={g.title[l]}
+                    loading="lazy"
+                    width={1200}
+                    height={630}
+                    className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+                  />
+                  <span className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-paper/90 text-xl shadow-sm backdrop-blur">
+                    {g.emoji}
+                  </span>
                 </div>
-                <h2 className="font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
-                  {g.title[l]}
-                </h2>
-                <p className="mt-1.5 flex-1 text-sm leading-relaxed text-whisper">
-                  {g.description[l]}
-                </p>
-                <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
-                  Play →
-                </span>
+                <div className="flex flex-1 flex-col p-6">
+                  <h2 className="font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                    {g.title[l]}
+                  </h2>
+                  <p className="mt-1.5 flex-1 text-sm leading-relaxed text-whisper">
+                    {g.description[l]}
+                  </p>
+                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                    {l === "id" ? "Main" : "Play"} →
+                  </span>
+                </div>
               </a>
             </li>
           ))}
