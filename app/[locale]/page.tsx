@@ -634,10 +634,8 @@ export default async function HomePage({
             </Reveal>
 
             <Reveal>
-              <a
-                href="https://paypal.me/ibracreative"
-                target="_blank"
-                rel="noopener"
+              <Link
+                href={pathFor(l, "/dukung")}
                 className="lift tap mt-3 flex items-center justify-between gap-4 rounded-[22px] border border-hairline bg-paper p-6"
               >
                 <div className="flex min-w-0 items-center gap-4">
@@ -649,19 +647,19 @@ export default async function HomePage({
                       {dict.home.sections.supportTitle}
                     </p>
                     <p className="mt-0.5 font-serif text-[18px] font-medium text-ink">
-                      {l === "id"
-                        ? "Dukung via PayPal"
-                        : "Donate via PayPal"}
+                      {l === "id" ? "Dukung Baby Mo" : "Support Baby Mo"}
                     </p>
                     <p className="mt-0.5 truncate text-[13.5px] text-whisper">
-                      paypal.me/ibracreative
+                      {l === "id"
+                        ? "QRIS · Saweria · PayPal — sedekah jariyah"
+                        : "QRIS · Saweria · PayPal — sadaqah jariyah"}
                     </p>
                   </div>
                 </div>
                 <span className="hidden text-[13.5px] font-semibold text-clay sm:inline">
-                  {l === "id" ? "Buka PayPal →" : "Open PayPal →"}
+                  {l === "id" ? "Lihat cara dukung →" : "See how to give →"}
                 </span>
-              </a>
+              </Link>
             </Reveal>
           </div>
         </section>
