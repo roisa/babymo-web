@@ -3,9 +3,9 @@ import type { ActivityType } from "./types";
 export const ACTIVITY_TYPES: ActivityType[] = [
   { id: "maze", label: "Maze", icon: "🌀" },
   { id: "tracing", label: "Tracing", icon: "✏️" },
-  { id: "coloring", label: "Coloring", icon: "🎨" },
+  { id: "coloring", label: "Coloring Prompt", icon: "🎨" },
   { id: "matching", label: "Matching", icon: "🔗" },
-  { id: "puzzle", label: "Puzzle", icon: "🧩" },
+  { id: "puzzle", label: "Simple Puzzle", icon: "🧩" },
 ];
 
 export function getActivityType(id: string): ActivityType {
