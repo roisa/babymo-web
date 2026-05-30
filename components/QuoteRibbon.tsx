@@ -30,8 +30,11 @@ export function QuoteRibbon({ locale }: Props) {
           { ar: "اَللَّهُمَّ بَارِكْ", id: "O Allah, bless" },
         ];
 
-  // Duplicate the list so the -50% translate loops seamlessly
-  const track = [...items, ...items];
+  // Repeat the base set enough that ONE half of the track is wider than
+  // the largest display, then duplicate that half. The -50% translate
+  // then loops seamlessly with no empty gap on big iMac screens.
+  const half = [...items, ...items, ...items, ...items];
+  const track = [...half, ...half];
 
   return (
     <section
