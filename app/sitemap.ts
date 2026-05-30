@@ -34,6 +34,7 @@ const STATIC_PATHS = [
   "/blog",
   "/kalender",
   "/unduh",
+  "/apps/kids-activity",
   "/permainan",
   "/momen",
   "/faq",
