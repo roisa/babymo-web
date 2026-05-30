@@ -13,6 +13,10 @@ import { generate as tracing } from "./generators/tracing";
 import { generate as coloring } from "./generators/coloring";
 import { generate as matching } from "./generators/matching";
 import { generate as puzzle } from "./generators/puzzle";
+import { generate as wordsearch } from "./generators/wordsearch";
+import { generate as counting } from "./generators/counting";
+import { generate as pattern } from "./generators/pattern";
+import { generate as dottodot } from "./generators/dottodot";
 
 const GENERATORS: Record<string, (o: GenOptions) => GenResult> = {
   maze,
@@ -20,6 +24,10 @@ const GENERATORS: Record<string, (o: GenOptions) => GenResult> = {
   coloring,
   matching,
   puzzle,
+  wordsearch,
+  counting,
+  pattern,
+  dottodot,
 };
 
 export function generateWorksheet({

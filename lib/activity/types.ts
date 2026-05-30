@@ -20,6 +20,18 @@ export type AgeDifficulty = {
   tracingRepeats: number;
   matchingPairs: number;
   puzzlePieces: number;
+  // Word search
+  wordSearchGrid: number;
+  wordSearchWords: number;
+  wordSearchDiagonal: boolean;
+  // Count & write
+  countRows: number;
+  countMax: number;
+  // What comes next (patterns)
+  patternRows: number;
+  patternUnit: number; // distinct items per repeating unit (AB=2, ABC=3)
+  // Dot-to-dot
+  dotCount: number;
 };
 
 export type AgeRange = {
