@@ -90,6 +90,38 @@ function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[]
           : "Islamic occasions and their recommended deeds.",
       href: "/kalender",
     },
+    // For-parents content, cross-linked here so it's easy to find (also lives
+    // in the dedicated For Parents area).
+    {
+      emoji: "🧭",
+      title: dict.nav.parenting,
+      description:
+        l === "id"
+          ? "Panduan situasi: tantrum, susah tidur, susah makan, dan lainnya."
+          : "Situation guides: tantrums, sleep, eating, and more.",
+      href: "/parenting",
+      badge: dict.nav.parents,
+    },
+    {
+      emoji: "✍️",
+      title: dict.nav.blog,
+      description:
+        l === "id"
+          ? "Artikel parenting islami yang ditulis dan ditinjau."
+          : "Islamic parenting articles, written and reviewed.",
+      href: "/blog",
+      badge: dict.nav.parents,
+    },
+    {
+      emoji: "📝",
+      title: dict.nav.catatan,
+      description:
+        l === "id"
+          ? "Catatan pribadi pendiri tentang momen bersama anak."
+          : "The founder's personal notes on moments with the kids.",
+      href: "/catatan",
+      badge: dict.nav.parents,
+    },
   ];
 }
 

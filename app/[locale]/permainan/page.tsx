@@ -68,6 +68,9 @@ export default async function GamesIndex({
                 rel="noopener"
                 className="group flex h-full flex-col overflow-hidden rounded-2xl border border-mist bg-paper transition hover:-translate-y-0.5 hover:border-sage/40"
               >
+                {/* The OG art is a self-contained promo card (title, tagline,
+                    brand baked in), so we don't repeat that text below — just
+                    the image plus a Play action. */}
                 <div className="relative aspect-[1200/630] w-full overflow-hidden bg-clay-soft">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -78,18 +81,13 @@ export default async function GamesIndex({
                     height={630}
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
-                  <span className="absolute left-3 top-3 flex h-9 w-9 items-center justify-center rounded-xl bg-paper/90 text-xl shadow-sm backdrop-blur">
-                    {g.emoji}
-                  </span>
                 </div>
-                <div className="flex flex-1 flex-col p-6">
-                  <h2 className="font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                <div className="flex items-center justify-between px-5 py-3.5">
+                  <span className="inline-flex items-center gap-2 text-[15px] font-medium text-ink">
+                    <span aria-hidden className="text-lg">{g.emoji}</span>
                     {g.title[l]}
-                  </h2>
-                  <p className="mt-1.5 flex-1 text-sm leading-relaxed text-whisper">
-                    {g.description[l]}
-                  </p>
-                  <span className="mt-4 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                  </span>
+                  <span className="inline-flex items-center gap-1 text-xs font-semibold text-sage-deep group-hover:translate-x-0.5">
                     {l === "id" ? "Main" : "Play"} →
                   </span>
                 </div>

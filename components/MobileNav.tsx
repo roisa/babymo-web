@@ -20,16 +20,26 @@ export function MobileNav({ locale }: Props) {
     { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon, match: ["/doa"] },
     {
-      href: "/learn",
-      label: dict.nav.learn ?? "Learn",
-      icon: LearnIcon,
-      match: ["/learn", "/hadith", "/kisah", "/surat", "/asmaul-husna", "/kalender"],
-    },
-    {
       href: "/play",
       label: dict.nav.play ?? "Play",
       icon: GameIcon,
       match: ["/play", "/permainan", "/apps"],
+    },
+    {
+      href: "/learn",
+      label: dict.nav.learn ?? "Learn",
+      icon: LearnIcon,
+      match: [
+        "/learn",
+        "/hadith",
+        "/kisah",
+        "/surat",
+        "/asmaul-husna",
+        "/kalender",
+        "/parenting",
+        "/blog",
+        "/catatan",
+      ],
     },
     { href: "/watch", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },
   ];
