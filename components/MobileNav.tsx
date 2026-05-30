@@ -20,7 +20,7 @@ export function MobileNav({ locale }: Props) {
     { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon, match: ["/doa"] },
     {
-      href: "/play",
+      href: "/permainan",
       label: dict.nav.play ?? "Play",
       icon: GameIcon,
       match: ["/play", "/permainan", "/apps"],
@@ -41,7 +41,7 @@ export function MobileNav({ locale }: Props) {
         "/catatan",
       ],
     },
-    { href: "/watch", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },
+    { href: "/momen", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },
   ];
 
   function isActive(match: string[]) {

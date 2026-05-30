@@ -116,9 +116,20 @@ export const games: Game[] = [
     tags: ["akhlak", "puzzle"],
   },
   {
-    slug: "sholat-bareng-mo",
+    slug: "pray-with-mo",
     emoji: "🕌",
-    title: { id: "Sholat Bareng Mo", en: "Pray with Mo" },
+    title: { id: "Pray with Mo", en: "Pray with Mo" },
+    description: {
+      id: "Panduan sholat interaktif — belajar gerakan & bacaan langkah demi langkah bersama Mo.",
+      en: "Interactive prayer guide — learn the movements and recitations step by step with Mo.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-pray-with-mo.html",
+    tags: ["ibadah", "sholat", "panduan"],
+  },
+  {
+    slug: "streak-sholat-mo",
+    emoji: "🔥",
+    title: { id: "Streak Sholat Mo", en: "Prayer Streak with Mo" },
     description: {
       id: "Jadwal sholat, arah kiblat, dan streak harian untuk membiasakan ibadah.",
       en: "Prayer times, qibla direction, and a daily streak to build the habit.",
