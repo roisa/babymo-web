@@ -24,10 +24,10 @@ const CONTENT = {
     title: "Generator Lembar Aktivitas Anak",
     metaTitle: "Generator Lembar Aktivitas Anak",
     metaDesc:
-      "Lembar aktivitas anak siap cetak, gratis — labirin, mewarnai, menjiplak, mencocokkan, dan puzzle. Pilih tema & usia, buat, lalu cetak di rumah. Tanpa daftar.",
+      "Lembar aktivitas anak siap cetak, gratis — labirin, mewarnai, menjiplak, mencocokkan, puzzle, cari kata, berhitung, pola, dan sambung titik. Pilih tema & usia, buat, lalu cetak di rumah. Tanpa daftar.",
     crumb: "Aktivitas Anak",
     intro:
-      "Buat lembar kerja anak yang siap cetak dalam hitungan detik. Pilih sebuah tema, tentukan rentang usia, lalu pilih satu atau lebih aktivitas — labirin, menjiplak, mewarnai, mencocokkan, atau puzzle. Semua berjalan di peramban, gratis, dan tanpa perlu mendaftar.",
+      "Buat lembar kerja anak yang siap cetak dalam hitungan detik. Pilih sebuah tema, tentukan rentang usia, lalu pilih satu atau lebih aktivitas — labirin, menjiplak, mewarnai, mencocokkan, puzzle, cari kata, berhitung, pola, atau sambung titik. Semua berjalan di peramban, gratis, dan tanpa perlu mendaftar.",
     badges: ["Gratis", "Tanpa daftar", "Berjalan di peramban", "Unduh PDF & SVG"],
     howTitle: "Cara kerjanya",
     how: [
@@ -42,6 +42,10 @@ const CONTENT = {
       ["🎨 Mewarnai", "Gambar garis siap warna, atau prompt menggambar bebas."],
       ["🔗 Mencocokkan", "Pasangkan gambar dengan gambar — atau dengan kata untuk usia 7–8."],
       ["🧩 Puzzle", "Potong dan tempel: susun potongan bernomor ke dalam bingkai."],
+      ["🔎 Cari Kata", "Temukan kata bertema dalam kotak huruf — mendatar, menurun, & diagonal untuk yang lebih besar."],
+      ["🔢 Hitung & Tulis", "Hitung gambar di tiap baris, lalu tulis angkanya. Latihan berhitung awal."],
+      ["➡️ Lanjutkan Pola", "Lihat pola gambar yang berulang, lalu isi kotak yang kosong."],
+      ["🔵 Sambung Titik", "Hubungkan titik bernomor untuk membentuk gambar, lalu warnai."],
     ],
     faqTitle: "Pertanyaan umum",
     faq: [
@@ -56,10 +60,10 @@ const CONTENT = {
     title: "Kids Activity Worksheet Generator",
     metaTitle: "Kids Activity Worksheet Generator",
     metaDesc:
-      "Free printable kids worksheets — mazes, coloring, tracing, matching, and puzzles. Pick a theme and age, generate, and print at home. No sign-up.",
+      "Free printable kids worksheets — mazes, coloring, tracing, matching, puzzles, word search, counting, patterns, and dot-to-dot. Pick a theme and age, generate, and print at home. No sign-up.",
     crumb: "Kids Activity",
     intro:
-      "Create printable kids worksheets in seconds. Pick a theme, choose an age range, then select one or more activities — mazes, tracing, coloring, matching, or puzzles. Everything runs in your browser, free, with no sign-up.",
+      "Create printable kids worksheets in seconds. Pick a theme, choose an age range, then select one or more activities — mazes, tracing, coloring, matching, puzzles, word search, counting, patterns, or dot-to-dot. Everything runs in your browser, free, with no sign-up.",
     badges: ["Free", "No sign-up", "Runs in your browser", "PDF & SVG export"],
     howTitle: "How it works",
     how: [
@@ -74,6 +78,10 @@ const CONTENT = {
       ["🎨 Coloring", "Ready-to-color line art, or a free-draw prompt frame."],
       ["🔗 Matching", "Match picture to picture — or to the word for ages 7–8."],
       ["🧩 Puzzles", "Cut & paste: arrange numbered pieces into the frame."],
+      ["🔎 Word Search", "Find themed words in a letter grid — across, down & diagonal for older kids."],
+      ["🔢 Count & Write", "Count the pictures in each row and write the number. Early math."],
+      ["➡️ What Comes Next", "Spot the repeating picture pattern and fill in the blanks."],
+      ["🔵 Dot-to-Dot", "Connect numbered dots to reveal a picture, then color it in."],
     ],
     faqTitle: "Frequently asked questions",
     faq: [
