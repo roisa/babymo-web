@@ -24,6 +24,12 @@ function uniqueHadithThemes(): string[] {
 
 const STATIC_PATHS = [
   "",
+  // Primary nav hubs
+  "/play",
+  "/learn",
+  "/watch",
+  "/orangtua",
+  // Content indexes
   "/doa",
   "/hadith",
   "/parenting",
@@ -37,6 +43,7 @@ const STATIC_PATHS = [
   "/apps/kids-activity",
   "/permainan",
   "/momen",
+  // Info & legal
   "/faq",
   "/tentang",
   "/tim",
