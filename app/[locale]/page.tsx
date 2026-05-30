@@ -35,7 +35,6 @@ import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
-import { getAllCatatan } from "@/lib/content/catatan";
 import { getAllGames } from "@/lib/content/games";
 import {
   getCurrentIslamicEvent,
@@ -72,7 +71,6 @@ export default async function HomePage({
   const allParenting = getAllParenting();
   const allGames = getAllGames();
   const allPosts = getAllBlogPosts();
-  const notes = getAllCatatan().slice(0, 3);
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const doas = allDoa.slice(0, 4);
   const hadiths = allHadith.slice(0, 3);
@@ -507,84 +505,42 @@ export default async function HomePage({
           </Reveal>
         </section>
 
-        {/* ── CATATAN — first-person notes by Salman ── */}
-        {notes.length > 0 && (
-          <section className="border-t border-hairline bg-paper-2">
-            <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
-              <Reveal>
-                <SectionHead
-                  title={dict.catatan.indexTitle}
-                  sub={dict.catatan.intro}
-                  viewAll={{
-                    href: pathFor(l, "/catatan"),
-                    label: dict.home.viewAll,
-                  }}
-                />
-              </Reveal>
-              <Reveal stagger>
-                <div className="mt-10 grid gap-5 md:grid-cols-3">
-                  {notes.map((n) => (
-                    <Link
-                      key={n.slug}
-                      href={pathFor(l, `/catatan/${n.slug}`)}
-                      className="lift tap group flex h-full flex-col gap-3 rounded-[22px] border border-hairline bg-paper p-6"
-                    >
-                      <span className="inline-flex w-fit items-center rounded-full bg-sage-soft px-2.5 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
-                        {dict.catatan.childChip[n.child]}
-                      </span>
-                      <h3 className="font-display text-[20px] font-medium leading-snug text-ink group-hover:text-brave-deep">
-                        {n.title[l]}
-                      </h3>
-                      <p className="line-clamp-3 text-[14px] leading-relaxed text-whisper">
-                        {n.hook[l]}
-                      </p>
-                      <p className="mt-auto text-[12px] text-whisper">
-                        — {dict.catatan.bySalman}
-                      </p>
-                    </Link>
-                  ))}
-                </div>
-              </Reveal>
-            </div>
-          </section>
-        )}
-
         {/* ── WATCH TOGETHER WITH BABY MO (auto-fed from YouTube) ── */}
         <Reveal>
           <VideoSection locale={l} />
         </Reveal>
 
-        {/* ── DOWNLOADS — lockscreen wallpapers ── */}
+        {/* ── KIDS ACTIVITY — printable worksheet generator ── */}
         <Reveal>
           <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
             <Link
-              href={pathFor(l, "/unduh")}
+              href={pathFor(l, "/apps/kids-activity")}
               className="lift tap group relative block overflow-hidden rounded-[28px] border border-hairline bg-brave-soft/40"
             >
               <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
                 <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-brave/15 text-brave-deep sm:flex">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="7" y="2" width="10" height="20" rx="2" />
-                    <path d="M11 5h2" />
+                    <rect x="4" y="3" width="16" height="18" rx="2" />
+                    <path d="M8 8h8M8 12h8M8 16h5" />
                   </svg>
                 </div>
                 <div>
                   <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brave-deep">
-                    {l === "id" ? "Gratis · Untuk Lockscreen" : "Free · For Lockscreen"}
+                    {l === "id" ? "Gratis · Bisa Dicetak" : "Free · Printable"}
                   </p>
                   <h2 className="font-display mt-1.5 text-[22px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[24px]">
                     {l === "id"
-                      ? "8 wallpaper doa harian untuk iPhone"
-                      : "8 daily-du'a wallpapers for iPhone"}
+                      ? "Buat lembar aktivitas anak siap cetak"
+                      : "Make printable kids activity sheets"}
                   </h2>
                   <p className="mt-1 text-[14px] leading-relaxed text-whisper">
                     {l === "id"
-                      ? "Supaya yang pertama dilihat tiap buka HP adalah pengingat lembut. Cetak biru cream + sage Baby Mo."
-                      : "So the first thing you see when you unlock is a gentle reminder. Cream + sage Baby Mo palette."}
+                      ? "Labirin, mewarnai, menjiplak, mencocokkan, dan puzzle — pilih tema & usia, lalu cetak di rumah."
+                      : "Mazes, coloring, tracing, matching, and puzzles — pick a theme & age, then print at home."}
                   </p>
                 </div>
                 <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-brave-deep sm:inline">
-                  {l === "id" ? "Lihat semua →" : "Browse all →"}
+                  {l === "id" ? "Buka aktivitas →" : "Open activities →"}
                 </span>
               </div>
             </Link>
