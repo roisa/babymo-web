@@ -11,6 +11,7 @@ import {
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, faqSchema, graph } from "@/lib/seo/schemas";
@@ -212,6 +213,7 @@ export default async function KidsActivityPage({
           </div>
         </section>
       </main>
+      <Footer locale={l} currentPath="/apps/kids-activity" />
       <MobileNav locale={l} />
       <JsonLd
         data={graph(
