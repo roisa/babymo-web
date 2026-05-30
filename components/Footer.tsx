@@ -35,7 +35,6 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/hadith">{dict.nav.hadith}</FooterLink>
             <FooterLink locale={locale} href="/kisah">{dict.nav.kisah}</FooterLink>
             <FooterLink locale={locale} href="/parenting">{dict.nav.parenting}</FooterLink>
-            <FooterLink locale={locale} href="/catatan">{dict.nav.catatan}</FooterLink>
             <FooterLink locale={locale} href="/blog">{dict.nav.blog}</FooterLink>
             <FooterLink locale={locale} href="/kalender">
               {locale === "id" ? "Kalender Islam" : "Islamic Calendar"}
@@ -47,6 +46,9 @@ export function Footer({ locale, currentPath }: Props) {
               {locale === "id" ? "Momen" : "Moments"}
             </FooterLink>
             <FooterLink locale={locale} href="/permainan">{dict.nav.games}</FooterLink>
+            <FooterLink locale={locale} href="/apps/kids-activity">
+              {locale === "id" ? "Aktivitas Anak" : "Kids Activity"}
+            </FooterLink>
             <FooterLink locale={locale} href="/unduh">
               {locale === "id" ? "Wallpaper Doa" : "Du'a Wallpapers"}
             </FooterLink>

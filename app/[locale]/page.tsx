@@ -16,8 +16,6 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { DoaCard } from "@/components/DoaCard";
-import { HadithCard } from "@/components/HadithCard";
-import { SituationCard } from "@/components/SituationCard";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { HeroAura } from "@/components/HeroAura";
@@ -73,8 +71,6 @@ export default async function HomePage({
   const allPosts = getAllBlogPosts();
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const doas = allDoa.slice(0, 4);
-  const hadiths = allHadith.slice(0, 3);
-  const situations = allParenting.slice(0, 3);
   const posts = allPosts.slice(0, 3);
   // Auto-pick a seasonal event from the Islamic calendar. Falls back
   // to the hard-coded Hijri new year post if the matching blog slug
@@ -376,56 +372,6 @@ export default async function HomePage({
               {doas.map((d) => (
                 <div key={d.slug} className="lift">
                   <DoaCard doa={d} locale={l} />
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
-        {/* ── HADITH ── */}
-        <section className="border-t border-hairline bg-paper-2">
-          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
-            <Reveal>
-              <SectionHead
-                title={dict.nav.hadith}
-                sub={
-                  l === "id"
-                    ? "Hadith pilihan dengan catatan penerapan untuk orang tua."
-                    : "Curated hadith with applied parenting notes."
-                }
-                viewAll={{ href: pathFor(l, "/hadith"), label: dict.home.viewAll }}
-              />
-            </Reveal>
-            <Reveal stagger>
-              <div className="mt-10 grid gap-4 md:grid-cols-3">
-                {hadiths.map((h) => (
-                  <div key={h.slug} className="lift">
-                    <HadithCard hadith={h} locale={l} />
-                  </div>
-                ))}
-              </div>
-            </Reveal>
-          </div>
-        </section>
-
-        {/* ── PARENTING ── */}
-        <section className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
-          <Reveal>
-            <SectionHead
-              title={dict.nav.parenting}
-              sub={
-                l === "id"
-                  ? "Panduan praktis untuk situasi yang sering dihadapi keluarga muslim."
-                  : "Practical guides for situations Muslim families face often."
-              }
-              viewAll={{ href: pathFor(l, "/parenting"), label: dict.home.viewAll }}
-            />
-          </Reveal>
-          <Reveal stagger>
-            <div className="mt-10 grid gap-4 md:grid-cols-3">
-              {situations.map((p) => (
-                <div key={p.slug} className="lift">
-                  <SituationCard situation={p} locale={l} />
                 </div>
               ))}
             </div>
