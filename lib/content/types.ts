@@ -220,6 +220,34 @@ export type App = {
 };
 
 /**
+ * One step in a Learning Path — a reference to an existing piece of content.
+ * The type tells us which collection to resolve the slug against and which
+ * route to link to.
+ */
+export type PathStepType = "doa" | "surah" | "hadith" | "kisah";
+
+export type PathStep = {
+  type: PathStepType;
+  slug: string;
+};
+
+/**
+ * A curated, ordered sequence that turns scattered content into a guided
+ * journey ("First bedtime routine", "First short surahs"). Steps reference
+ * existing doa / surah / hadith / kisah by slug — no content is duplicated.
+ */
+export type LearningPath = {
+  slug: string;
+  emoji: string;
+  title: Record<Locale, string>;
+  description: Record<Locale, string>;
+  /** Display label for the target age, e.g. "3–5". */
+  ageLabel: string;
+  steps: PathStep[];
+  published: string;
+};
+
+/**
  * Short surah from Juz 30 — for memorization and bedtime recitation.
  * Per-ayah breakdown lets us render line-by-line with the
  * transliteration and translation aligned.

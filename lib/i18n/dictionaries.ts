@@ -119,6 +119,7 @@ type Dict = {
     play: { title: string; description: string };
     watch: { title: string; description: string };
     parents: { title: string; description: string };
+    paths: { title: string; description: string };
     support: { title: string; description: string };
     faq: { title: string; description: string };
   };
@@ -327,6 +328,11 @@ const id: Dict = {
       title: "Untuk Orang Tua",
       description:
         "Panduan parenting, artikel, catatan, dan pengaturan untuk menemani perjalanan belajar anak.",
+    },
+    paths: {
+      title: "Jalur Belajar",
+      description:
+        "Rangkaian belajar berurutan — dari doa, surat, hingga akhlak — yang menuntun anak selangkah demi selangkah.",
     },
     support: {
       title: "Dukung Baby Mo",
@@ -568,6 +574,11 @@ const en: Dict = {
       title: "For Parents",
       description:
         "Parenting guides, articles, notes, and settings to support your child's learning journey.",
+    },
+    paths: {
+      title: "Learning Paths",
+      description:
+        "Step-by-step sequences — from duas and surahs to good character — that guide your child one step at a time.",
     },
     support: {
       title: "Support Baby Mo",

@@ -27,6 +27,16 @@ export async function generateMetadata({
 function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[] {
   return [
     {
+      emoji: "🧭",
+      title: dict.pages.paths.title,
+      description:
+        l === "id"
+          ? "Rangkaian belajar berurutan yang menuntun anak selangkah demi selangkah."
+          : "Step-by-step sequences that guide your child one step at a time.",
+      href: "/learn/path",
+      badge: l === "id" ? "Baru" : "New",
+    },
+    {
       emoji: "🌟",
       title: l === "id" ? "Akhlak Mulia" : "Good Manners (Akhlaq)",
       description:
