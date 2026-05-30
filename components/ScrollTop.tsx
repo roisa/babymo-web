@@ -33,7 +33,7 @@ export function ScrollTop({ locale }: { locale: Locale }) {
       aria-label={label}
       title={label}
       tabIndex={visible ? 0 : -1}
-      className={`fixed bottom-20 right-4 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-paper/95 text-ink-soft shadow-[0_10px_24px_-10px_rgba(15,18,19,0.4)] backdrop-blur transition hover:border-brave/40 hover:text-brave-deep md:bottom-6 md:right-6 md:h-12 md:w-12 ${
+      className={`fixed bottom-[calc(5rem+env(safe-area-inset-bottom))] right-4 z-30 flex h-11 w-11 items-center justify-center rounded-full border border-hairline bg-paper/95 text-ink-soft shadow-[0_10px_24px_-10px_rgba(15,18,19,0.4)] backdrop-blur transition hover:border-brave/40 hover:text-brave-deep lg:bottom-6 lg:right-6 lg:h-12 lg:w-12 ${
         visible
           ? "translate-y-0 opacity-100"
           : "pointer-events-none translate-y-3 opacity-0"
