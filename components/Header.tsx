@@ -18,7 +18,7 @@ export function Header({ locale, currentPath }: Props) {
   const items: { href: string; label: string; match: string[] }[] = [
     { href: "/doa", label: dict.nav.doa, match: ["/doa"] },
     {
-      href: "/play",
+      href: "/permainan",
       label: dict.nav.play ?? "Play",
       match: ["/play", "/permainan", "/apps"],
     },
@@ -37,7 +37,7 @@ export function Header({ locale, currentPath }: Props) {
         "/catatan",
       ],
     },
-    { href: "/watch", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
+    { href: "/momen", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
   ];
   const parentsActive = currentPath.startsWith("/orangtua");
 
