@@ -13,15 +13,23 @@ type Props = {
 
 export function Header({ locale, currentPath }: Props) {
   const dict = getDictionary(locale);
-  const items: { href: string; label: string }[] = [
-    { href: "/doa", label: dict.nav.doa },
-    { href: "/surat", label: dict.nav.surah ?? "Surat" },
-    { href: "/hadith", label: dict.nav.hadith ?? "Hadith" },
-    { href: "/kisah", label: dict.nav.kisah ?? "Kisah" },
-    { href: "/parenting", label: dict.nav.parenting ?? "Parenting" },
-    { href: "/catatan", label: dict.nav.catatan ?? "Catatan" },
-    { href: "/blog", label: dict.nav.blog },
+  // Outcome-based primary nav (Home lives on the logo). Every content format
+  // sits as a sub-section inside one of these four destinations.
+  const items: { href: string; label: string; match: string[] }[] = [
+    { href: "/doa", label: dict.nav.doa, match: ["/doa"] },
+    {
+      href: "/learn",
+      label: dict.nav.learn ?? "Learn",
+      match: ["/learn", "/hadith", "/kisah", "/surat", "/asmaul-husna", "/kalender"],
+    },
+    {
+      href: "/play",
+      label: dict.nav.play ?? "Play",
+      match: ["/play", "/permainan", "/apps"],
+    },
+    { href: "/watch", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
   ];
+  const parentsActive = currentPath.startsWith("/orangtua");
 
   return (
     <header className="glass sticky top-0 z-40 border-b border-hairline">
@@ -53,9 +61,9 @@ export function Header({ locale, currentPath }: Props) {
         <nav aria-label="Primary" className="hidden md:block">
           <ul className="flex items-center gap-0.5">
             {items.map((it) => {
-              const isActive =
-                currentPath === it.href ||
-                currentPath.startsWith(`${it.href}/`);
+              const isActive = it.match.some(
+                (m) => currentPath === m || currentPath.startsWith(`${m}/`)
+              );
               return (
                 <li key={it.href}>
                   <Link
@@ -79,6 +87,25 @@ export function Header({ locale, currentPath }: Props) {
           <SearchOverlay locale={locale} />
           <ThemeToggle locale={locale} />
           <LanguageSwitcher currentLocale={locale} path={currentPath} />
+          <Link
+            href={pathFor(locale, "/orangtua")}
+            aria-label={dict.nav.parents ?? "For Parents"}
+            aria-current={parentsActive ? "page" : undefined}
+            title={dict.nav.parents ?? "For Parents"}
+            className={
+              parentsActive
+                ? "tap inline-flex h-9 items-center gap-1.5 rounded-full bg-brave-soft px-2.5 text-brave-deep"
+                : "tap inline-flex h-9 items-center gap-1.5 rounded-full px-2.5 text-whisper transition hover:bg-paper-2 hover:text-ink"
+            }
+          >
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+              <circle cx="12" cy="8" r="3.2" />
+              <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
+            </svg>
+            <span className="hidden text-[13px] font-medium lg:inline">
+              {dict.nav.parents ?? "For Parents"}
+            </span>
+          </Link>
         </div>
       </div>
     </header>

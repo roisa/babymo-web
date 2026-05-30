@@ -199,6 +199,27 @@ export type Game = {
 };
 
 /**
+ * A standalone app surfaced in the "Apps" hub — tools parents can use with
+ * their kids, not just things to read. Each app has its own deployment; we
+ * either frame it inside the site (mode "embed", opens at /apps/<slug>) or
+ * link out to it in a new tab (mode "external", like Games).
+ */
+export type App = {
+  slug: string;
+  emoji: string;
+  title: Record<Locale, string>;
+  description: Record<Locale, string>;
+  /** The app's own deployment. iframe src when mode==="embed",
+   *  link target (new tab) when mode==="external". */
+  url: string;
+  mode: "embed" | "external";
+  /** Optional preview/OG image for the hub card; falls back to an
+   *  emoji-on-gradient placeholder when omitted. */
+  image?: string;
+  tags: string[];
+};
+
+/**
  * Short surah from Juz 30 — for memorization and bedtime recitation.
  * Per-ayah breakdown lets us render line-by-line with the
  * transliteration and translation aligned.
