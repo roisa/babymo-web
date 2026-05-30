@@ -18,14 +18,24 @@ export function Header({ locale, currentPath }: Props) {
   const items: { href: string; label: string; match: string[] }[] = [
     { href: "/doa", label: dict.nav.doa, match: ["/doa"] },
     {
-      href: "/learn",
-      label: dict.nav.learn ?? "Learn",
-      match: ["/learn", "/hadith", "/kisah", "/surat", "/asmaul-husna", "/kalender"],
-    },
-    {
       href: "/play",
       label: dict.nav.play ?? "Play",
       match: ["/play", "/permainan", "/apps"],
+    },
+    {
+      href: "/learn",
+      label: dict.nav.learn ?? "Learn",
+      match: [
+        "/learn",
+        "/hadith",
+        "/kisah",
+        "/surat",
+        "/asmaul-husna",
+        "/kalender",
+        "/parenting",
+        "/blog",
+        "/catatan",
+      ],
     },
     { href: "/watch", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
   ];
@@ -102,7 +112,7 @@ export function Header({ locale, currentPath }: Props) {
               <circle cx="12" cy="8" r="3.2" />
               <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
             </svg>
-            <span className="hidden text-[13px] font-medium lg:inline">
+            <span className="hidden text-[13px] font-medium sm:inline">
               {dict.nav.parents ?? "For Parents"}
             </span>
           </Link>
