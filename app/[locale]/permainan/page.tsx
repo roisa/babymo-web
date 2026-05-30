@@ -95,6 +95,56 @@ export default async function GamesIndex({
             </li>
           ))}
         </ul>
+
+        {/* More ways to play — printable activities + upcoming quizzes */}
+        <h2 className="mt-14 font-serif text-2xl font-medium tracking-tight text-ink">
+          {l === "id" ? "Lainnya untuk dimainkan" : "More to play"}
+        </h2>
+        <ul className="mt-6 grid gap-5 sm:grid-cols-2">
+          <li>
+            <Link
+              href={pathFor(l, "/apps/kids-activity")}
+              className="group flex h-full items-center gap-4 rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
+                🎨
+              </span>
+              <span className="min-w-0">
+                <span className="block font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                  {l === "id" ? "Aktivitas Anak" : "Kids Activity"}
+                </span>
+                <span className="mt-1 block text-sm leading-relaxed text-whisper">
+                  {l === "id"
+                    ? "Lembar kegiatan siap cetak — labirin, mewarnai, menjiplak."
+                    : "Printable worksheets — mazes, coloring, and tracing."}
+                </span>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                  {l === "id" ? "Buka" : "Open"} →
+                </span>
+              </span>
+            </Link>
+          </li>
+          <li>
+            <div className="flex h-full items-center gap-4 rounded-2xl border border-dashed border-mist bg-paper/60 p-6">
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
+                🧠
+              </span>
+              <span className="min-w-0">
+                <span className="flex items-center gap-2 font-serif text-lg font-semibold text-ink">
+                  {l === "id" ? "Kuis" : "Quizzes"}
+                  <span className="rounded-full bg-clay/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-clay">
+                    {l === "id" ? "Segera" : "Soon"}
+                  </span>
+                </span>
+                <span className="mt-1 block text-sm leading-relaxed text-whisper">
+                  {l === "id"
+                    ? "Uji pemahaman anak sambil bermain. Segera hadir."
+                    : "Test what your child has learned, playfully. Coming soon."}
+                </span>
+              </span>
+            </div>
+          </li>
+        </ul>
       </main>
       <Footer locale={l} currentPath="/permainan" />
       <MobileNav locale={l} />
