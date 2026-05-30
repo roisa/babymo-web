@@ -18,6 +18,10 @@ type Dict = {
     kisah: string;
     games: string;
     apps: string;
+    learn: string;
+    play: string;
+    watch: string;
+    parents: string;
     faq: string;
     about: string;
     contact: string;
@@ -111,6 +115,10 @@ type Dict = {
     terms: { title: string; description: string };
     games: { title: string; description: string };
     apps: { title: string; description: string };
+    learn: { title: string; description: string };
+    play: { title: string; description: string };
+    watch: { title: string; description: string };
+    parents: { title: string; description: string };
     support: { title: string; description: string };
     faq: { title: string; description: string };
   };
@@ -147,6 +155,10 @@ const id: Dict = {
     kisah: "Kisah Nabi",
     games: "Permainan",
     apps: "Aplikasi",
+    learn: "Belajar",
+    play: "Main",
+    watch: "Tonton",
+    parents: "Orang Tua",
     faq: "FAQ",
     about: "Tentang",
     contact: "Kontak",
@@ -296,6 +308,26 @@ const id: Dict = {
       description:
         "Kumpulan alat & aplikasi yang bisa langsung dipakai orang tua bersama anak — bukan sekadar bacaan.",
     },
+    learn: {
+      title: "Belajar",
+      description:
+        "Hadith, akhlak, kisah teladan, dan ilmu untuk anak memahami Islam.",
+    },
+    play: {
+      title: "Main",
+      description:
+        "Permainan, aktivitas siap cetak, dan kuis seru — belajar sambil bermain.",
+    },
+    watch: {
+      title: "Tonton",
+      description:
+        "Video, momen, dan nasheed pilihan yang ramah anak.",
+    },
+    parents: {
+      title: "Untuk Orang Tua",
+      description:
+        "Panduan parenting, artikel, catatan, dan pengaturan untuk menemani perjalanan belajar anak.",
+    },
     support: {
       title: "Dukung Baby Mo",
       description:
@@ -365,6 +397,10 @@ const en: Dict = {
     kisah: "Prophet Stories",
     games: "Games",
     apps: "Apps",
+    learn: "Learn",
+    play: "Play",
+    watch: "Watch",
+    parents: "For Parents",
     faq: "FAQ",
     about: "About",
     contact: "Contact",
@@ -512,6 +548,26 @@ const en: Dict = {
       title: "Apps",
       description:
         "A growing set of tools parents can use with their kids — not just things to read.",
+    },
+    learn: {
+      title: "Learn",
+      description:
+        "Hadith, manners, prophet stories, and knowledge to help your child understand Islam.",
+    },
+    play: {
+      title: "Play",
+      description:
+        "Games, printable activities, and quizzes — learning through play.",
+    },
+    watch: {
+      title: "Watch",
+      description:
+        "Hand-picked videos, moments, and nasheed that are good for kids.",
+    },
+    parents: {
+      title: "For Parents",
+      description:
+        "Parenting guides, articles, notes, and settings to support your child's learning journey.",
     },
     support: {
       title: "Support Baby Mo",

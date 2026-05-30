@@ -14,18 +14,30 @@ export function MobileNav({ locale }: Props) {
   // e.g. "/babymo-web/id/doa/sebelum-tidur" → "/doa/sebelum-tidur"
   const rel = pathname.replace(/^.*?\/(id|en)(?=\/|$)/, "") || "/";
 
-  const items = [
-    { href: "/", label: dict.nav.home, icon: HomeIcon },
-    { href: "/doa", label: dict.nav.doa, icon: BookIcon },
-    { href: "/permainan", label: "Games", icon: GameIcon },
-    { href: "/apps", label: dict.nav.apps ?? "Apps", icon: AppsIcon },
-    { href: "/parenting", label: dict.nav.parenting, icon: HeartIcon },
-    { href: "/blog", label: dict.nav.blog, icon: PenIcon },
+  // Five outcome tabs. `match` lets a tab stay highlighted when the user is on
+  // one of its deep sub-pages (e.g. /hadith lights up Learn).
+  const items: { href: string; label: string; icon: (p: IconProps) => React.JSX.Element; match: string[] }[] = [
+    { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
+    { href: "/doa", label: dict.nav.doa, icon: BookIcon, match: ["/doa"] },
+    {
+      href: "/learn",
+      label: dict.nav.learn ?? "Learn",
+      icon: LearnIcon,
+      match: ["/learn", "/hadith", "/kisah", "/surat", "/asmaul-husna", "/kalender"],
+    },
+    {
+      href: "/play",
+      label: dict.nav.play ?? "Play",
+      icon: GameIcon,
+      match: ["/play", "/permainan", "/apps"],
+    },
+    { href: "/watch", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },
   ];
 
-  function isActive(href: string) {
-    if (href === "/") return rel === "/" || rel === "";
-    return rel === href || rel.startsWith(`${href}/`);
+  function isActive(match: string[]) {
+    return match.some((href) =>
+      href === "/" ? rel === "/" || rel === "" : rel === href || rel.startsWith(`${href}/`)
+    );
   }
 
   return (
@@ -43,7 +55,7 @@ export function MobileNav({ locale }: Props) {
       <ul className="mx-auto flex max-w-md items-stretch justify-around">
         {items.map((it) => {
           const Icon = it.icon;
-          const active = isActive(it.href);
+          const active = isActive(it.match);
           return (
             <li key={it.href} className="flex-1">
               <Link
@@ -83,24 +95,17 @@ function BookIcon({ filled }: IconProps) {
     </svg>
   );
 }
-function HeartIcon({ filled }: IconProps) {
+function LearnIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M12 21s-7-4.5-9.3-9.1A5.4 5.4 0 0 1 7.1 4.4 5 5 0 0 1 12 7a5 5 0 0 1 4.9-2.6 5.4 5.4 0 0 1 4.4 7.5C19 16.5 12 21 12 21Z" />
+      <path d="M12 4 2.5 9 12 14l9.5-5L12 4Z" /><path d="M6 11v5.5c0 .8 2.7 2.5 6 2.5s6-1.7 6-2.5V11" /><path d="M21.5 9v5" />
     </svg>
   );
 }
-function PenIcon({ filled }: IconProps) {
+function WatchIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M4 20h4l10-10-4-4L4 16Z" /><path d="m13.5 6.5 4 4" />
-    </svg>
-  );
-}
-function AppsIcon({ filled }: IconProps) {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <rect x="3" y="3" width="7" height="7" rx="1.6" /><rect x="14" y="3" width="7" height="7" rx="1.6" /><rect x="3" y="14" width="7" height="7" rx="1.6" /><rect x="14" y="14" width="7" height="7" rx="1.6" />
+      <rect x="2.5" y="4.5" width="19" height="13" rx="2.5" /><path d="M8 21h8" /><path d="m10.5 8.5 4 2.5-4 2.5V8.5Z" fill={filled ? "var(--paper, #fff)" : "currentColor"} stroke="none" />
     </svg>
   );
 }
