@@ -133,7 +133,7 @@ export default async function KidsActivityPage({
 
   return (
     <>
-      <Header locale={l} currentPath="/apps" />
+      <Header locale={l} currentPath="/apps/kids-activity" />
       <main id="main" className="mx-auto max-w-6xl px-5 pb-24 pt-6 sm:px-8 md:pb-16">
         {/* Breadcrumb */}
         <nav aria-label="Breadcrumb" className="mb-4 text-xs text-whisper">
