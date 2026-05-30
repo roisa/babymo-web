@@ -39,7 +39,6 @@ export function Header({ locale, currentPath }: Props) {
     },
     { href: "/momen", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
   ];
-  const parentsActive = currentPath.startsWith("/orangtua");
 
   return (
     <header className="glass sticky top-0 z-40 border-b border-hairline">
@@ -97,25 +96,6 @@ export function Header({ locale, currentPath }: Props) {
           <SearchOverlay locale={locale} />
           <ThemeToggle locale={locale} />
           <LanguageSwitcher currentLocale={locale} path={currentPath} />
-          <Link
-            href={pathFor(locale, "/orangtua")}
-            aria-label={dict.nav.parents ?? "For Parents"}
-            aria-current={parentsActive ? "page" : undefined}
-            title={dict.nav.parents ?? "For Parents"}
-            className={
-              parentsActive
-                ? "tap inline-flex h-9 items-center gap-1.5 rounded-full bg-brave-soft px-2.5 text-brave-deep"
-                : "tap inline-flex h-9 items-center gap-1.5 rounded-full px-2.5 text-whisper transition hover:bg-paper-2 hover:text-ink"
-            }
-          >
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-              <circle cx="12" cy="8" r="3.2" />
-              <path d="M5.5 20a6.5 6.5 0 0 1 13 0" />
-            </svg>
-            <span className="hidden text-[13px] font-medium sm:inline">
-              {dict.nav.parents ?? "For Parents"}
-            </span>
-          </Link>
         </div>
       </div>
     </header>

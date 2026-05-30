@@ -125,6 +125,29 @@ export default async function GamesIndex({
             </Link>
           </li>
           <li>
+            <Link
+              href={pathFor(l, "/unduh")}
+              className="group flex h-full items-center gap-4 rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
+                🖼️
+              </span>
+              <span className="min-w-0">
+                <span className="block font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                  {l === "id" ? "Wallpaper Doa" : "Du'a Wallpapers"}
+                </span>
+                <span className="mt-1 block text-sm leading-relaxed text-whisper">
+                  {l === "id"
+                    ? "Wallpaper doa harian yang cantik untuk layar ponsel anak."
+                    : "Pretty daily-du'a wallpapers for your child's phone screen."}
+                </span>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                  {l === "id" ? "Unduh" : "Download"} →
+                </span>
+              </span>
+            </Link>
+          </li>
+          <li>
             <div className="flex h-full items-center gap-4 rounded-2xl border border-dashed border-mist bg-paper/60 p-6">
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
                 🧠

@@ -49,9 +49,6 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/apps/kids-activity">
               {locale === "id" ? "Aktivitas Anak" : "Kids Activity"}
             </FooterLink>
-            <FooterLink locale={locale} href="/unduh">
-              {locale === "id" ? "Wallpaper Doa" : "Du'a Wallpapers"}
-            </FooterLink>
             <FooterLink locale={locale} href="/faq">{dict.nav.faq}</FooterLink>
           </FooterCol>
 
