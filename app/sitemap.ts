@@ -7,6 +7,9 @@ import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
 import { getAllSurah } from "@/lib/content/surah";
 import { getAllProphets } from "@/lib/content/prophets";
+import { allSpotOddSlugs } from "@/lib/games/spot-odd";
+import { allSpotDiffSlugs } from "@/lib/games/spot-difference";
+import { allArchetypeKeys } from "@/lib/games/personality";
 
 export const dynamic = "force-static";
 
@@ -43,6 +46,12 @@ const STATIC_PATHS = [
   "/apps/kids-activity",
   "/permainan",
   "/momen",
+  // Interactive quizzes & games
+  "/kuis",
+  "/kuis/cari-yang-beda",
+  "/kuis/cari-perbedaan",
+  "/kuis/tebak-perasaan",
+  "/kuis/baby-mo-kamu",
   // Info & legal
   "/faq",
   "/tentang",
@@ -192,6 +201,22 @@ export default function sitemap(): MetadataRoute.Sitemap {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/kisah/${p.slug}`)]),
           ),
+        },
+      });
+    }
+    const quizPaths = [
+      ...allSpotOddSlugs().map((s) => `/kuis/cari-yang-beda/${s}`),
+      ...allSpotDiffSlugs().map((s) => `/kuis/cari-perbedaan/${s}`),
+      ...allArchetypeKeys().map((k) => `/kuis/baby-mo-kamu/hasil/${k}`),
+    ];
+    for (const p of quizPaths) {
+      out.push({
+        url: url(locale, p),
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(locales.map((ll) => [ll, url(ll, p)])),
         },
       });
     }

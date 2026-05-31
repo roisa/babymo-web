@@ -46,13 +46,13 @@ function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[]
     },
     {
       emoji: "🧠",
-      title: l === "id" ? "Kuis" : "Quizzes",
+      title: l === "id" ? "Kuis & Permainan" : "Quizzes & Games",
       description:
         l === "id"
-          ? "Uji pemahaman anak sambil bermain. Segera hadir."
-          : "Test what your child has learned, playfully. Coming soon.",
-      href: "/permainan",
-      badge: l === "id" ? "Segera" : "Soon",
+          ? "Temukan yang beda, cari perbedaan, tebak perasaan, dan kuis kepribadian Baby Mo."
+          : "Spot the odd one, find the differences, guess the feeling, and the Baby Mo personality quiz.",
+      href: "/kuis",
+      badge: l === "id" ? "Baru" : "New",
     },
   ];
 }
