@@ -5,6 +5,7 @@ import type { Locale } from "@/lib/i18n/config";
 import { t } from "@/lib/games/poses";
 import {
   SPOT_DIFF_LEVELS,
+  isAsymmetric,
   type SpotDiffLevel,
   type SpotDiffPuzzle,
 } from "@/lib/games/spot-difference";
@@ -69,8 +70,10 @@ function buildLayout(
   const right: Cell[] = left.map((c) => ({ ...c }));
   for (const d of diffs) {
     const base = left[d]!;
-    if (rng() < 0.35) {
-      // Orientation change — clearly visible flip.
+    // Only use a flip when the pose is one-sided enough for the mirror to be
+    // obvious; otherwise the difference would be unfindable. Symmetric poses
+    // always fall back to a guaranteed-visible pose swap.
+    if (rng() < 0.35 && isAsymmetric(base.file)) {
       right[d] = { file: base.file, flip: !base.flip };
     } else {
       // Swap to a different pose.
