@@ -148,24 +148,30 @@ export default async function GamesIndex({
             </Link>
           </li>
           <li>
-            <div className="flex h-full items-center gap-4 rounded-2xl border border-dashed border-mist bg-paper/60 p-6">
+            <Link
+              href={pathFor(l, "/kuis")}
+              className="group flex h-full items-center gap-4 rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
+            >
               <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
                 🧠
               </span>
               <span className="min-w-0">
-                <span className="flex items-center gap-2 font-serif text-lg font-semibold text-ink">
-                  {l === "id" ? "Kuis" : "Quizzes"}
-                  <span className="rounded-full bg-clay/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-clay">
-                    {l === "id" ? "Segera" : "Soon"}
+                <span className="flex items-center gap-2 font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                  {l === "id" ? "Kuis & Permainan" : "Quizzes & Games"}
+                  <span className="rounded-full bg-brave-soft px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                    {l === "id" ? "Baru" : "New"}
                   </span>
                 </span>
                 <span className="mt-1 block text-sm leading-relaxed text-whisper">
                   {l === "id"
-                    ? "Uji pemahaman anak sambil bermain. Segera hadir."
-                    : "Test what your child has learned, playfully. Coming soon."}
+                    ? "Temukan yang beda, cari perbedaan, tebak perasaan, dan kuis kepribadian Baby Mo."
+                    : "Spot the odd one, find the differences, guess the feeling, and the Baby Mo personality quiz."}
+                </span>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                  {l === "id" ? "Main" : "Play"} →
                 </span>
               </span>
-            </div>
+            </Link>
           </li>
         </ul>
       </main>

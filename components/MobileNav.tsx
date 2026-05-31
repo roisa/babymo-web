@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { useEffect, useRef } from "react";
 import { type Locale, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 
@@ -10,6 +11,38 @@ type Props = { locale: Locale };
 export function MobileNav({ locale }: Props) {
   const dict = getDictionary(locale);
   const pathname = usePathname() || "";
+  const navRef = useRef<HTMLElement>(null);
+
+  // iOS Safari pins `position: fixed; bottom: 0` to the *layout* viewport, so
+  // as the address/tool bar collapses and expands during scroll the nav
+  // appears to drift and leave a gap. Glue it to the *visual* viewport instead
+  // by translating it up by however much the visual viewport is shorter than
+  // the layout viewport (also keeps it above the on-screen keyboard). Pure
+  // progressive enhancement: without VisualViewport support the static
+  // translateZ(0) layer below is used unchanged.
+  useEffect(() => {
+    const vv = window.visualViewport;
+    const nav = navRef.current;
+    if (!vv || !nav) return;
+    let raf = 0;
+    const apply = () => {
+      raf = 0;
+      const layoutH = document.documentElement.clientHeight;
+      const dy = Math.min(0, vv.offsetTop + vv.height - layoutH);
+      nav.style.transform = `translate3d(0, ${dy}px, 0)`;
+    };
+    const onChange = () => {
+      if (!raf) raf = requestAnimationFrame(apply);
+    };
+    apply();
+    vv.addEventListener("resize", onChange);
+    vv.addEventListener("scroll", onChange);
+    return () => {
+      vv.removeEventListener("resize", onChange);
+      vv.removeEventListener("scroll", onChange);
+      if (raf) cancelAnimationFrame(raf);
+    };
+  }, []);
   // Strip the basePath + /locale prefix to get the app-relative path.
   // e.g. "/babymo-web/id/doa/sebelum-tidur" → "/doa/sebelum-tidur"
   const rel = pathname.replace(/^.*?\/(id|en)(?=\/|$)/, "") || "/";
@@ -52,13 +85,15 @@ export function MobileNav({ locale }: Props) {
 
   return (
     <nav
+      ref={navRef}
       aria-label="Mobile"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper md:hidden"
+      className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper will-change-transform md:hidden"
       style={{
         paddingBottom: "env(safe-area-inset-bottom)",
         // Promote to its own layer + solid (no backdrop-blur): stops the
         // fixed bar from detaching/floating during momentum scroll in
-        // iOS in-app webviews (Gojek/IG/etc.).
+        // iOS in-app webviews (Gojek/IG/etc.). The effect above keeps this
+        // transform in sync with the visual viewport in iOS Safari.
         transform: "translateZ(0)",
       }}
     >

@@ -147,3 +147,24 @@ export function getSpotDiffPuzzle(slug: string): SpotDiffPuzzle | undefined {
 export function allSpotDiffSlugs(): string[] {
   return SPOT_DIFF_PUZZLES.map((p) => p.slug);
 }
+
+/**
+ * Poses with a clearly one-sided silhouette (a single raised limb or gesture),
+ * so a horizontal flip is unmistakable. Front-facing, symmetric poses (e.g.
+ * wow, thank-you, yeyy) are deliberately excluded — flipping them is nearly
+ * invisible, which would make a "spot the difference" cell impossible to find.
+ * The board only ever uses a flip as a difference when the pose is in this set.
+ */
+export const ASYMMETRIC_POSES = new Set<string>([
+  "baby-mo-run.png",
+  "baby-mo-yes.png",
+  "baby-mo-idea.png",
+  "baby-mo-ok.png",
+  "baby-mo-alright.png",
+  "baby-mo-pose-20.png",
+]);
+
+export function isAsymmetric(file: string): boolean {
+  return ASYMMETRIC_POSES.has(file);
+}
+
