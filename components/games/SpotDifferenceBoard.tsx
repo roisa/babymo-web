@@ -176,8 +176,8 @@ export function SpotDifferenceBoard({
                 type="button"
                 onClick={() => handlePick(i, side)}
                 aria-label="Baby Mo"
-                className={`tap aspect-square rounded-lg p-0.5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sage ${
-                  wrong === id ? "bg-clay-soft" : "hover:scale-105"
+                className={`tap aspect-square rounded-lg p-0.5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sage active:scale-95 ${
+                  wrong === id ? "bg-clay-soft" : "hover:bg-paper"
                 } ${isFound ? "bg-sage-soft ring-2 ring-sage" : ""}`}
               >
                 <PoseImg

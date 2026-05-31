@@ -116,8 +116,8 @@ export function SpotOddBoard({
                     : "The odd Baby Mo"
                   : "Baby Mo"
               }
-              className={`tap aspect-square rounded-xl p-0.5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sage ${
-                wrong === i ? "bg-clay-soft" : "hover:scale-105"
+              className={`tap aspect-square rounded-xl p-0.5 transition focus:outline-none focus-visible:ring-2 focus-visible:ring-sage active:scale-95 ${
+                wrong === i ? "bg-clay-soft" : "hover:bg-paper"
               } ${reveal ? "bg-sage-soft ring-2 ring-sage" : ""}`}
             >
               <PoseImg

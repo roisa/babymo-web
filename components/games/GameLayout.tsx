@@ -39,7 +39,7 @@ export function GameLayout({
       <Header locale={locale} currentPath={currentPath} />
       <main
         id="main"
-        className="mx-auto max-w-5xl px-5 pb-24 pt-10 sm:px-8 sm:pt-14 md:pb-16"
+        className="mx-auto max-w-5xl overflow-x-clip px-5 pb-28 pt-10 sm:px-8 sm:pt-14 md:pb-16"
       >
         <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
           {fullTrail.map((c, i) => (
