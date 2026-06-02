@@ -3,32 +3,31 @@
 import { useEffect } from "react";
 
 /**
- * Privacy-friendly analytics (no cookies, no PII) for babymo.id.
+ * Privacy-friendly analytics (no cookies, no PII) for babymo.id via
+ * Cloudflare Web Analytics — free, GDPR-friendly.
  *
- * Defaults to Plausible. It only loads on the production domain, so
- * local dev, previews, and PWA opens never pollute the numbers. To
- * turn it on, create a site for "babymo.id" at https://plausible.io
- * (or self-host) — no code change needed. To switch to GA4, replace
- * the script block below with the gtag.js snippet. To disable, set
- * DOMAIN to "".
+ * It only loads on the production host, so local dev, previews, and PWA
+ * opens never pollute the numbers. To turn it on: create a free site for
+ * "babymo.id" in the Cloudflare dashboard → Web Analytics → copy the
+ * token → paste it below. Leave "" to keep analytics disabled.
  *
- * We inject the tag imperatively (rather than next/script) because the
- * site is a static export and we want a strict runtime host check.
+ * Injected imperatively (not next/script) because the site is a static
+ * export and we want a strict runtime host check.
  */
-const DOMAIN = "babymo.id";
+const CF_BEACON_TOKEN = ""; // e.g. "abc123…". Empty = disabled.
 
 export function Analytics() {
   useEffect(() => {
-    if (!DOMAIN) return;
+    if (!CF_BEACON_TOKEN) return;
     if (typeof window === "undefined") return;
     // Production host only — covers babymo.id and any www. subdomain.
     if (!/(^|\.)babymo\.id$/.test(window.location.hostname)) return;
-    if (document.querySelector('script[data-domain="' + DOMAIN + '"]')) return;
+    if (document.querySelector("script[data-cf-beacon]")) return;
 
     const s = document.createElement("script");
     s.defer = true;
-    s.setAttribute("data-domain", DOMAIN);
-    s.src = "https://plausible.io/js/script.outbound-links.js";
+    s.src = "https://static.cloudflareinsights.com/beacon.min.js";
+    s.setAttribute("data-cf-beacon", JSON.stringify({ token: CF_BEACON_TOKEN }));
     document.head.appendChild(s);
   }, []);
 
