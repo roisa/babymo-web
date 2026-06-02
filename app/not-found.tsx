@@ -21,6 +21,14 @@ export default function NotFound() {
         }}
       >
         <div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/baby-mo-poses/baby-mo-pose-38.png"
+            alt="Baby Mo"
+            width={160}
+            height={160}
+            style={{ width: 160, height: 160, objectFit: "contain", margin: "0 auto 4px", display: "block" }}
+          />
           <p style={{ fontSize: 56, fontWeight: 700, margin: 0, color: "#5F8B5A" }}>
             404
           </p>
