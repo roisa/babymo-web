@@ -26,6 +26,7 @@ import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
 import { MascotGreeting } from "@/components/MascotGreeting";
+import { MascotPoses } from "@/components/MascotPoses";
 import { StreakBadge } from "@/components/StreakBadge";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
@@ -169,21 +170,26 @@ export default async function HomePage({
                 {/* WebP-first hero. With output:export + unoptimized,
                     next/image is just a sized <img>, so prefer plain
                     <picture> for the LCP image: 229 KB PNG → 37 KB WebP. */}
-                <picture>
-                  <source
-                    type="image/webp"
-                    srcSet={asset("/assets/baby-mo-hero.webp")}
-                  />
-                  <img
-                    src={asset("/assets/baby-mo-hero.png")}
-                    alt="Baby Mo"
-                    width={900}
-                    height={900}
-                    fetchPriority="high"
-                    decoding="async"
-                    className="mascot-breathe mx-auto h-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]"
-                  />
-                </picture>
+                <div className="mascot-breathe relative mx-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]">
+                  {/* Static hero = the LCP image (fast first paint + SEO). */}
+                  <picture>
+                    <source
+                      type="image/webp"
+                      srcSet={asset("/assets/baby-mo-hero.webp")}
+                    />
+                    <img
+                      src={asset("/assets/baby-mo-hero.png")}
+                      alt="Baby Mo"
+                      width={900}
+                      height={900}
+                      fetchPriority="high"
+                      decoding="async"
+                      className="h-auto w-full"
+                    />
+                  </picture>
+                  {/* Rotating poses fade in on top — pure enhancement. */}
+                  <MascotPoses className="h-auto w-full max-w-sm" />
+                </div>
               </div>
             </div>
           </div>
