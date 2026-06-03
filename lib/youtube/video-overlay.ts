@@ -78,6 +78,8 @@ export const videoOverlay: Record<string, VideoOverlay> = {
     // "Lagu 1 Baby Mo - Bismillah Dulu | Lagu Anak Islami Ceria | Belajar Adab Sehari-hari" (2:00)
     category: "daily-adab",
     featured: true,
+    // Pin to the front of the homepage Momen row.
+    priority: 10,
     related: ["doa/sebelum-makan", "parenting/adab-sehari-hari"],
     title: {
       id: "Lagu Bismillah Dulu",
