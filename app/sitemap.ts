@@ -36,7 +36,7 @@ const STATIC_PATHS = [
   "/doa",
   "/hadith",
   "/parenting",
-  "/catatan",
+  "/cerita",
   "/surat",
   "/asmaul-husna",
   "/kisah",
@@ -167,13 +167,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
     for (const n of getAllCatatan()) {
       out.push({
-        url: url(locale, `/catatan/${n.slug}`),
+        url: url(locale, `/cerita/${n.slug}`),
         lastModified: new Date(n.published),
         changeFrequency: "monthly",
         priority: 0.75,
         alternates: {
           languages: Object.fromEntries(
-            locales.map((ll) => [ll, url(ll, `/catatan/${n.slug}`)]),
+            locales.map((ll) => [ll, url(ll, `/cerita/${n.slug}`)]),
           ),
         },
       });

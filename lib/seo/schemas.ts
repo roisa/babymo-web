@@ -134,7 +134,7 @@ export function catatanSchema(
       "@id": `${siteUrl}/#person-salman`,
     },
     publisher: { "@id": `${siteUrl}/#org` },
-    mainEntityOfPage: absoluteUrl(locale, `/catatan/${note.slug}`),
+    mainEntityOfPage: absoluteUrl(locale, `/cerita/${note.slug}`),
     image: [`${siteUrl}/assets/og-image.jpg`],
     keywords: note.tags.join(", "),
     articleSection: "Catatan",

@@ -368,7 +368,7 @@ function kindToHref(r: RelatedItem): string {
     case "hadith":
       return `/hadith/${r.slug}`;
     case "catatan":
-      return `/catatan/${r.slug}`;
+      return `/cerita/${r.slug}`;
   }
 }
 
