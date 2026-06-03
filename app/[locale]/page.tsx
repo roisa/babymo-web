@@ -474,7 +474,11 @@ export default async function HomePage({
                       {dict.catatan.childChip[n.child]}
                     </span>
                     <span className="rounded-full bg-brave-soft px-2 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
-                      {n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman}
+                      {n.kind === "story"
+                        ? dict.catatan.kidsStory
+                        : n.pov === "umi"
+                          ? dict.catatan.byUmi
+                          : dict.catatan.bySalman}
                     </span>
                   </div>
                   <h3 className="mt-3 text-center font-serif text-[18px] font-medium leading-snug text-ink group-hover:text-sage-deep">

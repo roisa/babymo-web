@@ -335,7 +335,16 @@ export type Catatan = {
   slug: string;
   /** Which kid the note centers on — used for filtering chips */
   child: "mo" | "ais" | "both";
-  /** Narrator voice — Abi (father) or Umi (mother). Defaults to "abi". */
+  /**
+   * "note"  — short first-person reflection from Abi/Umi (the default).
+   * "story" — a longer third-person narrative children's story starring
+   *           Baby Mo & Baby Ais, written as a picture-book draft (book
+   *           inspiration). Rendered with a "Cerita Anak" badge instead of
+   *           a narrator chip.
+   */
+  kind?: "note" | "story";
+  /** Narrator voice — Abi (father) or Umi (mother). Defaults to "abi".
+   *  Ignored for kind: "story". */
   pov?: "abi" | "umi";
   /** Optional Baby Mo pose filename (in /public/baby-mo-poses) to illustrate
    *  the story — picked to match the moment's mood. */

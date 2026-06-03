@@ -54,6 +54,7 @@ export default async function CatatanDetail({
   const dict = getDictionary(l);
 
   const anchor = resolveAnchor(n.anchor, l);
+  const isStory = n.kind === "story";
   const narrator = n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman;
 
   return (
@@ -72,12 +73,17 @@ export default async function CatatanDetail({
         </nav>
 
         <header className="mb-8">
+          {isStory && (
+            <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-clay-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+              <span aria-hidden>📖</span> {dict.catatan.bookInspo}
+            </p>
+          )}
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
             <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
               {dict.catatan.childChip[n.child]}
             </span>
             <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
-              {narrator}
+              {isStory ? dict.catatan.kidsStory : narrator}
             </span>
             <span className="text-whisper">
               {formatDate(n.published, l)}
@@ -124,12 +130,12 @@ export default async function CatatanDetail({
         {/* Takeaway pull-quote */}
         <aside className="mt-10 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
           <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
-            {dict.catatan.takeaway}
+            {isStory ? dict.catatan.storyTakeaway : dict.catatan.takeaway}
           </p>
           <p className="font-display mt-3 text-[19px] leading-[1.5] text-ink sm:text-[21px]">
             {n.takeaway[l]}
           </p>
-          <p className="mt-4 text-[13px] text-whisper">— {narrator}</p>
+          <p className="mt-4 text-[13px] text-whisper">— {isStory ? "Baby Mo" : narrator}</p>
         </aside>
 
         {/* Anchor link to the related doa / hadith / parenting */}
