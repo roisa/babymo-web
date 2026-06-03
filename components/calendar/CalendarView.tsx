@@ -41,7 +41,7 @@ const FILTER_LABEL_ID: Record<FilterKind, string> = {
   doa: "Doa",
   parenting: "Parenting",
   hadith: "Hadis",
-  catatan: "Catatan",
+  catatan: "Cerita",
   blog: "Artikel",
 };
 
@@ -50,7 +50,7 @@ const FILTER_LABEL_EN: Record<FilterKind, string> = {
   doa: "Du'as",
   parenting: "Parenting",
   hadith: "Hadith",
-  catatan: "Notes",
+  catatan: "Stories",
   blog: "Articles",
 };
 
@@ -374,6 +374,6 @@ function kindToHref(r: RelatedItem): string {
 
 function kindLabel(k: RelatedItem["kind"], locale: Locale): string {
   if (locale === "id")
-    return { blog: "Artikel", doa: "Doa", parenting: "Parenting", hadith: "Hadis", catatan: "Catatan" }[k];
-  return { blog: "Article", doa: "Du'a", parenting: "Parenting", hadith: "Hadith", catatan: "Note" }[k];
+    return { blog: "Artikel", doa: "Doa", parenting: "Parenting", hadith: "Hadis", catatan: "Cerita" }[k];
+  return { blog: "Article", doa: "Du'a", parenting: "Parenting", hadith: "Hadith", catatan: "Story" }[k];
 }

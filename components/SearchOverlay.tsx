@@ -28,7 +28,7 @@ const TYPE_LABEL: Record<SearchEntry["type"], { id: string; en: string }> = {
   hadith: { id: "Hadis", en: "Hadith" },
   parenting: { id: "Parenting", en: "Parenting" },
   blog: { id: "Artikel", en: "Article" },
-  catatan: { id: "Catatan", en: "Notes" },
+  catatan: { id: "Cerita", en: "Stories" },
   kalender: { id: "Kalender", en: "Calendar" },
   surah: { id: "Surat", en: "Surah" },
   prophet: { id: "Kisah Nabi", en: "Prophet" },

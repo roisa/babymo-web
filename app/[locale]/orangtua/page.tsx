@@ -45,12 +45,12 @@ function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[]
       href: "/blog",
     },
     {
-      emoji: "📝",
+      emoji: "📖",
       title: dict.nav.catatan,
       description:
         l === "id"
-          ? "Catatan pribadi pendiri tentang momen bersama anak."
-          : "The founder's personal notes on moments with the kids.",
+          ? "Cerita hangat dari Abi & Umi tentang Baby Mo & Baby Ais — tentang akhlak, berbagi, dan sabar."
+          : "Warm stories from Abi & Umi about Baby Mo & Baby Ais — about character, sharing, and patience.",
       href: "/catatan",
     },
     {

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { posePath } from "@/lib/games/poses";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -53,6 +54,7 @@ export default async function CatatanDetail({
   const dict = getDictionary(l);
 
   const anchor = resolveAnchor(n.anchor, l);
+  const narrator = n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman;
 
   return (
     <>
@@ -74,6 +76,9 @@ export default async function CatatanDetail({
             <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
               {dict.catatan.childChip[n.child]}
             </span>
+            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+              {narrator}
+            </span>
             <span className="text-whisper">
               {formatDate(n.published, l)}
             </span>
@@ -85,6 +90,19 @@ export default async function CatatanDetail({
           <h1 className="font-display text-[36px] font-medium leading-[1.05] text-ink sm:text-[46px]">
             {n.title[l]}
           </h1>
+          {n.pose && (
+            <div className="relative mt-6 flex justify-center">
+              <div className="absolute inset-0 -z-10 mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-2xl opacity-70" />
+              <img
+                src={asset(posePath(n.pose))}
+                alt="Baby Mo"
+                width={168}
+                height={168}
+                className="h-[168px] w-[168px] select-none object-contain drop-shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
+                draggable={false}
+              />
+            </div>
+          )}
           <p className="mt-4 text-[17px] leading-[1.6] text-whisper">
             {n.hook[l]}
           </p>
@@ -111,7 +129,7 @@ export default async function CatatanDetail({
           <p className="font-display mt-3 text-[19px] leading-[1.5] text-ink sm:text-[21px]">
             {n.takeaway[l]}
           </p>
-          <p className="mt-4 text-[13px] text-whisper">— {dict.catatan.bySalman}</p>
+          <p className="mt-4 text-[13px] text-whisper">— {narrator}</p>
         </aside>
 
         {/* Anchor link to the related doa / hadith / parenting */}
