@@ -15,7 +15,6 @@ import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
-import { DoaCard } from "@/components/DoaCard";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { HeroAura } from "@/components/HeroAura";
@@ -73,7 +72,6 @@ export default async function HomePage({
   const allGames = getAllGames();
   const allPosts = getAllBlogPosts();
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
-  const doas = allDoa.slice(0, 4);
   const posts = allPosts.slice(0, 3);
   const latestCerita = getAllCatatan().slice(0, 3);
   // Auto-pick a seasonal event from the Islamic calendar. Falls back
@@ -367,26 +365,6 @@ export default async function HomePage({
           </div>
         </section>
 
-        {/* ── DOA SAMPLER ── */}
-        <section className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
-          <Reveal>
-            <SectionHead
-              title={dict.home.sections.doaTitle}
-              sub={dict.home.sections.doaSub}
-              viewAll={{ href: pathFor(l, "/doa"), label: dict.home.viewAll }}
-            />
-          </Reveal>
-          <Reveal stagger>
-            <div className="mt-10 grid gap-5 md:grid-cols-2">
-              {doas.map((d) => (
-                <div key={d.slug} className="lift">
-                  <DoaCard doa={d} locale={l} />
-                </div>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
         {/* ── GAMES ── */}
         <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
           <Reveal>
@@ -676,10 +654,10 @@ export default async function HomePage({
         data={graph(
           itemListSchema(
             l,
-            dict.home.sections.doaTitle,
-            doas.map((d) => ({
-              name: d.title[l],
-              url: absoluteUrl(l, `/doa/${d.slug}`),
+            dict.home.sections.ceritaTitle,
+            latestCerita.map((n) => ({
+              name: n.title[l],
+              url: absoluteUrl(l, `/cerita/${n.slug}`),
             })),
           ),
           faqSchema(dict.faq.items),

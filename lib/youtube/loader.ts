@@ -43,7 +43,11 @@ export function getAllVideos(): EnrichedVideo[] {
 
 export function getFeaturedVideos(limit = 3): EnrichedVideo[] {
   const all = getAllVideos();
-  const featured = all.filter((v) => v.overlay.featured);
+  // Featured first, ordered by editorial priority (then original recency —
+  // Array.sort is stable). Lets us pin e.g. "Bismillah Dulu" to the front.
+  const featured = all
+    .filter((v) => v.overlay.featured)
+    .sort((a, b) => (b.overlay.priority ?? 0) - (a.overlay.priority ?? 0));
   if (featured.length >= limit) return featured.slice(0, limit);
   // Top up with most recent non-featured
   const rest = all.filter((v) => !v.overlay.featured);

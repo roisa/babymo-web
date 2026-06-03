@@ -41,6 +41,9 @@ export type VideoCategory =
 export type VideoOverlay = {
   category?: VideoCategory;
   featured?: boolean;
+  /** Higher numbers sort earlier among featured videos (0 = default).
+   *  Use to pin a specific video to the front of the homepage Momen row. */
+  priority?: number;
   /** References to other entities — e.g. "doa/sebelum-tidur" */
   related?: string[];
   /** Optional bilingual caption that overrides the YT description */
