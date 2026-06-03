@@ -33,6 +33,8 @@ type Dict = {
     indexDescription: string;
     intro: string;
     bySalman: string;
+    byUmi: string;
+    byline: string;
     childChip: { mo: string; ais: string; both: string };
     privacyNote: string;
     takeaway: string;
@@ -151,7 +153,7 @@ const id: Dict = {
     hadith: "Hadith",
     parenting: "Parenting",
     blog: "Blog",
-    catatan: "Catatan",
+    catatan: "Cerita",
     surah: "Surat Pendek",
     kisah: "Kisah Nabi",
     games: "Permainan",
@@ -167,12 +169,14 @@ const id: Dict = {
     languageSwitch: "Ganti bahasa",
   },
   catatan: {
-    indexTitle: "Catatan",
+    indexTitle: "Cerita Baby Mo & Baby Ais",
     indexDescription:
-      "Catatan singkat dari Abi (Salman, pendiri Baby Mo) tentang momen-momen kecil bersama Baby Mo dan Baby Ais — kembar usia 2 tahun. Bukan artikel parenting — cuma catatan yang ditulis pelan-pelan setelah anak-anak tidur.",
+      "Cerita hangat dari Abi dan Umi tentang Baby Mo dan Baby Ais — si kembar usia 2 tahun. Momen-momen kecil tentang akhlak, berbagi, sabar, jujur, dan syukur yang ringan dibaca bareng si kecil.",
     intro:
-      "Catatan singkat dari Abi tentang momen-momen bersama Baby Mo & Baby Ais (kembar, 2 tahun). Diperbarui beberapa kali sebulan.",
+      "Cerita hangat dari Abi & Umi tentang Baby Mo dan Baby Ais (si kembar, 2 tahun) — tentang akhlak, berbagi, sabar, dan momen-momen kecil yang berkesan. Diperbarui setiap minggu.",
     bySalman: "Abi",
+    byUmi: "Umi",
+    byline: "Cerita dari Abi & Umi",
     childChip: {
       mo: "Baby Mo (2)",
       ais: "Baby Ais (2)",
@@ -180,9 +184,9 @@ const id: Dict = {
     },
     privacyNote:
       "Nama anak-anak ditulis atas izin keluarga. Detail yang bisa mengidentifikasi (sekolah, lingkungan, foto wajah) tidak dipublikasikan. Suatu saat di masa depan, jika Baby Mo atau Baby Ais meminta, tulisan dapat di-anonimkan atau dihapus.",
-    takeaway: "Catatan untuk diri sendiri",
-    readMore: "Baca selengkapnya",
-    relatedAnchor: "Dasar dari catatan ini",
+    takeaway: "Hikmah kecil hari ini",
+    readMore: "Baca ceritanya",
+    relatedAnchor: "Terkait cerita ini",
   },
   home: {
     eyebrow: "Konten islami ramah anak",
@@ -327,7 +331,7 @@ const id: Dict = {
     parents: {
       title: "Untuk Orang Tua",
       description:
-        "Panduan parenting, artikel, catatan, dan pengaturan untuk menemani perjalanan belajar anak.",
+        "Panduan parenting, artikel, cerita, dan pengaturan untuk menemani perjalanan belajar anak.",
     },
     paths: {
       title: "Jalur Belajar",
@@ -398,7 +402,7 @@ const en: Dict = {
     hadith: "Hadith",
     parenting: "Parenting",
     blog: "Blog",
-    catatan: "Notes",
+    catatan: "Stories",
     surah: "Short Surahs",
     kisah: "Prophet Stories",
     games: "Games",
@@ -414,12 +418,14 @@ const en: Dict = {
     languageSwitch: "Switch language",
   },
   catatan: {
-    indexTitle: "Notes",
+    indexTitle: "Baby Mo & Baby Ais Stories",
     indexDescription:
-      "Short personal notes from Abi (Salman, Baby Mo's founder) about small moments with Baby Mo and Baby Ais — two-year-old twins. Not parenting articles — just notes written slowly after the kids are asleep.",
+      "Warm little stories from Abi and Umi about Baby Mo and Baby Ais — two-year-old twins. Small moments about good character, sharing, patience, honesty and gratitude — easy to read together with your little one.",
     intro:
-      "Short notes from Abi about moments with Baby Mo & Baby Ais (twins, age 2). Updated a few times a month.",
+      "Warm stories from Abi & Umi about Baby Mo and Baby Ais (the twins, age 2) — about good character, sharing, patience, and the small moments that stay with you. Updated weekly.",
     bySalman: "Abi",
+    byUmi: "Umi",
+    byline: "Stories from Abi & Umi",
     childChip: {
       mo: "Baby Mo (2)",
       ais: "Baby Ais (2)",
@@ -427,9 +433,9 @@ const en: Dict = {
     },
     privacyNote:
       "The children's first names are used with family consent. Identifying details (school, neighborhood, face photos) are not published. At any point in the future, if Baby Mo or Baby Ais asks, posts can be anonymized or removed.",
-    takeaway: "A note to self",
-    readMore: "Read more",
-    relatedAnchor: "What this note rests on",
+    takeaway: "Today's little lesson",
+    readMore: "Read the story",
+    relatedAnchor: "Related to this story",
   },
   home: {
     eyebrow: "Child-friendly Islamic content",

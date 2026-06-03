@@ -15,7 +15,7 @@ const TYPE_LABEL: Record<BookmarkType, { id: string; en: string }> = {
   doa: { id: "Doa", en: "Du'a" },
   hadith: { id: "Hadis", en: "Hadith" },
   parenting: { id: "Parenting", en: "Parenting" },
-  catatan: { id: "Catatan", en: "Note" },
+  catatan: { id: "Cerita", en: "Story" },
   surah: { id: "Surat", en: "Surah" },
   blog: { id: "Artikel", en: "Article" },
   prophet: { id: "Kisah Nabi", en: "Prophet" },
@@ -156,7 +156,7 @@ function EmptyState({ locale, pending }: { locale: Locale; pending?: boolean }) 
       </p>
       <p className="mx-auto mt-2 max-w-sm text-[14px] leading-relaxed text-whisper">
         {locale === "id"
-          ? "Ketuk ikon hati ❤ di doa, hadis, surat, atau catatan mana pun untuk menyimpannya di sini — siap dibaca bersama si kecil kapan saja."
+          ? "Ketuk ikon hati ❤ di doa, hadis, surat, atau cerita mana pun untuk menyimpannya di sini — siap dibaca bersama si kecil kapan saja."
           : "Tap the heart ❤ on any du'a, hadith, surah, or note to keep it here — ready to read with your little one anytime."}
       </p>
     </div>

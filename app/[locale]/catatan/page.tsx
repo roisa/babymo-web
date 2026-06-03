@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { posePath } from "@/lib/games/poses";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -55,7 +56,7 @@ export default async function CatatanIndex({
         <header className="mb-10 max-w-2xl">
           <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
             <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
-            {dict.catatan.bySalman}
+            {dict.catatan.byline}
           </span>
           <h1 className="font-display mt-4 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">
             {dict.catatan.indexTitle}
@@ -70,29 +71,48 @@ export default async function CatatanIndex({
             <li key={n.slug}>
               <Link
                 href={pathFor(l, `/catatan/${n.slug}`)}
-                className="lift tap group block rounded-[24px] border border-hairline bg-paper p-7 sm:p-8"
+                className="lift tap group flex items-start gap-4 rounded-[24px] border border-hairline bg-paper p-6 sm:gap-6 sm:p-8"
               >
-                <div className="flex flex-wrap items-center gap-2 text-[11px] text-whisper">
-                  <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
-                    {dict.catatan.childChip[n.child]}
-                  </span>
-                  <time dateTime={n.published}>
-                    {formatDate(n.published, l)}
-                  </time>
-                  <span aria-hidden>·</span>
-                  <span>
-                    {n.readingTimeMin} {dict.blog.readingTime}
-                  </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex flex-wrap items-center gap-2 text-[11px] text-whisper">
+                    <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+                      {dict.catatan.childChip[n.child]}
+                    </span>
+                    <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                      {n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman}
+                    </span>
+                    <time dateTime={n.published}>
+                      {formatDate(n.published, l)}
+                    </time>
+                    <span aria-hidden>·</span>
+                    <span>
+                      {n.readingTimeMin} {dict.blog.readingTime}
+                    </span>
+                  </div>
+                  <h2 className="font-display mt-3 text-[24px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[30px]">
+                    {n.title[l]}
+                  </h2>
+                  <p className="mt-2 text-[15.5px] leading-relaxed text-whisper">
+                    {n.hook[l]}
+                  </p>
+                  <p className="mt-5 text-[12.5px] font-semibold text-brave-deep">
+                    {dict.catatan.readMore} →
+                  </p>
                 </div>
-                <h2 className="font-display mt-3 text-[26px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[30px]">
-                  {n.title[l]}
-                </h2>
-                <p className="mt-2 text-[15.5px] leading-relaxed text-whisper">
-                  {n.hook[l]}
-                </p>
-                <p className="mt-5 text-[12.5px] font-semibold text-brave-deep">
-                  {dict.catatan.readMore} →
-                </p>
+                {n.pose && (
+                  <div className="relative hidden shrink-0 sm:block">
+                    <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-xl opacity-70" />
+                    <img
+                      src={asset(posePath(n.pose))}
+                      alt=""
+                      width={104}
+                      height={104}
+                      className="h-[104px] w-[104px] select-none object-contain transition-transform duration-300 group-hover:scale-105"
+                      draggable={false}
+                      loading="lazy"
+                    />
+                  </div>
+                )}
               </Link>
             </li>
           ))}

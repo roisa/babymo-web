@@ -335,6 +335,11 @@ export type Catatan = {
   slug: string;
   /** Which kid the note centers on — used for filtering chips */
   child: "mo" | "ais" | "both";
+  /** Narrator voice — Abi (father) or Umi (mother). Defaults to "abi". */
+  pov?: "abi" | "umi";
+  /** Optional Baby Mo pose filename (in /public/baby-mo-poses) to illustrate
+   *  the story — picked to match the moment's mood. */
+  pose?: string;
   /** ISO date string */
   published: string;
   title: Record<Locale, string>;
