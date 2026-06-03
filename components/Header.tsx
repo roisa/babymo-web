@@ -34,7 +34,7 @@ export function Header({ locale, currentPath }: Props) {
         "/kalender",
         "/parenting",
         "/blog",
-        "/catatan",
+        "/cerita",
       ],
     },
     { href: "/momen", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },

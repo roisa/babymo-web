@@ -119,7 +119,7 @@ function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[]
         l === "id"
           ? "Cerita hangat dari Abi & Umi tentang Baby Mo & Baby Ais — tentang akhlak, berbagi, dan sabar."
           : "Warm stories from Abi & Umi about Baby Mo & Baby Ais — about character, sharing, and patience.",
-      href: "/catatan",
+      href: "/cerita",
       badge: dict.nav.parents,
     },
   ];

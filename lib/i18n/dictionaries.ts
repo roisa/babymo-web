@@ -55,6 +55,8 @@ type Dict = {
       gamesSub: string;
       blogTitle: string;
       blogSub: string;
+      ceritaTitle: string;
+      ceritaSub: string;
       valuesTitle: string;
       valuesSub: string;
       faqTitle: string;
@@ -206,6 +208,9 @@ const id: Dict = {
       blogTitle: "Bacaan untuk Orang Tua",
       blogSub:
         "Panduan parenting islami berbasis sumber yang shahih, ditulis dengan empati.",
+      ceritaTitle: "Cerita Terbaru",
+      ceritaSub:
+        "Cerita hangat dari Abi & Umi tentang Baby Mo & Baby Ais — tentang akhlak, berbagi, dan sabar.",
       valuesTitle: "Mengapa Baby Mo",
       valuesSub: "Tiga prinsip yang kami pegang dalam setiap konten.",
       faqTitle: "Pertanyaan Umum",
@@ -455,6 +460,9 @@ const en: Dict = {
       blogTitle: "Reading for Parents",
       blogSub:
         "Islamic parenting guidance grounded in authentic sources, written with empathy.",
+      ceritaTitle: "Latest Stories",
+      ceritaSub:
+        "Warm stories from Abi & Umi about Baby Mo & Baby Ais — about character, sharing, and patience.",
       valuesTitle: "Why Baby Mo",
       valuesSub: "Three principles we hold in every piece of content.",
       faqTitle: "Common Questions",

@@ -35,6 +35,8 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllGames } from "@/lib/content/games";
+import { getAllCatatan } from "@/lib/content/catatan";
+import { posePath } from "@/lib/games/poses";
 import {
   getCurrentIslamicEvent,
   eventStatus,
@@ -73,6 +75,7 @@ export default async function HomePage({
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const doas = allDoa.slice(0, 4);
   const posts = allPosts.slice(0, 3);
+  const latestCerita = getAllCatatan().slice(0, 3);
   // Auto-pick a seasonal event from the Islamic calendar. Falls back
   // to the hard-coded Hijri new year post if the matching blog slug
   // hasn't been written yet.
@@ -451,6 +454,57 @@ export default async function HomePage({
                   <div className="mt-5 text-[12px] text-whisper">
                     {p.readingTimeMin} {dict.blog.readingTime}
                   </div>
+                </Link>
+              ))}
+            </div>
+          </Reveal>
+        </section>
+
+        {/* ── CERITA TERBARU (latest Baby Mo & Baby Ais stories) ── */}
+        <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
+          <Reveal>
+            <SectionHead
+              title={dict.home.sections.ceritaTitle}
+              sub={dict.home.sections.ceritaSub}
+              viewAll={{ href: pathFor(l, "/cerita"), label: dict.home.viewAll }}
+            />
+          </Reveal>
+          <Reveal stagger>
+            <div className="mt-10 grid gap-5 md:grid-cols-3">
+              {latestCerita.map((n) => (
+                <Link
+                  key={n.slug}
+                  href={pathFor(l, `/cerita/${n.slug}`)}
+                  className="lift tap group flex flex-col rounded-[22px] border border-hairline bg-paper p-6"
+                >
+                  {n.pose && (
+                    <div className="relative mx-auto mb-3">
+                      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-xl opacity-70" />
+                      <img
+                        src={asset(posePath(n.pose))}
+                        alt=""
+                        width={92}
+                        height={92}
+                        className="h-[92px] w-[92px] select-none object-contain transition-transform duration-300 group-hover:scale-105"
+                        draggable={false}
+                        loading="lazy"
+                      />
+                    </div>
+                  )}
+                  <div className="flex flex-wrap items-center justify-center gap-2 text-[10.5px]">
+                    <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+                      {dict.catatan.childChip[n.child]}
+                    </span>
+                    <span className="rounded-full bg-brave-soft px-2 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                      {n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman}
+                    </span>
+                  </div>
+                  <h3 className="mt-3 text-center font-serif text-[18px] font-medium leading-snug text-ink group-hover:text-sage-deep">
+                    {n.title[l]}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-center text-[14px] leading-relaxed text-whisper">
+                    {n.hook[l]}
+                  </p>
                 </Link>
               ))}
             </div>

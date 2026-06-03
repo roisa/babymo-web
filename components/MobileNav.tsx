@@ -71,7 +71,7 @@ export function MobileNav({ locale }: Props) {
         "/kalender",
         "/parenting",
         "/blog",
-        "/catatan",
+        "/cerita",
       ],
     },
     { href: "/momen", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },

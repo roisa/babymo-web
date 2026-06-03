@@ -248,7 +248,7 @@ const entries = [];
     entries.push({
       type: "catatan",
       slug,
-      url: `/catatan/${slug}`,
+      url: `/cerita/${slug}`,
       title,
       excerpt: hook,
       keywords: {
