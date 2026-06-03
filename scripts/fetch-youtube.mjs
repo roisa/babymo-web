@@ -70,7 +70,7 @@ const KNOWN_DEFAULTS = {
   cmK8ruUiCbA: { title: "Doa Sebelum Makan - Baby Mo",            duration: "0:40", durationSeconds: 40 },
   X6ZGk_e7A00: { title: "Doa Sesudah Makan - Baby Mo",            duration: "0:42", durationSeconds: 42 },
   BhLRQP_Nfdk: { title: "Cari dan Temukan Perbedaan Bareng Baby Mo", duration: "17:27", durationSeconds: 1047 },
-  "9wa8_JPlkP0": { title: "Lagu 1 Baby Mo - Bismillah Dulu",      duration: "2:00", durationSeconds: 120 },
+  "9wa8_JPlkP0": { title: "BABY MO - Bismillah Dulu | Lagu Anak Islami Ceria", duration: "2:00", durationSeconds: 120 },
   BKZLVWBRnL8: { title: "INTRO BABY MO VERSI 1",                  duration: "0:08", durationSeconds: 8 },
 };
 

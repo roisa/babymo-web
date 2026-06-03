@@ -35,6 +35,9 @@ type Dict = {
     bySalman: string;
     byUmi: string;
     byline: string;
+    kidsStory: string;
+    storyTakeaway: string;
+    bookInspo: string;
     childChip: { mo: string; ais: string; both: string };
     privacyNote: string;
     takeaway: string;
@@ -179,6 +182,9 @@ const id: Dict = {
     bySalman: "Abi",
     byUmi: "Umi",
     byline: "Cerita dari Abi & Umi",
+    kidsStory: "Cerita Anak",
+    storyTakeaway: "Pesan cerita",
+    bookInspo: "Draf cerita untuk buku Baby Mo",
     childChip: {
       mo: "Baby Mo (2)",
       ais: "Baby Ais (2)",
@@ -431,6 +437,9 @@ const en: Dict = {
     bySalman: "Abi",
     byUmi: "Umi",
     byline: "Stories from Abi & Umi",
+    kidsStory: "Kids Story",
+    storyTakeaway: "The story's message",
+    bookInspo: "Story draft for the Baby Mo book",
     childChip: {
       mo: "Baby Mo (2)",
       ais: "Baby Ais (2)",

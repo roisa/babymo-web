@@ -75,19 +75,21 @@ export const videoOverlay: Record<string, VideoOverlay> = {
 
   // ── Songs ───────────────────────────────────────────────────────
   "9wa8_JPlkP0": {
-    // "Lagu 1 Baby Mo - Bismillah Dulu | Lagu Anak Islami Ceria | Belajar Adab Sehari-hari" (2:00)
+    // "BABY MO - Bismillah Dulu | Lagu Anak Islami Ceria"
+    // NOTE: confirm this 11-char id still points to the current upload —
+    // it cannot be re-verified from the build env (YouTube is firewalled).
     category: "daily-adab",
     featured: true,
     // Pin to the front of the homepage Momen row.
     priority: 10,
     related: ["doa/sebelum-makan", "parenting/adab-sehari-hari"],
     title: {
-      id: "Lagu Bismillah Dulu",
-      en: "Bismillah First — Song for Kids",
+      id: "Bismillah Dulu",
+      en: "Bismillah Dulu — Islamic Kids Song",
     },
     caption: {
-      id: "Lagu anak islami ceria yang mengenalkan adab Bismillah sebelum mulai apapun.",
-      en: "A cheerful Islamic children's song introducing the habit of saying Bismillah before any activity.",
+      id: "Lagu anak islami ceria dari Baby Mo — mengajak si kecil membiasakan ucap Bismillah sebelum memulai apa pun.",
+      en: "A cheerful Islamic kids' song from Baby Mo — getting little ones into the habit of saying Bismillah before they start anything.",
     },
   },
 

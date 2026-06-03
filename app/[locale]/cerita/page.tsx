@@ -79,7 +79,11 @@ export default async function CatatanIndex({
                       {dict.catatan.childChip[n.child]}
                     </span>
                     <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
-                      {n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman}
+                      {n.kind === "story"
+                        ? dict.catatan.kidsStory
+                        : n.pov === "umi"
+                          ? dict.catatan.byUmi
+                          : dict.catatan.bySalman}
                     </span>
                     <time dateTime={n.published}>
                       {formatDate(n.published, l)}

@@ -1381,6 +1381,756 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
     readingTimeMin: 2,
   },
 
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  CERITA ANAK — longer narrative drafts, written as inspiration for the
+  //  Baby Mo picture-book series. Third-person, warm, with a clear akhlak
+  //  lesson and a gentle Islamic anchor. (kind: "story")
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "bismillah-dulu",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    published: "2026-06-03",
+    title: { id: "Bismillah Dulu", en: "Bismillah First" },
+    hook: {
+      id: "Baby Mo selalu terburu-buru. Sampai ia menemukan satu kata kecil yang membuat semuanya terasa lebih berkah.",
+      en: "Baby Mo is always in a hurry. Until he discovers one little word that makes everything feel more blessed.",
+    },
+    body: {
+      id: `Pagi itu matahari baru saja mengintip di balik tirai. Baby Mo melompat dari tempat tidur, berlari ke meja makan, dan langsung menyambar roti selai kesukaannya.
+
+"Eit, tunggu," kata Umi lembut sambil tersenyum. "Sudah baca apa belum, Sayang?"
+
+Baby Mo berhenti. Mulutnya sudah penuh. Ia menggeleng pelan-pelan.
+
+"Bismillah dulu," kata Umi. "Artinya, 'dengan nama Allah'. Supaya setiap yang kita mulai, dimulai bersama Allah."
+
+Baby Mo menelan rotinya, lalu menirukan, "Bis-mil-lah." Kata itu terasa bulat dan hangat di mulutnya, seperti susu cokelat.
+
+Hari itu Baby Mo penasaran. Sebelum memakai sepatu — "Bismillah." Sepatunya seperti masuk lebih mudah. Sebelum menyiram bunga — "Bismillah." Airnya berkilau seperti permata kecil. Sebelum menyusun balok jadi menara tinggi — "Bismillah." Dan menara itu berdiri paling tinggi yang pernah ia buat.
+
+Sore hari, Baby Ais jatuh dan menangis karena lututnya lecet. Baby Mo berlari, memegang tangan adik kembarnya, dan berbisik, "Bismillah, Ais." Entah kenapa, tangis Baby Ais pelan-pelan reda.
+
+Malam itu, sebelum tidur, Baby Mo menarik selimut sampai ke dagu. Ia memejamkan mata, lalu tersenyum kecil di kegelapan.
+
+"Bismillah," bisiknya pelan.
+
+Umi yang mendengar dari pintu menahan napas. Baby Mo tidak terburu-buru lagi. Ia sudah menemukan rahasianya: hal yang dimulai dengan nama Allah, selalu terasa cukup.
+
+> *Setiap perkara baik yang tidak dimulai dengan Bismillah, maka kurang keberkahannya.*
+
+Dan begitulah, satu kata kecil mengubah seluruh hari Baby Mo — bukan jadi lebih cepat, tapi jadi lebih berkah.`,
+      en: `That morning the sun had only just peeked through the curtains. Baby Mo leapt out of bed, ran to the table, and grabbed his favourite jam bread.
+
+"Wait a moment," said Umi gently, smiling. "Have you said it yet, sweetheart?"
+
+Baby Mo stopped. His mouth was already full. He shook his head slowly.
+
+"Bismillah first," said Umi. "It means 'with the name of Allah'. So that everything we begin, begins together with Allah."
+
+Baby Mo swallowed his bread and repeated, "Bis-mil-lah." The word felt round and warm in his mouth, like cocoa.
+
+That day Baby Mo grew curious. Before putting on his shoes — "Bismillah." They seemed to slip on more easily. Before watering the flowers — "Bismillah." The water sparkled like little jewels. Before stacking blocks into a tall tower — "Bismillah." And the tower stood taller than any he'd built.
+
+In the afternoon, Baby Ais fell and cried over a scraped knee. Baby Mo ran over, held his twin sister's hand, and whispered, "Bismillah, Ais." Somehow, her crying slowly settled.
+
+That night, before sleep, Baby Mo pulled the blanket up to his chin. He closed his eyes, then smiled a small smile in the dark.
+
+"Bismillah," he whispered.
+
+Umi, listening from the doorway, held her breath. Baby Mo wasn't in a hurry anymore. He'd found the secret: whatever begins with the name of Allah always feels like enough.
+
+> *Every good matter that does not begin with Bismillah is lacking in blessing.*
+
+And so, one little word changed Baby Mo's whole day — not into something faster, but into something more blessed.`,
+    },
+    anchor: { type: "doa", slug: "sebelum-makan" },
+    takeaway: {
+      id: "Satu kata kecil — Bismillah — mengajarkan anak bahwa setiap hal baik dimulai bersama Allah. Bukan supaya lebih cepat, tapi supaya lebih berkah.",
+      en: "One little word — Bismillah — teaches a child that every good thing begins with Allah. Not to be faster, but to be more blessed.",
+    },
+    tags: ["bismillah", "adab", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "menara-yang-tak-mau-menyerah",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-01",
+    title: {
+      id: "Menara yang Tak Mau Menyerah",
+      en: "The Tower That Wouldn't Give Up",
+    },
+    hook: {
+      id: "Lima kali menara Baby Mo roboh. Apakah ia akan menyerah, atau mencoba sekali lagi?",
+      en: "Five times Baby Mo's tower fell. Will he give up, or try just one more time?",
+    },
+    body: {
+      id: `Baby Mo punya satu impian besar untuk anak sekecil dia: membangun menara balok yang lebih tinggi dari kepalanya sendiri.
+
+Ia menumpuk balok merah. Lalu balok biru. Lalu balok kuning. Tinggi… lebih tinggi… dan—
+
+BRUK!
+
+Menara itu roboh berhamburan ke lantai. Baby Mo mengerucutkan bibir.
+
+Ia mencoba lagi. Merah, biru, kuning, hijau. Tinggi… lebih tinggi…
+
+BRUK!
+
+Empat kali. Lima kali. Setiap kali, balok-balok itu jatuh seperti hujan kayu. Mata Baby Mo mulai berkaca-kaca. Ia ingin melempar semua baloknya jauh-jauh.
+
+Dari sofa, Abi tidak ikut membereskan. Abi hanya berkata pelan, "Tarik napas, Sayang. Coba lihat — kenapa robohnya?"
+
+Baby Mo mengusap matanya. Ia memperhatikan. Ternyata balok paling bawah selalu miring. Pelan-pelan, ia membetulkan yang bawah dulu. Diluruskannya. Ditekannya supaya kokoh.
+
+"Bismillah," bisik Baby Mo.
+
+Merah. Biru. Kuning. Hijau. Ungu. Tangannya gemetar, tapi ia tahan napas. Menara itu naik… naik… melewati dadanya… melewati dagunya… sampai—
+
+Lebih tinggi dari kepalanya!
+
+Baby Mo memekik girang. "Yeeey! Berdiri! Berdiri!" Ia bertepuk tangan untuk dirinya sendiri, lalu menoleh ke Abi, meminta tepuk tangan juga.
+
+Abi bertepuk paling kencang di seluruh rumah. "Kamu tidak menyerah," kata Abi. "Itu lebih hebat daripada menaranya."
+
+Baby Mo memandang menaranya yang menjulang. Ternyata roboh bukan berarti gagal. Roboh hanya berarti: ayo coba lagi, sedikit lebih sabar.
+
+> *Sesungguhnya Allah mencintai seseorang yang apabila mengerjakan sesuatu, ia menyempurnakannya.*
+
+Dan menara yang tak mau menyerah itu berdiri sepanjang sore — sama seperti hati kecil yang membangunnya.`,
+      en: `Baby Mo had one big dream for someone so small: to build a block tower taller than his own head.
+
+He stacked a red block. Then a blue one. Then a yellow one. Higher… higher… and—
+
+CRASH!
+
+The tower tumbled across the floor. Baby Mo pursed his lips.
+
+He tried again. Red, blue, yellow, green. Higher… higher…
+
+CRASH!
+
+Four times. Five times. Each time the blocks fell like a rain of wood. Baby Mo's eyes began to glisten. He wanted to throw all his blocks far, far away.
+
+From the sofa, Abi didn't rush to tidy up. He only said softly, "Take a breath, sweetheart. Look — why does it fall?"
+
+Baby Mo wiped his eyes. He watched closely. It turned out the very bottom block was always crooked. Slowly, he fixed the bottom first. Straightened it. Pressed it down to make it firm.
+
+"Bismillah," whispered Baby Mo.
+
+Red. Blue. Yellow. Green. Purple. His hands trembled, but he held his breath. The tower rose… and rose… past his chest… past his chin… until—
+
+Taller than his head!
+
+Baby Mo squealed with joy. "Yaaay! It's standing! It's standing!" He clapped for himself, then turned to Abi for applause too.
+
+Abi clapped the loudest in the whole house. "You didn't give up," he said. "That's greater than the tower."
+
+Baby Mo gazed up at his soaring tower. It turned out that falling didn't mean failing. Falling only meant: try again, a little more patiently.
+
+> *Indeed Allah loves that when one of you does a task, he does it well.*
+
+And the tower that wouldn't give up stood all afternoon — just like the little heart that built it.`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Roboh bukan berarti gagal — roboh berarti 'coba lagi, sedikit lebih sabar'. Ketangguhan lahir saat anak dibiarkan bangkit sendiri.",
+      en: "Falling isn't failing — it means 'try again, a little more patiently'. Resilience is born when a child is allowed to rise on his own.",
+    },
+    tags: ["ketangguhan", "sabar", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "kucing-kecil-di-bawah-hujan",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-wow.png",
+    published: "2026-05-30",
+    title: {
+      id: "Kucing Kecil di Bawah Hujan",
+      en: "The Little Cat in the Rain",
+    },
+    hook: {
+      id: "Hujan turun deras, dan Baby Ais mendengar suara kecil yang sedih dari balik pagar. Tangan sekecil apa yang bisa menolong?",
+      en: "The rain pours, and Baby Ais hears a small, sad sound behind the fence. What can such little hands do to help?",
+    },
+    body: {
+      id: `Hujan turun deras sore itu. Baby Ais menempelkan hidungnya ke jendela, menonton titik-titik air berlomba turun di kaca.
+
+Lalu ia mendengarnya. Suara kecil. "Meong… meong…" Sedih sekali.
+
+Di balik pagar, seekor kucing kecil basah kuyup, menggigil. Bulunya menempel ke badannya yang mungil. Matanya yang bulat menatap Baby Ais.
+
+Baby Ais berlari ke Umi. "Umi! Kucing! Basah! Dingin!" katanya, menarik-narik tangan Umi.
+
+Mereka membuka pintu. Baby Ais ingin sekali memeluk kucing itu erat-erat, tapi Umi memegang tangannya. "Pelan-pelan, Sayang. Dia takut. Kita harus lembut."
+
+Baby Ais belajar. Ia duduk jongkok, mengulurkan tangan kecilnya pelan-pelan, dan berbisik, "Sini… sini… nggak apa-apa."
+
+Kucing kecil itu mengendus jarinya. Lalu — pelan sekali — ia melangkah masuk ke teras yang kering.
+
+Baby Ais membawakan handuk kecil. Umi menuangkan sedikit susu hangat ke mangkuk. Kucing itu menjilatnya, lalu mendengkur — suara kecil yang bergetar seperti mesin mainan.
+
+"Dia bilang terima kasih," kata Umi tersenyum.
+
+Baby Ais memandang kucing yang kini hangat dan kenyang itu. Hatinya penuh, sepenuh mangkuk susu tadi. Ternyata tangan yang kecil pun bisa menjadi tempat berlindung bagi yang lebih kecil lagi.
+
+> *Para penyayang akan disayangi oleh Yang Maha Penyayang. Sayangilah yang ada di bumi, niscaya Yang di langit menyayangimu.*
+
+Hujan masih turun di luar. Tapi di teras kecil itu, ada satu kucing yang tidak lagi kedinginan — karena seorang anak perempuan memilih untuk menyayangi.`,
+      en: `The rain came down hard that afternoon. Baby Ais pressed her nose to the window, watching the droplets race down the glass.
+
+Then she heard it. A tiny sound. "Meow… meow…" So sad.
+
+Behind the fence, a little cat was soaked through, shivering. Its fur clung to its tiny body. Its round eyes looked up at Baby Ais.
+
+Baby Ais ran to Umi. "Umi! Cat! Wet! Cold!" she said, tugging at Umi's hand.
+
+They opened the door. Baby Ais wanted so badly to scoop the cat up and squeeze it, but Umi held her hand. "Gently, sweetheart. He's scared. We must be soft."
+
+Baby Ais learned. She crouched down, reached out her little hand slowly, and whispered, "Here… here… it's okay."
+
+The little cat sniffed her finger. Then — ever so slowly — it stepped onto the dry porch.
+
+Baby Ais fetched a small towel. Umi poured a little warm milk into a bowl. The cat lapped it up, then purred — a tiny trembling sound, like a toy engine.
+
+"He's saying thank you," said Umi, smiling.
+
+Baby Ais looked at the cat, now warm and full. Her heart felt full too, as full as that bowl of milk. It turned out even little hands could be a shelter for something littler still.
+
+> *The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will be merciful to you.*
+
+The rain still fell outside. But on that little porch was one cat that was cold no longer — because a little girl chose to be kind.`,
+    },
+    anchor: { type: "hadith", slug: "kasih-sayang-kepada-anak" },
+    takeaway: {
+      id: "Tangan yang kecil pun bisa jadi tempat berlindung. Mengajari anak lembut pada makhluk kecil adalah latihan pertama menyayangi sesama.",
+      en: "Even little hands can be a shelter. Teaching a child gentleness toward small creatures is the first rehearsal of loving others.",
+    },
+    tags: ["kasih-sayang", "akhlak", "binatang", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "maaf-yang-hangat",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-alright.png",
+    published: "2026-05-28",
+    title: { id: "Maaf yang Hangat", en: "A Warm Sorry" },
+    hook: {
+      id: "Baby Mo merobohkan istana pasir Baby Ais. Kata 'maaf' terasa berat — sampai ia menemukan cara mengucapkannya.",
+      en: "Baby Mo knocks down Baby Ais's sandcastle. The word 'sorry' feels heavy — until he finds a way to say it.",
+    },
+    body: {
+      id: `Di halaman belakang, Baby Ais sedang membangun istana pasir. Ada menara, ada parit, bahkan ada bendera dari daun kecil di puncaknya. Ia bangga sekali.
+
+Baby Mo datang berlari, mengejar bola. Ia tidak melihat istana itu, dan—
+
+BRAK! Kakinya menabrak istana pasir. Menara runtuh, parit rata, bendera daun terbang tertiup angin.
+
+Baby Ais terdiam sebentar. Lalu bibirnya bergetar, dan air mata besar menggelinding di pipinya. "Istanaku…" isaknya.
+
+Baby Mo ingin sekali lari bersembunyi. Dadanya terasa sesak. Kata "maaf" tersangkut di tenggorokannya, berat seperti batu.
+
+Abi datang mendekat, tapi ia tidak memarahi Baby Mo. Abi berkata pelan, "Lihat wajah Ais, Sayang. Dia sedih. Apa yang bisa membuat hatinya hangat lagi?"
+
+Baby Mo memandang adiknya yang menangis. Sesuatu di dalam dadanya ikut sakit. Pelan-pelan, ia berjalan mendekat. Ia tidak tahu harus berkata apa, jadi ia melakukan yang ia bisa: ia mengulurkan tangan dan mengusap kepala Baby Ais.
+
+"Maaf, Ais," bisiknya akhirnya. Lalu ia jongkok di pasir. "Mo bantu bikin lagi, ya?"
+
+Mata Baby Ais masih basah, tapi ia mengangguk. Dan di sanalah mereka berdua, dua tangan kecil membangun istana baru — kali ini bersama. Menaranya lebih tinggi. Paritnya lebih lebar. Dan benderanya dua, satu untuk masing-masing.
+
+Maaf yang tulus, ternyata, tidak menghancurkan apa-apa. Ia justru membangun sesuatu yang lebih kuat dari sebelumnya.
+
+> *Orang yang paling dicintai Allah adalah yang paling baik akhlaknya, dan yang paling lembut hatinya.*
+
+Sore itu istana pasir berdiri lagi. Tapi yang paling kokoh bukan istananya — melainkan persaudaraan yang baru saja diperbaiki dengan satu kata hangat.`,
+      en: `In the back garden, Baby Ais was building a sandcastle. It had a tower, a moat, even a flag made from a little leaf at the top. She was very proud.
+
+Baby Mo came running, chasing a ball. He didn't see the castle, and—
+
+CRASH! His foot struck the sandcastle. The tower collapsed, the moat flattened, the leaf-flag blew away on the wind.
+
+Baby Ais went quiet for a moment. Then her lip trembled, and big tears rolled down her cheeks. "My castle…" she sobbed.
+
+Baby Mo wanted so badly to run and hide. His chest felt tight. The word "sorry" stuck in his throat, heavy as a stone.
+
+Abi came closer, but he did not scold Baby Mo. He said softly, "Look at Ais's face, sweetheart. She's sad. What could make her heart warm again?"
+
+Baby Mo looked at his crying sister. Something inside his own chest hurt too. Slowly, he walked over. He didn't know what to say, so he did what he could: he reached out and stroked Baby Ais's head.
+
+"Sorry, Ais," he whispered at last. Then he crouched in the sand. "Mo will help build it again, okay?"
+
+Baby Ais's eyes were still wet, but she nodded. And there they were, two little hands building a new castle — this time together. The tower was taller. The moat was wider. And there were two flags, one for each of them.
+
+A sincere sorry, it turned out, destroyed nothing. It built something stronger than before.
+
+> *The most beloved to Allah are those with the best character and the gentlest hearts.*
+
+That afternoon the sandcastle stood again. But the sturdiest thing wasn't the castle — it was the bond that had just been mended with one warm word.`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Maaf yang tulus tidak menghancurkan apa-apa — ia membangun sesuatu yang lebih kuat. Tunjukkan akibatnya pada hati, bukan paksa kata-katanya.",
+      en: "A sincere sorry destroys nothing — it builds something stronger. Show a child the effect on a heart, don't force the word.",
+    },
+    tags: ["maaf", "empati", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "bintang-bintang-rasa-syukur",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-09.png",
+    published: "2026-05-26",
+    title: {
+      id: "Bintang-Bintang Rasa Syukur",
+      en: "The Gratitude Stars",
+    },
+    hook: {
+      id: "Setiap malam, Abi dan si kembar menghitung bintang. Tapi bintang yang ini tidak ada di langit.",
+      en: "Every night, Abi and the twins count stars. But these stars aren't in the sky.",
+    },
+    body: {
+      id: `Setiap malam, sebelum tidur, ada satu permainan kesukaan di rumah Baby Mo dan Baby Ais. Namanya: Mengumpulkan Bintang.
+
+Tapi bintang-bintang ini istimewa. Mereka tidak ada di langit. Mereka bersembunyi di sepanjang hari yang baru saja lewat.
+
+"Ayo kita kumpulkan bintang hari ini," kata Abi sambil duduk di antara dua kasur kecil. "Satu bintang untuk setiap hal yang kita syukuri."
+
+Baby Mo berpikir keras. Lalu ia berseru, "Mam!" — maksudnya makan. Hari ini ada pisang goreng kesukaannya. Satu bintang menyala.
+
+Baby Ais menunjuk bonekanya. Hari ini boneka beruangnya menemaninya bermain seharian. Satu bintang lagi menyala.
+
+"Abi juga punya," kata Abi. "Abi bersyukur bisa pulang dan memeluk kalian berdua." Bintang ketiga.
+
+Mereka terus menghitung. Bintang untuk hujan yang membuat rumput hijau. Bintang untuk Umi yang masak enak. Bintang untuk kaki yang bisa berlari. Bintang untuk mata yang bisa melihat bulan dari jendela.
+
+Semakin mereka menghitung, semakin banyak bintang yang mereka temukan. Ternyata hari yang biasa pun penuh bintang — kalau kita mau mencarinya.
+
+"Siapa yang menyalakan semua bintang ini?" tanya Abi pelan.
+
+"Allah," jawab Baby Mo, sudah hampir terlelap.
+
+Abi tersenyum dan menyelimuti keduanya. "Betul. Dan Allah suka pada hati yang pandai berterima kasih."
+
+> *Jika kalian bersyukur, niscaya Aku akan menambah nikmat untuk kalian.*
+
+Malam itu, Baby Mo dan Baby Ais tertidur dengan langit-langit hati yang penuh bintang. Bukan karena hari mereka sempurna — tapi karena mereka belajar menghitung yang cukup, bukan yang kurang.`,
+      en: `Every night, before bed, there was one favourite game in the home of Baby Mo and Baby Ais. It was called: Collecting Stars.
+
+But these stars were special. They weren't in the sky. They hid all through the day that had just passed.
+
+"Let's collect today's stars," said Abi, sitting between two little beds. "One star for each thing we're grateful for."
+
+Baby Mo thought hard. Then he cried, "Mam!" — meaning food. Today there had been his favourite fried banana. One star lit up.
+
+Baby Ais pointed at her teddy. Today her bear had kept her company all day. Another star lit up.
+
+"Abi has one too," said Abi. "I'm grateful I could come home and hug you both." A third star.
+
+They kept counting. A star for the rain that made the grass green. A star for Umi's delicious cooking. A star for legs that can run. A star for eyes that can see the moon from the window.
+
+The more they counted, the more stars they found. It turned out even an ordinary day is full of stars — if we're willing to look.
+
+"Who lights all these stars?" asked Abi softly.
+
+"Allah," answered Baby Mo, almost asleep.
+
+Abi smiled and tucked them both in. "That's right. And Allah loves a heart that knows how to give thanks."
+
+> *If you are grateful, I will surely increase you.*
+
+That night, Baby Mo and Baby Ais drifted to sleep beneath a heart-ceiling full of stars. Not because their day was perfect — but because they'd learned to count what was enough, not what was missing.`,
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Hari yang biasa pun penuh bintang kalau kita mau mencarinya. Ajak anak menghitung nikmat tiap malam — ia tumbuh melihat yang cukup, bukan yang kurang.",
+      en: "Even an ordinary day is full of stars if we look. Count blessings with a child each night — and they grow up seeing what's enough, not what's missing.",
+    },
+    tags: ["syukur", "malam", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "keberanian-sebesar-biji-sawi",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-alright.png",
+    published: "2026-05-24",
+    title: {
+      id: "Keberanian Sebesar Biji Sawi",
+      en: "Courage the Size of a Mustard Seed",
+    },
+    hook: {
+      id: "Lampu kamar dimatikan, dan gelap terasa sangat besar. Bagaimana Baby Mo menemukan keberanian yang lebih besar dari rasa takutnya?",
+      en: "The light goes out, and the dark feels enormous. How will Baby Mo find a courage bigger than his fear?",
+    },
+    body: {
+      id: `Klik. Umi mematikan lampu kamar.
+
+Tiba-tiba kamar Baby Mo terasa sangat besar dan sangat gelap. Bayangan lemari terlihat seperti raksasa. Bayangan gantungan baju terlihat seperti tangan-tangan panjang. Jantung Baby Mo berdebar cepat.
+
+"Umi…" panggilnya dengan suara kecil. "Mo takut."
+
+Umi tidak menyalakan lampu lagi. Ia juga tidak berkata "jangan takut" — karena Umi tahu, gelap memang terasa besar bagi anak sekecil itu. Ia duduk di tepi tempat tidur dan menggenggam tangan Baby Mo.
+
+"Sayang," bisik Umi, "Mo tahu siapa yang menjaga Mo di tempat gelap?"
+
+Baby Mo menggeleng di kegelapan.
+
+"Allah," kata Umi. "Allah tidak pernah tidur. Saat Mo tidak bisa melihat apa-apa, Allah tetap melihat Mo. Dan Allah menjaga Mo."
+
+Lalu Umi mengajarkan satu kalimat kecil, sekecil biji sawi. "Coba ucapkan: A'udzu bikalimatillahit-tammah… Mo minta perlindungan kepada Allah."
+
+Baby Mo mengucapkannya pelan-pelan. Suaranya gemetar di kata pertama. Lebih mantap di kata kedua. Dan saat selesai, sesuatu yang aneh terjadi di dadanya — debar yang cepat tadi mulai melambat.
+
+Ia memandang bayangan lemari lagi. Ternyata… cuma lemari. Bayangan gantungan baju… cuma baju. Gelap tidak berubah. Tapi hati Baby Mo yang berubah.
+
+"Berani itu bukan berarti tidak takut," bisik Umi sambil mencium keningnya. "Berani itu takut, tapi tetap percaya Allah menjaga."
+
+> *Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk-Nya.*
+
+Malam itu Baby Mo tertidur dengan keberanian sebesar biji sawi di dalam dadanya. Kecil. Tapi cukup untuk membuat seluruh gelap terasa aman.`,
+      en: `Click. Umi turned off the bedroom light.
+
+Suddenly Baby Mo's room felt very big and very dark. The shadow of the wardrobe looked like a giant. The shadow of the coat hooks looked like long reaching arms. Baby Mo's heart thumped fast.
+
+"Umi…" he called in a small voice. "Mo is scared."
+
+Umi did not turn the light back on. Nor did she say "don't be scared" — because she knew the dark really does feel big to someone so small. She sat at the edge of the bed and held Baby Mo's hand.
+
+"Sweetheart," whispered Umi, "do you know who watches over Mo in the dark?"
+
+Baby Mo shook his head in the darkness.
+
+"Allah," said Umi. "Allah never sleeps. When Mo can't see anything, Allah still sees Mo. And Allah keeps Mo safe."
+
+Then Umi taught him one little sentence, small as a mustard seed. "Try saying: A'udhu bikalimatillahit-tammah… I seek Allah's protection."
+
+Baby Mo said it slowly. His voice trembled on the first word. Steadier on the second. And when he finished, something strange happened in his chest — the fast thumping began to slow.
+
+He looked at the wardrobe shadow again. It was just… a wardrobe. The coat-hook shadow… just coats. The dark hadn't changed. But Baby Mo's heart had.
+
+"Brave doesn't mean you're not scared," whispered Umi, kissing his forehead. "Brave means you're scared, but you still trust that Allah is watching over you."
+
+> *I seek refuge in the perfect words of Allah from the evil of His creation.*
+
+That night Baby Mo fell asleep with a courage the size of a mustard seed inside his chest. Small. But enough to make the whole dark feel safe.`,
+    },
+    anchor: { type: "doa", slug: "perlindungan-anak" },
+    takeaway: {
+      id: "Berani bukan berarti tidak takut — berani berarti takut, tapi tetap percaya Allah menjaga. Beri anak doa kecil, dan gelap pun terasa aman.",
+      en: "Brave doesn't mean unafraid — it means scared, but still trusting Allah watches over you. Give a child a small du'a, and even the dark feels safe.",
+    },
+    tags: ["berani", "takut-gelap", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "sepiring-untuk-tetangga",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-05-22",
+    title: { id: "Sepiring untuk Tetangga", en: "A Plate for the Neighbour" },
+    hook: {
+      id: "Umi membuat kolak paling enak sedunia. Tapi sebelum dimakan, ada satu kebiasaan kecil yang mengajarkan hal besar.",
+      en: "Umi makes the best sweet stew in the world. But before anyone eats, one small habit teaches something big.",
+    },
+    body: {
+      id: `Wangi kolak pisang memenuhi seluruh rumah. Baby Mo dan Baby Ais sudah duduk manis di meja, sendok di tangan, mata berbinar.
+
+Tapi Umi tidak langsung menghidangkannya. Ia menyiapkan satu mangkuk lagi, menutupnya rapi dengan kain bersih.
+
+"Untuk siapa itu, Umi?" tanya Baby Mo, sedikit cemas mangkuknya berkurang.
+
+"Untuk Nenek sebelah," jawab Umi. "Beliau tinggal sendirian. Kalau kita masak yang enak, kita bagi sedikit ke tetangga. Itu kebiasaan baik di rumah ini."
+
+Baby Mo memandang mangkuk yang ditutup itu. Sejujurnya, ia ingin semuanya untuk dirinya. Tapi lalu ia teringat wajah Nenek sebelah yang selalu tersenyum saat mereka lewat.
+
+"Mo yang antar!" serunya tiba-tiba.
+
+Maka berangkatlah mereka bertiga. Baby Mo memegang mangkuk dengan dua tangan, hati-hati sekali, seolah membawa harta karun. Baby Ais mengetuk pintu, "Tok tok!"
+
+Pintu terbuka. Wajah Nenek sebelah langsung berseri seperti matahari pagi. "Masya Allah! Untuk Nenek?"
+
+Baby Mo mengangguk bangga. Nenek mengusap kepala keduanya, dan mendoakan sesuatu yang lembut — doa yang tidak sepenuhnya mereka mengerti, tapi terasa hangat sampai ke dada.
+
+Di perjalanan pulang, Baby Mo merasa ada yang aneh. Mangkuknya sudah kosong, tapi hatinya justru terasa lebih penuh daripada sebelum berangkat.
+
+"Umi," katanya, "berbagi itu… kenyang juga, ya?"
+
+Umi tertawa lembut. "Itu kenyang yang paling enak, Sayang."
+
+> *Jibril terus berpesan kepadaku tentang tetangga, hingga aku mengira ia akan menjadikannya ahli waris.*
+
+Malam itu kolaknya terasa dua kali lebih enak. Karena yang paling manis, ternyata, bukan gulanya — melainkan sepiring yang dibagi dengan tetangga.`,
+      en: `The scent of banana stew filled the whole house. Baby Mo and Baby Ais were already sitting nicely at the table, spoons in hand, eyes shining.
+
+But Umi didn't serve it right away. She prepared one more bowl, covering it neatly with a clean cloth.
+
+"Who's that for, Umi?" asked Baby Mo, a little worried his share was shrinking.
+
+"For the grandma next door," answered Umi. "She lives alone. When we cook something nice, we share a little with the neighbours. That's a good habit in this house."
+
+Baby Mo looked at the covered bowl. Honestly, he wanted all of it for himself. But then he remembered the next-door grandma's face, always smiling whenever they passed.
+
+"Mo will deliver it!" he suddenly cried.
+
+So off the three of them went. Baby Mo held the bowl with both hands, ever so carefully, as if carrying treasure. Baby Ais knocked on the door, "Knock knock!"
+
+The door opened. The grandma's face lit up at once like the morning sun. "Masha'Allah! For me?"
+
+Baby Mo nodded proudly. Grandma stroked both their heads and prayed something gentle over them — a prayer they didn't fully understand, but that felt warm all the way to their chests.
+
+On the walk home, Baby Mo felt something odd. His bowl was empty now, yet his heart felt fuller than before they left.
+
+"Umi," he said, "sharing… it fills you up too, doesn't it?"
+
+Umi laughed softly. "That's the most delicious kind of full, sweetheart."
+
+> *Jibril kept advising me about the neighbour, until I thought he would make him an heir.*
+
+That night the stew tasted twice as good. Because the sweetest thing, it turned out, wasn't the sugar — it was a plate shared with a neighbour.`,
+    },
+    anchor: { type: "hadith", slug: "tetangga-keluarga-luas" },
+    takeaway: {
+      id: "Berbagi itu mengenyangkan hati. Kebiasaan memberi ke tetangga di depan anak menanam kemurahan hati yang akan tumbuh seumur hidup.",
+      en: "Sharing fills the heart. The habit of giving to neighbours, done in front of a child, plants a generosity that grows for a lifetime.",
+    },
+    tags: ["berbagi", "tetangga", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "kebun-sabar-baby-ais",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-ok.png",
+    published: "2026-05-20",
+    title: { id: "Kebun Sabar Baby Ais", en: "Baby Ais's Garden of Patience" },
+    hook: {
+      id: "Baby Ais menanam satu biji kecil dan ingin bunganya mekar HARI INI. Tapi kebun punya pelajarannya sendiri.",
+      en: "Baby Ais plants one little seed and wants the flower to bloom TODAY. But the garden has a lesson of its own.",
+    },
+    body: {
+      id: `Abi memberi Baby Ais sebutir biji bunga matahari, sekecil kuku jarinya. "Tanam ini, Sayang. Dengan izin Allah, nanti tumbuh tinggi sekali."
+
+Baby Ais menggali lubang kecil, memasukkan bijinya, dan menutupnya dengan tanah. "Bismillah," bisiknya, meniru Abi.
+
+Lalu ia berdiri, bertolak pinggang, dan menunggu.
+
+Satu menit. Dua menit. Tidak ada apa-apa.
+
+"Abi! Kok belum tumbuh?" tanyanya, dahinya berkerut.
+
+Abi tersenyum. "Sabar, Sayang. Bunga tidak tumbuh karena kita teriaki. Ia tumbuh pelan-pelan, dari dalam, di tempat yang tak terlihat."
+
+Esok paginya Baby Ais berlari ke kebun. Masih tanah. Ia hampir menangis. Tapi Abi mengajaknya menyiram, sedikit air setiap pagi. "Bismillah," dan sedikit air. "Bismillah," dan sedikit air.
+
+Hari berganti hari. Baby Ais menyiram. Menunggu. Menyiram lagi. Kadang ia lupa, dan kebun terasa membosankan. Tapi Abi selalu mengajaknya kembali, dengan sabar yang sama seperti yang sedang ia ajarkan.
+
+Lalu, suatu pagi—
+
+"ABI! ABI!" Baby Ais berteriak. Dari dalam tanah, sehelai daun hijau kecil mengintip, lembut seperti telinga kelinci.
+
+Baby Ais terpana. Selama ini, di bawah tanah yang terlihat kosong, sesuatu sedang tumbuh diam-diam. Kesabarannya tidak sia-sia. Ia hanya tidak bisa melihatnya.
+
+"Hal-hal yang baik butuh waktu," kata Abi sambil memeluknya. "Seperti bunga. Seperti hati yang baik. Allah yang menumbuhkan, kita yang menyiram dengan sabar."
+
+> *Sesungguhnya bersama kesulitan ada kemudahan.*
+
+Beberapa minggu kemudian, bunga matahari itu tumbuh lebih tinggi dari Baby Ais sendiri, wajahnya menghadap matahari. Dan setiap kali memandangnya, Baby Ais ingat: yang ditanam dengan sabar, akan mekar pada waktunya.`,
+      en: `Abi gave Baby Ais a single sunflower seed, as small as her fingernail. "Plant this, sweetheart. By Allah's leave, it will grow ever so tall."
+
+Baby Ais dug a little hole, dropped the seed in, and covered it with soil. "Bismillah," she whispered, copying Abi.
+
+Then she stood up, hands on her hips, and waited.
+
+One minute. Two minutes. Nothing.
+
+"Abi! Why isn't it growing?" she asked, her brow furrowed.
+
+Abi smiled. "Patience, sweetheart. A flower doesn't grow because we shout at it. It grows slowly, from the inside, in a place we can't see."
+
+The next morning Baby Ais ran to the garden. Still just soil. She nearly cried. But Abi invited her to water it, a little each morning. "Bismillah," and a little water. "Bismillah," and a little water.
+
+Day followed day. Baby Ais watered. Waited. Watered again. Sometimes she forgot, and the garden felt boring. But Abi always brought her back, with the very same patience he was teaching.
+
+Then, one morning—
+
+"ABI! ABI!" Baby Ais shouted. From the soil, a tiny green leaf peeked out, soft as a rabbit's ear.
+
+Baby Ais was amazed. All this time, beneath the soil that looked so empty, something had been quietly growing. Her patience had not been wasted. She just couldn't see it.
+
+"Good things take time," said Abi, hugging her. "Like a flower. Like a kind heart. Allah makes it grow; we water it with patience."
+
+> *Indeed, with hardship comes ease.*
+
+A few weeks later, the sunflower grew taller than Baby Ais herself, its face turned toward the sun. And every time she looked at it, Baby Ais remembered: what is planted with patience will bloom in its time.`,
+    },
+    anchor: { type: "doa", slug: "mendapat-rezeki" },
+    takeaway: {
+      id: "Yang ditanam dengan sabar akan mekar pada waktunya. Hal baik — bunga, hati yang baik — tumbuh pelan-pelan di tempat yang tak terlihat.",
+      en: "What is planted with patience blooms in its time. Good things — a flower, a kind heart — grow slowly in places we cannot see.",
+    },
+    tags: ["sabar", "syukur", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "berbagi-payung",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yes.png",
+    published: "2026-05-18",
+    title: { id: "Berbagi Payung", en: "Sharing the Umbrella" },
+    hook: {
+      id: "Hanya ada satu payung dan dua anak. Hujan turun deras. Apa yang akan dilakukan Baby Mo?",
+      en: "There is only one umbrella and two children. The rain is pouring. What will Baby Mo do?",
+    },
+    body: {
+      id: `Pulang dari taman, langit tiba-tiba berubah kelabu. Tetes pertama jatuh — tes. Lalu tes-tes-tes. Lalu hujan turun deras sekali.
+
+Baby Mo membuka payung kuningnya yang kecil. Tapi payung itu hanya cukup untuk satu orang. Dan di sebelahnya, Baby Ais mulai basah, bajunya menempel, rambutnya menetes.
+
+Sebentar, Baby Mo ragu. Payung ini miliknya. Kalau ia berbagi, ia juga akan ikut basah sedikit.
+
+Ia memandang adik kembarnya yang menggigil. Lalu ia teringat kata Umi: "Yang kuat itu yang menjaga yang lain."
+
+"Sini, Ais!" seru Baby Mo, menarik adiknya mendekat. Ia memiringkan payung — lebih banyak menutupi Baby Ais daripada dirinya sendiri. Satu bahu Baby Mo basah kuyup. Tapi ia tidak peduli.
+
+Mereka berjalan pelan-pelan, berdempetan di bawah satu payung kuning kecil, kaki kecil mereka melompati genangan. Baby Ais tertawa. Baby Mo ikut tertawa. Hujan tidak lagi terasa dingin saat ditembus berdua.
+
+Di depan pintu, Umi sudah menunggu dengan handuk. Ia melihat satu bahu Baby Mo yang basah, dan langsung mengerti apa yang terjadi.
+
+"Kenapa bahu Mo basah, Sayang?" tanya Umi, padahal ia sudah tahu jawabannya.
+
+"Mo kasih payungnya lebih banyak ke Ais," jawab Baby Mo polos. "Ais kan lebih kecil." (Padahal mereka kembar, hanya beda beberapa menit.)
+
+Umi memeluk keduanya erat-erat. Bahu yang basah bisa dikeringkan dengan handuk. Tapi hati yang belajar mendahulukan orang lain — itu menghangatkan seluruh rumah.
+
+> *Tidak sempurna iman salah seorang dari kalian sampai ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.*
+
+Malam itu, Baby Mo sedikit bersin. Tapi ia tersenyum di balik selimutnya. Karena berbagi payung, ternyata, jauh lebih hangat daripada kering sendirian.`,
+      en: `On the way home from the park, the sky suddenly turned grey. The first drop fell — plip. Then plip-plip-plip. Then the rain poured down hard.
+
+Baby Mo opened his small yellow umbrella. But it was only big enough for one. And beside him, Baby Ais was starting to get wet, her clothes clinging, her hair dripping.
+
+For a moment, Baby Mo hesitated. This umbrella was his. If he shared it, he'd get a little wet too.
+
+He looked at his shivering twin sister. Then he remembered Umi's words: "The strong one looks after others."
+
+"Come here, Ais!" cried Baby Mo, pulling his sister close. He tilted the umbrella — covering Baby Ais more than himself. One of Baby Mo's shoulders got soaked. But he didn't mind.
+
+They walked slowly, huddled under one little yellow umbrella, their small feet hopping over puddles. Baby Ais laughed. Baby Mo laughed too. The rain didn't feel cold anymore when they faced it together.
+
+At the door, Umi was already waiting with a towel. She saw Baby Mo's one wet shoulder and understood at once what had happened.
+
+"Why is Mo's shoulder wet, sweetheart?" asked Umi, though she already knew the answer.
+
+"Mo gave more of the umbrella to Ais," answered Baby Mo simply. "Ais is smaller." (Though they were twins, just a few minutes apart.)
+
+Umi hugged them both tightly. A wet shoulder can be dried with a towel. But a heart that learns to put others first — that warms the whole house.
+
+> *None of you truly believes until he loves for his brother what he loves for himself.*
+
+That night, Baby Mo sneezed a little. But he smiled under his blanket. Because sharing an umbrella, it turned out, was far warmer than being dry alone.`,
+    },
+    anchor: { type: "parenting", slug: "anak-tidak-mau-berbagi" },
+    takeaway: {
+      id: "Bahu yang basah bisa dikeringkan; hati yang belajar mendahulukan orang lain menghangatkan seluruh rumah. Berbagi lebih hangat daripada kering sendirian.",
+      en: "A wet shoulder can be dried; a heart that learns to put others first warms the whole house. Sharing is warmer than being dry alone.",
+    },
+    tags: ["berbagi", "kasih-sayang", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "selamat-tidur-sayang",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-09.png",
+    published: "2026-05-16",
+    title: { id: "Selamat Tidur, Sayang", en: "Goodnight, My Love" },
+    hook: {
+      id: "Bulan mengintip di jendela, dan dua mata kecil belum mau terpejam. Doa apa yang membuat malam terasa aman?",
+      en: "The moon peeks at the window, and two little eyes won't close. What du'a makes the night feel safe?",
+    },
+    body: {
+      id: `Malam sudah larut. Bulan mengintip di jendela kamar, bulat dan keperakan, seperti lampu tidur raksasa dari langit.
+
+Tapi dua pasang mata kecil masih terbuka. Baby Mo membolak-balik badannya. Baby Ais memeluk boneka beruangnya erat-erat.
+
+"Belum ngantuk?" tanya Abi sambil duduk di antara dua kasur.
+
+"Belum," kata mereka berdua, padahal mata mereka sudah sayu.
+
+Abi tersenyum. "Kalau begitu, kita siapkan hati dulu untuk tidur. Sama seperti kita cuci tangan sebelum makan, kita bersihkan hati sebelum tidur."
+
+Abi mulai mematikan lampu satu per satu, dan kamar menjadi temaram dan hangat. "Yuk, maafkan dulu hari ini," bisik Abi. "Kalau tadi Mo rebutan mainan sama Ais… sekarang dimaafkan, ya."
+
+Baby Mo melirik adiknya. "Maaf, Ais," gumamnya. Baby Ais terkikik kecil.
+
+"Sekarang, kita titipkan diri kita kepada Allah," kata Abi. Lalu ia membaca pelan, dan si kembar menirukan sebisanya:
+
+> *Bismika Allahumma ahyaa wa amuut.* — Dengan nama-Mu, ya Allah, aku hidup dan aku mati.
+
+"Artinya," bisik Abi, "kita tidur dalam pelukan penjagaan Allah. Allah yang menjaga napas kita sampai pagi. Jadi kita tidak perlu takut apa-apa."
+
+Baby Ais menguap lebar. Baby Mo merasa kelopak matanya menjadi berat, seberat selimut hangat.
+
+Abi mencium kening keduanya. "Selamat tidur, Sayang. Mimpi yang indah. Allah menjaga kalian."
+
+Bulan terus berjaga di jendela. Dan di bawah cahayanya yang lembut, Baby Mo dan Baby Ais tertidur — bukan karena lelah, tapi karena hati yang dititipkan kepada Allah selalu bisa tidur dengan tenang.
+
+Selamat tidur, Baby Mo. Selamat tidur, Baby Ais. Sampai jumpa di pagi yang baru, insya Allah.`,
+      en: `It was late at night. The moon peeked at the bedroom window, round and silvery, like a giant night light from the sky.
+
+But two pairs of little eyes were still open. Baby Mo tossed and turned. Baby Ais hugged her teddy bear tightly.
+
+"Not sleepy yet?" asked Abi, sitting between the two beds.
+
+"Not yet," they both said, though their eyes were already heavy.
+
+Abi smiled. "Then let's get our hearts ready for sleep first. Just as we wash our hands before eating, we clean our hearts before sleeping."
+
+Abi began turning off the lamps one by one, and the room grew dim and warm. "Let's forgive today first," whispered Abi. "If Mo fought with Ais over a toy earlier… it's forgiven now, okay?"
+
+Baby Mo glanced at his sister. "Sorry, Ais," he mumbled. Baby Ais giggled softly.
+
+"Now, let's entrust ourselves to Allah," said Abi. Then he recited softly, and the twins copied as best they could:
+
+> *Bismika Allahumma ahyaa wa amuut.* — In Your name, O Allah, I live and I die.
+
+"It means," whispered Abi, "we sleep in the embrace of Allah's protection. Allah keeps our breath safe until morning. So we don't need to fear anything."
+
+Baby Ais yawned wide. Baby Mo felt his eyelids grow heavy, as heavy as a warm blanket.
+
+Abi kissed both their foreheads. "Goodnight, my loves. Sweet dreams. Allah is watching over you."
+
+The moon kept watch at the window. And beneath its gentle light, Baby Mo and Baby Ais drifted to sleep — not because they were tired, but because a heart entrusted to Allah can always rest in peace.
+
+Goodnight, Baby Mo. Goodnight, Baby Ais. See you in a brand-new morning, insha'Allah.`,
+    },
+    anchor: { type: "doa", slug: "sebelum-tidur" },
+    takeaway: {
+      id: "Bersihkan hati sebelum tidur: maafkan hari ini, lalu titipkan diri kepada Allah. Hati yang dititipkan kepada-Nya selalu bisa tidur dengan tenang.",
+      en: "Clean the heart before sleep: forgive the day, then entrust yourself to Allah. A heart given to Him can always rest in peace.",
+    },
+    tags: ["malam", "doa-tidur", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
 ];
 
 export function getAllCatatan(): Catatan[] {
