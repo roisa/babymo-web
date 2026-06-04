@@ -253,6 +253,24 @@ export function videoGameSchema(locale: Locale, game: Game) {
   };
 }
 
+export function videoObjectSchema(
+  locale: Locale,
+  v: { id: string; name: string; description: string; uploadDate?: string },
+) {
+  return {
+    "@type": "VideoObject",
+    name: v.name,
+    description: v.description,
+    thumbnailUrl: [`https://i.ytimg.com/vi/${v.id}/hqdefault.jpg`],
+    uploadDate: v.uploadDate ?? "2026-01-01",
+    contentUrl: `https://www.youtube.com/watch?v=${v.id}`,
+    embedUrl: `https://www.youtube-nocookie.com/embed/${v.id}`,
+    inLanguage: locale === "id" ? "id-ID" : "en",
+    publisher: { "@id": `${siteUrl}/#org` },
+    isFamilyFriendly: true,
+  };
+}
+
 export function graph(...nodes: Record<string, unknown>[]) {
   return {
     "@context": "https://schema.org",

@@ -1392,6 +1392,7 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
     kind: "story",
     child: "mo",
     pose: "baby-mo-idea.png",
+    video: "cq6ODPSWGdc",
     published: "2026-06-03",
     title: { id: "Bismillah Dulu", en: "Bismillah First" },
     hook: {
@@ -1399,60 +1400,88 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
       en: "Baby Mo is always in a hurry. Until he discovers one little word that makes everything feel more blessed.",
     },
     body: {
-      id: `Pagi itu matahari baru saja mengintip di balik tirai. Baby Mo melompat dari tempat tidur, berlari ke meja makan, dan langsung menyambar roti selai kesukaannya.
+      id: `Baby Mo adalah anak yang paling cepat sedunia. Cepat bangun, cepat lari, cepat-cepat mau melakukan segalanya. Kalau Baby Mo punya semboyan, semboyannya pasti: "Cepat! Cepat! Cepaaat!"
 
-"Eit, tunggu," kata Umi lembut sambil tersenyum. "Sudah baca apa belum, Sayang?"
+Pagi itu matahari baru saja mengintip malu-malu di balik tirai. Baby Mo sudah melompat dari tempat tidur — hap! — berlari ke meja makan, dan langsung menyambar roti selai cokelat kesukaannya. Hap lagi! Hampir masuk ke mulut.
 
-Baby Mo berhenti. Mulutnya sudah penuh. Ia menggeleng pelan-pelan.
+"Eit, tunggu dulu, jagoan," kata Umi lembut sambil menahan tawa. "Sudah baca apa belum?"
 
-"Bismillah dulu," kata Umi. "Artinya, 'dengan nama Allah'. Supaya setiap yang kita mulai, dimulai bersama Allah."
+Baby Mo berhenti. Pipinya sudah menggembung seperti tupai yang menyimpan kacang. Ia menggeleng pelan-pelan. "Mmm?"
 
-Baby Mo menelan rotinya, lalu menirukan, "Bis-mil-lah." Kata itu terasa bulat dan hangat di mulutnya, seperti susu cokelat.
+Umi duduk sejajar dengan matanya. "Bismillah dulu," katanya. "Artinya, 'dengan nama Allah'. Jadi apa pun yang kita mulai, kita mulai bareng Allah. Seperti memegang tangan Allah dulu sebelum melangkah."
 
-Hari itu Baby Mo penasaran. Sebelum memakai sepatu — "Bismillah." Sepatunya seperti masuk lebih mudah. Sebelum menyiram bunga — "Bismillah." Airnya berkilau seperti permata kecil. Sebelum menyusun balok jadi menara tinggi — "Bismillah." Dan menara itu berdiri paling tinggi yang pernah ia buat.
+Baby Mo menelan rotinya — gluk — lalu mencoba kata itu pelan-pelan. "Bis… mil… lah." Kata itu terasa bulat dan hangat di mulutnya, seperti seteguk susu cokelat di pagi yang dingin. Ia menyukainya. Ia mengulanginya lagi, lebih keras, "Bismillah!" sampai Baby Ais yang masih mengantuk ikut kaget dan berkata, "Lah!"
 
-Sore hari, Baby Ais jatuh dan menangis karena lututnya lecet. Baby Mo berlari, memegang tangan adik kembarnya, dan berbisik, "Bismillah, Ais." Entah kenapa, tangis Baby Ais pelan-pelan reda.
+Sejak pagi itu, Baby Mo jadi penasaran. Apa benar kata kecil ini punya kekuatan?
 
-Malam itu, sebelum tidur, Baby Mo menarik selimut sampai ke dagu. Ia memejamkan mata, lalu tersenyum kecil di kegelapan.
+Maka ia mencobanya ke mana-mana, seperti seorang ilmuwan cilik.
 
-"Bismillah," bisiknya pelan.
+Sebelum memakai sepatu — "Bismillah!" — dan entah kenapa, kaki kanannya masuk lebih mulus. (Biasanya selalu tertukar.)
 
-Umi yang mendengar dari pintu menahan napas. Baby Mo tidak terburu-buru lagi. Ia sudah menemukan rahasianya: hal yang dimulai dengan nama Allah, selalu terasa cukup.
+Sebelum menyiram bunga di teras — "Bismillah!" — dan tetesan airnya berkilau ditimpa matahari, seperti hujan permata kecil. Baby Mo ternganga.
+
+Sebelum menyusun balok jadi menara — "Bismillah!" — dan ia menyusun lebih pelan, lebih hati-hati, satu per satu. Menara itu berdiri lebih tinggi dari kepalanya sendiri! Baby Mo melompat girang. Ternyata "Bismillah" tidak membuatnya lebih cepat — tapi membuatnya lebih tenang. Dan yang tenang, ternyata, lebih kuat.
+
+Siang itu ada satu ujian. Baby Ais terpeleset di lantai dan menangis karena lututnya lecet sedikit. Air matanya bulat-bulat besar. Biasanya Baby Mo akan ikut panik. Tapi kali ini ia berlari, menggenggam tangan adik kembarnya, dan berbisik pelan seperti yang Umi ajarkan, "Bismillah, Ais. Nggak apa-apa."
+
+Aneh sekali. Pelan-pelan, isak Baby Ais mereda. Mungkin bukan karena lututnya tiba-tiba sembuh — tapi karena ada suara tenang di sampingnya. Suara yang memulai segala sesuatu bersama Allah.
+
+Malam tiba. Lampu kamar dimatikan, dan kamar menjadi gelap dan teduh. Baby Mo menarik selimut sampai ke dagu. Ia teringat semua kejadian hari itu: sepatu, bunga, menara, tangan Baby Ais. Lalu ia memejamkan mata dan tersenyum kecil di dalam gelap.
+
+"Bismillah," bisiknya, hampir tak terdengar.
+
+Di balik pintu, Umi diam-diam mendengar. Ia menahan napas, lalu tersenyum. Karena Baby Mo, si anak paling cepat sedunia, akhirnya menemukan satu rahasia yang besar di dalam satu kata yang kecil: yang dimulai dengan nama Allah, selalu terasa cukup.
 
 > *Setiap perkara baik yang tidak dimulai dengan Bismillah, maka kurang keberkahannya.*
 
-Dan begitulah, satu kata kecil mengubah seluruh hari Baby Mo — bukan jadi lebih cepat, tapi jadi lebih berkah.`,
-      en: `That morning the sun had only just peeked through the curtains. Baby Mo leapt out of bed, ran to the table, and grabbed his favourite jam bread.
+Dan begitulah, satu kata kecil mengubah seluruh hari Baby Mo — bukan menjadi lebih cepat, tapi menjadi lebih berkah.
 
-"Wait a moment," said Umi gently, smiling. "Have you said it yet, sweetheart?"
+Sekarang, sebelum menutup buku ini, yuk kita coba bersama si kecil: tarik napas… lalu ucapkan pelan-pelan, "Bismillah." Rasakan, ya — hangat seperti susu cokelat. 🤎`,
+      en: `Baby Mo was the fastest child in the whole world. Fast to wake, fast to run, fast to do absolutely everything. If Baby Mo had a motto, it would surely be: "Fast! Fast! Faaast!"
 
-Baby Mo stopped. His mouth was already full. He shook his head slowly.
+That morning the sun had only just peeked shyly through the curtains. Baby Mo had already leapt out of bed — hop! — sprinted to the table, and snatched his favourite chocolate-jam bread. Hop again! Nearly into his mouth.
 
-"Bismillah first," said Umi. "It means 'with the name of Allah'. So that everything we begin, begins together with Allah."
+"Wait just a moment, champ," said Umi gently, holding back a laugh. "Have you said it yet?"
 
-Baby Mo swallowed his bread and repeated, "Bis-mil-lah." The word felt round and warm in his mouth, like cocoa.
+Baby Mo froze. His cheeks were already puffed out like a squirrel storing nuts. He shook his head slowly. "Mmm?"
 
-That day Baby Mo grew curious. Before putting on his shoes — "Bismillah." They seemed to slip on more easily. Before watering the flowers — "Bismillah." The water sparkled like little jewels. Before stacking blocks into a tall tower — "Bismillah." And the tower stood taller than any he'd built.
+Umi sat down level with his eyes. "Bismillah first," she said. "It means 'with the name of Allah'. So whatever we begin, we begin together with Allah. Like holding Allah's hand before we take a step."
 
-In the afternoon, Baby Ais fell and cried over a scraped knee. Baby Mo ran over, held his twin sister's hand, and whispered, "Bismillah, Ais." Somehow, her crying slowly settled.
+Baby Mo swallowed his bread — gulp — and tried the word slowly. "Bis… mil… lah." It felt round and warm in his mouth, like a sip of cocoa on a cold morning. He liked it. He said it again, louder, "Bismillah!" — until sleepy Baby Ais startled awake and said, "Lah!"
 
-That night, before sleep, Baby Mo pulled the blanket up to his chin. He closed his eyes, then smiled a small smile in the dark.
+From that morning on, Baby Mo grew curious. Could such a little word really have power?
 
-"Bismillah," he whispered.
+So he tried it everywhere, like a tiny scientist.
 
-Umi, listening from the doorway, held her breath. Baby Mo wasn't in a hurry anymore. He'd found the secret: whatever begins with the name of Allah always feels like enough.
+Before putting on his shoes — "Bismillah!" — and somehow his right foot slid in more smoothly. (Usually he got them mixed up.)
+
+Before watering the flowers on the porch — "Bismillah!" — and the droplets glittered in the sun like a little rain of jewels. Baby Mo's jaw dropped.
+
+Before stacking his blocks into a tower — "Bismillah!" — and he built more slowly, more carefully, one by one. The tower rose taller than his own head! Baby Mo jumped for joy. It turned out "Bismillah" didn't make him faster — it made him calmer. And calm, it turned out, was stronger.
+
+That afternoon came a little test. Baby Ais slipped on the floor and cried over a small scrape on her knee. Her tears were big and round. Normally Baby Mo would panic too. But this time he ran over, held his twin sister's hand, and whispered softly, just as Umi had taught him, "Bismillah, Ais. It's okay."
+
+How strange. Slowly, Baby Ais's sobbing settled. Maybe not because her knee suddenly healed — but because there was a calm voice beside her. A voice that began everything with Allah.
+
+Night came. The bedroom light went out, and the room turned dark and cosy. Baby Mo pulled the blanket up to his chin. He remembered everything from the day: the shoes, the flowers, the tower, Baby Ais's hand. Then he closed his eyes and smiled a tiny smile in the dark.
+
+"Bismillah," he whispered, almost too soft to hear.
+
+Behind the door, Umi quietly listened. She held her breath, then smiled. Because Baby Mo, the fastest child in the whole world, had finally found one big secret inside one little word: whatever begins with the name of Allah always feels like enough.
 
 > *Every good matter that does not begin with Bismillah is lacking in blessing.*
 
-And so, one little word changed Baby Mo's whole day — not into something faster, but into something more blessed.`,
+And so, one little word changed Baby Mo's whole day — not into something faster, but into something more blessed.
+
+Now, before we close this book, let's try it together with your little one: take a breath… then say it slowly, "Bismillah." Feel it — warm, like cocoa. 🤎`,
     },
     anchor: { type: "doa", slug: "sebelum-makan" },
     takeaway: {
-      id: "Satu kata kecil — Bismillah — mengajarkan anak bahwa setiap hal baik dimulai bersama Allah. Bukan supaya lebih cepat, tapi supaya lebih berkah.",
-      en: "One little word — Bismillah — teaches a child that every good thing begins with Allah. Not to be faster, but to be more blessed.",
+      id: "Satu kata kecil — Bismillah — mengajarkan anak bahwa setiap hal baik dimulai bersama Allah. Bukan supaya lebih cepat, tapi supaya lebih tenang dan berkah.",
+      en: "One little word — Bismillah — teaches a child that every good thing begins with Allah. Not to be faster, but to be calmer and more blessed.",
     },
     tags: ["bismillah", "adab", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 6,
   },
 
   {
@@ -2129,6 +2158,440 @@ Goodnight, Baby Mo. Goodnight, Baby Ais. See you in a brand-new morning, insha'A
     },
     tags: ["malam", "doa-tidur", "akhlak", "buku"],
     readingTimeMin: 5,
+  },
+
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  CERITA ANAK × MOMEN — book-draft stories tied to the Baby Mo videos
+  //  (embedded + VideoObject schema) so the written + video content
+  //  cross-link for SEO. Longer, with facts, humour and curiosity.
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "bulan-yang-mengikuti-baby-mo",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-09.png",
+    video: "orXDAOHAKw8",
+    published: "2026-06-04",
+    title: {
+      id: "Bulan yang Mengikuti Baby Mo",
+      en: "The Moon That Followed Baby Mo",
+    },
+    hook: {
+      id: "Sepanjang perjalanan pulang, bulan terus mengikuti mobil. Apakah bulan benar-benar teman Baby Mo? Dan kenapa kita harus tidur, sih?",
+      en: "All the way home, the moon kept following the car. Is the moon really Baby Mo's friend? And why do we have to sleep, anyway?",
+    },
+    body: {
+      id: `Malam itu Baby Mo dan Baby Ais pulang naik mobil. Di luar jendela, langit sudah gelap dan penuh taburan bintang. Lalu Baby Mo melihatnya — sebuah bulan besar bulat berwarna keperakan.
+
+"Umi!" seru Baby Mo. "Bulannya jalan! Bulannya ngikutin Mo!"
+
+Memang benar. Setiap kali mobil belok, bulan ikut belok. Mobil ngebut, bulan ikut ngebut. Baby Mo melambai. "Hai, Bulan!" Dan ia yakin sekali bulan itu melambai balik.
+
+"Tahukah kamu," kata Abi pelan, "kenapa bulan terlihat mengikuti kita?" Baby Mo menggeleng, matanya berbinar. "Karena bulan itu sangat, sangat jauh. Jauuuh sekali. Jadi walaupun mobil kita bergerak, bulan terlihat tetap di tempatnya — seakan-akan ia setia menemani kita pulang."
+
+Baby Ais menempelkan hidungnya ke kaca. "Bu-yan," bisiknya kagum.
+
+"Dan ada rahasia lagi," lanjut Abi. "Bulan itu sebenarnya tidak punya cahaya sendiri. Cahaya bulan itu pinjaman dari matahari! Matahari menyinari bulan, lalu bulan memantulkannya ke kita, supaya malam tidak terlalu gelap. Allah yang mengaturnya sebagai lampu malam untuk seluruh dunia."
+
+"Lampu malam sedunia," ulang Baby Mo takjub. Ia membayangkan satu lampu tidur raksasa untuk semua anak di bumi.
+
+Sampai di rumah, mata Baby Mo sudah berat. Tapi ia belum mau tidur. "Mo nggak ngantuk," katanya — sambil menguap lebar sekali, "hoaaahm" — sampai Baby Ais ikut menguap. (Tahukah kamu? Menguap itu menular. Kalau satu orang menguap, yang lain sering ikut. Coba perhatikan!)
+
+Abi tergelak. "Badan kecilmu sudah bekerja keras seharian, Sayang. Tidur itu seperti mengisi baterai. Saat kamu tidur, badanmu diam-diam memperbaiki dirinya, supaya besok kamu bisa berlari dan bermain lagi."
+
+Maka Baby Mo dan Baby Ais naik ke tempat tidur. Abi mematikan lampu, dan dari jendela, bulan keperakan itu masih mengintip, setia menjaga.
+
+"Sebelum tidur, kita titipkan diri kita kepada Allah, ya," bisik Abi. Lalu mereka membaca bersama, pelan-pelan:
+
+> *Bismika Allahumma ahyaa wa amuut.* — Dengan nama-Mu, ya Allah, aku hidup dan aku mati.
+
+"Artinya," kata Abi, "saat kita tidur dan tidak bisa melihat apa-apa, Allah tetap melihat kita. Allah tidak pernah tidur. Jadi kita bisa tidur dengan tenang."
+
+Baby Mo memandang bulan untuk terakhir kali. "Selamat malam, Bulan," gumamnya. "Allah jaga kita semua."
+
+Dan dengan itu, mata kecilnya pun terpejam — di bawah lampu malam sedunia yang dinyalakan Allah, khusus untuk anak-anak yang akan tidur.
+
+Selamat tidur, ya, Sayang. Mimpi indah. 🌙`,
+      en: `That night Baby Mo and Baby Ais were driving home. Outside the window, the sky was already dark and sprinkled with stars. Then Baby Mo saw it — a big, round, silvery moon.
+
+"Umi!" cried Baby Mo. "The moon is moving! The moon is following Mo!"
+
+And it was true. Every time the car turned, the moon turned too. The car sped up, the moon sped up. Baby Mo waved. "Hi, Moon!" And he was quite sure the moon waved back.
+
+"Do you know," said Abi softly, "why the moon looks like it's following us?" Baby Mo shook his head, eyes shining. "Because the moon is very, very far away. Sooo far. So even though our car moves, the moon looks like it stays in place — as if it's faithfully keeping us company on the way home."
+
+Baby Ais pressed her nose to the glass. "Moo-n," she whispered in awe.
+
+"And there's another secret," Abi went on. "The moon doesn't actually have its own light. Moonlight is borrowed from the sun! The sun shines on the moon, and the moon reflects it down to us, so the night isn't too dark. Allah arranged it as a night light for the whole world."
+
+"A night light for the whole world," repeated Baby Mo, amazed. He pictured one giant night light for every child on earth.
+
+By the time they got home, Baby Mo's eyes were heavy. But he didn't want to sleep yet. "Mo's not sleepy," he said — while yawning enormously, "yaaawn" — until Baby Ais yawned too. (Did you know? Yawning is contagious. When one person yawns, others often follow. Try watching!)
+
+Abi chuckled. "Your little body has worked hard all day, sweetheart. Sleep is like recharging a battery. While you sleep, your body quietly repairs itself, so tomorrow you can run and play all over again."
+
+So Baby Mo and Baby Ais climbed into bed. Abi switched off the light, and from the window, that silvery moon still peeked in, faithfully keeping watch.
+
+"Before sleep, let's entrust ourselves to Allah," whispered Abi. Then they recited together, slowly:
+
+> *Bismika Allahumma ahyaa wa amuut.* — In Your name, O Allah, I live and I die.
+
+"It means," said Abi, "when we sleep and can't see anything, Allah still sees us. Allah never sleeps. So we can rest in peace."
+
+Baby Mo looked at the moon one last time. "Goodnight, Moon," he mumbled. "May Allah watch over us all."
+
+And with that, his little eyes closed — beneath the world's night light that Allah switched on, just for children about to fall asleep.
+
+Goodnight, sweetheart. Sweet dreams. 🌙`,
+    },
+    anchor: { type: "doa", slug: "sebelum-tidur" },
+    takeaway: {
+      id: "Bulan terlihat mengikuti kita karena ia sangat jauh, dan cahayanya pinjaman dari matahari — lampu malam yang Allah nyalakan. Saat kita tidur dan tak bisa melihat, Allah tetap menjaga.",
+      en: "The moon seems to follow us because it's so far away, and its light is borrowed from the sun — a night light Allah switched on. When we sleep and can't see, Allah still watches over us.",
+    },
+    tags: ["malam", "doa-tidur", "fakta-seru", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "ayam-jago-paling-pagi",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-yeyy.png",
+    video: "L6bXkRuO5vc",
+    published: "2026-05-15",
+    title: {
+      id: "Ayam Jago Paling Pagi",
+      en: "The Earliest Rooster",
+    },
+    hook: {
+      id: "Siapa yang bangun paling pagi di dunia? Baby Ais bertekad mengalahkan Pak Ayam Jago. Tapi pagi menyimpan kejutan yang lebih besar.",
+      en: "Who wakes up earliest in the world? Baby Ais is determined to beat Mr. Rooster. But the morning holds a bigger surprise.",
+    },
+    body: {
+      id: `"Kukuruyuuuk!"
+
+Setiap pagi, sebelum matahari benar-benar naik, suara Pak Ayam Jago tetangga sudah membangunkan seisi kampung. Dan setiap pagi, Baby Ais merasa kesal sedikit. "Pak Ayam selalu menang," gerutunya. "Ais mau bangun paling pagi sedunia!"
+
+Maka suatu malam, Baby Ais bertekad. Ia tidur lebih awal, memeluk boneka beruangnya erat-erat. "Besok," bisiknya, "Ais yang menang."
+
+Keesokan harinya, Baby Ais membuka mata di kegelapan yang masih biru keabu-abuan. Belum ada suara ayam! Ia melompat ke jendela. "Ais menang! Ais menang!" — rambutnya berdiri ke segala arah, persis seperti jambul Pak Ayam Jago. Baby Mo yang ikut terbangun terkikik melihatnya.
+
+Tapi tunggu… ternyata Baby Ais tidak sendirian.
+
+Dari pohon di luar, terdengar seekor burung kecil mulai bernyanyi. Lalu burung kedua. Lalu ketiga. Pelan-pelan, seluruh pohon dipenuhi kicauan — seperti paduan suara. (Tahukah kamu? Para ahli menyebutnya "paduan suara fajar". Burung-burung memang bernyanyi paling ramai saat pagi mulai datang, seakan mengucapkan selamat pagi pada dunia.)
+
+"Wah," bisik Baby Ais, takjub. "Burung-burung bangun lebih pagi dari Ais."
+
+Lalu — "Kukuruyuuuk!" — Pak Ayam Jago pun ikut. Baby Ais tertawa. Ia mencoba menirukannya, "Ku-ku-yuuu!" Suaranya lucu sekali sampai Baby Mo terguling-guling.
+
+Umi masuk sambil tersenyum. "Masya Allah, sudah bangun pagi sekali. Tahukah kalian, ada satu hal yang bangun lebih dulu dari burung dan ayam?"
+
+"Apa, Umi?" tanya Baby Ais.
+
+"Hati yang bersyukur," kata Umi lembut. "Saat kita tidur, kita seperti 'dititipkan' kepada Allah. Lalu setiap pagi, Allah mengembalikan nyawa dan kekuatan kita, supaya kita bisa membuka mata lagi. Itu hadiah besar! Maka kita ucapkan terima kasih dulu."
+
+Mereka pun duduk bersila, dan membaca pelan-pelan doa bangun tidur:
+
+> *Alhamdulillahilladzii ahyaanaa ba'da maa amaatanaa wa ilaihin-nusyuur.* — Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami kembali.
+
+"Jadi," kata Baby Ais sambil berpikir keras, "Ais memang nggak menang lawan burung. Tapi Ais menang karena bilang terima kasih duluan?"
+
+Umi memeluknya. "Itu kemenangan yang paling indah, Sayang."
+
+Pagi itu matahari akhirnya naik, hangat dan keemasan. Burung-burung masih bernyanyi, Pak Ayam masih berkokok, dan dua anak kembar memulai hari mereka dengan satu kalimat syukur.
+
+Selamat pagi, dunia! Selamat pagi dari Baby Mo dan Baby Ais. ☀️`,
+      en: `"Cock-a-doodle-doo!"
+
+Every morning, before the sun was truly up, the neighbour's rooster, Mr. Rooster, woke the whole village. And every morning, Baby Ais felt a little annoyed. "Mr. Rooster always wins," she grumbled. "Ais wants to wake up earliest in the world!"
+
+So one night, Baby Ais made up her mind. She went to bed early, hugging her teddy bear tight. "Tomorrow," she whispered, "Ais wins."
+
+The next day, Baby Ais opened her eyes in a darkness still tinted blue-grey. No rooster yet! She leapt to the window. "Ais wins! Ais wins!" — her hair sticking out in every direction, exactly like Mr. Rooster's crest. Baby Mo, who'd woken too, giggled at the sight.
+
+But wait… Baby Ais wasn't alone.
+
+From the tree outside, a little bird began to sing. Then a second bird. Then a third. Slowly, the whole tree filled with chirping — like a choir. (Did you know? Experts call it the "dawn chorus". Birds really do sing loudest as morning arrives, as if saying good morning to the world.)
+
+"Wow," whispered Baby Ais, amazed. "The birds woke up earlier than Ais."
+
+Then — "Cock-a-doodle-doo!" — Mr. Rooster joined in. Baby Ais laughed. She tried to copy him, "Cock-a-doodle-doooo!" Her voice was so funny that Baby Mo rolled over giggling.
+
+Umi came in smiling. "Masha'Allah, awake so early. Do you know, there's one thing that wakes up even before the birds and the rooster?"
+
+"What, Umi?" asked Baby Ais.
+
+"A grateful heart," said Umi gently. "When we sleep, we are like something 'entrusted' to Allah. Then every morning, Allah returns our life and strength, so we can open our eyes again. That's a huge gift! So we say thank you first."
+
+So they sat cross-legged and recited, slowly, the waking-up du'a:
+
+> *Alhamdulillahilladhi ahyana ba'da ma amatana wa ilaihin-nushur.* — All praise is for Allah who gave us life after causing us to die, and to Him is the return.
+
+"So," said Baby Ais, thinking hard, "Ais didn't really beat the birds. But Ais wins because she said thank you first?"
+
+Umi hugged her. "That's the most beautiful kind of winning, sweetheart."
+
+That morning the sun finally rose, warm and golden. The birds still sang, Mr. Rooster still crowed, and two little twins began their day with one sentence of gratitude.
+
+Good morning, world! Good morning from Baby Mo and Baby Ais. ☀️`,
+    },
+    anchor: { type: "doa", slug: "bangun-tidur" },
+    takeaway: {
+      id: "Setiap pagi Allah mengembalikan nyawa dan kekuatan kita — hadiah besar. Bangun pagi bukan soal mengalahkan ayam, tapi soal siapa yang lebih dulu berterima kasih.",
+      en: "Every morning Allah returns our life and strength — a huge gift. Waking early isn't about beating the rooster; it's about who says thank you first.",
+    },
+    tags: ["pagi", "syukur", "fakta-seru", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "rahasia-lebah-dan-roti-madu",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    video: "cmK8ruUiCbA",
+    published: "2026-05-14",
+    title: {
+      id: "Rahasia Lebah dan Roti Madu",
+      en: "The Secret of the Bee and the Honey Bread",
+    },
+    hook: {
+      id: "Sebelum menggigit roti madunya, Baby Mo bertanya: dari mana, sih, datangnya madu? Jawabannya membawanya pada seekor pahlawan kecil bergaris kuning-hitam.",
+      en: "Before biting his honey bread, Baby Mo asked: where does honey even come from? The answer leads him to a tiny hero in yellow-and-black stripes.",
+    },
+    body: {
+      id: `Di meja makan, ada sepotong roti hangat yang diolesi madu keemasan. Baby Mo sudah siap menggigitnya. Tapi tiba-tiba ia berhenti dan bertanya, "Umi… madu ini datang dari mana?"
+
+Umi tersenyum. "Dari seekor pahlawan kecil. Namanya: lebah."
+
+Baby Mo membulatkan mata. "Lebah yang dengung-dengung itu?"
+
+"Iya," kata Umi. "Dan dengarkan ini — untuk membuat madu sebanyak satu sendok saja yang ada di rotimu, seekor lebah harus mengunjungi ribuan bunga. Ribuan! Ia terbang dari bunga ke bunga, mengumpulkan sari manisnya sedikit demi sedikit, tanpa pernah mengeluh."
+
+"Ribuan bunga?" Baby Mo memandang sesendok madunya dengan rasa hormat yang baru. Tadinya cuma madu. Sekarang ia tahu itu hasil kerja keras seekor makhluk mungil.
+
+"Ada lagi yang lebih menakjubkan," lanjut Umi. "Kalau seekor lebah menemukan kebun bunga yang banyak, ia pulang ke sarang dan… menari! Ya, menari. Gerakan tariannya memberitahu teman-temannya ke arah mana harus terbang. Itulah cara lebah berkata, 'Teman-teman, makanan enak ada di sebelah sana!'"
+
+Baby Mo terkikik membayangkan lebah-lebah berjoget. Lalu ia berbisik, setengah serius, "Berarti waktu lebah dengung 'zzzz', mungkin dia lagi bilang 'bismillaaah-zzz' sebelum kerja!" Umi tertawa. "Bisa jadi, Sayang."
+
+"Dan kamu tahu," tambah Abi yang baru bergabung, "di dalam Al-Qur'an ada satu surat yang namanya An-Nahl — artinya 'Lebah'. Allah menyebut lebah secara khusus, dan mengabarkan bahwa dari perutnya keluar minuman bermacam warna yang ada obat untuk manusia. Madu kecil ini ternyata disebut di kitab yang paling mulia."
+
+Baby Mo memandang rotinya — roti yang sama, tapi sekarang terasa istimewa. Begitu banyak perjalanan untuk satu gigitan: bunga, lebah, tarian, sarang, sampai ke mejanya.
+
+"Jadi," kata Umi lembut, "sebelum makan, pantas sekali kita berhenti sebentar dan berterima kasih kepada Allah yang menciptakan semua itu. Yuk."
+
+Baby Mo memegang rotinya dengan dua tangan, menarik napas, dan berkata dengan sungguh-sungguh:
+
+> *Bismillah.* Lalu, "Allahumma baarik lanaa fiimaa razaqtanaa…" — Ya Allah, berkahilah rezeki yang Engkau berikan kepada kami.
+
+Gigitan pertama itu terasa paling manis seumur hidupnya. Bukan cuma karena madunya — tapi karena kini ia tahu betapa panjang dan ajaib perjalanan rezeki sampai ke tangannya.
+
+Lain kali kamu makan madu, ingat ya: ada ribuan bunga dan seekor pahlawan kecil bergaris kuning-hitam di baliknya. Masya Allah. 🐝`,
+      en: `On the table sat a piece of warm bread spread with golden honey. Baby Mo was ready to take a bite. But suddenly he stopped and asked, "Umi… where does this honey come from?"
+
+Umi smiled. "From a tiny hero. Its name: the bee."
+
+Baby Mo's eyes went round. "The buzzy-buzzy bee?"
+
+"Yes," said Umi. "And listen to this — to make just one spoonful of the honey on your bread, a bee has to visit thousands of flowers. Thousands! It flies from flower to flower, gathering the sweet nectar little by little, never once complaining."
+
+"Thousands of flowers?" Baby Mo looked at his spoonful of honey with new respect. Before, it was just honey. Now he knew it was the hard work of a tiny creature.
+
+"There's something even more amazing," Umi went on. "When a bee finds a garden full of flowers, it flies home to the hive and… dances! Yes, dances. Its dance moves tell its friends which way to fly. That's how a bee says, 'Friends, delicious food is over there!'"
+
+Baby Mo giggled, picturing bees boogying. Then he whispered, half serious, "So when a bee buzzes 'zzzz', maybe it's saying 'bismillaaah-zzz' before it works!" Umi laughed. "Could be, sweetheart."
+
+"And you know," added Abi, just joining them, "in the Qur'an there's a chapter called An-Nahl — meaning 'The Bee'. Allah mentions the bee specially, and tells us that from its belly comes a drink of many colours in which there is healing for people. This little honey is named in the most noble Book."
+
+Baby Mo looked at his bread — the same bread, but now it felt special. So many journeys for one bite: the flower, the bee, the dance, the hive, all the way to his table.
+
+"So," said Umi gently, "before we eat, it's only fitting to pause a moment and thank Allah who created all of it. Come on."
+
+Baby Mo held his bread with both hands, took a breath, and said, sincerely:
+
+> *Bismillah.* Then, "Allahumma barik lana fima razaqtana…" — O Allah, bless what You have provided for us.
+
+That first bite tasted the sweetest of his whole life. Not only because of the honey — but because now he knew how long and wondrous the journey of provision was, all the way to his hands.
+
+Next time you eat honey, remember: there are thousands of flowers and a tiny striped hero behind it. Masha'Allah. 🐝`,
+    },
+    anchor: { type: "doa", slug: "sebelum-makan" },
+    takeaway: {
+      id: "Satu sendok madu butuh ribuan bunga dan kerja keras seekor lebah (yang Allah sebut dalam Surah An-Nahl). Sebelum makan, kita berhenti sejenak dan berterima kasih atas perjalanan panjang rezeki.",
+      en: "One spoon of honey takes thousands of flowers and a bee's hard work (which Allah names in Surah An-Nahl). Before eating, we pause and give thanks for provision's long journey.",
+    },
+    tags: ["adab-makan", "syukur", "fakta-seru", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "semut-kecil-yang-kuat",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-thank-you.png",
+    video: "X6ZGk_e7A00",
+    published: "2026-05-13",
+    title: {
+      id: "Semut Kecil yang Kuat",
+      en: "The Mighty Little Ant",
+    },
+    hook: {
+      id: "Sebutir remah jatuh dari piring Baby Ais. Lalu datanglah seekor semut — dan sebuah pelajaran besar tentang kekuatan, kerja sama, dan ucapan terima kasih.",
+      en: "A crumb falls from Baby Ais's plate. Then comes an ant — and a big lesson about strength, teamwork, and saying thank you.",
+    },
+    body: {
+      id: `Baby Mo dan Baby Ais baru saja selesai makan. Piring mereka hampir bersih — kecuali sebutir remah roti yang jatuh ke lantai.
+
+Baby Ais hendak menyapunya, tapi Baby Mo berseru, "Tunggu! Lihat!" Seekor semut kecil datang menghampiri remah itu. Mungil sekali, lebih kecil dari kuku jari. Lalu — hup! — semut itu mengangkat remah yang ukurannya berkali-kali lipat dari badannya sendiri, dan mulai membawanya pergi.
+
+"Wah!" Baby Mo dan Baby Ais ternganga bersamaan. "Kuat sekali!"
+
+Abi yang sedang minum teh ikut menonton. "Tahukah kalian," katanya, "semut itu bisa mengangkat benda yang jauh lebih berat dari tubuhnya. Bayangkan kalau kamu, Mo, bisa mengangkat mobil di atas kepalamu — kira-kira begitulah hebatnya semut!"
+
+Baby Mo langsung mencoba mengangkat kursi, dan… tidak bisa. Ia tertawa. "Semut menang!"
+
+Mereka mengikuti si semut. Ternyata ia tidak sendirian. Ada barisan semut lain, berjalan rapi satu-satu, saling menyapa dengan antena mereka. "Mereka kerja sama," kata Abi. "Tidak ada satu semut pun yang berkata, 'ah, itu bukan tugasku.' Mereka semua saling membantu membawa makanan untuk keluarga besar mereka."
+
+Baby Ais berjongkok dekat-dekat dan berbisik sopan ke arah si semut, "Terima kasih sudah membersihkan remahnya, ya." Baby Mo terkikik, tapi diam-diam ikut mengangguk.
+
+"Dan dengarkan ini," kata Abi, suaranya menjadi lembut. "Di dalam Al-Qur'an ada satu surat bernama An-Naml — artinya 'Semut'. Diceritakan, dulu ada seekor semut yang melihat pasukan Nabi Sulaiman datang. Semut itu cepat-cepat berkata kepada teman-temannya, 'Masuklah ke sarang, supaya kalian tidak terinjak!' Ia menjaga teman-temannya. Dan Nabi Sulaiman — yang bisa memahami bahasa hewan — tersenyum mendengarnya."
+
+"Semut yang baik," bisik Baby Ais.
+
+"Nah," kata Abi, "kita juga baru saja diberi makanan yang mengenyangkan. Pantas sekali kita meniru hati yang bersyukur. Yuk, kita ucapkan terima kasih kepada Allah."
+
+Maka mereka pun membaca doa setelah makan, pelan-pelan:
+
+> *Alhamdulillahilladzii ath'amanaa wa saqaanaa wa ja'alanaa muslimiin.* — Segala puji bagi Allah yang telah memberi kami makan dan minum, dan menjadikan kami muslim.
+
+Setelah itu, Baby Ais dengan hati-hati meletakkan satu remah kecil lagi di dekat barisan semut. "Buat kamu, ya," katanya. "Berbagi itu enak."
+
+Si semut mungil pun melanjutkan perjalanannya, membawa hadiah kecil itu pulang — kuat, rajin, dan tidak pernah lupa bekerja sama.
+
+Hebat ya, makhluk sekecil itu. Masya Allah. 🐜`,
+      en: `Baby Mo and Baby Ais had just finished eating. Their plates were nearly clean — except for one bread crumb that had fallen to the floor.
+
+Baby Ais was about to sweep it up, but Baby Mo cried, "Wait! Look!" A tiny ant came up to the crumb. So tiny, smaller than a fingernail. Then — hup! — the ant lifted the crumb, many times the size of its own body, and started carrying it away.
+
+"Whoa!" Baby Mo and Baby Ais gasped together. "So strong!"
+
+Abi, sipping his tea, watched too. "Did you know," he said, "an ant can lift things far heavier than its own body. Imagine if you, Mo, could lift a car over your head — that's about how mighty an ant is!"
+
+Baby Mo immediately tried to lift a chair, and… couldn't. He laughed. "The ant wins!"
+
+They followed the ant. It turned out it wasn't alone. There was a line of other ants, walking neatly one by one, greeting each other with their antennae. "They work as a team," said Abi. "Not a single ant says, 'ah, that's not my job.' They all help carry food for their big family."
+
+Baby Ais crouched down close and whispered politely to the ant, "Thank you for cleaning up the crumb." Baby Mo giggled, but secretly nodded along.
+
+"And listen to this," said Abi, his voice turning gentle. "In the Qur'an there's a chapter called An-Naml — meaning 'The Ant'. It tells of an ant that saw Prophet Sulaiman's army coming. The ant quickly told its friends, 'Get into your homes, so you won't be trampled!' It protected its friends. And Prophet Sulaiman — who could understand animal speech — smiled when he heard it."
+
+"A kind ant," whispered Baby Ais.
+
+"Now," said Abi, "we too were just given a filling meal. It's only right we copy that grateful heart. Come, let's thank Allah."
+
+So they recited, slowly, the du'a after eating:
+
+> *Alhamdulillahilladhi at'amana wa saqana wa ja'alana muslimin.* — All praise is for Allah who fed us and gave us drink, and made us Muslims.
+
+After that, Baby Ais carefully placed one more little crumb near the line of ants. "This is for you," she said. "Sharing feels nice."
+
+The mighty little ant carried on its journey, taking that small gift home — strong, hard-working, and never forgetting to team up.
+
+Amazing, isn't it, such a tiny creature. Masha'Allah. 🐜`,
+    },
+    anchor: { type: "doa", slug: "sesudah-makan" },
+    takeaway: {
+      id: "Semut kecil bisa mengangkat berkali-kali berat tubuhnya dan selalu bekerja sama (Allah sebut dalam Surah An-Naml). Setelah makan, kita meniru hati yang bersyukur — dan berbagi.",
+      en: "A tiny ant can lift many times its own weight and always teams up (Allah names it in Surah An-Naml). After eating, we copy that grateful heart — and share.",
+    },
+    tags: ["adab-makan", "syukur", "fakta-seru", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "dua-gambar-yang-hampir-sama",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-wow.png",
+    video: "BhLRQP_Nfdk",
+    published: "2026-05-12",
+    title: {
+      id: "Dua Gambar yang Hampir Sama",
+      en: "Two Pictures That Look Almost the Same",
+    },
+    hook: {
+      id: "Dua gambar terlihat persis sama… atau tidak? Baby Mo dan Baby Ais belajar bahwa mata yang sabar dan teliti bisa menemukan keajaiban yang tersembunyi.",
+      en: "Two pictures look exactly the same… or do they? Baby Mo and Baby Ais learn that patient, careful eyes can find hidden wonders.",
+    },
+    body: {
+      id: `Suatu sore yang santai, Abi mengeluarkan dua gambar dan meletakkannya berdampingan. "Coba lihat baik-baik," katanya. "Dua gambar ini hampir sama. Tapi ada lima perbedaan yang bersembunyi. Siapa yang bisa menemukannya?"
+
+"AKU!" seru Baby Mo, langsung menunjuk asal. "Itu! Itu beda!"
+
+Abi tersenyum. "Itu sama, Sayang. Coba lihat lebih pelan."
+
+Baby Mo cemberut sebentar. Ternyata menemukan perbedaan tidak bisa buru-buru. Ia harus melihat pelan-pelan, sabar, dari atas ke bawah. Baby Ais ikut menempelkan wajahnya ke gambar, matanya bergerak teliti seperti detektif kecil.
+
+"Ketemu!" pekik Baby Ais. "Awannya beda! Yang ini ada tiga, yang itu dua!"
+
+"Masya Allah, hebat!" kata Abi. "Itu satu. Empat lagi."
+
+Pelan-pelan mereka menemukannya: bunga yang hilang, warna sepatu yang berbeda, seekor kupu-kupu yang pindah tempat. Tinggal satu lagi. Mereka mencari… dan mencari…
+
+"Kucingnya ngedip!" seru Baby Mo tiba-tiba, sangat yakin. "Di gambar ini matanya buka, di sini merem! Kucingnya ngedip ke Mo!" Abi tertawa terbahak-bahak. "Betuuul! Itu yang kelima! Tapi kucingnya bukan ngedip ke kamu — pelukisnya yang sengaja membuatnya begitu."
+
+Setelah semua perbedaan ketemu, Abi berkata, "Tahukah kalian satu rahasia tentang mata kalian? Setiap menit, mata kita berkedip sekitar lima belas sampai dua puluh kali — dan kita bahkan tidak menyadarinya! Mata itu hadiah yang luar biasa dari Allah. Tapi mata hanya bisa benar-benar 'melihat' kalau kita mau memperhatikan dengan sabar."
+
+"Memperhatikan dengan sabar," ulang Baby Ais pelan.
+
+"Betul," kata Abi. "Banyak keindahan di dunia ini yang tersembunyi di hal-hal kecil. Sayap kupu-kupu yang sisi kiri dan kanannya sama persis. Garis-garis di ujung jarimu yang tidak sama dengan siapa pun di seluruh dunia — bahkan tidak sama dengan Baby Ais, walaupun kalian kembar! Semua itu buatan Allah yang Maha Teliti. Orang yang suka memperhatikan, akan selalu menemukan alasan untuk berkata 'Masya Allah'."
+
+Baby Mo memandang ujung jarinya sendiri, lalu jari Baby Ais. Benar — garisnya beda! Ia ternganga. "Wow."
+
+Sejak hari itu, Baby Mo dan Baby Ais punya permainan kesukaan baru: berjalan pelan-pelan dan mencari "perbedaan" serta keajaiban kecil di mana-mana. Di daun, di awan, di sayap capung. Dan setiap kali menemukan sesuatu yang menakjubkan, mereka berseru bersama:
+
+"Masya Allah!"
+
+Karena ternyata, dunia ini penuh keajaiban — bagi mata yang sabar dan hati yang mau memperhatikan. 👀✨`,
+      en: `One relaxed afternoon, Abi took out two pictures and laid them side by side. "Look carefully," he said. "These two pictures are almost the same. But there are five differences hiding. Who can find them?"
+
+"ME!" cried Baby Mo, pointing at random. "That one! That's different!"
+
+Abi smiled. "That's the same, sweetheart. Look more slowly."
+
+Baby Mo pouted for a second. It turned out finding differences couldn't be rushed. He had to look slowly, patiently, from top to bottom. Baby Ais pressed her face to the picture too, her eyes moving carefully like a little detective.
+
+"Found one!" squealed Baby Ais. "The clouds are different! This one has three, that one has two!"
+
+"Masha'Allah, well done!" said Abi. "That's one. Four to go."
+
+Slowly they found them: a missing flower, a different shoe colour, a butterfly that had moved. Just one left. They searched… and searched…
+
+"The cat winked!" Baby Mo suddenly cried, utterly certain. "In this picture its eyes are open, here they're shut! The cat winked at Mo!" Abi burst out laughing. "Correct! That's the fifth! But the cat didn't wink at you — the artist drew it that way on purpose."
+
+Once all the differences were found, Abi said, "Do you know a secret about your eyes? Every minute, our eyes blink about fifteen to twenty times — and we don't even notice! Eyes are an amazing gift from Allah. But eyes can only truly 'see' if we're willing to pay patient attention."
+
+"Patient attention," repeated Baby Ais softly.
+
+"Exactly," said Abi. "So much beauty in this world is hidden in little things. A butterfly's wings, identical on the left and right. The lines on your fingertips, which match no one else in the whole world — not even Baby Ais, even though you're twins! All made by Allah, the Most Precise. Those who love to notice will always find a reason to say 'Masha'Allah'."
+
+Baby Mo looked at his own fingertip, then at Baby Ais's. It was true — the lines were different! His jaw dropped. "Whoa."
+
+From that day on, Baby Mo and Baby Ais had a new favourite game: walking slowly and hunting for "differences" and little wonders everywhere. In a leaf, in a cloud, on a dragonfly's wing. And every time they found something amazing, they cried out together:
+
+"Masha'Allah!"
+
+Because it turns out, this world is full of wonders — for patient eyes and a heart willing to pay attention. 👀✨`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Mata kita berkedip 15–20 kali tiap menit tanpa kita sadari — hadiah dari Allah. Tapi keindahan dunia hanya terlihat oleh mata yang sabar memperhatikan. Yang suka memperhatikan, selalu menemukan alasan berkata 'Masya Allah'.",
+      en: "Our eyes blink 15–20 times a minute without us noticing — a gift from Allah. But the world's beauty is only seen by patient, attentive eyes. Those who notice always find a reason to say 'Masha'Allah'.",
+    },
+    tags: ["fakta-seru", "sabar", "tadabbur", "buku"],
+    readingTimeMin: 6,
   },
 
 ];
