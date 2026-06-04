@@ -8,6 +8,7 @@ import { getAllCatatan } from "@/lib/content/catatan";
 import { getCeritaThemeSlugs } from "@/lib/content/cerita-themes";
 import { getAllSurah } from "@/lib/content/surah";
 import { getAllProphets } from "@/lib/content/prophets";
+import { getAllAsmaulHusna } from "@/lib/content/asmaul-husna";
 import { allSpotOddSlugs } from "@/lib/games/spot-odd";
 import { allSpotDiffSlugs } from "@/lib/games/spot-difference";
 import { allArchetypeKeys } from "@/lib/games/personality";
@@ -217,6 +218,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/kisah/${p.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const n of getAllAsmaulHusna()) {
+      out.push({
+        url: url(locale, `/asmaul-husna/${n.slug}`),
+        lastModified: now,
+        changeFrequency: "yearly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/asmaul-husna/${n.slug}`)]),
           ),
         },
       });

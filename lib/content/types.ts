@@ -288,9 +288,15 @@ export type Surah = {
 export type AsmaulHusna = {
   /** 1–99 */
   number: number;
+  /** URL slug, e.g. "ar-rahman" */
+  slug: string;
   arabic: string;
   transliteration: string;
   meaning: Record<Locale, string>;
+  /** Warm, kid-friendly reflection on what the name means for us. */
+  explanation: Record<Locale, string>;
+  /** A concrete way for a parent to share the name with a child. */
+  forKids: Record<Locale, string>;
 };
 
 /**

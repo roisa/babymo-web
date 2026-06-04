@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, graph } from "@/lib/seo/schemas";
+import { breadcrumbSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllAsmaulHusna } from "@/lib/content/asmaul-husna";
 
 export async function generateStaticParams() {
@@ -73,28 +73,30 @@ export default async function AsmaulHusnaPage({
 
         <ol className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {names.map((n) => (
-            <li
-              key={n.number}
-              className="flex items-center gap-4 rounded-[18px] border border-hairline bg-paper p-4"
-            >
-              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brave-soft text-[13px] font-semibold text-brave-deep">
-                {n.number}
-              </span>
-              <div className="min-w-0 flex-1">
-                <div className="flex items-baseline justify-between gap-2">
-                  <span className="text-[13px] font-semibold text-ink">
-                    {n.transliteration}
-                  </span>
-                  <span
-                    dir="rtl"
-                    lang="ar"
-                    className="font-arabic text-[22px] leading-none text-sage-deep"
-                  >
-                    {n.arabic}
-                  </span>
+            <li key={n.number}>
+              <Link
+                href={pathFor(l, `/asmaul-husna/${n.slug}`)}
+                className="lift tap group flex h-full items-center gap-4 rounded-[18px] border border-hairline bg-paper p-4 hover:border-brave/40"
+              >
+                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-brave-soft text-[13px] font-semibold text-brave-deep">
+                  {n.number}
+                </span>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-baseline justify-between gap-2">
+                    <span className="text-[13px] font-semibold text-ink group-hover:text-brave-deep">
+                      {n.transliteration}
+                    </span>
+                    <span
+                      dir="rtl"
+                      lang="ar"
+                      className="font-arabic text-[22px] leading-none text-sage-deep"
+                    >
+                      {n.arabic}
+                    </span>
+                  </div>
+                  <p className="mt-1 text-[13px] text-whisper">{n.meaning[l]}</p>
                 </div>
-                <p className="mt-1 text-[13px] text-whisper">{n.meaning[l]}</p>
-              </div>
+              </Link>
             </li>
           ))}
         </ol>
@@ -114,6 +116,14 @@ export default async function AsmaulHusnaPage({
             { name: dict.nav.home, path: "/" },
             { name: "Asmaul Husna", path: "/asmaul-husna" },
           ]),
+          itemListSchema(
+            l,
+            l === "id" ? "99 Asmaul Husna" : "The 99 Names of Allah",
+            names.map((n) => ({
+              name: `${n.transliteration} — ${n.meaning[l]}`,
+              url: absoluteUrl(l, `/asmaul-husna/${n.slug}`),
+            })),
+          ),
         )}
       />
     </>
