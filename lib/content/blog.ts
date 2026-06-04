@@ -4625,6 +4625,403 @@ export const blogPosts: BlogPost[] = [
     readingTimeMin: 8,
     author: "tim-baby-mo",
   },
+
+  // ═════════════════════════════════════════════════════════════════
+  //  Parenting INSIGHT essays (reflective, not how-to) — "Bacaan untuk
+  //  Orang Tua". Warm, shareable, Islamic lens. Added 2026-06.
+  // ═════════════════════════════════════════════════════════════════
+  {
+    slug: "anak-sedang-mengalami-masa-sulit",
+    title: {
+      id: "Anakmu Bukan Memberi Masa Sulit — Ia Sedang Mengalami Masa Sulit",
+      en: "Your Child Isn't Giving You a Hard Time — They're Having a Hard Time",
+    },
+    excerpt: {
+      id: "Satu pergeseran cara pandang yang mengubah hampir semua hal: tangisan dan amukan kecil itu bukan serangan kepada kita, melainkan tanda bahwa hati kecilnya sedang kewalahan.",
+      en: "One shift in how we see it changes almost everything: the meltdown isn't an attack on us — it's a small heart that's overwhelmed.",
+    },
+    body: {
+      id: `<p>Ada satu kalimat yang, ketika benar-benar Abi pahami, mengubah cara Abi menemani anak yang sedang menangis: <strong>anak bukan sedang memberi kita masa sulit — ia sedang mengalami masa sulit.</strong></p>
+
+<p>Bedanya halus, tapi besar. Kalimat pertama membuat kita merasa diserang, lalu membela diri. Kalimat kedua membuat kita melihat seorang manusia kecil yang kewalahan, lalu mendekat.</p>
+
+<h2>Yang sebenarnya terjadi di kepala kecil itu</h2>
+
+<p>Bagian otak yang mengatur emosi — yang membuat orang dewasa bisa menahan diri, menarik napas, dan berkata "tidak apa-apa" — pada anak usia dua-tiga tahun belum selesai dibangun. Itu bukan kenakalan. Itu konstruksi yang belum jadi.</p>
+
+<p>Maka ketika anak menjerit di lantai toko, ia tidak sedang menyusun rencana untuk mempermalukan kita. Ia benar-benar tidak punya rem yang kita punya. Satu-satunya rem yang ia punya, untuk sementara, adalah <em>rem kita</em>. Kalau kita ikut meledak, ada dua orang yang badai. Kalau kita tetap tenang, ia punya pegangan.</p>
+
+<h2>Kelembutan bukan kelemahan</h2>
+
+<p>Kita kadang takut bahwa bersikap lembut berarti memanjakan. Padahal Rasulullah ﷺ — manusia paling tegas dalam prinsip — adalah manusia paling lembut kepada anak-anak.</p>
+
+<blockquote>"Sesungguhnya Allah Maha Lembut dan mencintai kelembutan dalam segala urusan." (HR. Bukhari & Muslim)</blockquote>
+
+<p>Kelembutan di sini bukan berarti membiarkan. Batas tetap ada — mainan tetap tidak dibeli, waktu tidur tetap datang. Yang berubah hanya <em>nada</em>-nya: dari melawan menjadi menemani. "Adik lagi marah, ya. Umi temani sampai reda." Lalu diam, hadir, menunggu badainya lewat.</p>
+
+<h2>Apa yang sedang anak pelajari</h2>
+
+<p>Setiap kali kita tetap tenang saat ia tidak, anak belajar sesuatu yang tidak bisa diajarkan lewat kata-kata: <strong>bahwa perasaan sebesar apa pun bisa dilalui, dan ia tidak ditinggalkan saat sedang sulit.</strong> Itu rasa aman yang ia bawa seumur hidup.</p>
+
+<p>Dan diam-diam, kita pun sedang belajar hal yang sama — menahan diri saat marah adalah salah satu bentuk kekuatan yang paling Allah cintai.</p>
+
+<blockquote>"Orang yang kuat bukanlah yang pandai bergulat, tetapi yang mampu menahan dirinya ketika marah." (HR. Bukhari & Muslim)</blockquote>
+
+<h2>Malam ini</h2>
+
+<p>Tidak ada langkah-langkah. Hanya satu pergeseran kecil: lain kali anak "sulit", coba ganti pertanyaan di kepala dari <em>"kenapa dia begini ke aku?"</em> menjadi <em>"apa yang sedang berat untuknya?"</em></p>
+
+<p>Pertanyaan yang berbeda akan membawa kita pada wajah yang berbeda. Dan wajah kita, bagi anak, adalah cuaca seluruh rumahnya.</p>
+
+<p>Bacaan terkait: <a href="/_/doa/ketika-marah/">Doa Ketika Marah</a> · <a href="/_/parenting/tantrum/">Menghadapi Tantrum</a>.</p>`,
+      en: `<p>There's one sentence that, once it truly landed, changed how I sit with a crying child: <strong>a child isn't giving us a hard time — they're having a hard time.</strong></p>
+
+<p>The difference is subtle but enormous. The first makes us feel attacked, so we defend. The second lets us see a small human who is overwhelmed, so we move closer.</p>
+
+<h2>What's really happening in that little head</h2>
+
+<p>The part of the brain that regulates emotion — the part that lets an adult pause, breathe, and say "it's okay" — is, in a two- or three-year-old, still under construction. That's not naughtiness. It's an unfinished build.</p>
+
+<p>So when a child screams on the shop floor, they aren't plotting to embarrass us. They genuinely don't have the brakes we have. The only brakes they have, for now, are <em>ours</em>. If we erupt too, that's two people in a storm. If we stay calm, they have something to hold.</p>
+
+<h2>Gentleness isn't weakness</h2>
+
+<p>We sometimes fear that being gentle means spoiling. Yet the Prophet ﷺ — the firmest of people in principle — was the gentlest of people with children.</p>
+
+<blockquote>"Indeed Allah is Gentle and loves gentleness in all matters." (Bukhari & Muslim)</blockquote>
+
+<p>Gentleness here doesn't mean giving in. The boundary stays — the toy still isn't bought, bedtime still comes. What changes is only the <em>tone</em>: from fighting to accompanying. "You're angry. I'll stay with you until it passes." Then quiet, present, waiting out the storm.</p>
+
+<h2>What the child is learning</h2>
+
+<p>Each time we stay calm while they can't, a child learns something words can't teach: <strong>that even the biggest feeling can be survived, and that they aren't abandoned when things are hard.</strong> That's a security they carry for life.</p>
+
+<p>And quietly, we're learning it too — restraining anger is one of the forms of strength Allah loves most.</p>
+
+<blockquote>"The strong one is not the good wrestler; the strong one is he who controls himself when angry." (Bukhari & Muslim)</blockquote>
+
+<h2>Tonight</h2>
+
+<p>No steps. Just one small shift: next time your child is "difficult", swap the question in your head from <em>"why is he doing this to me?"</em> to <em>"what is hard for him right now?"</em></p>
+
+<p>A different question leads to a different face. And our face, to a child, is the weather of their whole home.</p>
+
+<p>Related reading: <a href="/_/doa/ketika-marah/">Dua When Angry</a> · <a href="/_/parenting/tantrum/">Handling Tantrums</a>.</p>`,
+    },
+    tags: ["parenting", "emosi", "tarbiyah"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    readingTimeMin: 4,
+    author: "salman",
+  },
+  {
+    slug: "anak-belajar-doa-dari-nada",
+    title: {
+      id: "Anak Belajar Doa dari Nada, Sebelum dari Kata",
+      en: "Children Learn Du'a from Tone, Before Words",
+    },
+    excerpt: {
+      id: "Kita sibuk ingin anak hafal. Padahal yang pertama mereka serap bukan teksnya, melainkan suasana — tenang atau buru-buru, hangat atau terpaksa.",
+      en: "We're busy wanting them to memorise. But the first thing they absorb isn't the text — it's the atmosphere: calm or rushed, warm or forced.",
+    },
+    body: {
+      id: `<p>Sebelum anak bisa mengucap satu kata doa, ia sudah lebih dulu hafal sesuatu yang lain: <strong>nada saat doa itu diucapkan.</strong></p>
+
+<p>Telinga bayi mulai bekerja sejak dalam kandungan. Yang ia tangkap dari kita pertama kali bukanlah arti — tapi irama. Tenang atau panik. Lembut atau buru-buru. Doa, bagi anak kecil, mula-mula adalah <em>suara</em>, bukan makna.</p>
+
+<h2>Maka jangan terburu mengejar hafalan</h2>
+
+<p>Wajar kita ingin anak cepat hafal doa sebelum makan, doa tidur, doa naik kendaraan. Tapi kalau pengejaran hafalan itu datang dengan nada tegang — "ayo, yang benar, ulangi!" — anak memang akan hafal teksnya, tapi ia juga hafal bahwa doa itu terasa seperti ujian.</p>
+
+<p>Sebaliknya, kalau setiap malam ia mendengar doa tidur dibisikkan pelan di telinganya, dengan tangan yang mengelus, ia akan menyimpan doa itu sebagai sesuatu yang <em>aman dan hangat</em>. Maknanya menyusul nanti. Rasanya yang ditanam dulu.</p>
+
+<h2>Rumah punya "suara latar"</h2>
+
+<p>Setiap rumah punya bunyi latar yang anak hirup tanpa sadar. Pada sebagian rumah, itu suara televisi. Pada rumah yang lain, itu "bismillah" sebelum makan, "alhamdulillah" setelah bersin, gumaman doa kecil yang berulang sepanjang hari.</p>
+
+<p>Anak tidak menghafal suara latar itu dengan sengaja. Ia menyerapnya, seperti menyerap bahasa ibu. Itulah kenapa anak yang tumbuh di rumah yang sering menyebut Allah akan menyebut Allah dengan wajar — bukan karena disuruh, tapi karena itulah bunyi rumahnya.</p>
+
+<h2>Yang menanam bukan ingatan anak</h2>
+
+<p>Ini melegakan: keberhasilan tidak diukur dari apakah <em>anak</em> ingat hari ini. Yang menanam adalah <em>pengulangan kita</em>. Malam demi malam, satu kalimat yang sama, sampai ia masuk ke gema rumah — dan suatu hari, ke mulutnya sendiri.</p>
+
+<p>Konsistensi mengalahkan intensitas. Tidak perlu "mengajarkan doa dengan benar" dalam satu sesi serius. Cukup ucapkan, pelan, setiap hari.</p>
+
+<h2>Malam ini</h2>
+
+<p>Coba satu hal: malam ini, saat membacakan doa tidur, turunkan suara serendah bisikan. Tidak untuk mengajari. Hanya supaya anak mengenal — bahwa di rumah ini, hari ditutup dengan suara yang tenang dan nama Allah yang lembut.</p>
+
+<p>Bacaan terkait: <a href="/_/doa/sebelum-tidur/">Doa Sebelum Tidur</a> · <a href="/_/cerita/bismillah-dulu/">Cerita: Bismillah Dulu</a>.</p>`,
+      en: `<p>Before a child can say a single word of a du'a, they have already memorised something else: <strong>the tone in which it was said.</strong></p>
+
+<p>A baby's ears work from inside the womb. The first thing they catch from us isn't meaning — it's rhythm. Calm or panicked. Gentle or rushed. A du'a, to a small child, is at first a <em>sound</em>, not a meaning.</p>
+
+<h2>So don't rush the memorising</h2>
+
+<p>It's natural to want a child to quickly memorise the du'a before eating, before sleep, for the car. But if that chase comes with a tense tone — "come on, properly, again!" — the child will memorise the text, yes, but they'll also memorise that the du'a feels like a test.</p>
+
+<p>Whereas if every night they hear the sleep du'a whispered softly in their ear, with a hand stroking them, they'll store it as something <em>safe and warm</em>. The meaning follows later. The feeling is planted first.</p>
+
+<h2>A home has a "background sound"</h2>
+
+<p>Every home has a background hum the child breathes in without noticing. In some homes it's the television. In others it's "bismillah" before eating, "alhamdulillah" after a sneeze, the murmur of small du'as repeated through the day.</p>
+
+<p>A child doesn't memorise that background on purpose. They absorb it, like absorbing a mother tongue. That's why a child raised in a home that often mentions Allah will mention Allah naturally — not because they're told to, but because that's the sound of their home.</p>
+
+<h2>What plants it isn't the child's memory</h2>
+
+<p>This is a relief: success isn't measured by whether the <em>child</em> remembers today. What plants it is <em>our repetition</em>. Night after night, the same sentence, until it becomes the echo of the home — and one day, the sound of their own voice.</p>
+
+<p>Consistency beats intensity. You don't need to "teach the du'a correctly" in one serious session. Just say it, softly, every day.</p>
+
+<h2>Tonight</h2>
+
+<p>Try one thing: tonight, as you read the sleep du'a, lower your voice to a whisper. Not to teach. Just so the child knows — that in this home, the day closes with a calm sound and Allah's gentle name.</p>
+
+<p>Related reading: <a href="/_/doa/sebelum-tidur/">Dua Before Sleeping</a> · <a href="/_/cerita/bismillah-dulu/">Story: Bismillah First</a>.</p>`,
+    },
+    tags: ["parenting", "tarbiyah", "doa"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    readingTimeMin: 4,
+    author: "salman",
+  },
+  {
+    slug: "orang-tua-yang-mau-memperbaiki",
+    title: {
+      id: "Kamu Tak Perlu Jadi Orang Tua Sempurna — Cukup yang Mau Memperbaiki",
+      en: "You Don't Need to Be a Perfect Parent — Just One Who Repairs",
+    },
+    excerpt: {
+      id: "Yang membentuk anak bukan orang tua yang tak pernah salah, melainkan orang tua yang berani berkata 'maaf' setelah salah. Anak belajar tobat dengan melihatnya, bukan mendengarnya.",
+      en: "What shapes a child isn't a parent who never errs, but one brave enough to say 'sorry' after they do. Children learn repentance by seeing it, not hearing about it.",
+    },
+    body: {
+      id: `<p>Banyak orang tua diam-diam memikul beban yang tak mungkin: menjadi sempurna. Tidak boleh marah, tidak boleh salah, tidak boleh kehilangan kesabaran. Lalu ketika — sebagaimana semua manusia — kita gagal, kita dihantui rasa bersalah.</p>
+
+<p>Tapi anak tidak butuh orang tua yang sempurna. Anak butuh orang tua yang <strong>mau memperbaiki.</strong></p>
+
+<h2>Yang anak ingat bukan kesalahannya</h2>
+
+<p>Suatu sore mungkin kita meninggikan suara lebih dari yang kita mau. Wajah anak berubah. Dada kita sesak. Di titik itu, yang akan paling membekas pada anak bukanlah suara tinggi tadi — melainkan apa yang terjadi <em>setelahnya</em>.</p>
+
+<p>Kalau kita berlutut sejajar dengan matanya dan berkata, "Maaf ya, tadi Abi terlalu keras. Abi sedang lelah, tapi itu bukan salahmu," — anak belajar sesuatu yang berharga: bahwa cinta tidak hilang karena satu kesalahan, dan bahwa orang yang ia hormati pun meminta maaf.</p>
+
+<h2>Memperbaiki adalah sunnah, bukan kelemahan</h2>
+
+<p>Kita sering mengira meminta maaf kepada anak akan menjatuhkan wibawa. Justru sebaliknya. Manusia paling mulia, Rasulullah ﷺ, beristighfar — memohon ampun — puluhan kali setiap hari, padahal beliau ma'shum.</p>
+
+<blockquote>"Demi Allah, sungguh aku beristighfar kepada Allah dan bertaubat kepada-Nya dalam sehari lebih dari tujuh puluh kali." (HR. Bukhari)</blockquote>
+
+<p>Kalau manusia terbaik pun tak berhenti memperbaiki diri, maka mengakui kekeliruan di depan anak bukanlah aib. Itu justru pelajaran tobat yang paling hidup yang bisa kita berikan — bukan lewat ceramah, tapi lewat teladan.</p>
+
+<h2>Anak yang dimaafkan, belajar memaafkan</h2>
+
+<p>Ada lingkaran kecil yang indah di sini. Anak yang sering mendengar orang tuanya berkata "maaf" tumbuh menjadi anak yang ringan berkata "maaf". Anak yang kesalahannya disambut dengan tenang, bukan amarah, tumbuh menjadi anak yang jujur — karena ia tahu mengaku itu aman.</p>
+
+<p>Rumah yang sehat bukan rumah tanpa keretakan. Rumah yang sehat adalah rumah yang tahu cara memperbaiki keretakannya.</p>
+
+<h2>Malam ini</h2>
+
+<p>Kalau hari ini ada momen yang ingin kita ulang dengan lebih baik, tidak terlambat. Sebelum anak tidur, satu kalimat sederhana sudah cukup: "Maaf ya, sayang." Kita tidak sedang menjatuhkan diri. Kita sedang mengajarkan, dengan tubuh kita sendiri, bagaimana seorang mukmin kembali.</p>
+
+<p>Bacaan terkait: <a href="/_/doa/ketika-marah/">Doa Ketika Marah</a> · <a href="/_/parenting/marah-orang-tua/">Saat Orang Tua Marah</a>.</p>`,
+      en: `<p>Many parents quietly carry an impossible weight: to be perfect. Never angry, never wrong, never out of patience. Then when — as all humans do — we fail, we're haunted by guilt.</p>
+
+<p>But a child doesn't need a perfect parent. A child needs a parent who is <strong>willing to repair.</strong></p>
+
+<h2>What the child remembers isn't the mistake</h2>
+
+<p>One afternoon we might raise our voice more than we meant to. The child's face changes. Our chest tightens. At that point, what will mark the child most is not the raised voice — it's what happens <em>afterward</em>.</p>
+
+<p>If we kneel level with their eyes and say, "I'm sorry, I was too harsh just now. I was tired, but that wasn't your fault," — the child learns something precious: that love isn't lost over one mistake, and that even the person they look up to says sorry.</p>
+
+<h2>Repair is sunnah, not weakness</h2>
+
+<p>We often think apologising to a child will undercut our authority. It's the opposite. The noblest of humans, the Prophet ﷺ, sought forgiveness dozens of times a day, though he was sinless.</p>
+
+<blockquote>"By Allah, I seek Allah's forgiveness and turn to Him in repentance more than seventy times a day." (Bukhari)</blockquote>
+
+<p>If even the best of humans never stopped repairing himself, then admitting our error before our child is no shame. It's the most living lesson in repentance we can give — not through a lecture, but through example.</p>
+
+<h2>A forgiven child learns to forgive</h2>
+
+<p>There's a beautiful little loop here. A child who often hears their parents say "sorry" grows up quick to say "sorry". A child whose mistakes are met with calm, not anger, grows up honest — because they know that owning up is safe.</p>
+
+<p>A healthy home isn't one without cracks. A healthy home is one that knows how to repair its cracks.</p>
+
+<h2>Tonight</h2>
+
+<p>If there's a moment today you wish you could redo better, it isn't too late. Before your child sleeps, one simple sentence is enough: "I'm sorry, love." We aren't lowering ourselves. We're teaching, with our own body, how a believer returns.</p>
+
+<p>Related reading: <a href="/_/doa/ketika-marah/">Dua When Angry</a> · <a href="/_/parenting/marah-orang-tua/">When Parents Get Angry</a>.</p>`,
+    },
+    tags: ["parenting", "akhlak", "tarbiyah"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    readingTimeMin: 5,
+    author: "salman",
+  },
+  {
+    slug: "hal-kecil-yang-anak-ingat",
+    title: {
+      id: "Hal-Hal Kecil yang Akan Anak Ingat",
+      en: "The Small Things Your Child Will Remember",
+    },
+    excerpt: {
+      id: "Anak jarang mengingat liburan mahal atau mainan mewah. Yang melekat justru hal-hal kecil yang kita anggap remeh — dan kabar baiknya, hal kecil itu gratis.",
+      en: "Children rarely remember the expensive trips or fancy toys. What stays are the small things we think don't matter — and the good news is, small things are free.",
+    },
+    body: {
+      id: `<p>Kalau kita bertanya kepada orang dewasa, "apa kenangan terindahmu bersama orang tua waktu kecil?", jawabannya hampir tidak pernah liburan mahal atau hadiah besar. Hampir selalu sesuatu yang kecil: bau masakan ibu di pagi hari, ayah yang menunggu di depan pintu, sebuah lagu yang dinyanyikan menjelang tidur.</p>
+
+<p>Ini kabar yang melegakan bagi orang tua yang lelah dan tidak punya banyak uang: <strong>hal-hal yang paling diingat anak justru yang paling sederhana.</strong></p>
+
+<h2>Anak mengukur cinta dengan kehadiran</h2>
+
+<p>Bagi anak kecil, cinta tidak diukur dengan nominal. Ia diukur dengan kehadiran. Lima menit kita duduk di lantai, ikut menyusun balok tanpa memegang ponsel, terasa lebih panjang di hati anak daripada satu jam di tempat bermain mahal sambil kita sibuk.</p>
+
+<p>Rasulullah ﷺ memberi kita teladan yang menakjubkan dalam hal-hal kecil ini. Beliau memanjangkan sujud karena cucunya naik ke punggungnya. Beliau menjawab salam anak-anak. Beliau bercanda dengan mereka. Hal-hal yang dunia anggap "tidak penting" justru beliau muliakan.</p>
+
+<blockquote>"Bukan termasuk golongan kami orang yang tidak menyayangi yang kecil di antara kami." (HR. Tirmidzi)</blockquote>
+
+<h2>Daftar yang tak butuh biaya</h2>
+
+<p>Tanpa menjadikannya perintah, ini sekadar pengingat tentang hal-hal kecil yang akan tinggal lama di hati anak: menyebut namanya dengan lembut saat membangunkannya; menatap matanya saat ia bercerita hal yang menurut kita sepele; tertawa atas leluconnya yang tidak lucu; mendoakannya dengan suara pelan saat ia hampir tidur; berkata "Abi/Umi senang jadi orang tuamu".</p>
+
+<p>Tidak satu pun dari itu butuh uang. Semuanya butuh sesuatu yang lebih langka: <em>perhatian yang utuh</em>.</p>
+
+<h2>Yang sebenarnya kita bangun</h2>
+
+<p>Setiap momen kecil yang hangat adalah satu batu bata. Anak tidak akan ingat batu batanya satu per satu. Tapi suatu hari ia akan berdiri di dalam bangunan itu — rasa bahwa ia dicintai, layak, dan aman — tanpa tahu persis kapan bangunan itu didirikan.</p>
+
+<p>Itu didirikan pada hari-hari biasa yang kita kira tidak istimewa.</p>
+
+<h2>Hari ini</h2>
+
+<p>Pilih satu momen kecil hari ini dan hadir sepenuhnya di dalamnya — tanpa ponsel, tanpa terburu. Mungkin itulah momen yang, dua puluh tahun lagi, anak ceritakan sebagai kenangan terindahnya.</p>
+
+<p>Bacaan terkait: <a href="/_/parenting/bonding-orangtua/">Bonding dengan Anak</a> · <a href="/_/hadith/main-bersama-anak/">Hadis: Bermain Bersama Anak</a>.</p>`,
+      en: `<p>If you ask an adult, "what's your loveliest memory with your parents as a child?", the answer is almost never an expensive holiday or a big gift. It's almost always something small: the smell of mother's cooking in the morning, a father waiting at the door, a song sung at bedtime.</p>
+
+<p>This is reassuring news for tired parents without much money: <strong>the things a child remembers most are the simplest ones.</strong></p>
+
+<h2>A child measures love by presence</h2>
+
+<p>To a small child, love isn't measured in money. It's measured in presence. Five minutes of us sitting on the floor, building blocks with no phone in hand, feels longer in a child's heart than an hour at an expensive playground while we're distracted.</p>
+
+<p>The Prophet ﷺ gives us astonishing example in these small things. He lengthened his prostration because his grandson had climbed on his back. He returned children's greetings. He joked with them. The things the world calls "unimportant" he honoured.</p>
+
+<blockquote>"He is not one of us who does not show mercy to our young ones." (Tirmidhi)</blockquote>
+
+<h2>A list that costs nothing</h2>
+
+<p>Without making it a command, just a reminder of small things that linger long in a child's heart: saying their name softly as you wake them; meeting their eyes when they tell you something you find trivial; laughing at their unfunny joke; praying over them in a low voice as they drift to sleep; saying "I'm glad to be your parent".</p>
+
+<p>Not one of these needs money. All of them need something rarer: <em>undivided attention</em>.</p>
+
+<h2>What we're really building</h2>
+
+<p>Every small warm moment is one brick. A child won't remember the bricks one by one. But one day they'll stand inside that building — a sense of being loved, worthy, and safe — without knowing exactly when it was built.</p>
+
+<p>It was built on the ordinary days we thought weren't special.</p>
+
+<h2>Today</h2>
+
+<p>Pick one small moment today and be fully present in it — no phone, no rushing. It might be the very moment that, twenty years from now, your child tells as their loveliest memory.</p>
+
+<p>Related reading: <a href="/_/parenting/bonding-orangtua/">Bonding with Your Child</a> · <a href="/_/hadith/main-bersama-anak/">Hadith: Playing with Children</a>.</p>`,
+    },
+    tags: ["parenting", "keluarga", "kasih-sayang"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    readingTimeMin: 4,
+    author: "salman",
+  },
+  {
+    slug: "ketika-kita-marah-pada-anak",
+    title: {
+      id: "Ketika Kita Marah pada Anak: Apa yang Sebenarnya Terjadi di Hati Kita",
+      en: "When We Get Angry at Our Children: What's Really Happening in Our Hearts",
+    },
+    excerpt: {
+      id: "Sering kali marah kita pada anak bukan tentang anak sama sekali — tapi tentang lelah, kewalahan, dan hal-hal yang kita pendam. Menyadarinya adalah separuh jalan menuju tenang.",
+      en: "Often our anger at our children isn't about the child at all — it's about exhaustion, overwhelm, and things we've held in. Noticing that is half the way to calm.",
+    },
+    body: {
+      id: `<p>Ada rahasia kecil yang jarang diakui: sering kali, ledakan marah kita pada anak terlalu besar untuk pemicunya. Susu yang tumpah tidak sepadan dengan amarah yang keluar. Maka pertanyaan jujurnya bukan "kenapa anak ini menyebalkan?" melainkan <strong>"kenapa cangkir hatiku sudah sepenuh ini sebelum susu itu tumpah?"</strong></p>
+
+<h2>Marah sering kali bukan tentang anak</h2>
+
+<p>Anak kecil yang menumpahkan susu hampir tidak pernah jadi penyebab sebenarnya. Ia hanya tetes terakhir. Cangkirnya sudah penuh sejak tadi — oleh lelah, kurang tidur, pekerjaan yang menumpuk, atau hal yang sama sekali tidak ia tahu.</p>
+
+<p>Menyadari ini bukan untuk menambah rasa bersalah. Justru sebaliknya: ketika kita tahu marah kita lebih banyak tentang <em>kita</em> daripada tentang <em>dia</em>, kita berhenti melihat anak sebagai musuh, dan mulai melihat diri kita sebagai orang yang butuh istirahat.</p>
+
+<h2>Nasihat yang sangat singkat</h2>
+
+<p>Seseorang pernah datang kepada Rasulullah ﷺ meminta nasihat. Beliau menjawab dengan satu kalimat. Orang itu meminta lagi, dan lagi. Jawabannya tetap sama:</p>
+
+<blockquote>"Jangan marah." (HR. Bukhari)</blockquote>
+
+<p>Para ulama menjelaskan: maknanya bukan "jangan pernah merasa marah" — perasaan itu manusiawi. Maknanya adalah "jangan <em>bertindak</em> dari dalam marahmu". Beri jeda antara rasa dan reaksi. Di jeda sekecil itulah seluruh akhlak kita diuji.</p>
+
+<h2>Jeda yang menyelamatkan</h2>
+
+<p>Sunnah memberi kita alat-alat yang sangat praktis untuk jeda itu: mengucap ta'awudz (memohon perlindungan dari setan), berpindah posisi — jika berdiri maka duduk, mengambil wudhu, atau sekadar diam dan menarik napas sebelum bicara.</p>
+
+<p>Bukan karena anak tidak perlu diluruskan. Tapi karena teguran yang keluar dari hati yang tenang menyembuhkan, sedangkan teguran yang keluar dari hati yang meledak melukai — dan sering kali harus kita sesali nanti.</p>
+
+<h2>Lembut pada diri sendiri</h2>
+
+<p>Orang tua yang terus-menerus menghakimi dirinya sendiri akan kehabisan tenaga untuk lembut kepada anak. Maka termasuk bagian dari mendidik anak adalah merawat hati kita sendiri: cukup tidur, meminta bantuan, dan tidak menuntut diri menjadi sempurna.</p>
+
+<p>Anak tidak butuh orang tua yang tak pernah marah. Ia butuh orang tua yang mengenali marahnya, lalu memilih untuk tetap lembut — dan ketika gagal, kembali memperbaiki.</p>
+
+<h2>Malam ini</h2>
+
+<p>Sebelum tidur, tanyakan pada diri dengan lembut, bukan dengan hakim: "Apa yang membuat cangkirku penuh hari ini?" Kadang, sekadar menamai bebannya sudah membuatnya sedikit lebih ringan untuk besok.</p>
+
+<p>Bacaan terkait: <a href="/_/doa/ketika-marah/">Doa Ketika Marah</a> · <a href="/_/parenting/marah-orang-tua/">Saat Orang Tua Marah</a>.</p>`,
+      en: `<p>There's a small secret rarely admitted: often, our angry outburst at a child is too big for its trigger. Spilled milk doesn't equal the anger that comes out. So the honest question isn't "why is this child so annoying?" but <strong>"why was the cup of my heart already this full before the milk spilled?"</strong></p>
+
+<h2>Anger often isn't about the child</h2>
+
+<p>A small child spilling milk is almost never the real cause. They're just the last drop. The cup was already full — with exhaustion, lost sleep, piled-up work, or something they know nothing about.</p>
+
+<p>Noticing this isn't to add guilt. Quite the opposite: once we know our anger is more about <em>us</em> than about <em>them</em>, we stop seeing the child as an enemy and start seeing ourselves as someone who needs rest.</p>
+
+<h2>A very short piece of advice</h2>
+
+<p>A man once came to the Prophet ﷺ asking for advice. He answered with one sentence. The man asked again, and again. The answer stayed the same:</p>
+
+<blockquote>"Do not get angry." (Bukhari)</blockquote>
+
+<p>The scholars explain: it doesn't mean "never feel anger" — the feeling is human. It means "don't <em>act</em> from within your anger". Put a gap between the feeling and the reaction. In that tiny gap, all of our character is tested.</p>
+
+<h2>The gap that saves</h2>
+
+<p>The sunnah gives us very practical tools for that gap: saying the ta'awwudh (seeking refuge from Shaytan), changing position — if standing, sit — making wudu, or simply going quiet and taking a breath before speaking.</p>
+
+<p>Not because the child never needs correcting. But because correction that comes from a calm heart heals, while correction that comes from an exploding heart wounds — and often has to be regretted later.</p>
+
+<h2>Gentle with yourself</h2>
+
+<p>A parent who constantly judges themselves will run out of energy to be gentle with a child. So part of raising a child is tending to our own heart: enough sleep, asking for help, and not demanding perfection of ourselves.</p>
+
+<p>A child doesn't need a parent who never gets angry. They need a parent who notices their anger, then chooses to stay gentle — and when they fail, returns to repair.</p>
+
+<h2>Tonight</h2>
+
+<p>Before sleep, ask yourself gently, not as a judge: "What filled my cup today?" Sometimes, simply naming the weight makes it a little lighter for tomorrow.</p>
+
+<p>Related reading: <a href="/_/doa/ketika-marah/">Dua When Angry</a> · <a href="/_/parenting/marah-orang-tua/">When Parents Get Angry</a>.</p>`,
+    },
+    tags: ["parenting", "emosi", "akhlak"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    readingTimeMin: 5,
+    author: "salman",
+  },
 ];
 
 export function getAllBlogPosts(): BlogPost[] {
