@@ -26,6 +26,8 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
 import { MascotGreeting } from "@/components/MascotGreeting";
 import { MascotPoses } from "@/components/MascotPoses";
+import { BrandMission } from "@/components/BrandMission";
+import { YouTubeBand } from "@/components/YouTubeBand";
 import { StreakBadge } from "@/components/StreakBadge";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
@@ -365,6 +367,11 @@ export default async function HomePage({
           </div>
         </section>
 
+        {/* ── WHY BABY MO (brand mission teaser) ── */}
+        <Reveal>
+          <BrandMission locale={l} />
+        </Reveal>
+
         {/* ── GAMES ── */}
         <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
           <Reveal>
@@ -493,7 +500,10 @@ export default async function HomePage({
           </Reveal>
         </section>
 
-        {/* ── WATCH TOGETHER WITH BABY MO (auto-fed from YouTube) ── */}
+        {/* ── BABY MO ON YOUTUBE (brand band) + latest videos ── */}
+        <Reveal>
+          <YouTubeBand locale={l} />
+        </Reveal>
         <Reveal>
           <VideoSection locale={l} />
         </Reveal>
