@@ -333,6 +333,29 @@ export type BacaanSholat = {
 };
 
 /**
+ * One adhkar in the morning/evening remembrance (Al-Ma'tsurat). Reuses
+ * SholatPart for its recitation(s). Quranic parts (Ayat Kursi) use
+ * dataset-verified text; the 3 Quls + Sayyidul Istighfar cross-link to
+ * their existing pages instead of being duplicated.
+ */
+export type DzikirItem = {
+  slug: string;
+  order: number;
+  /** When it is read. Most are read both morning and evening. */
+  time: "pagi" | "petang" | "keduanya";
+  /** How many times, e.g. "3×", "7×", "100×". */
+  count?: string;
+  title: Record<Locale, string>;
+  parts: SholatPart[];
+  /** Fadhilah / why we read it — also the kid-friendly note. */
+  benefit: Record<Locale, string>;
+  source?: string;
+  crossSurah?: string[];
+  crossDoa?: string;
+  published: string;
+};
+
+/**
  * An item in the Puasa / Ramadan hub — a niat, doa, sunnah-prayer niat,
  * or an amalan note. Reuses SholatPart for its recitation(s).
  */

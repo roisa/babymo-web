@@ -313,6 +313,30 @@ const entries = [];
   }
 }
 
+// ── Dzikir Pagi & Petang (Al-Ma'tsurat) ─────────────────────────────
+{
+  const src = read("lib/content/dzikir.ts");
+  for (const { slug, block } of iterateBlocks(src, "dzikir")) {
+    const title = pluckBilingual(block, "title");
+    const benefit = pluckBilingual(block, "benefit");
+    if (!title.id) continue;
+    const translits = [...block.matchAll(/transliteration:\s*\n?\s*"((?:[^"\\]|\\.)*)"/g)]
+      .map((m) => unesc(m[1]))
+      .join(" ");
+    entries.push({
+      type: "dzikir",
+      slug,
+      url: `/dzikir/${slug}`,
+      title,
+      excerpt: benefit,
+      keywords: {
+        id: keywordsOf(title.id, "dzikir pagi petang al-matsurat", benefit.id, translits),
+        en: keywordsOf(title.en, "morning evening dhikr al-mathurat", benefit.en, translits),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");
