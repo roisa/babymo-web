@@ -353,6 +353,10 @@ export type Catatan = {
    *  page) embedded at the end of the story and emitted as VideoObject
    *  schema — cross-links the written story with the video for SEO. */
   video?: string;
+  /** Optional surah slugs this story relates to (e.g. the Quls recited
+   *  before sleep) — surfaces the story as "Cerita terkait" on those
+   *  /surat pages. */
+  surahs?: string[];
   /** ISO date string */
   published: string;
   title: Record<Locale, string>;

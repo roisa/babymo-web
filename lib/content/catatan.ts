@@ -20,6 +20,7 @@ import type { Catatan } from "./types";
 export const catatanList: Catatan[] = [
   {
     slug: "bisikan-jam-tiga-pagi",
+    surahs: ["al-fatihah"],
     child: "mo",
     pov: "abi",
     pose: "baby-mo-pose-09.png",
@@ -608,6 +609,7 @@ The cat left after a few minutes. But Baby Ais kept staring at her own hand, as 
   // ───────────────────────────── BEDTIME / FEELINGS ─────────────────────────────
   {
     slug: "mo-takut-gelap-lampu-kecil",
+    surahs: ["al-falaq", "an-nas"],
     child: "mo",
     pov: "abi",
     pose: "baby-mo-pose-09.png",
@@ -1211,6 +1213,7 @@ That little hand is still learning. But now he knows his hands have a better job
 
   {
     slug: "tiga-syukur-sebelum-tidur",
+    surahs: ["al-ikhlas"],
     child: "both",
     pov: "abi",
     pose: "baby-mo-pose-09.png",
@@ -1389,6 +1392,7 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   // ═══════════════════════════════════════════════════════════════════
   {
     slug: "bismillah-dulu",
+    surahs: ["al-fatihah"],
     kind: "story",
     child: "mo",
     pose: "baby-mo-idea.png",
@@ -1791,6 +1795,7 @@ That night, Baby Mo and Baby Ais drifted to sleep beneath a heart-ceiling full o
 
   {
     slug: "keberanian-sebesar-biji-sawi",
+    surahs: ["al-falaq", "an-nas"],
     kind: "story",
     child: "mo",
     pose: "baby-mo-alright.png",
@@ -2086,6 +2091,7 @@ That night, Baby Mo sneezed a little. But he smiled under his blanket. Because s
 
   {
     slug: "selamat-tidur-sayang",
+    surahs: ["al-ikhlas", "al-falaq", "an-nas"],
     kind: "story",
     child: "both",
     pose: "baby-mo-pose-09.png",
@@ -2168,6 +2174,7 @@ Goodnight, Baby Mo. Goodnight, Baby Ais. See you in a brand-new morning, insha'A
   // ═══════════════════════════════════════════════════════════════════
   {
     slug: "bulan-yang-mengikuti-baby-mo",
+    surahs: ["al-ikhlas", "al-falaq", "an-nas"],
     kind: "story",
     child: "both",
     pose: "baby-mo-pose-09.png",
@@ -3039,4 +3046,10 @@ export function getCatatanByAnchor(
   return getAllCatatan().filter(
     (c) => c.anchor.type === type && c.anchor.slug === slug,
   );
+}
+
+/** Stories that reference a given surah (via the optional `surahs` field) —
+ *  used for "Cerita terkait" on /surat pages. Newest first. */
+export function getCatatanBySurah(slug: string): Catatan[] {
+  return getAllCatatan().filter((c) => c.surahs?.includes(slug));
 }
