@@ -9,6 +9,7 @@ import { getCeritaThemeSlugs } from "@/lib/content/cerita-themes";
 import { getAllSurah } from "@/lib/content/surah";
 import { getAllProphets } from "@/lib/content/prophets";
 import { getAllAsmaulHusna } from "@/lib/content/asmaul-husna";
+import { getAllBacaanSholat } from "@/lib/content/bacaan-sholat";
 import { allSpotOddSlugs } from "@/lib/games/spot-odd";
 import { allSpotDiffSlugs } from "@/lib/games/spot-difference";
 import { allArchetypeKeys } from "@/lib/games/personality";
@@ -37,6 +38,7 @@ const STATIC_PATHS = [
   // Content indexes
   "/doa",
   "/doa/kategori",
+  "/sholat",
   "/hadith",
   "/hadith/tema",
   "/parenting",
@@ -231,6 +233,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/asmaul-husna/${n.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const b of getAllBacaanSholat()) {
+      out.push({
+        url: url(locale, `/sholat/${b.slug}`),
+        lastModified: new Date(b.published),
+        changeFrequency: "monthly",
+        priority: 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/sholat/${b.slug}`)]),
           ),
         },
       });

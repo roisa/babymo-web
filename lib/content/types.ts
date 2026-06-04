@@ -300,6 +300,39 @@ export type AsmaulHusna = {
 };
 
 /**
+ * One recited text within a prayer step (e.g. one of the five niat,
+ * or one part of the post-prayer dhikr sequence).
+ */
+export type SholatPart = {
+  label?: Record<Locale, string>;
+  arabic: string;
+  transliteration: string;
+  translation: Record<Locale, string>;
+  /** e.g. "3×" — how many times it is repeated. */
+  repeat?: string;
+};
+
+/**
+ * A step of the daily prayer — its recitation(s), when it is read, and
+ * a child-friendly note. The intent/niat, movements (rukun) and dhikr.
+ */
+export type BacaanSholat = {
+  slug: string;
+  /** Order within the prayer flow, for prev/next + index sorting. */
+  order: number;
+  category: "niat" | "gerakan" | "doa" | "dzikir";
+  title: Record<Locale, string>;
+  /** Short positioning line, e.g. "Dibaca setelah takbiratul ihram". */
+  subtitle?: Record<Locale, string>;
+  parts: SholatPart[];
+  when: Record<Locale, string>;
+  note?: Record<Locale, string>;
+  /** When the step *is* a surah, link to it instead of reproducing it. */
+  crossSurah?: string;
+  published: string;
+};
+
+/**
  * Prophet story (Kisah 25 Nabi) — short, age-appropriate retellings
  * of the 25 prophets named in the Qur'an.
  */
