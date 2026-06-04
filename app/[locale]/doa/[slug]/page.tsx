@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor, siteUrl } from "@/lib/i18n/config";
+import { type Locale, absoluteUrl, isLocale, locales, pathFor, siteUrl } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -14,8 +14,7 @@ import { VerificationBadge } from "@/components/VerificationBadge";
 import { Byline } from "@/components/Byline";
 import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
-import { getCatatanByAnchor } from "@/lib/content/catatan";
-import { posePath } from "@/lib/games/poses";
+import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
 
 export async function generateStaticParams() {
@@ -64,7 +63,6 @@ export default async function DoaDetail({
   if (!doa) notFound();
   const dict = getDictionary(l);
   const related = getRelatedDoa(slug);
-  const relatedStories = getCatatanByAnchor("doa", slug).slice(0, 3);
 
   const copyText = `${doa.arabic}\n\n${doa.transliteration}\n\n${doa.translation[l]}\n\n— ${doa.source.reference}`;
 
@@ -212,47 +210,7 @@ export default async function DoaDetail({
           </section>
         )}
 
-        {relatedStories.length > 0 && (
-          <section className="mt-14">
-            <h2 className="tracking-display font-serif text-2xl font-medium text-ink">
-              {l === "id" ? "Cerita terkait" : "Related stories"}
-            </h2>
-            <p className="mt-1 text-[14px] text-whisper">
-              {l === "id"
-                ? "Cerita Baby Mo & Baby Ais untuk dibacakan bersama doa ini."
-                : "Baby Mo & Baby Ais stories to read alongside this du'a."}
-            </p>
-            <div className="mt-5 grid gap-4 sm:grid-cols-2">
-              {relatedStories.map((c) => (
-                <Link
-                  key={c.slug}
-                  href={pathFor(l, `/cerita/${c.slug}`)}
-                  className="lift tap group flex items-center gap-4 rounded-[20px] border border-hairline bg-paper p-4 hover:border-brave/40"
-                >
-                  {c.pose && (
-                    <img
-                      src={asset(posePath(c.pose))}
-                      alt=""
-                      width={56}
-                      height={56}
-                      loading="lazy"
-                      className="h-14 w-14 shrink-0 select-none object-contain"
-                      draggable={false}
-                    />
-                  )}
-                  <div className="min-w-0">
-                    <p className="font-serif text-[16px] font-medium leading-snug text-ink group-hover:text-brave-deep">
-                      {c.title[l]}
-                    </p>
-                    <p className="mt-1 line-clamp-2 text-[13px] text-whisper">
-                      {c.hook[l]}
-                    </p>
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </section>
-        )}
+        <RelatedStories locale={l} type="doa" slug={slug} />
 
       </main>
 

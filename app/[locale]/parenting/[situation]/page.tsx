@@ -20,6 +20,7 @@ import {
 } from "@/lib/content/parenting";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
+import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
 import { HadithCard } from "@/components/HadithCard";
 import { CopyButton } from "@/components/CopyButton";
@@ -191,6 +192,8 @@ export default async function ParentingDetail({
             </div>
           </section>
         )}
+
+        <RelatedStories locale={l} type="parenting" slug={situation} />
       </main>
 
       <Footer locale={l} currentPath={`/parenting/${situation}`} />
