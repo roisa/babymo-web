@@ -15,6 +15,7 @@ import { VerificationBadge } from "@/components/VerificationBadge";
 import { breadcrumbSchema, hadithSchema, graph } from "@/lib/seo/schemas";
 import { getAllHadith, getHadithBySlug } from "@/lib/content/hadith";
 import { getDoaBySlug } from "@/lib/content/doa";
+import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
 
 export async function generateStaticParams() {
@@ -195,6 +196,8 @@ export default async function HadithDetail({
             </div>
           </section>
         )}
+
+        <RelatedStories locale={l} type="hadith" slug={slug} />
       </main>
 
       <Footer locale={l} currentPath={`/hadith/${slug}`} />
