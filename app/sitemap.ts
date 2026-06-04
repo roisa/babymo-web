@@ -5,6 +5,7 @@ import { getAllBlogPosts } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { getCeritaThemeSlugs } from "@/lib/content/cerita-themes";
 import { getAllSurah } from "@/lib/content/surah";
 import { getAllProphets } from "@/lib/content/prophets";
 import { allSpotOddSlugs } from "@/lib/games/spot-odd";
@@ -38,6 +39,7 @@ const STATIC_PATHS = [
   "/hadith",
   "/parenting",
   "/cerita",
+  "/cerita/tema",
   "/surat",
   "/asmaul-husna",
   "/kisah",
@@ -175,6 +177,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/cerita/${n.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const theme of getCeritaThemeSlugs()) {
+      out.push({
+        url: url(locale, `/cerita/tema/${theme}`),
+        lastModified: now,
+        changeFrequency: "weekly",
+        priority: 0.7,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/cerita/tema/${theme}`)]),
           ),
         },
       });

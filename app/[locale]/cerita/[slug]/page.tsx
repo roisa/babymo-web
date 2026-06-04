@@ -12,6 +12,7 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
+import { getThemesForCatatan } from "@/lib/content/cerita-themes";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
 import { getParentingBySlug } from "@/lib/content/parenting";
@@ -127,6 +128,28 @@ export default async function CatatanDetail({
         <div className="catatan-body">
           {renderBody(n.body[l])}
         </div>
+
+        {/* Theme chips — internal links to the story-theme hubs */}
+        {(() => {
+          const themes = getThemesForCatatan(n);
+          if (themes.length === 0) return null;
+          return (
+            <div className="mt-10 flex flex-wrap items-center gap-2">
+              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+                {l === "id" ? "Tema" : "Themes"}:
+              </span>
+              {themes.map((t) => (
+                <Link
+                  key={t.slug}
+                  href={pathFor(l, `/cerita/tema/${t.slug}`)}
+                  className="tap rounded-full border border-hairline bg-paper px-3 py-1 text-[12.5px] font-semibold text-brave-deep hover:border-brave/40"
+                >
+                  {t.label[l]}
+                </Link>
+              ))}
+            </div>
+          );
+        })()}
 
         {/* Takeaway pull-quote */}
         <aside className="mt-10 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">

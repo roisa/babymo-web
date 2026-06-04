@@ -65,6 +65,12 @@ export default async function CatatanIndex({
           <p className="mt-4 text-[16.5px] leading-[1.65] text-whisper">
             {dict.catatan.intro}
           </p>
+          <Link
+            href={pathFor(l, "/cerita/tema")}
+            className="tap mt-5 inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-4 py-2 text-[13.5px] font-semibold text-brave-deep hover:border-brave/40"
+          >
+            {l === "id" ? "Jelajahi per tema" : "Browse by theme"} →
+          </Link>
         </header>
 
         <ul className="space-y-7">
