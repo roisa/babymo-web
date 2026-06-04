@@ -20,78 +20,13 @@ import {
   itemListSchema,
 } from "@/lib/seo/schemas";
 import { getAllHadith } from "@/lib/content/hadith";
-
-const THEME_LABEL: Record<Locale, Record<string, string>> = {
-  id: {
-    "adab": "Adab",
-    "akhlak": "Akhlak",
-    "amanat": "Amanat",
-    "amal-jariyah": "Amal Jariyah",
-    "anak-perempuan": "Anak Perempuan",
-    "anak-shalih": "Anak Shalih",
-    "anak-yatim": "Anak Yatim",
-    "bermain": "Bermain",
-    "berbakti": "Berbakti",
-    "doa": "Doa",
-    "ibu": "Ibu",
-    "kasih-sayang": "Kasih Sayang",
-    "kelembutan": "Kelembutan",
-    "keluarga": "Keluarga",
-    "kemuliaan": "Kemuliaan",
-    "keadilan": "Keadilan",
-    "kehadiran": "Kehadiran",
-    "lisan-orangtua": "Lisan Orang Tua",
-    "nafkah": "Nafkah",
-    "pilih-kasih": "Pilih Kasih",
-    "rezeki": "Rezeki",
-    "saudara": "Saudara",
-    "sholat": "Sholat",
-    "silaturahmi": "Silaturahmi",
-    "suami-istri": "Suami Istri",
-    "tanggung-jawab": "Tanggung Jawab",
-    "tarbiyah": "Tarbiyah",
-    "tetangga": "Tetangga",
-    "tujuh-tahun": "Tujuh Tahun",
-    "warisan": "Warisan",
-  },
-  en: {
-    "adab": "Manners",
-    "akhlak": "Character",
-    "amanat": "Trust",
-    "amal-jariyah": "Ongoing Charity",
-    "anak-perempuan": "Daughters",
-    "anak-shalih": "Righteous Child",
-    "anak-yatim": "Orphans",
-    "bermain": "Play",
-    "berbakti": "Honoring Parents",
-    "doa": "Dua",
-    "ibu": "Mother",
-    "kasih-sayang": "Mercy & Affection",
-    "kelembutan": "Gentleness",
-    "keluarga": "Family",
-    "kemuliaan": "Honor",
-    "keadilan": "Justice",
-    "kehadiran": "Presence",
-    "lisan-orangtua": "Parents' Tongue",
-    "nafkah": "Provision",
-    "pilih-kasih": "Favoritism",
-    "rezeki": "Provision",
-    "saudara": "Siblings",
-    "sholat": "Prayer",
-    "silaturahmi": "Kinship Ties",
-    "suami-istri": "Spouse",
-    "tanggung-jawab": "Responsibility",
-    "tarbiyah": "Upbringing",
-    "tetangga": "Neighbors",
-    "tujuh-tahun": "Age Seven",
-    "warisan": "Legacy",
-  },
-};
+import {
+  HADITH_THEME_LABEL as THEME_LABEL,
+  getHadithThemeTags,
+} from "@/lib/content/hadith-themes";
 
 function getAllThemes(): string[] {
-  const t = new Set<string>();
-  for (const h of getAllHadith()) for (const tag of h.themes) t.add(tag);
-  return Array.from(t).sort();
+  return getHadithThemeTags();
 }
 
 export async function generateStaticParams() {
