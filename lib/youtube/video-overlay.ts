@@ -59,6 +59,19 @@ export const videoOverlay: Record<string, VideoOverlay> = {
   },
 
   // ── Games + long-form ───────────────────────────────────────────
+  "-4mkpvahJnE": {
+    // "Cari dan Temukan Perbedaan Bareng Baby Mo … | EPISODE 2" (13:30)
+    category: "family-activities",
+    related: ["permainan"],
+    title: {
+      id: "Cari & Temukan Perbedaan (Episode 2)",
+      en: "Spot the Difference (Episode 2)",
+    },
+    caption: {
+      id: "Episode 2! Latih ketelitian si kecil — temukan perbedaan di tiap scene bareng Baby Mo.",
+      en: "Episode 2! Sharpen your little one's attention — spot what's different in each scene with Baby Mo.",
+    },
+  },
   BhLRQP_Nfdk: {
     // "Cari dan Temukan Perbedaan Bareng Baby Mo 👀✨ ..." (17:27)
     category: "family-activities",

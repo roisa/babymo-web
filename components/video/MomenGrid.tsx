@@ -7,7 +7,12 @@ import { VideoCard } from "./VideoCard";
 import { ReelKitPanel } from "./ReelKitPanel";
 
 type Group = { cat: string; label: string; items: EnrichedVideo[] };
-type Props = { groups: Group[]; locale: Locale };
+type StoryLink = { href: string; title: string };
+type Props = {
+  groups: Group[];
+  locale: Locale;
+  storyByVideo?: Record<string, StoryLink>;
+};
 
 const STORAGE_KEY = "babymo:team-mode";
 
@@ -18,7 +23,7 @@ const STORAGE_KEY = "babymo:team-mode";
  * preference is remembered in localStorage so the team isn't re-toggling
  * on every visit.
  */
-export function MomenGrid({ groups, locale }: Props) {
+export function MomenGrid({ groups, locale, storyByVideo = {} }: Props) {
   const [team, setTeam] = useState(false);
   const [ready, setReady] = useState(false);
   const id = locale === "id";
@@ -96,7 +101,7 @@ export function MomenGrid({ groups, locale }: Props) {
             >
               {g.items.map((v) => (
                 <div key={v.id} className="flex flex-col">
-                  <VideoCard video={v} locale={locale} />
+                  <VideoCard video={v} locale={locale} story={storyByVideo[v.id]} />
                   {team && <ReelKitPanel video={v} locale={locale} />}
                 </div>
               ))}

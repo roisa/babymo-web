@@ -3053,3 +3053,9 @@ export function getCatatanByAnchor(
 export function getCatatanBySurah(slug: string): Catatan[] {
   return getAllCatatan().filter((c) => c.surahs?.includes(slug));
 }
+
+/** Story that embeds a given YouTube video id (via the `video` field) —
+ *  lets the Momen page link a video back to its written story. */
+export function getCatatanByVideo(videoId: string): Catatan | undefined {
+  return getAllCatatan().find((c) => c.video === videoId);
+}

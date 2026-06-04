@@ -1,12 +1,17 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import type { EnrichedVideo } from "@/lib/youtube/types";
 import { CATEGORY_LABEL } from "@/lib/youtube/video-overlay";
 import type { Locale } from "@/lib/i18n/config";
 import { VideoModal } from "./VideoModal";
 
-type Props = { video: EnrichedVideo; locale: Locale };
+type Props = {
+  video: EnrichedVideo;
+  locale: Locale;
+  story?: { href: string; title: string };
+};
 
 /**
  * Editorial card for a YouTube video.
@@ -14,7 +19,7 @@ type Props = { video: EnrichedVideo; locale: Locale };
  * - Click opens a click-to-load modal
  * - Calm, neutral background — NOT YouTube-styled
  */
-export function VideoCard({ video, locale }: Props) {
+export function VideoCard({ video, locale, story }: Props) {
   const [open, setOpen] = useState(false);
 
   const title = video.overlay.title?.[locale] ?? video.title;
@@ -87,6 +92,19 @@ export function VideoCard({ video, locale }: Props) {
           )}
         </div>
       </button>
+
+      {story && (
+        <Link
+          href={story.href}
+          className="lift tap group/story mt-2 flex items-center gap-2 rounded-[16px] border border-hairline bg-paper-2 px-4 py-2.5 text-[13px] hover:border-brave/40"
+        >
+          <span aria-hidden>📖</span>
+          <span className="min-w-0 flex-1 truncate font-semibold text-ink-soft group-hover/story:text-brave-deep">
+            {locale === "id" ? "Baca ceritanya" : "Read the story"}: {story.title}
+          </span>
+          <span className="text-brave-deep">→</span>
+        </Link>
+      )}
 
       {open && (
         <VideoModal
