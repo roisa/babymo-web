@@ -262,6 +262,32 @@ const entries = [];
   }
 }
 
+// ── Bacaan Sholat (prayer recitations) ──────────────────────────────
+{
+  const src = read("lib/content/bacaan-sholat.ts");
+  for (const { slug, block } of iterateBlocks(src, "bacaan-sholat")) {
+    const title = pluckBilingual(block, "title");
+    const subtitle = pluckBilingual(block, "subtitle");
+    const when = pluckBilingual(block, "when");
+    if (!title.id) continue;
+    // Collect all transliteration strings from the parts in this block.
+    const translits = [...block.matchAll(/transliteration:\s*\n?\s*"((?:[^"\\]|\\.)*)"/g)]
+      .map((m) => unesc(m[1]))
+      .join(" ");
+    entries.push({
+      type: "sholat",
+      slug,
+      url: `/sholat/${slug}`,
+      title,
+      excerpt: { id: subtitle.id || when.id, en: subtitle.en || when.en },
+      keywords: {
+        id: keywordsOf(title.id, "bacaan sholat niat", subtitle.id, when.id, translits),
+        en: keywordsOf(title.en, "prayer recitation sholat", subtitle.en, when.en, translits),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");

@@ -14,7 +14,8 @@ type SearchEntry = {
     | "kalender"
     | "surah"
     | "prophet"
-    | "asmaul-husna";
+    | "asmaul-husna"
+    | "sholat";
   slug: string;
   url: string;
   title: { id: string; en: string };
@@ -34,6 +35,7 @@ const TYPE_LABEL: Record<SearchEntry["type"], { id: string; en: string }> = {
   surah: { id: "Surat", en: "Surah" },
   prophet: { id: "Kisah Nabi", en: "Prophet" },
   "asmaul-husna": { id: "Asmaul Husna", en: "Asmaul Husna" },
+  sholat: { id: "Bacaan Sholat", en: "Prayer" },
 };
 
 const TYPE_COLOR: Record<SearchEntry["type"], string> = {
@@ -46,6 +48,7 @@ const TYPE_COLOR: Record<SearchEntry["type"], string> = {
   surah: "bg-brave/15 text-brave-deep",
   prophet: "bg-sage/15 text-sage-deep",
   "asmaul-husna": "bg-brave-soft text-brave-deep",
+  sholat: "bg-sage-soft text-sage-deep",
 };
 
 export function SearchOverlay({ locale }: Props) {
