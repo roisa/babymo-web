@@ -28,6 +28,7 @@ export async function generateMetadata({
     path: "/cerita",
     title: dict.catatan.indexTitle,
     description: dict.catatan.indexDescription,
+    image: `https://babymo.id/og/cerita/${locale}/index.jpg`,
   });
 }
 

@@ -248,7 +248,101 @@ function svgFor({ title, hook, kind, pose, rt }, locale) {
 </svg>`;
 }
 
-export { svgFor, extract };
+export { svgFor, indexSvg, extract };
+
+// ── Collection card for the /cerita index ────────────────────────────
+const INDEX_STRINGS = {
+  id: {
+    eyebrow: "KUMPULAN CERITA ANAK",
+    title: "Cerita Baby Mo & Baby Ais",
+    sub: (n) => `${n} cerita hangat tentang akhlak, berbagi & persaudaraan`,
+  },
+  en: {
+    eyebrow: "KIDS STORY COLLECTION",
+    title: "Baby Mo & Baby Ais Stories",
+    sub: (n) => `${n} warm stories about character, sharing & siblinghood`,
+  },
+};
+// A friendly trio that reads as "a collection / the cast".
+const INDEX_POSES = ["baby-mo-yeyy.png", "baby-mo-thank-you.png", "baby-mo-ok.png"];
+
+function indexSvg(locale, count) {
+  const S = STRINGS[locale];
+  const T = INDEX_STRINGS[locale];
+  const titleLines = wrap(T.title, 26, 2);
+  const titleSize = 50;
+  const titleLH = titleSize * 1.16;
+  const brandY = 296;
+  const eyebrowY = 328;
+  const titleStartY = 384;
+  const lastBaseline = titleStartY + (titleLines.length - 1) * titleLH;
+  const subY = lastBaseline + 46;
+
+  // three poses in a row, centred, slightly overlapping
+  const pw = 200;
+  const gap = 14;
+  const rowW = 3 * pw + 2 * gap;
+  let x0 = (W - rowW) / 2;
+  const poseEls = INDEX_POSES.map((p, i) => {
+    const uri = poseDataUri(p);
+    if (!uri) return "";
+    const x = x0 + i * (pw + gap);
+    return `<image x="${x}" y="36" width="${pw}" height="210" preserveAspectRatio="xMidYMid meet" xlink:href="${uri}"/>`;
+  }).join("\n  ");
+
+  return `<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="${C.paper}"/>
+      <stop offset="55%" stop-color="${C.sageSoft}" stop-opacity="0.7"/>
+      <stop offset="100%" stop-color="${C.braveSoft}"/>
+    </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="30%" r="46%">
+      <stop offset="0%" stop-color="${C.braveSoft}" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="${C.braveSoft}" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="${C.braveDeep}" fill-opacity="0.16"/>
+    </pattern>
+  </defs>
+  <rect width="${W}" height="${H}" fill="url(#bg)"/>
+  <rect width="${W}" height="${H}" fill="url(#dots)"/>
+  <ellipse cx="${W / 2}" cy="150" rx="420" ry="180" fill="url(#halo)"/>
+
+  ${poseEls}
+
+  <text x="${W / 2}" y="${brandY}" text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="800" font-size="16" letter-spacing="9"
+        fill="${C.braveDeep}">${xe(S.brand)}</text>
+  <text x="${W / 2}" y="${eyebrowY}" text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="12" letter-spacing="5"
+        fill="${C.clayDeep}">${xe(T.eyebrow)}</text>
+  ${titleLines
+    .map(
+      (line, i) =>
+        `<text x="${W / 2}" y="${titleStartY + i * titleLH}" text-anchor="middle"
+        font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
+        font-weight="500" font-size="${titleSize}" fill="${C.ink}"
+        letter-spacing="-0.5">${xe(line)}</text>`,
+    )
+    .join("\n  ")}
+  <text x="${W / 2}" y="${subY}" text-anchor="middle"
+        font-family="'Newsreader', 'DejaVu Serif', Georgia, serif"
+        font-weight="400" font-style="italic" font-size="20"
+        fill="${C.braveDeep}" opacity="0.9">${xe(T.sub(count))}</text>
+
+  <line x1="${W / 2 - 60}" y1="${H - 92}" x2="${W / 2 + 60}" y2="${H - 92}"
+        stroke="${C.brave}" stroke-width="2" stroke-linecap="round"/>
+  <text x="${W / 2}" y="${H - 58}" text-anchor="middle"
+        font-family="Inter, 'Helvetica Neue', Arial, sans-serif"
+        font-weight="700" font-size="18" letter-spacing="4"
+        fill="${C.braveDeep}">${xe(S.domain.toUpperCase())}</text>
+</svg>`;
+}
+
 
 // ── Main ─────────────────────────────────────────────────────────────
 const isMain = process.argv[1] && process.argv[1].endsWith("generate-og-cerita.mjs");
@@ -290,6 +384,16 @@ for (const c of stories) {
     });
     count++;
   }
+}
+
+// Collection card for the /cerita index (always regenerated — cheap).
+for (const locale of ["id", "en"]) {
+  const out = join(OUT_DIR, locale, "index.jpg");
+  mkdirSync(dirname(out), { recursive: true });
+  writeFileSync(tmpSvg, indexSvg(locale, stories.length), "utf8");
+  execSync(`rsvg-convert -w ${W} -h ${H} -o "${tmpPng}" "${tmpSvg}"`, { stdio: "pipe" });
+  execSync(`convert "${tmpPng}" -quality 88 -interlace plane "${out}"`, { stdio: "pipe" });
+  count++;
 }
 
 try {
