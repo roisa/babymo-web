@@ -20,75 +20,13 @@ import {
   itemListSchema,
 } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
+import {
+  DOA_CATEGORY_LABEL as CATEGORY_LABEL,
+  getDoaCategoryTags,
+} from "@/lib/content/doa-categories";
 
-const CATEGORY_LABEL: Record<Locale, Record<string, string>> = {
-  id: {
-    pagi: "Pagi",
-    malam: "Malam",
-    tidur: "Tidur",
-    bangun: "Bangun",
-    makan: "Makan",
-    minum: "Minum",
-    syukur: "Syukur",
-    "kamar-mandi": "Kamar Mandi",
-    perjalanan: "Perjalanan",
-    kendaraan: "Kendaraan",
-    rumah: "Rumah",
-    perlindungan: "Perlindungan",
-    orangtua: "Orang Tua",
-    cuaca: "Cuaca",
-    sholat: "Sholat",
-    adzan: "Adzan",
-    pakaian: "Pakaian",
-    akhlak: "Akhlak",
-    sosial: "Sosial",
-    belajar: "Belajar",
-    sekolah: "Sekolah",
-    wudhu: "Wudhu",
-    petang: "Petang",
-    puasa: "Puasa",
-    ramadan: "Ramadan",
-    "bulan-hijriyah": "Bulan Hijriyah",
-    rezeki: "Rezeki",
-    adab: "Adab",
-  },
-  en: {
-    pagi: "Morning",
-    malam: "Night",
-    tidur: "Sleep",
-    bangun: "Wake",
-    makan: "Eating",
-    minum: "Drinking",
-    syukur: "Gratitude",
-    "kamar-mandi": "Bathroom",
-    perjalanan: "Travel",
-    kendaraan: "Vehicle",
-    rumah: "Home",
-    perlindungan: "Protection",
-    orangtua: "Parents",
-    cuaca: "Weather",
-    sholat: "Prayer",
-    adzan: "Adhan",
-    pakaian: "Clothing",
-    akhlak: "Character",
-    sosial: "Social",
-    belajar: "Study",
-    sekolah: "School",
-    wudhu: "Wudu",
-    petang: "Evening",
-    puasa: "Fasting",
-    ramadan: "Ramadan",
-    "bulan-hijriyah": "Hijri Month",
-    rezeki: "Provision",
-    adab: "Manners",
-  },
-};
-
-/** All unique tags across all doa, used to generate static category pages. */
 function getAllTags(): string[] {
-  const tags = new Set<string>();
-  for (const d of getAllDoa()) for (const s of d.situations) tags.add(s);
-  return Array.from(tags).sort();
+  return getDoaCategoryTags();
 }
 
 export async function generateStaticParams() {
