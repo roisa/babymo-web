@@ -65,6 +65,12 @@ export default async function HadithIndex({
           <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
             {dict.hadith.indexDescription}
           </p>
+          <Link
+            href={pathFor(l, "/hadith/tema")}
+            className="tap mt-5 inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-4 py-2 text-[13.5px] font-semibold text-sage-deep hover:border-sage/40"
+          >
+            {l === "id" ? "Jelajahi per tema" : "Browse by theme"} →
+          </Link>
         </header>
         <div className="mt-10 grid gap-4 sm:grid-cols-2">
           {all.map((h) => (

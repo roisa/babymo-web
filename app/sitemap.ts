@@ -37,6 +37,7 @@ const STATIC_PATHS = [
   "/doa",
   "/doa/kategori",
   "/hadith",
+  "/hadith/tema",
   "/parenting",
   "/cerita",
   "/cerita/tema",
