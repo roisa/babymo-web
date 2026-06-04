@@ -38,6 +38,7 @@ export async function generateMetadata({
     title: n.title[locale],
     description: n.hook[locale],
     type: "article",
+    image: `https://babymo.id/og/cerita/${locale}/${slug}.jpg`,
   });
 }
 
