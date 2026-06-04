@@ -333,6 +333,22 @@ export type BacaanSholat = {
 };
 
 /**
+ * An item in the Puasa / Ramadan hub — a niat, doa, sunnah-prayer niat,
+ * or an amalan note. Reuses SholatPart for its recitation(s).
+ */
+export type PuasaItem = {
+  slug: string;
+  order: number;
+  category: "niat" | "doa" | "sholat" | "amalan";
+  title: Record<Locale, string>;
+  subtitle?: Record<Locale, string>;
+  parts: SholatPart[];
+  when: Record<Locale, string>;
+  note?: Record<Locale, string>;
+  published: string;
+};
+
+/**
  * Prophet story (Kisah 25 Nabi) — short, age-appropriate retellings
  * of the 25 prophets named in the Qur'an.
  */

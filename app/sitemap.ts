@@ -10,6 +10,7 @@ import { getAllSurah } from "@/lib/content/surah";
 import { getAllProphets } from "@/lib/content/prophets";
 import { getAllAsmaulHusna } from "@/lib/content/asmaul-husna";
 import { getAllBacaanSholat } from "@/lib/content/bacaan-sholat";
+import { getAllPuasa } from "@/lib/content/puasa";
 import { allSpotOddSlugs } from "@/lib/games/spot-odd";
 import { allSpotDiffSlugs } from "@/lib/games/spot-difference";
 import { allArchetypeKeys } from "@/lib/games/personality";
@@ -39,6 +40,7 @@ const STATIC_PATHS = [
   "/doa",
   "/doa/kategori",
   "/sholat",
+  "/puasa",
   "/hadith",
   "/hadith/tema",
   "/parenting",
@@ -246,6 +248,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: {
           languages: Object.fromEntries(
             locales.map((ll) => [ll, url(ll, `/sholat/${b.slug}`)]),
+          ),
+        },
+      });
+    }
+    for (const p of getAllPuasa()) {
+      out.push({
+        url: url(locale, `/puasa/${p.slug}`),
+        lastModified: new Date(p.published),
+        changeFrequency: "monthly",
+        priority: 0.8,
+        alternates: {
+          languages: Object.fromEntries(
+            locales.map((ll) => [ll, url(ll, `/puasa/${p.slug}`)]),
           ),
         },
       });

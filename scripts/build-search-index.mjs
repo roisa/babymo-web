@@ -288,6 +288,31 @@ const entries = [];
   }
 }
 
+// ── Puasa & Ramadan (niat, doa, sunnah prayers) ─────────────────────
+{
+  const src = read("lib/content/puasa.ts");
+  for (const { slug, block } of iterateBlocks(src, "puasa")) {
+    const title = pluckBilingual(block, "title");
+    const subtitle = pluckBilingual(block, "subtitle");
+    const when = pluckBilingual(block, "when");
+    if (!title.id) continue;
+    const translits = [...block.matchAll(/transliteration:\s*\n?\s*"((?:[^"\\]|\\.)*)"/g)]
+      .map((m) => unesc(m[1]))
+      .join(" ");
+    entries.push({
+      type: "puasa",
+      slug,
+      url: `/puasa/${slug}`,
+      title,
+      excerpt: { id: subtitle.id || when.id, en: subtitle.en || when.en },
+      keywords: {
+        id: keywordsOf(title.id, "niat puasa ramadhan doa buka puasa sahur tarawih", subtitle.id, when.id, translits),
+        en: keywordsOf(title.en, "fasting intention ramadan iftar dua sahur tarawih", subtitle.en, when.en, translits),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");

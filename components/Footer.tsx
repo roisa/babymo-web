@@ -34,6 +34,9 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/sholat">
               {locale === "id" ? "Bacaan Sholat" : "Prayer Recitations"}
             </FooterLink>
+            <FooterLink locale={locale} href="/puasa">
+              {locale === "id" ? "Niat Puasa" : "Fasting & Ramadan"}
+            </FooterLink>
             <FooterLink locale={locale} href="/asmaul-husna">Asmaul Husna</FooterLink>
             <FooterLink locale={locale} href="/hadith">{dict.nav.hadith}</FooterLink>
             <FooterLink locale={locale} href="/kisah">{dict.nav.kisah}</FooterLink>
