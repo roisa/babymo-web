@@ -1,27 +1,35 @@
 import Link from "next/link";
 import { type Locale, asset, pathFor } from "@/lib/i18n/config";
 import { getCatatanByAnchor } from "@/lib/content/catatan";
+import type { Catatan } from "@/lib/content/types";
 import { posePath } from "@/lib/games/poses";
 
 /**
  * "Cerita terkait" — links the Baby Mo & Baby Ais stories whose Islamic
- * anchor points at this doa / hadith / parenting entry. Cross-linking the
- * narrative content onto the reference pages strengthens internal linking
- * and surfaces the stories at the right moment. Renders nothing when there
- * are no matches.
+ * anchor (or surah reference) points at this reference page. Cross-linking
+ * the narrative content onto the doa / hadith / parenting / surah pages
+ * strengthens internal linking and surfaces the stories at the right
+ * moment. Renders nothing when there are no matches.
+ *
+ * Pass either (type, slug) to resolve by anchor, or an explicit `stories`
+ * list (e.g. surah pages, which match on the optional `surahs` field).
  */
 export function RelatedStories({
   locale,
   type,
   slug,
+  stories: given,
   limit = 3,
 }: {
   locale: Locale;
-  type: "doa" | "hadith" | "parenting";
-  slug: string;
+  type?: "doa" | "hadith" | "parenting";
+  slug?: string;
+  stories?: Catatan[];
   limit?: number;
 }) {
-  const stories = getCatatanByAnchor(type, slug).slice(0, limit);
+  const resolved =
+    given ?? (type && slug ? getCatatanByAnchor(type, slug) : []);
+  const stories = resolved.slice(0, limit);
   if (stories.length === 0) return null;
   const l = locale;
 

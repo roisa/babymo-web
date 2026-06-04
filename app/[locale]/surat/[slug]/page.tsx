@@ -12,6 +12,8 @@ import { VerificationBadge } from "@/components/VerificationBadge";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph } from "@/lib/seo/schemas";
 import { getAllSurah, getSurahBySlug } from "@/lib/content/surah";
+import { getCatatanBySurah } from "@/lib/content/catatan";
+import { RelatedStories } from "@/components/RelatedStories";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -197,6 +199,8 @@ export default async function SurahDetail({
             <dd className="mt-1 text-ink">{s.ayahCount}</dd>
           </div>
         </dl>
+
+        <RelatedStories locale={l} stories={getCatatanBySurah(slug)} />
       </main>
 
       <Footer locale={l} currentPath={`/surat/${slug}`} />

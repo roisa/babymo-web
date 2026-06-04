@@ -122,22 +122,31 @@ export function catatanSchema(
   locale: Locale,
   note: import("../content/types").Catatan,
 ) {
+  const isStory = note.kind === "story";
+  // Kids stories are brand content; reflective notes are by the founder.
+  const author = isStory
+    ? { "@id": `${siteUrl}/#org` }
+    : { "@type": "Person", name: "Salman Alfa", "@id": `${siteUrl}/#person-salman` };
+  const images = [`${siteUrl}/assets/og-image.jpg`];
+  if (note.pose) images.unshift(`${siteUrl}/baby-mo-poses/${note.pose}`);
   return {
-    "@type": "BlogPosting",
+    "@type": isStory ? "Article" : "BlogPosting",
     headline: note.title[locale],
     description: note.hook[locale],
     inLanguage: locale === "id" ? "id-ID" : "en",
     datePublished: note.published,
-    author: {
-      "@type": "Person",
-      name: "Salman Alfa",
-      "@id": `${siteUrl}/#person-salman`,
-    },
+    dateModified: note.published,
+    author,
     publisher: { "@id": `${siteUrl}/#org` },
     mainEntityOfPage: absoluteUrl(locale, `/cerita/${note.slug}`),
-    image: [`${siteUrl}/assets/og-image.jpg`],
+    image: images,
     keywords: note.tags.join(", "),
-    articleSection: "Catatan",
+    articleSection: isStory
+      ? locale === "id"
+        ? "Cerita Anak"
+        : "Kids Story"
+      : "Catatan",
+    isFamilyFriendly: true,
   };
 }
 
