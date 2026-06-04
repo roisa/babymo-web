@@ -237,6 +237,31 @@ const entries = [];
   }
 }
 
+// ── Asmaul Husna (99 names of Allah) ────────────────────────────────
+{
+  const src = read("lib/content/asmaul-husna.ts");
+  for (const { slug, block } of iterateBlocks(src, "asmaul-husna")) {
+    const transliteration = pluckString(block, "transliteration");
+    const meaning = pluckBilingual(block, "meaning");
+    const explanation = pluckBilingual(block, "explanation");
+    if (!transliteration) continue;
+    entries.push({
+      type: "asmaul-husna",
+      slug,
+      url: `/asmaul-husna/${slug}`,
+      title: {
+        id: `${transliteration} — ${meaning.id}`,
+        en: `${transliteration} — ${meaning.en}`,
+      },
+      excerpt: explanation,
+      keywords: {
+        id: keywordsOf(transliteration, "asmaul husna", meaning.id, explanation.id),
+        en: keywordsOf(transliteration, "asmaul husna 99 names of allah", meaning.en, explanation.en),
+      },
+    });
+  }
+}
+
 // ── Catatan (first-person notes) ────────────────────────────────────
 {
   const src = read("lib/content/catatan.ts");
