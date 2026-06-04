@@ -197,6 +197,31 @@ export default async function DoaDetail({
           </div>
         </dl>
 
+        {doa.video && (
+          <section className="mt-14">
+            <h2 className="tracking-display font-serif text-2xl font-medium text-ink">
+              {l === "id" ? "Dengarkan lagunya bareng Baby Mo" : "Sing along with Baby Mo"}
+            </h2>
+            <p className="mt-2 text-[14.5px] text-whisper">
+              {l === "id"
+                ? "Versi lagu dari doa ini — cara menyenangkan agar si kecil cepat hafal."
+                : "The song version of this du'a — a fun way to help your little one memorize it."}
+            </p>
+            <div className="mt-5 overflow-hidden rounded-[24px] border border-hairline bg-paper">
+              <div className="relative aspect-video">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${doa.video}?rel=0`}
+                  title={doa.title[l]}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </section>
+        )}
+
         {related.length > 0 && (
           <section className="mt-14">
             <h2 className="tracking-display font-serif text-2xl font-medium text-ink">
