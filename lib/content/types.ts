@@ -349,6 +349,10 @@ export type Catatan = {
   /** Optional Baby Mo pose filename (in /public/baby-mo-poses) to illustrate
    *  the story — picked to match the moment's mood. */
   pose?: string;
+  /** Optional YouTube video id (e.g. a Baby Mo song/episode from the Momen
+   *  page) embedded at the end of the story and emitted as VideoObject
+   *  schema — cross-links the written story with the video for SEO. */
+  video?: string;
   /** ISO date string */
   published: string;
   title: Record<Locale, string>;

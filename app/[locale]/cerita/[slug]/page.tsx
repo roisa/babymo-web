@@ -10,7 +10,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { JsonLd } from "@/components/JsonLd";
-import { breadcrumbSchema, catatanSchema, graph } from "@/lib/seo/schemas";
+import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
@@ -161,6 +161,33 @@ export default async function CatatanDetail({
           </section>
         )}
 
+        {/* Watch on Baby Mo — embedded song/episode from the Momen page */}
+        {n.video && (
+          <section className="mt-12">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+              {l === "id" ? "🎬 Tonton lagunya di Baby Mo" : "🎬 Watch it on Baby Mo"}
+            </p>
+            <div className="mt-3 overflow-hidden rounded-[22px] border border-hairline bg-paper">
+              <div className="relative aspect-video w-full">
+                <iframe
+                  className="absolute inset-0 h-full w-full"
+                  src={`https://www.youtube-nocookie.com/embed/${n.video}?rel=0`}
+                  title={n.title[l]}
+                  loading="lazy"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+            <p className="mt-3 text-[12.5px] text-whisper">
+              {l === "id"
+                ? "Putar bersama si kecil setelah membaca ceritanya 🎵"
+                : "Play it with your little one after reading the story 🎵"}
+            </p>
+          </section>
+        )}
+
         <hr className="my-12 border-hairline" />
 
         {/* Other notes */}
@@ -184,6 +211,16 @@ export default async function CatatanDetail({
             { name: n.title[l], path: `/cerita/${slug}` },
           ]),
           catatanSchema(l, n),
+          ...(n.video
+            ? [
+                videoObjectSchema(l, {
+                  id: n.video,
+                  name: n.title[l],
+                  description: n.hook[l],
+                  uploadDate: n.published,
+                }),
+              ]
+            : []),
         )}
       />
     </>
