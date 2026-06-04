@@ -2594,6 +2594,430 @@ Because it turns out, this world is full of wonders — for patient eyes and a h
     readingTimeMin: 6,
   },
 
+
+  // ═══════════════════════════════════════════════════════════════════
+  //  CERITA ANAK — the Baby Mo & Baby Ais bond. Warm, funny, cute twin
+  //  moments so young readers learn to love and enjoy their siblings.
+  // ═══════════════════════════════════════════════════════════════════
+  {
+    slug: "bahasa-rahasia-si-kembar",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-wow.png",
+    published: "2026-05-11",
+    title: {
+      id: "Bahasa Rahasia Si Kembar",
+      en: "The Twins' Secret Language",
+    },
+    hook: {
+      id: "Baby Mo dan Baby Ais sering mengobrol dengan kata-kata yang tidak dimengerti siapa pun — kecuali mereka berdua. Apa, ya, yang mereka bicarakan?",
+      en: "Baby Mo and Baby Ais often chatter in words nobody understands — except the two of them. What on earth are they talking about?",
+    },
+    body: {
+      id: `Pagi-pagi, Umi mendengar suara dari kamar anak-anak. "Da-bu-da?" tanya Baby Mo. "Mbe-mbe-ya!" jawab Baby Ais. Lalu keduanya tertawa terbahak-bahak, seakan baru saja mendengar lelucon paling lucu sedunia.
+
+Umi mengintip. Baby Mo memberikan satu balok merah kepada Baby Ais sambil berkata, "Tu-tu?" Baby Ais menerimanya dan menjawab mantap, "Tu-tu!" Lalu mereka tos dengan tangan gemuk mereka.
+
+Umi tersenyum bingung. "Mereka ngomong apa, sih?" Tidak ada satu kata pun yang ia kenali. Tapi anehnya, Baby Mo dan Baby Ais saling mengerti dengan sempurna. Kalau Baby Ais berkata "nyam-nyam", Baby Mo langsung mengambilkan biskuit. Kalau Baby Mo berkata "wush!", Baby Ais langsung berlari ke jendela melihat burung.
+
+(Tahukah kamu? Ini benar-benar terjadi pada banyak anak kembar! Para ahli menyebutnya "bahasa kembar". Karena setiap hari bersama sejak di dalam perut Umi, anak kembar kadang menciptakan kata-kata kecil yang hanya mereka berdua yang mengerti. Bukan sihir — tapi memang ajaib, ya?)
+
+Siang itu Abi pulang dan ikut penasaran. "Coba Abi tebak," katanya. Ia menunjuk boneka beruang. "Ini namanya apa?" Baby Mo dan Baby Ais berpandangan, lalu serempak menjawab, "Bo-bo!" Abi tertawa. "Bo-bo? Wah, Abi belajar bahasa baru hari ini."
+
+Tapi yang paling membuat Umi terharu adalah malam harinya. Baby Ais terbangun sebentar, sedikit takut karena mimpi. Sebelum Umi sempat datang, Baby Mo sudah lebih dulu menggenggam tangan saudarinya dan berbisik pelan, "Da-da. Da-da." Entah apa artinya. Tapi Baby Ais langsung tenang, lalu tertidur lagi.
+
+Mungkin "da-da" artinya, "Ada Mo di sini. Jangan takut."
+
+Umi memandang dua anak kembarnya dari pintu. Mereka punya banyak hal yang sama: wajah yang mirip, ulang tahun yang sama, mainan yang sama. Tapi yang paling istimewa adalah ini — sebuah bahasa kecil yang hanya milik mereka berdua. Sebuah tali tak terlihat yang Allah ikatkan di hati keduanya.
+
+> *Orang-orang beriman itu bersaudara.*
+
+"Semoga kalian selalu saling mengerti, ya," bisik Umi, "bahkan saat kalian sudah besar nanti dan tidak lagi berkata 'da-bu-da'."
+
+Dan di kamar yang temaram itu, dua anak kembar tidur berdampingan — masih saling menggenggam tangan, dalam bahasa yang tidak butuh kata-kata.
+
+Punya saudara itu seperti punya sahabat sejak hari pertama. Masya Allah. 💛`,
+      en: `Early one morning, Umi heard sounds from the children's room. "Da-boo-da?" asked Baby Mo. "Mbe-mbe-ya!" answered Baby Ais. Then the two of them burst out laughing, as if they'd just heard the funniest joke in the world.
+
+Umi peeked in. Baby Mo handed a red block to Baby Ais, saying, "Too-too?" Baby Ais took it and answered firmly, "Too-too!" Then they high-fived with their chubby hands.
+
+Umi smiled, puzzled. "What are they even saying?" Not a single word she recognised. But strangely, Baby Mo and Baby Ais understood each other perfectly. When Baby Ais said "nyum-nyum", Baby Mo immediately fetched a biscuit. When Baby Mo said "whoosh!", Baby Ais ran straight to the window to look at a bird.
+
+(Did you know? This really happens with many twins! Experts call it a "twin language". Because they've been together every day since inside Umi's tummy, twins sometimes invent little words only the two of them understand. Not magic — but wondrous, isn't it?)
+
+That afternoon Abi came home and grew curious too. "Let me guess," he said. He pointed at the teddy bear. "What's this called?" Baby Mo and Baby Ais looked at each other, then answered together, "Bo-bo!" Abi laughed. "Bo-bo? Well, I learned a new language today."
+
+But what moved Umi most was that night. Baby Ais woke up briefly, a little scared from a dream. Before Umi could even come, Baby Mo had already taken his sister's hand and whispered softly, "Da-da. Da-da." Who knows what it meant. But Baby Ais settled at once, then fell back asleep.
+
+Maybe "da-da" meant, "Mo is here. Don't be afraid."
+
+Umi watched her two twins from the doorway. They shared so much: matching faces, the same birthday, the same toys. But the most special thing was this — a little language belonging only to the two of them. An invisible thread that Allah had tied between their hearts.
+
+> *The believers are but brothers.*
+
+"May you always understand each other," whispered Umi, "even when you're all grown up and no longer say 'da-boo-da'."
+
+And in that dim room, two twins slept side by side — still holding hands, in a language that needs no words.
+
+Having a sibling is like having a best friend from day one. Masha'Allah. 💛`,
+    },
+    anchor: { type: "hadith", slug: "main-bersama-anak" },
+    takeaway: {
+      id: "Anak kembar kadang punya 'bahasa' sendiri — tali tak terlihat yang Allah ikat di hati mereka. Punya saudara itu seperti punya sahabat sejak hari pertama.",
+      en: "Twins sometimes have their own 'language' — an invisible thread Allah ties between their hearts. Having a sibling is like having a best friend from day one.",
+    },
+    tags: ["saudara", "kembar", "fakta-seru", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "satu-selimut-untuk-berdua",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-09.png",
+    published: "2026-05-10",
+    title: {
+      id: "Satu Selimut untuk Berdua",
+      en: "One Blanket for Two",
+    },
+    hook: {
+      id: "Baby Mo dan Baby Ais punya kasur sendiri-sendiri. Tapi setiap pagi, Umi selalu menemukan mereka di tempat yang sama. Kenapa, ya?",
+      en: "Baby Mo and Baby Ais each have their own bed. But every morning, Umi finds them in the very same spot. Why is that?",
+    },
+    body: {
+      id: `Di kamar Baby Mo dan Baby Ais ada dua kasur kecil yang lucu. Satu bersprei bintang, satu bersprei bulan. Satu untuk Mo, satu untuk Ais. Setiap malam, Umi menyelimuti mereka di kasur masing-masing.
+
+"Selamat tidur, Mo. Selamat tidur, Ais," bisik Umi sambil mematikan lampu.
+
+Tapi setiap pagi — selalu, tanpa pernah gagal — Umi menemukan keduanya di SATU kasur. Berdempetan. Kaki Baby Ais di atas kepala Baby Mo. Tangan Baby Mo memeluk boneka beruang Baby Ais. Selimut bintang dan selimut bulan tercampur jadi satu gulungan besar. Dan keduanya tidur pulas dengan wajah paling damai sedunia.
+
+Suatu malam, Umi penasaran. Ia mengintip diam-diam dari balik pintu.
+
+Mula-mula keduanya tidur di kasur sendiri. Tapi tak lama, dalam gelap, terdengar suara kecil. "Mo?" panggil Baby Ais pelan. "Mo," jawab Baby Mo. Lalu — bruk, bruk — terdengar suara dua badan kecil merangkak. Dan dalam sekejap, mereka sudah berkumpul di satu kasur lagi, saling memeluk, lalu tidur.
+
+Umi menahan tawa, dan juga menahan air mata harunya.
+
+Esoknya ia bertanya sambil tersenyum, "Mo, Ais, kenapa nggak tidur di kasur sendiri-sendiri? Kan masing-masing sudah punya selimut hangat."
+
+Baby Mo berpikir keras dengan jari di dagu. Lalu ia menjawab dengan polos, "Kasur Mo… kosong. Kalau ada Ais, baru penuh."
+
+Baby Ais mengangguk setuju sambil mengunyah pisang. "Penuh!"
+
+Umi memeluk keduanya. Ternyata, selimut paling hangat bukanlah selimut bintang atau selimut bulan. Selimut paling hangat adalah saudara di sebelahmu.
+
+> *Perumpamaan orang beriman dalam saling mencintai dan menyayangi seperti satu tubuh.*
+
+Sejak itu, Umi tidak lagi memaksa mereka tidur sendiri-sendiri. Ia cuma menggeser dua kasur kecil itu menjadi rapat, supaya jadi satu tempat tidur besar. Dan setiap malam, Baby Mo dan Baby Ais tidur berdampingan, di bawah dua selimut yang tercampur jadi satu.
+
+Karena hati yang saling menyayangi memang tidak suka tidur sendirian.
+
+Selamat tidur, Mo. Selamat tidur, Ais. 🌙`,
+      en: `In Baby Mo and Baby Ais's room were two cute little beds. One with star sheets, one with moon sheets. One for Mo, one for Ais. Every night, Umi tucked them into their own beds.
+
+"Goodnight, Mo. Goodnight, Ais," whispered Umi, switching off the light.
+
+But every morning — always, without ever failing — Umi found them both in ONE bed. Squished together. Baby Ais's foot on top of Baby Mo's head. Baby Mo's arm hugging Baby Ais's teddy. The star blanket and the moon blanket all tangled into one big bundle. And both fast asleep with the most peaceful faces in the world.
+
+One night, Umi grew curious. She peeked quietly from behind the door.
+
+At first they each slept in their own bed. But before long, in the dark, came a tiny sound. "Mo?" Baby Ais called softly. "Mo," answered Baby Mo. Then — thump, thump — the sound of two little bodies crawling. And in a flash, they'd gathered into one bed again, hugging each other, and fell asleep.
+
+Umi held back a laugh, and also held back a happy tear.
+
+The next day she asked, smiling, "Mo, Ais, why not sleep in your own beds? You each have a warm blanket."
+
+Baby Mo thought hard with a finger on his chin. Then he answered innocently, "Mo's bed… is empty. With Ais, it's full."
+
+Baby Ais nodded in agreement, chewing a banana. "Full!"
+
+Umi hugged them both. It turned out the warmest blanket wasn't the star blanket or the moon blanket. The warmest blanket is the sibling beside you.
+
+> *The likeness of the believers in their love and mercy for one another is like a single body.*
+
+From then on, Umi stopped forcing them to sleep apart. She simply slid the two little beds together to make one big bed. And every night, Baby Mo and Baby Ais slept side by side, under two blankets tangled into one.
+
+Because hearts that love each other don't much like sleeping alone.
+
+Goodnight, Mo. Goodnight, Ais. 🌙`,
+    },
+    anchor: { type: "hadith", slug: "kasih-sayang-kepada-anak" },
+    takeaway: {
+      id: "Selimut paling hangat bukan yang paling tebal — tapi saudara di sebelahmu. Hati yang saling menyayangi tidak suka tidur sendirian.",
+      en: "The warmest blanket isn't the thickest — it's the sibling beside you. Hearts that love each other don't like sleeping alone.",
+    },
+    tags: ["saudara", "malam", "kasih-sayang", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kakak-cuma-lima-menit",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-alright.png",
+    published: "2026-05-09",
+    title: {
+      id: "Kakak Cuma Lima Menit",
+      en: "Big Brother by Five Minutes",
+    },
+    hook: {
+      id: "Baby Mo lahir lima menit lebih dulu dari Baby Ais. Lima menit saja! Tapi Baby Mo menganggapnya tugas yang sangat, sangat penting.",
+      en: "Baby Mo was born five minutes before Baby Ais. Just five minutes! But Baby Mo takes it as a very, very important job.",
+    },
+    body: {
+      id: `Baby Mo punya satu hal yang sangat ia banggakan. Ia lahir lima menit lebih dulu daripada Baby Ais. Lima menit! Maka, menurut Baby Mo, itu menjadikannya seorang KAKAK. Dan kakak, katanya, punya tugas penting: menjaga adik.
+
+"Mo kakak," katanya mantap setiap pagi, sambil bertolak pinggang. Baby Ais cuma mengangguk sambil menyusu botolnya, tidak terlalu peduli soal lima menit.
+
+Tugas pertama Sang Kakak: mencicipi makanan dulu. Kalau Umi memberi bubur baru, Baby Mo akan menyendok satu suap untuk dirinya, mengunyah dengan wajah serius seperti seorang ahli, lalu mengangguk. "Aman." Baru Baby Ais boleh makan. (Padahal sebenarnya ia cuma ingin makan duluan, tapi ssst, jangan bilang-bilang.)
+
+Tugas kedua: berjalan paling depan. Setiap mereka jalan-jalan, Baby Mo melangkah di depan seperti penjaga kecil, sesekali menengok ke belakang memastikan adiknya masih ada.
+
+Tapi tugas Sang Kakak benar-benar diuji suatu sore di taman.
+
+Baby Ais sedang asyik bermain pasir, ketika seekor anjing besar lewat dan menggonggong, "Guk! Guk!" Baby Ais kaget, matanya langsung berkaca-kaca, dan ia mundur ketakutan.
+
+Dan dalam sekejap — bahkan sebelum Umi sempat bergerak — Baby Mo sudah berlari, berdiri di depan adiknya, merentangkan kedua tangan kecilnya lebar-lebar. Suaranya gemetar, tapi ia tetap berkata kepada anjing itu, "Jangan! Ini adik Mo!"
+
+Anjing itu, yang ternyata jinak, cuma mengibaskan ekornya dan pergi. Tapi Umi terpaku. Anak sekecil itu, yang juga takut, memilih untuk berdiri di depan saudarinya.
+
+Malam itu Umi memeluk Baby Mo. "Mo tadi berani sekali. Padahal Mo juga takut, ya?"
+
+Baby Mo mengangguk jujur. "Takut. Tapi Ais lebih takut. Jadi Mo harus jagain. Mo kan kakak." Lalu ia menambahkan dengan serius, "Lima menit."
+
+Umi tertawa dan menciumnya. "Iya, Sayang. Kakak yang hebat. Tahukah kamu, menjaga yang lebih lemah itu disukai Allah."
+
+> *Yang kuat bukanlah yang menang berkelahi, tapi yang menjaga dan menyayangi yang lebih lemah darinya.*
+
+Lima menit memang tidak lama. Tapi di hati Baby Mo, lima menit itu cukup untuk membuatnya bertekad menjaga saudarinya seumur hidup.
+
+Dan Baby Ais? Ia memang tidak peduli soal lima menit. Tapi diam-diam, ia sangat bersyukur punya kakak seperti Baby Mo. 💪`,
+      en: `Baby Mo had one thing he was very proud of. He was born five minutes before Baby Ais. Five minutes! So, according to Baby Mo, that made him a BIG BROTHER. And a big brother, he said, has an important job: protecting his little sister.
+
+"Mo is big brother," he declared every morning, hands on his hips. Baby Ais just nodded, sucking her bottle, not too fussed about five minutes.
+
+Big Brother's first duty: taste the food first. When Umi served fresh porridge, Baby Mo would spoon a bite for himself, chew with a serious expert's face, then nod. "Safe." Only then could Baby Ais eat. (Really he just wanted to eat first, but shh, don't tell.)
+
+Second duty: walk in front. Whenever they went out, Baby Mo marched ahead like a tiny guard, glancing back now and then to make sure his sister was still there.
+
+But Big Brother's duty was truly tested one afternoon at the park.
+
+Baby Ais was happily playing in the sand when a big dog walked by and barked, "Woof! Woof!" Baby Ais startled, her eyes welling up at once, and she backed away in fear.
+
+And in a flash — even before Umi could move — Baby Mo had run over, stood in front of his sister, and stretched both his little arms out wide. His voice trembled, but he still said to the dog, "No! This is Mo's sister!"
+
+The dog, which turned out to be friendly, just wagged its tail and left. But Umi stood frozen. Such a small child, who was scared too, had chosen to stand in front of his sister.
+
+That night Umi hugged Baby Mo. "You were so brave today. Even though you were scared too, right?"
+
+Baby Mo nodded honestly. "Scared. But Ais was more scared. So Mo had to protect her. Mo is big brother." Then he added solemnly, "Five minutes."
+
+Umi laughed and kissed him. "Yes, sweetheart. A wonderful big brother. Do you know, protecting the weaker one is beloved to Allah."
+
+> *The strong one is not the one who wins fights, but the one who guards and shows mercy to those weaker than him.*
+
+Five minutes really isn't long. But in Baby Mo's heart, those five minutes were enough to make him resolve to protect his sister for a lifetime.
+
+And Baby Ais? She really didn't care about the five minutes. But secretly, she was very grateful to have a big brother like Baby Mo. 💪`,
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Menjaga yang lebih lemah — bahkan saat kita sendiri takut — adalah tanda hati yang kuat dan disukai Allah. Kakak hebat bukan soal usia, tapi soal keberanian menyayangi.",
+      en: "Protecting the weaker one — even when we're scared ourselves — is the mark of a strong heart, beloved to Allah. A great big sibling isn't about age, but the courage to care.",
+    },
+    tags: ["saudara", "berani", "kasih-sayang", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kejutan-untuk-umi",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-05-08",
+    title: {
+      id: "Kejutan untuk Umi",
+      en: "A Surprise for Umi",
+    },
+    hook: {
+      id: "Baby Mo dan Baby Ais punya satu misi rahasia: membuat kejutan untuk Umi. Tapi menyimpan rahasia ternyata sangat, sangat sulit!",
+      en: "Baby Mo and Baby Ais have a secret mission: to surprise Umi. But keeping a secret turns out to be very, very hard!",
+    },
+    body: {
+      id: `Suatu pagi, Abi berbisik kepada Baby Mo dan Baby Ais, "Pssst. Hari ini ulang tahun Umi. Yuk, kita buat kejutan. Tapi ingat — ini RAHASIA."
+
+Mata Baby Mo dan Baby Ais langsung berbinar-binar. Sebuah misi rahasia! Mereka berdua mengangguk penuh semangat dan menempelkan jari ke bibir, "Ssssst!"
+
+Maka dimulailah Operasi Kejutan.
+
+Tugas Baby Mo: menggambar. Ia mengambil krayon dan menggambar sesuatu yang ia sebut "Umi" — sebuah lingkaran besar dengan rambut keriting dan senyum yang sangat lebar (dan, entah kenapa, delapan kaki). Tugas Baby Ais: menempel bintang-bintang kertas di gambar itu. Mereka bekerja diam-diam di pojok kamar, sambil terus berbisik, "Ssst! Ssst!"
+
+Tapi menyimpan rahasia, ternyata, adalah hal paling sulit di dunia bagi anak dua tahun.
+
+Saat sarapan, Baby Ais yang paling tidak tahan. Ia memandang Umi, lalu tersenyum penuh arti, lalu berbisik keras-keras (yang sebenarnya tidak bisik sama sekali), "Umi! Ada keju— mmpfh!" Untung Baby Mo cepat-cepat menutup mulut adiknya dengan tangan. "Ssst, Ais! Rahasia!"
+
+Umi pura-pura tidak mendengar, dan diam-diam tersenyum.
+
+Sepanjang pagi, "rahasia" itu hampir bocor sepuluh kali. Baby Ais terus terkikik setiap melihat Umi. Baby Mo terus menarik tangan adiknya menjauh sambil berbisik, "Belum! Belum!"
+
+Akhirnya, saat sore tiba, semuanya siap. Abi memanggil Umi ke ruang tamu. Baby Mo dan Baby Ais bersembunyi di balik sofa, menahan napas, badan kecil mereka gemetar karena gembira.
+
+"Satu… dua… tiga!" hitung Abi.
+
+"KEJUTAAAN!" teriak Baby Mo dan Baby Ais bersamaan, melompat keluar sambil mengangkat gambar buatan mereka. Confetti dari potongan kertas beterbangan (yang tadi diam-diam mereka gunting).
+
+Umi menutup mulutnya, dan matanya benar-benar berkaca-kaca. "Masya Allah… ini untuk Umi?"
+
+"Iya!" seru keduanya. Baby Ais menambahkan bangga, "Ais yang tempel bintang!" Baby Mo menunjuk gambarnya, "Ini Umi. Cantik."
+
+Umi memeluk kedua anaknya erat-erat, lama sekali. Hadiah itu cuma selembar kertas dengan gambar berkaki delapan. Tapi bagi Umi, itu adalah lukisan paling indah di seluruh dunia — karena dibuat oleh dua tangan kecil yang bekerja sama, dengan hati yang penuh cinta.
+
+> *Ridha Allah ada pada ridha orang tua.*
+
+"Terima kasih, Sayang," bisik Umi. "Ini hadiah terindah yang pernah Umi terima."
+
+Dan Baby Mo serta Baby Ais saling pandang, lalu tos. Misi rahasia: berhasil! (Walaupun hampir bocor sepuluh kali.)
+
+Ternyata, hal terbaik dari membuat kejutan bukan kejutannya — tapi mengerjakannya bersama saudara tersayang. 🎁`,
+      en: `One morning, Abi whispered to Baby Mo and Baby Ais, "Psst. Today is Umi's birthday. Let's make a surprise. But remember — it's a SECRET."
+
+Baby Mo and Baby Ais's eyes lit up at once. A secret mission! They both nodded eagerly and pressed a finger to their lips, "Shhhh!"
+
+So Operation Surprise began.
+
+Baby Mo's job: drawing. He took the crayons and drew something he called "Umi" — a big circle with curly hair and a very wide smile (and, for some reason, eight legs). Baby Ais's job: sticking paper stars onto the drawing. They worked quietly in the corner of the room, whispering all the while, "Shh! Shh!"
+
+But keeping a secret, it turned out, was the hardest thing in the world for a two-year-old.
+
+At breakfast, Baby Ais was the one who couldn't hold it. She looked at Umi, then smiled meaningfully, then whisper-shouted (which wasn't a whisper at all), "Umi! There's a surpri— mmpfh!" Luckily Baby Mo quickly covered his sister's mouth with his hand. "Shh, Ais! Secret!"
+
+Umi pretended not to hear, and secretly smiled.
+
+All morning, the "secret" nearly leaked ten times. Baby Ais kept giggling every time she saw Umi. Baby Mo kept pulling his sister away, whispering, "Not yet! Not yet!"
+
+Finally, when evening came, everything was ready. Abi called Umi into the living room. Baby Mo and Baby Ais hid behind the sofa, holding their breath, their little bodies trembling with excitement.
+
+"One… two… three!" counted Abi.
+
+"SURPRIIISE!" shouted Baby Mo and Baby Ais together, leaping out and holding up their drawing. Confetti made of paper scraps fluttered down (which they'd secretly cut earlier).
+
+Umi covered her mouth, and her eyes truly welled up. "Masha'Allah… this is for me?"
+
+"Yes!" cried them both. Baby Ais added proudly, "Ais stuck the stars!" Baby Mo pointed at his drawing, "This is Umi. Pretty."
+
+Umi hugged both her children tight, for a long, long time. The gift was just a sheet of paper with an eight-legged drawing. But to Umi, it was the most beautiful painting in the whole world — because it was made by two little hands working together, with hearts full of love.
+
+> *The pleasure of Allah lies in the pleasure of one's parents.*
+
+"Thank you, my loves," whispered Umi. "This is the loveliest gift I've ever received."
+
+And Baby Mo and Baby Ais looked at each other, then high-fived. Secret mission: accomplished! (Even if it nearly leaked ten times.)
+
+It turned out the best part of making a surprise wasn't the surprise — it was making it together with a beloved sibling. 🎁`,
+    },
+    anchor: { type: "hadith", slug: "berbakti-pada-ibu" },
+    takeaway: {
+      id: "Hal terbaik dari membuat kejutan bukan kejutannya — tapi mengerjakannya bersama saudara tersayang. Dan hadiah kecil dari hati anak adalah yang paling berharga bagi orang tua.",
+      en: "The best part of making a surprise isn't the surprise — it's making it together with a beloved sibling. And a small gift from a child's heart is the most precious thing to a parent.",
+    },
+    tags: ["saudara", "keluarga", "kerja-sama", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "saat-ais-pergi-ke-rumah-nenek",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-07.png",
+    published: "2026-05-07",
+    title: {
+      id: "Saat Ais Pergi ke Rumah Nenek",
+      en: "When Ais Went to Grandma's",
+    },
+    hook: {
+      id: "Untuk pertama kalinya, Baby Ais menginap di rumah Nenek — tanpa Baby Mo. Satu hari terasa biasa saja… atau ternyata tidak?",
+      en: "For the first time, Baby Ais slept over at Grandma's — without Baby Mo. One day felt ordinary… or did it?",
+    },
+    body: {
+      id: `Suatu hari, Nenek mengajak Baby Ais menginap satu malam di rumahnya. Hanya Baby Ais. Baby Mo tetap di rumah.
+
+"Dah, Mo!" Baby Ais melambai riang dari mobil. Baby Mo melambai balik. "Dah, Ais!" Ia bahkan tersenyum lebar. Satu hari tanpa rebutan mainan? Asyik! Baby Mo membayangkan ia bisa memainkan SEMUA balok sendirian.
+
+Pagi itu, Baby Mo bermain balok. Sendirian. Ia menyusun menara paling tinggi. Lalu ia menoleh ke samping untuk berkata "lihat!" — tapi tidak ada siapa-siapa di sana. "Oh iya," gumamnya. "Ais lagi di rumah Nenek."
+
+Siang itu, Umi memberi dua potong biskuit. Refleks, Baby Mo menyimpan satu di tangan kirinya. "Buat Ais," katanya. Lalu ia ingat. Ais tidak ada. Pelan-pelan, ia memandang biskuit kedua itu dengan bingung.
+
+Sore itu, ada anjing menggonggong di luar. Baby Mo agak takut, dan secara otomatis ia menoleh untuk menggenggam tangan saudarinya — tapi tangan itu tidak ada di sana.
+
+Dan saat makan malam, meja terasa terlalu sepi. Tidak ada yang berkata "nyam-nyam". Tidak ada yang tertawa saat ia membuat wajah lucu. Tidak ada yang berebut kursi sebelahnya.
+
+Malam tiba. Umi menyelimuti Baby Mo di kasurnya. Tapi kasur di sebelahnya — kasur bersprei bulan — kosong dan rapi.
+
+Baby Mo memandanginya lama sekali. Lalu bibir kecilnya bergetar. "Umi," bisiknya pelan, "Mo… kangen Ais."
+
+Umi duduk dan memeluknya. "Umi tahu, Sayang. Kadang kita baru sadar betapa kita menyayangi seseorang… justru saat ia sedang tidak ada."
+
+"Padahal tadi pagi Mo senang," kata Baby Mo, bingung dengan perasaannya sendiri.
+
+Umi tersenyum lembut. "Itu karena menyayangi saudara itu seperti udara, Sayang. Kita tidak selalu menyadarinya — sampai sebentar saja ia tidak ada."
+
+Baby Mo memeluk boneka beruang milik Baby Ais, mencium baunya yang seperti adiknya, lalu tertidur sambil menggenggamnya.
+
+Keesokan paginya — "MO!" Pintu terbuka dan Baby Ais berlari masuk. Baby Mo melompat dari kursinya dan keduanya berpelukan erat sekali, berputar-putar, tertawa, seakan sudah berpisah seratus tahun. "Ais! Ais pulang!"
+
+"Mo kangen Ais?" tanya Umi sambil tersenyum.
+
+Baby Mo mengangguk kuat-kuat. Lalu, untuk pertama kalinya, ia berkata sesuatu yang membuat Umi terharu: "Mo nggak mau main balok sendirian lagi. Lebih seru sama Ais."
+
+> *Dan Dia menjadikan di antara kalian rasa kasih dan sayang.*
+
+Ternyata, mainan terbaik di dunia bukanlah menara balok yang paling tinggi. Mainan terbaik adalah saudara yang duduk di sebelahmu, ikut tertawa, bahkan saat berebut.
+
+Selamat datang kembali, Baby Ais. Baby Mo, dan satu kasur yang lagi-lagi akan penuh malam ini, sudah menunggumu. 💛`,
+      en: `One day, Grandma invited Baby Ais to sleep over for one night at her house. Just Baby Ais. Baby Mo stayed home.
+
+"Bye, Mo!" Baby Ais waved cheerfully from the car. Baby Mo waved back. "Bye, Ais!" He even smiled wide. A whole day with no fighting over toys? Brilliant! Baby Mo imagined he could play with ALL the blocks by himself.
+
+That morning, Baby Mo played with blocks. Alone. He built the tallest tower. Then he turned to the side to say "look!" — but there was no one there. "Oh right," he mumbled. "Ais is at Grandma's."
+
+That afternoon, Umi gave him two biscuits. Out of habit, Baby Mo kept one in his left hand. "For Ais," he said. Then he remembered. Ais wasn't there. Slowly, he stared at the second biscuit, puzzled.
+
+That evening, a dog barked outside. Baby Mo was a little scared, and automatically he turned to grab his sister's hand — but the hand wasn't there.
+
+And at dinner, the table felt too quiet. No one said "nyum-nyum". No one laughed when he made a funny face. No one squabbled over the chair beside him.
+
+Night came. Umi tucked Baby Mo into his bed. But the bed beside it — the one with moon sheets — was empty and neatly made.
+
+Baby Mo stared at it for a long time. Then his little lip trembled. "Umi," he whispered, "Mo… misses Ais."
+
+Umi sat down and hugged him. "I know, sweetheart. Sometimes we only realise how much we love someone… exactly when they're not around."
+
+"But this morning Mo was happy," said Baby Mo, confused by his own feelings.
+
+Umi smiled gently. "That's because loving a sibling is like air, sweetheart. We don't always notice it — until, for just a little while, it's gone."
+
+Baby Mo hugged Baby Ais's teddy bear, breathed in its smell that was like his sister, then fell asleep holding it.
+
+The next morning — "MO!" The door opened and Baby Ais ran in. Baby Mo leapt from his chair and the two hugged so tightly, spinning around, laughing, as if they'd been apart a hundred years. "Ais! Ais is home!"
+
+"Did Mo miss Ais?" asked Umi, smiling.
+
+Baby Mo nodded hard. Then, for the first time, he said something that moved Umi: "Mo doesn't want to play blocks alone anymore. It's more fun with Ais."
+
+> *And He has placed between you affection and mercy.*
+
+It turned out the best toy in the world wasn't the tallest block tower. The best toy is the sibling sitting beside you, laughing along, even while squabbling.
+
+Welcome home, Baby Ais. Baby Mo — and one bed that will, once again, be full tonight — have been waiting for you. 💛`,
+    },
+    anchor: { type: "hadith", slug: "silaturahmi-rezeki" },
+    takeaway: {
+      id: "Kadang kita baru sadar betapa menyayangi saudara justru saat ia sedang tidak ada. Mainan terbaik bukan menara tertinggi — tapi saudara yang duduk di sebelahmu.",
+      en: "Sometimes we only realise how much we love a sibling exactly when they're away. The best toy isn't the tallest tower — it's the sibling sitting beside you.",
+    },
+    tags: ["saudara", "keluarga", "kasih-sayang", "buku"],
+    readingTimeMin: 6,
+  },
+
 ];
 
 export function getAllCatatan(): Catatan[] {
@@ -2603,4 +3027,16 @@ export function getAllCatatan(): Catatan[] {
 
 export function getCatatanBySlug(slug: string): Catatan | undefined {
   return catatanList.find((c) => c.slug === slug);
+}
+
+/** Stories/notes whose Islamic anchor points at a given doa/hadith/parenting
+ *  entry — used to cross-link content (e.g. "Cerita terkait" on a doa page),
+ *  which strengthens internal linking & discovery. Newest first. */
+export function getCatatanByAnchor(
+  type: "doa" | "hadith" | "parenting",
+  slug: string,
+): Catatan[] {
+  return getAllCatatan().filter(
+    (c) => c.anchor.type === type && c.anchor.slug === slug,
+  );
 }
