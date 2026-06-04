@@ -19,6 +19,7 @@ import {
   itemListSchema,
 } from "@/lib/seo/schemas";
 import { getAllVideos } from "@/lib/youtube/loader";
+import { getCatatanByVideo } from "@/lib/content/catatan";
 import {
   CATEGORY_LABEL,
   CATEGORY_ORDER,
@@ -85,6 +86,17 @@ export default async function MomenPage({
     ),
   })).filter((g) => g.items.length > 0);
 
+  // Map each video to its written story (if any) so a card can link to it.
+  const storyByVideo: Record<string, { href: string; title: string }> = {};
+  for (const v of all) {
+    const story = getCatatanByVideo(v.id);
+    if (story)
+      storyByVideo[v.id] = {
+        href: pathFor(l, `/cerita/${story.slug}`),
+        title: story.title[l],
+      };
+  }
+
   return (
     <>
       <Header locale={l} currentPath="/momen" />
@@ -134,7 +146,7 @@ export default async function MomenPage({
             <p className="text-[15px] leading-relaxed text-whisper">{c.empty}</p>
           </div>
         ) : (
-          <MomenGrid groups={byCategory} locale={l} />
+          <MomenGrid groups={byCategory} locale={l} storyByVideo={storyByVideo} />
         )}
       </main>
       <Footer locale={l} currentPath="/momen" />
