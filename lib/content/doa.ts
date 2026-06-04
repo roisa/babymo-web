@@ -1170,6 +1170,228 @@ export const doaList: Doa[] = [
     author: "tim-baby-mo",
   },
 
+
+  // ───────── Added 2026-06 (batch 2): travel, illness, Qur'anic ─────────
+  // Arabic verified against standard references; pending scholar review.
+  {
+    slug: "doa-bepergian",
+    arabic:
+      "اللَّهُمَّ إِنَّا نَسْأَلُكَ فِي سَفَرِنَا هَذَا الْبِرَّ وَالتَّقْوَى، وَمِنَ الْعَمَلِ مَا تَرْضَى، اللَّهُمَّ هَوِّنْ عَلَيْنَا سَفَرَنَا هَذَا، وَاطْوِ عَنَّا بُعْدَهُ",
+    transliteration:
+      "Allahumma innaa nas'aluka fii safarinaa haadzal-birra wat-taqwaa, wa minal-'amali maa tardhaa. Allahumma hawwin 'alainaa safaranaa haadzaa, wathwi 'annaa bu'dah",
+    title: { id: "Doa Bepergian (Safar)", en: "Dua When Travelling" },
+    translation: {
+      id: "Ya Allah, kami memohon kepada-Mu kebaikan dan ketakwaan dalam perjalanan kami ini, serta amal yang Engkau ridai. Ya Allah, mudahkanlah perjalanan kami ini dan dekatkanlah jaraknya.",
+      en: "O Allah, we ask You for righteousness and piety on this journey of ours, and deeds that please You. O Allah, make this journey easy for us and fold up its distance.",
+    },
+    context: {
+      id: "Dibaca ketika memulai perjalanan jauh bersama keluarga — mudik, liburan, atau bepergian.",
+      en: "Read when setting off on a long journey with the family — going home, holidays, or any trip.",
+    },
+    source: { type: "hadith", reference: "HR. Muslim 1342", grade: "sahih" },
+    ages: [6, 7, 8],
+    situations: ["perjalanan", "kendaraan", "harian"],
+    related: ["naik-kendaraan", "keluar-rumah", "doa-singgah"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-kembali-dari-perjalanan",
+    arabic: "آيِبُونَ تَائِبُونَ عَابِدُونَ لِرَبِّنَا حَامِدُونَ",
+    transliteration: "Aayibuuna taa'ibuuna 'aabiduuna li rabbinaa haamiduun",
+    title: { id: "Doa Kembali dari Perjalanan", en: "Dua When Returning from a Journey" },
+    translation: {
+      id: "Kami kembali, bertaubat, beribadah, dan memuji Tuhan kami.",
+      en: "We return, repentant, worshipping, and praising our Lord.",
+    },
+    context: {
+      id: "Diucapkan ketika pulang dari perjalanan — sebagai rasa syukur telah sampai dengan selamat.",
+      en: "Said when returning from a journey — in gratitude for arriving home safely.",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 1797", grade: "sahih" },
+    ages: [6, 7, 8],
+    situations: ["perjalanan", "syukur", "harian"],
+    related: ["doa-bepergian", "masuk-rumah"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-menjenguk-orang-sakit",
+    arabic: "أَسْأَلُ اللَّهَ الْعَظِيمَ رَبَّ الْعَرْشِ الْعَظِيمِ أَنْ يَشْفِيَكَ",
+    transliteration: "As'alullaahal-'azhiima rabbal-'arsyil-'azhiimi an yasyfiyak",
+    title: { id: "Doa Menjenguk Orang Sakit", en: "Dua When Visiting the Sick" },
+    translation: {
+      id: "Aku memohon kepada Allah Yang Maha Agung, Tuhan 'Arsy yang agung, agar menyembuhkanmu.",
+      en: "I ask Allah the Mighty, Lord of the Mighty Throne, to heal you.",
+    },
+    context: {
+      id: "Dibaca anak ketika menjenguk anggota keluarga atau teman yang sakit (dianjurkan diulang tujuh kali).",
+      en: "Read by a child when visiting a sick family member or friend (recommended to repeat seven times).",
+    },
+    source: { type: "hadith", reference: "HR. Tirmidzi 2083", grade: "sahih" },
+    ages: [5, 6, 7, 8],
+    situations: ["sakit", "sosial", "keluarga"],
+    related: ["ketika-sakit", "doa-nabi-ayyub"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-keteguhan-hati",
+    arabic:
+      "رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ",
+    transliteration:
+      "Rabbanaa laa tuzigh quluubanaa ba'da idz hadaitanaa wa hab lanaa mil ladunka rahmah, innaka antal-wahhaab",
+    title: { id: "Doa Keteguhan Hati", en: "Dua for a Steadfast Heart" },
+    translation: {
+      id: "Ya Tuhan kami, janganlah Engkau condongkan hati kami kepada kesesatan setelah Engkau beri petunjuk, dan karuniakanlah kepada kami rahmat dari sisi-Mu. Sesungguhnya Engkau Maha Pemberi.",
+      en: "Our Lord, do not let our hearts deviate after You have guided us, and grant us mercy from Yourself. Indeed, You are the Bestower.",
+    },
+    context: {
+      id: "Doa memohon agar hati tetap teguh di atas kebaikan dan petunjuk Allah.",
+      en: "A dua asking that the heart stay firm upon goodness and Allah's guidance.",
+    },
+    source: { type: "quran", reference: "QS. Ali 'Imran: 8", grade: "quran" },
+    ages: [6, 7, 8],
+    situations: ["ibadah", "harian", "perlindungan"],
+    related: ["doa-pagi", "doa-petang"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-mohon-rahmat",
+    arabic: "رَبَّنَا آتِنَا مِنْ لَدُنْكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا",
+    transliteration: "Rabbanaa aatinaa mil ladunka rahmah, wa hayyi' lanaa min amrinaa rasyadaa",
+    title: { id: "Doa Memohon Rahmat & Petunjuk", en: "Dua for Mercy & Right Guidance" },
+    translation: {
+      id: "Ya Tuhan kami, berikanlah rahmat kepada kami dari sisi-Mu, dan sempurnakanlah petunjuk yang lurus bagi kami dalam urusan kami.",
+      en: "Our Lord, grant us mercy from Yourself, and prepare for us right guidance in our affair.",
+    },
+    context: {
+      id: "Doa para pemuda Ashabul Kahfi. Dibaca ketika memohon rahmat dan jalan yang benar.",
+      en: "The dua of the young men of the Cave. Read when asking for mercy and the right path.",
+    },
+    source: { type: "quran", reference: "QS. Al-Kahf: 10", grade: "quran" },
+    ages: [6, 7, 8],
+    situations: ["ibadah", "harian"],
+    related: ["doa-keteguhan-hati", "doa-dimudahkan-urusan"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-pandai-bersyukur",
+    arabic:
+      "رَبِّ أَوْزِعْنِي أَنْ أَشْكُرَ نِعْمَتَكَ الَّتِي أَنْعَمْتَ عَلَيَّ وَعَلَى وَالِدَيَّ وَأَنْ أَعْمَلَ صَالِحًا تَرْضَاهُ",
+    transliteration:
+      "Rabbi auzi'nii an asykura ni'matakal-latii an'amta 'alayya wa 'alaa waalidayya wa an a'mala shaalihan tardhaah",
+    title: { id: "Doa Pandai Bersyukur", en: "Dua to Be Truly Grateful" },
+    translation: {
+      id: "Ya Tuhanku, berilah aku ilham untuk mensyukuri nikmat-Mu yang telah Engkau berikan kepadaku dan kepada kedua orang tuaku, dan agar aku mengerjakan kebajikan yang Engkau ridai.",
+      en: "My Lord, enable me to be grateful for Your favour which You have bestowed upon me and upon my parents, and to do righteousness of which You approve.",
+    },
+    context: {
+      id: "Doa Nabi Sulaiman. Dibaca untuk memohon hati yang pandai bersyukur atas nikmat Allah.",
+      en: "Prophet Sulaiman's dua. Read to ask for a heart that is truly grateful for Allah's favours.",
+    },
+    source: { type: "quran", reference: "QS. An-Naml: 19", grade: "quran" },
+    ages: [6, 7, 8],
+    situations: ["syukur", "orangtua", "ibadah"],
+    related: ["doa-untuk-orang-tua", "mendapat-rezeki"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-akhlak-mulia",
+    arabic:
+      "اللَّهُمَّ اهْدِنِي لِأَحْسَنِ الْأَخْلَاقِ لَا يَهْدِي لِأَحْسَنِهَا إِلَّا أَنْتَ، وَاصْرِفْ عَنِّي سَيِّئَهَا لَا يَصْرِفُ عَنِّي سَيِّئَهَا إِلَّا أَنْتَ",
+    transliteration:
+      "Allahumma-hdinii li ahsanil-akhlaaq, laa yahdii li ahsanihaa illaa anta, washrif 'annii sayyi'ahaa, laa yashrifu 'annii sayyi'ahaa illaa anta",
+    title: { id: "Doa Memohon Akhlak Mulia", en: "Dua for the Best Character" },
+    translation: {
+      id: "Ya Allah, tunjukilah aku kepada akhlak yang terbaik, tidak ada yang dapat menunjukkannya kecuali Engkau; dan jauhkanlah dariku akhlak yang buruk, tidak ada yang dapat menjauhkannya kecuali Engkau.",
+      en: "O Allah, guide me to the best of character, none guides to it but You; and turn me away from bad character, none turns it away from me but You.",
+    },
+    context: {
+      id: "Doa memohon akhlak yang baik dan dijauhkan dari akhlak buruk — inti pendidikan anak.",
+      en: "A dua for good character and protection from bad character — the heart of raising a child.",
+    },
+    source: { type: "hadith", reference: "HR. Muslim 771", grade: "sahih" },
+    ages: [6, 7, 8],
+    situations: ["akhlak", "ibadah", "sosial"],
+    related: ["doa-penutup-majelis", "doa-keturunan-shalih"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-hasbunallah",
+    arabic: "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+    transliteration: "Hasbunallaahu wa ni'mal-wakiil",
+    title: { id: "Doa Ketika Takut & Cemas", en: "Dua When Afraid or Anxious" },
+    translation: {
+      id: "Cukuplah Allah menjadi penolong kami, dan Dia sebaik-baik pelindung.",
+      en: "Allah is sufficient for us, and He is the best Disposer of affairs.",
+    },
+    context: {
+      id: "Kalimat tawakal yang singkat — dibaca anak ketika takut, cemas, atau menghadapi sesuatu yang berat.",
+      en: "A short phrase of reliance on Allah — read by a child when afraid, anxious, or facing something hard.",
+    },
+    source: { type: "quran", reference: "QS. Ali 'Imran: 173", grade: "quran" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["perlindungan", "emosi", "harian"],
+    related: ["doa-ketika-kesulitan", "perlindungan-anak"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-nabi-ayyub",
+    arabic: "رَبِّ أَنِّي مَسَّنِيَ الضُّرُّ وَأَنْتَ أَرْحَمُ الرَّاحِمِينَ",
+    transliteration: "Rabbi annii massaniyadh-dhurru wa anta arhamur-raahimiin",
+    title: { id: "Doa Ketika Sakit (Doa Nabi Ayyub)", en: "Dua When Ill (Prophet Ayyub's Dua)" },
+    translation: {
+      id: "Ya Tuhanku, sesungguhnya aku telah ditimpa penyakit, dan Engkau adalah Tuhan Yang Maha Penyayang di antara para penyayang.",
+      en: "My Lord, indeed adversity has touched me, and You are the Most Merciful of the merciful.",
+    },
+    context: {
+      id: "Doa Nabi Ayyub yang sabar saat sakit. Dibaca anak ketika sakit, memohon kesembuhan dari Allah.",
+      en: "The dua of patient Prophet Ayyub when ill. Read by a child when sick, asking Allah for healing.",
+    },
+    source: { type: "quran", reference: "QS. Al-Anbiya: 83", grade: "quran" },
+    ages: [5, 6, 7, 8],
+    situations: ["sakit", "emosi", "perlindungan"],
+    related: ["ketika-sakit", "doa-menjenguk-orang-sakit"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-mohon-hikmah",
+    arabic: "رَبِّ هَبْ لِي حُكْمًا وَأَلْحِقْنِي بِالصَّالِحِينَ",
+    transliteration: "Rabbi hab lii hukman wa alhiqnii bish-shaalihiin",
+    title: { id: "Doa Memohon Hikmah", en: "Dua for Wisdom" },
+    translation: {
+      id: "Ya Tuhanku, berikanlah kepadaku ilmu (hikmah) dan pertemukanlah aku dengan orang-orang yang saleh.",
+      en: "My Lord, grant me wisdom and join me with the righteous.",
+    },
+    context: {
+      id: "Doa Nabi Ibrahim. Dibaca untuk memohon ilmu yang bermanfaat dan teman-teman yang saleh.",
+      en: "Prophet Ibrahim's dua. Read to ask for beneficial knowledge and righteous companions.",
+    },
+    source: { type: "quran", reference: "QS. Asy-Syu'ara: 83", grade: "quran" },
+    ages: [6, 7, 8],
+    situations: ["belajar", "ibadah", "harian"],
+    related: ["sebelum-belajar", "minta-ilmu-bermanfaat"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+
 ];
 
 export function getAllDoa(): Doa[] {

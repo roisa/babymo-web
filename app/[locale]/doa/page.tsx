@@ -70,6 +70,12 @@ export default async function DoaIndex({
           <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
             {dict.doa.indexDescription}
           </p>
+          <Link
+            href={pathFor(l, "/doa/kategori")}
+            className="tap mt-5 inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-4 py-2 text-[13.5px] font-semibold text-sage-deep hover:border-sage/40"
+          >
+            {l === "id" ? "Jelajahi per kategori" : "Browse by category"} →
+          </Link>
         </header>
 
         <div className="mt-8">

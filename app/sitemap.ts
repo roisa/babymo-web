@@ -34,6 +34,7 @@ const STATIC_PATHS = [
   "/orangtua",
   // Content indexes
   "/doa",
+  "/doa/kategori",
   "/hadith",
   "/parenting",
   "/cerita",
