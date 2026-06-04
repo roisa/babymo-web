@@ -1,67 +1,48 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import type { Locale } from "@/lib/i18n/config";
+import {
+  MASCOT_LINES,
+  getMascotIndex,
+  subscribeMascot,
+} from "./mascot-store";
 
 type Props = { locale: Locale };
 
-const GREETINGS: Record<Locale, string[]> = {
-  id: [
-    "Assalamu'alaikum! 👋",
-    "Yuk baca doa hari ini! 🤲",
-    "Sudah sholat belum? 🕌",
-    "Bismillah dulu ya! 😊",
-    "Hari yang berkah! ✨",
-    "Semangat belajar! 📖",
-    "Jangan lupa senyum! 😄",
-    "MasyaAllah, hebat! 🌟",
-    "Yuk, main sambil belajar! 🧩",
-    "Sayang Allah, sayang keluarga ❤️",
-  ],
-  en: [
-    "Assalamu'alaikum! 👋",
-    "Let's read today's du'a! 🤲",
-    "Have you prayed yet? 🕌",
-    "Say Bismillah first! 😊",
-    "A blessed day! ✨",
-    "Happy learning! 📖",
-    "Don't forget to smile! 😄",
-    "MashaAllah, awesome! 🌟",
-    "Let's play and learn! 🧩",
-    "Love Allah, love family ❤️",
-  ],
-};
-
 /**
- * A small speech bubble near the mascot that shows a random Baby Mo
- * greeting and gently cycles through more every few seconds. Picks
- * the first message at random on mount (client-only — avoids SSR
- * hydration mismatch), then rotates with a soft fade.
+ * A small speech bubble near the mascot. It FOLLOWS the pose: MascotPoses
+ * publishes the current index to the shared store, and this bubble shows
+ * the line paired with whatever pose is on screen — so the words always
+ * match (e.g. the "wow" pose says "Wow… MashaAllah!"). Swaps with a soft
+ * fade. Server-renders nothing (index is -1) → no hydration mismatch.
  */
 export function MascotGreeting({ locale }: Props) {
-  const list = GREETINGS[locale];
-  const [idx, setIdx] = useState<number | null>(null);
+  const current = useSyncExternalStore(
+    subscribeMascot,
+    getMascotIndex,
+    () => -1,
+  );
+  const [shown, setShown] = useState(-1);
   const [visible, setVisible] = useState(true);
 
   useEffect(() => {
-    // random start
-    setIdx(Math.floor(Math.random() * list.length));
-    const reduce =
-      typeof window !== "undefined" &&
-      window.matchMedia?.("(prefers-reduced-motion: reduce)").matches;
-    if (reduce) return; // pick one and stay
+    if (current < 0) return;
+    if (shown < 0) {
+      setShown(current); // first line — appear immediately
+      return;
+    }
+    if (current === shown) return;
+    // fade out, swap text, fade back in — in step with the pose crossfade
+    setVisible(false);
+    const t = setTimeout(() => {
+      setShown(current);
+      setVisible(true);
+    }, 300);
+    return () => clearTimeout(t);
+  }, [current, shown]);
 
-    const interval = setInterval(() => {
-      setVisible(false);
-      setTimeout(() => {
-        setIdx((i) => ((i ?? 0) + 1) % list.length);
-        setVisible(true);
-      }, 350);
-    }, 4200);
-    return () => clearInterval(interval);
-  }, [list.length]);
-
-  if (idx === null) return null;
+  if (shown < 0) return null;
 
   return (
     <div
@@ -69,11 +50,11 @@ export function MascotGreeting({ locale }: Props) {
       className="pointer-events-none absolute left-0 top-[6%] z-10 sm:left-2"
     >
       <div
-        className={`relative rounded-2xl rounded-br-sm border border-hairline bg-paper px-3.5 py-2 text-[13px] font-semibold text-ink shadow-[0_8px_24px_-10px_rgba(15,18,19,0.3)] transition-all duration-300 ${
+        className={`relative max-w-[15rem] rounded-2xl rounded-br-sm border border-hairline bg-paper px-3.5 py-2 text-[13px] font-semibold text-ink shadow-[0_8px_24px_-10px_rgba(15,18,19,0.3)] transition-all duration-300 ${
           visible ? "translate-y-0 opacity-100" : "translate-y-1 opacity-0"
         }`}
       >
-        {list[idx]}
+        {MASCOT_LINES[shown]!.text[locale]}
         {/* tail on the right, pointing down toward Baby Mo (who sits to the right) */}
         <span className="absolute -bottom-1.5 right-4 h-3 w-3 rotate-45 border-b border-r border-hairline bg-paper" />
       </div>
