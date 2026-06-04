@@ -34,6 +34,7 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/asmaul-husna">Asmaul Husna</FooterLink>
             <FooterLink locale={locale} href="/hadith">{dict.nav.hadith}</FooterLink>
             <FooterLink locale={locale} href="/kisah">{dict.nav.kisah}</FooterLink>
+            <FooterLink locale={locale} href="/cerita">{dict.nav.catatan}</FooterLink>
             <FooterLink locale={locale} href="/parenting">{dict.nav.parenting}</FooterLink>
             <FooterLink locale={locale} href="/blog">{dict.nav.blog}</FooterLink>
             <FooterLink locale={locale} href="/kalender">
@@ -49,7 +50,6 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/apps/kids-activity">
               {locale === "id" ? "Aktivitas Anak" : "Kids Activity"}
             </FooterLink>
-            <FooterLink locale={locale} href="/faq">{dict.nav.faq}</FooterLink>
           </FooterCol>
 
           <FooterCol heading={dict.footer.info}>
@@ -57,6 +57,7 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/tim">{locale === "id" ? "Tim & Reviewer" : "Team & Reviewers"}</FooterLink>
             <FooterLink locale={locale} href="/dukung">{dict.nav.support}</FooterLink>
             <FooterLink locale={locale} href="/kontak">{dict.nav.contact}</FooterLink>
+            <FooterLink locale={locale} href="/faq">{dict.nav.faq}</FooterLink>
             <FooterLink locale={locale} href="/privasi">{dict.pages.privacy.title}</FooterLink>
             <FooterLink locale={locale} href="/syarat">{dict.pages.terms.title}</FooterLink>
           </FooterCol>
