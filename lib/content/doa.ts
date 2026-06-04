@@ -942,6 +942,234 @@ export const doaList: Doa[] = [
     published: "2026-05-28",
     updated: "2026-05-28",
   },
+
+  // ───────── Added 2026-06: well-known, sourced daily du'as ─────────
+  // Arabic verified against standard references (Qur'an mushaf, Hisnul
+  // Muslim, the cited hadith collections). Pending a final check by the
+  // Baby Mo scholar-reviewer before any are marked reviewedBy.
+  {
+    slug: "sayyidul-istighfar",
+    arabic:
+      "اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ، أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ، أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ، وَأَبُوءُ بِذَنْبِي، فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ",
+    transliteration:
+      "Allahumma anta rabbii laa ilaaha illaa anta, khalaqtanii wa anaa 'abduka, wa anaa 'alaa 'ahdika wa wa'dika mastatha'tu, a'uudzu bika min syarri maa shana'tu, abuu'u laka bini'matika 'alayya, wa abuu'u bidzanbii, faghfir lii fa innahu laa yaghfirudz-dzunuuba illaa anta",
+    title: { id: "Sayyidul Istighfar", en: "Sayyid al-Istighfar (Best Forgiveness Dua)" },
+    translation: {
+      id: "Ya Allah, Engkau Tuhanku, tidak ada tuhan selain Engkau. Engkau menciptakanku dan aku hamba-Mu. Aku menepati janji dan ikatan kepada-Mu sekuat tenagaku. Aku berlindung kepada-Mu dari keburukan perbuatanku. Aku mengakui nikmat-Mu kepadaku dan aku mengakui dosaku, maka ampunilah aku, karena tidak ada yang mengampuni dosa kecuali Engkau.",
+      en: "O Allah, You are my Lord, there is no god but You. You created me and I am Your servant. I keep Your covenant and promise as best I can. I seek refuge in You from the evil I have done. I acknowledge Your favour upon me and I acknowledge my sin, so forgive me, for none forgives sins but You.",
+    },
+    context: {
+      id: "Istighfar paling utama. Siapa membacanya dengan yakin di pagi atau petang, ia termasuk ahli surga (HR. Bukhari).",
+      en: "The most excellent way to seek forgiveness. Whoever says it with conviction in the morning or evening is among the people of Paradise (Bukhari).",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 6306", grade: "sahih" },
+    ages: [7, 8],
+    situations: ["pagi", "petang", "ibadah", "harian"],
+    related: ["doa-pagi", "doa-petang"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-ketika-kesulitan",
+    arabic: "لَا إِلَهَ إِلَّا أَنْتَ سُبْحَانَكَ إِنِّي كُنْتُ مِنَ الظَّالِمِينَ",
+    transliteration: "Laa ilaaha illaa anta subhaanaka innii kuntu minazh-zhaalimiin",
+    title: { id: "Doa Ketika Kesulitan (Doa Nabi Yunus)", en: "Dua in Hardship (Prophet Yunus's Dua)" },
+    translation: {
+      id: "Tidak ada tuhan selain Engkau. Maha Suci Engkau. Sesungguhnya aku termasuk orang-orang yang zalim.",
+      en: "There is no god but You. Glory be to You. Indeed, I have been among the wrongdoers.",
+    },
+    context: {
+      id: "Doa Nabi Yunus di dalam perut ikan. Dibaca anak ketika sedih, takut, atau menghadapi kesulitan.",
+      en: "Prophet Yunus's dua from inside the whale. Read by a child when sad, afraid, or facing difficulty.",
+    },
+    source: { type: "quran", reference: "QS. Al-Anbiya: 87", grade: "quran" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["perlindungan", "emosi", "harian"],
+    related: ["ketika-sakit", "ketika-marah", "perlindungan-anak"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-keturunan-shalih",
+    arabic:
+      "رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا",
+    transliteration:
+      "Rabbanaa hab lanaa min azwaajinaa wa dzurriyyaatinaa qurrata a'yun, waj'alnaa lil-muttaqiina imaamaa",
+    title: { id: "Doa Memohon Keturunan yang Shalih", en: "Dua for Righteous Offspring" },
+    translation: {
+      id: "Ya Tuhan kami, anugerahkanlah kepada kami pasangan dan keturunan kami sebagai penyenang hati, dan jadikanlah kami pemimpin bagi orang-orang yang bertakwa.",
+      en: "Our Lord, grant us from our spouses and offspring comfort to our eyes, and make us a leader for the righteous.",
+    },
+    context: {
+      id: "Doa orang tua untuk anak-anaknya — memohon agar keluarga menjadi penyejuk hati dan teladan kebaikan.",
+      en: "A parent's dua for their children — asking that the family be a comfort to the eyes and an example of goodness.",
+    },
+    source: { type: "quran", reference: "QS. Al-Furqan: 74", grade: "quran" },
+    ages: [5, 6, 7, 8],
+    situations: ["keluarga", "orangtua"],
+    related: ["doa-untuk-orang-tua", "doa-kedua-orang-tua"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-dilancarkan-bicara",
+    arabic:
+      "رَبِّ اشْرَحْ لِي صَدْرِي، وَيَسِّرْ لِي أَمْرِي، وَاحْلُلْ عُقْدَةً مِنْ لِسَانِي، يَفْقَهُوا قَوْلِي",
+    transliteration:
+      "Rabbisyrah lii shadrii, wa yassir lii amrii, wahlul 'uqdatam mil lisaanii, yafqahuu qaulii",
+    title: { id: "Doa Dilancarkan Berbicara (Doa Nabi Musa)", en: "Dua for Clear Speech (Prophet Musa's Dua)" },
+    translation: {
+      id: "Ya Tuhanku, lapangkanlah dadaku, mudahkanlah urusanku, dan lepaskanlah kekakuan dari lidahku, agar mereka mengerti perkataanku.",
+      en: "My Lord, expand my chest, ease my task, and untie the knot from my tongue, so they may understand my speech.",
+    },
+    context: {
+      id: "Doa Nabi Musa. Dibaca anak ketika gugup berbicara, hendak tampil, atau menjawab di depan kelas.",
+      en: "Prophet Musa's dua. Read by a child when nervous to speak, before a presentation, or answering in class.",
+    },
+    source: { type: "quran", reference: "QS. Taha: 25-28", grade: "quran" },
+    ages: [5, 6, 7, 8],
+    situations: ["belajar", "sekolah", "sosial"],
+    related: ["sebelum-belajar", "minta-ilmu-bermanfaat"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-dimudahkan-urusan",
+    arabic:
+      "اللَّهُمَّ لَا سَهْلَ إِلَّا مَا جَعَلْتَهُ سَهْلًا، وَأَنْتَ تَجْعَلُ الْحَزْنَ إِذَا شِئْتَ سَهْلًا",
+    transliteration:
+      "Allahumma laa sahla illaa maa ja'altahu sahlaa, wa anta taj'alul hazna idzaa syi'ta sahlaa",
+    title: { id: "Doa Dimudahkan Segala Urusan", en: "Dua to Make Things Easy" },
+    translation: {
+      id: "Ya Allah, tidak ada kemudahan kecuali yang Engkau jadikan mudah, dan Engkau menjadikan kesulitan—jika Engkau kehendaki—menjadi mudah.",
+      en: "O Allah, there is no ease except in what You make easy, and You make hardship easy if You will.",
+    },
+    context: {
+      id: "Dibaca ketika menghadapi sesuatu yang terasa sulit — sebelum ujian, mencoba hal baru, atau saat menemui kesukaran.",
+      en: "Read when facing something that feels hard — before a test, trying something new, or meeting difficulty.",
+    },
+    source: { type: "hadith", reference: "HR. Ibnu Hibban 2427", grade: "hasan" },
+    ages: [5, 6, 7, 8],
+    situations: ["belajar", "sekolah", "harian"],
+    related: ["doa-dilancarkan-bicara", "sebelum-belajar"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-penutup-majelis",
+    arabic:
+      "سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ، أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ، أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ",
+    transliteration:
+      "Subhaanakallahumma wa bihamdika, asyhadu an laa ilaaha illaa anta, astaghfiruka wa atuubu ilaik",
+    title: { id: "Doa Penutup Majelis (Kafaratul Majelis)", en: "Dua to Close a Gathering" },
+    translation: {
+      id: "Maha Suci Engkau ya Allah, dan segala puji bagi-Mu. Aku bersaksi bahwa tidak ada tuhan selain Engkau. Aku memohon ampun dan bertaubat kepada-Mu.",
+      en: "Glory be to You, O Allah, and praise. I bear witness that there is no god but You. I seek Your forgiveness and turn to You in repentance.",
+    },
+    context: {
+      id: "Dibaca di akhir belajar, mengaji, atau berkumpul — sebagai penutup dan penghapus kekeliruan selama majelis.",
+      en: "Read at the end of studying, Qur'an class, or any gathering — a closing that wipes away its slips.",
+    },
+    source: { type: "hadith", reference: "HR. Tirmidzi 3433", grade: "sahih" },
+    ages: [5, 6, 7, 8],
+    situations: ["belajar", "adab", "ibadah"],
+    related: ["setelah-belajar", "sebelum-belajar"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-masuk-pasar",
+    arabic:
+      "لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، يُحْيِي وَيُمِيتُ، وَهُوَ حَيٌّ لَا يَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ",
+    transliteration:
+      "Laa ilaaha illallahu wahdahu laa syariika lah, lahul mulku wa lahul hamd, yuhyii wa yumiit, wa huwa hayyun laa yamuut, biyadihil khair, wa huwa 'alaa kulli syai'in qadiir",
+    title: { id: "Doa Masuk Pasar", en: "Dua When Entering the Market" },
+    translation: {
+      id: "Tidak ada tuhan selain Allah semata, tiada sekutu bagi-Nya. Milik-Nya kerajaan dan bagi-Nya segala pujian. Dia menghidupkan dan mematikan, dan Dia Maha Hidup tidak mati. Di tangan-Nya segala kebaikan, dan Dia Mahakuasa atas segala sesuatu.",
+      en: "There is no god but Allah alone, with no partner. His is the dominion and His is the praise. He gives life and death, and He is Ever-Living and never dies. In His hand is all good, and He is able to do all things.",
+    },
+    context: {
+      id: "Dibaca ketika memasuki pasar atau tempat ramai — pengingat mengingat Allah di tengah keramaian.",
+      en: "Read when entering a market or busy place — a reminder to remember Allah amid the crowd.",
+    },
+    source: { type: "hadith", reference: "HR. Tirmidzi 3428", grade: "hasan" },
+    ages: [6, 7, 8],
+    situations: ["perjalanan", "adab", "harian"],
+    related: ["keluar-rumah", "naik-kendaraan"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-menjawab-bersin",
+    arabic: "يَرْحَمُكَ اللَّهُ",
+    transliteration: "Yarhamukallah",
+    title: { id: "Menjawab Orang Bersin (Tasymit)", en: "Replying to Someone Who Sneezes" },
+    translation: {
+      id: "Semoga Allah merahmatimu.",
+      en: "May Allah have mercy on you.",
+    },
+    context: {
+      id: "Ketika orang bersin lalu mengucap 'alhamdulillah', kita menjawab 'yarhamukallah'. Lalu yang bersin membalas: 'yahdiikumullaahu wa yushlihu baalakum' (semoga Allah memberimu petunjuk dan memperbaiki keadaanmu).",
+      en: "When someone sneezes and says 'alhamdulillah', we reply 'yarhamukallah'. The one who sneezed then responds: 'yahdikumullahu wa yuslihu balakum' (may Allah guide you and set your affairs right).",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 6224", grade: "sahih" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["adab", "sosial", "akhlak"],
+    related: ["doa-bersin", "mengucap-salam"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-singgah",
+    arabic: "أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ",
+    transliteration: "A'uudzu bikalimaatillaahit-taammaati min syarri maa khalaq",
+    title: { id: "Doa Singgah di Suatu Tempat", en: "Dua When Stopping at a Place" },
+    translation: {
+      id: "Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan apa yang Dia ciptakan.",
+      en: "I seek refuge in the perfect words of Allah from the evil of what He has created.",
+    },
+    context: {
+      id: "Dibaca ketika tiba atau berhenti di suatu tempat. Siapa membacanya, tidak ada sesuatu pun yang membahayakannya hingga ia beranjak dari tempat itu (HR. Muslim).",
+      en: "Read when arriving or stopping at a place. Whoever says it, nothing will harm him until he leaves that place (Muslim).",
+    },
+    source: { type: "hadith", reference: "HR. Muslim 2708", grade: "sahih" },
+    ages: [5, 6, 7, 8],
+    situations: ["perjalanan", "perlindungan", "harian"],
+    related: ["naik-kendaraan", "keluar-rumah", "perlindungan-anak"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "doa-setelah-hujan",
+    arabic: "مُطِرْنَا بِفَضْلِ اللَّهِ وَرَحْمَتِهِ",
+    transliteration: "Muthirnaa bifadhlillaahi wa rahmatih",
+    title: { id: "Doa Setelah Turun Hujan", en: "Dua After the Rain" },
+    translation: {
+      id: "Kita diberi hujan berkat karunia Allah dan rahmat-Nya.",
+      en: "We have been given rain by the grace and mercy of Allah.",
+    },
+    context: {
+      id: "Diucapkan setelah hujan turun — mengingatkan anak bahwa hujan adalah karunia dan rahmat dari Allah, bukan sekadar peristiwa alam.",
+      en: "Said after the rain falls — reminding the child that rain is a grace and mercy from Allah, not just a natural event.",
+    },
+    source: { type: "hadith", reference: "HR. Bukhari 846", grade: "sahih" },
+    ages: [4, 5, 6, 7, 8],
+    situations: ["cuaca", "syukur", "harian"],
+    related: ["ketika-hujan", "mendengar-petir"],
+    published: "2026-06-04",
+    updated: "2026-06-04",
+    author: "tim-baby-mo",
+  },
+
 ];
 
 export function getAllDoa(): Doa[] {
