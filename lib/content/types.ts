@@ -88,6 +88,8 @@ export type Doa = {
   author?: string;
   /** Slug of a Person who reviewed the entry (qualified scholar) */
   reviewedBy?: string;
+  /** YouTube video id of the Baby Mo song for this du'a (sing-along). */
+  video?: string;
 };
 
 export type BlogKit = {

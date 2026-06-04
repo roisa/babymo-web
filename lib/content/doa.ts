@@ -36,6 +36,7 @@ export const doaList: Doa[] = [
     related: ["bangun-tidur"],
     published: "2026-05-27",
     updated: "2026-05-27",
+    video: "orXDAOHAKw8",
   },
   {
     slug: "bangun-tidur",
@@ -65,6 +66,7 @@ export const doaList: Doa[] = [
     related: ["sebelum-tidur"],
     published: "2026-05-27",
     updated: "2026-05-27",
+    video: "L6bXkRuO5vc",
   },
   {
     slug: "sebelum-makan",
@@ -92,6 +94,7 @@ export const doaList: Doa[] = [
     related: ["sesudah-makan"],
     published: "2026-05-27",
     updated: "2026-05-27",
+    video: "cmK8ruUiCbA",
   },
   {
     slug: "sesudah-makan",
@@ -121,6 +124,7 @@ export const doaList: Doa[] = [
     related: ["sebelum-makan"],
     published: "2026-05-27",
     updated: "2026-05-27",
+    video: "X6ZGk_e7A00",
   },
   {
     slug: "masuk-kamar-mandi",
