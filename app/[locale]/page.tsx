@@ -21,6 +21,7 @@ import { HeroAura } from "@/components/HeroAura";
 import { AnimatedCount } from "@/components/AnimatedCount";
 import { VideoSection } from "@/components/video/VideoSection";
 import { QuoteRibbon } from "@/components/QuoteRibbon";
+import { TemanTumbuhTeaser } from "@/components/teman/TemanTumbuhTeaser";
 import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
@@ -317,6 +318,11 @@ export default async function HomePage({
               </Link>
             </div>
           </section>
+        </Reveal>
+
+        {/* ── TEMAN TUMBUH teaser — daily companion ── */}
+        <Reveal>
+          <TemanTumbuhTeaser locale={l} />
         </Reveal>
 
         {/* ── WAKTU SHOLAT — client-side, location-aware ── */}
