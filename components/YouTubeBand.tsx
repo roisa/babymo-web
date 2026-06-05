@@ -13,7 +13,7 @@ const CHANNEL = "https://www.youtube.com/@babymo.official";
 export function YouTubeBand({ locale: l }: Props) {
   return (
     <section className="mx-auto max-w-6xl px-5 pb-4 sm:px-7">
-      <div className="relative overflow-hidden rounded-[28px] border border-[#c4302b]/20 bg-gradient-to-br from-[#fff4f3] via-paper to-[#fff7f0]">
+      <div className="relative overflow-hidden rounded-[28px] border border-[#c4302b]/20 bg-gradient-to-br from-[#fff4f3] via-paper to-[#fff7f0] dark:border-[#f87264]/25 dark:from-[#2a1614] dark:via-paper dark:to-[#20120f]">
         <div className="grid items-center gap-7 p-7 sm:grid-cols-[0.85fr_1.15fr] sm:p-10">
           {/* Mascot + play badge */}
           <div className="relative order-1 mx-auto w-full max-w-[220px] sm:order-none">
@@ -33,7 +33,7 @@ export function YouTubeBand({ locale: l }: Props) {
             />
             <span
               aria-hidden
-              className="absolute bottom-2 right-2 flex h-12 w-12 items-center justify-center rounded-full bg-[#c4302b] text-paper shadow-lg"
+              className="absolute bottom-2 right-2 flex h-12 w-12 items-center justify-center rounded-full bg-[#c4302b] text-white shadow-lg"
             >
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z" />
@@ -42,7 +42,7 @@ export function YouTubeBand({ locale: l }: Props) {
           </div>
 
           <div>
-            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#c4302b]">
+            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#c4302b] dark:text-[#f87264]">
               <YouTubeGlyph />
               {l === "id" ? "Baby Mo di YouTube" : "Baby Mo on YouTube"}
             </p>
@@ -62,7 +62,7 @@ export function YouTubeBand({ locale: l }: Props) {
                 href={CHANNEL}
                 target="_blank"
                 rel="noopener"
-                className="magnet tap inline-flex items-center gap-2 rounded-full bg-[#c4302b] px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(196,48,43,0.5)] hover:bg-[#a92722]"
+                className="magnet tap inline-flex items-center gap-2 rounded-full bg-[#c4302b] px-5 py-3 text-[14px] font-semibold text-white shadow-[0_10px_24px_-8px_rgba(196,48,43,0.5)] hover:bg-[#a92722]"
               >
                 <YouTubeGlyph />
                 {l === "id" ? "Langganan channel" : "Subscribe"}
