@@ -37,6 +37,7 @@ const STATIC_PATHS = [
   "/learn",
   "/watch",
   "/orangtua",
+  "/teman-tumbuh",
   // Content indexes
   "/doa",
   "/doa/kategori",

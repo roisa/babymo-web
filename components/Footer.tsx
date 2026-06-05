@@ -56,6 +56,9 @@ export function Footer({ locale, currentPath }: Props) {
               {locale === "id" ? "Momen" : "Moments"}
             </FooterLink>
             <FooterLink locale={locale} href="/permainan">{dict.nav.games}</FooterLink>
+            <FooterLink locale={locale} href="/teman-tumbuh">
+              {locale === "id" ? "Teman Tumbuh" : "Teman Tumbuh"}
+            </FooterLink>
             <FooterLink locale={locale} href="/apps/kids-activity">
               {locale === "id" ? "Aktivitas Anak" : "Kids Activity"}
             </FooterLink>
