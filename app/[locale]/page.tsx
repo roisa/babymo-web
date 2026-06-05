@@ -574,7 +574,7 @@ export default async function HomePage({
                   icon={<YouTubeIcon />}
                   label="YouTube"
                   handle="@babymo.official"
-                  accent="bg-[#fff1f1] text-[#c4302b]"
+                  accent="bg-[#fff1f1] text-[#c4302b] dark:bg-[#c4302b]/20 dark:text-[#f87264]"
                   locale={l}
                 />
                 <SocialCard
@@ -582,7 +582,7 @@ export default async function HomePage({
                   icon={<InstagramIcon />}
                   label="Instagram"
                   handle="@babymo.official"
-                  accent="bg-[#fdf2f8] text-[#c2185b]"
+                  accent="bg-[#fdf2f8] text-[#c2185b] dark:bg-[#c2185b]/20 dark:text-[#f06fa5]"
                   locale={l}
                 />
                 <SocialCard
@@ -590,7 +590,7 @@ export default async function HomePage({
                   icon={<TikTokIcon />}
                   label="TikTok"
                   handle="@babymo.official"
-                  accent="bg-[#f4f4f5] text-ink"
+                  accent="bg-[#f4f4f5] text-ink dark:bg-white/10"
                   locale={l}
                 />
                 {whatsappNumber && (
@@ -599,7 +599,7 @@ export default async function HomePage({
                     icon={<WhatsAppIcon />}
                     label="WhatsApp"
                     handle="+62 823-1597-1002"
-                    accent="bg-[#ecfdf3] text-[#1f8748]"
+                    accent="bg-[#ecfdf3] text-[#1f8748] dark:bg-[#1f8748]/22 dark:text-[#4cc47e]"
                     locale={l}
                   />
                 )}

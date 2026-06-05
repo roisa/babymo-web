@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+/* Bind Tailwind's `dark:` variant to the manual `.dark` class on <html>
+   (the theme toggle's source of truth), not the prefers-color-scheme
+   media query — so `dark:` utilities track the in-app theme switch. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ───────────────────────────────────────────────
    Baby Mo — calm parenting platform (iOS-inspired)
    Sage/clay palette over a warm paper neutral.
