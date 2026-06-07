@@ -26,7 +26,7 @@ import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
 import { MascotGreeting } from "@/components/MascotGreeting";
-import { MascotPoses } from "@/components/MascotPoses";
+import { HeroMascot } from "@/components/HeroMascot";
 import { BrandMission } from "@/components/BrandMission";
 import { YouTubeBand } from "@/components/YouTubeBand";
 import { StreakBadge } from "@/components/StreakBadge";
@@ -171,29 +171,10 @@ export default async function HomePage({
                 <span aria-hidden className="sparkle" style={{ bottom: "12%", right: "10%", "--sz": "14px", "--dur": "3.6s", "--delay": "2.1s" } as React.CSSProperties}>✦</span>
                 <span aria-hidden className="sparkle" style={{ top: "48%", right: "5%", "--sz": "9px", "--dur": "3.2s", "--delay": "1.6s" } as React.CSSProperties}>·</span>
 
-                {/* WebP-first hero. With output:export + unoptimized,
-                    next/image is just a sized <img>, so prefer plain
-                    <picture> for the LCP image: 229 KB PNG → 37 KB WebP. */}
-                <div className="mascot-breathe relative mx-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]">
-                  {/* Static hero = the LCP image (fast first paint + SEO). */}
-                  <picture>
-                    <source
-                      type="image/webp"
-                      srcSet={asset("/assets/baby-mo-hero.webp")}
-                    />
-                    <img
-                      src={asset("/assets/baby-mo-hero.png")}
-                      alt="Baby Mo"
-                      width={900}
-                      height={900}
-                      fetchPriority="high"
-                      decoding="async"
-                      className="h-auto w-full"
-                    />
-                  </picture>
-                  {/* Rotating poses fade in on top — pure enhancement. */}
-                  <MascotPoses className="h-auto w-full max-w-sm" />
-                </div>
+                {/* WebP-first hero (LCP). HeroMascot renders the static
+                    <picture> and cross-fades the pose set on top, hiding the
+                    static layer declaratively so only one Baby Mo ever shows. */}
+                <HeroMascot alt="Baby Mo" />
               </div>
             </div>
           </div>
