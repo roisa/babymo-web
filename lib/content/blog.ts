@@ -13,6 +13,149 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lagu-hujan-turun-rintik-rintik",
+    title: {
+      id: "Lirik Lagu “Hujan Turun Rintik-Rintik” — Lagu Anak Ceria Baby Mo",
+      en: "“Hujan Turun Rintik-Rintik” Lyrics — Baby Mo’s Cheerful Kids Song",
+    },
+    excerpt: {
+      id: "Lagu anak ceria tentang hujan, bunga yang mekar, dan kehangatan ayah-bunda. Lengkap dengan video, lirik, dan ide momen bonding sederhana lewat “klitik-klitik”.",
+      en: "A cheerful kids’ song about rain, blooming flowers, and a parent’s warmth. With the video, lyrics, and a simple bonding moment through tickles.",
+    },
+    body: {
+      id: `<p>Hujan tidak selalu berarti tidak bisa bermain. Lewat lagu <strong>“Hujan Turun Rintik-Rintik”</strong> dari Baby Mo, hujan jadi momen ceria — bunga mekar, dan ayah-bunda memberi <em>klitik-klitik</em> (gelitikan sayang) pada si kecil.</p>
+
+<div class="hjn-stage" aria-hidden="true">
+  <div class="hjn-sky">
+    <span class="hjn-cloud"></span>
+    <span class="hjn-drop" style="--x:18%;--d:0s"></span>
+    <span class="hjn-drop" style="--x:34%;--d:.5s"></span>
+    <span class="hjn-drop" style="--x:50%;--d:.2s"></span>
+    <span class="hjn-drop" style="--x:66%;--d:.7s"></span>
+    <span class="hjn-drop" style="--x:82%;--d:.35s"></span>
+    <div class="hjn-flower">
+      <span class="hjn-stem"></span>
+      <span class="hjn-head">
+        <span class="hjn-petal" style="--r:0deg"></span>
+        <span class="hjn-petal" style="--r:72deg"></span>
+        <span class="hjn-petal" style="--r:144deg"></span>
+        <span class="hjn-petal" style="--r:216deg"></span>
+        <span class="hjn-petal" style="--r:288deg"></span>
+        <span class="hjn-core"></span>
+      </span>
+    </div>
+  </div>
+</div>
+<style>
+.hjn-stage{margin-top:1.4em;padding:14px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);}
+.hjn-sky{position:relative;height:160px;border-radius:16px;overflow:hidden;background:linear-gradient(#bfe4f5,#eaf7ff);}
+.hjn-cloud{position:absolute;top:14px;left:50%;margin-left:-45px;width:90px;height:26px;background:#fff;border-radius:20px;box-shadow:-26px 6px 0 -4px #fff,26px 6px 0 -2px #fff;opacity:.95;}
+.hjn-drop{position:absolute;top:38px;left:var(--x);width:3px;height:12px;border-radius:3px;background:rgba(86,150,200,.7);animation:hjn-fall 1.1s linear infinite;animation-delay:var(--d);}
+@keyframes hjn-fall{0%{transform:translateY(0);opacity:0}10%{opacity:1}100%{transform:translateY(92px);opacity:0}}
+.hjn-flower{position:absolute;bottom:0;left:50%;margin-left:-32px;width:64px;height:80px;transform-origin:bottom center;animation:hjn-sway 3.6s ease-in-out infinite;}
+.hjn-stem{position:absolute;bottom:0;left:50%;margin-left:-2.5px;width:5px;height:44px;background:#4ea84e;border-radius:3px;}
+.hjn-head{position:absolute;top:0;left:50%;margin-left:-22px;width:44px;height:44px;}
+.hjn-petal{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#ff9ec0;transform:rotate(var(--r)) translateY(-13px);}
+.hjn-core{position:absolute;top:50%;left:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#ffd166;}
+@keyframes hjn-sway{0%,100%{transform:translateX(0) rotate(-4deg)}50%{transform:translateX(0) rotate(4deg)}}
+@media(prefers-reduced-motion:reduce){.hjn-drop{animation:none;opacity:.5}.hjn-flower{animation:none}}
+</style>
+
+<h2>Lirik “Hujan Turun Rintik-Rintik”</h2>
+<p class="bmlg-credit"><em>Ciptaan: Yaniko, Felly</em></p>
+<div class="bmlg-lyrics">
+<p>Hujan turun rintik-rintik<br>Bunga mekar sangat cantik<br>Anak soleh, anak baik<br>Sini ayah kasih klitik<br>Klitik klitik klitik</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Hujan turun rintik-rintik<br>Bunga mekar sangat cantik<br>Anak solehah, anak cantik<br>Sini bunda kasih klitik<br>Klitik klitik klitik</p>
+</div>
+<style>
+.bmlg-credit{margin-top:.2em;font-size:13px;color:var(--color-whisper);}
+.bmlg-lyrics{margin-top:1em;padding:20px 18px;border-radius:18px;background:var(--color-brave-soft);border:1px solid var(--color-hairline);text-align:center;font-weight:600;color:var(--color-ink);line-height:1.9;}
+.bmlg-lyrics p{margin:0;}
+.bmlg-dot{margin:10px 0!important;color:var(--color-sage);letter-spacing:6px;}
+</style>
+
+<h2>Kenapa lagu ini terasa hangat</h2>
+<p>Lagu ini sederhana tapi penuh kasih. Bagian “sini ayah/bunda kasih klitik” mengubah lagu menjadi <strong>momen bonding</strong>: peluk anak, gelitik lembut, tertawa bersama. Sentuhan dan tawa membangun rasa aman yang jadi dasar tumbuh kembang anak.</p>
+<ul>
+  <li><strong>Kosakata baru.</strong> Hujan, rintik, bunga, mekar — sambil bernyanyi, tunjuk benda di sekitar.</li>
+  <li><strong>Menyambut hari hujan dengan ceria.</strong> Anak belajar bahwa hujan itu nikmat, bukan halangan.</li>
+  <li><strong>Tawa sebelum tidur siang.</strong> Lagu pendek ini pas untuk jeda hangat di siang hari.</li>
+</ul>
+
+<p>Suka lagunya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo di YouTube</a> untuk lagu anak ceria lainnya. Lihat juga lagu <a href="/_/blog/lagu-bismillah-dulu/">“Bismillah Dulu”</a> dan <a href="/_/permainan/">permainan Baby Mo</a>.</p>`,
+      en: `<p>Rain doesn’t have to mean no play. With Baby Mo’s <strong>“Hujan Turun Rintik-Rintik”</strong> (“Rain Falls in Droplets”), rain becomes a happy moment — flowers bloom, and mum and dad give the little one loving <em>klitik-klitik</em> (gentle tickles).</p>
+
+<div class="hjn-stage" aria-hidden="true">
+  <div class="hjn-sky">
+    <span class="hjn-cloud"></span>
+    <span class="hjn-drop" style="--x:18%;--d:0s"></span>
+    <span class="hjn-drop" style="--x:34%;--d:.5s"></span>
+    <span class="hjn-drop" style="--x:50%;--d:.2s"></span>
+    <span class="hjn-drop" style="--x:66%;--d:.7s"></span>
+    <span class="hjn-drop" style="--x:82%;--d:.35s"></span>
+    <div class="hjn-flower">
+      <span class="hjn-stem"></span>
+      <span class="hjn-head">
+        <span class="hjn-petal" style="--r:0deg"></span>
+        <span class="hjn-petal" style="--r:72deg"></span>
+        <span class="hjn-petal" style="--r:144deg"></span>
+        <span class="hjn-petal" style="--r:216deg"></span>
+        <span class="hjn-petal" style="--r:288deg"></span>
+        <span class="hjn-core"></span>
+      </span>
+    </div>
+  </div>
+</div>
+<style>
+.hjn-stage{margin-top:1.4em;padding:14px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);}
+.hjn-sky{position:relative;height:160px;border-radius:16px;overflow:hidden;background:linear-gradient(#bfe4f5,#eaf7ff);}
+.hjn-cloud{position:absolute;top:14px;left:50%;margin-left:-45px;width:90px;height:26px;background:#fff;border-radius:20px;box-shadow:-26px 6px 0 -4px #fff,26px 6px 0 -2px #fff;opacity:.95;}
+.hjn-drop{position:absolute;top:38px;left:var(--x);width:3px;height:12px;border-radius:3px;background:rgba(86,150,200,.7);animation:hjn-fall 1.1s linear infinite;animation-delay:var(--d);}
+@keyframes hjn-fall{0%{transform:translateY(0);opacity:0}10%{opacity:1}100%{transform:translateY(92px);opacity:0}}
+.hjn-flower{position:absolute;bottom:0;left:50%;margin-left:-32px;width:64px;height:80px;transform-origin:bottom center;animation:hjn-sway 3.6s ease-in-out infinite;}
+.hjn-stem{position:absolute;bottom:0;left:50%;margin-left:-2.5px;width:5px;height:44px;background:#4ea84e;border-radius:3px;}
+.hjn-head{position:absolute;top:0;left:50%;margin-left:-22px;width:44px;height:44px;}
+.hjn-petal{position:absolute;top:50%;left:50%;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;background:#ff9ec0;transform:rotate(var(--r)) translateY(-13px);}
+.hjn-core{position:absolute;top:50%;left:50%;width:18px;height:18px;margin:-9px 0 0 -9px;border-radius:50%;background:#ffd166;}
+@keyframes hjn-sway{0%,100%{transform:translateX(0) rotate(-4deg)}50%{transform:translateX(0) rotate(4deg)}}
+@media(prefers-reduced-motion:reduce){.hjn-drop{animation:none;opacity:.5}.hjn-flower{animation:none}}
+</style>
+
+<h2>Lyrics (original Indonesian)</h2>
+<p class="bmlg-credit"><em>Written by: Yaniko, Felly</em></p>
+<div class="bmlg-lyrics">
+<p>Hujan turun rintik-rintik<br>Bunga mekar sangat cantik<br>Anak soleh, anak baik<br>Sini ayah kasih klitik<br>Klitik klitik klitik</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Hujan turun rintik-rintik<br>Bunga mekar sangat cantik<br>Anak solehah, anak cantik<br>Sini bunda kasih klitik<br>Klitik klitik klitik</p>
+</div>
+<style>
+.bmlg-credit{margin-top:.2em;font-size:13px;color:var(--color-whisper);}
+.bmlg-lyrics{margin-top:1em;padding:20px 18px;border-radius:18px;background:var(--color-brave-soft);border:1px solid var(--color-hairline);text-align:center;font-weight:600;color:var(--color-ink);line-height:1.9;}
+.bmlg-lyrics p{margin:0;}
+.bmlg-dot{margin:10px 0!important;color:var(--color-sage);letter-spacing:6px;}
+</style>
+
+<p><em>Meaning:</em> Rain falls in droplets, flowers bloom so pretty; good little one, come here for a loving tickle — klitik klitik klitik.</p>
+
+<h2>Why this song feels warm</h2>
+<p>It’s simple but full of affection. The “come here for a tickle” line turns the song into a <strong>bonding moment</strong>: hug your child, tickle gently, laugh together. Touch and laughter build the sense of safety that underpins healthy development.</p>
+<ul>
+  <li><strong>New words.</strong> Rain, droplets, flower, bloom — point to things around you as you sing.</li>
+  <li><strong>Greet rainy days happily.</strong> Kids learn that rain is a blessing, not an obstacle.</li>
+  <li><strong>A laugh before nap time.</strong> A short, warm midday pause.</li>
+</ul>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo on YouTube</a> for more cheerful kids’ songs. See also the <a href="/_/blog/lagu-bismillah-dulu/">“Bismillah Dulu”</a> song and <a href="/_/permainan/">Baby Mo games</a>.</p>`,
+    },
+    tags: ["lagu", "anak", "bonding", "video", "balita"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 2,
+    author: "tim-baby-mo",
+    youtube: "h0JAjIsyrSs",
+  },
+  {
     slug: "lagu-doa-sebelum-tidur-anak",
     title: {
       id: "Doa Sebelum Tidur untuk Anak: Video Lagu, Lirik, dan Artinya",
@@ -259,6 +402,13 @@ export const blogPosts: BlogPost[] = [
 <iframe src="https://www.youtube-nocookie.com/embed/-4mkpvahJnE" title="Cari dan Temukan Perbedaan Bareng Baby Mo — Episode 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
 </div>
 
+<h2>Seri lain: Temukan Emoji yang Berbeda</h2>
+<p>Selain cari perbedaan gambar, Baby Mo juga punya seri <strong>“Temukan Emoji”</strong> — temukan satu emoji yang berbeda di antara banyak emoji yang mirip, sebelum waktu habis. Levelnya makin sulit, seru untuk melatih kecepatan dan ketelitian mata.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/wFs26KUovCk" title="Temukan Emoji yang Berbeda — Baby Mo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p>Seri cari perbedaan dan temukan emoji ini terus bertambah episode baru.</p>
+
 <p>Suka serunya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo</a> untuk episode berikutnya. Mau yang interaktif? Mainkan <a href="/_/permainan/">permainan Baby Mo</a> langsung di web.</p>`,
       en: `<p>Not all screen time has to be loud and fast. Baby Mo’s <strong>“Spot the Difference”</strong> videos invite kids to sit calmly, observe, and find — building focus without feeling like a lesson.</p>
 
@@ -282,9 +432,16 @@ export const blogPosts: BlogPost[] = [
 <iframe src="https://www.youtube-nocookie.com/embed/-4mkpvahJnE" title="Spot the Difference with Baby Mo — Episode 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
 </div>
 
+<h2>Another series: Find the Different Emoji</h2>
+<p>Besides spot-the-difference, Baby Mo also has a <strong>“Find the Emoji”</strong> series — find the one emoji that’s different among many look-alikes before time runs out. Levels get harder — great for training speed and visual attention.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/wFs26KUovCk" title="Find the Different Emoji — Baby Mo" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p>New episodes are added to both series regularly.</p>
+
 <p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo</a> for the next episodes. Want interactive? Play <a href="/_/permainan/">Baby Mo games</a> right in your browser.</p>`,
     },
-    tags: ["game", "cari-perbedaan", "fokus", "video", "aktivitas"],
+    tags: ["game", "cari-perbedaan", "temukan-emoji", "fokus", "video", "aktivitas"],
     published: "2026-06-22",
     updated: "2026-06-22",
     readingTimeMin: 3,
