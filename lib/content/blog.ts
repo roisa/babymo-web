@@ -13,6 +13,109 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "youtube-anak-aman-tanpa-iklan",
+    title: {
+      id: "YouTube Anak Aman Tanpa Iklan: Cara Memilih Tontonan Islami untuk Anak",
+      en: "Safe, Ad-Free YouTube for Kids: How to Choose Islamic Content",
+    },
+    excerpt: {
+      id: "Khawatir dengan iklan dan tontonan yang tidak pantas? Panduan praktis menyetel YouTube yang aman untuk anak — plus pilihan tontonan islami yang tenang dan bebas iklan.",
+      en: "Worried about ads and unsuitable content? A practical guide to setting up safe YouTube for kids — plus calm, ad-free Islamic options.",
+    },
+    body: {
+      id: `<p>Setiap orang tua ingin anak menonton dengan tenang dan aman — bukan diganggu iklan, autoplay yang melompat ke video aneh, atau tontonan yang terlalu cepat dan bising. Kabar baiknya: dengan beberapa pengaturan sederhana, waktu layar anak bisa jauh lebih aman. Berikut panduannya.</p>
+
+<h2>Langkah menyetel YouTube aman untuk anak</h2>
+<ol>
+  <li><strong>Pakai aplikasi YouTube Kids.</strong> Dirancang khusus untuk anak, dengan kontrol orang tua, timer, dan konten yang lebih terkurasi.</li>
+  <li><strong>Aktifkan Mode Terbatas (Restricted Mode)</strong> di YouTube biasa untuk menyaring konten dewasa.</li>
+  <li><strong>Matikan autoplay.</strong> Ini mencegah anak "terbawa" ke video berikutnya yang tidak Anda pilih.</li>
+  <li><strong>Buat playlist sendiri.</strong> Kumpulkan video yang sudah Anda tonton lebih dulu, lalu biarkan anak hanya menonton playlist itu.</li>
+  <li><strong>Tonton bersama.</strong> Pendampingan adalah filter terbaik — sekaligus momen belajar bersama.</li>
+  <li><strong>Pilih channel yang dikurasi &amp; sesuai nilai keluarga.</strong> Channel anak islami yang tenang membantu menjaga isi dan nuansanya.</li>
+</ol>
+
+<h2>Ingin benar-benar bebas iklan?</h2>
+<p>Untuk pengalaman yang sepenuhnya tanpa iklan, gunakan properti web yang memang dibuat tanpa iklan: <a href="/_/doa/">doa harian</a> dan <a href="/_/permainan/">permainan Baby Mo</a> di babymo.id dan play.babymo.id — tidak ada iklan, tidak ada autoplay ke konten asing, dan bisa dimainkan offline setelah dibuka.</p>
+
+<h2>Contoh tontonan yang tenang &amp; islami</h2>
+<p>Konten Baby Mo dibuat tenang, ramah balita, dan berfokus pada nilai baik — doa harian, lagu islami, dan game edukatif. Misalnya lagu “Bismillah Dulu”:</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Lagu Anak Islami" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p>Lihat lebih banyak: <a href="/_/blog/lagu-anak-islami-baby-mo/">lagu anak islami</a>, <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video edukasi Baby Mo</a>, atau <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">subscribe channel Baby Mo</a> untuk tontonan yang aman dan terkurasi.</p>
+
+<h2>Tanda tontonan anak yang sehat</h2>
+<ul>
+  <li>Tenang dan tidak berlebihan secara visual/suara.</li>
+  <li>Durasi pendek dan jelas, bukan video panjang yang membuat lengket.</li>
+  <li>Mengajarkan sesuatu yang baik — adab, doa, huruf, atau nilai.</li>
+  <li>Tanpa autoplay liar ke konten yang tak berkaitan.</li>
+</ul>
+
+<p>Tonton bersama si kecil, batasi durasinya, dan jadikan layar sebagai jembatan ke kebiasaan baik di dunia nyata.</p>`,
+      en: `<p>Every parent wants their child to watch calmly and safely — not interrupted by ads, autoplay jumping to strange videos, or content that's too fast and loud. The good news: with a few simple settings, kids' screen time can be far safer. Here's how.</p>
+
+<h2>How to set up safe YouTube for kids</h2>
+<ol>
+  <li><strong>Use the YouTube Kids app.</strong> Built for children, with parental controls, timers, and more curated content.</li>
+  <li><strong>Turn on Restricted Mode</strong> on regular YouTube to filter mature content.</li>
+  <li><strong>Disable autoplay.</strong> This stops kids being carried off to a next video you didn't choose.</li>
+  <li><strong>Build your own playlist.</strong> Pre-watch videos, then let your child watch only that playlist.</li>
+  <li><strong>Watch together.</strong> Co-viewing is the best filter — and a shared learning moment.</li>
+  <li><strong>Choose curated channels aligned with your values.</strong> A calm Islamic kids' channel keeps the content and tone in check.</li>
+</ol>
+
+<h2>Want fully ad-free?</h2>
+<p>For a completely ad-free experience, use web properties built without ads: the <a href="/_/doa/">daily duas</a> and <a href="/_/permainan/">Baby Mo games</a> on babymo.id and play.babymo.id — no ads, no autoplay into unrelated content, and playable offline once opened.</p>
+
+<h2>An example of calm, Islamic content</h2>
+<p>Baby Mo's content is calm, toddler-friendly, and focused on good values — daily duas, Islamic songs, and educational games. For example, the song “Bismillah Dulu”:</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Islamic Kids Song" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p>See more: <a href="/_/blog/lagu-anak-islami-baby-mo/">Islamic kids songs</a>, <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo educational videos</a>, or <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">subscribe to Baby Mo</a> for safe, curated content.</p>
+
+<h2>Signs of healthy kids' content</h2>
+<ul>
+  <li>Calm, not over-stimulating in visuals or sound.</li>
+  <li>Short and clear, not long videos designed to keep them glued.</li>
+  <li>Teaches something good — manners, duas, letters, or values.</li>
+  <li>No wild autoplay into unrelated content.</li>
+</ul>
+
+<p>Watch with your little one, keep it short, and let the screen be a bridge to good habits in real life.</p>`,
+    },
+    tags: ["screen-time", "parenting", "youtube", "tontonan-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: { id: "Bagaimana cara menonton YouTube tanpa iklan untuk anak?", en: "How can kids watch YouTube without ads?" },
+        answer: {
+          id: "Gunakan aplikasi YouTube Kids dengan kontrol orang tua, atau YouTube Premium untuk bebas iklan. Untuk tontonan yang benar-benar tanpa iklan, gunakan <a href=\"/_/permainan/\">permainan</a> dan <a href=\"/_/doa/\">doa</a> di babymo.id / play.babymo.id yang memang dibuat tanpa iklan.",
+          en: "Use the YouTube Kids app with parental controls, or YouTube Premium for ad-free viewing. For a truly ad-free experience, use the <a href=\"/_/permainan/\">games</a> and <a href=\"/_/doa/\">duas</a> on babymo.id / play.babymo.id, which are built without ads.",
+        },
+      },
+      {
+        question: { id: "Apakah YouTube Kids aman untuk anak?", en: "Is YouTube Kids safe for children?" },
+        answer: {
+          id: "Lebih aman daripada YouTube biasa karena ada kontrol orang tua, timer, dan kurasi konten. Tetap disarankan menemani anak dan memilih channel yang sesuai nilai keluarga.",
+          en: "Safer than regular YouTube thanks to parental controls, timers, and content curation. Co-viewing and choosing channels aligned with your values is still recommended.",
+        },
+      },
+      {
+        question: { id: "Channel YouTube islami untuk anak yang aman apa?", en: "Which Islamic YouTube channel for kids is safe?" },
+        answer: {
+          id: "Baby Mo (@babymo.official) menyediakan doa harian, lagu islami, dan game edukatif yang tenang dan ramah anak — bisa ditonton di YouTube dan dimainkan tanpa iklan di babymo.id.",
+          en: "Baby Mo (@babymo.official) offers calm, child-friendly daily duas, Islamic songs, and educational games — watch on YouTube and play ad-free on babymo.id.",
+        },
+      },
+    ],
+  },
+  {
     slug: "lagu-anak-islami-baby-mo",
     title: {
       id: "Lagu Anak Islami Baby Mo: Video & Lirik Lengkap (Ceria untuk Balita)",
