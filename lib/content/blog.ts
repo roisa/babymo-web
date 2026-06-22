@@ -13,6 +13,279 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "game-anak-islami-baby-mo",
+    title: {
+      id: "Game Anak Islami Gratis: Permainan Edukatif Baby Mo (Online, Tanpa Iklan)",
+      en: "Free Islamic Games for Kids: Baby Mo’s Educational Games (Online, Ad-Free)",
+    },
+    excerpt: {
+      id: "Kumpulan game anak islami gratis dari Baby Mo — belajar doa, huruf hijaiyah, sholat, dan melatih fokus. Bisa dimainkan langsung di browser, tanpa iklan, tanpa install.",
+      en: "A collection of free Islamic games for kids from Baby Mo — learn duas, hijaiyah letters, prayer, and build focus. Play right in the browser, no ads, no install.",
+    },
+    body: {
+      id: `<p>Mencari <strong>game anak yang aman, islami, dan benar-benar bermanfaat</strong>? Baby Mo punya kumpulan permainan edukatif yang bisa dimainkan langsung di browser — <strong>gratis, tanpa iklan, tanpa perlu install</strong>. Semua bekerja di HP, tablet, maupun laptop, dan bahkan bisa dimainkan offline setelah dibuka sekali.</p>
+
+<h2>Kenapa game edukatif islami?</h2>
+<p>Anak belajar paling cepat lewat bermain. Game yang tepat bisa menanamkan doa harian, mengenalkan huruf hijaiyah, dan melatih fokus — semua sambil bersenang-senang. Yang membedakan: konten Baby Mo dibuat tenang, ramah balita, dan sejalan dengan nilai keluarga muslim.</p>
+
+<h2>🤲 Belajar doa &amp; ibadah</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener"><span class="gmp-em">🤲</span><b>Doa Harian</b><span>Belajar 6 doa sehari-hari sambil bermain.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener"><span class="gmp-em">🃏</span><b>Dua Journey</b><span>Cocokkan kartu doa dengan situasinya.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener"><span class="gmp-em">🕌</span><b>Pray with Mo</b><span>Belajar gerakan sholat bareng Baby Mo.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener"><span class="gmp-em">🛌</span><b>Dreamtime</b><span>Rutinitas &amp; doa sebelum tidur yang menenangkan.</span></a>
+</div>
+
+<h2>🔤 Belajar huruf &amp; kata</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener"><span class="gmp-em">🌙</span><b>Huruf Hijaiyah</b><span>Kenali huruf hijaiyah satu per satu.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener"><span class="gmp-em">🔤</span><b>Kata Islam</b><span>Susun huruf jadi kata-kata islami.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener"><span class="gmp-em">💖</span><b>Kata Baik</b><span>Belajar ucapan baik &amp; akhlak terpuji.</span></a>
+</div>
+
+<h2>🔍 Latih fokus &amp; daya ingat</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener"><span class="gmp-em">🔍</span><b>Cari Baby Mo</b><span>Cari objek tersembunyi di 12 scene seru.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener"><span class="gmp-em">🎴</span><b>Memory Match</b><span>Latih daya ingat dengan kartu pasangan.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener"><span class="gmp-em">🧩</span><b>Kenalan Baby Mo</b><span>Buka petak dan temui Baby Mo.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener"><span class="gmp-em">🎵</span><b>Forehand Beat</b><span>Ketuk mengikuti irama yang ceria.</span></a>
+</div>
+<style>
+.gmp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:1em 0;}
+.gmp-game{display:flex;flex-direction:column;gap:3px;padding:14px;border-radius:16px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-decoration:none!important;}
+.gmp-game .gmp-em{font-size:26px;}
+.gmp-game b{font-size:14px;color:var(--color-ink);}
+.gmp-game span:last-child{font-size:11.5px;color:var(--color-whisper);line-height:1.35;}
+.gmp-play{display:inline-block;margin-top:.4em;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}
+@media(max-width:380px){.gmp-grid{grid-template-columns:1fr;}}
+</style>
+
+<h2>Pilih sesuai tujuan</h2>
+<ul>
+  <li><strong>Mau anak hafal doa?</strong> Mulai dari <a href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">Doa Harian</a> dan <a href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">Dua Journey</a>.</li>
+  <li><strong>Mulai mengenal huruf Arab?</strong> Pilih <a href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">Huruf Hijaiyah</a>.</li>
+  <li><strong>Anak susah fokus?</strong> Game tenang seperti <a href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">Cari Baby Mo</a> melatih konsentrasi.</li>
+  <li><strong>Waktu menjelang tidur?</strong> <a href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">Dreamtime</a> menutup hari dengan tenang.</li>
+</ul>
+
+<h2>Tips bermain yang sehat</h2>
+<ul>
+  <li>Temani anak bermain — sebut huruf/doa bersama agar belajarnya menempel.</li>
+  <li>Batasi durasi; game pendek membantu menjaga waktu layar tetap wajar.</li>
+  <li>Hubungkan ke kehidupan nyata: setelah game doa makan, praktikkan saat makan.</li>
+</ul>
+
+<p><a class="gmp-play" href="https://play.babymo.id/" target="_blank" rel="noopener">▶ Main semua game di play.babymo.id</a></p>
+
+<p>Mau yang lebih tenang? Pelajari <a href="/_/doa/">doa harian</a> atau tonton <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video edukasi Baby Mo</a>.</p>`,
+      en: `<p>Looking for <strong>kids’ games that are safe, Islamic, and genuinely useful</strong>? Baby Mo has a set of educational games you can play right in the browser — <strong>free, no ads, no install</strong>. They work on phone, tablet, and laptop, and even play offline once opened.</p>
+
+<h2>Why educational Islamic games?</h2>
+<p>Children learn fastest through play. The right game can plant daily duas, introduce hijaiyah letters, and build focus — all while having fun. What sets Baby Mo apart: calm, toddler-friendly content aligned with a Muslim family’s values.</p>
+
+<h2>🤲 Learn duas &amp; worship</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener"><span class="gmp-em">🤲</span><b>Daily Duas</b><span>Learn 6 everyday duas through play.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener"><span class="gmp-em">🃏</span><b>Dua Journey</b><span>Match dua cards to their situations.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener"><span class="gmp-em">🕌</span><b>Pray with Mo</b><span>Learn the prayer movements with Baby Mo.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener"><span class="gmp-em">🛌</span><b>Dreamtime</b><span>A calming bedtime routine &amp; dua.</span></a>
+</div>
+
+<h2>🔤 Learn letters &amp; words</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener"><span class="gmp-em">🌙</span><b>Hijaiyah Letters</b><span>Get to know the Arabic letters one by one.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener"><span class="gmp-em">🔤</span><b>Islamic Words</b><span>Arrange letters into Islamic words.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener"><span class="gmp-em">💖</span><b>Kind Words</b><span>Learn good words &amp; praiseworthy manners.</span></a>
+</div>
+
+<h2>🔍 Build focus &amp; memory</h2>
+<div class="gmp-grid">
+  <a class="gmp-game" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener"><span class="gmp-em">🔍</span><b>Find Baby Mo</b><span>Find hidden objects across 12 fun scenes.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener"><span class="gmp-em">🎴</span><b>Memory Match</b><span>Train memory with matching pairs.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener"><span class="gmp-em">🧩</span><b>Meet Baby Mo</b><span>Reveal the tiles to meet Baby Mo.</span></a>
+  <a class="gmp-game" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener"><span class="gmp-em">🎵</span><b>Forehand Beat</b><span>Tap along to a cheerful rhythm.</span></a>
+</div>
+<style>
+.gmp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin:1em 0;}
+.gmp-game{display:flex;flex-direction:column;gap:3px;padding:14px;border-radius:16px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-decoration:none!important;}
+.gmp-game .gmp-em{font-size:26px;}
+.gmp-game b{font-size:14px;color:var(--color-ink);}
+.gmp-game span:last-child{font-size:11.5px;color:var(--color-whisper);line-height:1.35;}
+.gmp-play{display:inline-block;margin-top:.4em;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}
+@media(max-width:380px){.gmp-grid{grid-template-columns:1fr;}}
+</style>
+
+<h2>Pick by goal</h2>
+<ul>
+  <li><strong>Want your child to memorize duas?</strong> Start with <a href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">Daily Duas</a> and <a href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">Dua Journey</a>.</li>
+  <li><strong>Just starting Arabic letters?</strong> Pick <a href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">Hijaiyah Letters</a>.</li>
+  <li><strong>Struggling with focus?</strong> Calm games like <a href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">Find Baby Mo</a> build concentration.</li>
+  <li><strong>Near bedtime?</strong> <a href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">Dreamtime</a> closes the day calmly.</li>
+</ul>
+
+<h2>Healthy play tips</h2>
+<ul>
+  <li>Play alongside your child — say the letters/duas together so it sticks.</li>
+  <li>Keep sessions short; brief games help keep screen time reasonable.</li>
+  <li>Connect to real life: after the eating-dua game, practice it at the meal.</li>
+</ul>
+
+<p><a class="gmp-play" href="https://play.babymo.id/" target="_blank" rel="noopener">▶ Play all games at play.babymo.id</a></p>
+
+<p>Prefer something calmer? Learn the <a href="/_/doa/">daily duas</a> or watch <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo’s educational videos</a>.</p>`,
+    },
+    tags: ["game", "permainan-anak", "islami", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 6,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: { id: "Apakah game Baby Mo gratis?", en: "Are Baby Mo games free?" },
+        answer: {
+          id: "Ya, semua game gratis dimainkan langsung di <a href=\"https://play.babymo.id/\" target=\"_blank\" rel=\"noopener\">play.babymo.id</a> — tanpa biaya dan tanpa iklan.",
+          en: "Yes, all games are free to play right at <a href=\"https://play.babymo.id/\" target=\"_blank\" rel=\"noopener\">play.babymo.id</a> — no cost and no ads.",
+        },
+      },
+      {
+        question: { id: "Perlu install aplikasi?", en: "Do I need to install an app?" },
+        answer: {
+          id: "Tidak. Game berjalan di browser HP, tablet, atau laptop. Kamu juga bisa menambahkannya ke layar utama (Add to Home Screen) agar terbuka seperti aplikasi, dan bisa dimainkan offline setelah dibuka sekali.",
+          en: "No. The games run in the browser on phone, tablet, or laptop. You can also Add to Home Screen so they open like an app, and they work offline once opened.",
+        },
+      },
+      {
+        question: { id: "Untuk umur berapa?", en: "What age are they for?" },
+        answer: {
+          id: "Paling cocok untuk anak usia sekitar 2–8 tahun, dengan tingkat kesulitan yang bervariasi antar game.",
+          en: "Best for children around ages 2–8, with difficulty varying across the games.",
+        },
+      },
+    ],
+  },
+  {
+    slug: "game-cari-baby-mo-look-and-find",
+    title: {
+      id: "Cari Baby Mo: Game Cari Objek untuk Melatih Fokus Anak (Gratis)",
+      en: "Find Baby Mo: A Hidden-Object Game to Build Kids’ Focus (Free)",
+    },
+    excerpt: {
+      id: "Game cari objek tersembunyi dengan 12 scene seru — melatih fokus, ketelitian, dan kesabaran anak. Gratis, tanpa iklan, langsung main di browser.",
+      en: "A hidden-object game with 12 fun scenes — building focus, attention to detail, and patience. Free, ad-free, play right in the browser.",
+    },
+    body: {
+      id: `<p><strong>Cari Baby Mo</strong> adalah game cari objek tersembunyi: di setiap scene, anak mencari benda-benda — dan Baby Mo yang ngumpet — sebelum semuanya ketemu. Tenang, penuh warna, dan melatih konsentrasi tanpa terasa seperti belajar.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">▶ Main Cari Baby Mo sekarang</a></p>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
+
+<h2>Apa yang dilatih?</h2>
+<ul>
+  <li><strong>Fokus &amp; ketelitian</strong> — anak belajar mengamati detail, bukan sekadar melihat sekilas.</li>
+  <li><strong>Kesabaran</strong> — menemukan objek butuh waktu, latihan kecil untuk tidak terburu-buru.</li>
+  <li><strong>Kosakata</strong> — sambil mencari, ajak anak menyebut benda yang ditemukan.</li>
+</ul>
+
+<h2>12 scene yang berbeda</h2>
+<p>Dari kamar tidur, ruang keluarga, taman, pasar Ramadan, masjid, dapur, kelas, pantai, kebun binatang, taman bermain, kebun, sampai bawah laut — setiap scene punya benda baru untuk dicari, dan Baby Mo yang bersembunyi di tempat berbeda lalu muncul ceria saat ditemukan.</p>
+
+<h2>Cara main bersama</h2>
+<ol>
+  <li>Duduk berdampingan; biarkan anak menunjuk layar saat menemukan objek.</li>
+  <li>Beri petunjuk, bukan jawaban: “coba lihat bagian atas…”.</li>
+  <li>Rayakan setiap temuan dengan tepuk tangan kecil.</li>
+</ol>
+
+<p>Suka game ini? Lihat <a href="/_/blog/game-anak-islami-baby-mo/">semua game Baby Mo</a>, atau pelajari <a href="/_/doa/">doa harian</a>.</p>`,
+      en: `<p><strong>Find Baby Mo</strong> is a hidden-object game: in each scene, kids look for objects — and a hidden Baby Mo — before finding them all. Calm, colorful, and focus-building without feeling like a lesson.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">▶ Play Find Baby Mo now</a></p>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
+
+<h2>What it builds</h2>
+<ul>
+  <li><strong>Focus &amp; attention to detail</strong> — kids learn to observe, not just glance.</li>
+  <li><strong>Patience</strong> — finding objects takes time; small practice in not rushing.</li>
+  <li><strong>Vocabulary</strong> — name each object as you search together.</li>
+</ul>
+
+<h2>12 different scenes</h2>
+<p>From the bedroom, living room, garden, Ramadan market, mosque, kitchen, classroom, beach, zoo, playground, farm, to under the sea — each scene has new objects to find, and a Baby Mo hiding in a different spot who pops up happily when found.</p>
+
+<h2>How to play together</h2>
+<ol>
+  <li>Sit side by side; let your child point at the screen when they spot something.</li>
+  <li>Give hints, not answers: “try looking near the top…”.</li>
+  <li>Celebrate each find with a little clap.</li>
+</ol>
+
+<p>Enjoyed it? See <a href="/_/blog/game-anak-islami-baby-mo/">all Baby Mo games</a>, or learn the <a href="/_/doa/">daily duas</a>.</p>`,
+    },
+    tags: ["game", "cari-objek", "fokus", "cari-baby-mo", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-belajar-hijaiyah-anak",
+    title: {
+      id: "Belajar Huruf Hijaiyah Sambil Bermain: Game Hijaiyah Baby Mo (Gratis)",
+      en: "Learn Hijaiyah Letters Through Play: Baby Mo’s Hijaiyah Game (Free)",
+    },
+    excerpt: {
+      id: "Cara menyenangkan mengenalkan huruf hijaiyah ke anak — game interaktif Baby Mo yang gratis, tanpa iklan, dan bisa dimainkan langsung di browser.",
+      en: "A fun way to introduce hijaiyah letters to your child — Baby Mo’s free, ad-free interactive game you can play right in the browser.",
+    },
+    body: {
+      id: `<p>Mengenalkan <strong>huruf hijaiyah</strong> tidak harus dengan hafalan yang kaku. Lewat game <strong>Huruf Hijaiyah</strong> dari Baby Mo, anak mengenal bentuk dan bunyi huruf Arab satu per satu, dengan cara yang ceria dan interaktif.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Main game Hijaiyah sekarang</a></p>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
+
+<h2>Kenapa lewat game?</h2>
+<ul>
+  <li><strong>Mengenal bentuk huruf</strong> tanpa tekanan — anak bermain, bukan diuji.</li>
+  <li><strong>Mengaitkan bentuk dengan bunyi</strong> lewat interaksi langsung.</li>
+  <li><strong>Pengulangan yang menyenangkan</strong> membuat huruf lebih cepat dikenal.</li>
+</ul>
+
+<h2>Tips untuk orang tua</h2>
+<ol>
+  <li>Temani dan ucapkan bunyi hurufnya bersama anak.</li>
+  <li>Cukup beberapa huruf per sesi — jangan terburu mengejar semua.</li>
+  <li>Lanjutkan ke <a href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">Kata Islam</a> saat anak mulai kenal huruf, untuk menyusun kata sederhana.</li>
+</ol>
+
+<p>Lihat juga <a href="/_/blog/game-anak-islami-baby-mo/">semua game Baby Mo</a> dan <a href="/_/doa/">kumpulan doa harian</a>.</p>`,
+      en: `<p>Introducing the <strong>hijaiyah letters</strong> doesn’t have to be rigid memorization. With Baby Mo’s <strong>Hijaiyah Letters</strong> game, kids get to know the shape and sound of each Arabic letter one by one, in a cheerful, interactive way.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Play the Hijaiyah game now</a></p>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
+
+<h2>Why through a game?</h2>
+<ul>
+  <li><strong>Recognize letter shapes</strong> without pressure — kids play, not get tested.</li>
+  <li><strong>Link shape to sound</strong> through direct interaction.</li>
+  <li><strong>Fun repetition</strong> makes the letters stick faster.</li>
+</ul>
+
+<h2>Tips for parents</h2>
+<ol>
+  <li>Sit along and say each letter’s sound together.</li>
+  <li>A few letters per session is plenty — no need to rush through all.</li>
+  <li>Move on to <a href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">Islamic Words</a> once they know the letters, to build simple words.</li>
+</ol>
+
+<p>See also <a href="/_/blog/game-anak-islami-baby-mo/">all Baby Mo games</a> and the <a href="/_/doa/">daily duas</a>.</p>`,
+    },
+    tags: ["game", "hijaiyah", "belajar-membaca", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
     slug: "video-edukasi-anak-islami-baby-mo",
     title: {
       id: "Video Edukasi Anak Islami: Panduan Tontonan Baby Mo (Doa, Lagu & Game)",

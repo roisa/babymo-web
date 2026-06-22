@@ -277,6 +277,23 @@ export default async function HomePage({
                     url={`/doa/${doaToday.slug}`}
                     locale={l}
                   />
+                  <a
+                    href={`https://wa.me/?text=${encodeURIComponent(
+                      (l === "id"
+                        ? `Doa Hari Ini 🤲\n${doaToday.title.id}\n\n${doaToday.arabic}\n\n"${doaToday.translation.id}"\n\nBaca bareng anak: `
+                        : `Du'a of the Day 🤲\n${doaToday.title.en}\n\n${doaToday.arabic}\n\n"${doaToday.translation.en}"\n\nRead it with your child: `) +
+                        absoluteUrl(l, `/doa/${doaToday.slug}`),
+                    )}`}
+                    target="_blank"
+                    rel="noopener"
+                    aria-label={l === "id" ? "Bagikan ke WhatsApp" : "Share on WhatsApp"}
+                    className="tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper px-4 py-3 text-[14px] font-semibold text-ink hover:border-sage/50"
+                  >
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden className="text-[#25D366]">
+                      <path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.16L2 22l4.95-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.86 12.4l-.2.32.6 2.18-2.24-.59-.31.18a8.1 8.1 0 1 1-4.71-14.7Zm-2.78 4.2c-.13 0-.34.05-.52.25-.18.2-.69.67-.69 1.64s.71 1.9.81 2.03c.1.13 1.39 2.21 3.43 3.02 1.7.67 2.05.54 2.42.5.37-.03 1.2-.49 1.37-.96.17-.47.17-.87.12-.96-.05-.08-.18-.13-.37-.23s-1.2-.59-1.38-.66c-.18-.07-.32-.1-.46.1-.13.2-.52.66-.64.8-.12.13-.23.15-.43.05a5.6 5.6 0 0 1-1.65-1.02 6.2 6.2 0 0 1-1.14-1.42c-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.06-.13.03-.25-.02-.35-.05-.1-.45-1.1-.62-1.5-.16-.4-.33-.34-.45-.34Z" />
+                    </svg>
+                    {l === "id" ? "Bagikan" : "Share"}
+                  </a>
                 </div>
               </div>
               <Link
