@@ -127,6 +127,32 @@ export const islamicCalendar: IslamicEvent[] = [
     parentingSlugs: ["puasa-pertama"],
   },
   {
+    id: "maulid-1448",
+    hijri: "12 Rabiul Awal 1448",
+    name: { id: "Maulid Nabi 1448", en: "Mawlid 1448" },
+    caption: {
+      id: "Memperingati kelahiran Rasulullah ﷺ — momen mengenalkan teladan beliau pada anak.",
+      en: "Commemorating the Prophet's ﷺ birth — a moment to introduce his example to children.",
+    },
+    startISO: "2026-09-02",
+    endISO: "2026-09-06",
+    blogSlug: "maulid-mengenalkan-rasulullah-pada-anak",
+    doaSlugs: ["doa-pagi", "doa-petang"],
+  },
+  {
+    id: "isra-miraj-1448",
+    hijri: "27 Rajab 1448",
+    name: { id: "Isra Mi'raj 1448", en: "Isra & Mi'raj 1448" },
+    caption: {
+      id: "Perjalanan malam Rasulullah ﷺ — awal mula perintah sholat lima waktu.",
+      en: "The Prophet's ﷺ night journey — the origin of the five daily prayers.",
+    },
+    startISO: "2027-01-16",
+    endISO: "2027-01-19",
+    blogSlug: "isra-miraj-untuk-anak",
+    doaSlugs: ["doa-pagi", "doa-petang"],
+  },
+  {
     id: "rajab-1448",
     hijri: "Rajab 1448",
     name: { id: "Bulan Rajab", en: "Month of Rajab" },
@@ -156,6 +182,19 @@ export const islamicCalendar: IslamicEvent[] = [
     parentingSlugs: ["puasa-pertama", "mulai-sholat"],
   },
   {
+    id: "lailatul-qadar-1448",
+    hijri: "10 Malam Terakhir Ramadan 1448",
+    name: { id: "Lailatul Qadar 1448", en: "Laylatul Qadr 1448" },
+    caption: {
+      id: "Malam yang lebih baik dari seribu bulan — dicari di 10 malam terakhir Ramadan.",
+      en: "The night better than a thousand months — sought in the last ten nights of Ramadan.",
+    },
+    startISO: "2027-03-11",
+    endISO: "2027-03-21",
+    blogSlug: "lailatul-qadar-untuk-anak",
+    doaSlugs: ["doa-pagi", "doa-petang", "berbuka-puasa"],
+  },
+  {
     id: "ramadan-1448",
     hijri: "Ramadan 1448",
     name: { id: "Ramadan 1448", en: "Ramadan 1448" },
@@ -170,6 +209,20 @@ export const islamicCalendar: IslamicEvent[] = [
     doaSlugs: ["berbuka-puasa", "doa-pagi", "doa-petang"],
     parentingSlugs: ["puasa-pertama", "adab-sehari-hari", "anak-tidak-mau-sholat"],
     catatanSlugs: ["disindir-si-kembar-waktu-makan"],
+  },
+  {
+    id: "idul-fitri-1448",
+    hijri: "1 Syawal 1448",
+    name: { id: "Idul Fitri 1448 H", en: "Eid al-Fitr 1448 H" },
+    caption: {
+      id: "Hari kemenangan setelah sebulan berpuasa — sholat Ied, takbir, dan saling memaafkan.",
+      en: "The day of joy after a month of fasting — Eid prayer, takbir, and seeking forgiveness.",
+    },
+    startISO: "2027-03-21",
+    endISO: "2027-03-24",
+    blogSlug: "idul-fitri-untuk-anak",
+    extraBlogSlugs: ["puasa-syawal-untuk-anak", "zakat-fitrah-untuk-anak"],
+    doaSlugs: ["mengucap-salam", "doa-untuk-orang-tua", "mendapat-rezeki"],
   },
 ];
 
