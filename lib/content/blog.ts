@@ -13,6 +13,285 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lagu-doa-sebelum-tidur-anak",
+    title: {
+      id: "Doa Sebelum Tidur untuk Anak: Video Lagu, Lirik, dan Artinya",
+      en: "Dua Before Sleeping for Kids: Song Video, Lyrics, and Meaning",
+    },
+    excerpt: {
+      id: "Ajarkan doa sebelum tidur ke anak lewat video lagu Baby Mo yang ceria — lengkap dengan bacaan Arab, latin, arti, dan cara mengajarkannya setiap malam.",
+      en: "Teach your child the dua before sleeping with Baby Mo’s cheerful song video — complete with Arabic, transliteration, meaning, and how to make it a nightly habit.",
+    },
+    body: {
+      id: `<p>Doa sebelum tidur adalah salah satu doa pertama yang bisa diajarkan ke anak — pendek, mudah dihafal, dan dibaca setiap malam. Lewat video lagu <strong>“Doa Sebelum Tidur”</strong> dari Baby Mo, anak belajar sambil bernyanyi, bukan menghafal dengan terpaksa.</p>
+
+<h2>Bacaan doa sebelum tidur</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.55em;line-height:2;color:var(--color-sage-deep);">بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ</blockquote>
+<p><em>Bismika Allāhumma aḥyā wa bismika amūtu</em></p>
+<p>“Dengan nama-Mu ya Allah aku hidup dan dengan nama-Mu aku mati.”</p>
+<p>Bacaan lengkap dengan sumbernya bisa dilihat di halaman <a href="/_/doa/sebelum-tidur/">Doa Sebelum Tidur</a>.</p>
+
+<h2>Cara mengajarkan lewat video</h2>
+<ol>
+  <li><strong>Putar saat rutinitas tidur.</strong> Jadikan video ini bagian dari ritual malam: sikat gigi, matikan lampu, lalu nyanyikan doanya bersama.</li>
+  <li><strong>Nyanyikan bersama, jangan hanya diputar.</strong> Suara orang tua membuat anak merasa aman dan lebih cepat hafal.</li>
+  <li><strong>Ulangi setiap malam.</strong> Konsistensi mengubah lagu menjadi kebiasaan, dan kebiasaan menjadi karakter.</li>
+</ol>
+
+<h2>Kenapa lagu efektif untuk anak</h2>
+<p>Melodi dan pengulangan membantu otak anak menyimpan kata-kata jauh lebih baik daripada hafalan biasa. Lagu pendek berdurasi setengah menit cocok dengan rentang fokus balita — cukup untuk satu doa, tidak membuat bosan.</p>
+
+<p>Suka videonya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo di YouTube</a> untuk video doa &amp; lagu anak islami lainnya. Lihat juga <a href="/_/doa/">kumpulan doa harian</a> dan <a href="/_/permainan/">permainan Baby Mo</a>.</p>`,
+      en: `<p>The dua before sleeping is one of the first duas you can teach a child — short, easy to memorize, and read every night. With Baby Mo’s cheerful <strong>“Doa Sebelum Tidur”</strong> song video, kids learn by singing rather than forced memorizing.</p>
+
+<h2>The dua before sleeping</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.55em;line-height:2;color:var(--color-sage-deep);">بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ</blockquote>
+<p><em>Bismika Allāhumma aḥyā wa bismika amūtu</em></p>
+<p>“With Your name, O Allah, I live and with Your name I die.”</p>
+<p>Full reading with the source on the <a href="/_/doa/sebelum-tidur/">Doa Sebelum Tidur</a> page.</p>
+
+<h2>How to teach it with the video</h2>
+<ol>
+  <li><strong>Play it during the bedtime routine.</strong> Make it part of the nightly ritual: brush teeth, lights down, then sing the dua together.</li>
+  <li><strong>Sing along — don’t just press play.</strong> A parent’s voice helps a child feel safe and memorize faster.</li>
+  <li><strong>Repeat every night.</strong> Consistency turns a song into a habit, and a habit into character.</li>
+</ol>
+
+<h2>Why songs work for kids</h2>
+<p>Melody and repetition help a child’s brain store words far better than plain memorization. A half-minute song fits a toddler’s attention span — enough for one dua, never boring.</p>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo on YouTube</a> for more Islamic dua &amp; song videos for kids. Also see the <a href="/_/doa/">daily duas</a> and <a href="/_/permainan/">Baby Mo games</a>.</p>`,
+    },
+    tags: ["doa", "sebelum-tidur", "lagu", "video", "balita"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    youtube: "orXDAOHAKw8",
+  },
+  {
+    slug: "lagu-doa-bangun-tidur-anak",
+    title: {
+      id: "Doa Bangun Tidur untuk Anak: Video Lagu, Lirik, dan Artinya",
+      en: "Dua Upon Waking for Kids: Song Video, Lyrics, and Meaning",
+    },
+    excerpt: {
+      id: "Mulai pagi anak dengan rasa syukur. Video lagu “Doa Bangun Tidur” dari Baby Mo membantu anak menghafal doa pagi — lengkap dengan Arab, latin, dan artinya.",
+      en: "Start your child’s morning with gratitude. Baby Mo’s “Doa Bangun Tidur” song video helps kids memorize the waking dua — with Arabic, transliteration, and meaning.",
+    },
+    body: {
+      id: `<p>Hal pertama yang diucapkan seorang muslim saat bangun adalah syukur — bahwa Allah menghidupkannya kembali untuk satu hari baru. Video lagu <strong>“Doa Bangun Tidur”</strong> dari Baby Mo mengajarkan kebiasaan indah ini sejak dini.</p>
+
+<h2>Bacaan doa bangun tidur</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.5em;line-height:2;color:var(--color-sage-deep);">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</blockquote>
+<p><em>Alhamdulillāhilladzī aḥyānā ba‘da mā amātanā wa ilayhin-nusyūr</em></p>
+<p>“Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami dibangkitkan.”</p>
+<p>Selengkapnya: <a href="/_/doa/bangun-tidur/">Doa Bangun Tidur</a>.</p>
+
+<h2>Jadikan rutinitas pagi</h2>
+<ol>
+  <li><strong>Putar saat anak baru bangun.</strong> Sebelum gawai, sebelum sarapan — satu lagu pendek untuk membuka hari.</li>
+  <li><strong>Pasangkan dengan doa sebelum tidur.</strong> Anak belajar siklus indah: tidur dengan bismillah, bangun dengan alhamdulillah.</li>
+  <li><strong>Beri pujian, bukan tekanan.</strong> “MasyaAllah, sudah ingat doanya!” lebih ampuh daripada menyuruh.</li>
+</ol>
+
+<p>Suka videonya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo</a>. Lihat juga <a href="/_/doa/sebelum-tidur/">doa sebelum tidur</a> dan <a href="/_/doa/">doa harian lainnya</a>.</p>`,
+      en: `<p>The first thing a Muslim says upon waking is gratitude — that Allah has given life back for a new day. Baby Mo’s <strong>“Doa Bangun Tidur”</strong> song video teaches this beautiful habit early.</p>
+
+<h2>The dua upon waking</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.5em;line-height:2;color:var(--color-sage-deep);">الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ</blockquote>
+<p><em>Alhamdulillāhilladzī aḥyānā ba‘da mā amātanā wa ilayhin-nusyūr</em></p>
+<p>“All praise is for Allah who gave us life after causing us to die, and to Him is the return.”</p>
+<p>More: <a href="/_/doa/bangun-tidur/">Doa Bangun Tidur</a>.</p>
+
+<h2>Make it a morning routine</h2>
+<ol>
+  <li><strong>Play it as your child wakes.</strong> Before screens, before breakfast — one short song to open the day.</li>
+  <li><strong>Pair it with the sleeping dua.</strong> Kids learn a beautiful cycle: sleep with bismillah, wake with alhamdulillah.</li>
+  <li><strong>Praise, don’t pressure.</strong> “MashaAllah, you remembered!” beats nagging.</li>
+</ol>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo</a>. See also the <a href="/_/doa/sebelum-tidur/">dua before sleeping</a> and <a href="/_/doa/">other daily duas</a>.</p>`,
+    },
+    tags: ["doa", "bangun-tidur", "lagu", "video", "rutinitas"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    youtube: "L6bXkRuO5vc",
+  },
+  {
+    slug: "lagu-doa-sebelum-makan-anak",
+    title: {
+      id: "Doa Sebelum Makan untuk Anak: Video Lagu & Adab Makan Islami",
+      en: "Dua Before Eating for Kids: Song Video & Islamic Table Manners",
+    },
+    excerpt: {
+      id: "Biasakan anak membaca bismillah sebelum makan lewat video lagu Baby Mo — plus adab makan sederhana yang bisa diajarkan sejak balita.",
+      en: "Help kids say bismillah before eating with Baby Mo’s song video — plus simple Islamic table manners you can teach from toddlerhood.",
+    },
+    body: {
+      id: `<p>Sebelum suapan pertama, ada satu kata kecil yang mengubah makan biasa menjadi ibadah: <strong>bismillah</strong>. Video lagu <strong>“Doa Sebelum Makan”</strong> dari Baby Mo membuat adab ini menyenangkan untuk anak.</p>
+
+<h2>Bacaan doa sebelum makan</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.7em;line-height:1.9;color:var(--color-sage-deep);">بِسْمِ اللَّهِ</blockquote>
+<p><em>Bismillāh</em> — “Dengan nama Allah.”</p>
+<p>Rasulullah ﷺ mengajarkan membaca bismillah sebelum makan. Selengkapnya: <a href="/_/doa/sebelum-makan/">Doa Sebelum Makan</a>.</p>
+
+<h2>Adab makan sederhana untuk anak</h2>
+<ul>
+  <li>Baca <em>bismillah</em> sebelum mulai.</li>
+  <li>Makan dengan tangan kanan.</li>
+  <li>Makan yang ada di dekatnya, secukupnya, tidak berlebihan.</li>
+  <li>Tutup dengan <a href="/_/doa/sesudah-makan/">doa sesudah makan</a> dan ucapan syukur.</li>
+</ul>
+
+<p>Lagu ini juga sejalan dengan lagu <a href="/_/blog/lagu-bismillah-dulu/">“Bismillah Dulu”</a> — keduanya menanamkan kebiasaan mengawali dengan nama Allah.</p>
+
+<p>Suka videonya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo</a> untuk lagu &amp; doa anak islami lainnya.</p>`,
+      en: `<p>Before the first bite, one small word turns an ordinary meal into worship: <strong>bismillah</strong>. Baby Mo’s <strong>“Doa Sebelum Makan”</strong> song video makes this manner fun for kids.</p>
+
+<h2>The dua before eating</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.7em;line-height:1.9;color:var(--color-sage-deep);">بِسْمِ اللَّهِ</blockquote>
+<p><em>Bismillāh</em> — “In the name of Allah.”</p>
+<p>The Prophet ﷺ taught saying bismillah before eating. More: <a href="/_/doa/sebelum-makan/">Doa Sebelum Makan</a>.</p>
+
+<h2>Simple table manners for kids</h2>
+<ul>
+  <li>Say <em>bismillah</em> before starting.</li>
+  <li>Eat with the right hand.</li>
+  <li>Eat what’s nearest, in moderation, without waste.</li>
+  <li>Finish with the <a href="/_/doa/sesudah-makan/">dua after eating</a> and a word of thanks.</li>
+</ul>
+
+<p>This pairs with the <a href="/_/blog/lagu-bismillah-dulu/">“Bismillah Dulu”</a> song — both plant the habit of beginning with Allah’s name.</p>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo</a> for more Islamic songs &amp; duas for kids.</p>`,
+    },
+    tags: ["doa", "makan", "lagu", "video", "adab"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    youtube: "cmK8ruUiCbA",
+  },
+  {
+    slug: "lagu-doa-sesudah-makan-anak",
+    title: {
+      id: "Doa Sesudah Makan untuk Anak: Video Lagu, Lirik, dan Artinya",
+      en: "Dua After Eating for Kids: Song Video, Lyrics, and Meaning",
+    },
+    excerpt: {
+      id: "Ajari anak bersyukur setelah makan lewat video lagu Baby Mo — lengkap dengan bacaan Arab, latin, arti, dan tips menanamkan kebiasaan syukur.",
+      en: "Teach kids gratitude after eating with Baby Mo’s song video — Arabic, transliteration, meaning, and tips for nurturing a habit of thankfulness.",
+    },
+    body: {
+      id: `<p>Rasa kenyang adalah nikmat yang mudah dilupakan. Doa sesudah makan mengajak anak berhenti sejenak dan bersyukur. Video lagu <strong>“Doa Sesudah Makan”</strong> dari Baby Mo membuatnya mudah diingat.</p>
+
+<h2>Bacaan doa sesudah makan</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.5em;line-height:2;color:var(--color-sage-deep);">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ</blockquote>
+<p><em>Alhamdulillāhilladzī aṭ‘amanā wa saqānā wa ja‘alanā muslimīn</em></p>
+<p>“Segala puji bagi Allah yang memberi kami makan dan minum, serta menjadikan kami muslim.”</p>
+<p>Selengkapnya: <a href="/_/doa/sesudah-makan/">Doa Sesudah Makan</a>.</p>
+
+<h2>Menanamkan kebiasaan syukur</h2>
+<ol>
+  <li><strong>Baca bersama setelah suapan terakhir.</strong> Jadikan penutup makan, sama rutinnya dengan membuka dengan bismillah.</li>
+  <li><strong>Hubungkan dengan rasa.</strong> “Tadi enak ya? Yuk, ucap terima kasih ke Allah.”</li>
+  <li><strong>Contohkan.</strong> Saat orang tua ikut bersyukur, anak meniru tanpa diperintah.</li>
+</ol>
+
+<p>Suka videonya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo</a>. Lihat juga <a href="/_/doa/sebelum-makan/">doa sebelum makan</a> dan <a href="/_/doa/">doa harian lainnya</a>.</p>`,
+      en: `<p>Feeling full is a blessing that’s easy to forget. The dua after eating invites a child to pause and give thanks. Baby Mo’s <strong>“Doa Sesudah Makan”</strong> song video makes it easy to remember.</p>
+
+<h2>The dua after eating</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.5em;line-height:2;color:var(--color-sage-deep);">الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنَا وَسَقَانَا وَجَعَلَنَا مُسْلِمِينَ</blockquote>
+<p><em>Alhamdulillāhilladzī aṭ‘amanā wa saqānā wa ja‘alanā muslimīn</em></p>
+<p>“All praise is for Allah who fed us, gave us drink, and made us Muslims.”</p>
+<p>More: <a href="/_/doa/sesudah-makan/">Doa Sesudah Makan</a>.</p>
+
+<h2>Nurturing the habit of gratitude</h2>
+<ol>
+  <li><strong>Recite together after the last bite.</strong> Make it the meal’s closing, as routine as opening with bismillah.</li>
+  <li><strong>Connect it to taste.</strong> “That was tasty, right? Let’s thank Allah.”</li>
+  <li><strong>Model it.</strong> When parents give thanks too, children copy without being told.</li>
+</ol>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo</a>. See also the <a href="/_/doa/sebelum-makan/">dua before eating</a> and <a href="/_/doa/">other daily duas</a>.</p>`,
+    },
+    tags: ["doa", "makan", "syukur", "video", "adab"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    youtube: "X6ZGk_e7A00",
+  },
+  {
+    slug: "cari-perbedaan-anak-baby-mo",
+    title: {
+      id: "Game Cari Perbedaan untuk Anak: Melatih Fokus Sambil Bermain",
+      en: "Spot the Difference for Kids: Building Focus Through Play",
+    },
+    excerpt: {
+      id: "Video “Cari dan Temukan Perbedaan Bareng Baby Mo” melatih fokus, ketelitian, dan kesabaran anak — tontonan tenang yang ramah anak. Plus cara memainkannya bersama.",
+      en: "Baby Mo’s “Spot the Difference” videos build focus, attention to detail, and patience — calm, kid-friendly screen time. Plus how to play along together.",
+    },
+    body: {
+      id: `<p>Tidak semua waktu layar harus ramai dan cepat. Video <strong>“Cari dan Temukan Perbedaan Bareng Baby Mo”</strong> mengajak anak duduk tenang, mengamati, dan menemukan — melatih fokus tanpa terasa seperti belajar.</p>
+
+<h2>Apa yang dilatih?</h2>
+<ul>
+  <li><strong>Fokus &amp; perhatian.</strong> Anak belajar mengamati detail, bukan sekadar melihat sekilas.</li>
+  <li><strong>Kesabaran.</strong> Menemukan perbedaan butuh waktu — latihan kecil untuk tidak terburu-buru.</li>
+  <li><strong>Kosakata.</strong> Sambil mencari, ajak anak menyebut benda yang dilihat.</li>
+</ul>
+
+<h2>Cara bermain bersama</h2>
+<ol>
+  <li><strong>Duduk berdampingan.</strong> Jeda videonya, ajak anak menunjuk layar saat menemukan perbedaan.</li>
+  <li><strong>Beri petunjuk, bukan jawaban.</strong> “Coba lihat bagian atas…” lebih melatih daripada langsung menunjuk.</li>
+  <li><strong>Rayakan setiap temuan.</strong> Tepuk tangan kecil membuat anak ingin lanjut.</li>
+</ol>
+
+<h2>Episode 2</h2>
+<p>Sudah selesai episode pertama di atas? Lanjut ke episode berikutnya:</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/-4mkpvahJnE" title="Cari dan Temukan Perbedaan Bareng Baby Mo — Episode 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+
+<p>Suka serunya? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe channel Baby Mo</a> untuk episode berikutnya. Mau yang interaktif? Mainkan <a href="/_/permainan/">permainan Baby Mo</a> langsung di web.</p>`,
+      en: `<p>Not all screen time has to be loud and fast. Baby Mo’s <strong>“Spot the Difference”</strong> videos invite kids to sit calmly, observe, and find — building focus without feeling like a lesson.</p>
+
+<h2>What it builds</h2>
+<ul>
+  <li><strong>Focus &amp; attention.</strong> Kids learn to observe details, not just glance.</li>
+  <li><strong>Patience.</strong> Finding differences takes time — small practice in not rushing.</li>
+  <li><strong>Vocabulary.</strong> While searching, have your child name what they see.</li>
+</ul>
+
+<h2>How to play together</h2>
+<ol>
+  <li><strong>Sit side by side.</strong> Pause the video and let your child point at the screen when they spot a difference.</li>
+  <li><strong>Give hints, not answers.</strong> “Look near the top…” trains more than pointing it out.</li>
+  <li><strong>Celebrate each find.</strong> A little clap makes them want to continue.</li>
+</ol>
+
+<h2>Episode 2</h2>
+<p>Finished the first episode above? Continue to the next one:</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/-4mkpvahJnE" title="Spot the Difference with Baby Mo — Episode 2" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+
+<p>Enjoyed it? <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Subscribe to Baby Mo</a> for the next episodes. Want interactive? Play <a href="/_/permainan/">Baby Mo games</a> right in your browser.</p>`,
+    },
+    tags: ["game", "cari-perbedaan", "fokus", "video", "aktivitas"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    youtube: "BhLRQP_Nfdk",
+  },
+  {
     slug: "lagu-bismillah-dulu",
     title: {
       id: "Lirik Lagu “Bismillah Dulu” — Biasakan Anak Mengawali dengan Bismillah",
@@ -145,6 +424,7 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-06-22",
     readingTimeMin: 3,
     author: "salman",
+    youtube: "cq6ODPSWGdc",
   },
   {
     slug: "kebiasaan-kecil-yang-tumbuh-besar",
