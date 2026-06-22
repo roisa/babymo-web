@@ -13,6 +13,414 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "idul-fitri-untuk-anak",
+    title: {
+      id: "Idul Fitri untuk Anak: Panduan Lebaran (Sholat Ied, Takbir & Maaf-maafan)",
+      en: "Eid al-Fitr for Kids: A Family Guide (Eid Prayer, Takbir & Forgiveness)",
+    },
+    excerpt: {
+      id: "Cara mengenalkan makna Idul Fitri pada anak — takbir, sholat Ied, zakat fitrah, baju baru, dan tradisi maaf-maafan — agar Lebaran terasa istimewa dan penuh makna.",
+      en: "How to teach children the meaning of Eid al-Fitr — takbir, the Eid prayer, zakat al-fitr, new clothes, and asking forgiveness — so Eid feels special and meaningful.",
+    },
+    body: {
+      id: `<p>Idul Fitri adalah hari kemenangan setelah sebulan berpuasa di bulan Ramadan. Bagi anak, Lebaran bisa jadi salah satu kenangan paling indah — asal kita jelaskan maknanya, bukan sekadar baju baru dan uang.</p>
+
+<h2>Yang dilakukan saat Idul Fitri</h2>
+<ul>
+  <li><strong>Takbir.</strong> Mulai malam Lebaran hingga sebelum sholat Ied, kumandangkan takbir: “Allahu akbar, Allahu akbar, laa ilaaha illallah…”</li>
+  <li><strong>Zakat fitrah.</strong> Ditunaikan sebelum sholat Ied — ajak anak ikut menyerahkannya. Selengkapnya: <a href="/_/blog/zakat-fitrah-untuk-anak/">zakat fitrah untuk anak</a>.</li>
+  <li><strong>Mandi &amp; pakai pakaian terbaik.</strong> Tidak harus baru — yang penting bersih dan rapi.</li>
+  <li><strong>Sholat Ied berjamaah.</strong> Ajak anak ke lapangan/masjid; biarkan ia merasakan kebersamaan.</li>
+  <li><strong>Saling memaafkan.</strong> Mulai dari keluarga — ajarkan anak meminta dan memberi maaf dengan tulus.</li>
+</ul>
+
+<h2>Mengajarkan makna Idul Fitri pada anak</h2>
+<p>Idul Fitri bukan akhir dari ibadah, tapi perayaan atas sebulan latihan kesabaran dan syukur. Sampaikan dengan bahasa sederhana: “Kita senang karena sudah berusaha taat selama Ramadan, dan hari ini kita berterima kasih kepada Allah.”</p>
+<ul>
+  <li>Ceritakan bahwa kebahagiaan terbesar adalah kembali suci dan dekat dengan Allah.</li>
+  <li>Ajak berbagi: sisihkan sebagian THR anak untuk sedekah.</li>
+  <li>Jadikan maaf-maafan momen hangat, bukan formalitas.</li>
+</ul>
+
+<p>Lanjutkan kebaikan Ramadan dengan <a href="/_/blog/puasa-syawal-untuk-anak/">puasa Syawal</a>. Lihat juga <a href="/_/blog/ramadan-bersama-anak/">Ramadan bersama anak</a> dan <a href="/_/doa/">kumpulan doa harian</a>.</p>`,
+      en: `<p>Eid al-Fitr is the day of joy after a month of fasting in Ramadan. For a child it can become one of the loveliest memories — as long as we explain its meaning, not just new clothes and money.</p>
+
+<h2>What we do on Eid</h2>
+<ul>
+  <li><strong>Takbir.</strong> From the eve of Eid until the Eid prayer: “Allahu akbar, Allahu akbar, laa ilaaha illallah…”</li>
+  <li><strong>Zakat al-fitr.</strong> Given before the Eid prayer — let your child help hand it over. More: <a href="/_/blog/zakat-fitrah-untuk-anak/">zakat al-fitr for kids</a>.</li>
+  <li><strong>Bathe &amp; wear your best.</strong> Not necessarily new — just clean and tidy.</li>
+  <li><strong>Pray Eid in congregation.</strong> Take your child along to feel the togetherness.</li>
+  <li><strong>Seek forgiveness.</strong> Start with family — teach children to ask for and give pardon sincerely.</li>
+</ul>
+
+<h2>Teaching the meaning of Eid</h2>
+<p>Eid isn't the end of worship but a celebration of a month of practicing patience and gratitude. Say it simply: “We're happy because we tried to obey Allah all Ramadan, and today we thank Him.”</p>
+<ul>
+  <li>Tell them the greatest joy is returning pure and close to Allah.</li>
+  <li>Encourage sharing: set aside part of their Eid money for charity.</li>
+  <li>Make seeking forgiveness a warm moment, not a formality.</li>
+</ul>
+
+<p>Continue Ramadan's good with <a href="/_/blog/puasa-syawal-untuk-anak/">six days of Shawwal</a>. See also <a href="/_/blog/ramadan-bersama-anak/">Ramadan with your child</a> and the <a href="/_/doa/">daily duas</a>.</p>`,
+    },
+    tags: ["idul-fitri", "syawal", "ibadah-musiman", "parenting", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apa saja yang dilakukan anak saat Idul Fitri?", en: "What should kids do on Eid?" },
+        answer: { id: "Bertakbir, ikut menyerahkan zakat fitrah, mandi dan berpakaian rapi, sholat Ied berjamaah, lalu saling memaafkan dengan keluarga.", en: "Recite takbir, help give zakat al-fitr, bathe and dress neatly, pray Eid in congregation, then exchange forgiveness with family." } },
+      { question: { id: "Kapan zakat fitrah ditunaikan?", en: "When is zakat al-fitr given?" },
+        answer: { id: "Paling utama sebelum sholat Idul Fitri, dan boleh ditunaikan beberapa hari sebelumnya pada akhir Ramadan.", en: "Best before the Eid prayer, and it may be given in the last days of Ramadan." } },
+    ],
+  },
+  {
+    slug: "puasa-syawal-untuk-anak",
+    title: {
+      id: "Puasa Syawal 6 Hari: Keutamaan & Cara Mengajak Anak",
+      en: "Six Days of Shawwal: Virtue & How to Involve Your Child",
+    },
+    excerpt: {
+      id: "Puasa enam hari di bulan Syawal — keutamaannya seperti puasa setahun, cara melakukannya, dan tips lembut mengajak anak ikut berlatih.",
+      en: "Fasting six days in Shawwal — its reward like fasting a whole year, how to do it, and gentle ways to involve your child.",
+    },
+    body: {
+      id: `<p>Setelah Idul Fitri, ada amalan ringan tapi besar pahalanya: <strong>puasa enam hari di bulan Syawal</strong>. Rasulullah ﷺ bersabda, “Barang siapa berpuasa Ramadan lalu mengikutinya dengan enam hari di bulan Syawal, maka seperti berpuasa setahun penuh.” — <strong>HR. Muslim</strong>.</p>
+
+<h2>Cara melakukannya</h2>
+<ul>
+  <li>Dilakukan <strong>setelah</strong> hari raya Idul Fitri (tidak boleh puasa pada 1 Syawal).</li>
+  <li>Enam hari, boleh berurutan atau terpisah, selama masih di bulan Syawal.</li>
+  <li>Niat puasa sunnah; pahalanya melengkapi puasa Ramadan.</li>
+</ul>
+
+<h2>Mengajak anak ikut berlatih</h2>
+<p>Bagi anak yang belum wajib puasa, Syawal adalah lanjutan latihan yang menyenangkan setelah Ramadan.</p>
+<ol>
+  <li><strong>Tawarkan, jangan paksa.</strong> “Mau coba puasa setengah hari lagi seperti waktu Ramadan?”</li>
+  <li><strong>Puasa bersama.</strong> Anak lebih semangat saat orang tua ikut berpuasa di hari yang sama.</li>
+  <li><strong>Rayakan berbuka.</strong> Jadikan momen berbuka hangat dan istimewa.</li>
+</ol>
+
+<p>Lihat <a href="/_/doa/berbuka-puasa/">doa berbuka puasa</a>, atau jelajahi <a href="/_/blog/kalender-puasa-sunnah/">kalender puasa sunnah setahun</a> untuk amalan puasa lainnya.</p>`,
+      en: `<p>After Eid comes a light deed with a great reward: <strong>fasting six days in Shawwal</strong>. The Prophet ﷺ said, “Whoever fasts Ramadan then follows it with six days of Shawwal, it is as if he fasted the whole year.” — <strong>Muslim</strong>.</p>
+
+<h2>How to do it</h2>
+<ul>
+  <li>Done <strong>after</strong> Eid al-Fitr (fasting on the 1st of Shawwal is not allowed).</li>
+  <li>Six days, consecutive or separate, as long as it's within Shawwal.</li>
+  <li>Intend a voluntary fast; its reward completes the Ramadan fast.</li>
+</ul>
+
+<h2>Involving your child</h2>
+<p>For children not yet obligated to fast, Shawwal is a fun continuation of Ramadan's practice.</p>
+<ol>
+  <li><strong>Offer, don't force.</strong> “Want to try a half-day fast again like in Ramadan?”</li>
+  <li><strong>Fast together.</strong> Kids are keener when parents fast the same day.</li>
+  <li><strong>Celebrate iftar.</strong> Make breaking the fast a warm, special moment.</li>
+</ol>
+
+<p>See the <a href="/_/doa/berbuka-puasa/">dua for breaking fast</a>, or explore the <a href="/_/blog/kalender-puasa-sunnah/">year-round sunnah fasting calendar</a>.</p>`,
+    },
+    tags: ["puasa", "syawal", "ibadah-musiman", "parenting"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Kapan boleh mulai puasa Syawal?", en: "When can the Shawwal fast begin?" },
+        answer: { id: "Mulai tanggal 2 Syawal (sehari setelah Idul Fitri) hingga akhir bulan Syawal. Tanggal 1 Syawal dilarang berpuasa karena hari raya.", en: "From the 2nd of Shawwal (the day after Eid) until the month ends. Fasting on the 1st of Shawwal is forbidden as it is the day of Eid." } },
+      { question: { id: "Harus berurutan enam harinya?", en: "Must the six days be consecutive?" },
+        answer: { id: "Tidak harus. Boleh berurutan atau dipisah-pisah, asalkan total enam hari dan masih dalam bulan Syawal.", en: "No. They may be consecutive or spread out, as long as it totals six days within Shawwal." } },
+    ],
+  },
+  {
+    slug: "zakat-fitrah-untuk-anak",
+    title: {
+      id: "Zakat Fitrah Dijelaskan ke Anak: Panduan Keluarga (Kapan, Berapa, untuk Siapa)",
+      en: "Zakat al-Fitr Explained to Kids: A Family Guide (When, How Much, For Whom)",
+    },
+    excerpt: {
+      id: "Apa itu zakat fitrah, berapa besarnya, kapan ditunaikan, dan cara melibatkan anak agar mereka belajar berbagi dan peduli sejak dini.",
+      en: "What zakat al-fitr is, how much, when to give, and how to involve children so they learn to share and care early.",
+    },
+    body: {
+      id: `<p>Zakat fitrah adalah zakat yang wajib ditunaikan setiap muslim di akhir Ramadan — termasuk untuk anak-anak (ditunaikan oleh orang tua). Tujuannya menyucikan diri setelah berpuasa dan membantu yang membutuhkan agar ikut bahagia di hari raya.</p>
+
+<h2>Hal penting tentang zakat fitrah</h2>
+<ul>
+  <li><strong>Untuk siapa?</strong> Setiap jiwa muslim — besar maupun kecil, bahkan bayi. Orang tua menunaikan untuk anak-anaknya.</li>
+  <li><strong>Berapa?</strong> Satu sha' makanan pokok (sekitar 2,5–3 kg beras), atau senilai uang sesuai ketentuan lembaga zakat setempat. <strong>(HR. Bukhari &amp; Muslim, dari Ibnu Umar.)</strong></li>
+  <li><strong>Kapan?</strong> Paling utama sebelum sholat Idul Fitri; boleh sejak akhir Ramadan.</li>
+  <li><strong>Untuk siapa diberikan?</strong> Fakir miskin dan golongan yang berhak.</li>
+</ul>
+
+<h2>Melibatkan anak</h2>
+<ol>
+  <li><strong>Ajak menimbang &amp; menyiapkan.</strong> Biarkan anak ikut menakar beras atau memasukkan ke kantong.</li>
+  <li><strong>Ajak menyerahkan.</strong> Pengalaman langsung memberi membekas lebih dalam daripada penjelasan.</li>
+  <li><strong>Jelaskan tujuannya.</strong> “Agar teman-teman yang kurang mampu juga bisa makan enak dan senang saat Lebaran.”</li>
+</ol>
+
+<p>Bagian dari rangkaian <a href="/_/blog/idul-fitri-untuk-anak/">Idul Fitri</a>. Lihat juga <a href="/_/blog/ramadan-bersama-anak/">Ramadan bersama anak</a>.</p>`,
+      en: `<p>Zakat al-fitr is an obligatory charity every Muslim gives at the end of Ramadan — including for children (paid by parents). It purifies the one who fasted and helps those in need share in the joy of Eid.</p>
+
+<h2>Key points</h2>
+<ul>
+  <li><strong>For whom?</strong> Every Muslim soul — young or old, even an infant. Parents pay on behalf of their children.</li>
+  <li><strong>How much?</strong> One sha' of staple food (about 2.5–3 kg of rice), or its cash value per your local zakat authority. <strong>(Bukhari &amp; Muslim, from Ibn Umar.)</strong></li>
+  <li><strong>When?</strong> Best before the Eid prayer; may be given from the last days of Ramadan.</li>
+  <li><strong>To whom?</strong> The poor and those entitled.</li>
+</ul>
+
+<h2>Involving your child</h2>
+<ol>
+  <li><strong>Measure &amp; prepare together.</strong> Let your child help weigh the rice or fill the bag.</li>
+  <li><strong>Let them hand it over.</strong> Giving in person leaves a deeper mark than any explanation.</li>
+  <li><strong>Explain the purpose.</strong> “So friends who have less can also eat well and be happy on Eid.”</li>
+</ol>
+
+<p>Part of the <a href="/_/blog/idul-fitri-untuk-anak/">Eid al-Fitr</a> series. See also <a href="/_/blog/ramadan-bersama-anak/">Ramadan with your child</a>.</p>`,
+    },
+    tags: ["zakat", "idul-fitri", "ibadah-musiman", "akhlak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah bayi juga wajib zakat fitrah?", en: "Is zakat al-fitr due for a baby too?" },
+        answer: { id: "Ya. Zakat fitrah wajib untuk setiap jiwa muslim, termasuk bayi dan anak-anak, dan ditunaikan oleh orang tua atau walinya.", en: "Yes. Zakat al-fitr is due for every Muslim soul, including babies and children, and is paid by the parent or guardian." } },
+      { question: { id: "Berapa besar zakat fitrah?", en: "How much is zakat al-fitr?" },
+        answer: { id: "Satu sha' makanan pokok (sekitar 2,5–3 kg beras) per orang, atau senilai uang sesuai ketentuan lembaga zakat resmi setempat.", en: "One sha' of staple food (about 2.5–3 kg of rice) per person, or its cash value per your local official zakat body." } },
+    ],
+  },
+  {
+    slug: "12-bulan-hijriah-untuk-anak",
+    title: {
+      id: "Mengenal 12 Bulan Hijriah & Artinya untuk Anak (Plus 4 Bulan Haram)",
+      en: "The 12 Hijri Months & Their Meaning for Kids (Plus the 4 Sacred Months)",
+    },
+    excerpt: {
+      id: "Kenalkan anak pada kalender Islam: 12 bulan Hijriah, peristiwa pentingnya, dan empat bulan haram yang dimuliakan — dengan tautan ke setiap momen.",
+      en: "Introduce children to the Islamic calendar: the 12 Hijri months, their key events, and the four sacred months — with links to each occasion.",
+    },
+    body: {
+      id: `<p>Kalender Islam (Hijriah) mengikuti peredaran bulan, dan terdiri dari 12 bulan. Allah berfirman bahwa jumlah bulan ada dua belas, dan empat di antaranya adalah bulan haram (yang dimuliakan). — <strong>QS. At-Taubah: 36</strong>. Mengenalkannya membantu anak merasa terhubung dengan waktu secara islami.</p>
+
+<h2>12 Bulan Hijriah</h2>
+<ol>
+  <li><strong>Muharram</strong> 🌙 — bulan haram; <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">tahun baru Islam</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">Asyura</a>.</li>
+  <li><strong>Safar</strong> — bukan bulan sial dalam Islam.</li>
+  <li><strong>Rabiul Awal</strong> — bulan kelahiran <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Rasulullah ﷺ</a>.</li>
+  <li><strong>Rabiul Akhir</strong></li>
+  <li><strong>Jumadil Awal</strong></li>
+  <li><strong>Jumadil Akhir</strong></li>
+  <li><strong>Rajab</strong> 🌙 — bulan haram; <a href="/_/blog/isra-miraj-untuk-anak/">Isra Mi'raj</a>.</li>
+  <li><strong>Sya'ban</strong> — <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">persiapan menuju Ramadan</a>.</li>
+  <li><strong>Ramadan</strong> — bulan puasa; <a href="/_/blog/lailatul-qadar-untuk-anak/">Lailatul Qadar</a>.</li>
+  <li><strong>Syawal</strong> — <a href="/_/blog/idul-fitri-untuk-anak/">Idul Fitri</a> &amp; <a href="/_/blog/puasa-syawal-untuk-anak/">puasa Syawal</a>.</li>
+  <li><strong>Dzulqadah</strong> 🌙 — bulan haram.</li>
+  <li><strong>Dzulhijjah</strong> 🌙 — bulan haram; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">10 hari pertama</a>, haji &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Idul Adha</a>.</li>
+</ol>
+
+<h2>Empat bulan haram</h2>
+<p>Empat bulan yang dimuliakan adalah <strong>Dzulqadah, Dzulhijjah, Muharram, dan Rajab</strong>. Pada bulan-bulan ini umat Islam dianjurkan memperbanyak kebaikan dan menjauhi kezaliman.</p>
+
+<p>Lihat kalender lengkap dengan tanggalnya di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>The Islamic (Hijri) calendar follows the moon and has 12 months. Allah states that the number of months is twelve, four of which are sacred. — <strong>Qur'an, At-Tawbah: 36</strong>. Knowing them helps a child feel connected to time in an Islamic way.</p>
+
+<h2>The 12 Hijri Months</h2>
+<ol>
+  <li><strong>Muharram</strong> 🌙 — sacred; <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">Islamic new year</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">Ashura</a>.</li>
+  <li><strong>Safar</strong> — not an unlucky month in Islam.</li>
+  <li><strong>Rabi' al-Awwal</strong> — the birth month of the <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Prophet ﷺ</a>.</li>
+  <li><strong>Rabi' al-Akhir</strong></li>
+  <li><strong>Jumada al-Awwal</strong></li>
+  <li><strong>Jumada al-Akhir</strong></li>
+  <li><strong>Rajab</strong> 🌙 — sacred; <a href="/_/blog/isra-miraj-untuk-anak/">Isra & Mi'raj</a>.</li>
+  <li><strong>Sha'ban</strong> — <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">preparing for Ramadan</a>.</li>
+  <li><strong>Ramadan</strong> — the month of fasting; <a href="/_/blog/lailatul-qadar-untuk-anak/">Laylatul Qadr</a>.</li>
+  <li><strong>Shawwal</strong> — <a href="/_/blog/idul-fitri-untuk-anak/">Eid al-Fitr</a> &amp; <a href="/_/blog/puasa-syawal-untuk-anak/">six days of Shawwal</a>.</li>
+  <li><strong>Dhul-Qa'dah</strong> 🌙 — sacred.</li>
+  <li><strong>Dhul-Hijjah</strong> 🌙 — sacred; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">first 10 days</a>, Hajj &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Eid al-Adha</a>.</li>
+</ol>
+
+<h2>The four sacred months</h2>
+<p>The four honored months are <strong>Dhul-Qa'dah, Dhul-Hijjah, Muharram, and Rajab</strong>. In them, Muslims are encouraged to do more good and avoid wrongdoing.</p>
+
+<p>See the full calendar with dates at <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "hijriah", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "kalender-puasa-sunnah",
+    title: {
+      id: "Kalender Puasa Sunnah Setahun untuk Keluarga (Lengkap & Bersumber)",
+      en: "A Year-Round Sunnah Fasting Calendar for Families (Sourced)",
+    },
+    excerpt: {
+      id: "Daftar puasa sunnah sepanjang tahun — Senin-Kamis, Ayyamul Bidh, Arafah, Asyura, Syawal, dan puasa Daud — beserta keutamaan dan tips melibatkan anak.",
+      en: "A list of voluntary fasts through the year — Mondays/Thursdays, Ayyamul Bidh, Arafah, Ashura, Shawwal, and the fast of Dawud — with virtues and tips to involve kids.",
+    },
+    body: {
+      id: `<p>Selain puasa wajib Ramadan, ada banyak puasa sunnah yang bisa menjadi latihan ringan dan penuh berkah sepanjang tahun. Berikut yang paling dikenal, lengkap dengan sumbernya.</p>
+
+<h2>Puasa sunnah sepanjang tahun</h2>
+<ul>
+  <li><strong>Senin &amp; Kamis.</strong> Hari diangkatnya amal; Rasulullah ﷺ rutin berpuasa pada keduanya. <em>(HR. Tirmidzi.)</em></li>
+  <li><strong>Ayyamul Bidh.</strong> Tiga hari terang bulan: 13, 14, 15 setiap bulan Hijriah. <em>(HR. Tirmidzi &amp; Nasa'i.)</em></li>
+  <li><strong>Puasa Arafah.</strong> 9 Dzulhijjah — menghapus dosa setahun lalu dan setahun mendatang (bagi yang tidak berhaji). <em>(HR. Muslim.)</em></li>
+  <li><strong>Puasa Asyura.</strong> 10 Muharram (disunnahkan juga Tasua, 9 Muharram). <em>(HR. Muslim.)</em> Lihat <a href="/_/blog/puasa-asyura-untuk-anak/">Asyura untuk anak</a>.</li>
+  <li><strong>Enam hari Syawal.</strong> Setelah Idul Fitri — pahalanya seperti puasa setahun. <em>(HR. Muslim.)</em> Lihat <a href="/_/blog/puasa-syawal-untuk-anak/">puasa Syawal</a>.</li>
+  <li><strong>Puasa Daud.</strong> Sehari puasa, sehari tidak — puasa yang paling dicintai Allah. <em>(HR. Bukhari &amp; Muslim.)</em></li>
+</ul>
+
+<h2>Melibatkan anak</h2>
+<p>Anak belum wajib berpuasa, tapi bisa ikut berlatih. Mulai dari puasa setengah hari di hari Senin atau Kamis, puasa bersama, dan rayakan berbukanya. Konsistensi kecil lebih baik daripada banyak tapi cepat menyerah.</p>
+
+<p>Lihat <a href="/_/doa/berbuka-puasa/">doa berbuka puasa</a> dan <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender 12 bulan Hijriah</a>.</p>`,
+      en: `<p>Beyond the obligatory Ramadan fast, there are many voluntary fasts that make light, blessed practice all year. Here are the best-known, with their sources.</p>
+
+<h2>Sunnah fasts through the year</h2>
+<ul>
+  <li><strong>Mondays &amp; Thursdays.</strong> Days when deeds are raised; the Prophet ﷺ regularly fasted them. <em>(Tirmidhi.)</em></li>
+  <li><strong>Ayyamul Bidh.</strong> The three bright days: the 13th, 14th, 15th of each Hijri month. <em>(Tirmidhi &amp; Nasa'i.)</em></li>
+  <li><strong>Arafah.</strong> 9th of Dhul-Hijjah — expiates the past and coming year (for non-pilgrims). <em>(Muslim.)</em></li>
+  <li><strong>Ashura.</strong> 10th of Muharram (with Tasua, the 9th, recommended too). <em>(Muslim.)</em> See <a href="/_/blog/puasa-asyura-untuk-anak/">Ashura for kids</a>.</li>
+  <li><strong>Six days of Shawwal.</strong> After Eid — reward like fasting a year. <em>(Muslim.)</em> See <a href="/_/blog/puasa-syawal-untuk-anak/">Shawwal fasting</a>.</li>
+  <li><strong>Fast of Dawud.</strong> Fast one day, skip the next — the fast most beloved to Allah. <em>(Bukhari &amp; Muslim.)</em></li>
+</ul>
+
+<h2>Involving your child</h2>
+<p>Children aren't obligated to fast but can join the practice. Start with a half-day fast on Monday or Thursday, fast together, and celebrate iftar. Small consistency beats a lot that quickly fades.</p>
+
+<p>See the <a href="/_/doa/berbuka-puasa/">dua for breaking fast</a> and the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">12 Hijri months</a>.</p>`,
+    },
+    tags: ["puasa", "puasa-sunnah", "ibadah", "panduan", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Puasa sunnah apa yang paling mudah untuk memulai?", en: "Which sunnah fast is easiest to start with?" },
+        answer: { id: "Puasa Senin-Kamis paling mudah dijadikan rutinitas karena berulang tiap pekan dan dicontohkan Rasulullah ﷺ.", en: "Mondays and Thursdays are easiest to make routine — they recur weekly and follow the Prophet's ﷺ example." } },
+      { question: { id: "Bolehkah anak ikut puasa sunnah?", en: "Can children join voluntary fasts?" },
+        answer: { id: "Boleh, sebagai latihan. Anak belum wajib berpuasa, jadi mulailah dari setengah hari dan tanpa paksaan.", en: "Yes, as practice. Children aren't obligated, so start with half-days and without pressure." } },
+    ],
+  },
+  {
+    slug: "lailatul-qadar-untuk-anak",
+    title: {
+      id: "Lailatul Qadar untuk Anak: Malam Seribu Bulan di 10 Hari Terakhir Ramadan",
+      en: "Laylatul Qadr for Kids: The Night of a Thousand Months in the Last 10 Days",
+    },
+    excerpt: {
+      id: "Apa itu Lailatul Qadar, kapan dicari, dan cara melibatkan anak di sepuluh malam terakhir Ramadan dengan cara yang ringan dan berkesan.",
+      en: "What Laylatul Qadr is, when to seek it, and how to involve children in the last ten nights of Ramadan in a light, memorable way.",
+    },
+    body: {
+      id: `<p>Lailatul Qadar adalah malam yang <strong>lebih baik dari seribu bulan</strong> — disebutkan dalam <strong>QS. Al-Qadr</strong>. Pada malam ini Al-Qur'an pertama kali diturunkan, dan ibadah di dalamnya bernilai sangat besar.</p>
+
+<h2>Kapan dicari?</h2>
+<p>Rasulullah ﷺ bersabda agar mencarinya di <strong>sepuluh malam terakhir Ramadan</strong>, terutama pada malam-malam ganjil (21, 23, 25, 27, 29). <em>(HR. Bukhari &amp; Muslim.)</em></p>
+
+<h2>Doa Lailatul Qadar</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.4em;line-height:2;color:var(--color-sage-deep);">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</blockquote>
+<p><em>Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni</em> — “Ya Allah, Engkau Maha Pemaaf dan menyukai maaf, maka maafkanlah aku.” <em>(HR. Tirmidzi.)</em></p>
+
+<h2>Melibatkan anak</h2>
+<ol>
+  <li><strong>Hitung mundur 10 malam terakhir.</strong> Buat kalender sederhana yang anak tandai tiap malam.</li>
+  <li><strong>Sholat &amp; doa singkat bersama.</strong> Tidak harus lama — yang penting anak ikut merasakan istimewanya malam itu.</li>
+  <li><strong>Ajarkan doa di atas.</strong> Pendek dan mudah dihafal.</li>
+</ol>
+
+<p>Bagian dari <a href="/_/blog/ramadan-bersama-anak/">Ramadan bersama anak</a>. Lihat juga <a href="/_/blog/nuzulul-quran-untuk-anak/">Nuzulul Qur'an</a>.</p>`,
+      en: `<p>Laylatul Qadr is a night <strong>better than a thousand months</strong> — described in <strong>Surah Al-Qadr</strong>. On it the Qur'an was first revealed, and worship within it carries immense reward.</p>
+
+<h2>When to seek it</h2>
+<p>The Prophet ﷺ told us to seek it in the <strong>last ten nights of Ramadan</strong>, especially the odd nights (21st, 23rd, 25th, 27th, 29th). <em>(Bukhari &amp; Muslim.)</em></p>
+
+<h2>The du'a of Laylatul Qadr</h2>
+<blockquote dir="rtl" lang="ar" style="font-family:'Amiri Quran','Amiri','Noto Naskh Arabic',serif;font-size:1.4em;line-height:2;color:var(--color-sage-deep);">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</blockquote>
+<p><em>Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni</em> — “O Allah, You are Pardoning and love to pardon, so pardon me.” <em>(Tirmidhi.)</em></p>
+
+<h2>Involving your child</h2>
+<ol>
+  <li><strong>Count down the last 10 nights.</strong> Make a simple calendar your child marks each night.</li>
+  <li><strong>Short prayer &amp; du'a together.</strong> It needn't be long — just let them feel the night's specialness.</li>
+  <li><strong>Teach the du'a above.</strong> Short and easy to memorize.</li>
+</ol>
+
+<p>Part of <a href="/_/blog/ramadan-bersama-anak/">Ramadan with your child</a>. See also <a href="/_/blog/nuzulul-quran-untuk-anak/">Nuzulul Qur'an</a>.</p>`,
+    },
+    tags: ["lailatul-qadar", "ramadan", "ibadah-musiman", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "nisfu-syaban",
+    title: {
+      id: "Nisfu Sya'ban: Apa Itu dan Sikap yang Seimbang (Penjelasan Bersumber)",
+      en: "Nisfu Sha'ban: What It Is and a Balanced Stance (Sourced)",
+    },
+    excerpt: {
+      id: "Apa itu malam Nisfu Sya'ban, bagaimana status riwayatnya menurut ulama, dan sikap yang seimbang — memperbanyak amal umum tanpa ritual khusus yang tidak berdasar.",
+      en: "What the night of Nisfu Sha'ban is, how scholars view its narrations, and a balanced stance — increasing general worship without baseless special rituals.",
+    },
+    body: {
+      id: `<p>Malam Nisfu Sya'ban (pertengahan bulan Sya'ban, malam ke-15) sering diperingati di Indonesia. Agar anak tumbuh dengan pemahaman yang lurus, penting menyampaikannya secara seimbang dan jujur tentang dalilnya.</p>
+
+<h2>Bagaimana status riwayatnya?</h2>
+<p>Keutamaan malam Nisfu Sya'ban disebut dalam sejumlah riwayat, namun <strong>sebagian besar dinilai lemah atau diperdebatkan</strong> para ahli hadith; sebagian ulama menerimanya karena saling menguatkan. Yang disepakati: <strong>tidak ada tuntunan ibadah khusus</strong> (seperti sholat atau bacaan tertentu dengan jumlah tertentu) yang shahih untuk malam itu.</p>
+
+<h2>Sikap yang seimbang</h2>
+<ul>
+  <li><strong>Boleh memperbanyak amal umum</strong> yang memang disyariatkan kapan saja: doa, istighfar, sholat sunnah, dan sedekah.</li>
+  <li><strong>Hindari ritual khusus</strong> yang tidak ada dasarnya — jumlah rakaat tertentu, bacaan tertentu, atau keyakinan tertentu yang dikaitkan khusus dengan malam ini.</li>
+  <li><strong>Manfaatkan Sya'ban</strong> sesuai sunnah yang jelas: memperbanyak puasa sunnah sebagai <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">persiapan menuju Ramadan</a>.</li>
+</ul>
+
+<h2>Untuk anak</h2>
+<p>Cukup ajarkan inti yang lurus: memperbanyak kebaikan itu baik di bulan apa pun, dan kita mengikuti contoh yang jelas dari Rasulullah ﷺ. Ini menanamkan kebiasaan beramal sekaligus berpegang pada dalil.</p>
+
+<p>Lihat <a href="/_/blog/kalender-puasa-sunnah/">kalender puasa sunnah</a> dan <a href="/_/doa/sayyidul-istighfar/">Sayyidul Istighfar</a>.</p>`,
+      en: `<p>The night of Nisfu Sha'ban (the 15th night of Sha'ban) is widely observed in Indonesia. So children grow with a sound understanding, it's important to present it honestly and in balance regarding the evidence.</p>
+
+<h2>What is the status of its narrations?</h2>
+<p>The virtue of Nisfu Sha'ban appears in several narrations, but <strong>most are graded weak or disputed</strong> by hadith scholars; some scholars accept them via corroboration. What is agreed: there is <strong>no authentic special prescribed worship</strong> (a specific prayer or recitation with a set count) for that night.</p>
+
+<h2>A balanced stance</h2>
+<ul>
+  <li><strong>It's fine to increase general worship</strong> that is encouraged at any time: du'a, istighfar, voluntary prayer, and charity.</li>
+  <li><strong>Avoid baseless special rituals</strong> — a fixed number of units, particular recitations, or specific beliefs tied uniquely to this night.</li>
+  <li><strong>Use Sha'ban</strong> per the clear sunnah: increasing voluntary fasts as <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">preparation for Ramadan</a>.</li>
+</ul>
+
+<h2>For children</h2>
+<p>Teach the sound core: doing good is praiseworthy in any month, and we follow the Prophet's ﷺ clear example. This builds the habit of good deeds while holding to evidence.</p>
+
+<p>See the <a href="/_/blog/kalender-puasa-sunnah/">sunnah fasting calendar</a> and <a href="/_/doa/sayyidul-istighfar/">Sayyidul Istighfar</a>.</p>`,
+    },
+    tags: ["syaban", "ibadah-musiman", "fiqh", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah ada sholat khusus malam Nisfu Sya'ban?", en: "Is there a special prayer for Nisfu Sha'ban night?" },
+        answer: { id: "Tidak ada tuntunan shahih tentang sholat khusus dengan jumlah rakaat atau bacaan tertentu untuk malam itu. Yang dianjurkan adalah amal umum seperti doa, istighfar, dan sholat sunnah biasa.", en: "There is no authentic guidance for a special prayer with a set number of units or recitations for that night. What's encouraged is general worship like du'a, istighfar, and ordinary voluntary prayer." } },
+    ],
+  },
+  {
     slug: "youtube-anak-aman-tanpa-iklan",
     title: {
       id: "YouTube Anak Aman Tanpa Iklan: Cara Memilih Tontonan Islami untuk Anak",
