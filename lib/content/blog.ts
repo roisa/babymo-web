@@ -1787,6 +1787,22 @@ export const blogPosts: BlogPost[] = [
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Main game Hijaiyah sekarang</a></p>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
 
+<h2>Lihat di dalam game</h2>
+<p>Beginilah tampilan game Huruf Hijaiyah Baby Mo — bersih, ceria, dan mudah diikuti si kecil.</p>
+<div class="hsg">
+  <figure><img src="/_img/blog/hijaiyah-welcome.jpg" alt="Layar pembuka game Huruf Hijaiyah Baby Mo dengan 28 huruf Arab" width="412" height="840" loading="lazy"><figcaption>Layar pembuka — 28 huruf menanti 🌟</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-lessons.jpg" alt="Peta pelajaran huruf hijaiyah yang dibagi bertahap per jilid" width="412" height="840" loading="lazy"><figcaption>Pelajaran bertahap per jilid</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-letter-card.jpg" alt="Kartu huruf Alif berukuran besar dengan tombol Dengar Huruf" width="412" height="560" loading="lazy"><figcaption>Kartu huruf + tombol suara 🔊</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-quiz.jpg" alt="Kuis menebak nama huruf hijaiyah dengan tiga nyawa" width="412" height="520" loading="lazy"><figcaption>Kuis seru dengan nyawa ❤️</figcaption></figure>
+</div>
+<style>
+.hsg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.2em 0;align-items:start;}
+.hsg figure{margin:0;}
+.hsg img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -14px rgba(0,0,0,.4);display:block;}
+.hsg figcaption{margin-top:7px;font-size:11.5px;color:var(--color-whisper);text-align:center;line-height:1.35;}
+@media(max-width:560px){.hsg{grid-template-columns:repeat(2,1fr);}}
+</style>
+
 <h2>Kenapa lewat game?</h2>
 <ul>
   <li><strong>Mengenal bentuk huruf</strong> tanpa tekanan — anak bermain, bukan diuji.</li>
@@ -1806,6 +1822,22 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Play the Hijaiyah game now</a></p>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
+
+<h2>A look inside the game</h2>
+<p>Here is what Baby Mo’s Hijaiyah Letters game looks like — clean, cheerful, and easy for little ones to follow.</p>
+<div class="hsg">
+  <figure><img src="/_img/blog/hijaiyah-welcome.jpg" alt="Welcome screen of Baby Mo’s Hijaiyah Letters game with 28 Arabic letters" width="412" height="840" loading="lazy"><figcaption>Welcome screen — 28 letters await 🌟</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-lessons.jpg" alt="Hijaiyah lesson path split into gradual levels" width="412" height="840" loading="lazy"><figcaption>Step-by-step lessons by level</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-letter-card.jpg" alt="Large Alif letter card with a Listen button" width="412" height="560" loading="lazy"><figcaption>Letter card + sound button 🔊</figcaption></figure>
+  <figure><img src="/_img/blog/hijaiyah-quiz.jpg" alt="Quiz guessing the name of a hijaiyah letter with three lives" width="412" height="520" loading="lazy"><figcaption>A fun quiz with lives ❤️</figcaption></figure>
+</div>
+<style>
+.hsg{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:1.2em 0;align-items:start;}
+.hsg figure{margin:0;}
+.hsg img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -14px rgba(0,0,0,.4);display:block;}
+.hsg figcaption{margin-top:7px;font-size:11.5px;color:var(--color-whisper);text-align:center;line-height:1.35;}
+@media(max-width:560px){.hsg{grid-template-columns:repeat(2,1fr);}}
+</style>
 
 <h2>Why through a game?</h2>
 <ul>
