@@ -13,6 +13,357 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "surat-pendek-untuk-anak",
+    title: {
+      id: "Surat Pendek untuk Anak: Urutan Hafalan & Tips Menghafal",
+      en: "Short Surahs for Kids: A Memorization Order & Tips",
+    },
+    excerpt: {
+      id: "Panduan menghafal surat-surat pendek untuk anak — mulai dari yang termudah, dengan urutan jelas, arti singkat, dan tips agar hafalan menempel tanpa dipaksa.",
+      en: "A guide to memorizing short surahs with children — easiest first, a clear order, short meanings, and tips so it sticks without pressure.",
+    },
+    body: {
+      id: `<p>Surat-surat pendek adalah pintu pertama anak mengenal Al-Qur'an. Pendek, berirama, dan dibaca setiap hari dalam sholat — sempurna untuk dihafal sejak dini. Mulailah dari yang paling pendek, satu per satu, tanpa terburu-buru.</p>
+
+<h2>Urutan menghafal surat pendek untuk anak</h2>
+<p>Urutan yang ramah anak: dimulai dari surat terpendek dan yang paling sering dibaca dalam sholat.</p>
+<ol>
+  <li><a href="/_/surat/al-fatihah/">Al-Fatihah</a> — pembuka, dibaca di setiap rakaat.</li>
+  <li><a href="/_/surat/an-nas/">An-Nas</a> — perlindungan dari kejahatan.</li>
+  <li><a href="/_/surat/al-falaq/">Al-Falaq</a> — perlindungan di waktu subuh.</li>
+  <li><a href="/_/surat/al-ikhlas/">Al-Ikhlas</a> — keesaan Allah, setara sepertiga Qur'an.</li>
+  <li><a href="/_/surat/al-kautsar/">Al-Kautsar</a> — surat terpendek dalam Al-Qur'an.</li>
+  <li><a href="/_/surat/al-asr/">Al-'Asr</a> — pentingnya waktu dan kebaikan.</li>
+  <li><a href="/_/surat/an-nasr/">An-Nasr</a> — pertolongan Allah.</li>
+  <li><a href="/_/surat/quraisy/">Quraisy</a> — nikmat keamanan dan rezeki.</li>
+  <li><a href="/_/surat/al-fil/">Al-Fil</a> — kisah pasukan gajah.</li>
+  <li><a href="/_/surat/al-maun/">Al-Ma'un</a> — peduli pada sesama.</li>
+  <li><a href="/_/surat/al-kafirun/">Al-Kafirun</a> — keteguhan tauhid.</li>
+  <li><a href="/_/surat/al-lahab/">Al-Lahab</a>.</li>
+  <li><a href="/_/surat/at-takatsur/">At-Takatsur</a>.</li>
+  <li><a href="/_/surat/al-humazah/">Al-Humazah</a>.</li>
+  <li><a href="/_/surat/al-qariah/">Al-Qari'ah</a>.</li>
+  <li><a href="/_/surat/al-adiyat/">Al-'Adiyat</a>.</li>
+  <li><a href="/_/surat/az-zalzalah/">Az-Zalzalah</a>.</li>
+  <li><a href="/_/surat/al-qadr/">Al-Qadr</a>.</li>
+  <li><a href="/_/surat/al-insyirah/">Al-Insyirah</a>.</li>
+  <li><a href="/_/surat/adh-dhuha/">Adh-Dhuha</a>.</li>
+  <li><a href="/_/surat/at-tin/">At-Tin</a>.</li>
+  <li><a href="/_/surat/asy-syams/">Asy-Syams</a>.</li>
+  <li><a href="/_/surat/al-ala/">Al-A'la</a>.</li>
+  <li><a href="/_/surat/al-alaq/">Al-'Alaq</a> — wahyu pertama.</li>
+</ol>
+
+<h2>Tips menghafal bareng anak</h2>
+<ul>
+  <li><strong>Sedikit tapi rutin.</strong> Cukup satu-dua ayat per hari, diulang setiap sholat.</li>
+  <li><strong>Dengar berulang.</strong> Putar murottal yang sama tiap hari; telinga anak menghafal sebelum lisannya.</li>
+  <li><strong>Pakai irama.</strong> Anak menghafal lewat nada — lihat juga <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video &amp; lagu Baby Mo</a>.</li>
+  <li><strong>Pahami arti singkatnya.</strong> Satu kalimat makna membuat hafalan lebih bermakna.</li>
+</ul>
+
+<p>Buka bacaan lengkap tiap surat di <a href="/_/surat/">Surat Pendek</a>.</p>`,
+      en: `<p>Short surahs are a child's first door into the Qur'an. Brief, rhythmic, and recited every day in prayer — perfect to memorize early. Start with the shortest, one at a time, no rushing.</p>
+
+<h2>A kid-friendly memorization order</h2>
+<p>Begin with the shortest surahs and the ones most often recited in prayer.</p>
+<ol>
+  <li><a href="/_/surat/al-fatihah/">Al-Fatihah</a> — the opening, recited in every unit of prayer.</li>
+  <li><a href="/_/surat/an-nas/">An-Nas</a> — seeking refuge from evil.</li>
+  <li><a href="/_/surat/al-falaq/">Al-Falaq</a> — refuge at daybreak.</li>
+  <li><a href="/_/surat/al-ikhlas/">Al-Ikhlas</a> — the oneness of Allah.</li>
+  <li><a href="/_/surat/al-kautsar/">Al-Kautsar</a> — the shortest surah.</li>
+  <li><a href="/_/surat/al-asr/">Al-'Asr</a> — the value of time.</li>
+  <li><a href="/_/surat/an-nasr/">An-Nasr</a>.</li>
+  <li><a href="/_/surat/quraisy/">Quraisy</a>.</li>
+  <li><a href="/_/surat/al-fil/">Al-Fil</a>.</li>
+  <li><a href="/_/surat/al-maun/">Al-Ma'un</a>.</li>
+  <li><a href="/_/surat/al-kafirun/">Al-Kafirun</a>.</li>
+  <li><a href="/_/surat/al-lahab/">Al-Lahab</a>.</li>
+  <li><a href="/_/surat/at-takatsur/">At-Takatsur</a>.</li>
+  <li><a href="/_/surat/al-humazah/">Al-Humazah</a>.</li>
+  <li><a href="/_/surat/al-qariah/">Al-Qari'ah</a>.</li>
+  <li><a href="/_/surat/al-adiyat/">Al-'Adiyat</a>.</li>
+  <li><a href="/_/surat/az-zalzalah/">Az-Zalzalah</a>.</li>
+  <li><a href="/_/surat/al-qadr/">Al-Qadr</a>.</li>
+  <li><a href="/_/surat/al-insyirah/">Al-Insyirah</a>.</li>
+  <li><a href="/_/surat/adh-dhuha/">Adh-Dhuha</a>.</li>
+  <li><a href="/_/surat/at-tin/">At-Tin</a>.</li>
+  <li><a href="/_/surat/asy-syams/">Asy-Syams</a>.</li>
+  <li><a href="/_/surat/al-ala/">Al-A'la</a>.</li>
+  <li><a href="/_/surat/al-alaq/">Al-'Alaq</a> — the first revelation.</li>
+</ol>
+
+<h2>Tips for memorizing together</h2>
+<ul>
+  <li><strong>Little but consistent.</strong> One or two verses a day, repeated each prayer.</li>
+  <li><strong>Repeated listening.</strong> Play the same recitation daily; the ear memorizes before the tongue.</li>
+  <li><strong>Use rhythm.</strong> Kids memorize through melody — see <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo videos &amp; songs</a>.</li>
+  <li><strong>Know the short meaning.</strong> One line of meaning makes memorization meaningful.</li>
+</ul>
+
+<p>Open the full reading of each surah at <a href="/_/surat/">Short Surahs</a>.</p>`,
+    },
+    tags: ["surat", "hafalan", "quran", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Mulai menghafal surat pendek dari umur berapa?", en: "What age to start memorizing short surahs?" },
+        answer: { id: "Anak bisa mulai mendengar dan menirukan sejak usia 2–3 tahun. Hafalan yang lebih sadar biasanya mulai usia 4–6 tahun. Tidak perlu bisa membaca Arab dulu — mendengar dan menirukan sudah cukup untuk memulai.", en: "Children can start listening and imitating from age 2–3. More conscious memorization usually begins at 4–6. They don't need to read Arabic first — listening and repeating is enough to start." } },
+      { question: { id: "Surat apa yang paling baik dihafal pertama?", en: "Which surah is best to memorize first?" },
+        answer: { id: "Setelah Al-Fatihah (yang wajib di tiap rakaat), mulailah dari surat terpendek seperti Al-Ikhlas, An-Nas, Al-Falaq, dan Al-Kautsar.", en: "After Al-Fatihah (recited in every prayer unit), begin with the shortest like Al-Ikhlas, An-Nas, Al-Falaq, and Al-Kautsar." } },
+    ],
+  },
+  {
+    slug: "asmaul-husna-untuk-anak",
+    title: {
+      id: "Asmaul Husna untuk Anak: Cara Mudah Menghafal 99 Nama Allah",
+      en: "Asmaul Husna for Kids: An Easy Way to Memorize the 99 Names",
+    },
+    excerpt: {
+      id: "Kenalkan anak pada 99 nama indah Allah dengan cara yang menyenangkan — apa itu Asmaul Husna, manfaatnya, dan tips menghafal sedikit demi sedikit.",
+      en: "Introduce children to Allah's 99 beautiful names the fun way — what Asmaul Husna is, its benefits, and tips to memorize a little at a time.",
+    },
+    body: {
+      id: `<p><strong>Asmaul Husna</strong> adalah 99 nama indah Allah — seperti Ar-Rahman (Maha Pengasih) dan Ar-Rahim (Maha Penyayang). Mengenalkannya pada anak bukan sekadar hafalan, tapi cara menumbuhkan cinta dan rasa dekat kepada Allah sejak kecil.</p>
+
+<h2>Cara mudah menghafal bareng anak</h2>
+<ol>
+  <li><strong>Kelompok kecil.</strong> Hafalkan 3–5 nama per minggu, bukan sekaligus.</li>
+  <li><strong>Pahami artinya.</strong> "Allah Ar-Razzaq — Maha Pemberi rezeki" lebih melekat saat anak tahu maknanya.</li>
+  <li><strong>Kaitkan ke kehidupan.</strong> Saat hujan turun: "Allah Ar-Rahman, sayang pada kita." Saat sembuh dari sakit: "Allah Asy-Syafi, Maha Penyembuh."</li>
+  <li><strong>Ulangi dengan irama.</strong> Banyak anak hafal Asmaul Husna lewat lagu — dengar bersama setiap hari.</li>
+</ol>
+
+<h2>Beberapa nama untuk mulai</h2>
+<ul>
+  <li><strong>Ar-Rahman</strong> — Maha Pengasih</li>
+  <li><strong>Ar-Rahim</strong> — Maha Penyayang</li>
+  <li><strong>Al-Malik</strong> — Maha Merajai</li>
+  <li><strong>Al-Quddus</strong> — Maha Suci</li>
+  <li><strong>As-Salam</strong> — Maha Pemberi Keselamatan</li>
+  <li><strong>Al-Khaliq</strong> — Maha Pencipta</li>
+  <li><strong>Ar-Razzaq</strong> — Maha Pemberi Rezeki</li>
+  <li><strong>Al-Ghafur</strong> — Maha Pengampun</li>
+  <li><strong>Al-Wadud</strong> — Maha Mencintai</li>
+</ul>
+
+<p>Lihat 99 nama lengkap beserta arti di <a href="/_/asmaul-husna/">Asmaul Husna</a>. Mau lanjut belajar doa? Lihat <a href="/_/blog/kumpulan-doa-harian-anak/">kumpulan doa harian anak</a>.</p>`,
+      en: `<p><strong>Asmaul Husna</strong> are the 99 beautiful names of Allah — like Ar-Rahman (the Most Compassionate) and Ar-Rahim (the Most Merciful). Introducing them to a child isn't just memorization; it nurtures love and closeness to Allah from a young age.</p>
+
+<h2>An easy way to memorize together</h2>
+<ol>
+  <li><strong>Small groups.</strong> Learn 3–5 names a week, not all at once.</li>
+  <li><strong>Know the meaning.</strong> "Allah Ar-Razzaq — the Provider" sticks when a child knows what it means.</li>
+  <li><strong>Connect to life.</strong> When it rains: "Allah Ar-Rahman loves us." When recovering from illness: "Allah Ash-Shafi, the Healer."</li>
+  <li><strong>Repeat with rhythm.</strong> Many kids learn the names through song — listen together daily.</li>
+</ol>
+
+<h2>A few names to start with</h2>
+<ul>
+  <li><strong>Ar-Rahman</strong> — the Most Compassionate</li>
+  <li><strong>Ar-Rahim</strong> — the Most Merciful</li>
+  <li><strong>Al-Malik</strong> — the King</li>
+  <li><strong>Al-Quddus</strong> — the Most Holy</li>
+  <li><strong>As-Salam</strong> — the Giver of Peace</li>
+  <li><strong>Al-Khaliq</strong> — the Creator</li>
+  <li><strong>Ar-Razzaq</strong> — the Provider</li>
+  <li><strong>Al-Ghafur</strong> — the Most Forgiving</li>
+  <li><strong>Al-Wadud</strong> — the Most Loving</li>
+</ul>
+
+<p>See all 99 names with meanings at <a href="/_/asmaul-husna/">Asmaul Husna</a>. Want to keep learning duas? See the <a href="/_/blog/kumpulan-doa-harian-anak/">daily duas for children</a>.</p>`,
+    },
+    tags: ["asmaul-husna", "tauhid", "hafalan", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apa itu Asmaul Husna?", en: "What is Asmaul Husna?" },
+        answer: { id: "Asmaul Husna adalah 99 nama indah dan mulia milik Allah yang disebutkan dalam Al-Qur'an dan hadith, masing-masing menggambarkan sifat kesempurnaan-Nya.", en: "Asmaul Husna are the 99 beautiful, noble names of Allah mentioned in the Qur'an and hadith, each describing an attribute of His perfection." } },
+      { question: { id: "Bagaimana cara anak menghafal 99 nama?", en: "How can a child memorize 99 names?" },
+        answer: { id: "Bertahap: 3–5 nama per minggu, dipahami artinya, diulang lewat lagu, dan dikaitkan dengan kejadian sehari-hari. Tidak perlu sekaligus.", en: "Gradually: 3–5 names a week, with meanings, repeated through song, and connected to everyday moments. No need to do it all at once." } },
+    ],
+  },
+  {
+    slug: "kumpulan-doa-harian-anak",
+    title: {
+      id: "Kumpulan Doa Harian Anak Lengkap (Arab, Latin & Arti) untuk Berbagai Situasi",
+      en: "Complete Daily Duas for Children (Arabic, Transliteration & Meaning)",
+    },
+    excerpt: {
+      id: "Kumpulan doa harian anak untuk berbagai situasi — bangun tidur, makan, bepergian, belajar, hingga perlindungan. Lengkap dengan Arab, latin, dan artinya.",
+      en: "A collection of daily duas for children across situations — waking, eating, travel, learning, and protection. With Arabic, transliteration, and meaning.",
+    },
+    body: {
+      id: `<p>Doa harian mengajarkan anak untuk selalu mengingat Allah di setiap kegiatan. Berikut kumpulan doa untuk berbagai situasi — pilih beberapa dulu, lalu tambah perlahan sampai jadi kebiasaan.</p>
+
+<h2>Bangun &amp; tidur</h2>
+<ul><li><a href="/_/doa/bangun-tidur/">Doa bangun tidur</a></li><li><a href="/_/doa/sebelum-tidur/">Doa sebelum tidur</a></li></ul>
+
+<h2>Makan &amp; minum</h2>
+<ul><li><a href="/_/doa/sebelum-makan/">Doa sebelum makan</a></li><li><a href="/_/doa/sesudah-makan/">Doa sesudah makan</a></li><li><a href="/_/doa/mendapat-rezeki/">Doa mendapat rezeki</a></li></ul>
+
+<h2>Bersuci, adzan &amp; masjid</h2>
+<ul><li><a href="/_/doa/selesai-wudhu/">Doa selesai wudhu</a></li><li><a href="/_/doa/mendengar-adzan/">Doa mendengar adzan</a></li><li><a href="/_/doa/masuk-masjid/">Doa masuk masjid</a></li><li><a href="/_/doa/keluar-masjid/">Doa keluar masjid</a></li></ul>
+
+<h2>Pakaian &amp; diri</h2>
+<ul><li><a href="/_/doa/memakai-pakaian/">Doa memakai pakaian</a></li><li><a href="/_/doa/bercermin/">Doa bercermin</a></li><li><a href="/_/doa/doa-bersin/">Doa ketika bersin</a></li></ul>
+
+<h2>Rumah, kamar mandi &amp; perjalanan</h2>
+<ul><li><a href="/_/doa/masuk-rumah/">Doa masuk rumah</a></li><li><a href="/_/doa/keluar-rumah/">Doa keluar rumah</a></li><li><a href="/_/doa/masuk-kamar-mandi/">Doa masuk kamar mandi</a></li><li><a href="/_/doa/keluar-kamar-mandi/">Doa keluar kamar mandi</a></li><li><a href="/_/doa/naik-kendaraan/">Doa naik kendaraan</a></li><li><a href="/_/doa/doa-bepergian/">Doa bepergian</a></li><li><a href="/_/doa/doa-masuk-pasar/">Doa masuk pasar</a></li></ul>
+
+<h2>Belajar &amp; ilmu</h2>
+<ul><li><a href="/_/doa/sebelum-belajar/">Doa sebelum belajar</a></li><li><a href="/_/doa/setelah-belajar/">Doa setelah belajar</a></li><li><a href="/_/doa/minta-ilmu-bermanfaat/">Doa minta ilmu bermanfaat</a></li></ul>
+
+<h2>Pagi, petang &amp; perlindungan</h2>
+<ul><li><a href="/_/doa/doa-pagi/">Doa pagi</a></li><li><a href="/_/doa/doa-petang/">Doa petang</a></li><li><a href="/_/doa/perlindungan-anak/">Doa perlindungan anak</a></li><li><a href="/_/doa/sayyidul-istighfar/">Sayyidul Istighfar</a></li></ul>
+
+<h2>Cuaca &amp; alam</h2>
+<ul><li><a href="/_/doa/ketika-hujan/">Doa ketika hujan</a></li><li><a href="/_/doa/mendengar-petir/">Doa mendengar petir</a></li><li><a href="/_/doa/melihat-bulan-baru/">Doa melihat bulan baru</a></li></ul>
+
+<h2>Saat sulit &amp; sakit</h2>
+<ul><li><a href="/_/doa/ketika-sakit/">Doa ketika sakit</a></li><li><a href="/_/doa/ketika-marah/">Doa ketika marah</a></li><li><a href="/_/doa/doa-ketika-kesulitan/">Doa ketika kesulitan</a></li><li><a href="/_/doa/doa-dimudahkan-urusan/">Doa dimudahkan urusan</a></li></ul>
+
+<h2>Keluarga &amp; akhlak</h2>
+<ul><li><a href="/_/doa/doa-untuk-orang-tua/">Doa untuk orang tua</a></li><li><a href="/_/doa/doa-keturunan-shalih/">Doa agar anak sholeh</a></li><li><a href="/_/doa/doa-akhlak-mulia/">Doa akhlak mulia</a></li><li><a href="/_/doa/doa-pandai-bersyukur/">Doa pandai bersyukur</a></li><li><a href="/_/doa/kebaikan-dunia-akhirat/">Doa kebaikan dunia &amp; akhirat</a></li></ul>
+
+<p>Lihat semua doa beserta bacaan lengkap di <a href="/_/doa/">Kumpulan Doa</a>. Mau lewat lagu? Lihat <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video Baby Mo</a>.</p>`,
+      en: `<p>Daily duas teach a child to remember Allah in everything. Here's a collection across situations — pick a few first, then add slowly until they become habit.</p>
+
+<h2>Waking &amp; sleeping</h2>
+<ul><li><a href="/_/doa/bangun-tidur/">Dua upon waking</a></li><li><a href="/_/doa/sebelum-tidur/">Dua before sleeping</a></li></ul>
+
+<h2>Eating &amp; drinking</h2>
+<ul><li><a href="/_/doa/sebelum-makan/">Dua before eating</a></li><li><a href="/_/doa/sesudah-makan/">Dua after eating</a></li><li><a href="/_/doa/mendapat-rezeki/">Dua for provision</a></li></ul>
+
+<h2>Purification, adhan &amp; mosque</h2>
+<ul><li><a href="/_/doa/selesai-wudhu/">After wudu</a></li><li><a href="/_/doa/mendengar-adzan/">Hearing the adhan</a></li><li><a href="/_/doa/masuk-masjid/">Entering the mosque</a></li><li><a href="/_/doa/keluar-masjid/">Leaving the mosque</a></li></ul>
+
+<h2>Home, bathroom &amp; travel</h2>
+<ul><li><a href="/_/doa/masuk-rumah/">Entering the home</a></li><li><a href="/_/doa/keluar-rumah/">Leaving the home</a></li><li><a href="/_/doa/masuk-kamar-mandi/">Entering the bathroom</a></li><li><a href="/_/doa/keluar-kamar-mandi/">Leaving the bathroom</a></li><li><a href="/_/doa/naik-kendaraan/">Boarding a vehicle</a></li><li><a href="/_/doa/doa-bepergian/">For travel</a></li></ul>
+
+<h2>Learning</h2>
+<ul><li><a href="/_/doa/sebelum-belajar/">Before studying</a></li><li><a href="/_/doa/setelah-belajar/">After studying</a></li><li><a href="/_/doa/minta-ilmu-bermanfaat/">For beneficial knowledge</a></li></ul>
+
+<h2>Morning, evening &amp; protection</h2>
+<ul><li><a href="/_/doa/doa-pagi/">Morning</a></li><li><a href="/_/doa/doa-petang/">Evening</a></li><li><a href="/_/doa/perlindungan-anak/">Protection</a></li><li><a href="/_/doa/sayyidul-istighfar/">Sayyidul Istighfar</a></li></ul>
+
+<h2>Family &amp; character</h2>
+<ul><li><a href="/_/doa/doa-untuk-orang-tua/">For one's parents</a></li><li><a href="/_/doa/doa-keturunan-shalih/">For righteous children</a></li><li><a href="/_/doa/doa-akhlak-mulia/">For good character</a></li><li><a href="/_/doa/kebaikan-dunia-akhirat/">Good in this life &amp; the next</a></li></ul>
+
+<p>See every dua with its full reading at <a href="/_/doa/">Daily Duas</a>. Prefer songs? See <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo videos</a>.</p>`,
+    },
+    tags: ["doa", "doa-harian", "edukasi-anak", "panduan", "balita"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 6,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Berapa doa yang sebaiknya diajarkan dulu?", en: "How many duas should I teach first?" },
+        answer: { id: "Mulai dari 2–3 doa yang paling sering dipakai, seperti doa sebelum makan, doa sebelum tidur, dan doa bangun tidur. Setelah terbiasa, tambahkan yang lain sedikit demi sedikit.", en: "Start with 2–3 of the most-used duas — before eating, before sleeping, and upon waking. Once they're habit, add more gradually." } },
+      { question: { id: "Anak belum bisa baca Arab, bagaimana?", en: "My child can't read Arabic yet — what do I do?" },
+        answer: { id: "Tidak masalah. Anak menghafal lewat mendengar dan menirukan. Gunakan latin dan artinya sebagai bantuan, dan ulangi bersama setiap hari.", en: "No problem. Children memorize by listening and repeating. Use the transliteration and meaning as a guide, and repeat together daily." } },
+    ],
+  },
+  {
+    slug: "kisah-nabi-untuk-anak",
+    title: {
+      id: "Kumpulan Kisah 25 Nabi untuk Anak: Ringkas & Penuh Hikmah",
+      en: "The 25 Prophets' Stories for Kids: Short & Full of Lessons",
+    },
+    excerpt: {
+      id: "Kumpulan kisah 25 nabi dan rasul untuk anak — ringkas, mudah dipahami, dan penuh teladan. Lengkap dengan tautan tiap kisah dan tips cara menceritakannya.",
+      en: "A collection of the 25 prophets' stories for children — short, easy to follow, and full of example. With a link to each story and tips for telling them.",
+    },
+    body: {
+      id: `<p>Kisah para nabi adalah cara terbaik mengenalkan iman, kesabaran, dan akhlak kepada anak — lewat tokoh nyata yang penuh teladan. Berikut 25 nabi dan rasul yang wajib dikenal, masing-masing dengan kisahnya.</p>
+
+<h2>25 Nabi &amp; Rasul</h2>
+<ul>
+  <li><a href="/_/kisah/adam/">Nabi Adam</a> — manusia pertama.</li>
+  <li><a href="/_/kisah/idris/">Nabi Idris</a></li>
+  <li><a href="/_/kisah/nuh/">Nabi Nuh</a> — bahtera &amp; kesabaran.</li>
+  <li><a href="/_/kisah/hud/">Nabi Hud</a></li>
+  <li><a href="/_/kisah/salih/">Nabi Salih</a> — unta mukjizat.</li>
+  <li><a href="/_/kisah/ibrahim/">Nabi Ibrahim</a> — bapak para nabi.</li>
+  <li><a href="/_/kisah/lut/">Nabi Lut</a></li>
+  <li><a href="/_/kisah/ismail/">Nabi Ismail</a> — kisah kurban.</li>
+  <li><a href="/_/kisah/ishaq/">Nabi Ishaq</a></li>
+  <li><a href="/_/kisah/yaqub/">Nabi Ya'qub</a></li>
+  <li><a href="/_/kisah/yusuf/">Nabi Yusuf</a> — sabar &amp; memaafkan.</li>
+  <li><a href="/_/kisah/ayyub/">Nabi Ayyub</a> — kesabaran luar biasa.</li>
+  <li><a href="/_/kisah/syuaib/">Nabi Syu'aib</a></li>
+  <li><a href="/_/kisah/musa/">Nabi Musa</a> — menghadapi Fir'aun.</li>
+  <li><a href="/_/kisah/harun/">Nabi Harun</a></li>
+  <li><a href="/_/kisah/dzulkifli/">Nabi Dzulkifli</a></li>
+  <li><a href="/_/kisah/daud/">Nabi Daud</a> — suara yang merdu.</li>
+  <li><a href="/_/kisah/sulaiman/">Nabi Sulaiman</a> — memahami bahasa hewan.</li>
+  <li><a href="/_/kisah/ilyas/">Nabi Ilyas</a></li>
+  <li><a href="/_/kisah/ilyasa/">Nabi Ilyasa'</a></li>
+  <li><a href="/_/kisah/yunus/">Nabi Yunus</a> — di perut ikan.</li>
+  <li><a href="/_/kisah/zakariya/">Nabi Zakariya</a></li>
+  <li><a href="/_/kisah/yahya/">Nabi Yahya</a></li>
+  <li><a href="/_/kisah/isa/">Nabi Isa</a></li>
+  <li><a href="/_/kisah/muhammad/">Nabi Muhammad ﷺ</a> — penutup para nabi.</li>
+</ul>
+
+<h2>Tips menceritakan kisah nabi</h2>
+<p>Mulai dari yang paling dikenal — Nabi Adam, Nuh, Ibrahim, Musa, Yusuf, dan Muhammad ﷺ. Ceritakan singkat, fokus pada satu pelajaran, dan tutup dengan pertanyaan ringan. Panduan lengkap: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">cara bercerita kisah nabi untuk anak</a>.</p>
+
+<p>Baca semua kisah lengkap di <a href="/_/kisah/">Kisah Nabi</a>.</p>`,
+      en: `<p>The prophets' stories are the best way to introduce faith, patience, and good character to a child — through real figures full of example. Here are the 25 prophets every child should know, each with its story.</p>
+
+<h2>The 25 Prophets</h2>
+<ul>
+  <li><a href="/_/kisah/adam/">Prophet Adam</a> — the first human.</li>
+  <li><a href="/_/kisah/idris/">Prophet Idris</a></li>
+  <li><a href="/_/kisah/nuh/">Prophet Nuh (Noah)</a> — the ark &amp; patience.</li>
+  <li><a href="/_/kisah/hud/">Prophet Hud</a></li>
+  <li><a href="/_/kisah/salih/">Prophet Salih</a></li>
+  <li><a href="/_/kisah/ibrahim/">Prophet Ibrahim (Abraham)</a></li>
+  <li><a href="/_/kisah/lut/">Prophet Lut (Lot)</a></li>
+  <li><a href="/_/kisah/ismail/">Prophet Ismail (Ishmael)</a></li>
+  <li><a href="/_/kisah/ishaq/">Prophet Ishaq (Isaac)</a></li>
+  <li><a href="/_/kisah/yaqub/">Prophet Ya'qub (Jacob)</a></li>
+  <li><a href="/_/kisah/yusuf/">Prophet Yusuf (Joseph)</a> — patience &amp; forgiveness.</li>
+  <li><a href="/_/kisah/ayyub/">Prophet Ayyub (Job)</a> — remarkable patience.</li>
+  <li><a href="/_/kisah/syuaib/">Prophet Syu'aib</a></li>
+  <li><a href="/_/kisah/musa/">Prophet Musa (Moses)</a></li>
+  <li><a href="/_/kisah/harun/">Prophet Harun (Aaron)</a></li>
+  <li><a href="/_/kisah/dzulkifli/">Prophet Dzulkifli</a></li>
+  <li><a href="/_/kisah/daud/">Prophet Daud (David)</a></li>
+  <li><a href="/_/kisah/sulaiman/">Prophet Sulaiman (Solomon)</a></li>
+  <li><a href="/_/kisah/ilyas/">Prophet Ilyas (Elijah)</a></li>
+  <li><a href="/_/kisah/ilyasa/">Prophet Ilyasa' (Elisha)</a></li>
+  <li><a href="/_/kisah/yunus/">Prophet Yunus (Jonah)</a> — in the whale.</li>
+  <li><a href="/_/kisah/zakariya/">Prophet Zakariya</a></li>
+  <li><a href="/_/kisah/yahya/">Prophet Yahya (John)</a></li>
+  <li><a href="/_/kisah/isa/">Prophet Isa (Jesus)</a></li>
+  <li><a href="/_/kisah/muhammad/">Prophet Muhammad ﷺ</a> — the final prophet.</li>
+</ul>
+
+<h2>Tips for telling prophet stories</h2>
+<p>Start with the most familiar — Adam, Nuh, Ibrahim, Musa, Yusuf, and Muhammad ﷺ. Keep it short, focus on one lesson, and close with a light question. Full guide: <a href="/_/blog/cara-bercerita-kisah-nabi-untuk-anak/">how to tell prophet stories to kids</a>.</p>
+
+<p>Read all the full stories at <a href="/_/kisah/">Prophet Stories</a>.</p>`,
+    },
+    tags: ["kisah-nabi", "sejarah-islam", "akhlak", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Berapa jumlah nabi yang wajib diketahui anak?", en: "How many prophets should a child know?" },
+        answer: { id: "Ada 25 nabi dan rasul yang wajib diketahui dan namanya disebut dalam Al-Qur'an. Anak bisa mulai dari yang paling dikenal lalu menambah lainnya.", en: "There are 25 prophets and messengers a child should know, named in the Qur'an. Kids can start with the most familiar and add the rest over time." } },
+      { question: { id: "Kisah nabi mana yang cocok diceritakan lebih dulu?", en: "Which prophet's story is best to start with?" },
+        answer: { id: "Mulai dari kisah yang penuh teladan dan mudah diingat: Nabi Nuh, Nabi Ibrahim, Nabi Yusuf, Nabi Musa, dan tentu Nabi Muhammad ﷺ.", en: "Start with the most memorable and exemplary: Nuh, Ibrahim, Yusuf, Musa, and of course Muhammad ﷺ." } },
+    ],
+  },
+  {
     slug: "game-anak-islami-baby-mo",
     title: {
       id: "Game Anak Islami Gratis: Permainan Edukatif Baby Mo (Online, Tanpa Iklan)",
