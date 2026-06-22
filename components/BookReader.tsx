@@ -135,7 +135,11 @@ export function BookReader({
 
     const measurer = document.createElement("div");
     measurer.className = "bk-prose";
-    measurer.style.cssText = `position:absolute;left:-99999px;top:0;visibility:hidden;width:${width}px;font-size:${fontPx}px;`;
+    measurer.style.cssText = `position:absolute;left:-99999px;top:0;visibility:hidden;width:${width}px;`;
+    // The .bk-prose rules read var(--bk-fs); set it here so the measurer
+    // reflows at the chosen size (it's outside .bk-book, so the var would
+    // otherwise fall back to the default and pagination would never change).
+    measurer.style.setProperty("--bk-fs", `${fontPx}px`);
     document.body.appendChild(measurer);
 
     const contentPages: Block[][] = [];
@@ -444,12 +448,12 @@ export function BookReader({
         .bk-cover-inner,.bk-end-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;height:100%;}
         .bk-cover-badge{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-clay);}
         .bk-cover-pose{width:clamp(120px,22vw,168px);height:auto;object-fit:contain;filter:drop-shadow(0 12px 22px rgba(0,0,0,.18));}
-        .bk-cover-title{font-family:var(--font-display);font-size:clamp(26px,4.4vw,40px);line-height:1.1;color:var(--color-ink);margin:0;}
-        .bk-cover-hook{font-family:var(--font-serif);font-size:clamp(15px,2.2vw,18px);line-height:1.6;color:var(--color-whisper);max-width:34ch;margin:0;}
-        .bk-end-quote{font-family:var(--font-serif);font-style:italic;font-size:clamp(17px,2.6vw,22px);line-height:1.6;color:var(--color-ink);max-width:32ch;}
+        .bk-cover-title{font-family:var(--font-display);font-size:clamp(26px,calc(var(--bk-fs,22px) * 1.55),48px);line-height:1.12;color:var(--color-ink);margin:0;}
+        .bk-cover-hook{font-family:var(--font-serif);font-size:calc(var(--bk-fs,22px) * 0.86);line-height:1.6;color:var(--color-whisper);max-width:34ch;margin:0;}
+        .bk-end-quote{font-family:var(--font-serif);font-style:italic;font-size:calc(var(--bk-fs,22px) * 0.98);line-height:1.6;color:var(--color-ink);max-width:32ch;}
         .bk-end-pose{width:clamp(100px,18vw,140px);height:auto;object-fit:contain;}
-        .bk-end-word{font-family:var(--font-display);font-size:clamp(24px,4vw,34px);color:var(--color-clay);margin:0;}
-        .bk-end-sub{font-size:13px;color:var(--color-whisper);margin:0;}
+        .bk-end-word{font-family:var(--font-display);font-size:clamp(24px,calc(var(--bk-fs,22px) * 1.45),44px);color:var(--color-clay);margin:0;}
+        .bk-end-sub{font-size:calc(var(--bk-fs,22px) * 0.62);color:var(--color-whisper);margin:0;}
 
         .bk-nav{flex-shrink:0;width:54px;height:54px;border-radius:50%;cursor:pointer;font-size:30px;line-height:1;
           display:flex;align-items:center;justify-content:center;color:#fff;
