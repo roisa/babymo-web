@@ -13,6 +13,572 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "liburan-sekolah-keluarga-muslim",
+    title: {
+      id: "Liburan Sekolah untuk Keluarga Muslim: 10 Ide Seru yang Tetap Berkah",
+      en: "School Holidays for Muslim Families: 10 Fun Ideas That Stay Blessed",
+    },
+    excerpt: {
+      id: "Panduan praktis mengisi libur sekolah bersama anak — ide aktivitas, menjaga rutinitas ibadah, batas layar yang sehat, hingga doa saat bepergian.",
+      en: "A practical guide to filling school holidays with your kids — activity ideas, keeping worship routines, healthy screen limits, and prayers for travel.",
+    },
+    body: {
+      id: `<p>Libur sekolah adalah hadiah: waktu lebih lapang untuk dekat dengan anak. Tapi tanpa rencana, liburan mudah habis di depan layar dan rutinitas baik ikut berantakan. Berikut cara mengisi libur yang seru sekaligus menjaganya tetap berkah.</p>
+
+<h2>10 ide aktivitas libur sekolah</h2>
+<ol>
+  <li><strong>Proyek kecil di rumah.</strong> Menanam biji di pot, membuat kue, atau membereskan mainan sambil bernyanyi.</li>
+  <li><strong>Silaturahmi.</strong> Berkunjung ke nenek-kakek atau saudara — pahala dan kenangan sekaligus. <em>(HR. Bukhari: silaturahmi melapangkan rezeki & umur.)</em></li>
+  <li><strong>Wisata alam.</strong> Pantai, kebun, atau taman — sambil mengenalkan ciptaan Allah.</li>
+  <li><strong>Ke masjid bareng.</strong> Lihat <a href="/_/blog/mengajak-anak-ke-masjid/">tips mengajak anak ke masjid</a>.</li>
+  <li><strong>Hari membaca.</strong> Buku cerita nabi atau <a href="/_/cerita/">cerita Baby Mo</a> sebelum tidur.</li>
+  <li><strong>Sedekah kecil.</strong> Ajak anak menyisihkan jajan untuk diberikan — melatih empati.</li>
+  <li><strong>Belajar sambil bermain.</strong> <a href="/_/permainan/">Permainan islami</a> seperti <a href="/_/blog/puzzle-hijaiyah-belajar-sambil-bermain/">puzzle hijaiyah</a> dan belajar doa harian.</li>
+  <li><strong>Memasak bersama.</strong> Anak belajar adab makan dan bersyukur atas rezeki.</li>
+  <li><strong>Olahraga ringan.</strong> Bersepeda atau jalan pagi — tubuh sehat, hati gembira.</li>
+  <li><strong>Proyek hafalan ringan.</strong> Satu surat pendek atau satu doa baru selama liburan.</li>
+</ol>
+
+<h2>Jaga rutinitas ibadah</h2>
+<p>Liburan bukan libur dari Allah. Pertahankan sholat tepat waktu, <a href="/_/doa/doa-pagi/">doa pagi</a> &amp; <a href="/_/doa/doa-petang/">petang</a>, dan tidur tidak terlalu larut. Rutinitas yang dijaga membuat anak kembali sekolah tanpa "kaget".</p>
+
+<h2>Batas layar yang sehat</h2>
+<p>Sepakati aturan sederhana sejak awal: kapan boleh menonton, berapa lama, dan tontonan apa. Pilih konten yang aman — seperti <a href="/_/blog/youtube-anak-aman-tanpa-iklan/">video anak tanpa iklan judi</a>. Layar sebagai pelengkap, bukan pengasuh.</p>
+
+<h2>Kalau bepergian</h2>
+<p>Mudik atau liburan ke luar kota? Siapkan <a href="/_/blog/doa-perjalanan-untuk-anak/">doa-doa perjalanan</a> dan pelajari <a href="/_/blog/solat-jamak-qasar-saat-liburan/">sholat jamak &amp; qasar</a> agar ibadah tetap jalan di perjalanan.</p>
+
+<p>Lihat juga <a href="/_/kalender/">Kalender Islam</a> untuk momen-momen yang bisa dirayakan bersama selama liburan.</p>`,
+      en: `<p>School holidays are a gift: more space to be close to your children. But without a plan, the break easily melts into screen time and good routines fall apart. Here is how to fill the holidays with fun while keeping them blessed.</p>
+
+<h2>10 school-holiday activity ideas</h2>
+<ol>
+  <li><strong>Small home projects.</strong> Plant a seed in a pot, bake, or tidy toys while singing.</li>
+  <li><strong>Visit family.</strong> Grandparents or relatives — reward and memories at once. <em>(Bukhari: keeping family ties expands provision &amp; life.)</em></li>
+  <li><strong>Nature trips.</strong> Beach, garden, or park — while pointing out Allah's creation.</li>
+  <li><strong>Go to the mosque together.</strong> See <a href="/_/blog/mengajak-anak-ke-masjid/">tips for taking kids to the mosque</a>.</li>
+  <li><strong>Reading day.</strong> Prophet stories or <a href="/_/cerita/">Baby Mo stories</a> before bed.</li>
+  <li><strong>Small charity.</strong> Have your child set aside pocket money to give — building empathy.</li>
+  <li><strong>Learn through play.</strong> <a href="/_/permainan/">Islamic games</a> like the <a href="/_/blog/puzzle-hijaiyah-belajar-sambil-bermain/">hijaiyah puzzle</a> and daily-dua learning.</li>
+  <li><strong>Cook together.</strong> Kids learn table manners and gratitude for provision.</li>
+  <li><strong>Light exercise.</strong> Cycling or a morning walk — healthy body, happy heart.</li>
+  <li><strong>A small memorization project.</strong> One short surah or one new dua over the break.</li>
+</ol>
+
+<h2>Keep worship routines</h2>
+<p>A holiday is not a holiday from Allah. Keep prayers on time, <a href="/_/doa/doa-pagi/">morning</a> &amp; <a href="/_/doa/doa-petang/">evening</a> remembrance, and not-too-late bedtimes. Protected routines let kids return to school without a jolt.</p>
+
+<h2>Healthy screen limits</h2>
+<p>Agree on simple rules up front: when watching is allowed, how long, and what. Choose safe content — like <a href="/_/blog/youtube-anak-aman-tanpa-iklan/">kids' videos without gambling ads</a>. Screens as a supplement, not a babysitter.</p>
+
+<h2>If you travel</h2>
+<p>Heading out of town? Prepare the <a href="/_/blog/doa-perjalanan-untuk-anak/">prayers for travel</a> and learn <a href="/_/blog/solat-jamak-qasar-saat-liburan/">combining &amp; shortening prayers</a> so worship keeps going on the road.</p>
+
+<p>See also the <a href="/_/kalender/">Islamic Calendar</a> for moments you can celebrate together over the break.</p>`,
+    },
+    tags: ["liburan-sekolah", "parenting", "keluarga", "panduan", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 6,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Bagaimana mengisi libur sekolah agar tidak hanya main HP?", en: "How do we fill school holidays so it isn't just phones?" },
+        answer: { id: "Sepakati jadwal sederhana: campur aktivitas fisik, silaturahmi, proyek kecil, dan ibadah, dengan layar sebagai pelengkap yang dibatasi waktunya.", en: "Agree on a simple schedule: mix physical activity, family visits, small projects, and worship, with screens as a time-limited supplement." } },
+      { question: { id: "Apakah rutinitas anak boleh longgar saat liburan?", en: "Can a child's routine loosen during holidays?" },
+        answer: { id: "Boleh sedikit, tapi jaga inti rutinitas — sholat, makan, dan tidur — agar anak tidak kaget saat kembali sekolah.", en: "A little, but keep the core routine — prayer, meals, and sleep — so the child isn't shocked when school resumes." } },
+    ],
+  },
+  {
+    slug: "doa-perjalanan-untuk-anak",
+    title: {
+      id: "Doa Perjalanan untuk Anak: Bekal Lengkap Saat Mudik & Liburan",
+      en: "Travel Duas for Kids: A Complete Kit for Trips & Holidays",
+    },
+    excerpt: {
+      id: "Kumpulan doa perjalanan yang mudah dihafal anak — keluar rumah, naik kendaraan, doa safar, singgah di tempat baru, hingga doa pulang dengan selamat.",
+      en: "A set of easy-to-memorize travel duas for kids — leaving home, boarding a vehicle, the travel dua, stopping somewhere new, and returning home safely.",
+    },
+    body: {
+      id: `<p>Perjalanan adalah waktu yang istimewa: doa seorang musafir termasuk doa yang mustajab. <em>(HR. Tirmidzi.)</em> Saat liburan atau mudik, jadikan tiap tahap perjalanan momen mengajarkan anak menyebut nama Allah.</p>
+
+<h2>1. Sebelum keluar rumah</h2>
+<p>Ajarkan <a href="/_/doa/keluar-rumah/">doa keluar rumah</a> — "Bismillah, tawakkaltu 'alallah…" — agar anak terbiasa berserah kepada Allah sejak melangkah.</p>
+
+<h2>2. Naik kendaraan</h2>
+<p>Saat naik mobil, kereta, atau pesawat, baca <a href="/_/doa/naik-kendaraan/">doa naik kendaraan</a> ("Subhanalladzi sakhkhara lana hadza…"). Lihat juga <a href="/_/doa/naik-turun-kendaraan-selamat/">doa agar selamat naik-turun kendaraan</a>.</p>
+
+<h2>3. Doa bepergian (safar)</h2>
+<p>Untuk perjalanan jauh, ada <a href="/_/doa/doa-bepergian/">doa safar</a> yang memohon kebaikan, takwa, dan kemudahan di perjalanan. Anak cukup ikut mengaminkan dulu, lalu pelan-pelan menghafalnya.</p>
+
+<h2>4. Singgah di tempat baru</h2>
+<p>Sampai di penginapan atau rest area, baca <a href="/_/doa/doa-singgah/">doa singgah</a>: "A'udzu bikalimatillahit-tammati min syarri ma khalaq" — memohon perlindungan dari keburukan tempat itu.</p>
+
+<h2>5. Pulang dengan selamat</h2>
+<p>Saat kembali, ucapkan <a href="/_/doa/doa-kembali-dari-perjalanan/">doa pulang dari perjalanan</a> dengan hati bersyukur. Tutup perjalanan seperti membukanya: bersama Allah.</p>
+
+<h2>Tips menghafal bareng anak</h2>
+<ul>
+  <li>Pilih satu doa per perjalanan — jangan semua sekaligus.</li>
+  <li>Bacakan keras-keras, anak menirukan potongan akhirnya.</li>
+  <li>Puji setiap usaha, bukan hanya hasil sempurna.</li>
+</ul>
+
+<p>Butuh lebih banyak? Lihat <a href="/_/blog/kumpulan-doa-harian-anak/">kumpulan doa harian anak</a> dan panduan <a href="/_/blog/liburan-sekolah-keluarga-muslim/">liburan sekolah keluarga Muslim</a>.</p>`,
+      en: `<p>Travel is a special time: a traveller's dua is among those readily answered. <em>(Tirmidhi.)</em> On holidays or trips home, turn each stage of the journey into a moment to teach your child to mention Allah's name.</p>
+
+<h2>1. Before leaving home</h2>
+<p>Teach the <a href="/_/doa/keluar-rumah/">dua for leaving home</a> — "Bismillah, tawakkaltu 'alallah…" — so your child gets used to relying on Allah from the first step.</p>
+
+<h2>2. Boarding a vehicle</h2>
+<p>When getting into a car, train, or plane, read the <a href="/_/doa/naik-kendaraan/">dua for boarding</a> ("Subhanalladhi sakhkhara lana hadha…"). See also the <a href="/_/doa/naik-turun-kendaraan-selamat/">dua for safe travel</a>.</p>
+
+<h2>3. The travel dua (safar)</h2>
+<p>For long journeys, there is the <a href="/_/doa/doa-bepergian/">safar dua</a> asking for goodness, piety, and ease on the road. Children can simply say "ameen" at first, then slowly memorize it.</p>
+
+<h2>4. Stopping somewhere new</h2>
+<p>Arriving at a hotel or rest stop, read the <a href="/_/doa/doa-singgah/">dua for stopping</a>: "A'udhu bikalimatillahit-tammati min sharri ma khalaq" — seeking protection from any harm in that place.</p>
+
+<h2>5. Returning home safely</h2>
+<p>On the way back, say the <a href="/_/doa/doa-kembali-dari-perjalanan/">dua for returning</a> with a grateful heart. Close the journey the way you opened it: with Allah.</p>
+
+<h2>Tips for memorizing with kids</h2>
+<ul>
+  <li>Pick one dua per trip — not all at once.</li>
+  <li>Read it aloud; let the child echo the final phrase.</li>
+  <li>Praise every effort, not only perfect results.</li>
+</ul>
+
+<p>Want more? See the <a href="/_/blog/kumpulan-doa-harian-anak/">collection of daily duas for kids</a> and the <a href="/_/blog/liburan-sekolah-keluarga-muslim/">Muslim family school-holiday guide</a>.</p>`,
+    },
+    tags: ["doa", "perjalanan", "liburan-sekolah", "edukasi-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apa doa saat naik kendaraan untuk anak?", en: "What is the dua for boarding a vehicle for kids?" },
+        answer: { id: "Bacaan 'Subhanalladzi sakhkhara lana hadza wa ma kunna lahu muqrinin'. Anak bisa mulai dengan menghafal potongan awalnya saja.", en: "It is 'Subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin'. Children can start by memorizing just the opening phrase." } },
+      { question: { id: "Kenapa doa musafir istimewa?", en: "Why is a traveller's dua special?" },
+        answer: { id: "Rasulullah ﷺ menyebut doa musafir termasuk doa yang dikabulkan (HR. Tirmidzi), sehingga perjalanan adalah waktu yang baik untuk berdoa.", en: "The Prophet ﷺ named the traveller's dua among those answered (Tirmidhi), so travel is a good time to make dua." } },
+    ],
+  },
+  {
+    slug: "solat-jamak-qasar-saat-liburan",
+    title: {
+      id: "Sholat Jamak & Qasar Saat Liburan: Panduan Ringkas untuk Keluarga",
+      en: "Combining & Shortening Prayers on Holiday: A Short Family Guide",
+    },
+    excerpt: {
+      id: "Apa itu jamak dan qasar, kapan boleh dilakukan saat bepergian, dan cara sederhana menjelaskannya pada anak agar ibadah tetap terjaga di perjalanan.",
+      en: "What jama' and qasar are, when they're allowed while travelling, and a simple way to explain them to children so prayers stay protected on the road.",
+    },
+    body: {
+      id: `<p>Islam itu mudah. Saat bepergian jauh, Allah memberi keringanan agar sholat tetap bisa dijalankan: <strong>jamak</strong> (menggabung dua sholat) dan <strong>qasar</strong> (meringkas sholat empat rakaat menjadi dua). Allah berfirman tentang bolehnya meringkas sholat saat bepergian — <strong>QS. An-Nisa: 101</strong>.</p>
+
+<h2>Apa itu qasar?</h2>
+<p>Qasar artinya meringkas sholat yang empat rakaat (Zuhur, Asar, Isya) menjadi dua rakaat. Magrib dan Subuh tidak diqasar. Keringanan ini untuk musafir (orang yang sedang dalam perjalanan jauh).</p>
+
+<h2>Apa itu jamak?</h2>
+<p>Jamak artinya menggabungkan dua sholat dalam satu waktu:</p>
+<ul>
+  <li><strong>Jamak taqdim</strong> — Zuhur &amp; Asar dikerjakan di waktu Zuhur; Magrib &amp; Isya di waktu Magrib.</li>
+  <li><strong>Jamak takhir</strong> — keduanya dikerjakan di waktu yang belakangan.</li>
+</ul>
+<p>Rasulullah ﷺ menjamak sholat dalam perjalanan. <em>(HR. Bukhari &amp; Muslim.)</em> Sering kali jamak dan qasar dilakukan sekaligus saat safar.</p>
+
+<h2>Kapan boleh?</h2>
+<p>Saat menempuh perjalanan jauh (jumhur ulama: sekitar 80–90 km atau lebih) dan bukan untuk maksiat. Jika ragu, ikuti panduan ustaz tepercaya — yang penting niat menjaga sholat, bukan meninggalkannya.</p>
+
+<h2>Menjelaskan pada anak</h2>
+<p>Katakan sederhana: "Karena kita sedang dalam perjalanan jauh, Allah memberi kita cara yang lebih ringan supaya sholat tetap jalan." Anak belajar bahwa ibadah itu fleksibel namun tidak ditinggalkan. Ajak mereka menggelar sajadah di rest area atau musala.</p>
+
+<p>Pelajari gerakan dan bacaannya di <a href="/_/sholat/">panduan bacaan sholat</a>. Lihat juga <a href="/_/blog/doa-perjalanan-untuk-anak/">doa perjalanan untuk anak</a> dan <a href="/_/blog/liburan-sekolah-keluarga-muslim/">panduan liburan sekolah</a>.</p>`,
+      en: `<p>Islam is meant to be easy. When travelling far, Allah grants a concession so prayers can still be performed: <strong>jama'</strong> (combining two prayers) and <strong>qasar</strong> (shortening a four-unit prayer to two). Allah mentions shortening prayer while travelling — <strong>Qur'an, An-Nisa: 101</strong>.</p>
+
+<h2>What is qasar?</h2>
+<p>Qasar means shortening the four-unit prayers (Dhuhr, Asr, Isha) to two units. Maghrib and Fajr are not shortened. The concession is for a traveller on a long journey.</p>
+
+<h2>What is jama'?</h2>
+<p>Jama' means combining two prayers in one time slot:</p>
+<ul>
+  <li><strong>Jama' taqdim</strong> — Dhuhr &amp; Asr prayed in Dhuhr's time; Maghrib &amp; Isha in Maghrib's time.</li>
+  <li><strong>Jama' takhir</strong> — both prayed in the later time.</li>
+</ul>
+<p>The Prophet ﷺ combined prayers while travelling. <em>(Bukhari &amp; Muslim.)</em> Often jama' and qasar are done together during a journey.</p>
+
+<h2>When is it allowed?</h2>
+<p>On a long journey (the majority of scholars: roughly 80–90 km or more) and not for a sinful purpose. If unsure, follow a trusted scholar's guidance — the point is to protect the prayer, not abandon it.</p>
+
+<h2>Explaining it to children</h2>
+<p>Say it simply: "Because we're on a long trip, Allah gives us an easier way so the prayer still happens." Children learn that worship is flexible yet never dropped. Have them roll out the prayer mat at a rest stop or prayer room.</p>
+
+<p>Learn the movements and recitations in the <a href="/_/sholat/">prayer guide</a>. See also <a href="/_/blog/doa-perjalanan-untuk-anak/">travel duas for kids</a> and the <a href="/_/blog/liburan-sekolah-keluarga-muslim/">school-holiday guide</a>.</p>`,
+    },
+    tags: ["sholat", "jamak-qasar", "perjalanan", "liburan-sekolah", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Sholat apa saja yang boleh dijamak?", en: "Which prayers can be combined?" },
+        answer: { id: "Zuhur dengan Asar, dan Magrib dengan Isya. Subuh tidak dijamak dengan sholat lain.", en: "Dhuhr with Asr, and Maghrib with Isha. Fajr is not combined with another prayer." } },
+      { question: { id: "Berapa jarak agar boleh qasar?", en: "What distance allows shortening (qasar)?" },
+        answer: { id: "Mayoritas ulama menyebut sekitar 80–90 km atau lebih. Jika ragu, ikuti panduan ustaz tepercaya.", en: "Most scholars cite roughly 80–90 km or more. If unsure, follow a trusted scholar's guidance." } },
+    ],
+  },
+  {
+    slug: "puzzle-hijaiyah-belajar-sambil-bermain",
+    title: {
+      id: "Belajar Huruf Hijaiyah Sambil Main Puzzle: Cara Seru & Tepercaya",
+      en: "Learning Hijaiyah Letters Through Puzzle Play: Fun & Trustworthy",
+    },
+    excerpt: {
+      id: "Gabungkan permainan huruf hijaiyah dengan puzzle menyusun huruf agar anak belajar huruf Arab sambil bermain — gratis, tanpa iklan, langsung di browser bersama orang tua.",
+      en: "Pair the hijaiyah letters game with letter-arranging puzzles so kids learn Arabic letters through play — free, ad-free, right in the browser with a parent.",
+    },
+    body: {
+      id: `<p>Anak belajar paling baik saat ia merasa sedang bermain. Daripada menghafal dengan tegang, kita bisa <strong>menggabungkan dua jenis permainan</strong> Baby Mo: permainan <em>belajar huruf hijaiyah</em> untuk mengenali bentuk &amp; bunyinya, lalu permainan <em>puzzle menyusun huruf</em> untuk menguatkan ingatannya.</p>
+
+<h2>Kenapa puzzle bagus untuk belajar huruf?</h2>
+<ul>
+  <li><strong>Mengenali bentuk.</strong> Menyusun huruf melatih anak membedakan bentuk ﺍ، ﺏ، ﺕ dan titik-titiknya.</li>
+  <li><strong>Belajar dengan banyak indra.</strong> Lihat hurufnya, dengar bunyinya, gerakkan tangannya — ingatan jadi lebih kuat.</li>
+  <li><strong>Sabar &amp; fokus.</strong> Puzzle melatih ketekunan, satu kepingan demi satu kepingan.</li>
+  <li><strong>Rasa berhasil.</strong> Setiap puzzle selesai memberi anak dorongan percaya diri untuk lanjut.</li>
+</ul>
+
+<h2>Urutan main yang disarankan</h2>
+<ol>
+  <li><strong>Kenali dulu.</strong> Mulai dari <a href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">Belajar Huruf Hijaiyah</a> — 28 huruf lengkap dengan suara, kuis, dan bintang.</li>
+  <li><strong>Susun &amp; mainkan.</strong> Lanjut ke <a href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">Kata Islam</a> (seret huruf menyusun kata) dan puzzle <a href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">Kata Baik</a> untuk menguatkan apa yang baru dipelajari.</li>
+  <li><strong>Ulangi dengan riang.</strong> Sedikit tiap hari lebih baik daripada banyak tapi cepat bosan.</li>
+</ol>
+
+<h2>Main bareng orang tua</h2>
+<p>Permainan ini paling bermakna saat dimainkan berdua. Sebut nama hurufnya bersama anak, tirukan bunyinya, dan beri tepuk tangan kecil setiap satu huruf dikenali. Inilah cara <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">mengenalkan huruf hijaiyah</a> yang hangat, bukan menghafal yang menegangkan.</p>
+
+<h2>Aman &amp; bisa dipercaya</h2>
+<p>Semua <a href="/_/permainan/">permainan Baby Mo</a> <strong>gratis, tanpa iklan, tanpa pembelian dalam aplikasi</strong>, dan langsung jalan di browser tanpa perlu mengunduh. Orang tua tenang, anak fokus belajar.</p>
+
+<p>Selengkapnya di <a href="/_/blog/game-belajar-hijaiyah-anak/">game belajar hijaiyah untuk anak</a> dan <a href="/_/blog/game-anak-islami-baby-mo/">kumpulan game anak islami Baby Mo</a>.</p>`,
+      en: `<p>Children learn best when they feel they're playing. Instead of tense rote memorizing, we can <strong>combine two kinds of Baby Mo games</strong>: the <em>learn-the-hijaiyah-letters</em> game to recognize their shapes &amp; sounds, then <em>letter-arranging puzzles</em> to lock the memory in.</p>
+
+<h2>Why puzzles help with learning letters</h2>
+<ul>
+  <li><strong>Shape recognition.</strong> Arranging letters trains kids to tell apart ﺍ، ﺏ، ﺕ and their dots.</li>
+  <li><strong>Multi-sensory learning.</strong> See the letter, hear its sound, move your hands — memory grows stronger.</li>
+  <li><strong>Patience &amp; focus.</strong> Puzzles build perseverance, one piece at a time.</li>
+  <li><strong>A sense of achievement.</strong> Each finished puzzle gives a confidence boost to keep going.</li>
+</ul>
+
+<h2>A suggested play order</h2>
+<ol>
+  <li><strong>Get to know them.</strong> Start with <a href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">Learn Hijaiyah Letters</a> — all 28 letters with sound, quizzes, and stars.</li>
+  <li><strong>Arrange &amp; play.</strong> Move on to <a href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">Islamic Words</a> (drag letters to spell) and the <a href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">Kind Words</a> puzzle to reinforce what was just learned.</li>
+  <li><strong>Repeat joyfully.</strong> A little each day beats a lot that quickly bores.</li>
+</ol>
+
+<h2>Play with a parent</h2>
+<p>These games mean the most played together. Say each letter's name with your child, echo its sound, and give a little clap for every letter recognized. This is the warm way to <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">introduce the hijaiyah letters</a> — not tense rote memorization.</p>
+
+<h2>Safe &amp; trustworthy</h2>
+<p>All <a href="/_/permainan/">Baby Mo games</a> are <strong>free, ad-free, with no in-app purchases</strong>, and run straight in the browser with no download. Parents relax, kids focus on learning.</p>
+
+<p>More in <a href="/_/blog/game-belajar-hijaiyah-anak/">the hijaiyah learning game for kids</a> and the <a href="/_/blog/game-anak-islami-baby-mo/">collection of Baby Mo Islamic kids' games</a>.</p>`,
+    },
+    tags: ["hijaiyah", "permainan", "edukasi-anak", "huruf-arab", "belajar-sambil-bermain"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah permainan hijaiyah Baby Mo gratis?", en: "Are the Baby Mo hijaiyah games free?" },
+        answer: { id: "Ya, gratis sepenuhnya, tanpa iklan dan tanpa pembelian dalam aplikasi. Langsung dimainkan di browser tanpa mengunduh.", en: "Yes, completely free, with no ads and no in-app purchases. They play straight in the browser with no download." } },
+      { question: { id: "Umur berapa cocok belajar hijaiyah sambil bermain?", en: "What age suits learning hijaiyah through play?" },
+        answer: { id: "Cocok untuk anak usia sekitar 3–7 tahun, terutama saat dimainkan bersama orang tua.", en: "Suitable for children around 3–7 years old, especially when played together with a parent." } },
+    ],
+  },
+  {
+    slug: "safar-bukan-bulan-sial-untuk-anak",
+    title: {
+      id: "Bulan Safar: Bukan Bulan Sial — Mengajarkan Tawakal pada Anak",
+      en: "The Month of Safar: Not Unlucky — Teaching Children Tawakkul",
+    },
+    excerpt: {
+      id: "Safar sering dianggap bulan sial. Islam menolak anggapan itu. Cara menjelaskan pada anak bahwa keberuntungan dan keburukan hanya di tangan Allah.",
+      en: "Safar is often thought of as unlucky. Islam rejects that. How to explain to children that good and bad are in Allah's hands alone.",
+    },
+    body: {
+      id: `<p>Safar adalah bulan kedua dalam <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender Hijriah</a>. Sejak zaman dahulu, sebagian orang menganggap Safar sebagai bulan sial — penuh musibah. Islam dengan tegas <strong>menolak</strong> kepercayaan ini.</p>
+
+<h2>Tidak ada hari atau bulan yang membawa sial</h2>
+<p>Rasulullah ﷺ bersabda: <em>"Tidak ada penularan (dengan sendirinya), tidak ada thiyarah (anggapan sial), tidak ada hammah, dan tidak ada (kesialan) bulan Safar."</em> <strong>(HR. Bukhari &amp; Muslim.)</strong></p>
+<p>Artinya, tidak ada waktu yang dengan sendirinya membawa keberuntungan atau keburukan. Semua kebaikan dan ketetapan datang dari Allah.</p>
+
+<h2>Menjelaskan pada anak</h2>
+<ol>
+  <li><strong>Allah pengatur segala sesuatu.</strong> Katakan: "Tidak ada hari sial. Yang menjaga kita adalah Allah, kapan pun."</li>
+  <li><strong>Ganti rasa takut dengan doa.</strong> Saat anak cemas, ajak baca <a href="/_/doa/doa-pagi/">doa pagi</a> &amp; <a href="/_/doa/doa-petang/">petang</a> dan <a href="/_/doa/perlindungan-anak/">doa perlindungan</a>.</li>
+  <li><strong>Tanam tawakal.</strong> Berusaha sebaik mungkin, lalu serahkan hasilnya pada Allah — itulah inti tawakal.</li>
+</ol>
+
+<h2>Tetap penuh kebaikan</h2>
+<p>Safar adalah bulan biasa yang bisa diisi amal baik seperti bulan lain: sholat, sedekah, berbuat baik pada keluarga. Justru di bulan ini kita ajarkan anak bahwa keberkahan datang dari ketaatan, bukan dari tanggal di kalender.</p>
+
+<p>Lihat momen lain di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>Safar is the second month of the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">Hijri calendar</a>. Since ancient times, some have considered Safar an unlucky, calamity-filled month. Islam firmly <strong>rejects</strong> this belief.</p>
+
+<h2>No day or month brings bad luck</h2>
+<p>The Prophet ﷺ said: <em>"There is no contagion (by itself), no evil omen, no hamah, and no (bad luck in) Safar."</em> <strong>(Bukhari &amp; Muslim.)</strong></p>
+<p>This means no time by itself brings fortune or misfortune. All good and every decree comes from Allah.</p>
+
+<h2>Explaining it to children</h2>
+<ol>
+  <li><strong>Allah governs everything.</strong> Say: "There is no unlucky day. The One who protects us is Allah, at any time."</li>
+  <li><strong>Replace fear with dua.</strong> When your child worries, read the <a href="/_/doa/doa-pagi/">morning</a> &amp; <a href="/_/doa/doa-petang/">evening</a> remembrance and the <a href="/_/doa/perlindungan-anak/">dua of protection</a>.</li>
+  <li><strong>Plant tawakkul.</strong> Do your best, then entrust the outcome to Allah — that is the heart of reliance.</li>
+</ol>
+
+<h2>Still full of good</h2>
+<p>Safar is an ordinary month that can be filled with good deeds like any other: prayer, charity, kindness to family. In this very month we teach children that blessing comes from obedience, not from a date on the calendar.</p>
+
+<p>See other moments in the <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "safar", "tawakal", "akidah", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah bulan Safar membawa sial?", en: "Does the month of Safar bring bad luck?" },
+        answer: { id: "Tidak. Rasulullah ﷺ menegaskan tidak ada kesialan pada bulan Safar (HR. Bukhari & Muslim). Semua ketetapan ada di tangan Allah.", en: "No. The Prophet ﷺ affirmed there is no bad luck in Safar (Bukhari & Muslim). All decree is in Allah's hands." } },
+      { question: { id: "Bagaimana menjelaskan tahayul pada anak?", en: "How do we explain superstition to a child?" },
+        answer: { id: "Ganti rasa takut dengan tawakal: ajarkan bahwa hanya Allah yang menjaga, dan biasakan berdoa daripada percaya pada kesialan.", en: "Replace fear with reliance on Allah: teach that only Allah protects, and make dua a habit instead of believing in bad luck." } },
+    ],
+  },
+  {
+    slug: "rabiul-akhir-menjaga-kebiasaan-baik",
+    title: {
+      id: "Bulan Rabiul Akhir: Merawat Kebiasaan Baik yang Kecil tapi Istiqamah",
+      en: "The Month of Rabi' al-Akhir: Nurturing Small, Consistent Good Habits",
+    },
+    excerpt: {
+      id: "Rabiul Akhir tidak punya hari besar khusus — dan justru di situ pelajarannya: amal yang dicintai Allah adalah yang rutin meski sedikit. Cara menumbuhkan istiqamah pada anak.",
+      en: "Rabi' al-Akhir has no special major day — and that's exactly the lesson: the deeds Allah loves most are the consistent ones, even if small. How to build istiqamah in children.",
+    },
+    body: {
+      id: `<p>Rabiul Akhir adalah bulan keempat dalam <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender Hijriah</a>. Berbeda dengan Ramadan atau Dzulhijjah, bulan ini tidak memiliki hari raya atau ibadah khusus. Tapi justru "bulan yang tenang" ini menyimpan pelajaran berharga untuk anak.</p>
+
+<h2>Amal terbaik adalah yang konsisten</h2>
+<p>Rasulullah ﷺ bersabda: <em>"Amal yang paling dicintai Allah adalah yang paling rutin walaupun sedikit."</em> <strong>(HR. Bukhari &amp; Muslim.)</strong> Bulan tanpa hari besar adalah waktu sempurna melatih istiqamah — ketaatan harian yang kecil tapi tak putus.</p>
+
+<h2>Kebiasaan kecil yang bisa dijaga anak</h2>
+<ul>
+  <li>Membaca <a href="/_/doa/doa-pagi/">doa pagi</a> &amp; <a href="/_/doa/doa-petang/">petang</a> setiap hari.</li>
+  <li>Satu halaman atau satu baris hafalan <a href="/_/surat/">surat pendek</a>.</li>
+  <li>Membantu satu pekerjaan rumah tanpa diminta.</li>
+  <li>Mengucap Bismillah sebelum makan dan Alhamdulillah sesudahnya.</li>
+</ul>
+
+<h2>Tips untuk orang tua</h2>
+<p>Pilih satu kebiasaan, bukan sepuluh. Buat papan ceklis sederhana, dan rayakan setiap "centang" sebagai kemenangan kecil. Lihat <a href="/_/blog/kebiasaan-kecil-yang-tumbuh-besar/">kebiasaan kecil yang tumbuh besar</a> untuk idenya.</p>
+
+<p>Lihat momen lain di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>Rabi' al-Akhir is the fourth month of the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">Hijri calendar</a>. Unlike Ramadan or Dhul-Hijjah, this month has no festival or special worship. Yet this "quiet month" holds a precious lesson for children.</p>
+
+<h2>The best deeds are the consistent ones</h2>
+<p>The Prophet ﷺ said: <em>"The deeds most beloved to Allah are the most consistent, even if small."</em> <strong>(Bukhari &amp; Muslim.)</strong> A month with no major day is the perfect time to train istiqamah — small daily obedience that never stops.</p>
+
+<h2>Small habits a child can keep</h2>
+<ul>
+  <li>Reading the <a href="/_/doa/doa-pagi/">morning</a> &amp; <a href="/_/doa/doa-petang/">evening</a> remembrance daily.</li>
+  <li>One line of memorizing a <a href="/_/surat/">short surah</a>.</li>
+  <li>Helping with one chore without being asked.</li>
+  <li>Saying Bismillah before eating and Alhamdulillah after.</li>
+</ul>
+
+<h2>Tips for parents</h2>
+<p>Pick one habit, not ten. Make a simple checklist board, and celebrate each "tick" as a small win. See <a href="/_/blog/kebiasaan-kecil-yang-tumbuh-besar/">small habits that grow big</a> for ideas.</p>
+
+<p>See other moments in the <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "rabiul-akhir", "istiqamah", "kebiasaan", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah ada ibadah khusus di bulan Rabiul Akhir?", en: "Is there special worship in Rabi' al-Akhir?" },
+        answer: { id: "Tidak ada ibadah khusus yang dikhususkan untuk bulan ini. Justru ia menjadi waktu baik untuk menjaga amalan harian yang konsisten.", en: "There is no worship singled out for this month. It is instead a good time to maintain consistent daily deeds." } },
+    ],
+  },
+  {
+    slug: "jumadil-awal-belajar-berani-berbuat-baik",
+    title: {
+      id: "Bulan Jumadil Awal: Belajar Berani Membela Kebaikan dari Kisah Mu'tah",
+      en: "The Month of Jumada al-Awwal: Learning Courage for Good from Mu'tah",
+    },
+    excerpt: {
+      id: "Di bulan Jumadil Awal, sejarah Islam mencatat keteguhan para sahabat dalam Perang Mu'tah. Cara mengambil pelajaran keberanian yang lembut untuk anak.",
+      en: "In Jumada al-Awwal, Islamic history records the steadfastness of the Companions at the Battle of Mu'tah. How to draw a gentle lesson of courage for kids.",
+    },
+    body: {
+      id: `<p>Jumadil Awal adalah bulan kelima dalam <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender Hijriah</a>. Menurut catatan sejarah Islam (sirah), di bulan ini terjadi <strong>Perang Mu'tah</strong> pada tahun 8 Hijriah — saat para sahabat menunjukkan keberanian luar biasa membela kebenaran.</p>
+
+<h2>Keberanian yang bukan sekadar tidak takut</h2>
+<p>Untuk anak, keberanian tidak perlu dijelaskan lewat detail peperangan. Cukup intinya: berani itu adalah <strong>tetap melakukan hal yang benar walau terasa sulit</strong>. Para sahabat berani karena mereka percaya pada Allah.</p>
+
+<h2>Keberanian sehari-hari untuk si kecil</h2>
+<ul>
+  <li>Berani <strong>jujur</strong> dan mengakui kesalahan.</li>
+  <li>Berani <strong>berkata baik</strong> dan menolak ajakan buruk.</li>
+  <li>Berani <strong>meminta maaf</strong> lebih dulu.</li>
+  <li>Berani <strong>membela teman</strong> yang diperlakukan tidak adil.</li>
+</ul>
+
+<h2>Sandarkan pada Allah</h2>
+<p>Ajari anak bahwa sumber keberanian adalah tawakal. Saat takut, ajak baca <a href="/_/doa/doa-keteguhan-hati/">doa keteguhan hati</a> dan <a href="/_/doa/perlindungan-anak/">doa perlindungan</a>. Hati yang dekat dengan Allah lebih tenang dan kuat.</p>
+
+<p>Lihat juga kisah-kisah teladan di <a href="/_/kisah/">Kisah Para Nabi</a> dan momen lain di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>Jumada al-Awwal is the fifth month of the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">Hijri calendar</a>. According to Islamic history (sirah), this month saw the <strong>Battle of Mu'tah</strong> in 8 AH — when the Companions showed extraordinary courage in defending the truth.</p>
+
+<h2>Courage that is more than just fearlessness</h2>
+<p>For children, courage needn't be taught through battle details. The core is enough: bravery is <strong>still doing what is right even when it feels hard</strong>. The Companions were brave because they trusted Allah.</p>
+
+<h2>Everyday courage for little ones</h2>
+<ul>
+  <li>Brave enough to be <strong>honest</strong> and admit mistakes.</li>
+  <li>Brave enough to <strong>speak kindly</strong> and refuse bad invitations.</li>
+  <li>Brave enough to <strong>apologize</strong> first.</li>
+  <li>Brave enough to <strong>stand up for a friend</strong> treated unfairly.</li>
+</ul>
+
+<h2>Lean on Allah</h2>
+<p>Teach your child that the source of courage is reliance on Allah. When afraid, read the <a href="/_/doa/doa-keteguhan-hati/">dua for a steadfast heart</a> and the <a href="/_/doa/perlindungan-anak/">dua of protection</a>. A heart close to Allah is calmer and stronger.</p>
+
+<p>See also the role-model stories in <a href="/_/kisah/">Prophet Stories</a> and other moments in the <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "jumadil-awal", "keberanian", "akhlak", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Peristiwa apa yang terjadi di bulan Jumadil Awal?", en: "What event happened in Jumada al-Awwal?" },
+        answer: { id: "Menurut catatan sirah, Perang Mu'tah terjadi pada Jumadil Awal tahun 8 Hijriah, contoh keberanian para sahabat membela kebenaran.", en: "According to sirah accounts, the Battle of Mu'tah took place in Jumada al-Awwal, 8 AH — an example of the Companions' courage in defending the truth." } },
+    ],
+  },
+  {
+    slug: "jumadil-akhir-sahabat-setia-abu-bakar",
+    title: {
+      id: "Bulan Jumadil Akhir: Belajar Setia dari Abu Bakar Ash-Shiddiq",
+      en: "The Month of Jumada al-Akhir: Learning Loyalty from Abu Bakr As-Siddiq",
+    },
+    excerpt: {
+      id: "Menurut riwayat, Abu Bakar Ash-Shiddiq wafat di bulan Jumadil Akhir. Kisah sahabat paling setia ini mengajarkan anak arti persahabatan, kejujuran, dan kelembutan hati.",
+      en: "By many narrations, Abu Bakr As-Siddiq passed away in Jumada al-Akhir. The story of the most loyal Companion teaches kids friendship, honesty, and a gentle heart.",
+    },
+    body: {
+      id: `<p>Jumadil Akhir adalah bulan keenam dalam <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender Hijriah</a>. Menurut banyak riwayat, di bulan ini wafat <strong>Abu Bakar Ash-Shiddiq رضي الله عنه</strong> — sahabat paling dekat dan paling setia kepada Rasulullah ﷺ.</p>
+
+<h2>Sahabat yang setia</h2>
+<p>Abu Bakar adalah orang dewasa pertama yang beriman. Ia menemani Rasulullah ﷺ saat hijrah, bersembunyi bersama di Gua Tsur, dan selalu membenarkan beliau — sampai diberi gelar <strong>"Ash-Shiddiq"</strong> (yang sangat jujur dan membenarkan). Allah menyebut momen di gua itu dalam <strong>QS. At-Taubah: 40</strong>.</p>
+
+<h2>Pelajaran untuk anak</h2>
+<ul>
+  <li><strong>Setia.</strong> Teman sejati ada di saat senang maupun susah.</li>
+  <li><strong>Jujur.</strong> Selalu berkata benar membuat orang percaya pada kita.</li>
+  <li><strong>Lembut &amp; dermawan.</strong> Abu Bakar terkenal lembut hatinya dan suka menolong.</li>
+</ul>
+
+<h2>Ajak anak mempraktikkan</h2>
+<p>Tanyakan: "Bagaimana cara jadi teman yang baik hari ini?" Mungkin dengan berbagi bekal, menemani teman yang sedih, atau menepati janji. Ceritakan pula kisah ini lewat <a href="/_/cerita/">cerita Baby Mo</a> tentang persahabatan.</p>
+
+<p>Lihat juga <a href="/_/kisah/">Kisah Para Nabi</a> dan momen lain di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>Jumada al-Akhir is the sixth month of the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">Hijri calendar</a>. By many narrations, this month saw the passing of <strong>Abu Bakr As-Siddiq (may Allah be pleased with him)</strong> — the closest and most loyal Companion of the Prophet ﷺ.</p>
+
+<h2>The loyal friend</h2>
+<p>Abu Bakr was the first adult man to believe. He accompanied the Prophet ﷺ on the migration, hid with him in the Cave of Thawr, and always affirmed him — earning the title <strong>"As-Siddiq"</strong> (the truthful, the affirmer). Allah mentions that moment in the cave in <strong>Qur'an, At-Tawbah: 40</strong>.</p>
+
+<h2>Lessons for children</h2>
+<ul>
+  <li><strong>Loyalty.</strong> A true friend is there in ease and hardship alike.</li>
+  <li><strong>Honesty.</strong> Always telling the truth makes people trust us.</li>
+  <li><strong>Gentleness &amp; generosity.</strong> Abu Bakr was known for his tender heart and love of helping.</li>
+</ul>
+
+<h2>Help your child practice</h2>
+<p>Ask: "How can you be a good friend today?" Perhaps by sharing a snack, sitting with a sad friend, or keeping a promise. Tell this through <a href="/_/cerita/">Baby Mo stories</a> about friendship too.</p>
+
+<p>See also <a href="/_/kisah/">Prophet Stories</a> and other moments in the <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "jumadil-akhir", "abu-bakar", "persahabatan", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Siapa Abu Bakar Ash-Shiddiq?", en: "Who was Abu Bakr As-Siddiq?" },
+        answer: { id: "Sahabat terdekat Rasulullah ﷺ dan khalifah pertama, dikenal sangat jujur dan setia. Menurut riwayat beliau wafat di bulan Jumadil Akhir.", en: "The closest Companion of the Prophet ﷺ and the first caliph, known for great honesty and loyalty. By narration he passed away in Jumada al-Akhir." } },
+    ],
+  },
+  {
+    slug: "dzulqadah-bulan-haram-cinta-damai",
+    title: {
+      id: "Bulan Dzulqadah: Bulan Haram yang Mengajarkan Anak Cinta Damai",
+      en: "The Month of Dhul-Qa'dah: A Sacred Month Teaching Children to Love Peace",
+    },
+    excerpt: {
+      id: "Dzulqadah adalah salah satu dari empat bulan haram. Dari Perjanjian Hudaibiyah, anak belajar bahwa kesabaran dan memilih damai adalah kekuatan, bukan kelemahan.",
+      en: "Dhul-Qa'dah is one of the four sacred months. From the Treaty of Hudaybiyyah, kids learn that patience and choosing peace are strength, not weakness.",
+    },
+    body: {
+      id: `<p>Dzulqadah adalah bulan kesebelas dalam <a href="/_/blog/12-bulan-hijriah-untuk-anak/">kalender Hijriah</a> dan termasuk salah satu dari <strong>empat bulan haram</strong> yang dimuliakan Allah — <strong>QS. At-Taubah: 36</strong>. Pada bulan haram, umat Islam dianjurkan menjauhi pertikaian dan memperbanyak kebaikan.</p>
+
+<h2>Belajar damai dari Hudaibiyah</h2>
+<p>Menurut sirah, pada bulan Dzulqadah tahun 6 Hijriah terjadi <strong>Perjanjian Hudaibiyah</strong> — saat Rasulullah ﷺ memilih berdamai meski syaratnya terasa berat. Ternyata perdamaian itu membuka jalan kebaikan yang besar. Anak belajar: <em>memilih damai dan sabar bukan tanda kalah.</em></p>
+
+<h2>Pelajaran untuk anak</h2>
+<ul>
+  <li><strong>Menahan diri.</strong> Tidak membalas keburukan dengan keburukan.</li>
+  <li><strong>Sabar.</strong> Kebaikan kadang datang setelah kita menunggu.</li>
+  <li><strong>Cinta damai.</strong> Berdamai dengan teman setelah bertengkar adalah keberanian.</li>
+</ul>
+
+<h2>Praktik sederhana di rumah</h2>
+<p>Saat kakak-adik bertengkar, jadikan momen ini latihan "Hudaibiyah kecil": siapa yang mau mengalah dulu demi damai? Bantu dengan <a href="/_/blog/adab-bersaudara-mengurangi-pertengkaran/">adab bersaudara</a> dan <a href="/_/doa/ketika-marah/">doa ketika marah</a>.</p>
+
+<p>Lihat momen lain di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
+      en: `<p>Dhul-Qa'dah is the eleventh month of the <a href="/_/blog/12-bulan-hijriah-untuk-anak/">Hijri calendar</a> and one of the <strong>four sacred months</strong> honored by Allah — <strong>Qur'an, At-Tawbah: 36</strong>. In sacred months, Muslims are urged to avoid conflict and do more good.</p>
+
+<h2>Learning peace from Hudaybiyyah</h2>
+<p>According to sirah, in Dhul-Qa'dah of 6 AH came the <strong>Treaty of Hudaybiyyah</strong> — when the Prophet ﷺ chose peace even though the terms felt hard. That peace opened the way to great good. Children learn: <em>choosing peace and patience is not a sign of losing.</em></p>
+
+<h2>Lessons for children</h2>
+<ul>
+  <li><strong>Self-restraint.</strong> Not answering bad with bad.</li>
+  <li><strong>Patience.</strong> Good sometimes comes after we wait.</li>
+  <li><strong>Loving peace.</strong> Making up with a friend after a quarrel is courage.</li>
+</ul>
+
+<h2>A simple practice at home</h2>
+<p>When siblings quarrel, make it a "little Hudaybiyyah": who will give way first for the sake of peace? Help with <a href="/_/blog/adab-bersaudara-mengurangi-pertengkaran/">sibling manners</a> and the <a href="/_/doa/ketika-marah/">dua when angry</a>.</p>
+
+<p>See other moments in the <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+    },
+    tags: ["kalender-islam", "dzulqadah", "bulan-haram", "damai", "edukasi-anak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apa saja empat bulan haram?", en: "What are the four sacred months?" },
+        answer: { id: "Dzulqadah, Dzulhijjah, Muharram, dan Rajab. Pada bulan-bulan ini dianjurkan memperbanyak kebaikan dan menjauhi kezaliman.", en: "Dhul-Qa'dah, Dhul-Hijjah, Muharram, and Rajab. In them we are encouraged to do more good and avoid wrongdoing." } },
+      { question: { id: "Apa itu Perjanjian Hudaibiyah?", en: "What was the Treaty of Hudaybiyyah?" },
+        answer: { id: "Perjanjian damai pada masa Rasulullah ﷺ (sekitar Dzulqadah 6 H) yang mengajarkan bahwa memilih damai dan sabar bisa membawa kebaikan besar.", en: "A peace treaty in the Prophet's ﷺ time (around Dhul-Qa'dah 6 AH) teaching that choosing peace and patience can bring great good." } },
+    ],
+  },
+  {
     slug: "idul-fitri-untuk-anak",
     title: {
       id: "Idul Fitri untuk Anak: Panduan Lebaran (Sholat Ied, Takbir & Maaf-maafan)",
@@ -207,50 +773,74 @@ export const blogPosts: BlogPost[] = [
       en: "Introduce children to the Islamic calendar: the 12 Hijri months, their key events, and the four sacred months — with links to each occasion.",
     },
     body: {
-      id: `<p>Kalender Islam (Hijriah) mengikuti peredaran bulan, dan terdiri dari 12 bulan. Allah berfirman bahwa jumlah bulan ada dua belas, dan empat di antaranya adalah bulan haram (yang dimuliakan). — <strong>QS. At-Taubah: 36</strong>. Mengenalkannya membantu anak merasa terhubung dengan waktu secara islami.</p>
+      id: `<p>Kalender Islam (Hijriah) mengikuti peredaran <strong>bulan (qamariah)</strong>, sehingga satu tahunnya sekitar 354 hari — sebelas hari lebih pendek dari kalender Masehi. Itulah sebabnya Ramadan dan Idul Fitri "bergeser" maju setiap tahun. Allah berfirman bahwa jumlah bulan ada dua belas, dan empat di antaranya adalah bulan haram (yang dimuliakan). — <strong>QS. At-Taubah: 36</strong>.</p>
 
-<h2>12 Bulan Hijriah</h2>
+<p>Setiap nama bulan punya arti yang indah dan sering terkait cuaca atau kebiasaan bangsa Arab dahulu. Mengenalkannya membantu anak merasa terhubung dengan waktu secara islami — bukan sekadar menghafal nama.</p>
+
+<h2>12 Bulan Hijriah & maknanya</h2>
 <ol>
-  <li><strong>Muharram</strong> 🌙 — bulan haram; <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">tahun baru Islam</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">Asyura</a>.</li>
-  <li><strong>Safar</strong> — bukan bulan sial dalam Islam.</li>
-  <li><strong>Rabiul Awal</strong> — bulan kelahiran <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Rasulullah ﷺ</a>.</li>
-  <li><strong>Rabiul Akhir</strong></li>
-  <li><strong>Jumadil Awal</strong></li>
-  <li><strong>Jumadil Akhir</strong></li>
-  <li><strong>Rajab</strong> 🌙 — bulan haram; <a href="/_/blog/isra-miraj-untuk-anak/">Isra Mi'raj</a>.</li>
-  <li><strong>Sya'ban</strong> — <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">persiapan menuju Ramadan</a>.</li>
-  <li><strong>Ramadan</strong> — bulan puasa; <a href="/_/blog/lailatul-qadar-untuk-anak/">Lailatul Qadar</a>.</li>
-  <li><strong>Syawal</strong> — <a href="/_/blog/idul-fitri-untuk-anak/">Idul Fitri</a> &amp; <a href="/_/blog/puasa-syawal-untuk-anak/">puasa Syawal</a>.</li>
-  <li><strong>Dzulqadah</strong> 🌙 — bulan haram.</li>
-  <li><strong>Dzulhijjah</strong> 🌙 — bulan haram; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">10 hari pertama</a>, haji &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Idul Adha</a>.</li>
+  <li><strong>Muharram</strong> 🌙 — artinya "yang diharamkan/dimuliakan". Bulan haram pembuka tahun: <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">tahun baru Islam</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">puasa Asyura</a>.</li>
+  <li><strong>Safar</strong> — artinya "kosong". <a href="/_/blog/safar-bukan-bulan-sial-untuk-anak/">Bukan bulan sial</a> — momen mengajarkan tawakal.</li>
+  <li><strong>Rabiul Awal</strong> — "musim semi pertama". Bulan kelahiran <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Rasulullah ﷺ</a>.</li>
+  <li><strong>Rabiul Akhir</strong> — "musim semi kedua". Bulan tenang untuk <a href="/_/blog/rabiul-akhir-menjaga-kebiasaan-baik/">menjaga kebiasaan baik (istiqamah)</a>.</li>
+  <li><strong>Jumadil Awal</strong> — "musim beku pertama". Belajar <a href="/_/blog/jumadil-awal-belajar-berani-berbuat-baik/">berani membela kebaikan</a>.</li>
+  <li><strong>Jumadil Akhir</strong> — "musim beku kedua". Mengenang <a href="/_/blog/jumadil-akhir-sahabat-setia-abu-bakar/">Abu Bakar Ash-Shiddiq, sahabat setia</a>.</li>
+  <li><strong>Rajab</strong> 🌙 — "mengagungkan". Bulan haram; peristiwa <a href="/_/blog/isra-miraj-untuk-anak/">Isra Mi'raj</a>.</li>
+  <li><strong>Sya'ban</strong> — "berpencar". <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">Persiapan menuju Ramadan</a>; ada juga <a href="/_/blog/nisfu-syaban/">Nisfu Sya'ban</a>.</li>
+  <li><strong>Ramadan</strong> — "membakar (dosa)". Bulan puasa &amp; <a href="/_/blog/lailatul-qadar-untuk-anak/">Lailatul Qadar</a>.</li>
+  <li><strong>Syawal</strong> — "mengangkat/meninggi". <a href="/_/blog/idul-fitri-untuk-anak/">Idul Fitri</a> &amp; <a href="/_/blog/puasa-syawal-untuk-anak/">puasa enam hari Syawal</a>.</li>
+  <li><strong>Dzulqadah</strong> 🌙 — "pemilik istirahat" (berhenti dari perang). Bulan haram, <a href="/_/blog/dzulqadah-bulan-haram-cinta-damai/">cinta damai</a>.</li>
+  <li><strong>Dzulhijjah</strong> 🌙 — "pemilik haji". Bulan haram; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">10 hari pertama</a>, haji &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Idul Adha</a>.</li>
 </ol>
 
 <h2>Empat bulan haram</h2>
-<p>Empat bulan yang dimuliakan adalah <strong>Dzulqadah, Dzulhijjah, Muharram, dan Rajab</strong>. Pada bulan-bulan ini umat Islam dianjurkan memperbanyak kebaikan dan menjauhi kezaliman.</p>
+<p>Empat bulan yang dimuliakan adalah <strong>Dzulqadah, Dzulhijjah, Muharram, dan Rajab</strong> (tiga berurutan, satu terpisah). Pada bulan-bulan ini umat Islam dianjurkan memperbanyak kebaikan dan lebih menjauhi kezaliman, karena dosa pun lebih berat nilainya.</p>
 
-<p>Lihat kalender lengkap dengan tanggalnya di <a href="/_/kalender/">Kalender Islam</a>.</p>`,
-      en: `<p>The Islamic (Hijri) calendar follows the moon and has 12 months. Allah states that the number of months is twelve, four of which are sacred. — <strong>Qur'an, At-Tawbah: 36</strong>. Knowing them helps a child feel connected to time in an Islamic way.</p>
+<h2>Setiap bulan ada hikmahnya</h2>
+<p>Tidak semua bulan punya hari raya — dan itu disengaja. Bulan-bulan "tenang" seperti Rabiul Akhir, Jumadil Awal, dan Jumadil Akhir mengajarkan anak bahwa kebaikan tidak menunggu momen besar. Justru di sanalah kita melatih amal harian yang kecil tapi rutin.</p>
 
-<h2>The 12 Hijri Months</h2>
+<h2>Cara memakai kalender ini bersama anak</h2>
+<ul>
+  <li><strong>Tandai bulan berjalan.</strong> Tunjukkan kita sedang di bulan apa, dan apa keistimewaannya.</li>
+  <li><strong>Satu amalan per bulan.</strong> Pilih satu kebiasaan baik untuk dijaga sepanjang bulan itu.</li>
+  <li><strong>Ceritakan maknanya.</strong> Arti nama bulan membuat anak penasaran dan mudah mengingat.</li>
+</ul>
+
+<p>Lihat kalender lengkap dengan tanggalnya di <a href="/_/kalender/">Kalender Islam</a>, dan <a href="/_/blog/kalender-puasa-sunnah/">kalender puasa sunnah</a> sepanjang tahun.</p>`,
+      en: `<p>The Islamic (Hijri) calendar follows the <strong>moon (lunar) cycle</strong>, so a year is about 354 days — eleven days shorter than the Gregorian calendar. That's why Ramadan and Eid "move" earlier each year. Allah states that the number of months is twelve, four of which are sacred. — <strong>Qur'an, At-Tawbah: 36</strong>.</p>
+
+<p>Each month's name carries a beautiful meaning, often tied to old Arabian weather or customs. Knowing them helps a child feel connected to time in an Islamic way — not just memorizing names.</p>
+
+<h2>The 12 Hijri Months & their meanings</h2>
 <ol>
-  <li><strong>Muharram</strong> 🌙 — sacred; <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">Islamic new year</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">Ashura</a>.</li>
-  <li><strong>Safar</strong> — not an unlucky month in Islam.</li>
-  <li><strong>Rabi' al-Awwal</strong> — the birth month of the <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Prophet ﷺ</a>.</li>
-  <li><strong>Rabi' al-Akhir</strong></li>
-  <li><strong>Jumada al-Awwal</strong></li>
-  <li><strong>Jumada al-Akhir</strong></li>
-  <li><strong>Rajab</strong> 🌙 — sacred; <a href="/_/blog/isra-miraj-untuk-anak/">Isra & Mi'raj</a>.</li>
-  <li><strong>Sha'ban</strong> — <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">preparing for Ramadan</a>.</li>
-  <li><strong>Ramadan</strong> — the month of fasting; <a href="/_/blog/lailatul-qadar-untuk-anak/">Laylatul Qadr</a>.</li>
-  <li><strong>Shawwal</strong> — <a href="/_/blog/idul-fitri-untuk-anak/">Eid al-Fitr</a> &amp; <a href="/_/blog/puasa-syawal-untuk-anak/">six days of Shawwal</a>.</li>
-  <li><strong>Dhul-Qa'dah</strong> 🌙 — sacred.</li>
-  <li><strong>Dhul-Hijjah</strong> 🌙 — sacred; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">first 10 days</a>, Hajj &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Eid al-Adha</a>.</li>
+  <li><strong>Muharram</strong> 🌙 — "the forbidden/sacred". The sacred month that opens the year: <a href="/_/blog/menjelaskan-tahun-baru-islam-ke-anak/">Islamic new year</a> &amp; <a href="/_/blog/puasa-asyura-untuk-anak/">the Ashura fast</a>.</li>
+  <li><strong>Safar</strong> — "empty". <a href="/_/blog/safar-bukan-bulan-sial-untuk-anak/">Not an unlucky month</a> — a time to teach tawakkul.</li>
+  <li><strong>Rabi' al-Awwal</strong> — "first spring". The birth month of the <a href="/_/blog/maulid-mengenalkan-rasulullah-pada-anak/">Prophet ﷺ</a>.</li>
+  <li><strong>Rabi' al-Akhir</strong> — "second spring". A quiet month to <a href="/_/blog/rabiul-akhir-menjaga-kebiasaan-baik/">keep good habits (istiqamah)</a>.</li>
+  <li><strong>Jumada al-Awwal</strong> — "first frozen month". Learning to <a href="/_/blog/jumadil-awal-belajar-berani-berbuat-baik/">bravely stand for good</a>.</li>
+  <li><strong>Jumada al-Akhir</strong> — "second frozen month". Remembering <a href="/_/blog/jumadil-akhir-sahabat-setia-abu-bakar/">Abu Bakr As-Siddiq, the loyal friend</a>.</li>
+  <li><strong>Rajab</strong> 🌙 — "to honor". Sacred; the <a href="/_/blog/isra-miraj-untuk-anak/">Isra & Mi'raj</a>.</li>
+  <li><strong>Sha'ban</strong> — "to scatter". <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">Preparing for Ramadan</a>; also <a href="/_/blog/nisfu-syaban/">mid-Sha'ban</a>.</li>
+  <li><strong>Ramadan</strong> — "to burn (away sins)". The month of fasting &amp; <a href="/_/blog/lailatul-qadar-untuk-anak/">Laylatul Qadr</a>.</li>
+  <li><strong>Shawwal</strong> — "to lift/raise". <a href="/_/blog/idul-fitri-untuk-anak/">Eid al-Fitr</a> &amp; the <a href="/_/blog/puasa-syawal-untuk-anak/">six days of Shawwal</a>.</li>
+  <li><strong>Dhul-Qa'dah</strong> 🌙 — "the one of rest" (a pause from war). Sacred; <a href="/_/blog/dzulqadah-bulan-haram-cinta-damai/">loving peace</a>.</li>
+  <li><strong>Dhul-Hijjah</strong> 🌙 — "the one of Hajj". Sacred; <a href="/_/blog/10-hari-dzulhijjah-bareng-anak/">first 10 days</a>, Hajj &amp; <a href="/_/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/">Eid al-Adha</a>.</li>
 </ol>
 
 <h2>The four sacred months</h2>
-<p>The four honored months are <strong>Dhul-Qa'dah, Dhul-Hijjah, Muharram, and Rajab</strong>. In them, Muslims are encouraged to do more good and avoid wrongdoing.</p>
+<p>The four honored months are <strong>Dhul-Qa'dah, Dhul-Hijjah, Muharram, and Rajab</strong> (three in a row, one apart). In them, Muslims are encouraged to do more good and avoid wrongdoing all the more, since even sins weigh heavier.</p>
 
-<p>See the full calendar with dates at <a href="/_/kalender/">Islamic Calendar</a>.</p>`,
+<h2>Every month has its wisdom</h2>
+<p>Not every month has a festival — and that's by design. The "quiet" months like Rabi' al-Akhir, Jumada al-Awwal, and Jumada al-Akhir teach children that goodness doesn't wait for a big occasion. That's exactly where we train small, consistent daily deeds.</p>
+
+<h2>How to use this calendar with your child</h2>
+<ul>
+  <li><strong>Mark the current month.</strong> Show which month we're in and what makes it special.</li>
+  <li><strong>One deed per month.</strong> Choose one good habit to keep all month long.</li>
+  <li><strong>Tell the meaning.</strong> A month's name sparks curiosity and sticks in memory.</li>
+</ul>
+
+<p>See the full calendar with dates at <a href="/_/kalender/">Islamic Calendar</a>, and the year-round <a href="/_/blog/kalender-puasa-sunnah/">sunnah fasting calendar</a>.</p>`,
     },
     tags: ["kalender-islam", "hijriah", "edukasi-anak", "panduan"],
     published: "2026-06-22",

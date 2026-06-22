@@ -1391,6 +1391,198 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   //  lesson and a gentle Islamic anchor. (kind: "story")
   // ═══════════════════════════════════════════════════════════════════
   {
+    slug: "stoples-liburan-baby-mo",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-22",
+    title: { id: "Stoples Liburan Baby Mo", en: "Baby Mo's Holiday Jar" },
+    hook: {
+      id: "Hari pertama libur, Baby Mo berkata, \"Bosaaan.\" Lalu Umi mengeluarkan sebuah stoples ajaib berisi kertas-kertas kecil.",
+      en: "On the first day of the break, Baby Mo said, \"I'm booored.\" Then Umi brought out a magic jar full of little folded papers.",
+    },
+    body: {
+      id: `Hari pertama libur sekolah, matahari bersinar cerah, tapi Baby Mo justru berguling-guling di sofa sambil mengeluh, "Bosaaan. Mau ngapain, Umi?"
+
+Baby Ais menirukan kakaknya, ikut berguling, "Bosaaan juga."
+
+Umi tersenyum. Ia masuk ke dapur dan kembali membawa sebuah stoples kaca yang penuh dengan gulungan kertas kecil berwarna-warni. "Ini," katanya, "Stoples Liburan. Setiap kertas ada satu kejutan kegiatan. Tapi ada satu aturan: setiap kegiatan kita mulai dengan… apa hayo?"
+
+"Bismillah!" seru Baby Mo dan Baby Ais bersamaan.
+
+"Pintar!" Umi mengangguk. "Ayo, siapa yang mau ambil pertama?"
+
+Baby Mo melompat. Tangannya yang mungil mengaduk-aduk stoples, lalu menarik satu gulungan. Ia membukanya pelan-pelan, seperti membuka harta karun. "Me… na… nam… biji!" ejanya.
+
+Maka pagi itu mereka menanam biji kacang hijau di gelas plastik bekas. "Bismillah," kata Baby Mo sebelum menaruh bijinya di atas kapas basah. "Tumbuh yang tinggi, ya," bisik Baby Ais pada bijinya, seakan biji itu bisa mendengar.
+
+Siangnya, kertas kedua bertuliskan "Telepon Nenek". Baby Mo bercerita panjang lebar tentang bijinya, dan suara Nenek di seberang tertawa hangat. "Itu namanya silaturahmi," kata Umi. "Allah suka kalau kita menyambung kasih sayang dengan keluarga."
+
+Hari-hari berikutnya, stoples itu seperti tak pernah kehabisan kejutan. Ada "Hari Membaca" — mereka meringkuk di bawah selimut sambil mendengar kisah para nabi. Ada "Bantu Umi" — Baby Ais melap meja sampai mengkilap, dan Baby Mo membereskan mainannya sambil bernyanyi. Ada "Sedekah Kecil" — mereka memasukkan beberapa koin ke kotak amal masjid, dan dada Baby Mo terasa hangat dengan cara yang lucu.
+
+Suatu sore, kertas yang keluar bertuliskan "Lihat Ciptaan Allah". Mereka pergi ke taman. Baby Mo menengadah memandang awan yang berarak seperti domba-domba putih. "Umi, yang bikin awan siapa?" tanyanya.
+
+"Allah," jawab Umi.
+
+"Yang bikin angin?"
+
+"Allah."
+
+"Yang bikin… Baby Ais bawel?" Baby Mo terkikik, dan Baby Ais mengejarnya keliling taman sambil tertawa.
+
+Malam terakhir liburan, biji kacang hijau mereka sudah tumbuh menjadi tunas hijau mungil yang menjulur ke arah jendela. Baby Mo memandanginya takjub. Liburan yang tadinya terasa "bosaaan" ternyata penuh — bukan penuh layar dan teriakan, tapi penuh tawa, biji yang tumbuh, dan Bismillah di setiap awalnya.
+
+"Umi," kata Baby Mo sambil menguap, "besok masih ada kertasnya?"
+
+Umi menyelimutinya. "Selalu ada, sayang. Karena hari yang dimulai bersama Allah, tidak pernah benar-benar membosankan."
+
+> *Sebaik-baik bekal liburan bukan mainan baru, tapi waktu bersama yang dimulai dengan nama Allah.*
+
+Sekarang, yuk buat Stoples Liburan-mu sendiri bersama si kecil. Tulis kegiatan-kegiatan kecil, gulung, dan masukkan ke stoples. Jangan lupa: setiap kegiatan dimulai dengan "Bismillah!" 🫙✨`,
+      en: `On the first day of the school holidays, the sun shone bright — but Baby Mo just rolled around on the sofa, groaning, "I'm booored. What can we do, Umi?"
+
+Baby Ais copied her brother, rolling too. "Booored as well."
+
+Umi smiled. She went to the kitchen and came back with a glass jar full of little colourful rolled-up papers. "Here," she said, "the Holiday Jar. Each paper has one surprise activity. But there's one rule: every activity we begin with… what was it again?"
+
+"Bismillah!" cried Baby Mo and Baby Ais together.
+
+"Clever!" Umi nodded. "Now, who wants to pick first?"
+
+Baby Mo leapt up. His tiny hands stirred the jar, then pulled out a roll. He opened it slowly, like opening treasure. "Plant… a… seed!" he read.
+
+So that morning they planted mung beans in an old plastic cup. "Bismillah," said Baby Mo before setting his bean on the damp cotton. "Grow nice and tall, okay," Baby Ais whispered to her bean, as if it could hear.
+
+In the afternoon, the second paper said "Call Grandma." Baby Mo told a long story about his bean, and Grandma's voice laughed warmly down the line. "That's called keeping family ties," said Umi. "Allah loves it when we keep love flowing between family."
+
+In the days that followed, the jar never seemed to run out of surprises. There was "Reading Day" — they curled up under a blanket listening to stories of the prophets. There was "Help Umi" — Baby Ais wiped the table until it gleamed, and Baby Mo tidied his toys while singing. There was "A Small Charity" — they slipped a few coins into the mosque donation box, and Baby Mo's chest felt warm in a funny way.
+
+One evening, the paper read "Look at Allah's Creation." They went to the park. Baby Mo tilted his head back at the clouds drifting like little white sheep. "Umi, who made the clouds?" he asked.
+
+"Allah," said Umi.
+
+"Who made the wind?"
+
+"Allah."
+
+"Who made… Baby Ais so chatty?" Baby Mo giggled, and Baby Ais chased him around the park, laughing.
+
+On the last night of the break, their mung beans had sprouted into tiny green shoots reaching for the window. Baby Mo stared in wonder. The holiday that once felt so "booored" turned out to be full — not full of screens and shouting, but full of laughter, a growing seed, and a Bismillah at the start of each thing.
+
+"Umi," said Baby Mo with a yawn, "is there still a paper for tomorrow?"
+
+Umi tucked him in. "There always is, dear. Because a day begun with Allah is never truly boring."
+
+> *The best holiday provision isn't a new toy, but time spent together that begins with the name of Allah.*
+
+Now, let's make your own Holiday Jar with your little one. Write small activities, roll them up, and drop them in the jar. Don't forget: every activity begins with "Bismillah!" 🫙✨`,
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Liburan yang berkesan bukan soal banyaknya layar, tapi waktu bersama yang sederhana — dan setiap kegiatan dimulai dengan Bismillah.",
+      en: "A memorable holiday isn't about more screen time, but simple time together — and every activity begins with Bismillah.",
+    },
+    tags: ["liburan", "keluarga", "bersyukur", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "teman-baru-di-kelas-baru",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-alright.png",
+    published: "2026-06-21",
+    title: { id: "Teman Baru di Kelas Baru", en: "A New Friend in a New Class" },
+    hook: {
+      id: "Baby Mo naik ke kelas yang lebih besar. Tapi pagi itu kakinya terasa berat — bagaimana kalau tidak ada yang mau berteman dengannya?",
+      en: "Baby Mo is moving up to a bigger class. But that morning his feet felt heavy — what if no one wants to be his friend?",
+    },
+    body: {
+      id: `Hari ini istimewa. Baby Mo tidak lagi pergi ke kelompok bermain yang kecil dan akrab itu — hari ini ia naik ke kelas yang lebih besar, kelas anak-anak yang sudah lebih besar. Taman Kanak-kanak!
+
+Tapi anehnya, pagi itu kaki Baby Mo terasa berat seperti diisi pasir. Ia berpegangan erat pada ujung baju Umi di depan gerbang sekolah yang baru.
+
+"Umi," bisiknya, "bagaimana kalau teman-teman lamaku tidak ada di sini? Bagaimana kalau… tidak ada yang mau bermain denganku?"
+
+Umi berjongkok. Ia merapikan rambut Baby Mo yang sedikit berantakan. "Dengar, jagoan. Dulu teman-teman lamamu juga awalnya orang asing, kan? Lalu jadi sahabat. Begitu juga teman-teman barumu nanti."
+
+Baby Mo menunduk, belum yakin.
+
+"Umi ajari satu rahasia," lanjut Umi. "Tahu cara paling mudah membuka pintu hati seseorang? Ucapkan salam. 'Assalamualaikum.' Artinya, 'semoga keselamatan untukmu'. Itu doa, sayang. Kamu mendoakan teman barumu sebelum kalian sempat saling kenal."
+
+Baby Mo mengangkat wajahnya sedikit. "Cuma… salam?"
+
+"Cuma salam. Dan satu senyum. Bismillah, ya."
+
+Baby Mo menarik napas dalam-dalam, seperti hendak menyelam. "Bismillah," gumamnya. Lalu ia melangkah masuk.
+
+Di dalam, ada seorang anak laki-laki yang duduk sendirian di pojok, memeluk lututnya. Wajahnya murung. Sepertinya ia juga sedang berpikir, "bagaimana kalau tidak ada yang mau berteman denganku?"
+
+Baby Mo teringat rahasia Umi. Jantungnya berdebar. Ia berjalan mendekat, pelan-pelan, lalu dengan suara yang sedikit gemetar berkata, "Assalamualaikum. Aku Baby Mo. Mau main bareng?"
+
+Anak itu mendongak. Matanya yang tadi sendu perlahan berbinar. "Wa… waalaikumsalam," jawabnya. "Aku Faiz." Dan ia tersenyum — senyum lega seorang anak yang baru saja ditemukan.
+
+Ternyata, di balik wajah murung tadi, Faiz hanya butuh satu orang yang berani menyapa lebih dulu.
+
+Hari itu mereka membangun menara balok bersama, berbagi krayon, dan tertawa sampai Bu Guru harus mengingatkan agar tidak terlalu ramai. Saat dijemput, Baby Mo berlari ke arah Umi dengan wajah berseri-seri.
+
+"Umi! Rahasianya berhasil! Aku punya teman baru namanya Faiz! Tadinya dia sedih sendirian, tapi aku ucapkan salam dulu — seperti kata Umi!"
+
+Umi memeluknya erat. "Masya Allah. Lihat? Satu salam kecilmu tadi bukan cuma membuatmu punya teman. Tapi juga membuat hari Faiz jadi lebih cerah."
+
+Baby Mo tersenyum bangga. Ternyata, kelas baru itu tidak menakutkan. Ia hanya butuh keberanian sebesar satu kata: salam.
+
+> *Sebarkanlah salam, niscaya kalian saling mencintai.*
+
+Sekarang, kalau si kecil bertemu teman baru besok, ajak ia mencoba rahasia Baby Mo: ucapkan "Assalamualaikum" dengan satu senyum. Pintu pertemanan akan terbuka. 🤝🌟`,
+      en: `Today was special. Baby Mo wasn't going to that small, cosy playgroup anymore — today he was moving up to a bigger class, the class for older children. Kindergarten!
+
+But strangely, that morning Baby Mo's feet felt heavy, as if filled with sand. He clung tightly to the hem of Umi's dress in front of the new school gate.
+
+"Umi," he whispered, "what if my old friends aren't here? What if… no one wants to play with me?"
+
+Umi crouched down. She smoothed Baby Mo's slightly messy hair. "Listen, champ. Your old friends were strangers at first too, weren't they? Then they became best friends. Your new friends will be just the same."
+
+Baby Mo looked down, not yet convinced.
+
+"Let me teach you a secret," Umi went on. "Do you know the easiest way to open someone's heart? Give the greeting of peace. 'Assalamu'alaikum.' It means, 'may peace be upon you.' That's a prayer, dear. You're praying for your new friend before you even know each other."
+
+Baby Mo lifted his face a little. "Just… a greeting?"
+
+"Just a greeting. And one smile. Say Bismillah."
+
+Baby Mo took a deep breath, as if about to dive underwater. "Bismillah," he murmured. Then he stepped inside.
+
+Inside, there was a little boy sitting alone in the corner, hugging his knees. His face was gloomy. He seemed to be thinking the very same thing: "what if no one wants to be my friend?"
+
+Baby Mo remembered Umi's secret. His heart pounded. He walked closer, slowly, then in a slightly trembling voice said, "Assalamu'alaikum. I'm Baby Mo. Want to play together?"
+
+The boy looked up. His once-sad eyes slowly lit up. "Wa… waalaikumussalam," he answered. "I'm Faiz." And he smiled — the relieved smile of a child who had just been found.
+
+It turned out that behind that gloomy face, Faiz had only needed one person brave enough to say hello first.
+
+That day they built a block tower together, shared crayons, and laughed until the teacher had to remind them not to be too loud. At pick-up time, Baby Mo ran toward Umi, his face beaming.
+
+"Umi! The secret worked! I have a new friend named Faiz! He was sad and alone, but I gave the greeting first — just like you said!"
+
+Umi hugged him tight. "Masha'Allah. See? That one little greeting didn't just get you a friend. It made Faiz's whole day brighter too."
+
+Baby Mo smiled proudly. It turned out the new class wasn't scary at all. He had only needed courage the size of one word: a greeting.
+
+> *Spread the greeting of peace, and you will love one another.*
+
+Now, if your little one meets a new friend tomorrow, invite them to try Baby Mo's secret: say "Assalamu'alaikum" with a smile. The door to friendship will open. 🤝🌟`,
+    },
+    anchor: { type: "doa", slug: "mengucap-salam" },
+    takeaway: {
+      id: "Mengucap salam lebih dulu adalah keberanian kecil yang membuka pintu pertemanan — sekaligus doa kebaikan untuk teman baru.",
+      en: "Greeting first is a small act of courage that opens the door to friendship — and a prayer of good for a new friend.",
+    },
+    tags: ["persahabatan", "salam", "sekolah", "keberanian", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
     slug: "bismillah-dulu",
     surahs: ["al-fatihah"],
     kind: "story",
