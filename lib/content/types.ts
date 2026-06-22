@@ -127,6 +127,8 @@ export type BlogPost = {
   /** Person slug — used to look up byline + JSON-LD author */
   author: string;
   reviewedBy?: string;
+  /** Optional YouTube video id — renders an embed + VideoObject schema */
+  youtube?: string;
   /** Optional kit for cross-channel content multiplication */
   kit?: BlogKit;
   /** Optional FAQ — drives both visual section and FAQPage schema */

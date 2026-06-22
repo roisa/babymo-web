@@ -12,8 +12,10 @@ import {
   blogPostingSchema,
   blogFaqSchema,
   breadcrumbSchema,
+  videoObjectSchema,
   graph,
 } from "@/lib/seo/schemas";
+import { getVideoById } from "@/lib/youtube/loader";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
 import { Byline } from "@/components/Byline";
@@ -91,6 +93,31 @@ export default async function BlogDetail({
           </div>
         </header>
 
+        {post.youtube && (
+          <figure className="mb-10">
+            <div className="relative overflow-hidden rounded-2xl border border-hairline bg-paper-2" style={{ paddingTop: "56.25%" }}>
+              <iframe
+                className="absolute inset-0 h-full w-full"
+                src={`https://www.youtube-nocookie.com/embed/${post.youtube}`}
+                title={post.title[l]}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+            <figcaption className="mt-2 text-center text-xs text-whisper">
+              <a
+                href="https://www.youtube.com/@babymo.official?sub_confirmation=1"
+                target="_blank"
+                rel="noopener"
+                className="font-semibold text-sage-deep hover:underline"
+              >
+                {l === "id" ? "▶ Tonton & subscribe Baby Mo di YouTube" : "▶ Watch & subscribe to Baby Mo on YouTube"}
+              </a>
+            </figcaption>
+          </figure>
+        )}
+
         <article
           className="prose"
           dangerouslySetInnerHTML={{ __html: renderBody(post.body[l], l) }}
@@ -141,6 +168,16 @@ export default async function BlogDetail({
           ]),
           blogPostingSchema(l, post),
           ...(blogFaqSchema(l, post) ? [blogFaqSchema(l, post)!] : []),
+          ...(post.youtube
+            ? [
+                videoObjectSchema(l, {
+                  id: post.youtube,
+                  name: getVideoById(post.youtube)?.title ?? post.title[l],
+                  description: post.excerpt[l],
+                  uploadDate: getVideoById(post.youtube)?.publishedAt,
+                }),
+              ]
+            : []),
         )}
       />
     </>
