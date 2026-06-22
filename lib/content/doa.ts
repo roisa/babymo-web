@@ -12,15 +12,15 @@ import type { Doa } from "./types";
 export const doaList: Doa[] = [
   {
     slug: "sebelum-tidur",
-    arabic: "بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا",
-    transliteration: "Bismika Allahumma amutu wa ahya",
+    arabic: "بِاسْمِكَ اللَّهُمَّ أَحْيَا وَبِاسْمِكَ أَمُوتُ",
+    transliteration: "Bismika Allahumma ahya wa bismika amutu",
     title: {
       id: "Doa Sebelum Tidur",
       en: "Dua Before Sleeping",
     },
     translation: {
-      id: "Dengan nama-Mu ya Allah, aku mati dan aku hidup.",
-      en: "In Your name, O Allah, I die and I live.",
+      id: "Dengan nama-Mu ya Allah aku hidup dan dengan nama-Mu aku mati.",
+      en: "With Your name, O Allah, I live and with Your name I die.",
     },
     context: {
       id: "Dibaca anak ketika hendak tidur, sebagai pengingat bahwa hidup dan mati di tangan Allah.",
