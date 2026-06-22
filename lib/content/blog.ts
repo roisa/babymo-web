@@ -12,6 +12,274 @@ import type { BlogPost } from "./types";
  *   - Reading time ≈ words ÷ 230.
  */
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "lagu-bismillah-dulu",
+    title: {
+      id: "Lirik Lagu “Bismillah Dulu” — Biasakan Anak Mengawali dengan Bismillah",
+      en: "“Bismillah Dulu” Song Lyrics — Helping Kids Begin Everything with Bismillah",
+    },
+    excerpt: {
+      id: "Lagu ceria untuk menanamkan satu kebiasaan kecil yang besar maknanya: mengucap bismillah sebelum makan, minum, bermain, belajar, dan tidur. Lengkap dengan lirik dan cara memakainya di rumah.",
+      en: "A cheerful song that plants one small, meaningful habit: saying bismillah before eating, drinking, playing, learning, and sleeping. With full lyrics and how to use it at home.",
+    },
+    body: {
+      id: `<p>Anak-anak belajar paling cepat lewat hal yang menyenangkan — dan lagu adalah salah satu cara terbaik menanamkan kebiasaan baik. Lagu <strong>“Bismillah Dulu”</strong> mengajak anak mengucap <em>bismillah</em> sebelum memulai apa pun: makan, minum, bermain, belajar, sampai tidur.</p>
+
+<h2>Kenapa “Bismillah dulu”?</h2>
+<p>Mengucap <em>bismillah</em> (“dengan nama Allah”) sebelum berbuat sesuatu mengajarkan anak bahwa setiap kegiatan kecil pun dimulai dengan mengingat Allah. Rasulullah ﷺ menganjurkan membaca bismillah sebelum makan, dan adab ini bisa anak bawa ke seluruh harinya.</p>
+<p>Buat anak, manfaatnya sederhana tapi besar: satu jeda kecil, satu tarikan napas, sebelum bertindak. Kebiasaan ini menumbuhkan kesadaran dan ketenangan sejak dini.</p>
+
+<div class="bmlg-stage" aria-hidden="true">
+  <div class="bmlg-ar">بِسْمِ اللّٰه</div>
+  <div class="bmlg-ribbon">Bismillah dulu!</div>
+  <div class="bmlg-row">
+    <span class="bmlg-act" style="--i:0"><span class="bmlg-ico">\u{1F37D}\u{FE0F}</span><b>makan</b></span>
+    <span class="bmlg-act" style="--i:1"><span class="bmlg-ico">\u{1F95B}</span><b>minum</b></span>
+    <span class="bmlg-act" style="--i:2"><span class="bmlg-ico">\u{1F9E9}</span><b>main</b></span>
+    <span class="bmlg-act" style="--i:3"><span class="bmlg-ico">\u{1F4D6}</span><b>belajar</b></span>
+    <span class="bmlg-act" style="--i:4"><span class="bmlg-ico">\u{1F634}</span><b>tidur</b></span>
+  </div>
+</div>
+<style>
+.bmlg-stage{margin-top:1.4em;padding:22px 16px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-align:center;}
+.bmlg-ar{font-family:'Amiri Quran','Amiri',serif;font-size:30px;color:var(--color-sage-deep);line-height:1.4;}
+.bmlg-ribbon{display:inline-block;margin-top:6px;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#3FD08C,#1FA971);padding:7px 18px;border-radius:999px;box-shadow:0 6px 16px -6px rgba(31,169,113,.5);animation:bmlg-pop 2.6s ease-in-out infinite;}
+.bmlg-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:18px;}
+.bmlg-act{display:flex;flex-direction:column;align-items:center;gap:4px;width:60px;opacity:.4;transform:scale(.9);animation:bmlg-glow 5s ease-in-out infinite;animation-delay:calc(var(--i)*1s);}
+.bmlg-ico{font-size:30px;line-height:1;}
+.bmlg-act b{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--color-whisper);}
+@keyframes bmlg-pop{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.05)}}
+@keyframes bmlg-glow{0%{opacity:1;transform:scale(1.16)}15%{opacity:1;transform:scale(1.12)}26%,100%{opacity:.4;transform:scale(.92)}}
+@media(prefers-reduced-motion:reduce){.bmlg-ribbon,.bmlg-act{animation:none!important}.bmlg-act{opacity:1;transform:none}}
+</style>
+
+<h2>Lirik “Bismillah Dulu”</h2>
+<p class="bmlg-credit"><em>Ciptaan: Salman, Yaniko, Felly</em></p>
+<div class="bmlg-lyrics">
+<p>Bismillah dulu, Bismillah dulu<br>Mau makan, Bismillah dulu<br>Mau minum, Bismillah dulu<br>Bismillah (Prok 2x), Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Mau main, Bismillah dulu<br>Mau belajar, Bismillah dulu<br>Mau sekolah, Bismillah dulu<br>Bismillah (Prok 2x), Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Mau doa, Bismillah dulu<br>Mau tidur, Bismillah dulu<br>Semuanya, Baca Bismillah<br>Semuanya, apa? Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Yuk kita baca apa? Bismillah<br>Yuk kita baca apa? Bismillah<br>Yuk kita baca apa? Bismillah</p>
+</div>
+<style>
+.bmlg-credit{margin-top:.2em;font-size:13px;color:var(--color-whisper);}
+.bmlg-lyrics{margin-top:1em;padding:20px 18px;border-radius:18px;background:var(--color-brave-soft);border:1px solid var(--color-hairline);text-align:center;font-weight:600;color:var(--color-ink);line-height:1.9;}
+.bmlg-lyrics p{margin:0;}
+.bmlg-dot{margin:10px 0!important;color:var(--color-sage);letter-spacing:6px;}
+</style>
+
+<h2>Cara memakai lagu ini di rumah</h2>
+<ol>
+  <li><strong>Nyanyikan saat momennya tiba.</strong> Sebelum anak makan, nyanyikan baris “Mau makan, Bismillah dulu” — lalu ucapkan bismillah bersama. Lagu jadi penanda, bukan sekadar hiburan.</li>
+  <li><strong>Pakai bagian “Prok 2x” untuk bertepuk.</strong> Tepuk tangan dua kali membuat anak ikut aktif dan menandai ritme — cocok untuk balita yang belum lancar bicara.</li>
+  <li><strong>Tanya-jawab di akhir.</strong> Bagian “Yuk kita baca apa? Bismillah” bisa jadi permainan: orang tua bertanya, anak menjawab. Ulangi dengan ceria.</li>
+  <li><strong>Konsisten, bukan sempurna.</strong> Cukup satu-dua kegiatan dulu (misalnya makan dan tidur). Setelah terbiasa, tambah yang lain.</li>
+</ol>
+
+<p>Mau lanjut? Lihat <a href="/_/doa/">kumpulan doa harian anak</a>, atau ajak anak bermain sambil belajar di <a href="/_/permainan/">permainan Baby Mo</a>.</p>`,
+      en: `<p>Children learn fastest through joy — and songs are one of the best ways to plant good habits. The song <strong>“Bismillah Dulu”</strong> (“Bismillah First”) invites kids to say <em>bismillah</em> before they start anything: eating, drinking, playing, learning, and sleeping.</p>
+
+<h2>Why “Bismillah first”?</h2>
+<p>Saying <em>bismillah</em> (“in the name of Allah”) before doing something teaches a child that even small activities begin by remembering Allah. The Prophet ﷺ encouraged saying bismillah before eating, and a child can carry this manner through the whole day.</p>
+<p>For a child the benefit is simple but big: one small pause, one breath, before acting — growing awareness and calm from an early age.</p>
+
+<div class="bmlg-stage" aria-hidden="true">
+  <div class="bmlg-ar">بِسْمِ اللّٰه</div>
+  <div class="bmlg-ribbon">Bismillah first!</div>
+  <div class="bmlg-row">
+    <span class="bmlg-act" style="--i:0"><span class="bmlg-ico">\u{1F37D}\u{FE0F}</span><b>eat</b></span>
+    <span class="bmlg-act" style="--i:1"><span class="bmlg-ico">\u{1F95B}</span><b>drink</b></span>
+    <span class="bmlg-act" style="--i:2"><span class="bmlg-ico">\u{1F9E9}</span><b>play</b></span>
+    <span class="bmlg-act" style="--i:3"><span class="bmlg-ico">\u{1F4D6}</span><b>learn</b></span>
+    <span class="bmlg-act" style="--i:4"><span class="bmlg-ico">\u{1F634}</span><b>sleep</b></span>
+  </div>
+</div>
+<style>
+.bmlg-stage{margin-top:1.4em;padding:22px 16px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-align:center;}
+.bmlg-ar{font-family:'Amiri Quran','Amiri',serif;font-size:30px;color:var(--color-sage-deep);line-height:1.4;}
+.bmlg-ribbon{display:inline-block;margin-top:6px;font-weight:800;font-size:14px;color:#fff;background:linear-gradient(135deg,#3FD08C,#1FA971);padding:7px 18px;border-radius:999px;box-shadow:0 6px 16px -6px rgba(31,169,113,.5);animation:bmlg-pop 2.6s ease-in-out infinite;}
+.bmlg-row{display:flex;justify-content:center;gap:6px;flex-wrap:wrap;margin-top:18px;}
+.bmlg-act{display:flex;flex-direction:column;align-items:center;gap:4px;width:60px;opacity:.4;transform:scale(.9);animation:bmlg-glow 5s ease-in-out infinite;animation-delay:calc(var(--i)*1s);}
+.bmlg-ico{font-size:30px;line-height:1;}
+.bmlg-act b{font-size:10.5px;font-weight:800;text-transform:uppercase;letter-spacing:.4px;color:var(--color-whisper);}
+@keyframes bmlg-pop{0%,100%{transform:translateY(0) scale(1)}50%{transform:translateY(-3px) scale(1.05)}}
+@keyframes bmlg-glow{0%{opacity:1;transform:scale(1.16)}15%{opacity:1;transform:scale(1.12)}26%,100%{opacity:.4;transform:scale(.92)}}
+@media(prefers-reduced-motion:reduce){.bmlg-ribbon,.bmlg-act{animation:none!important}.bmlg-act{opacity:1;transform:none}}
+</style>
+
+<h2>Lyrics (original Indonesian)</h2>
+<p class="bmlg-credit"><em>Written by: Salman, Yaniko, Felly</em></p>
+<div class="bmlg-lyrics">
+<p>Bismillah dulu, Bismillah dulu<br>Mau makan, Bismillah dulu<br>Mau minum, Bismillah dulu<br>Bismillah (Clap 2x), Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Mau main, Bismillah dulu<br>Mau belajar, Bismillah dulu<br>Mau sekolah, Bismillah dulu<br>Bismillah (Clap 2x), Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Mau doa, Bismillah dulu<br>Mau tidur, Bismillah dulu<br>Semuanya, Baca Bismillah<br>Semuanya, apa? Bismillah</p>
+<p class="bmlg-dot">· · ·</p>
+<p>Yuk kita baca apa? Bismillah<br>Yuk kita baca apa? Bismillah<br>Yuk kita baca apa? Bismillah</p>
+</div>
+<style>
+.bmlg-credit{margin-top:.2em;font-size:13px;color:var(--color-whisper);}
+.bmlg-lyrics{margin-top:1em;padding:20px 18px;border-radius:18px;background:var(--color-brave-soft);border:1px solid var(--color-hairline);text-align:center;font-weight:600;color:var(--color-ink);line-height:1.9;}
+.bmlg-lyrics p{margin:0;}
+.bmlg-dot{margin:10px 0!important;color:var(--color-sage);letter-spacing:6px;}
+</style>
+
+<p><em>Meaning:</em> Before eating, drinking, playing, learning, going to school, making dua, and sleeping — say bismillah first. Before everything, what do we read? Bismillah.</p>
+
+<h2>How to use this song at home</h2>
+<ol>
+  <li><strong>Sing it at the moment.</strong> Right before your child eats, sing “Mau makan, Bismillah dulu” — then say bismillah together. The song becomes a cue, not just entertainment.</li>
+  <li><strong>Use the “Clap 2x” part.</strong> Two claps get your child physically involved and mark the rhythm — great for toddlers still building speech.</li>
+  <li><strong>Turn the ending into call-and-response.</strong> “What do we read? Bismillah” — you ask, the child answers. Repeat with a smile.</li>
+  <li><strong>Consistent, not perfect.</strong> Start with one or two activities (say, eating and sleeping). Add more once it sticks.</li>
+</ol>
+
+<p>Keep going: browse the <a href="/_/doa/">daily duas for children</a>, or play and learn with <a href="/_/permainan/">Baby Mo games</a>.</p>`,
+    },
+    tags: ["bismillah", "lagu", "adab", "balita", "doa"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "salman",
+  },
+  {
+    slug: "kebiasaan-kecil-yang-tumbuh-besar",
+    title: {
+      id: "Kebiasaan Kecil yang Tumbuh Besar: Cara Menanam Akhlak pada Anak",
+      en: "Small Habits That Grow Big: Planting Good Character in Children",
+    },
+    excerpt: {
+      id: "Karakter anak tidak dibangun dalam satu hari besar, tapi dalam ratusan hari biasa. Sebuah ilustrasi bergerak tentang bagaimana satu kebiasaan kecil tumbuh menjadi akhlak — dan cara menanamnya.",
+      en: "A child’s character isn’t built in one big day, but across hundreds of ordinary ones. An animated look at how one small habit grows into character — and how to plant it.",
+    },
+    body: {
+      id: `<p>Karakter anak tidak dibangun dalam satu hari besar, melainkan dalam ratusan hari biasa. Satu kebiasaan kecil yang diulang — mengucap bismillah, merapikan mainan, memeluk orang tua sebelum tidur — perlahan tumbuh menjadi akhlak.</p>
+
+<div class="htree-stage" aria-hidden="true">
+  <div class="htree-sway">
+  <svg viewBox="0 0 260 200" class="htree-svg" role="img">
+    <ellipse cx="130" cy="184" rx="92" ry="12" fill="#000" opacity=".06"/>
+    <ellipse cx="130" cy="182" rx="78" ry="10" fill="#7ace7e"/>
+    <g class="htree-tree">
+      <path d="M130 182 C128 150 132 140 130 108" stroke="#a8703f" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M130 150 C120 142 110 138 100 132" stroke="#a8703f" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M130 138 C142 132 152 128 162 124" stroke="#a8703f" stroke-width="7" fill="none" stroke-linecap="round"/>
+    </g>
+    <g>
+      <circle class="htree-leaf" style="--d:0s"  cx="130" cy="96"  r="30" fill="#5aa066"/>
+      <circle class="htree-leaf" style="--d:.12s" cx="100" cy="112" r="22" fill="#6bbf72"/>
+      <circle class="htree-leaf" style="--d:.24s" cx="162" cy="108" r="22" fill="#6bbf72"/>
+      <circle class="htree-leaf" style="--d:.36s" cx="130" cy="78"  r="24" fill="#7ace7e"/>
+      <circle class="htree-leaf" style="--d:.48s" cx="148" cy="96"  r="18" fill="#8fd98a"/>
+      <circle class="htree-leaf" style="--d:.6s"  cx="112" cy="92"  r="16" fill="#8fd98a"/>
+    </g>
+    <g fill="#ff8fb3" class="htree-fruit">
+      <circle style="--d:1.0s" cx="108" cy="104" r="5"/>
+      <circle style="--d:1.15s" cx="152" cy="98" r="5"/>
+      <circle style="--d:1.3s" cx="132" cy="86" r="5"/>
+    </g>
+  </svg>
+  </div>
+  <p class="htree-cap">Satu kebiasaan kecil, diulang setiap hari… tumbuh jadi akhlak.</p>
+</div>
+<style>
+.htree-stage{margin-top:1.4em;padding:18px 16px 14px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-align:center;}
+.htree-svg{width:100%;max-width:300px;height:auto;}
+.htree-sway{display:inline-block;transform-box:fill-box;transform-origin:50% 100%;animation:htree-sway 5s ease-in-out 1.6s infinite;}
+.htree-tree{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:htree-grow 1.1s cubic-bezier(.2,.8,.3,1) .1s forwards;}
+.htree-leaf{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:htree-pop .5s cubic-bezier(.18,.9,.32,1.4) forwards;animation-delay:calc(1s + var(--d));}
+.htree-fruit circle{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:htree-pop .5s ease-out forwards;animation-delay:var(--d);}
+.htree-cap{margin-top:6px;font-size:13.5px;font-weight:700;color:var(--color-whisper);}
+@keyframes htree-grow{to{transform:scaleY(1)}}
+@keyframes htree-pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+@keyframes htree-sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+@media(prefers-reduced-motion:reduce){.htree-sway,.htree-tree,.htree-leaf,.htree-fruit circle{animation:none!important;transform:none!important}}
+</style>
+
+<h2>Sedikit tapi rutin</h2>
+<p>Rasulullah ﷺ mengajarkan bahwa amal yang paling dicintai Allah adalah yang paling konsisten, walaupun sedikit — <strong>HR. Bukhari dan Muslim</strong>. Prinsip ini sangat cocok untuk anak: lebih baik satu kebiasaan kecil setiap hari daripada banyak aturan yang cepat ditinggalkan.</p>
+
+<h2>Cara menanam satu kebiasaan</h2>
+<ol>
+  <li><strong>Pilih SATU dulu.</strong> Jangan semua sekaligus. Misalnya: mengucap bismillah sebelum makan. Itu saja, sampai jadi otomatis.</li>
+  <li><strong>Tempelkan ke kegiatan yang sudah ada.</strong> Kebiasaan baru lebih mudah menempel pada rutinitas lama: “setelah cuci tangan, baca bismillah.”</li>
+  <li><strong>Rayakan yang kecil.</strong> Senyum, pelukan, “MasyaAllah!” — anak mengulang apa yang membuatnya merasa dihargai.</li>
+  <li><strong>Ulangi, jangan menuntut sempurna.</strong> Akan ada hari yang terlewat. Tidak apa-apa. Pohon tetap tumbuh meski satu-dua hari tak disiram.</li>
+</ol>
+
+<h2>Air dan cahaya sang kebiasaan</h2>
+<p>Pohon butuh air dan cahaya; kebiasaan anak butuh <em>contoh</em> dan <em>kehangatan</em>. Anak meniru apa yang ia lihat lebih daripada apa yang ia dengar. Saat orang tua sendiri mengawali dengan bismillah, benih itu mendapat cahayanya.</p>
+
+<p>Mulai dari yang paling ringan: <a href="/_/doa/sebelum-tidur/">doa sebelum tidur</a>, atau jelajahi <a href="/_/doa/">doa harian lainnya</a>.</p>`,
+      en: `<p>A child’s character isn’t built in one big day, but across hundreds of ordinary ones. One small habit, repeated — saying bismillah, tidying toys, a hug before bed — slowly grows into character.</p>
+
+<div class="htree-stage" aria-hidden="true">
+  <div class="htree-sway">
+  <svg viewBox="0 0 260 200" class="htree-svg" role="img">
+    <ellipse cx="130" cy="184" rx="92" ry="12" fill="#000" opacity=".06"/>
+    <ellipse cx="130" cy="182" rx="78" ry="10" fill="#7ace7e"/>
+    <g class="htree-tree">
+      <path d="M130 182 C128 150 132 140 130 108" stroke="#a8703f" stroke-width="11" fill="none" stroke-linecap="round"/>
+      <path d="M130 150 C120 142 110 138 100 132" stroke="#a8703f" stroke-width="7" fill="none" stroke-linecap="round"/>
+      <path d="M130 138 C142 132 152 128 162 124" stroke="#a8703f" stroke-width="7" fill="none" stroke-linecap="round"/>
+    </g>
+    <g>
+      <circle class="htree-leaf" style="--d:0s"  cx="130" cy="96"  r="30" fill="#5aa066"/>
+      <circle class="htree-leaf" style="--d:.12s" cx="100" cy="112" r="22" fill="#6bbf72"/>
+      <circle class="htree-leaf" style="--d:.24s" cx="162" cy="108" r="22" fill="#6bbf72"/>
+      <circle class="htree-leaf" style="--d:.36s" cx="130" cy="78"  r="24" fill="#7ace7e"/>
+      <circle class="htree-leaf" style="--d:.48s" cx="148" cy="96"  r="18" fill="#8fd98a"/>
+      <circle class="htree-leaf" style="--d:.6s"  cx="112" cy="92"  r="16" fill="#8fd98a"/>
+    </g>
+    <g fill="#ff8fb3" class="htree-fruit">
+      <circle style="--d:1.0s" cx="108" cy="104" r="5"/>
+      <circle style="--d:1.15s" cx="152" cy="98" r="5"/>
+      <circle style="--d:1.3s" cx="132" cy="86" r="5"/>
+    </g>
+  </svg>
+  </div>
+  <p class="htree-cap">One small habit, repeated daily… grows into character.</p>
+</div>
+<style>
+.htree-stage{margin-top:1.4em;padding:18px 16px 14px;border-radius:22px;background:var(--color-paper-2);border:1px solid var(--color-hairline);text-align:center;}
+.htree-svg{width:100%;max-width:300px;height:auto;}
+.htree-sway{display:inline-block;transform-box:fill-box;transform-origin:50% 100%;animation:htree-sway 5s ease-in-out 1.6s infinite;}
+.htree-tree{transform-box:fill-box;transform-origin:50% 100%;transform:scaleY(0);animation:htree-grow 1.1s cubic-bezier(.2,.8,.3,1) .1s forwards;}
+.htree-leaf{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:htree-pop .5s cubic-bezier(.18,.9,.32,1.4) forwards;animation-delay:calc(1s + var(--d));}
+.htree-fruit circle{transform-box:fill-box;transform-origin:center;transform:scale(0);animation:htree-pop .5s ease-out forwards;animation-delay:var(--d);}
+.htree-cap{margin-top:6px;font-size:13.5px;font-weight:700;color:var(--color-whisper);}
+@keyframes htree-grow{to{transform:scaleY(1)}}
+@keyframes htree-pop{0%{transform:scale(0)}70%{transform:scale(1.15)}100%{transform:scale(1)}}
+@keyframes htree-sway{0%,100%{transform:rotate(-1.5deg)}50%{transform:rotate(1.5deg)}}
+@media(prefers-reduced-motion:reduce){.htree-sway,.htree-tree,.htree-leaf,.htree-fruit circle{animation:none!important;transform:none!important}}
+</style>
+
+<h2>Little but consistent</h2>
+<p>The Prophet ﷺ taught that the deeds most beloved to Allah are the most consistent ones, even if small — <strong>narrated by Bukhari and Muslim</strong>. This fits children perfectly: one small habit every day beats many rules that are quickly abandoned.</p>
+
+<h2>How to plant one habit</h2>
+<ol>
+  <li><strong>Pick ONE first.</strong> Not everything at once. For example: bismillah before eating. Just that, until it’s automatic.</li>
+  <li><strong>Attach it to an existing routine.</strong> New habits stick best onto old ones: “after we wash hands, we say bismillah.”</li>
+  <li><strong>Celebrate small.</strong> A smile, a hug, “MashaAllah!” — children repeat what makes them feel valued.</li>
+  <li><strong>Repeat; don’t demand perfection.</strong> Days will be missed. That’s fine. A tree still grows even if it isn’t watered once or twice.</li>
+</ol>
+
+<h2>The water and light of a habit</h2>
+<p>A tree needs water and light; a child’s habit needs <em>example</em> and <em>warmth</em>. Children copy what they see more than what they hear. When parents begin with bismillah themselves, the seed gets its light.</p>
+
+<p>Start with the lightest one: the <a href="/_/doa/sebelum-tidur/">dua before sleeping</a>, or explore <a href="/_/doa/">other daily duas</a>.</p>`,
+    },
+    tags: ["kebiasaan", "parenting", "tarbiyah", "akhlak"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
   // ═════════════════════════════════════════════════════════════════
   //  MUHARRAM 1448 H series — 5 posts for the Islamic New Year window
   //  (~16 June 2026 = 1 Muharram, ~25 June = 10 Muharram / Asyura)
