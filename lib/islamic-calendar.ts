@@ -127,6 +127,19 @@ export const islamicCalendar: IslamicEvent[] = [
     parentingSlugs: ["puasa-pertama"],
   },
   {
+    id: "safar-1448",
+    hijri: "Safar 1448",
+    name: { id: "Bulan Safar", en: "Month of Safar" },
+    caption: {
+      id: "Bukan bulan sial — momen mengajarkan anak tawakal: keberkahan datang dari Allah, bukan dari tanggal.",
+      en: "Not an unlucky month — a time to teach tawakkul: blessing comes from Allah, not from a date.",
+    },
+    startISO: "2026-07-15",
+    endISO: "2026-08-14",
+    blogSlug: "safar-bukan-bulan-sial-untuk-anak",
+    doaSlugs: ["doa-pagi", "doa-petang", "perlindungan-anak"],
+  },
+  {
     id: "maulid-1448",
     hijri: "12 Rabiul Awal 1448",
     name: { id: "Maulid Nabi 1448", en: "Mawlid 1448" },
@@ -137,6 +150,45 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-08-23",
     endISO: "2026-08-27",
     blogSlug: "maulid-mengenalkan-rasulullah-pada-anak",
+    doaSlugs: ["doa-pagi", "doa-petang"],
+  },
+  {
+    id: "rabiul-akhir-1448",
+    hijri: "Rabiul Akhir 1448",
+    name: { id: "Bulan Rabiul Akhir", en: "Month of Rabi' al-Akhir" },
+    caption: {
+      id: "Bulan tanpa hari besar — waktu terbaik melatih istiqamah: amal kecil yang rutin lebih dicintai Allah.",
+      en: "A month with no major day — the best time to build istiqamah: small, consistent deeds Allah loves most.",
+    },
+    startISO: "2026-09-12",
+    endISO: "2026-10-11",
+    blogSlug: "rabiul-akhir-menjaga-kebiasaan-baik",
+    doaSlugs: ["doa-pagi", "doa-petang"],
+  },
+  {
+    id: "jumadil-awal-1448",
+    hijri: "Jumadil Awal 1448",
+    name: { id: "Bulan Jumadil Awal", en: "Month of Jumada al-Awwal" },
+    caption: {
+      id: "Bulan keberanian — dari kisah para sahabat, anak belajar berani membela kebaikan dengan tawakal.",
+      en: "A month of courage — from the Companions' example, children learn to bravely stand for good with trust in Allah.",
+    },
+    startISO: "2026-10-11",
+    endISO: "2026-11-10",
+    blogSlug: "jumadil-awal-belajar-berani-berbuat-baik",
+    doaSlugs: ["doa-keteguhan-hati", "perlindungan-anak"],
+  },
+  {
+    id: "jumadil-akhir-1448",
+    hijri: "Jumadil Akhir 1448",
+    name: { id: "Bulan Jumadil Akhir", en: "Month of Jumada al-Akhir" },
+    caption: {
+      id: "Mengenang Abu Bakar Ash-Shiddiq — sahabat paling setia: anak belajar arti setia, jujur, dan lembut hati.",
+      en: "Remembering Abu Bakr As-Siddiq, the most loyal Companion: children learn loyalty, honesty, and a gentle heart.",
+    },
+    startISO: "2026-11-10",
+    endISO: "2026-12-10",
+    blogSlug: "jumadil-akhir-sahabat-setia-abu-bakar",
     doaSlugs: ["doa-pagi", "doa-petang"],
   },
   {
@@ -223,6 +275,19 @@ export const islamicCalendar: IslamicEvent[] = [
     blogSlug: "idul-fitri-untuk-anak",
     extraBlogSlugs: ["puasa-syawal-untuk-anak", "zakat-fitrah-untuk-anak"],
     doaSlugs: ["mengucap-salam", "doa-untuk-orang-tua", "mendapat-rezeki"],
+  },
+  {
+    id: "dzulqadah-1448",
+    hijri: "Dzulqa'idah 1448",
+    name: { id: "Bulan Dzulqadah", en: "Month of Dhul-Qa'dah" },
+    caption: {
+      id: "Salah satu bulan haram — dari Perjanjian Hudaibiyah, anak belajar bahwa sabar dan cinta damai adalah kekuatan.",
+      en: "One of the sacred months — from the Treaty of Hudaybiyyah, children learn patience and loving peace are strength.",
+    },
+    startISO: "2027-04-08",
+    endISO: "2027-05-07",
+    blogSlug: "dzulqadah-bulan-haram-cinta-damai",
+    doaSlugs: ["doa-pagi", "doa-petang", "ketika-marah"],
   },
 ];
 
