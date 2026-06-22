@@ -9,6 +9,7 @@ import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { BookmarkButton } from "@/components/BookmarkButton";
+import { BookReader } from "@/components/BookReader";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
@@ -123,6 +124,19 @@ export default async function CatatanDetail({
               locale={l}
             />
           </div>
+
+          {/* Book mode — trial on a single story; roll out to all once approved. */}
+          {isStory && slug === "stoples-liburan-baby-mo" && (
+            <BookReader
+              locale={l}
+              title={n.title[l]}
+              hook={n.hook[l]}
+              body={n.body[l]}
+              takeaway={n.takeaway[l]}
+              poseSrc={n.pose ? asset(posePath(n.pose)) : null}
+              accent={["🌱", "🫙", "☁️", "✨", "🍃", "💚"]}
+            />
+          )}
         </header>
 
         <div className="catatan-body">
