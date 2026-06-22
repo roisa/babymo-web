@@ -49,9 +49,6 @@ export function Footer({ locale, currentPath }: Props) {
             <FooterLink locale={locale} href="/kalender">
               {locale === "id" ? "Kalender Islam" : "Islamic Calendar"}
             </FooterLink>
-            <FooterLink locale={locale} href="/tersimpan">
-              {locale === "id" ? "Tersimpan" : "Saved"}
-            </FooterLink>
             <FooterLink locale={locale} href="/momen">
               {locale === "id" ? "Momen" : "Moments"}
             </FooterLink>
@@ -65,6 +62,9 @@ export function Footer({ locale, currentPath }: Props) {
           </FooterCol>
 
           <FooterCol heading={dict.footer.info}>
+            <FooterLink locale={locale} href="/tersimpan">
+              {locale === "id" ? "Tersimpan" : "Saved"}
+            </FooterLink>
             <FooterLink locale={locale} href="/tentang">{dict.nav.about}</FooterLink>
             <FooterLink locale={locale} href="/tim">{locale === "id" ? "Tim & Reviewer" : "Team & Reviewers"}</FooterLink>
             <FooterLink locale={locale} href="/dukung">{dict.nav.support}</FooterLink>
