@@ -22,6 +22,8 @@ export const videoOverlay: Record<string, VideoOverlay> = {
     // "Doa Sebelum Tidur - Baby Mo" (0:32)
     category: "before-sleep",
     featured: true,
+    // The one doa featured on the homepage Momen row.
+    priority: 10,
     related: ["doa/sebelum-tidur", "parenting/sulit-tidur"],
     caption: {
       id: "Bismika Allahumma… momen tenang menutup hari bersama Baby Mo.",
@@ -31,7 +33,6 @@ export const videoOverlay: Record<string, VideoOverlay> = {
   L6bXkRuO5vc: {
     // "Doa Bangun Tidur - Baby Mo" (0:42)
     category: "morning-routine",
-    featured: true,
     related: ["doa/bangun-tidur"],
     caption: {
       id: "Alhamdulillahilladzi ahyana… mengawali pagi dengan syukur.",
@@ -41,7 +42,6 @@ export const videoOverlay: Record<string, VideoOverlay> = {
   cmK8ruUiCbA: {
     // "Doa Sebelum Makan - Baby Mo" (0:40)
     category: "daily-adab",
-    featured: true,
     related: ["doa/sebelum-makan", "parenting/adab-sehari-hari"],
     caption: {
       id: "Bismillah — satu kata, kebiasaan seumur hidup.",
@@ -59,6 +59,22 @@ export const videoOverlay: Record<string, VideoOverlay> = {
   },
 
   // ── Games + long-form ───────────────────────────────────────────
+  YXGf2TCTVKI: {
+    // "🔍 Temukan Perbedaan Gambar Bersama Baby Mo … EPISODE 6" (13:27)
+    // Latest game — featured on the homepage Momen row.
+    category: "family-activities",
+    featured: true,
+    priority: 8,
+    related: ["permainan"],
+    title: {
+      id: "Cari & Temukan Perbedaan (Episode 6)",
+      en: "Spot the Difference (Episode 6)",
+    },
+    caption: {
+      id: "Episode terbaru! Latih fokus & ketelitian si kecil — temukan semua perbedaannya bareng Baby Mo.",
+      en: "Newest episode! Build your little one's focus & attention — find every difference with Baby Mo.",
+    },
+  },
   "-4mkpvahJnE": {
     // "Cari dan Temukan Perbedaan Bareng Baby Mo … | EPISODE 2" (13:30)
     category: "family-activities",
@@ -93,7 +109,7 @@ export const videoOverlay: Record<string, VideoOverlay> = {
     category: "daily-adab",
     featured: true,
     // Pin to the front of the homepage Momen row.
-    priority: 10,
+    priority: 12,
     related: ["doa/sebelum-makan", "parenting/adab-sehari-hari"],
     title: {
       id: "Bismillah Dulu",
