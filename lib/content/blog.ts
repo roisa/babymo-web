@@ -13,6 +13,200 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "video-edukasi-anak-islami-baby-mo",
+    title: {
+      id: "Video Edukasi Anak Islami: Panduan Tontonan Baby Mo (Doa, Lagu & Game)",
+      en: "Islamic Educational Videos for Kids: A Guide to Baby Mo (Duas, Songs & Games)",
+    },
+    excerpt: {
+      id: "Bingung cari tontonan anak yang aman dan islami? Panduan ini merangkum video Baby Mo — doa harian, lagu anak, dan game edukatif — lengkap dengan manfaat dan kapan paling pas diputar.",
+      en: "Looking for safe, Islamic screen time for your child? This guide rounds up Baby Mo’s videos — daily duas, kids’ songs, and educational games — with their benefits and when to use each.",
+    },
+    body: {
+      id: `<p>Sebagai orang tua, kita ingin waktu layar anak <strong>tenang, aman, dan sejalan dengan nilai keluarga</strong> — bukan yang penuh iklan dan terlalu cepat. Baby Mo dibuat untuk itu: video doa harian, lagu anak islami, dan game edukatif yang ramah balita. Panduan ini merangkum tontonannya, manfaatnya, dan kapan paling pas diputar.</p>
+
+<div class="vrev-cards" aria-hidden="true">
+  <div class="vrev-card"><span class="vrev-em">🤲</span><b>Doa Harian</b><span>Belajar doa lewat video pendek</span></div>
+  <div class="vrev-card"><span class="vrev-em">🎵</span><b>Lagu Islami</b><span>Hafal sambil bernyanyi</span></div>
+  <div class="vrev-card"><span class="vrev-em">🧩</span><b>Game Edukatif</b><span>Latih fokus &amp; ketelitian</span></div>
+</div>
+<style>
+.vrev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:1.4em;}
+.vrev-card{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;padding:16px 8px;border-radius:18px;background:var(--color-paper-2);border:1px solid var(--color-hairline);}
+.vrev-card .vrev-em{font-size:30px;}
+.vrev-card b{font-size:13.5px;color:var(--color-ink);}
+.vrev-card span:last-child{font-size:11px;color:var(--color-whisper);line-height:1.3;}
+.vrev-uc{margin-top:1em;border:1px solid var(--color-hairline);border-radius:16px;overflow:hidden;}
+.vrev-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid var(--color-hairline);}
+.vrev-row:first-child{border-top:none;}
+.vrev-when{font-weight:700;color:var(--color-ink);font-size:14px;}
+.vrev-pick{font-size:13.5px;text-align:right;}
+@media(max-width:380px){.vrev-cards{grid-template-columns:1fr;}}
+</style>
+
+<h2>1. Doa harian anak</h2>
+<p>Video pendek (30–45 detik) yang mengajarkan satu doa lewat tingkah Baby Mo yang menggemaskan. Karena singkat, cocok dijadikan <strong>penanda rutinitas</strong>: diputar setiap kali momennya tiba.</p>
+<ul>
+  <li><a href="/_/blog/lagu-doa-sebelum-tidur-anak/">Doa Sebelum Tidur</a> — penutup hari yang menenangkan.</li>
+  <li><a href="/_/blog/lagu-doa-bangun-tidur-anak/">Doa Bangun Tidur</a> — buka hari dengan syukur.</li>
+  <li><a href="/_/blog/lagu-doa-sebelum-makan-anak/">Doa Sebelum Makan</a> dan <a href="/_/blog/lagu-doa-sesudah-makan-anak/">Doa Sesudah Makan</a> — adab di meja makan.</li>
+</ul>
+<p><strong>Manfaatnya:</strong> menanamkan kebiasaan ibadah kecil yang konsisten. Doa yang dibaca tiap hari perlahan menjadi otomatis — dan kebiasaan baik adalah fondasi akhlak.</p>
+
+<h2>2. Lagu anak islami</h2>
+<p>Melodi dan pengulangan membuat anak hafal jauh lebih cepat daripada hafalan biasa, sekaligus menambah kosakata.</p>
+<ul>
+  <li><a href="/_/blog/lagu-bismillah-dulu/">Bismillah Dulu</a> — biasakan mengawali apa pun dengan nama Allah.</li>
+  <li><a href="/_/blog/lagu-hujan-turun-rintik-rintik/">Hujan Turun Rintik-Rintik</a> — lagu hangat untuk momen bonding ayah-bunda.</li>
+</ul>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Lagu Anak Islami" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+
+<h2>3. Game cari perbedaan &amp; temukan emoji</h2>
+<p>Tidak semua waktu layar harus ramai. Seri <a href="/_/blog/cari-perbedaan-anak-baby-mo/">Cari Perbedaan &amp; Temukan Emoji</a> mengajak anak duduk tenang, mengamati, dan menemukan — melatih <strong>fokus, ketelitian, dan kesabaran</strong> tanpa terasa seperti belajar.</p>
+
+<h2>Pilih sesuai momen</h2>
+<div class="vrev-uc">
+  <div class="vrev-row"><span class="vrev-when">😴 Mau tidur</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-sebelum-tidur-anak/">Doa Sebelum Tidur</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">☀️ Bangun pagi</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-bangun-tidur-anak/">Doa Bangun Tidur</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🍽️ Waktu makan</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-sebelum-makan-anak/">Doa Makan</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🌧️ Hari hujan</span><span class="vrev-pick"><a href="/_/blog/lagu-hujan-turun-rintik-rintik/">Hujan Rintik-Rintik</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🧩 Waktu tenang</span><span class="vrev-pick"><a href="/_/blog/cari-perbedaan-anak-baby-mo/">Game Cari Perbedaan</a></span></div>
+</div>
+
+<h2>Tips waktu layar yang sehat</h2>
+<ul>
+  <li><strong>Tonton bersama.</strong> Anak belajar paling baik saat orang tua ikut menyanyi atau menunjuk layar.</li>
+  <li><strong>Pendek dan terjadwal.</strong> Video doa yang singkat membantu menjaga durasi tetap wajar.</li>
+  <li><strong>Hubungkan ke kehidupan nyata.</strong> Setelah video doa makan, langsung ajak praktik saat makan beneran.</li>
+</ul>
+
+<h2>Kenapa memilih Baby Mo</h2>
+<ul>
+  <li>Konten islami yang ramah anak — fokus pada doa, adab, dan nilai baik.</li>
+  <li>Tenang dan tidak berlebihan secara visual, cocok untuk balita.</li>
+  <li>Gratis ditonton, dan tersedia juga sebagai doa &amp; game interaktif di babymo.id.</li>
+</ul>
+
+<p>Tonton semuanya di <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">channel YouTube Baby Mo</a>, mainkan langsung di <a href="/_/permainan/">permainan Baby Mo</a>, atau pelajari <a href="/_/doa/">kumpulan doa harian</a>.</p>`,
+      en: `<p>As parents, we want screen time that is <strong>calm, safe, and aligned with our values</strong> — not ad-filled and over-stimulating. That’s what Baby Mo is for: daily dua videos, Islamic kids’ songs, and toddler-friendly educational games. This guide rounds them up, with benefits and when each fits best.</p>
+
+<div class="vrev-cards" aria-hidden="true">
+  <div class="vrev-card"><span class="vrev-em">🤲</span><b>Daily Duas</b><span>Learn duas via short videos</span></div>
+  <div class="vrev-card"><span class="vrev-em">🎵</span><b>Islamic Songs</b><span>Memorize by singing</span></div>
+  <div class="vrev-card"><span class="vrev-em">🧩</span><b>Educational Games</b><span>Train focus &amp; attention</span></div>
+</div>
+<style>
+.vrev-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:1.4em;}
+.vrev-card{display:flex;flex-direction:column;align-items:center;gap:4px;text-align:center;padding:16px 8px;border-radius:18px;background:var(--color-paper-2);border:1px solid var(--color-hairline);}
+.vrev-card .vrev-em{font-size:30px;}
+.vrev-card b{font-size:13.5px;color:var(--color-ink);}
+.vrev-card span:last-child{font-size:11px;color:var(--color-whisper);line-height:1.3;}
+.vrev-uc{margin-top:1em;border:1px solid var(--color-hairline);border-radius:16px;overflow:hidden;}
+.vrev-row{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:12px 14px;border-top:1px solid var(--color-hairline);}
+.vrev-row:first-child{border-top:none;}
+.vrev-when{font-weight:700;color:var(--color-ink);font-size:14px;}
+.vrev-pick{font-size:13.5px;text-align:right;}
+@media(max-width:380px){.vrev-cards{grid-template-columns:1fr;}}
+</style>
+
+<h2>1. Daily duas for kids</h2>
+<p>Short videos (30–45 seconds) that teach one dua through Baby Mo’s adorable antics. Being short, they make perfect <strong>routine cues</strong> — play one whenever the moment arrives.</p>
+<ul>
+  <li><a href="/_/blog/lagu-doa-sebelum-tidur-anak/">Dua Before Sleeping</a> — a calming close to the day.</li>
+  <li><a href="/_/blog/lagu-doa-bangun-tidur-anak/">Dua Upon Waking</a> — open the day with gratitude.</li>
+  <li><a href="/_/blog/lagu-doa-sebelum-makan-anak/">Dua Before Eating</a> and <a href="/_/blog/lagu-doa-sesudah-makan-anak/">After Eating</a> — table manners.</li>
+</ul>
+<p><strong>The benefit:</strong> planting small, consistent acts of worship. A dua read daily slowly becomes automatic — and good habits are the foundation of character.</p>
+
+<h2>2. Islamic kids’ songs</h2>
+<p>Melody and repetition help kids memorize far faster than rote learning, while building vocabulary.</p>
+<ul>
+  <li><a href="/_/blog/lagu-bismillah-dulu/">Bismillah Dulu</a> — begin everything with Allah’s name.</li>
+  <li><a href="/_/blog/lagu-hujan-turun-rintik-rintik/">Hujan Turun Rintik-Rintik</a> — a warm song for parent-child bonding.</li>
+</ul>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin-top:10px;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Islamic Kids Song" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+
+<h2>3. Spot-the-difference &amp; find-the-emoji games</h2>
+<p>Not all screen time has to be loud. The <a href="/_/blog/cari-perbedaan-anak-baby-mo/">Spot the Difference &amp; Find the Emoji</a> series invites kids to sit calmly, observe, and find — building <strong>focus, attention to detail, and patience</strong> without feeling like a lesson.</p>
+
+<h2>Pick by the moment</h2>
+<div class="vrev-uc">
+  <div class="vrev-row"><span class="vrev-when">😴 Bedtime</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-sebelum-tidur-anak/">Dua Before Sleeping</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">☀️ Waking up</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-bangun-tidur-anak/">Dua Upon Waking</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🍽️ Mealtime</span><span class="vrev-pick"><a href="/_/blog/lagu-doa-sebelum-makan-anak/">Eating Dua</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🌧️ Rainy day</span><span class="vrev-pick"><a href="/_/blog/lagu-hujan-turun-rintik-rintik/">Hujan Rintik-Rintik</a></span></div>
+  <div class="vrev-row"><span class="vrev-when">🧩 Quiet time</span><span class="vrev-pick"><a href="/_/blog/cari-perbedaan-anak-baby-mo/">Spot the Difference</a></span></div>
+</div>
+
+<h2>Healthy screen-time tips</h2>
+<ul>
+  <li><strong>Watch together.</strong> Kids learn best when a parent sings along or points at the screen.</li>
+  <li><strong>Short and scheduled.</strong> Brief dua videos help keep total time reasonable.</li>
+  <li><strong>Connect to real life.</strong> After the eating-dua video, practice it at the actual meal.</li>
+</ul>
+
+<h2>Why choose Baby Mo</h2>
+<ul>
+  <li>Child-friendly Islamic content — focused on duas, manners, and good values.</li>
+  <li>Calm and not visually over-stimulating, suitable for toddlers.</li>
+  <li>Free to watch, and also available as interactive duas &amp; games on babymo.id.</li>
+</ul>
+
+<p>Watch them all on the <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">Baby Mo YouTube channel</a>, play directly in <a href="/_/permainan/">Baby Mo games</a>, or learn the <a href="/_/doa/">daily duas</a>.</p>`,
+    },
+    tags: ["video", "edukasi-anak", "islami", "tontonan-anak", "panduan"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 6,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apakah video Baby Mo aman untuk anak?",
+          en: "Are Baby Mo videos safe for children?",
+        },
+        answer: {
+          id: "Ya. Baby Mo dibuat khusus untuk anak: konten islami yang ramah anak, tanpa kekerasan, dan tidak berlebihan secara visual. Tetap disarankan menonton bersama anak.",
+          en: "Yes. Baby Mo is made for children: child-friendly Islamic content, no violence, and not visually over-stimulating. Co-viewing with your child is still recommended.",
+        },
+      },
+      {
+        question: {
+          id: "Untuk umur berapa video Baby Mo cocok?",
+          en: "What age are Baby Mo videos for?",
+        },
+        answer: {
+          id: "Paling cocok untuk balita dan anak usia sekitar 2–8 tahun. Video doa yang pendek pas untuk balita, sementara game cari perbedaan cocok untuk anak yang lebih besar.",
+          en: "Best for toddlers and children around ages 2–8. The short dua videos suit toddlers, while the spot-the-difference games suit older kids.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah perlu membayar?",
+          en: "Is it free?",
+        },
+        answer: {
+          id: "Gratis. Semua video bisa ditonton di <a href=\"https://www.youtube.com/@babymo.official\" target=\"_blank\" rel=\"noopener\">channel YouTube Baby Mo</a>, dan doa serta game interaktif tersedia gratis di babymo.id.",
+          en: "Free. All videos are on the <a href=\"https://www.youtube.com/@babymo.official\" target=\"_blank\" rel=\"noopener\">Baby Mo YouTube channel</a>, and the duas and interactive games are free on babymo.id.",
+        },
+      },
+      {
+        question: {
+          id: "Di mana saya bisa menonton dan belajar lebih lanjut?",
+          en: "Where can I watch and learn more?",
+        },
+        answer: {
+          id: "Tonton di channel YouTube @babymo.official. Untuk belajar interaktif, buka <a href=\"/_/doa/\">kumpulan doa harian</a> dan <a href=\"/_/permainan/\">permainan Baby Mo</a> di situs ini.",
+          en: "Watch on the @babymo.official YouTube channel. For interactive learning, open the <a href=\"/_/doa/\">daily duas</a> and <a href=\"/_/permainan/\">Baby Mo games</a> on this site.",
+        },
+      },
+    ],
+  },
+  {
     slug: "lagu-hujan-turun-rintik-rintik",
     title: {
       id: "Lirik Lagu “Hujan Turun Rintik-Rintik” — Lagu Anak Ceria Baby Mo",
