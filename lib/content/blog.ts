@@ -254,6 +254,19 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Ulangi dengan riang.</strong> Sedikit tiap hari lebih baik daripada banyak tapi cepat bosan.</li>
 </ol>
 
+<div class="psg">
+  <figure><img src="/_img/blog/hijaiyah-letter-card.jpg" alt="Kartu huruf Alif besar dengan tombol Dengar Huruf di game Baby Mo" width="412" height="560" loading="lazy"><figcaption>1. Kenali hurufnya dulu 🔊</figcaption></figure>
+  <figure><img src="/_img/blog/kata-islam-play.jpg" alt="Menyusun huruf hijaiyah menjadi kata pada game Kata Islam" width="412" height="640" loading="lazy"><figcaption>2. Susun huruf jadi kata</figcaption></figure>
+  <figure><img src="/_img/blog/kata-baik-play.jpg" alt="Puzzle Kata Baik Baby Mo tanpa iklan dan aman untuk anak" width="412" height="840" loading="lazy"><figcaption>3. Puzzle seru — tanpa iklan</figcaption></figure>
+</div>
+<style>
+.psg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.3em 0;align-items:start;}
+.psg figure{margin:0;}
+.psg img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -14px rgba(0,0,0,.4);display:block;}
+.psg figcaption{margin-top:7px;font-size:11.5px;color:var(--color-whisper);text-align:center;line-height:1.35;}
+@media(max-width:560px){.psg{grid-template-columns:1fr 1fr;}.psg figure:last-child{grid-column:1 / -1;max-width:50%;margin:0 auto;}}
+</style>
+
 <h2>Main bareng orang tua</h2>
 <p>Permainan ini paling bermakna saat dimainkan berdua. Sebut nama hurufnya bersama anak, tirukan bunyinya, dan beri tepuk tangan kecil setiap satu huruf dikenali. Inilah cara <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">mengenalkan huruf hijaiyah</a> yang hangat, bukan menghafal yang menegangkan.</p>
 
@@ -277,6 +290,19 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Arrange &amp; play.</strong> Move on to <a href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">Islamic Words</a> (drag letters to spell) and the <a href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">Kind Words</a> puzzle to reinforce what was just learned.</li>
   <li><strong>Repeat joyfully.</strong> A little each day beats a lot that quickly bores.</li>
 </ol>
+
+<div class="psg">
+  <figure><img src="/_img/blog/hijaiyah-letter-card.jpg" alt="Large Alif letter card with a Listen button in the Baby Mo game" width="412" height="560" loading="lazy"><figcaption>1. Get to know the letter 🔊</figcaption></figure>
+  <figure><img src="/_img/blog/kata-islam-play.jpg" alt="Arranging hijaiyah letters into a word in the Islamic Words game" width="412" height="640" loading="lazy"><figcaption>2. Arrange letters into a word</figcaption></figure>
+  <figure><img src="/_img/blog/kata-baik-play.jpg" alt="Baby Mo's Kind Words puzzle, ad-free and kid-safe" width="412" height="840" loading="lazy"><figcaption>3. A fun puzzle — ad-free</figcaption></figure>
+</div>
+<style>
+.psg{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:1.3em 0;align-items:start;}
+.psg figure{margin:0;}
+.psg img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -14px rgba(0,0,0,.4);display:block;}
+.psg figcaption{margin-top:7px;font-size:11.5px;color:var(--color-whisper);text-align:center;line-height:1.35;}
+@media(max-width:560px){.psg{grid-template-columns:1fr 1fr;}.psg figure:last-child{grid-column:1 / -1;max-width:50%;margin:0 auto;}}
+</style>
 
 <h2>Play with a parent</h2>
 <p>These games mean the most played together. Say each letter's name with your child, echo its sound, and give a little clap for every letter recognized. This is the warm way to <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">introduce the hijaiyah letters</a> — not tense rote memorization.</p>
