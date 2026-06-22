@@ -13,6 +13,98 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "lagu-anak-islami-baby-mo",
+    title: {
+      id: "Lagu Anak Islami Baby Mo: Video & Lirik Lengkap (Ceria untuk Balita)",
+      en: "Baby Mo Islamic Kids Songs: Videos & Full Lyrics (Cheerful for Toddlers)",
+    },
+    excerpt: {
+      id: "Kumpulan lagu anak islami Baby Mo yang ceria — lengkap dengan video dan lirik. Mudah dihafal, menanamkan kebiasaan baik, dan koleksinya terus bertambah.",
+      en: "A collection of Baby Mo’s cheerful Islamic kids songs — with videos and lyrics. Easy to memorize, instilling good habits, and growing over time.",
+    },
+    body: {
+      id: `<p>Lagu adalah salah satu cara tercepat anak belajar. Melodi dan pengulangan membuat kata-kata mudah menempel — jauh lebih cepat daripada hafalan biasa. Berikut <strong>lagu anak islami Baby Mo</strong> yang ceria dan ramah balita, lengkap dengan video dan liriknya.</p>
+
+<h2>🎵 Bismillah Dulu</h2>
+<p>Lagu untuk membiasakan anak mengucap <em>bismillah</em> sebelum makan, minum, bermain, belajar, hingga tidur.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Lagu Anak Islami" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p style="font-style:italic;color:var(--color-whisper);">“Bismillah dulu, Bismillah dulu / Mau makan, Bismillah dulu / Mau minum, Bismillah dulu / Bismillah (Prok 2x), Bismillah…”</p>
+<p>Lirik lengkap &amp; cara memakainya di rumah: <a href="/_/blog/lagu-bismillah-dulu/">Lirik Lagu “Bismillah Dulu”</a>.</p>
+
+<h2>🎵 Hujan Turun Rintik-Rintik</h2>
+<p>Lagu hangat tentang hujan, bunga yang mekar, dan kasih sayang ayah-bunda — cocok jadi momen bonding.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/h0JAjIsyrSs" title="BABY MO - Hujan Turun Rintik Rintik | Lagu Anak" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p style="font-style:italic;color:var(--color-whisper);">“Hujan turun rintik-rintik / Bunga mekar sangat cantik / Anak soleh, anak baik / Sini ayah kasih klitik…”</p>
+<p>Lirik lengkap: <a href="/_/blog/lagu-hujan-turun-rintik-rintik/">Lirik Lagu “Hujan Turun Rintik-Rintik”</a>.</p>
+
+<h2>Kenapa lagu efektif untuk anak?</h2>
+<ul>
+  <li><strong>Cepat hafal.</strong> Irama dan rima membantu otak anak menyimpan kata.</li>
+  <li><strong>Menanamkan kebiasaan baik.</strong> Satu lagu bisa jadi penanda rutinitas (bismillah sebelum makan).</li>
+  <li><strong>Menambah kosakata</strong> dan mempererat momen bersama orang tua.</li>
+</ul>
+
+<h2>🔔 Koleksi yang terus bertambah</h2>
+<p>Baby Mo rutin merilis lagu anak islami baru. Agar tidak ketinggalan lagu terbaru, <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">subscribe channel YouTube Baby Mo</a> dan nyalakan lonceng notifikasinya.</p>
+
+<p>Mau yang lain? Lihat <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">semua video edukasi Baby Mo</a>, pelajari <a href="/_/doa/">doa harian</a>, atau mainkan <a href="/_/permainan/">permainan Baby Mo</a>.</p>`,
+      en: `<p>Songs are one of the fastest ways children learn. Melody and repetition make words stick — far faster than rote memorization. Here are <strong>Baby Mo’s Islamic kids songs</strong>, cheerful and toddler-friendly, with videos and lyrics.</p>
+
+<h2>🎵 Bismillah Dulu</h2>
+<p>A song to get kids into the habit of saying <em>bismillah</em> before eating, drinking, playing, learning, and sleeping.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/cq6ODPSWGdc" title="BABY MO - Bismillah Dulu | Islamic Kids Song" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p style="font-style:italic;color:var(--color-whisper);">“Bismillah dulu, Bismillah dulu / Mau makan, Bismillah dulu / Mau minum, Bismillah dulu…”</p>
+<p>Full lyrics &amp; how to use it at home: <a href="/_/blog/lagu-bismillah-dulu/">“Bismillah Dulu” lyrics</a>.</p>
+
+<h2>🎵 Hujan Turun Rintik-Rintik</h2>
+<p>A warm song about rain, blooming flowers, and a parent’s love — a lovely bonding moment.</p>
+<div style="position:relative;padding-top:56.25%;border-radius:16px;overflow:hidden;border:1px solid var(--color-hairline);margin:10px 0;">
+<iframe src="https://www.youtube-nocookie.com/embed/h0JAjIsyrSs" title="BABY MO - Hujan Turun Rintik Rintik | Kids Song" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen style="position:absolute;inset:0;width:100%;height:100%;border:0;"></iframe>
+</div>
+<p style="font-style:italic;color:var(--color-whisper);">“Hujan turun rintik-rintik / Bunga mekar sangat cantik / Anak soleh, anak baik / Sini ayah kasih klitik…”</p>
+<p>Full lyrics: <a href="/_/blog/lagu-hujan-turun-rintik-rintik/">“Hujan Turun Rintik-Rintik” lyrics</a>.</p>
+
+<h2>Why songs work for kids</h2>
+<ul>
+  <li><strong>Fast to memorize.</strong> Rhythm and rhyme help a child’s brain store words.</li>
+  <li><strong>Builds good habits.</strong> One song can cue a routine (bismillah before eating).</li>
+  <li><strong>Grows vocabulary</strong> and strengthens moments with parents.</li>
+</ul>
+
+<h2>🔔 A growing collection</h2>
+<p>Baby Mo releases new Islamic kids songs regularly. So you don’t miss the latest, <a href="https://www.youtube.com/@babymo.official?sub_confirmation=1" target="_blank" rel="noopener">subscribe to the Baby Mo YouTube channel</a> and turn on notifications.</p>
+
+<p>Want more? See <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">all Baby Mo educational videos</a>, learn the <a href="/_/doa/">daily duas</a>, or play <a href="/_/permainan/">Baby Mo games</a>.</p>`,
+    },
+    tags: ["lagu", "lagu-anak-islami", "video", "musik", "balita"],
+    published: "2026-06-22",
+    updated: "2026-06-22",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: { id: "Di mana bisa menonton lagu anak islami Baby Mo?", en: "Where can I watch Baby Mo’s Islamic kids songs?" },
+        answer: {
+          id: "Semua lagu tersedia gratis di <a href=\"https://www.youtube.com/@babymo.official\" target=\"_blank\" rel=\"noopener\">channel YouTube Baby Mo</a>. Subscribe untuk lagu-lagu terbaru.",
+          en: "All songs are free on the <a href=\"https://www.youtube.com/@babymo.official\" target=\"_blank\" rel=\"noopener\">Baby Mo YouTube channel</a>. Subscribe for the newest songs.",
+        },
+      },
+      {
+        question: { id: "Apakah lagunya cocok untuk balita?", en: "Are the songs suitable for toddlers?" },
+        answer: {
+          id: "Ya. Lagu dibuat ceria, pendek, dan mudah diikuti — pas untuk balita dan anak usia 2–8 tahun, dengan lirik yang menanamkan kebiasaan baik.",
+          en: "Yes. The songs are cheerful, short, and easy to follow — ideal for toddlers and kids aged 2–8, with lyrics that build good habits.",
+        },
+      },
+    ],
+  },
+  {
     slug: "surat-pendek-untuk-anak",
     title: {
       id: "Surat Pendek untuk Anak: Urutan Hafalan & Tips Menghafal",
