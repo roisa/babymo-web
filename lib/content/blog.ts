@@ -1402,12 +1402,31 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Kosakata.</strong> Sambil mencari, ajak anak menyebut benda yang dilihat.</li>
 </ul>
 
+<h2>Kenapa main bareng anak itu penting?</h2>
+<p>Menemani anak bermain mengubah waktu layar yang pasif menjadi momen berharga bersama. Ini bukan soal mengawasi, tapi terhubung.</p>
+<ul>
+  <li><strong>Mempererat ikatan.</strong> Tertawa dan menang bersama membangun rasa aman pada anak.</li>
+  <li><strong>Menumbuhkan bahasa.</strong> Saat Anda menyebut benda dan mengajukan pertanyaan, kosakata anak bertambah cepat.</li>
+  <li><strong>Anak meniru cara berpikir Anda.</strong> “Hmm, coba kita lihat pelan-pelan…” mengajarkan kesabaran dan strategi.</li>
+  <li><strong>Layar jadi interaktif, bukan menyendiri.</strong> Bermain bersama menjaga durasi tetap wajar dan terarah.</li>
+</ul>
+
 <h2>Cara bermain bersama</h2>
 <ol>
   <li><strong>Duduk berdampingan.</strong> Jeda videonya, ajak anak menunjuk layar saat menemukan perbedaan.</li>
   <li><strong>Beri petunjuk, bukan jawaban.</strong> “Coba lihat bagian atas…” lebih melatih daripada langsung menunjuk.</li>
   <li><strong>Rayakan setiap temuan.</strong> Tepuk tangan kecil membuat anak ingin lanjut.</li>
 </ol>
+
+<h2>Ide seru main bareng</h2>
+<ul>
+  <li><strong>Bergantian.</strong> Anak menemukan satu, lalu giliran Anda — adil dan menyenangkan.</li>
+  <li><strong>Lomba ramah.</strong> Pakai hitungan mundur: berapa yang ketemu sebelum waktu habis?</li>
+  <li><strong>Sebutkan bendanya.</strong> Bukan sekadar menunjuk — “kucing oranye!” untuk menambah kosakata.</li>
+  <li><strong>Hitung bersama.</strong> “Ada berapa perbedaan semuanya?” sambil belajar berhitung.</li>
+  <li><strong>Buat versi sendiri di rumah.</strong> Susun dua baris mainan yang mirip, ubah satu, lalu minta anak mencari perbedaannya.</li>
+  <li><strong>Ceritakan gambarnya.</strong> “Menurutmu Baby Mo sedang apa di sini?” untuk melatih imajinasi &amp; bercerita.</li>
+</ul>
 
 <h2>Episode 2</h2>
 <p>Sudah selesai episode pertama di atas? Lanjut ke episode berikutnya:</p>
@@ -1432,12 +1451,31 @@ export const blogPosts: BlogPost[] = [
   <li><strong>Vocabulary.</strong> While searching, have your child name what they see.</li>
 </ul>
 
+<h2>Why play together?</h2>
+<p>Joining in turns passive screen time into a precious shared moment. It's not about supervising — it's about connecting.</p>
+<ul>
+  <li><strong>Strengthens your bond.</strong> Laughing and winning together builds a child's sense of safety.</li>
+  <li><strong>Grows language.</strong> As you name things and ask questions, your child's vocabulary expands fast.</li>
+  <li><strong>Kids copy how you think.</strong> “Hmm, let's look slowly…” teaches patience and strategy.</li>
+  <li><strong>Screen time becomes interactive, not isolating.</strong> Playing together keeps it reasonable and purposeful.</li>
+</ul>
+
 <h2>How to play together</h2>
 <ol>
   <li><strong>Sit side by side.</strong> Pause the video and let your child point at the screen when they spot a difference.</li>
   <li><strong>Give hints, not answers.</strong> “Look near the top…” trains more than pointing it out.</li>
   <li><strong>Celebrate each find.</strong> A little clap makes them want to continue.</li>
 </ol>
+
+<h2>Fun ideas to play together</h2>
+<ul>
+  <li><strong>Take turns.</strong> Your child finds one, then it's your turn — fair and fun.</li>
+  <li><strong>Friendly race.</strong> Use a countdown: how many can you find before time's up?</li>
+  <li><strong>Name it.</strong> Not just pointing — “the orange cat!” to grow vocabulary.</li>
+  <li><strong>Count together.</strong> “How many differences in total?” while practicing numbers.</li>
+  <li><strong>Make your own at home.</strong> Lay out two near-identical rows of toys, change one, and let your child spot it.</li>
+  <li><strong>Tell the picture's story.</strong> “What do you think Baby Mo is doing here?” to build imagination &amp; storytelling.</li>
+</ul>
 
 <h2>Episode 2</h2>
 <p>Finished the first episode above? Continue to the next one:</p>
