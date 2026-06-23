@@ -418,3 +418,84 @@ html {
   outline-offset: 2px;
   border-radius: 6px;
 }
+
+/* ─── Story scene covers (pure-CSS illustrations) ──────────────────── */
+.sc {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--color-hairline);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.sc--day { background: linear-gradient(180deg, #BFE3FB 0%, #E8F6FF 62%, #F3FBEE 100%); }
+.sc--night { background: linear-gradient(180deg, #2A2E5A 0%, #3D3F73 55%, #5A4E86 100%); }
+.sc--garden { background: linear-gradient(180deg, #CFEBFB 0%, #EAF8F0 60%, #F4FBEA 100%); }
+.sc--rain { background: linear-gradient(180deg, #9FB4C6 0%, #C4D2DD 60%, #DCE6EC 100%); }
+.sc--cozy { background: linear-gradient(180deg, #FBE6C9 0%, #F7E0D2 60%, #F3D9C4 100%); }
+
+/* Sun */
+.sc-sun {
+  position: absolute; top: 14%; right: 16%;
+  width: 22%; aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 38% 36%, #FFF1B8, #FBD24E 70%);
+  box-shadow: 0 0 0 6px rgba(251, 210, 78, 0.22), 0 0 22px rgba(251, 210, 78, 0.4);
+}
+/* Moon (crescent via offset mask) */
+.sc-moon {
+  position: absolute; top: 15%; right: 18%;
+  width: 20%; aspect-ratio: 1; border-radius: 50%;
+  background: #FCEBA6; box-shadow: 0 0 18px rgba(252, 235, 166, 0.5);
+}
+.sc-moon::after {
+  content: ""; position: absolute; top: -14%; left: 26%;
+  width: 100%; height: 100%; border-radius: 50%; background: #3D3F73;
+}
+/* Stars */
+.sc-star { position: absolute; width: 7px; height: 7px; background: #FFF6D6; border-radius: 50%;
+  box-shadow: 0 0 6px rgba(255, 246, 214, 0.9); animation: sc-tw 3s ease-in-out infinite; }
+.sc-star--sm { width: 4px; height: 4px; animation-delay: 1.2s; }
+@keyframes sc-tw { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+
+/* Clouds */
+.sc-cloud { position: absolute; height: 11%; aspect-ratio: 2.4 / 1; background: #fff; border-radius: 999px;
+  opacity: 0.92; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+.sc-cloud::before, .sc-cloud::after { content: ""; position: absolute; bottom: 18%; background: #fff; border-radius: 50%; }
+.sc-cloud::before { width: 48%; height: 130%; left: 14%; }
+.sc-cloud::after { width: 38%; height: 100%; right: 16%; }
+.sc-cloud--a { top: 20%; left: 10%; animation: sc-drift 16s ease-in-out infinite; }
+.sc-cloud--b { top: 34%; left: 52%; transform: scale(0.72); opacity: 0.8; animation: sc-drift 22s ease-in-out infinite reverse; }
+@keyframes sc-drift { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(10%); } }
+.sc--rain .sc-cloud { background: #EDF1F4; }
+.sc--rain .sc-cloud::before, .sc--rain .sc-cloud::after { background: #EDF1F4; }
+
+/* Rain drops */
+.sc-drops i { position: absolute; top: 42%; width: 2px; height: 11px; border-radius: 2px;
+  background: rgba(120, 150, 175, 0.7); animation: sc-fall 1s linear infinite; animation-delay: var(--d, 0s); }
+@keyframes sc-fall { 0% { transform: translateY(0); opacity: 0; } 30% { opacity: 1; } 100% { transform: translateY(120px); opacity: 0; } }
+
+/* Hill / ground */
+.sc-hill { position: absolute; left: -12%; right: -12%; bottom: -34%; height: 64%;
+  background: linear-gradient(180deg, #8FCF7E, #5FAE55); border-radius: 50%; }
+.sc-hill--night { background: linear-gradient(180deg, #46527A, #343B5E); }
+.sc-ground { position: absolute; left: 0; right: 0; bottom: 0; height: 26%; }
+.sc-ground--grass { background: linear-gradient(180deg, #8FCF7E, #5FAE55); border-radius: 40% 40% 0 0 / 22% 22% 0 0; }
+.sc-ground--floor { background: linear-gradient(180deg, #E7B98E, #D49E6F); }
+
+/* Flowers */
+.sc-flower { position: absolute; bottom: 16%; width: 6%; aspect-ratio: 1/2.4; }
+.sc-flower::before { content: ""; position: absolute; left: 45%; bottom: 0; width: 10%; height: 70%; background: #4E9A52; }
+.sc-flower::after { content: ""; position: absolute; left: 0; top: 0; width: 100%; aspect-ratio: 1; border-radius: 50%;
+  background: var(--fc, #F2849E); box-shadow: 0 0 0 3px rgba(255,255,255,0.55) inset; }
+
+/* The character */
+.sc-pose { position: absolute; bottom: 7%; left: 50%; transform: translateX(-50%);
+  width: 60%; height: auto; object-fit: contain; filter: drop-shadow(0 6px 10px rgba(0,0,0,0.18));
+  animation: sc-float 4s ease-in-out infinite; }
+.group:hover .sc-pose { animation-play-state: paused; transform: translateX(-50%) scale(1.06); }
+@keyframes sc-float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(-5px); } }
+
+@media (prefers-reduced-motion: reduce) {
+  .sc-star, .sc-cloud, .sc-drops i, .sc-pose { animation: none !important; }
+}
