@@ -775,9 +775,9 @@ export function BookReader({
         .bk-vig--gift i::before{left:6%;transform:rotate(-18deg);}
         .bk-vig--gift i::after{right:6%;transform:scaleX(-1) rotate(-18deg);}
 
-        .bk-vig--quran::before{content:"";position:absolute;left:16%;top:24%;width:68%;height:58%;background:linear-gradient(145deg,#2E8B66,#1F6E4F);border-radius:6px 10px 10px 6px;box-shadow:inset -6px 0 0 rgba(0,0,0,.12);}
-        .bk-vig--quran::after{content:"";position:absolute;left:38%;top:34%;width:24%;height:24%;border-radius:50%;background:radial-gradient(circle at 62% 50%,transparent 54%,#F4C540 55%);transform:rotate(18deg);}
-        .bk-vig--quran i{position:absolute;left:48%;top:78%;width:8%;height:18%;background:#E23E57;border-radius:0 0 2px 2px;}
+        .bk-vig--quran::before{content:"";position:absolute;left:26%;top:20%;width:54%;height:64%;background:#F1E7CC;border-radius:2px 4px 4px 2px;box-shadow:inset -4px 0 0 rgba(0,0,0,.06);}
+        .bk-vig--quran i{position:absolute;left:22%;top:17%;width:54%;height:64%;background:linear-gradient(145deg,#2E8B66,#1C6B4D);border-radius:4px 3px 3px 4px;box-shadow:inset 0 0 0 3px rgba(244,197,64,.55),inset 7px 0 0 rgba(0,0,0,.16);}
+        .bk-vig--quran::after{content:"";position:absolute;left:34%;top:35%;width:21%;height:21%;border-radius:50%;background:#F4C540;-webkit-mask:radial-gradient(circle at 78% 32%,transparent 0 52%,#000 53%);mask:radial-gradient(circle at 78% 32%,transparent 0 52%,#000 53%);}
         .bk-vig--lantern::before{content:"";position:absolute;left:30%;top:24%;width:40%;height:54%;border-radius:14px 14px 18px 18px;background:linear-gradient(180deg,#F6C84C,#E0992F);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25);}
         .bk-vig--lantern::after{content:"";position:absolute;left:34%;top:78%;width:32%;height:10%;background:#C9A55B;border-radius:0 0 4px 4px;}
         .bk-vig--lantern i{position:absolute;left:38%;top:10%;width:24%;height:12%;background:#C9A55B;border-radius:4px 4px 0 0;}
