@@ -13,10 +13,6 @@ type Sheet =
   | { kind: "content"; blocks: Block[]; vig?: string; pose?: string }
   | { kind: "end" };
 
-/** Bottom space (px) reserved on each content page for its corner art so it
- *  never overlaps the text. */
-const ART_RESERVE = 122;
-
 /**
  * Keyword → drawn CSS "vignette" kind. Ordered: more specific first.
  * Bilingual (id + en). Each kind renders as a small CSS illustration in the
@@ -227,8 +223,9 @@ export function BookReader({
     const content = sizeRef.current;
     if (!content) return;
     const width = content.clientWidth;
-    // Leave room at the bottom for each page's corner illustration.
-    const maxH = content.clientHeight - ART_RESERVE;
+    // The sizer already includes the top art band, so the measured content
+    // box is the space left for text.
+    const maxH = content.clientHeight;
     if (maxH < 40 || width < 40) return;
 
     const measurer = document.createElement("div");
@@ -400,6 +397,19 @@ export function BookReader({
     const idx = sheets ? sheets.indexOf(s) : 0;
     return (
       <div className="bk-page" key={key}>
+        <div className="bk-page-art">
+          {s.vig ? (
+            renderVignette(s.vig)
+          ) : s.pose ? (
+            <img
+              className="bk-cpose"
+              src={asset(posePath(s.pose))}
+              alt=""
+              draggable={false}
+              loading="lazy"
+            />
+          ) : null}
+        </div>
         <div className="bk-prose bk-page-content">
           {s.blocks.map((b, i) =>
             b.type === "quote" ? (
@@ -409,17 +419,6 @@ export function BookReader({
             ),
           )}
         </div>
-        {s.vig ? (
-          renderVignette(s.vig)
-        ) : s.pose ? (
-          <img
-            className="bk-cpose"
-            src={asset(posePath(s.pose))}
-            alt=""
-            draggable={false}
-            loading="lazy"
-          />
-        ) : null}
         <div className="bk-page-foot">
           {t.page} {idx}
         </div>
@@ -495,6 +494,7 @@ export function BookReader({
               {/* Invisible sizer — measures the page content box for pagination */}
               <div className="bk-sizer" aria-hidden>
                 <div className="bk-page">
+                  <div className="bk-page-art" />
                   <div className="bk-prose bk-page-content" ref={sizeRef} />
                   <div className="bk-page-foot">0</div>
                 </div>
@@ -596,15 +596,16 @@ export function BookReader({
 
         .bk-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow:hidden;}
         .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
+        /* Top-centered art band that sits above the text on each content page */
+        .bk-page-art{flex-shrink:0;height:clamp(94px,18vw,122px);display:flex;align-items:center;justify-content:center;margin-bottom:clamp(8px,1.6vw,14px);}
+
         /* Baby Mo character on content pages (alternates with vignettes) */
-        .bk-cpose{position:absolute;z-index:0;right:clamp(8px,2vw,16px);bottom:clamp(6px,1.6vw,12px);
-          width:clamp(60px,13vw,86px);height:auto;object-fit:contain;pointer-events:none;
+        .bk-cpose{height:clamp(90px,17vw,118px);width:auto;object-fit:contain;pointer-events:none;
           filter:drop-shadow(0 6px 10px rgba(0,0,0,.16));animation:bkCpose 5s ease-in-out infinite;}
         @keyframes bkCpose{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
 
-        /* Drawn CSS "vignette" illustrations (corner spot art per page) */
-        .bk-vig{position:absolute;z-index:0;right:clamp(10px,2.4vw,20px);bottom:clamp(12px,2.6vw,22px);
-          width:clamp(58px,13vw,84px);height:clamp(58px,13vw,84px);pointer-events:none;
+        /* Drawn CSS "vignette" illustrations (top-center spot art per page) */
+        .bk-vig{position:relative;width:clamp(78px,17vw,110px);height:clamp(78px,17vw,110px);pointer-events:none;
           filter:drop-shadow(0 5px 9px rgba(0,0,0,.14));}
         .bk-vig i{position:absolute;}
         .bk-vig--sun::before{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(#F6C23D 0 9deg,transparent 9deg 30deg);opacity:.9;}
