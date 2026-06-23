@@ -38,3 +38,17 @@ export function poseForCatatan(n: Catatan): string {
   for (let i = 0; i < n.slug.length; i++) h = (h * 31 + n.slug.charCodeAt(i)) >>> 0;
   return FALLBACK_POSES[h % FALLBACK_POSES.length]!;
 }
+
+/** Ambient drifting emoji for Book Mode, themed to the story's scene. */
+const SCENE_ACCENTS: Record<SceneKey, string[]> = {
+  day: ["☀️", "☁️", "✨", "🌳", "🐦", "🌤️"],
+  night: ["🌙", "⭐", "✨", "🌟", "💫"],
+  garden: ["🌱", "🌸", "🍃", "🦋", "✨", "🌼"],
+  rain: ["🌧️", "💧", "☁️", "🌈", "✨"],
+  cozy: ["📖", "🏠", "🍪", "✨", "💛", "🧸"],
+};
+
+export function accentForScene(scene: SceneKey): string[] {
+  return SCENE_ACCENTS[scene];
+}
+
