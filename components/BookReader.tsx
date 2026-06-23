@@ -31,14 +31,51 @@ const VIGNETTES: [RegExp, string][] = [
   [/berbagi|\bshare|sharing|hadiah|\bgift|memberi|sedekah|\bgive/i, "gift"],
   [/stoples|toples|\bjar\b/i, "jar"],
   [/masjid|mosque|sholat|salat|\bpray|sujud|takbir/i, "mosque"],
+  [/qur'?an|quran|mushaf|kitab suci|ayat|surah|mengaji|ngaji/i, "quran"],
   [/buku|\bbook\b|baca|\bread|cerita|story/i, "book"],
+  [/puasa|ramadan|ramadhan|berbuka|sahur|\bfast/i, "lantern"],
+  [/rezeki|rizki|\bnasi\b|\broti|\bbread|lapar|kenyang|panen|sawah|makanan/i, "bread"],
+  [/jujur|kejujuran|honest|truth|bohong|berbohong/i, "shield"],
+  [/keluarga|family|orang ?tua|berbakti|silaturahmi/i, "house"],
   [/hati|sayang|\blove\b|peluk|\bhug|cinta/i, "heart"],
   [/\bair\b|water|siram|tetes/i, "drop"],
   [/daun|leaf|pohon|\btree|hijau/i, "leaf"],
   [/\bdoa\b|\bdua\b|bismillah|berdoa|alhamdulillah|syukur|grateful/i, "star"],
 ];
 
+/** Reveal label for each vignette kind, shown when a child taps the art. */
+const VIG_LABEL: Record<string, { id: string; en: string }> = {
+  sun: { id: "Matahari", en: "Sun" },
+  moon: { id: "Bulan", en: "Moon" },
+  star: { id: "Bintang", en: "Star" },
+  cloud: { id: "Awan", en: "Cloud" },
+  rain: { id: "Hujan", en: "Rain" },
+  sprout: { id: "Tunas", en: "Sprout" },
+  flower: { id: "Bunga", en: "Flower" },
+  jar: { id: "Stoples", en: "Jar" },
+  mosque: { id: "Masjid", en: "Mosque" },
+  book: { id: "Buku", en: "Book" },
+  heart: { id: "Sayang", en: "Love" },
+  drop: { id: "Air", en: "Water" },
+  leaf: { id: "Daun", en: "Leaf" },
+  wing: { id: "Malaikat", en: "Angel" },
+  gift: { id: "Hadiah", en: "Gift" },
+  quran: { id: "Al-Qur'an", en: "Qur'an" },
+  lantern: { id: "Ramadan", en: "Ramadan" },
+  bread: { id: "Rezeki", en: "Provision" },
+  shield: { id: "Jujur", en: "Honest" },
+  house: { id: "Keluarga", en: "Family" },
+};
+
+/** Generic "scenery" kinds — common across stories; the rest are the more
+ *  distinctive/topical illustrations we prefer to surface when present. */
+const GENERIC_VIG = new Set(["sun", "moon", "star", "cloud", "heart", "leaf", "drop"]);
+
 function vignetteFor(text: string, exclude?: string): string | null {
+  // Prefer a distinctive (non-generic) match so unique art surfaces; avoid
+  // repeating the previous page's vignette; fall back gracefully.
+  for (const [re, k] of VIGNETTES) if (!GENERIC_VIG.has(k) && k !== exclude && re.test(text)) return k;
+  for (const [re, k] of VIGNETTES) if (!GENERIC_VIG.has(k) && re.test(text)) return k;
   for (const [re, k] of VIGNETTES) if (k !== exclude && re.test(text)) return k;
   for (const [re, k] of VIGNETTES) if (re.test(text)) return k;
   return null;
@@ -67,7 +104,15 @@ function contentPose(text: string, idx: number): string {
 
 /** Render a drawn CSS vignette for a kind (some kinds need inner elements). */
 function renderVignette(kind: string) {
-  if (kind === "cloud" || kind === "sprout" || kind === "wing" || kind === "gift") {
+  if (
+    kind === "cloud" ||
+    kind === "sprout" ||
+    kind === "wing" ||
+    kind === "gift" ||
+    kind === "quran" ||
+    kind === "lantern" ||
+    kind === "house"
+  ) {
     return (
       <span className={`bk-vig bk-vig--${kind}`} aria-hidden>
         <i />
@@ -85,6 +130,60 @@ function renderVignette(kind: string) {
     );
   }
   return <span className={`bk-vig bk-vig--${kind}`} aria-hidden />;
+}
+
+/**
+ * One page's illustration (a drawn vignette or a Baby Mo pose), made
+ * interactive: tapping it pops the art, sends out a little sparkle, and
+ * reveals the thing's name. Each instance owns its own state so left/right
+ * pages in a spread behave independently.
+ */
+function PageArt({
+  vig,
+  poseSrc,
+  label,
+  hint,
+  tapHint,
+}: {
+  vig?: string;
+  poseSrc?: string;
+  label?: string;
+  hint?: boolean;
+  tapHint: string;
+}) {
+  const [n, setN] = useState(0);
+  const [show, setShow] = useState(false);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  useEffect(() => () => {
+    if (timer.current) clearTimeout(timer.current);
+  }, []);
+  const tap = () => {
+    setN((x) => x + 1);
+    setShow(true);
+    if (timer.current) clearTimeout(timer.current);
+    timer.current = setTimeout(() => setShow(false), 1700);
+  };
+  return (
+    <button type="button" className="bk-art-btn" onClick={tap} aria-label={label}>
+      <span className={`bk-art-fig${n ? " bk-pop" : ""}`} key={n}>
+        {vig ? (
+          renderVignette(vig)
+        ) : poseSrc ? (
+          <img className="bk-cpose" src={poseSrc} alt="" draggable={false} loading="lazy" />
+        ) : null}
+        {n > 0 && (
+          <span className="bk-art-spark" key={`s${n}`} aria-hidden>
+            <i />
+            <i />
+            <i />
+            <i />
+          </span>
+        )}
+      </span>
+      {show && label && <span className="bk-art-label">{label}</span>}
+      {hint && n === 0 && <span className="bk-art-hint">{tapHint}</span>}
+    </button>
+  );
 }
 
 type Props = {
@@ -163,6 +262,8 @@ export function BookReader({
           tapHint: "Ketuk Baby Mo 👆",
           wave: "Lambaikan tangan Baby Mo",
           nextStory: "Baca cerita berikutnya",
+          tapReveal: "Ketuk untuk lihat! 👆",
+          babymo: "Baby Mo",
         }
       : {
           open: "Read in Book Mode",
@@ -180,6 +281,8 @@ export function BookReader({
           tapHint: "Tap Baby Mo 👆",
           wave: "Make Baby Mo wave",
           nextStory: "Read the next story",
+          tapReveal: "Tap to reveal! 👆",
+          babymo: "Baby Mo",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -281,14 +384,15 @@ export function BookReader({
       const text = p.map((b) => b.html.replace(/<[^>]+>/g, "")).join(" ");
       let vig: string | undefined;
       let pose: string | undefined;
-      if (i % 2 === 0) {
-        const v = vignetteFor(text, lastVig);
-        if (v) {
-          vig = v;
-          lastVig = v;
-        } else {
-          pose = contentPose(text, i);
-        }
+      const v = vignetteFor(text, lastVig);
+      if (v && !GENERIC_VIG.has(v)) {
+        // Distinctive/topical art always shows (it's the point of the page).
+        vig = v;
+        lastVig = v;
+      } else if (i % 2 === 0 && v) {
+        // Generic scenery alternates with the Baby Mo character.
+        vig = v;
+        lastVig = v;
       } else {
         pose = contentPose(text, i);
       }
@@ -411,17 +515,15 @@ export function BookReader({
     return (
       <div className="bk-page" key={key}>
         <div className="bk-page-art">
-          {s.vig ? (
-            renderVignette(s.vig)
-          ) : s.pose ? (
-            <img
-              className="bk-cpose"
-              src={asset(posePath(s.pose))}
-              alt=""
-              draggable={false}
-              loading="lazy"
+          {(s.vig || s.pose) && (
+            <PageArt
+              vig={s.vig}
+              poseSrc={s.pose ? asset(posePath(s.pose)) : undefined}
+              label={s.vig ? VIG_LABEL[s.vig]?.[locale] : t.babymo}
+              hint={idx === 1}
+              tapHint={t.tapReveal}
             />
-          ) : null}
+          )}
         </div>
         <div className="bk-prose bk-page-content">
           {s.blocks.map((b, i) =>
@@ -669,6 +771,40 @@ export function BookReader({
         .bk-vig--gift i::before{left:6%;transform:rotate(-18deg);}
         .bk-vig--gift i::after{right:6%;transform:scaleX(-1) rotate(-18deg);}
 
+        .bk-vig--quran::before{content:"";position:absolute;left:16%;top:24%;width:68%;height:58%;background:linear-gradient(145deg,#2E8B66,#1F6E4F);border-radius:6px 10px 10px 6px;box-shadow:inset -6px 0 0 rgba(0,0,0,.12);}
+        .bk-vig--quran::after{content:"";position:absolute;left:38%;top:34%;width:24%;height:24%;border-radius:50%;background:radial-gradient(circle at 62% 50%,transparent 54%,#F4C540 55%);transform:rotate(18deg);}
+        .bk-vig--quran i{position:absolute;left:48%;top:78%;width:8%;height:18%;background:#E23E57;border-radius:0 0 2px 2px;}
+        .bk-vig--lantern::before{content:"";position:absolute;left:30%;top:24%;width:40%;height:54%;border-radius:14px 14px 18px 18px;background:linear-gradient(180deg,#F6C84C,#E0992F);box-shadow:inset 0 0 0 3px rgba(255,255,255,.25);}
+        .bk-vig--lantern::after{content:"";position:absolute;left:34%;top:78%;width:32%;height:10%;background:#C9A55B;border-radius:0 0 4px 4px;}
+        .bk-vig--lantern i{position:absolute;left:38%;top:10%;width:24%;height:12%;background:#C9A55B;border-radius:4px 4px 0 0;}
+        .bk-vig--lantern i::before{content:"";position:absolute;left:34%;top:-70%;width:32%;height:80%;border:3px solid #C9A55B;border-bottom:none;border-radius:50% 50% 0 0;}
+        .bk-vig--bread::before{content:"";position:absolute;left:14%;top:38%;width:72%;height:42%;background:linear-gradient(180deg,#E0A765,#C07F3E);border-radius:50% 50% 30% 30%/70% 70% 30% 30%;}
+        .bk-vig--bread::after{content:"";position:absolute;left:26%;top:46%;width:48%;height:3%;background:rgba(120,70,30,.5);box-shadow:0 8px 0 rgba(120,70,30,.42),0 16px 0 rgba(120,70,30,.32);border-radius:2px;}
+        .bk-vig--shield::before{content:"";position:absolute;inset:10% 18%;background:linear-gradient(160deg,#5AA9E6,#2F7FD8);clip-path:polygon(50% 0,100% 16%,100% 60%,50% 100%,0 60%,0 16%);}
+        .bk-vig--shield::after{content:"";position:absolute;left:35%;top:30%;width:30%;height:30%;border-left:5px solid #fff;border-bottom:5px solid #fff;transform:rotate(-50deg);}
+        .bk-vig--house::before{content:"";position:absolute;left:22%;top:44%;width:56%;height:42%;background:#F2C28B;border-radius:0 0 4px 4px;}
+        .bk-vig--house::after{content:"";position:absolute;left:14%;top:24%;width:72%;height:28%;background:#D86C5A;clip-path:polygon(50% 0,100% 100%,0 100%);}
+        .bk-vig--house i{position:absolute;left:44%;top:62%;width:12%;height:24%;background:#9B5A3C;border-radius:3px 3px 0 0;}
+
+        /* Tap-to-reveal interaction on page art */
+        .bk-art-btn{position:relative;background:none;border:none;padding:0;margin:0;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+        .bk-art-fig{position:relative;display:flex;align-items:center;justify-content:center;}
+        .bk-art-fig.bk-pop{animation:bkPop .5s cubic-bezier(.34,1.56,.64,1);}
+        @keyframes bkPop{0%{transform:scale(1)}40%{transform:scale(1.18) rotate(-3deg)}70%{transform:scale(.95)}100%{transform:scale(1)}}
+        .bk-art-spark{position:absolute;inset:0;pointer-events:none;}
+        .bk-art-spark i{position:absolute;top:50%;left:50%;width:7px;height:7px;border-radius:50%;background:#F6C945;opacity:0;animation:bkSpark .65s ease-out forwards;}
+        .bk-art-spark i:nth-child(1){--ax:-48px;--ay:-30px}
+        .bk-art-spark i:nth-child(2){--ax:48px;--ay:-30px}
+        .bk-art-spark i:nth-child(3){--ax:-40px;--ay:34px}
+        .bk-art-spark i:nth-child(4){--ax:40px;--ay:34px}
+        @keyframes bkSpark{0%{opacity:0;transform:translate(-50%,-50%) scale(.4)}30%{opacity:1}100%{opacity:0;transform:translate(calc(-50% + var(--ax)),calc(-50% + var(--ay))) scale(1)}}
+        .bk-art-label{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:2px;white-space:nowrap;z-index:2;
+          background:linear-gradient(135deg,#FFE3A0,#F0C463);color:#06231a;font-weight:800;font-size:12px;padding:4px 12px;border-radius:999px;
+          box-shadow:0 4px 10px -4px rgba(0,0,0,.4);animation:bkLabelIn .3s ease;}
+        @keyframes bkLabelIn{from{opacity:0;transform:translateX(-50%) translateY(-4px) scale(.8)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+        .bk-art-hint{position:absolute;top:100%;left:50%;transform:translateX(-50%);margin-top:3px;white-space:nowrap;
+          font-size:10.5px;font-weight:700;color:var(--color-clay);opacity:.85;animation:bkHint 2s ease-in-out infinite;}
+
         /* Illustrated cover */
         .bk-page--cover{padding:0;}
         .bk-cover-scene{width:100%;flex-shrink:0;}
@@ -742,7 +878,7 @@ export function BookReader({
 
         @media (prefers-reduced-motion: reduce){
           .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-cpose,
-          .bk-wave,.bk-burst i,.bk-tap-hint{animation:none;}
+          .bk-wave,.bk-burst i,.bk-tap-hint,.bk-pop,.bk-art-spark i,.bk-art-hint{animation:none;}
         }
       `}</style>
     </>
