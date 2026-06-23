@@ -6,8 +6,51 @@ type Block = { type: "p" | "quote"; html: string };
 
 type Sheet =
   | { kind: "cover" }
-  | { kind: "content"; blocks: Block[] }
+  | { kind: "content"; blocks: Block[]; motif?: string }
   | { kind: "end" };
+
+/**
+ * Keyword → emoji "spot illustration" for a page. Ordered: more specific /
+ * evocative matches first. Bilingual (id + en). Used to give roughly every
+ * other content page a soft decorative motif that reflects what it's about.
+ */
+const MOTIFS: [RegExp, string][] = [
+  [/matahari|sinar|\bsun\b|sunny|sunshine|cerah/i, "☀️"],
+  [/tunas|tumbuh|grow|sprout|biji|kacang|seed|menanam|tanam|\bplant/i, "🌱"],
+  [/bunga|flower|mawar|tulip|melati/i, "🌸"],
+  [/hujan|\brain/i, "🌧️"],
+  [/awan|cloud/i, "☁️"],
+  [/bintang|\bstar/i, "⭐"],
+  [/bulan|malam|moon|night|tidur|sleep|selimut|blanket|mengantuk|menguap/i, "🌙"],
+  [/masjid|mosque|sholat|salat|\bpray|sujud|takbir/i, "🕌"],
+  [/stoples|toples|\bjar\b/i, "🫙"],
+  [/cokelat|chocolate|cocoa/i, "🍫"],
+  [/susu|\bmilk\b/i, "🥛"],
+  [/roti|bread|sarapan|\bmakan|\beat\b|breakfast/i, "🍞"],
+  [/kucing|\bcat\b/i, "🐱"],
+  [/\bair\b|water|siram/i, "💧"],
+  [/koin|coin|sedekah|charity|amal|donas/i, "🪙"],
+  [/buku|\bbook\b|baca|\bread|cerita|story/i, "📚"],
+  [/nenek|kakek|grandma|grandpa|grandmother|grandfather/i, "👵"],
+  [/telepon|telpon|phone|\bcall|menelepon/i, "📞"],
+  [/taman|\bpark\b|garden|kebun|pohon|\btree/i, "🌳"],
+  [/menara|balok|tower|block/i, "🧱"],
+  [/jendela|window/i, "🪟"],
+  [/kertas|paper|gulung/i, "📜"],
+  [/sepatu|\bshoe/i, "👟"],
+  [/tepuk|\bclap|girang|tertawa|laugh|gembira|riang|senang|happy|\bjoy/i, "😄"],
+  [/\bdoa\b|\bdua\b|bismillah|berdoa|alhamdulillah|syukur|grateful/i, "🤲"],
+  [/hati|sayang|\blove\b|heart|peluk|\bhug/i, "💚"],
+  [/tangan|\bhand\b|genggam/i, "🤝"],
+];
+
+function pageEmoji(text: string, exclude?: string): string | null {
+  // Prefer a match that isn't the one used on the previous motif page, so
+  // motifs feel varied rather than repeating the story's central theme.
+  for (const [re, em] of MOTIFS) if (em !== exclude && re.test(text)) return em;
+  for (const [re, em] of MOTIFS) if (re.test(text)) return em;
+  return null;
+}
 
 type Props = {
   locale: "id" | "en";
@@ -170,8 +213,29 @@ export function BookReader({
     if (cur.length) contentPages.push(cur);
     document.body.removeChild(measurer);
 
+    // Assign a content-derived "spot illustration" to roughly every other
+    // page (gap >= 2) so motifs feel special rather than constant.
+    const motifs: (string | undefined)[] = [];
+    let lastMotif = -2;
+    let lastEmoji: string | undefined;
+    contentPages.forEach((p, i) => {
+      let m: string | undefined;
+      if (i - lastMotif >= 2) {
+        const text = p.map((b) => b.html.replace(/<[^>]+>/g, "")).join(" ");
+        const e = pageEmoji(text, lastEmoji);
+        if (e) {
+          m = e;
+          lastMotif = i;
+          lastEmoji = e;
+        }
+      }
+      motifs.push(m);
+    });
+
     const out: Sheet[] = [{ kind: "cover" }];
-    for (const p of contentPages) out.push({ kind: "content", blocks: p });
+    contentPages.forEach((p, i) =>
+      out.push({ kind: "content", blocks: p, motif: motifs[i] }),
+    );
     out.push({ kind: "end" });
     setSheets(out);
     setPos((prev) => Math.min(prev, out.length - 1));
@@ -251,6 +315,11 @@ export function BookReader({
     const idx = sheets ? sheets.indexOf(s) : 0;
     return (
       <div className="bk-page" key={key}>
+        {s.motif && (
+          <span className="bk-motif" aria-hidden>
+            {s.motif}
+          </span>
+        )}
         <div className="bk-prose bk-page-content">
           {s.blocks.map((b, i) =>
             b.type === "quote" ? (
@@ -434,8 +503,12 @@ export function BookReader({
         .bk-page--blank{background:var(--color-paper-2);opacity:.55;}
         .bk-spine{width:2px;align-self:stretch;background:linear-gradient(180deg,transparent,rgba(0,0,0,.18),transparent);}
 
-        .bk-page-content{flex:1;min-height:0;overflow:hidden;}
-        .bk-page-foot{flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
+        .bk-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow:hidden;}
+        .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
+        .bk-motif{position:absolute;z-index:0;bottom:clamp(-6px,-1.4vw,-12px);right:clamp(-4px,-1.2vw,-10px);
+          font-size:clamp(84px,17vw,148px);line-height:1;opacity:.14;pointer-events:none;user-select:none;
+          transform:rotate(-8deg);animation:bkMotif 8s ease-in-out infinite;}
+        @keyframes bkMotif{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-8px)}}
 
         .bk-prose{font-family:var(--font-serif);color:var(--color-ink);}
         .bk-prose p{font-size:var(--bk-fs,22px);line-height:1.82;margin:0 0 .72em;}
@@ -476,7 +549,7 @@ export function BookReader({
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
 
         @media (prefers-reduced-motion: reduce){
-          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb{animation:none;}
+          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-motif{animation:none;}
         }
       `}</style>
     </>
