@@ -112,7 +112,8 @@ function renderVignette(kind: string) {
     kind === "quran" ||
     kind === "lantern" ||
     kind === "house" ||
-    kind === "mosque"
+    kind === "mosque" ||
+    kind === "book"
   ) {
     return (
       <span className={`bk-vig bk-vig--${kind}`} aria-hidden>
@@ -754,9 +755,9 @@ export function BookReader({
         .bk-vig--mosque i{position:absolute;left:44%;top:60%;width:12%;height:26%;background:#9C7A33;border-radius:50% 50% 0 0;}
         .bk-vig--mosque i::before{content:"";position:absolute;left:-230%;bottom:-8%;width:55%;height:150%;background:#D8B871;border-radius:2px 2px 0 0;}
         .bk-vig--mosque i::after{content:"";position:absolute;right:-230%;bottom:-8%;width:55%;height:150%;background:#D8B871;border-radius:2px 2px 0 0;}
-        .bk-vig--book::before,.bk-vig--book::after{content:"";position:absolute;top:30%;width:42%;height:42%;background:#F1E7D2;border:2px solid #C9A55B;}
-        .bk-vig--book::before{left:7%;transform:skewY(12deg);transform-origin:right;border-radius:3px 0 0 3px;}
-        .bk-vig--book::after{right:7%;transform:skewY(-12deg);transform-origin:left;border-radius:0 3px 3px 0;}
+        .bk-vig--book::before{content:"";position:absolute;left:26%;top:22%;width:52%;height:60%;background:repeating-linear-gradient(#F4EDDB 0 3px,#DDD0AE 3px 5px);border-radius:2px 4px 4px 2px;box-shadow:0 1px 2px rgba(0,0,0,.15);}
+        .bk-vig--book i{position:absolute;left:20%;top:18%;width:54%;height:60%;background:linear-gradient(145deg,#5A86C2,#39629F);border-radius:4px 3px 3px 4px;box-shadow:inset 7px 0 0 rgba(0,0,0,.22),inset 0 0 0 2px rgba(255,255,255,.12);}
+        .bk-vig--book::after{content:"";position:absolute;left:31%;top:40%;width:30%;height:5%;background:rgba(244,197,64,.9);border-radius:2px;box-shadow:0 9px 0 -1px rgba(244,197,64,.55);}
         .bk-vig--heart::before,.bk-vig--heart::after{content:"";position:absolute;top:22%;width:40%;height:60%;background:#F2849E;border-radius:50% 50% 0 0;}
         .bk-vig--heart::before{left:50%;transform:rotate(-45deg);transform-origin:0 100%;}
         .bk-vig--heart::after{left:10%;transform:rotate(45deg);transform-origin:100% 100%;}
