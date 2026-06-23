@@ -134,6 +134,7 @@ export default async function CatatanDetail({
               body={n.body[l]}
               takeaway={n.takeaway[l]}
               poseSrc={n.pose ? asset(posePath(n.pose)) : null}
+              endPose={asset(posePath("baby-mo-pose-15.png"))}
               accent={["🌱", "🫙", "☁️", "✨", "🍃", "💚"]}
             />
           )}
