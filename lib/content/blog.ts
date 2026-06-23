@@ -13,6 +13,156 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "generator-aktivitas-anak-gratis",
+    title: {
+      id: "Generator Lembar Aktivitas Anak Gratis: Buat & Cetak dalam Hitungan Detik",
+      en: "Free Kids Activity Worksheet Generator: Make & Print in Seconds",
+    },
+    excerpt: {
+      id: "Buat lembar kerja anak siap cetak — labirin, mewarnai, menjiplak, cari kata, sambung titik, dan banyak lagi. Pilih tema & usia, klik buat, lalu cetak. Gratis, tanpa daftar.",
+      en: "Make printable kids worksheets — mazes, coloring, tracing, word search, dot-to-dot, and more. Pick a theme & age, click generate, then print. Free, no sign-up.",
+    },
+    body: {
+      id: `<p>Butuh kegiatan cepat untuk si kecil — tanpa harus beli buku aktivitas atau berlangganan apa pun? <strong>Generator Lembar Aktivitas Anak</strong> dari Baby Mo membuat lembar kerja siap cetak hanya dalam hitungan detik. Pilih tema, tentukan usia, pilih jenis aktivitas, klik <em>Buat</em> — selesai.</p>
+
+<figure class="actg-hero">
+  <img src="/_img/blog/activity-pack.jpg" alt="Generator Lembar Aktivitas Anak Baby Mo menampilkan paket lembar kerja tema Luar Angkasa untuk usia 5–6" width="2360" height="2000" loading="lazy">
+  <figcaption>Pilih di kiri, paket lembar kerja langsung muncul di kanan — siap diunduh PDF atau dicetak.</figcaption>
+</figure>
+
+<p><a class="actg-cta" href="/_/apps/kids-activity/">✨ Buka Generator Aktivitas Anak</a></p>
+
+<h2>Kenapa orang tua menyukainya</h2>
+<ul>
+  <li><strong>Gratis &amp; tanpa daftar.</strong> Tidak ada biaya, akun, atau batas jumlah lembar.</li>
+  <li><strong>Berjalan di peramban.</strong> Tidak perlu mengunduh aplikasi; data tidak dikirim ke mana-mana.</li>
+  <li><strong>Siap cetak.</strong> Unduh satu paket PDF, simpan per lembar (PDF/SVG), atau cetak langsung.</li>
+  <li><strong>Sesuai usia.</strong> Tiga tingkat — 3–4, 5–6, dan 7–8 — yang menyesuaikan tingkat kesulitan.</li>
+</ul>
+
+<h2>9 jenis aktivitas dalam satu tempat</h2>
+<p>🌀 Labirin · ✏️ Menjiplak · 🎨 Mewarnai · 🔗 Mencocokkan · 🧩 Puzzle · 🔎 Cari Kata · 🔢 Hitung &amp; Tulis · ➡️ Lanjutkan Pola · 🔵 Sambung Titik. Tersedia 8 tema: Dinosaurus, Luar Angkasa, Hewan, Putri, Kendaraan, Alfabet, Ramadan, dan Laut.</p>
+
+<div class="actg-2">
+  <figure>
+    <img src="/_img/blog/activity-picker.jpg" alt="Panel pilihan: tema, usia, dan jenis aktivitas" width="680" height="1578" loading="lazy">
+    <figcaption>Pilih tema, usia, dan centang aktivitasnya.</figcaption>
+  </figure>
+  <figure>
+    <img src="/_img/blog/activity-sample.jpg" alt="Contoh lembar menjiplak tema Luar Angkasa: kata MOON dan COMET" width="704" height="1138" loading="lazy">
+    <figcaption>Contoh hasil: lembar menjiplak tema Luar Angkasa, lengkap kolom nama &amp; tanggal.</figcaption>
+  </figure>
+</div>
+
+<h2>Ide pemakaian sehari-hari</h2>
+<ul>
+  <li><strong>Hari hujan di rumah.</strong> Cetak paket labirin + mewarnai, anak sibuk berkreasi tanpa layar.</li>
+  <li><strong>Menunggu di restoran.</strong> Bawa satu lembar cari kata atau sambung titik di tas — penyelamat saat menunggu makanan.</li>
+  <li><strong>Perjalanan &amp; <a href="/_/blog/liburan-sekolah-keluarga-muslim/">liburan sekolah</a>.</strong> Siapkan beberapa lembar untuk dikerjakan di mobil atau penginapan.</li>
+  <li><strong>Belajar di rumah (homeschool).</strong> Campur menjiplak huruf, berhitung, dan pola jadi satu paket latihan harian.</li>
+  <li><strong>Untuk guru.</strong> Atur 1–10 lembar per aktivitas untuk seisi kelas dalam sekali buat.</li>
+  <li><strong>Momen islami.</strong> Pilih tema <strong>Ramadan</strong> untuk lembar bertema yang terasa spesial.</li>
+</ul>
+
+<h2>Cara kerjanya — 3 langkah</h2>
+<ol>
+  <li><strong>Pilih tema &amp; usia.</strong> Delapan tema, tiga tingkat usia.</li>
+  <li><strong>Pilih aktivitas.</strong> Centang satu atau lebih, atur berapa lembar tiap aktivitas.</li>
+  <li><strong>Buat &amp; cetak.</strong> Klik Buat, lalu unduh PDF, simpan SVG, atau cetak.</li>
+</ol>
+
+<p>Lengkapi juga dengan <a href="/_/permainan/">permainan Baby Mo</a> yang lain — semuanya gratis dan ramah anak. <a class="actg-cta" href="/_/apps/kids-activity/">✨ Coba sekarang</a></p>
+
+<style>
+.actg-hero{margin:1.3em 0;}
+.actg-hero img{width:100%;height:auto;border-radius:18px;border:1px solid var(--color-hairline);box-shadow:0 16px 34px -18px rgba(0,0,0,.4);display:block;}
+.actg-hero figcaption,.actg-2 figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper);text-align:center;line-height:1.4;}
+.actg-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.3em 0;align-items:start;}
+.actg-2 figure{margin:0;}
+.actg-2 img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -16px rgba(0,0,0,.4);display:block;}
+.actg-cta{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#5BB0F0,#2F7FD8);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(47,127,216,.6);}
+@media(max-width:520px){.actg-2{grid-template-columns:1fr;}}
+</style>`,
+      en: `<p>Need a quick activity for your little one — without buying an activity book or subscribing to anything? Baby Mo's <strong>Kids Activity Worksheet Generator</strong> makes printable worksheets in seconds. Pick a theme, choose an age, select the activity types, hit <em>Generate</em> — done.</p>
+
+<figure class="actg-hero">
+  <img src="/_img/blog/activity-pack.jpg" alt="Baby Mo Kids Activity Generator showing a Space-themed worksheet pack for ages 5–6" width="2360" height="2000" loading="lazy">
+  <figcaption>Choose on the left, the worksheet pack appears on the right — ready to download as PDF or print.</figcaption>
+</figure>
+
+<p><a class="actg-cta" href="/_/apps/kids-activity/">✨ Open the Kids Activity Generator</a></p>
+
+<h2>Why parents love it</h2>
+<ul>
+  <li><strong>Free &amp; no sign-up.</strong> No cost, no account, no limit on how many sheets you make.</li>
+  <li><strong>Runs in your browser.</strong> Nothing to install; no data sent anywhere.</li>
+  <li><strong>Print-ready.</strong> Download a single PDF pack, save per sheet (PDF/SVG), or print directly.</li>
+  <li><strong>Age-appropriate.</strong> Three levels — 3–4, 5–6, and 7–8 — that adjust the difficulty.</li>
+</ul>
+
+<h2>9 activity types in one place</h2>
+<p>🌀 Mazes · ✏️ Tracing · 🎨 Coloring · 🔗 Matching · 🧩 Puzzles · 🔎 Word Search · 🔢 Count &amp; Write · ➡️ What Comes Next · 🔵 Dot-to-Dot. Eight themes: Dinosaurs, Space, Animals, Princess, Vehicles, Alphabet, Ramadan, and Ocean.</p>
+
+<div class="actg-2">
+  <figure>
+    <img src="/_img/blog/activity-picker.jpg" alt="Picker panel: theme, age, and activity types" width="680" height="1578" loading="lazy">
+    <figcaption>Pick a theme, an age, and tick the activities.</figcaption>
+  </figure>
+  <figure>
+    <img src="/_img/blog/activity-sample.jpg" alt="Sample Space-themed tracing sheet with the words MOON and COMET" width="704" height="1138" loading="lazy">
+    <figcaption>A real result: a Space-themed tracing sheet with name &amp; date fields.</figcaption>
+  </figure>
+</div>
+
+<h2>Real, everyday use cases</h2>
+<ul>
+  <li><strong>Rainy day at home.</strong> Print a maze + coloring pack and your child is happily busy, screen-free.</li>
+  <li><strong>Waiting at a restaurant.</strong> Keep a word search or dot-to-dot in your bag — a lifesaver while food arrives.</li>
+  <li><strong>Travel &amp; <a href="/_/blog/liburan-sekolah-keluarga-muslim/">school holidays</a>.</strong> Prep a few sheets to do in the car or at the hotel.</li>
+  <li><strong>Homeschooling.</strong> Mix letter tracing, counting, and patterns into one daily practice pack.</li>
+  <li><strong>For teachers.</strong> Set 1–10 sheets per activity to cover a whole class in one go.</li>
+  <li><strong>Islamic moments.</strong> Choose the <strong>Ramadan</strong> theme for sheets that feel special.</li>
+</ul>
+
+<h2>How it works — 3 steps</h2>
+<ol>
+  <li><strong>Pick a theme &amp; age.</strong> Eight themes, three age levels.</li>
+  <li><strong>Choose activities.</strong> Tick one or more, set how many sheets each.</li>
+  <li><strong>Generate &amp; print.</strong> Hit Generate, then download PDF, save SVG, or print.</li>
+</ol>
+
+<p>Round it out with the other <a href="/_/permainan/">Baby Mo games</a> — all free and kid-friendly. <a class="actg-cta" href="/_/apps/kids-activity/">✨ Try it now</a></p>
+
+<style>
+.actg-hero{margin:1.3em 0;}
+.actg-hero img{width:100%;height:auto;border-radius:18px;border:1px solid var(--color-hairline);box-shadow:0 16px 34px -18px rgba(0,0,0,.4);display:block;}
+.actg-hero figcaption,.actg-2 figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper);text-align:center;line-height:1.4;}
+.actg-2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:1.3em 0;align-items:start;}
+.actg-2 figure{margin:0;}
+.actg-2 img{width:100%;height:auto;border-radius:16px;border:1px solid var(--color-hairline);box-shadow:0 12px 28px -16px rgba(0,0,0,.4);display:block;}
+.actg-cta{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#5BB0F0,#2F7FD8);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(47,127,216,.6);}
+@media(max-width:520px){.actg-2{grid-template-columns:1fr;}}
+</style>`,
+    },
+    tags: ["aktivitas-anak", "lembar-kerja", "printable", "edukasi-anak", "homeschool"],
+    published: "2026-06-23",
+    updated: "2026-06-23",
+    readingTimeMin: 5,
+    author: "tim-baby-mo",
+    faq: [
+      { question: { id: "Apakah generator lembar aktivitas ini gratis?", en: "Is the activity worksheet generator free?" },
+        answer: { id: "Ya, sepenuhnya gratis — tanpa biaya, tanpa akun, dan tanpa batas jumlah lembar yang bisa dibuat dan dicetak.", en: "Yes, completely free — no cost, no account, and no limit on how many sheets you can make and print." } },
+      { question: { id: "Perlukah mendaftar atau memasang aplikasi?", en: "Do I need to sign up or install an app?" },
+        answer: { id: "Tidak. Semua berjalan langsung di peramban dan tidak ada data yang dikirim ke server.", en: "No. Everything runs in your browser and no data is sent to a server." } },
+      { question: { id: "Untuk usia berapa lembar ini cocok?", en: "What ages are the worksheets for?" },
+        answer: { id: "Tersedia tiga tingkat: 3–4, 5–6, dan 7–8 tahun, dengan tingkat kesulitan yang menyesuaikan.", en: "Three levels: ages 3–4, 5–6, and 7–8, with difficulty that adjusts to each." } },
+      { question: { id: "Bisakah dicetak atau disimpan sebagai PDF?", en: "Can I print or save as PDF?" },
+        answer: { id: "Bisa. Unduh seluruh paket sebagai satu PDF, simpan tiap lembar sebagai PDF/SVG, atau cetak langsung dari peramban.", en: "Yes. Download the whole pack as one PDF, save each sheet as PDF/SVG, or print directly from the browser." } },
+      { question: { id: "Cocok untuk guru dan homeschooling?", en: "Is it good for teachers and homeschooling?" },
+        answer: { id: "Sangat cocok. Buat banyak lembar sekaligus untuk satu kelas, atau campur beberapa aktivitas jadi satu paket latihan.", en: "Very much. Make many sheets at once for a class, or mix activities into one practice pack." } },
+    ],
+  },
+  {
     slug: "liburan-sekolah-keluarga-muslim",
     title: {
       id: "Liburan Sekolah untuk Keluarga Muslim: 10 Ide Seru yang Tetap Berkah",
