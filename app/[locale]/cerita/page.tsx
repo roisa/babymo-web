@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor } from "@/lib/i18n/config";
-import { posePath } from "@/lib/games/poses";
+import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
@@ -10,6 +9,8 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { StoryScene } from "@/components/StoryScene";
+import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -78,8 +79,11 @@ export default async function CatatanIndex({
             <li key={n.slug}>
               <Link
                 href={pathFor(l, `/cerita/${n.slug}`)}
-                className="lift tap group flex items-start gap-4 rounded-[24px] border border-hairline bg-paper p-6 sm:gap-6 sm:p-8"
+                className="lift tap group flex items-start gap-4 rounded-[24px] border border-hairline bg-paper p-5 sm:gap-6 sm:p-6"
               >
+                <div className="w-[92px] shrink-0 sm:w-[132px]">
+                  <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} />
+                </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2 text-[11px] text-whisper">
                     <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
@@ -100,30 +104,16 @@ export default async function CatatanIndex({
                       {n.readingTimeMin} {dict.blog.readingTime}
                     </span>
                   </div>
-                  <h2 className="font-display mt-3 text-[24px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[30px]">
+                  <h2 className="font-display mt-3 text-[22px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[28px]">
                     {n.title[l]}
                   </h2>
-                  <p className="mt-2 text-[15.5px] leading-relaxed text-whisper">
+                  <p className="mt-2 line-clamp-3 text-[15px] leading-relaxed text-whisper sm:text-[15.5px]">
                     {n.hook[l]}
                   </p>
-                  <p className="mt-5 text-[12.5px] font-semibold text-brave-deep">
+                  <p className="mt-4 text-[12.5px] font-semibold text-brave-deep">
                     {dict.catatan.readMore} →
                   </p>
                 </div>
-                {n.pose && (
-                  <div className="relative hidden shrink-0 sm:block">
-                    <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-xl opacity-70" />
-                    <img
-                      src={asset(posePath(n.pose))}
-                      alt=""
-                      width={104}
-                      height={104}
-                      className="h-[104px] w-[104px] select-none object-contain transition-transform duration-300 group-hover:scale-105"
-                      draggable={false}
-                      loading="lazy"
-                    />
-                  </div>
-                )}
               </Link>
             </li>
           ))}
