@@ -1391,6 +1391,371 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   //  lesson and a gentle Islamic anchor. (kind: "story")
   // ═══════════════════════════════════════════════════════════════════
   {
+    slug: "apa-itu-alquran-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Al-Qur'an?", en: "What Is the Qur'an?" },
+    hook: {
+      id: "Baby Mo melihat Abi memegang sebuah kitab dengan begitu hati-hati. \"Umi, buku apa itu? Kenapa istimewa sekali?\"",
+      en: "Baby Mo watches Abi hold a book so carefully. \"Umi, what book is that? Why is it so special?\"",
+    },
+    body: {
+      id: `Baby Mo memperhatikan Abi mencuci tangan, lalu mengambil sebuah kitab dari tempat yang tinggi, menaruhnya di atas bantalan kecil, dan membukanya dengan lembut sekali — seperti memegang sesuatu yang sangat berharga.
+
+"Umi," bisik Baby Mo, "buku apa itu? Kenapa Abi hati-hati sekali?"
+
+"Itu Al-Qur'an, sayang," kata Umi. "Al-Qur'an bukan buku biasa. Itu adalah firman Allah — kata-kata dari Allah sendiri untuk kita semua. Seperti surat cinta dan petunjuk, supaya kita tahu cara hidup yang baik."
+
+"Kata-kata dari Allah?" Mata Baby Mo membulat. "Untuk aku juga?"
+
+"Untuk semua orang. Tidak ada satu pun manusia yang bisa membuat kitab seindah ini. Makanya kita memuliakannya."
+
+"Aku boleh pegang?" tanya Baby Mo penuh harap.
+
+"Boleh, dengan cara yang baik." Maka Umi menuntunnya. Pertama, Baby Mo mencuci tangannya sampai bersih. Lalu dengan dua tangan, pelan-pelan, ia memegang Al-Qur'an seperti memegang seekor burung kecil yang rapuh.
+
+Umi membacakan satu ayat pendek dengan suara merdu. Baby Mo mendengarkan, lalu menirukannya pelan-pelan. Kata-katanya terasa indah di lidahnya, walau ia belum mengerti semuanya. Ia mengulanginya sekali lagi, dan Umi tersenyum bangga.
+
+Selesai membaca, Baby Mo menutup Al-Qur'an, lalu — tanpa diminta — menciumnya dengan lembut dan menaruhnya kembali di tempat yang tinggi dan bersih.
+
+"Umi," katanya, "aku mau belajar membaca Al-Qur'an sampai bisa, biar aku ngerti semua suratnya."
+
+Umi memeluknya. "Masya Allah. Tahukah kamu, orang yang belajar Al-Qur'an dan mengajarkannya adalah orang yang terbaik. Setiap satu huruf yang kamu baca, Allah memberi kebaikan."
+
+Mata Baby Mo berbinar. Ternyata setiap huruf kecil pun berharga.
+
+> *Sebaik-baik kalian adalah yang belajar Al-Qur'an dan mengajarkannya.*
+
+Sekarang, ajak si kecil mendengar satu ayat pendek, lalu menirukannya. Awali dengan tangan bersih dan hati yang gembira. 📖`,
+      en: `Baby Mo watched Abi wash his hands, then take a book down from a high place, set it on a small cushion, and open it ever so gently — like holding something very precious.
+
+"Umi," Baby Mo whispered, "what book is that? Why is Abi so careful?"
+
+"That's the Qur'an, dear," said Umi. "The Qur'an is no ordinary book. It is the word of Allah — words from Allah Himself, for all of us. Like a letter of love and guidance, so we know how to live well."
+
+"Words from Allah?" Baby Mo's eyes went round. "For me too?"
+
+"For everyone. No human being could ever make a book as beautiful as this. That's why we honour it."
+
+"May I hold it?" Baby Mo asked hopefully.
+
+"Yes, in a good way." So Umi guided him. First, Baby Mo washed his hands clean. Then with both hands, slowly, he held the Qur'an like holding a small, delicate bird.
+
+Umi recited one short verse in a lovely voice. Baby Mo listened, then echoed it softly. The words felt beautiful on his tongue, even though he didn't understand them all yet. He repeated it once more, and Umi smiled proudly.
+
+When the reading was done, Baby Mo closed the Qur'an, then — without being asked — kissed it gently and placed it back up high and clean.
+
+"Umi," he said, "I want to learn to read the Qur'an properly, so I can understand all of it."
+
+Umi hugged him. "Masha'Allah. Did you know, the one who learns the Qur'an and teaches it is among the very best of people? For every single letter you read, Allah gives a reward."
+
+Baby Mo's eyes sparkled. So even every little letter was precious.
+
+> *The best of you are those who learn the Qur'an and teach it.*
+
+Now, have your little one listen to one short verse, then echo it. Begin with clean hands and a happy heart. 📖`,
+    },
+    anchor: { type: "doa", slug: "minta-ilmu-bermanfaat" },
+    takeaway: {
+      id: "Al-Qur'an adalah firman Allah — petunjuk dan surat cinta untuk kita. Kita memuliakannya dengan tangan bersih, hati gembira, dan belajar membacanya.",
+      en: "The Qur'an is Allah's word — guidance and a love-letter for us. We honour it with clean hands, a happy heart, and by learning to read it.",
+    },
+    tags: ["al-quran", "ilmu", "adab", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-kita-berpuasa-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Kita Berpuasa?", en: "Why Do We Fast?" },
+    hook: {
+      id: "Baby Mo ingin ikut puasa seperti Abi. \"Tapi kenapa sih kita menahan lapar?\" Sebuah puasa setengah hari mengajarkannya jawabannya.",
+      en: "Baby Mo wants to fast like Abi. \"But why do we hold back from food?\" A half-day fast teaches him the answer.",
+    },
+    body: {
+      id: `Pagi-pagi sekali, Baby Mo melihat Abi dan Umi makan sahur. "Aku mau ikut puasa!" serunya bersemangat.
+
+Abi tersenyum. "Boleh coba puasa setengah hari dulu, ya. Sampai zuhur."
+
+Baby Mo mengangguk mantap. Pagi terasa mudah — ia sibuk bermain. Tapi menjelang siang, perutnya mulai berbunyi. Kruuuk. "Umi," rengeknya pelan, "lapar…"
+
+Umi duduk di sebelahnya. "Nah, rasa lapar itu justru gurunya, sayang. Coba pikirkan: di luar sana ada anak-anak yang lapar bukan karena puasa, tapi karena tidak punya makanan. Saat kita puasa, kita ikut merasakannya. Jadi hati kita jadi lembut, dan kita ingin berbagi."
+
+Baby Mo terdiam, memikirkan anak-anak itu. "Jadi puasa mengajari kita supaya sayang sama yang lapar?"
+
+"Iya. Dan puasa juga melatih kita sabar dan menuruti Allah — menahan yang kita suka, demi cinta kepada-Nya."
+
+Baby Mo memutuskan untuk bertahan. Untuk mengalihkan lapar, ia membantu Umi menyiapkan kurma dan air di meja untuk berbuka nanti. Ia menata gelas dengan rapi, dan diam-diam menyisihkan satu kotak makanan "untuk dibagi ke orang yang lapar".
+
+Akhirnya azan zuhur berkumandang — waktunya berbuka untuk puasa setengah harinya! Baby Mo menggigit kurma pertamanya. Manisnya… luar biasa. Ia tidak pernah merasa kurma seenak ini.
+
+"Umi! Kenapa makanannya jadi terasa jauh lebih enak?"
+
+Umi tertawa lembut. "Itulah hadiah orang berpuasa: kebahagiaan saat berbuka. Setelah sabar menahan, semuanya terasa lebih nikmat dan lebih disyukuri."
+
+Malam itu Baby Mo tidur dengan bangga. Hari ini ia belajar tiga hal sekaligus: sabar, syukur, dan sayang pada yang kekurangan.
+
+> *Bagi orang yang berpuasa ada dua kebahagiaan: kebahagiaan saat berbuka, dan kebahagiaan saat berjumpa Allah.*
+
+Sekarang, kalau si kecil ingin mencoba, mulai dari puasa setengah hari. Rayakan berbukanya, dan ajak berbagi satu makanan untuk yang membutuhkan. 🌙🍪`,
+      en: `Very early in the morning, Baby Mo saw Abi and Umi eating the pre-dawn meal. "I want to fast too!" he cried eagerly.
+
+Abi smiled. "You may try a half-day fast first, okay — until midday."
+
+Baby Mo nodded firmly. The morning felt easy — he was busy playing. But as noon neared, his tummy began to rumble. Grrrr. "Umi," he whined softly, "I'm hungry…"
+
+Umi sat beside him. "That hungry feeling is actually the teacher, dear. Think about it: out there are children who are hungry not from fasting, but because they have no food. When we fast, we feel a little of what they feel. So our hearts grow tender, and we want to share."
+
+Baby Mo went quiet, thinking of those children. "So fasting teaches us to care for the hungry?"
+
+"Yes. And fasting also trains us to be patient and to obey Allah — holding back from what we love, out of love for Him."
+
+Baby Mo decided to hold on. To take his mind off his hunger, he helped Umi set out dates and water on the table for breaking the fast later. He arranged the cups neatly, and quietly set aside one food box "to share with someone who's hungry."
+
+At last the midday call to prayer rang out — time to break his half-day fast! Baby Mo bit into his first date. The sweetness… was incredible. He had never tasted a date this good.
+
+"Umi! Why does the food taste so much better?"
+
+Umi laughed gently. "That's the gift of the one who fasts: the joy of breaking it. After patiently holding back, everything tastes nicer and is more appreciated."
+
+That night Baby Mo slept proudly. Today he had learned three things at once: patience, gratitude, and love for those who have less.
+
+> *The one who fasts has two joys: the joy of breaking the fast, and the joy of meeting Allah.*
+
+Now, if your little one wants to try, start with a half-day fast. Celebrate the breaking, and share one food item with someone in need. 🌙🍪`,
+    },
+    anchor: { type: "doa", slug: "berbuka-puasa" },
+    takeaway: {
+      id: "Puasa mengajarkan tiga hal: sabar dan taat pada Allah, merasakan lapar agar sayang pada yang kekurangan, dan syukur lewat kebahagiaan berbuka.",
+      en: "Fasting teaches three things: patience and obeying Allah, feeling hunger so we care for those in need, and gratitude through the joy of breaking it.",
+    },
+    tags: ["puasa", "ramadan", "sabar", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "apa-itu-rezeki-untuk-anak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-idea.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Rezeki?", en: "What Is Rezeki?" },
+    hook: {
+      id: "Sambil makan, Baby Mo bertanya, \"Umi, nasi ini datang dari mana?\" Maka mereka menelusuri perjalanan sebutir nasi — sampai ke pemberinya.",
+      en: "While eating, Baby Mo asks, \"Umi, where does this rice come from?\" So they trace the journey of a grain of rice — all the way to its Giver.",
+    },
+    body: {
+      id: `Baby Mo menatap sesendok nasi di piringnya. "Umi, nasi ini datang dari mana sih?"
+
+"Pertanyaan bagus! Ayo kita telusuri," kata Umi. "Nasi ini tadinya beras. Beras tadinya padi yang ditanam petani di sawah. Petani menanam benih kecil… lalu siapa yang menumbuhkannya?"
+
+"Hujan!" jawab Baby Mo. "Dan matahari!"
+
+"Betul. Dan siapa yang mengirim hujan dan matahari?"
+
+"Allah," kata Baby Mo, mulai mengerti ke mana arah ceritanya.
+
+"Nah. Jadi sebutir nasi di piringmu sebenarnya melewati perjalanan panjang — petani, tanah, hujan, matahari — dan semuanya diatur oleh Allah. Itulah yang namanya rezeki: setiap pemberian baik dari Allah."
+
+Baby Mo memandangi nasinya dengan rasa kagum yang baru. "Berarti rezeki itu cuma makanan?"
+
+"Bukan cuma makanan, sayang. Coba kita berburu rezeki!" Umi mengajaknya menghitung. "Rumah yang hangat — rezeki. Umi dan Abi yang sayang — rezeki. Mata yang sehat, kaki yang bisa berlari, Baby Ais sebagai teman — semuanya rezeki dari Allah."
+
+Baby Mo menghitung dengan jarinya sampai kehabisan jari. Ternyata rezekinya banyak sekali!
+
+"Dan karena rezeki itu pemberian Allah," lanjut Umi, "kita berterima kasih dengan mengucap Alhamdulillah, dan kita berbagi dengan yang lain."
+
+Maka Baby Mo menyisihkan beberapa butir nasi dan remah roti, lalu menaburkannya di teras untuk burung-burung kecil. Tak lama, seekor burung pipit hinggap dan mematuknya dengan riang.
+
+"Umi, lihat! Aku berbagi rezekiku!" serunya bahagia.
+
+Umi mengusap kepalanya. "Masya Allah. Rezeki yang dibagi tidak pernah berkurang — malah makin berkah."
+
+> *Tidak ada satu makhluk pun di bumi kecuali Allah yang menanggung rezekinya.*
+
+Sekarang, ajak si kecil berburu rezeki: hitung lima pemberian Allah hari ini, lalu ucapkan bersama, "Alhamdulillah." 🍚🐦`,
+      en: `Baby Mo stared at a spoonful of rice on his plate. "Umi, where does this rice even come from?"
+
+"Great question! Let's trace it," said Umi. "This rice was once raw grain. The grain came from rice plants a farmer grew in the field. The farmer planted a tiny seed… then who made it grow?"
+
+"The rain!" answered Baby Mo. "And the sun!"
+
+"Right. And who sends the rain and the sun?"
+
+"Allah," said Baby Mo, beginning to see where the story was going.
+
+"There you go. So one grain of rice on your plate actually went on a long journey — the farmer, the soil, the rain, the sun — and all of it was arranged by Allah. That's what rezeki is: every good gift from Allah."
+
+Baby Mo looked at his rice with fresh wonder. "So rezeki is just food?"
+
+"Not just food, dear. Let's go on a rezeki hunt!" Umi counted with him. "A warm home — rezeki. Umi and Abi who love you — rezeki. Healthy eyes, legs that can run, Baby Ais as a friend — all rezeki from Allah."
+
+Baby Mo counted on his fingers until he ran out of fingers. It turned out he had so much rezeki!
+
+"And because rezeki is a gift from Allah," Umi went on, "we say thank you with Alhamdulillah, and we share with others."
+
+So Baby Mo set aside a few grains of rice and some bread crumbs, then scattered them on the porch for the little birds. Before long, a sparrow landed and pecked happily.
+
+"Umi, look! I shared my rezeki!" he cried with joy.
+
+Umi stroked his head. "Masha'Allah. Rezeki that is shared never decreases — it only grows more blessed."
+
+> *There is no creature on earth but that its provision is upon Allah.*
+
+Now, go on a rezeki hunt with your little one: count five of Allah's gifts today, then say together, "Alhamdulillah." 🍚🐦`,
+    },
+    anchor: { type: "doa", slug: "mendapat-rezeki" },
+    takeaway: {
+      id: "Rezeki adalah setiap pemberian baik dari Allah — bukan cuma makanan, tapi keluarga, kesehatan, dan teman. Kita syukuri dengan Alhamdulillah dan kita bagi.",
+      en: "Rezeki is every good gift from Allah — not just food, but family, health, and friends. We thank Him with Alhamdulillah and we share it.",
+    },
+    tags: ["rezeki", "bersyukur", "berbagi", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-harus-jujur-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-ok.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Harus Jujur?", en: "Why Be Honest?" },
+    hook: {
+      id: "Sebuah gelas pecah, dan tidak ada yang melihat. Baby Mo hampir berbohong — sampai ia menemukan bahwa kejujuran membuat hati terasa ringan.",
+      en: "A cup breaks, and no one saw. Baby Mo almost lies — until he discovers that honesty makes the heart feel light.",
+    },
+    body: {
+      id: `Praang! Gelas itu terlepas dari tangan Baby Mo dan pecah di lantai. Jantungnya berdebar kencang. Ia melihat sekeliling — tidak ada siapa-siapa. Baby Ais sedang bermain di kamar.
+
+Saat Umi datang dan bertanya, "Siapa yang memecahkan gelas?", sebuah pikiran melintas cepat di kepala Baby Mo: "Bilang saja Baby Ais…"
+
+Mulutnya hampir berkata begitu. Tapi dadanya terasa berat, seperti ada batu kecil yang mengganjal. Ia teringat kata Umi, bahwa berbohong membuat hati jadi gelap.
+
+Baby Mo menarik napas panjang. Lalu, dengan suara kecil tapi jujur, ia berkata, "Aku, Umi. Aku yang tidak sengaja memecahkannya. Maaf."
+
+Sesuatu yang ajaib terjadi. Batu kecil di dadanya hilang. Hatinya terasa ringan, seperti dibersihkan.
+
+Umi berlutut dan memeluknya. "Terima kasih sudah jujur, sayang. Gelas yang pecah bisa diganti. Tapi kejujuranmu jauh lebih berharga daripada seribu gelas."
+
+"Umi nggak marah?"
+
+"Sedikit pun tidak. Justru Umi bangga. Karena berani jujur itu lebih sulit daripada berbohong — dan kamu memilih yang sulit tapi benar." Umi tersenyum. "Lihat, kan? Jujur membuat hati lega dan bersih. Dan setiap kali kamu jujur, orang makin percaya padamu."
+
+Mereka membereskan pecahan gelas bersama-sama. Anehnya, Baby Mo merasa lebih bahagia setelah mengakui kesalahannya daripada kalau ia menyembunyikannya.
+
+Sejak hari itu, kalau Baby Mo berbuat salah, ia langsung mengakuinya. Karena ia sudah tahu rahasianya: kejujuran selalu menuntun pada kebaikan, dan hati yang jujur terasa ringan.
+
+> *Hendaklah kalian jujur, karena kejujuran menuntun kepada kebaikan.*
+
+Sekarang, ceritakan pada si kecil: kalau berbuat salah, berani jujur itu hebat. Peluk dan puji setiap kali ia jujur — bukan dimarahi. 💙`,
+      en: `Crash! The cup slipped from Baby Mo's hand and shattered on the floor. His heart pounded. He looked around — no one was there. Baby Ais was playing in her room.
+
+When Umi came and asked, "Who broke the cup?", a thought darted quickly through Baby Mo's head: "Just say it was Baby Ais…"
+
+His mouth almost said it. But his chest felt heavy, like a little stone was stuck there. He remembered Umi's words, that lying makes the heart go dark.
+
+Baby Mo took a deep breath. Then, in a small but honest voice, he said, "It was me, Umi. I broke it by accident. I'm sorry."
+
+Something magical happened. The little stone in his chest vanished. His heart felt light, as if it had been cleaned.
+
+Umi knelt and hugged him. "Thank you for being honest, dear. A broken cup can be replaced. But your honesty is far more precious than a thousand cups."
+
+"You're not angry, Umi?"
+
+"Not in the least. In fact, I'm proud. Because daring to be honest is harder than lying — and you chose the hard but right thing." Umi smiled. "See? Honesty makes the heart light and clean. And every time you're honest, people trust you more."
+
+They cleaned up the broken cup together. Strangely, Baby Mo felt happier after owning up to his mistake than if he had hidden it.
+
+From that day on, whenever Baby Mo did something wrong, he admitted it right away. Because he knew the secret now: honesty always leads to good, and an honest heart feels light.
+
+> *Be truthful, for truthfulness leads to goodness.*
+
+Now, tell your little one: if you make a mistake, being brave and honest is wonderful. Hug and praise them each time they're honest — not scold. 💙`,
+    },
+    anchor: { type: "parenting", slug: "anak-bohong" },
+    takeaway: {
+      id: "Jujur kadang lebih sulit daripada berbohong, tapi ia membuat hati ringan dan bersih, dan membuat orang makin percaya. Kejujuran selalu menuntun pada kebaikan.",
+      en: "Honesty is sometimes harder than lying, but it makes the heart light and clean, and earns trust. Truthfulness always leads to goodness.",
+    },
+    tags: ["jujur", "akhlak", "kejujuran", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "kenapa-sayang-orang-tua-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Kita Sayang Orang Tua?", en: "Why Do We Love Our Parents?" },
+    hook: {
+      id: "\"Umi, kenapa aku harus sayang dan nurut sama Umi dan Abi?\" Lewat satu misi kecil, Baby Mo menemukan betapa besar cinta orang tuanya.",
+      en: "\"Umi, why should I love and obey Umi and Abi?\" Through one little mission, Baby Mo discovers just how big his parents' love is.",
+    },
+    body: {
+      id: `Suatu malam Baby Mo bertanya, "Umi, kenapa sih aku harus sayang dan nurut sama Umi dan Abi?"
+
+Umi tidak langsung menjawab. Ia justru mengajak Baby Mo bermain "misi detektif cinta". "Ayo kita hitung: apa saja yang Umi dan Abi lakukan untukmu setiap hari?"
+
+Baby Mo mulai berpikir, dan menghitung dengan jarinya. "Umi memasak untukku… Abi bekerja supaya aku punya rumah dan mainan… Umi menjagaku waktu aku sakit… Abi menggendongku waktu aku capek… kalian membacakan cerita sebelum tidur…"
+
+Jarinya habis, tapi daftarnya belum selesai. Baby Mo terdiam. Ternyata begitu banyak.
+
+"Dan tahukah kamu," kata Umi lembut, "Umi dan Abi melakukan semua itu bukan supaya dibayar. Kami melakukannya karena sayang. Dulu, saat kamu masih bayi mungil dan belum bisa apa-apa, kami yang merawatmu siang dan malam."
+
+Mata Baby Mo berkaca-kaca. "Sebanyak itu…"
+
+"Karena itulah Allah menyuruh kita berbakti dan menyayangi orang tua. Bahkan Allah berfirman agar kita berbuat baik kepada mereka. Ridha Allah ada pada ridha orang tua."
+
+Baby Mo melompat berdiri. "Kalau begitu, aku juga mau melakukan misi cinta untuk Umi dan Abi!"
+
+Maka ia mulai beraksi. Ia membantu membereskan piring. Ia memijat lengan Abi yang lelah dengan tangan mungilnya. Lalu, sebelum tidur, ia menengadahkan tangannya dan berdoa, "Ya Allah, sayangilah Umi dan Abi seperti mereka menyayangiku waktu aku kecil."
+
+Umi dan Abi berpandangan, dan mata mereka basah. Doa kecil itu adalah hadiah paling indah malam itu.
+
+> *Ridha Allah ada pada ridha orang tua, dan murka Allah ada pada murka orang tua.*
+
+Sekarang, ajak si kecil membuat "misi cinta" untuk orang tua: satu bantuan, satu pelukan, dan satu doa — "Rabbighfirli wa liwalidayya." 🏡💛`,
+      en: `One night Baby Mo asked, "Umi, why do I have to love and obey Umi and Abi?"
+
+Umi didn't answer right away. Instead she invited Baby Mo to play a "love detective mission." "Let's count: what do Umi and Abi do for you every day?"
+
+Baby Mo began to think, counting on his fingers. "Umi cooks for me… Abi works so I have a home and toys… Umi looks after me when I'm sick… Abi carries me when I'm tired… you read me stories before bed…"
+
+He ran out of fingers, but the list wasn't finished. Baby Mo went quiet. It turned out to be so much.
+
+"And do you know," Umi said gently, "Umi and Abi do all of that not to be paid. We do it out of love. Long ago, when you were a tiny baby who couldn't do anything yet, we cared for you day and night."
+
+Baby Mo's eyes glistened. "That much…"
+
+"That's why Allah commands us to honour and love our parents. Allah even tells us to be good to them. The pleasure of Allah lies in the pleasure of one's parents."
+
+Baby Mo jumped to his feet. "Then I want to do a love mission for Umi and Abi too!"
+
+So he sprang into action. He helped clear the dishes. He massaged Abi's tired arm with his tiny hands. Then, before bed, he raised his hands and prayed, "O Allah, love Umi and Abi the way they loved me when I was small."
+
+Umi and Abi looked at each other, their eyes wet. That little prayer was the most beautiful gift of the night.
+
+> *Allah's pleasure is in the parents' pleasure, and Allah's displeasure is in the parents' displeasure.*
+
+Now, invite your little one to do a "love mission" for their parents: one act of help, one hug, and one prayer — "Rabbighfirli wa liwalidayya." 🏡💛`,
+    },
+    anchor: { type: "doa", slug: "doa-untuk-orang-tua" },
+    takeaway: {
+      id: "Orang tua merawat kita dengan cinta tanpa minta balasan. Karena itu kita berbakti dan menyayangi mereka — sebab ridha Allah ada pada ridha orang tua.",
+      en: "Parents care for us with love, asking nothing back. So we honour and love them — for Allah's pleasure lies in our parents' pleasure.",
+    },
+    tags: ["orang-tua", "berbakti", "keluarga", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  {
     slug: "siapa-yang-menciptakan-aku",
     kind: "story",
     child: "mo",
