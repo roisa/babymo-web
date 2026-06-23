@@ -98,6 +98,8 @@ type Props = {
   coverPose: string;
   /** Optional different pose for the closing page (e.g. a waving goodbye). */
   endPose?: string | null;
+  /** Recommended next story shown on the closing page. */
+  nextStory?: { href: string; title: string } | null;
   byline?: string;
   /** Decorative drifting emoji themed to the story (ambient layer). */
   accent?: string[];
@@ -137,6 +139,7 @@ export function BookReader({
   scene,
   coverPose,
   endPose,
+  nextStory,
   byline = "Baby Mo",
   accent = ["✨", "🌙", "⭐"],
 }: Props) {
@@ -157,6 +160,7 @@ export function BookReader({
           bye: "Dadah! 👋",
           tapHint: "Ketuk Baby Mo 👆",
           wave: "Lambaikan tangan Baby Mo",
+          nextStory: "Baca cerita berikutnya",
         }
       : {
           open: "Read in Book Mode",
@@ -173,6 +177,7 @@ export function BookReader({
           bye: "Bye-bye! 👋",
           tapHint: "Tap Baby Mo 👆",
           wave: "Make Baby Mo wave",
+          nextStory: "Read the next story",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -389,6 +394,12 @@ export function BookReader({
             )}
             <p className="bk-end-word">{t.end}</p>
             <p className="bk-end-sub">{t.endSub}</p>
+            {nextStory && (
+              <a className="bk-nextstory" href={nextStory.href}>
+                <span className="bk-nextstory-label">📖 {t.nextStory}</span>
+                <span className="bk-nextstory-title">{nextStory.title} →</span>
+              </a>
+            )}
           </div>
           <div className="bk-page-foot">— {byline}</div>
         </div>
@@ -559,11 +570,14 @@ export function BookReader({
           animation:bkDrift calc(11s + var(--i) * 2.5s) linear infinite;animation-delay:calc(var(--i) * -3s);}
         @keyframes bkDrift{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.55}90%{opacity:.4}100%{transform:translateY(-115vh) rotate(220deg);opacity:0}}
 
-        .bk-topbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:14px 16px;padding-top:calc(14px + env(safe-area-inset-top));}
+        .bk-topbar{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;
+          padding:16px 16px 12px;padding-top:calc(20px + env(safe-area-inset-top));
+          background:linear-gradient(180deg,rgba(8,6,4,.5),rgba(8,6,4,0));}
         .bk-fontctl{display:flex;gap:8px;}
-        .bk-icon{display:inline-flex;align-items:center;justify-content:center;min-width:42px;height:42px;padding:0 12px;border-radius:14px;cursor:pointer;
-          border:1px solid rgba(255,255,255,.22);background:rgba(255,255,255,.12);color:#fff;font-weight:800;font-size:15px;}
-        .bk-icon--sm{height:38px;min-width:44px;font-size:14px;}
+        .bk-icon{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:14px;cursor:pointer;
+          border:1px solid rgba(255,255,255,.45);background:rgba(18,14,10,.62);color:#fff;font-weight:800;font-size:17px;
+          box-shadow:0 3px 12px rgba(0,0,0,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
+        .bk-icon--sm{height:40px;min-width:46px;font-size:15px;}
         .bk-icon:disabled{opacity:.4;cursor:default;}
         .bk-icon:active{transform:scale(.95);}
 
@@ -686,6 +700,12 @@ export function BookReader({
         @keyframes bkHint{0%,100%{opacity:.5}50%{opacity:1}}
         .bk-end-word{font-family:var(--font-display);font-size:clamp(24px,calc(var(--bk-fs,22px) * 1.45),44px);color:var(--color-clay);margin:0;}
         .bk-end-sub{font-size:calc(var(--bk-fs,22px) * 0.62);color:var(--color-whisper);margin:0;}
+        .bk-nextstory{margin-top:14px;display:flex;flex-direction:column;align-items:center;gap:2px;text-align:center;
+          text-decoration:none;background:linear-gradient(135deg,#FFE3A0,#F0C463);color:#06231a;
+          padding:10px 18px;border-radius:16px;max-width:88%;box-shadow:0 6px 16px -8px rgba(0,0,0,.5);transition:transform .12s ease;}
+        .bk-nextstory:active{transform:scale(.98);}
+        .bk-nextstory-label{font-size:10.5px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;opacity:.75;}
+        .bk-nextstory-title{font-family:var(--font-display);font-size:15px;font-weight:700;line-height:1.2;}
 
         .bk-nav{flex-shrink:0;width:54px;height:54px;border-radius:50%;cursor:pointer;font-size:30px;line-height:1;
           display:flex;align-items:center;justify-content:center;color:#fff;

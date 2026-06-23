@@ -61,6 +61,15 @@ export default async function CatatanDetail({
   const isStory = n.kind === "story";
   const narrator = n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman;
 
+  // Recommended next story for the end of Book Mode (wraps around the list).
+  let nextStory: { href: string; title: string } | null = null;
+  if (isStory) {
+    const stories = getAllCatatan().filter((c) => c.kind === "story");
+    const i = stories.findIndex((c) => c.slug === slug);
+    const nx = i >= 0 && stories.length > 1 ? stories[(i + 1) % stories.length] : null;
+    if (nx) nextStory = { href: pathFor(l, `/cerita/${nx.slug}`), title: nx.title[l] };
+  }
+
   return (
     <>
       <Header locale={l} currentPath={`/cerita/${slug}`} />
@@ -138,6 +147,7 @@ export default async function CatatanDetail({
               scene={sceneForCatatan(n)}
               coverPose={poseForCatatan(n)}
               endPose={asset(posePath("baby-mo-pose-15.png"))}
+              nextStory={nextStory}
               accent={accentForScene(sceneForCatatan(n))}
             />
           )}
