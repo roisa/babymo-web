@@ -37,6 +37,11 @@ const VIGNETTES: [RegExp, string][] = [
   [/rezeki|rizki|\bnasi\b|\broti|\bbread|lapar|kenyang|panen|sawah|makanan/i, "bread"],
   [/jujur|kejujuran|honest|truth|bohong|berbohong/i, "shield"],
   [/keluarga|family|orang ?tua|berbakti|silaturahmi/i, "house"],
+  [/ka'?bah|kabah|kiblat|qiblat|mekah|makkah|baitullah/i, "kaaba"],
+  [/sabar|bersabar|menunggu|\bwait|tunggu|patience/i, "hourglass"],
+  [/kucing|\bcat\b|binatang|hewan|\banimal|anjing|peliharaan|piaraan/i, "cat"],
+  [/sedekah|\bkoin|\bcoin|charity|infak|infaq|\bderma\b|celengan/i, "coin"],
+  [/\bsalam\b|assalam|salaam/i, "salam"],
   [/hati|sayang|\blove\b|peluk|\bhug|cinta/i, "heart"],
   [/\bair\b|water|siram|tetes/i, "drop"],
   [/daun|leaf|pohon|\btree|hijau/i, "leaf"],
@@ -65,6 +70,11 @@ const VIG_LABEL: Record<string, { id: string; en: string }> = {
   bread: { id: "Rezeki", en: "Provision" },
   shield: { id: "Jujur", en: "Honest" },
   house: { id: "Keluarga", en: "Family" },
+  kaaba: { id: "Ka'bah", en: "Ka'bah" },
+  hourglass: { id: "Sabar", en: "Patience" },
+  cat: { id: "Kucing", en: "Cat" },
+  coin: { id: "Sedekah", en: "Charity" },
+  salam: { id: "Salam", en: "Salam" },
 };
 
 /** Generic "scenery" kinds — common across stories; the rest are the more
@@ -113,7 +123,11 @@ function renderVignette(kind: string) {
     kind === "lantern" ||
     kind === "house" ||
     kind === "mosque" ||
-    kind === "book"
+    kind === "book" ||
+    kind === "kaaba" ||
+    kind === "hourglass" ||
+    kind === "cat" ||
+    kind === "salam"
   ) {
     return (
       <span className={`bk-vig bk-vig--${kind}`} aria-hidden>
@@ -790,6 +804,28 @@ export function BookReader({
         .bk-vig--house::before{content:"";position:absolute;left:22%;top:44%;width:56%;height:42%;background:#F2C28B;border-radius:0 0 4px 4px;}
         .bk-vig--house::after{content:"";position:absolute;left:14%;top:24%;width:72%;height:28%;background:#D86C5A;clip-path:polygon(50% 0,100% 100%,0 100%);}
         .bk-vig--house i{position:absolute;left:44%;top:62%;width:12%;height:24%;background:#9B5A3C;border-radius:3px 3px 0 0;}
+        .bk-vig--kaaba::before{content:"";position:absolute;left:24%;top:24%;width:52%;height:60%;background:linear-gradient(135deg,#35353D,#1B1B20);border-radius:3px;box-shadow:inset 0 0 0 2px rgba(255,255,255,.06);}
+        .bk-vig--kaaba i{position:absolute;left:24%;top:37%;width:52%;height:9%;background:linear-gradient(#EBCB6E,#CFA23E);}
+        .bk-vig--kaaba::after{content:"";position:absolute;left:43%;top:60%;width:13%;height:24%;background:#D9B24E;border-radius:2px 2px 0 0;}
+        .bk-vig--hourglass::before{content:"";position:absolute;left:32%;top:26%;width:36%;height:24%;background:linear-gradient(#EAC470,#E0A93F);clip-path:polygon(0 0,100% 0,50% 100%);}
+        .bk-vig--hourglass::after{content:"";position:absolute;left:32%;top:50%;width:36%;height:24%;background:linear-gradient(#E0A93F,#EAC470);clip-path:polygon(50% 0,100% 100%,0 100%);}
+        .bk-vig--hourglass i{position:absolute;left:26%;top:22%;width:48%;height:56%;}
+        .bk-vig--hourglass i::before,.bk-vig--hourglass i::after{content:"";position:absolute;left:0;width:100%;height:9%;background:#9C6B3B;border-radius:3px;}
+        .bk-vig--hourglass i::before{top:0;}
+        .bk-vig--hourglass i::after{bottom:0;}
+        .bk-vig--cat::before{content:"";position:absolute;left:28%;top:36%;width:44%;height:42%;border-radius:50%;background:radial-gradient(circle at 37% 46%,#2E2118 0 6.5%,transparent 7.5%),radial-gradient(circle at 63% 46%,#2E2118 0 6.5%,transparent 7.5%),radial-gradient(circle at 50% 60%,#C76B3A 0 5%,transparent 6%),linear-gradient(160deg,#F0AE5A,#E1924A);}
+        .bk-vig--cat i{position:absolute;left:28%;top:26%;width:44%;height:22%;}
+        .bk-vig--cat i::before,.bk-vig--cat i::after{content:"";position:absolute;top:0;width:36%;height:100%;background:#E1924A;}
+        .bk-vig--cat i::before{left:2%;clip-path:polygon(0 100%,100% 100%,15% 0);}
+        .bk-vig--cat i::after{right:2%;clip-path:polygon(0 100%,100% 100%,85% 0);}
+        .bk-vig--coin::before{content:"";position:absolute;left:30%;top:30%;width:40%;height:28%;border-radius:50%;background:radial-gradient(circle at 40% 36%,#F7DA7C,#DCAE40);box-shadow:0 7px 0 -2px #EAC766,0 13px 0 -3px #DCAE40;}
+        .bk-vig--coin::after{content:"";position:absolute;left:44%;top:35%;width:12%;height:16%;background:#B7882B;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+        .bk-vig--salam::before{content:"";position:absolute;left:16%;top:22%;width:68%;height:44%;background:linear-gradient(160deg,#86C390,#5FA86B);border-radius:16px;}
+        .bk-vig--salam::after{content:"";position:absolute;left:28%;top:60%;width:18%;height:18%;background:#5FA86B;clip-path:polygon(0 0,100% 0,10% 100%);}
+        .bk-vig--salam i{position:absolute;left:32%;top:28%;width:36%;height:30%;}
+        .bk-vig--salam i::before,.bk-vig--salam i::after{content:"";position:absolute;top:6%;width:42%;height:60%;background:#fff;border-radius:50% 50% 0 0;}
+        .bk-vig--salam i::before{left:52%;transform:rotate(-45deg);transform-origin:0 100%;}
+        .bk-vig--salam i::after{left:10%;transform:rotate(45deg);transform-origin:100% 100%;}
 
         /* Tap-to-reveal interaction on page art */
         .bk-art-btn{position:relative;background:none;border:none;padding:0;margin:0;cursor:pointer;display:flex;align-items:center;justify-content:center;}

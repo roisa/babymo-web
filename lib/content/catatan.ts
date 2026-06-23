@@ -1391,6 +1391,351 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   //  lesson and a gentle Islamic anchor. (kind: "story")
   // ═══════════════════════════════════════════════════════════════════
   {
+    slug: "apa-itu-kabah-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Ka'bah?", en: "What Is the Ka'bah?" },
+    hook: {
+      id: "Baby Mo melihat semua orang sholat menghadap arah yang sama. \"Umi, kita menghadap ke mana, sih?\" Maka ia belajar tentang rumah Allah yang pertama.",
+      en: "Baby Mo notices everyone faces the same way in prayer. \"Umi, what are we facing?\" And he learns about the first house of Allah.",
+    },
+    body: {
+      id: `Saat sholat berjamaah, Baby Mo memperhatikan sesuatu. Abi, Umi, dan dirinya — semua menghadap ke arah yang sama persis. "Umi," tanyanya setelah salam, "kita tadi menghadap ke mana?"
+
+"Kita menghadap ke Ka'bah, sayang," kata Umi. "Ka'bah itu bangunan berbentuk kubus, ditutup kain hitam, yang ada di kota Mekah. Dulu sekali, Nabi Ibrahim dan putranya Nabi Ismail membangunnya kembali sebagai rumah pertama untuk menyembah Allah."
+
+Baby Mo memiringkan kepalanya. "Berarti kita menyembah Ka'bah?"
+
+"Bukan, sayang. Kita tidak menyembah Ka'bah. Kita tetap menyembah Allah saja. Ka'bah hanyalah arah — supaya semua orang menghadap ke satu tempat yang sama saat sholat."
+
+Lalu Umi mengeluarkan kompas penunjuk kiblat di ponselnya. Jarumnya berputar-putar, lalu berhenti menunjuk satu arah. "Nah, itu arah Ka'bah dari rumah kita."
+
+"Coba bayangkan," lanjut Umi sambil tersenyum. "Saat kamu sholat menghadap ke sana, di saat yang sama ada jutaan anak dan orang dewasa di seluruh dunia — dari tempat yang jauh-jauh — yang juga menghadap ke titik yang sama. Seperti satu keluarga besar yang menghadap ke satu rumah."
+
+Mata Baby Mo berbinar membayangkannya. Jutaan orang, dari segala penjuru bumi, menghadap bersama-sama. Ia merasa menjadi bagian dari sesuatu yang sangat besar.
+
+Sore itu, saat sholat, Baby Mo berdiri dengan lebih tegak. Ia menutup matanya dan membayangkan barisan-barisan panjang orang di seluruh dunia, berdiri bersamanya, menghadap ke arah yang sama, menyembah Allah Yang Satu.
+
+"Umi," bisiknya sesudah selesai, "ternyata aku tidak pernah sholat sendirian, ya."
+
+> *Maka hadapkanlah wajahmu ke arah Masjidil Haram (Ka'bah).*
+
+Sekarang, tunjukkan pada si kecil arah kiblat dari rumah, lalu ajak membayangkan jutaan orang yang menghadap ke sana bersama-sama. 🕋`,
+      en: `During the congregational prayer, Baby Mo noticed something. Abi, Umi, and himself — all facing the exact same direction. "Umi," he asked after the closing salam, "what were we facing just now?"
+
+"We were facing the Ka'bah, dear," said Umi. "The Ka'bah is a cube-shaped building, draped in black cloth, in the city of Mecca. Long, long ago, Prophet Ibrahim and his son Prophet Ismail rebuilt it as the first house for worshipping Allah."
+
+Baby Mo tilted his head. "So we worship the Ka'bah?"
+
+"No, dear. We don't worship the Ka'bah. We worship Allah alone. The Ka'bah is just a direction — so everyone faces one and the same place when they pray."
+
+Then Umi brought out the qibla compass on her phone. The needle spun around, then stopped, pointing one way. "There — that's the direction of the Ka'bah from our home."
+
+"Now imagine," Umi went on with a smile. "When you pray facing that way, at the very same moment there are millions of children and grown-ups all over the world — from far, far away — also facing the same point. Like one big family facing one home."
+
+Baby Mo's eyes sparkled as he pictured it. Millions of people, from every corner of the earth, facing together. He felt part of something very big.
+
+That afternoon, during prayer, Baby Mo stood up a little straighter. He closed his eyes and imagined the long rows of people all over the world, standing with him, facing the same way, worshipping the One Allah.
+
+"Umi," he whispered when he finished, "so I'm never really praying alone, am I."
+
+> *So turn your face toward the Sacred Mosque (the Ka'bah).*
+
+Now, show your little one the qibla direction from home, then imagine together the millions facing it at the same time. 🕋`,
+    },
+    anchor: { type: "parenting", slug: "mulai-sholat" },
+    takeaway: {
+      id: "Ka'bah adalah rumah pertama untuk menyembah Allah; kita tidak menyembahnya, tapi menghadapnya. Saat sholat, kita menghadap bersama jutaan orang sedunia.",
+      en: "The Ka'bah is the first house for worshipping Allah; we don't worship it, we face it. In prayer we face it together with millions worldwide.",
+    },
+    tags: ["kabah", "kiblat", "sholat", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-harus-sabar-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-ok.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Harus Sabar?", en: "Why Be Patient?" },
+    hook: {
+      id: "Baby Mo mau kuenya sekarang juga! Tapi kue itu masih di dalam oven. Sebuah jam pasir mengajarkannya rahasia menunggu dengan indah.",
+      en: "Baby Mo wants his cake right now! But it's still in the oven. An hourglass teaches him the secret of waiting beautifully.",
+    },
+    body: {
+      id: `Aroma kue cokelat memenuhi dapur. Baby Mo berdiri di depan oven sambil melompat-lompat. "Umi! Aku mau kuenya sekarang! Sekaraaang!"
+
+"Sabar dulu, jagoan," kata Umi sambil tertawa. "Kuenya belum matang. Kalau kita ambil sekarang, malah lembek dan tidak enak."
+
+"Tapi aku nggak bisa nunggu!" rengek Baby Mo.
+
+Umi mengambil sebuah jam pasir kecil dan membaliknya. Butiran pasir mulai mengalir pelan-pelan dari atas ke bawah. "Nah, ini namanya jam pasir. Kita tunggu sampai pasirnya habis turun, ya. Sambil menunggu, ayo kita lakukan sesuatu yang seru."
+
+Maka mereka tidak diam saja. Baby Mo membantu menata piring, lalu menggambar, lalu bernyanyi. Setiap kali ia melirik jam pasir, pasirnya makin sedikit. Anehnya, menunggu sambil sibuk ternyata tidak terasa lama.
+
+"Umi," kata Baby Mo, "sabar itu ternyata bukan cuma diam menunggu, ya?"
+
+"Betul sekali, sayang. Sabar itu menunggu dengan hati yang tenang dan tetap berbuat baik. Sabar saat menunggu, sabar saat antre, sabar saat ada yang membuat kita kesal. Dan tahukah kamu? Allah bersama orang-orang yang sabar."
+
+Tepat saat butir pasir terakhir jatuh — ting! — oven berbunyi. Kuenya matang sempurna, mengembang dan harum. Baby Mo menggigit potongan pertamanya. Hangat, lembut, dan manis sekali.
+
+"Umi… kuenya jadi terasa lebih enak karena tadi aku sabar menunggu!"
+
+Umi mengangguk. "Itulah hadiah kesabaran. Yang baik memang sering butuh ditunggu. Dan menunggunya pun bisa jadi menyenangkan."
+
+Sejak hari itu, kalau Baby Mo harus menunggu, ia teringat jam pasir — dan ia menunggu dengan senyum, bukan dengan rengekan.
+
+> *Sesungguhnya Allah beserta orang-orang yang sabar.*
+
+Sekarang, coba "permainan jam pasir" bersama si kecil: saat harus menunggu, balik timer dan kerjakan sesuatu yang seru sampai waktunya tiba. ⏳`,
+      en: `The smell of chocolate cake filled the kitchen. Baby Mo stood in front of the oven, hopping up and down. "Umi! I want the cake now! Nooow!"
+
+"Patience, champ," said Umi, laughing. "The cake isn't done yet. If we take it out now, it'll be soggy and not tasty."
+
+"But I can't wait!" Baby Mo whined.
+
+Umi picked up a little hourglass and flipped it over. The grains of sand began to trickle slowly from top to bottom. "This is an hourglass. We'll wait until the sand finishes falling, okay. And while we wait, let's do something fun."
+
+So they didn't just stand around. Baby Mo helped set the plates, then drew, then sang. Each time he glanced at the hourglass, there was less sand. Strangely, waiting while busy didn't feel long at all.
+
+"Umi," said Baby Mo, "so patience isn't just standing still and waiting?"
+
+"Exactly, dear. Patience is waiting with a calm heart and still doing good. Patient while waiting, patient in a queue, patient when someone annoys us. And do you know what? Allah is with the patient ones."
+
+Right as the last grain of sand fell — ding! — the oven beeped. The cake was perfectly done, risen and fragrant. Baby Mo bit into his first piece. Warm, soft, and ever so sweet.
+
+"Umi… the cake tastes even better because I waited patiently!"
+
+Umi nodded. "That's the reward of patience. Good things often need waiting for. And even the waiting can be fun."
+
+From that day on, whenever Baby Mo had to wait, he remembered the hourglass — and he waited with a smile, not a whine.
+
+> *Indeed, Allah is with the patient.*
+
+Now, try the "hourglass game" with your little one: when you must wait, flip a timer and do something fun until the time comes. ⏳`,
+    },
+    anchor: { type: "doa", slug: "ketika-marah" },
+    takeaway: {
+      id: "Sabar bukan sekadar diam menunggu, tapi menunggu dengan hati tenang sambil tetap berbuat baik — dan Allah selalu bersama orang yang sabar.",
+      en: "Patience isn't just waiting idly, but waiting with a calm heart while still doing good — and Allah is always with the patient.",
+    },
+    tags: ["sabar", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-sayang-binatang-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-alright.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Kita Sayang Binatang?", en: "Why Are We Kind to Animals?" },
+    hook: {
+      id: "Di hari yang panas, Baby Mo menemukan seekor kucing kecil yang kehausan. Apa yang sebaiknya ia lakukan?",
+      en: "On a hot day, Baby Mo finds a little cat that's thirsty. What should he do?",
+    },
+    body: {
+      id: `Siang itu panas sekali. Saat bermain di teras, Baby Mo mendengar suara lemah. "Meong… meong…"
+
+Di pojok pagar, ada seekor kucing kecil berbulu jingga. Lidahnya menjulur, napasnya terengah. Ia tampak sangat kehausan.
+
+Baby Mo berlari ke dalam. "Umi! Ada kucing kecil, kayaknya haus banget. Boleh aku kasih minum?"
+
+Umi tersenyum bangga. "Tentu boleh, sayang. Itu perbuatan yang sangat disukai Allah."
+
+Maka Baby Mo menuang sedikit air ke dalam mangkuk kecil, dan dengan hati-hati menaruhnya di dekat si kucing. Pelan-pelan, kucing itu mendekat, lalu minum dengan rakus. Lap… lap… lap… Setelah kenyang, ia menggesekkan kepalanya ke kaki Baby Mo dan mengeong lembut, seakan berkata terima kasih.
+
+Baby Mo terkikik geli. "Umi, dia senang!"
+
+Umi duduk di sampingnya. "Tahukah kamu, Rasulullah ﷺ mengajarkan kita untuk menyayangi semua binatang. Beliau bercerita, ada orang yang dosanya diampuni Allah hanya karena ia memberi minum seekor anjing yang kehausan. Pada setiap makhluk yang bernyawa, ada pahala kebaikan bila kita menolongnya."
+
+"Berarti kucing, burung, semua binatang itu ciptaan Allah juga?"
+
+"Iya, sayang. Dan mereka juga bisa merasa lapar, haus, dan sakit, sama seperti kita. Maka kita perlakukan mereka dengan lembut — jangan disakiti, jangan diganggu."
+
+Sejak hari itu, Baby Mo selalu menyisakan sedikit air di mangkuk teras untuk si kucing jingga. Dan setiap kali kucing itu datang, hatinya ikut hangat. Ternyata, menyayangi makhluk kecil membuat hatinya terasa besar.
+
+> *Pada setiap makhluk bernyawa yang kita tolong, ada pahala kebaikan.*
+
+Sekarang, ajak si kecil berbuat baik pada binatang: beri minum kucing, taburkan remah untuk burung, dan selalu perlakukan mereka dengan lembut. 🐱`,
+      en: `That afternoon was very hot. While playing on the porch, Baby Mo heard a faint sound. "Meow… meow…"
+
+In the corner by the fence was a little orange cat. Its tongue hung out, its breathing heavy. It looked very thirsty.
+
+Baby Mo ran inside. "Umi! There's a little cat, it seems really thirsty. May I give it a drink?"
+
+Umi smiled proudly. "Of course, dear. That's a deed Allah loves very much."
+
+So Baby Mo poured a little water into a small bowl and carefully set it near the cat. Slowly, the cat came closer, then drank eagerly. Lap… lap… lap… Once it had its fill, it rubbed its head against Baby Mo's leg and meowed softly, as if to say thank you.
+
+Baby Mo giggled. "Umi, it's happy!"
+
+Umi sat beside him. "Did you know, the Prophet ﷺ taught us to be kind to all animals. He told of a person whose sins Allah forgave simply because they gave water to a thirsty dog. For every living creature we help, there is a reward."
+
+"So cats, birds, all animals are Allah's creatures too?"
+
+"Yes, dear. And they can feel hungry, thirsty, and hurt, just like us. So we treat them gently — never harm them, never tease them."
+
+From that day on, Baby Mo always left a little water in the porch bowl for the orange cat. And every time the cat came by, his heart felt warm. It turned out that being kind to a small creature made his heart feel big.
+
+> *For every living creature you help, there is a reward.*
+
+Now, help your little one be kind to animals: give a cat a drink, scatter crumbs for the birds, and always treat them gently. 🐱`,
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Binatang juga ciptaan Allah yang bisa lapar dan haus. Rasulullah ﷺ mengajarkan kita menyayanginya — menolong makhluk kecil mendatangkan pahala.",
+      en: "Animals are Allah's creatures too, who feel hunger and thirst. The Prophet ﷺ taught us to be kind — helping a small creature earns reward.",
+    },
+    tags: ["binatang", "kasih-sayang", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "apa-itu-sedekah-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Sedekah?", en: "What Is Sedekah (Charity)?" },
+    hook: {
+      id: "Baby Mo menabung di celengannya untuk membeli mainan. Tapi hari itu ia belajar bahwa memberi bisa lebih membahagiakan daripada membeli.",
+      en: "Baby Mo saves in his piggy bank to buy a toy. But that day he learns that giving can make you happier than buying.",
+    },
+    body: {
+      id: `Baby Mo punya celengan ayam berwarna merah. Setiap hari ia memasukkan koin ke dalamnya, demi membeli mainan baru impiannya. Klontang! Koinnya sudah banyak sekali.
+
+Suatu hari, dalam perjalanan ke masjid, mereka melihat seorang kakek tua menjual tisu di pinggir jalan, di bawah terik matahari. Baby Mo menatapnya lama.
+
+"Umi," katanya pelan, "kakek itu kelihatan capek sekali."
+
+Sampai di masjid, Baby Mo melihat sebuah kotak amal. Tiba-tiba ia teringat celengannya. "Umi, apa itu sedekah?"
+
+"Sedekah itu memberi sebagian dari yang kita punya untuk membantu orang lain, dengan ikhlas karena Allah," kata Umi. "Tidak harus banyak. Bahkan satu koin, satu senyuman, atau membantu orang pun termasuk sedekah."
+
+Baby Mo terdiam, memikirkan celengannya dan kakek penjual tisu tadi. Esoknya, ia membuka celengannya sendiri. Ia mengambil beberapa koin — bukan semua, tapi cukup banyak — lalu menggenggamnya erat.
+
+Saat bertemu kakek penjual tisu lagi, Baby Mo menghampirinya dengan malu-malu, lalu memberikan koin-koin itu sambil tersenyum. "Untuk Kakek."
+
+Wajah kakek itu langsung berseri, matanya berkaca-kaca. "Terima kasih, Nak. Semoga Allah membalas kebaikanmu."
+
+Dalam perjalanan pulang, Baby Mo melompat-lompat gembira. "Umi! Hatiku rasanya senang sekali! Lebih senang daripada beli mainan!"
+
+Umi memeluknya. "Itulah keajaiban sedekah, sayang. Memberi tidak membuat kita berkurang — malah membuat hati jadi kaya. Dan harta yang disedekahkan tidak akan pernah habis berkahnya."
+
+> *Senyummu kepada saudaramu adalah sedekah.*
+
+Sekarang, ajak si kecil bersedekah: masukkan koin ke kotak amal, beri makanan pada yang membutuhkan, atau cukup berikan senyuman tulus. 🪙`,
+      en: `Baby Mo had a red chicken piggy bank. Every day he dropped a coin inside, all to buy the new toy of his dreams. Clink! He had so many coins now.
+
+One day, on the way to the mosque, they saw an old grandfather selling tissues by the roadside, under the blazing sun. Baby Mo looked at him for a long while.
+
+"Umi," he said softly, "that grandpa looks so tired."
+
+At the mosque, Baby Mo saw a charity box. Suddenly he remembered his piggy bank. "Umi, what is sedekah?"
+
+"Sedekah is giving some of what we have to help others, sincerely for Allah," said Umi. "It doesn't have to be a lot. Even one coin, one smile, or helping someone counts as charity."
+
+Baby Mo went quiet, thinking of his piggy bank and the old tissue seller. The next day, he opened his own piggy bank. He took out some coins — not all, but quite a few — and held them tight.
+
+When they met the old tissue seller again, Baby Mo approached him shyly, then gave him the coins with a smile. "For you, Grandpa."
+
+The old man's face lit up at once, his eyes glistening. "Thank you, child. May Allah reward your kindness."
+
+On the way home, Baby Mo skipped along happily. "Umi! My heart feels so happy! Happier than buying a toy!"
+
+Umi hugged him. "That's the magic of sedekah, dear. Giving doesn't make us less — it makes the heart rich. And wealth given in charity never loses its blessing."
+
+> *Your smile to your brother is a charity.*
+
+Now, help your little one give: drop a coin in a charity box, give food to someone in need, or simply offer a sincere smile. 🪙`,
+    },
+    anchor: { type: "doa", slug: "mendapat-rezeki" },
+    takeaway: {
+      id: "Sedekah adalah memberi dengan ikhlas — bahkan satu koin atau satu senyuman. Memberi tidak membuat kita berkurang, malah membuat hati kaya dan bahagia.",
+      en: "Sedekah is giving sincerely — even one coin or one smile. Giving doesn't make us less; it makes the heart rich and happy.",
+    },
+    tags: ["sedekah", "berbagi", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "apa-arti-salam-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-06-23",
+    title: { id: "Apa Arti Salam?", en: "What Does Salam Mean?" },
+    hook: {
+      id: "Setiap hari Baby Mo mengucap \"Assalamualaikum\". Tapi apa sebenarnya artinya? Ternyata itu adalah doa kecil yang menebar kebaikan.",
+      en: "Every day Baby Mo says \"Assalamu'alaikum.\" But what does it really mean? It turns out to be a little prayer that spreads goodness.",
+    },
+    body: {
+      id: `Baby Mo sudah hafal mengucapkannya: "Assalamualaikum!" Ia mengucapkannya saat masuk rumah, saat bertemu Abi, saat menelepon Nenek. Tapi suatu hari ia berhenti dan bertanya, "Umi, sebenarnya 'Assalamualaikum' itu artinya apa, sih?"
+
+Umi tersenyum. "Pertanyaan yang indah. Artinya: 'Semoga keselamatan dan kasih sayang Allah selalu untukmu.' Jadi setiap kali kamu mengucap salam, sebenarnya kamu sedang mendoakan kebaikan untuk orang itu."
+
+Mata Baby Mo membulat. "Jadi salam itu… doa?"
+
+"Iya, doa kecil yang sangat besar maknanya. Dan kalau ada yang memberi salam padamu, kamu menjawabnya dengan doa yang lebih baik lagi: 'Waalaikumussalam warahmatullah.'"
+
+Baby Mo jadi bersemangat. Hari itu ia memutuskan menebar salam ke mana-mana — seperti membagikan hadiah doa.
+
+"Assalamualaikum, Abi!" Abi tersenyum lebar dan menjawab salamnya.
+
+"Assalamualaikum, Pak!" sapanya pada pak penjaga. Wajah pak penjaga yang tadinya datar langsung ramah.
+
+"Assalamualaikum, Ais!" Baby Ais terkikik dan menjawab, "Waa… waikumtalam!"
+
+Setiap kali Baby Mo memberi salam, ia melihat hal yang sama: orang-orang tersenyum. Seakan satu kata kecil itu membuka pintu hati dan menumbuhkan rasa sayang.
+
+Malam itu, sebelum tidur, Baby Mo berkata, "Umi, ternyata salam itu seperti menanam benih kebaikan, ya. Sekali ucap, dua orang jadi senang."
+
+Umi mengangguk. "Benar sekali. Rasulullah ﷺ bilang, sebarkanlah salam, maka kalian akan saling mencintai. Jadi jangan pelit salam, ya."
+
+> *Sebarkanlah salam di antara kalian, niscaya kalian saling mencintai.*
+
+Sekarang, ajak si kecil menebar salam hari ini: ucapkan "Assalamualaikum" dengan senyum kepada keluarga dan teman. Lihat berapa banyak senyum yang tumbuh. 🌿`,
+      en: `Baby Mo had it memorized: "Assalamu'alaikum!" He said it entering the house, meeting Abi, calling Grandma. But one day he paused and asked, "Umi, what does 'Assalamu'alaikum' actually mean?"
+
+Umi smiled. "What a beautiful question. It means: 'May the safety and mercy of Allah always be upon you.' So every time you give salam, you're actually praying for goodness for that person."
+
+Baby Mo's eyes went round. "So salam is… a prayer?"
+
+"Yes, a little prayer with a very big meaning. And when someone gives you salam, you answer with an even better prayer: 'Wa'alaikumussalam warahmatullah.'"
+
+Baby Mo grew excited. That day he decided to spread salam everywhere — like handing out little gifts of prayer.
+
+"Assalamu'alaikum, Abi!" Abi grinned and returned his salam.
+
+"Assalamu'alaikum, sir!" he greeted the guard. The guard's flat face turned instantly friendly.
+
+"Assalamu'alaikum, Ais!" Baby Ais giggled and answered, "Waa… waikumtalam!"
+
+Each time Baby Mo gave salam, he saw the same thing: people smiled. As if that one little word opened the door to hearts and grew love.
+
+That night, before bed, Baby Mo said, "Umi, salam is like planting a seed of goodness, isn't it. Said once, two people feel happy."
+
+Umi nodded. "Exactly right. The Prophet ﷺ said: spread the greeting of peace, and you will love one another. So never be stingy with salam."
+
+> *Spread the greeting of peace among you, and you will love one another.*
+
+Now, have your little one spread salam today: say "Assalamu'alaikum" with a smile to family and friends. See how many smiles grow. 🌿`,
+    },
+    anchor: { type: "doa", slug: "mengucap-salam" },
+    takeaway: {
+      id: "Salam bukan sekadar sapaan — artinya mendoakan keselamatan dan kasih sayang Allah untuk orang lain. Menebar salam menumbuhkan rasa saling mencintai.",
+      en: "Salam isn't just a greeting — it means praying for Allah's safety and mercy for others. Spreading salam grows mutual love.",
+    },
+    tags: ["salam", "akhlak", "adab", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  // ═══════════════════════════════════════════════════════════════════
+  {
     slug: "apa-itu-alquran-untuk-anak",
     kind: "story",
     child: "mo",
