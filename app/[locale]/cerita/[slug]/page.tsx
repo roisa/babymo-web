@@ -13,6 +13,7 @@ import { BookReader } from "@/components/BookReader";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
+import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
 import { getThemesForCatatan } from "@/lib/content/cerita-themes";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
@@ -134,6 +135,8 @@ export default async function CatatanDetail({
               body={n.body[l]}
               takeaway={n.takeaway[l]}
               poseSrc={n.pose ? asset(posePath(n.pose)) : null}
+              scene={sceneForCatatan(n)}
+              coverPose={poseForCatatan(n)}
               endPose={asset(posePath("baby-mo-pose-15.png"))}
               accent={["🌱", "🫙", "☁️", "✨", "🍃", "💚"]}
             />

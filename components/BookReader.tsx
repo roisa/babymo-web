@@ -1,55 +1,92 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { asset } from "@/lib/i18n/config";
+import { posePath } from "@/lib/games/poses";
+import { StoryScene } from "@/components/StoryScene";
+import type { SceneKey } from "@/lib/cerita/scene";
 
 type Block = { type: "p" | "quote"; html: string };
 
 type Sheet =
   | { kind: "cover" }
-  | { kind: "content"; blocks: Block[]; motif?: string }
+  | { kind: "content"; blocks: Block[]; vig?: string; pose?: string }
   | { kind: "end" };
 
+/** Bottom space (px) reserved on each content page for its corner art so it
+ *  never overlaps the text. */
+const ART_RESERVE = 122;
+
 /**
- * Keyword → emoji "spot illustration" for a page. Ordered: more specific /
- * evocative matches first. Bilingual (id + en). Used to give roughly every
- * other content page a soft decorative motif that reflects what it's about.
+ * Keyword → drawn CSS "vignette" kind. Ordered: more specific first.
+ * Bilingual (id + en). Each kind renders as a small CSS illustration in the
+ * page corner (see renderVignette + the .bk-vig styles) — a real little
+ * drawing rather than an emoji.
  */
-const MOTIFS: [RegExp, string][] = [
-  [/matahari|sinar|\bsun\b|sunny|sunshine|cerah/i, "☀️"],
-  [/tunas|tumbuh|grow|sprout|biji|kacang|seed|menanam|tanam|\bplant/i, "🌱"],
-  [/bunga|flower|mawar|tulip|melati/i, "🌸"],
-  [/hujan|\brain/i, "🌧️"],
-  [/awan|cloud/i, "☁️"],
-  [/bintang|\bstar/i, "⭐"],
-  [/bulan|malam|moon|night|tidur|sleep|selimut|blanket|mengantuk|menguap/i, "🌙"],
-  [/masjid|mosque|sholat|salat|\bpray|sujud|takbir/i, "🕌"],
-  [/stoples|toples|\bjar\b/i, "🫙"],
-  [/cokelat|chocolate|cocoa/i, "🍫"],
-  [/susu|\bmilk\b/i, "🥛"],
-  [/roti|bread|sarapan|\bmakan|\beat\b|breakfast/i, "🍞"],
-  [/kucing|\bcat\b/i, "🐱"],
-  [/\bair\b|water|siram/i, "💧"],
-  [/koin|coin|sedekah|charity|amal|donas/i, "🪙"],
-  [/buku|\bbook\b|baca|\bread|cerita|story/i, "📚"],
-  [/nenek|kakek|grandma|grandpa|grandmother|grandfather/i, "👵"],
-  [/telepon|telpon|phone|\bcall|menelepon/i, "📞"],
-  [/taman|\bpark\b|garden|kebun|pohon|\btree/i, "🌳"],
-  [/menara|balok|tower|block/i, "🧱"],
-  [/jendela|window/i, "🪟"],
-  [/kertas|paper|gulung/i, "📜"],
-  [/sepatu|\bshoe/i, "👟"],
-  [/tepuk|\bclap|girang|tertawa|laugh|gembira|riang|senang|happy|\bjoy/i, "😄"],
-  [/\bdoa\b|\bdua\b|bismillah|berdoa|alhamdulillah|syukur|grateful/i, "🤲"],
-  [/hati|sayang|\blove\b|heart|peluk|\bhug/i, "💚"],
-  [/tangan|\bhand\b|genggam/i, "🤝"],
+const VIGNETTES: [RegExp, string][] = [
+  [/matahari|sinar|\bsun\b|sunny|sunshine|cerah/i, "sun"],
+  [/bulan|malam|\bmoon|night|tidur|sleep|selimut|mengantuk|menguap/i, "moon"],
+  [/bintang|\bstar/i, "star"],
+  [/awan|cloud/i, "cloud"],
+  [/hujan|\brain|gerimis/i, "rain"],
+  [/tunas|tumbuh|grow|sprout|biji|kacang|seed|menanam|tanam|\bplant|kecambah/i, "sprout"],
+  [/bunga|flower|mawar|tulip|melati|kebun|taman|garden/i, "flower"],
+  [/stoples|toples|\bjar\b/i, "jar"],
+  [/masjid|mosque|sholat|salat|\bpray|sujud|takbir/i, "mosque"],
+  [/buku|\bbook\b|baca|\bread|cerita|story/i, "book"],
+  [/hati|sayang|\blove\b|peluk|\bhug|cinta/i, "heart"],
+  [/\bair\b|water|siram|tetes/i, "drop"],
+  [/daun|leaf|pohon|\btree|hijau/i, "leaf"],
+  [/\bdoa\b|\bdua\b|bismillah|berdoa|alhamdulillah|syukur|grateful/i, "star"],
 ];
 
-function pageEmoji(text: string, exclude?: string): string | null {
-  // Prefer a match that isn't the one used on the previous motif page, so
-  // motifs feel varied rather than repeating the story's central theme.
-  for (const [re, em] of MOTIFS) if (em !== exclude && re.test(text)) return em;
-  for (const [re, em] of MOTIFS) if (re.test(text)) return em;
+function vignetteFor(text: string, exclude?: string): string | null {
+  for (const [re, k] of VIGNETTES) if (k !== exclude && re.test(text)) return k;
+  for (const [re, k] of VIGNETTES) if (re.test(text)) return k;
   return null;
+}
+
+/** Keyword → Baby Mo pose filename, for the character that appears on pages
+ *  that don't get a drawn vignette. Falls back to a rotating set. */
+const POSE_RULES: [RegExp, string][] = [
+  [/senang|gembira|girang|tertawa|laugh|happy|\bjoy|melompat|hore|asyik/i, "baby-mo-yeyy.png"],
+  [/penasaran|\bide\b|idea|wonder|curious|berpikir|kenapa|mengapa|takjub/i, "baby-mo-idea.png"],
+  [/berani|semangat|brave|yakin|\bbisa\b|hebat/i, "baby-mo-yes.png"],
+  [/terima kasih|syukur|thank|alhamdulillah|berdoa|\bdoa\b/i, "baby-mo-thank-you.png"],
+  [/lari|\brun|cepat|kejar|buru/i, "baby-mo-run.png"],
+];
+const FALLBACK_CPOSES = [
+  "baby-mo-ok.png",
+  "baby-mo-alright.png",
+  "baby-mo-pose-22.png",
+  "baby-mo-idea.png",
+  "baby-mo-pose-31.png",
+];
+function contentPose(text: string, idx: number): string {
+  for (const [re, f] of POSE_RULES) if (re.test(text)) return f;
+  return FALLBACK_CPOSES[idx % FALLBACK_CPOSES.length]!;
+}
+
+/** Render a drawn CSS vignette for a kind (some kinds need inner elements). */
+function renderVignette(kind: string) {
+  if (kind === "cloud" || kind === "sprout") {
+    return (
+      <span className={`bk-vig bk-vig--${kind}`} aria-hidden>
+        <i />
+      </span>
+    );
+  }
+  if (kind === "rain") {
+    return (
+      <span className="bk-vig bk-vig--rain" aria-hidden>
+        <i className="c" />
+        <i className="dp" style={{ left: "30%" }} />
+        <i className="dp" style={{ left: "52%" }} />
+        <i className="dp" style={{ left: "72%" }} />
+      </span>
+    );
+  }
+  return <span className={`bk-vig bk-vig--${kind}`} aria-hidden />;
 }
 
 type Props = {
@@ -59,6 +96,10 @@ type Props = {
   body: string;
   takeaway: string;
   poseSrc?: string | null;
+  /** Scene key for the illustrated cover (sky/sun/moon/hills). */
+  scene: SceneKey;
+  /** Pose filename shown standing in the cover scene. */
+  coverPose: string;
   /** Optional different pose for the closing page (e.g. a waving goodbye). */
   endPose?: string | null;
   byline?: string;
@@ -97,6 +138,8 @@ export function BookReader({
   body,
   takeaway,
   poseSrc,
+  scene,
+  coverPose,
   endPose,
   byline = "Baby Mo",
   accent = ["✨", "🌙", "⭐"],
@@ -183,8 +226,9 @@ export function BookReader({
   const paginate = useCallback(() => {
     const content = sizeRef.current;
     if (!content) return;
-    const maxH = content.clientHeight;
     const width = content.clientWidth;
+    // Leave room at the bottom for each page's corner illustration.
+    const maxH = content.clientHeight - ART_RESERVE;
     if (maxH < 40 || width < 40) return;
 
     const measurer = document.createElement("div");
@@ -224,29 +268,28 @@ export function BookReader({
     if (cur.length) contentPages.push(cur);
     document.body.removeChild(measurer);
 
-    // Assign a content-derived "spot illustration" to roughly every other
-    // page (gap >= 2) so motifs feel special rather than constant.
-    const motifs: (string | undefined)[] = [];
-    let lastMotif = -2;
-    let lastEmoji: string | undefined;
-    contentPages.forEach((p, i) => {
-      let m: string | undefined;
-      if (i - lastMotif >= 2) {
-        const text = p.map((b) => b.html.replace(/<[^>]+>/g, "")).join(" ");
-        const e = pageEmoji(text, lastEmoji);
-        if (e) {
-          m = e;
-          lastMotif = i;
-          lastEmoji = e;
-        }
-      }
-      motifs.push(m);
-    });
-
+    // Give every content page a real illustration: alternate a drawn CSS
+    // vignette (keyword-matched) with a Baby Mo pose, so it reads as an
+    // illustrated book rather than text. Avoid repeating the same vignette.
     const out: Sheet[] = [{ kind: "cover" }];
-    contentPages.forEach((p, i) =>
-      out.push({ kind: "content", blocks: p, motif: motifs[i] }),
-    );
+    let lastVig: string | undefined;
+    contentPages.forEach((p, i) => {
+      const text = p.map((b) => b.html.replace(/<[^>]+>/g, "")).join(" ");
+      let vig: string | undefined;
+      let pose: string | undefined;
+      if (i % 2 === 0) {
+        const v = vignetteFor(text, lastVig);
+        if (v) {
+          vig = v;
+          lastVig = v;
+        } else {
+          pose = contentPose(text, i);
+        }
+      } else {
+        pose = contentPose(text, i);
+      }
+      out.push({ kind: "content", blocks: p, vig, pose });
+    });
     out.push({ kind: "end" });
     setSheets(out);
     setPos((prev) => Math.min(prev, out.length - 1));
@@ -305,11 +348,11 @@ export function BookReader({
     if (s.kind === "cover") {
       return (
         <div className="bk-page bk-page--cover" key={key}>
-          <div className="bk-page-content bk-cover-inner">
+          <div className="bk-cover-scene">
+            <StoryScene scene={scene} pose={coverPose} className="sc--cover" />
+          </div>
+          <div className="bk-cover-text">
             <span className="bk-cover-badge">📖 {t.cover}</span>
-            {poseSrc && (
-              <img className="bk-cover-pose" src={poseSrc} alt="Baby Mo" draggable={false} />
-            )}
             <h2 className="bk-cover-title">{title}</h2>
             <p className="bk-cover-hook">{hook}</p>
           </div>
@@ -357,11 +400,6 @@ export function BookReader({
     const idx = sheets ? sheets.indexOf(s) : 0;
     return (
       <div className="bk-page" key={key}>
-        {s.motif && (
-          <span className="bk-motif" aria-hidden>
-            {s.motif}
-          </span>
-        )}
         <div className="bk-prose bk-page-content">
           {s.blocks.map((b, i) =>
             b.type === "quote" ? (
@@ -371,6 +409,17 @@ export function BookReader({
             ),
           )}
         </div>
+        {s.vig ? (
+          renderVignette(s.vig)
+        ) : s.pose ? (
+          <img
+            className="bk-cpose"
+            src={asset(posePath(s.pose))}
+            alt=""
+            draggable={false}
+            loading="lazy"
+          />
+        ) : null}
         <div className="bk-page-foot">
           {t.page} {idx}
         </div>
@@ -547,10 +596,58 @@ export function BookReader({
 
         .bk-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow:hidden;}
         .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
-        .bk-motif{position:absolute;z-index:0;bottom:clamp(-4px,-1vw,-10px);right:clamp(-2px,-0.8vw,-8px);
-          font-size:clamp(92px,18vw,156px);line-height:1;opacity:.26;pointer-events:none;user-select:none;
-          transform:rotate(-8deg);filter:drop-shadow(0 4px 10px rgba(0,0,0,.12));animation:bkMotif 8s ease-in-out infinite;}
-        @keyframes bkMotif{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-8px)}}
+        /* Baby Mo character on content pages (alternates with vignettes) */
+        .bk-cpose{position:absolute;z-index:0;right:clamp(8px,2vw,16px);bottom:clamp(6px,1.6vw,12px);
+          width:clamp(60px,13vw,86px);height:auto;object-fit:contain;pointer-events:none;
+          filter:drop-shadow(0 6px 10px rgba(0,0,0,.16));animation:bkCpose 5s ease-in-out infinite;}
+        @keyframes bkCpose{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+
+        /* Drawn CSS "vignette" illustrations (corner spot art per page) */
+        .bk-vig{position:absolute;z-index:0;right:clamp(10px,2.4vw,20px);bottom:clamp(12px,2.6vw,22px);
+          width:clamp(58px,13vw,84px);height:clamp(58px,13vw,84px);pointer-events:none;
+          filter:drop-shadow(0 5px 9px rgba(0,0,0,.14));}
+        .bk-vig i{position:absolute;}
+        .bk-vig--sun::before{content:"";position:absolute;inset:0;border-radius:50%;background:repeating-conic-gradient(#F6C23D 0 9deg,transparent 9deg 30deg);opacity:.9;}
+        .bk-vig--sun::after{content:"";position:absolute;inset:24%;border-radius:50%;background:radial-gradient(circle at 38% 34%,#FFEFAE,#F6C23D 72%);}
+        .bk-vig--moon::before{content:"";position:absolute;inset:8%;border-radius:50%;background:#F1D26A;}
+        .bk-vig--moon::after{content:"";position:absolute;top:-2%;left:30%;width:98%;height:98%;border-radius:50%;background:var(--color-paper-2);}
+        .bk-vig--star::before{content:"";position:absolute;inset:4%;background:#F4C540;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+        .bk-vig--star::after{content:"";position:absolute;width:34%;height:34%;right:0;top:2%;background:#F7D261;clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+        .bk-vig--cloud i,.bk-vig--rain .c{left:4%;bottom:32%;width:92%;height:38%;background:#E3EEF8;border-radius:999px;}
+        .bk-vig--cloud i::before,.bk-vig--cloud i::after,.bk-vig--rain .c::before,.bk-vig--rain .c::after{content:"";position:absolute;background:#E3EEF8;border-radius:50%;bottom:8%;}
+        .bk-vig--cloud i::before,.bk-vig--rain .c::before{width:50%;height:150%;left:10%;}
+        .bk-vig--cloud i::after,.bk-vig--rain .c::after{width:40%;height:115%;right:12%;}
+        .bk-vig--rain .c{top:12%;bottom:auto;height:34%;background:#C9D6DF;}
+        .bk-vig--rain .c::before,.bk-vig--rain .c::after{background:#C9D6DF;}
+        .bk-vig--rain .dp{top:60%;width:6%;height:18%;background:#5FA8D8;border-radius:50% 50% 50% 0;transform:rotate(45deg);}
+        .bk-vig--sprout i{left:48%;bottom:12%;width:5%;height:50%;background:#4E9A52;border-radius:3px;}
+        .bk-vig--sprout i::before,.bk-vig--sprout i::after{content:"";position:absolute;width:180%;height:70%;background:linear-gradient(160deg,#86C97A,#4E9A52);bottom:55%;}
+        .bk-vig--sprout i::before{right:60%;border-radius:50% 0 50% 50%;transform:rotate(10deg);}
+        .bk-vig--sprout i::after{left:60%;border-radius:0 50% 50% 50%;transform:rotate(-10deg);}
+        .bk-vig--flower::before{content:"";position:absolute;inset:6% 6% 30% 6%;
+          background:radial-gradient(circle at 50% 18%,#F2849E 13%,transparent 14%),radial-gradient(circle at 82% 48%,#F2849E 13%,transparent 14%),radial-gradient(circle at 18% 48%,#F2849E 13%,transparent 14%),radial-gradient(circle at 33% 82%,#F2849E 13%,transparent 14%),radial-gradient(circle at 67% 82%,#F2849E 13%,transparent 14%),radial-gradient(circle at 50% 50%,#F6C945 15%,transparent 16%);}
+        .bk-vig--flower::after{content:"";position:absolute;left:46%;top:62%;width:8%;height:34%;background:#4E9A52;border-radius:2px;}
+        .bk-vig--jar::before{content:"";position:absolute;inset:26% 24% 8% 24%;border:3px solid #8FB7C9;border-top:none;border-radius:5px 5px 14px 14px;background:rgba(143,183,201,.16);}
+        .bk-vig--jar::after{content:"";position:absolute;top:18%;left:30%;width:40%;height:9%;background:#8FB7C9;border-radius:4px;}
+        .bk-vig--mosque::before{content:"";position:absolute;left:22%;top:42%;width:56%;height:44%;background:#C9A55B;border-radius:6px 6px 0 0;}
+        .bk-vig--mosque::after{content:"";position:absolute;left:33%;top:18%;width:34%;height:34%;background:#D8B871;border-radius:50% 50% 8% 8%;}
+        .bk-vig--book::before,.bk-vig--book::after{content:"";position:absolute;top:30%;width:42%;height:42%;background:#F1E7D2;border:2px solid #C9A55B;}
+        .bk-vig--book::before{left:7%;transform:skewY(12deg);transform-origin:right;border-radius:3px 0 0 3px;}
+        .bk-vig--book::after{right:7%;transform:skewY(-12deg);transform-origin:left;border-radius:0 3px 3px 0;}
+        .bk-vig--heart::before,.bk-vig--heart::after{content:"";position:absolute;top:24%;left:30%;width:40%;height:62%;background:#F2849E;border-radius:50% 50% 0 0;}
+        .bk-vig--heart::before{transform:rotate(-45deg);transform-origin:0 100%;}
+        .bk-vig--heart::after{transform:rotate(45deg);transform-origin:100% 100%;}
+        .bk-vig--drop::before{content:"";position:absolute;inset:18% 28%;background:linear-gradient(160deg,#86C7F0,#3E9BD8);border-radius:50% 50% 50% 0;transform:rotate(45deg);}
+        .bk-vig--leaf::before{content:"";position:absolute;inset:24%;background:linear-gradient(150deg,#8FCF7E,#4E9A52);border-radius:0 50% 0 50%;}
+        .bk-vig--leaf::after{content:"";position:absolute;left:48%;top:30%;width:3%;height:46%;background:rgba(255,255,255,.55);transform:rotate(-45deg);transform-origin:top;}
+
+        /* Illustrated cover */
+        .bk-page--cover{padding:0;}
+        .bk-cover-scene{width:100%;flex-shrink:0;}
+        .bk-cover-scene .sc{border-radius:16px 16px 0 0;border-left:0;border-right:0;border-top:0;}
+        .bk-cover-scene .sc--cover{aspect-ratio:4 / 3;}
+        .bk-cover-text{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:clamp(16px,3.2vw,30px);}
+        .bk-page--cover .bk-page-foot{padding-bottom:clamp(12px,2vw,18px);}
 
         .bk-prose{font-family:var(--font-serif);color:var(--color-ink);}
         .bk-prose p{font-size:var(--bk-fs,22px);line-height:1.82;margin:0 0 .72em;}
@@ -610,7 +707,7 @@ export function BookReader({
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
 
         @media (prefers-reduced-motion: reduce){
-          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-motif,
+          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-cpose,
           .bk-wave,.bk-burst i,.bk-tap-hint{animation:none;}
         }
       `}</style>
