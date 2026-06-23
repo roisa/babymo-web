@@ -13,7 +13,7 @@ import { BookReader } from "@/components/BookReader";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
-import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
+import { poseForCatatan, sceneForCatatan, accentForScene } from "@/lib/cerita/scene";
 import { getThemesForCatatan } from "@/lib/content/cerita-themes";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
@@ -126,8 +126,8 @@ export default async function CatatanDetail({
             />
           </div>
 
-          {/* Book mode — trial on a single story; roll out to all once approved. */}
-          {isStory && slug === "stoples-liburan-baby-mo" && (
+          {/* Book mode — available on every kids' story (kind: "story"). */}
+          {isStory && (
             <BookReader
               locale={l}
               title={n.title[l]}
@@ -138,7 +138,7 @@ export default async function CatatanDetail({
               scene={sceneForCatatan(n)}
               coverPose={poseForCatatan(n)}
               endPose={asset(posePath("baby-mo-pose-15.png"))}
-              accent={["🌱", "🫙", "☁️", "✨", "🍃", "💚"]}
+              accent={accentForScene(sceneForCatatan(n))}
             />
           )}
         </header>
