@@ -1391,6 +1391,362 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   //  lesson and a gentle Islamic anchor. (kind: "story")
   // ═══════════════════════════════════════════════════════════════════
   {
+    slug: "siapa-yang-menciptakan-aku",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-ok.png",
+    published: "2026-06-23",
+    title: { id: "Siapa yang Menciptakan Aku?", en: "Who Created Me?" },
+    hook: {
+      id: "Di depan cermin, Baby Mo bertanya, \"Umi, siapa yang membuat aku?\" Maka mereka main \"penjelajah tubuh\" — menemukan betapa ajaibnya ciptaan Allah.",
+      en: "In front of the mirror, Baby Mo asks, \"Umi, who made me?\" So they play \"body explorer\" — discovering how amazing Allah's creation is.",
+    },
+    body: {
+      id: `Pagi itu Baby Mo berdiri di depan cermin, memiringkan kepala ke kiri dan ke kanan. "Umi," tanyanya, "siapa yang membuat aku? Mataku, tanganku, semuanya?"
+
+Umi berlutut di belakangnya, ikut memandang cermin. "Allah, sayang. Allah yang menciptakanmu dengan sebaik-baik bentuk. Mau buktikan betapa hebatnya buatan Allah? Ayo main penjelajah tubuh!"
+
+"Penjelajah tubuh?" Mata Baby Mo berbinar.
+
+"Pos pertama: mata." Umi menutup matanya sendiri dengan tangan. "Coba pejamkan matamu. Gelap, kan? Sekarang buka." Baby Mo membuka mata, dan dunia kembali penuh warna. "Allah memberimu mata untuk melihat semua keindahan."
+
+"Pos kedua: telinga." Umi berbisik sangat pelan, "Baby Mo sayang Umi." Baby Mo terkikik — ia mendengarnya! "Allah memberimu telinga untuk mendengar suara sayang."
+
+"Pos ketiga: tangan." Baby Mo menggoyangkan sepuluh jarinya, lalu memegang gelas, lalu memeluk Umi erat-erat. "Allah memberimu tangan untuk bekerja dan memeluk."
+
+"Pos terakhir," kata Umi, menempelkan tangan Baby Mo ke dadanya. Dug… dug… dug… "Jantung kecil yang berdetak tanpa pernah kamu suruh. Bahkan saat kamu tidur, ia terus bekerja. Hanya Allah yang bisa membuat yang seajaib itu."
+
+Baby Mo menatap pantulannya di cermin dengan kagum, seakan baru berkenalan dengan dirinya sendiri. "Wah… aku ini buatan Allah."
+
+"Iya, sayang. Dan karena Allah membuatmu dengan begitu sayang, kita berterima kasih dengan cara menjaganya dan memakainya untuk kebaikan."
+
+Malam itu, sebelum tidur, Baby Mo berbisik, "Terima kasih, Allah, sudah membuat aku."
+
+> *Allah menciptakanmu dalam bentuk yang sebaik-baiknya — maka bersyukurlah.*
+
+Sekarang, main penjelajah tubuh bareng si kecil: tunjuk mata, telinga, tangan, dan dada, lalu ucapkan, "Terima kasih, Allah." 👀👂✋💓`,
+      en: `That morning Baby Mo stood in front of the mirror, tilting his head left and right. "Umi," he asked, "who made me? My eyes, my hands, all of it?"
+
+Umi knelt behind him, looking into the mirror too. "Allah, dear. Allah created you in the very best form. Want to see how amazing Allah's work is? Let's play body explorer!"
+
+"Body explorer?" Baby Mo's eyes sparkled.
+
+"Station one: eyes." Umi covered her own eyes with her hands. "Close your eyes. It's dark, right? Now open them." Baby Mo opened his eyes, and the world was full of colour again. "Allah gave you eyes to see all this beauty."
+
+"Station two: ears." Umi whispered very softly, "Baby Mo loves Umi." Baby Mo giggled — he heard it! "Allah gave you ears to hear loving words."
+
+"Station three: hands." Baby Mo wiggled all ten fingers, then held a cup, then hugged Umi tight. "Allah gave you hands to work and to hug."
+
+"Last station," said Umi, pressing Baby Mo's hand to his chest. Thump… thump… thump… "A little heart that beats without you ever telling it to. Even while you sleep, it keeps working. Only Allah can make something that wonderful."
+
+Baby Mo stared at his reflection in awe, as if meeting himself for the first time. "Wow… I'm made by Allah."
+
+"Yes, dear. And because Allah made you with such love, we thank Him by taking care of ourselves and using ourselves for good."
+
+That night, before sleep, Baby Mo whispered, "Thank you, Allah, for making me."
+
+> *Allah created you in the best of forms — so be grateful.*
+
+Now, play body explorer with your little one: point to eyes, ears, hands, and chest, then say, "Thank you, Allah." 👀👂✋💓`,
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Allah menciptakan kita dengan sebaik-baik bentuk — mata, telinga, tangan, dan jantung yang berdetak. Cara berterima kasih: menjaganya dan memakainya untuk kebaikan.",
+      en: "Allah made us in the best form — eyes, ears, hands, a beating heart. We give thanks by caring for ourselves and using ourselves for good.",
+    },
+    tags: ["allah", "ciptaan", "bersyukur", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "apa-itu-malaikat-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Malaikat?", en: "What Are Angels?" },
+    hook: {
+      id: "\"Umi, apa itu malaikat? Kenapa aku tidak bisa melihatnya?\" Baby Mo belajar bahwa ada teman-teman baik yang tak terlihat — selalu mencatat kebaikannya.",
+      en: "\"Umi, what are angels? Why can't I see them?\" Baby Mo learns there are kind, unseen friends — always writing down his good deeds.",
+    },
+    body: {
+      id: `Sehabis mendengar kata "malaikat" dalam sebuah doa, Baby Mo bertanya, "Umi, apa itu malaikat? Kenapa aku tidak pernah melihatnya?"
+
+Umi mengajaknya ke jendela. "Coba lihat ke luar. Kamu bisa lihat angin?"
+
+Baby Mo memicingkan mata. "Tidak… tapi aku bisa lihat daun yang bergoyang!"
+
+"Nah, begitu juga malaikat," kata Umi. "Allah menciptakan mereka dari cahaya. Kita tidak bisa melihatnya, tapi mereka ada, selalu taat melakukan perintah Allah. Ada malaikat yang menjaga, ada yang menyampaikan rahmat… dan ada dua malaikat istimewa yang selalu menemani setiap anak."
+
+"Dua malaikat? Menemani aku?" Baby Mo melihat ke bahu kiri dan kanannya.
+
+"Iya. Yang di kanan mencatat setiap kebaikanmu, dan yang di kiri mencatat kesalahan. Jadi setiap kali kamu berbuat baik…" Umi pura-pura menulis di udara, "…sret! Tercatat sebagai bintang kebaikan."
+
+Mata Baby Mo membulat. Lalu, diam-diam, ia punya rencana.
+
+Sepanjang hari itu, ia berbuat banyak kebaikan — membereskan mainan, berbagi biskuit, mengucap terima kasih. Dan setiap kali, ia berbisik kecil sambil tersenyum, "Tolong dicatat, ya."
+
+Saat ia hampir marah pada Baby Ais yang merebut krayonnya, Baby Mo berhenti. Ia ingat malaikat di kiri yang siap mencatat. Ia menarik napas, lalu berkata pelan, "Nggak apa-apa, Ais, pakai dulu." Dan ia merasa lega.
+
+Menjelang tidur, Baby Mo berkata, "Umi, walaupun aku tidak bisa melihat mereka, mereka melihatku. Jadi aku mau jadi anak baik — biar buku kebaikanku penuh."
+
+Umi mencium keningnya. "Masya Allah, sayang. Itulah hadiah dari percaya pada yang gaib: kita jadi baik, bahkan saat tak ada yang terlihat menonton."
+
+> *Bagi setiap orang ada malaikat-malaikat yang menjaganya bergiliran.*
+
+Sekarang, ajak si kecil: setiap kali berbuat baik hari ini, bisikkan, "Tolong dicatat, ya." Lihat berapa banyak kebaikan yang bisa terkumpul. ✨`,
+      en: `After hearing the word "angels" in a dua, Baby Mo asked, "Umi, what are angels? Why have I never seen them?"
+
+Umi led him to the window. "Look outside. Can you see the wind?"
+
+Baby Mo squinted. "No… but I can see the leaves swaying!"
+
+"That's just like the angels," said Umi. "Allah created them from light. We can't see them, but they're there, always obeying Allah's commands. Some angels protect us, some bring mercy… and two special angels always stay with every child."
+
+"Two angels? With me?" Baby Mo glanced at his left and right shoulders.
+
+"Yes. The one on the right writes down every good thing you do, and the one on the left writes down mistakes. So every time you do good…" Umi pretended to write in the air, "…swish! Recorded as a star of goodness."
+
+Baby Mo's eyes went round. Then, quietly, he had a plan.
+
+All that day, he did lots of good — tidying toys, sharing a biscuit, saying thank you. And each time, he whispered with a little smile, "Please write that down."
+
+When he was about to get angry at Baby Ais for grabbing his crayon, Baby Mo stopped. He remembered the angel on the left, ready to write. He took a breath, then said gently, "It's okay, Ais, you use it first." And he felt relieved.
+
+At bedtime, Baby Mo said, "Umi, even though I can't see them, they can see me. So I want to be a good boy — to fill up my book of good deeds."
+
+Umi kissed his forehead. "Masha'Allah, dear. That's the gift of believing in the unseen: we become good, even when no one visible is watching."
+
+> *For everyone there are angels who guard them in turns.*
+
+Now, invite your little one: each time you do good today, whisper, "Please write that down." See how many good deeds you can gather. ✨`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Malaikat adalah ciptaan Allah dari cahaya yang tak terlihat namun selalu taat. Dua malaikat mencatat amal kita — jadi kita berbuat baik walau tak ada yang terlihat menonton.",
+      en: "Angels are Allah's creation of light — unseen yet always obedient. Two angels record our deeds, so we do good even when no one visible is watching.",
+    },
+    tags: ["malaikat", "iman", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-harus-berbagi-untuk-anak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Harus Berbagi?", en: "Why Should I Share?" },
+    hook: {
+      id: "Baby Mo punya dua biskuit dan tidak mau berbagi. Tapi sebuah percobaan kecil mengajarkannya rahasia: kebahagiaan yang dibagi malah bertambah.",
+      en: "Baby Mo has two biscuits and doesn't want to share. But a little experiment teaches him a secret: happiness shared only grows.",
+    },
+    body: {
+      id: `Baby Mo memegang dua biskuit cokelat erat-erat di dadanya. Baby Ais memandanginya dengan mata besar penuh harap.
+
+"Ini punyaku," kata Baby Mo cepat. "Semua."
+
+Umi tidak memarahinya. Ia justru duduk dan berkata, "Baby Mo, Umi punya percobaan seru. Mau coba?"
+
+Baby Mo penasaran. "Percobaan apa?"
+
+"Coba makan satu biskuit sendirian, di pojok sana. Lalu rasakan: seberapa senang?"
+
+Baby Mo pergi ke pojok dan memakan satu biskuit. Enak… tapi sepi. Baby Ais hanya memandang dari jauh. Entah kenapa, biskuitnya terasa kurang manis.
+
+"Sekarang," kata Umi lembut, "yang satu lagi, coba bagi dua dengan Baby Ais. Lalu rasakan lagi."
+
+Baby Mo ragu sebentar. Lalu ia mematahkan biskuit terakhirnya — krak! — dan memberikan separuhnya kepada Baby Ais.
+
+Wajah Baby Ais langsung berseri. "Tewima katih, Kakak!" serunya, lalu memeluk Baby Mo. Mereka mengunyah bersama, saling pandang, dan tertawa.
+
+Dan… ajaib. Setengah biskuit yang ini terasa jauh lebih nikmat daripada satu biskuit utuh tadi.
+
+Baby Mo terdiam, lalu berkata pelan, "Umi… kok yang dibagi malah terasa lebih enak?"
+
+Umi tersenyum. "Itulah rahasianya, sayang. Saat kita berbagi, kita tidak kehilangan kebahagiaan — kebahagiaannya malah jadi dua. Dan Allah sayang pada orang yang suka berbagi. Memberi tidak pernah membuat kita berkurang."
+
+Sejak hari itu, kalau Baby Mo punya sesuatu yang enak, matanya langsung mencari Baby Ais. Karena ia sudah tahu rahasianya: berbagi membuat segala sesuatu terasa lebih manis.
+
+> *Tidak akan berkurang harta karena sedekah — berbagi justru menambah keberkahan.*
+
+Sekarang, coba percobaan berbagi bareng si kecil: satu camilan dibagi berdua. Tanyakan, "Lebih enak yang mana?" 🍪💞`,
+      en: `Baby Mo clutched two chocolate biscuits tight to his chest. Baby Ais watched him with big, hopeful eyes.
+
+"These are mine," Baby Mo said quickly. "All of them."
+
+Umi didn't scold him. Instead she sat down and said, "Baby Mo, I have a fun experiment. Want to try?"
+
+Baby Mo was curious. "What experiment?"
+
+"Eat one biscuit by yourself, over in that corner. Then notice: how happy do you feel?"
+
+Baby Mo went to the corner and ate one biscuit. Tasty… but lonely. Baby Ais just watched from afar. Somehow, the biscuit felt less sweet.
+
+"Now," Umi said gently, "the other one — try splitting it in half with Baby Ais. Then notice again."
+
+Baby Mo hesitated a moment. Then he snapped his last biscuit — crack! — and gave half to Baby Ais.
+
+Baby Ais's face lit up at once. "Tank you, broder!" she cried, then hugged Baby Mo. They munched together, looked at each other, and laughed.
+
+And… how strange. This half a biscuit tasted far nicer than the whole one before.
+
+Baby Mo went quiet, then said softly, "Umi… why does the shared one taste even better?"
+
+Umi smiled. "That's the secret, dear. When we share, we don't lose our happiness — it actually doubles. And Allah loves those who love to share. Giving never makes us less."
+
+From that day on, whenever Baby Mo had something nice, his eyes searched for Baby Ais. Because he knew the secret now: sharing makes everything taste sweeter.
+
+> *Wealth is never decreased by charity — giving only adds blessing.*
+
+Now, try the sharing experiment with your little one: split one snack between two. Ask, "Which one tasted better?" 🍪💞`,
+    },
+    anchor: { type: "parenting", slug: "anak-tidak-mau-berbagi" },
+    takeaway: {
+      id: "Berbagi tidak membuat kita kekurangan — kebahagiaan yang dibagi justru jadi dua, dan Allah menambah keberkahan bagi yang suka memberi.",
+      en: "Sharing doesn't leave us with less — happiness shared doubles, and Allah adds blessing for those who love to give.",
+    },
+    tags: ["berbagi", "sedekah", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "ke-mana-kita-saat-tidur",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-alright.png",
+    published: "2026-06-23",
+    title: { id: "Ke Mana Kita Saat Tidur?", en: "Where Do We Go When We Sleep?" },
+    hook: {
+      id: "Di bawah selimut, Baby Mo bertanya, \"Umi, kita pergi ke mana waktu tidur?\" Maka ia belajar bahwa tidur adalah hadiah istirahat — dan pagi adalah hadiah hidup yang baru.",
+      en: "Under the blanket, Baby Mo asks, \"Umi, where do we go when we sleep?\" And he learns that sleep is a gift of rest — and morning is the gift of a new day.",
+    },
+    body: {
+      id: `Malam sudah larut. Lampu kamar redup, dan bintang-bintang mengintip dari balik tirai. Baby Mo menarik selimut sampai ke dagu, lalu bertanya, "Umi, kita pergi ke mana sih waktu tidur? Kenapa aku tidak ingat apa-apa?"
+
+Umi duduk di tepi tempat tidur. "Pertanyaan yang dalam sekali, sayang. Begini: setiap malam, Allah memberi kita hadiah bernama istirahat. Tubuh kita yang lelah seharian dibiarkan beristirahat, dan Allah yang menjaga kita sepanjang malam."
+
+"Allah menjaga aku… walaupun aku tidur?"
+
+"Selalu. Allah tidak pernah mengantuk dan tidak pernah tidur. Saat matamu terpejam, Dia tetap menjagamu." Umi mengusap rambutnya. "Tidur itu sedikit seperti dititipkan dengan aman. Lalu pagi datang, mata kita terbuka lagi, dan itu… seperti hadiah hidup yang baru."
+
+Baby Mo memikirkannya. "Jadi setiap pagi aku dapat hadiah?"
+
+"Iya. Makanya saat bangun nanti, kita ucapkan terima kasih: 'Alhamdulillah, yang telah menghidupkan aku kembali setelah mematikan aku.' Sekarang, sebelum dititipkan, kita baca doa tidur, ya."
+
+Bersama-sama mereka berbisik doa sebelum tidur. Baby Mo merapatkan matanya, merasa hangat dan aman, seperti dipeluk dari segala arah.
+
+"Selamat beristirahat, jagoan," bisik Umi. "Sampai jumpa di pagi yang baru."
+
+Esok paginya, cahaya masuk lembut lewat jendela. Baby Mo membuka mata, meregangkan tangannya, dan — ia ingat. Sambil tersenyum mengantuk ia berkata, "Alhamdulillah… aku dapat hari baru lagi!"
+
+> *Allah-lah yang menidurkan kita di malam hari dan membangunkan kita di pagi hari.*
+
+Sekarang, tutup hari bersama si kecil dengan doa tidur, dan buka pagi dengan satu ucapan: "Alhamdulillah, hari baru!" 🌙⭐`,
+      en: `It was late. The bedroom light was dim, and stars peeked through the curtains. Baby Mo pulled the blanket up to his chin and asked, "Umi, where do we go when we sleep? Why don't I remember anything?"
+
+Umi sat on the edge of the bed. "What a deep question, dear. Here's how it is: every night, Allah gives us a gift called rest. Our body, tired from the whole day, gets to rest, and Allah watches over us all night long."
+
+"Allah watches me… even when I'm asleep?"
+
+"Always. Allah never gets drowsy and never sleeps. When your eyes are closed, He still keeps you safe." Umi stroked his hair. "Sleep is a little like being placed somewhere safe for keeping. Then morning comes, our eyes open again, and that… is like the gift of a brand-new life."
+
+Baby Mo thought about it. "So every morning I get a gift?"
+
+"Yes. That's why when you wake, we say thank you: 'Alhamdulillah, the One who gave me life after taking it.' Now, before we're placed in safekeeping, let's read the sleeping dua."
+
+Together they whispered the dua before sleep. Baby Mo closed his eyes tight, feeling warm and safe, as if hugged from every side.
+
+"Rest well, champ," whispered Umi. "See you in a new morning."
+
+The next morning, light slipped softly through the window. Baby Mo opened his eyes, stretched his arms, and — he remembered. With a sleepy smile he said, "Alhamdulillah… I got a new day again!"
+
+> *It is Allah who takes our souls to rest at night and wakes us in the morning.*
+
+Now, close the day with your little one with the sleeping dua, and open the morning with one phrase: "Alhamdulillah, a new day!" 🌙⭐`,
+    },
+    anchor: { type: "doa", slug: "sebelum-tidur" },
+    takeaway: {
+      id: "Tidur adalah hadiah istirahat; Allah yang Maha Menjaga tak pernah tidur. Pagi adalah hadiah hidup baru — sambut dengan Alhamdulillah.",
+      en: "Sleep is a gift of rest; Allah, the Ever-Watchful, never sleeps. Morning is the gift of new life — greet it with Alhamdulillah.",
+    },
+    tags: ["tidur", "doa", "tawakal", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "siapa-yang-membuat-hujan",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-23",
+    title: { id: "Siapa yang Membuat Hujan?", en: "Who Makes the Rain?" },
+    hook: {
+      id: "Saat hujan turun, Baby Mo menempelkan wajahnya ke jendela. \"Umi, siapa yang mengirim hujan?\" Lalu ia melihat sendiri bagaimana hujan adalah kasih sayang Allah.",
+      en: "As the rain falls, Baby Mo presses his face to the window. \"Umi, who sends the rain?\" Then he sees for himself how rain is Allah's mercy.",
+    },
+    body: {
+      id: `Tetes pertama jatuh — tik. Lalu tik-tik-tik, dan sebentar saja hujan turun rapat di luar. Baby Mo dan Baby Ais menempelkan hidung mereka ke kaca jendela.
+
+"Umi! Siapa sih yang mengirim hujan sebanyak ini?" tanya Baby Mo.
+
+"Allah, sayang," kata Umi. "Allah menggiring awan, lalu menurunkan hujan dari langit. Dan tahukah kamu? Hujan itu salah satu tanda kasih sayang Allah."
+
+"Kasih sayang? Tapi kan jadi becek," kata Baby Mo sambil cemberut kecil.
+
+"Yuk kita lihat ke mana perginya air hujan," ajak Umi.
+
+Mereka memakai jas hujan dan keluar ke teras. Baby Mo menengadahkan tangannya dan menampung tetes-tetes hujan yang dingin dan segar. Ia melihat air mengalir membasahi tanah, lalu memandang pot kacang hijaunya — daun-daunnya tampak lebih hijau dan segar, seakan sedang minum dengan gembira.
+
+"Lihat," kata Umi. "Tanpa hujan, tanaman layu, sungai kering, dan kita tidak punya air untuk minum. Lewat satu hujan, Allah memberi minum pada bunga, pohon, hewan, dan manusia — semuanya sekaligus."
+
+Mata Baby Mo membulat. "Jadi hujan itu hadiah buat semua makhluk?"
+
+"Betul sekali. Makanya saat hujan turun, kita berdoa: 'Ya Allah, jadikanlah hujan ini hujan yang bermanfaat.'"
+
+Baby Mo menengadah ke langit kelabu, membiarkan satu tetes jatuh di pipinya, lalu tersenyum lebar. "Terima kasih, Allah, sudah memberi minum bunga-bungaku."
+
+Sejak hari itu, Baby Mo tidak lagi cemberut saat hujan. Ia tahu, di balik tetes-tetes itu ada kasih sayang yang sedang turun dari langit.
+
+> *Allah menurunkan air dari langit, lalu menghidupkan bumi yang tandus dengannya.*
+
+Sekarang, saat hujan berikutnya, ajak si kecil menampung setetes di tangan dan berdoa, "Ya Allah, hujan yang bermanfaat." 🌧️🌱`,
+      en: `The first drop fell — tap. Then tap-tap-tap, and in no time the rain came down thick outside. Baby Mo and Baby Ais pressed their noses to the window glass.
+
+"Umi! Who sends down all this rain?" asked Baby Mo.
+
+"Allah, dear," said Umi. "Allah drives the clouds, then sends rain from the sky. And do you know what? Rain is one of the signs of Allah's mercy."
+
+"Mercy? But it gets all muddy," said Baby Mo with a little pout.
+
+"Let's go see where the rainwater goes," Umi invited.
+
+They put on raincoats and stepped onto the porch. Baby Mo held up his hands and caught the cool, fresh drops. He watched the water flow and soak the soil, then looked at his mung-bean pot — the leaves looked greener and fresher, as if drinking happily.
+
+"See," said Umi. "Without rain, plants wilt, rivers dry up, and we'd have no water to drink. Through one rainfall, Allah gives a drink to flowers, trees, animals, and people — all at once."
+
+Baby Mo's eyes went round. "So rain is a gift for all creatures?"
+
+"Exactly. That's why when it rains, we pray: 'O Allah, make this a beneficial rain.'"
+
+Baby Mo looked up at the grey sky, let one drop land on his cheek, then beamed. "Thank you, Allah, for giving my flowers a drink."
+
+From that day on, Baby Mo no longer pouted at the rain. He knew that behind those drops was a mercy coming down from the sky.
+
+> *Allah sends water down from the sky, and with it gives life to the barren earth.*
+
+Now, at the next rain, invite your little one to catch a drop in their hand and pray, "O Allah, a beneficial rain." 🌧️🌱`,
+    },
+    anchor: { type: "doa", slug: "ketika-hujan" },
+    takeaway: {
+      id: "Hujan adalah kasih sayang Allah yang memberi minum bunga, pohon, hewan, dan manusia sekaligus. Sambut dengan doa, bukan keluhan.",
+      en: "Rain is Allah's mercy, giving a drink to flowers, trees, animals, and people all at once. Greet it with a dua, not a complaint.",
+    },
+    tags: ["hujan", "ciptaan", "kasih-sayang", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
     slug: "siapa-allah-untuk-anak",
     kind: "story",
     child: "mo",

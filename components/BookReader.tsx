@@ -27,6 +27,8 @@ const VIGNETTES: [RegExp, string][] = [
   [/hujan|\brain|gerimis/i, "rain"],
   [/tunas|tumbuh|grow|sprout|biji|kacang|seed|menanam|tanam|\bplant|kecambah/i, "sprout"],
   [/bunga|flower|mawar|tulip|melati|kebun|taman|garden/i, "flower"],
+  [/malaikat|angel|sayap|\bwing/i, "wing"],
+  [/berbagi|\bshare|sharing|hadiah|\bgift|memberi|sedekah|\bgive/i, "gift"],
   [/stoples|toples|\bjar\b/i, "jar"],
   [/masjid|mosque|sholat|salat|\bpray|sujud|takbir/i, "mosque"],
   [/buku|\bbook\b|baca|\bread|cerita|story/i, "book"],
@@ -65,7 +67,7 @@ function contentPose(text: string, idx: number): string {
 
 /** Render a drawn CSS vignette for a kind (some kinds need inner elements). */
 function renderVignette(kind: string) {
-  if (kind === "cloud" || kind === "sprout") {
+  if (kind === "cloud" || kind === "sprout" || kind === "wing" || kind === "gift") {
     return (
       <span className={`bk-vig bk-vig--${kind}`} aria-hidden>
         <i />
@@ -655,6 +657,17 @@ export function BookReader({
         .bk-vig--drop::before{content:"";position:absolute;inset:18% 28%;background:linear-gradient(160deg,#86C7F0,#3E9BD8);border-radius:50% 50% 50% 0;transform:rotate(45deg);}
         .bk-vig--leaf::before{content:"";position:absolute;inset:24%;background:linear-gradient(150deg,#8FCF7E,#4E9A52);border-radius:0 50% 0 50%;}
         .bk-vig--leaf::after{content:"";position:absolute;left:48%;top:30%;width:3%;height:46%;background:rgba(255,255,255,.55);transform:rotate(-45deg);transform-origin:top;}
+        .bk-vig--wing::before,.bk-vig--wing::after{content:"";position:absolute;top:34%;width:42%;height:46%;background:linear-gradient(160deg,#FFFFFF,#E6EEF7);border-radius:50% 50% 50% 8px;box-shadow:0 2px 6px rgba(0,0,0,.1);}
+        .bk-vig--wing::before{left:5%;transform:rotate(-16deg);}
+        .bk-vig--wing::after{right:5%;transform:scaleX(-1) rotate(-16deg);}
+        .bk-vig--wing i{left:50%;top:10%;transform:translateX(-50%);width:34%;height:20%;border:4px solid #F4C540;border-radius:50%;background:transparent;}
+        .bk-vig--gift::before{content:"";position:absolute;left:16%;top:36%;width:68%;height:52%;background:#F2849E;border-radius:6px;}
+        .bk-vig--gift::after{content:"";position:absolute;left:16%;top:36%;width:68%;height:52%;border-radius:6px;
+          background:linear-gradient(90deg,transparent 43%,#FBE3A0 43% 57%,transparent 57%);}
+        .bk-vig--gift i{left:10%;top:24%;width:80%;height:16%;background:#F4A0B4;border-radius:4px;box-shadow:0 0 0 0 transparent;}
+        .bk-vig--gift i::before,.bk-vig--gift i::after{content:"";position:absolute;top:-70%;width:42%;height:90%;background:#F2849E;border-radius:50% 50% 0 50%;}
+        .bk-vig--gift i::before{left:6%;transform:rotate(-18deg);}
+        .bk-vig--gift i::after{right:6%;transform:scaleX(-1) rotate(-18deg);}
 
         /* Illustrated cover */
         .bk-page--cover{padding:0;}
