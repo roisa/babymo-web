@@ -59,6 +59,8 @@ type Props = {
   body: string;
   takeaway: string;
   poseSrc?: string | null;
+  /** Optional different pose for the closing page (e.g. a waving goodbye). */
+  endPose?: string | null;
   byline?: string;
   /** Decorative drifting emoji themed to the story (ambient layer). */
   accent?: string[];
@@ -95,6 +97,7 @@ export function BookReader({
   body,
   takeaway,
   poseSrc,
+  endPose,
   byline = "Baby Mo",
   accent = ["✨", "🌙", "⭐"],
 }: Props) {
@@ -112,6 +115,9 @@ export function BookReader({
           endSub: "Sampai jumpa di cerita berikutnya, ya!",
           page: "Halaman",
           font: "Ukuran huruf",
+          bye: "Dadah! 👋",
+          tapHint: "Ketuk Baby Mo 👆",
+          wave: "Lambaikan tangan Baby Mo",
         }
       : {
           open: "Read in Book Mode",
@@ -125,6 +131,9 @@ export function BookReader({
           endSub: "See you in the next story!",
           page: "Page",
           font: "Text size",
+          bye: "Bye-bye! 👋",
+          tapHint: "Tap Baby Mo 👆",
+          wave: "Make Baby Mo wave",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -134,6 +143,8 @@ export function BookReader({
   const [sheets, setSheets] = useState<Sheet[] | null>(null);
   const [pos, setPos] = useState(0); // sheet index (single) / left sheet index (spread)
   const [dir, setDir] = useState<"next" | "prev" | "open">("open");
+  const [waved, setWaved] = useState(0); // bump to replay the goodbye wave
+  const waveTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   const bookRef = useRef<HTMLDivElement>(null);
   const sizeRef = useRef<HTMLDivElement>(null);
@@ -265,6 +276,15 @@ export function BookReader({
     });
   };
 
+  const waveNow = () => {
+    setWaved((w) => w + 1);
+    if (waveTimer.current) clearTimeout(waveTimer.current);
+    waveTimer.current = setTimeout(() => setWaved(0), 2200);
+  };
+  useEffect(() => () => {
+    if (waveTimer.current) clearTimeout(waveTimer.current);
+  }, []);
+
   // Touch swipe (phone).
   const touch = useRef<{ x: number; y: number } | null>(null);
   const onTouchStart = (e: React.TouchEvent) => {
@@ -298,12 +318,34 @@ export function BookReader({
       );
     }
     if (s.kind === "end") {
+      const endImg = endPose ?? poseSrc;
       return (
         <div className="bk-page bk-page--end" key={key}>
           <div className="bk-page-content bk-end-inner">
             <div className="bk-end-quote" dangerouslySetInnerHTML={{ __html: parseBlocks(takeaway)[0]?.html ?? takeaway }} />
-            {poseSrc && (
-              <img className="bk-end-pose" src={poseSrc} alt="Baby Mo" draggable={false} />
+            {endImg && (
+              <div className="bk-end-pose-wrap">
+                <button type="button" className="bk-end-pose-btn" onClick={waveNow} aria-label={t.wave}>
+                  <img
+                    key={waved}
+                    className={`bk-end-pose${waved ? " bk-wave" : ""}`}
+                    src={endImg}
+                    alt="Baby Mo"
+                    draggable={false}
+                  />
+                </button>
+                {waved > 0 && (
+                  <>
+                    <span className="bk-bubble" key={`b${waved}`}>{t.bye}</span>
+                    <span className="bk-burst" key={`x${waved}`} aria-hidden>
+                      {accent.slice(0, 4).map((e, i) => (
+                        <i key={i} style={{ "--n": i } as React.CSSProperties}>{e}</i>
+                      ))}
+                    </span>
+                  </>
+                )}
+                <span className="bk-tap-hint">{t.tapHint}</span>
+              </div>
             )}
             <p className="bk-end-word">{t.end}</p>
             <p className="bk-end-sub">{t.endSub}</p>
@@ -505,9 +547,9 @@ export function BookReader({
 
         .bk-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow:hidden;}
         .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
-        .bk-motif{position:absolute;z-index:0;bottom:clamp(-6px,-1.4vw,-12px);right:clamp(-4px,-1.2vw,-10px);
-          font-size:clamp(84px,17vw,148px);line-height:1;opacity:.14;pointer-events:none;user-select:none;
-          transform:rotate(-8deg);animation:bkMotif 8s ease-in-out infinite;}
+        .bk-motif{position:absolute;z-index:0;bottom:clamp(-4px,-1vw,-10px);right:clamp(-2px,-0.8vw,-8px);
+          font-size:clamp(92px,18vw,156px);line-height:1;opacity:.26;pointer-events:none;user-select:none;
+          transform:rotate(-8deg);filter:drop-shadow(0 4px 10px rgba(0,0,0,.12));animation:bkMotif 8s ease-in-out infinite;}
         @keyframes bkMotif{0%,100%{transform:rotate(-8deg) translateY(0)}50%{transform:rotate(-3deg) translateY(-8px)}}
 
         .bk-prose{font-family:var(--font-serif);color:var(--color-ink);}
@@ -524,7 +566,26 @@ export function BookReader({
         .bk-cover-title{font-family:var(--font-display);font-size:clamp(26px,calc(var(--bk-fs,22px) * 1.55),48px);line-height:1.12;color:var(--color-ink);margin:0;}
         .bk-cover-hook{font-family:var(--font-serif);font-size:calc(var(--bk-fs,22px) * 0.86);line-height:1.6;color:var(--color-whisper);max-width:34ch;margin:0;}
         .bk-end-quote{font-family:var(--font-serif);font-style:italic;font-size:calc(var(--bk-fs,22px) * 0.98);line-height:1.6;color:var(--color-ink);max-width:32ch;}
-        .bk-end-pose{width:clamp(100px,18vw,140px);height:auto;object-fit:contain;}
+        .bk-end-pose-wrap{position:relative;display:flex;flex-direction:column;align-items:center;}
+        .bk-end-pose-btn{background:none;border:none;padding:0;cursor:pointer;line-height:0;}
+        .bk-end-pose-btn:active{transform:scale(.97);}
+        .bk-end-pose{width:clamp(110px,19vw,150px);height:auto;object-fit:contain;transform-origin:62% 88%;}
+        .bk-end-pose.bk-wave{animation:bkWave .85s ease;}
+        @keyframes bkWave{0%{transform:rotate(0)}14%{transform:rotate(-13deg)}30%{transform:rotate(10deg)}46%{transform:rotate(-8deg)}62%{transform:rotate(6deg)}78%{transform:rotate(-3deg)}100%{transform:rotate(0)}}
+        .bk-bubble{position:absolute;top:-6px;left:50%;transform:translateX(-50%);white-space:nowrap;
+          background:linear-gradient(135deg,#FFE3A0,#F0C463);color:#06231a;font-weight:800;font-size:14px;
+          padding:7px 14px;border-radius:16px;box-shadow:0 6px 16px -8px rgba(0,0,0,.5);animation:bkBubble 1.8s ease forwards;}
+        .bk-bubble::after{content:"";position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);
+          border:7px solid transparent;border-top-color:#F0C463;border-bottom:0;}
+        @keyframes bkBubble{0%{opacity:0;transform:translateX(-50%) translateY(6px) scale(.7)}15%{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}80%{opacity:1}100%{opacity:0;transform:translateX(-50%) translateY(-4px)}}
+        .bk-burst{position:absolute;top:14%;left:50%;width:0;height:0;pointer-events:none;}
+        .bk-burst i{position:absolute;font-style:normal;font-size:22px;left:0;top:0;opacity:0;
+          animation:bkBurst 1.1s ease-out forwards;animation-delay:calc(var(--n) * .05s);}
+        .bk-burst i:nth-child(1){--dx:-54px}.bk-burst i:nth-child(2){--dx:-18px}
+        .bk-burst i:nth-child(3){--dx:18px}.bk-burst i:nth-child(4){--dx:54px}
+        @keyframes bkBurst{0%{opacity:0;transform:translate(0,0) scale(.5)}25%{opacity:1}100%{opacity:0;transform:translate(var(--dx,0),-60px) scale(1.1)}}
+        .bk-tap-hint{margin-top:6px;font-size:11px;font-weight:700;letter-spacing:.04em;color:var(--color-clay);opacity:.9;animation:bkHint 2s ease-in-out infinite;}
+        @keyframes bkHint{0%,100%{opacity:.5}50%{opacity:1}}
         .bk-end-word{font-family:var(--font-display);font-size:clamp(24px,calc(var(--bk-fs,22px) * 1.45),44px);color:var(--color-clay);margin:0;}
         .bk-end-sub{font-size:calc(var(--bk-fs,22px) * 0.62);color:var(--color-whisper);margin:0;}
 
@@ -549,7 +610,8 @@ export function BookReader({
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
 
         @media (prefers-reduced-motion: reduce){
-          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-motif{animation:none;}
+          .bk-leaf--next,.bk-leaf--prev,.bk-leaf--open,.bk-amb,.bk-motif,
+          .bk-wave,.bk-burst i,.bk-tap-hint{animation:none;}
         }
       `}</style>
     </>
