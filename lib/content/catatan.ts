@@ -1391,6 +1391,382 @@ Now "pwease" is her favourite word, used for everything. And Umi happily grants 
   //  lesson and a gentle Islamic anchor. (kind: "story")
   // ═══════════════════════════════════════════════════════════════════
   {
+    slug: "siapa-allah-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    published: "2026-06-23",
+    title: { id: "Siapa Itu Allah?", en: "Who Is Allah?" },
+    hook: {
+      id: "Baby Mo bertanya, \"Umi, siapa itu Allah?\" Maka Umi mengajaknya berburu harta karun — mencari tanda-tanda Allah di sekeliling mereka.",
+      en: "Baby Mo asks, \"Umi, who is Allah?\" So Umi takes him on a treasure hunt — to find the signs of Allah all around them.",
+    },
+    body: {
+      id: `Suatu sore yang tenang, Baby Mo memandangi langit dari jendela. Lalu ia bertanya dengan suara kecil, "Umi… siapa itu Allah? Kenapa aku tidak bisa melihat-Nya?"
+
+Umi tersenyum, lalu berlutut di sampingnya. "Pertanyaan yang bagus sekali, sayang. Ayo, Umi ajak main. Kita berburu harta karun — mencari tanda-tanda Allah."
+
+Baby Mo melompat girang. Harta karun!
+
+"Tanda pertama," kata Umi. "Tutup matamu, lalu hadapkan wajahmu ke jendela."
+
+Baby Mo memejamkan mata. Cahaya matahari yang hangat membelai pipinya. "Hangat, Umi…"
+
+"Siapa yang membuat matahari sehangat itu untukmu?" bisik Umi.
+
+"Allah," jawab Baby Mo pelan, mulai mengerti.
+
+"Tanda kedua." Umi memberinya sepotong apel. Baby Mo menggigitnya — kriuk! — manis dan segar. "Siapa yang menaruh rasa manis di dalam apel?"
+
+"Allah!" kata Baby Mo, kali ini lebih yakin.
+
+"Tanda ketiga." Umi menempelkan tangan mungil Baby Mo ke dadanya sendiri. Di sana ada sesuatu yang berdetak. Dug… dug… dug… "Itu jantungmu, sayang. Berdetak siang dan malam tanpa kamu suruh. Siapa yang membuatnya terus berdetak?"
+
+Mata Baby Mo membulat. "Allah… yang membuat jantungku?"
+
+Umi mengangguk. "Kita memang tidak bisa melihat Allah dengan mata kita sekarang. Tapi lihat — kita bisa merasakan kebaikan-Nya di mana-mana. Di matahari yang hangat, di apel yang manis, di jantung yang berdetak, dan…" Umi memeluknya erat, "…di pelukan yang sayang. Allah yang menciptakan semuanya, dan Allah sangat menyayangimu."
+
+Baby Mo terdiam, lalu tersenyum lebar. Ternyata harta karun itu bukan emas. Harta karunnya adalah: di mana pun ada kebaikan, di situ ada hadiah dari Allah.
+
+Malam itu, sebelum tidur, Baby Mo berbisik sambil memeluk gulingnya, "Terima kasih, Allah, untuk matahari, apel, dan pelukan Umi."
+
+> *Allah satu-satunya yang menciptakan dan menyayangi kita — dan tidak ada satu pun yang serupa dengan-Nya.*
+
+Sekarang, yuk berburu harta karun bareng si kecil: cari tiga hal baik hari ini, lalu ucapkan bersama, "Ini dari Allah." 🌟`,
+      en: `One calm afternoon, Baby Mo gazed at the sky through the window. Then he asked in a small voice, "Umi… who is Allah? Why can't I see Him?"
+
+Umi smiled and knelt beside him. "What a wonderful question, dear. Come, let's play a game. A treasure hunt — to find the signs of Allah."
+
+Baby Mo jumped up. Treasure!
+
+"First sign," said Umi. "Close your eyes and turn your face to the window."
+
+Baby Mo shut his eyes. Warm sunlight stroked his cheeks. "It's warm, Umi…"
+
+"Who made the sun that warm just for you?" whispered Umi.
+
+"Allah," Baby Mo answered softly, beginning to understand.
+
+"Second sign." Umi handed him a slice of apple. Baby Mo took a bite — crunch! — sweet and fresh. "Who put the sweetness inside the apple?"
+
+"Allah!" said Baby Mo, surer this time.
+
+"Third sign." Umi pressed Baby Mo's tiny hand to his own chest. Something was beating there. Thump… thump… thump… "That's your heart, dear. Beating day and night without you telling it to. Who keeps it beating?"
+
+Baby Mo's eyes went round. "Allah… made my heart?"
+
+Umi nodded. "We can't see Allah with our eyes right now. But look — we can feel His kindness everywhere. In the warm sun, in the sweet apple, in a beating heart, and…" Umi hugged him tight, "…in a loving hug. Allah created it all, and Allah loves you so much."
+
+Baby Mo went quiet, then beamed. It turned out the treasure wasn't gold. His treasure was this: wherever there is goodness, there is a gift from Allah.
+
+That night, before sleep, Baby Mo whispered while hugging his pillow, "Thank you, Allah, for the sun, the apple, and Umi's hug."
+
+> *Allah alone created us and loves us — and there is nothing at all like Him.*
+
+Now, go on a treasure hunt with your little one: find three good things today, then say together, "This is from Allah." 🌟`,
+    },
+    anchor: { type: "parenting", slug: "anak-bertanya-allah-di-mana" },
+    takeaway: {
+      id: "Kita belum bisa melihat Allah, tapi kita bisa merasakan kasih sayang-Nya di setiap hal baik — matahari, apel manis, dan pelukan.",
+      en: "We can't see Allah yet, but we can feel His love in every good thing — the sun, a sweet apple, and a hug.",
+    },
+    tags: ["allah", "tauhid", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "apakah-allah-melihatku",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-wow.png",
+    published: "2026-06-23",
+    title: { id: "Apakah Allah Bisa Melihatku?", en: "Can Allah See Me?" },
+    hook: {
+      id: "Saat main petak umpet, Baby Mo bersembunyi di tempat paling gelap. \"Tidak ada yang bisa melihatku!\" pikirnya. Tapi… benarkah begitu?",
+      en: "Playing hide-and-seek, Baby Mo hides in the darkest spot. \"Nobody can see me!\" he thinks. But… is that really true?",
+    },
+    body: {
+      id: `Sore itu Baby Mo dan Baby Ais bermain petak umpet. Baby Mo paling jago bersembunyi. Ia menyelinap ke dalam lemari selimut, menutup pintunya rapat-rapat, dan duduk di kegelapan.
+
+"Hihi," kikiknya pelan. "Di sini gelap sekali. Tidak ada yang bisa melihatku!"
+
+Sambil menunggu, tangannya meraba-raba dan menemukan sesuatu — toples kue cokelat kesukaannya, yang tadi pagi Umi bilang, "Nanti dulu, ya, sesudah makan malam."
+
+Baby Mo menelan ludah. Kuenya wangi sekali. Di sini gelap. Tidak ada Umi. Tidak ada Baby Ais. Tidak ada siapa-siapa yang melihat…
+
+Tangannya hampir membuka toples itu.
+
+Tapi tiba-tiba ia teringat sesuatu yang pernah Umi katakan. Ia berbisik pada dirinya sendiri di dalam gelap, "Tidak ada siapa-siapa yang melihat… kecuali Allah. Allah selalu melihat. Bahkan di tempat yang paling gelap."
+
+Baby Mo menarik tangannya kembali. Pelan-pelan ia menutup toples itu rapat-rapat, seakan menyimpan rahasia kebaikan. Dadanya terasa hangat dan ringan — perasaan yang jauh lebih enak daripada kue mana pun.
+
+"Ketemu!" Pintu lemari terbuka, dan Baby Ais tertawa menemukan kakaknya.
+
+Malam harinya, sesudah makan, Umi memberi mereka kue cokelat. Baby Mo memakannya dengan senyum paling lebar sedunia. Lalu ia berbisik ke telinga Umi, "Umi, tadi aku hampir ambil kue di lemari. Tapi aku ingat… Allah melihat. Jadi aku tunggu."
+
+Umi memeluknya erat sekali. "Masya Allah, jagoan. Itu namanya menjaga diri karena Allah. Kamu baik bukan hanya saat dilihat orang — tapi juga saat sendirian. Itu yang paling istimewa."
+
+> *Allah mengetahui yang kita rahasiakan dan yang kita tampakkan — Dia selalu melihat.*
+
+Sekarang, tanyakan pada si kecil: "Kalau tidak ada yang melihat, siapa yang tetap melihat?" Lalu tersenyumlah bersama: "Allah." 👀💚`,
+      en: `That afternoon Baby Mo and Baby Ais played hide-and-seek. Baby Mo was the best hider. He slipped into the blanket closet, shut the door tight, and sat in the dark.
+
+"Hehe," he giggled softly. "It's so dark in here. Nobody can see me!"
+
+While he waited, his hands felt around and found something — the jar of his favourite chocolate cookies, the ones Umi had said that morning, "Not yet, okay, after dinner."
+
+Baby Mo swallowed. The cookies smelled wonderful. It was dark in here. No Umi. No Baby Ais. Nobody watching…
+
+His hand almost opened the jar.
+
+But suddenly he remembered something Umi had once told him. He whispered to himself in the dark, "Nobody is watching… except Allah. Allah always sees. Even in the darkest place."
+
+Baby Mo pulled his hand back. Slowly he closed the jar up tight, as if keeping a little secret of goodness. His chest felt warm and light — a feeling far nicer than any cookie.
+
+"Found you!" The closet door opened, and Baby Ais laughed at finding her brother.
+
+That night, after dinner, Umi gave them chocolate cookies. Baby Mo ate his with the biggest smile in the world. Then he whispered into Umi's ear, "Umi, I almost took a cookie from the closet. But I remembered… Allah sees. So I waited."
+
+Umi hugged him ever so tight. "Masha'Allah, champ. That's guarding yourself for Allah's sake. You're good not only when people are watching — but also when you're alone. That's the most special thing of all."
+
+> *Allah knows what we hide and what we show — He always sees.*
+
+Now, ask your little one: "If no one is watching, who still sees?" Then smile together: "Allah." 👀💚`,
+    },
+    anchor: { type: "parenting", slug: "anak-bohong" },
+    takeaway: {
+      id: "Allah selalu melihat — bahkan di tempat gelap. Maka kita bisa berbuat baik bukan hanya saat dilihat, tapi juga saat sendirian.",
+      en: "Allah always sees — even in the dark. So we can do good not just when watched, but also when alone.",
+    },
+    tags: ["allah", "ihsan", "kejujuran", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "kenapa-kita-sholat-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-06-23",
+    title: { id: "Kenapa Kita Sholat?", en: "Why Do We Pray?" },
+    hook: {
+      id: "Baby Mo melihat Abi berhenti bermain untuk sholat. \"Kenapa harus sholat, Abi?\" Lalu Baby Mo menemukan jawabannya — dengan sujud kecilnya sendiri.",
+      en: "Baby Mo watches Abi stop playing to pray. \"Why do we pray, Abi?\" Then Baby Mo finds the answer — with a little sujud of his own.",
+    },
+    body: {
+      id: `Mereka sedang asyik menyusun balok ketika terdengar suara azan dari masjid. Abi langsung berhenti, tersenyum, dan berdiri. "Sebentar, ya, jagoan. Abi mau sholat dulu."
+
+Baby Mo cemberut sedikit. "Kenapa harus berhenti, Abi? Kenapa sih kita sholat?"
+
+Abi duduk kembali sebentar. "Coba Abi tanya. Kalau Baby Mo sayang sekali sama seseorang, Baby Mo mau nggak ketemu dia tiap hari?"
+
+"Mau!" jawab Baby Mo cepat.
+
+"Nah, sholat itu seperti janji ketemu yang membahagiakan dengan Allah," kata Abi. "Lima kali sehari, kita berhenti sebentar dari main, dari sibuk, lalu bilang: 'Terima kasih, Allah. Aku sayang Allah.' Seperti lima pelukan dalam sehari."
+
+Baby Mo memiringkan kepalanya. "Lima pelukan untuk Allah?"
+
+"Iya. Mau lihat caranya?"
+
+Baby Mo mengangguk dan mengikuti Abi ke sajadah. Ia memperhatikan dengan saksama. Abi mengangkat kedua tangan — "Allahu Akbar" — lalu membungkuk, lalu turun bersujud, dahinya menyentuh sajadah dengan tenang.
+
+"Waktu sujud itu," bisik Abi setelah selesai, "kepala kita yang paling tinggi, kita letakkan paling rendah. Itu cara kita bilang ke Allah: Engkau yang paling besar, dan aku sayang sekali sama-Mu."
+
+Sore itu mereka bermain seharian — kejar-kejaran, tertawa, sampai capek dan bahagia. Menjelang magrib, tiba-tiba Baby Mo berlari ke sajadah kecilnya. Tanpa diminta, ia mengangkat kedua tangannya yang mungil, lalu sujud pelan-pelan, meniru Abi.
+
+"Terima kasih, Allah," katanya dengan suara teredam sajadah, "hari ini menyenangkan sekali."
+
+Abi memandanginya dari pintu, dan matanya berkaca-kaca. Ternyata Baby Mo sudah mengerti: sholat bukan beban yang membuat kita berhenti bermain. Sholat adalah cara kita berterima kasih kepada Yang memberi kita hari yang indah.
+
+> *Dirikanlah sholat untuk mengingat Allah.*
+
+Sekarang, ajak si kecil membuat satu "sujud terima kasih" hari ini — letakkan dahi dengan tenang, lalu ucapkan, "Terima kasih, Allah." 🕌`,
+      en: `They were busy building blocks when the call to prayer drifted from the mosque. Abi stopped at once, smiled, and stood up. "One moment, champ. Abi's going to pray first."
+
+Baby Mo pouted a little. "Why stop, Abi? Why do we even pray?"
+
+Abi sat back down for a moment. "Let me ask you. If you love someone very much, would you want to see them every day?"
+
+"Yes!" Baby Mo answered quickly.
+
+"Well, prayer is like a happy appointment with Allah," said Abi. "Five times a day, we pause from playing, from being busy, and say: 'Thank you, Allah. I love You.' Like five hugs in a day."
+
+Baby Mo tilted his head. "Five hugs for Allah?"
+
+"Yes. Want to see how?"
+
+Baby Mo nodded and followed Abi to the prayer mat. He watched closely. Abi raised both hands — "Allahu Akbar" — then bowed, then went down into sujud, his forehead resting calmly on the mat.
+
+"In sujud," Abi whispered afterward, "we take our head — the highest part of us — and place it the lowest. That's how we tell Allah: You are the greatest, and I love You so much."
+
+That afternoon they played all day — chasing, laughing, until they were tired and happy. As sunset neared, Baby Mo suddenly ran to his little prayer mat. Without being asked, he raised his tiny hands, then slowly went into sujud, copying Abi.
+
+"Thank you, Allah," he said, his voice muffled by the mat, "today was so much fun."
+
+Abi watched from the doorway, his eyes glistening. Baby Mo had understood: prayer isn't a burden that stops our play. Prayer is how we thank the One who gives us a beautiful day.
+
+> *Establish prayer to remember Allah.*
+
+Now, invite your little one to make one "thank-you sujud" today — rest the forehead gently, then say, "Thank you, Allah." 🕌`,
+    },
+    anchor: { type: "parenting", slug: "mulai-sholat" },
+    takeaway: {
+      id: "Sholat bukan beban — ia janji ketemu yang membahagiakan dengan Allah, lima pelukan kecil untuk berterima kasih setiap hari.",
+      en: "Prayer isn't a burden — it's a happy appointment with Allah, five little hugs of thanks every day.",
+    },
+    tags: ["sholat", "ibadah", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "apa-itu-surga-untuk-anak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-06-23",
+    title: { id: "Apa Itu Surga?", en: "What Is Jannah?" },
+    hook: {
+      id: "\"Umi, surga itu seperti apa?\" tanya Baby Mo. Maka mereka membuat kebun kebaikan — dan Baby Mo belajar cara menanam jalan menuju surga.",
+      en: "\"Umi, what is Jannah like?\" asks Baby Mo. So they make a garden of good deeds — and Baby Mo learns how to plant his way there.",
+    },
+    body: {
+      id: `Sehabis membaca cerita, Baby Mo bertanya, "Umi, surga itu seperti apa? Apa benar di sana ada sungai dan tidak pernah ada yang menangis?"
+
+"Benar, sayang," kata Umi. "Surga itu tempat paling indah yang Allah siapkan untuk orang yang beriman dan suka berbuat baik. Di sana semua bahagia, dan tidak ada lagi sedih sedikit pun."
+
+Mata Baby Mo berbinar. "Aku mau ke sana! Bagaimana caranya, Umi?"
+
+Umi tersenyum penuh rahasia. "Bukan dengan berangan-angan saja. Surga itu seperti kebun — kita menanamnya pelan-pelan, satu kebaikan satu bunga. Ayo kita buat Kebun Kebaikan hari ini!"
+
+Umi menggambar sebuah taman kosong di selembar kertas besar. "Setiap kali kamu berbuat baik, kita tempel satu bunga."
+
+Baby Mo berpikir sebentar. Lalu ia berlari membagi dua biskuitnya dengan Baby Ais. "Ini berbagi!" Umi pun menempel satu bunga merah di kertas. 🌷
+
+Tak lama, Baby Ais menjatuhkan mainannya dan hampir menangis. Baby Mo memungutnya dan mengembalikannya dengan lembut. "Ini menolong!" — dan tumbuh satu bunga kuning. 🌻
+
+Sebelum makan, Baby Mo mengucap "Bismillah", dan sesudahnya "Alhamdulillah". Dua bunga lagi mekar di kebun itu.
+
+Saat matahari terbenam, kertas itu sudah penuh dengan bunga warna-warni. Baby Mo memandanginya dengan kagum. "Kebunku jadi cantik sekali, Umi!"
+
+"Lihat," kata Umi lembut, memeluk kedua anaknya. "Setiap kebaikan kecil yang kamu lakukan hari ini menanam satu bunga. Begitulah cara kita merindukan surga — bukan cuma membayangkannya, tapi menanamnya dengan kebaikan, sedikit demi sedikit, sambil meminta rahmat Allah."
+
+Malam itu Baby Mo tidur dengan senyum. Dalam mimpinya, kebun kebaikannya tumbuh sangat luas — seluas yang bisa ia bayangkan.
+
+> *Surga adalah karunia Allah; kita menujunya dengan iman dan kebaikan-kebaikan kecil yang dijaga.*
+
+Sekarang, buat Kebun Kebaikan bersama si kecil: tiap satu kebaikan hari ini, gambar atau tempel satu bunga. Lihat kebunnya tumbuh! 🌸`,
+      en: `After story time, Baby Mo asked, "Umi, what is Jannah like? Is it true there are rivers and no one ever cries?"
+
+"It's true, dear," said Umi. "Jannah is the most beautiful place Allah has prepared for those who believe and love to do good. Everyone there is happy, and there's not a single bit of sadness anymore."
+
+Baby Mo's eyes sparkled. "I want to go there! How, Umi?"
+
+Umi smiled a secret smile. "Not by only wishing. Jannah is like a garden — we plant it slowly, one good deed, one flower. Let's make a Garden of Good Deeds today!"
+
+Umi drew an empty garden on a big sheet of paper. "Every time you do something good, we'll stick on a flower."
+
+Baby Mo thought for a moment. Then he ran to share his biscuit in half with Baby Ais. "This is sharing!" And Umi stuck a red flower on the paper. 🌷
+
+Soon, Baby Ais dropped her toy and nearly cried. Baby Mo picked it up and gently gave it back. "This is helping!" — and a yellow flower grew. 🌻
+
+Before eating, Baby Mo said "Bismillah," and after, "Alhamdulillah." Two more flowers bloomed in the garden.
+
+As the sun set, the paper was full of colourful flowers. Baby Mo gazed at it in wonder. "My garden turned out so pretty, Umi!"
+
+"See," said Umi gently, hugging both her children. "Every little good thing you did today planted one flower. That's how we long for Jannah — not just imagining it, but planting it with good deeds, little by little, while asking for Allah's mercy."
+
+That night Baby Mo slept with a smile. In his dream, his garden of good deeds grew vast — as wide as he could imagine.
+
+> *Jannah is Allah's gift; we head toward it with faith and small, steady good deeds.*
+
+Now, make a Garden of Good Deeds with your little one: for each kind act today, draw or stick on a flower. Watch the garden grow! 🌸`,
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Surga adalah hadiah indah dari Allah. Kita menanam jalan ke sana dengan kebaikan-kebaikan kecil setiap hari.",
+      en: "Jannah is Allah's beautiful gift. We plant our way there with small good deeds, every day.",
+    },
+    tags: ["surga", "akhirat", "kebaikan", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "siapa-nabi-muhammad-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-06-23",
+    title: { id: "Siapa Nabi Muhammad ﷺ?", en: "Who Is Prophet Muhammad ﷺ?" },
+    hook: {
+      id: "\"Umi, siapa Nabi Muhammad? Bisa aku melihatnya?\" Baby Mo belajar mengenal beliau dengan cara yang seru — dengan meniru kebaikannya seharian.",
+      en: "\"Umi, who is Prophet Muhammad? Can I see him?\" Baby Mo gets to know him in a fun way — by copying his kindness all day.",
+    },
+    body: {
+      id: `Baby Mo sering mendengar nama itu disebut dengan penuh sayang: Nabi Muhammad ﷺ. Suatu pagi ia bertanya, "Umi, siapa Nabi Muhammad? Apa aku bisa melihatnya?"
+
+Umi mengajaknya duduk. "Nabi Muhammad ﷺ adalah manusia terbaik, utusan Allah yang paling Allah cintai. Beliau datang untuk mengajari kita cara hidup yang baik dan penuh kasih sayang. Kita memang tidak bisa melihat beliau sekarang… tapi kita bisa mencintainya dengan cara yang istimewa."
+
+"Caranya?" tanya Baby Mo penasaran.
+
+"Dengan meniru kebaikan beliau," kata Umi sambil tersenyum. "Hari ini, yuk kita main jadi 'sahabat kecil Nabi'. Setiap kali kita melakukan satu kebaikan yang beliau ajarkan, kita kumpulkan satu bintang."
+
+Baby Mo langsung bersemangat.
+
+Saat bertemu Pak Satpam di depan, Baby Mo melambaikan tangan, "Assalamualaikum!" — karena Nabi ﷺ mengajarkan menyebar salam. ⭐
+
+Ketika Baby Ais terlihat murung, Baby Mo memberinya senyum paling lebar. "Kata Umi, senyum itu sedekah, dan Nabi ﷺ paling sering tersenyum." ⭐
+
+Di teras, ada kucing kurus yang mengeong. Baby Mo menaruh sedikit makanan dan air dengan lembut. "Nabi ﷺ sayang pada binatang." ⭐
+
+Saat makan siang, Baby Mo membaca Bismillah, makan dengan tangan kanan, dan tidak menyisakan makanan — semua adab yang beliau contohkan. ⭐⭐
+
+Sore harinya, bintang-bintang Baby Mo sudah banyak sekali. Ia memandangnya dengan bangga. "Umi, aku jadi merasa dekat dengan Nabi Muhammad, walaupun aku belum pernah melihatnya."
+
+Umi memeluknya. "Itulah cinta yang sebenarnya, sayang. Kita mencintai Nabi ﷺ bukan hanya dengan menyebut namanya, tapi dengan menjadi anak yang baik seperti yang beliau ajarkan. Dan kelak, orang yang mencintainya akan dikumpulkan bersama beliau."
+
+Baby Mo memejamkan mata dan berbisik, "Shalawat untukmu, ya Nabi."
+
+> *Orang akan bersama siapa yang ia cintai — maka cintailah Nabi ﷺ dengan meneladaninya.*
+
+Sekarang, kumpulkan "bintang sunnah" bersama si kecil hari ini: ucap salam, tersenyum, sayangi yang kecil. Berapa bintang yang bisa kalian kumpulkan? ⭐`,
+      en: `Baby Mo often heard that name spoken with such love: Prophet Muhammad ﷺ. One morning he asked, "Umi, who is Prophet Muhammad? Can I see him?"
+
+Umi sat him down. "Prophet Muhammad ﷺ is the best of all people, the messenger most beloved to Allah. He came to teach us how to live well and with kindness. We can't see him now… but we can love him in a special way."
+
+"How?" asked Baby Mo, curious.
+
+"By copying his kindness," said Umi with a smile. "Today, let's play 'the Prophet's little companions.' Every time we do one good thing he taught, we collect a star."
+
+Baby Mo lit up at once.
+
+Meeting the guard out front, Baby Mo waved, "Assalamu'alaikum!" — because the Prophet ﷺ taught us to spread the greeting of peace. ⭐
+
+When Baby Ais looked gloomy, Baby Mo gave her his biggest smile. "Umi says a smile is charity, and the Prophet ﷺ smiled the most." ⭐
+
+On the porch, a skinny cat meowed. Baby Mo gently set out a little food and water. "The Prophet ﷺ was kind to animals." ⭐
+
+At lunch, Baby Mo said Bismillah, ate with his right hand, and left no food behind — all manners he had shown us. ⭐⭐
+
+By late afternoon, Baby Mo had collected so many stars. He looked at them proudly. "Umi, I feel close to Prophet Muhammad, even though I've never seen him."
+
+Umi hugged him. "That's true love, dear. We love the Prophet ﷺ not just by saying his name, but by being a good child the way he taught. And one day, those who love him will be gathered with him."
+
+Baby Mo closed his eyes and whispered, "Blessings upon you, O Prophet."
+
+> *A person will be with the one they love — so love the Prophet ﷺ by following his example.*
+
+Now, collect "sunnah stars" with your little one today: give salam, smile, be kind to the small. How many stars can you gather? ⭐`,
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Kita tak bisa melihat Nabi ﷺ sekarang, tapi kita mencintainya dengan meniru kebaikannya: salam, senyum, dan sayang pada yang kecil.",
+      en: "We can't see the Prophet ﷺ now, but we love him by copying his kindness: greetings, smiles, and care for the small.",
+    },
+    tags: ["nabi-muhammad", "sunnah", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
     slug: "stoples-liburan-baby-mo",
     kind: "story",
     child: "both",
