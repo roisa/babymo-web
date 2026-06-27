@@ -4314,6 +4314,422 @@ Welcome home, Baby Ais. Baby Mo — and one bed that will, once again, be full t
     readingTimeMin: 6,
   },
 
+  {
+    slug: "kenapa-harus-minta-izin-untuk-anak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-alright.png",
+    published: "2026-06-25",
+    title: { id: "Kenapa Harus Minta Izin?", en: "Why Do We Ask Permission?" },
+    hook: {
+      id: "Baby Mo mengambil mobil-mobilan Baby Ais tanpa bertanya. Baby Ais menangis. Apa yang salah, kalau cuma sebentar?",
+      en: "Baby Mo took Baby Ais's toy car without asking. Baby Ais cried. What's wrong with just borrowing it for a bit?",
+    },
+    body: {
+      id: `Mobil-mobilan merah itu sedang diam di lantai. Baby Ais sedang minum susu di dapur. Baby Mo melihat mobil itu, matanya berbinar, lalu — diambilnya begitu saja. Tanpa bertanya.
+
+Baru juga dua putaran, Baby Ais kembali dari dapur. "Itu punya Ais!" teriaknya, lalu menangis kencang sambil menarik mobilnya kembali.
+
+"Kan cuma sebentar," kata Baby Mo, bingung. "Aku kembalikan kok."
+
+Umi mendekat, duduk di antara mereka. "Mo, coba bayangkan. Kalau nanti mainan kesukaanmu diambil orang lain saat kamu tidak melihat — tanpa tanya dulu — bagaimana rasanya?"
+
+Baby Mo terdiam. "Sedih," jawabnya pelan. "Kayak dicuri."
+
+"Nah. Walaupun Mo cuma mau pinjam sebentar dan berniat baik, kalau diambil tanpa izin, hati Ais tetap merasa kehilangan. Itu sebabnya kita selalu bertanya dulu — 'Ais, boleh Mo pinjam?' — sebelum menyentuh barang orang lain, sekecil apa pun."
+
+Baby Mo memandang Baby Ais yang masih sesenggukan memeluk mobilnya. Pelan-pelan, ia mendekat. "Ais... maaf. Boleh Mo pinjam mobilnya, nanti dikembalikan?"
+
+Baby Ais menyeka air mata, lalu mengangguk kecil. "Boleh. Tapi tanya dulu ya."
+
+Mereka bermain bersama sore itu — bergiliran, saling bertanya sebelum menyentuh mainan satu sama lain. Ternyata izin yang sederhana itu membuat permainan jadi lebih hangat, bukan lebih lama.
+
+> *Tidak halal bagi seorang muslim mengambil harta saudaranya tanpa kerelaan darinya.*
+
+Sekarang, ajak si kecil membiasakan satu kalimat kecil: "Boleh aku pinjam?" — sebelum menyentuh barang siapa pun, termasuk milik saudaranya sendiri. 🤝`,
+      en: `The little red car sat quietly on the floor. Baby Ais was off having milk in the kitchen. Baby Mo spotted it, eyes lighting up, and just — took it. Without asking.
+
+Only two laps in, Baby Ais came back from the kitchen. "That's Ais's!" she shouted, then burst into tears as she pulled her car back.
+
+"It was only for a bit," said Baby Mo, confused. "I was going to give it back."
+
+Umi came over and sat between them. "Mo, imagine this. If your favourite toy got taken by someone else while you weren't looking — without asking first — how would that feel?"
+
+Baby Mo went quiet. "Sad," he said softly. "Like it got stolen."
+
+"Exactly. Even if Mo only wanted to borrow it for a moment with good intentions, if it's taken without permission, Ais's heart still feels the loss. That's why we always ask first — 'Ais, may Mo borrow this?' — before touching anyone's belongings, no matter how small."
+
+Baby Mo looked at Baby Ais, still sniffling and hugging her car. Slowly, he came closer. "Ais... sorry. May Mo borrow the car? I'll give it back."
+
+Baby Ais wiped her tears and gave a small nod. "Okay. But ask first, okay?"
+
+They played together that afternoon — taking turns, asking each other before touching one another's toys. It turned out that simple permission made the game warmer, not slower.
+
+> *It is not lawful for a Muslim to take his brother's wealth without his consent.*
+
+Now, help your little one build one small habit: "May I borrow this?" — before touching anyone's belongings, even their own sibling's. 🤝`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Niat baik tidak menggantikan izin. Sebelum menyentuh barang orang lain — sekecil apa pun — biasakan bertanya dulu.",
+      en: "Good intentions don't replace permission. Before touching anyone's belongings — however small — make asking first a habit.",
+    },
+    tags: ["adab", "izin", "saudara", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "apa-itu-sedekah-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-06-26",
+    title: { id: "Apa Itu Sedekah?", en: "What Is Sadaqah?" },
+    hook: {
+      id: "Baby Mo punya dua koin di tangannya. \"Umi, kalau aku kasih ini ke orang, koinku jadi habis kan? Kok katanya malah nambah?\"",
+      en: "Baby Mo holds two coins in his hand. \"Umi, if I give this to someone, my coins are gone, right? Why do people say it actually grows?\"",
+    },
+    body: {
+      id: `Sore itu, Baby Mo mendapat dua koin dari Abi sebagai hadiah karena sudah membereskan mainannya sendiri. Ia memandanginya bangga, menggenggamnya erat-erat.
+
+Di depan rumah, lewatlah seorang kakek tua memikul keranjang sapu lidi, berjalan pelan di bawah matahari. Umi berbisik, "Mo, mau kasih satu koinmu ke Kakek?"
+
+Baby Mo menggenggam koinnya lebih erat. "Tapi nanti koinku tinggal satu, Umi. Berkurang."
+
+"Coba dengar dulu," kata Umi sambil berlutut sejajar dengan Baby Mo. "Sedekah itu seperti benih. Kalau biji ditanam di tanah, ia kelihatannya hilang — padahal sebenarnya sedang tumbuh jadi pohon yang lebih besar. Allah berjanji, harta yang disedekahkan tidak akan berkurang, malah diberkahi dan ditumbuhkan."
+
+Baby Mo memandang koinnya, lalu memandang kakek yang masih berjalan pelan. "Jadi... kalau aku kasih, bukannya hilang, tapi tumbuh? Tapi aku nggak lihat tumbuhnya."
+
+"Tumbuhnya bukan selalu jadi koin baru, Sayang. Kadang tumbuh jadi hati yang lebih ringan, rezeki yang lebih lancar, atau pahala yang menunggu di tempat yang jauh lebih indah."
+
+Baby Mo berlari kecil mengejar kakek itu. "Kek! Ini untuk Kakek!" katanya sambil menyodorkan satu koin dengan kedua tangan.
+
+Kakek itu berhenti, tersenyum lebar, mengusap kepala Baby Mo. "Terima kasih, Nak. Semoga Allah membalas kebaikanmu."
+
+Baby Mo berlari kembali ke Umi, wajahnya berbinar lebih cerah dari sebelumnya — padahal koinnya tinggal satu. "Umi, koinku kurang satu, tapi kenapa hatiku malah penuh?"
+
+Umi memeluknya. "Karena itulah benih kebaikan yang Mo tanam, mulai tumbuh."
+
+> *Sedekah itu sama sekali tidak akan mengurangi harta.*
+
+Sekarang, ajak si kecil menyisihkan satu hal kecil untuk diberikan — koin, makanan, atau mainan yang masih bagus — dan biarkan ia melihat sendiri wajah orang yang menerimanya. 🌱`,
+      en: `That afternoon, Baby Mo received two coins from Abi as a reward for tidying his own toys. He admired them proudly, gripping them tight.
+
+Outside, an old man walked slowly by under the sun, carrying a basket of brooms. Umi whispered, "Mo, would you like to give one of your coins to the grandfather?"
+
+Baby Mo gripped his coins tighter. "But then I'll only have one left, Umi. It'll go down."
+
+"Listen first," said Umi, kneeling to Baby Mo's height. "Sadaqah is like a seed. When a seed is planted in the ground, it looks like it disappears — but really it's growing into a bigger tree. Allah promises that wealth given in charity never shrinks; it gets blessed and made to grow instead."
+
+Baby Mo looked at his coins, then at the grandfather still walking slowly away. "So... if I give it, it doesn't disappear, it grows? But I won't see it growing."
+
+"It doesn't always grow back into a new coin, sweetheart. Sometimes it grows into a lighter heart, smoother sustenance, or a reward waiting somewhere far more beautiful."
+
+Baby Mo ran a little to catch up with the grandfather. "Sir! This is for you!" he said, holding out one coin with both hands.
+
+The old man stopped, smiled widely, and patted Baby Mo's head. "Thank you, little one. May Allah repay your kindness."
+
+Baby Mo ran back to Umi, his face brighter than before — even though he now had only one coin. "Umi, I have one less coin, but why does my heart feel so full?"
+
+Umi hugged him. "Because that's the seed of kindness Mo just planted, beginning to grow."
+
+> *Charity does not decrease wealth at all.*
+
+Now, help your little one set aside one small thing to give — a coin, food, or a toy still in good shape — and let them see the receiver's face for themselves. 🌱`,
+    },
+    anchor: { type: "hadith", slug: "menyantuni-anak-yatim" },
+    takeaway: {
+      id: "Sedekah bukan kehilangan, tapi menanam. Yang diberikan tidak hilang — ia tumbuh, hanya saja bentuknya kadang tak terlihat.",
+      en: "Sadaqah isn't a loss, it's planting. What's given doesn't vanish — it grows, even if the shape of that growth is sometimes invisible.",
+    },
+    tags: ["sedekah", "rezeki", "akhlak", "tanya-anak", "buku"],
+    readingTimeMin: 6,
+  },
+
+  {
+    slug: "kenapa-berwudhu-sebelum-sholat",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-ok.png",
+    published: "2026-06-27",
+    title: { id: "Kenapa Berwudhu Sebelum Sholat?", en: "Why Do We Wash Up Before Praying?" },
+    hook: {
+      id: "Baby Ais sudah pakai sajadah, tapi belum cuci tangan. \"Umi, aku kan cuma mau sholat, bukan mau makan. Kenapa harus basah-basah dulu?\"",
+      en: "Baby Ais already has her prayer mat out, but hasn't washed up. \"Umi, I'm just praying, not eating. Why do I need to get wet first?\"",
+    },
+    body: {
+      id: `Baby Ais menggelar sajadah kecilnya, lalu berdiri tegak, siap sholat Maghrib bersama Umi. Tapi Umi menahan tangannya pelan.
+
+"Ais, sudah berwudhu?"
+
+"Belum, Umi. Tapi tanganku kan nggak kotor. Buat apa basah-basah dulu kalau cuma mau sholat?"
+
+Umi mengajaknya ke tempat wudhu, lalu duduk di sebelahnya. "Coba bayangkan, Ais mau bertemu orang yang paling Ais hormati — siapa?"
+
+"Abi! Atau... Allah," jawab Baby Ais, ragu-ragu.
+
+"Nah, kalau mau bertemu Abi sehabis main lumpur, biasanya Ais cuci tangan dulu kan, supaya rapi waktu memeluk Abi?"
+
+Baby Ais mengangguk. "Iya, biar nggak kotor pelukannya."
+
+"Sholat itu, kita sedang menghadap Allah — bukan sekadar bergerak, tapi seperti bertemu langsung. Wudhu bukan untuk membersihkan kotoran di kulit saja, tapi membersihkan dan menyiapkan hati supaya tenang sebelum menghadap-Nya."
+
+Umi mencontohkan pelan-pelan: membasuh tangan tiga kali, berkumur, membasuh muka, tangan sampai siku, mengusap kepala, lalu kaki. Baby Ais menirukan setiap gerakan dengan serius, air menetes dari jari-jarinya.
+
+Selesai berwudhu, ia merasa beda — lebih segar, lebih siap, seperti baru mencuci bersih semua rasa kantuk dan malasnya.
+
+"Sekarang aku berasa lebih bersih, Umi. Bukan cuma tangan, tapi... di sini juga," kata Baby Ais sambil menyentuh dadanya.
+
+Umi tersenyum. "Itulah wudhu, Sayang. Membasuh badan, menenangkan hati, lalu kita berdiri menghadap Allah dengan keadaan paling baik."
+
+> *Barangsiapa berwudhu dengan sempurna, keluarlah dosa-dosanya dari tubuhnya, hingga keluar pula dari bawah kuku-kukunya.*
+
+Sekarang, ajak si kecil berwudhu sendiri sebelum sholat, satu gerakan demi satu gerakan, sambil menjelaskan: ini bukan basah-basah biasa — ini cara kita bersiap bertemu Allah. 💧`,
+      en: `Baby Ais laid out her little prayer mat, then stood up straight, ready for Maghrib prayer with Umi. But Umi gently held her hand back.
+
+"Ais, have you done wudhu yet?"
+
+"Not yet, Umi. But my hands aren't dirty. Why get wet first if I'm just going to pray?"
+
+Umi led her to the wudhu spot and sat beside her. "Imagine, Ais, you're about to meet the person you respect most — who would that be?"
+
+"Abi! Or... Allah," answered Baby Ais, a little unsure.
+
+"Right. If you wanted to meet Abi after playing in the mud, you'd usually wash your hands first, so your hug would be clean, wouldn't you?"
+
+Baby Ais nodded. "Yes, so the hug isn't dirty."
+
+"In prayer, we're facing Allah — it isn't just movements, it's like meeting Him directly. Wudhu isn't only to clean the dirt on our skin, but to cleanse and prepare our heart to be calm before standing before Him."
+
+Umi demonstrated slowly: washing the hands three times, rinsing the mouth, washing the face, arms to the elbows, wiping the head, then the feet. Baby Ais copied each movement seriously, water dripping from her fingers.
+
+When she finished, she felt different — fresher, more ready, as if she'd washed away all her drowsiness and laziness too.
+
+"I feel cleaner now, Umi. Not just my hands, but... here too," said Baby Ais, touching her chest.
+
+Umi smiled. "That's wudhu, sweetheart. Washing the body, calming the heart, then standing before Allah in our very best state."
+
+> *Whoever performs wudhu perfectly, his sins leave his body, even from beneath his fingernails.*
+
+Now, let your little one do their own wudhu before prayer, one step at a time, while you explain: this isn't ordinary water-play — it's how we get ready to meet Allah. 💧`,
+    },
+    anchor: { type: "doa", slug: "selesai-wudhu" },
+    takeaway: {
+      id: "Wudhu bukan basah-basah biasa — ia membersihkan badan dan menenangkan hati sebelum menghadap Allah.",
+      en: "Wudhu isn't ordinary water-play — it cleanses the body and calms the heart before standing before Allah.",
+    },
+    tags: ["wudhu", "sholat", "ibadah", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "semangkuk-sup-untuk-pak-becak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yes.png",
+    published: "2026-06-28",
+    title: { id: "Semangkuk Sup untuk Pak Becak", en: "A Bowl of Soup for the Pedicab Driver" },
+    hook: {
+      id: "Hujan turun deras. Baby Mo dan Baby Ais melihat seorang bapak tukang becak berteduh sendirian, basah dan menggigil, di depan rumah.",
+      en: "Heavy rain fell. Baby Mo and Baby Ais saw a pedicab driver sheltering alone outside their house, soaked and shivering.",
+    },
+    body: {
+      id: `Hujan turun sangat deras sore itu. Dari jendela, Baby Mo dan Baby Ais melihat seorang bapak tukang becak berhenti di depan rumah mereka, berteduh di bawah atap kecil becaknya sendiri. Bajunya basah kuyup. Tangannya gemetar memegang setang.
+
+"Umi, Bapak itu kedinginan," kata Baby Ais, hidungnya menempel di kaca jendela.
+
+Umi sedang memasak sup hangat untuk makan malam. Baby Mo mencium aromanya, lalu menarik lengan Umi. "Umi, sup ini banyak kan? Boleh kasih ke Bapak itu?"
+
+Umi tersenyum, lalu menuangkan semangkuk sup hangat dan memasukkannya ke dalam rantang kecil. "Siapa yang mau bawa?"
+
+"Kami berdua!" jawab keduanya bersamaan.
+
+Mereka berlari kecil di bawah payung besar Abi, lalu menyodorkan rantang itu dengan dua tangan. "Pak, ini sup hangat. Buat Bapak," kata Baby Mo, suaranya nyaris hilang ditelan suara hujan.
+
+Bapak becak itu terkejut, lalu matanya berkaca-kaca. "Masya Allah... terima kasih banyak, Nak. Bapak belum makan dari pagi." Ia menerima rantang itu dengan kedua tangan, seakan menerima sesuatu yang sangat berharga.
+
+Di perjalanan pulang, Baby Ais bertanya, "Umi, kenapa Bapak itu sampai menangis cuma karena sup?"
+
+"Karena yang ia rasakan bukan cuma hangatnya sup, Ais. Tapi rasanya ada orang yang peduli, di saat ia merasa sendirian di tengah hujan."
+
+Malam itu, sebelum tidur, Baby Mo berbisik ke Baby Ais, "Besok kalau hujan lagi, kita kasih lagi ya?"
+
+Baby Ais mengangguk penuh semangat. "Ya. Senyum Bapak itu tadi... bikin aku ikut senang."
+
+> *Senyummu kepada saudaramu adalah sedekah.*
+
+Sekarang, ajak si kecil memperhatikan orang-orang yang bekerja di luar saat cuaca sulit — tukang becak, kurir, satpam — dan berikan sesuatu sekecil pun, sebagai latihan empati sejak dini. ☔`,
+      en: `The rain poured down hard that afternoon. From the window, Baby Mo and Baby Ais saw a pedicab driver stop in front of their house, sheltering under the small roof of his own pedicab. His clothes were soaked through. His hands trembled on the handlebars.
+
+"Umi, that man is cold," said Baby Ais, nose pressed to the window glass.
+
+Umi was cooking warm soup for dinner. Baby Mo caught the smell and tugged her sleeve. "Umi, there's a lot of soup, right? Can we give some to that man?"
+
+Umi smiled, then poured a warm bowl into a small lunch tin. "Who wants to bring it?"
+
+"Both of us!" they answered together.
+
+They ran out under Abi's big umbrella, then held out the tin with both hands. "Sir, this is warm soup. For you," said Baby Mo, his voice nearly swallowed by the rain.
+
+The pedicab driver was startled, then his eyes welled up. "Masha'Allah... thank you so much, little ones. I haven't eaten since morning." He took the tin with both hands, as if receiving something very precious.
+
+On the way back inside, Baby Ais asked, "Umi, why did that man almost cry just from soup?"
+
+"Because what he felt wasn't only the warmth of the soup, Ais. It was the feeling that someone cared, at a moment he felt all alone in the rain."
+
+That night, before bed, Baby Mo whispered to Baby Ais, "Next time it rains, let's give again, okay?"
+
+Baby Ais nodded eagerly. "Yes. That man's smile earlier... it made me happy too."
+
+> *Your smile to your brother is an act of charity.*
+
+Now, help your little one notice people working outside in hard weather — pedicab drivers, couriers, security guards — and give even something small, as early practice in empathy. ☔`,
+    },
+    anchor: { type: "hadith", slug: "tetangga-keluarga-luas" },
+    takeaway: {
+      id: "Kepedulian kecil — semangkuk sup, sebuah senyum — bisa terasa sangat besar bagi orang yang merasa sendirian.",
+      en: "A small act of care — a bowl of soup, a smile — can feel enormous to someone who feels alone.",
+    },
+    tags: ["sedekah", "empati", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "antrian-es-krim-yang-panjang",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-run.png",
+    published: "2026-06-29",
+    title: { id: "Antrian Es Krim yang Panjang", en: "The Long Ice Cream Line" },
+    hook: {
+      id: "Sepuluh orang mengantre di depan Baby Mo. Es krimnya kelihatan meleleh duluan dalam bayangannya, padahal belum dibeli sama sekali.",
+      en: "Ten people stood ahead of Baby Mo in line. The ice cream was already melting in his imagination, even though he hadn't bought any yet.",
+    },
+    body: {
+      id: `Hari itu panas sekali, dan Baby Mo sudah membayangkan es krim cokelat kesukaannya sejak di mobil. Begitu sampai, ia berlari ke kedai — tapi antreannya panjang sekali, berkelok sampai ke luar pintu.
+
+"Lamaaa," rengek Baby Mo, menghentakkan kaki. "Umi, kita antre paling belakang terus!"
+
+Umi berlutut di sebelahnya. "Mo, coba lihat ke depan. Semua orang itu juga menunggu, sama seperti kita. Mereka juga ingin cepat. Tapi semua orang sabar menunggu gilirannya."
+
+Baby Mo melipat tangan, masih kesal. Lima menit terasa seperti satu jam baginya. Ia menghela napas panjang, menggerutu, hampir menangis.
+
+"Coba kita main sambil menunggu," kata Umi. "Hitung ada berapa warna baju orang di depan kita?"
+
+Baby Mo mulai menghitung. Biru, merah, kuning, hijau... tanpa sadar, antreannya sudah maju lima orang. Ia tersenyum kecil. "Sudah lebih dekat, Umi!"
+
+Mereka terus bermain tebak-tebakan sambil melangkah maju, sedikit demi sedikit. Sampai akhirnya — "Selamat siang, mau pesan apa?" tanya penjualnya, tersenyum ramah, persis di depan Baby Mo.
+
+Baby Mo memesan es krim cokelatnya dengan suara bangga. Rasanya jadi dua kali lebih nikmat — bukan cuma karena manis, tapi karena ia berhasil menunggu tanpa marah.
+
+"Tadi Mo hampir nangis," kata Baby Mo sambil menjilat es krimnya. "Tapi sekarang Mo nggak nyangka, ternyata antrenya nggak selama itu kalau hatinya sabar."
+
+Umi mengusap kepalanya. "Itu rahasianya, Sayang. Waktu menunggu terasa lama kalau hati kita gelisah, dan terasa cepat kalau hati kita tenang."
+
+> *Sesungguhnya Allah menyertai orang-orang yang sabar.*
+
+Sekarang, ajak si kecil bermain kecil saat harus menunggu — menghitung, menebak warna, atau bernyanyi pelan — supaya sabar terasa lebih ringan untuk dipelajari. 🍦`,
+      en: `It was a scorching hot day, and Baby Mo had been picturing his favourite chocolate ice cream ever since the car ride. The moment they arrived, he ran to the shop — but the line was long, curling all the way out the door.
+
+"Soooo sloooow," whined Baby Mo, stamping his foot. "Umi, we're always last in line!"
+
+Umi knelt beside him. "Mo, look ahead. Everyone there is waiting too, just like us. They want it fast too. But everyone is patiently waiting their turn."
+
+Baby Mo crossed his arms, still annoyed. Five minutes felt like an hour to him. He sighed loudly, grumbling, nearly in tears.
+
+"Let's play a game while we wait," said Umi. "Count how many colours of shirts the people ahead of us are wearing?"
+
+Baby Mo started counting. Blue, red, yellow, green... before he noticed, the line had moved forward five people. He gave a small smile. "We're closer now, Umi!"
+
+They kept playing guessing games as they shuffled forward, little by little, until finally — "Good afternoon, what would you like?" asked the seller, smiling warmly, right in front of Baby Mo.
+
+Baby Mo ordered his chocolate ice cream with a proud voice. It tasted twice as good — not just because it was sweet, but because he'd managed to wait without losing his temper.
+
+"I almost cried earlier," said Baby Mo, licking his ice cream. "But now I didn't expect it — the line wasn't even that long once my heart was patient."
+
+Umi patted his head. "That's the secret, sweetheart. Waiting feels long when our heart is restless, and feels quick when our heart is calm."
+
+> *Indeed, Allah is with those who are patient.*
+
+Now, give your little one a small game to play while waiting — counting, guessing colours, or quietly singing — so patience becomes a lighter thing to learn. 🍦`,
+    },
+    anchor: { type: "parenting", slug: "tantrum" },
+    takeaway: {
+      id: "Menunggu terasa lama kalau hati gelisah, dan terasa ringan kalau hati ditenangkan dengan permainan kecil dan kesabaran yang dilatih sedikit demi sedikit.",
+      en: "Waiting feels long when the heart is restless, and lighter when calmed with a small game and patience practiced little by little.",
+    },
+    tags: ["sabar", "tantrum", "akhlak", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "apa-itu-adzan-untuk-anak",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-wow.png",
+    published: "2026-06-30",
+    title: { id: "Apa Itu Adzan?", en: "What Is the Adhan?" },
+    hook: {
+      id: "Suara merdu terdengar dari kejauhan. Baby Ais berhenti bermain. \"Umi, itu suara apa? Kenapa semua orang jadi diam mendengarnya?\"",
+      en: "A beautiful voice rang out in the distance. Baby Ais stopped playing. \"Umi, what's that sound? Why does everyone go quiet when they hear it?\"",
+    },
+    body: {
+      id: `Sore itu, saat Baby Ais sedang menyusun puzzle di teras, terdengar suara merdu memanggil dari kejauhan — naik turun, panjang, dan menggetarkan udara sore. Baby Ais berhenti, jarinya masih menggenggam satu keping puzzle.
+
+"Umi, itu suara apa? Kok merdu sekali, dan kenapa Abi langsung berhenti bekerja?"
+
+Umi duduk di sebelahnya. "Itu namanya adzan, Sayang. Adzan adalah panggilan, untuk memberi tahu semua orang muslim: sudah waktunya sholat. Suara itu seperti undangan dari Allah, dipanggil lima kali setiap hari."
+
+"Undangan?" Baby Ais memiringkan kepala. "Seperti diundang ke ulang tahun?"
+
+Umi tersenyum. "Mirip begitu. Bedanya, ini undangan paling penting — diundang untuk berbicara langsung dengan Allah, yang menciptakan kita."
+
+Mereka berdua mendengarkan sampai adzan selesai. "Umi, tadi ada bagian yang diulang dua kali," kata Baby Ais, telinganya tajam menangkap pola suara.
+
+"Betul sekali! Itu karena pesannya sangat penting, jadi diulang supaya semua orang dengar — bahkan yang sedang sibuk sekalipun."
+
+Baby Ais lalu mengajukan pertanyaan favoritnya. "Kalau aku dengar adzan, apa yang harus aku lakukan?"
+
+"Yang paling indah, kita berhenti sebentar dari yang kita kerjakan, lalu berdoa pelan-pelan. Karena ada rahasia kecil: doa yang dipanjatkan di antara adzan dan sholat, sangat disukai untuk dikabulkan Allah."
+
+Sejak sore itu, setiap kali adzan berkumandang, Baby Ais akan meletakkan mainannya sebentar, menutup matanya, dan berdoa pelan — sebelum kembali bermain dengan hati yang lebih ringan.
+
+> *Doa di antara adzan dan iqamah tidak akan ditolak.*
+
+Sekarang, ajak si kecil berhenti sejenak setiap kali mendengar adzan, lalu ucapkan satu doa kecil bersama — kebiasaan kecil yang akan tertanam seumur hidup. 🕌`,
+      en: `That afternoon, while Baby Ais was putting together a puzzle on the porch, a beautiful voice called out from a distance — rising and falling, long, and stirring the evening air. Baby Ais stopped, one puzzle piece still in her fingers.
+
+"Umi, what's that sound? It's so lovely, and why did Abi stop working right away?"
+
+Umi sat beside her. "That's called the adhan, sweetheart. The adhan is a call, to let every Muslim know: it's time to pray. That sound is like an invitation from Allah, called out five times a day."
+
+"An invitation?" Baby Ais tilted her head. "Like being invited to a birthday party?"
+
+Umi smiled. "Something like that. The difference is, this is the most important invitation — invited to speak directly with Allah, who created us."
+
+They both listened until the adhan finished. "Umi, there was a part that repeated twice," said Baby Ais, her sharp ears catching the pattern.
+
+"That's right! It's because the message is so important, it's repeated so everyone hears it — even those who are busy."
+
+Then Baby Ais asked her favourite kind of question. "If I hear the adhan, what should I do?"
+
+"The most beautiful thing is to pause for a moment from whatever we're doing, then pray quietly. Because there's a little secret: a prayer made between the adhan and the prayer itself is especially loved to be answered by Allah."
+
+From that afternoon on, every time the adhan rang out, Baby Ais would set her toys down for a moment, close her eyes, and pray softly — before returning to play with a lighter heart.
+
+> *A prayer made between the adhan and the iqamah will not be rejected.*
+
+Now, help your little one pause for a moment every time they hear the adhan, and say one small prayer together — a small habit that will stay rooted for a lifetime. 🕌`,
+    },
+    anchor: { type: "doa", slug: "mendengar-adzan" },
+    takeaway: {
+      id: "Adzan adalah undangan Allah, lima kali sehari. Doa yang dipanjatkan saat mendengarnya adalah salah satu doa yang paling disukai untuk dikabulkan.",
+      en: "The adhan is Allah's invitation, five times a day. A prayer made while hearing it is among the prayers most beloved to be answered.",
+    },
+    tags: ["adzan", "sholat", "ibadah", "tanya-anak", "buku"],
+    readingTimeMin: 5,
+  },
+
 ];
 
 export function getAllCatatan(): Catatan[] {
