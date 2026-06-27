@@ -76,7 +76,8 @@ export default async function HomePage({
   const allPosts = getAllBlogPosts();
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const posts = allPosts.slice(0, 3);
-  const latestCerita = getAllCatatan().slice(0, 3);
+  const allCerita = getAllCatatan();
+  const latestCerita = allCerita.slice(0, 3);
   // Auto-pick a seasonal event from the Islamic calendar. Falls back
   // to the hard-coded Hijri new year post if the matching blog slug
   // hasn't been written yet.
@@ -153,11 +154,12 @@ export default async function HomePage({
                 </div>
 
                 {/* Animated stat strip */}
-                <dl className="mt-12 grid max-w-md grid-cols-4 gap-3">
+                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-3 sm:grid-cols-5">
                   <Stat n={allDoa.length} label={dict.nav.doa} locale={l} />
                   <Stat n={allHadith.length} label={dict.nav.hadith} locale={l} />
                   <Stat n={allParenting.length} label={dict.nav.parenting} locale={l} />
                   <Stat n={allPosts.length} label={dict.nav.blog} locale={l} />
+                  <Stat n={allCerita.length} label={dict.nav.catatan} locale={l} />
                 </dl>
               </div>
 
