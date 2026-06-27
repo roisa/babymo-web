@@ -103,6 +103,29 @@ export default async function GamesIndex({
         <ul className="mt-6 grid gap-5 sm:grid-cols-2">
           <li>
             <Link
+              href={pathFor(l, "/momen")}
+              className="group flex h-full items-center gap-4 rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
+            >
+              <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-clay-soft text-2xl">
+                📺
+              </span>
+              <span className="min-w-0">
+                <span className="block font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
+                  {dict.nav.watch}
+                </span>
+                <span className="mt-1 block text-sm leading-relaxed text-whisper">
+                  {l === "id"
+                    ? "Kurasi video Baby Mo di YouTube untuk ditonton bareng anak."
+                    : "Curated Baby Mo YouTube videos to watch together with your child."}
+                </span>
+                <span className="mt-3 inline-flex items-center gap-1 text-xs font-semibold text-sage-deep">
+                  {l === "id" ? "Tonton" : "Watch"} →
+                </span>
+              </span>
+            </Link>
+          </li>
+          <li>
+            <Link
               href={pathFor(l, "/apps/kids-activity")}
               className="group flex h-full items-center gap-4 rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
             >

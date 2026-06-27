@@ -14,13 +14,14 @@ type Props = {
 export function Header({ locale, currentPath }: Props) {
   const dict = getDictionary(locale);
   // Outcome-based primary nav (Home lives on the logo). Every content format
-  // sits as a sub-section inside one of these four destinations.
+  // sits as a sub-section inside one of these destinations.
   const items: { href: string; label: string; match: string[] }[] = [
     { href: "/doa", label: dict.nav.doa, match: ["/doa"] },
+    { href: "/cerita", label: dict.nav.catatan, match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
-      match: ["/play", "/permainan", "/apps"],
+      match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
     },
     {
       href: "/learn",
@@ -34,10 +35,8 @@ export function Header({ locale, currentPath }: Props) {
         "/kalender",
         "/parenting",
         "/blog",
-        "/cerita",
       ],
     },
-    { href: "/momen", label: dict.nav.watch ?? "Watch", match: ["/watch", "/momen"] },
   ];
 
   return (
