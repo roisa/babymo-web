@@ -52,11 +52,12 @@ export function MobileNav({ locale }: Props) {
   const items: { href: string; label: string; icon: (p: IconProps) => React.JSX.Element; match: string[] }[] = [
     { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
     { href: "/doa", label: dict.nav.doa, icon: BookIcon, match: ["/doa"] },
+    { href: "/cerita", label: dict.nav.catatan, icon: StoryIcon, match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
       icon: GameIcon,
-      match: ["/play", "/permainan", "/apps"],
+      match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
     },
     {
       href: "/learn",
@@ -71,10 +72,8 @@ export function MobileNav({ locale }: Props) {
         "/kalender",
         "/parenting",
         "/blog",
-        "/cerita",
       ],
     },
-    { href: "/momen", label: dict.nav.watch ?? "Watch", icon: WatchIcon, match: ["/watch", "/momen"] },
   ];
 
   function isActive(match: string[]) {
@@ -147,10 +146,10 @@ function LearnIcon({ filled }: IconProps) {
     </svg>
   );
 }
-function WatchIcon({ filled }: IconProps) {
+function StoryIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <rect x="2.5" y="4.5" width="19" height="13" rx="2.5" /><path d="M8 21h8" /><path d="m10.5 8.5 4 2.5-4 2.5V8.5Z" fill={filled ? "var(--paper, #fff)" : "currentColor"} stroke="none" />
+      <path d="M12 6c-1.5-1.3-3.6-2-6-2v13c2.4 0 4.5.7 6 2 1.5-1.3 3.6-2 6-2V4c-2.4 0-4.5.7-6 2Z" /><path d="M12 6v13" />
     </svg>
   );
 }

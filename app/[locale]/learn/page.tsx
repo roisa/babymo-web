@@ -27,6 +27,16 @@ export async function generateMetadata({
 function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[] {
   return [
     {
+      emoji: "✍️",
+      title: dict.nav.blog,
+      description:
+        l === "id"
+          ? "Artikel parenting islami yang ditulis dan ditinjau."
+          : "Islamic parenting articles, written and reviewed.",
+      href: "/blog",
+      badge: dict.nav.parents,
+    },
+    {
       emoji: "🧭",
       title: dict.pages.paths.title,
       description:
@@ -100,26 +110,6 @@ function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[]
           ? "Panduan situasi: tantrum, susah tidur, susah makan, dan lainnya."
           : "Situation guides: tantrums, sleep, eating, and more.",
       href: "/parenting",
-      badge: dict.nav.parents,
-    },
-    {
-      emoji: "✍️",
-      title: dict.nav.blog,
-      description:
-        l === "id"
-          ? "Artikel parenting islami yang ditulis dan ditinjau."
-          : "Islamic parenting articles, written and reviewed.",
-      href: "/blog",
-      badge: dict.nav.parents,
-    },
-    {
-      emoji: "📖",
-      title: dict.nav.catatan,
-      description:
-        l === "id"
-          ? "Cerita hangat dari Abi & Umi tentang Baby Mo & Baby Ais — tentang akhlak, berbagi, dan sabar."
-          : "Warm stories from Abi & Umi about Baby Mo & Baby Ais — about character, sharing, and patience.",
-      href: "/cerita",
       badge: dict.nav.parents,
     },
   ];

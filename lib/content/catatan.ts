@@ -4314,6 +4314,662 @@ Welcome home, Baby Ais. Baby Mo — and one bed that will, once again, be full t
     readingTimeMin: 6,
   },
 
+  {
+    slug: "kenapa-harus-minta-izin-untuk-anak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-alright.png",
+    published: "2026-06-25",
+    title: { id: "Kenapa Harus Minta Izin?", en: "Why Do We Ask Permission?" },
+    hook: {
+      id: "Baby Mo mengambil mobil-mobilan Baby Ais tanpa bertanya. Baby Ais menangis keras.",
+      en: "Baby Mo took Baby Ais's car without asking. Baby Ais cried loudly.",
+    },
+    body: {
+      id: `Mobil merah itu diam di lantai. Baby Ais sedang minum susu di dapur.
+
+Baby Mo melihatnya. Diambilnya cepat-cepat. Tidak bertanya.
+
+Baby Ais kembali. "Itu punya Ais!" Ia menangis kencang.
+
+Baby Mo kaget. Ia diam saja, memegang mobilnya erat-erat.
+
+Umi datang, hanya bertanya pelan, "Mo, coba tanya dulu sama Ais."
+
+Baby Mo memandang Baby Ais yang masih menangis. Ia mendekat. "Ais... boleh Mo pinjam mobilnya?"
+
+Baby Ais berhenti menangis. Ia mengangguk. "Boleh. Tapi tanya dulu ya."
+
+Mereka main bersama. Bergiliran. Saling bertanya dulu sebelum pegang mainan.
+
+> *Tidak halal bagi seorang muslim mengambil harta saudaranya tanpa kerelaan darinya.*
+
+Sekarang, ajak si kecil bilang satu kalimat kecil sebelum pegang mainan orang lain: "Boleh aku pinjam?" 🤝`,
+      en: `The little red car sat on the floor. Baby Ais was having milk in the kitchen.
+
+Baby Mo saw it. He grabbed it fast. He didn't ask.
+
+Baby Ais came back. "That's Ais's!" She cried loudly.
+
+Baby Mo froze. He just stood there, holding the car tight.
+
+Umi came over and simply said, "Mo, try asking Ais first."
+
+Baby Mo looked at Baby Ais, still crying. He stepped closer. "Ais... may Mo borrow the car?"
+
+Baby Ais stopped crying. She nodded. "Okay. But ask first, okay?"
+
+They played together. Taking turns. Asking first before touching each other's toys.
+
+> *It is not lawful for a Muslim to take his brother's wealth without his consent.*
+
+Now, help your little one say one small phrase before touching someone else's toy: "May I borrow this?" 🤝`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Sebelum pegang mainan orang lain — tanya dulu. Biasakan satu kalimat kecil ini sejak dini.",
+      en: "Before touching someone else's toy — ask first. Build this one small habit early.",
+    },
+    tags: ["adab", "izin", "saudara", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "apa-itu-sedekah-untuk-anak",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-06-26",
+    title: { id: "Apa Itu Sedekah?", en: "What Is Sadaqah?" },
+    hook: {
+      id: "Baby Mo punya dua koin di tangan. Di luar, ada kakek tua bawa keranjang sapu.",
+      en: "Baby Mo holds two coins. Outside, an old man carries a basket of brooms.",
+    },
+    body: {
+      id: `Baby Mo punya dua koin di tangan. Hadiah dari Abi.
+
+Di luar, ada kakek tua bawa keranjang sapu. Berjalan pelan di bawah matahari.
+
+Abi berkata pelan, "Mo, mau kasih satu koin ke Kakek itu?"
+
+Baby Mo lihat koinnya. Lalu lihat Kakek. Ia berlari kecil. "Kek! Ini untuk Kakek!"
+
+Kakek berhenti. Tersenyum lebar. "Terima kasih, Nak."
+
+Baby Mo lari balik ke Abi. Wajahnya senang sekali. "Abi, koinku tinggal satu. Tapi aku senang!"
+
+Abi memeluknya. "Itu namanya sedekah, Sayang. Kasih sedikit, bikin senang banyak."
+
+> *Sedekah itu sama sekali tidak akan mengurangi harta.*
+
+Sekarang, ajak si kecil menyisihkan satu koin atau mainan untuk diberikan, dan biarkan ia melihat sendiri senyum orang yang menerimanya. 🌱`,
+      en: `Baby Mo holds two coins. A gift from Abi.
+
+Outside, an old man carries a basket of brooms. Walking slowly under the sun.
+
+Abi says quietly, "Mo, want to give the grandfather one coin?"
+
+Baby Mo looks at his coins. Then at the grandfather. He runs over. "Sir! This is for you!"
+
+The old man stops. He smiles wide. "Thank you, little one."
+
+Baby Mo runs back to Abi, beaming. "Abi, I only have one coin left. But I'm happy!"
+
+Abi hugs him. "That's called sadaqah, sweetheart. Give a little, make many happy."
+
+> *Charity does not decrease wealth at all.*
+
+Now, help your little one set aside one coin or toy to give, and let them see the receiver's smile for themselves. 🌱`,
+    },
+    anchor: { type: "hadith", slug: "menyantuni-anak-yatim" },
+    takeaway: {
+      id: "Sedekah bukan kehilangan. Kasih sedikit, bikin senang banyak orang.",
+      en: "Sadaqah isn't a loss. Give a little, and make many people happy.",
+    },
+    tags: ["sedekah", "rezeki", "akhlak", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "kenapa-berwudhu-sebelum-sholat",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-ok.png",
+    published: "2026-06-27",
+    title: { id: "Kenapa Berwudhu Sebelum Sholat?", en: "Why Do We Wash Up Before Praying?" },
+    hook: {
+      id: "Baby Ais sudah pakai sajadah. Tapi belum cuci tangan.",
+      en: "Baby Ais already has her prayer mat out. But she hasn't washed up yet.",
+    },
+    body: {
+      id: `Baby Ais sudah pakai sajadah. Tapi belum cuci tangan.
+
+"Ais, sudah wudhu?" tanya Abi.
+
+"Belum. Tanganku kan nggak kotor."
+
+Abi tidak menjawab panjang. Ia mengajak Ais ke keran air. "Lihat Abi dulu, ya."
+
+Abi membasuh tangan, kumur, basuh muka, tangan sampai siku, usap kepala, lalu kaki. Pelan-pelan.
+
+Baby Ais menirukan satu-satu. Air dingin di tangannya. Ia tertawa kecil.
+
+Selesai wudhu, Baby Ais merasa segar. "Abi, aku berasa bersih banget!"
+
+Abi tersenyum. "Sekarang kita siap sholat. Bersih badan, bersih hati."
+
+> *Barangsiapa berwudhu dengan sempurna, keluarlah dosa-dosanya dari tubuhnya, hingga keluar pula dari bawah kuku-kukunya.*
+
+Sekarang, ajak si kecil berwudhu sendiri, satu gerakan demi satu gerakan, sambil mereka melihat Abi atau Umi mencontohkan dulu. 💧`,
+      en: `Baby Ais already has her prayer mat out. But she hasn't washed up yet.
+
+"Ais, have you done wudhu?" asked Abi.
+
+"Not yet. My hands aren't dirty."
+
+Abi didn't explain much. He led her to the tap. "Watch Abi first."
+
+Abi washed his hands, rinsed his mouth, washed his face, arms to the elbows, wiped his head, then his feet. Slowly.
+
+Baby Ais copied each step. The water felt cool on her hands. She giggled.
+
+When she finished, Baby Ais felt fresh. "Abi, I feel so clean!"
+
+Abi smiled. "Now we're ready to pray. Clean body, clean heart."
+
+> *Whoever performs wudhu perfectly, his sins leave his body, even from beneath his fingernails.*
+
+Now, let your little one do their own wudhu, one step at a time, after watching you do it first. 💧`,
+    },
+    anchor: { type: "doa", slug: "selesai-wudhu" },
+    takeaway: {
+      id: "Wudhu itu sederhana: bersihkan badan, lalu hati jadi tenang sebelum sholat.",
+      en: "Wudhu is simple: clean the body, and the heart settles before prayer.",
+    },
+    tags: ["wudhu", "sholat", "ibadah", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "semangkuk-sup-untuk-pak-becak",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yes.png",
+    published: "2026-06-28",
+    title: { id: "Semangkuk Sup untuk Pak Becak", en: "A Bowl of Soup for the Pedicab Driver" },
+    hook: {
+      id: "Hujan turun deras. Baby Mo dan Baby Ais melihat seorang bapak tukang becak berteduh sendirian, basah dan menggigil, di depan rumah.",
+      en: "Heavy rain fell. Baby Mo and Baby Ais saw a pedicab driver sheltering alone outside their house, soaked and shivering.",
+    },
+    body: {
+      id: `Hujan deras sore itu. Baby Mo dan Baby Ais lihat bapak becak menggigil di depan rumah.
+
+"Umi, Bapak itu kedinginan," kata Baby Ais.
+
+Umi sedang masak sup hangat. Baby Mo menarik lengannya. "Boleh kasih ke Bapak itu?"
+
+Umi menuangkan sup ke rantang kecil. "Siapa yang mau bawa?"
+
+"Kami berdua!"
+
+Mereka lari kecil di bawah payung Abi. "Pak, ini sup hangat," kata Baby Mo.
+
+Bapak becak itu terkejut. Matanya berkaca-kaca. "Terima kasih banyak, Nak."
+
+Baby Mo dan Baby Ais melihat Bapak itu makan sambil senyum lebar. Mereka ikut senyum.
+
+Malam itu Baby Mo bilang ke Baby Ais, "Besok kalau hujan lagi, kita kasih lagi ya?"
+
+> *Senyummu kepada saudaramu adalah sedekah.*
+
+Sekarang, ajak si kecil memperhatikan orang yang bekerja di luar saat hujan atau panas, lalu berikan sesuatu sekecil pun. ☔`,
+      en: `Heavy rain fell that afternoon. Baby Mo and Baby Ais saw a pedicab driver shivering outside.
+
+"Umi, that man is cold," said Baby Ais.
+
+Umi was cooking warm soup. Baby Mo tugged her sleeve. "Can we give some to him?"
+
+Umi poured soup into a small tin. "Who wants to bring it?"
+
+"Both of us!"
+
+They ran out under Abi's umbrella. "Sir, this is warm soup," said Baby Mo.
+
+The pedicab driver was startled. His eyes welled up. "Thank you so much, little ones."
+
+Baby Mo and Baby Ais watched him eat with a big smile. They smiled too.
+
+That night Baby Mo told Baby Ais, "Next time it rains, let's give again, okay?"
+
+> *Your smile to your brother is an act of charity.*
+
+Now, help your little one notice people working outside in rain or heat, and give even something small. ☔`,
+    },
+    anchor: { type: "hadith", slug: "tetangga-keluarga-luas" },
+    takeaway: {
+      id: "Kepedulian kecil — semangkuk sup, sebuah senyum — bisa terasa sangat besar bagi orang yang sendirian.",
+      en: "A small act of care — a bowl of soup, a smile — can feel enormous to someone who feels alone.",
+    },
+    tags: ["sedekah", "empati", "akhlak", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "antrian-es-krim-yang-panjang",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-run.png",
+    published: "2026-06-29",
+    title: { id: "Antrian Es Krim yang Panjang", en: "The Long Ice Cream Line" },
+    hook: {
+      id: "Sepuluh orang mengantre di depan Baby Mo. Es krimnya kelihatan meleleh duluan dalam bayangannya, padahal belum dibeli sama sekali.",
+      en: "Ten people stood ahead of Baby Mo in line. The ice cream was already melting in his imagination, even though he hadn't bought any yet.",
+    },
+    body: {
+      id: `Antrean es krim panjang sekali. Baby Mo cemberut. "Lamaaa, Umi!"
+
+Umi berlutut. "Yuk main sambil nunggu. Hitung, ada berapa baju biru?"
+
+Baby Mo mulai menghitung. Biru, merah, kuning... Ia lupa kalau sedang menunggu.
+
+Tanpa sadar, antreannya sudah maju. "Sudah dekat, Umi!"
+
+"Selamat siang, mau pesan apa?" kata penjualnya, tepat di depan Baby Mo.
+
+Baby Mo memesan es krim cokelat. Rasanya manis sekali.
+
+"Tadi Mo kira nunggu lama banget," kata Baby Mo sambil menjilat es krimnya. "Tapi nggak lama, ya?"
+
+Umi mengusap kepalanya. "Kalau hati tenang, nunggu jadi nggak berat."
+
+> *Sesungguhnya Allah menyertai orang-orang yang sabar.*
+
+Sekarang, ajak si kecil main kecil saat harus menunggu — menghitung warna, atau bernyanyi pelan. 🍦`,
+      en: `The ice cream line was very long. Baby Mo frowned. "So sloooow, Umi!"
+
+Umi knelt down. "Let's play while we wait. Count how many blue shirts you see?"
+
+Baby Mo started counting. Blue, red, yellow... He forgot he was even waiting.
+
+Before he noticed, the line had moved forward. "We're close now, Umi!"
+
+"Good afternoon, what would you like?" asked the seller, right in front of Baby Mo.
+
+Baby Mo ordered his chocolate ice cream. It tasted so sweet.
+
+"I thought the wait would be so long," said Baby Mo, licking his ice cream. "But it wasn't, was it?"
+
+Umi patted his head. "When the heart is calm, waiting feels light."
+
+> *Indeed, Allah is with those who are patient.*
+
+Now, give your little one a small game to play while waiting — counting colours, or quietly singing. 🍦`,
+    },
+    anchor: { type: "parenting", slug: "tantrum" },
+    takeaway: {
+      id: "Menunggu terasa ringan kalau hati ditenangkan dengan permainan kecil sambil menunggu.",
+      en: "Waiting feels lighter when the heart is calmed with a small game while we wait.",
+    },
+    tags: ["sabar", "tantrum", "akhlak", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "apa-itu-adzan-untuk-anak",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-wow.png",
+    published: "2026-06-30",
+    title: { id: "Apa Itu Adzan?", en: "What Is the Adhan?" },
+    hook: {
+      id: "Suara merdu terdengar dari kejauhan. Baby Ais berhenti bermain. \"Umi, itu suara apa? Kenapa semua orang jadi diam mendengarnya?\"",
+      en: "A beautiful voice rang out in the distance. Baby Ais stopped playing. \"Umi, what's that sound? Why does everyone go quiet when they hear it?\"",
+    },
+    body: {
+      id: `Suara merdu terdengar dari jauh. Baby Ais berhenti main.
+
+Abi langsung berhenti kerja. Ia diam, mendengarkan.
+
+Baby Ais memperhatikan Abi. Lalu ia duduk diam juga, ikut mendengarkan.
+
+Setelah suara itu selesai, Baby Ais bertanya, "Abi, itu suara apa?"
+
+"Itu adzan, panggilan sholat," kata Abi pelan. "Tandanya, waktunya kita berdoa sebentar."
+
+Abi menutup mata, berdoa pelan. Baby Ais menutup mata juga, menirukan Abi.
+
+Sejak itu, setiap dengar adzan, Baby Ais berhenti main sebentar. Menutup mata. Berdoa pelan.
+
+> *Doa di antara adzan dan iqamah tidak akan ditolak.*
+
+Sekarang, ajak si kecil berhenti sejenak setiap kali dengar adzan, lalu berdoa pelan bersama. 🕌`,
+      en: `A beautiful sound rang out from far away. Baby Ais stopped playing.
+
+Abi stopped working right away. He stood still, listening.
+
+Baby Ais watched Abi. Then she sat still too, listening along.
+
+When the sound finished, Baby Ais asked, "Abi, what's that sound?"
+
+"That's the adhan, the call to pray," Abi said quietly. "It means it's time to pray for a moment."
+
+Abi closed his eyes and prayed quietly. Baby Ais closed her eyes too, copying him.
+
+Since then, every time she hears the adhan, Baby Ais pauses her play. Closes her eyes. Prays quietly.
+
+> *A prayer made between the adhan and the iqamah will not be rejected.*
+
+Now, help your little one pause for a moment every time they hear the adhan, and pray quietly together. 🕌`,
+    },
+    anchor: { type: "doa", slug: "mendengar-adzan" },
+    takeaway: {
+      id: "Saat dengar adzan, berhenti sebentar dan berdoa pelan — kebiasaan kecil yang tertanam seumur hidup.",
+      en: "When you hear the adhan, pause for a moment and pray quietly — a small habit that stays for a lifetime.",
+    },
+    tags: ["adzan", "sholat", "ibadah", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "layang-layang-yang-nyangkut",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-run.png",
+    published: "2026-07-01",
+    title: { id: "Layang-Layang yang Nyangkut", en: "The Kite Stuck in the Tree" },
+    hook: {
+      id: "Layang-layang merah Baby Mo nyangkut tinggi di pohon. Talinya kusut. Baby Mo mau menyerah.",
+      en: "Baby Mo's red kite got stuck high in a tree. The string was tangled. Baby Mo wanted to give up.",
+    },
+    body: {
+      id: `Layang-layang merah Baby Mo terbang tinggi sekali. Lalu — tersangkut di dahan pohon.
+
+"Nggak bisa, Abi!" Baby Mo menarik talinya kuat-kuat. Tetap nyangkut.
+
+Abi tidak langsung menarik. Ia duduk dulu, melihat dahannya. "Coba pelan-pelan, Mo. Tarik sedikit, lalu kasih kendur sedikit."
+
+Baby Mo menarik pelan. Lalu kendur. Tarik lagi. Kendur lagi.
+
+Talinya mulai bergerak. Sedikit demi sedikit, layang-layang itu lepas dari dahan.
+
+"Bisa, Abi! Bisa!" Baby Mo melompat senang, memeluk layang-layangnya lagi.
+
+Abi mengusap kepalanya. "Kalau pelan-pelan dan nggak buru-buru, yang susah jadi bisa, Mo."
+
+> *Ya Allah, tidak ada kemudahan kecuali yang Engkau jadikan mudah, dan Engkau menjadikan kesulitan menjadi mudah.*
+
+Sekarang, kalau si kecil hampir menyerah pada sesuatu yang sulit, ajak ia coba pelan-pelan dulu, lalu baca doa ini bersama. 🪁`,
+      en: `Baby Mo's red kite flew up high. Then — it got caught on a tree branch.
+
+"It's stuck, Abi!" Baby Mo pulled the string hard. Still stuck.
+
+Abi didn't yank it right away. He sat down first, looking at the branch. "Try slowly, Mo. Pull a little, then loosen a little."
+
+Baby Mo pulled gently. Then loosened. Pulled again. Loosened again.
+
+The string began to move. Bit by bit, the kite came free from the branch.
+
+"It worked, Abi! It worked!" Baby Mo jumped with joy, hugging his kite again.
+
+Abi patted his head. "When you go slow and don't rush, the hard thing becomes possible, Mo."
+
+> *O Allah, there is no ease except in what You make easy, and You make hardship easy if You will.*
+
+Now, when your little one is about to give up on something hard, help them try slowly first, then say this dua together. 🪁`,
+    },
+    anchor: { type: "doa", slug: "doa-dimudahkan-urusan" },
+    takeaway: {
+      id: "Yang terasa sulit bisa jadi mudah — kalau dicoba pelan-pelan, sambil minta kemudahan dari Allah.",
+      en: "What feels hard can become easy — if tried slowly, while asking Allah for ease.",
+    },
+    tags: ["sabar", "usaha", "doa", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "permintaan-pada-bintang-jatuh",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-wow.png",
+    published: "2026-07-02",
+    title: { id: "Permintaan pada Bintang Jatuh", en: "A Wish Upon a Falling Star" },
+    hook: {
+      id: "Sebuah cahaya melesat di langit malam. \"Itu bintang jatuh!\" teriak Baby Ais. \"Aku boleh minta sesuatu, kan?\"",
+      en: "A streak of light shot across the night sky. \"A falling star!\" shouted Baby Ais. \"I get to wish for something, right?\"",
+    },
+    body: {
+      id: `Malam itu, Baby Ais duduk di teras bersama Umi, memandangi langit penuh bintang.
+
+Tiba-tiba — wuusshh — sebuah cahaya melesat cepat. "Itu bintang jatuh! Aku boleh minta sesuatu, kan, Umi?"
+
+Umi memeluknya. "Bintang itu indah, Sayang. Tapi bintang tidak bisa mengabulkan permintaan. Bintang juga ciptaan Allah, sama seperti kita."
+
+Baby Ais terdiam. "Jadi... aku minta ke siapa?"
+
+"Minta ke Allah saja. Dia yang menciptakan bintang itu, jadi Dia juga yang bisa mengabulkan permintaanmu."
+
+Baby Ais memejamkan mata, menengadah ke langit. "Allah, aku mau main sama Kak Mo besok, ya."
+
+Umi memejamkan mata juga, ikut berdoa pelan di sebelahnya.
+
+Mereka berdua duduk diam sebentar, memandangi langit yang masih berkilau dengan ribuan bintang lain.
+
+> *Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu.*
+
+Sekarang, kalau si kecil melihat bintang jatuh atau hal indah di langit, ajak ia menutup mata dan berdoa kepada Allah saat itu juga. ⭐`,
+      en: `That night, Baby Ais sat on the porch with Umi, gazing up at a sky full of stars.
+
+Suddenly — whoosh — a light streaked across the sky. "A falling star! I get to wish for something, right, Umi?"
+
+Umi hugged her. "That star is beautiful, sweetheart. But a star can't grant wishes. The star is also Allah's creation, just like us."
+
+Baby Ais went quiet. "So... who do I ask?"
+
+"Ask Allah instead. He made that star, so He's the one who can grant your wish."
+
+Baby Ais closed her eyes and looked up at the sky. "Allah, I want to play with Kak Mo tomorrow, please."
+
+Umi closed her eyes too, praying quietly beside her.
+
+They sat together for a while, watching the sky still sparkling with a thousand other stars.
+
+> *Call upon Me, and I will answer you.*
+
+Now, when your little one sees a falling star or something beautiful in the sky, help them close their eyes and pray to Allah right then. ⭐`,
+    },
+    anchor: { type: "doa", slug: "doa-pandai-bersyukur" },
+    takeaway: {
+      id: "Keinginan boleh dimiliki — tapi yang diminta adalah Allah, bukan bintang.",
+      en: "It's okay to want things — but the One we ask is Allah, not a star.",
+    },
+    tags: ["doa", "tauhid", "tanya-anak", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "kupu-kupu-di-tangan-baby-ais",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-07-03",
+    title: { id: "Kupu-Kupu di Tangan Baby Ais", en: "The Butterfly in Baby Ais's Hand" },
+    hook: {
+      id: "Baby Ais berhasil menangkap kupu-kupu kuning. Ia menggenggamnya erat-erat — terlalu erat.",
+      en: "Baby Ais finally caught a yellow butterfly. She gripped it tight — too tight.",
+    },
+    body: {
+      id: `Kupu-kupu kuning itu hinggap sebentar di bunga. Baby Ais mengendap-endap, lalu — tertangkap!
+
+"Aku dapat! Aku mau pelihara dia di kamar," kata Baby Ais, menggenggam kupu-kupu itu erat-erat di kedua tangan.
+
+Sayap kupu-kupu itu bergerak-gerak, mencoba lepas. Baby Ais menggenggam lebih erat lagi, takut kupu-kupunya kabur.
+
+Baby Mo yang melihat dari dekat berbisik, "Ais, lihat — sayapnya kayak mau patah."
+
+Baby Ais melonggarkan genggamannya sedikit. Sayap kupu-kupu itu kelihatan kusut di antara jarinya.
+
+Ia membuka telapak tangannya pelan-pelan. Kupu-kupu itu diam sebentar di telapaknya, lalu terbang — pelan, lalu tinggi, menjauh ke arah bunga-bunga lain.
+
+Baby Ais memandanginya terbang. "Dia lebih suka terbang ya, daripada digenggam terus."
+
+Baby Mo mengangguk. "Mungkin kalau sayang sama sesuatu, kita pegangnya pelan-pelan aja."
+
+> *Sesungguhnya kelembutan tidaklah ada pada sesuatu, kecuali akan menghiasinya.*
+
+Sekarang, kalau si kecil menangkap serangga atau hewan kecil, ajak ia memegangnya dengan tangan terbuka dan pelan — lalu lepaskan bersama. 🦋`,
+      en: `The yellow butterfly landed on a flower for a moment. Baby Ais crept closer, then — caught it!
+
+"I got it! I want to keep her in my room," said Baby Ais, gripping the butterfly tight with both hands.
+
+The butterfly's wings fluttered, trying to escape. Baby Ais gripped even tighter, afraid it would fly away.
+
+Baby Mo, watching nearby, whispered, "Ais, look — her wings look like they might break."
+
+Baby Ais loosened her grip a little. The butterfly's wings looked crumpled between her fingers.
+
+She slowly opened her palm. The butterfly sat still for a moment, then flew off — slow at first, then higher, away toward the other flowers.
+
+Baby Ais watched it go. "I guess she likes flying more than being held."
+
+Baby Mo nodded. "Maybe when we love something, we should hold it gently."
+
+> *Gentleness is not found in anything except that it beautifies it.*
+
+Now, when your little one catches a bug or small creature, help them hold it with open, gentle hands — then let it go together. 🦋`,
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Sayang pada makhluk kecil ditunjukkan dengan genggaman yang lembut, bukan yang erat.",
+      en: "Love for small creatures is shown through a gentle hold, not a tight one.",
+    },
+    tags: ["kelembutan", "hewan", "akhlak", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "hujan-pertama-setelah-lama-kering",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-07-04",
+    title: { id: "Hujan Pertama Setelah Lama Kering", en: "The First Rain After a Long Dry Spell" },
+    hook: {
+      id: "Sudah lama tidak hujan. Tanah halaman kering dan berdebu. Lalu, satu tetes air jatuh dari langit.",
+      en: "It hadn't rained in a long time. The yard was dry and dusty. Then, one drop of water fell from the sky.",
+    },
+    body: {
+      id: `Sudah berminggu-minggu tidak ada hujan. Tanaman di halaman mulai layu. Tanahnya kering, berdebu kalau diinjak.
+
+Sore itu, langit tiba-tiba menggelap. Lalu — tes, tes, tes — air mulai jatuh.
+
+"Hujan! Hujan!" Baby Mo dan Baby Ais berlari ke teras, berteriak girang.
+
+Umi membuka pintu lebar-lebar. "Alhamdulillah, akhirnya hujan turun lagi."
+
+Hujan makin deras. Bau tanah basah tercium dari halaman. Daun-daun yang layu jadi terlihat segar lagi.
+
+"Umi, kenapa kita ucap alhamdulillah? Kan cuma hujan," tanya Baby Ais.
+
+"Karena hujan ini rezeki, Sayang. Tanaman butuh minum, sama seperti kita."
+
+Baby Mo dan Baby Ais menengadahkan tangan ke arah tetes hujan dari atap, lalu bersama-sama berbisik, "Allahumma shayyiban naafi'an" — ya Allah, jadikan hujan ini bermanfaat.
+
+Mereka berdua tertawa, membiarkan tetesnya jatuh di telapak tangan.
+
+> *Ya Allah, jadikanlah hujan ini hujan yang membawa manfaat.*
+
+Sekarang, lain kali hujan turun setelah lama kering, ajak si kecil berdiri di teras, merasakan tetesnya, dan membaca doa ini bersama. 🌧️`,
+      en: `It hadn't rained for weeks. The plants in the yard were starting to wilt. The ground was dry, dusty underfoot.
+
+That afternoon, the sky suddenly darkened. Then — drip, drip, drip — water began to fall.
+
+"Rain! Rain!" Baby Mo and Baby Ais ran to the porch, shouting with joy.
+
+Umi threw the door wide open. "Alhamdulillah, the rain is finally back."
+
+The rain grew heavier. The smell of wet earth rose from the yard. The wilted leaves looked fresh again.
+
+"Umi, why do we say alhamdulillah? It's just rain," asked Baby Ais.
+
+"Because this rain is a blessing, sweetheart. Plants need a drink, just like we do."
+
+Baby Mo and Baby Ais held their hands up to catch the drops falling from the roof, then whispered together, "Allahumma shayyiban naafi'an" — O Allah, make this rain beneficial.
+
+They both laughed, letting the drops fall onto their palms.
+
+> *O Allah, make this a beneficial rain.*
+
+Now, next time it rains after a long dry spell, take your little one to the porch, feel the drops together, and say this dua. 🌧️`,
+    },
+    anchor: { type: "doa", slug: "ketika-hujan" },
+    takeaway: {
+      id: "Hujan bukan cuma basah — ia rezeki untuk tanaman, dan layak disyukuri bersama.",
+      en: "Rain isn't just wet weather — it's a blessing for plants, worth giving thanks for together.",
+    },
+    tags: ["hujan", "syukur", "doa", "buku"],
+    readingTimeMin: 3,
+  },
+
+  {
+    slug: "membantu-umi-bikin-kue",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-pose-30.png",
+    published: "2026-07-05",
+    title: { id: "Membantu Umi Bikin Kue", en: "Helping Umi Bake Cookies" },
+    hook: {
+      id: "Baby Mo mau bantu bikin kue. Tepungnya malah berhamburan ke lantai dan ke bajunya.",
+      en: "Baby Mo wanted to help bake cookies. The flour ended up scattered across the floor and his shirt.",
+    },
+    body: {
+      id: `"Umi, aku mau bantu bikin kue!" Baby Mo sudah berdiri di samping meja dapur, siap-siap.
+
+Umi mengangkatnya ke kursi tinggi. "Boleh. Tapi sebelum mulai, ucapkan dulu ya."
+
+"Bismillah," kata Baby Mo, lalu menuang tepung ke mangkuk — terlalu cepat. Tepungnya berhamburan ke meja, ke lantai, ke bajunya sendiri.
+
+Baby Mo terdiam, takut dimarahi. Tapi Umi malah tertawa kecil. "Nggak apa-apa, Mo. Pelan-pelan saja, sedikit demi sedikit."
+
+Mereka mengaduk adonan bersama-sama. Tangan kecil Baby Mo penuh tepung, tapi ia tersenyum lebar.
+
+Saat adonan dibentuk bulat-bulat dan dimasukkan ke oven, Baby Mo menempelkan wajahnya ke kaca oven, menunggu.
+
+Begitu kue matang, ia menggigit kue pertamanya sendiri. "Umi, ini kue paling enak! Aku yang bikin!"
+
+Umi memeluknya, masih penuh tepung. "Karena kue ini dibuat dengan bismillah, dan dibuat bersama-sama."
+
+> *Rasulullah ﷺ adalah orang yang sibuk, tetapi beliau masih sempat bermain dan menghabiskan waktu bersama anak-anak.*
+
+Sekarang, ajak si kecil membantu satu tugas dapur sederhana bersama — biar berantakan, yang penting dikerjakan bersama. 🍪`,
+      en: `"Umi, I want to help bake cookies!" Baby Mo was already standing by the kitchen counter, ready to go.
+
+Umi lifted him onto a high chair. "Of course. But before we start, say it first."
+
+"Bismillah," said Baby Mo, then poured the flour into the bowl — too fast. Flour scattered across the counter, the floor, and his own shirt.
+
+Baby Mo froze, afraid he'd get scolded. But Umi just laughed softly. "It's okay, Mo. Just go slowly, bit by bit."
+
+They stirred the dough together. Baby Mo's little hands were covered in flour, but he grinned widely.
+
+As the dough was rolled into balls and placed in the oven, Baby Mo pressed his face to the oven glass, waiting.
+
+The moment the cookies were done, he took the first bite himself. "Umi, this is the best cookie! I made it!"
+
+Umi hugged him, still covered in flour. "Because this cookie was made with bismillah, and made together."
+
+> *The Prophet ﷺ was a busy man, yet he still made time to play and spend time with children.*
+
+Now, invite your little one to help with one simple kitchen task together — mess and all, what matters is doing it together. 🍪`,
+    },
+    anchor: { type: "parenting", slug: "bonding-orangtua" },
+    takeaway: {
+      id: "Kebersamaan lebih penting daripada kerapian. Satu tugas kecil bersama lebih berarti dari hasil yang sempurna.",
+      en: "Togetherness matters more than tidiness. One small task done together means more than a perfect result.",
+    },
+    tags: ["bonding", "dapur", "keluarga", "buku"],
+    readingTimeMin: 3,
+  },
+
 ];
 
 export function getAllCatatan(): Catatan[] {
