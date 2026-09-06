@@ -1,0 +1,355 @@
+1:"$Sreact.fragment"
+2:I[9766,[],""]
+3:I[98924,[],""]
+4:I[52619,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],""]
+7:I[24431,[],"OutletBoundary"]
+9:I[15278,[],"AsyncMetadataOutlet"]
+b:I[24431,[],"ViewportBoundary"]
+d:I[24431,[],"MetadataBoundary"]
+e:"$Sreact.suspense"
+10:I[57150,[],""]
+:HL["/_next/static/css/8a19edd2ca0c68b7.css","style"]
+:HL["/_next/static/media/26dc4a78f0c7af7f-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/5611c55482296524-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/e4af272ccee01ff0-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/media/fb12bdfc6f99d938-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/_next/static/css/74a333fbc1a85ba2.css","style"]
+0:{"P":null,"b":"Z9hsd2DbIIvT_1PU3neUI","p":"","c":["","id","blog","panduan-idul-adha-dan-qurban-untuk-keluarga",""],"i":false,"f":[[["",{"children":[["locale","id","d"],{"children":["blog",{"children":[["slug","panduan-idul-adha-dan-qurban-untuk-keluarga","d"],{"children":["__PAGE__",{}]}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/8a19edd2ca0c68b7.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","html",null,{"lang":"id","children":["$","body",null,{"style":{"margin":0,"minHeight":"100vh","display":"flex","alignItems":"center","justifyContent":"center","fontFamily":"system-ui, -apple-system, Segoe UI, Roboto, sans-serif","background":"#FAFAF7","color":"#0E1213","padding":24,"textAlign":"center"},"children":["$","div",null,{"children":[["$","img",null,{"src":"/baby-mo-poses/baby-mo-pose-38.png","alt":"Baby Mo","width":160,"height":160,"style":{"width":160,"height":160,"objectFit":"contain","margin":"0 auto 4px","display":"block"}}],["$","p",null,{"style":{"fontSize":56,"fontWeight":700,"margin":0,"color":"#5F8B5A"},"children":"404"}],["$","h1",null,{"style":{"fontSize":24,"margin":"12px 0 6px"},"children":"Halaman tidak ditemukan"}],["$","p",null,{"style":{"color":"#6B7068","margin":"0 0 24px"},"children":"Page not found."}],["$","$L4",null,{"href":"/id","style":{"display":"inline-block","background":"#0E1213","color":"#FAFAF7","padding":"10px 22px","borderRadius":999,"textDecoration":"none","fontWeight":600},"children":"Kembali ke beranda · Back home"}]]}]}]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["locale","id","d"],["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/74a333fbc1a85ba2.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],"$L5"]}],{"children":["blog",["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","panduan-idul-adha-dan-qurban-untuk-keluarga","d"],["$","$1","c",{"children":[null,["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",null,["$","$L7",null,{"children":["$L8",["$","$L9",null,{"promise":"$@a"}]]}]]}],{},null,false]},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,[["$","$Lb",null,{"children":"$Lc"}],["$","meta",null,{"name":"next-size-adjust","content":""}]],["$","$Ld",null,{"children":["$","div",null,{"hidden":true,"children":["$","$e",null,{"fallback":null,"children":"$Lf"}]}]}]]}],false]],"m":"$undefined","G":["$10",[]],"s":false,"S":true}
+11:I[57874,["8450","static/chunks/app/%5Blocale%5D/layout-e1837f6087f5ff2f.js"],"ScrollTop"]
+12:I[65342,["8450","static/chunks/app/%5Blocale%5D/layout-e1837f6087f5ff2f.js"],"PwaBootstrap"]
+13:I[35514,["8450","static/chunks/app/%5Blocale%5D/layout-e1837f6087f5ff2f.js"],"Analytics"]
+14:I[81356,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],"Image"]
+15:I[79646,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],"SearchOverlay"]
+16:I[6621,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],"ThemeToggle"]
+5:["$","html",null,{"lang":"id-ID","className":"__variable_f367f3 __variable_df1539 __variable_e00342 __variable_eaa818","children":["$","body",null,{"children":[["$","script",null,{"dangerouslySetInnerHTML":{"__html":"(function(){try{var t=localStorage.getItem('babymo.theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();"}}],["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"Organization\",\"@id\":\"https://babymo.id/#org\",\"name\":\"Baby Mo\",\"url\":\"https://babymo.id\",\"logo\":{\"@type\":\"ImageObject\",\"url\":\"https://babymo.id/assets/logo-512.png\",\"width\":512,\"height\":512},\"email\":\"hello@babymo.id\",\"telephone\":\"+62-823-1597-1002\",\"sameAs\":[\"https://www.youtube.com/@babymo.official\",\"https://www.instagram.com/babymo.official\",\"https://www.tiktok.com/@babymo.official\"]},{\"@type\":\"WebSite\",\"@id\":\"https://babymo.id/#website\",\"url\":\"https://babymo.id\",\"name\":\"Baby Mo\",\"description\":\"Baby Mo: platform parenting islami untuk keluarga muslim Indonesia. Doa harian, hadith, situasi parenting, dan game edukatif untuk anak usia 2–8 tahun.\",\"publisher\":{\"@id\":\"https://babymo.id/#org\"},\"inLanguage\":\"id-ID\"}]}"}}],["$","$L2",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L3",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L11",null,{"locale":"id"}],["$","$L12",null,{"locale":"id"}],["$","$L13",null,{}]]}]}]
+6:[["$","header",null,{"className":"glass sticky top-0 z-40 border-b border-hairline","children":[["$","a",null,{"href":"#main","className":"sr-only focus:not-sr-only focus:absolute focus:left-3 focus:top-3 focus:z-50 focus:rounded-full focus:bg-sage-deep focus:px-3 focus:py-1.5 focus:text-[12px] focus:font-semibold focus:text-paper","children":"Lewati ke konten"}],["$","div",null,{"className":"mx-auto flex h-14 max-w-6xl items-center justify-between px-5 sm:h-16 sm:px-7","children":[["$","$L4",null,{"href":"/id","className":"tap flex items-center gap-2.5 text-ink","aria-label":"Baby Mo","children":[["$","$L14",null,{"src":"/assets/logo-96.png","alt":"","width":32,"height":32,"priority":true,"className":"h-8 w-8"}],["$","span",null,{"className":"font-serif text-[17px] font-medium tracking-tight","children":"Baby Mo"}]]}],["$","nav",null,{"aria-label":"Primary","className":"hidden md:block","children":["$","ul",null,{"className":"flex items-center gap-0.5","children":[["$","li","/doa",{"children":["$","$L4",null,{"href":"/id/doa","aria-current":"$undefined","className":"tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink","children":"Doa"}]}],["$","li","/cerita",{"children":["$","$L4",null,{"href":"/id/cerita","aria-current":"$undefined","className":"tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink","children":"Cerita"}]}],["$","li","/permainan",{"children":["$","$L4",null,{"href":"/id/permainan","aria-current":"$undefined","className":"tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink","children":"Main"}]}],["$","li","/learn",{"children":["$","$L4",null,{"href":"/id/learn","aria-current":"page","className":"tap inline-flex items-center rounded-full bg-brave-soft px-3.5 py-1.5 text-[13.5px] font-semibold text-brave-deep shadow-[inset_0_0_0_1px_rgba(30,140,83,0.18)]","children":"Belajar"}]}]]}]}],["$","div",null,{"className":"flex items-center gap-2","children":[["$","$L15",null,{"locale":"id"}],["$","$L16",null,{"locale":"id"}],["$","div",null,{"className":"inline-flex items-center rounded-full border border-mist bg-paper p-0.5 text-xs font-semibold","role":"group","aria-label":"Language","children":[["$","$L4","id",{"href":"/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga","hrefLang":"id","aria-current":"true","className":"rounded-full px-2.5 py-1 transition bg-ink text-paper","children":"ID"}],["$","$L4","en",{"href":"/en/blog/panduan-idul-adha-dan-qurban-untuk-keluarga","hrefLang":"en","aria-current":"$undefined","className":"rounded-full px-2.5 py-1 transition text-whisper hover:text-ink","children":"EN"}]]}]]}]]}]]}],["$","main",null,{"id":"main","className":"mx-auto max-w-3xl px-5 pb-40 pt-10 sm:px-8 sm:pt-14 md:pb-16","children":[["$","nav",null,{"aria-label":"Breadcrumb","className":"mb-6 text-xs text-whisper","children":[["$","$L4",null,{"href":"/id","className":"hover:text-ink","children":"Beranda"}]," ","/"," ",["$","$L4",null,{"href":"/id/blog","className":"hover:text-ink","children":"Blog"}]," ","/ ",["$","span",null,{"className":"text-ink","children":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak"}]]}],["$","header",null,{"className":"mb-10","children":[["$","div",null,{"className":"text-[11px] font-semibold uppercase tracking-wider text-sage-deep","children":"idul-adha · qurban · eid · dzulhijjah · fiqh · anak"}],["$","h1",null,{"className":"mt-3 font-serif text-3xl font-medium leading-tight tracking-tight text-ink sm:text-4xl","children":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak"}],["$","div",null,{"className":"mt-4","children":["$","div",null,{"className":"flex flex-wrap items-center gap-2 text-[13px] text-whisper","children":[["$","span",null,{"children":["Ditulis oleh"," ",["$","$L4",null,{"href":"/id/tim#tim-baby-mo","className":"font-semibold text-ink hover:underline","children":"Tim Baby Mo"}]]}],"$undefined",[["$","span",null,{"aria-hidden":true,"children":"·"}],["$","time",null,{"dateTime":"2026-05-28","children":"2026-05-28"}]],"$L17"]}]}]]}],"$undefined","$L18","$L19","$undefined"]}],"$L1a","$L1b","$L1c","$L1d"]
+2d:I[72953,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],"MobileNav"]
+2e:I[28902,["2619","static/chunks/2619-04bc32f026a0d946.js","3305","static/chunks/3305-84872c7e96a0770f.js","9330","static/chunks/9330-64be0e2f94c98aaf.js","8414","static/chunks/app/%5Blocale%5D/blog/%5Bslug%5D/page-dc0d3de2fceffd69.js"],"ShareBar"]
+17:[["$","span",null,{"aria-hidden":true,"children":"·"}],["$","span",null,{"children":[18," ","menit baca"]}]]
+1e:T51ba,<p>Saat tulisan ini diterbitkan (28 Mei 2026 / 12 Dzulhijjah 1447 H), umat Islam Indonesia sedang berada di hari kedua Tasyriq — dua hari setelah hari raya Idul Adha (Selasa, 26 Mei 2026). Masih dalam masa penyembelihan hewan kurban yang berlangsung hingga 13 Dzulhijjah (Jumat, 29 Mei).</p>
+
+<p>Panduan ini untuk keluarga muslim Indonesia: <strong>(1) makna Idul Adha</strong>, <strong>(2) kisah Nabi Ibrahim ﷺ untuk diceritakan ke anak</strong>, <strong>(3) tata cara Sholat Ied</strong>, <strong>(4) syarat dan tata cara qurban</strong>, <strong>(5) hari Tasyriq</strong>, <strong>(6) cara melibatkan anak</strong>, <strong>(7) doa-doa penting</strong>.</p>
+
+<h2>Apa itu Idul Adha</h2>
+
+<p>Idul Adha adalah salah satu dari dua hari raya umat Islam (yang satu lagi: Idul Fitri). Jatuh pada <strong>10 Dzulhijjah</strong> — hari ke-10 bulan terakhir dalam kalender Hijriyah. Disebut juga "Yaumun Nahr" (hari penyembelihan), karena di hari ini disunnahkan menyembelih hewan qurban sebagai napak tilas pengorbanan Nabi Ibrahim ﷺ.</p>
+
+<p>Di Indonesia, Idul Adha 1447 H jatuh pada <strong>Selasa, 26 Mei 2026</strong> berdasarkan pengumuman Kementerian Agama. Penyembelihan hewan qurban dilakukan setelah Sholat Ied (10 Dzulhijjah) sampai sebelum maghrib 13 Dzulhijjah (29 Mei).</p>
+
+<h2>Kisah Nabi Ibrahim ﷺ — Untuk Diceritakan ke Anak</h2>
+
+<p>Tidak ada Idul Adha tanpa kisah ini. Setiap anak muslim sebaiknya mendengarnya, kalau bisa setiap tahun.</p>
+
+<p>Nabi Ibrahim ﷺ — kekasih Allah — sudah tua dan lama menanti anak. Akhirnya Allah memberinya seorang putra: <strong>Ismail</strong>. Ketika Ismail menginjak usia yang sudah bisa berjalan dan membantu ayahnya, Nabi Ibrahim mendapat mimpi yang berulang-ulang — mimpi yang bagi seorang nabi adalah wahyu — yaitu perintah dari Allah untuk menyembelih anaknya sendiri.</p>
+
+<p>Yang luar biasa dari kisah ini bukan perintahnya. Tapi <strong>jawaban Nabi Ibrahim dan Ismail</strong>. Nabi Ibrahim berbicara dulu kepada anaknya. Tidak menyembunyikan. Tidak menipu. Beliau berkata:</p>
+
+<blockquote>
+<p>"Wahai anakku, sesungguhnya aku melihat dalam mimpi bahwa aku menyembelihmu. Bagaimana pendapatmu?"</p>
+</blockquote>
+
+<p>Ismail muda menjawab dengan kalimat yang membuat hati setiap orang tua bergetar:</p>
+
+<blockquote>
+<p>"Wahai ayahku, kerjakan apa yang diperintahkan kepadamu. Insya Allah engkau akan mendapatiku termasuk orang-orang yang sabar." <em>(QS. As-Saffat: 102)</em></p>
+</blockquote>
+
+<p>Mereka berdua pergi ke tempat penyembelihan. Saat pisau hampir menyentuh leher Ismail, Allah mengganti Ismail dengan seekor kibas (domba) besar dari surga. Ujian sudah lulus. Perintah itu memang bukan untuk benar-benar menyembelih anak — tapi untuk menguji apakah Ibrahim dan Ismail rela menyerahkan apa yang paling mereka cintai kepada Allah.</p>
+
+<p>Dari peristiwa inilah qurban Idul Adha berasal.</p>
+
+<h3>Cara Bercerita ke Anak (per Usia)</h3>
+
+<ul>
+  <li><strong>Usia 3–5:</strong> Cerita pendek dengan suara naratif. "Nabi Ibrahim sayang sekali sama anaknya, namanya Ismail..." Skip detail traumatis pisau/leher; cukup "Allah suruh ayahnya untuk... percaya saja sama Allah. Allah sayang. Akhirnya yang disembelih bukan Ismail, tapi domba dari surga."</li>
+  <li><strong>Usia 6–8:</strong> Lebih lengkap. Jelaskan kenapa Allah menguji. Tekankan jawaban Ismail. Ajak anak bertanya: "Kalau adik jadi Ismail, kira-kira bisa nggak bilang seperti itu ke Ayah?"</li>
+  <li><strong>Usia 9+:</strong> Diskusikan makna spiritualnya. Apa yang paling kita cintai di dunia ini? Apakah kita rela melepaskannya untuk Allah? Qurban hewan adalah simbol — yang dilihat Allah adalah ketakwaan di hati, bukan dagingnya.</li>
+</ul>
+
+<p>Lihat juga panduan: <a href="/id/blog/cara-bercerita-kisah-nabi-untuk-anak/">Cara Bercerita Kisah Nabi untuk Anak</a>.</p>
+
+<h2>Sholat Idul Adha</h2>
+
+<p>Sholat Ied adalah <strong>sunnah muakkadah</strong> (sangat dianjurkan), dikerjakan berjamaah di lapangan terbuka atau masjid pada pagi hari 10 Dzulhijjah. Dua rakaat. Dilakukan sebelum khutbah (kebalikan dari sholat Jumat).</p>
+
+<h3>Tata Cara Singkat</h3>
+
+<div style="margin:1.5rem 0;padding:1.5rem;border:1px solid var(--color-hairline);border-radius:24px;background:var(--color-paper-2);">
+  <div style="font-size:11px;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--color-brave-deep);margin-bottom:1rem;">Tata Cara Sholat Idul Adha (2 Rakaat)</div>
+
+  <div style="display:grid;gap:0.75rem;">
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">1</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Niat dalam hati</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">"Aku niat sholat sunnah Idul Adha dua rakaat (sebagai imam/makmum) karena Allah Ta'ala."</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">2</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Takbiratul Ihram → 7 takbir tambahan</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Rakaat pertama: setelah takbir pembuka, baca doa iftitah, lalu <strong>7 takbir tambahan</strong> (mengangkat tangan setiap takbir). Di antara takbir, baca: "Subhanallah, walhamdulillah, wa laa ilaaha illallah, wallahu akbar."</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave-deep);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">3</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Al-Fatihah + Surah → Ruku' → Sujud (seperti biasa)</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Imam disunnahkan membaca surat panjang yang mengandung kisah Nabi Ibrahim atau ujian, seperti Surat Al-A'la atau Qaf.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-brave);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">4</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Rakaat kedua: 5 takbir tambahan</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Setelah bangun dari sujud, takbir bangun, lalu <strong>5 takbir tambahan</strong> sebelum membaca Al-Fatihah. Sama dzikirnya di antara takbir.</div>
+      </div>
+    </div>
+
+    <div style="display:flex;gap:1rem;align-items:flex-start;">
+      <div style="flex-shrink:0;width:48px;height:48px;border-radius:14px;background:var(--color-sage);color:#FBFAF6;font-weight:700;font-size:18px;display:flex;align-items:center;justify-content:center;">5</div>
+      <div style="flex:1;border:1px solid var(--color-hairline);border-radius:14px;background:var(--color-paper);padding:1rem;">
+        <div style="font-weight:600;color:var(--color-ink);font-size:15px;">Salam → Khutbah Idul Adha</div>
+        <div style="margin-top:4px;color:var(--color-whisper);font-size:13.5px;line-height:1.55;">Setelah salam, jangan langsung pulang. Dengarkan khutbah (dua khutbah, dipisah duduk sebentar). Khutbah Ied adalah bagian dari ibadah.</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<h3>Adab Sebelum Berangkat Sholat Ied</h3>
+
+<ul>
+  <li>Mandi sunnah pagi-pagi.</li>
+  <li>Memakai pakaian terbaik yang dimiliki — bersih, harum, putih bila ada.</li>
+  <li><strong>Tidak makan sebelum sholat</strong> (kebalikan dari Idul Fitri — di Idul Adha justru sunnah menunda sarapan sampai setelah sholat / setelah daging qurban tersedia).</li>
+  <li>Berangkat lewat jalan yang berbeda dengan pulangnya (sunnah).</li>
+  <li>Bertakbir sepanjang perjalanan: "Allahu akbar, Allahu akbar, laa ilaaha illallah, wallahu akbar, Allahu akbar wa lillahil-hamd."</li>
+</ul>
+
+<h2>Qurban — Penyembelihan Hewan</h2>
+
+<p>Qurban adalah ibadah inti Idul Adha. Hukumnya <strong>sunnah muakkadah</strong> bagi yang mampu (sebagian ulama Hanafi menganggapnya wajib). Yang menyembelih satu kambing/domba = pahala untuk satu orang. Satu sapi/kerbau = pahala untuk maksimal 7 orang (patungan).</p>
+
+<h3>Syarat Hewan Qurban</h3>
+
+<ul>
+  <li><strong>Jenis:</strong> kambing, domba, sapi, kerbau, atau unta. (Ayam tidak sah untuk qurban.)</li>
+  <li><strong>Usia minimal:</strong>
+    <ul>
+      <li>Kambing: sudah berumur ≥1 tahun</li>
+      <li>Domba: sudah berumur ≥6 bulan dan giginya sudah berganti</li>
+      <li>Sapi/kerbau: sudah berumur ≥2 tahun</li>
+      <li>Unta: sudah berumur ≥5 tahun</li>
+    </ul>
+  </li>
+  <li><strong>Sehat sempurna</strong> — tidak ada cacat yang mempengaruhi daging. Tidak buta, tidak pincang parah, tidak terlalu kurus.</li>
+  <li><strong>Anggota tubuh utuh</strong> — tidak putus telinganya, tidak patah tanduknya sampai akarnya, tidak putus ekor.</li>
+</ul>
+
+<p>Cacat ringan (telinga belah sedikit, ekor terpotong sedikit) <strong>diperbolehkan</strong> oleh sebagian ulama, tapi pilih yang paling sempurna jika ada pilihan — qurban yang paling utama adalah yang paling baik.</p>
+
+<h3>Waktu Penyembelihan</h3>
+
+<p>Sah dilakukan mulai <strong>setelah sholat Idul Adha tanggal 10 Dzulhijjah</strong> sampai <strong>sebelum maghrib 13 Dzulhijjah</strong>. Untuk 1447 H di Indonesia: dari Selasa 26 Mei pagi sampai Jumat 29 Mei sore.</p>
+
+<p>Penyembelihan sebelum sholat Ied: <em>tidak sah</em> sebagai qurban (jadi sedekah biasa saja, kata Nabi ﷺ).</p>
+
+<h3>Tata Cara Menyembelih</h3>
+
+<ol>
+  <li>Hadapkan hewan ke arah kiblat.</li>
+  <li>Baringkan di sisi kiri, ikat kakinya kecuali kaki kanan belakang.</li>
+  <li>Pisau harus tajam — Rasulullah ﷺ memerintahkan menyembelih dengan cepat agar hewan tidak menderita.</li>
+  <li>Penyembelih membaca:
+    <blockquote>
+      <p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">بِسْمِ اللَّهِ، اَللَّهُ أَكْبَر، اَللَّهُمَّ هَذَا مِنْكَ وَلَكَ، تَقَبَّلْ مِنِّي يَا كَرِيم</p>
+      <p><em>Bismillah, Allahu akbar. Allahumma haadzaa minka wa laka, taqabbal minnii yaa Kariim.</em></p>
+      <p>"Dengan nama Allah, Allah Maha Besar. Ya Allah, ini dari-Mu dan untuk-Mu, terimalah dariku wahai Yang Maha Pemurah."</p>
+    </blockquote>
+  </li>
+  <li>Sembelih dengan satu gerakan tegas — putus saluran napas, saluran makanan, dan dua urat darah leher.</li>
+  <li>Tunggu hewan tenang sepenuhnya sebelum dikuliti.</li>
+</ol>
+
+<h3>Distribusi Daging Qurban</h3>
+
+<p>Daging qurban dibagi menjadi <strong>tiga bagian</strong> (umumnya):</p>
+
+<ul>
+  <li><strong>1/3 untuk keluarga</strong> yang berqurban — boleh dimakan, disimpan, dimasak menjadi hidangan.</li>
+  <li><strong>1/3 untuk kerabat dan tetangga</strong> — termasuk yang non-muslim.</li>
+  <li><strong>1/3 untuk fakir miskin</strong> — yang paling membutuhkan.</li>
+</ul>
+
+<p>Pembagian ini sunnah; pembagian lain juga sah selama tidak menjual sebagian darinya. Yang menyembelih tidak boleh menjual daging atau kulit qurban (kecuali untuk kepentingan fakir miskin lewat panitia).</p>
+
+<h2>Tiga Cara Berqurban di Indonesia 2026</h2>
+
+<h3>1. Qurban Langsung di Kampung / Masjid Setempat</h3>
+
+<p>Yang paling tradisional. Beli hewan di peternak/pasar hewan, bawa ke masjid, panitia menyembelih dan membagikan ke warga setempat.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Kambing Rp 3,5–6 juta; sapi 1/7 orang Rp 4–7 juta.</li>
+  <li><strong>Kelebihan:</strong> langsung kontribusi ke lingkungan sekitar, anak bisa ikut menyaksikan, suasana komunal.</li>
+  <li><strong>Kekurangan:</strong> di daerah perkotaan yang sudah surplus daging, manfaatnya tidak sebesar di daerah miskin.</li>
+</ul>
+
+<h3>2. Qurban Lewat Lembaga Amil (Online)</h3>
+
+<p>Lembaga seperti Dompet Dhuafa, BAZNAS, Aksi Cepat Tanggap (ACT), Rumah Zakat, dan banyak lainnya menerima qurban online. Hewan disembelih di daerah pelosok / luar negeri (Palestina, Yaman, Suriah) yang membutuhkan.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Kambing Rp 2,4–3 juta (program luar negeri lebih murah karena harga hewan beda).</li>
+  <li><strong>Kelebihan:</strong> dampak lebih besar di daerah yang benar-benar kekurangan, bisa qurban dari mana saja, transparan via laporan.</li>
+  <li><strong>Kekurangan:</strong> tidak menyaksikan langsung, anak tidak terlibat fisik.</li>
+</ul>
+
+<h3>3. Qurban Patungan Sapi 1/7</h3>
+
+<p>Tujuh orang patungan satu sapi. Setiap orang dapat porsi 1/7 dari biaya sapi. Lebih terjangkau dari beli kambing sendiri.</p>
+
+<ul>
+  <li><strong>Biaya 2026:</strong> Rp 4–7 juta per orang (1/7 sapi).</li>
+  <li><strong>Cocok untuk:</strong> jamaah masjid, kantor, keluarga besar yang ingin berqurban bersama.</li>
+  <li><strong>Tata cara:</strong> niat ditetapkan masing-masing dari 7 orang. Bukan satu orang qurban dengan niat 7 orang.</li>
+</ul>
+
+<h2>Hari Tasyriq (11–13 Dzulhijjah)</h2>
+
+<p>Tiga hari setelah Idul Adha disebut <strong>hari Tasyriq</strong>. Untuk Indonesia 1447 H: Rabu 27 Mei – Jumat 29 Mei 2026.</p>
+
+<h3>Aturan Khusus Hari Tasyriq</h3>
+
+<ul>
+  <li><strong>Dilarang berpuasa</strong> — Nabi ﷺ bersabda hari-hari ini adalah "hari makan, minum, dan dzikir kepada Allah" (HR. Muslim). Yang sedang qadha puasa Ramadan pun ditunda.</li>
+  <li><strong>Masih dianjurkan takbir</strong> — Mulai dari subuh hari Arafah (9 Dzulhijjah) sampai ashar hari Tasyriq terakhir (13 Dzulhijjah), disunnahkan takbir setelah setiap sholat fardhu.</li>
+  <li><strong>Masih boleh menyembelih qurban</strong> — Penyembelihan sah sampai sebelum maghrib 13 Dzulhijjah.</li>
+  <li><strong>Banyak-banyak dzikir</strong> — Allah berfirman: "Dan berdzikirlah (dengan menyebut) nama Allah dalam hari-hari yang sudah ditentukan." (QS. Al-Baqarah: 203) — yang dimaksud adalah hari Tasyriq.</li>
+</ul>
+
+<h2>Cara Melibatkan Anak</h2>
+
+<p>Idul Adha tanpa keterlibatan anak hanya akan jadi "hari libur." Dengan keterlibatan, jadi kenangan emosional yang dibawa seumur hidup. Beberapa cara:</p>
+
+<h3>Sehari Sebelum (9 Dzulhijjah)</h3>
+
+<ul>
+  <li>Ceritakan ulang kisah Nabi Ibrahim dan Ismail sebelum tidur.</li>
+  <li>Siapkan pakaian Ied bersama — anak pilih baju sendiri yang akan dipakai esok.</li>
+  <li>Ajarkan takbir Idul Adha — anak ulang sambil bermain.</li>
+</ul>
+
+<h3>Pagi Idul Adha</h3>
+
+<ul>
+  <li>Bangunkan anak lebih awal — ini hari spesial, bukan hari biasa.</li>
+  <li>Mandi, pakai pakaian terbaik, parfum (untuk yang lebih besar).</li>
+  <li>Berangkat ke lapangan sholat Ied — kalau anak masih kecil dan lapangan terbuka, gendong/dorong stroller.</li>
+  <li>Pulang lewat jalan berbeda — sebagai aktivitas eksplorasi anak ("ayo coba jalan satunya").</li>
+</ul>
+
+<h3>Saat Penyembelihan Qurban</h3>
+
+<ul>
+  <li><strong>Usia 0–4:</strong> Jangan bawa ke tempat penyembelihan. Trauma visual + bau bisa lama menempel.</li>
+  <li><strong>Usia 5–7:</strong> Boleh saksikan dari jarak agak jauh, sambil dipegangi orang tua. Jelaskan pelan: "Hewan ini ibadah, untuk Allah, untuk dibagikan ke orang yang butuh." Jangan paksa kalau anak tidak mau melihat.</li>
+  <li><strong>Usia 8+:</strong> Bisa lebih dekat, bahkan ikut membantu memegang hewan (untuk anak yang siap). Banyak anak Indonesia merasakan momen ini sebagai pengalaman spiritual mendalam.</li>
+</ul>
+
+<h3>Saat Membagikan Daging</h3>
+
+<ul>
+  <li>Ajak anak ikut mengantar daging ke tetangga atau panti asuhan. Biarkan dia yang mengetuk pintu dan memberi langsung.</li>
+  <li>Jelaskan: "Daging ini bukan untuk kita semua — ini hadiah untuk orang yang jarang makan daging."</li>
+  <li>Ajarkan ucapan saat memberi: "Idul Adha Mubarak, semoga berkah."</li>
+</ul>
+
+<h3>Saat Makan Bersama</h3>
+
+<ul>
+  <li>Masak sate/gulai/rendang bersama anak (sesuai usia). Anak yang ikut memasak akan lebih menghargai daging tersebut.</li>
+  <li>Sebelum makan, baca <a href="/id/doa/sebelum-makan/">doa sebelum makan</a> bersama keras-keras.</li>
+  <li>Ceritakan ulang ke anak: "Dulu Nabi Ibrahim siap menyembelih Ismail untuk Allah. Sekarang kita menyembelih hewan untuk dibagikan. Itulah qurban."</li>
+</ul>
+
+<h2>Doa-Doa Penting Idul Adha</h2>
+
+<h3>1. Takbir Idul Adha (Sejak 9 Dzulhijjah Subuh – 13 Dzulhijjah Ashar)</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.9;direction:rtl;text-align:right;" lang="ar">اَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، لاَ إِلٰهَ إِلاَّ اللَّهُ، وَاللَّهُ أَكْبَرُ، اَللَّهُ أَكْبَرُ، وَلِلَّهِ الْحَمْدُ</p>
+<p><em>Allahu akbar, Allahu akbar, Allahu akbar. Laa ilaaha illallah, wallahu akbar. Allahu akbar, wa lillahil-hamd.</em></p>
+<p>"Allah Maha Besar, Allah Maha Besar, Allah Maha Besar. Tiada Tuhan selain Allah, Allah Maha Besar. Allah Maha Besar, dan bagi-Nya segala pujian."</p>
+</blockquote>
+
+<h3>2. Doa Saat Berqurban</h3>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">بِسْمِ اللَّهِ، اَللَّهُ أَكْبَر، اَللَّهُمَّ مِنْكَ وَلَكَ، عَنْ [نَامَ مَنْ يَضَحِّي]</p>
+<p><em>Bismillah, Allahu akbar. Allahumma minka wa laka, 'an [sebut nama orang yang berqurban].</em></p>
+<p>"Dengan nama Allah, Allah Maha Besar. Ya Allah, [qurban ini] dari-Mu dan untuk-Mu, dari [nama]."</p>
+</blockquote>
+
+<h3>3. Ucapan Selamat Idul Adha</h3>
+
+<p>Yang sunnah dari para sahabat:</p>
+
+<blockquote>
+<p style="font-family:var(--font-arabic);font-size:22px;line-height:1.8;direction:rtl;text-align:right;" lang="ar">تَقَبَّلَ اللَّهُ مِنَّا وَمِنْكُمْ</p>
+<p><em>Taqabbalallahu minnaa wa minkum.</em></p>
+<p>"Semoga Allah menerima (amal ibadah) dari kami dan dari kalian."</p>
+</blockquote>
+
+<p>Bukan "Selamat Idul Adha, Mohon Maaf Lahir Batin" — itu lebih khusus untuk Idul Fitri (di Idul Adha tidak ada konsep saling maaf-memaafkan secara khusus).</p>
+
+<h2>Yang Harus Dihindari</h2>
+
+<ul>
+  <li><strong>Berpuasa di hari Idul Adha dan Tasyriq</strong> — haram bagi muslim (kecuali jamaah haji yang qiran/tamattu' dan tidak punya hadyu, boleh puasa hari Tasyriq).</li>
+  <li><strong>Memamerkan qurban di media sosial</strong> — ibadah yang dipamerkan bisa hilang pahalanya. Boleh memberitahu sebagai dakwah, tapi hindari tonjolkan diri.</li>
+  <li><strong>Menyembelih sebelum sholat Ied</strong> — tidak sah sebagai qurban.</li>
+  <li><strong>Memilih hewan termurah dan jelek</strong> — qurban adalah pemberian terbaik untuk Allah. Pilih hewan yang sehat dan baik dalam batas kemampuan.</li>
+  <li><strong>Menjual kulit atau daging qurban</strong> — yang menyembelih tidak boleh menjual sebagian dari qurban. Boleh dimakan, dihadiahkan, atau disedekahkan.</li>
+  <li><strong>Mengejek atau memaksa anak yang takut melihat sembelihan</strong> — anak punya kepekaan berbeda; hormati.</li>
+</ul>
+
+<h2>Penutup</h2>
+
+<p>Idul Adha adalah hari raya pengorbanan — bukan hanya pengorbanan hewan, tapi pengorbanan dari hal-hal yang paling kita cintai untuk Allah. Bagi anak, ini adalah satu-satunya hari raya yang melibatkan darah dan daging dan komunitas dan kisah heroik — campuran yang langka. Manfaatkan.</p>
+
+<p>Tahun depan, anak Anda akan ingat: "Tahun lalu Ayah/Ibu ajak saya bagi daging ke tetangga." Atau: "Tahun lalu saya pegang kambing pertama kali." Atau: "Tahun lalu Bunda cerita Nabi Ibrahim sebelum tidur dan saya nggak bisa tidur karena pikirin Ismail."</p>
+
+<p>Itulah Idul Adha. Bukan hari libur — hari yang membentuk identitas.</p>
+
+<p><em>Taqabbalallahu minnaa wa minkum.</em></p>18:["$","article",null,{"className":"prose","dangerouslySetInnerHTML":{"__html":"$1e"}}]
+19:["$","section",null,{"className":"mt-14 border-t border-hairline pt-10","children":[["$","h2",null,{"className":"font-serif text-2xl font-medium tracking-tight text-ink sm:text-3xl","children":"Pertanyaan yang Sering Diajukan"}],["$","div",null,{"className":"mt-6 divide-y divide-hairline","children":[["$","details","0",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Kapan Idul Adha 1447 H di Indonesia?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Idul Adha 1447 H di Indonesia jatuh pada <strong>Selasa, 26 Mei 2026</strong>, berdasarkan pengumuman Kementerian Agama. Hari Tasyriq (di mana qurban masih bisa disembelih) berlangsung 27–29 Mei 2026."}}]]}],["$","details","1",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Apa hukum berqurban — wajib atau sunnah?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Mayoritas ulama (Maliki, Syafi'i, Hanbali) berpendapat qurban hukumnya <strong>sunnah muakkadah</strong> — sangat dianjurkan bagi yang mampu, tapi tidak berdosa kalau ditinggalkan. Mazhab Hanafi menganggap <strong>wajib</strong> bagi yang mampu (memiliki nisab). Yang disepakati semua: bagi yang mampu, jangan sampai meninggalkannya — Rasulullah ﷺ memperingatkan keras orang yang mampu tapi tidak berqurban."}}]]}],["$","details","2",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Apa syarat hewan qurban yang sah?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Hewan harus: (1) jenis yang diizinkan — <strong>kambing, domba, sapi, kerbau, atau unta</strong> (ayam tidak sah); (2) usia minimum — kambing ≥1 tahun, domba ≥6 bulan dengan gigi sudah berganti, sapi/kerbau ≥2 tahun, unta ≥5 tahun; (3) sehat sempurna tanpa cacat yang mempengaruhi daging — tidak buta, tidak pincang parah, tidak terlalu kurus; (4) anggota tubuh utuh."}}]]}],["$","details","3",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Berapa biaya qurban kambing dan sapi 2026?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"<strong>Kambing</strong> di Indonesia 2026: Rp 3,5–6 juta (lokal) atau Rp 2,4–3 juta (program luar negeri via lembaga amil). <strong>Sapi patungan 1/7 orang:</strong> Rp 4–7 juta per orang. Harga bervariasi berdasarkan daerah, berat hewan, dan rute distribusi. Untuk lokasi pelosok atau luar negeri biaya lebih murah karena harga ternak setempat lebih rendah."}}]]}],["$","details","4",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":["$L1f","$L20"]}],"$L21"]}],"$L22","$L23","$L24"]}]]}]
+1a:["$","footer",null,{"className":"mt-24 border-t border-mist bg-paper","children":["$","div",null,{"className":"mx-auto max-w-6xl px-5 py-12 sm:px-8 sm:py-16","children":[["$","div",null,{"className":"grid gap-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]","children":[["$","div",null,{"children":[["$","$L4",null,{"href":"/id","className":"inline-flex items-center gap-2.5","children":[["$","$L14",null,{"src":"/assets/logo-96.png","alt":"","width":36,"height":36,"className":"h-9 w-9"}],["$","span",null,{"className":"font-serif text-lg font-semibold text-ink","children":"Baby Mo"}]]}],["$","p",null,{"className":"mt-3 max-w-xs text-sm leading-relaxed text-whisper","children":"Pendamping islami untuk keluarga muslim Indonesia."}],["$","div",null,{"className":"mt-5 inline-flex items-center gap-2 text-xs text-whisper","children":[["$","span",null,{"children":["Bahasa",":"]}],["$","div",null,{"className":"inline-flex items-center rounded-full border border-mist bg-paper p-0.5 text-xs font-semibold","role":"group","aria-label":"Language","children":[["$","$L4","id",{"href":"/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga","hrefLang":"id","aria-current":"true","className":"rounded-full px-2.5 py-1 transition bg-ink text-paper","children":"ID"}],["$","$L4","en",{"href":"/en/blog/panduan-idul-adha-dan-qurban-untuk-keluarga","hrefLang":"en","aria-current":"$undefined","className":"rounded-full px-2.5 py-1 transition text-whisper hover:text-ink","children":"EN"}]]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"mb-3 text-xs font-semibold uppercase tracking-wider text-ink","children":"Jelajahi"}],["$","ul",null,{"className":"space-y-2 text-sm","children":[["$","li",null,{"children":["$","$L4",null,{"href":"/id/doa","className":"text-whisper transition hover:text-ink","children":"Doa"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/surat","className":"text-whisper transition hover:text-ink","children":"Surat Pendek"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/sholat","className":"text-whisper transition hover:text-ink","children":"Bacaan Sholat"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/puasa","className":"text-whisper transition hover:text-ink","children":"Niat Puasa"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/dzikir","className":"text-whisper transition hover:text-ink","children":"Dzikir Pagi Petang"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/asmaul-husna","className":"text-whisper transition hover:text-ink","children":"Asmaul Husna"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/hadith","className":"text-whisper transition hover:text-ink","children":"Hadith"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/kisah","className":"text-whisper transition hover:text-ink","children":"Kisah Nabi"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/cerita","className":"text-whisper transition hover:text-ink","children":"Cerita"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/parenting","className":"text-whisper transition hover:text-ink","children":"Parenting"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/blog","className":"text-whisper transition hover:text-ink","children":"Blog"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/kalender","className":"text-whisper transition hover:text-ink","children":"Kalender Islam"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/momen","className":"text-whisper transition hover:text-ink","children":"Momen"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/permainan","className":"text-whisper transition hover:text-ink","children":"Permainan"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/teman-tumbuh","className":"text-whisper transition hover:text-ink","children":"Teman Tumbuh"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/apps/kids-activity","className":"text-whisper transition hover:text-ink","children":"Aktivitas Anak"}]}]]}]]}],["$","div",null,{"children":[["$","h3",null,{"className":"mb-3 text-xs font-semibold uppercase tracking-wider text-ink","children":"Informasi"}],["$","ul",null,{"className":"space-y-2 text-sm","children":[["$","li",null,{"children":["$","$L4",null,{"href":"/id/tersimpan","className":"text-whisper transition hover:text-ink","children":"Tersimpan"}]}],["$","li",null,{"children":["$","$L4",null,{"href":"/id/tentang","className":"text-whisper transition hover:text-ink","children":"Tentang"}]}],"$L25","$L26","$L27","$L28","$L29","$L2a"]}]]}],"$L2b"]}],"$L2c"]}]}]
+1b:["$","$L2d",null,{"locale":"id"}]
+1c:["$","$L2e",null,{"locale":"id","title":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak","text":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak","url":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}]
+2f:T1463,{"@context":"https://schema.org","@graph":[{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Beranda","item":"https://babymo.id/id/"},{"@type":"ListItem","position":2,"name":"Blog","item":"https://babymo.id/id/blog/"},{"@type":"ListItem","position":3,"name":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak","item":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}]},{"@type":"BlogPosting","headline":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak","description":"Panduan lengkap menyambut Hari Raya Idul Adha untuk keluarga Indonesia: kisah Nabi Ibrahim ﷺ, tata cara sholat Ied, syarat dan tata cara qurban (kambing/sapi/online), 3 hari Tasyriq, doa-doa penting, dan cara melibatkan anak sehingga Idul Adha jadi kenangan emosional yang dibawa seumur hidup.","inLanguage":"id-ID","datePublished":"2026-05-28","dateModified":"2026-05-28","author":{"@type":"Organization","name":"tim-baby-mo","@id":"https://babymo.id/#org"},"publisher":{"@id":"https://babymo.id/#org"},"mainEntityOfPage":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/","image":["https://babymo.id/assets/og-image.jpg"],"keywords":"idul-adha, qurban, eid, dzulhijjah, fiqh, anak"},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Kapan Idul Adha 1447 H di Indonesia?","acceptedAnswer":{"@type":"Answer","text":"Idul Adha 1447 H di Indonesia jatuh pada <strong>Selasa, 26 Mei 2026</strong>, berdasarkan pengumuman Kementerian Agama. Hari Tasyriq (di mana qurban masih bisa disembelih) berlangsung 27–29 Mei 2026."}},{"@type":"Question","name":"Apa hukum berqurban — wajib atau sunnah?","acceptedAnswer":{"@type":"Answer","text":"Mayoritas ulama (Maliki, Syafi'i, Hanbali) berpendapat qurban hukumnya <strong>sunnah muakkadah</strong> — sangat dianjurkan bagi yang mampu, tapi tidak berdosa kalau ditinggalkan. Mazhab Hanafi menganggap <strong>wajib</strong> bagi yang mampu (memiliki nisab). Yang disepakati semua: bagi yang mampu, jangan sampai meninggalkannya — Rasulullah ﷺ memperingatkan keras orang yang mampu tapi tidak berqurban."}},{"@type":"Question","name":"Apa syarat hewan qurban yang sah?","acceptedAnswer":{"@type":"Answer","text":"Hewan harus: (1) jenis yang diizinkan — <strong>kambing, domba, sapi, kerbau, atau unta</strong> (ayam tidak sah); (2) usia minimum — kambing ≥1 tahun, domba ≥6 bulan dengan gigi sudah berganti, sapi/kerbau ≥2 tahun, unta ≥5 tahun; (3) sehat sempurna tanpa cacat yang mempengaruhi daging — tidak buta, tidak pincang parah, tidak terlalu kurus; (4) anggota tubuh utuh."}},{"@type":"Question","name":"Berapa biaya qurban kambing dan sapi 2026?","acceptedAnswer":{"@type":"Answer","text":"<strong>Kambing</strong> di Indonesia 2026: Rp 3,5–6 juta (lokal) atau Rp 2,4–3 juta (program luar negeri via lembaga amil). <strong>Sapi patungan 1/7 orang:</strong> Rp 4–7 juta per orang. Harga bervariasi berdasarkan daerah, berat hewan, dan rute distribusi. Untuk lokasi pelosok atau luar negeri biaya lebih murah karena harga ternak setempat lebih rendah."}},{"@type":"Question","name":"Sampai kapan batas waktu menyembelih hewan qurban?","acceptedAnswer":{"@type":"Answer","text":"Penyembelihan qurban sah dilakukan mulai <strong>setelah Sholat Idul Adha pada 10 Dzulhijjah</strong> sampai <strong>sebelum maghrib 13 Dzulhijjah</strong>. Untuk Indonesia 1447 H: dari Selasa 26 Mei pagi (setelah Sholat Ied) sampai Jumat 29 Mei sore (sebelum maghrib). Yang menyembelih sebelum Sholat Ied: <strong>tidak sah sebagai qurban</strong>, hanya dianggap sedekah biasa."}},{"@type":"Question","name":"Bolehkah qurban diniatkan untuk orang yang sudah meninggal?","acceptedAnswer":{"@type":"Answer","text":"Ada perbedaan pendapat ulama. <strong>Mazhab Hanafi dan Hanbali:</strong> sah, pahalanya sampai kepada yang meninggal. <strong>Mazhab Maliki dan Syafi'i:</strong> tidak sah kecuali jika almarhum berwasiat sebelum meninggal. Mayoritas ulama kontemporer membolehkan dengan catatan: qurban untuk diri sendiri tetap utama dulu, baru qurban untuk yang meninggal sebagai amalan tambahan."}},{"@type":"Question","name":"Apa beda qurban dan aqiqah?","acceptedAnswer":{"@type":"Answer","text":"<strong>Qurban</strong> dilakukan setiap Idul Adha oleh muslim dewasa yang mampu — meneladani pengorbanan Nabi Ibrahim. <strong>Aqiqah</strong> dilakukan untuk seorang anak yang baru lahir (idealnya hari ke-7) — sebagai syukur atas kelahiran. Aqiqah: 2 kambing untuk anak laki-laki, 1 untuk perempuan. Daging aqiqah dimasak dulu, baru dibagikan; daging qurban boleh mentah. Hukum aqiqah: sunnah muakkadah untuk orang tua."}},{"@type":"Question","name":"Apa hukum potong rambut dan kuku sebelum berqurban?","acceptedAnswer":{"@type":"Answer","text":"Bagi yang berniat berqurban, disunnahkan tidak memotong rambut, kuku, atau kulit <strong>sejak masuk tanggal 1 Dzulhijjah sampai setelah menyembelih hewan qurban</strong> (HR. Muslim). Ini adalah <strong>sunnah, bukan wajib</strong> — kalau terlanjur potong, tetap sah qurbannya. Hikmahnya: menyerupai jamaah haji yang sedang ihram, dan menambah keistimewaan momen qurban."}}]}]}1d:["$","script",null,{"type":"application/ld+json","dangerouslySetInnerHTML":{"__html":"$2f"}}]
+1f:["$","span",null,{"children":"Sampai kapan batas waktu menyembelih hewan qurban?"}]
+20:["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]
+21:["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Penyembelihan qurban sah dilakukan mulai <strong>setelah Sholat Idul Adha pada 10 Dzulhijjah</strong> sampai <strong>sebelum maghrib 13 Dzulhijjah</strong>. Untuk Indonesia 1447 H: dari Selasa 26 Mei pagi (setelah Sholat Ied) sampai Jumat 29 Mei sore (sebelum maghrib). Yang menyembelih sebelum Sholat Ied: <strong>tidak sah sebagai qurban</strong>, hanya dianggap sedekah biasa."}}]
+22:["$","details","5",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Bolehkah qurban diniatkan untuk orang yang sudah meninggal?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Ada perbedaan pendapat ulama. <strong>Mazhab Hanafi dan Hanbali:</strong> sah, pahalanya sampai kepada yang meninggal. <strong>Mazhab Maliki dan Syafi'i:</strong> tidak sah kecuali jika almarhum berwasiat sebelum meninggal. Mayoritas ulama kontemporer membolehkan dengan catatan: qurban untuk diri sendiri tetap utama dulu, baru qurban untuk yang meninggal sebagai amalan tambahan."}}]]}]
+23:["$","details","6",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Apa beda qurban dan aqiqah?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"<strong>Qurban</strong> dilakukan setiap Idul Adha oleh muslim dewasa yang mampu — meneladani pengorbanan Nabi Ibrahim. <strong>Aqiqah</strong> dilakukan untuk seorang anak yang baru lahir (idealnya hari ke-7) — sebagai syukur atas kelahiran. Aqiqah: 2 kambing untuk anak laki-laki, 1 untuk perempuan. Daging aqiqah dimasak dulu, baru dibagikan; daging qurban boleh mentah. Hukum aqiqah: sunnah muakkadah untuk orang tua."}}]]}]
+24:["$","details","7",{"className":"group py-5","children":[["$","summary",null,{"className":"flex cursor-pointer items-center justify-between gap-4 text-[15.5px] font-semibold text-ink","children":[["$","span",null,{"children":"Apa hukum potong rambut dan kuku sebelum berqurban?"}],["$","span",null,{"className":"text-whisper transition group-open:rotate-45","children":"+"}]]}],["$","div",null,{"className":"prose mt-3 text-[14.5px] leading-relaxed text-whisper","dangerouslySetInnerHTML":{"__html":"Bagi yang berniat berqurban, disunnahkan tidak memotong rambut, kuku, atau kulit <strong>sejak masuk tanggal 1 Dzulhijjah sampai setelah menyembelih hewan qurban</strong> (HR. Muslim). Ini adalah <strong>sunnah, bukan wajib</strong> — kalau terlanjur potong, tetap sah qurbannya. Hikmahnya: menyerupai jamaah haji yang sedang ihram, dan menambah keistimewaan momen qurban."}}]]}]
+25:["$","li",null,{"children":["$","$L4",null,{"href":"/id/tim","className":"text-whisper transition hover:text-ink","children":"Tim & Reviewer"}]}]
+26:["$","li",null,{"children":["$","$L4",null,{"href":"/id/dukung","className":"text-whisper transition hover:text-ink","children":"Dukung"}]}]
+27:["$","li",null,{"children":["$","$L4",null,{"href":"/id/kontak","className":"text-whisper transition hover:text-ink","children":"Kontak"}]}]
+28:["$","li",null,{"children":["$","$L4",null,{"href":"/id/faq","className":"text-whisper transition hover:text-ink","children":"FAQ"}]}]
+29:["$","li",null,{"children":["$","$L4",null,{"href":"/id/privasi","className":"text-whisper transition hover:text-ink","children":"Kebijakan Privasi"}]}]
+2a:["$","li",null,{"children":["$","$L4",null,{"href":"/id/syarat","className":"text-whisper transition hover:text-ink","children":"Syarat & Ketentuan"}]}]
+2b:["$","div",null,{"children":[["$","h3",null,{"className":"mb-3 text-xs font-semibold uppercase tracking-wider text-ink","children":"Ikuti kami"}],["$","ul",null,{"className":"space-y-2 text-sm","children":[["$","li",null,{"children":["$","a",null,{"href":"https://www.youtube.com/@babymo.official","target":"_blank","rel":"noopener","className":"text-whisper transition hover:text-ink","children":"YouTube"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://www.instagram.com/babymo.official","target":"_blank","rel":"noopener","className":"text-whisper transition hover:text-ink","children":"Instagram"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://www.tiktok.com/@babymo.official","target":"_blank","rel":"noopener","className":"text-whisper transition hover:text-ink","children":"TikTok"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://wa.me/6282315971002?text=Assalamu'alaikum%20Tim%20Baby%20Mo!%20%F0%9F%98%8A%20Saya%20menemukan%20Baby%20Mo%20di%20babymo.id%20dan%20ingin%20tahu%20lebih%20lanjut.","target":"_blank","rel":"noopener","className":"text-whisper transition hover:text-ink","children":"WhatsApp"}]}],["$","li",null,{"children":["$","a",null,{"href":"https://paypal.me/ibracreative","target":"_blank","rel":"noopener","className":"text-whisper transition hover:text-ink","children":"Dukung via PayPal"}]}]]}]]}]
+2c:["$","div",null,{"className":"mt-12 flex flex-col items-start justify-between gap-3 border-t border-mist pt-6 text-xs text-whisper sm:flex-row sm:items-center","children":[["$","p",null,{"children":["© ",2026," Baby Mo. ","Hak cipta dilindungi."]}],["$","p",null,{"children":["Powered by"," ",["$","a",null,{"href":"https://ibracreative.com","target":"_blank","rel":"noopener","className":"font-semibold text-ink-soft hover:text-ink hover:underline","children":"ibracreative.com"}]]}]]}]
+c:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}],["$","meta","2",{"name":"theme-color","media":"(prefers-color-scheme: light)","content":"#FBFAF6"}],["$","meta","3",{"name":"theme-color","media":"(prefers-color-scheme: dark)","content":"#15171B"}],["$","meta","4",{"name":"color-scheme","content":"light dark"}]]
+8:null
+30:I[80622,[],"IconMark"]
+a:{"metadata":[["$","title","0",{"children":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak — Baby Mo"}],["$","meta","1",{"name":"description","content":"Panduan lengkap menyambut Hari Raya Idul Adha untuk keluarga Indonesia: kisah Nabi Ibrahim ﷺ, tata cara sholat Ied, syarat dan tata cara qurban (kambing/sapi/online), 3 hari Tasyriq, doa-doa penting, dan cara melibatkan anak sehingga Idul Adha jadi kenangan emosional yang dibawa seumur hidup."}],["$","link","2",{"rel":"manifest","href":"/manifest.webmanifest","crossOrigin":"$undefined"}],["$","meta","3",{"name":"keywords","content":"doa harian anak, parenting islami, hijaiyah anak, konten islami anak, game islami, baby mo"}],["$","meta","4",{"name":"robots","content":"index, follow"}],["$","meta","5",{"name":"googlebot","content":"index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1"}],["$","meta","6",{"name":"format-detection","content":"telephone=no"}],["$","link","7",{"rel":"canonical","href":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}],["$","link","8",{"rel":"alternate","hrefLang":"id","href":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}],["$","link","9",{"rel":"alternate","hrefLang":"en","href":"https://babymo.id/en/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}],["$","link","10",{"rel":"alternate","hrefLang":"x-default","href":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}],["$","meta","11",{"property":"og:title","content":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak — Baby Mo"}],["$","meta","12",{"property":"og:description","content":"Panduan lengkap menyambut Hari Raya Idul Adha untuk keluarga Indonesia: kisah Nabi Ibrahim ﷺ, tata cara sholat Ied, syarat dan tata cara qurban (kambing/sapi/online), 3 hari Tasyriq, doa-doa penting, dan cara melibatkan anak sehingga Idul Adha jadi kenangan emosional yang dibawa seumur hidup."}],["$","meta","13",{"property":"og:url","content":"https://babymo.id/id/blog/panduan-idul-adha-dan-qurban-untuk-keluarga/"}],["$","meta","14",{"property":"og:site_name","content":"Baby Mo"}],["$","meta","15",{"property":"og:locale","content":"id_ID"}],["$","meta","16",{"property":"og:image","content":"https://babymo.id/og/blog/id/panduan-idul-adha-dan-qurban-untuk-keluarga.jpg"}],["$","meta","17",{"property":"og:image:width","content":"1200"}],["$","meta","18",{"property":"og:image:height","content":"630"}],["$","meta","19",{"property":"og:image:alt","content":"Baby Mo"}],["$","meta","20",{"property":"og:type","content":"article"}],["$","meta","21",{"name":"twitter:card","content":"summary_large_image"}],["$","meta","22",{"name":"twitter:title","content":"Panduan Idul Adha & Qurban untuk Keluarga: Tata Cara, Doa, dan Cara Melibatkan Anak — Baby Mo"}],["$","meta","23",{"name":"twitter:description","content":"Panduan lengkap menyambut Hari Raya Idul Adha untuk keluarga Indonesia: kisah Nabi Ibrahim ﷺ, tata cara sholat Ied, syarat dan tata cara qurban (kambing/sapi/online), 3 hari Tasyriq, doa-doa penting, dan cara melibatkan anak sehingga Idul Adha jadi kenangan emosional yang dibawa seumur hidup."}],["$","meta","24",{"name":"twitter:image","content":"https://babymo.id/og/blog/id/panduan-idul-adha-dan-qurban-untuk-keluarga.jpg"}],["$","link","25",{"rel":"icon","href":"/favicon.ico","type":"image/x-icon","sizes":"48x48"}],["$","link","26",{"rel":"icon","href":"/icon.png?64cf6855e3f99731","type":"image/png","sizes":"192x192"}],["$","link","27",{"rel":"apple-touch-icon","href":"/apple-icon.png?a952d086197da43b","type":"image/png","sizes":"180x180"}],["$","$L30","28",{}]],"error":null,"digest":"$undefined"}
+f:"$a:metadata"
