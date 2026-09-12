@@ -4850,9 +4850,91 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["haji", "ibadah-haji", "jamaah-indonesia", "fiqh", "dzulhijjah"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 22,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Haji adalah rukun Islam kelima — wajib sekali seumur hidup bagi yang mampu (istitha'ah). Tapi tanda haji mabrur bukan di Tanah Suci: akhlak yang lebih baik, lebih lembut kepada keluarga, dan tidak kembali kepada dosa lama setelah pulang.",
+        en: "Hajj is the fifth pillar of Islam — obligatory once in a lifetime for those able (istita'ah). But the sign of an accepted Hajj isn't in the Holy Land: better character, gentleness with family, and not returning to old sins after coming home.",
+      },
+      carousel: {
+        id: [
+          { title: "Panduan Haji untuk Jamaah Indonesia — 1/7", body: "Haji adalah rukun Islam kelima — kunjungan ke Baitullah pada waktu tertentu, wajib sekali seumur hidup bagi yang mampu." },
+          { title: "5 syarat wajib", body: "Islam, baligh, berakal, merdeka, dan mampu (istitha'ah) — mampu secara fisik, finansial, dan keamanan perjalanan." },
+          { title: "3 jenis pelaksanaan", body: "Ifrad, Tamattu', dan Qiran — berbeda dalam urutan haji & umrah serta ada/tidaknya dam (denda). Mayoritas jamaah Indonesia: Tamattu'." },
+          { title: "3 jalur di Indonesia", body: "Reguler (Kemenag, Rp 56–60 jt, tunggu 15–48 th), Khusus/ONH Plus (USD 10–13 rb, 5–9 th), Furoda (visa undangan, tanpa tunggu)." },
+          { title: "Cara mulai daftar reguler", body: "Buka tabungan haji (setoran awal Rp 25 jt) → dapat Bukti Setoran Awal → bawa ke Kemenag → dapat nomor porsi → tunggu giliran." },
+          { title: "Bolehkah anak ikut haji?", body: "Boleh, hajinya sah (sunnah). Tapi setelah baligh tetap wajib haji lagi. Fisik berat untuk anak — banyak ulama sarankan tunda sampai 7+ / 12+." },
+          { title: "Haji mabrur", body: "Tolok ukurnya bukan di Makkah, tapi perubahan hidup setelah pulang: akhlak lebih baik, lebih dekat ibadah, lebih dermawan. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "A Hajj Guide for Indonesian Pilgrims — 1/7", body: "Hajj is the fifth pillar — a visit to the House of Allah at a set time, obligatory once in a lifetime for those able." },
+          { title: "5 conditions of obligation", body: "Islam, puberty, sound mind, freedom, and ability (istita'ah) — physical, financial, and travel-safety capacity." },
+          { title: "3 types of performance", body: "Ifrad, Tamattu', and Qiran — differing in the order of Hajj & Umrah and whether a dam (offering) applies. Most Indonesians: Tamattu'." },
+          { title: "3 registration paths (Indonesia)", body: "Regular (Kemenag, IDR 56–60M, 15–48 yr wait), Special/ONH Plus (USD 10–13K, 5–9 yr), Furoda (invitation visa, no wait)." },
+          { title: "Starting regular registration", body: "Open a Hajj savings account (IDR 25M initial deposit) → get the deposit receipt → bring to Kemenag → receive a portion number → wait your turn." },
+          { title: "Can children do Hajj?", body: "Yes, it's valid (supererogatory). But after puberty it's still obligatory if able. It's physically demanding — many scholars suggest waiting to 7+ / 12+." },
+          { title: "A mabrur Hajj", body: "The measure isn't in Makkah but the life change after: better character, closer worship, more generosity. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Waiting list haji reguler di Indonesia bisa 15 sampai 48 tahun. Kalau belum daftar, kamu sudah "telat".
+
+[3–15 detik] MASALAH: Banyak yang menunda daftar haji karena bingung alurnya, padahal antriannya berjalan puluhan tahun.
+
+[15–35 detik] SOLUSI: Ada 3 jalur: Reguler, Khusus (ONH Plus), Furoda. Untuk reguler: buka tabungan haji, setoran awal Rp 25 juta, dapat nomor porsi, masuk antrian.
+
+[35–55 detik] BUKTI: Haji wajib sekali seumur hidup bagi yang mampu. Tapi haji mabrur diukur setelah pulang — akhlak lebih baik, lebih lembut ke keluarga.
+
+[55–60 detik] CTA: "Simpan panduan ini. Bagikan ke keluarga yang berencana haji."`,
+        en: `[0–3s] HOOK: Indonesia's regular Hajj waiting list can be 15 to 48 years. If you haven't registered, you're already "late."
+
+[3–15s] PROBLEM: Many delay registering because the process confuses them — yet the queue runs for decades.
+
+[15–35s] SOLUTION: Three paths: Regular, Special (ONH Plus), Furoda. For regular: open a Hajj savings account, IDR 25M initial deposit, get a portion number, join the queue.
+
+[35–55s] PROOF: Hajj is obligatory once in a lifetime for the able. But a mabrur Hajj is measured after you return — better character, gentler with family.
+
+[55–60s] CTA: "Save this guide. Share it with family planning for Hajj."`,
+      },
+      pin: {
+        id: {
+          title: "Panduan Haji untuk Jamaah Indonesia: Syarat, Jalur & Alur",
+          description: "Panduan haji lengkap untuk jamaah Indonesia: 5 syarat wajib, 3 jenis haji, 3 jalur pendaftaran (Reguler/ONH Plus/Furoda), cara daftar, dan tanda haji mabrur.",
+        },
+        en: {
+          title: "A Hajj Guide for Indonesian Pilgrims: Conditions, Paths & Steps",
+          description: "A complete Hajj guide for Indonesian pilgrims: 5 conditions, 3 types of Hajj, 3 registration paths (Regular/ONH Plus/Furoda), how to register, and signs of a mabrur Hajj.",
+        },
+      },
+      checklist: {
+        id: [
+          "Pahami haji sebagai rukun Islam kelima (wajib 1× bagi yang mampu)",
+          "Cek 5 syarat wajib, terutama istitha'ah (kemampuan)",
+          "Pilih jalur: Reguler, Khusus (ONH Plus), atau Furoda",
+          "Reguler: buka tabungan haji, setoran awal Rp 25 juta",
+          "Dapatkan Bukti Setoran Awal, bawa ke Kantor Kemenag",
+          "Dapat nomor porsi seumur hidup di Siskohat",
+          "Cek estimasi keberangkatan di haji.kemenag.go.id",
+          "Saat dipanggil: pelunasan, manasik, tes kesehatan",
+          "Pertimbangkan matang jika ingin membawa anak (fisik berat)",
+          "Ingat tolok ukur haji mabrur: perubahan akhlak setelah pulang",
+        ],
+        en: [
+          "Understand Hajj as the fifth pillar (obligatory once for the able)",
+          "Check the 5 conditions, especially istita'ah (ability)",
+          "Choose a path: Regular, Special (ONH Plus), or Furoda",
+          "Regular: open a Hajj savings account, IDR 25M initial deposit",
+          "Get the deposit receipt, bring it to the Kemenag office",
+          "Receive a lifetime portion number in Siskohat",
+          "Check departure estimates at haji.kemenag.go.id",
+          "When called: final payment, manasik training, medical exam",
+          "Weigh carefully before bringing a child (physically demanding)",
+          "Remember the measure of a mabrur Hajj: changed character after return",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -5486,9 +5568,91 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["idul-adha", "qurban", "eid", "dzulhijjah", "fiqh", "anak"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 18,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Tidak ada Idul Adha tanpa kisah Nabi Ibrahim ﷺ dan Ismail. Setiap anak muslim sebaiknya mendengarnya, kalau bisa setiap tahun — kisah cinta seorang ayah kepada Allah yang melebihi cintanya pada segalanya, dan seorang anak yang berserah dengan tenang.",
+        en: "There is no Eid al-Adha without the story of Prophet Ibrahim ﷺ and Ismail. Every Muslim child should hear it, ideally every year — a father's love for Allah above all else, and a son who submitted with calm trust.",
+      },
+      carousel: {
+        id: [
+          { title: "Idul Adha & Qurban untuk Keluarga — 1/7", body: "Salah satu dari dua hari raya Islam, jatuh 10 Dzulhijjah. Disebut \"Yaumun Nahr\" — hari penyembelihan, napak tilas pengorbanan Nabi Ibrahim ﷺ." },
+          { title: "Kisah Ibrahim & Ismail", body: "Ibrahim ﷺ diperintahkan menyembelih putra yang lama dinanti. Keduanya berserah — lalu Allah menggantinya dengan seekor domba. Cerita ini untuk anak setiap tahun." },
+          { title: "Sholat Ied", body: "Dua rakaat berjamaah pagi hari, dengan takbir tambahan. Ajak anak pakai baju terbaik, berangkat sambil takbir." },
+          { title: "Syarat & tata cara qurban", body: "Hewan (kambing/sapi/unta) cukup umur & sehat, disembelih setelah Sholat Ied sampai 13 Dzulhijjah. Sebut nama, hadap kiblat, baca bismillah & takbir." },
+          { title: "Hari Tasyriq (11–13)", body: "Hari makan, minum, dan mengingat Allah. Dilarang puasa. Waktu berbagi daging & bersyukur bersama keluarga." },
+          { title: "Cara melibatkan anak", body: "Ajak lihat proses qurban (sesuai kesiapan), bagikan daging ke tetangga, dan jelaskan makna berkurban: mendekat kepada Allah." },
+          { title: "Inti untuk anak", body: "Berkurban bukan soal daging — tapi menyerahkan yang kita cintai karena Allah, seperti Ibrahim ﷺ. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Eid al-Adha & Qurbani for Families — 1/7", body: "One of Islam's two Eids, on 10 Dhul-Hijjah. Called \"Yawm an-Nahr\" — the day of sacrifice, following Prophet Ibrahim's ﷺ example." },
+          { title: "The Ibrahim & Ismail story", body: "Ibrahim ﷺ was commanded to sacrifice his long-awaited son. Both submitted — then Allah replaced him with a ram. A story for kids every year." },
+          { title: "The Eid prayer", body: "Two rakaat in congregation in the morning, with extra takbirs. Have the child wear their best and set out saying takbir." },
+          { title: "Qurbani rules & method", body: "The animal (goat/cow/camel) of proper age & healthy, slaughtered after the Eid prayer through 13 Dhul-Hijjah. Name it, face qibla, say bismillah & takbir." },
+          { title: "Days of Tashriq (11–13)", body: "Days of eating, drinking, and remembering Allah. Fasting is forbidden. A time to share meat & give thanks as a family." },
+          { title: "Involving the child", body: "Let them watch the qurbani (per readiness), distribute meat to neighbors, and explain its meaning: drawing near to Allah." },
+          { title: "The core for kids", body: "Sacrifice isn't about meat — it's giving up what we love for Allah, like Ibrahim ﷺ. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Anakmu tahu KENAPA kita berkurban di Idul Adha? Jawabannya bukan soal daging.
+
+[3–15 detik] MASALAH: Banyak anak melihat Idul Adha hanya sebagai "hari potong hewan" — tanpa memahami kisah cinta di baliknya.
+
+[15–35 detik] SOLUSI: Ceritakan Nabi Ibrahim ﷺ yang bersedia menyembelih putranya karena cinta kepada Allah, lalu Allah menggantinya dengan domba. Libatkan anak: lihat qurban, bagikan daging.
+
+[35–55 detik] BUKTI: Idul Adha jatuh 10 Dzulhijjah, "Yaumun Nahr". Berkurban = menyerahkan yang kita cintai karena Allah. Itu inti yang anak harus bawa.
+
+[55–60 detik] CTA: "Ceritakan kisah Ibrahim ke anakmu tahun ini. Simpan & bagikan."`,
+        en: `[0–3s] HOOK: Does your child know WHY we sacrifice on Eid al-Adha? The answer isn't about the meat.
+
+[3–15s] PROBLEM: Many kids see Eid al-Adha only as "animal-slaughter day" — without the love story behind it.
+
+[15–35s] SOLUTION: Tell of Prophet Ibrahim ﷺ, willing to sacrifice his son out of love for Allah, then replaced with a ram. Involve the child: watch the qurbani, share the meat.
+
+[35–55s] PROOF: Eid al-Adha falls on 10 Dhul-Hijjah, "Yawm an-Nahr". Sacrifice = giving up what we love for Allah. That's the core the child should carry.
+
+[55–60s] CTA: "Tell the Ibrahim story to your child this year. Save & share."`,
+      },
+      pin: {
+        id: {
+          title: "Panduan Idul Adha & Qurban untuk Keluarga",
+          description: "Makna Idul Adha, kisah Nabi Ibrahim untuk anak, tata cara Sholat Ied & qurban, hari Tasyriq, dan cara melibatkan anak. Untuk keluarga muslim Indonesia.",
+        },
+        en: {
+          title: "Eid al-Adha & Qurbani Guide for Families",
+          description: "The meaning of Eid al-Adha, the Ibrahim story for kids, the Eid prayer & qurbani method, the days of Tashriq, and how to involve children. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Ceritakan kisah Nabi Ibrahim & Ismail (setiap tahun)",
+          "Idul Adha jatuh 10 Dzulhijjah — \"Yaumun Nahr\"",
+          "Sholat Ied berjamaah + baju terbaik + takbir",
+          "Qurban: hewan cukup umur & sehat, setelah Sholat Ied s/d 13 Dzulhijjah",
+          "Saat menyembelih: hadap kiblat, bismillah & takbir, sebut nama",
+          "Hari Tasyriq (11–13): hari makan & syukur, dilarang puasa",
+          "Libatkan anak melihat proses qurban sesuai kesiapan",
+          "Ajak anak membagikan daging ke tetangga & yang membutuhkan",
+          "Jelaskan makna: mendekat kepada Allah, bukan soal daging",
+          "Ulangi kisah & maknanya setiap Idul Adha",
+        ],
+        en: [
+          "Tell the Ibrahim & Ismail story (every year)",
+          "Eid al-Adha falls on 10 Dhul-Hijjah — \"Yawm an-Nahr\"",
+          "Eid prayer in congregation + best clothes + takbir",
+          "Qurbani: animal of proper age & healthy, after Eid prayer through 13 Dhul-Hijjah",
+          "When slaughtering: face qibla, bismillah & takbir, name it",
+          "Days of Tashriq (11–13): days of eating & gratitude, no fasting",
+          "Let the child watch the qurbani per their readiness",
+          "Have the child help distribute meat to neighbors & the needy",
+          "Explain the meaning: drawing near to Allah, not about meat",
+          "Repeat the story & its meaning every Eid al-Adha",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -5821,6 +5985,86 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Sya'ban sering \"terlewat\" karena berada di antara Rajab dan Ramadan. Padahal Rasulullah ﷺ justru paling banyak berpuasa sunnah di bulan ini — karena di Sya'ban amal-amal diangkat kepada Allah, dan beliau senang amalnya diangkat dalam keadaan berpuasa.",
+        en: "Sha'ban is often \"skipped\" because it sits between Rajab and Ramadan. Yet the Prophet ﷺ fasted most in this very month — because in Sha'ban deeds are raised to Allah, and he loved for his to be raised while fasting.",
+      },
+      carousel: {
+        id: [
+          { title: "Bulan Sya'ban Bersama Anak — 1/6", body: "Bulan kedelapan, tepat sebelum Ramadan. Sering dilalaikan, padahal Rasulullah ﷺ paling banyak berpuasa sunnah di bulan ini." },
+          { title: "Kenapa Nabi banyak puasa", body: "\"Sya'ban bulan yang dilalaikan manusia, padahal amal diangkat kepada Allah — aku senang amalku diangkat saat berpuasa\" (HR. Nasa'i)." },
+          { title: "Latihan puasa untuk anak", body: "Sya'ban waktu sempurna anak 7+ mencoba puasa setengah hari — supaya saat Ramadan tiba mereka sudah terbiasa." },
+          { title: "Beres rumah & hati", body: "Ajak anak menata kamar, merapikan mainan, saling memaafkan. \"Sebentar lagi Ramadan — kita siapkan rumah & hati yang bersih.\"" },
+          { title: "Mulai jadwal mengaji", body: "Bangun kebiasaan membaca Al-Qur'an bersama, supaya saat Ramadan rutinitasnya sudah jalan, bukan dimulai dari nol." },
+          { title: "Nisfu Sya'ban: yang aman", body: "Ulama berbeda soal amalan khusus malam Nisfu Sya'ban. Pendekatan aman: perbanyak doa & istighfar seperti malam lain. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "The Month of Sha'ban with Kids — 1/6", body: "The eighth month, right before Ramadan. Often neglected, yet the Prophet ﷺ fasted most in it." },
+          { title: "Why the Prophet fasted a lot", body: "\"Sha'ban is a month people neglect, yet deeds are raised to Allah — I love mine to be raised while fasting\" (Nasa'i)." },
+          { title: "Fasting practice for kids", body: "Sha'ban is the perfect time for ages 7+ to try a half-day fast — so that when Ramadan comes they're already used to it." },
+          { title: "Tidy the home & the heart", body: "Have the child organize their room, tidy toys, forgive one another. \"Ramadan's near — let's ready a clean home & heart.\"" },
+          { title: "Start a Qur'an schedule", body: "Build the habit of reading together, so by Ramadan the routine is already running, not starting from zero." },
+          { title: "Nisfu Sha'ban: the safe way", body: "Scholars differ on special worship that night. Safe approach: increase du'a & istighfar as on any night. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Ada bulan yang Rasulullah ﷺ paling banyak berpuasa di dalamnya — dan kebanyakan orang melewatinya.
+
+[3–15 detik] MASALAH: Sya'ban terjepit antara Rajab dan Ramadan, jadi sering dilalaikan. Anak pun tiba di Ramadan tanpa persiapan.
+
+[15–35 detik] SOLUSI: Pakai Sya'ban untuk latihan puasa setengah hari (anak 7+), mulai jadwal mengaji, dan beres-beres rumah + hati bareng anak.
+
+[35–55 detik] BUKTI: Nabi bersabda amal diangkat kepada Allah di Sya'ban, dan beliau senang amalnya diangkat saat berpuasa (HR. Nasa'i). Soal Nisfu Sya'ban: perbanyak doa, hindari ritual tanpa dalil.
+
+[55–60 detik] CTA: "Simpan ini & mulai persiapan Ramadan dari Sya'ban."`,
+        en: `[0–3s] HOOK: There's a month the Prophet ﷺ fasted in most — and most people skip it.
+
+[3–15s] PROBLEM: Sha'ban is wedged between Rajab and Ramadan, so it's often neglected. Kids reach Ramadan unprepared.
+
+[15–35s] SOLUTION: Use Sha'ban for half-day fasting practice (ages 7+), start a Qur'an schedule, and tidy the home + heart with your child.
+
+[35–55s] PROOF: The Prophet said deeds are raised to Allah in Sha'ban, and he loved his raised while fasting (Nasa'i). On Nisfu Sha'ban: increase du'a, avoid rituals without evidence.
+
+[55–60s] CTA: "Save this & start Ramadan prep from Sha'ban."`,
+      },
+      pin: {
+        id: {
+          title: "Bulan Sya'ban: Menyiapkan Hati & Anak Menuju Ramadan",
+          description: "Cara memanfaatkan Sya'ban bersama anak: latihan puasa setengah hari, mulai mengaji, beres rumah & hati, dan sikap yang aman soal Nisfu Sya'ban. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "The Month of Sha'ban: Preparing the Heart & Kids for Ramadan",
+          description: "How to use Sha'ban with your child: half-day fasting practice, starting Qur'an reading, tidying home & heart, and a safe stance on Nisfu Sha'ban. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Jelaskan Sya'ban sebagai bulan sebelum Ramadan yang sering dilalaikan",
+          "Ceritakan Nabi ﷺ paling banyak puasa sunnah di Sya'ban",
+          "Anak 7+: latihan puasa setengah hari",
+          "Mulai jadwal mengaji bersama sebelum Ramadan",
+          "Ajak anak beres-beres kamar & mainan",
+          "Latih saling memaafkan di rumah",
+          "Bagi yang baligh: lunasi utang puasa Ramadan lalu",
+          "Nisfu Sya'ban: perbanyak doa & istighfar",
+          "Hindari ritual malam khusus yang tidak berdalil kuat",
+          "Bingkai semuanya sebagai 'pemanasan' menuju Ramadan",
+        ],
+        en: [
+          "Explain Sha'ban as the often-neglected month before Ramadan",
+          "Tell how the Prophet ﷺ fasted most in Sha'ban",
+          "Ages 7+: half-day fasting practice",
+          "Start a shared Qur'an schedule before Ramadan",
+          "Have the child tidy their room & toys",
+          "Practice mutual forgiveness at home",
+          "For those past puberty: make up missed Ramadan fasts",
+          "Nisfu Sha'ban: increase du'a & istighfar",
+          "Avoid special night rituals lacking firm evidence",
+          "Frame it all as a 'warm-up' toward Ramadan",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -6127,6 +6371,86 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Di puncak perjalanan Isra Mi'raj, Allah memberikan perintah sholat — awalnya 50 kali, lalu menjadi 5 tapi pahalanya senilai 50. Pelajaran besar untuk anak: sholat adalah hadiah, bukan beban — begitu istimewa sampai diberikan langsung di langit.",
+        en: "At the peak of Isra Mi'raj, Allah gave the command to pray — first 50 times, then reduced to 5 but rewarded as 50. The big lesson for a child: prayer is a gift, not a burden — so special it was given directly in the heavens.",
+      },
+      carousel: {
+        id: [
+          { title: "Isra Mi'raj untuk Anak — 1/6", body: "Dua peristiwa luar biasa dalam satu malam, sekitar setahun sebelum hijrah. Diperingati 27 Rajab. Penuh mukjizat, berakhir dengan hadiah terbesar." },
+          { title: "Isra — perjalanan mendatar", body: "Dari Masjidil Haram (Mekkah) ke Masjidil Aqsa (Yerusalem) dengan Buraq — secepat kilat. Di sana beliau mengimami para nabi." },
+          { title: "Mi'raj — perjalanan naik", body: "Dari Baitul Maqdis naik ke langit demi langit, bertemu para nabi, hingga Sidratul Muntaha — batas yang tak pernah dicapai makhluk." },
+          { title: "Hadiah terbesar: sholat", body: "Awalnya 50× sehari. Atas saran Nabi Musa, Nabi memohon keringanan hingga jadi 5× — tapi pahalanya tetap 50." },
+          { title: "Sholat = hadiah, bukan beban", body: "Perintahnya diberikan langsung di langit, bukan lewat perantara seperti perintah lain. Betapa istimewanya sholat kita." },
+          { title: "Cara cerita per usia", body: "3–5: fokus keajaiban Buraq & naik ke langit. 6–8: tekankan sholat sebagai hadiah dari perjalanan itu. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Isra Mi'raj for Kids — 1/6", body: "Two extraordinary events in one night, about a year before the Hijrah. Marked on 27 Rajab. Full of miracles, ending with the greatest gift." },
+          { title: "Isra — the horizontal journey", body: "From the Sacred Mosque (Makkah) to al-Aqsa (Jerusalem) on Buraq — swift as lightning. There he led the prophets in prayer." },
+          { title: "Mi'raj — the ascent", body: "From Jerusalem up through the heavens, meeting the prophets, to Sidrat al-Muntaha — a limit no creature had reached." },
+          { title: "The greatest gift: prayer", body: "First 50× a day. On Prophet Musa's advice, he sought relief until it became 5× — yet rewarded as 50." },
+          { title: "Prayer = gift, not burden", body: "Its command was given directly in the heavens, not through an intermediary like other commands. How special our salah is." },
+          { title: "Telling it by age", body: "3–5: focus on the wonder of Buraq & the ascent. 6–8: stress prayer as the gift from that journey. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Kenapa kita sholat 5 kali sehari, bukan 50? Jawabannya ada di kisah Isra Mi'raj.
+
+[3–15 detik] MASALAH: Banyak anak melihat sholat sebagai kewajiban yang berat. Padahal asal-usulnya adalah sebuah hadiah dari langit.
+
+[15–35 detik] SOLUSI: Ceritakan perjalanannya — Buraq dari Mekkah ke Aqsa, naik ke langit bertemu para nabi. Di puncak, perintah sholat: 50 lalu jadi 5, tapi pahala tetap 50.
+
+[35–55 detik] BUKTI: Sholat begitu istimewa sampai perintahnya diberikan langsung di langit, bukan lewat perantara. Untuk anak: sholat adalah hadiah, bukan beban.
+
+[55–60 detik] CTA: "Ceritakan kisah ini ke anakmu malam ini. Simpan & bagikan."`,
+        en: `[0–3s] HOOK: Why do we pray 5 times a day, not 50? The answer is in the Isra Mi'raj.
+
+[3–15s] PROBLEM: Many children see prayer as a heavy duty. Yet its very origin is a gift from the heavens.
+
+[15–35s] SOLUTION: Tell the journey — Buraq from Makkah to al-Aqsa, ascending the heavens, meeting the prophets. At the peak, the command to pray: 50, then 5, but rewarded as 50.
+
+[35–55s] PROOF: Prayer is so special its command came directly in the heavens, not through an intermediary. For a child: prayer is a gift, not a burden.
+
+[55–60s] CTA: "Tell this story to your child tonight. Save & share."`,
+      },
+      pin: {
+        id: {
+          title: "Isra Mi'raj untuk Anak: Kisah & Asal-Usul Sholat 5 Waktu",
+          description: "Cara menceritakan Isra Mi'raj kepada anak: perjalanan Buraq, naik ke langit, dan hadiah sholat lima waktu. Sholat adalah hadiah, bukan beban. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "Isra Mi'raj for Kids: The Story & Origin of the 5 Daily Prayers",
+          description: "How to tell the Isra Mi'raj to children: the Buraq journey, the ascent, and the gift of the five daily prayers. Prayer is a gift, not a burden. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Ceritakan bahwa Isra Mi'raj terjadi dalam satu malam (27 Rajab)",
+          "Isra: Mekkah → Yerusalem dengan Buraq",
+          "Mi'raj: naik ke langit, bertemu para nabi, hingga Sidratul Muntaha",
+          "Hadiah terbesar: perintah sholat (50 → 5, pahala tetap 50)",
+          "Tekankan: sholat adalah hadiah, bukan beban",
+          "Usia 3–5: fokus pada keajaiban (Buraq, naik ke langit)",
+          "Usia 6–8: tekankan makna sholat sebagai hadiah",
+          "Kaitkan dengan sholat harian keluarga",
+          "Ceritakan dari sumber terpercaya, tanpa menambah detail",
+          "Ulangi menjelang 27 Rajab tiap tahun",
+        ],
+        en: [
+          "Explain Isra Mi'raj happened in one night (27 Rajab)",
+          "Isra: Makkah → Jerusalem on the Buraq",
+          "Mi'raj: ascending the heavens, meeting prophets, to Sidrat al-Muntaha",
+          "The greatest gift: the command to pray (50 → 5, still rewarded as 50)",
+          "Emphasize: prayer is a gift, not a burden",
+          "Ages 3–5: focus on the wonder (Buraq, the ascent)",
+          "Ages 6–8: stress the meaning of prayer as a gift",
+          "Connect it to the family's daily prayers",
+          "Tell it from trustworthy sources, without adding details",
+          "Repeat near 27 Rajab each year",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -6240,6 +6564,86 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Sangat istimewa bahwa kata pertama yang Allah turunkan adalah \"Bacalah\" — bukan \"sholatlah\" atau \"puasalah.\" Islam memuliakan ilmu dan membaca. Untuk anak: belajar membaca, membaca Al-Qur'an, mencari ilmu — semuanya adalah perintah pertama Allah.",
+        en: "It's striking that the first word Allah revealed was \"Read\" — not \"pray\" or \"fast.\" Islam honors knowledge and reading. For a child: learning to read, reading the Qur'an, seeking knowledge — all are Allah's very first command.",
+      },
+      carousel: {
+        id: [
+          { title: "Nuzulul Qur'an untuk Anak — 1/6", body: "Peringatan turunnya wahyu pertama Al-Qur'an, di Indonesia biasa diperingati 17 Ramadan. Momen tepat mengenalkan lahirnya Al-Qur'an." },
+          { title: "Gua Hira", body: "Sebelum menjadi nabi, Rasulullah ﷺ sering menyendiri di Gua Hira di atas Jabal Nur (Gunung Cahaya) untuk merenung." },
+          { title: "\"Iqra!\"", body: "Suatu malam Ramadan, Malaikat Jibril memeluk beliau erat: \"Iqra!\" (Bacalah!). Beliau menjawab, \"Aku tidak bisa membaca.\"" },
+          { title: "Ayat pertama", body: "Jibril mengulang tiga kali, lalu: \"Bacalah dengan (menyebut) nama Tuhanmu yang menciptakan\" (QS. Al-'Alaq 1)." },
+          { title: "Khadijah menenangkan", body: "Beliau pulang gemetar. Khadijah menyelimutinya: \"Allah tidak akan menelantarkanmu — engkau jujur, menyambung silaturahmi, membantu yang lemah.\"" },
+          { title: "Cara memperingati", body: "Ceritakan kisah Gua Hira, tambah waktu mengaji malam itu, jelaskan kenapa kita sayang Al-Qur'an. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Nuzulul Qur'an for Kids — 1/6", body: "Commemorating the first revelation, marked in Indonesia on 17 Ramadan. A perfect moment to introduce the Qur'an's beginning." },
+          { title: "The Cave of Hira", body: "Before prophethood, the Prophet ﷺ often retreated to the Cave of Hira on Jabal an-Nur (the Mountain of Light) to reflect." },
+          { title: "\"Iqra!\"", body: "One Ramadan night, the Angel Jibril embraced him tightly: \"Iqra!\" (Read!). He replied, \"I cannot read.\"" },
+          { title: "The first verse", body: "Jibril repeated three times, then: \"Read in the name of your Lord who created\" (Al-'Alaq 1)." },
+          { title: "Khadijah reassures", body: "He returned trembling. Khadijah wrapped him: \"Allah will not forsake you — you are honest, keep ties, help the weak.\"" },
+          { title: "How to observe it", body: "Tell the Cave of Hira story, add Qur'an time that night, explain why we love the Qur'an. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Kata pertama yang Allah turunkan bukan "sholatlah" atau "puasalah" — tapi "Bacalah."
+
+[3–15 detik] MASALAH: Anak sering tidak tahu dari mana Al-Qur'an berasal. Nuzulul Qur'an (17 Ramadan) adalah momen sempurna menceritakannya.
+
+[15–35 detik] SOLUSI: Ceritakan Gua Hira — Nabi menyendiri, Malaikat Jibril datang berkata "Iqra!". Beliau pulang gemetar, dan Khadijah menenangkannya.
+
+[35–55 detik] BUKTI: Ayat pertama: "Bacalah dengan nama Tuhanmu yang menciptakan" (Al-'Alaq 1). Islam memuliakan ilmu — belajar membaca adalah perintah pertama.
+
+[55–60 detik] CTA: "Ceritakan kisah Gua Hira ke anakmu di 17 Ramadan. Simpan & bagikan."`,
+        en: `[0–3s] HOOK: The first word Allah revealed wasn't "pray" or "fast" — it was "Read."
+
+[3–15s] PROBLEM: Children often don't know where the Qur'an came from. Nuzulul Qur'an (17 Ramadan) is the perfect moment to tell them.
+
+[15–35s] SOLUTION: Tell the Cave of Hira — the Prophet in retreat, the Angel Jibril saying "Iqra!". He returned trembling, and Khadijah reassured him.
+
+[35–55s] PROOF: The first verse: "Read in the name of your Lord who created" (Al-'Alaq 1). Islam honors knowledge — learning to read is the very first command.
+
+[55–60s] CTA: "Tell the Cave of Hira story to your child on 17 Ramadan. Save & share."`,
+      },
+      pin: {
+        id: {
+          title: "Nuzulul Qur'an untuk Anak: Saat Al-Qur'an Pertama Turun",
+          description: "Cara menceritakan turunnya wahyu pertama kepada anak: Gua Hira, \"Iqra\", dan kenapa Islam memuliakan ilmu & membaca. Untuk keluarga muslim di bulan Ramadan.",
+        },
+        en: {
+          title: "Nuzulul Qur'an for Kids: When the Qur'an First Descended",
+          description: "How to tell children about the first revelation: the Cave of Hira, \"Iqra\", and why Islam honors knowledge & reading. For Muslim families in Ramadan.",
+        },
+      },
+      checklist: {
+        id: [
+          "Ceritakan Nuzulul Qur'an diperingati 17 Ramadan",
+          "Gua Hira di atas Jabal Nur — tempat Nabi merenung",
+          "Malaikat Jibril datang berkata \"Iqra!\" (Bacalah)",
+          "Ayat pertama: QS. Al-'Alaq 1 — \"Bacalah dengan nama Tuhanmu\"",
+          "Khadijah menenangkan Nabi yang pulang gemetar",
+          "Pelajaran: kata pertama adalah \"Bacalah\" — Islam muliakan ilmu",
+          "Tambah waktu mengaji di malam 17 Ramadan",
+          "Jelaskan kenapa keluarga menyayangi Al-Qur'an",
+          "Anak suka detail: gua, gunung, malaikat, kata \"Iqra\"",
+          "Ceritakan dari sumber terpercaya, tanpa menambah-nambah",
+        ],
+        en: [
+          "Explain Nuzulul Qur'an is marked on 17 Ramadan",
+          "The Cave of Hira on Jabal an-Nur — where the Prophet reflected",
+          "The Angel Jibril came saying \"Iqra!\" (Read)",
+          "The first verse: Al-'Alaq 1 — \"Read in the name of your Lord\"",
+          "Khadijah reassured the Prophet who returned trembling",
+          "Lesson: the first word was \"Read\" — Islam honors knowledge",
+          "Add Qur'an reading time on the night of 17 Ramadan",
+          "Explain why the family loves the Qur'an",
+          "Kids love the detail: cave, mountain, angel, the word \"Iqra\"",
+          "Tell it from trustworthy sources, without embellishing",
+        ],
+      },
+    },
     faq: [
       {
         question: {
