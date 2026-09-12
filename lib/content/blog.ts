@@ -2083,6 +2083,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Daftar doa yang harus anak kenal sebelum usia 7 jauh lebih pendek dari yang dibayangkan: 7 doa inti, lalu 5 tambahan. Kuncinya bukan banyaknya — tapi satu doa per minggu, dibaca di momennya, tanpa hukuman kalau lupa.",
+        en: "The list of du'as a child should know before age 7 is far shorter than you think: 7 core ones, then 5 more. The key isn't quantity — it's one du'a a week, said in context, with no punishment for forgetting.",
+      },
+      carousel: {
+        id: [
+          { title: "12 Doa Sebelum Usia 7 — 1/7", body: "Daftar di Google panjang, buku doa tebal. Padahal daftar inti yang penting jauh lebih pendek — dan jauh lebih bisa dicapai." },
+          { title: "Kenapa kebiasaan ini penting", body: "Anak yang mengucap Bismillah sebelum makan sedang membentuk koneksi harian dengan Allah — belajar bahwa hidup punya nara-sumber." },
+          { title: "7 doa inti (tier 1)", body: "Sebelum & bangun tidur, sebelum & sesudah makan, masuk & keluar kamar mandi, naik kendaraan. Banyak yang cuma satu kata: Bismillah, Ghufranaka." },
+          { title: "5 doa tambahan (tier 2)", body: "Setelah 7 inti dikenal: keluar/masuk rumah, saat hujan, saat bersin, dan doa untuk orang tua. Tidak terburu-buru." },
+          { title: "Prinsip: satu doa per minggu", body: "Otak balita butuh konsolidasi. Tujuh doa dalam seminggu = tidak ada yang menempel. Satu doa, diulang tiap hari, sepekan penuh." },
+          { title: "Selalu di momennya", body: "Doa makan diajarkan saat mau makan, bukan di meja belajar. Otak menyimpan info yang terkoneksi konteks fisik jauh lebih kuat." },
+          { title: "Tidak ada hukuman kalau lupa", body: "\"Lupa Bismillah ya? Yuk diulang.\" Asosiasi dengan doa harus positif. Modelkan, jangan hanya menyuruh. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "12 Du'as Before Age 7 — 1/7", body: "Google's list is long, the du'a books are thick. But the core list that matters is far shorter — and far more achievable." },
+          { title: "Why this habit matters", body: "A child who says Bismillah before eating is building a daily connection with Allah — learning that life has a Source." },
+          { title: "7 core du'as (tier 1)", body: "Before & after sleep, before & after eating, entering & leaving the bathroom, riding transport. Many are one word: Bismillah, Ghufranaka." },
+          { title: "5 more (tier 2)", body: "Once the 7 are known: leaving/entering home, when it rains, when sneezing, and a du'a for parents. No rush." },
+          { title: "Principle: one du'a a week", body: "A toddler's brain needs consolidation. Seven in a week = none stick. One du'a, repeated daily, for a full week." },
+          { title: "Always in context", body: "The meal du'a is taught when about to eat, not at a desk. The brain stores context-linked info far more strongly." },
+          { title: "No punishment for forgetting", body: "\"Forgot Bismillah? Let's say it.\" The association must stay positive. Model it, don't just command. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Berapa doa yang harus anak hafal sebelum usia 7? Lebih sedikit dari yang kamu kira.
+
+[3–15 detik] MASALAH: Orang tua sering kewalahan — daftar doa panjang, anak baru hafal satu sudah disodorkan lima. Hasilnya tidak ada yang menempel.
+
+[15–35 detik] SOLUSI: Cukup 7 doa inti dulu — banyak yang satu kata seperti Bismillah. Ajarkan SATU per minggu, di momennya: doa makan saat mau makan, doa tidur saat mau tidur.
+
+[35–55 detik] BUKTI: Otak balita butuh waktu konsolidasi. 3 bulan konsisten = lima doa pertama jadi otomatis. Tanpa hukuman kalau lupa — asosiasi harus positif.
+
+[55–60 detik] CTA: "Simpan daftarnya. Bagikan ke orang tua yang lagi bingung mulai dari mana."`,
+        en: `[0–3s] HOOK: How many du'as should a child know before age 7? Fewer than you think.
+
+[3–15s] PROBLEM: Parents get overwhelmed — long lists, five new du'as before the child has learned one. Nothing sticks.
+
+[15–35s] SOLUTION: Just 7 core du'as first — many are one word like Bismillah. Teach ONE a week, in context: the meal du'a when eating, the sleep du'a at bedtime.
+
+[35–55s] PROOF: A toddler's brain needs consolidation. 3 consistent months = the first five become automatic. No punishment for forgetting — keep it positive.
+
+[55–60s] CTA: "Save the list. Share it with a parent who doesn't know where to start."`,
+      },
+      pin: {
+        id: {
+          title: "12 Doa Harian Anak Sebelum Usia 7 Tahun",
+          description: "Daftar doa inti yang perlu dikenal anak sebelum 7 tahun + cara mengajarkannya: satu doa per minggu, di momennya, tanpa hukuman. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "12 Daily Du'as for Kids Before Age 7",
+          description: "The core du'as a child should know before 7 + how to teach them: one a week, in context, without punishment. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Tier 1 — 7 doa inti dulu (tidur, bangun, makan, kamar mandi, kendaraan)",
+          "Ajarkan SATU doa per minggu, bukan satu per hari",
+          "Baca di momennya: doa makan saat mau makan",
+          "Orang tua membaca dulu dengan keras, anak menirukan",
+          "Jangan tanya \"ingat ga doanya?\" — cukup contohkan",
+          "Tidak ada hukuman kalau anak lupa",
+          "Modelkan: orang tua juga membaca Bismillah saat makan",
+          "Tier 2 (5 doa) ditambahkan setelah tier 1 dikenal",
+          "Target 3 bulan: lima doa pertama jadi otomatis",
+          "Setelah usia 7: pelan-pelan kenalkan dzikir pagi/petang & surat pendek",
+        ],
+        en: [
+          "Tier 1 — the 7 core du'as first (sleep, waking, eating, bathroom, transport)",
+          "Teach ONE du'a a week, not one a day",
+          "Say it in context: the meal du'a when about to eat",
+          "Parent recites aloud first, child imitates",
+          "Don't quiz (\"do you remember it?\") — just model it",
+          "No punishment when the child forgets",
+          "Model it: the parent says Bismillah when eating too",
+          "Tier 2 (5 du'as) added once tier 1 is known",
+          "3-month target: the first five become automatic",
+          "After age 7: gently introduce morning/evening adhkar & short surahs",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -2334,6 +2416,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 9,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Anak tidak butuh orang tua yang tidak pernah marah. Anak butuh orang tua yang memodelkan cara mengelola marah. Rasulullah ﷺ memberi kita lima langkah yang bisa dilakukan dalam 30 detik — sebelum kata-kata yang tak bisa ditarik terlanjur keluar.",
+        en: "A child doesn't need a parent who never gets angry. They need a parent who models how to manage it. The Prophet ﷺ gave us five steps you can do in 30 seconds — before words you can't take back slip out.",
+      },
+      carousel: {
+        id: [
+          { title: "Saat Orang Tua Marah — 1/7", body: "Setiap orang tua pernah marah. Yang berbeda bukan seberapa sering — tapi seberapa cepat mereda, dan apa yang dilakukan sesudahnya." },
+          { title: "1. Ta'awwudz", body: "Saat panas naik di dada: \"A'udzu billahi minasy-syaithonir-rajim.\" Rasulullah ﷺ mengajarkan ini untuk meredakan amarah. Banyak yang merasakan denyut menurun." },
+          { title: "2. Ganti posisi", body: "Berdiri? Duduklah. Masih marah? Berbaringlah. Perubahan postur mengubah kondisi mental — dan membuatmu sejajar tinggi anak." },
+          { title: "3. Ambil wudhu", body: "\"Marah dari setan, setan dari api, api dipadamkan air\" (HR. Abu Dawud). 60 detik air dingin sering cukup memutus reaksi amarah." },
+          { title: "4. Diam", body: "\"Jika marah, hendaklah diam\" (HR. Ahmad). Luka jangka panjang bukan pukulan — tapi kata-kata. Dan ucapan marah bisa jadi doa yang dikabulkan." },
+          { title: "Setelah terlanjur membentak", body: "Beri ruang 5–10 menit. Datang di ketinggian anak. Minta maaf jujur TANPA \"tapi\": \"Mama minta maaf. Kamu ga salah.\"" },
+          { title: "Kalau polanya berulang", body: "Selalu di jam yang sama? Cek akarnya: kurang tidur, lapar, tekanan kerja. Mengakui masalah bukan kelemahan. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "When Parents Get Angry — 1/7", body: "Every parent gets angry. What differs isn't how often — it's how fast it subsides, and what you do after." },
+          { title: "1. Ta'awwudz", body: "As the heat rises: \"A'udhu billahi minash-shaytanir-rajim.\" The Prophet ﷺ taught this to defuse anger. Many feel their pulse drop." },
+          { title: "2. Change posture", body: "Standing? Sit. Still angry? Lie down. Shifting posture shifts your mental state — and brings you level with the child." },
+          { title: "3. Make wudu", body: "\"Anger is from Shaytan, from fire, and fire is put out with water\" (Abu Dawud). 60 seconds of cool water often breaks the reaction." },
+          { title: "4. Stay silent", body: "\"If one of you is angry, be silent\" (Ahmad). The lasting wound isn't a blow — it's words. And angry words can become an answered du'a." },
+          { title: "After you've already yelled", body: "Give 5–10 minutes. Come to their level. Apologize honestly with NO \"but\": \"I'm sorry. You did nothing wrong.\"" },
+          { title: "If it's a pattern", body: "Always the same hour? Check the root: lack of sleep, hunger, work stress. Admitting it isn't weakness. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Rasulullah ﷺ memberi 5 langkah meredakan marah dalam 30 detik. Kebanyakan orang tua tidak pernah diajari ini.
+
+[3–15 detik] MASALAH: Luka terdalam yang ditinggalkan orang tua bukan pukulan — tapi kata-kata yang terucap saat marah. Sekali keluar, tidak bisa ditarik.
+
+[15–35 detik] SOLUSI: Satu, ta'awwudz. Dua, ganti posisi — berdiri jadi duduk. Tiga, ambil wudhu. Empat, diam. Lima, tinggalkan ruangan sebentar setelah anak aman.
+
+[35–55 detik] BUKTI: "Jika marah, hendaklah diam" (HR. Ahmad). Dan hati-hati: ucapan marah orang tua bisa jadi doa yang dikabulkan untuk anak.
+
+[55–60 detik] CTA: "Simpan lima langkah ini. Bagikan ke orang tua yang butuh."`,
+        en: `[0–3s] HOOK: The Prophet ﷺ gave 5 steps to defuse anger in 30 seconds. Most parents were never taught them.
+
+[3–15s] PROBLEM: The deepest wound a parent leaves isn't a blow — it's the words said in anger. Once out, they can't be recalled.
+
+[15–35s] SOLUTION: One, ta'awwudz. Two, change posture — stand to sit. Three, make wudu. Four, stay silent. Five, briefly leave once the child is safe.
+
+[35–55s] PROOF: "If one of you is angry, be silent" (Ahmad). And beware: a parent's angry words can become an answered du'a over their child.
+
+[55–60s] CTA: "Save these five steps. Share them with a parent who needs them."`,
+      },
+      pin: {
+        id: {
+          title: "5 Langkah Sunnah Meredakan Marah ke Anak",
+          description: "Cara meredakan amarah pada anak menurut sunnah Rasulullah ﷺ: ta'awwudz, ganti posisi, wudhu, diam, dan cara minta maaf yang benar setelah terlanjur. Untuk orang tua muslim.",
+        },
+        en: {
+          title: "5 Sunnah Steps to Calm Anger at Your Child",
+          description: "How to defuse anger toward your child the Prophet's ﷺ way: ta'awwudz, change posture, wudu, silence, and how to apologize properly afterward. For Muslim parents.",
+        },
+      },
+      checklist: {
+        id: [
+          "Langkah 1: ucapkan ta'awwudz saat panas mulai naik",
+          "Langkah 2: ganti posisi — berdiri jadi duduk, lalu berbaring",
+          "Langkah 3: ambil wudhu (air dingin ± 60 detik)",
+          "Langkah 4: diam — jangan bicara saat puncak marah",
+          "Langkah 5: tinggalkan ruangan sebentar setelah anak aman",
+          "Setelah tenang: beri anak ruang 5–10 menit",
+          "Minta maaf jujur tanpa \"tapi\"",
+          "Janji yang realistis: \"Mama akan coba lebih tenang\"",
+          "Jangan mendoakan keburukan untuk anak, walau kesal",
+          "Kalau pola berulang: cek akarnya (tidur, lapar, tekanan) & bicarakan",
+        ],
+        en: [
+          "Step 1: say ta'awwudz as the heat rises",
+          "Step 2: change posture — stand to sit, then lie down",
+          "Step 3: make wudu (cool water, ~60 seconds)",
+          "Step 4: stay silent — don't speak at peak anger",
+          "Step 5: briefly leave the room once the child is safe",
+          "Once calm: give the child 5–10 minutes",
+          "Apologize honestly with no \"but\"",
+          "Make a realistic promise: \"I'll try to stay calmer\"",
+          "Never invoke bad against your child, even when upset",
+          "If it recurs: check the root (sleep, hunger, stress) & talk it out",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -2497,6 +2661,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Rasulullah ﷺ membawa cucunya Umamah di pundak saat sholat — bukan karena tidak ada penjaga di rumah, tapi karena bersama anak di dalam ibadah adalah bagian dari ibadah. Bawa anakmu ke masjid, walau dia belum sempurna.",
+        en: "The Prophet ﷺ carried his granddaughter Umamah on his shoulders during prayer — not for lack of a caregiver at home, but because being with a child inside worship is part of worship. Take your child to the mosque, even imperfectly.",
+      },
+      carousel: {
+        id: [
+          { title: "Mengajak Anak ke Masjid — 1/7", body: "\"Apa anakku akan mengganggu jamaah?\" Lalu sholat berjamaah ditinggalkan — dan anak kehilangan pengalaman melihat sendiri ayahnya rukuk." },
+          { title: "Mulai usia berapa", body: "Tidak ada minimum, tapi bermakna sekitar usia 3 tahun. 3–5: Maghrib di masjid dekat rumah, 1–2× seminggu. 6+: lebih sering, mulai Jum'at." },
+          { title: "Persiapan sebelum berangkat", body: "Toilet dulu. Beri makan ringan. Pakaian nyaman. Kit darurat: tisu, buku tipis, satu mainan tenang. Cerita di jalan." },
+          { title: "Di dalam masjid", body: "Pilih shaf pinggir dekat pintu. Anak berdiri di SAMPING, bukan di belakang — mereka harus melihat ayahnya rukuk." },
+          { title: "Kalau anak menangis", body: "Jangan panik. Ambil anak, keluar pelan, tenangkan. Tidak ada jamaah yang baik akan menegur ayah yang membawa anaknya." },
+          { title: "Yang anak pelajari", body: "Bukan tata cara sholat — itu bisa kapan saja. Yang dipelajari adalah IDENTITAS: masjid adalah tempatku, jamaah adalah orang-orangku." },
+          { title: "Efek jangka panjang", body: "Saat usia 7 dan disuruh sholat, dia tidak menolak — karena sudah di sana sejak usia 3. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Taking Your Child to the Mosque — 1/7", body: "\"Will my child disturb the congregation?\" So congregational prayer is skipped — and the child loses the sight of their own father bowing." },
+          { title: "From what age", body: "No minimum, but meaningful around age 3. Ages 3–5: Maghrib at a nearby mosque, 1–2× a week. 6+: more often, starting Jumu'ah." },
+          { title: "Prep before leaving", body: "Toilet first. A light snack. Comfortable clothes. Emergency kit: tissues, a thin book, one quiet toy. A short story on the way." },
+          { title: "Inside the mosque", body: "Pick an edge row near the door. The child stands BESIDE you, not behind — they need to see their father bow." },
+          { title: "If the child cries", body: "Don't panic. Pick them up, step out gently, soothe them. No good worshipper will reproach a father who brought his child." },
+          { title: "What the child learns", body: "Not the mechanics of prayer — that can come anytime. They learn IDENTITY: the mosque is my place, the congregation is my people." },
+          { title: "The long-term effect", body: "At 7, when told to pray, they don't refuse — because they've been there since age 3. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Takut anak mengganggu jamaah di masjid? Jangan sampai itu bikin kamu berhenti membawanya.
+
+[3–15 detik] MASALAH: Banyak orang tua muda meninggalkan sholat berjamaah karena khawatir anak rewel. Anak pun kehilangan pengalaman paling penting: melihat ayahnya rukuk.
+
+[15–35 detik] SOLUSI: Mulai usia 3. Siapkan: toilet, makan ringan, kit darurat. Di masjid, pilih shaf pinggir dekat pintu. Anak berdiri di samping, bukan di belakang.
+
+[35–55 detik] BUKTI: Rasulullah ﷺ sholat sambil menggendong cucunya, Umamah. Yang anak pelajari bukan tata cara — tapi identitas: masjid adalah tempatnya.
+
+[55–60 detik] CTA: "Bawa anakmu ke masjid minggu ini. Bagikan pengingat ini."`,
+        en: `[0–3s] HOOK: Afraid your child will disturb the congregation? Don't let it stop you from bringing them.
+
+[3–15s] PROBLEM: Many young parents skip congregational prayer fearing a fussy child. The child loses the most important experience: seeing their father bow.
+
+[15–35s] SOLUTION: Start at age 3. Prep: toilet, light snack, emergency kit. At the mosque, take an edge row near the door. The child stands beside you, not behind.
+
+[35–55s] PROOF: The Prophet ﷺ prayed while carrying his granddaughter Umamah. What the child learns isn't mechanics — it's identity: the mosque is their place.
+
+[55–60s] CTA: "Take your child to the mosque this week. Share this reminder."`,
+      },
+      pin: {
+        id: {
+          title: "Panduan Mengajak Anak ke Masjid (per Usia)",
+          description: "Kapan mulai mengajak anak ke masjid, apa yang disiapkan, posisi anak saat sholat, dan cara menghadapi anak yang rewel. Untuk orang tua muslim Indonesia.",
+        },
+        en: {
+          title: "A Parent's Guide to Bringing Kids to the Mosque",
+          description: "When to start, what to pack, where the child should stand during prayer, and how to handle a fussy child. For Muslim parents.",
+        },
+      },
+      checklist: {
+        id: [
+          "Mulai ajak sekitar usia 3 tahun (Maghrib paling cocok)",
+          "Toilet dulu sebelum berangkat",
+          "Beri makan ringan — anak lapar = rewel",
+          "Bawa kit darurat: tisu, buku tipis, satu mainan tenang",
+          "Cerita di jalan: \"Kita ke rumah Allah\"",
+          "Pilih shaf pinggir, dekat pintu",
+          "Anak berdiri di samping, bukan di belakang",
+          "Kalau menangis: keluar pelan, tenangkan, jangan panik",
+          "Jangan tegur keras kalau anak gelisah di rakaat akhir",
+          "Konsisten — identitas tumbuh dari pengulangan",
+        ],
+        en: [
+          "Start around age 3 (Maghrib works best)",
+          "Toilet first before leaving",
+          "A light snack — a hungry child is fussy",
+          "Bring an emergency kit: tissues, thin book, one quiet toy",
+          "A story on the way: \"We're going to Allah's house\"",
+          "Choose an edge row, near the door",
+          "The child stands beside you, not behind",
+          "If they cry: step out gently, soothe, don't panic",
+          "Don't scold if they fidget in the last rakaat",
+          "Be consistent — identity grows from repetition",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -2666,6 +2912,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Ada perbedaan besar antara menyebut Nabi Yunus berada di dalam ikan, dan membawa anak masuk ke dalam perut ikan itu bersama beliau. Yang pertama informasi. Yang kedua pengalaman. Hanya yang kedua yang diingat anak saat ia berusia 25 tahun.",
+        en: "There's a big difference between mentioning that Prophet Yunus was inside the fish, and taking your child inside that fish with him. The first is information. The second is experience. Only the second is remembered at 25.",
+      },
+      carousel: {
+        id: [
+          { title: "Cerita Nabi yang Diingat Seumur Hidup — 1/7", body: "Ubah informasi menjadi pengalaman. Itu rahasia kenapa satu anak lupa kisah nabi dan anak lain mengingatnya puluhan tahun." },
+          { title: "1. Karakter yang dikenali", body: "\"Nabi Musa yang shalih\" — anak mengangguk dan lupa. \"Anak kecil yang dihanyutkan di sungai\" — anak ingat, karena karakternya seperti dia." },
+          { title: "2. Detail kecil yang hidup", body: "\"Yusuf dilemas ke sumur\" = informasi. \"Sumurnya gelap, dingin, dia sendirian — tapi tidak menangis, karena tahu Allah melihatnya\" = pengalaman." },
+          { title: "3. Bertanya, bukan menjelaskan", body: "Berhenti di satu titik. Tanya: \"Menurut adik, gimana perasaan Yusuf di sumur?\" Bayangan anak itulah yang membekas." },
+          { title: "Format praktis", body: "Sebelum tidur. Maksimal 7 menit. 3× seminggu: Senin (kenalan), Rabu (konflik), Jumat (resolusi). Anak yang mau lebih akan minta." },
+          { title: "5 kisah untuk mulai", body: "Ibrahim (berani berbeda), Yusuf (saudara yang iri), Musa (dihanyutkan), Yunus (doa saat susah), Muhammad ﷺ (masa kecil bersama Halimah)." },
+          { title: "Yang harus dihindari", body: "Sumber tidak jelas. Menakut-nakuti. Moralisasi di akhir. Membaca dari HP. Simpan & bagikan ke orang tua yang suka bercerita." },
+        ],
+        en: [
+          { title: "Prophet Stories Kids Remember for Life — 1/7", body: "Turn information into experience. That's the secret to why one child forgets a prophet story and another remembers it for decades." },
+          { title: "1. A recognizable character", body: "\"The righteous Prophet Musa\" — a nod and forgotten. \"A little boy set adrift on a river\" — remembered, because he's like them." },
+          { title: "2. Small living details", body: "\"Yusuf was thrown in a well\" = information. \"The well was dark, cold, he was alone — but didn't cry, knowing Allah saw him\" = experience." },
+          { title: "3. Ask, don't explain", body: "Pause at one moment. Ask: \"How do you think Yusuf felt in the well?\" The child's own image is what sticks." },
+          { title: "Practical format", body: "Bedtime. 7 minutes max. 3× a week: Mon (setup), Wed (conflict), Fri (resolution). A child who wants more will ask." },
+          { title: "5 stories to start", body: "Ibrahim (daring to differ), Yusuf (jealous brothers), Musa (set adrift), Yunus (du'a in hardship), Muhammad ﷺ (childhood with Halimah)." },
+          { title: "What to avoid", body: "Unclear sources. Frightening detail. Moralizing at the end. Reading off a phone. Save & share with a storytelling parent." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Kenapa anakmu lupa kisah nabi yang kamu ceritakan? Karena kamu memberi informasi, bukan pengalaman.
+
+[3–15 detik] MASALAH: "Nabi Yunus di dalam ikan paus" — anak mengangguk, lalu lupa. Fakta tidak melekat. Yang melekat adalah rasa.
+
+[15–35 detik] SOLUSI: Bawa anak MASUK ke cerita. Detail kecil: gua yang gelap, sumur yang dingin. Lalu berhenti dan tanya: "Gimana perasaan dia?" Biarkan anak membayangkan.
+
+[35–55 detik] BUKTI: Maksimal 7 menit, sebelum tidur, 3× seminggu. Anak yang tumbuh dengan kisah nabi punya cadangan emosi: saat takut, mereka punya Yunus.
+
+[55–60 detik] CTA: "Simpan 5 kisah pembuka ini. Bagikan ke orang tua lain."`,
+        en: `[0–3s] HOOK: Why does your child forget the prophet stories you tell? Because you're giving information, not experience.
+
+[3–15s] PROBLEM: "Prophet Yunus was in the whale" — a nod, then forgotten. Facts don't stick. Feelings do.
+
+[15–35s] SOLUTION: Take the child INTO the story. Small details: the dark cave, the cold well. Then pause and ask: "How did he feel?" Let them imagine.
+
+[35–55s] PROOF: 7 minutes max, at bedtime, 3× a week. A child raised on prophet stories has an emotional reserve: when afraid, they have Yunus.
+
+[55–60s] CTA: "Save these 5 starter stories. Share with another parent."`,
+      },
+      pin: {
+        id: {
+          title: "Cara Bercerita Kisah Nabi agar Anak Ingat Seumur Hidup",
+          description: "Tiga prinsip bercerita kisah nabi untuk anak + format 7 menit + 5 kisah untuk memulai. Ubah informasi jadi pengalaman. Untuk orang tua muslim.",
+        },
+        en: {
+          title: "How to Tell Prophet Stories Kids Remember Forever",
+          description: "Three storytelling principles for prophet stories + a 7-minute format + 5 stories to start. Turn information into experience. For Muslim parents.",
+        },
+      },
+      checklist: {
+        id: [
+          "Pilih karakter yang anak kenali (anak kecil, saudara, ayah)",
+          "Tambah detail kecil yang menghidupkan (gelap, dingin, sendirian)",
+          "Berhenti dan bertanya: \"Gimana perasaan dia?\"",
+          "Waktu: sebelum tidur, maksimal 7 menit",
+          "Ritme: 3× seminggu (kenalan, konflik, resolusi)",
+          "Mulai dari 5 kisah: Ibrahim, Yusuf, Musa, Yunus, Muhammad ﷺ",
+          "Pilih sumber dari Qur'an atau hadith shahih",
+          "Jangan menakut-nakuti dengan detail siksa",
+          "Jangan moralisasi di akhir (\"makanya kamu harus…\")",
+          "Jangan baca dari HP — ceritakan dengan suaramu",
+        ],
+        en: [
+          "Pick a character the child recognizes (a little boy, a sibling, a father)",
+          "Add small details that bring it alive (dark, cold, alone)",
+          "Pause and ask: \"How did he feel?\"",
+          "Time: at bedtime, 7 minutes max",
+          "Rhythm: 3× a week (setup, conflict, resolution)",
+          "Start with 5 stories: Ibrahim, Yusuf, Musa, Yunus, Muhammad ﷺ",
+          "Choose sources from the Qur'an or authentic hadith",
+          "Don't frighten with graphic punishment",
+          "Don't moralize at the end (\"so that's why you must…\")",
+          "Don't read off a phone — tell it in your own voice",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -2859,6 +3187,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Perbedaan antara rumah yang pertengkarannya berakhir dalam 5 menit dan yang berlanjut jadi dendam bukan jumlah anak — tapi adab yang ditanam. Saudara adalah teman paling lama dalam hidup: adab di usia 5 adalah pelukan di usia 50.",
+        en: "The difference between a home where fights end in 5 minutes and one where they turn to grudges isn't the number of kids — it's the manners instilled. Siblings are life's longest friends: manners at 5 are the embrace at 50.",
+      },
+      carousel: {
+        id: [
+          { title: "Adab Bersaudara — 1/7", body: "\"Kenapa anak-anakku tidak bisa akur 30 menit saja?\" Kamu tidak sendiri. Rumah dengan dua anak adalah arena negosiasi 24 jam." },
+          { title: "Akarnya sering di orang tua", body: "\"Bertakwalah kepada Allah dan berlaku adillah di antara anak-anak kalian\" (HR. Bukhari 2587) — hadith ini ditujukan kepada ORANG TUA." },
+          { title: "Adab 1 & 2", body: "Panggilan yang baik (jangan biarkan ejekan walau bercanda). Salam & minta izin sebelum masuk kamar saudara." },
+          { title: "Adab 3 & 4", body: "Berbagi tanpa dipaksa — tiap anak punya satu laci pribadi. Saling mendoakan: \"Ya Allah, sembuhkan adek\" menyembuhkan luka tak terlihat." },
+          { title: "Saat bertengkar: 4 langkah", body: "Pisahkan 5 menit. Dengar bergantian (yang muda dulu). Cari fakta, bukan menyalahkan. Minta maaf tatap mata, lalu peluk." },
+          { title: "Yang harus dihindari", body: "\"Kamu kan kakak, harus ngalah\" (ketidakadilan). \"Lihat adek, lebih pintar\" (iri). Tertawa di pertengkaran. Mengungkit kesalahan lama." },
+          { title: "Yang harus dibiasakan", body: "Foto bareng dibingkai. Doakan bersama sebut nama. Tugas berdua. Cerita Hasan & Husain. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Manners Between Siblings — 1/7", body: "\"Why can't my kids get along for 30 minutes?\" You're not alone. A home with two children is a 24-hour negotiation arena." },
+          { title: "The root is often the parents", body: "\"Fear Allah and be just among your children\" (Bukhari 2587) — this hadith is addressed to PARENTS." },
+          { title: "Manners 1 & 2", body: "Kind forms of address (no mocking nicknames, even joking). Greeting & asking permission before entering a sibling's room." },
+          { title: "Manners 3 & 4", body: "Sharing without force — each child has one private drawer. Praying for each other: \"O Allah, heal my sibling\" heals unseen wounds." },
+          { title: "When they fight: 4 steps", body: "Separate 5 min. Listen in turns (younger first). Find facts, not blame. Apologize with eye contact, then hug." },
+          { title: "What to avoid", body: "\"You're older, give in\" (injustice). \"Look, they're smarter\" (envy). Laughing at their fights. Dredging up old mistakes." },
+          { title: "What to build", body: "A framed photo together. Praying together by name. Shared chores. The story of Hasan & Husain. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Anak-anakmu bertengkar terus? Akarnya sering bukan di anak — tapi di sikap orang tua.
+
+[3–15 detik] MASALAH: "Kamu kan kakak, harus ngalah." "Lihat adek, lebih pintar." Dua kalimat ini menanam ketidakadilan dan iri yang sulit dicabut.
+
+[15–35 detik] SOLUSI: Empat adab: panggilan baik, salam & izin, berbagi tanpa dipaksa, saling mendoakan. Saat bertengkar: pisahkan, dengar bergantian, cari fakta bukan menyalahkan.
+
+[35–55 detik] BUKTI: "Berlaku adillah di antara anak-anak kalian" (HR. Bukhari) — ditujukan ke orang tua. Adil bukan sama persis, tapi tiap anak merasa dihormati.
+
+[55–60 detik] CTA: "Simpan 4 langkah ini untuk pertengkaran berikutnya."`,
+        en: `[0–3s] HOOK: Your kids fight constantly? The root is often not the kids — it's the parents' stance.
+
+[3–15s] PROBLEM: "You're the older one, give in." "Look, your sibling is smarter." These two lines plant injustice and hard-to-remove envy.
+
+[15–35s] SOLUTION: Four manners: kind address, greeting & permission, sharing without force, praying for each other. When they fight: separate, listen in turns, find facts not blame.
+
+[35–55s] PROOF: "Be just among your children" (Bukhari) — addressed to parents. Justice isn't identical treatment; it's each child feeling respected.
+
+[55–60s] CTA: "Save these 4 steps for the next fight."`,
+      },
+      pin: {
+        id: {
+          title: "Adab Bersaudara: Mengurangi Pertengkaran Kakak-Adik",
+          description: "Empat adab antar saudara dalam Islam + 4 langkah menengahi pertengkaran + hal yang harus dihindari orang tua. Untuk keluarga muslim dengan lebih dari satu anak.",
+        },
+        en: {
+          title: "Sibling Manners in Islam: Fewer Fights at Home",
+          description: "Four Islamic manners between siblings + 4 steps to mediate a fight + what parents should avoid. For Muslim families with more than one child.",
+        },
+      },
+      checklist: {
+        id: [
+          "Biasakan panggilan yang baik (\"kakak\", \"adik\"), larang ejekan",
+          "Salam & ketuk sebelum masuk kamar saudara",
+          "Beri tiap anak satu laci pribadi — tidak diambil tanpa izin",
+          "Ajarkan saling mendoakan (saat sakit, ulang tahun, ujian)",
+          "Saat bertengkar: pisahkan dulu ±5 menit",
+          "Dengar bergantian — yang lebih muda bicara dulu",
+          "Cari fakta, bukan menyalahkan",
+          "Minta maaf sambil tatap mata, lalu peluk",
+          "Hindari: \"kamu kan kakak harus ngalah\" & membanding-bandingkan",
+          "Bangun kenangan bersama: foto, tugas berdua, doa sebut nama",
+        ],
+        en: [
+          "Use kind address (\"big brother\", \"little sister\"), ban mockery",
+          "Greet & knock before entering a sibling's room",
+          "Give each child one private drawer — not taken without permission",
+          "Teach them to pray for each other (illness, birthday, exams)",
+          "When they fight: separate first for ~5 minutes",
+          "Listen in turns — the younger speaks first",
+          "Find facts, not blame",
+          "Apologize with eye contact, then hug",
+          "Avoid: \"you're older, give in\" & comparisons",
+          "Build shared memories: photos, joint chores, du'a by name",
+        ],
+      },
+    },
     faq: [
       {
         question: {
