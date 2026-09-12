@@ -128,9 +128,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["muharram", "tahun-baru-hijriyah", "doa", "parenting"],
     published: "2026-05-27",
-    updated: "2026-05-27",
+    updated: "2026-09-12",
     readingTimeMin: 6,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apa doa awal tahun Hijriyah yang shahih untuk anak?",
+          en: "What is the authentic Islamic New Year du'a to teach a child?",
+        },
+        answer: {
+          id: "Yang paling shahih dan jelas sanadnya adalah <strong>doa melihat bulan sabit baru</strong>: \"Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-islam, rabbi wa rabbukallah\" — \"Ya Allah, tampakkanlah bulan ini kepada kami dengan keamanan dan keimanan, keselamatan dan Islam\" (HR. Tirmidzi 3451, hasan). Ajarkan doa ini dulu kepada anak; sudah cukup.",
+          en: "The most authentic, clearly-chained one is the <strong>du'a for sighting the new crescent</strong>: \"Allahumma ahillahu 'alayna bil-amni wal-iman, was-salamati wal-islam, rabbi wa rabbukallah\" — \"O Allah, bring it over us with security and faith, safety and Islam\" (Tirmidhi 3451, hasan). Teach a child this first; it's enough.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah doa \"Allahumma anta al-abadiyyul qadim\" itu sunnah?",
+          en: "Is the popular \"Allahumma anta al-abadiyyul qadim\" du'a from the Sunnah?",
+        },
+        answer: {
+          id: "Doa \"awal tahun\" yang viral itu <strong>sanadnya diperdebatkan</strong> para ulama — sebagian menerimanya sebagai amal baik tanpa keyakinan sunnah, sebagian menolak. Sikap kami: ajarkan yang <em>paling shahih</em> dulu (doa melihat bulan sabit). Doa lain bisa diperkenalkan setelah anak besar dan mampu memahami diskusi sanad.",
+          en: "That viral \"new year\" du'a has a <strong>disputed chain</strong> — some scholars accept it as a good deed without claiming it's Sunnah, others reject it. Our stance: teach the <em>most authentic</em> one first (the crescent du'a). Others can wait until the child is older and can grasp the discussion.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana menandai tahun baru Hijriyah untuk anak kecil?",
+          en: "How do I make the Islamic New Year meaningful for a young child?",
+        },
+        answer: {
+          id: "Anak kecil tidak butuh penjelasan fiqih panjang — mereka butuh <strong>momen yang terasa istimewa</strong>. Tandai malam munculnya bulan sabit dengan doa bersama, sarapan spesial, atau menempel kalender Hijriyah di kulkas. Anak belajar bahwa waktu dihitung dengan cara berbeda: dengan bulan, dengan hijrah, dengan ibadah.",
+          en: "Young children don't need long fiqh — they need a <strong>moment that feels special</strong>. Mark the crescent night with a shared du'a, a special breakfast, or a Hijri calendar on the fridge. The child learns that time can be counted differently: by the moon, by the Hijrah, by worship.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Tahun baru Hijriyah datang dengan tenang, bukan dengan kembang api. Ajarkan anak menandai waktu dengan doa, bukan dengan bunyi.",
@@ -338,9 +370,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["muharram", "tahun-baru-hijriyah", "aktivitas", "tarbiyah"],
     published: "2026-05-26",
-    updated: "2026-05-26",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apa saja aktivitas Muharram yang bisa dilakukan bersama anak?",
+          en: "What Muharram activities can I do with my kids?",
+        },
+        answer: {
+          id: "Beberapa yang mudah: <strong>kalender Hijriyah di kulkas</strong> (anak mencoret tanggal tiap pagi), <strong>menyebut tanggal Hijriyah</strong> dalam doa harian, <strong>cerita hijrah Nabi</strong> seminggu sekali, <strong>persiapan puasa Asyura</strong> (10 Muharram), dan <strong>sedekah pertama tahun</strong>. Tidak perlu semua — pilih dua atau tiga yang cocok dengan ritme keluargamu.",
+          en: "Easy ones: a <strong>Hijri calendar on the fridge</strong> (the child crosses off each morning), <strong>naming the Hijri date</strong> in daily du'as, a weekly <strong>Hijrah story</strong>, <strong>preparing for the Ashura fast</strong> (10 Muharram), and a <strong>first charity of the year</strong>. You don't need all of them — pick two or three that fit your family's rhythm.",
+        },
+      },
+      {
+        question: {
+          id: "Kenapa bulan Muharram istimewa dalam Islam?",
+          en: "Why is Muharram a special month in Islam?",
+        },
+        answer: {
+          id: "Muharram adalah salah satu dari <strong>empat bulan haram (suci)</strong> yang Allah sebut secara eksplisit dalam Al-Qur'an: Dzulqa'dah, Dzulhijjah, Muharram, dan Rajab (QS. At-Taubah 9:36). Ini bulan yang dimuliakan — waktu yang baik untuk memperbanyak kebaikan bersama anak.",
+          en: "Muharram is one of the <strong>four sacred months</strong> Allah names explicitly in the Qur'an: Dhul-Qa'dah, Dhul-Hijjah, Muharram, and Rajab (At-Tawbah 9:36). It's an honored month — a good time to increase good deeds together with children.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah anak harus melakukan semua amalan Muharram?",
+          en: "Do children need to do every Muharram practice?",
+        },
+        answer: {
+          id: "Tidak. Tujuannya bukan kesempurnaan tapi <strong>menanam memori bahwa bulan ini berbeda</strong>. Pilih dua atau tiga aktivitas ringan dan lakukan konsisten. Aktivitas 5 detik seperti mencoret kalender pun efeknya bisa seumur hidup.",
+          en: "No. The goal isn't perfection but <strong>planting the memory that this month is different</strong>. Pick two or three light activities and do them consistently. Even a 5-second habit like crossing off a calendar can have a lifelong effect.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Anak akan tahu Muharram berbeda — bukan karena kamu mengatakannya, tapi karena mereka mengalaminya.",
@@ -584,9 +648,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["muharram", "tahun-baru-hijriyah", "parenting", "identitas"],
     published: "2026-05-25",
-    updated: "2026-05-25",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Tahun baru Islam dihitung sejak peristiwa apa?",
+          en: "What event marks the start of the Islamic calendar?",
+        },
+        answer: {
+          id: "Sejak <strong>hijrahnya Nabi ﷺ dari Makkah ke Madinah</strong> — bukan dari kelahiran beliau dan bukan dari wahyu pertama. Itulah kenapa kalender ini disebut kalender Hijriyah. Tiga inti yang perlu anak pahami: muslim punya kalender sendiri (paralel dengan Masehi), dihitung sejak hijrah, dan bulan pertamanya Muharram — salah satu bulan haram.",
+          en: "From the <strong>Prophet's ﷺ migration (Hijrah) from Makkah to Madinah</strong> — not his birth, not the first revelation. That's why it's the Hijri calendar. Three ideas for a child: Muslims have their own calendar (parallel to the Gregorian one), counted from the Hijrah, and its first month is Muharram — a sacred month.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana menjelaskan tahun baru Islam ke anak usia 3–5 tahun?",
+          en: "How do I explain the Islamic New Year to a 3–5 year old?",
+        },
+        answer: {
+          id: "Gunakan bahasa <strong>konkret dan singkat</strong>, hindari kata abstrak seperti \"kalender\" atau \"hijrah\" tanpa konteks. Contoh: \"Ada dua tahun baru. Satu, 1 Januari, dirayakan dengan kembang api. Satu lagi, 1 Muharram, tahun barunya muslim — tidak ada kembang api, tapi ada doa dan makan enak. Mau bantu Mama bikin sarapan istimewa besok?\"",
+          en: "Use <strong>concrete, short</strong> language; avoid abstract words like \"calendar\" or \"Hijrah\" without context. Try: \"There are two new years. One, January 1, has fireworks. The other, 1 Muharram, is the Muslims' new year — no fireworks, but we have du'a and good food. Want to help make a special breakfast tomorrow?\"",
+        },
+      },
+      {
+        question: {
+          id: "Apakah harus melarang anak merayakan tahun baru Masehi?",
+          en: "Should I forbid my child from the Gregorian new year?",
+        },
+        answer: {
+          id: "Tidak perlu melarang. Caranya bukan melarang yang satu, tapi <strong>membuat tahun baru Islam masuk akal</strong> dan terasa bermakna bagi anak. Tanpa penjelasan, anak menyimpulkan sendiri bahwa yang lebih ramai lebih penting — jadi tugas kita memberi makna, bukan sekadar larangan.",
+          en: "No need to forbid it. The approach isn't banning one but <strong>making the Islamic New Year make sense</strong> and feel meaningful. Without explanation, a child assumes the louder one matters more — so our job is to give meaning, not just prohibition.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Anak yang melihat kembang api tahun baru Masehi tapi tidak tahu Muharram, akan membentuk identitas dari yang dirayakan di sekitarnya.",
@@ -820,9 +916,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["asyura", "puasa", "muharram", "ibadah-musiman"],
     published: "2026-05-24",
-    updated: "2026-05-24",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan puasa Asyura dilaksanakan?",
+          en: "When is the fast of Ashura?",
+        },
+        answer: {
+          id: "Puasa Asyura jatuh pada <strong>10 Muharram</strong>. Dianjurkan juga berpuasa pada <strong>9 Muharram (Tasu'a)</strong> agar berbeda dengan praktik Yahudi yang hanya berpuasa tanggal 10 — jadi bisa puasa 9 & 10, atau 10 & 11, atau ketiganya.",
+          en: "Ashura falls on the <strong>10th of Muharram</strong>. It's also recommended to fast the <strong>9th (Tasu'a)</strong> to differ from the Jewish practice of fasting only the 10th — so you may fast the 9th & 10th, the 10th & 11th, or all three.",
+        },
+      },
+      {
+        question: {
+          id: "Apa keutamaan puasa Asyura?",
+          en: "What is the reward of fasting Ashura?",
+        },
+        answer: {
+          id: "Puasa Asyura adalah <strong>sunnah muakkadah</strong> (sangat dianjurkan) dan <strong>mengampuni dosa setahun yang lalu</strong> (HR. Muslim 1162) — yakni dosa-dosa kecil, dengan syarat menjauhi dosa besar.",
+          en: "Fasting Ashura is a <strong>strongly recommended (muakkadah) sunnah</strong> and <strong>expiates the sins of the previous year</strong> (Muslim 1162) — meaning minor sins, provided major ones are avoided.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah anak wajib puasa Asyura?",
+          en: "Are children obligated to fast on Ashura?",
+        },
+        answer: {
+          id: "Tidak. Anak yang belum baligh <strong>tidak diwajibkan puasa apa pun</strong> — termasuk Ramadan, apalagi Asyura. Tapi melatih sejak usia 5–7 tahun adalah sunnah. Para sahabat di Madinah membiasakan anak berpuasa Asyura dan memberi mainan dari bulu domba — saat anak lapar, mereka bermain. Prinsipnya: latih, jangan paksa.",
+          en: "No. A child before puberty is <strong>not obligated to fast at all</strong> — not even Ramadan, let alone Ashura. But training from ages 5–7 is Sunnah. The Companions in Madinah had children fast Ashura and gave them wool toys — when they got hungry, they'd play. The principle: train, don't force.",
+        },
+      },
+      {
+        question: {
+          id: "Apa sejarah Asyura yang bisa diceritakan ke anak?",
+          en: "What Ashura story can I tell my child?",
+        },
+        answer: {
+          id: "Saat Rasulullah ﷺ hijrah ke Madinah, beliau melihat orang Yahudi berpuasa pada 10 Muharram karena itu <strong>hari Allah menyelamatkan Nabi Musa dan Bani Israil dari Firaun</strong>. Beliau bersabda, \"Aku lebih berhak atas Musa daripada kalian,\" lalu berpuasa dan memerintahkan kaum muslimin berpuasa (HR. Bukhari 2004, Muslim 1130). Anak menyukai kisah ini: Musa, Firaun, laut yang terbelah, lalu syukur kepada Allah.",
+          en: "When the Prophet ﷺ migrated to Madinah, he saw Jews fasting on 10 Muharram because it was <strong>the day Allah saved Prophet Musa and the Israelites from Pharaoh</strong>. He said, \"I have more right to Musa than you,\" then fasted and told the Muslims to fast (Bukhari 2004, Muslim 1130). Children love this story: Musa, Pharaoh, the parting sea, then gratitude to Allah.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Latih, jangan paksa. Beri anak pengalaman puasa, bukan beban. Trauma puasa di usia 6 bisa membuat anak menolak puasa di usia 16.",
@@ -1118,9 +1256,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["hijrah", "muharram", "kisah-nabi", "sejarah-islam"],
     published: "2026-05-23",
-    updated: "2026-05-23",
+    updated: "2026-09-12",
     readingTimeMin: 9,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kenapa kalender Islam dimulai dari hijrah, bukan dari kelahiran Nabi?",
+          en: "Why does the Islamic calendar start from the Hijrah, not the Prophet's birth?",
+        },
+        answer: {
+          id: "Karena <strong>hijrah adalah ujian terbesar</strong> yang dilalui umat Islam awal — dan dari ujian itu sebuah komunitas (Madinah) tumbuh. Bukan kelahiran Nabi ﷺ, bukan wahyu pertama, tapi peristiwa yang menandai lahirnya masyarakat muslim yang dipilih sebagai titik awal penanggalan.",
+          en: "Because the <strong>Hijrah was the greatest test</strong> the early Muslims passed — and from it a community (Madinah) grew. Not the Prophet's ﷺ birth, not the first revelation, but the event that marked the birth of the Muslim society was chosen as the starting point.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana cara menceritakan kisah hijrah ke anak?",
+          en: "How do I tell the Hijrah story to a child?",
+        },
+        answer: {
+          id: "Gunakan <strong>struktur tiga babak</strong> yang anak suka: (1) <strong>Makkah yang makin sulit</strong> — kaum Quraisy mengganggu; (2) <strong>perjalanan bersama Abu Bakar</strong> — persiapan rahasia, Ali menjadi umpan, persembunyian di gua Tsur; (3) <strong>tiba di Madinah</strong> dan komunitas baru. Kaitkan dengan perasaan anak: \"Bayangkan kalau adik harus pindah karena ada yang terus mengganggu — susah, ya? Itu yang Nabi rasakan.\"",
+          en: "Use a <strong>three-act structure</strong> children love: (1) <strong>Makkah growing harder</strong> — Quraysh persecution; (2) <strong>the journey with Abu Bakr</strong> — secret prep, Ali as a decoy, hiding in the Cave of Thawr; (3) <strong>arrival in Madinah</strong> and a new community. Connect it to feelings: \"Imagine having to move because someone kept bothering you — hard, right? That's what the Prophet felt.\"",
+        },
+      },
+      {
+        question: {
+          id: "Siapa yang tidur di tempat tidur Nabi ﷺ saat malam hijrah?",
+          en: "Who slept in the Prophet's ﷺ bed on the night of the Hijrah?",
+        },
+        answer: {
+          id: "<strong>Ali bin Abi Thalib</strong>, sepupu Nabi yang masih muda, tidur di tempat tidur beliau sebagai umpan agar para pengejar mengira Nabi ﷺ masih di rumah. Ini contoh keberanian anak muda yang bagus untuk diceritakan.",
+          en: "<strong>Ali ibn Abi Talib</strong>, the Prophet's young cousin, slept in his bed as a decoy so the pursuers would think the Prophet ﷺ was still home. It's a great example of youthful courage to share.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Berani bukan berarti tidak takut. Berani berarti pergi meski takut — itu yang Abu Bakar ajarkan kepada anak-anak yang mendengar kisah hijrah.",
@@ -1368,9 +1538,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["dzulhijjah", "idul-adha", "ibadah-musiman", "parenting"],
     published: "2026-05-27",
-    updated: "2026-05-27",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kenapa 10 hari pertama Dzulhijjah istimewa?",
+          en: "Why are the first 10 days of Dhul-Hijjah special?",
+        },
+        answer: {
+          id: "Ini <strong>satu-satunya hari</strong> di mana Rasulullah ﷺ bersabda bahwa amal saleh padanya <strong>lebih dicintai Allah daripada hari-hari lain</strong> — bahkan melebihi jihad, kecuali orang yang berjihad dengan harta dan dirinya lalu tidak kembali (HR. Bukhari 969). Untuk keluarga, ini soal mengenalkan bahwa hari-hari ini istimewa.",
+          en: "These are the <strong>only days</strong> the Prophet ﷺ described good deeds as <strong>more beloved to Allah than any others</strong> — even greater than jihad, except one who goes out with wealth and self and doesn't return (Bukhari 969). For families, it's about introducing that these days are special.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang bisa dilakukan anak selama 10 hari Dzulhijjah?",
+          en: "What can kids do during the 10 days of Dhul-Hijjah?",
+        },
+        answer: {
+          id: "Panduan bertahap: <strong>Hari 1–3</strong> bangun suasana — cerita Nabi Ibrahim & Ismail, dekorasi ringan, mulai biasakan takbir; <strong>Hari 4–6</strong> latihan puasa setengah hari (opsional, untuk 5+), sediakan aktivitas agar lupa lapar; menjelang Idul Adha, libatkan anak dalam kurban dan sholat Ied. Sesuaikan dengan usia anak.",
+          en: "A gradual guide: <strong>Days 1–3</strong> build atmosphere — the story of Ibrahim & Ismail, light decorations, begin the takbir habit; <strong>Days 4–6</strong> optional half-day fasting (ages 5+), with activities to distract from hunger; toward Eid al-Adha, involve the child in the qurbani and Eid prayer. Adapt to the child's age.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah anak wajib puasa di 10 hari Dzulhijjah?",
+          en: "Must children fast during the first 10 days of Dhul-Hijjah?",
+        },
+        answer: {
+          id: "Tidak wajib. Anak yang belum baligh tidak diwajibkan puasa. Puasa setengah hari (dari sahur sampai Dzuhur) untuk anak 5 tahun ke atas adalah <strong>latihan, bukan kewajiban atau ujian</strong> — bangunkan sahur dengan makanan yang anak suka, dan beri makanan favorit saat berbuka.",
+          en: "Not obligatory. A child before puberty isn't required to fast. A half-day fast (sahur to Dhuhr) for ages 5+ is <strong>training, not an obligation or a test</strong> — wake them for sahur with food they like, and serve a favorite at iftar.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -3215,9 +3417,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["ramadan", "puasa", "anak", "ibadah", "keluarga"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 14,
     author: "salman",
+    faq: [
+      {
+        question: {
+          id: "Apakah anak kecil wajib puasa Ramadan?",
+          en: "Are young children required to fast in Ramadan?",
+        },
+        answer: {
+          id: "Tidak. <strong>Tidak ada anak usia 0–10 tahun yang diwajibkan puasa</strong> — kewajiban baru berlaku setelah baligh. Tugas orang tua hanya satu: membuat Ramadan <em>terasa istimewa</em>, sehingga hubungan anak dengan ibadah tumbuh hangat, bukan sebagai beban.",
+          en: "No. <strong>No child aged 0–10 is obligated to fast</strong> — the obligation begins after puberty. A parent's only task is to make Ramadan <em>feel special</em>, so the child's relationship with worship grows warm rather than burdensome.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana melatih anak puasa secara bertahap?",
+          en: "How do I ease a child into fasting gradually?",
+        },
+        answer: {
+          id: "Per usia: <strong>0–3 tahun</strong> cukup hadir di suasana (sahur/buka bersama); <strong>4–6 tahun</strong> sahur opsional dan puasa setengah hari sampai Dzuhur sebagai pencapaian besar; <strong>7–10 tahun</strong> mulai setengah hari, penuh hari adalah tahap lanjut — hormati ketika anak menyerah, yang penting mau coba lagi besok.",
+          en: "By age: <strong>0–3</strong> just be present (sahur/iftar together); <strong>4–6</strong> optional sahur and a half-day fast to Dhuhr as a big win; <strong>7–10</strong> start half days, with full days a later milestone — respect when they give up; what matters is willingness to try again tomorrow.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana mempersiapkan anak sebelum Ramadan tiba?",
+          en: "How do I prepare a child before Ramadan begins?",
+        },
+        answer: {
+          id: "<strong>Bangun antisipasi.</strong> Hitung mundur visual di kulkas, ceritakan apa yang akan berubah (sahur, buka, banyak doa), beli/buat satu dekorasi baru, dan bila anak >7 dan berminat, latih satu-dua hari puasa Sya'ban setengah hari sebagai pemanasan. Anak yang tahu apa yang datang jauh lebih kooperatif.",
+          en: "<strong>Build anticipation.</strong> A visual countdown on the fridge, tell them what will change (sahur, iftar, more du'a), make one new decoration, and if the child is 7+ and interested, practice a day or two of half-day Sha'ban fasting as a warm-up. A child who knows what's coming is far more cooperative.",
+        },
+      },
+      {
+        question: {
+          id: "Bolehkah anak ikut sholat tarawih?",
+          en: "Can children join tarawih prayers?",
+        },
+        answer: {
+          id: "Boleh, tapi <strong>mulai dari rumah</strong>: 2–4 rakaat bersama keluarga, lalu anak tidur dan orang tua melanjutkan. Kalau ke masjid, bawa \"ransel masjid\": sajadah kecil, buku tenang, air, dan biskuit. Jangan jadikan beban — kehadiran yang menyenangkan lebih penting daripada jumlah rakaat.",
+          en: "Yes, but <strong>start at home</strong>: 2–4 rakaat as a family, then the child sleeps while parents continue. At the mosque, pack a \"mosque bag\": a small rug, a quiet book, water, and a biscuit. Don't make it a burden — a pleasant presence matters more than the rakaat count.",
+        },
+      },
+    ],
     kit: {
       quote: {
         id: "Ramadan tahun ini tidak harus sempurna. Anak tidak harus puasa penuh, sholat semua tarawih, hafal semua doa. Yang anak butuh: orang tua yang hadir, suasana rumah yang berbeda, dan pesan diam-diam bahwa bulan ini adalah bulan yang dirindukan.",
@@ -4661,9 +4905,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["rajab", "bulan-haram", "ramadan", "ibadah-musiman"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apa keutamaan bulan Rajab?",
+          en: "What is the significance of the month of Rajab?",
+        },
+        answer: {
+          id: "Rajab adalah salah satu dari <strong>empat bulan haram</strong> (bersama Dzulqa'dah, Dzulhijjah, Muharram). Orang dahulu berkata: <em>\"Rajab menanam, Sya'ban menyirami, Ramadan memanen\"</em> — artinya Rajab adalah waktu mulai mempersiapkan hati menuju Ramadan yang tinggal dua bulan lagi. Di bulan haram, kebaikan lebih berbobot dan keburukan lebih berat.",
+          en: "Rajab is one of the <strong>four sacred months</strong> (with Dhul-Qa'dah, Dhul-Hijjah, Muharram). The elders said: <em>\"Rajab plants, Sha'ban waters, Ramadan harvests\"</em> — Rajab is when you begin preparing the heart for Ramadan, two months away. In a sacred month, good weighs more and wrong weighs heavier.",
+        },
+      },
+      {
+        question: {
+          id: "Apa doa bulan Rajab yang bisa diajarkan ke anak?",
+          en: "What Rajab du'a can I teach my child?",
+        },
+        answer: {
+          id: "Doa masyhur yang pendek dan mudah dihafal anak: <strong>\"Allahumma baarik lanaa fii Rajab wa Sya'baan, wa ballighnaa Ramadhaan\"</strong> — \"Ya Allah, berkahilah kami di bulan Rajab dan Sya'ban, dan sampaikanlah kami ke bulan Ramadan.\" Bisa dibaca tiap pagi sebagai pengingat menyambut Ramadan.",
+          en: "A short, well-known du'a that's easy for kids to memorize: <strong>\"Allahumma barik lana fi Rajab wa Sha'ban, wa ballighna Ramadan\"</strong> — \"O Allah, bless us in Rajab and Sha'ban, and let us reach Ramadan.\" Recite it each morning as a reminder that Ramadan is coming.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah ada puasa khusus yang wajib di bulan Rajab?",
+          en: "Is there a special obligatory fast in Rajab?",
+        },
+        answer: {
+          id: "Tidak. Berpuasa sunnah di Rajab <strong>boleh</strong> — sebagai puasa sunnah biasa (misalnya Senin-Kamis). Namun \"puasa Rajab\" yang dianggap <em>wajib</em> atau ritual malam tertentu dengan keutamaan yang dibuat-buat <strong>tidak memiliki dasar yang kuat</strong> dalam sunnah. Para ulama mengingatkan agar berhati-hati terhadap amalan tanpa dalil.",
+          en: "No. Voluntary fasting in Rajab is <strong>permitted</strong> — as ordinary sunnah fasting (e.g. Mondays and Thursdays). But a \"Rajab fast\" treated as <em>obligatory</em>, or specific night rituals with invented virtues, have <strong>no strong basis</strong> in the Sunnah. Scholars caution against practices without evidence.",
+        },
+      },
+    ],
   },
 
   {
@@ -4724,9 +5000,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["syaban", "ramadan", "puasa", "ibadah-musiman"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kenapa Rasulullah ﷺ banyak berpuasa di bulan Sya'ban?",
+          en: "Why did the Prophet ﷺ fast so much in Sha'ban?",
+        },
+        answer: {
+          id: "Saat Usamah bin Zaid bertanya, Rasulullah ﷺ menjawab bahwa Sya'ban adalah <strong>bulan yang sering dilalaikan manusia</strong> (karena berada di antara Rajab dan Ramadan), padahal di bulan ini <strong>amal-amal diangkat kepada Allah</strong> — dan beliau senang amalnya diangkat dalam keadaan berpuasa (HR. Nasa'i).",
+          en: "When Usamah ibn Zayd asked, the Prophet ﷺ said Sha'ban is <strong>a month people neglect</strong> (falling between Rajab and Ramadan), yet in it <strong>deeds are raised to Allah</strong> — and he loved for his deeds to be raised while fasting (Nasa'i).",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana memanfaatkan Sya'ban bersama anak?",
+          en: "How can I make the most of Sha'ban with my kids?",
+        },
+        answer: {
+          id: "Empat hal: <strong>latihan puasa setengah hari</strong> untuk anak 7+ agar terbiasa sebelum Ramadan; <strong>beres-beres rumah dan hati</strong> (rapikan mainan, saling memaafkan); <strong>mulai jadwal mengaji</strong> supaya rutinitas sudah jalan saat Ramadan; dan bagi yang baligh, <strong>lunasi utang puasa</strong> Ramadan lalu selagi sempat.",
+          en: "Four things: <strong>half-day fasting practice</strong> for ages 7+ to build the habit before Ramadan; <strong>tidy the home and the heart</strong> (organize toys, forgive one another); <strong>start a Qur'an schedule</strong> so the routine is running by Ramadan; and for those past puberty, <strong>make up missed fasts</strong> from last Ramadan while there's time.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hukum amalan khusus malam Nisfu Sya'ban?",
+          en: "What about special worship on the night of Nisfu Sha'ban?",
+        },
+        answer: {
+          id: "Malam pertengahan Sya'ban disebut dalam beberapa hadits sebagai malam ampunan yang luas, namun para ulama <strong>berbeda pendapat</strong> tentang amalan khusus malam itu. Pendekatan yang aman: <strong>perbanyak doa dan istighfar</strong> sebagaimana malam-malam lain, tanpa ritual khusus yang tidak berdalil kuat.",
+          en: "The middle night of Sha'ban is mentioned in some narrations as a night of wide forgiveness, but scholars <strong>differ</strong> on special worship that night. The safe approach: <strong>increase du'a and istighfar</strong> as on any night, without specific rituals lacking firm evidence.",
+        },
+      },
+    ],
   },
 
   {
@@ -4799,9 +5107,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["maulid", "rabiul-awal", "kisah-nabi", "akhlak"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan Maulid Nabi diperingati?",
+          en: "When is Mawlid an-Nabi observed?",
+        },
+        answer: {
+          id: "Maulid mengingat kelahiran Nabi Muhammad ﷺ dan dikaitkan dengan bulan <strong>Rabi'ul Awal</strong> (umumnya tanggal 12). Terlepas dari tanggalnya, seluruh bulan ini adalah momen alami untuk mengenalkan sosok dan akhlak Rasulullah ﷺ kepada anak.",
+          en: "Mawlid commemorates the birth of the Prophet Muhammad ﷺ and is associated with the month of <strong>Rabi' al-Awwal</strong> (commonly the 12th). Regardless of the exact date, the whole month is a natural time to introduce the Prophet's ﷺ person and character to children.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hukum merayakan Maulid Nabi?",
+          en: "What is the ruling on celebrating Mawlid?",
+        },
+        answer: {
+          id: "Ulama <strong>berbeda pendapat</strong>: sebagian membolehkan sebagai sarana mengingat dan mencintai Nabi, sebagian tidak menganjurkan karena tidak dilakukan di masa salaf. Kami tidak masuk ke perdebatan itu — fokus pada satu hal yang <strong>disepakati semua</strong>: mengenal dan mencintai Rasulullah ﷺ adalah kewajiban setiap muslim, termasuk anak-anak.",
+          en: "Scholars <strong>differ</strong>: some permit it as a means to remember and love the Prophet, some don't recommend it since the early generations didn't do it. We stay out of that debate and focus on what <strong>everyone agrees on</strong>: knowing and loving the Prophet ﷺ is an obligation on every Muslim, children included.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana mengenalkan Rasulullah ﷺ ke anak sesuai usia?",
+          en: "How do I introduce the Prophet ﷺ to a child by age?",
+        },
+        answer: {
+          id: "<strong>Usia 3–5:</strong> Nabi yang penyayang — beliau menyayangi anak, mencium cucunya, memendekkan sholat saat mendengar bayi menangis. <strong>Usia 6–8:</strong> Nabi yang jujur & adil — gelar \"Al-Amin\" (yang terpercaya). <strong>Usia 9+:</strong> Nabi sebagai teladan hidup — ajak anak memilih satu sunnah untuk ditiru pekan ini (senyum, memberi salam, membantu pekerjaan rumah).",
+          en: "<strong>Ages 3–5:</strong> the compassionate Prophet — he loved children, kissed his grandchildren, shortened prayer on hearing a baby cry. <strong>Ages 6–8:</strong> the honest and just Prophet — the title \"Al-Amin\" (the trustworthy). <strong>Ages 9+:</strong> the Prophet as a life model — have the child pick one sunnah to imitate this week (smiling, greeting, helping at home).",
+        },
+      },
+      {
+        question: {
+          id: "Kenapa penting anak mencintai Nabi ﷺ sejak dini?",
+          en: "Why is it important for a child to love the Prophet ﷺ early?",
+        },
+        answer: {
+          id: "Anak <strong>meniru tokoh yang mereka kagumi</strong>. Kalau kita tidak mengisi hati mereka dengan kekaguman pada Rasulullah ﷺ, dunia akan mengisinya dengan tokoh lain. Mencintai Nabi bukan sekadar emosi — itu pintu untuk mencintai akhlaknya, lalu menirunya.",
+          en: "Children <strong>imitate the figures they admire</strong>. If we don't fill their hearts with admiration for the Prophet ﷺ, the world will fill it with someone else. Loving the Prophet isn't mere emotion — it's the door to loving his character, then emulating it.",
+        },
+      },
+    ],
   },
 
   {
@@ -4876,9 +5226,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["isra-miraj", "rajab", "sholat", "kisah-nabi"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan Isra Mi'raj diperingati?",
+          en: "When is Isra Mi'raj commemorated?",
+        },
+        answer: {
+          id: "Isra Mi'raj diperingati pada <strong>27 Rajab</strong>, dan peristiwanya terjadi sekitar setahun sebelum hijrah Rasulullah ﷺ ke Madinah.",
+          en: "Isra Mi'raj is commemorated on the <strong>27th of Rajab</strong>, and the event took place about a year before the Prophet's ﷺ migration to Madinah.",
+        },
+      },
+      {
+        question: {
+          id: "Apa itu Isra dan apa itu Mi'raj?",
+          en: "What is Isra and what is Mi'raj?",
+        },
+        answer: {
+          id: "<strong>Isra</strong> adalah perjalanan mendatar Rasulullah ﷺ dari Masjidil Haram (Mekkah) ke Masjidil Aqsa (Yerusalem) dengan kendaraan istimewa bernama <strong>Buraq</strong>. <strong>Mi'raj</strong> adalah perjalanan naik dari Baitul Maqdis ke langit demi langit, bertemu para nabi, hingga Sidratul Muntaha — batas yang tidak pernah dicapai makhluk mana pun.",
+          en: "<strong>Isra</strong> is the Prophet's ﷺ horizontal journey from the Sacred Mosque (Makkah) to al-Aqsa Mosque (Jerusalem) on a special mount called <strong>Buraq</strong>. <strong>Mi'raj</strong> is the ascent from Jerusalem through the heavens, meeting the prophets, up to Sidrat al-Muntaha — a limit no creature had reached.",
+        },
+      },
+      {
+        question: {
+          id: "Apa hadiah terbesar dari peristiwa Isra Mi'raj?",
+          en: "What was the greatest gift of Isra Mi'raj?",
+        },
+        answer: {
+          id: "<strong>Perintah sholat.</strong> Awalnya 50 kali sehari; atas saran Nabi Musa, Rasulullah ﷺ berulang kali memohon keringanan hingga menjadi <strong>5 kali sehari — tetapi pahalanya senilai 50</strong>. Pelajaran besar untuk anak: sholat adalah <em>hadiah</em>, bukan beban, dan begitu istimewa sampai perintahnya diberikan langsung di langit.",
+          en: "<strong>The command to pray.</strong> Originally 50 times a day; on Prophet Musa's advice, the Prophet ﷺ repeatedly asked for relief until it became <strong>5 a day — but rewarded as 50</strong>. The big lesson for a child: prayer is a <em>gift</em>, not a burden, and so special its command was given directly in the heavens.",
+        },
+      },
+    ],
   },
 
   {
@@ -4957,9 +5339,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["nuzulul-quran", "ramadan", "al-quran", "kisah-nabi"],
     published: "2026-05-28",
-    updated: "2026-05-28",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan Nuzulul Qur'an diperingati?",
+          en: "When is Nuzulul Qur'an observed?",
+        },
+        answer: {
+          id: "Nuzulul Qur'an memperingati turunnya wahyu pertama Al-Qur'an kepada Rasulullah ﷺ, dan di Indonesia biasa diperingati setiap <strong>17 Ramadan</strong>.",
+          en: "Nuzulul Qur'an commemorates the first revelation of the Qur'an to the Prophet ﷺ, and in Indonesia it is commonly observed on the <strong>17th of Ramadan</strong>.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana kisah wahyu pertama untuk diceritakan ke anak?",
+          en: "What is the story of the first revelation to tell a child?",
+        },
+        answer: {
+          id: "Rasulullah ﷺ sering menyendiri di <strong>Gua Hira</strong> di atas Jabal Nur. Suatu malam Ramadan, <strong>Malaikat Jibril</strong> datang dan berkata \"Iqra!\" (Bacalah!). Beliau menjawab \"Aku tidak bisa membaca,\" hingga Jibril menyampaikan ayat pertama: \"Bacalah dengan (menyebut) nama Tuhanmu yang menciptakan\" (QS. Al-'Alaq 1). Beliau pulang gemetar, lalu istrinya Khadijah menenangkannya.",
+          en: "The Prophet ﷺ often retreated to the <strong>Cave of Hira</strong> on Jabal an-Nur. One Ramadan night, the <strong>Angel Jibril</strong> came and said \"Iqra!\" (Read!). He replied \"I cannot read,\" until Jibril conveyed the first verse: \"Read in the name of your Lord who created\" (Al-'Alaq 1). He returned trembling, and his wife Khadijah reassured him.",
+        },
+      },
+      {
+        question: {
+          id: "Apa pelajaran dari ayat pertama \"Iqra\"?",
+          en: "What is the lesson of the first word, \"Iqra\"?",
+        },
+        answer: {
+          id: "Sangat istimewa bahwa kata pertama yang Allah turunkan adalah <strong>\"Bacalah\"</strong> — bukan \"sholatlah\" atau \"puasalah.\" Ini menunjukkan betapa Islam memuliakan <strong>ilmu dan membaca</strong>. Untuk anak: belajar membaca, membaca Al-Qur'an, dan mencari ilmu semuanya sejalan dengan perintah pertama Allah.",
+          en: "It's striking that the first word revealed was <strong>\"Read\"</strong> — not \"pray\" or \"fast.\" It shows how deeply Islam honors <strong>knowledge and reading</strong>. For a child: learning to read, reading the Qur'an, and seeking knowledge all align with Allah's very first command.",
+        },
+      },
+    ],
   },
 ];
 
