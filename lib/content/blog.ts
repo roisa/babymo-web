@@ -1762,6 +1762,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 9,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Anak yang dipaksa sholat sering tumbuh menjadi dewasa yang menjauhinya. Rasulullah ﷺ sendiri tidak pernah memerintahkan sholat pada anak kecil — beliau memberi waktu tujuh tahun untuk mengenal, dan tiga tahun lagi untuk terbiasa. Yang lembut justru yang paling sesuai sunnah.",
+        en: "A child forced to pray often becomes an adult who avoids it. The Prophet ﷺ never commanded young children to pray — he gave seven years to get to know it, and three more to grow used to it. The gentle way is the one truest to the Sunnah.",
+      },
+      carousel: {
+        id: [
+          { title: "Mengajarkan Sholat Tanpa Paksaan — 1/7", body: "Rasulullah ﷺ tidak pernah memaksa anak kecil sholat. Beliau memberi kerangka waktu yang jauh lebih lembut dari yang kebanyakan orang tua terapkan." },
+          { title: "Apa yang benar-benar diperintahkan", body: "\"Perintahkan anak sholat di usia tujuh, tegur di usia sepuluh\" (HR. Abu Dawud 495). Tujuh = awal pengenalan, bukan kewajiban penuh. Ada 3 tahun jeda untuk membentuk kebiasaan." },
+          { title: "Usia 3–4: Cukup mengamati", body: "Jangan ajarkan apa pun. Biarkan anak melihat ayah rukuk dan ibu sujud setiap hari. Ia menyerap: ini bagian hidup, seperti makan dan tidur." },
+          { title: "Usia 5–6: Mulai gerakan", body: "Takbir, rukuk, sujud. Ajarkan takbiratul ihram + satu surat pendek (Al-Ikhlas). Beri sajadah yang anak pilih sendiri." },
+          { title: "Usia 7: Lima waktu — bertahap", body: "Bulan 1–2: Maghrib & Isya. Bulan 3–4: tambah Subuh. Bulan 5–6: tambah Dzuhur. Bulan 7+: lengkap. Bukan sakelar yang tiba-tiba menyala." },
+          { title: "Lima hal yang harus dihindari", body: "Membandingkan dengan anak lain. Mempermalukan di depan tamu. Membentak saat salah gerakan. Menjadikan sholat hukuman. Memberi imbalan materi besar." },
+          { title: "Yang paling penting", body: "Anak meniru, bukan mendengar. Sholat anakmu dimulai dari sholatmu sendiri. Simpan & bagikan ke orang tua muslim yang lain." },
+        ],
+        en: [
+          { title: "Teaching Salah Without Force — 1/7", body: "The Prophet ﷺ never forced young children to pray. He set a timeline far gentler than what most parents enforce." },
+          { title: "What was actually commanded", body: "\"Command children to pray at seven, correct them at ten\" (Abu Dawud 495). Seven = the start of introduction, not full obligation. There's a 3-year window to build the habit." },
+          { title: "Ages 3–4: Just let them watch", body: "Teach nothing. Let the child see father bow and mother prostrate daily. They absorb: this is part of life, like eating and sleeping." },
+          { title: "Ages 5–6: Begin the movements", body: "Takbir, ruku, sujud. Teach takbiratul ihram + one short surah (Al-Ikhlas). Give them a prayer mat they choose themselves." },
+          { title: "Age 7: Five prayers — gradually", body: "Months 1–2: Maghrib & Isha. Months 3–4: add Fajr. Months 5–6: add Dhuhr. Month 7+: complete. It's not a switch that flips at once." },
+          { title: "Five things to avoid", body: "Comparing to other kids. Shaming in front of guests. Yelling at mistakes. Using prayer as punishment. Big material rewards." },
+          { title: "The most important thing", body: "Children imitate, they don't listen. Your child's prayer begins with your own. Save & share with another Muslim parent." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Kesalahan #1 orang tua soal sholat anak: memaksa terlalu cepat.
+
+[3–15 detik] MASALAH: Anak yang dipaksa sholat di usia 5–6 sering jadi dewasa yang menjauhinya. Padahal Rasulullah ﷺ tidak pernah memerintahkan anak kecil sholat.
+
+[15–35 detik] SOLUSI: Usia 3–4 cukup mengamati. Usia 5–6 mulai gerakan + satu surat pendek. Usia 7 baru lima waktu — itu pun bertahap: mulai Maghrib & Isya, tambah satu waktu tiap dua bulan.
+
+[35–55 detik] BUKTI: Hadith Abu Dawud 495 — "perintahkan di tujuh, tegur di sepuluh". Ada tiga tahun jeda. Tujuh bukan sakelar, tapi awal pengenalan.
+
+[55–60 detik] CTA: "Simpan ini. Bagikan ke orang tua yang lagi berjuang ngajarin anak sholat."`,
+        en: `[0–3s] HOOK: The #1 parenting mistake with kids and salah: forcing it too early.
+
+[3–15s] PROBLEM: Children forced to pray at 5–6 often become adults who avoid it. Yet the Prophet ﷺ never commanded young children to pray.
+
+[15–35s] SOLUTION: Ages 3–4, just observe. Ages 5–6, begin the movements + one short surah. Age 7, start the five prayers — and even then gradually: begin with Maghrib & Isha, add one prayer every two months.
+
+[35–55s] PROOF: Abu Dawud 495 — "command at seven, correct at ten." There's a three-year window. Seven isn't a switch; it's the start of introduction.
+
+[55–60s] CTA: "Save this. Share it with a parent struggling to teach their child salah."`,
+      },
+      pin: {
+        id: {
+          title: "Cara Mengajarkan Sholat ke Anak per Usia (Tanpa Paksaan)",
+          description: "Panduan mengajarkan sholat ke anak usia 3–7 tahun sesuai sunnah: kapan mulai, apa yang diajarkan tiap usia, dan lima hal yang harus dihindari. Untuk orang tua muslim.",
+        },
+        en: {
+          title: "How to Teach Kids to Pray, Age by Age (Without Force)",
+          description: "A gentle, Sunnah-based guide to teaching salah to children ages 3–7: when to start, what to teach at each age, and five things to avoid. For Muslim parents.",
+        },
+      },
+      checklist: {
+        id: [
+          "Usia 3–4: biarkan anak mengamati, jangan larang mendekat saat sholat",
+          "Usia 5–6: ajarkan takbiratul ihram + Al-Ikhlas",
+          "Beri sajadah/mukena/peci yang anak pilih sendiri",
+          "Sholat berjamaah keluarga minimal 1× sehari (Maghrib paling mudah)",
+          "Usia 7 bulan 1–2: Maghrib & Isya dulu",
+          "Bulan 3–4: tambah Subuh; bulan 5–6: tambah Dzuhur; bulan 7+: lengkap",
+          "Puji usaha, bukan hasil: \"Mama suka caranya kakak rukuk pelan-pelan\"",
+          "Doakan anak dengan menyebut namanya, setelah sholat",
+          "Hindari: membandingkan, mempermalukan, membentak, hukuman, imbalan besar",
+          "Saat anak menolak: jangan paksa fisik, tanya tenang, beri keringanan bila sakit/lelah",
+        ],
+        en: [
+          "Ages 3–4: let the child watch; don't push them away during prayer",
+          "Ages 5–6: teach takbiratul ihram + Al-Ikhlas",
+          "Give a prayer mat/clothes the child picks themselves",
+          "Family congregational prayer at least 1×/day (Maghrib is easiest)",
+          "Age 7, months 1–2: Maghrib & Isha first",
+          "Months 3–4: add Fajr; months 5–6: add Dhuhr; month 7+: all five",
+          "Praise effort, not outcome: \"I liked how slowly you did ruku\"",
+          "Make du'a for the child by name, after prayer",
+          "Avoid: comparing, shaming, yelling, punishment, big rewards",
+          "When they refuse: no physical force, ask calmly, ease off if sick/tired",
+        ],
+      },
+    },
     faq: [
       {
         question: {
