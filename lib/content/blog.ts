@@ -1557,9 +1557,61 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["sholat", "tarbiyah", "parenting", "tujuh-tahun"],
     published: "2026-05-26",
-    updated: "2026-05-26",
+    updated: "2026-09-12",
     readingTimeMin: 9,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Umur berapa anak mulai wajib sholat?",
+          en: "At what age must a child start praying?",
+        },
+        answer: {
+          id: "Anak <strong>mulai diperintahkan</strong> sholat di usia <strong>7 tahun</strong> dan ditegur lebih tegas jika meninggalkannya di usia <strong>10 tahun</strong> (HR. Abu Dawud 495, hasan). Namun ini tahap <em>pembiasaan</em> — kewajiban penuh (dan dosa jika ditinggalkan) baru berlaku setelah anak <strong>baligh</strong>. Usia 7–10 adalah masa membentuk kebiasaan, bukan menuntut kesempurnaan.",
+          en: "A child <strong>begins to be instructed</strong> to pray at <strong>age 7</strong> and is corrected more firmly if they neglect it at <strong>age 10</strong> (Abu Dawud 495, hasan). But this is a <em>habit-forming</em> stage — full obligation (and sin for skipping) only applies after <strong>puberty</strong>. Ages 7–10 are for building the habit, not demanding perfection.",
+        },
+      },
+      {
+        question: {
+          id: "Bolehkah memaksa anak sholat?",
+          en: "Is it okay to force a child to pray?",
+        },
+        answer: {
+          id: "Sebaiknya tidak. Paksaan fisik menanam benih perlawanan jangka panjang — banyak anak yang dipaksa justru menjauhi sholat saat dewasa. Rasulullah ﷺ sendiri tidak pernah memerintahkan sholat pada anak kecil, bahkan pernah sholat sambil menggendong cucunya, Umamah. Pendekatan yang lembut dan bertahap terbukti lebih sesuai sunnah <em>dan</em> lebih efektif.",
+          en: "Better not to. Physical force plants long-term resistance — many forced children avoid prayer as adults. The Prophet ﷺ never commanded young children to pray, and even prayed while carrying his granddaughter Umamah. A gentle, gradual approach is both more in line with the Sunnah <em>and</em> more effective.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana mengajarkan sholat pada anak usia 3–4 tahun?",
+          en: "How do I teach prayer to a 3–4 year old?",
+        },
+        answer: {
+          id: "Di usia ini jangan ajarkan apa pun secara formal — <strong>cukup biarkan anak mengamati</strong>. Anak yang setiap hari melihat orang tuanya rukuk dan sujud menyerap pesan bahwa sholat adalah bagian normal dari hidup, seperti makan dan tidur. Jangan larang anak mendekat saat Anda sholat, agar ia tidak mengasosiasikan sholat dengan ketegangan.",
+          en: "At this age, teach nothing formal — <strong>just let them watch</strong>. A child who sees a parent bow and prostrate every day absorbs that prayer is a normal part of life, like eating and sleeping. Don't push them away while you pray, so they never associate prayer with tension.",
+        },
+      },
+      {
+        question: {
+          id: "Surat apa yang pertama diajarkan untuk sholat anak?",
+          en: "Which surah should I teach a child first for prayer?",
+        },
+        answer: {
+          id: "Mulai dari <strong>takbiratul ihram</strong> dan satu surat pendek. <strong>Al-Ikhlas</strong> adalah pilihan klasik karena pendek, mudah dihafal, dan indah. Belum perlu anak hafal semua bacaan atau khusyuk sempurna di usia 5–6 tahun — yang penting anak ikut gerakan dan merasa memiliki sajadahnya sendiri.",
+          en: "Start with <strong>takbiratul ihram</strong> and one short surah. <strong>Al-Ikhlas</strong> is the classic choice — short, easy to memorize, and beautiful. A 5–6 year old need not memorize every recitation or achieve full focus — what matters is joining the movements and feeling ownership over their own prayer mat.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang harus dilakukan kalau anak tidak mau sholat?",
+          en: "What should I do when my child refuses to pray?",
+        },
+        answer: {
+          id: "Tarik nafas — ini normal dan perjalanan panjang. <strong>Jangan paksa fisik.</strong> Tanya dengan tenang: \"Kenapa belum mau sholat? Mama mau dengar.\" Jika anak lelah atau sakit, beri keringanan (Allah Maha Penyayang). Jika penolakan jadi pola, evaluasi apakah ada paksaan yang membuat anak resisten, dan kapan terakhir Anda memuji usahanya — bukan hanya hasilnya.",
+          en: "Breathe — this is normal and it's a long road. <strong>Don't force physically.</strong> Ask calmly: \"Why don't you want to pray? I want to hear.\" If they're tired or ill, give a pass (Allah is Most Merciful). If refusal becomes a pattern, check whether built-up coercion is driving resistance, and when you last praised their effort — not just the result.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -1744,9 +1796,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["doa", "edukasi", "hijaiyah-doa", "balita"],
     published: "2026-05-25",
-    updated: "2026-05-25",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Berapa banyak doa yang harus diajarkan ke anak sebelum usia 7 tahun?",
+          en: "How many du'as should a child learn before age 7?",
+        },
+        answer: {
+          id: "Daftar intinya jauh lebih pendek dari yang dibayangkan: <strong>7 doa inti</strong> (tier 1) — sebelum/sesudah tidur, sebelum/sesudah makan, masuk/keluar kamar mandi, dan naik kendaraan — lalu <strong>5 doa tambahan</strong> (tier 2) yang ditambahkan bertahap. Total 12. Targetnya anak <em>mengenal</em>, bukan harus hafal sempurna.",
+          en: "The core list is far shorter than most parents fear: <strong>7 essential du'as</strong> (tier 1) — before/after sleep, before/after eating, entering/leaving the bathroom, and riding transport — then <strong>5 more</strong> (tier 2) added gradually. Twelve in total. The goal is that the child <em>knows</em> them, not that they memorize them perfectly.",
+        },
+      },
+      {
+        question: {
+          id: "Apa cara paling efektif mengajarkan doa ke balita?",
+          en: "What's the most effective way to teach du'as to a toddler?",
+        },
+        answer: {
+          id: "Lima prinsip yang terbukti: (1) <strong>satu doa per minggu</strong>, bukan satu per hari; (2) ajarkan <strong>di momennya</strong> — doa makan saat mau makan, bukan saat duduk belajar; (3) <strong>orang tua membaca dulu</strong>, anak menirukan; (4) <strong>tidak ada hukuman</strong> jika lupa; (5) modelkan, jangan hanya mengajarkan.",
+          en: "Five proven principles: (1) <strong>one du'a per week</strong>, not one per day; (2) teach <strong>in context</strong> — the meal du'a when about to eat, not at a study desk; (3) <strong>the parent reads first</strong>, the child imitates; (4) <strong>no punishment</strong> for forgetting; (5) model it, don't just instruct it.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa lama sampai anak hafal doa harian?",
+          en: "How long until a child memorizes the daily du'as?",
+        },
+        answer: {
+          id: "Untuk sebagian besar anak, sekitar <strong>3 bulan konsisten</strong> membuat lima doa pertama menjadi otomatis, dan setelah <strong>6 bulan</strong> anak biasanya membacanya sendiri tanpa diingatkan. Anak yang butuh waktu lebih lama tidak masalah — tidak ada balapan.",
+          en: "For most children, about <strong>3 consistent months</strong> makes the first five du'as automatic, and after <strong>6 months</strong> they usually recite them unprompted. Children who need longer are fine — there's no race.",
+        },
+      },
+      {
+        question: {
+          id: "Haruskah anak dihukum kalau lupa membaca doa?",
+          en: "Should a child be punished for forgetting a du'a?",
+        },
+        answer: {
+          id: "Tidak. Asosiasi anak dengan doa harus <strong>positif</strong>. Kalau anak lupa Bismillah sebelum makan, cukup katakan santai: \"Lupa Bismillah ya? Yuk diulang.\" Orang tua yang sendiri lupa Bismillah tapi memarahi anak yang lupa justru mengajarkan kemunafikan kecil — anak meniru lebih dari yang ia dengar.",
+          en: "No. A child's association with du'a must stay <strong>positive</strong>. If they forget Bismillah before eating, just say lightly: \"Forgot Bismillah? Let's say it.\" A parent who forgets it themselves but scolds the child teaches a small hypocrisy — children imitate more than they hear.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -1953,9 +2047,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["emosi", "parenting", "akhlak", "sunnah"],
     published: "2026-05-24",
-    updated: "2026-05-24",
+    updated: "2026-09-12",
     readingTimeMin: 9,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Bagaimana cara meredakan marah ke anak menurut sunnah?",
+          en: "How do I calm anger toward my child the Sunnah way?",
+        },
+        answer: {
+          id: "Rasulullah ﷺ memberi protokol lima langkah yang bisa dilakukan dalam ±30 detik: (1) <strong>ta'awwudz</strong> — \"A'udzu billahi minasy-syaithonir-rajim\"; (2) <strong>ganti posisi</strong> — berdiri lalu duduk, lalu berbaring; (3) <strong>ambil wudhu</strong> (\"marah dari api, dipadamkan dengan air\"); (4) <strong>diam</strong>, jangan bicara; (5) <strong>tinggalkan ruangan</strong> sebentar setelah memastikan anak aman.",
+          en: "The Prophet ﷺ gave a five-step protocol you can run in ~30 seconds: (1) <strong>ta'awwudz</strong> — \"A'udhu billahi minash-shaytanir-rajim\"; (2) <strong>change posture</strong> — if standing, sit, then lie down; (3) <strong>make wudu</strong> (\"anger is from fire, extinguished by water\"); (4) <strong>stay silent</strong>; (5) <strong>briefly leave the room</strong> after making sure the child is safe.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah normal orang tua marah ke anak?",
+          en: "Is it normal for parents to get angry at their kids?",
+        },
+        answer: {
+          id: "Ya — <strong>setiap orang tua muslim pernah marah</strong>, dan marah itu manusiawi. Yang membedakan bukan seberapa sering, tapi seberapa cepat amarah mereda dan apa yang dilakukan setelahnya. Sering kali marah berlebihan adalah tanda kelelahan, kurang tidur, atau tekanan — kasihanilah dirimu juga.",
+          en: "Yes — <strong>every Muslim parent gets angry</strong>, and anger is human. What differs isn't how often, but how quickly it subsides and what you do afterward. Excess anger is often a sign of exhaustion, lack of sleep, or pressure — be gentle with yourself too.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang harus dilakukan setelah terlanjur membentak anak?",
+          en: "What should I do after I've already yelled at my child?",
+        },
+        answer: {
+          id: "Yang menentukan bukan kejadiannya, tapi apa yang dilakukan setelahnya. Beri anak ruang tenang 5–10 menit, datang di ketinggian mereka (jongkok, jangan menjulang), lalu <strong>minta maaf dengan jujur tanpa \"tapi\"</strong>: \"Mama tadi marah dan suaranya keras. Mama minta maaf. Kamu ga salah.\" Tutup dengan janji yang realistis: \"Mama akan coba lebih tenang\" — bukan \"tidak akan pernah marah lagi\".",
+          en: "What matters isn't the incident but what follows. Give the child 5–10 minutes to settle, come down to their level (crouch, don't loom), then <strong>apologize honestly with no \"but\"</strong>: \"I was angry and my voice was loud. I'm sorry. You did nothing wrong.\" Close with a realistic promise: \"I'll try to stay calmer\" — not \"I'll never get angry again.\"",
+        },
+      },
+      {
+        question: {
+          id: "Kenapa tidak boleh berkata kasar saat marah ke anak?",
+          en: "Why shouldn't I say harsh words when angry at my child?",
+        },
+        answer: {
+          id: "Sebagian besar luka jangka panjang yang ditinggalkan orang tua bukan pukulan — tapi <strong>kata-kata</strong> yang terucap saat marah, dan sekali keluar tidak bisa ditarik. Lebih berat lagi: Rasulullah ﷺ memperingatkan agar <strong>jangan mendoakan keburukan untuk anak</strong>, karena ucapan kemarahan orang tua bisa menjadi doa yang dikabulkan. Karena itu langkah \"diam\" begitu penting.",
+          en: "Most long-term wounds parents leave aren't blows — they're the <strong>words</strong> spoken in anger, and once out they can't be recalled. Worse: the Prophet ﷺ warned <strong>never to invoke bad against your children</strong>, because a parent's angry words can become an answered supplication. That's why the \"stay silent\" step matters so much.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -2074,9 +2210,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["masjid", "sholat", "parenting", "identitas"],
     published: "2026-05-23",
-    updated: "2026-05-23",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Umur berapa anak boleh diajak ke masjid?",
+          en: "At what age can I take my child to the mosque?",
+        },
+        answer: {
+          id: "Tidak ada usia minimum, tapi pengalaman yang bermakna biasanya mulai sekitar <strong>usia 3 tahun</strong> — saat anak bisa diajak komunikasi singkat dan menahan diri 5–10 menit. Panduan kasar: 0–2 tahun hanya hari raya/acara khusus; 3–5 tahun sholat Maghrib di masjid dekat rumah 1–2× seminggu; 6+ lebih sering, mulai diajak Jum'at dan tarawih pendek.",
+          en: "There's no minimum age, but meaningful experiences usually start around <strong>age 3</strong> — when a child can handle brief communication and hold still for 5–10 minutes. Rough guide: ages 0–2 only for Eid/special occasions; 3–5 for Maghrib at a nearby mosque 1–2× a week; 6+ more often, starting Jumu'ah and short tarawih.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana kalau anak menangis atau mengganggu jamaah di masjid?",
+          en: "What if my child cries or disturbs the congregation?",
+        },
+        answer: {
+          id: "Jangan panik. Ambil anak, keluar pelan, dan tenangkan. <strong>Tidak ada jamaah yang baik akan menegur seorang ayah yang membawa anaknya</strong> — Rasulullah ﷺ sendiri sholat sambil menggendong cucunya, Umamah. Pilih shaf di pinggir dekat pintu agar mudah keluar bila perlu, dan fokus pada apa yang sedang kamu bangun jangka panjang.",
+          en: "Don't panic. Pick the child up, step out gently, and soothe them. <strong>No good worshipper will reproach a father who brought his child</strong> — the Prophet ﷺ himself prayed while carrying his granddaughter Umamah. Choose a row on the edge near the door for an easy exit, and stay focused on what you're building long term.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang perlu disiapkan sebelum mengajak anak ke masjid?",
+          en: "What should I prepare before taking my child to the mosque?",
+        },
+        answer: {
+          id: "Lima persiapan sederhana: <strong>ke toilet dulu</strong> (sering dilupakan), <strong>beri makan ringan</strong> (anak lapar = rewel), <strong>pakaian nyaman</strong> yang tidak gatal, <strong>kit darurat</strong> (tisu, buku gambar tipis, satu mainan tenang), dan <strong>cerita singkat di jalan</strong>: \"Kita ke rumah Allah. Adik tunggu Mama selesai sholat ya.\"",
+          en: "Five simple prep steps: <strong>use the toilet first</strong> (often forgotten), <strong>a light snack</strong> (a hungry child is fussy), <strong>comfortable clothes</strong> that don't itch, an <strong>emergency kit</strong> (tissues, a thin drawing book, one quiet toy), and a <strong>short story on the way</strong>: \"We're going to Allah's house. Wait while Mama finishes praying, okay?\"",
+        },
+      },
+      {
+        question: {
+          id: "Di mana sebaiknya posisi anak saat sholat berjamaah?",
+          en: "Where should my child stand during congregational prayer?",
+        },
+        answer: {
+          id: "Anak berdiri <strong>di sebelah</strong> orang tua, bukan di belakang — mereka perlu <em>melihat</em> ayahnya rukuk dan sujud, karena itulah pelajaran yang paling membekas. Pilih shaf di pinggir dekat pintu. Jika anak gelisah di rakaat ketiga, biarkan; mereka sudah memberi yang mereka bisa.",
+          en: "The child stands <strong>beside</strong> the parent, not behind — they need to <em>see</em> the bowing and prostration, because that's the lesson that sticks. Pick an edge row near the door. If they get restless by the third rakaat, let it be; they've given what they can.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -2201,9 +2379,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["cerita-nabi", "parenting", "tarbiyah"],
     published: "2026-05-22",
-    updated: "2026-05-22",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Bagaimana cara bercerita kisah nabi agar anak mengingatnya seumur hidup?",
+          en: "How do I tell prophet stories so a child remembers them for life?",
+        },
+        answer: {
+          id: "Ubah <em>informasi</em> menjadi <em>pengalaman</em>. Tiga prinsip: (1) hadirkan <strong>karakter yang anak kenali</strong> — \"anak kecil yang dihanyutkan di sungai\" lebih membekas daripada \"Nabi Musa yang shalih\"; (2) tambahkan <strong>detail kecil</strong> yang membuat dunia hidup (sumur yang gelap dan dingin); (3) <strong>bertanya, bukan menjelaskan</strong> — \"Menurut adik, gimana perasaan Nabi Yusuf di dalam sumur?\"",
+          en: "Turn <em>information</em> into <em>experience</em>. Three principles: (1) bring in a <strong>character the child recognizes</strong> — \"a little boy set adrift on a river\" lands harder than \"the righteous Prophet Musa\"; (2) add <strong>small sensory details</strong> that make the world alive (the dark, cold well); (3) <strong>ask, don't explain</strong> — \"How do you think Prophet Yusuf felt in the well?\"",
+        },
+      },
+      {
+        question: {
+          id: "Berapa lama durasi ideal bercerita kisah nabi untuk anak?",
+          en: "How long should a prophet story for kids be?",
+        },
+        answer: {
+          id: "<strong>Maksimal 7 menit, sekitar 3× seminggu.</strong> Pilih waktu yang sudah ada — sebelum tidur paling alami. Satu kisah dibagi sepekan: Senin (kenalan), Rabu (puncak konflik), Jumat (resolusi). Anak yang ingin lebih akan meminta sendiri.",
+          en: "<strong>Seven minutes max, about 3× a week.</strong> Use a slot that already exists — bedtime is most natural. Split one story across the week: Monday (setup), Wednesday (climax), Friday (resolution). A child who wants more will ask.",
+        },
+      },
+      {
+        question: {
+          id: "Kisah nabi apa yang cocok untuk anak yang baru mulai?",
+          en: "Which prophet stories are best to start with?",
+        },
+        answer: {
+          id: "Lima kisah pembuka yang kaya emosi: <strong>Nabi Ibrahim</strong> (berani berbeda), <strong>Nabi Yusuf</strong> (saudara yang iri), <strong>Nabi Musa</strong> (bayi yang dihanyutkan, tawakal seorang ibu), <strong>Nabi Yunus</strong> (doa di saat susah), dan <strong>Nabi Muhammad ﷺ</strong> (masa kecil bersama Halimah). Anak yang tumbuh dengan kisah ini punya cadangan emosi: saat takut mereka punya Yunus, saat dikhianati mereka punya Yusuf.",
+          en: "Five emotionally rich openers: <strong>Ibrahim</strong> (daring to be different), <strong>Yusuf</strong> (jealous brothers), <strong>Musa</strong> (the baby set adrift, a mother's trust), <strong>Yunus</strong> (prayer in hardship), and <strong>Muhammad ﷺ</strong> (childhood with Halimah). Children raised on these build an emotional reserve: when afraid they have Yunus, when betrayed they have Yusuf.",
+        },
+      },
+      {
+        question: {
+          id: "Apa yang harus dihindari saat bercerita kisah nabi ke anak?",
+          en: "What should I avoid when telling prophet stories?",
+        },
+        answer: {
+          id: "Empat hal: (1) <strong>jangan menambah cerita dari sumber tidak jelas</strong> — pilih dari Qur'an atau hadith shahih; (2) jangan menakut-nakuti anak 4 tahun dengan detail siksa; (3) jangan <strong>moralisasi</strong> di akhir (\"makanya kamu harus rajin sholat\") — itu merusak pengalaman; (4) jangan membaca dari HP — anak menyerap bahwa cerita ini tidak cukup penting untuk dihafal.",
+          en: "Four things: (1) <strong>don't add material from unclear sources</strong> — draw from the Qur'an or authentic hadith; (2) don't frighten a 4-year-old with graphic punishment; (3) don't <strong>moralize</strong> at the end (\"so that's why you must pray\") — it ruins the experience; (4) don't read off your phone — the child absorbs that the story wasn't important enough to know by heart.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -2352,9 +2572,41 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["saudara", "adab", "parenting", "akhlak"],
     published: "2026-05-21",
-    updated: "2026-05-21",
+    updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Bagaimana cara mengurangi pertengkaran kakak-adik menurut Islam?",
+          en: "How can I reduce sibling fighting the Islamic way?",
+        },
+        answer: {
+          id: "Kuncinya <strong>adab yang ditanam</strong>, dan sering kali akarnya ada pada orang tua, bukan anak. Rasulullah ﷺ bersabda: \"Bertakwalah kepada Allah dan berlaku adillah di antara anak-anak kalian\" (HR. Bukhari 2587, Muslim 1623) — hadith ini ditujukan kepada <em>orang tua</em>. Empat adab yang dibiasakan: panggilan yang baik, salam & minta izin sebelum masuk kamar, berbagi tanpa dipaksa, dan saling mendoakan.",
+          en: "The key is the <strong>manners you instill</strong>, and the root is often the parents, not the children. The Prophet ﷺ said: \"Fear Allah and be just among your children\" (Bukhari 2587, Muslim 1623) — addressed to <em>parents</em>. Four manners to build: kind forms of address, greeting & asking permission before entering a room, sharing without being forced, and praying for one another.",
+        },
+      },
+      {
+        question: {
+          id: "Apakah kakak harus selalu mengalah pada adik?",
+          en: "Should the older sibling always give in to the younger?",
+        },
+        answer: {
+          id: "Tidak. Kalimat \"Kamu kan kakak, harus ngalah\" justru <strong>mengajarkan ketidakadilan</strong> dan menanam rasa tidak dihargai. Begitu juga membanding-bandingkan (\"lihat adek, lebih pintar\") menanam iri yang sulit dicabut. Adil bukan berarti sama persis, tapi setiap anak merasa haknya dihormati.",
+          en: "No. Saying \"You're the older one, you must give in\" actually <strong>teaches injustice</strong> and plants a sense of being unappreciated. Likewise, comparisons (\"look, your sibling is smarter\") plant hard-to-remove envy. Fairness isn't identical treatment — it's each child feeling their rights are respected.",
+        },
+      },
+      {
+        question: {
+          id: "Apa langkah menengahi saat anak-anak sedang bertengkar?",
+          en: "What steps should I take to mediate a fight between kids?",
+        },
+        answer: {
+          id: "Empat langkah: (1) <strong>pisahkan dulu</strong> — masing-masing ke ruang sendiri ±5 menit; (2) <strong>dengar bergantian</strong> — yang lebih muda bicara dulu; (3) <strong>cari fakta, bukan menyalahkan</strong> — \"Jadi tadi kakak ambil mainan, lalu adek dorong. Begitu?\"; (4) <strong>minta maaf sambil tatap mata</strong>, lalu pelukan. Hindari mengungkit kesalahan lama — setiap pertengkaran adalah pertengkaran baru.",
+          en: "Four steps: (1) <strong>separate first</strong> — each to their own space for ~5 minutes; (2) <strong>listen in turns</strong> — the younger speaks first; (3) <strong>find facts, not blame</strong> — \"So you took the toy, then your brother pushed. Right?\"; (4) <strong>apologize with eye contact</strong>, then a hug. Don't dredge up old mistakes — each fight is a new one.",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -2535,9 +2787,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["dzikir", "doa", "perlindungan", "rutinitas"],
     published: "2026-05-20",
-    updated: "2026-05-20",
+    updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Apa doa perlindungan pagi dan petang yang paling sederhana untuk anak?",
+          en: "What's the simplest morning & evening protection du'a for a child?",
+        },
+        answer: {
+          id: "Untuk anak 3–6 tahun, mulai dari satu doa yang sama di pagi dan petang: <strong>\"Bismillahilladzi la yadhurru ma'asmihi syai'un fil-ardhi wa la fis-sama', wa huwas-sami'ul-'alim\"</strong> (dibaca 3×) — \"Dengan nama Allah yang dengan menyebut nama-Nya, segala sesuatu di bumi dan langit tidak akan memberi mudharat.\" Rasulullah ﷺ menjanjikan perlindungan menyeluruh bagi yang membacanya 3× pagi dan petang.",
+          en: "For ages 3–6, start with one du'a used both morning and evening: <strong>\"Bismillahilladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama', wa huwas-sami'ul-'alim\"</strong> (recited 3×) — \"In the name of Allah, with whose name nothing on earth or in heaven can cause harm.\" The Prophet ﷺ promised complete protection to whoever recites it 3× morning and evening.",
+        },
+      },
+      {
+        question: {
+          id: "Kapan waktu membaca dzikir pagi dan petang untuk anak?",
+          en: "When should a child recite the morning and evening adhkar?",
+        },
+        answer: {
+          id: "<strong>Pagi</strong> adalah pintu masuk hari — untuk anak, sebelum berangkat sekolah, sebelum bertemu dunia yang lebih besar dari rumah. <strong>Petang</strong> adalah pintu masuk malam — sebelum anak tidur sendirian di kamarnya. Manfaatkan waktu yang sudah ada: sambil pakai sepatu di pagi hari, sambil menunggu Maghrib di sore hari.",
+          en: "<strong>Morning</strong> is the day's gateway — for a child, before leaving for school, before meeting the world beyond home. <strong>Evening</strong> is the night's gateway — before they sleep alone in their room. Use existing moments: while putting on shoes in the morning, while waiting for Maghrib in the evening.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana membangun rutinitas dzikir pada anak?",
+          en: "How do I build a daily adhkar routine for a child?",
+        },
+        answer: {
+          id: "Pola empat minggu: <strong>Minggu 1</strong> — orang tua membaca dengan suara terdengar, anak cukup mengamati; <strong>Minggu 2</strong> — ajak menirukan, sekali pagi sekali petang; <strong>Minggu 3</strong> — balik posisi, anak yang memimpin dan orang tua membantu jika lupa; <strong>Minggu 4</strong> — otomatis. Kalau belum, lanjut dengan ritme yang sama; tidak ada balapan. Pegang tangan anak saat membaca agar terasa bermakna.",
+          en: "A four-week pattern: <strong>Week 1</strong> — the parent recites audibly, the child just watches; <strong>Week 2</strong> — invite them to repeat, once morning, once evening; <strong>Week 3</strong> — flip roles, the child leads and you help if they forget; <strong>Week 4</strong> — automatic. If not yet, continue the same rhythm; there's no race. Hold the child's hand while reciting to make it feel meaningful.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa banyak doa yang perlu diajarkan di awal?",
+          en: "How many du'as should I teach at first?",
+        },
+        answer: {
+          id: "Cukup <strong>satu doa di pagi dan satu di petang</strong> — tidak perlu langsung hafal sepuluh. Setelah anak nyaman (biasanya usia 7–8), baru tambahkan Al-Ikhlas, Al-Falaq, An-Nas (3× pagi/petang) dan Ayat Kursi. Prinsipnya: <strong>lebih baik 2 doa rutin daripada 10 doa terlupakan.</strong>",
+          en: "Just <strong>one du'a in the morning and one in the evening</strong> — no need to memorize ten at once. Once the child is comfortable (usually age 7–8), add Al-Ikhlas, Al-Falaq, An-Nas (3× morning/evening) and Ayat al-Kursi. The principle: <strong>two consistent du'as beat ten forgotten ones.</strong>",
+        },
+      },
+    ],
   },
 
   // ─────────────────────────────────────────────────────────────────
@@ -2608,9 +2902,51 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["hijaiyah", "parenting", "edukasi"],
     published: "2026-05-23",
-    updated: "2026-05-23",
+    updated: "2026-09-12",
     readingTimeMin: 6,
     author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Umur berapa anak mulai belajar huruf hijaiyah?",
+          en: "At what age should a child start learning the hijaiyah letters?",
+        },
+        answer: {
+          id: "Usia <strong>3–6 tahun</strong> adalah <em>golden age</em> — masa otak menyerap informasi paling cepat. Mengenalkan huruf hijaiyah di usia ini bukan sekadar hafalan, tapi membangun fondasi cinta Al-Qur'an seumur hidup. Yang penting bukan kecepatan, tapi konsistensi dan kesenangan.",
+          en: "Ages <strong>3–6</strong> are the <em>golden age</em> — when the brain absorbs information fastest. Introducing the hijaiyah letters now isn't just memorization; it lays a lifelong foundation of love for the Qur'an. What matters isn't speed but consistency and enjoyment.",
+        },
+      },
+      {
+        question: {
+          id: "Berapa huruf hijaiyah yang sebaiknya diajarkan di awal?",
+          en: "How many hijaiyah letters should I teach at the start?",
+        },
+        answer: {
+          id: "Mulai dari <strong>3 huruf, bukan 28</strong>. Kesalahan umum adalah ingin anak hafal Alif sampai Ya' dalam seminggu — otak balita belum siap. Mulai dari Alif (ا), Ba (ب), Ta (ت), dan kuasai tiga huruf ini selama 3–5 hari sebelum menambah yang berikutnya.",
+          en: "Start with <strong>3 letters, not 28</strong>. The common mistake is wanting a child to memorize Alif through Ya in a week — a toddler's brain isn't ready. Begin with Alif (ا), Ba (ب), Ta (ت), and master these three over 3–5 days before adding more.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana cara mengenalkan huruf hijaiyah yang menyenangkan?",
+          en: "What are fun ways to introduce the hijaiyah letters?",
+        },
+        answer: {
+          id: "Gabungkan beberapa cara: <strong>lagu hijaiyah</strong> (otak anak menyerap melodi jauh lebih cepat dari kata biasa), <strong>kartu bergambar warna kontras</strong> yang ditempel di kulkas, <strong>game interaktif</strong> ramah anak, dan <strong>tracing dengan jari</strong> di nampan pasir atau krayon. Selalu rayakan kemajuan kecil: \"Subhanallah, kakak sudah hafal 5 huruf!\"",
+          en: "Mix several methods: a <strong>hijaiyah song</strong> (children absorb melody far faster than plain words), <strong>high-contrast picture cards</strong> stuck on the fridge, a child-friendly <strong>interactive game</strong>, and <strong>finger tracing</strong> in a sand tray or with crayons. Always celebrate small wins: \"SubhanAllah, you know 5 letters now!\"",
+        },
+      },
+      {
+        question: {
+          id: "Berapa lama waktu belajar hijaiyah yang ideal per hari?",
+          en: "How much daily practice is ideal for learning hijaiyah?",
+        },
+        answer: {
+          id: "<strong>10 menit setiap hari</strong> jauh lebih efektif daripada satu sesi panjang seminggu sekali. Konsistensi 10 menit/hari selama 4 minggu menghasilkan retensi sekitar <strong>3× lipat</strong> dibanding 70 menit dalam satu kali pertemuan. Sedikit tapi rutin mengalahkan banyak tapi jarang.",
+          en: "<strong>Ten minutes every day</strong> beats one long weekly session. Consistent 10 minutes/day for 4 weeks yields roughly <strong>3× the retention</strong> of 70 minutes in a single sitting. A little but regular beats a lot but rare.",
+        },
+      },
+    ],
   },
 
   {

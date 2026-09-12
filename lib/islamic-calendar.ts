@@ -127,6 +127,27 @@ export const islamicCalendar: IslamicEvent[] = [
     parentingSlugs: ["puasa-pertama"],
   },
   {
+    // Rabiul Awwal — the month of the Prophet's ﷺ birth. Indonesian
+    // families mark Maulid across the whole month, not just the 12th,
+    // so the window spans Rabiul Awwal 1448 (approx.) to keep the
+    // homepage banner meaningful through the season.
+    id: "maulid-1448",
+    hijri: "Rabiul Awwal 1448",
+    name: { id: "Maulid Nabi 1448 H", en: "Mawlid an-Nabi 1448 H" },
+    caption: {
+      id: "Bulan kelahiran Rasulullah ﷺ — momen mengenalkan akhlak dan kisah Nabi kepada anak.",
+      en: "The month of the Prophet's ﷺ birth — a time to introduce his character and story to children.",
+    },
+    startISO: "2026-08-24",
+    endISO: "2026-09-23",
+    blogSlug: "maulid-mengenalkan-rasulullah-pada-anak",
+    extraBlogSlugs: [
+      "cara-bercerita-kisah-nabi-untuk-anak",
+    ],
+    doaSlugs: ["doa-pagi", "doa-petang"],
+    parentingSlugs: ["adab-sehari-hari"],
+  },
+  {
     id: "rajab-1448",
     hijri: "Rajab 1448",
     name: { id: "Bulan Rajab", en: "Month of Rajab" },
