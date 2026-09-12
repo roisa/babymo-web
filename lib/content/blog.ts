@@ -1541,6 +1541,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Sepuluh hari pertama Dzulhijjah adalah hari-hari yang amal salehnya paling dicintai Allah (HR. Bukhari 969). Untuk anak, ini bukan soal mengikuti semua amalan dewasa — tapi menanam memori bahwa hari-hari ini istimewa.",
+        en: "The first ten days of Dhul-Hijjah are days when good deeds are most beloved to Allah (Bukhari 969). For a child, it's not about matching adult worship — it's about planting the memory that these days are special.",
+      },
+      carousel: {
+        id: [
+          { title: "10 Hari Dzulhijjah Bareng Anak — 1/7", body: "Rasulullah ﷺ bersabda: amal saleh di 10 hari ini lebih dicintai Allah daripada hari lain (HR. Bukhari 969). Panduan hari-per-hari." },
+          { title: "Hari 1–3: Bangun suasana", body: "Belum perlu puasa. Ceritakan kisah Ibrahim & Ismail sesuai usia. Dekorasi ringan. Mulai biasakan takbir setelah sholat." },
+          { title: "Hari 4–6: Latihan puasa pendek", body: "Anak 5+ yang penasaran: coba puasa setengah hari (sahur–Dzuhur). Bukan kewajiban, bukan ujian. Sediakan aktivitas agar lupa lapar." },
+          { title: "Hari Arafah (9 Dzulhijjah)", body: "Puncak spiritual. Untuk anak: ceritakan jutaan jamaah wukuf di Arafah. Perbanyak doa bersama, sebut nama anak dalam doamu." },
+          { title: "Idul Adha (10 Dzulhijjah)", body: "Sholat Ied bersama, baju terbaik, takbir. Libatkan anak melihat proses kurban — napak tilas Nabi Ibrahim ﷺ." },
+          { title: "Hari Tasyriq (11–13)", body: "Hari makan-makan dan bersyukur. Bagikan daging kurban bersama anak — pelajaran berbagi yang nyata." },
+          { title: "Inti untuk anak", body: "Idul Adha berbeda dari Idul Fitri, dan kurban punya cerita yang dimulai dari cinta Ibrahim kepada Allah. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "10 Days of Dhul-Hijjah with Kids — 1/7", body: "The Prophet ﷺ said good deeds in these 10 days are more beloved to Allah than any other (Bukhari 969). A day-by-day guide." },
+          { title: "Days 1–3: Build atmosphere", body: "No fasting needed. Tell the Ibrahim & Ismail story by age. Light decorations. Begin the takbir habit after prayer." },
+          { title: "Days 4–6: Short fasting practice", body: "Curious 5+ kids: try a half-day fast (sahur–Dhuhr). Not an obligation, not a test. Offer activities to distract from hunger." },
+          { title: "Day of Arafah (9th)", body: "The spiritual peak. For kids: describe millions of pilgrims at Arafah. Increase du'a together; name your child in your prayers." },
+          { title: "Eid al-Adha (10th)", body: "Eid prayer together, best clothes, takbir. Let the child witness the qurbani — following Prophet Ibrahim's ﷺ example." },
+          { title: "Days of Tashriq (11–13)", body: "Days of eating and gratitude. Distribute the qurbani meat with your child — a real lesson in sharing." },
+          { title: "The core for kids", body: "Eid al-Adha differs from Eid al-Fitr, and the sacrifice has a story that began with Ibrahim's love for Allah. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Ada 10 hari yang amalnya lebih dicintai Allah daripada hari lain — dan kebanyakan keluarga melewatinya begitu saja.
+
+[3–15 detik] MASALAH: 10 hari Dzulhijjah sering lewat tanpa terasa istimewa di rumah dengan anak kecil. Padahal ini momen emas.
+
+[15–35 detik] SOLUSI: Hari 1–3 bangun suasana + cerita Nabi Ibrahim. Hari 4–6 latihan puasa setengah hari (opsional). Hari Arafah perbanyak doa. Idul Adha libatkan anak lihat kurban.
+
+[35–55 detik] BUKTI: "Amal saleh di 10 hari ini lebih dicintai Allah" (HR. Bukhari 969). Untuk anak, tujuannya bukan sempurna — tapi menanam memori bahwa hari ini istimewa.
+
+[55–60 detik] CTA: "Simpan panduan hari-per-hari ini sebelum Dzulhijjah."`,
+        en: `[0–3s] HOOK: There are 10 days whose deeds are more beloved to Allah than any other — and most families let them slip by.
+
+[3–15s] PROBLEM: The 10 days of Dhul-Hijjah often pass without feeling special in a home with young kids. Yet they're golden.
+
+[15–35s] SOLUTION: Days 1–3 build atmosphere + the Ibrahim story. Days 4–6 optional half-day fasting. Day of Arafah, more du'a. Eid al-Adha, involve the child in the qurbani.
+
+[35–55s] PROOF: "Good deeds in these 10 days are most beloved to Allah" (Bukhari 969). For a child the aim isn't perfection — it's planting the memory that these days are special.
+
+[55–60s] CTA: "Save this day-by-day guide before Dhul-Hijjah."`,
+      },
+      pin: {
+        id: {
+          title: "10 Hari Dzulhijjah Bareng Anak: Panduan Hari-per-Hari",
+          description: "Cara mengisi 10 hari pertama Dzulhijjah bersama anak menuju Idul Adha: suasana, takbir, latihan puasa, hari Arafah, dan kurban. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "10 Days of Dhul-Hijjah with Kids: A Day-by-Day Guide",
+          description: "How to fill the first 10 days of Dhul-Hijjah with your child toward Eid al-Adha: atmosphere, takbir, fasting practice, Arafah, and qurbani. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Hari 1–3: cerita Nabi Ibrahim & Ismail sesuai usia anak",
+          "Dekorasi ringan + mulai biasakan takbir setelah sholat",
+          "Hari 4–6: latihan puasa setengah hari (opsional, anak 5+)",
+          "Sediakan aktivitas agar anak lupa lapar (buku, jalan pagi)",
+          "Hari Arafah (9): perbanyak doa, sebut nama anak",
+          "Idul Adha (10): sholat Ied, baju terbaik, takbir",
+          "Libatkan anak melihat proses kurban",
+          "Hari Tasyriq (11–13): bagikan daging kurban bersama anak",
+          "Tekankan bedanya Idul Adha & Idul Fitri",
+          "Ceritakan kurban sebagai kisah cinta Ibrahim kepada Allah",
+        ],
+        en: [
+          "Days 1–3: tell the Ibrahim & Ismail story by the child's age",
+          "Light decorations + begin the takbir habit after prayer",
+          "Days 4–6: half-day fasting practice (optional, ages 5+)",
+          "Offer activities to distract from hunger (books, morning walk)",
+          "Day of Arafah (9th): more du'a, name your child",
+          "Eid al-Adha (10th): Eid prayer, best clothes, takbir",
+          "Let the child witness the qurbani process",
+          "Days of Tashriq (11–13): distribute the meat with your child",
+          "Emphasize how Eid al-Adha differs from Eid al-Fitr",
+          "Tell the sacrifice as Ibrahim's love story with Allah",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -3484,6 +3566,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Kamu tidak bisa menjaga anakmu 24 jam. Tapi kamu bisa mengajarinya meminta penjagaan dari Yang Maha Menjaga — setiap pagi sebelum ia keluar pintu, setiap petang sebelum tidur. Itu warisan yang tidak terlihat, tapi terasa seumur hidupnya.",
+        en: "You can't protect your child 24 hours a day. But you can teach them to ask protection from the Ever-Watchful — every morning before they step out, every evening before sleep. An invisible legacy they'll feel for life.",
+      },
+      carousel: {
+        id: [
+          { title: "Dzikir Pagi & Petang untuk Anak — 1/7", body: "Islam memberi lebih dari sekadar kekhawatiran: ada amal yang bisa kita ajarkan pada anak yang menjadi perlindungan dirinya sendiri." },
+          { title: "Kenapa pagi & petang", body: "\"Sebutlah nama Tuhanmu pada pagi dan petang\" (QS. Al-Insan 25). Pagi = pintu masuk hari. Petang = pintu masuk malam." },
+          { title: "Versi paling sederhana", body: "Untuk anak 3–6, satu doa yang sama pagi & petang: \"Bismillahilladzi la yadhurru ma'asmihi syai'un…\" (3×). Tidak perlu hafal sepuluh." },
+          { title: "Minggu 1–2", body: "Minggu 1: orang tua baca, anak mengamati. Minggu 2: ajak menirukan — sekali pagi, sekali petang. Pegang tangan anak saat membaca." },
+          { title: "Minggu 3–4", body: "Minggu 3: balik posisi, anak yang memimpin, bantu kalau lupa. Minggu 4: otomatis. Belum? Lanjut ritme yang sama. Tidak ada balapan." },
+          { title: "Apa yang berubah", body: "Setelah 2–3 bulan: anak yang cemas berangkat sekolah lebih tenang, yang sulit tidur cepat tertidur — dan mulai mengajak orang tuanya membaca." },
+          { title: "Setelah terbiasa", body: "Usia 7–8: tambah Al-Ikhlas, Al-Falaq, An-Nas & Ayat Kursi. Tapi 2 doa rutin > 10 doa terlupakan. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Morning & Evening Adhkar for Kids — 1/7", body: "Islam gives more than worry: deeds we can teach a child that become their own protection." },
+          { title: "Why morning & evening", body: "\"Remember the name of your Lord morning and evening\" (Al-Insan 25). Morning = the day's gateway. Evening = the night's gateway." },
+          { title: "The simplest version", body: "For ages 3–6, one du'a both times: \"Bismillahilladhi la yadurru ma'asmihi shay'un…\" (3×). No need to memorize ten." },
+          { title: "Weeks 1–2", body: "Week 1: parent recites, child watches. Week 2: invite them to repeat — once morning, once evening. Hold the child's hand while reciting." },
+          { title: "Weeks 3–4", body: "Week 3: flip roles, the child leads, you help if they forget. Week 4: automatic. Not yet? Keep the rhythm. No race." },
+          { title: "What changes", body: "After 2–3 months: an anxious child is calmer going to school, a restless one falls asleep faster — and starts inviting you to recite." },
+          { title: "Once it's a habit", body: "Ages 7–8: add Al-Ikhlas, Al-Falaq, An-Nas & Ayat al-Kursi. But 2 consistent du'as > 10 forgotten ones. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Kamu tidak bisa jaga anakmu 24 jam. Tapi kamu bisa ajari dia satu doa perlindungan.
+
+[3–15 detik] MASALAH: Orang tua khawatir — anak main di luar, tidur sendirian, berangkat sekolah. Tapi kekhawatiran saja tidak menjaga.
+
+[15–35 detik] SOLUSI: Ajari satu doa pagi & petang: "Bismillahilladzi la yadhurru ma'asmihi syai'un…" 3 kali. Pagi sebelum keluar pintu, petang sebelum tidur. Cukup satu, tidak perlu sepuluh.
+
+[35–55 detik] BUKTI: Rasulullah ﷺ menjanjikan perlindungan menyeluruh bagi yang membacanya 3× pagi/petang. Bangun rutinitas 4 minggu: orang tua dulu, lalu anak memimpin.
+
+[55–60 detik] CTA: "Simpan doanya. Mulai besok pagi."`,
+        en: `[0–3s] HOOK: You can't guard your child 24/7. But you can teach them one protection du'a.
+
+[3–15s] PROBLEM: Parents worry — kids playing outside, sleeping alone, heading to school. But worry alone doesn't protect.
+
+[15–35s] SOLUTION: Teach one du'a morning & evening: "Bismillahilladhi la yadurru ma'asmihi shay'un…" 3 times. Morning before the door, evening before sleep. Just one, not ten.
+
+[35–55s] PROOF: The Prophet ﷺ promised complete protection to whoever recites it 3× morning/evening. Build it over 4 weeks: parent first, then the child leads.
+
+[55–60s] CTA: "Save the du'a. Start tomorrow morning."`,
+      },
+      pin: {
+        id: {
+          title: "Dzikir Pagi & Petang Anak: Rutinitas Perlindungan Harian",
+          description: "Satu doa perlindungan pagi & petang untuk anak + cara membangun rutinitasnya dalam 4 minggu. Sederhana, tanpa memaksa. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "Morning & Evening Adhkar: A Child's Daily Protection",
+          description: "One morning & evening protection du'a for children + how to build the routine in 4 weeks. Simple, without forcing. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Mulai satu doa yang sama untuk pagi dan petang",
+          "Pagi: sebelum berangkat sekolah / keluar rumah",
+          "Petang: sebelum malam / sebelum tidur",
+          "Minggu 1: orang tua baca, anak cukup mengamati",
+          "Minggu 2: ajak anak menirukan, pegang tangannya",
+          "Minggu 3: anak memimpin, bantu kalau lupa",
+          "Minggu 4: biarkan otomatis — tidak ada balapan",
+          "Manfaatkan waktu yang sudah ada (pakai sepatu, tunggu Maghrib)",
+          "Jangan korelasikan dengan hukuman kalau lupa",
+          "Usia 7–8: tambah Al-Ikhlas, Al-Falaq, An-Nas, Ayat Kursi",
+        ],
+        en: [
+          "Start with one du'a used both morning and evening",
+          "Morning: before school / leaving the house",
+          "Evening: before night / before sleep",
+          "Week 1: parent recites, child just watches",
+          "Week 2: invite the child to repeat, hold their hand",
+          "Week 3: the child leads, help if they forget",
+          "Week 4: let it become automatic — no race",
+          "Use existing moments (putting on shoes, waiting for Maghrib)",
+          "Don't tie it to punishment when they forget",
+          "Ages 7–8: add Al-Ikhlas, Al-Falaq, An-Nas, Ayat al-Kursi",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -3599,6 +3763,88 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 6,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Mengenalkan huruf hijaiyah pada anak 3–6 tahun bukan tentang kecepatan, tapi konsistensi dan kesenangan. Mulai dari 3 huruf, bukan 28. 10 menit sehari selama sebulan mengalahkan 70 menit seminggu sekali.",
+        en: "Introducing the hijaiyah letters to a 3–6 year old isn't about speed — it's about consistency and joy. Start with 3 letters, not 28. Ten minutes a day for a month beats 70 minutes once a week.",
+      },
+      carousel: {
+        id: [
+          { title: "7 Cara Mengenalkan Hijaiyah — 1/7", body: "Usia 3–6 adalah golden age — otak menyerap paling cepat. Ini fondasi cinta Al-Qur'an seumur hidup, bukan sekadar hafalan." },
+          { title: "1. Mulai 3 huruf, bukan 28", body: "Kesalahan umum: ingin anak hafal Alif–Ya' seminggu. Mulai Alif, Ba, Ta — kuasai 3 huruf ini 3–5 hari dulu." },
+          { title: "2. Gunakan lagu hijaiyah", body: "Otak anak menyerap melodi 10× lebih cepat dari kata biasa. Nyanyikan berirama ceria sambil menggerakkan badan." },
+          { title: "3. Kartu warna kontras", body: "Cetak kartu hijaiyah warna-warni. Tunjukkan 1 kartu per hari, tempel di pintu kulkas." },
+          { title: "4. Game & 5. Tracing jari", body: "Game ramah anak membuat belajar terasa bermain. Tracing di nampan pasir/krayon membantu mengingat bentuk huruf." },
+          { title: "6. Konsisten 10 menit/hari", body: "10 menit setiap hari selama 4 minggu = retensi 3× lipat dibanding 70 menit seminggu sekali." },
+          { title: "7. Rayakan kemajuan kecil", body: "\"Subhanallah, kakak sudah hafal 5 huruf!\" — kalimat sederhana ini melepas dopamin di otak anak. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "7 Ways to Teach Hijaiyah — 1/7", body: "Ages 3–6 are the golden age — the brain absorbs fastest. This is a lifelong foundation of Qur'an love, not mere memorization." },
+          { title: "1. Start with 3 letters, not 28", body: "Common mistake: wanting Alif–Ya in a week. Begin Alif, Ba, Ta — master these 3 over 3–5 days first." },
+          { title: "2. Use a hijaiyah song", body: "A child's brain absorbs melody 10× faster than plain words. Sing it cheerfully while moving." },
+          { title: "3. High-contrast color cards", body: "Print colorful hijaiyah cards. Show one a day, stick it on the fridge." },
+          { title: "4. Games & 5. Finger tracing", body: "Child-friendly games make learning feel like play. Tracing in a sand tray/with crayons helps remember letter shapes." },
+          { title: "6. Consistent 10 min/day", body: "10 minutes daily for 4 weeks = 3× the retention of 70 minutes once a week." },
+          { title: "7. Celebrate small wins", body: "\"SubhanAllah, you know 5 letters!\" — this simple line releases dopamine in the child's brain. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Mau anak cinta Al-Qur'an? Jangan mulai dari 28 huruf hijaiyah. Mulai dari 3.
+
+[3–15 detik] MASALAH: Orang tua sering ingin anak hafal Alif sampai Ya' dalam seminggu. Otak balita belum siap — hasilnya frustrasi, bukan cinta.
+
+[15–35 detik] SOLUSI: Mulai Alif, Ba, Ta — kuasai 3 huruf dulu. Gabungkan lagu, kartu warna, game, dan tracing jari. 10 menit sehari, tiap hari.
+
+[35–55 detik] BUKTI: 10 menit/hari selama sebulan menghasilkan retensi 3× lipat dibanding 70 menit seminggu sekali. Dan selalu rayakan: "Subhanallah, sudah 5 huruf!"
+
+[55–60 detik] CTA: "Simpan 7 cara ini. Mulai dari 3 huruf hari ini."`,
+        en: `[0–3s] HOOK: Want your child to love the Qur'an? Don't start with 28 hijaiyah letters. Start with 3.
+
+[3–15s] PROBLEM: Parents often want Alif to Ya in a week. A toddler's brain isn't ready — the result is frustration, not love.
+
+[15–35s] SOLUTION: Start Alif, Ba, Ta — master 3 first. Mix a song, color cards, games, and finger tracing. Ten minutes a day, every day.
+
+[35–55s] PROOF: 10 min/day for a month yields 3× the retention of 70 minutes weekly. And always celebrate: "SubhanAllah, that's 5 letters!"
+
+[55–60s] CTA: "Save these 7 ways. Start with 3 letters today."`,
+      },
+      pin: {
+        id: {
+          title: "7 Cara Menyenangkan Mengenalkan Huruf Hijaiyah ke Anak",
+          description: "Cara mengajarkan huruf hijaiyah pada anak 3–6 tahun tanpa memaksa: mulai 3 huruf, lagu, kartu, game, tracing, 10 menit sehari. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "7 Fun Ways to Teach Kids the Hijaiyah Letters",
+          description: "How to teach the Arabic letters to a 3–6 year old without pressure: start with 3 letters, songs, cards, games, tracing, 10 minutes a day. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Mulai dari 3 huruf (Alif, Ba, Ta), bukan 28",
+          "Kuasai 3 huruf itu selama 3–5 hari sebelum menambah",
+          "Nyanyikan lagu hijaiyah berirama ceria",
+          "Buat kartu warna kontras, tempel di kulkas",
+          "Tunjukkan 1 kartu per hari",
+          "Gunakan game hijaiyah yang ramah anak",
+          "Tracing huruf dengan jari (nampan pasir / krayon)",
+          "Konsisten 10 menit setiap hari",
+          "Lakukan rutin selama 4 minggu",
+          "Rayakan setiap kemajuan kecil dengan pujian tulus",
+        ],
+        en: [
+          "Start with 3 letters (Alif, Ba, Ta), not 28",
+          "Master those 3 over 3–5 days before adding more",
+          "Sing a cheerful hijaiyah song",
+          "Make high-contrast color cards, stick them on the fridge",
+          "Show one card a day",
+          "Use a child-friendly hijaiyah game",
+          "Trace letters with a finger (sand tray / crayons)",
+          "Be consistent — 10 minutes every day",
+          "Keep it up for 4 weeks",
+          "Celebrate every small win with sincere praise",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -5400,6 +5646,86 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 7,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Rajab menanam, Sya'ban menyirami, Ramadan memanen. Bulan Rajab adalah waktu mulai mempersiapkan hati anak menuju Ramadan yang tinggal dua bulan lagi — dengan hitung mundur, doa singkat, dan satu proyek kebaikan kecil.",
+        en: "Rajab plants, Sha'ban waters, Ramadan harvests. Rajab is when we begin preparing a child's heart for Ramadan, two months away — with a countdown, a short du'a, and one small good-deed project.",
+      },
+      carousel: {
+        id: [
+          { title: "Bulan Rajab Bersama Anak — 1/6", body: "Rajab adalah salah satu dari empat bulan haram (suci). Bulan pembuka menuju Ramadan — waktu mulai mempersiapkan hati." },
+          { title: "Kenapa Rajab istimewa", body: "Termasuk bulan haram — kebaikan lebih berbobot, keburukan lebih berat. Waktu yang baik menjaga lisan dan memperbanyak doa." },
+          { title: "Doa Rajab yang singkat", body: "\"Allahumma baarik lanaa fii Rajab wa Sya'baan, wa ballighnaa Ramadhaan.\" Mudah dihafal anak, dibaca tiap pagi." },
+          { title: "Mulai hitung mundur Ramadan", body: "\"Dua bulan lagi Ramadan, lho! Yuk siap-siap dari sekarang.\" Anak jadi menanti, bukan kaget." },
+          { title: "Satu proyek Rajab", body: "Pilih satu kebaikan kecil rutin: sholat Subuh, atau sedekah seribu tiap hari ke celengan masjid. Latih konsistensi." },
+          { title: "Yang perlu diluruskan", body: "\"Puasa Rajab\" yang dianggap wajib atau ritual malam tertentu tidak berdasar kuat. Puasa sunnah biasa boleh. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "The Month of Rajab with Kids — 1/6", body: "Rajab is one of the four sacred months. The opening month toward Ramadan — time to begin preparing the heart." },
+          { title: "Why Rajab is special", body: "A sacred month — good weighs more, wrong weighs heavier. A good time to guard the tongue and increase du'a." },
+          { title: "A short Rajab du'a", body: "\"Allahumma barik lana fi Rajab wa Sha'ban, wa ballighna Ramadan.\" Easy for kids to memorize, recited each morning." },
+          { title: "Start the Ramadan countdown", body: "\"Two months to Ramadan! Let's get ready now.\" The child anticipates rather than being caught off guard." },
+          { title: "One Rajab project", body: "Pick one small recurring good deed: Fajr prayer, or a coin of charity daily into a mosque jar. Train consistency." },
+          { title: "What to set straight", body: "A \"Rajab fast\" treated as obligatory, or specific night rituals, have no firm basis. Ordinary sunnah fasting is fine. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Rajab menanam, Sya'ban menyirami, Ramadan memanen. Ramadan dimulai dari sekarang.
+
+[3–15 detik] MASALAH: Banyak keluarga baru "sadar Ramadan" H-3. Anak kaget, rutinitas mendadak berubah, dan bulan suci terasa melelahkan.
+
+[15–35 detik] SOLUSI: Mulai dari Rajab. Ajarkan doa singkat "Allahumma baarik lanaa fii Rajab wa Sya'baan…". Mulai hitung mundur. Pilih satu proyek kebaikan kecil.
+
+[35–55 detik] BUKTI: Rajab termasuk bulan haram — kebaikan lebih berbobot. Tapi hati-hati: "puasa Rajab" wajib atau ritual khusus tidak berdasar kuat. Puasa sunnah biasa boleh.
+
+[55–60 detik] CTA: "Simpan doa Rajab ini & mulai hitung mundur bareng anak."`,
+        en: `[0–3s] HOOK: Rajab plants, Sha'ban waters, Ramadan harvests. Ramadan starts now.
+
+[3–15s] PROBLEM: Many families only "realize Ramadan" 3 days before. The child is startled, routines change abruptly, and the sacred month feels exhausting.
+
+[15–35s] SOLUTION: Start in Rajab. Teach the short du'a "Allahumma barik lana fi Rajab wa Sha'ban…". Begin the countdown. Pick one small good-deed project.
+
+[35–55s] PROOF: Rajab is a sacred month — good deeds weigh more. But beware: an obligatory "Rajab fast" or special rituals have no firm basis. Ordinary sunnah fasting is fine.
+
+[55–60s] CTA: "Save this Rajab du'a & start the countdown with your child."`,
+      },
+      pin: {
+        id: {
+          title: "Bulan Rajab Bersama Anak: Bulan Haram & Persiapan Ramadan",
+          description: "Cara mengenalkan bulan Rajab ke anak: doa singkat Rajab, hitung mundur Ramadan, proyek kebaikan kecil, dan amalan yang perlu diluruskan. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "The Month of Rajab with Kids: Sacred Month & Ramadan Prep",
+          description: "How to introduce Rajab to children: the short Rajab du'a, a Ramadan countdown, a small good-deed project, and practices to clarify. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "Jelaskan Rajab sebagai salah satu dari 4 bulan haram",
+          "Ajarkan doa singkat: \"Allahumma baarik lanaa fii Rajab wa Sya'baan…\"",
+          "Baca doa itu bersama anak tiap pagi",
+          "Mulai hitung mundur Ramadan (\"dua bulan lagi!\")",
+          "Pilih satu \"proyek Rajab\": kebaikan kecil yang rutin",
+          "Contoh proyek: sholat Subuh rutin / sedekah harian ke celengan",
+          "Ajak anak lebih hati-hati menjaga lisan di bulan haram",
+          "Puasa sunnah biasa (Senin–Kamis) boleh dilatih",
+          "Luruskan: tidak ada \"puasa Rajab\" wajib atau ritual malam khusus",
+          "Tekankan Rajab sebagai awal persiapan, bukan puncak",
+        ],
+        en: [
+          "Explain Rajab as one of the 4 sacred months",
+          "Teach the short du'a: \"Allahumma barik lana fi Rajab wa Sha'ban…\"",
+          "Recite it with the child each morning",
+          "Start the Ramadan countdown (\"two months to go!\")",
+          "Pick one \"Rajab project\": a small recurring good deed",
+          "Example: consistent Fajr prayer / daily coin of charity",
+          "Encourage extra care with the tongue in a sacred month",
+          "Ordinary sunnah fasting (Mon–Thu) may be practiced",
+          "Clarify: there's no obligatory \"Rajab fast\" or special night ritual",
+          "Frame Rajab as the start of preparation, not the peak",
+        ],
+      },
+    },
     faq: [
       {
         question: {
@@ -5602,6 +5928,86 @@ export const blogPosts: BlogPost[] = [
     updated: "2026-09-12",
     readingTimeMin: 8,
     author: "tim-baby-mo",
+    kit: {
+      quote: {
+        id: "Anak meniru tokoh yang mereka kagumi. Kalau kita tidak mengisi hati mereka dengan kekaguman pada Rasulullah ﷺ, dunia akan mengisinya dengan tokoh lain. Mencintai Nabi bukan sekadar emosi — itu pintu untuk mencintai akhlaknya, lalu menirunya.",
+        en: "Children imitate the figures they admire. If we don't fill their hearts with love for the Prophet ﷺ, the world will fill it with someone else. Loving the Prophet isn't mere emotion — it's the door to loving his character, then living it.",
+      },
+      carousel: {
+        id: [
+          { title: "Mengenalkan Rasulullah ﷺ ke Anak — 1/6", body: "Setiap Rabi'ul Awal kita teringat kelahiran manusia terbaik. Terlepas dari perbedaan soal perayaan, mencintai Nabi adalah kewajiban semua." },
+          { title: "Kenapa sejak dini", body: "Anak meniru yang mereka kagumi. Isi hati mereka dengan kekaguman pada Rasulullah ﷺ sebelum dunia mengisinya dengan tokoh lain." },
+          { title: "Usia 3–5: Nabi yang penyayang", body: "Beliau menyayangi anak, mencium cucunya, memendekkan sholat saat mendengar bayi menangis. Anak kecil paling mudah terhubung dengan kasih sayang." },
+          { title: "Usia 6–8: Nabi yang jujur & adil", body: "Ceritakan gelar \"Al-Amin\" (yang terpercaya) yang diberikan penduduk Mekkah bahkan sebelum beliau jadi nabi." },
+          { title: "Usia 9+: Nabi sebagai teladan", body: "Diskusikan cara beliau menyikapi kesulitan, memaafkan musuh, tetap rendah hati. Ajak anak pilih satu sunnah untuk ditiru pekan ini." },
+          { title: "Satu sunnah pekan ini", body: "Senyum, memberi salam, atau membantu pekerjaan rumah — Nabi pun membantu keluarganya. Cinta yang berubah jadi amal. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Introducing the Prophet ﷺ to Kids — 1/6", body: "Every Rabi' al-Awwal we remember the birth of the best of humanity. Whatever the view on celebrating, loving the Prophet is everyone's duty." },
+          { title: "Why start early", body: "Children imitate whom they admire. Fill their hearts with love for the Prophet ﷺ before the world fills it with someone else." },
+          { title: "Ages 3–5: the compassionate Prophet", body: "He loved children, kissed his grandchildren, shortened prayer on hearing a baby cry. Young children connect most easily with kindness." },
+          { title: "Ages 6–8: the honest & just Prophet", body: "Tell of the title \"Al-Amin\" (the trustworthy) the people of Makkah gave him even before prophethood." },
+          { title: "Ages 9+: the Prophet as a model", body: "Discuss how he met hardship, forgave enemies, stayed humble. Have the child pick one sunnah to imitate this week." },
+          { title: "One sunnah this week", body: "Smiling, greeting with salam, or helping at home — the Prophet helped his family too. Love turned into action. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Anak meniru tokoh yang mereka kagumi. Pertanyaannya: siapa yang mengisi hati anakmu?
+
+[3–15 detik] MASALAH: Kalau kita tidak mengenalkan Rasulullah ﷺ sejak dini, dunia akan mengisi hati anak dengan tokoh lain — dan akhlak mengikuti siapa yang dikagumi.
+
+[15–35 detik] SOLUSI: Sesuaikan usia. 3–5: Nabi yang penyayang. 6–8: Nabi "Al-Amin" yang jujur. 9+: Nabi teladan hidup — ajak pilih satu sunnah untuk ditiru pekan ini.
+
+[35–55 detik] BUKTI: Mencintai Nabi bukan sekadar emosi — itu pintu mencintai akhlaknya lalu menirunya. Mulai dari senyum, salam, membantu di rumah.
+
+[55–60 detik] CTA: "Pilih satu sunnah untuk keluargamu tiru pekan ini. Bagikan."`,
+        en: `[0–3s] HOOK: Children imitate whom they admire. The question is: who's filling your child's heart?
+
+[3–15s] PROBLEM: If we don't introduce the Prophet ﷺ early, the world fills the child's heart with someone else — and character follows whoever is admired.
+
+[15–35s] SOLUTION: Match the age. 3–5: the compassionate Prophet. 6–8: the honest "Al-Amin." 9+: the Prophet as a life model — pick one sunnah to imitate this week.
+
+[35–55s] PROOF: Loving the Prophet isn't mere emotion — it's the door to loving his character, then living it. Start with a smile, salam, helping at home.
+
+[55–60s] CTA: "Pick one sunnah for your family to imitate this week. Share it."`,
+      },
+      pin: {
+        id: {
+          title: "Cara Mengenalkan Rasulullah ﷺ ke Anak (per Usia)",
+          description: "Cara mengenalkan sosok dan akhlak Nabi Muhammad ﷺ kepada anak sesuai usia, dari kasih sayang sampai teladan hidup. Untuk keluarga muslim di bulan Maulid.",
+        },
+        en: {
+          title: "How to Introduce the Prophet ﷺ to Kids, by Age",
+          description: "How to introduce the person and character of Prophet Muhammad ﷺ to children by age, from compassion to life model. For Muslim families in the Mawlid month.",
+        },
+      },
+      checklist: {
+        id: [
+          "Usia 3–5: ceritakan sisi penyayang Nabi (menyayangi anak & cucu)",
+          "Usia 6–8: ceritakan gelar \"Al-Amin\" — jujur & adil",
+          "Usia 9+: diskusikan cara Nabi menghadapi kesulitan & memaafkan",
+          "Ajak anak memilih SATU sunnah untuk ditiru pekan ini",
+          "Contoh sunnah: senyum, memberi salam, membantu pekerjaan rumah",
+          "Fokus pada mengenal & mencintai Nabi (disepakati semua)",
+          "Kaitkan cinta Nabi dengan meniru akhlaknya, bukan sekadar emosi",
+          "Bacakan kisah Nabi Muhammad ﷺ dari sumber terpercaya",
+          "Jadikan Rasulullah ﷺ 'pahlawan' anak, bukan tokoh kartun",
+          "Ulangi sepanjang bulan Rabi'ul Awal, bukan sekali saja",
+        ],
+        en: [
+          "Ages 3–5: tell the Prophet's compassionate side (loving kids & grandkids)",
+          "Ages 6–8: tell of the title \"Al-Amin\" — honest & just",
+          "Ages 9+: discuss how the Prophet met hardship & forgave",
+          "Have the child pick ONE sunnah to imitate this week",
+          "Example sunnahs: smiling, giving salam, helping at home",
+          "Focus on knowing & loving the Prophet (agreed by all)",
+          "Tie loving the Prophet to imitating his character, not just emotion",
+          "Read the Prophet's ﷺ story from trustworthy sources",
+          "Make the Prophet ﷺ the child's 'hero', not a cartoon figure",
+          "Repeat through the month of Rabi' al-Awwal, not just once",
+        ],
+      },
+    },
     faq: [
       {
         question: {
