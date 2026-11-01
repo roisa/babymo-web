@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph, videoGameSchema } from "@/lib/seo/schemas";
 import { getAllGames } from "@/lib/content/games";
+import { GameIcon } from "@/components/GameIcon";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -82,9 +83,9 @@ export default async function GamesIndex({
                     className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
                 </div>
-                <div className="flex items-center justify-between px-5 py-3.5">
-                  <span className="inline-flex items-center gap-2 text-[15px] font-medium text-ink">
-                    <span aria-hidden className="text-lg">{g.emoji}</span>
+                <div className="flex items-center justify-between px-4 py-3.5">
+                  <span className="inline-flex items-center gap-2.5 text-[15px] font-medium text-ink">
+                    <GameIcon slug={g.slug} className="h-8 w-8" />
                     {g.title[l]}
                   </span>
                   <span className="inline-flex items-center gap-1 text-xs font-semibold text-sage-deep group-hover:translate-x-0.5">

@@ -28,6 +28,20 @@
   --color-whisper: #6B7068;
   --color-whisper-2: #8B9089;
 
+  /* Fresh accent tones — complement the green master for a brighter,
+     kid-and-parent-friendly feel (iOS-style vivid-but-soft). Use sparingly
+     for playful surfaces (game tiles, category chips); green stays primary. */
+  --color-sky: #3AA7DA;
+  --color-sky-soft: #E3F3FB;
+  --color-peach: #F0975A;
+  --color-peach-soft: #FCEDE1;
+  --color-grape: #8A79D9;
+  --color-grape-soft: #ECE9FB;
+  --color-berry: #E86C9E;
+  --color-berry-soft: #FBE7F1;
+  --color-sun: #E6B52E;
+  --color-sun-soft: #FBF2D4;
+
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
   --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
   /* Modern editorial display — used for hero / large titles only */
@@ -68,6 +82,19 @@ html.dark {
   --color-hairline: #2C3037;   /* subtle visible border on dark */
   --color-whisper: #989CA3;    /* muted text, lifted for legibility */
   --color-whisper-2: #70747B;
+
+  /* Fresh accents — brightened hue + dark tint for dark mode. */
+  --color-sky: #6CC2E8;
+  --color-sky-soft: #15303B;
+  --color-peach: #F3B183;
+  --color-peach-soft: #3A271B;
+  --color-grape: #B4A6ED;
+  --color-grape-soft: #262046;
+  --color-berry: #F08AB4;
+  --color-berry-soft: #3A1E2B;
+  --color-sun: #E7C651;
+  --color-sun-soft: #332B12;
+
   color-scheme: dark;
 }
 

@@ -176,6 +176,7 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-10-11",
     endISO: "2026-11-10",
     blogSlug: "jumadil-awal-belajar-berani-berbuat-baik",
+    extraBlogSlugs: ["persiapan-ramadan-untuk-anak"],
     doaSlugs: ["doa-keteguhan-hati", "perlindungan-anak"],
   },
   {
@@ -189,6 +190,7 @@ export const islamicCalendar: IslamicEvent[] = [
     startISO: "2026-11-10",
     endISO: "2026-12-10",
     blogSlug: "jumadil-akhir-sahabat-setia-abu-bakar",
+    extraBlogSlugs: ["persiapan-ramadan-untuk-anak"],
     doaSlugs: ["doa-pagi", "doa-petang"],
   },
   {
