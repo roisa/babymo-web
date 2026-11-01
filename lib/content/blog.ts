@@ -13,6 +13,264 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "persiapan-ramadan-untuk-anak",
+    title: {
+      id: "Persiapan Ramadan untuk Anak: Mulai dari Sekarang",
+      en: "Preparing Your Child for Ramadan: Start Now",
+    },
+    excerpt: {
+      id: "Ramadan masih terasa jauh — dan justru itulah waktu terbaik untuk mulai. Anak yang disiapkan sejak jauh hari menyambut Ramadan dengan rindu, bukan sebagai beban yang tiba-tiba. Panduan bertahap dari tiga bulan sebelum sampai malam pertama.",
+      en: "Ramadan still feels far away — which is exactly why now is the best time to start. A child prepared early greets Ramadan with longing, not as a burden that lands overnight. A phased guide from three months out to the first night.",
+    },
+    body: {
+      id: `<p>Setiap tahun, cerita yang sama terulang: Ramadan datang, dan keluarga baru sibuk "menyiapkan" anak di H-3. Rutinitas berubah mendadak, anak kaget, dan bulan yang seharusnya dirindukan justru terasa melelahkan. Padahal anak kecil tidak butuh persiapan yang berat — mereka butuh <em>waktu</em> untuk menanti.</p>
+
+<p>Kabar baiknya: kita masih punya beberapa bulan. Dan beberapa bulan adalah hadiah. Berikut panduan bertahap menyiapkan anak menyambut Ramadan — satu lapis setiap bulan, tanpa paksaan.</p>
+
+<blockquote>Rasulullah ﷺ paling banyak berpuasa sunnah di bulan Sya'ban — bulan tepat sebelum Ramadan. Beliau mengajarkan kita bahwa Ramadan disiapkan dari jauh, bukan dimulai dari nol di malam pertama.</blockquote>
+
+<h2>Tiga bulan sebelum (sekarang): tanam rasa rindu</h2>
+
+<p>Tujuan fase ini bukan ibadah, tapi <strong>emosi</strong>. Anak harus mulai mengasosiasikan kata "Ramadan" dengan sesuatu yang hangat dan ditunggu.</p>
+
+<ul>
+  <li><strong>Sebut Ramadan dalam percakapan santai.</strong> "Sebentar lagi ada bulan istimewa, namanya Ramadan. Bulan yang paling disayang Allah." Tidak perlu ceramah — cukup ditanam.</li>
+  <li><strong>Ceritakan kenangan Ramadanmu sendiri</strong> saat kecil: sahur bareng, suara beduk, ketupat. Anak menyerap kehangatan dari suaramu.</li>
+  <li><strong>Mulai kebiasaan kecil yang akan berlanjut</strong> — satu doa harian, atau membaca satu surat pendek sebelum tidur. Lihat <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">doa harian yang perlu anak kenal</a>.</li>
+</ul>
+
+<h2>Dua bulan sebelum — Rajab: mulai ritme</h2>
+
+<p>Rajab adalah bulan haram dan "bulan pembuka" menuju Ramadan. Orang dahulu berkata: <em>Rajab menanam, Sya'ban menyirami, Ramadan memanen.</em></p>
+
+<ul>
+  <li><strong>Mulai hitung mundur.</strong> "Dua bulan lagi Ramadan, lho!" Anak jadi menanti, bukan kaget.</li>
+  <li><strong>Ajarkan doa Rajab yang singkat:</strong> "Allahumma baarik lanaa fii Rajab wa Sya'baan, wa ballighnaa Ramadhaan." Mudah dihafal, dibaca tiap pagi.</li>
+  <li><strong>Pilih satu "proyek kebaikan"</strong> — sedekah seribu tiap hari ke celengan, atau rutin sholat Subuh. Selengkapnya: <a href="/_/blog/rajab-bulan-haram-bersama-anak/">bulan Rajab bersama anak</a>.</li>
+</ul>
+
+<h2>Satu bulan sebelum — Sya'ban: latihan</h2>
+
+<p>Inilah fase latihan yang sesungguhnya. Tujuannya: saat Ramadan tiba, tubuh dan hati anak sudah terbiasa.</p>
+
+<ul>
+  <li><strong>Latihan puasa setengah hari</strong> untuk anak 7 tahun ke atas — dari sahur sampai Dzuhur. Bukan kewajiban, tapi latihan yang terbukti membuat puasa pertama Ramadan terasa ringan.</li>
+  <li><strong>Mulai jadwal mengaji bersama</strong> sekarang, supaya saat Ramadan rutinitasnya sudah jalan — bukan dimulai dari nol.</li>
+  <li><strong>Beres-beres rumah dan hati:</strong> rapikan kamar, saling memaafkan. "Sebentar lagi Ramadan, kita siapkan rumah dan hati yang bersih." Selengkapnya: <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">bulan Sya'ban menyiapkan hati</a>.</li>
+</ul>
+
+<h2>Minggu terakhir: bangun suasana</h2>
+
+<ul>
+  <li><strong>Hitung mundur visual</strong> — tempel kalender Ramadan di kulkas, anak mencoret satu kotak setiap pagi.</li>
+  <li><strong>Satu dekorasi baru</strong> — lampu bulan-bintang, taplak baru. Anak menyerap bahwa bulan ini berbeda sebelum kata-kata.</li>
+  <li><strong>Ceritakan apa yang akan berubah</strong> — sahur subuh-subuh, buka sore, banyak doa, banyak tamu. Anak yang tahu apa yang datang jauh lebih kooperatif.</li>
+</ul>
+
+<h2>Panduan singkat per usia</h2>
+
+<ul>
+  <li><strong>Usia 0–3:</strong> cukup hadir di suasana. Tidak perlu puasa, tidak perlu diajarkan apa pun secara formal. Yang mereka serap: nada rumah.</li>
+  <li><strong>Usia 4–6:</strong> sahur opsional, puasa setengah hari sebagai "pencapaian", satu doa baru per minggu.</li>
+  <li><strong>Usia 7–10:</strong> mulai puasa setengah hari di Sya'ban, penuh hari adalah tahap lanjut — hormati ketika anak menyerah.</li>
+</ul>
+
+<h2>Yang harus dihindari</h2>
+
+<p>Memaksa puasa penuh terlalu dini. Membandingkan dengan anak lain. Marah karena anak lapar. Menjadikan Ramadan tentang target, bukan tentang rasa. <a href="/_/blog/saat-orang-tua-marah-ke-anak/">Marah justru menanam perlawanan jangka panjang</a>.</p>
+
+<h2>Penutup</h2>
+
+<p>Ramadan tahun ini tidak harus sempurna. Anak tidak harus puasa penuh atau hafal semua doa. Yang anak butuhkan: orang tua yang hadir, rumah yang terasa berbeda, dan pesan diam-diam bahwa bulan ini adalah bulan yang dirindukan. Panduan lengkap saat Ramadan tiba: <a href="/_/blog/ramadan-bersama-anak/">Ramadan bersama anak</a>.</p>`,
+      en: `<p>Every year, the same story repeats: Ramadan arrives, and families scramble to "prepare" the child three days out. Routines change overnight, the child is startled, and a month that should be longed for feels exhausting instead. Yet young children don't need heavy preparation — they need <em>time</em> to anticipate.</p>
+
+<p>The good news: we still have a few months. And a few months is a gift. Here's a phased guide to preparing your child for Ramadan — one layer each month, without force.</p>
+
+<blockquote>The Prophet ﷺ fasted the most voluntary days in Sha'ban — the month just before Ramadan. He taught us that Ramadan is prepared from afar, not begun from zero on the first night.</blockquote>
+
+<h2>Three months out (now): plant the longing</h2>
+
+<p>The goal of this phase isn't worship — it's <strong>emotion</strong>. The child should begin to associate the word "Ramadan" with something warm and awaited.</p>
+
+<ul>
+  <li><strong>Mention Ramadan in casual talk.</strong> "Soon there's a special month called Ramadan — the month Allah loves most." No lecture needed — just plant it.</li>
+  <li><strong>Tell your own childhood Ramadan memories</strong>: sahur together, the drum at dawn, the festive food. The child absorbs the warmth in your voice.</li>
+  <li><strong>Start one small habit that will continue</strong> — a daily du'a, or one short surah before bed. See <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">the daily du'as a child should know</a>.</li>
+</ul>
+
+<h2>Two months out — Rajab: begin the rhythm</h2>
+
+<p>Rajab is a sacred month and the "opening month" toward Ramadan. The elders said: <em>Rajab plants, Sha'ban waters, Ramadan harvests.</em></p>
+
+<ul>
+  <li><strong>Start the countdown.</strong> "Two months to Ramadan!" The child anticipates instead of being caught off guard.</li>
+  <li><strong>Teach the short Rajab du'a:</strong> "Allahumma barik lana fi Rajab wa Sha'ban, wa ballighna Ramadan." Easy to memorize, said each morning.</li>
+  <li><strong>Pick one "good-deed project"</strong> — a daily coin of charity, or consistent Fajr prayer. More: <a href="/_/blog/rajab-bulan-haram-bersama-anak/">the month of Rajab with kids</a>.</li>
+</ul>
+
+<h2>One month out — Sha'ban: practice</h2>
+
+<p>This is the real practice phase. The goal: by the time Ramadan arrives, the child's body and heart are already used to it.</p>
+
+<ul>
+  <li><strong>Half-day fasting practice</strong> for ages 7+ — from sahur to Dhuhr. Not an obligation, but practice that proves to make the first Ramadan fast feel light.</li>
+  <li><strong>Start a Qur'an schedule now</strong>, so that by Ramadan the routine is already running — not starting from zero.</li>
+  <li><strong>Tidy the home and the heart:</strong> organize the room, forgive one another. "Ramadan's near — let's ready a clean home and heart." More: <a href="/_/blog/syaban-menyiapkan-hati-menuju-ramadan/">the month of Sha'ban</a>.</li>
+</ul>
+
+<h2>The final week: build the atmosphere</h2>
+
+<ul>
+  <li><strong>A visual countdown</strong> — a Ramadan calendar on the fridge, the child crossing off a box each morning.</li>
+  <li><strong>One new decoration</strong> — moon-and-star lights, a new tablecloth. The child feels the month is different before any words.</li>
+  <li><strong>Tell them what will change</strong> — early sahur, evening iftar, more du'a, more guests. A child who knows what's coming is far more cooperative.</li>
+</ul>
+
+<h2>A quick age guide</h2>
+
+<ul>
+  <li><strong>Ages 0–3:</strong> just be present in the atmosphere. No fasting, nothing formal. What they absorb is the home's tone.</li>
+  <li><strong>Ages 4–6:</strong> optional sahur, a half-day fast as an "achievement," one new du'a per week.</li>
+  <li><strong>Ages 7–10:</strong> start half-day fasts in Sha'ban; full days are a later milestone — respect it when they give up.</li>
+</ul>
+
+<h2>What to avoid</h2>
+
+<p>Forcing a full fast too early. Comparing to other children. Anger when the child is hungry. Making Ramadan about targets instead of feeling. <a href="/_/blog/saat-orang-tua-marah-ke-anak/">Anger plants long-term resistance</a>.</p>
+
+<h2>Closing</h2>
+
+<p>This Ramadan doesn't have to be perfect. The child doesn't have to complete every fast or memorize every du'a. What they need: present parents, a home that feels different, and the quiet message that this month is one to long for. The full guide once Ramadan begins: <a href="/_/blog/ramadan-bersama-anak/">Ramadan with your child</a>.</p>`,
+    },
+    tags: ["ramadan", "persiapan-ramadan", "puasa", "parenting", "ibadah-musiman"],
+    published: "2026-11-01",
+    updated: "2026-11-01",
+    readingTimeMin: 8,
+    author: "tim-baby-mo",
+    faq: [
+      {
+        question: {
+          id: "Kapan sebaiknya mulai menyiapkan anak untuk Ramadan?",
+          en: "When should I start preparing my child for Ramadan?",
+        },
+        answer: {
+          id: "Sejak <strong>beberapa bulan sebelumnya</strong>, bukan H-3. Anak kecil butuh waktu untuk <em>menanti</em>, bukan perubahan rutinitas yang mendadak. Mulai dari menanam rasa rindu (3 bulan sebelum), membangun ritme di bulan Rajab (2 bulan sebelum), lalu latihan nyata di bulan Sya'ban (1 bulan sebelum).",
+          en: "From <strong>a few months out</strong>, not three days before. Young children need time to <em>anticipate</em>, not an abrupt routine change. Begin by planting longing (3 months out), building rhythm in Rajab (2 months out), then real practice in Sha'ban (1 month out).",
+        },
+      },
+      {
+        question: {
+          id: "Apakah anak kecil wajib puasa Ramadan?",
+          en: "Are young children required to fast in Ramadan?",
+        },
+        answer: {
+          id: "Tidak. Anak yang <strong>belum baligh tidak diwajibkan puasa</strong>. Latihan puasa setengah hari (sahur sampai Dzuhur) untuk anak 7 tahun ke atas adalah sunnah pembiasaan — latihan, bukan kewajiban atau ujian.",
+          en: "No. A child <strong>before puberty is not obligated to fast</strong>. A half-day fast (sahur to Dhuhr) for ages 7+ is habit-building practice — training, not an obligation or a test.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana melatih anak puasa sebelum Ramadan?",
+          en: "How do I train my child to fast before Ramadan?",
+        },
+        answer: {
+          id: "Manfaatkan <strong>bulan Sya'ban</strong> (satu bulan sebelum Ramadan). Ajak anak 7+ mencoba puasa setengah hari — bangunkan sahur dengan makanan yang ia suka, sediakan aktivitas agar lupa lapar, dan beri makanan favorit saat berbuka. Hormati ketika ia menyerah; yang penting mau coba lagi.",
+          en: "Use <strong>Sha'ban</strong> (the month before Ramadan). Have ages 7+ try a half-day fast — wake them for sahur with food they like, offer activities to distract from hunger, and serve a favorite at iftar. Respect it when they give up; what matters is willingness to try again.",
+        },
+      },
+      {
+        question: {
+          id: "Bagaimana membuat anak menanti Ramadan, bukan takut?",
+          en: "How do I make my child look forward to Ramadan, not dread it?",
+        },
+        answer: {
+          id: "Fokus pada <strong>suasana dan emosi</strong>, bukan target. Ceritakan kenangan Ramadanmu, buat hitung mundur visual di kulkas, tambahkan satu dekorasi baru, dan hindari memaksa atau membandingkan. Anak yang Ramadannya hangat dan ditunggu akan membawa hubungan positif dengan ibadah seumur hidup.",
+          en: "Focus on <strong>atmosphere and emotion</strong>, not targets. Share your Ramadan memories, make a visual countdown on the fridge, add one new decoration, and avoid forcing or comparing. A child whose Ramadan feels warm and awaited carries a positive relationship with worship for life.",
+        },
+      },
+    ],
+    kit: {
+      quote: {
+        id: "Anak kecil tidak butuh persiapan Ramadan yang berat — mereka butuh waktu untuk menanti. Mulai dari sekarang: tanam rasa rindu di hati, dan Ramadan akan datang sebagai tamu yang dirindukan, bukan beban yang tiba-tiba.",
+        en: "Young children don't need heavy Ramadan preparation — they need time to anticipate. Start now: plant the longing in their heart, and Ramadan will arrive as a cherished guest, not a sudden burden.",
+      },
+      carousel: {
+        id: [
+          { title: "Persiapan Ramadan untuk Anak — 1/6", body: "Jangan tunggu H-3. Anak yang disiapkan sejak jauh hari menyambut Ramadan dengan rindu, bukan beban. Kita masih punya beberapa bulan — itu hadiah." },
+          { title: "3 bulan sebelum: tanam rasa rindu", body: "Sebut Ramadan dalam obrolan santai. Ceritakan kenangan Ramadanmu. Mulai satu kebiasaan kecil: satu doa harian." },
+          { title: "2 bulan (Rajab): mulai ritme", body: "Mulai hitung mundur. Ajarkan doa Rajab singkat. Pilih satu 'proyek kebaikan' — sedekah harian atau sholat Subuh." },
+          { title: "1 bulan (Sya'ban): latihan", body: "Anak 7+ coba puasa setengah hari. Mulai jadwal mengaji. Beres-beres rumah & hati bareng anak." },
+          { title: "Minggu terakhir: suasana", body: "Hitung mundur visual di kulkas. Satu dekorasi baru. Ceritakan apa yang akan berubah — sahur, buka, banyak doa." },
+          { title: "Hindari ini", body: "Memaksa puasa penuh terlalu dini. Membandingkan anak. Marah karena lapar. Jadikan Ramadan soal rasa, bukan target. Simpan & bagikan." },
+        ],
+        en: [
+          { title: "Preparing Kids for Ramadan — 1/6", body: "Don't wait until 3 days out. A child prepared early greets Ramadan with longing, not dread. We still have a few months — that's a gift." },
+          { title: "3 months out: plant the longing", body: "Mention Ramadan in casual talk. Share your Ramadan memories. Start one small habit: a daily du'a." },
+          { title: "2 months (Rajab): begin the rhythm", body: "Start the countdown. Teach the short Rajab du'a. Pick one 'good-deed project' — daily charity or Fajr prayer." },
+          { title: "1 month (Sha'ban): practice", body: "Ages 7+ try a half-day fast. Start a Qur'an schedule. Tidy the home & heart with your child." },
+          { title: "Final week: atmosphere", body: "A visual countdown on the fridge. One new decoration. Tell them what changes — sahur, iftar, more du'a." },
+          { title: "Avoid these", body: "Forcing a full fast too early. Comparing kids. Anger from hunger. Make Ramadan about feeling, not targets. Save & share." },
+        ],
+      },
+      shortScript: {
+        id: `[0–3 detik] HOOK: Jangan tunggu H-3 Ramadan untuk "menyiapkan" anak. Mulai dari sekarang.
+
+[3–15 detik] MASALAH: Setiap tahun keluarga baru sibuk di H-3. Rutinitas berubah mendadak, anak kaget, dan Ramadan terasa melelahkan, bukan dirindukan.
+
+[15–35 detik] SOLUSI: Bertahap. 3 bulan sebelum: tanam rasa rindu lewat cerita. 2 bulan (Rajab): mulai hitung mundur & doa singkat. 1 bulan (Sya'ban): latihan puasa setengah hari untuk anak 7+.
+
+[35–55 detik] BUKTI: Rasulullah ﷺ paling banyak puasa sunnah di Sya'ban — Ramadan disiapkan dari jauh, bukan dari nol di malam pertama.
+
+[55–60 detik] CTA: "Simpan panduan bertahap ini & mulai dari obrolan santai hari ini."`,
+        en: `[0–3s] HOOK: Don't wait until 3 days before Ramadan to "prepare" your child. Start now.
+
+[3–15s] PROBLEM: Every year families scramble 3 days out. Routines change overnight, the child is startled, and Ramadan feels exhausting instead of longed for.
+
+[15–35s] SOLUTION: Go in phases. 3 months out: plant longing through stories. 2 months (Rajab): start the countdown & a short du'a. 1 month (Sha'ban): half-day fasting practice for ages 7+.
+
+[35–55s] PROOF: The Prophet ﷺ fasted most in Sha'ban — Ramadan is prepared from afar, not from zero on the first night.
+
+[55–60s] CTA: "Save this phased guide & start with a casual chat today."`,
+      },
+      pin: {
+        id: {
+          title: "Persiapan Ramadan untuk Anak: Panduan Bertahap dari Sekarang",
+          description: "Cara menyiapkan anak menyambut Ramadan sejak jauh hari — fase 3 bulan, 2 bulan (Rajab), 1 bulan (Sya'ban), dan minggu terakhir. Tanpa memaksa. Untuk keluarga muslim.",
+        },
+        en: {
+          title: "Preparing Kids for Ramadan: A Phased Guide, Starting Now",
+          description: "How to ready your child for Ramadan months ahead — the 3-month, 2-month (Rajab), 1-month (Sha'ban), and final-week phases. Without forcing. For Muslim families.",
+        },
+      },
+      checklist: {
+        id: [
+          "3 bulan sebelum: sebut Ramadan dalam obrolan santai",
+          "Ceritakan kenangan Ramadan masa kecilmu",
+          "Mulai satu kebiasaan kecil (satu doa harian)",
+          "Rajab: mulai hitung mundur Ramadan",
+          "Ajarkan doa Rajab singkat tiap pagi",
+          "Pilih satu 'proyek kebaikan' harian",
+          "Sya'ban: latihan puasa setengah hari (anak 7+)",
+          "Mulai jadwal mengaji bersama",
+          "Minggu terakhir: hitung mundur visual + satu dekorasi baru",
+          "Hindari memaksa puasa penuh & membandingkan anak",
+        ],
+        en: [
+          "3 months out: mention Ramadan in casual talk",
+          "Share your own childhood Ramadan memories",
+          "Start one small habit (a daily du'a)",
+          "Rajab: start the Ramadan countdown",
+          "Teach the short Rajab du'a each morning",
+          "Pick one daily 'good-deed project'",
+          "Sha'ban: half-day fasting practice (ages 7+)",
+          "Start a shared Qur'an schedule",
+          "Final week: a visual countdown + one new decoration",
+          "Avoid forcing a full fast & comparing children",
+        ],
+      },
+    },
+  },
+  {
     slug: "generator-aktivitas-anak-gratis",
     title: {
       id: "Generator Lembar Aktivitas Anak Gratis: Buat & Cetak dalam Hitungan Detik",
