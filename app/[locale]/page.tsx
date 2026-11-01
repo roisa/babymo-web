@@ -7,8 +7,6 @@ import {
   locales,
   pathFor,
   absoluteUrl,
-  whatsappNumber,
-  whatsappUrl,
 } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
@@ -566,9 +564,7 @@ export default async function HomePage({
             </Reveal>
 
             <Reveal stagger>
-              <div
-                className={`grid gap-3 sm:grid-cols-2 ${whatsappNumber ? "lg:grid-cols-4" : "lg:grid-cols-3"}`}
-              >
+              <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
                 <SocialCard
                   href="https://www.youtube.com/@babymo.official"
                   icon={<YouTubeIcon />}
@@ -593,16 +589,6 @@ export default async function HomePage({
                   accent="bg-[#f4f4f5] text-ink dark:bg-white/10"
                   locale={l}
                 />
-                {whatsappNumber && (
-                  <SocialCard
-                    href={whatsappUrl(l)}
-                    icon={<WhatsAppIcon />}
-                    label="WhatsApp"
-                    handle="+62 823-1597-1002"
-                    accent="bg-[#ecfdf3] text-[#1f8748] dark:bg-[#1f8748]/22 dark:text-[#4cc47e]"
-                    locale={l}
-                  />
-                )}
               </div>
             </Reveal>
 
@@ -766,13 +752,6 @@ function TikTokIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
       <path d="M19.4 6.5a5.5 5.5 0 0 1-3.7-1.4 5.4 5.4 0 0 1-1.5-2.7H10v12.4a2.6 2.6 0 1 1-2.6-2.6c.3 0 .6 0 .9.1V8.4a6 6 0 0 0-.9-.1 6.5 6.5 0 1 0 6.5 6.5V9.6a8.6 8.6 0 0 0 5.5 2V7.8a5.7 5.7 0 0 1 0-1.3Z" />
-    </svg>
-  );
-}
-function WhatsAppIcon() {
-  return (
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
-      <path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.3A10 10 0 1 0 12 2Zm5.7 14.3c-.2.7-1.4 1.3-1.9 1.4-.5.1-1.2.1-1.9-.1-.4-.1-1-.3-1.8-.6-3.1-1.3-5.2-4.4-5.3-4.6-.2-.2-1.3-1.7-1.3-3.3 0-1.6.8-2.4 1.1-2.7.3-.3.7-.4.9-.4h.7c.2 0 .5 0 .8.6.3.6.9 2 1 2.1.1.1.1.3 0 .5l-.3.5-.4.5-.3.4c-.2.2-.4.4-.2.7.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.8.4.2.6.1.8-.1.2-.2.9-1 1.1-1.4.2-.3.4-.3.7-.2.3.1 2 1 2.3 1.1.3.2.5.2.6.4.1.2.1.7-.1 1.3Z" />
     </svg>
   );
 }
