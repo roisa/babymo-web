@@ -35,6 +35,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { getAllHadith } from "@/lib/content/hadith";
 import { getAllParenting } from "@/lib/content/parenting";
 import { getAllGames } from "@/lib/content/games";
+import { GameIcon } from "@/components/GameIcon";
 import { getAllCatatan } from "@/lib/content/catatan";
 import { posePath } from "@/lib/games/poses";
 import {
@@ -402,10 +403,10 @@ export default async function HomePage({
                   {allGames.slice(0, 9).map((g, i) => (
                     <div
                       key={g.slug}
-                      className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2 text-xl"
+                      className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2"
                       style={{ transitionDelay: `${i * 35}ms` }}
                     >
-                      {g.emoji}
+                      <GameIcon slug={g.slug} className="h-11 w-11" />
                     </div>
                   ))}
                 </div>
