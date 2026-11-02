@@ -50,6 +50,28 @@ def crescent(cx, cy, r, fill, cut_fill=None, dx=None):
     )
 
 
+def _du_a_hand(tone="#047857"):
+    """Left-side hand of the pair, palm facing us: chubby kid fingers, the
+    thumb attached and pointing outward, the pinky near the centre, a mint cuff."""
+    w = 6.6
+    f = [(25.4, 38.0), (31.9, 34.5), (38.4, 35.8), (44.9, 41.0)]  # finger x, top y
+    fingers = "".join(f'<rect x="{x}" y="{t}" width="{w}" height="{60 - t}" rx="{w / 2}"/>' for x, t in f)
+    palm = '<path d="M25.4 52 H51.5 V69 C51.5 77.5 45.5 82.5 38.4 82.5 C31.3 82.5 25.4 77.5 25.4 69 Z"/>'
+    thumb = '<path d="M29 71.5 L19.6 58.5" stroke="#fff" stroke-width="7.4" stroke-linecap="round"/>'
+    lines = "".join(
+        f'<path d="M{x + w - 0.25:.2f} {t + 8:.1f} V55" stroke="{tone}" stroke-opacity=".2" stroke-width="1" stroke-linecap="round"/>'
+        for x, t in f[:3]
+    )
+    cuff = '<rect x="28.4" y="79.5" width="20" height="9" rx="4.5" fill="#A7F3D0"/>'
+    return f'{thumb}<g fill="#fff">{palm}{fingers}</g>{lines}{cuff}'
+
+
+def du_a_hands(rot=-7):
+    h = _du_a_hand()
+    return (f'<g transform="translate(-1 0) rotate({rot} 38.4 84)">{h}</g>'
+            f'<g transform="translate(100 0) scale(-1 1) translate(-1 0) rotate({rot} 38.4 84)">{h}</g>')
+
+
 ICONS = {
     # Kenalan Baby Mo — tap tiles to reveal Baby Mo
     "puzzle": dict(
@@ -59,16 +81,12 @@ ICONS = {
             for r in range(3) for c in range(3)
         ) + '<rect x="43" y="43" width="15" height="15" rx="4" fill="#FFD54A"/>' + star(50.5, 49.5, 0.48, "#fff"),
     ),
-    # Doa Harian — cupped hands + Arabic audio
+    # Doa Harian — two little hands raised in du'a under a glowing star
     "doa-harian": dict(
         a="#6EE7B7", b="#047857",
-        g=(
-            # two open palms raised side by side, like 🤲 (left hand mirrored for the right)
-            '<g transform="rotate(-8 36 60)"><g fill="#fff"><rect x="26" y="50" width="21" height="30" rx="9"/><rect x="26.5" y="36" width="4.6" height="22" rx="2.3"/><rect x="31.8" y="32" width="4.6" height="26" rx="2.3"/><rect x="37.1" y="33" width="4.6" height="25" rx="2.3"/><rect x="42.2" y="37" width="4.4" height="21" rx="2.2"/><rect x="19" y="52" width="5" height="17" rx="2.5" transform="rotate(-38 21.5 60.5)"/></g></g>'
-            '<g transform="translate(100 0) scale(-1 1) rotate(-8 36 60)"><g fill="#fff"><rect x="26" y="50" width="21" height="30" rx="9"/><rect x="26.5" y="36" width="4.6" height="22" rx="2.3"/><rect x="31.8" y="32" width="4.6" height="26" rx="2.3"/><rect x="37.1" y="33" width="4.6" height="25" rx="2.3"/><rect x="42.2" y="37" width="4.4" height="21" rx="2.2"/><rect x="19" y="52" width="5" height="17" rx="2.5" transform="rotate(-38 21.5 60.5)"/></g></g>'
-        )
-          + star(50, 22, 0.8, "#FFE27A")
-          + '<path d="M74 22a9 9 0 0 1 0 13M80 17a16 16 0 0 1 0 23" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" opacity=".9"/>',
+        g='<circle cx="50" cy="21" r="13" fill="#fff" opacity=".16"/>'
+          + du_a_hands()
+          + star(50, 21, 0.66, "#FFE27A") + star(24, 27, 0.3, "#fff") + star(77, 29, 0.34, "#fff"),
     ),
     # Dua Journey — match du'a cards to situations
     "dua-journey": dict(
