@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SectionHeader, SectionButton } from "@/components/SectionHeader";
 import { notFound } from "next/navigation";
 import { type Locale, absoluteUrl, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -48,31 +49,17 @@ export default async function CatatanIndex({
     <>
       <Header locale={l} currentPath="/cerita" />
       <main id="main" className="mx-auto max-w-3xl px-5 pb-28 pt-12 sm:px-7 sm:pt-16 md:pb-20">
-        <nav aria-label="Breadcrumb" className="mb-6 text-[12px] text-whisper">
-          <Link href={pathFor(l)} className="hover:text-ink">
-            {dict.nav.home}
-          </Link>{" "}
-          / <span className="text-ink">{dict.nav.catatan}</span>
-        </nav>
-
-        <header className="mb-10 max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-brave-deep">
-            <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
-            {dict.catatan.byline}
-          </span>
-          <h1 className="font-display mt-4 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">
-            {dict.catatan.indexTitle}
-          </h1>
-          <p className="mt-4 text-[16.5px] leading-[1.65] text-whisper">
-            {dict.catatan.intro}
-          </p>
-          <Link
-            href={pathFor(l, "/cerita/tema")}
-            className="tap mt-5 inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper px-4 py-2 text-[13.5px] font-semibold text-brave-deep hover:border-brave/40"
-          >
+        <SectionHeader
+          locale={l}
+          section="cerita"
+          crumb={dict.nav.catatan}
+          title={dict.catatan.indexTitle}
+          sub={dict.catatan.intro}
+        >
+          <SectionButton href={pathFor(l, "/cerita/tema")}>
             {l === "id" ? "Jelajahi per tema" : "Browse by theme"} →
-          </Link>
-        </header>
+          </SectionButton>
+        </SectionHeader>
 
         <ul className="space-y-7">
           {notes.map((n) => (

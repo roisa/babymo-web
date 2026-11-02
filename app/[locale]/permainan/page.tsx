@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SectionHeader, SectionButton } from "@/components/SectionHeader";
 import { notFound } from "next/navigation";
 import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -46,20 +47,13 @@ export default async function GamesIndex({
     <>
       <Header locale={l} currentPath="/permainan" />
       <main id="main" className="mx-auto max-w-6xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
-        <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
-          <Link href={pathFor(l)} className="hover:text-ink">
-            {dict.nav.home}
-          </Link>{" "}
-          / <span className="text-ink">{dict.nav.games}</span>
-        </nav>
-        <header className="max-w-2xl">
-          <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-            {dict.pages.games.title}
-          </h1>
-          <p className="mt-3 text-base leading-relaxed text-whisper">
-            {dict.pages.games.description}
-          </p>
-        </header>
+        <SectionHeader
+          locale={l}
+          section="main"
+          crumb={dict.nav.games}
+          title={dict.pages.games.title}
+          sub={dict.pages.games.description}
+        />
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {games.map((g) => (
             <li key={g.slug}>

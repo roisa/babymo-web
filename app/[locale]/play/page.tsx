@@ -73,6 +73,7 @@ export default async function PlayHub({
       title={dict.pages.play.title}
       description={dict.pages.play.description}
       crumbLabel={dict.nav.play}
+      section="main"
       items={items(l, dict)}
     />
   );

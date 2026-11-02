@@ -131,6 +131,7 @@ export default async function LearnHub({
       title={dict.pages.learn.title}
       description={dict.pages.learn.description}
       crumbLabel={dict.nav.learn}
+      section="belajar"
       items={items(l, dict)}
     />
   );

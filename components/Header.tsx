@@ -5,6 +5,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { SearchOverlay } from "./SearchOverlay";
 import { ThemeToggle } from "./ThemeToggle";
+import { type SectionKey, SECTION_EMOJI } from "@/lib/sections";
 
 type Props = {
   locale: Locale;
@@ -15,17 +16,19 @@ export function Header({ locale, currentPath }: Props) {
   const dict = getDictionary(locale);
   // Outcome-based primary nav (Home lives on the logo). Every content format
   // sits as a sub-section inside one of these destinations.
-  const items: { href: string; label: string; match: string[] }[] = [
-    { href: "/doa", label: dict.nav.doa, match: ["/doa"] },
-    { href: "/cerita", label: dict.nav.catatan, match: ["/cerita"] },
+  const items: { href: string; label: string; sec: SectionKey; match: string[] }[] = [
+    { href: "/doa", label: dict.nav.doa, sec: "doa", match: ["/doa", "/dzikir", "/sholat", "/puasa"] },
+    { href: "/cerita", label: dict.nav.catatan, sec: "cerita", match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
+      sec: "main",
       match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
     },
     {
       href: "/learn",
       label: dict.nav.learn ?? "Learn",
+      sec: "belajar",
       match: [
         "/learn",
         "/hadith",
@@ -61,7 +64,7 @@ export function Header({ locale, currentPath }: Props) {
             priority
             className="h-8 w-8"
           />
-          <span className="font-serif text-[17px] font-medium tracking-tight">
+          <span className="font-display text-[19px] tracking-tight">
             Baby Mo
           </span>
         </Link>
@@ -77,12 +80,9 @@ export function Header({ locale, currentPath }: Props) {
                   <Link
                     href={pathFor(locale, it.href)}
                     aria-current={isActive ? "page" : undefined}
-                    className={
-                      isActive
-                        ? "tap inline-flex items-center rounded-full bg-brave-soft px-3.5 py-1.5 text-[13.5px] font-semibold text-brave-deep shadow-[inset_0_0_0_1px_rgba(30,140,83,0.18)]"
-                        : "tap inline-flex items-center rounded-full px-3 py-1.5 text-[13.5px] font-medium text-whisper transition hover:bg-paper-2 hover:text-ink"
-                    }
+                    className={`nav-sec sec-${it.sec} tap inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[14px] font-bold transition`}
                   >
+                    <span aria-hidden className="text-[15px]">{SECTION_EMOJI[it.sec]}</span>
                     {it.label}
                   </Link>
                 </li>
