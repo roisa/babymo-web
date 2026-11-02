@@ -1035,3 +1035,42 @@ html.dark { --color-coral: #FF8A8E; --color-coral-soft: #3A1E22; --color-coral-d
   box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 8px 16px -8px rgba(247, 103, 7, 0.7);
 }
 @media (max-width: 639px) { .phone-shot { border-width: 4px; border-radius: 16px; } }
+
+/* ─── Belajar page ───────────────────────────────────────────────────── */
+.learn-tone--sky   { --t: var(--color-sky);   --t-soft: var(--color-sky-soft);   --t-deep: var(--color-sky-deep); }
+.learn-tone--grape { --t: var(--color-grape); --t-soft: var(--color-grape-soft); --t-deep: var(--color-grape-deep); }
+.learn-tone--peach { --t: var(--color-peach); --t-soft: var(--color-peach-soft); --t-deep: #B4470F; }
+.learn-tone--brave { --t: var(--color-brave); --t-soft: var(--color-brave-soft); --t-deep: var(--color-brave-deep); }
+.learn-tone--sun   { --t: var(--color-sun);   --t-soft: var(--color-sun-soft);   --t-deep: var(--color-sun-deep); }
+.learn-tone--berry { --t: var(--color-berry); --t-soft: var(--color-berry-soft); --t-deep: var(--color-berry-deep); }
+html.dark .learn-tone--peach { --t-deep: #F7B98A; }
+.learn-today, .learn-tile {
+  background:
+    radial-gradient(120% 90% at 100% 0%, color-mix(in srgb, var(--t) 22%, transparent), transparent 60%),
+    var(--t-soft);
+  border: 2px solid color-mix(in srgb, var(--t) 28%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.7), 0 14px 28px -22px color-mix(in srgb, var(--t) 70%, #000);
+  transition: transform 260ms cubic-bezier(.34,1.56,.64,1), box-shadow 260ms ease;
+}
+html.dark .learn-today, html.dark .learn-tile { box-shadow: 0 14px 28px -22px rgba(0,0,0,.7); }
+.learn-today:hover, .learn-tile:hover { transform: translateY(-4px) rotate(-.4deg); }
+.learn-emoji {
+  display: grid; place-items: center; width: 54px; height: 54px; border-radius: 17px; font-size: 30px;
+  background: var(--color-paper); border: 2px solid #fff;
+  box-shadow: 0 6px 14px -8px color-mix(in srgb, var(--t) 80%, #000);
+  transform: rotate(-6deg); transition: transform 260ms cubic-bezier(.34,1.56,.64,1);
+}
+html.dark .learn-emoji { border-color: rgba(255,255,255,.08); }
+.learn-tile:hover .learn-emoji { transform: rotate(6deg) scale(1.08); }
+.learn-play {
+  background: linear-gradient(100deg, var(--color-sun-soft), var(--color-peach-soft));
+  border: 2px solid color-mix(in srgb, var(--color-sun) 35%, transparent);
+}
+.learn-month {
+  background:
+    radial-gradient(60% 120% at 0% 50%, rgba(255, 231, 163, .55), transparent 60%),
+    linear-gradient(110deg, #EEE9FF, #E3F1FF);
+  border: 2px solid rgba(138, 121, 217, .3);
+}
+html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); }
+.learn-moon { font-size: 54px; filter: drop-shadow(0 8px 14px rgba(120, 90, 220, .35)); }
