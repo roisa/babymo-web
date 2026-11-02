@@ -971,3 +971,36 @@ html.dark .text-grad, html.dark .text-grad-hero, html.dark h1.font-display:not(.
 html.dark { --color-coral: #FF8A8E; --color-coral-soft: #3A1E22; --color-coral-deep: #FFB3B6; }
 .sec-momen { --sec: var(--color-coral); --sec-soft: var(--color-coral-soft); --sec-deep: var(--color-coral-deep);
   --grad: linear-gradient(100deg, #E5233D 0%, #FF6B4A 45%, #F59F00 100%); --grad-dark: linear-gradient(100deg, #FFB3B6, #FFD08A); }
+
+/* ─── Momen (videos) ─────────────────────────────────────────────────── */
+.momen-thumb { box-shadow: 0 10px 24px -16px rgba(15, 18, 19, 0.5); background: var(--sec-soft); }
+.momen-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  display: grid; place-items: center; width: 52px; height: 52px; border-radius: 999px;
+  color: #fff; background: rgba(229, 35, 61, 0.88);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 8px 20px -6px rgba(229, 35, 61, 0.7);
+  transition: transform 260ms cubic-bezier(.34,1.56,.64,1);
+}
+.momen-card .momen-thumb.rounded-\[16px\] .momen-play { width: 36px; height: 36px; }
+.group:hover .momen-play { transform: translate(-50%, -50%) scale(1.12); }
+.momen-dur, .momen-new {
+  position: absolute; bottom: 8px; border-radius: 999px; padding: 2px 8px;
+  font-size: 11.5px; font-weight: 800; color: #fff;
+}
+.momen-dur { right: 8px; background: rgba(15, 18, 19, 0.72); }
+.momen-new { left: 8px; top: 8px; bottom: auto; background: linear-gradient(100deg, #FF5A5F, #F59F00); box-shadow: 0 4px 10px -4px rgba(229,35,61,.6); }
+/* Horizontal snap shelves */
+.momen-row { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(240px, 1fr); gap: 18px;
+  overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 4px 14px; margin: 0 -4px; scrollbar-width: thin; }
+.momen-row > * { scroll-snap-align: start; }
+@media (min-width: 1024px) { .momen-row { grid-auto-columns: calc((100% - 54px) / 4); } }
+/* "Hari ini mau nonton apa?" mood picker */
+.mood-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 18px 10px;
+  border-radius: 24px; background: var(--color-paper); border: 2px solid var(--color-hairline);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.9), 0 8px 18px -14px rgba(15,18,19,.4);
+  transition: transform 220ms cubic-bezier(.34,1.56,.64,1), border-color 200ms ease;
+}
+.mood-btn:hover { transform: translateY(-3px) rotate(-1deg); border-color: var(--sec); }
+.mood-btn:active { transform: scale(0.95); }
+.mood-emoji { font-size: 38px; line-height: 1; filter: drop-shadow(0 4px 6px rgba(0,0,0,.15)); }
