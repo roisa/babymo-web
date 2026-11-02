@@ -91,6 +91,12 @@ export function DoaList({ doas, locale }: Props) {
         label: `${SITUATION_EMOJI[k] ?? "•"} ${lookup[k] ?? labelize(k)}`,
         count: n,
       })),
+      ...(() => {
+        const songs = doas.filter((d) => d.video).length;
+        return songs
+          ? [{ value: "lagu", label: locale === "id" ? "🎵 Ada lagunya" : "🎵 Has a song", count: songs }]
+          : [];
+      })(),
     ];
   }, [doas, locale]);
 
@@ -98,7 +104,9 @@ export function DoaList({ doas, locale }: Props) {
   const filtered =
     active === "all"
       ? doas
-      : doas.filter((d) => d.situations.includes(active));
+      : active === "lagu"
+        ? doas.filter((d) => d.video)
+        : doas.filter((d) => d.situations.includes(active));
 
   return (
     <>

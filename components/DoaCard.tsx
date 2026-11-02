@@ -37,6 +37,11 @@ export function DoaCard({ doa, locale }: Props) {
           {GRADE_LABEL[doa.source.grade] ?? labelize(doa.source.grade)}
         </span>
         <span>{doa.source.reference}</span>
+        {doa.video && (
+          <span className="ml-auto rounded-full bg-[var(--color-sky-soft)] px-2.5 py-0.5 font-bold text-[var(--color-sky-deep)]">
+            🎵 {locale === "id" ? "Ada lagunya" : "Has a song"}
+          </span>
+        )}
       </div>
     </Link>
   );

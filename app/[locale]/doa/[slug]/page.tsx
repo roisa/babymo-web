@@ -96,6 +96,11 @@ export default async function DoaDetail({
           <p className="mt-4 text-[17px] leading-relaxed text-ink-soft">
             {doa.context[l]}
           </p>
+          {doa.video && (
+            <a href="#lagu" className="sec-btn tap mt-5 inline-flex items-center gap-2 rounded-full px-5 py-3 text-[15px] font-bold">
+              🎵 {l === "id" ? "Nyanyikan lagunya bareng Baby Mo" : "Sing it with Baby Mo"}
+            </a>
+          )}
         </header>
 
         {/* Arabic / transliteration / translation — iOS card stack */}
@@ -207,7 +212,7 @@ export default async function DoaDetail({
         </ParentPanel>
 
         {doa.video && (
-          <section className="mt-14">
+          <section id="lagu" className="mt-14 scroll-mt-24">
             <h2 className="tracking-display font-serif text-2xl font-medium text-ink">
               {l === "id" ? "Dengarkan lagunya bareng Baby Mo" : "Sing along with Baby Mo"}
             </h2>
