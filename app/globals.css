@@ -756,3 +756,18 @@ html.dark .sec-btn { color: #15171B; }
 @media (prefers-reduced-motion: reduce) {
   .lift:hover, .lift:active, .magnet:hover, .magnet:active { transform: none; }
 }
+
+/* Baby Mo speech bubble (page intros) */
+.bm-bubble {
+  background: var(--color-paper);
+  border: 2px solid color-mix(in srgb, var(--sec, var(--color-brave)) 35%, var(--color-hairline));
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--sec, var(--color-brave)) 25%, transparent);
+}
+.bm-bubble::after {
+  content: ""; position: absolute; left: -9px; bottom: 14px;
+  width: 16px; height: 16px; background: inherit;
+  border-left: inherit; border-bottom: inherit;
+  transform: rotate(45deg); border-radius: 0 0 0 4px;
+}
+.bm-says-pose { filter: drop-shadow(0 8px 10px rgba(15, 18, 19, 0.16)); animation: mascot-breathe 5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .bm-says-pose { animation: none; } }
