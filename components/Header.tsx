@@ -5,7 +5,8 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { LanguageSwitcher } from "./LanguageSwitcher";
 import { SearchOverlay } from "./SearchOverlay";
 import { ThemeToggle } from "./ThemeToggle";
-import { type SectionKey, SECTION_EMOJI } from "@/lib/sections";
+import type { SectionKey } from "@/lib/sections";
+import { AppIcon } from "./AppIcon";
 
 type Props = {
   locale: Locale;
@@ -82,7 +83,7 @@ export function Header({ locale, currentPath }: Props) {
                     aria-current={isActive ? "page" : undefined}
                     className={`nav-sec sec-${it.sec} tap inline-flex items-center gap-1.5 rounded-full px-3.5 py-1.5 text-[14px] font-bold transition`}
                   >
-                    <span aria-hidden className="text-[15px]">{SECTION_EMOJI[it.sec]}</span>
+                    <AppIcon name={it.sec} size={22} />
                     {it.label}
                   </Link>
                 </li>

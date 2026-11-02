@@ -110,12 +110,13 @@ export default async function HomePage({
                   {dict.home.eyebrow}
                 </span>
                 <h1 className="font-display hero-words mt-5 text-[38px] font-medium leading-[1.06] text-ink sm:text-[50px] md:text-[56px]">
-                  {heroWords.map((w, i) => (
+                  {heroWords.slice(0, heroSplit).map((w, i) => (
                     <Fragment key={i}>
-                      <span className={i >= heroSplit ? "text-brave" : ""}>{w}</span>
-                      {i < heroWords.length - 1 ? " " : ""}
+                      <span>{w}</span>{" "}
                     </Fragment>
                   ))}
+                  {/* Second clause = one gradient phrase (inline, so it wraps). */}
+                  <span className="hero-grad text-grad-hero">{dict.home.heroTitleB}</span>
                 </h1>
                 <p className="mt-6 max-w-lg text-[17px] leading-[1.6] text-whisper">
                   {dict.home.heroSub}
@@ -221,7 +222,7 @@ export default async function HomePage({
           <div className="mx-auto max-w-6xl px-5 pt-14 sm:px-7 sm:pt-20">
             <Reveal>
               <div className="max-w-2xl">
-                <h2 className="tracking-display font-display text-[32px] font-medium leading-tight text-ink sm:text-[42px]">
+                <h2 className="tracking-display font-display text-grad text-[32px] font-medium leading-tight sm:text-[42px]">
                   {l === "id" ? "Satu hari bersama Baby Mo" : "A day with Baby Mo"}
                 </h2>
                 <p className="mt-2 text-[15.5px] text-whisper">
@@ -241,7 +242,7 @@ export default async function HomePage({
                 <div className="grid items-stretch gap-5 md:grid-cols-[0.95fr_1.05fr]">
                   <div className="flex flex-col justify-center">
                     <MomentLabel icon="🌅" text={l === "id" ? "Pagi · Doa hari ini" : "Morning · Today's du'a"} />
-                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                    <h3 className="font-display text-grad mt-3 text-[28px] font-medium leading-tight sm:text-[36px]">
                       {doaToday.title[l]}
                     </h3>
                     <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
@@ -323,7 +324,7 @@ export default async function HomePage({
                 <div className="grid items-center gap-8 sm:grid-cols-[1.1fr_0.9fr]">
                   <div>
                     <MomentLabel icon="☀️" text={l === "id" ? "Siang · Bermain sambil belajar" : "Daytime · Learn through play"} />
-                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                    <h3 className="font-display text-grad mt-3 text-[28px] font-medium leading-tight sm:text-[36px]">
                       {l === "id"
                         ? `${allGames.length} permainan gratis`
                         : `${allGames.length} free games`}
@@ -374,7 +375,7 @@ export default async function HomePage({
                 <div className="flex flex-wrap items-end justify-between gap-6">
                   <div className="max-w-xl">
                     <MomentLabel icon="🌙" text={l === "id" ? "Malam · Cerita sebelum tidur" : "Night · Bedtime stories"} />
-                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                    <h3 className="font-display text-grad mt-3 text-[28px] font-medium leading-tight sm:text-[36px]">
                       {l === "id" ? "Cerita Baby Mo & Baby Ais" : "Baby Mo & Baby Ais stories"}
                     </h3>
                   </div>

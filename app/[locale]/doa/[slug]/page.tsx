@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ParentPanel } from "@/components/ParentPanel";
+import { AppIcon } from "@/components/AppIcon";
 import { doaEmoji, doaTile } from "@/lib/doa-emoji";
 import { notFound } from "next/navigation";
 import { type Locale, absoluteUrl, isLocale, locales, pathFor, siteUrl } from "@/lib/i18n/config";
@@ -97,8 +98,9 @@ export default async function DoaDetail({
             {doa.context[l]}
           </p>
           {doa.video && (
-            <a href="#lagu" className="sec-btn tap mt-5 inline-flex items-center gap-2 rounded-full px-5 py-3 text-[15px] font-bold">
-              🎵 {l === "id" ? "Nyanyikan lagunya bareng Baby Mo" : "Sing it with Baby Mo"}
+            <a href="#lagu" className="sec-btn tap mt-5 inline-flex items-center gap-2.5 rounded-full py-2.5 pl-2.5 pr-5 text-[15px] font-bold">
+              <AppIcon name="music" size={30} />
+              {l === "id" ? "Nyanyikan lagunya bareng Baby Mo" : "Sing it with Baby Mo"}
             </a>
           )}
         </header>

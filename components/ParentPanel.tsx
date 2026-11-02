@@ -1,4 +1,5 @@
 import type { Locale } from "@/lib/i18n/config";
+import { AppIcon } from "./AppIcon";
 
 /**
  * "Untuk Ayah & Bunda" — a fold-out panel that holds the parent-facing
@@ -20,7 +21,7 @@ export function ParentPanel({
     <details className={`parent-panel group rounded-[24px] border-2 border-hairline bg-paper-2 ${className}`} open={open}>
       <summary className="tap flex cursor-pointer list-none items-center justify-between gap-3 px-5 py-4 sm:px-6">
         <span className="flex items-center gap-3">
-          <span aria-hidden className="flex h-10 w-10 items-center justify-center rounded-full bg-sage-soft text-[20px]">👨‍👩‍👧</span>
+          <AppIcon name="parents" size={40} />
           <span>
             <span className="font-display block text-[18px] leading-tight text-ink">
               {locale === "id" ? "Untuk Ayah & Bunda" : "For parents"}

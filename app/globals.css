@@ -723,12 +723,7 @@ html.dark {
   transform: rotate(-6deg);
 }
 html.dark .sec-sticker { border-color: color-mix(in srgb, var(--sec) 40%, transparent); }
-.sec-btn {
-  background: var(--sec-deep); color: var(--color-paper);
-  box-shadow: 0 4px 0 color-mix(in srgb, var(--sec-deep) 60%, #000);
-}
-html.dark .sec-btn { color: #15171B; }
-.sec-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--sec-deep) 60%, #000); }
+
 
 /* Nav pill in the section colour */
 .nav-sec { color: var(--color-whisper); }
@@ -746,12 +741,9 @@ html.dark .sec-btn { color: #15171B; }
 .lift.border:hover { box-shadow: 0 7px 0 var(--color-hairline), 0 18px 32px -22px rgba(15, 18, 19, 0.22); }
 .lift:active { transform: translateY(2px); }
 .lift.border:active { box-shadow: 0 1px 0 var(--color-hairline); }
-/* Primary buttons: pressable, with a darker base that squishes on tap. */
-.magnet { box-shadow: 0 4px 0 rgba(0, 0, 0, 0.18) !important; }
-.magnet:hover { transform: translateY(-1px); box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18) !important; }
-.magnet:active { transform: translateY(3px) scale(1); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18) !important; }
+
 @media (prefers-reduced-motion: reduce) {
-  .lift:hover, .lift:active, .magnet:hover, .magnet:active { transform: none; }
+  .lift:hover, .lift:active { transform: none; }
 }
 
 /* Baby Mo speech bubble (page intros) */
@@ -857,3 +849,118 @@ html.dark body {
   .story-done-card { transform: none; opacity: 1; transition: none; }
   .story-done.is-done .story-done-pose { animation: none; }
 }
+
+/* ═══ iOS 26-inspired "Liquid Glass" layer ══════════════════════════ */
+
+/* App icons: gradient squircle + glossy sheen + coloured shadow */
+.app-icon {
+  position: relative; display: inline-grid; place-items: center; flex-shrink: 0;
+  border-radius: 28%; isolation: isolate; overflow: hidden;
+  background: linear-gradient(160deg, var(--ai-a), var(--ai-b));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -2px 4px rgba(0, 0, 0, 0.12),
+    0 6px 14px -6px var(--ai-shadow);
+}
+.app-icon::before { /* top sheen */
+  content: ""; position: absolute; inset: 0 0 48% 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.42), rgba(255, 255, 255, 0));
+  border-radius: inherit;
+}
+.app-icon svg { filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.18)); }
+.app-icon--tilt { transform: rotate(-6deg); }
+.app-icon--doa     { --ai-a: #5BCBFA; --ai-b: #2D7BE5; --ai-shadow: rgba(45, 123, 229, 0.55); }
+.app-icon--cerita  { --ai-a: #A88BFF; --ai-b: #6646E0; --ai-shadow: rgba(102, 70, 224, 0.55); }
+.app-icon--main    { --ai-a: #FFD54A; --ai-b: #FF9500; --ai-shadow: rgba(255, 149, 0, 0.55); }
+.app-icon--belajar { --ai-a: #FF8AB5; --ai-b: #E8336F; --ai-shadow: rgba(232, 51, 111, 0.55); }
+.app-icon--home    { --ai-a: #4CD992; --ai-b: #12A15A; --ai-shadow: rgba(18, 161, 90, 0.5); }
+.app-icon--parents { --ai-a: #4FDCC8; --ai-b: #0E9488; --ai-shadow: rgba(14, 148, 136, 0.5); }
+.app-icon--music   { --ai-a: #FF8A80; --ai-b: #F0436A; --ai-shadow: rgba(240, 67, 106, 0.5); }
+
+/* Floating glass tab bar (mobile). No backdrop-filter on purpose: blur on a
+   fixed bar detaches during momentum scroll in iOS in-app webviews, so the
+   glass is faked with a near-opaque tint, a top sheen and a soft shadow. */
+.glass-tabbar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0) 60%),
+    color-mix(in srgb, var(--color-paper) 94%, transparent);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 0 1px var(--color-hairline), 0 14px 34px -14px rgba(15, 18, 19, 0.35);
+}
+html.dark .glass-tabbar {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0) 60%),
+    color-mix(in srgb, var(--color-paper-2) 94%, transparent);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+.tabbar-item.is-active { background: var(--sec-soft, var(--color-brave-soft)); }
+
+/* Buttons — Liquid Glass capsules.
+   Primary (.magnet / .sec-btn): tinted glass — the colour shows through a
+   glossy top sheen, with a bright inner top edge and a soft coloured glow.
+   Secondary (rounded-full outlined buttons): clear glass. All of them
+   shrink a touch when pressed, like iOS. */
+.magnet, .sec-btn {
+  position: relative;
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.32) 0%, rgba(255, 255, 255, 0.08) 48%, rgba(255, 255, 255, 0) 52%, rgba(0, 0, 0, 0.06) 100%) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1),
+    0 10px 22px -10px var(--btn-glow, rgba(30, 140, 83, 0.55)) !important;
+  transition: transform 220ms cubic-bezier(.34, 1.56, .64, 1), box-shadow 220ms ease, filter 220ms ease !important;
+}
+.magnet:hover, .sec-btn:hover { transform: translateY(-1px) scale(1.02); filter: saturate(1.08) brightness(1.04); }
+.magnet:active, .sec-btn:active { transform: scale(0.95); filter: brightness(0.97); }
+.sec-btn {
+  background-color: var(--sec-deep); color: #fff;
+  --btn-glow: color-mix(in srgb, var(--sec) 70%, transparent);
+}
+html.dark .sec-btn { color: #15171B; }
+
+.tap.rounded-full.border:not(.magnet):not(.sec-btn) {
+  background-color: color-mix(in srgb, var(--color-paper) 72%, transparent) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(170%);
+  backdrop-filter: blur(14px) saturate(170%);
+  border-color: rgba(255, 255, 255, 0.9) !important;
+  box-shadow:
+    0 0 0 1px var(--color-hairline),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9),
+    0 6px 16px -10px rgba(15, 18, 19, 0.3);
+  transition: transform 220ms cubic-bezier(.34, 1.56, .64, 1), box-shadow 220ms ease;
+}
+html.dark .tap.rounded-full.border:not(.magnet):not(.sec-btn) {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 6px 16px -10px rgba(0, 0, 0, 0.6);
+}
+.tap.rounded-full.border:not(.magnet):not(.sec-btn):hover { transform: translateY(-1px); }
+.tap.rounded-full.border:not(.magnet):not(.sec-btn):active { transform: scale(0.95); }
+@media (prefers-reduced-motion: reduce) {
+  .magnet:hover, .magnet:active, .sec-btn:hover, .sec-btn:active { transform: none; }
+}
+
+/* ─── Gradient headlines: iOS-elegant, kid-bright ───────────────────── */
+.text-grad, .text-grad-hero, h1.font-display:not(.hero-words), h1.font-serif {
+  background-image: var(--grad, linear-gradient(100deg, #0F8F52 0%, #14A89A 38%, #2D8FE0 72%, #7A5CF0 100%));
+  -webkit-background-clip: text; background-clip: text;
+  color: transparent; -webkit-text-fill-color: transparent;
+  -webkit-box-decoration-break: slice; box-decoration-break: slice;
+  padding-bottom: 0.06em; /* keep descenders inside the clip */
+}
+html.dark .text-grad, html.dark .text-grad-hero, html.dark h1.font-display:not(.hero-words), html.dark h1.font-serif {
+  background-image: var(--grad-dark, linear-gradient(100deg, #6EE7A8 0%, #5EE0D2 38%, #7CC4FF 72%, #C3B5FF 100%));
+}
+/* Hero: Baby Mo's emerald melting into teal, sky and a little grape. */
+.text-grad-hero {
+  --grad: linear-gradient(95deg, #12A15A 0%, #10B5A0 35%, #2F9BEA 68%, #8B6CF5 100%);
+}
+/* Section pages pick up their own colour pair. */
+.sec-doa     { --grad: linear-gradient(100deg, #1C7FC4 0%, #2D9BEA 45%, #6A5CF0 100%); --grad-dark: linear-gradient(100deg, #8FD4FF, #B6B0FF); }
+.sec-cerita  { --grad: linear-gradient(100deg, #5B3FD6 0%, #8B5CF6 45%, #E0457F 100%); --grad-dark: linear-gradient(100deg, #C9B8FF, #FFA8C8); }
+.sec-main    { --grad: linear-gradient(100deg, #E8590C 0%, #F59F00 55%, #E0457F 100%); --grad-dark: linear-gradient(100deg, #FFC27A, #FFE08A); }
+.sec-belajar { --grad: linear-gradient(100deg, #D6336C 0%, #E64980 40%, #7A5CF0 100%); --grad-dark: linear-gradient(100deg, #FFA8C8, #C9B8FF); }
+/* Night sky section on the homepage: moonlit gradient on dark blue. */
+.moment--malam { --grad: linear-gradient(100deg, #FFE7A3, #CFC6F7); --grad-dark: linear-gradient(100deg, #FFE7A3, #CFC6F7); }
+/* The hero clause is inline (it must wrap), so it fades in instead of rising. */
+.hero-words > span.hero-grad { display: inline; animation: hero-grad-in 900ms ease 400ms both; }
+@keyframes hero-grad-in { from { opacity: 0; filter: blur(6px); } to { opacity: 1; filter: blur(0); } }
+.magnet[class*="c4302b"] { --btn-glow: rgba(196, 48, 43, 0.5); }
