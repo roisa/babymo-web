@@ -73,6 +73,17 @@ def du_a_hands(rot=-7):
 
 
 ICONS = {
+    # Wudhu Bareng Mo — a tap pouring a big clean water drop
+    "wudhu": dict(
+        a="#7DD3FC", b="#0369A1",
+        g='<path d="M22 24h30a6 6 0 0 1 6 6v8H50v-4H22z" fill="#fff"/>'
+          + '<rect x="16" y="20" width="10" height="16" rx="3" fill="#fff"/>'
+          + '<rect x="30" y="14" width="10" height="6" rx="3" fill="#fff" opacity=".85"/>'
+          + '<path d="M54 46c0 0-15 16-15 26a15 15 0 0 0 30 0c0-10-15-26-15-26z" fill="#fff"/>'
+          + '<path d="M47 71a7 7 0 0 0 6 7" fill="none" stroke="#38BDF8" stroke-width="3.4" stroke-linecap="round"/>'
+          + '<circle cx="54" cy="41" r="2.6" fill="#E0F4FF"/>'
+          + star(78, 30, 0.42, "#FFE27A") + star(28, 70, 0.32, "#fff"),
+    ),
     # Kenalan Baby Mo — tap tiles to reveal Baby Mo
     "puzzle": dict(
         a="#C4B5FD", b="#6D28D9",
