@@ -1004,3 +1004,6 @@ html.dark { --color-coral: #FF8A8E; --color-coral-soft: #3A1E22; --color-coral-d
 .mood-btn:hover { transform: translateY(-3px) rotate(-1deg); border-color: var(--sec); }
 .mood-btn:active { transform: scale(0.95); }
 .mood-emoji { font-size: 38px; line-height: 1; filter: drop-shadow(0 4px 6px rgba(0,0,0,.15)); }
+
+/* Game icons (SVG app icons shared with play.babymo.id) */
+.game-icon { border-radius: 23%; filter: drop-shadow(0 8px 12px rgba(15, 18, 19, 0.22)); }
