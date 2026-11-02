@@ -832,3 +832,28 @@ html.dark body {
 }
 .mascot-tap:hover .mascot-hint { opacity: 1; transform: translateX(-50%) translateY(-2px); color: var(--color-brave-deep); }
 @media (prefers-reduced-motion: reduce) { .mascot-hop { animation: none; } }
+
+/* End-of-story celebration */
+.story-done-card {
+  background: var(--sec-soft);
+  border: 2px solid color-mix(in srgb, var(--sec) 35%, transparent);
+  box-shadow: 0 5px 0 color-mix(in srgb, var(--sec) 30%, transparent);
+  transform: scale(0.96); opacity: 0.6; transition: transform 500ms cubic-bezier(.34,1.56,.64,1), opacity 400ms ease;
+}
+.story-done.is-done .story-done-card { transform: none; opacity: 1; }
+.story-done.is-done .story-done-pose { animation: mascot-hop 800ms cubic-bezier(.34,1.56,.64,1) 150ms both; }
+.story-confetti { position: absolute; inset: -40px 0 auto 0; height: 0; pointer-events: none; z-index: 2; }
+.story-confetti span {
+  position: absolute; left: var(--x); top: 0; font-size: 22px;
+  animation: confetti-pop 1400ms cubic-bezier(.2,.7,.3,1) calc(var(--i) * 45ms) both;
+}
+@keyframes confetti-pop {
+  0% { transform: translateY(80px) scale(0.3) rotate(0deg); opacity: 0; }
+  25% { opacity: 1; }
+  60% { transform: translateY(-40px) scale(1.1) rotate(160deg); opacity: 1; }
+  100% { transform: translateY(40px) scale(0.9) rotate(300deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-done-card { transform: none; opacity: 1; transition: none; }
+  .story-done.is-done .story-done-pose { animation: none; }
+}

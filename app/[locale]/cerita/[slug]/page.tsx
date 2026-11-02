@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ParentPanel } from "@/components/ParentPanel";
+import { StoryCelebrate } from "@/components/StoryCelebrate";
 import { notFound } from "next/navigation";
 import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { posePath } from "@/lib/games/poses";
@@ -167,6 +168,14 @@ export default async function CatatanDetail({
         <div className="catatan-body">
           {renderBody(n.body[l])}
         </div>
+
+        {isStory && (
+          <StoryCelebrate
+            locale={l}
+            poseSrc={asset(posePath("baby-mo-yeyy.png"))}
+            nextStory={nextStory}
+          />
+        )}
 
         {/* Theme chips — internal links to the story-theme hubs */}
         {(() => {
