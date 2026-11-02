@@ -232,6 +232,7 @@ export default async function HomePage({
           {/* Pagi — du'a of the day */}
           <Reveal>
             <div className="moment moment--pagi">
+              <span aria-hidden className="sky-sun" />
               <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
                 <div className="grid items-stretch gap-5 md:grid-cols-[0.95fr_1.05fr]">
                   <div className="flex flex-col justify-center">
@@ -312,6 +313,8 @@ export default async function HomePage({
           {/* Siang — play */}
           <Reveal>
             <div className="moment moment--siang">
+              <span aria-hidden className="sky-cloud" style={{ top: "14%", left: "6%" }} />
+              <span aria-hidden className="sky-cloud" style={{ top: "8%", right: "12%", transform: "scale(0.7)", animationDirection: "reverse" }} />
               <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
                 <div className="grid items-center gap-8 sm:grid-cols-[1.1fr_0.9fr]">
                   <div>
@@ -359,6 +362,10 @@ export default async function HomePage({
           {/* Malam — bedtime stories */}
           <Reveal>
             <div className="moment moment--malam">
+              <span aria-hidden className="sky-moon" />
+              {STARS.map(([top, left, d], i) => (
+                <span key={i} aria-hidden className="sky-star" style={{ top, left, ["--d" as string]: d }} />
+              ))}
               <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
                 <div className="flex flex-wrap items-end justify-between gap-6">
                   <div className="max-w-xl">
@@ -633,6 +640,13 @@ export default async function HomePage({
     </>
   );
 }
+
+// Night-sky star positions for the Malam moment: [top, left, delay].
+const STARS: [string, string, string][] = [
+  ["8%", "8%", "0s"], ["14%", "26%", "1.1s"], ["6%", "44%", "0.4s"],
+  ["22%", "62%", "1.8s"], ["12%", "78%", "0.7s"], ["30%", "90%", "2.2s"],
+  ["34%", "14%", "1.5s"], ["40%", "52%", "0.2s"],
+];
 
 function MomentLabel({ icon, text }: { icon: string; text: string }) {
   return (

@@ -536,3 +536,85 @@ html {
   background: var(--color-brave-soft);
   color: var(--color-brave-deep);
 }
+
+/* Dawn → day → night: one continuous sky across the three moments.
+   Pagi/Siang use the soft accent tokens (they flip in dark mode);
+   Malam is always night and re-maps the colour tokens locally so every
+   card and text utility inside it turns "night" with no extra classes. */
+.moment {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.moment--pagi {
+  background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-peach-soft) 45%, var(--color-sun-soft) 100%);
+}
+.moment--siang {
+  background: linear-gradient(180deg, var(--color-sun-soft) 0%, var(--color-sky-soft) 55%, var(--color-sky-soft) 100%);
+}
+.moment--malam {
+  --color-ink: #F3F1EA;
+  --color-ink-soft: #D9D7EC;
+  --color-paper: #2C3063;
+  --color-hairline: rgba(255, 255, 255, 0.12);
+  --color-whisper: #B8BAD8;
+  --color-sage-deep: #CFE6CA;
+  --color-brave-soft: #444A8C;
+  --color-sage-soft: #3A3F78;
+  background: linear-gradient(180deg, var(--color-sky-soft) 0, #3D3F73 130px, #262A55 55%, #1C1F42 100%);
+  padding-top: 110px;
+  color: var(--color-ink);
+}
+html.dark .moment--pagi { background: linear-gradient(180deg, var(--color-paper) 0%, #241F35 50%, #2D2533 100%); }
+html.dark .moment--siang { background: linear-gradient(180deg, #2D2533 0%, #1A2C3A 60%, var(--color-sky-soft) 100%); }
+html.dark .moment--malam { background: linear-gradient(180deg, var(--color-sky-soft) 0, #262A55 130px, #15172F 100%); }
+.moment--malam .moment-label { background: rgba(255, 255, 255, 0.1); color: #FCEBA6; }
+
+/* Sky decor */
+.sky-sun {
+  position: absolute; z-index: -1; top: 4%; left: 44%;
+  width: clamp(64px, 9vw, 120px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 40% 38%, #FFF1B8, #FBD24E 72%);
+  box-shadow: 0 0 0 14px rgba(251, 210, 78, 0.16), 0 0 60px rgba(251, 210, 78, 0.45);
+  opacity: 0.85;
+}
+.sky-cloud {
+  position: absolute; z-index: -1; height: 34px; aspect-ratio: 2.6 / 1;
+  background: #fff; border-radius: 999px; opacity: 0.75;
+  animation: sc-drift 18s ease-in-out infinite;
+}
+html.dark .sky-cloud { background: #2B3A48; opacity: 0.55; }
+.sky-cloud::before, .sky-cloud::after { content: ""; position: absolute; bottom: 30%; background: inherit; border-radius: 50%; }
+.sky-cloud::before { width: 46%; height: 140%; left: 14%; }
+.sky-cloud::after { width: 36%; height: 105%; right: 16%; }
+.sky-moon {
+  position: absolute; z-index: -1; top: 8%; left: 52%;
+  width: clamp(48px, 6vw, 80px); aspect-ratio: 1; border-radius: 50%;
+  box-shadow: inset -16px 10px 0 0 #FCEBA6;
+  filter: drop-shadow(0 0 18px rgba(252, 235, 166, 0.45));
+  transform: rotate(-18deg);
+}
+.sky-star {
+  position: absolute; z-index: -1; width: 4px; height: 4px; border-radius: 50%;
+  background: #FFF6D6; box-shadow: 0 0 6px rgba(255, 246, 214, 0.9);
+  animation: sc-tw 3s ease-in-out infinite; animation-delay: var(--d, 0s);
+}
+
+/* Scroll-linked: the sun rises and the moon drifts up as each moment
+   enters view. Progressive enhancement — static where unsupported. */
+@supports (animation-timeline: view()) {
+  .sky-sun { animation: sky-rise linear both; animation-timeline: view(); animation-range: entry 0% cover 55%; }
+  .sky-moon { animation: sky-rise-moon linear both; animation-timeline: view(); animation-range: entry 0% cover 55%; }
+}
+@keyframes sky-rise { from { transform: translateY(120px) scale(0.85); opacity: 0.2; } to { transform: none; opacity: 0.85; } }
+@keyframes sky-rise-moon { from { transform: translateY(80px) rotate(-40deg); opacity: 0; } to { transform: rotate(-18deg); opacity: 1; } }
+
+/* Phones: tuck the sun/moon into the corner so they never sit on text. */
+@media (max-width: 639px) {
+  .sky-sun { left: auto; right: 4%; top: 1%; width: 52px; }
+  .sky-moon { left: auto; right: 7%; top: 48px; width: 40px; box-shadow: inset -9px 6px 0 0 #FCEBA6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-sun, .sky-moon, .sky-cloud, .sky-star { animation: none !important; }
+}
