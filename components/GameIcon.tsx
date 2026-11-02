@@ -9,7 +9,7 @@ import { asset } from "@/lib/i18n/config";
 const KNOWN = new Set([
   "puzzle", "doa-harian", "dua-journey", "kata-islam", "dreamtime", "hijaiyah",
   "cari-baby-mo", "memory-match", "forehand-beat", "kata-baik", "pray-with-mo",
-  "streak-sholat-mo",
+  "streak-sholat-mo", "wudhu",
 ]);
 
 export function GameIcon({

@@ -205,7 +205,7 @@ export default async function LearnHub({
               <AppIcon name="main" size={48} />
               <span className="min-w-0 flex-1">
                 <span className="font-display block text-[18px] text-ink">{id ? "Capek membaca? Main sambil belajar!" : "Tired of reading? Learn through play!"}</span>
-                <span className="block text-[13.5px] text-ink-soft">{id ? "12 game: hijaiyah, doa, sholat, dan kata Arab." : "12 games: hijaiyah, du'as, prayer and Arabic words."}</span>
+                <span className="block text-[13.5px] text-ink-soft">{id ? "13 game: hijaiyah, doa, wudhu, sholat, dan kata Arab." : "13 games: hijaiyah, du'as, wudu, prayer and Arabic words."}</span>
               </span>
               <span aria-hidden className="text-[18px] font-bold text-[var(--color-sun-deep)]">→</span>
             </Link>
