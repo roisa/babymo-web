@@ -72,7 +72,7 @@ export default async function CatatanIndex({
           <ul className="shelf mt-6 grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4">
             {stories.map((n, i) => (
               <li key={n.slug}>
-                <Link href={pathFor(l, `/cerita/${n.slug}`)} className="book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
+                <Link href={pathFor(l, `/cerita/${n.slug}`)} className="shelf-book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
                   <div className="book-cover relative">
                     <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} className="book-art" />
                     <span className="book-spine" aria-hidden />
