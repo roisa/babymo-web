@@ -1022,6 +1022,29 @@ html.dark { --color-coral: #FF8A8E; --color-coral-soft: #3A1E22; --color-coral-d
     var(--sec-soft);
   border: 2px solid color-mix(in srgb, var(--sec) 35%, transparent);
 }
+/* Permainan cards on phones: the screenshot peeks out of a tinted box
+   instead of a tall, thin phone strip squeezed beside the text */
+@media (max-width: 639px) {
+  .shot-peek {
+    background:
+      radial-gradient(80% 90% at 100% 0%, rgba(255, 213, 74, 0.40), transparent 60%),
+      radial-gradient(80% 90% at 0% 100%, rgba(125, 211, 252, 0.40), transparent 60%),
+      var(--sec-soft, #FFF4E6);
+  }
+  .shot-peek::after {
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 46px; pointer-events: none;
+    background: linear-gradient(to bottom, transparent, color-mix(in srgb, var(--sec-soft, #FFF4E6) 92%, transparent));
+  }
+  .shot-peek .phone-shot { border-width: 5px; border-radius: 22px; }
+  html.dark .shot-peek {
+    background:
+      radial-gradient(80% 90% at 100% 0%, rgba(255, 190, 60, 0.20), transparent 60%),
+      radial-gradient(80% 90% at 0% 100%, rgba(56, 189, 248, 0.20), transparent 60%),
+      #1E2433;
+  }
+  html.dark .shot-peek::after { background: linear-gradient(to bottom, transparent, rgba(30, 36, 51, .92)); }
+  .game-card:hover .shot-peek .phone-shot { transform: translateY(-4px); }
+}
 .game-card {
   box-shadow: 0 0 0 1px var(--color-hairline), 0 16px 30px -22px rgba(30, 60, 110, 0.45);
   transition: transform 260ms cubic-bezier(.34,1.56,.64,1), box-shadow 260ms ease;
