@@ -49,20 +49,22 @@ export function MobileNav({ locale }: Props) {
 
   // Five outcome tabs. `match` lets a tab stay highlighted when the user is on
   // one of its deep sub-pages (e.g. /hadith lights up Learn).
-  const items: { href: string; label: string; icon: (p: IconProps) => React.JSX.Element; match: string[] }[] = [
+  const items: { href: string; label: string; icon: (p: IconProps) => React.JSX.Element; sec?: string; match: string[] }[] = [
     { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
-    { href: "/doa", label: dict.nav.doa, icon: BookIcon, match: ["/doa"] },
-    { href: "/cerita", label: dict.nav.catatan, icon: StoryIcon, match: ["/cerita"] },
+    { href: "/doa", label: dict.nav.doa, icon: BookIcon, sec: "doa", match: ["/doa", "/dzikir", "/sholat", "/puasa"] },
+    { href: "/cerita", label: dict.nav.catatan, icon: StoryIcon, sec: "cerita", match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
       icon: GameIcon,
+      sec: "main",
       match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
     },
     {
       href: "/learn",
       label: dict.nav.learn ?? "Learn",
       icon: LearnIcon,
+      sec: "belajar",
       match: [
         "/learn",
         "/hadith",
@@ -105,12 +107,12 @@ export function MobileNav({ locale }: Props) {
               <Link
                 href={pathFor(locale, it.href)}
                 aria-current={active ? "page" : undefined}
-                className={`relative flex flex-col items-center gap-1 py-2.5 text-[11px] font-medium transition ${
-                  active ? "text-brave-deep" : "text-whisper active:text-ink"
+                className={`${it.sec ? `sec-${it.sec}` : ""} relative flex flex-col items-center gap-1 py-2.5 text-[11.5px] font-bold transition ${
+                  active ? (it.sec ? "text-[var(--sec-deep)]" : "text-brave-deep") : "text-whisper active:text-ink"
                 }`}
               >
                 {active && (
-                  <span className="absolute top-0 h-0.5 w-8 rounded-full bg-brave" />
+                  <span className={`absolute top-0 h-1 w-9 rounded-full ${it.sec ? "bg-[var(--sec)]" : "bg-brave"}`} />
                 )}
                 <Icon filled={active} />
                 {it.label}

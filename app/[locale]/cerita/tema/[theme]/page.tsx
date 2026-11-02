@@ -85,7 +85,7 @@ export default async function CeritaTemaPage({
         </nav>
 
         <header className="mb-10 max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "Tema Cerita" : "Story Theme"}
           </p>
           <h1 className="font-display mt-3 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">
@@ -103,7 +103,7 @@ export default async function CeritaTemaPage({
         </ul>
 
         <section className="mt-16 border-t border-hairline pt-10">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Tema lain" : "Other themes"}
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">

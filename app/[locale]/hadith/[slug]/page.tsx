@@ -17,6 +17,7 @@ import { getAllHadith, getHadithBySlug } from "@/lib/content/hadith";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -83,8 +84,8 @@ export default async function HadithDetail({
 
         <header className="mb-8">
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-clay-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-clay">
-              {GRADE_LABEL[h.source.grade] ?? h.source.grade}
+            <span className="rounded-full bg-clay-soft px-2.5 py-0.5 font-semibold normal-case-label text-clay">
+              {GRADE_LABEL[h.source.grade] ?? labelize(h.source.grade)}
             </span>
             <span className="text-whisper">{h.source.reference}</span>
           </div>
@@ -116,7 +117,7 @@ export default async function HadithDetail({
             </p>
           </div>
           <div className="px-6 py-7 sm:px-10">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.doa.translation}
             </h2>
             <p className="mt-2 text-[16.5px] leading-[1.7] text-ink">
@@ -146,7 +147,7 @@ export default async function HadithDetail({
         </section>
 
         <section className="mt-8 rounded-[22px] border border-hairline bg-paper p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
             {dict.hadith.parentingNote}
           </h2>
           <p className="mt-2 text-[16px] leading-[1.7] text-ink">
@@ -156,19 +157,19 @@ export default async function HadithDetail({
 
         <dl className="mt-8 grid gap-5 rounded-[22px] border border-hairline bg-paper p-6 text-[14px] sm:grid-cols-3">
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.hadith.collection}
             </dt>
             <dd className="mt-1 text-ink">{h.source.collection}</dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.hadith.narrator}
             </dt>
             <dd className="mt-1 text-ink">{h.narrator}</dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.hadith.themes}
             </dt>
             <dd className="mt-1 flex flex-wrap gap-1.5">

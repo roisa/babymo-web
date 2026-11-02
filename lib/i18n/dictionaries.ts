@@ -178,7 +178,7 @@ const id: Dict = {
     indexDescription:
       "Cerita hangat dari Abi dan Umi tentang Baby Mo dan Baby Ais — si kembar usia 2 tahun. Momen-momen kecil tentang akhlak, berbagi, sabar, jujur, dan syukur yang ringan dibaca bareng si kecil.",
     intro:
-      "Cerita hangat dari Abi & Umi tentang Baby Mo dan Baby Ais (si kembar, 2 tahun) — tentang akhlak, berbagi, sabar, dan momen-momen kecil yang berkesan. Diperbarui setiap minggu.",
+      "Petualangan kecil si kembar tentang berani, berbagi, dan sayang pada Allah. Pilih satu, lalu baca bersama sebelum tidur.",
     bySalman: "Abi",
     byUmi: "Umi",
     byline: "Cerita dari Abi & Umi",
@@ -186,8 +186,8 @@ const id: Dict = {
     storyTakeaway: "Pesan cerita",
     bookInspo: "Draf cerita untuk buku Baby Mo",
     childChip: {
-      mo: "Baby Mo (2)",
-      ais: "Baby Ais (2)",
+      mo: "Baby Mo",
+      ais: "Baby Ais",
       both: "Baby Mo & Baby Ais",
     },
     privacyNote:
@@ -433,7 +433,7 @@ const en: Dict = {
     indexDescription:
       "Warm little stories from Abi and Umi about Baby Mo and Baby Ais — two-year-old twins. Small moments about good character, sharing, patience, honesty and gratitude — easy to read together with your little one.",
     intro:
-      "Warm stories from Abi & Umi about Baby Mo and Baby Ais (the twins, age 2) — about good character, sharing, patience, and the small moments that stay with you. Updated weekly.",
+      "The twins' little adventures about courage, sharing, and loving Allah. Pick one and read it together at bedtime.",
     bySalman: "Abi",
     byUmi: "Umi",
     byline: "Stories from Abi & Umi",
@@ -441,8 +441,8 @@ const en: Dict = {
     storyTakeaway: "The story's message",
     bookInspo: "Story draft for the Baby Mo book",
     childChip: {
-      mo: "Baby Mo (2)",
-      ais: "Baby Ais (2)",
+      mo: "Baby Mo",
+      ais: "Baby Ais",
       both: "Baby Mo & Baby Ais",
     },
     privacyNote:

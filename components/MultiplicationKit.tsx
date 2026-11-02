@@ -38,7 +38,7 @@ export function MultiplicationKit({ kit, locale }: Props) {
   return (
     <aside className="mt-16 rounded-[28px] border border-hairline bg-paper-2 p-6 sm:p-10">
       <header className="mb-8 max-w-xl">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+        <p className="text-[12.5px] font-semibold normal-case-label text-clay">
           {L.eyebrow}
         </p>
         <h2 className="tracking-display mt-1 font-serif text-2xl font-medium text-ink sm:text-3xl">
@@ -69,13 +69,13 @@ export function MultiplicationKit({ kit, locale }: Props) {
         </Card>
 
         <Card heading={L.pin} icon={PinIcon}>
-          <p className="text-[10px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <p className="text-[11.5px] font-semibold normal-case-label text-whisper">
             {L.title}
           </p>
           <p className="mt-1 font-serif text-[15.5px] text-ink">
             {kit.pin[locale].title}
           </p>
-          <p className="mt-4 text-[10px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <p className="mt-4 text-[11.5px] font-semibold normal-case-label text-whisper">
             {L.description}
           </p>
           <p className="mt-1 text-[13.5px] leading-relaxed text-ink-soft">
@@ -90,7 +90,7 @@ export function MultiplicationKit({ kit, locale }: Props) {
                 key={i}
                 className="rounded-2xl border border-hairline bg-paper p-4"
               >
-                <div className="mb-1.5 text-[10px] font-semibold uppercase tracking-[0.14em] text-whisper">
+                <div className="mb-1.5 text-[11.5px] font-semibold normal-case-label text-whisper">
                   {L.slide} {i + 1} / {kit.carousel[locale].length}
                 </div>
                 <h4 className="font-serif text-[15px] font-semibold text-ink">

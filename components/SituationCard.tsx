@@ -28,7 +28,7 @@ export function SituationCard({ situation, locale }: Props) {
       className="tap group flex h-full flex-col gap-3 rounded-[22px] border border-hairline bg-paper p-6 transition hover:border-sage/40"
     >
       <div className="flex items-center gap-2 text-[11px]">
-        <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold uppercase tracking-wider text-sage-deep">
+        <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold normal-case-label text-sage-deep">
           {CATEGORY_LABEL[locale][situation.category] ?? situation.category}
         </span>
         <span className="text-whisper">

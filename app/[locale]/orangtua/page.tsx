@@ -117,6 +117,7 @@ export default async function ParentsHub({
       title={dict.pages.parents.title}
       description={dict.pages.parents.description}
       crumbLabel={dict.nav.parents}
+      section="belajar"
       items={items(l, dict)}
     />
   );

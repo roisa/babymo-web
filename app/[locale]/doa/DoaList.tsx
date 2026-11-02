@@ -1,5 +1,7 @@
 "use client";
 
+import { labelize } from "@/lib/labelize";
+import { SITUATION_EMOJI } from "@/lib/doa-emoji";
 import { useMemo, useState } from "react";
 import type { Doa } from "@/lib/content/types";
 import type { Locale } from "@/lib/i18n/config";
@@ -83,12 +85,18 @@ export function DoaList({ doas, locale }: Props) {
       .slice(0, 8);
     const lookup = SITUATION_LABEL[locale];
     return [
-      { value: "all", label: lookup.all ?? "All", count: doas.length },
+      { value: "all", label: `${SITUATION_EMOJI.all} ${lookup.all ?? "All"}`, count: doas.length },
       ...top.map(([k, n]) => ({
         value: k,
-        label: lookup[k] ?? k,
+        label: `${SITUATION_EMOJI[k] ?? "•"} ${lookup[k] ?? labelize(k)}`,
         count: n,
       })),
+      ...(() => {
+        const songs = doas.filter((d) => d.video).length;
+        return songs
+          ? [{ value: "lagu", label: locale === "id" ? "🎵 Ada lagunya" : "🎵 Has a song", count: songs }]
+          : [];
+      })(),
     ];
   }, [doas, locale]);
 
@@ -96,7 +104,9 @@ export function DoaList({ doas, locale }: Props) {
   const filtered =
     active === "all"
       ? doas
-      : doas.filter((d) => d.situations.includes(active));
+      : active === "lagu"
+        ? doas.filter((d) => d.video)
+        : doas.filter((d) => d.situations.includes(active));
 
   return (
     <>

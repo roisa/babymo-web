@@ -188,7 +188,7 @@ export function SearchOverlay({ locale }: Props) {
                 type="button"
                 aria-label={locale === "id" ? "Tutup" : "Close"}
                 onClick={() => setOpen(false)}
-                className="tap rounded-full px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper hover:text-ink"
+                className="tap rounded-full px-2.5 py-1 text-[12.5px] font-semibold normal-case-label text-whisper hover:text-ink"
               >
                 ESC
               </button>
@@ -217,7 +217,7 @@ export function SearchOverlay({ locale }: Props) {
                     >
                       <div className="mb-1 flex items-center gap-2">
                         <span
-                          className={`rounded-full px-2 py-0.5 text-[10.5px] font-semibold uppercase tracking-[0.1em] ${TYPE_COLOR[r.type]}`}
+                          className={`rounded-full px-2 py-0.5 text-[12px] font-semibold normal-case-label ${TYPE_COLOR[r.type]}`}
                         >
                           {TYPE_LABEL[r.type][locale]}
                         </span>

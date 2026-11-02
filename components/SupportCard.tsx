@@ -31,7 +31,7 @@ export function SupportCard({ method, locale }: Props) {
           <p className="truncate text-[13px] text-whisper">{method.handle}</p>
         </div>
         {method.recommended && (
-          <span className="ml-auto rounded-full bg-clay/15 px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-clay">
+          <span className="ml-auto rounded-full bg-clay/15 px-2 py-0.5 text-[11.5px] font-semibold normal-case-label text-clay">
             {locale === "id" ? "Termudah" : "Easiest"}
           </span>
         )}

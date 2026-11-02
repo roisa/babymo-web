@@ -24,6 +24,7 @@ import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
 import { HadithCard } from "@/components/HadithCard";
 import { CopyButton } from "@/components/CopyButton";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   const out: { locale: string; situation: string }[] = [];
@@ -87,8 +88,8 @@ export default async function ParentingDetail({
 
         <header className="mb-8">
           <div className="mb-3 flex items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
-              {p.category}
+            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
+              {labelize(p.category)}
             </span>
             <span className="text-whisper">
               {dict.parenting.ageRange}: {p.ageMin}–{p.ageMax} tahun
@@ -103,7 +104,7 @@ export default async function ParentingDetail({
         </header>
 
         <section className="rounded-[22px] border border-hairline bg-paper p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {dict.parenting.signs}
           </h2>
           <ul className="mt-4 space-y-3">
@@ -117,7 +118,7 @@ export default async function ParentingDetail({
         </section>
 
         <section className="mt-6 rounded-[22px] border border-hairline bg-paper p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
             {dict.parenting.steps}
           </h2>
           <ol className="mt-5 space-y-4">
@@ -136,7 +137,7 @@ export default async function ParentingDetail({
         </section>
 
         <section className="mt-6 rounded-[22px] border border-hairline bg-clay-soft p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-clay">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-clay">
             {dict.parenting.islamicPerspective}
           </h2>
           <p className="mt-3 font-serif text-[16.5px] leading-[1.7] text-ink">
@@ -149,7 +150,7 @@ export default async function ParentingDetail({
           <section className="mt-6 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
             <div className="flex items-start justify-between gap-4">
               <div className="min-w-0">
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+                <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
                   {l === "id" ? "Kalau hanya satu kalimat" : "If just one line"}
                 </p>
                 <p className="font-display mt-3 text-[19px] leading-[1.5] text-ink sm:text-[21px]">

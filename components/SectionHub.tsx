@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { SectionHeader } from "@/components/SectionHeader";
+import type { SectionKey } from "@/lib/sections";
 import { type Locale, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
 import { Header } from "@/components/Header";
@@ -30,6 +32,8 @@ type Props = {
   /** Localized breadcrumb label for this hub. */
   crumbLabel: string;
   items: SectionItem[];
+  /** Colourful section header (Doa/Cerita/Main/Belajar) instead of the plain one. */
+  section?: SectionKey;
 };
 
 /**
@@ -45,6 +49,7 @@ export function SectionHub({
   description,
   crumbLabel,
   items,
+  section,
 }: Props) {
   const l = locale;
   const dict = getDictionary(l);
@@ -53,18 +58,24 @@ export function SectionHub({
     <>
       <Header locale={l} currentPath={currentPath} />
       <main id="main" className="mx-auto max-w-6xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
+        {section ? (
+          <SectionHeader locale={l} section={section} crumb={crumbLabel} title={title} sub={description} />
+        ) : (
+          <>
         <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
-          <Link href={pathFor(l)} className="hover:text-ink">
-            {dict.nav.home}
-          </Link>{" "}
-          / <span className="text-ink">{crumbLabel}</span>
-        </nav>
-        <header className="max-w-2xl">
-          <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-            {title}
-          </h1>
-          <p className="mt-3 text-base leading-relaxed text-whisper">{description}</p>
-        </header>
+            <Link href={pathFor(l)} className="hover:text-ink">
+              {dict.nav.home}
+            </Link>{" "}
+            / <span className="text-ink">{crumbLabel}</span>
+          </nav>
+          <header className="max-w-2xl">
+            <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
+              {title}
+            </h1>
+            <p className="mt-3 text-base leading-relaxed text-whisper">{description}</p>
+          </header>
+          </>
+        )}
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((it) => {
             const cardClass =
@@ -95,7 +106,7 @@ export function SectionHub({
               </>
             );
             return (
-              <li key={it.href}>
+              <li key={`${it.href}-${it.title}`}>
                 {it.external ? (
                   <a href={it.href} target="_blank" rel="noopener" className={cardClass}>
                     {inner}

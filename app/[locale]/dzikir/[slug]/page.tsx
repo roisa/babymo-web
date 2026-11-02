@@ -95,7 +95,7 @@ export default async function DzikirDetail({
 
         <header className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
               {timeLabel}
             </span>
             {d.count && (
@@ -122,7 +122,7 @@ export default async function DzikirDetail({
                 {(part.label || part.repeat) && (
                   <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                     {part.label && (
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-sage-deep">
+                      <span className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
                         {part.label[l]}
                       </span>
                     )}
@@ -161,7 +161,7 @@ export default async function DzikirDetail({
                 className="lift tap group flex items-center justify-between gap-3 rounded-[18px] border border-brave/20 bg-brave-soft/40 p-5 hover:border-brave/40"
               >
                 <div>
-                  <span className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                  <span className="text-[12px] font-semibold normal-case-label text-brave-deep">
                     {l === "id" ? "Surat" : "Surah"}
                   </span>
                   <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-brave-deep">
@@ -179,7 +179,7 @@ export default async function DzikirDetail({
                 className="lift tap group flex items-center justify-between gap-3 rounded-[18px] border border-sage/20 bg-sage-soft/40 p-5 hover:border-sage/40"
               >
                 <div>
-                  <span className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+                  <span className="text-[12px] font-semibold normal-case-label text-sage-deep">
                     {l === "id" ? "Doa" : "Du'a"}
                   </span>
                   <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-sage-deep">
@@ -194,7 +194,7 @@ export default async function DzikirDetail({
 
         {/* Benefit / why */}
         <section className="mt-8 rounded-[24px] border border-sage/20 bg-sage-soft/40 p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
             {l === "id" ? "Keutamaan & untuk si kecil" : "Virtue & for your little one"}
           </h2>
           <p className="mt-3 font-serif text-[17px] leading-[1.7] text-ink">
@@ -211,7 +211,7 @@ export default async function DzikirDetail({
               href={pathFor(l, `/dzikir/${prev.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 ← {l === "id" ? "Sebelumnya" : "Previous"}
               </span>
               <p className="font-display mt-1 text-[16px] font-medium text-ink group-hover:text-sage-deep">
@@ -226,7 +226,7 @@ export default async function DzikirDetail({
               href={pathFor(l, `/dzikir/${next.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5 sm:text-right"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 {l === "id" ? "Selanjutnya" : "Next"} →
               </span>
               <p className="font-display mt-1 text-[16px] font-medium text-ink group-hover:text-sage-deep">

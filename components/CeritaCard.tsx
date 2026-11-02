@@ -22,10 +22,10 @@ export function CeritaCard({ note: n, locale: l }: { note: Catatan; locale: Loca
     >
       <div className="min-w-0 flex-1">
         <div className="flex flex-wrap items-center gap-2 text-[11px] text-whisper">
-          <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+          <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
             {dict.catatan.childChip[n.child]}
           </span>
-          <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+          <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
             {n.kind === "story"
               ? dict.catatan.kidsStory
               : n.pov === "umi"

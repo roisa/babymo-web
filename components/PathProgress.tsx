@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import { type Locale, pathFor } from "@/lib/i18n/config";
 import type { ResolvedStep } from "@/lib/content/paths";
 import { getDoneSteps, toggleStep, onPathsChange } from "@/lib/path-progress";
+import { labelize } from "@/lib/labelize";
 
 type Props = {
   locale: Locale;
@@ -86,8 +87,8 @@ export function PathProgress({ locale, pathSlug, steps }: Props) {
                 )}
               </button>
               <Link href={pathFor(locale, step.href)} className="min-w-0 flex-1">
-                <span className="block text-[11px] font-semibold uppercase tracking-wider text-sage-deep">
-                  {step.kind}
+                <span className="block text-[12.5px] font-semibold normal-case-label text-sage-deep">
+                  {labelize(step.kind)}
                 </span>
                 <span className={`block truncate text-[15px] font-medium ${isDone ? "text-whisper line-through" : "text-ink"}`}>
                   {step.title}

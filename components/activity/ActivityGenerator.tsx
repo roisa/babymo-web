@@ -447,7 +447,7 @@ export function ActivityGenerator({ locale }: { locale: Locale }) {
 function Field({ label, children }: { label: string; children: React.ReactNode }) {
   return (
     <div className="mt-5">
-      <label className="mb-2 block text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+      <label className="mb-2 block text-[12.5px] font-semibold normal-case-label text-whisper">
         {label}
       </label>
       {children}

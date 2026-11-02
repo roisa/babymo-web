@@ -86,6 +86,7 @@ export default async function KuisHub({
           : "Play fun Baby Mo quizzes and games — training attention, focus, and emotional intelligence while having fun."
       }
       crumbLabel={l === "id" ? "Kuis" : "Quizzes"}
+      section="main"
       items={items(l)}
     />
   );

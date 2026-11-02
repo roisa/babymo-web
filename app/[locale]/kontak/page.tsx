@@ -117,7 +117,7 @@ export default async function ContactPage({
                 rel="noopener"
                 className="group block rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
               >
-                <div className="text-[11px] font-semibold uppercase tracking-wider text-sage-deep">
+                <div className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
                   {c.label}
                 </div>
                 <div className="mt-1 font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">

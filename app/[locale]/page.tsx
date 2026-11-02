@@ -38,6 +38,7 @@ import {
   daysUntil,
   currentHijriMonth,
 } from "@/lib/islamic-calendar";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -104,11 +105,11 @@ export default async function HomePage({
           <div className="mx-auto max-w-6xl px-5 pb-14 pt-12 sm:px-7 sm:pb-20 sm:pt-20">
             <div className="grid items-center gap-12 md:grid-cols-[1.05fr_0.95fr]">
               <div>
-                <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+                <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-brave-deep">
                   <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
                   {dict.home.eyebrow}
                 </span>
-                <h1 className="font-display hero-words mt-5 text-[42px] font-medium leading-[1.04] text-ink sm:text-[56px] md:text-[64px]">
+                <h1 className="font-display hero-words mt-5 text-[38px] font-medium leading-[1.06] text-ink sm:text-[50px] md:text-[56px]">
                   {heroWords.map((w, i) => (
                     <Fragment key={i}>
                       <span className={i >= heroSplit ? "text-brave" : ""}>{w}</span>
@@ -150,7 +151,7 @@ export default async function HomePage({
                     static layer declaratively so only one Baby Mo ever shows. */}
                 {/* Soft 8-point star halo behind Baby Mo */}
                 <Star8 className="star-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[86%] -translate-x-1/2 -translate-y-1/2 text-brave-soft" />
-                <HeroMascot alt="Baby Mo" />
+                <HeroMascot alt="Baby Mo" tapHint={l === "id" ? "👆 Ketuk Baby Mo!" : "👆 Tap Baby Mo!"} />
               </div>
             </div>
           </div>
@@ -172,7 +173,7 @@ export default async function HomePage({
                       </svg>
                     </div>
                     <div>
-                      <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                      <p className="flex items-center gap-2 text-[12.5px] font-semibold normal-case-label text-clay">
                         <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-clay text-clay" />
                         {eventState === "active"
                           ? l === "id" ? "Sedang berlangsung" : "Happening now"
@@ -467,7 +468,7 @@ export default async function HomePage({
                 </div>
                 {/* Right page — promise stickers */}
                 <div className="book-page book-page--right p-7 sm:p-10">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
+                  <p className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
                     {dict.home.sections.valuesTitle}
                   </p>
                   <ul className="mt-5 grid gap-4">
@@ -520,8 +521,8 @@ export default async function HomePage({
                   href={pathFor(l, `/blog/${p.slug}`)}
                   className="lift tap group rounded-[22px] border border-hairline bg-paper p-6"
                 >
-                  <div className="text-[11px] font-semibold uppercase tracking-[0.12em] text-sage-deep">
-                    {p.tags[0]}
+                  <div className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
+                    {labelize(p.tags[0])}
                   </div>
                   <h3 className="mt-3 font-serif text-[17px] font-medium leading-snug text-ink group-hover:text-sage-deep">
                     {p.title[l]}
@@ -591,7 +592,7 @@ export default async function HomePage({
                     <PayPalIcon />
                   </span>
                   <div className="min-w-0">
-                    <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                    <p className="text-[12.5px] font-semibold normal-case-label text-clay">
                       {dict.home.sections.supportTitle}
                     </p>
                     <p className="mt-0.5 font-serif text-[18px] font-medium text-ink">
@@ -671,7 +672,7 @@ const STARS: [string, string, string][] = [
 
 function MomentLabel({ icon, text }: { icon: string; text: string }) {
   return (
-    <p className="moment-label inline-flex self-start items-center gap-2 rounded-full px-3 py-1 text-[11.5px] font-semibold uppercase tracking-[0.12em]">
+    <p className="moment-label inline-flex self-start items-center gap-2 rounded-full px-3 py-1 text-[13px] font-semibold normal-case-label">
       <span aria-hidden className="text-[14px]">{icon}</span>
       {text}
     </p>

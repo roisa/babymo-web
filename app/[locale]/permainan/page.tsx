@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { SectionHeader, SectionButton } from "@/components/SectionHeader";
 import { notFound } from "next/navigation";
 import { type Locale, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -46,20 +47,17 @@ export default async function GamesIndex({
     <>
       <Header locale={l} currentPath="/permainan" />
       <main id="main" className="mx-auto max-w-6xl px-5 pb-24 pt-12 sm:px-8 sm:pt-16 md:pb-16">
-        <nav aria-label="Breadcrumb" className="mb-6 text-xs text-whisper">
-          <Link href={pathFor(l)} className="hover:text-ink">
-            {dict.nav.home}
-          </Link>{" "}
-          / <span className="text-ink">{dict.nav.games}</span>
-        </nav>
-        <header className="max-w-2xl">
-          <h1 className="font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">
-            {dict.pages.games.title}
-          </h1>
-          <p className="mt-3 text-base leading-relaxed text-whisper">
-            {dict.pages.games.description}
-          </p>
-        </header>
+        <SectionHeader
+          locale={l}
+          section="main"
+          crumb={dict.nav.games}
+          title={l === "id" ? "Ayo main bareng Baby Mo!" : "Let's play with Baby Mo!"}
+          sub={
+            l === "id"
+              ? "Game gratis untuk belajar hijaiyah, doa, dan kata-kata Arab — main langsung, tanpa daftar."
+              : "Free games for learning hijaiyah, du'as and Arabic words — no sign-up needed."
+          }
+        />
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {games.map((g) => (
             <li key={g.slug}>
@@ -182,7 +180,7 @@ export default async function GamesIndex({
               <span className="min-w-0">
                 <span className="flex items-center gap-2 font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
                   {l === "id" ? "Kuis & Permainan" : "Quizzes & Games"}
-                  <span className="rounded-full bg-brave-soft px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                  <span className="rounded-full bg-brave-soft px-2 py-0.5 text-[11.5px] font-semibold normal-case-label text-brave-deep">
                     {l === "id" ? "Baru" : "New"}
                   </span>
                 </span>

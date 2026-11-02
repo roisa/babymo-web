@@ -18,6 +18,7 @@ import {
   onTemanChange,
   setChild,
 } from "@/lib/teman";
+import { labelize } from "@/lib/labelize";
 
 type Props = { locale: Locale; mission: Mission };
 
@@ -196,10 +197,10 @@ export function TemanTumbuh({ locale: l, mission }: Props) {
         )}
 
         <div className="flex items-center justify-between gap-3">
-          <span className="inline-flex items-center gap-2 rounded-full bg-clay-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-            {cat}
+          <span className="inline-flex items-center gap-2 rounded-full bg-clay-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-clay">
+            {labelize(cat)}
           </span>
-          <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+          <span className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Misi Hari Ini" : "Today's Mission"}
           </span>
         </div>

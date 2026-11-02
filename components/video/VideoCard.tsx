@@ -62,7 +62,7 @@ export function VideoCard({ video, locale, story }: Props) {
           <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-black/25 to-transparent" />
 
           {/* Category pill */}
-          <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-paper/95 px-2.5 py-1 text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+          <span className="absolute left-3 top-3 inline-flex items-center gap-1.5 rounded-full bg-paper/95 px-2.5 py-1 text-[12px] font-semibold normal-case-label text-sage-deep">
             {categoryLabel}
           </span>
 

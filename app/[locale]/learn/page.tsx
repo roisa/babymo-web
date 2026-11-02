@@ -128,9 +128,14 @@ export default async function LearnHub({
     <SectionHub
       locale={l}
       currentPath="/learn"
-      title={dict.pages.learn.title}
-      description={dict.pages.learn.description}
+      title={l === "id" ? "Belajar itu seru!" : "Learning is fun!"}
+      description={
+        l === "id"
+          ? "Kisah para nabi, hadith pilihan, surat pendek, dan kalender islam — untuk dibaca bersama si kecil."
+          : "Prophet stories, chosen hadith, short surahs and the Islamic calendar — to read together with your little one."
+      }
       crumbLabel={dict.nav.learn}
+      section="belajar"
       items={items(l, dict)}
     />
   );

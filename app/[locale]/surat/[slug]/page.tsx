@@ -73,7 +73,7 @@ export default async function SurahDetail({
 
         <header className="mb-10">
           <div className="mb-3 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
               {l === "id" ? "Surat ke-" : "Surah"} {s.number}
             </span>
             <span className="text-whisper">
@@ -157,7 +157,7 @@ export default async function SurahDetail({
 
         {/* Tafsir for kids */}
         <section className="mt-10 rounded-[22px] border border-hairline bg-clay-soft p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-clay">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-clay">
             {l === "id" ? "Tafsir Sederhana untuk Anak" : "Tafsir for Children"}
           </h2>
           <p className="mt-3 font-serif text-[16.5px] leading-[1.75] text-ink">
@@ -167,7 +167,7 @@ export default async function SurahDetail({
 
         {/* When to read */}
         <section className="mt-6 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "Kapan dibaca" : "When to recite"}
           </h2>
           <p className="mt-3 text-[15.5px] leading-[1.65] text-ink">
@@ -178,7 +178,7 @@ export default async function SurahDetail({
         {/* Themes */}
         <dl className="mt-8 grid gap-5 rounded-[22px] border border-hairline bg-paper p-6 text-[14px] sm:grid-cols-2">
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {l === "id" ? "Tema" : "Themes"}
             </dt>
             <dd className="mt-1 flex flex-wrap gap-1.5">
@@ -193,7 +193,7 @@ export default async function SurahDetail({
             </dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {l === "id" ? "Jumlah Ayat" : "Verse count"}
             </dt>
             <dd className="mt-1 text-ink">{s.ayahCount}</dd>

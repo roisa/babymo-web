@@ -64,7 +64,7 @@ export default async function TemanTumbuhPage({
         </nav>
 
         <header className="mb-8 max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-sage-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
+          <span className="inline-flex items-center gap-2 rounded-full bg-sage-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-sage-deep">
             <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-sage text-sage" />
             {l === "id" ? "Teman harian si kecil" : "Your child's daily friend"}
           </span>

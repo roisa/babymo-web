@@ -90,7 +90,7 @@ export default async function DoaKategoriPage({
           / <span className="text-ink">{label ?? tag}</span>
         </nav>
         <header className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-sage-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
             {l === "id" ? "Kategori" : "Category"}
           </p>
           <h1 className="tracking-display mt-2 font-serif text-[36px] font-medium leading-[1.1] text-ink sm:text-[44px]">
@@ -113,7 +113,7 @@ export default async function DoaKategoriPage({
 
         {/* Other categories chips */}
         <section className="mt-16 border-t border-hairline pt-10">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Kategori lain" : "Other categories"}
           </h2>
           <div className="mt-4 flex flex-wrap gap-2">

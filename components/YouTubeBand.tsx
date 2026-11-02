@@ -42,7 +42,7 @@ export function YouTubeBand({ locale: l }: Props) {
           </div>
 
           <div>
-            <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-[#c4302b] dark:text-[#f87264]">
+            <p className="flex items-center gap-2 text-[12.5px] font-semibold normal-case-label text-[#c4302b] dark:text-[#f87264]">
               <YouTubeGlyph />
               {l === "id" ? "Baby Mo di YouTube" : "Baby Mo on YouTube"}
             </p>

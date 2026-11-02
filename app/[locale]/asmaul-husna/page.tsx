@@ -58,7 +58,7 @@ export default async function AsmaulHusnaPage({
         </nav>
 
         <header className="mb-10 max-w-3xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "99 Nama Allah" : "99 Names of Allah"}
           </span>
           <h1 className="font-display mt-4 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">

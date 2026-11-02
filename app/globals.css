@@ -43,9 +43,11 @@
   --color-sun-soft: #FBF2D4;
 
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, -apple-system, sans-serif;
-  --font-serif: var(--font-newsreader), ui-serif, Georgia, serif;
+  /* Headings: rounded & friendly (Baloo 2). Kept on the old token names so
+     every font-serif / font-display heading switches in one place. */
+  --font-serif: var(--font-rounded), ui-rounded, "Nunito", system-ui, sans-serif;
   /* Modern editorial display — used for hero / large titles only */
-  --font-display: var(--font-display), "Fraunces", "Newsreader", ui-serif, Georgia, serif;
+  --font-display: var(--font-rounded), ui-rounded, "Nunito", system-ui, sans-serif;
   --font-arabic: var(--font-arabic), "Noto Naskh Arabic", "Amiri", serif;
 
   /* iOS-style squircle radii */
@@ -116,19 +118,19 @@ body {
 }
 
 /* Tight tracking on display type — iOS large-title style */
-.tracking-display {
-  letter-spacing: -0.022em;
-}
+
 
 /* Modern editorial display face — hero-only. Uses Fraunces variable
    axes so optical sizing scales naturally with large type. */
 .font-display {
   font-family: var(--font-display);
-  font-optical-sizing: auto;
-  font-variation-settings: "opsz" 96, "SOFT" 40;
-  letter-spacing: -0.028em;
-  font-feature-settings: "ss01", "ss02";
+  font-weight: 700;
+  letter-spacing: -0.012em;
 }
+/* Rounded headings read best a touch bolder and without tight tracking. */
+.font-serif { letter-spacing: -0.005em; }
+h1.font-serif, h2.font-serif, h3.font-serif, h4.font-serif { font-weight: 700; }
+.tracking-display { letter-spacing: -0.01em; }
 
 /* iOS hairline divider — uses 1px border that auto-scales on retina */
 .hairline {
@@ -683,4 +685,175 @@ html.dark .moment-label { border-color: rgba(255, 255, 255, 0.08); }
 @media (prefers-reduced-motion: reduce) {
   .peek { transition: none; transform: none; opacity: 1; }
   .sticker { transition: none; }
+}
+
+/* Former ALL-CAPS labels: now sentence case, a little warmer. */
+.normal-case-label { text-transform: none; letter-spacing: 0.005em; }
+
+/* ─── Section colours (Doa sky · Cerita grape · Main sun · Belajar berry) ── */
+:root {
+  --color-sky-deep: #1C6F98;
+  --color-grape-deep: #5745B0;
+  --color-sun-deep: #7A5D00;
+  --color-berry-deep: #A8346A;
+}
+html.dark {
+  --color-sky-deep: #9ED8F2;
+  --color-grape-deep: #CFC6F7;
+  --color-sun-deep: #F2D877;
+  --color-berry-deep: #F5A9C8;
+}
+.sec-doa     { --sec: var(--color-sky);   --sec-soft: var(--color-sky-soft);   --sec-deep: var(--color-sky-deep); }
+.sec-cerita  { --sec: var(--color-grape); --sec-soft: var(--color-grape-soft); --sec-deep: var(--color-grape-deep); }
+.sec-main    { --sec: var(--color-sun);   --sec-soft: var(--color-sun-soft);   --sec-deep: var(--color-sun-deep); }
+.sec-belajar { --sec: var(--color-berry); --sec-soft: var(--color-berry-soft); --sec-deep: var(--color-berry-deep); }
+
+.sec-band {
+  background:
+    radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--sec) 22%, transparent) 0%, transparent 55%),
+    var(--sec-soft);
+  border: 2px solid color-mix(in srgb, var(--sec) 30%, transparent);
+}
+.sec-sticker {
+  display: inline-grid; place-items: center;
+  width: 56px; height: 56px; border-radius: 18px; font-size: 30px;
+  background: var(--color-paper);
+  border: 3px solid #fff;
+  box-shadow: 0 6px 14px -8px rgba(15, 18, 19, 0.35);
+  transform: rotate(-6deg);
+}
+html.dark .sec-sticker { border-color: color-mix(in srgb, var(--sec) 40%, transparent); }
+.sec-btn {
+  background: var(--sec-deep); color: var(--color-paper);
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--sec-deep) 60%, #000);
+}
+html.dark .sec-btn { color: #15171B; }
+.sec-btn:active { transform: translateY(3px); box-shadow: 0 1px 0 color-mix(in srgb, var(--sec-deep) 60%, #000); }
+
+/* Nav pill in the section colour */
+.nav-sec { color: var(--color-whisper); }
+.nav-sec:hover { background: var(--sec-soft); color: var(--sec-deep); }
+.nav-sec[aria-current="page"] {
+  background: var(--sec-soft); color: var(--sec-deep);
+  box-shadow: inset 0 0 0 2px color-mix(in srgb, var(--sec) 45%, transparent);
+}
+
+/* ─── Chunky, tappable shapes ───────────────────────────────────────── */
+/* Cards: a thicker edge and a soft "ledge" underneath, like a toy block. */
+/* Toy-block edge + ledge only on cards that already draw a border. */
+.lift.border { border-width: 2px; box-shadow: 0 4px 0 var(--color-hairline); }
+.lift:hover { transform: translateY(-3px); }
+.lift.border:hover { box-shadow: 0 7px 0 var(--color-hairline), 0 18px 32px -22px rgba(15, 18, 19, 0.22); }
+.lift:active { transform: translateY(2px); }
+.lift.border:active { box-shadow: 0 1px 0 var(--color-hairline); }
+/* Primary buttons: pressable, with a darker base that squishes on tap. */
+.magnet { box-shadow: 0 4px 0 rgba(0, 0, 0, 0.18) !important; }
+.magnet:hover { transform: translateY(-1px); box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18) !important; }
+.magnet:active { transform: translateY(3px) scale(1); box-shadow: 0 1px 0 rgba(0, 0, 0, 0.18) !important; }
+@media (prefers-reduced-motion: reduce) {
+  .lift:hover, .lift:active, .magnet:hover, .magnet:active { transform: none; }
+}
+
+/* Baby Mo speech bubble (page intros) */
+.bm-bubble {
+  background: var(--color-paper);
+  border: 2px solid color-mix(in srgb, var(--sec, var(--color-brave)) 35%, var(--color-hairline));
+  box-shadow: 0 4px 0 color-mix(in srgb, var(--sec, var(--color-brave)) 25%, transparent);
+}
+.bm-bubble::after {
+  content: ""; position: absolute; left: -9px; bottom: 14px;
+  width: 16px; height: 16px; background: inherit;
+  border-left: inherit; border-bottom: inherit;
+  transform: rotate(45deg); border-radius: 0 0 0 4px;
+}
+.bm-says-pose { filter: drop-shadow(0 8px 10px rgba(15, 18, 19, 0.16)); animation: mascot-breathe 5s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) { .bm-says-pose { animation: none; } }
+
+/* ─── Cerita bookshelf ──────────────────────────────────────────────── */
+.book { transform: rotate(var(--tilt, 0deg)); transition: transform 260ms cubic-bezier(.34,1.56,.64,1); }
+.book:hover { transform: rotate(0deg) translateY(-6px); }
+.book-cover {
+  border-radius: 6px 18px 18px 6px; overflow: hidden;
+  box-shadow: 0 6px 0 color-mix(in srgb, var(--sec) 35%, var(--color-hairline)), 0 16px 28px -18px rgba(15, 18, 19, 0.45);
+}
+.book-cover .book-art { aspect-ratio: 4 / 5; border-radius: 0; border: 0; }
+.book-spine {
+  position: absolute; inset: 0 auto 0 0; width: 14px;
+  background: linear-gradient(90deg, rgba(0,0,0,0.22), rgba(255,255,255,0.18) 55%, rgba(0,0,0,0.06));
+}
+.book-chip {
+  position: absolute; left: 22px; top: 10px;
+  border-radius: 999px; padding: 2px 9px; font-size: 11.5px; font-weight: 700;
+  background: rgba(255,255,255,0.9); color: #3B2F7A;
+}
+@media (prefers-reduced-motion: reduce) { .book, .book:hover { transform: none; } }
+
+/* Doa picture tiles */
+.doa-tile {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 52px; height: 52px; border-radius: 16px; font-size: 28px;
+  border: 2px solid #fff; box-shadow: 0 4px 0 rgba(15, 18, 19, 0.08);
+  transform: rotate(-4deg); transition: transform 260ms cubic-bezier(.34,1.56,.64,1);
+}
+html.dark .doa-tile { border-color: rgba(255,255,255,0.08); }
+.group:hover .doa-tile { transform: rotate(4deg) scale(1.08); }
+.doa-tile--sky { background: var(--color-sky-soft); }
+.doa-tile--sun { background: var(--color-sun-soft); }
+.doa-tile--grape { background: var(--color-grape-soft); }
+.doa-tile--peach { background: var(--color-peach-soft); }
+.doa-tile--berry { background: var(--color-berry-soft); }
+.doa-tile--brave { background: var(--color-brave-soft); }
+.parent-panel > div > *:first-child { margin-top: 0 !important; }
+
+/* ─── Doodle background: faint stars, moons, clouds and hearts ─────── */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%235F8B5A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.055'%3E%3Cpath d='M30 22l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/%3E%3Cpath d='M190 40a14 14 0 1 0 14 18 11 11 0 0 1-14-18z'/%3E%3Cpath d='M70 150c-8 0-12-5-12-10s5-10 11-9c2-6 7-9 13-8 6 1 10 6 10 11 5 0 8 4 8 8s-4 8-9 8z'/%3E%3Cpath d='M170 170c0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 7-14 15-14 15s-14-8-14-15z'/%3E%3Ccircle cx='120' cy='90' r='2.5'/%3E%3Ccircle cx='220' cy='120' r='2'/%3E%3Ccircle cx='20' cy='210' r='2'/%3E%3Cpath d='M118 210l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+}
+html.dark body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%23A8CFA2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Cpath d='M30 22l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/%3E%3Cpath d='M190 40a14 14 0 1 0 14 18 11 11 0 0 1-14-18z'/%3E%3Cpath d='M70 150c-8 0-12-5-12-10s5-10 11-9c2-6 7-9 13-8 6 1 10 6 10 11 5 0 8 4 8 8s-4 8-9 8z'/%3E%3Cpath d='M170 170c0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 7-14 15-14 15s-14-8-14-15z'/%3E%3Ccircle cx='120' cy='90' r='2.5'/%3E%3Ccircle cx='220' cy='120' r='2'/%3E%3Ccircle cx='20' cy='210' r='2'/%3E%3Cpath d='M118 210l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z'/%3E%3C/svg%3E");
+}
+
+/* Tap Baby Mo */
+@keyframes mascot-hop {
+  0% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-26px) scale(1.04, 0.97) rotate(-3deg); }
+  55% { transform: translateY(0) scale(1.06, 0.92); }
+  75% { transform: translateY(-8px) scale(0.99, 1.02) rotate(2deg); }
+  100% { transform: translateY(0) scale(1); }
+}
+.mascot-hop { animation: mascot-hop 650ms cubic-bezier(.34,1.56,.64,1) both; }
+.mascot-hint {
+  position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%);
+  white-space: nowrap; border-radius: 999px; padding: 4px 12px;
+  background: var(--color-paper); border: 2px solid var(--color-hairline);
+  font-size: 12.5px; font-weight: 700; color: var(--color-whisper);
+  opacity: 0.85; transition: opacity 200ms ease, transform 200ms ease;
+}
+.mascot-tap:hover .mascot-hint { opacity: 1; transform: translateX(-50%) translateY(-2px); color: var(--color-brave-deep); }
+@media (prefers-reduced-motion: reduce) { .mascot-hop { animation: none; } }
+
+/* End-of-story celebration */
+.story-done-card {
+  background: var(--sec-soft);
+  border: 2px solid color-mix(in srgb, var(--sec) 35%, transparent);
+  box-shadow: 0 5px 0 color-mix(in srgb, var(--sec) 30%, transparent);
+  transform: scale(0.96); opacity: 0.6; transition: transform 500ms cubic-bezier(.34,1.56,.64,1), opacity 400ms ease;
+}
+.story-done.is-done .story-done-card { transform: none; opacity: 1; }
+.story-done.is-done .story-done-pose { animation: mascot-hop 800ms cubic-bezier(.34,1.56,.64,1) 150ms both; }
+.story-confetti { position: absolute; inset: -40px 0 auto 0; height: 0; pointer-events: none; z-index: 2; }
+.story-confetti span {
+  position: absolute; left: var(--x); top: 0; font-size: 22px;
+  animation: confetti-pop 1400ms cubic-bezier(.2,.7,.3,1) calc(var(--i) * 45ms) both;
+}
+@keyframes confetti-pop {
+  0% { transform: translateY(80px) scale(0.3) rotate(0deg); opacity: 0; }
+  25% { opacity: 1; }
+  60% { transform: translateY(-40px) scale(1.1) rotate(160deg); opacity: 1; }
+  100% { transform: translateY(40px) scale(0.9) rotate(300deg); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .story-done-card { transform: none; opacity: 1; transition: none; }
+  .story-done.is-done .story-done-pose { animation: none; }
 }
