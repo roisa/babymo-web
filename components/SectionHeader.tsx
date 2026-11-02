@@ -10,6 +10,7 @@ const INTRO: Record<SectionKey, { pose: string; id: string; en: string }> = {
   doa: { pose: "baby-mo-thank-you.png", id: "Yuk, baca doa bareng aku! Mulai dari yang paling pendek dulu, ya.", en: "Let's read a du'a together! Start with the shortest one." },
   cerita: { pose: "baby-mo-yes.png", id: "Mau dibacain cerita? Pilih satu — aku temenin sampai habis!", en: "Want a story? Pick one — I'll stay with you till the end!" },
   main: { pose: "baby-mo-yeyy.png", id: "Main dulu, yuk! Semuanya gratis, sambil belajar.", en: "Let's play! Everything's free, and you learn as you go." },
+  momen: { pose: "baby-mo-wow.png", id: "Ada video baru hampir setiap hari! Mau nyanyi atau main tebak-tebakan?", en: "New videos almost every day! Want to sing or play a guessing game?" },
   belajar: { pose: "baby-mo-idea.png", id: "Ini rak buku kita: kisah nabi, hadith, surat pendek, dan banyak lagi.", en: "This is our bookshelf: prophet stories, hadith, short surahs and more." },
 };
 

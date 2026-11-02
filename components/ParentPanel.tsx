@@ -11,11 +11,14 @@ export function ParentPanel({
   children,
   open = false,
   className = "",
+  hint,
 }: {
   locale: Locale;
   children: React.ReactNode;
   open?: boolean;
   className?: string;
+  /** Subtitle under the panel title (defaults to sources/grading). */
+  hint?: string;
 }) {
   return (
     <details className={`parent-panel group rounded-[24px] border-2 border-hairline bg-paper-2 ${className}`} open={open}>
@@ -27,7 +30,7 @@ export function ParentPanel({
               {locale === "id" ? "Untuk Ayah & Bunda" : "For parents"}
             </span>
             <span className="block text-[13px] text-whisper">
-              {locale === "id" ? "Sumber, derajat, peninjau, dan tips" : "Sources, grading, reviewers and tips"}
+              {hint ?? (locale === "id" ? "Sumber, derajat, peninjau, dan tips" : "Sources, grading, reviewers and tips")}
             </span>
           </span>
         </span>

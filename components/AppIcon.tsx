@@ -4,7 +4,7 @@
  * icons (nav, headers, tab bar) so Baby Mo's navigation feels like a home
  * screen a child already knows how to use.
  */
-export type AppIconName = "doa" | "cerita" | "main" | "belajar" | "home" | "parents" | "music";
+export type AppIconName = "doa" | "cerita" | "main" | "belajar" | "home" | "parents" | "music" | "momen";
 
 const GLYPH: Record<AppIconName, React.ReactNode> = {
   // cupped hands with a little star
@@ -29,6 +29,13 @@ const GLYPH: Record<AppIconName, React.ReactNode> = {
       <path d="M12 3.6 1.6 8.7 12 13.8l8.4-4.1v5.6h1.6V8.7z" />
       <path d="M6 12.1v3.7c0 1.6 2.7 3.2 6 3.2s6-1.6 6-3.2v-3.7l-6 2.9z" />
     </>
+  ),
+  // play button inside a little screen
+  momen: (
+    <path
+      fillRule="evenodd"
+      d="M5 5h14a3 3 0 0 1 3 3v8a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V8a3 3 0 0 1 3-3zm5 3.6v6.8l5.8-3.4z"
+    />
   ),
   // house
   home: <path d="M12 3.2 3 10.3v9.7a1 1 0 0 0 1 1h5.4v-5.8h5.2V21H20a1 1 0 0 0 1-1v-9.7z" />,

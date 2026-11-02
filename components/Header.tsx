@@ -18,13 +18,13 @@ export function Header({ locale, currentPath }: Props) {
   // Outcome-based primary nav (Home lives on the logo). Every content format
   // sits as a sub-section inside one of these destinations.
   const items: { href: string; label: string; sec: SectionKey; match: string[] }[] = [
-    { href: "/doa", label: dict.nav.doa, sec: "doa", match: ["/doa", "/dzikir", "/sholat", "/puasa"] },
+    { href: "/momen", label: locale === "id" ? "Momen" : "Moments", sec: "momen", match: ["/momen", "/watch"] },
     { href: "/cerita", label: dict.nav.catatan, sec: "cerita", match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
       sec: "main",
-      match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
+      match: ["/play", "/permainan", "/apps", "/kuis"],
     },
     {
       href: "/learn",
@@ -32,6 +32,10 @@ export function Header({ locale, currentPath }: Props) {
       sec: "belajar",
       match: [
         "/learn",
+        "/doa",
+        "/dzikir",
+        "/sholat",
+        "/puasa",
         "/hadith",
         "/kisah",
         "/surat",

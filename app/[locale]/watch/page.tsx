@@ -74,7 +74,7 @@ export default async function WatchHub({
       title={dict.pages.watch.title}
       description={dict.pages.watch.description}
       crumbLabel={dict.nav.watch}
-      section="main"
+      section="momen"
       items={items(l)}
     />
   );

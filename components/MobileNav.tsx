@@ -53,14 +53,14 @@ export function MobileNav({ locale }: Props) {
   // one of its deep sub-pages (e.g. /hadith lights up Learn).
   const items: { href: string; label: string; icon: (p: IconProps) => React.JSX.Element; sec?: string; match: string[] }[] = [
     { href: "/", label: dict.nav.home, icon: HomeIcon, match: ["/"] },
-    { href: "/doa", label: dict.nav.doa, icon: BookIcon, sec: "doa", match: ["/doa", "/dzikir", "/sholat", "/puasa"] },
+    { href: "/momen", label: locale === "id" ? "Momen" : "Moments", icon: PlayIcon, sec: "momen", match: ["/momen", "/watch"] },
     { href: "/cerita", label: dict.nav.catatan, icon: StoryIcon, sec: "cerita", match: ["/cerita"] },
     {
       href: "/permainan",
       label: dict.nav.play ?? "Play",
       icon: GameIcon,
       sec: "main",
-      match: ["/play", "/permainan", "/apps", "/watch", "/momen"],
+      match: ["/play", "/permainan", "/apps", "/kuis"],
     },
     {
       href: "/learn",
@@ -69,6 +69,10 @@ export function MobileNav({ locale }: Props) {
       sec: "belajar",
       match: [
         "/learn",
+        "/doa",
+        "/dzikir",
+        "/sholat",
+        "/puasa",
         "/hadith",
         "/kisah",
         "/surat",
@@ -132,17 +136,19 @@ export function MobileNav({ locale }: Props) {
 
 type IconProps = { filled?: boolean };
 
+function PlayIcon({ filled }: IconProps) {
+  return (
+    <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <rect x="2.5" y="5" width="19" height="14" rx="3.5" />
+      <path d="M10 9.2v5.6l4.8-2.8z" fill="currentColor" />
+    </svg>
+  );
+}
+
 function HomeIcon({ filled }: IconProps) {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
       <path d="M3 11.5 12 4l9 7.5" /><path d="M5 10v10h14V10" />
-    </svg>
-  );
-}
-function BookIcon({ filled }: IconProps) {
-  return (
-    <svg width="22" height="22" viewBox="0 0 24 24" fill={filled ? "currentColor" : "none"} stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-      <path d="M4 4h11a3 3 0 0 1 3 3v13" /><path d="M4 4v15a2 2 0 0 0 2 2h12" />
     </svg>
   );
 }
