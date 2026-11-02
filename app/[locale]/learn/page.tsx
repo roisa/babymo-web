@@ -27,6 +27,16 @@ export async function generateMetadata({
 function items(l: Locale, dict: ReturnType<typeof getDictionary>): SectionItem[] {
   return [
     {
+      emoji: "🤲",
+      title: l === "id" ? "Doa Harian" : "Daily Du'as",
+      description:
+        l === "id"
+          ? "Doa pendek untuk tidur, makan, hujan, dan petualangan sehari-hari — dengan Arab, cara baca, dan artinya."
+          : "Short du'as for sleeping, eating, rain and everyday adventures — with Arabic, reading guide and meaning.",
+      href: "/doa",
+      badge: l === "id" ? "Favorit" : "Favourite",
+    },
+    {
       emoji: "✍️",
       title: dict.nav.blog,
       description:

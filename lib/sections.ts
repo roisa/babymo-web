@@ -5,13 +5,14 @@
  * The CSS lives in globals.css as .sec-<key> classes that set --sec,
  * --sec-soft and --sec-deep; components just add the class.
  */
-export type SectionKey = "doa" | "cerita" | "main" | "belajar";
+export type SectionKey = "doa" | "cerita" | "main" | "belajar" | "momen";
 
 export const SECTION_EMOJI: Record<SectionKey, string> = {
   doa: "🤲",
   cerita: "📖",
   main: "🎮",
   belajar: "🎓",
+  momen: "🎬",
 };
 
 /** Map a site path (no locale prefix) to its section, if any. */
@@ -20,7 +21,8 @@ export function sectionForPath(path: string): SectionKey | null {
   const is = (...ms: string[]) => ms.some((m) => p === m || p.startsWith(`${m}/`));
   if (is("/doa", "/dzikir", "/sholat", "/puasa")) return "doa";
   if (is("/cerita")) return "cerita";
-  if (is("/permainan", "/play", "/apps", "/watch", "/momen", "/kuis")) return "main";
+  if (is("/momen", "/watch")) return "momen";
+  if (is("/permainan", "/play", "/apps", "/kuis")) return "main";
   if (is("/learn", "/hadith", "/kisah", "/surat", "/asmaul-husna", "/kalender", "/parenting", "/blog")) return "belajar";
   return null;
 }
