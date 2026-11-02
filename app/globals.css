@@ -790,3 +790,19 @@ html.dark .sec-btn { color: #15171B; }
   background: rgba(255,255,255,0.9); color: #3B2F7A;
 }
 @media (prefers-reduced-motion: reduce) { .book, .book:hover { transform: none; } }
+
+/* Doa picture tiles */
+.doa-tile {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 52px; height: 52px; border-radius: 16px; font-size: 28px;
+  border: 2px solid #fff; box-shadow: 0 4px 0 rgba(15, 18, 19, 0.08);
+  transform: rotate(-4deg); transition: transform 260ms cubic-bezier(.34,1.56,.64,1);
+}
+html.dark .doa-tile { border-color: rgba(255,255,255,0.08); }
+.group:hover .doa-tile { transform: rotate(4deg) scale(1.08); }
+.doa-tile--sky { background: var(--color-sky-soft); }
+.doa-tile--sun { background: var(--color-sun-soft); }
+.doa-tile--grape { background: var(--color-grape-soft); }
+.doa-tile--peach { background: var(--color-peach-soft); }
+.doa-tile--berry { background: var(--color-berry-soft); }
+.doa-tile--brave { background: var(--color-brave-soft); }
