@@ -165,8 +165,12 @@ export default async function GamesIndex({
                   const pr = GAME_PROMO[g.slug];
                   return (
                     <li key={g.slug}>
-                      <a href={g.externalUrl} target="_blank" rel="noopener" className="game-card tap group flex h-full gap-4 rounded-[28px] bg-paper p-4 sm:p-5">
-                        <PhoneShot slug={g.slug} alt={g.title[l]} className="w-[86px] shrink-0 sm:w-[122px]" />
+                      <a href={g.externalUrl} target="_blank" rel="noopener" className="game-card tap group flex h-full flex-col gap-4 rounded-[28px] bg-paper p-4 sm:flex-row sm:p-5">
+                        {/* Phone: a wide tinted "peek" box with the phone rising out of it.
+                            sm+: the classic side-by-side phone (natural 9:16, never stretched). */}
+                        <span className="shot-peek relative block h-[188px] shrink-0 overflow-hidden rounded-[22px] sm:h-auto sm:w-[122px] sm:self-start sm:overflow-visible sm:rounded-none">
+                          <PhoneShot slug={g.slug} alt={g.title[l]} className="absolute left-1/2 top-5 w-[148px] -translate-x-1/2 sm:static sm:w-full sm:translate-x-0" />
+                        </span>
                         <span className="flex min-w-0 flex-col">
                           <span className="flex items-center gap-3">
                             <GameIcon slug={g.slug} className="h-11 w-11" />

@@ -22,7 +22,7 @@ export const GAME_GROUPS: {
       id: "Dari doa bangun tidur sampai gerakan sholat — belajar ibadah dengan suara, gambar, dan kuis.",
       en: "From the waking-up du'a to the movements of prayer — learning worship with sound, pictures and quizzes.",
     },
-    slugs: ["doa-harian", "dua-journey", "pray-with-mo", "streak-sholat-mo"],
+    slugs: ["doa-harian", "dua-journey", "wudhu", "pray-with-mo", "streak-sholat-mo"],
   },
   {
     key: "arab",
@@ -159,6 +159,15 @@ export const GAME_PROMO: Record<
     },
     ages: "3–7",
     skills: { id: ["Kalimat thayyibah", "Akhlak"], en: ["Kalimat thayyibah", "Good character"] },
+  },
+  wudhu: {
+    hook: { id: "Wudhu dulu, baru sholat — bareng Mo!", en: "Wudu first, then prayer — with Mo!" },
+    pitch: {
+      id: "Sepuluh langkah wudhu dari niat sampai doa, dengan Baby Mo asli di depan keran. Ketuk tombol air untuk membasuh, lalu uji hafalan lewat game urutkan.",
+      en: "Ten wudu steps from the intention to the du'a, with the real Baby Mo at the tap. Tap the water button to wash, then test yourself with the ordering game.",
+    },
+    ages: "3–7",
+    skills: { id: ["Tata cara wudhu", "Urutan & ingatan"], en: ["How to do wudu", "Order & memory"] },
   },
   "pray-with-mo": {
     hook: { id: "Belajar sholat, gerakan demi gerakan.", en: "Learn to pray, one movement at a time." },

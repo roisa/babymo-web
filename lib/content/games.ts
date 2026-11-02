@@ -116,6 +116,17 @@ export const games: Game[] = [
     tags: ["akhlak", "puzzle"],
   },
   {
+    slug: "wudhu",
+    emoji: "💧",
+    title: { id: "Wudhu Bareng Mo", en: "Wudu with Mo" },
+    description: {
+      id: "Belajar wudhu langkah demi langkah bersama Baby Mo — lengkap dengan niat, doa, dan game urutkan.",
+      en: "Learn wudu step by step with Baby Mo — with the intention, the du'a and an ordering game.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-wudhu.html",
+    tags: ["ibadah", "wudhu", "panduan"],
+  },
+  {
     slug: "pray-with-mo",
     emoji: "🕌",
     title: { id: "Pray with Mo", en: "Pray with Mo" },
