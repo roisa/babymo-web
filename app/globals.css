@@ -624,3 +624,63 @@ html.dark .sky-cloud { background: #2B3A48; opacity: 0.55; }
 html.dark .star-halo { opacity: 0.6; }
 @keyframes star-turn { to { rotate: 360deg; } }
 @media (prefers-reduced-motion: reduce) { .star-halo { animation: none; } }
+
+/* ─── Picture-book spread (founder + promise) ───────────────────────── */
+.book {
+  border-radius: 28px;
+  border: 1px solid var(--color-hairline);
+  background-color: var(--color-paper);
+  /* faint paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.25 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  box-shadow: 0 1px 0 var(--color-hairline), 0 24px 48px -28px rgba(15, 18, 19, 0.22);
+}
+html.dark .book { box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.6); }
+@media (min-width: 768px) {
+  /* the book's spine: a soft fold shadow down the middle */
+  .book-page--right {
+    background: linear-gradient(90deg, rgba(15, 18, 19, 0.06), transparent 36px);
+    border-left: 1px solid var(--color-hairline);
+  }
+  html.dark .book-page--right { background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), transparent 36px); }
+}
+@media (max-width: 767px) {
+  .book-page--right { border-top: 1px dashed var(--color-hairline); }
+}
+
+/* Baby Mo peeking over the book edge — pops up when revealed. */
+.peek { transform: translateY(26px); opacity: 0; transition: transform 700ms cubic-bezier(.34, 1.56, .64, 1) 250ms, opacity 400ms ease 250ms; filter: drop-shadow(0 10px 14px rgba(15, 18, 19, 0.14)); }
+.reveal.in .peek { transform: none; opacity: 1; }
+
+/* ─── Stickers: chunky white border, slight tilt, playful shadow ────── */
+.sticker {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: var(--color-paper);
+  border: 3px solid #fff;
+  outline: 1px solid var(--color-hairline);
+  box-shadow: 0 8px 18px -10px rgba(15, 18, 19, 0.28);
+  transition: transform 260ms cubic-bezier(.34, 1.56, .64, 1);
+}
+html.dark .sticker { border-color: #2A2E36; }
+.sticker--0 { transform: rotate(-1.4deg); }
+.sticker--1 { transform: rotate(1.1deg) translateX(10px); }
+.sticker--2 { transform: rotate(-0.6deg); }
+.sticker:hover { transform: rotate(0) scale(1.03); }
+.sticker-icon {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 44px; height: 44px; border-radius: 14px; font-size: 22px;
+}
+.sticker--0 .sticker-icon { background: var(--color-sun-soft); }
+.sticker--1 .sticker-icon { background: var(--color-sky-soft); }
+.sticker--2 .sticker-icon { background: var(--color-grape-soft); }
+
+/* Moment labels become little stickers too */
+.moment-label { border: 2px solid #fff; box-shadow: 0 4px 10px -6px rgba(15, 18, 19, 0.3); transform: rotate(-1.5deg); }
+html.dark .moment-label { border-color: rgba(255, 255, 255, 0.08); }
+.moment--malam .moment-label { border-color: rgba(255, 255, 255, 0.14); }
+
+@media (prefers-reduced-motion: reduce) {
+  .peek { transition: none; transform: none; opacity: 1; }
+  .sticker { transition: none; }
+}

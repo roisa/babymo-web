@@ -419,64 +419,75 @@ export default async function HomePage({
           </Reveal>
         </section>
 
-        <StarDivider className="pt-14 sm:pt-20" />
+        <StarDivider className="pt-14 sm:pt-16" />
 
         {/* ── TERSIMPAN UNTUKMU — only renders if user has saves ── */}
         <SavedHomeSection locale={l} />
 
-        {/* ── PROMISE + FOUNDER LINE (replaces the two "Why" blocks) ── */}
-        <section className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
+        {/* ── PROMISE + FOUNDER — an open picture book ── */}
+        <section className="mx-auto max-w-6xl px-5 pb-14 pt-24 sm:px-7 sm:pb-20 sm:pt-28">
           <Reveal>
-            <div className="grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
-              <div className="flex items-center gap-5">
-                <div className="relative h-[112px] w-[112px] shrink-0">
-                  <Star8 className="absolute inset-0 h-full w-full text-sage-soft" />
-                  <img
-                    src={asset("/baby-mo-poses/baby-mo-thank-you.png")}
-                    alt=""
-                    width={120}
-                    height={120}
-                    loading="lazy"
-                    className="relative h-full w-full select-none object-contain p-2"
-                    draggable={false}
-                  />
-                </div>
-                <div>
-                  <p className="font-display text-[22px] font-medium leading-snug text-ink sm:text-[26px]">
+            <div className="book relative">
+              {/* Baby Mo peeking over the top of the book */}
+              <img
+                src={asset("/baby-mo-poses/baby-mo-idea.png")}
+                alt=""
+                width={160}
+                height={160}
+                loading="lazy"
+                className="peek pointer-events-none absolute -top-[86px] right-8 w-[110px] select-none sm:right-16 sm:w-[132px] sm:-top-[104px]"
+                draggable={false}
+              />
+              <div className="grid md:grid-cols-2">
+                {/* Left page — founder */}
+                <div className="book-page flex flex-col justify-center gap-5 p-7 sm:p-10">
+                  <div className="relative h-[112px] w-[112px]">
+                    <Star8 className="absolute inset-0 h-full w-full text-sage-soft" />
+                    <img
+                      src={asset("/baby-mo-poses/baby-mo-thank-you.png")}
+                      alt=""
+                      width={120}
+                      height={120}
+                      loading="lazy"
+                      className="relative h-full w-full select-none object-contain p-2"
+                      draggable={false}
+                    />
+                  </div>
+                  <p className="font-display text-[24px] font-medium leading-snug text-ink sm:text-[28px]">
                     {l === "id"
                       ? "“Dibuat oleh Abi & Umi untuk Mo dan Ais — dan untuk anakmu juga.”"
                       : "“Made by Abi & Umi for Mo and Ais — and for your child too.”"}
                   </p>
                   <Link
                     href={pathFor(l, "/tentang")}
-                    className="tap mt-3 inline-flex text-[13.5px] font-semibold text-sage-deep hover:underline"
+                    className="tap inline-flex self-start text-[13.5px] font-semibold text-sage-deep hover:underline"
                   >
                     {l === "id" ? "Cerita di balik Baby Mo" : "The story behind Baby Mo"} →
                   </Link>
                 </div>
-              </div>
-              <div>
-                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
-                  {dict.home.sections.valuesTitle}
-                </p>
-                <ul className="mt-4 grid gap-3 sm:grid-cols-3">
-                  {dict.home.values.map((v, i) => (
-                    <li
-                      key={v.title}
-                      className="rounded-[22px] border border-hairline bg-paper p-5"
-                    >
-                      <span aria-hidden className="text-[22px]">
-                        {["📖", "🛡️", "🌙"][i]}
-                      </span>
-                      <h3 className="mt-2 font-serif text-[16.5px] font-medium text-ink">
-                        {v.title}
-                      </h3>
-                      <p className="mt-1 text-[13.5px] leading-relaxed text-whisper">
-                        {v.body}
-                      </p>
-                    </li>
-                  ))}
-                </ul>
+                {/* Right page — promise stickers */}
+                <div className="book-page book-page--right p-7 sm:p-10">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
+                    {dict.home.sections.valuesTitle}
+                  </p>
+                  <ul className="mt-5 grid gap-4">
+                    {dict.home.values.map((v, i) => (
+                      <li key={v.title} className={`sticker sticker--${i}`}>
+                        <span aria-hidden className="sticker-icon">
+                          {["📖", "🛡️", "🌙"][i]}
+                        </span>
+                        <div>
+                          <h3 className="font-serif text-[16.5px] font-medium text-ink">
+                            {v.title}
+                          </h3>
+                          <p className="mt-0.5 text-[13.5px] leading-relaxed text-whisper">
+                            {v.body}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </div>
             </div>
           </Reveal>
