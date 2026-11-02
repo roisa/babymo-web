@@ -197,11 +197,11 @@ const id: Dict = {
     relatedAnchor: "Terkait cerita ini",
   },
   home: {
-    eyebrow: "Untuk anak muslim 2–8 tahun",
+    eyebrow: "Teman kecil keluarga muslim",
     heroTitleA: "Menanam cinta pada Allah,",
     heroTitleB: "dari hal kecil yang anak sukai.",
     heroSub:
-      "Doa, cerita, dan permainan — dibuat oleh orang tua, untuk keluarga muslim.",
+      "Doa, cerita, dan permainan untuk anak 2–8 tahun — dibuat oleh orang tua, untuk orang tua.",
     ctaPrimary: "Jelajahi Doa Harian",
     ctaSecondary: "Mainkan Game Gratis",
     sections: {
@@ -452,11 +452,11 @@ const en: Dict = {
     relatedAnchor: "Related to this story",
   },
   home: {
-    eyebrow: "For Muslim kids aged 2–8",
+    eyebrow: "A little friend for Muslim families",
     heroTitleA: "Planting love for Allah,",
     heroTitleB: "through the small things kids love.",
     heroSub:
-      "Du'a, stories, and play — made by parents, for Muslim families.",
+      "Du'a, stories, and play for kids aged 2–8 — made by parents, for parents.",
     ctaPrimary: "Explore Daily Duas",
     ctaSecondary: "Play Free Games",
     sections: {
