@@ -27,7 +27,6 @@ import { MascotGreeting } from "@/components/MascotGreeting";
 import { HeroMascot } from "@/components/HeroMascot";
 import { BrandMission } from "@/components/BrandMission";
 import { YouTubeBand } from "@/components/YouTubeBand";
-import { StreakBadge } from "@/components/StreakBadge";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllDoa } from "@/lib/content/doa";
@@ -137,18 +136,6 @@ export default async function HomePage({
                     className="magnet tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-5 py-3 text-[14px] font-semibold text-ink backdrop-blur hover:border-brave/40"
                   >
                     {dict.nav.games ?? (l === "id" ? "Permainan" : "Games")}
-                  </Link>
-                </div>
-
-                {/* Daily streak + a nudge into the guided learning paths */}
-                <div className="mt-5 flex flex-wrap items-center gap-2.5">
-                  <StreakBadge locale={l} />
-                  <Link
-                    href={pathFor(l, "/learn/path")}
-                    className="tap inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper/70 px-3 py-1.5 text-[12.5px] font-semibold text-sage-deep backdrop-blur transition hover:border-sage/40"
-                  >
-                    <span aria-hidden>🧭</span>
-                    {l === "id" ? "Mulai jalur belajar" : "Start a learning path"} →
                   </Link>
                 </div>
 
