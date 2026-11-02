@@ -86,7 +86,7 @@ export default async function AsmaulHusnaDetail({
 
         <header className="mb-10">
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
               {l === "id" ? "Asmaul Husna ke-" : "Name"} {n.number}{" "}
               {l === "id" ? "" : "of 99"}
             </span>
@@ -108,7 +108,7 @@ export default async function AsmaulHusnaDetail({
 
         {/* What this name means for us */}
         <section className="rounded-[24px] border border-hairline bg-paper p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Apa artinya untuk kita" : "What this name means for us"}
           </h2>
           <p className="mt-4 font-serif text-[18px] leading-[1.7] text-ink">
@@ -118,7 +118,7 @@ export default async function AsmaulHusnaDetail({
 
         {/* Share with your child */}
         <section className="mt-6 rounded-[24px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "Kenalkan ke si kecil" : "Share with your little one"}
           </h2>
           <p className="mt-4 font-serif text-[18px] leading-[1.7] text-ink">
@@ -146,7 +146,7 @@ export default async function AsmaulHusnaDetail({
 
         {/* Keep learning */}
         <section className="mt-10">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Lanjutkan belajar" : "Keep learning"}
           </h2>
           <div className="mt-4 grid gap-3 sm:grid-cols-2">
@@ -154,7 +154,7 @@ export default async function AsmaulHusnaDetail({
               href={pathFor(l, "/asmaul-husna")}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5 hover:border-brave/40"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+              <span className="text-[12px] font-semibold normal-case-label text-brave-deep">
                 {l === "id" ? "Daftar lengkap" : "Full list"}
               </span>
               <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-brave-deep">
@@ -165,7 +165,7 @@ export default async function AsmaulHusnaDetail({
               href={pathFor(l, "/doa")}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5 hover:border-brave/40"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+              <span className="text-[12px] font-semibold normal-case-label text-sage-deep">
                 {l === "id" ? "Doa" : "Du'a"}
               </span>
               <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-brave-deep">
@@ -187,7 +187,7 @@ export default async function AsmaulHusnaDetail({
               href={pathFor(l, `/asmaul-husna/${prev.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 ← {prev.number}. {l === "id" ? "Sebelumnya" : "Previous"}
               </span>
               <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-brave-deep">
@@ -202,7 +202,7 @@ export default async function AsmaulHusnaDetail({
               href={pathFor(l, `/asmaul-husna/${next.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5 sm:text-right"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 {next.number}. {l === "id" ? "Selanjutnya" : "Next"} →
               </span>
               <p className="font-display mt-1 text-[17px] font-medium text-ink group-hover:text-brave-deep">

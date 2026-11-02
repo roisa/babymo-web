@@ -229,7 +229,7 @@ export function PrayerWidget({ locale }: Props) {
   return (
     <div className="rounded-[24px] border border-hairline bg-paper p-6 sm:p-7">
       <div className="flex items-start justify-between gap-4">
-        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+        <p className="flex items-center gap-2 text-[12.5px] font-semibold normal-case-label text-brave-deep">
           <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
           {locale === "id" ? "Waktu Sholat" : "Prayer Times"}
         </p>
@@ -290,7 +290,7 @@ export function PrayerWidget({ locale }: Props) {
       {nextName && (
         <div className="mt-5 flex items-end justify-between gap-4 rounded-[18px] bg-brave-soft/50 px-5 py-4">
           <div>
-            <p className="text-[12px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+            <p className="text-[13px] font-semibold normal-case-label text-brave-deep">
               {locale === "id" ? "Berikutnya" : "Next"}
             </p>
             <p className="font-display mt-0.5 text-[24px] font-medium leading-none text-ink">
@@ -319,7 +319,7 @@ export function PrayerWidget({ locale }: Props) {
               key={p}
               className={`rounded-xl py-2 ${isActive ? "bg-brave text-paper" : ""}`}
             >
-              <div className={`text-[10.5px] font-semibold uppercase tracking-[0.06em] ${isActive ? "text-paper/90" : "text-whisper"}`}>
+              <div className={`text-[12px] font-semibold normal-case-label ${isActive ? "text-paper/90" : "text-whisper"}`}>
                 {PRAYER_LABEL[p][locale]}
               </div>
               <div className={`mt-0.5 text-[12.5px] font-semibold ${isActive ? "text-paper" : "text-ink"}`}>

@@ -66,7 +66,7 @@ export default async function HadithTemaIndex({
         </nav>
 
         <header className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-sage-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
             {dict.nav.hadith}
           </p>
           <h1 className="tracking-display mt-2 font-serif text-[36px] font-medium leading-[1.1] text-ink sm:text-[44px]">

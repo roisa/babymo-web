@@ -85,7 +85,7 @@ export default async function DownloadsPage({
         </nav>
 
         <header className="mb-10 max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "Gratis · Untuk Dibagikan" : "Free · Shareable"}
           </span>
           <h1 className="font-display mt-4 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">

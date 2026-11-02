@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Inter, Newsreader, Noto_Naskh_Arabic, Fraunces } from "next/font/google";
+import { Inter, Noto_Naskh_Arabic, Baloo_2 } from "next/font/google";
 import {
   type Locale,
   isLocale,
@@ -20,13 +20,6 @@ const inter = Inter({
   display: "swap",
 });
 
-const newsreader = Newsreader({
-  subsets: ["latin"],
-  variable: "--font-newsreader",
-  weight: ["400", "500", "600", "700"],
-  display: "swap",
-});
-
 const arabic = Noto_Naskh_Arabic({
   subsets: ["arabic"],
   variable: "--font-arabic",
@@ -34,10 +27,12 @@ const arabic = Noto_Naskh_Arabic({
   display: "swap",
 });
 
-const fraunces = Fraunces({
+// Rounded, friendly display face for every heading — reads well in
+// Indonesian and feels made-for-kids without hurting parent readability.
+const baloo = Baloo_2({
   subsets: ["latin"],
-  variable: "--font-display",
-  axes: ["opsz", "SOFT"],
+  variable: "--font-rounded",
+  weight: ["400", "500", "600", "700", "800"],
   display: "swap",
 });
 
@@ -78,7 +73,7 @@ export default async function LocaleLayout({
   return (
     <html
       lang={localeHtmlLang[locale]}
-      className={`${inter.variable} ${newsreader.variable} ${arabic.variable} ${fraunces.variable}`}
+      className={`${inter.variable} ${baloo.variable} ${arabic.variable}`}
     >
       <body>
         {/* Set theme before first paint to avoid a flash of the wrong

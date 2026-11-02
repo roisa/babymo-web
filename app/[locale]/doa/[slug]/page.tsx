@@ -16,6 +16,7 @@ import { breadcrumbSchema, doaSchema, graph } from "@/lib/seo/schemas";
 import { getAllDoa, getDoaBySlug, getRelatedDoa } from "@/lib/content/doa";
 import { RelatedStories } from "@/components/RelatedStories";
 import { DoaCard } from "@/components/DoaCard";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -83,8 +84,8 @@ export default async function DoaDetail({
 
         <header className="mb-8">
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
-              {GRADE_LABEL[doa.source.grade] ?? doa.source.grade}
+            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
+              {GRADE_LABEL[doa.source.grade] ?? labelize(doa.source.grade)}
             </span>
             <span className="text-whisper">{doa.source.reference}</span>
           </div>
@@ -126,7 +127,7 @@ export default async function DoaDetail({
           </div>
           <div className="grid gap-6 px-6 py-7 sm:grid-cols-2 sm:px-10">
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+              <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
                 {dict.doa.transliteration}
               </h2>
               <p className="mt-1.5 text-[16px] italic text-ink">
@@ -134,7 +135,7 @@ export default async function DoaDetail({
               </p>
             </div>
             <div>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+              <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
                 {dict.doa.translation}
               </h2>
               <p className="mt-1.5 text-[16px] text-ink">
@@ -167,13 +168,13 @@ export default async function DoaDetail({
         {/* Meta strip */}
         <dl className="mt-8 grid gap-5 rounded-[22px] border border-hairline bg-paper p-6 text-[14px] sm:grid-cols-3">
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.doa.source}
             </dt>
             <dd className="mt-1 text-ink">{doa.source.reference}</dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.doa.ages}
             </dt>
             <dd className="mt-1 text-ink">
@@ -181,7 +182,7 @@ export default async function DoaDetail({
             </dd>
           </div>
           <div>
-            <dt className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.doa.situations}
             </dt>
             <dd className="mt-1 flex flex-wrap gap-1.5">

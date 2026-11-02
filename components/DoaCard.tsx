@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Doa } from "@/lib/content/types";
 import { type Locale, pathFor } from "@/lib/i18n/config";
+import { labelize } from "@/lib/labelize";
 
 type Props = { doa: Doa; locale: Locale };
 
@@ -18,8 +19,8 @@ export function DoaCard({ doa, locale }: Props) {
       className="tap group flex flex-col gap-4 rounded-[22px] border border-hairline bg-paper p-6 transition hover:border-sage/40"
     >
       <div className="flex items-center gap-2 text-[11px]">
-        <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold uppercase tracking-wider text-sage-deep">
-          {GRADE_LABEL[doa.source.grade] ?? doa.source.grade}
+        <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold normal-case-label text-sage-deep">
+          {GRADE_LABEL[doa.source.grade] ?? labelize(doa.source.grade)}
         </span>
         <span className="text-whisper">{doa.source.reference}</span>
       </div>

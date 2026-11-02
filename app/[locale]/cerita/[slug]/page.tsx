@@ -18,6 +18,7 @@ import { getThemesForCatatan } from "@/lib/content/cerita-themes";
 import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
 import { getParentingBySlug } from "@/lib/content/parenting";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -87,15 +88,15 @@ export default async function CatatanDetail({
 
         <header className="mb-8">
           {isStory && (
-            <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-clay-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+            <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-clay-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-clay">
               <span aria-hidden>📖</span> {dict.catatan.bookInspo}
             </p>
           )}
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
               {dict.catatan.childChip[n.child]}
             </span>
-            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+            <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
               {isStory ? dict.catatan.kidsStory : narrator}
             </span>
             <span className="text-whisper">
@@ -163,7 +164,7 @@ export default async function CatatanDetail({
           if (themes.length === 0) return null;
           return (
             <div className="mt-10 flex flex-wrap items-center gap-2">
-              <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+              <span className="text-[12.5px] font-semibold normal-case-label text-whisper">
                 {l === "id" ? "Tema" : "Themes"}:
               </span>
               {themes.map((t) => (
@@ -181,7 +182,7 @@ export default async function CatatanDetail({
 
         {/* Takeaway pull-quote */}
         <aside className="mt-10 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {isStory ? dict.catatan.storyTakeaway : dict.catatan.takeaway}
           </p>
           <p className="font-display mt-3 text-[19px] leading-[1.5] text-ink sm:text-[21px]">
@@ -193,15 +194,15 @@ export default async function CatatanDetail({
         {/* Anchor link to the related doa / hadith / parenting */}
         {anchor && (
           <section className="mt-10">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+            <p className="text-[12.5px] font-semibold normal-case-label text-whisper">
               {dict.catatan.relatedAnchor}
             </p>
             <Link
               href={pathFor(l, anchor.href)}
               className="lift tap mt-3 block rounded-[22px] border border-hairline bg-paper p-6 hover:border-brave/40"
             >
-              <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
-                {anchor.kind}
+              <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
+                {labelize(anchor.kind)}
               </p>
               <p className="font-serif mt-1 text-[17px] font-medium text-ink">
                 {anchor.title}
@@ -216,7 +217,7 @@ export default async function CatatanDetail({
         {/* Watch on Baby Mo — embedded song/episode from the Momen page */}
         {n.video && (
           <section className="mt-12">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+            <p className="text-[12.5px] font-semibold normal-case-label text-clay">
               {l === "id" ? "🎬 Tonton lagunya di Baby Mo" : "🎬 Watch it on Baby Mo"}
             </p>
             <div className="mt-3 overflow-hidden rounded-[22px] border border-hairline bg-paper">
@@ -293,7 +294,7 @@ function RelatedNotes({
   if (others.length === 0) return null;
   return (
     <div>
-      <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-whisper">
+      <p className="text-[12.5px] font-semibold normal-case-label text-whisper">
         {locale === "id" ? "Catatan lain" : "Other notes"}
       </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
@@ -303,7 +304,7 @@ function RelatedNotes({
             href={pathFor(locale, `/cerita/${o.slug}`)}
             className="lift tap group rounded-[20px] border border-hairline bg-paper p-5"
           >
-            <span className="text-[10.5px] font-semibold uppercase tracking-[0.1em] text-sage-deep">
+            <span className="text-[12px] font-semibold normal-case-label text-sage-deep">
               {dict.catatan.childChip[o.child]}
             </span>
             <p className="font-display mt-2 text-[18px] font-medium leading-snug text-ink group-hover:text-brave-deep">

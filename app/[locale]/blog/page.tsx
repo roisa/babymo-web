@@ -9,6 +9,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllBlogPosts } from "@/lib/content/blog";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -66,8 +67,8 @@ export default async function BlogIndex({
               href={pathFor(l, `/blog/${p.slug}`)}
               className="group rounded-2xl border border-mist bg-paper p-6 transition hover:-translate-y-0.5 hover:border-sage/40"
             >
-              <div className="text-[11px] font-semibold uppercase tracking-wider text-sage-deep">
-                {p.tags[0]}
+              <div className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
+                {labelize(p.tags[0])}
               </div>
               <h2 className="mt-2 font-serif text-xl font-semibold leading-snug text-ink group-hover:text-sage-deep">
                 {p.title[l]}

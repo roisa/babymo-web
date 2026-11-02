@@ -109,7 +109,7 @@ export function Footer({ locale, currentPath }: Props) {
 function FooterCol({ heading, children }: { heading: string; children: React.ReactNode }) {
   return (
     <div>
-      <h3 className="mb-3 text-xs font-semibold uppercase tracking-wider text-ink">
+      <h3 className="mb-3 text-xs font-semibold normal-case-label text-ink">
         {heading}
       </h3>
       <ul className="space-y-2 text-sm">{children}</ul>

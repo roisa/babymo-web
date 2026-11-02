@@ -93,7 +93,7 @@ export default async function ResultPage({
       extraSchema={[articleSchema]}
     >
       <article className="mx-auto max-w-2xl rounded-3xl border border-hairline bg-paper p-6 text-center shadow-sm sm:p-10">
-        <p className="text-sm font-semibold uppercase tracking-wide text-whisper">
+        <p className="text-sm font-semibold normal-case-label text-whisper">
           {l === "id" ? "Hari ini kamu adalah" : "Today you are"}
         </p>
         <h1 className="mt-1 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">

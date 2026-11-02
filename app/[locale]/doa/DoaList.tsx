@@ -1,5 +1,6 @@
 "use client";
 
+import { labelize } from "@/lib/labelize";
 import { useMemo, useState } from "react";
 import type { Doa } from "@/lib/content/types";
 import type { Locale } from "@/lib/i18n/config";
@@ -86,7 +87,7 @@ export function DoaList({ doas, locale }: Props) {
       { value: "all", label: lookup.all ?? "All", count: doas.length },
       ...top.map(([k, n]) => ({
         value: k,
-        label: lookup[k] ?? k,
+        label: lookup[k] ?? labelize(k),
         count: n,
       })),
     ];

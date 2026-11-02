@@ -160,7 +160,7 @@ export function SpotDifferenceBoard({
   function panel(cells: Cell[], side: "l" | "r", title: string) {
     return (
       <div className="flex-1">
-        <p className="mb-2 text-center text-xs font-semibold uppercase tracking-wide text-whisper">
+        <p className="mb-2 text-center text-xs font-semibold normal-case-label text-whisper">
           {title}
         </p>
         <div

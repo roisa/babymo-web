@@ -169,7 +169,7 @@ export default async function CalendarPage({
 
         {/* Hero — today's Hijri date */}
         <header className="mb-12 rounded-[28px] border border-hairline bg-paper-2 p-8 sm:p-10">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {l === "id" ? "Hari ini di kalender islam" : "Today in the Islamic calendar"}
           </p>
           <p className="font-display mt-3 text-[36px] font-medium leading-[1.05] text-ink sm:text-[44px]">

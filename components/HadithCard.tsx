@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Hadith } from "@/lib/content/types";
 import { type Locale, pathFor } from "@/lib/i18n/config";
+import { labelize } from "@/lib/labelize";
 
 const GRADE_LABEL: Record<string, string> = {
   sahih: "Sahih",
@@ -17,8 +18,8 @@ export function HadithCard({ hadith, locale }: Props) {
       className="tap group flex flex-col gap-4 rounded-[22px] border border-hairline bg-paper p-6 transition hover:border-sage/40"
     >
       <div className="flex items-center gap-2 text-[11px]">
-        <span className="rounded-full bg-clay-soft px-2 py-0.5 font-semibold uppercase tracking-wider text-clay">
-          {GRADE_LABEL[hadith.source.grade] ?? hadith.source.grade}
+        <span className="rounded-full bg-clay-soft px-2 py-0.5 font-semibold normal-case-label text-clay">
+          {GRADE_LABEL[hadith.source.grade] ?? labelize(hadith.source.grade)}
         </span>
         <span className="text-whisper">{hadith.source.reference}</span>
       </div>

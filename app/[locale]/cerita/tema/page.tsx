@@ -66,7 +66,7 @@ export default async function CeritaTemaIndex({
         </nav>
 
         <header className="mb-10 max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
             {dict.catatan.byline}
           </p>
           <h1 className="font-display mt-3 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">

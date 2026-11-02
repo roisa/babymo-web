@@ -71,7 +71,7 @@ export function SavedShelf({ locale, context, limit }: Props) {
             className="min-w-0 flex-1"
           >
             <span
-              className={`inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] ${TYPE_TONE[b.type]}`}
+              className={`inline-flex items-center rounded-full px-2 py-0.5 text-[11.5px] font-semibold normal-case-label ${TYPE_TONE[b.type]}`}
             >
               {TYPE_LABEL[b.type][locale]}
             </span>
@@ -114,7 +114,7 @@ export function SavedHomeSection({ locale }: { locale: Locale }) {
     <section className="mx-auto max-w-6xl px-5 pt-14 sm:px-7 sm:pt-20">
       <div className="mb-6 flex items-end justify-between gap-4">
         <div>
-          <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <p className="flex items-center gap-2 text-[12.5px] font-semibold normal-case-label text-brave-deep">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" aria-hidden>
               <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z" />
             </svg>

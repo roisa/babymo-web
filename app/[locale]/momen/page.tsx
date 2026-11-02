@@ -108,7 +108,7 @@ export default async function MomenPage({
           / <span className="text-ink">{c.title}</span>
         </nav>
         <header className="max-w-2xl">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+          <p className="text-[12.5px] font-semibold normal-case-label text-clay">
             {l === "id" ? "Tonton & Ikuti" : "Watch & Follow"}
           </p>
           <h1 className="tracking-display mt-2 font-serif text-[36px] font-medium leading-[1.1] text-ink sm:text-[44px]">

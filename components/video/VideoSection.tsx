@@ -45,7 +45,7 @@ export function VideoSection({ locale, compact = false }: Props) {
       <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
         <div className="flex flex-wrap items-end justify-between gap-6">
           <div className="max-w-xl">
-            <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+            <p className="text-[12.5px] font-semibold normal-case-label text-clay">
               {locale === "id" ? "Momen Baby Mo" : "Baby Mo Moments"}
             </p>
             <h2 className="tracking-display mt-1 font-serif text-3xl font-medium text-ink sm:text-4xl">

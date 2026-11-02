@@ -182,7 +182,7 @@ export default async function GamesIndex({
               <span className="min-w-0">
                 <span className="flex items-center gap-2 font-serif text-lg font-semibold text-ink group-hover:text-sage-deep">
                   {l === "id" ? "Kuis & Permainan" : "Quizzes & Games"}
-                  <span className="rounded-full bg-brave-soft px-2 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                  <span className="rounded-full bg-brave-soft px-2 py-0.5 text-[11.5px] font-semibold normal-case-label text-brave-deep">
                     {l === "id" ? "Baru" : "New"}
                   </span>
                 </span>

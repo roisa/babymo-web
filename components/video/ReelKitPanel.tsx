@@ -22,7 +22,7 @@ export function ReelKitPanel({ video, locale }: Props) {
   return (
     <div className="mt-2 rounded-[20px] border border-brave/25 bg-brave-soft/40 p-4 sm:p-5">
       <div className="flex flex-wrap items-center gap-2">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-brave px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.08em] text-paper">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-brave px-2.5 py-1 text-[12.5px] font-semibold normal-case-label text-paper">
           {kit.format === "repost" ? <RepostIcon /> : <ScissorsIcon />}
           {kit.formatLabel}
         </span>
@@ -46,7 +46,7 @@ export function ReelKitPanel({ video, locale }: Props) {
 
       {kit.cutTip && (
         <div className="mt-3 rounded-[14px] border border-clay/30 bg-clay-soft/60 px-3.5 py-2.5">
-          <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-clay">
+          <p className="text-[12.5px] font-semibold normal-case-label text-clay">
             {id ? "Tips potong" : "Cut tip"}
           </p>
           <p className="mt-1 text-[13px] leading-relaxed text-ink">{kit.cutTip}</p>
@@ -54,7 +54,7 @@ export function ReelKitPanel({ video, locale }: Props) {
       )}
 
       <div className="mt-4">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+        <p className="text-[12.5px] font-semibold normal-case-label text-whisper">
           {id ? "Alur 3 detik" : "3-beat storyboard"}
         </p>
         <ol className="mt-2 space-y-1.5">
@@ -70,7 +70,7 @@ export function ReelKitPanel({ video, locale }: Props) {
       </div>
 
       <div className="mt-4">
-        <p className="text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
+        <p className="text-[12.5px] font-semibold normal-case-label text-whisper">
           {id ? "Caption (siap tempel)" : "Caption (ready to paste)"}
         </p>
         <pre className="mt-2 max-h-44 overflow-auto whitespace-pre-wrap break-words rounded-[14px] border border-hairline bg-paper px-3.5 py-3 font-sans text-[12.5px] leading-relaxed text-ink">

@@ -101,7 +101,7 @@ export function CalendarView({
     <>
       {/* 12-month strip */}
       <section className="mb-10">
-        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-whisper">
+        <p className="mb-3 text-[12.5px] font-semibold normal-case-label text-whisper">
           {locale === "id" ? "12 bulan ke depan" : "Next 12 months"}
         </p>
         <div className="-mx-5 overflow-x-auto px-5 sm:-mx-7 sm:px-7">
@@ -122,7 +122,7 @@ export function CalendarView({
                 <div className="font-display text-[15px] font-medium leading-tight">
                   {m.label}
                 </div>
-                <div className="mt-1 text-[10.5px] uppercase tracking-[0.1em] opacity-70">
+                <div className="mt-1 text-[12px] normal-case-label opacity-70">
                   {m.year} H
                 </div>
                 <div className="mt-2 flex items-center gap-1">
@@ -147,7 +147,7 @@ export function CalendarView({
 
       {/* Filter chips */}
       <section className="mb-10">
-        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-whisper">
+        <p className="mb-3 text-[12.5px] font-semibold normal-case-label text-whisper">
           {locale === "id" ? "Filter konten terkait" : "Filter related content"}
         </p>
         <div className="flex flex-wrap gap-2">
@@ -241,7 +241,7 @@ function CardSection({
   return (
     <section className="mb-12">
       <div>
-        <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+        <p className="flex items-center gap-2 text-[12.5px] font-semibold normal-case-label text-brave-deep">
           {pulse && (
             <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
           )}
@@ -306,7 +306,7 @@ function EventCard({
     <article className={`rounded-[24px] border p-6 sm:p-7 ${accentBg}`}>
       <div className="flex flex-wrap items-center gap-2 text-[11px]">
         <span
-          className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] ${pillColor}`}
+          className={`inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 font-semibold normal-case-label ${pillColor}`}
         >
           {card.status === "active" && (
             <span className="pulse-dot inline-block h-1 w-1 rounded-full bg-current text-current" />
@@ -334,7 +334,7 @@ function EventCard({
 
       {visibleRelated.length > 0 && (
         <div className="mt-6 border-t border-hairline/70 pt-5">
-          <p className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <p className="text-[12px] font-semibold normal-case-label text-whisper">
             {locale === "id" ? "Yang terkait" : "Related"}
           </p>
           <div className="mt-3 flex flex-wrap gap-2">
@@ -344,7 +344,7 @@ function EventCard({
                 href={pathFor(locale, kindToHref(r))}
                 className={`tap inline-flex max-w-full items-center gap-2 rounded-full border px-3 py-1.5 text-[12.5px] transition ${CHIP_TONE[r.kind]}`}
               >
-                <span className="text-[10px] font-semibold uppercase tracking-[0.1em] opacity-70">
+                <span className="text-[11.5px] font-semibold normal-case-label opacity-70">
                   {kindLabel(r.kind, locale)}
                 </span>
                 <span className="truncate font-medium">{r.title}</span>

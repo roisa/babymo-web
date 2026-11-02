@@ -175,7 +175,7 @@ function Section({
                 <h3 className="font-serif text-[17px] font-medium text-ink">
                   {p.name}
                 </h3>
-                <p className="text-[12.5px] uppercase tracking-[0.1em] text-whisper">
+                <p className="text-[12.5px] normal-case-label text-whisper">
                   {p.title[locale]}
                 </p>
               </div>

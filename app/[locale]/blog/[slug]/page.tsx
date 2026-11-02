@@ -20,6 +20,7 @@ import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
 import { renderBody } from "@/lib/content/render";
 import { Byline } from "@/components/Byline";
 import { MultiplicationKit } from "@/components/MultiplicationKit";
+import { labelize } from "@/lib/labelize";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -76,8 +77,8 @@ export default async function BlogDetail({
         </nav>
 
         <header className="mb-10">
-          <div className="text-[11px] font-semibold uppercase tracking-wider text-sage-deep">
-            {post.tags.join(" · ")}
+          <div className="text-[12.5px] font-semibold normal-case-label text-sage-deep">
+            {post.tags.map(labelize).join(" · ")}
           </div>
           <h1 className="mt-3 font-serif text-3xl font-medium leading-tight tracking-tight text-ink sm:text-4xl">
             {post.title[l]}

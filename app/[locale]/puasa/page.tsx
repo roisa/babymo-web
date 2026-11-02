@@ -73,7 +73,7 @@ export default async function PuasaIndex({
         </nav>
 
         <header className="max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-clay-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-clay">
+          <span className="inline-flex items-center gap-2 rounded-full bg-clay-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-clay">
             {l === "id" ? "Puasa & Ramadhan" : "Fasting & Ramadan"}
           </span>
           <h1 className="font-display mt-4 text-[40px] font-medium leading-[1.05] text-ink sm:text-[52px]">
@@ -89,7 +89,7 @@ export default async function PuasaIndex({
         <div className="mt-12 space-y-12">
           {groups.map(({ category, items }) => (
             <section key={category}>
-              <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-clay">
+              <h2 className="text-[12.5px] font-semibold normal-case-label text-clay">
                 {CATEGORY_LABEL[category][l]}
               </h2>
               <ol className="mt-4 grid gap-3 sm:grid-cols-2">

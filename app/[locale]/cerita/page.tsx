@@ -56,7 +56,7 @@ export default async function CatatanIndex({
         </nav>
 
         <header className="mb-10 max-w-2xl">
-          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
+          <span className="inline-flex items-center gap-2 rounded-full bg-brave-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-brave-deep">
             <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
             {dict.catatan.byline}
           </span>
@@ -86,10 +86,10 @@ export default async function CatatanIndex({
                 </div>
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-center gap-2 text-[11px] text-whisper">
-                    <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
+                    <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
                       {dict.catatan.childChip[n.child]}
                     </span>
-                    <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
+                    <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
                       {n.kind === "story"
                         ? dict.catatan.kidsStory
                         : n.pov === "umi"

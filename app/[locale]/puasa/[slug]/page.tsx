@@ -98,7 +98,7 @@ export default async function PuasaDetail({
                 {(part.label || part.repeat) && (
                   <div className="mb-4 flex flex-wrap items-center justify-between gap-2">
                     {part.label && (
-                      <span className="text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
+                      <span className="text-[12.5px] font-semibold normal-case-label text-clay">
                         {part.label[l]}
                       </span>
                     )}
@@ -128,7 +128,7 @@ export default async function PuasaDetail({
         )}
 
         <section className="mt-8 rounded-[20px] border border-hairline bg-paper-2 px-6 py-5">
-          <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-whisper">
+          <h2 className="text-[12.5px] font-semibold normal-case-label text-whisper">
             {l === "id" ? "Kapan & penjelasan" : "When & how"}
           </h2>
           <p className="mt-3 text-[15.5px] leading-relaxed text-ink-soft">{p.when[l]}</p>
@@ -136,7 +136,7 @@ export default async function PuasaDetail({
 
         {p.note && (
           <section className="mt-6 rounded-[24px] border border-clay/20 bg-clay-soft/40 p-6 sm:p-8">
-            <h2 className="text-[11px] font-semibold uppercase tracking-[0.14em] text-clay">
+            <h2 className="text-[12.5px] font-semibold normal-case-label text-clay">
               {l === "id" ? "Untuk si kecil" : "For your little one"}
             </h2>
             <p className="mt-3 font-serif text-[17px] leading-[1.7] text-ink">{p.note[l]}</p>
@@ -152,7 +152,7 @@ export default async function PuasaDetail({
               href={pathFor(l, `/puasa/${prev.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 ← {l === "id" ? "Sebelumnya" : "Previous"}
               </span>
               <p className="font-display mt-1 text-[16px] font-medium text-ink group-hover:text-clay">
@@ -167,7 +167,7 @@ export default async function PuasaDetail({
               href={pathFor(l, `/puasa/${next.slug}`)}
               className="lift tap group rounded-[18px] border border-hairline bg-paper p-5 sm:text-right"
             >
-              <span className="text-[10.5px] font-semibold uppercase tracking-[0.14em] text-whisper">
+              <span className="text-[12px] font-semibold normal-case-label text-whisper">
                 {l === "id" ? "Selanjutnya" : "Next"} →
               </span>
               <p className="font-display mt-1 text-[16px] font-medium text-ink group-hover:text-clay">
