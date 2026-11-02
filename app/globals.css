@@ -694,7 +694,7 @@ html.dark .moment-label { border-color: rgba(255, 255, 255, 0.08); }
 :root {
   --color-sky-deep: #1C6F98;
   --color-grape-deep: #5745B0;
-  --color-sun-deep: #7A5D00;
+  --color-sun-deep: #C2560C;
   --color-berry-deep: #A8346A;
 }
 html.dark {
@@ -1007,3 +1007,31 @@ html.dark { --color-coral: #FF8A8E; --color-coral-soft: #3A1E22; --color-coral-d
 
 /* Game icons (SVG app icons shared with play.babymo.id) */
 .game-icon { border-radius: 23%; filter: drop-shadow(0 8px 12px rgba(15, 18, 19, 0.22)); }
+
+/* ─── Permainan page ─────────────────────────────────────────────────── */
+.phone-shot {
+  aspect-ratio: 9 / 16; overflow: hidden; border-radius: 22px;
+  border: 5px solid #141820; background: #141820;
+  box-shadow: 0 18px 34px -18px rgba(30, 60, 110, 0.55), inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.game-spot .phone-shot { border-radius: 32px; border-width: 7px; }
+.game-spot {
+  background:
+    radial-gradient(90% 120% at 100% 0%, rgba(255, 213, 74, 0.45), transparent 55%),
+    radial-gradient(80% 100% at 0% 100%, rgba(255, 138, 181, 0.30), transparent 60%),
+    var(--sec-soft);
+  border: 2px solid color-mix(in srgb, var(--sec) 35%, transparent);
+}
+.game-card {
+  box-shadow: 0 0 0 1px var(--color-hairline), 0 16px 30px -22px rgba(30, 60, 110, 0.45);
+  transition: transform 260ms cubic-bezier(.34,1.56,.64,1), box-shadow 260ms ease;
+}
+.game-card:hover { transform: translateY(-4px); box-shadow: 0 0 0 1px var(--color-hairline), 0 26px 40px -24px rgba(30, 60, 110, 0.55); }
+.game-card:hover .phone-shot { transform: rotate(-2deg); }
+.game-card .phone-shot { transition: transform 300ms cubic-bezier(.34,1.56,.64,1); }
+.game-play {
+  color: #fff; background-color: #F76707;
+  background-image: linear-gradient(180deg, rgba(255,255,255,.3), rgba(255,255,255,0) 52%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.5), 0 8px 16px -8px rgba(247, 103, 7, 0.7);
+}
+@media (max-width: 639px) { .phone-shot { border-width: 4px; border-radius: 16px; } }
