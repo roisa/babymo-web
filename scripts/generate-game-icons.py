@@ -83,11 +83,11 @@ ICONS = {
     "kata-islam": dict(
         a="#67E8F9", b="#0E7490",
         g="".join(
-            f'<rect x="{17 + i * 23}" y="{34 + (i % 2) * 6}" width="20" height="24" rx="5" fill="#fff"/>'
-            f'<text x="{27 + i * 23}" y="{52 + (i % 2) * 6}" font-size="17" fill="#0E7490" {AR}>{ch}</text>'
+            f'<rect x="{12 + i * 26}" y="{30 + (4 if i == 1 else 0)}" width="24" height="30" rx="6" fill="#fff"/>'
+            f'<text x="{24 + i * 26}" y="{52 + (4 if i == 1 else 0)}" font-size="22" fill="#0E7490" {AR}>{ch}</text>'
             for i, ch in enumerate(["ت", "ي", "ب"])
-        ) + '<path d="M30 74h40" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".85"/>'
-          + '<path d="M63 69l7 5-7 5" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity=".85"/>',
+        ) + '<path d="M28 76h40" stroke="#fff" stroke-width="4.5" stroke-linecap="round" opacity=".9"/>'
+          + '<path d="M61 70l8 6-8 6" fill="none" stroke="#fff" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" opacity=".9"/>',
     ),
     # Dreamtime — bedtime routine
     "dreamtime": dict(
@@ -100,13 +100,13 @@ ICONS = {
     # Pulau Hijaiyah — voxel island, find the 28 letters
     "hijaiyah": dict(
         a="#5EEAD4", b="#0F766E",
-        g='<path d="M50 44l22 11-22 11-22-11z" fill="#fff"/>'
-          + '<path d="M28 55l22 11v20L28 75z" fill="#fff" opacity=".78"/>'
-          + '<path d="M72 55L50 66v20l22-11z" fill="#fff" opacity=".56"/>'
-          + '<path d="M41 52l9-4 9 4-9 4z" fill="#86EFAC"/>'
-          + '<rect x="36" y="13" width="28" height="26" rx="8" fill="#FFD54A"/>'
-          + '<path d="M46 38l4 6 4-6z" fill="#FFD54A"/>'
-          + f'<text x="50" y="33" font-size="19" fill="#0F766E" {AR}>ب</text>',
+        g='<path d="M50 52l19 9.5-19 9.5-19-9.5z" fill="#fff"/>'
+          + '<path d="M31 61.5l19 9.5v17l-19-9.5z" fill="#fff" opacity=".78"/>'
+          + '<path d="M69 61.5L50 71v17l19-9.5z" fill="#fff" opacity=".56"/>'
+          + '<path d="M42 59.5l8-4 8 4-8 4z" fill="#86EFAC"/>'
+          + '<rect x="29" y="10" width="42" height="36" rx="11" fill="#FFD54A"/>'
+          + '<path d="M44 45l6 7 6-7z" fill="#FFD54A"/>'
+          + f'<text x="50" y="36" font-size="27" fill="#0F766E" {AR}>ب</text>',
     ),
     # Cari Baby Mo — look & find
     "cari-baby-mo": dict(
@@ -128,11 +128,11 @@ ICONS = {
     # Forehand Beat — rhythm jumper with a tennis ball
     "forehand-beat": dict(
         a="#BEF264", b="#3F6212",
-        g='<circle cx="38" cy="60" r="20" fill="#fff"/>'
-          + '<path d="M22 50c8 3 13 11 12 23M54 50c-8 3-13 11-12 23" fill="none" stroke="#65A30D" stroke-width="3.2" stroke-linecap="round"/>'
-          + '<path d="M66 22v31" stroke="#fff" stroke-width="5" stroke-linecap="round"/>'
-          + '<path d="M66 22l14 5v9l-14-5z" fill="#fff"/>'
-          + '<ellipse cx="60" cy="54" rx="8" ry="6.5" fill="#fff" transform="rotate(-20 60 54)"/>',
+        g='<circle cx="35" cy="63" r="19" fill="#fff"/>'
+          + '<path d="M19.5 52c7.5 6 7.5 16 0 22M50.5 52c-7.5 6-7.5 16 0 22" fill="none" stroke="#65A30D" stroke-width="3.4" stroke-linecap="round"/>'
+          + '<path d="M72 20v34" stroke="#fff" stroke-width="5" stroke-linecap="round"/>'
+          + '<path d="M72 20l13 5v9l-13-5z" fill="#fff"/>'
+          + '<ellipse cx="65" cy="55" rx="8.5" ry="6.8" fill="#fff" transform="rotate(-20 65 55)"/>',
     ),
     # Kata Baik — kalimat thayyibah
     "kata-baik": dict(
