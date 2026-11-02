@@ -1,5 +1,7 @@
 "use client";
 
+import { AppIcon, type AppIconName } from "./AppIcon";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useRef } from "react";
@@ -88,9 +90,9 @@ export function MobileNav({ locale }: Props) {
     <nav
       ref={navRef}
       aria-label="Mobile"
-      className="fixed inset-x-0 bottom-0 z-40 border-t border-hairline bg-paper will-change-transform md:hidden"
+      className="glass-tabbar fixed inset-x-3 bottom-3 z-40 rounded-[30px] will-change-transform md:hidden"
       style={{
-        paddingBottom: "env(safe-area-inset-bottom)",
+        marginBottom: "env(safe-area-inset-bottom)",
         // Promote to its own layer + solid (no backdrop-blur): stops the
         // fixed bar from detaching/floating during momentum scroll in
         // iOS in-app webviews (Gojek/IG/etc.). The effect above keeps this
@@ -98,7 +100,7 @@ export function MobileNav({ locale }: Props) {
         transform: "translateZ(0)",
       }}
     >
-      <ul className="mx-auto flex max-w-md items-stretch justify-around">
+      <ul className="mx-auto flex max-w-md items-stretch justify-around px-1.5 py-1.5">
         {items.map((it) => {
           const Icon = it.icon;
           const active = isActive(it.match);
@@ -107,14 +109,17 @@ export function MobileNav({ locale }: Props) {
               <Link
                 href={pathFor(locale, it.href)}
                 aria-current={active ? "page" : undefined}
-                className={`${it.sec ? `sec-${it.sec}` : ""} relative flex flex-col items-center gap-1 py-2.5 text-[11.5px] font-bold transition ${
+                className={`${it.sec ? `sec-${it.sec}` : ""} tabbar-item relative flex flex-col items-center gap-0.5 rounded-[24px] py-1.5 text-[11px] font-bold transition ${active ? "is-active" : ""} ${
                   active ? (it.sec ? "text-[var(--sec-deep)]" : "text-brave-deep") : "text-whisper active:text-ink"
                 }`}
               >
-                {active && (
-                  <span className={`absolute top-0 h-1 w-9 rounded-full ${it.sec ? "bg-[var(--sec)]" : "bg-brave"}`} />
+                {active ? (
+                  <AppIcon name={(it.sec ?? "home") as AppIconName} size={26} />
+                ) : (
+                  <span className="grid h-[26px] place-items-center">
+                    <Icon filled={false} />
+                  </span>
                 )}
-                <Icon filled={active} />
                 {it.label}
               </Link>
             </li>

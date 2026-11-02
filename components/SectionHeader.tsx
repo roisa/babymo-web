@@ -1,7 +1,8 @@
 import Link from "next/link";
 import { type Locale, pathFor } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
-import { type SectionKey, SECTION_EMOJI } from "@/lib/sections";
+import type { SectionKey } from "@/lib/sections";
+import { AppIcon } from "./AppIcon";
 import { BabyMoSays } from "./BabyMoSays";
 
 /** What Baby Mo says at the top of each section, and how he stands. */
@@ -41,9 +42,7 @@ export function SectionHeader({ locale, section, crumb, title, sub, children, as
       </nav>
       <div className="grid items-center gap-6 md:grid-cols-[1fr_auto]">
         <div className="max-w-2xl">
-          <span aria-hidden className="sec-sticker">
-            {SECTION_EMOJI[section]}
-          </span>
+          <AppIcon name={section} size={60} tilt />
           <h1 className="font-display mt-4 text-[34px] leading-[1.08] text-ink sm:text-[46px]">
             {title}
           </h1>
