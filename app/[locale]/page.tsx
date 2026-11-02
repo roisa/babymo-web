@@ -23,6 +23,7 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
 import { MascotGreeting } from "@/components/MascotGreeting";
 import { HeroMascot } from "@/components/HeroMascot";
+import { Star8, StarDivider } from "@/components/Star8";
 import { YouTubeBand } from "@/components/YouTubeBand";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
@@ -134,7 +135,7 @@ export default async function HomePage({
                 </div>
               </div>
 
-              <div className="relative mx-auto w-full max-w-md md:max-w-none">
+              <div className="relative isolate mx-auto w-full max-w-md md:max-w-none">
                 {/* Baby Mo speech bubble — random rotating greeting */}
                 <MascotGreeting locale={l} />
                 {/* Sparkles around mascot */}
@@ -147,6 +148,8 @@ export default async function HomePage({
                 {/* WebP-first hero (LCP). HeroMascot renders the static
                     <picture> and cross-fades the pose set on top, hiding the
                     static layer declaratively so only one Baby Mo ever shows. */}
+                {/* Soft 8-point star halo behind Baby Mo */}
+                <Star8 className="star-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[86%] -translate-x-1/2 -translate-y-1/2 text-brave-soft" />
                 <HeroMascot alt="Baby Mo" />
               </div>
             </div>
@@ -416,6 +419,8 @@ export default async function HomePage({
           </Reveal>
         </section>
 
+        <StarDivider className="pt-14 sm:pt-20" />
+
         {/* ── TERSIMPAN UNTUKMU — only renders if user has saves ── */}
         <SavedHomeSection locale={l} />
 
@@ -424,15 +429,18 @@ export default async function HomePage({
           <Reveal>
             <div className="grid items-center gap-10 md:grid-cols-[0.9fr_1.1fr]">
               <div className="flex items-center gap-5">
-                <img
-                  src={asset("/baby-mo-poses/baby-mo-thank-you.png")}
-                  alt=""
-                  width={120}
-                  height={120}
-                  loading="lazy"
-                  className="h-[104px] w-[104px] shrink-0 select-none object-contain"
-                  draggable={false}
-                />
+                <div className="relative h-[112px] w-[112px] shrink-0">
+                  <Star8 className="absolute inset-0 h-full w-full text-sage-soft" />
+                  <img
+                    src={asset("/baby-mo-poses/baby-mo-thank-you.png")}
+                    alt=""
+                    width={120}
+                    height={120}
+                    loading="lazy"
+                    className="relative h-full w-full select-none object-contain p-2"
+                    draggable={false}
+                  />
+                </div>
                 <div>
                   <p className="font-display text-[22px] font-medium leading-snug text-ink sm:text-[26px]">
                     {l === "id"
@@ -481,6 +489,8 @@ export default async function HomePage({
         <Reveal>
           <VideoSection locale={l} compact />
         </Reveal>
+
+        <StarDivider className="pt-4" />
 
         {/* ── FOR PARENTS — blog ── */}
         <section className="mx-auto max-w-6xl px-5 pb-14 pt-10 sm:px-7 sm:pb-20 sm:pt-14">

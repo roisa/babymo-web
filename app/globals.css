@@ -618,3 +618,9 @@ html.dark .sky-cloud { background: #2B3A48; opacity: 0.55; }
 @media (prefers-reduced-motion: reduce) {
   .sky-sun, .sky-moon, .sky-cloud, .sky-star { animation: none !important; }
 }
+
+/* Hero star halo — a very slow turn, like a gentle clock. */
+.star-halo { opacity: 0.9; animation: star-turn 90s linear infinite; }
+html.dark .star-halo { opacity: 0.6; }
+@keyframes star-turn { to { rotate: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .star-halo { animation: none; } }
