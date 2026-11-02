@@ -245,6 +245,10 @@ body {
 .hero-words > span:nth-child(6) { animation-delay: 410ms; }
 .hero-words > span:nth-child(7) { animation-delay: 480ms; }
 .hero-words > span:nth-child(8) { animation-delay: 550ms; }
+.hero-words > span:nth-child(9) { animation-delay: 620ms; }
+.hero-words > span:nth-child(10) { animation-delay: 690ms; }
+.hero-words > span:nth-child(11) { animation-delay: 760ms; }
+.hero-words > span:nth-child(12) { animation-delay: 830ms; }
 
 /* Mascot: gentle breathing float */
 @keyframes mascot-breathe {
@@ -525,4 +529,158 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .sc-star, .sc-cloud, .sc-drops i, .sc-pose { animation: none !important; }
+}
+
+/* ─── Homepage "Satu hari bersama Baby Mo" ─────────────────────────── */
+.moment-label {
+  background: var(--color-brave-soft);
+  color: var(--color-brave-deep);
+}
+
+/* Dawn → day → night: one continuous sky across the three moments.
+   Pagi/Siang use the soft accent tokens (they flip in dark mode);
+   Malam is always night and re-maps the colour tokens locally so every
+   card and text utility inside it turns "night" with no extra classes. */
+.moment {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+.moment--pagi {
+  background: linear-gradient(180deg, var(--color-paper) 0%, var(--color-peach-soft) 45%, var(--color-sun-soft) 100%);
+}
+.moment--siang {
+  background: linear-gradient(180deg, var(--color-sun-soft) 0%, var(--color-sky-soft) 55%, var(--color-sky-soft) 100%);
+}
+.moment--malam {
+  --color-ink: #F3F1EA;
+  --color-ink-soft: #D9D7EC;
+  --color-paper: #2C3063;
+  --color-hairline: rgba(255, 255, 255, 0.12);
+  --color-whisper: #B8BAD8;
+  --color-sage-deep: #CFE6CA;
+  --color-brave-soft: #444A8C;
+  --color-sage-soft: #3A3F78;
+  background: linear-gradient(180deg, var(--color-sky-soft) 0, #3D3F73 130px, #262A55 55%, #1C1F42 100%);
+  padding-top: 110px;
+  color: var(--color-ink);
+}
+html.dark .moment--pagi { background: linear-gradient(180deg, var(--color-paper) 0%, #241F35 50%, #2D2533 100%); }
+html.dark .moment--siang { background: linear-gradient(180deg, #2D2533 0%, #1A2C3A 60%, var(--color-sky-soft) 100%); }
+html.dark .moment--malam { background: linear-gradient(180deg, var(--color-sky-soft) 0, #262A55 130px, #15172F 100%); }
+.moment--malam .moment-label { background: rgba(255, 255, 255, 0.1); color: #FCEBA6; }
+
+/* Sky decor */
+.sky-sun {
+  position: absolute; z-index: -1; top: 4%; left: 44%;
+  width: clamp(64px, 9vw, 120px); aspect-ratio: 1; border-radius: 50%;
+  background: radial-gradient(circle at 40% 38%, #FFF1B8, #FBD24E 72%);
+  box-shadow: 0 0 0 14px rgba(251, 210, 78, 0.16), 0 0 60px rgba(251, 210, 78, 0.45);
+  opacity: 0.85;
+}
+.sky-cloud {
+  position: absolute; z-index: -1; height: 34px; aspect-ratio: 2.6 / 1;
+  background: #fff; border-radius: 999px; opacity: 0.75;
+  animation: sc-drift 18s ease-in-out infinite;
+}
+html.dark .sky-cloud { background: #2B3A48; opacity: 0.55; }
+.sky-cloud::before, .sky-cloud::after { content: ""; position: absolute; bottom: 30%; background: inherit; border-radius: 50%; }
+.sky-cloud::before { width: 46%; height: 140%; left: 14%; }
+.sky-cloud::after { width: 36%; height: 105%; right: 16%; }
+.sky-moon {
+  position: absolute; z-index: -1; top: 8%; left: 52%;
+  width: clamp(48px, 6vw, 80px); aspect-ratio: 1; border-radius: 50%;
+  box-shadow: inset -16px 10px 0 0 #FCEBA6;
+  filter: drop-shadow(0 0 18px rgba(252, 235, 166, 0.45));
+  transform: rotate(-18deg);
+}
+.sky-star {
+  position: absolute; z-index: -1; width: 4px; height: 4px; border-radius: 50%;
+  background: #FFF6D6; box-shadow: 0 0 6px rgba(255, 246, 214, 0.9);
+  animation: sc-tw 3s ease-in-out infinite; animation-delay: var(--d, 0s);
+}
+
+/* Scroll-linked: the sun rises and the moon drifts up as each moment
+   enters view. Progressive enhancement — static where unsupported. */
+@supports (animation-timeline: view()) {
+  .sky-sun { animation: sky-rise linear both; animation-timeline: view(); animation-range: entry 0% cover 55%; }
+  .sky-moon { animation: sky-rise-moon linear both; animation-timeline: view(); animation-range: entry 0% cover 55%; }
+}
+@keyframes sky-rise { from { transform: translateY(120px) scale(0.85); opacity: 0.2; } to { transform: none; opacity: 0.85; } }
+@keyframes sky-rise-moon { from { transform: translateY(80px) rotate(-40deg); opacity: 0; } to { transform: rotate(-18deg); opacity: 1; } }
+
+/* Phones: tuck the sun/moon into the corner so they never sit on text. */
+@media (max-width: 639px) {
+  .sky-sun { left: auto; right: 4%; top: 1%; width: 52px; }
+  .sky-moon { left: auto; right: 7%; top: 48px; width: 40px; box-shadow: inset -9px 6px 0 0 #FCEBA6; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sky-sun, .sky-moon, .sky-cloud, .sky-star { animation: none !important; }
+}
+
+/* Hero star halo — a very slow turn, like a gentle clock. */
+.star-halo { opacity: 0.9; animation: star-turn 90s linear infinite; }
+html.dark .star-halo { opacity: 0.6; }
+@keyframes star-turn { to { rotate: 360deg; } }
+@media (prefers-reduced-motion: reduce) { .star-halo { animation: none; } }
+
+/* ─── Picture-book spread (founder + promise) ───────────────────────── */
+.book {
+  border-radius: 28px;
+  border: 1px solid var(--color-hairline);
+  background-color: var(--color-paper);
+  /* faint paper grain */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.45 0 0 0 0 0.38 0 0 0 0 0.25 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  box-shadow: 0 1px 0 var(--color-hairline), 0 24px 48px -28px rgba(15, 18, 19, 0.22);
+}
+html.dark .book { box-shadow: 0 24px 48px -28px rgba(0, 0, 0, 0.6); }
+@media (min-width: 768px) {
+  /* the book's spine: a soft fold shadow down the middle */
+  .book-page--right {
+    background: linear-gradient(90deg, rgba(15, 18, 19, 0.06), transparent 36px);
+    border-left: 1px solid var(--color-hairline);
+  }
+  html.dark .book-page--right { background: linear-gradient(90deg, rgba(0, 0, 0, 0.3), transparent 36px); }
+}
+@media (max-width: 767px) {
+  .book-page--right { border-top: 1px dashed var(--color-hairline); }
+}
+
+/* Baby Mo peeking over the book edge — pops up when revealed. */
+.peek { transform: translateY(26px); opacity: 0; transition: transform 700ms cubic-bezier(.34, 1.56, .64, 1) 250ms, opacity 400ms ease 250ms; filter: drop-shadow(0 10px 14px rgba(15, 18, 19, 0.14)); }
+.reveal.in .peek { transform: none; opacity: 1; }
+
+/* ─── Stickers: chunky white border, slight tilt, playful shadow ────── */
+.sticker {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 18px;
+  border-radius: 20px;
+  background: var(--color-paper);
+  border: 3px solid #fff;
+  outline: 1px solid var(--color-hairline);
+  box-shadow: 0 8px 18px -10px rgba(15, 18, 19, 0.28);
+  transition: transform 260ms cubic-bezier(.34, 1.56, .64, 1);
+}
+html.dark .sticker { border-color: #2A2E36; }
+.sticker--0 { transform: rotate(-1.4deg); }
+.sticker--1 { transform: rotate(1.1deg) translateX(10px); }
+.sticker--2 { transform: rotate(-0.6deg); }
+.sticker:hover { transform: rotate(0) scale(1.03); }
+.sticker-icon {
+  display: grid; place-items: center; flex-shrink: 0;
+  width: 44px; height: 44px; border-radius: 14px; font-size: 22px;
+}
+.sticker--0 .sticker-icon { background: var(--color-sun-soft); }
+.sticker--1 .sticker-icon { background: var(--color-sky-soft); }
+.sticker--2 .sticker-icon { background: var(--color-grape-soft); }
+
+/* Moment labels become little stickers too */
+.moment-label { border: 2px solid #fff; box-shadow: 0 4px 10px -6px rgba(15, 18, 19, 0.3); transform: rotate(-1.5deg); }
+html.dark .moment-label { border-color: rgba(255, 255, 255, 0.08); }
+.moment--malam .moment-label { border-color: rgba(255, 255, 255, 0.14); }
+
+@media (prefers-reduced-motion: reduce) {
+  .peek { transition: none; transform: none; opacity: 1; }
+  .sticker { transition: none; }
 }

@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -16,24 +17,17 @@ import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
 import { HeroAura } from "@/components/HeroAura";
-import { AnimatedCount } from "@/components/AnimatedCount";
 import { VideoSection } from "@/components/video/VideoSection";
-import { QuoteRibbon } from "@/components/QuoteRibbon";
-import { TemanTumbuhTeaser } from "@/components/teman/TemanTumbuhTeaser";
 import { SavedHomeSection } from "@/components/SavedShelf";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { PrayerWidget } from "@/components/PrayerWidget";
 import { MascotGreeting } from "@/components/MascotGreeting";
 import { HeroMascot } from "@/components/HeroMascot";
-import { BrandMission } from "@/components/BrandMission";
+import { Star8, StarDivider } from "@/components/Star8";
 import { YouTubeBand } from "@/components/YouTubeBand";
-import { StreakBadge } from "@/components/StreakBadge";
 import { getDoaOfTheDay } from "@/lib/doa-of-the-day";
 import { faqSchema, graph, itemListSchema } from "@/lib/seo/schemas";
-import { getAllDoa } from "@/lib/content/doa";
 import { getAllBlogPosts, getBlogPostBySlug } from "@/lib/content/blog";
-import { getAllHadith } from "@/lib/content/hadith";
-import { getAllParenting } from "@/lib/content/parenting";
 import { getAllGames } from "@/lib/content/games";
 import { GameIcon } from "@/components/GameIcon";
 import { getAllCatatan } from "@/lib/content/catatan";
@@ -68,15 +62,13 @@ export default async function HomePage({
   if (!isLocale(locale)) notFound();
   const l = locale as Locale;
   const dict = getDictionary(l);
-  const allDoa = getAllDoa();
-  const allHadith = getAllHadith();
-  const allParenting = getAllParenting();
   const allGames = getAllGames();
   const allPosts = getAllBlogPosts();
   const { doa: doaToday, contextEvent: doaEvent } = getDoaOfTheDay();
   const posts = allPosts.slice(0, 3);
   const allCerita = getAllCatatan();
-  const latestCerita = allCerita.slice(0, 3);
+  const latestCerita = allCerita.filter((n) => n.kind === "story").slice(0, 3);
+  if (latestCerita.length < 3) latestCerita.push(...allCerita.filter((n) => !latestCerita.includes(n)).slice(0, 3 - latestCerita.length));
   // Auto-pick a seasonal event from the Islamic calendar. Falls back
   // to the hard-coded Hijri new year post if the matching blog slug
   // hasn't been written yet.
@@ -93,6 +85,8 @@ export default async function HomePage({
   const heroWords = (dict.home.heroTitleA + " " + dict.home.heroTitleB)
     .split(/\s+/)
     .filter(Boolean);
+  // Second clause of the vision line is tinted green.
+  const heroSplit = dict.home.heroTitleA.split(/\s+/).filter(Boolean).length;
 
   return (
     <>
@@ -100,7 +94,7 @@ export default async function HomePage({
       <div className="scroll-progress" aria-hidden />
 
       <main id="main" className="pb-28 md:pb-0">
-        {/* ── HERO ── */}
+        {/* ── HERO — the vision, said once ── */}
         <section className="relative overflow-hidden">
           {/* Animated aura behind content */}
           <div className="pointer-events-none absolute inset-0 -z-10" aria-hidden>
@@ -114,55 +108,34 @@ export default async function HomePage({
                   <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
                   {dict.home.eyebrow}
                 </span>
-                <h1 className="font-display hero-words mt-5 text-[46px] font-medium leading-[1.02] text-ink sm:text-[60px] md:text-[72px]">
+                <h1 className="font-display hero-words mt-5 text-[42px] font-medium leading-[1.04] text-ink sm:text-[56px] md:text-[64px]">
                   {heroWords.map((w, i) => (
-                    <span key={i} className={i >= heroWords.length / 2 ? "text-brave" : ""}>
-                      {w}
-                      {i < heroWords.length - 1 ? " " : ""}
-                    </span>
+                    <Fragment key={i}>
+                      <span className={i >= heroSplit ? "text-brave" : ""}>{w}</span>
+                      {i < heroWords.length - 1 ? " " : ""}
+                    </Fragment>
                   ))}
                 </h1>
-                <p className="mt-6 max-w-xl text-[17px] leading-[1.6] text-whisper">
+                <p className="mt-6 max-w-lg text-[17px] leading-[1.6] text-whisper">
                   {dict.home.heroSub}
                 </p>
                 <div className="mt-9 flex flex-wrap items-center gap-3">
-                  <Link
-                    href={pathFor(l, "/doa")}
+                  <a
+                    href="#sehari"
                     className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(30,140,83,0.42)] hover:bg-brave-deep"
                   >
-                    {dict.home.ctaPrimary}
-                  </Link>
+                    {l === "id" ? "Mulai hari ini" : "Start today"} ↓
+                  </a>
                   <Link
-                    href={pathFor(l, "/permainan")}
+                    href={pathFor(l, "/tentang")}
                     className="magnet tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-5 py-3 text-[14px] font-semibold text-ink backdrop-blur hover:border-brave/40"
                   >
-                    {dict.nav.games ?? (l === "id" ? "Permainan" : "Games")}
+                    {l === "id" ? "Kenalan dengan Baby Mo" : "Meet Baby Mo"}
                   </Link>
                 </div>
-
-                {/* Daily streak + a nudge into the guided learning paths */}
-                <div className="mt-5 flex flex-wrap items-center gap-2.5">
-                  <StreakBadge locale={l} />
-                  <Link
-                    href={pathFor(l, "/learn/path")}
-                    className="tap inline-flex items-center gap-1.5 rounded-full border border-hairline bg-paper/70 px-3 py-1.5 text-[12.5px] font-semibold text-sage-deep backdrop-blur transition hover:border-sage/40"
-                  >
-                    <span aria-hidden>🧭</span>
-                    {l === "id" ? "Mulai jalur belajar" : "Start a learning path"} →
-                  </Link>
-                </div>
-
-                {/* Animated stat strip */}
-                <dl className="mt-12 grid max-w-lg grid-cols-3 gap-3 sm:grid-cols-5">
-                  <Stat n={allDoa.length} label={dict.nav.doa} locale={l} />
-                  <Stat n={allHadith.length} label={dict.nav.hadith} locale={l} />
-                  <Stat n={allParenting.length} label={dict.nav.parenting} locale={l} />
-                  <Stat n={allPosts.length} label={dict.nav.blog} locale={l} />
-                  <Stat n={allCerita.length} label={dict.nav.catatan} locale={l} />
-                </dl>
               </div>
 
-              <div className="relative mx-auto w-full max-w-md md:max-w-none">
+              <div className="relative isolate mx-auto w-full max-w-md md:max-w-none">
                 {/* Baby Mo speech bubble — random rotating greeting */}
                 <MascotGreeting locale={l} />
                 {/* Sparkles around mascot */}
@@ -175,6 +148,8 @@ export default async function HomePage({
                 {/* WebP-first hero (LCP). HeroMascot renders the static
                     <picture> and cross-fades the pose set on top, hiding the
                     static layer declaratively so only one Baby Mo ever shows. */}
+                {/* Soft 8-point star halo behind Baby Mo */}
+                <Star8 className="star-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[86%] -translate-x-1/2 -translate-y-1/2 text-brave-soft" />
                 <HeroMascot alt="Baby Mo" />
               </div>
             </div>
@@ -240,172 +215,203 @@ export default async function HomePage({
           </Reveal>
         )}
 
-        {/* ── Daily phrase ribbon — slow marquee ── */}
-        <QuoteRibbon locale={l} />
-
-        {/* ── DOA HARI INI — rotates daily, calendar-aware ── */}
-        <Reveal>
-          <section className="mx-auto max-w-6xl px-5 pt-14 sm:px-7 sm:pt-20">
-            <div className="grid items-stretch gap-5 md:grid-cols-[0.95fr_1.05fr]">
-              <div className="flex flex-col justify-center">
-                <p className="flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-brave-deep">
-                  <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brave text-brave" />
-                  {l === "id" ? "Doa Hari Ini" : "Du'a of the Day"}
-                </p>
-                <h2 className="font-display mt-3 text-[30px] font-medium leading-tight text-ink sm:text-[38px]">
-                  {doaToday.title[l]}
-                </h2>
-                <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
-                  {doaEvent
-                    ? l === "id"
-                      ? `Bertepatan dengan ${doaEvent.name.id} — baik untuk dibaca bersama si kecil hari ini.`
-                      : `Coinciding with ${doaEvent.name.en} — lovely to read with your little one today.`
-                    : l === "id"
-                      ? "Satu doa untuk dibaca bersama si kecil hari ini. Berganti setiap hari."
-                      : "One du'a to read with your little one today. It changes each day."}
-                </p>
-                <div className="mt-6 flex flex-wrap items-center gap-3">
-                  <Link
-                    href={pathFor(l, `/doa/${doaToday.slug}`)}
-                    className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(30,140,83,0.42)] hover:bg-brave-deep"
-                  >
-                    {l === "id" ? "Buka doa" : "Open du'a"}
-                  </Link>
-                  <BookmarkButton
-                    type="doa"
-                    slug={doaToday.slug}
-                    title={doaToday.title[l]}
-                    url={`/doa/${doaToday.slug}`}
-                    locale={l}
-                  />
-                  <a
-                    href={`https://wa.me/?text=${encodeURIComponent(
-                      (l === "id"
-                        ? `Doa Hari Ini 🤲\n${doaToday.title.id}\n\n${doaToday.arabic}\n\n"${doaToday.translation.id}"\n\nBaca bareng anak: `
-                        : `Du'a of the Day 🤲\n${doaToday.title.en}\n\n${doaToday.arabic}\n\n"${doaToday.translation.en}"\n\nRead it with your child: `) +
-                        absoluteUrl(l, `/doa/${doaToday.slug}`),
-                    )}`}
-                    target="_blank"
-                    rel="noopener"
-                    aria-label={l === "id" ? "Bagikan ke WhatsApp" : "Share on WhatsApp"}
-                    className="tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper px-4 py-3 text-[14px] font-semibold text-ink hover:border-sage/50"
-                  >
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden className="text-[#25D366]">
-                      <path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.16L2 22l4.95-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.86 12.4l-.2.32.6 2.18-2.24-.59-.31.18a8.1 8.1 0 1 1-4.71-14.7Zm-2.78 4.2c-.13 0-.34.05-.52.25-.18.2-.69.67-.69 1.64s.71 1.9.81 2.03c.1.13 1.39 2.21 3.43 3.02 1.7.67 2.05.54 2.42.5.37-.03 1.2-.49 1.37-.96.17-.47.17-.87.12-.96-.05-.08-.18-.13-.37-.23s-1.2-.59-1.38-.66c-.18-.07-.32-.1-.46.1-.13.2-.52.66-.64.8-.12.13-.23.15-.43.05a5.6 5.6 0 0 1-1.65-1.02 6.2 6.2 0 0 1-1.14-1.42c-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.06-.13.03-.25-.02-.35-.05-.1-.45-1.1-.62-1.5-.16-.4-.33-.34-.45-.34Z" />
-                    </svg>
-                    {l === "id" ? "Bagikan" : "Share"}
-                  </a>
-                </div>
-              </div>
-              <Link
-                href={pathFor(l, `/doa/${doaToday.slug}`)}
-                className="lift tap group flex flex-col justify-center rounded-[28px] border border-hairline bg-paper p-8 sm:p-10"
-              >
-                <p
-                  dir="rtl"
-                  lang="ar"
-                  className="font-arabic text-[30px] leading-[1.9] text-ink sm:text-[38px]"
-                >
-                  {doaToday.arabic}
-                </p>
-                <p className="mt-5 text-[15px] leading-relaxed text-whisper group-hover:text-ink-soft">
-                  {doaToday.translation[l]}
-                </p>
-                <p className="mt-4 text-[12.5px] text-whisper">
-                  — {doaToday.source.reference}
-                </p>
-              </Link>
-            </div>
-          </section>
-        </Reveal>
-
-        {/* ── TEMAN TUMBUH teaser — daily companion ── */}
-        <Reveal>
-          <TemanTumbuhTeaser locale={l} />
-        </Reveal>
-
-        {/* ── WAKTU SHOLAT — client-side, location-aware ── */}
-        <Reveal>
-          <section className="mx-auto max-w-6xl px-5 pt-8 sm:px-7 sm:pt-10">
-            <div className="mx-auto max-w-2xl">
-              <PrayerWidget locale={l} />
-            </div>
-          </section>
-        </Reveal>
-
-        {/* ── TERSIMPAN UNTUKMU — only renders if user has saves ── */}
-        <SavedHomeSection locale={l} />
-
-        {/* ── VALUES ── */}
-        <section className="border-t border-hairline bg-paper-2">
-          <div className="mx-auto max-w-6xl px-5 py-14 sm:px-7 sm:py-20">
+        {/* ── SATU HARI BERSAMA BABY MO — the vision, shown not told ── */}
+        <section id="sehari" className="day scroll-mt-20">
+          <div className="mx-auto max-w-6xl px-5 pt-14 sm:px-7 sm:pt-20">
             <Reveal>
-              <div className="mb-10 max-w-2xl">
-                <h2 className="tracking-display font-serif text-3xl font-medium text-ink sm:text-4xl">
-                  {dict.home.sections.valuesTitle}
+              <div className="max-w-2xl">
+                <h2 className="tracking-display font-display text-[32px] font-medium leading-tight text-ink sm:text-[42px]">
+                  {l === "id" ? "Satu hari bersama Baby Mo" : "A day with Baby Mo"}
                 </h2>
                 <p className="mt-2 text-[15.5px] text-whisper">
-                  {dict.home.sections.valuesSub}
+                  {l === "id"
+                    ? "Pagi berdoa, siang bermain, malam bercerita."
+                    : "Pray in the morning, play by day, stories at night."}
                 </p>
               </div>
             </Reveal>
-            <Reveal stagger>
-              <ul className="grid gap-5 md:grid-cols-3">
-                {dict.home.values.map((v, i) => (
-                  <li
-                    key={v.title}
-                    className="lift rounded-[22px] border border-hairline bg-paper p-6"
-                  >
-                    <div className="mb-4 flex h-9 w-9 items-center justify-center rounded-full bg-sage-soft text-sage-deep">
-                      <span className="text-[13px] font-semibold">{i + 1}</span>
-                    </div>
-                    <h3 className="font-serif text-[17px] font-medium text-ink">
-                      {v.title}
-                    </h3>
-                    <p className="mt-2 text-[14.5px] leading-relaxed text-whisper">
-                      {v.body}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-            </Reveal>
           </div>
-        </section>
 
-        {/* ── WHY BABY MO (brand mission teaser) ── */}
-        <Reveal>
-          <BrandMission locale={l} />
-        </Reveal>
-
-        {/* ── GAMES ── */}
-        <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
+          {/* Pagi — du'a of the day */}
           <Reveal>
-            <div className="overflow-hidden rounded-[28px] border border-clay/30 bg-clay-soft/60">
-              <div className="grid items-center gap-8 p-7 sm:grid-cols-[1.1fr_0.9fr] sm:p-10">
-                <div>
-                  <span className="inline-flex items-center rounded-full bg-clay/15 px-2.5 py-1 text-[11px] font-semibold uppercase tracking-[0.12em] text-clay">
-                    {allGames.length} {l === "id" ? "game gratis" : "free games"}
-                  </span>
-                  <h2 className="tracking-display mt-3 font-serif text-3xl font-medium text-ink sm:text-4xl">
-                    {dict.home.sections.gamesTitle}
-                  </h2>
-                  <p className="mt-3 max-w-md text-[15.5px] leading-relaxed text-whisper">
-                    {dict.home.sections.gamesSub}
-                  </p>
+            <div className="moment moment--pagi">
+              <span aria-hidden className="sky-sun" />
+              <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
+                <div className="grid items-stretch gap-5 md:grid-cols-[0.95fr_1.05fr]">
+                  <div className="flex flex-col justify-center">
+                    <MomentLabel icon="🌅" text={l === "id" ? "Pagi · Doa hari ini" : "Morning · Today's du'a"} />
+                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                      {doaToday.title[l]}
+                    </h3>
+                    <p className="mt-3 text-[15.5px] leading-relaxed text-whisper">
+                      {doaEvent
+                        ? l === "id"
+                          ? `Bertepatan dengan ${doaEvent.name.id} — baca bersama si kecil hari ini.`
+                          : `Coinciding with ${doaEvent.name.en} — read it with your little one today.`
+                        : l === "id"
+                          ? "Satu doa untuk dibaca bersama si kecil. Berganti setiap hari."
+                          : "One du'a to read with your little one. New every day."}
+                    </p>
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      <Link
+                        href={pathFor(l, `/doa/${doaToday.slug}`)}
+                        className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper shadow-[0_10px_24px_-8px_rgba(30,140,83,0.42)] hover:bg-brave-deep"
+                      >
+                        {l === "id" ? "Buka doa" : "Open du'a"}
+                      </Link>
+                      <BookmarkButton
+                        type="doa"
+                        slug={doaToday.slug}
+                        title={doaToday.title[l]}
+                        url={`/doa/${doaToday.slug}`}
+                        locale={l}
+                      />
+                      <a
+                        href={`https://wa.me/?text=${encodeURIComponent(
+                          (l === "id"
+                            ? `Doa Hari Ini 🤲\n${doaToday.title.id}\n\n${doaToday.arabic}\n\n"${doaToday.translation.id}"\n\nBaca bareng anak: `
+                            : `Du'a of the Day 🤲\n${doaToday.title.en}\n\n${doaToday.arabic}\n\n"${doaToday.translation.en}"\n\nRead it with your child: `) +
+                            absoluteUrl(l, `/doa/${doaToday.slug}`),
+                        )}`}
+                        target="_blank"
+                        rel="noopener"
+                        aria-label={l === "id" ? "Bagikan ke WhatsApp" : "Share on WhatsApp"}
+                        className="tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper px-4 py-3 text-[14px] font-semibold text-ink hover:border-sage/50"
+                      >
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden className="text-[#25D366]">
+                          <path d="M12.04 2a9.9 9.9 0 0 0-8.43 15.16L2 22l4.95-1.3A9.9 9.9 0 1 0 12.04 2Zm0 1.8a8.1 8.1 0 0 1 6.86 12.4l-.2.32.6 2.18-2.24-.59-.31.18a8.1 8.1 0 1 1-4.71-14.7Zm-2.78 4.2c-.13 0-.34.05-.52.25-.18.2-.69.67-.69 1.64s.71 1.9.81 2.03c.1.13 1.39 2.21 3.43 3.02 1.7.67 2.05.54 2.42.5.37-.03 1.2-.49 1.37-.96.17-.47.17-.87.12-.96-.05-.08-.18-.13-.37-.23s-1.2-.59-1.38-.66c-.18-.07-.32-.1-.46.1-.13.2-.52.66-.64.8-.12.13-.23.15-.43.05a5.6 5.6 0 0 1-1.65-1.02 6.2 6.2 0 0 1-1.14-1.42c-.12-.2-.01-.31.09-.41.09-.09.2-.23.3-.35.1-.12.13-.2.2-.34.06-.13.03-.25-.02-.35-.05-.1-.45-1.1-.62-1.5-.16-.4-.33-.34-.45-.34Z" />
+                        </svg>
+                        {l === "id" ? "Bagikan" : "Share"}
+                      </a>
+                    </div>
+                  </div>
                   <Link
-                    href={pathFor(l, "/permainan")}
-                    className="magnet tap mt-6 inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper hover:bg-brave-deep"
+                    href={pathFor(l, `/doa/${doaToday.slug}`)}
+                    className="lift tap group flex flex-col justify-center rounded-[28px] border border-hairline bg-paper p-8 sm:p-10"
                   >
-                    {dict.home.viewAll}
+                    <p
+                      dir="rtl"
+                      lang="ar"
+                      className="font-arabic text-[30px] leading-[1.9] text-ink sm:text-[38px]"
+                    >
+                      {doaToday.arabic}
+                    </p>
+                    <p className="mt-5 text-[15px] leading-relaxed text-whisper group-hover:text-ink-soft">
+                      {doaToday.translation[l]}
+                    </p>
+                    <p className="mt-4 text-[12.5px] text-whisper">
+                      — {doaToday.source.reference}
+                    </p>
                   </Link>
                 </div>
-                <div className="grid grid-cols-3 gap-2.5">
-                  {allGames.slice(0, 9).map((g) => (
-                    <GameIcon
-                      key={g.slug}
-                      slug={g.slug}
-                      className="lift aspect-square h-auto w-full"
-                    />
+
+                {/* Prayer times — client-side, location-aware */}
+                <div className="mx-auto mt-8 max-w-2xl">
+                  <PrayerWidget locale={l} />
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Siang — play */}
+          <Reveal>
+            <div className="moment moment--siang">
+              <span aria-hidden className="sky-cloud" style={{ top: "14%", left: "6%" }} />
+              <span aria-hidden className="sky-cloud" style={{ top: "8%", right: "12%", transform: "scale(0.7)", animationDirection: "reverse" }} />
+              <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
+                <div className="grid items-center gap-8 sm:grid-cols-[1.1fr_0.9fr]">
+                  <div>
+                    <MomentLabel icon="☀️" text={l === "id" ? "Siang · Bermain sambil belajar" : "Daytime · Learn through play"} />
+                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                      {l === "id"
+                        ? `${allGames.length} permainan gratis`
+                        : `${allGames.length} free games`}
+                    </h3>
+                    <p className="mt-3 max-w-md text-[15.5px] leading-relaxed text-whisper">
+                      {l === "id"
+                        ? "Hijaiyah, doa, dan akhlak baik — lewat main."
+                        : "Hijaiyah, du'a, and good manners — through play."}
+                    </p>
+                    <div className="mt-6 flex flex-wrap items-center gap-3">
+                      <Link
+                        href={pathFor(l, "/permainan")}
+                        className="magnet tap inline-flex items-center gap-2 rounded-full bg-brave px-5 py-3 text-[14px] font-semibold text-paper hover:bg-brave-deep"
+                      >
+                        {l === "id" ? "Main sekarang" : "Play now"}
+                      </Link>
+                      <Link
+                        href={pathFor(l, "/apps/kids-activity")}
+                        className="tap inline-flex items-center gap-2 rounded-full border border-hairline bg-paper/80 px-4 py-3 text-[14px] font-semibold text-ink hover:border-brave/40"
+                      >
+                        <span aria-hidden>🖍️</span>
+                        {l === "id" ? "Lembar aktivitas" : "Activity sheets"}
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="grid grid-cols-3 gap-2.5">
+                    {allGames.slice(0, 6).map((g) => (
+                      <GameIcon
+                        key={g.slug}
+                        slug={g.slug}
+                        className="lift aspect-square h-auto w-full"
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+
+          {/* Malam — bedtime stories */}
+          <Reveal>
+            <div className="moment moment--malam">
+              <span aria-hidden className="sky-moon" />
+              {STARS.map(([top, left, d], i) => (
+                <span key={i} aria-hidden className="sky-star" style={{ top, left, ["--d" as string]: d }} />
+              ))}
+              <div className="mx-auto max-w-6xl px-5 py-12 sm:px-7 sm:py-16">
+                <div className="flex flex-wrap items-end justify-between gap-6">
+                  <div className="max-w-xl">
+                    <MomentLabel icon="🌙" text={l === "id" ? "Malam · Cerita sebelum tidur" : "Night · Bedtime stories"} />
+                    <h3 className="font-display mt-3 text-[28px] font-medium leading-tight text-ink sm:text-[36px]">
+                      {l === "id" ? "Cerita Baby Mo & Baby Ais" : "Baby Mo & Baby Ais stories"}
+                    </h3>
+                  </div>
+                  <Link
+                    href={pathFor(l, "/cerita")}
+                    className="tap whitespace-nowrap text-[13.5px] font-semibold text-sage-deep hover:underline"
+                  >
+                    {dict.home.viewAll} →
+                  </Link>
+                </div>
+                <div className="mt-8 grid gap-5 md:grid-cols-3">
+                  {latestCerita.map((n) => (
+                    <Link
+                      key={n.slug}
+                      href={pathFor(l, `/cerita/${n.slug}`)}
+                      className="lift tap group flex flex-col rounded-[22px] border border-hairline bg-paper p-6"
+                    >
+                      {n.pose && (
+                        <div className="relative mx-auto mb-3">
+                          <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-xl opacity-70" />
+                          <img
+                            src={asset(posePath(n.pose))}
+                            alt=""
+                            width={92}
+                            height={92}
+                            className="h-[92px] w-[92px] select-none object-contain transition-transform duration-300 group-hover:scale-105"
+                            draggable={false}
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <h4 className="text-center font-serif text-[18px] font-medium leading-snug text-ink group-hover:text-sage-deep">
+                        {n.title[l]}
+                      </h4>
+                      <p className="mt-2 line-clamp-2 text-center text-[14px] leading-relaxed text-whisper">
+                        {n.hook[l]}
+                      </p>
+                    </Link>
                   ))}
                 </div>
               </div>
@@ -413,8 +419,92 @@ export default async function HomePage({
           </Reveal>
         </section>
 
-        {/* ── BLOG ── */}
-        <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
+        <StarDivider className="pt-14 sm:pt-16" />
+
+        {/* ── TERSIMPAN UNTUKMU — only renders if user has saves ── */}
+        <SavedHomeSection locale={l} />
+
+        {/* ── PROMISE + FOUNDER — an open picture book ── */}
+        <section className="mx-auto max-w-6xl px-5 pb-14 pt-24 sm:px-7 sm:pb-20 sm:pt-28">
+          <Reveal>
+            <div className="book relative">
+              {/* Baby Mo peeking over the top of the book */}
+              <img
+                src={asset("/baby-mo-poses/baby-mo-idea.png")}
+                alt=""
+                width={160}
+                height={160}
+                loading="lazy"
+                className="peek pointer-events-none absolute -top-[86px] right-8 w-[110px] select-none sm:right-16 sm:w-[132px] sm:-top-[104px]"
+                draggable={false}
+              />
+              <div className="grid md:grid-cols-2">
+                {/* Left page — founder */}
+                <div className="book-page flex flex-col justify-center gap-5 p-7 sm:p-10">
+                  <div className="relative h-[112px] w-[112px]">
+                    <Star8 className="absolute inset-0 h-full w-full text-sage-soft" />
+                    <img
+                      src={asset("/baby-mo-poses/baby-mo-thank-you.png")}
+                      alt=""
+                      width={120}
+                      height={120}
+                      loading="lazy"
+                      className="relative h-full w-full select-none object-contain p-2"
+                      draggable={false}
+                    />
+                  </div>
+                  <p className="font-display text-[24px] font-medium leading-snug text-ink sm:text-[28px]">
+                    {l === "id"
+                      ? "“Dibuat oleh Abi & Umi untuk Mo dan Ais — dan untuk anakmu juga.”"
+                      : "“Made by Abi & Umi for Mo and Ais — and for your child too.”"}
+                  </p>
+                  <Link
+                    href={pathFor(l, "/tentang")}
+                    className="tap inline-flex self-start text-[13.5px] font-semibold text-sage-deep hover:underline"
+                  >
+                    {l === "id" ? "Cerita di balik Baby Mo" : "The story behind Baby Mo"} →
+                  </Link>
+                </div>
+                {/* Right page — promise stickers */}
+                <div className="book-page book-page--right p-7 sm:p-10">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-sage-deep">
+                    {dict.home.sections.valuesTitle}
+                  </p>
+                  <ul className="mt-5 grid gap-4">
+                    {dict.home.values.map((v, i) => (
+                      <li key={v.title} className={`sticker sticker--${i}`}>
+                        <span aria-hidden className="sticker-icon">
+                          {["📖", "🛡️", "🌙"][i]}
+                        </span>
+                        <div>
+                          <h3 className="font-serif text-[16.5px] font-medium text-ink">
+                            {v.title}
+                          </h3>
+                          <p className="mt-0.5 text-[13.5px] leading-relaxed text-whisper">
+                            {v.body}
+                          </p>
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </Reveal>
+        </section>
+
+        {/* ── WATCH — Baby Mo on YouTube + latest videos ── */}
+        <Reveal>
+          <YouTubeBand locale={l} />
+        </Reveal>
+        <Reveal>
+          <VideoSection locale={l} compact />
+        </Reveal>
+
+        <StarDivider className="pt-4" />
+
+        {/* ── FOR PARENTS — blog ── */}
+        <section className="mx-auto max-w-6xl px-5 pb-14 pt-10 sm:px-7 sm:pb-20 sm:pt-14">
           <Reveal>
             <SectionHead
               title={dict.home.sections.blogTitle}
@@ -447,106 +537,6 @@ export default async function HomePage({
             </div>
           </Reveal>
         </section>
-
-        {/* ── CERITA TERBARU (latest Baby Mo & Baby Ais stories) ── */}
-        <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
-          <Reveal>
-            <SectionHead
-              title={dict.home.sections.ceritaTitle}
-              sub={dict.home.sections.ceritaSub}
-              viewAll={{ href: pathFor(l, "/cerita"), label: dict.home.viewAll }}
-            />
-          </Reveal>
-          <Reveal stagger>
-            <div className="mt-10 grid gap-5 md:grid-cols-3">
-              {latestCerita.map((n) => (
-                <Link
-                  key={n.slug}
-                  href={pathFor(l, `/cerita/${n.slug}`)}
-                  className="lift tap group flex flex-col rounded-[22px] border border-hairline bg-paper p-6"
-                >
-                  {n.pose && (
-                    <div className="relative mx-auto mb-3">
-                      <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-xl opacity-70" />
-                      <img
-                        src={asset(posePath(n.pose))}
-                        alt=""
-                        width={92}
-                        height={92}
-                        className="h-[92px] w-[92px] select-none object-contain transition-transform duration-300 group-hover:scale-105"
-                        draggable={false}
-                        loading="lazy"
-                      />
-                    </div>
-                  )}
-                  <div className="flex flex-wrap items-center justify-center gap-2 text-[10.5px]">
-                    <span className="rounded-full bg-sage-soft px-2 py-0.5 font-semibold uppercase tracking-[0.1em] text-sage-deep">
-                      {dict.catatan.childChip[n.child]}
-                    </span>
-                    <span className="rounded-full bg-brave-soft px-2 py-0.5 font-semibold uppercase tracking-[0.1em] text-brave-deep">
-                      {n.kind === "story"
-                        ? dict.catatan.kidsStory
-                        : n.pov === "umi"
-                          ? dict.catatan.byUmi
-                          : dict.catatan.bySalman}
-                    </span>
-                  </div>
-                  <h3 className="mt-3 text-center font-serif text-[18px] font-medium leading-snug text-ink group-hover:text-sage-deep">
-                    {n.title[l]}
-                  </h3>
-                  <p className="mt-2 line-clamp-2 text-center text-[14px] leading-relaxed text-whisper">
-                    {n.hook[l]}
-                  </p>
-                </Link>
-              ))}
-            </div>
-          </Reveal>
-        </section>
-
-        {/* ── BABY MO ON YOUTUBE (brand band) + latest videos ── */}
-        <Reveal>
-          <YouTubeBand locale={l} />
-        </Reveal>
-        <Reveal>
-          <VideoSection locale={l} />
-        </Reveal>
-
-        {/* ── KIDS ACTIVITY — printable worksheet generator ── */}
-        <Reveal>
-          <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
-            <Link
-              href={pathFor(l, "/apps/kids-activity")}
-              className="lift tap group relative block overflow-hidden rounded-[28px] border border-hairline bg-brave-soft/40"
-            >
-              <div className="grid items-center gap-6 p-7 sm:grid-cols-[auto_1fr_auto] sm:p-8">
-                <div className="hidden h-14 w-14 items-center justify-center rounded-2xl bg-brave/15 text-brave-deep sm:flex">
-                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
-                    <rect x="4" y="3" width="16" height="18" rx="2" />
-                    <path d="M8 8h8M8 12h8M8 16h5" />
-                  </svg>
-                </div>
-                <div>
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.12em] text-brave-deep">
-                    {l === "id" ? "Gratis · Bisa Dicetak" : "Free · Printable"}
-                  </p>
-                  <h2 className="font-display mt-1.5 text-[22px] font-medium leading-snug text-ink group-hover:text-brave-deep sm:text-[24px]">
-                    {l === "id"
-                      ? "Buat lembar aktivitas anak siap cetak"
-                      : "Make printable kids activity sheets"}
-                  </h2>
-                  <p className="mt-1 text-[14px] leading-relaxed text-whisper">
-                    {l === "id"
-                      ? "Labirin, mewarnai, menjiplak, mencocokkan, dan puzzle — pilih tema & usia, lalu cetak di rumah."
-                      : "Mazes, coloring, tracing, matching, and puzzles — pick a theme & age, then print at home."}
-                  </p>
-                </div>
-                <span className="hidden whitespace-nowrap text-[13.5px] font-semibold text-brave-deep sm:inline">
-                  {l === "id" ? "Buka aktivitas →" : "Open activities →"}
-                </span>
-              </div>
-            </Link>
-          </section>
-        </Reveal>
 
         {/* ── FOLLOW & SUPPORT ── */}
         <section className="border-t border-hairline bg-paper-2">
@@ -672,24 +662,19 @@ export default async function HomePage({
   );
 }
 
-function Stat({
-  n,
-  label,
-  locale,
-}: {
-  n: number;
-  label: string;
-  locale: Locale;
-}) {
+// Night-sky star positions for the Malam moment: [top, left, delay].
+const STARS: [string, string, string][] = [
+  ["8%", "8%", "0s"], ["14%", "26%", "1.1s"], ["6%", "44%", "0.4s"],
+  ["22%", "62%", "1.8s"], ["12%", "78%", "0.7s"], ["30%", "90%", "2.2s"],
+  ["34%", "14%", "1.5s"], ["40%", "52%", "0.2s"],
+];
+
+function MomentLabel({ icon, text }: { icon: string; text: string }) {
   return (
-    <div>
-      <div className="font-display text-[30px] font-medium leading-none text-ink sm:text-[34px]">
-        <AnimatedCount to={n} locale={locale === "id" ? "id" : "en"} />
-      </div>
-      <div className="mt-1 text-[11px] font-semibold uppercase tracking-[0.1em] text-whisper">
-        {label}
-      </div>
-    </div>
+    <p className="moment-label inline-flex self-start items-center gap-2 rounded-full px-3 py-1 text-[11.5px] font-semibold uppercase tracking-[0.12em]">
+      <span aria-hidden className="text-[14px]">{icon}</span>
+      {text}
+    </p>
   );
 }
 
