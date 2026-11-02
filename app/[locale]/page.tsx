@@ -400,14 +400,12 @@ export default async function HomePage({
                   </Link>
                 </div>
                 <div className="grid grid-cols-3 gap-2.5">
-                  {allGames.slice(0, 9).map((g, i) => (
-                    <div
+                  {allGames.slice(0, 9).map((g) => (
+                    <GameIcon
                       key={g.slug}
-                      className="lift flex aspect-square items-center justify-center rounded-2xl border border-hairline bg-paper-2"
-                      style={{ transitionDelay: `${i * 35}ms` }}
-                    >
-                      <GameIcon slug={g.slug} className="h-11 w-11" />
-                    </div>
+                      slug={g.slug}
+                      className="lift aspect-square h-auto w-full"
+                    />
                   ))}
                 </div>
               </div>
