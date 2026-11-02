@@ -20,11 +20,11 @@ import { MASCOT_LINES, setMascotIndex } from "./mascot-store";
  * but still publishes one index so the bubble has a line).
  */
 
-type Props = { alt?: string };
+type Props = { alt?: string; /** Small label under Baby Mo inviting a tap. */ tapHint?: string };
 
 const poseUrl = (p: string) => asset(`/baby-mo-poses/${p}.png`);
 
-export function HeroMascot({ alt = "Baby Mo" }: Props) {
+export function HeroMascot({ alt = "Baby Mo", tapHint = "👆 Ketuk Baby Mo!" }: Props) {
   const [poseA, setPoseA] = useState<string | null>(null);
   const [poseB, setPoseB] = useState<string | null>(null);
   const [showA, setShowA] = useState(true);
@@ -32,6 +32,42 @@ export function HeroMascot({ alt = "Baby Mo" }: Props) {
   const [posesReady, setPosesReady] = useState(false);
   const idxRef = useRef(0);
   const showARef = useRef(true);
+  const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [hop, setHop] = useState(0);
+
+  /** Show the next random pose + matching speech line. */
+  function advance() {
+    let next = idxRef.current;
+    while (next === idxRef.current)
+      next = Math.floor(Math.random() * MASCOT_LINES.length);
+    idxRef.current = next;
+    setMascotIndex(next);
+    const pose = MASCOT_LINES[next]!.pose;
+    // place the new pose on the currently-hidden layer, then flip
+    if (showARef.current) setPoseB(pose);
+    else setPoseA(pose);
+    showARef.current = !showARef.current;
+    setShowA(showARef.current);
+  }
+
+  function startTimer() {
+    if (timerRef.current) clearInterval(timerRef.current);
+    timerRef.current = setInterval(advance, 5200);
+  }
+
+  /** Tap Baby Mo: he hops and says something new. */
+  function onTap() {
+    setHop((h) => h + 1);
+    if (!animate) {
+      // reduced motion: still change the line, no pose swap animation
+      const next = (idxRef.current + 1) % MASCOT_LINES.length;
+      idxRef.current = next;
+      setMascotIndex(next);
+      return;
+    }
+    advance();
+    startTimer();
+  }
 
   useEffect(() => {
     // Random starting pose (client-only → no SSR hydration mismatch).
@@ -53,28 +89,24 @@ export function HeroMascot({ alt = "Baby Mo" }: Props) {
       pre.src = poseUrl(l.pose);
     });
 
-    const interval = setInterval(() => {
-      let next = idxRef.current;
-      while (next === idxRef.current)
-        next = Math.floor(Math.random() * MASCOT_LINES.length);
-      idxRef.current = next;
-      setMascotIndex(next);
-      const pose = MASCOT_LINES[next]!.pose;
-      // place the new pose on the currently-hidden layer, then flip
-      if (showARef.current) setPoseB(pose);
-      else setPoseA(pose);
-      showARef.current = !showARef.current;
-      setShowA(showARef.current);
-    }, 5200);
-
-    return () => clearInterval(interval);
+    startTimer();
+    return () => {
+      if (timerRef.current) clearInterval(timerRef.current);
+    };
   }, []);
 
   const layer =
     "pointer-events-none absolute inset-0 h-full w-full object-contain transition-opacity duration-500 ease-in-out";
 
   return (
-    <div className="mascot-breathe relative mx-auto w-full max-w-sm drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]">
+    <button
+      type="button"
+      onClick={onTap}
+      aria-label={tapHint.replace(/^👆\s*/, "")}
+      className="mascot-tap group relative mx-auto block w-full max-w-sm cursor-pointer rounded-[40px] focus-visible:outline-offset-4"
+    >
+    <div key={hop} className={hop ? "mascot-hop" : ""}>
+    <div className="mascot-breathe relative w-full drop-shadow-[0_18px_36px_rgba(15,18,19,0.10)]">
       {/* Static hero = the LCP image (fast first paint + SEO). Fades out
           once the first pose has decoded so only one Baby Mo is visible. */}
       <picture
@@ -119,5 +151,8 @@ export function HeroMascot({ alt = "Baby Mo" }: Props) {
         />
       )}
     </div>
+    </div>
+      <span className="mascot-hint" aria-hidden>{tapHint}</span>
+    </button>
   );
 }

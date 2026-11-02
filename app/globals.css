@@ -740,15 +740,12 @@ html.dark .sec-btn { color: #15171B; }
 
 /* ─── Chunky, tappable shapes ───────────────────────────────────────── */
 /* Cards: a thicker edge and a soft "ledge" underneath, like a toy block. */
-.lift {
-  border-width: 2px !important;
-  box-shadow: 0 4px 0 var(--color-hairline);
-}
-.lift:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 7px 0 var(--color-hairline), 0 18px 32px -22px rgba(15, 18, 19, 0.22);
-}
-.lift:active { transform: translateY(2px); box-shadow: 0 1px 0 var(--color-hairline); }
+/* Toy-block edge + ledge only on cards that already draw a border. */
+.lift.border { border-width: 2px; box-shadow: 0 4px 0 var(--color-hairline); }
+.lift:hover { transform: translateY(-3px); }
+.lift.border:hover { box-shadow: 0 7px 0 var(--color-hairline), 0 18px 32px -22px rgba(15, 18, 19, 0.22); }
+.lift:active { transform: translateY(2px); }
+.lift.border:active { box-shadow: 0 1px 0 var(--color-hairline); }
 /* Primary buttons: pressable, with a darker base that squishes on tap. */
 .magnet { box-shadow: 0 4px 0 rgba(0, 0, 0, 0.18) !important; }
 .magnet:hover { transform: translateY(-1px); box-shadow: 0 5px 0 rgba(0, 0, 0, 0.18) !important; }
@@ -816,3 +813,22 @@ body {
 html.dark body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%23A8CFA2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Cpath d='M30 22l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/%3E%3Cpath d='M190 40a14 14 0 1 0 14 18 11 11 0 0 1-14-18z'/%3E%3Cpath d='M70 150c-8 0-12-5-12-10s5-10 11-9c2-6 7-9 13-8 6 1 10 6 10 11 5 0 8 4 8 8s-4 8-9 8z'/%3E%3Cpath d='M170 170c0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 7-14 15-14 15s-14-8-14-15z'/%3E%3Ccircle cx='120' cy='90' r='2.5'/%3E%3Ccircle cx='220' cy='120' r='2'/%3E%3Ccircle cx='20' cy='210' r='2'/%3E%3Cpath d='M118 210l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z'/%3E%3C/svg%3E");
 }
+
+/* Tap Baby Mo */
+@keyframes mascot-hop {
+  0% { transform: translateY(0) scale(1); }
+  30% { transform: translateY(-26px) scale(1.04, 0.97) rotate(-3deg); }
+  55% { transform: translateY(0) scale(1.06, 0.92); }
+  75% { transform: translateY(-8px) scale(0.99, 1.02) rotate(2deg); }
+  100% { transform: translateY(0) scale(1); }
+}
+.mascot-hop { animation: mascot-hop 650ms cubic-bezier(.34,1.56,.64,1) both; }
+.mascot-hint {
+  position: absolute; left: 50%; bottom: -6px; transform: translateX(-50%);
+  white-space: nowrap; border-radius: 999px; padding: 4px 12px;
+  background: var(--color-paper); border: 2px solid var(--color-hairline);
+  font-size: 12.5px; font-weight: 700; color: var(--color-whisper);
+  opacity: 0.85; transition: opacity 200ms ease, transform 200ms ease;
+}
+.mascot-tap:hover .mascot-hint { opacity: 1; transform: translateX(-50%) translateY(-2px); color: var(--color-brave-deep); }
+@media (prefers-reduced-motion: reduce) { .mascot-hop { animation: none; } }

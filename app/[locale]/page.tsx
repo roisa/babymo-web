@@ -151,7 +151,7 @@ export default async function HomePage({
                     static layer declaratively so only one Baby Mo ever shows. */}
                 {/* Soft 8-point star halo behind Baby Mo */}
                 <Star8 className="star-halo pointer-events-none absolute left-1/2 top-1/2 -z-10 w-[86%] -translate-x-1/2 -translate-y-1/2 text-brave-soft" />
-                <HeroMascot alt="Baby Mo" />
+                <HeroMascot alt="Baby Mo" tapHint={l === "id" ? "👆 Ketuk Baby Mo!" : "👆 Tap Baby Mo!"} />
               </div>
             </div>
           </div>
