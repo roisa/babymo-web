@@ -40,7 +40,7 @@ Refleks pertama Abi: "Yuk, baca doa sebelum tidur." Lalu sadar — Baby Mo belum
 
 Abi pun gendong, jalan-jalan kecil di kamar. Sambil bisikkan di telinganya:
 
-> *Bismika Allahumma ahyaa wa amuut.*
+> *Bismika Allahumma ahyaa wa amuut.* (HR. Bukhari 6324, Muslim 2711)
 
 Pelan. Berulang. Bukan supaya dia hafal. Supaya dia kenal suara itu.
 
@@ -55,7 +55,7 @@ Abi's first reflex: "Let's read the bedtime du'a." Then I caught myself — Baby
 
 So Abi carried him, walking slowly around the room. Whispering into his ear:
 
-> *Bismika Allahumma ahyaa wa amuut.*
+> *Bismika Allahumma ahyaa wa amuut.* (Bukhari 6324, Muslim 2711)
 
 Slowly. On repeat. Not so he'd memorize it. So he'd recognize the sound.
 
@@ -106,8 +106,7 @@ Abi yang mengajarkan mereka Bismillah sebelum makan — pelan-pelan, beberapa bu
 
 Ada hadits yang sering dikutip di group-group WhatsApp:
 
-> *"Jika salah seorang dari kalian makan, hendaklah dia menyebut nama Allah. Jika dia lupa di awal, hendaklah dia ucapkan: Bismillaahi fii awwalihi wa aakhirihi."*
-> — HR. Abu Dawud, Tirmidzi
+> *"Jika salah seorang dari kalian makan, hendaklah dia menyebut nama Allah. Jika dia lupa di awal, hendaklah dia ucapkan: Bismillaahi fii awwalihi wa aakhirihi."* (HR. Abu Dawud 3767, Tirmidzi 1858)
 
 Pintu cadangan, kalau lupa. Tapi pelajaran lain pagi itu: punya anak kembar berarti punya dua "auditor" sekaligus. Kalau satu lupa mengoreksi, yang satunya yang inget. Susah sembunyi.
 
@@ -129,8 +128,7 @@ Abi taught them Bismillah before eating — slowly, over the last few months, at
 
 There's a hadith often quoted in WhatsApp groups:
 
-> *"When one of you eats, let him mention the name of Allah. If he forgets at the start, let him say: Bismillaahi fii awwalihi wa aakhirihi."*
-> — Abu Dawud, Tirmidhi
+> *"When one of you eats, let him mention the name of Allah. If he forgets at the start, let him say: Bismillaahi fii awwalihi wa aakhirihi."* (Abu Dawud 3767, Tirmidhi 1858)
 
 A back door, if we forget. But the other lesson this morning: having twins means having two auditors at once. If one forgets to correct you, the other remembers. Hard to hide.
 
@@ -178,8 +176,7 @@ Ada keunikan anak kembar yang Abi pelan-pelan mulai pahami: mereka belajar dua k
 
 Ada hadits Nabi ﷺ:
 
-> *"Tidaklah seorang ayah memberikan pemberian yang lebih utama bagi anaknya daripada budi pekerti yang baik."*
-> — HR. Tirmidzi
+> *"Barangsiapa menunjukkan kepada kebaikan, maka ia mendapat pahala seperti pahala orang yang mengerjakannya."* (HR. Muslim 1893)
 
 Budi pekerti, dalam praktik Abi, dimulai dari satu kalimat di malam hari. Yang Abi tahu satu malam akan tiba, ketika Abi terlalu lelah atau lupa, dan suara yang membaca doa itu bukan lagi Abi — tapi mereka berdua. Buat satu sama lain.
 
@@ -202,8 +199,7 @@ There's a uniqueness to twins that Abi is slowly starting to understand: they le
 
 There's a hadith of the Prophet ﷺ:
 
-> *"No father has given his child a gift more valuable than good character."*
-> — Tirmidhi
+> *"Whoever guides someone to goodness will have a reward like that of the one who does it."* (Muslim 1893)
 
 Good character, in Abi's practice, begins with one sentence at night. I know a night will come, when Abi is too tired or forgets, and the voice reciting the du'a is no longer Abi's — but theirs. For each other.
 
@@ -240,7 +236,7 @@ Refleks Umi mau langsung ambil krayonnya dan beli yang baru nanti sore. Tapi Umi
 
 Butuh tiga kali diulang. Tapi akhirnya Baby Mo melepas krayon itu ke tangan saudarinya — pelan, ragu, tapi melepas. Baby Ais bilang "ankyu" (terima kasih versinya). Dan Umi diam-diam menahan napas.
 
-> *Sebaik-baik kalian adalah yang paling baik akhlaknya.*
+> *Sebaik-baik kalian adalah yang paling baik akhlaknya.* (HR. Bukhari 3559, Muslim 2321)
 
 Berbagi bukan bawaan lahir. Itu diajari, satu krayon ungu setiap kali. Umi tidak menyelesaikan masalahnya untuk mereka — Umi cuma menunjukkan jalannya, lalu memberi mereka ruang untuk memilih sendiri.`,
       en: `This morning there was only one purple crayon still whole. Baby Mo grabbed it first, Baby Ais pulled at it. Two little hands, one crayon, and an "Ais's one!" — the first time Umi heard it that clearly.
@@ -249,7 +245,7 @@ Umi's reflex was to just take the crayon and buy a new one this evening. But I h
 
 It took three repeats. But Baby Mo finally let the crayon go into his sister's hand — slowly, unsure, but he let go. Baby Ais said "ankyu" (her version of thank you). And Umi quietly held her breath.
 
-> *The best of you are those with the best character.*
+> *The best of you are those with the best character.* (Bukhari 3559, Muslim 2321)
 
 Sharing isn't something they're born with. It's taught, one purple crayon at a time. Umi didn't solve it for them — I just showed the path, then gave them room to choose it themselves.`,
     },
@@ -283,7 +279,7 @@ Abi jongkok. Tidak marah, tidak buru-buru. Cuma tanya: "Mo yang pegang gelasnya 
 
 Abi tidak menghukum. Abi bilang: "Gelas bisa diganti. Jujur itu yang Abi sayang." Lalu kami bereskan pecahannya bareng-bareng. Baby Mo ikut memungut (yang plastik saja).
 
-> *Hendaklah kalian jujur, karena kejujuran menuntun pada kebaikan.*
+> *Hendaklah kalian jujur, karena kejujuran menuntun pada kebaikan.* (HR. Bukhari 6094, Muslim 2607)
 
 Anak kecil berbohong bukan karena jahat — karena takut. Kalau jujur selalu disambut amarah, dia belajar menyembunyikan. Kalau jujur disambut tenang, dia belajar terbuka. Malam ini Abi pilih jadi tempat yang aman untuk berkata benar.`,
       en: `A cup shattered in the kitchen. Abi walked in, and Baby Mo immediately pointed at Baby Ais — even though she was sitting far away, playing with blocks.
@@ -292,7 +288,7 @@ Abi crouched down. Not angry, not rushed. Just asked: "Was Mo holding the cup?" 
 
 Abi didn't punish. I said: "Cups can be replaced. Honesty is what Abi loves." Then we cleaned up the pieces together. Baby Mo helped pick up (the plastic bits only).
 
-> *Hold to truthfulness, for truthfulness leads to goodness.*
+> *Hold to truthfulness, for truthfulness leads to goodness.* (Bukhari 6094, Muslim 2607)
 
 Small children lie not out of malice — out of fear. If honesty is always met with anger, they learn to hide. If honesty is met with calm, they learn to open up. Tonight Abi chose to be the safe place to tell the truth.`,
     },
@@ -326,7 +322,7 @@ Umi tidak pernah mengajarinya dengan serius. Cuma, setiap Abi memberi sesuatu ke
 
 Anak usia dua tahun adalah peniru ulung. Mereka tidak melakukan yang kita suruh — mereka melakukan yang kita lakukan. Adab bukan pelajaran yang diajarkan; adab itu udara yang dihirup di rumah.
 
-> *Tidak ada pemberian orang tua kepada anaknya yang lebih utama daripada adab yang baik.*
+> *"Barangsiapa tidak berterima kasih kepada manusia, ia tidak bersyukur kepada Allah."* (HR. Abu Dawud 4811, Tirmidzi 1954)
 
 Jadi kalau Umi mau Baby Ais dan Baby Mo tumbuh jadi anak yang tahu terima kasih, tugas Umi sederhana: jadi orang yang paling sering berterima kasih di rumah ini.`,
       en: `A small thing, but Umi thought about it all day. I gave Baby Ais a slice of banana. Before I could even say "what do you say?", she'd already beaten me to it: "ankyu."
@@ -335,11 +331,11 @@ I never taught her formally. It's just that every time Abi hands me something, w
 
 A two-year-old is a master mimic. They don't do what we tell them — they do what we do. Good manners aren't a lesson you teach; they're the air a child breathes at home.
 
-> *No gift a parent gives a child is better than good character.*
+> *"Whoever does not thank people has not thanked Allah."* (Abu Dawud 4811, Tirmidhi 1954)
 
 So if Umi wants Baby Ais and Baby Mo to grow up grateful, my job is simple: be the person who says thank you the most in this house.`,
     },
-    anchor: { type: "hadith", slug: "hadiah-terbaik-adab" },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
     takeaway: {
       id: "Anak tidak melakukan yang kita suruh — mereka melakukan yang kita lakukan. Mau anak tahu terima kasih? Jadilah yang paling sering berterima kasih di rumah.",
       en: "Children don't do what we say — they do what we do. Want a grateful child? Be the one who says thank you the most at home.",
@@ -369,7 +365,7 @@ Abi gendong Baby Ais dulu sampai tenang. Baru Abi tunjukkan ke Baby Mo: "Lihat, 
 
 Empati datang sebelum kata. Anak perlu melihat akibat perbuatannya pada wajah orang lain dulu, baru kata "maaf" punya arti. Abi tidak mengejar ucapannya; Abi mengejar pengertiannya.
 
-> *Bukan golongan kami orang yang tidak menyayangi yang kecil.*
+> *Bukan golongan kami orang yang tidak menyayangi yang kecil.* (HR. Tirmidzi 1919)
 
 Beberapa menit kemudian mereka main bareng lagi seolah tidak terjadi apa-apa. Tapi Abi tahu, sesuatu yang kecil baru saja ditanam.`,
       en: `Baby Mo snatched a toy, Baby Ais fell and cried. Abi didn't order Baby Mo to say "sorry" in a commanding tone — that only turns sorry into an empty word.
@@ -378,7 +374,7 @@ I carried Baby Ais first until she calmed. Then I showed Baby Mo: "Look, Ais is 
 
 Empathy comes before words. A child needs to see the effect of his action on someone's face first; only then does "sorry" mean anything. Abi wasn't chasing the word; I was chasing the understanding.
 
-> *He is not one of us who does not show mercy to our young ones.*
+> *He is not one of us who does not show mercy to our young ones.* (Tirmidhi 1919)
 
 A few minutes later they were playing together again as if nothing happened. But Abi knows something small was just planted.`,
     },
@@ -412,7 +408,7 @@ Umi tidak mau memaksa Baby Mo turun begitu saja — itu mengajarkan bahwa yang m
 
 Sampai hitungan sepuluh, Baby Mo turun sendiri. Bangga, malah. Sabar jadi terukur, ada ujungnya yang jelas — bukan "tunggu" yang kabur dan terasa selamanya buat anak dua tahun.
 
-> *Sungguh, bersama kesulitan ada kemudahan.*
+> *Sungguh, bersama kesulitan ada kemudahan.* (QS. Al-Insyirah: 6)
 
 Menunggu giliran adalah ibadah kecil. Dan ternyata, sepuluh hitungan adalah panjang yang pas untuk hati yang masih belajar bersabar.`,
       en: `At the park there was only one free swing. Baby Mo got on first. Baby Ais stood beside it, tugging his shirt: my turn, my turn.
@@ -421,7 +417,7 @@ Umi didn't want to just force Baby Mo off — that teaches that whoever cries lo
 
 At ten, Baby Mo climbed off on his own. Proud, even. Patience became measurable, with a clear end — instead of a vague "wait" that feels like forever to a two-year-old.
 
-> *Indeed, with hardship comes ease.*
+> *Indeed, with hardship comes ease.* (Qur'an, Ash-Sharh 94:6)
 
 Waiting your turn is a small act of worship. And it turns out, a count of ten is just the right length for a heart still learning to be patient.`,
     },
@@ -455,7 +451,7 @@ Abi tidak pernah duduk dan mengajari "ayo bilang salam." Tapi setiap masuk rumah
 
 Salam itu doa: semoga keselamatan untukmu. Mengajari anak menyebar salam berarti mengajarinya menebar kebaikan ke orang yang bahkan belum dia kenal. Itu bibit ramah yang akan tumbuh seumur hidup.
 
-> *Sebarkanlah salam di antara kalian.*
+> *Sebarkanlah salam di antara kalian.* (HR. Muslim 54)
 
 Tetangga tadi tersenyum lebar, dan Abi diam-diam berdoa: semoga lambaian kecil ini jadi kebiasaan yang besar.`,
       en: `This afternoon we took a short walk. Passing a neighbour's house, she greeted us. Suddenly Baby Mo waved and said "samlekum" — his lisped version of assalamualaikum.
@@ -464,7 +460,7 @@ Abi never sat down to teach "say salam." But every time I enter the house, I say
 
 Salam is a prayer: may peace be upon you. Teaching a child to spread salam is teaching him to scatter goodness to people he doesn't even know yet. That's a seed of warmth that grows for a lifetime.
 
-> *Spread salam (peace) amongst yourselves.*
+> *Spread salam (peace) amongst yourselves.* (Muslim 54)
 
 The neighbour beamed, and Abi quietly prayed: may this little wave become a big habit.`,
     },
@@ -498,7 +494,7 @@ Setiap suap pertama, kami selalu bilang bismillah bareng. Sudah jadi tanda mulai
 
 Yang Umi sukai: dia belum paham arti katanya, tapi sudah paham bahwa makan dimulai dengan menyebut nama Allah. Maknanya menyusul nanti; kebiasaannya dulu yang ditanam. Itu cara doa masuk ke tubuh anak — lewat rutinitas, bukan hafalan.
 
-> *Bismillah… makanlah dengan tangan kananmu.*
+> *Bismillah… makanlah dengan tangan kananmu.* (HR. Bukhari 5376, Muslim 2022)
 
 Jadi Umi tahan suapan, kami ucap bismillah bareng, baru dia buka mulut lebar-lebar. Lampu hijau.`,
       en: `At lunch, Umi was about to feed Baby Ais straight away. But she held my hand back, looked at me, waiting for something. I was puzzled for a second — then realised. She was waiting for "bismillah".
@@ -507,7 +503,7 @@ Every first bite, we always say bismillah together. It's become their signal tha
 
 What Umi loves: she doesn't understand the words yet, but she already understands that eating begins by mentioning Allah's name. The meaning will follow later; the habit gets planted first. That's how a du'a enters a child's body — through routine, not memorisation.
 
-> *Say Bismillah… and eat with your right hand.*
+> *Say Bismillah… and eat with your right hand.* (Bukhari 5376, Muslim 2022)
 
 So I held the spoon, we said bismillah together, and only then did she open wide. Green light.`,
     },
@@ -541,7 +537,7 @@ Tiba-tiba beres-beres jadi seru. Baby Mo berlari ambil balok, Baby Ais ikut-ikut
 
 Anak tidak benci membantu — mereka benci diperintah dengan nada bosan. Tugas yang sama bisa jadi beban atau jadi main, tergantung wajah kita waktu mengajaknya. Tanggung jawab paling mudah ditanam saat masih terasa seperti permainan.
 
-> *Setiap kalian adalah pemimpin, dan akan dimintai tanggung jawab atas yang dipimpinnya.*
+> *Setiap kalian adalah pemimpin, dan akan dimintai tanggung jawab atas yang dipimpinnya.* (HR. Bukhari 893, Muslim 1829)
 
 Tanggung jawab atas barang sendiri dimulai dari satu keranjang balok. Dan ternyata, sambil bernyanyi, jauh lebih ringan.`,
       en: `Toys everywhere. If Abi says "let's tidy up" in a tired voice, the result is zero. So I turned it into a race: "Who can put the blocks in the basket fastest?"
@@ -550,7 +546,7 @@ Suddenly tidying was fun. Baby Mo ran for blocks, Baby Ais copied him stuffing i
 
 Children don't hate helping — they hate being ordered in a bored voice. The same task can be a burden or a game, depending on our face when we ask. Responsibility is easiest planted while it still feels like play.
 
-> *Each of you is a shepherd, and each is responsible for his flock.*
+> *Each of you is a shepherd, and each is responsible for his flock.* (Bukhari 893, Muslim 1829)
 
 Responsibility for your own things starts with one basket of blocks. And it turns out, with a song, it's much lighter.`,
     },
@@ -584,7 +580,7 @@ Umi pegang tangan kecilnya, ajari mengelus dari kepala ke punggung. Pelan. Kucin
 
 Kasih sayang ke makhluk kecil adalah latihan pertama kasih sayang ke manusia. Anak yang belajar lembut pada kucing belajar bahwa kekuatan bukan untuk menyakiti. Itu pelajaran besar yang masuk lewat bulu kucing.
 
-> *Para penyayang akan disayangi oleh Yang Maha Penyayang.*
+> *Para penyayang akan disayangi oleh Yang Maha Penyayang.* (HR. Abu Dawud 4941, Tirmidzi 1924)
 
 Kucingnya pergi setelah beberapa menit. Tapi Baby Ais masih menatap tangannya sendiri, seperti baru menemukan kekuatan baru: tangan yang lembut.`,
       en: `A street cat wandered onto the porch. Baby Ais was thrilled and went to grab its tail. Umi gently held her hand back: "Gently, love. The cat hurts too if you pull."
@@ -593,7 +589,7 @@ I held her little hand and taught her to stroke from head to back. Slowly. The c
 
 Tenderness toward small creatures is the first rehearsal of tenderness toward people. A child who learns gentleness with a cat learns that strength isn't for hurting. That's a big lesson, arriving through cat fur.
 
-> *The merciful are shown mercy by the Most Merciful.*
+> *The merciful are shown mercy by the Most Merciful.* (Abu Dawud 4941, Tirmidhi 1924)
 
 The cat left after a few minutes. But Baby Ais kept staring at her own hand, as if she'd discovered a new power: a gentle one.`,
     },
@@ -629,7 +625,7 @@ Jadi Abi nyalakan lampu tidur kecil, gendong dia, dan bisikkan doa pelan. Abi bi
 
 Rasa takut anak tidak dilawan dengan "jangan takut" — itu tidak pernah berhasil. Dilawan dengan kehadiran. Anak perlu meminjam ketenangan kita sampai punya ketenangan sendiri. Dan doa sebelum tidur adalah cara meminjamkannya.
 
-> *Dengan nama-Mu, ya Allah, aku hidup dan aku mati.*
+> *Dengan nama-Mu, ya Allah, aku hidup dan aku mati.* (HR. Bukhari 6324, Muslim 2711)
 
 Beberapa menit, tangisnya reda jadi napas tidur. Lampu kecil tetap menyala. Tapi yang sebenarnya menenangkannya bukan lampu itu — Abi tahu itu.`,
       en: `The moment Abi turned off the light, Baby Mo cried. The dark is enormous for someone so small. I could have just switched it back on — but that teaches that the dark is rightly feared.
@@ -638,7 +634,7 @@ So I turned on a small night light, carried him, and whispered the du'a softly. 
 
 A child's fear isn't beaten with "don't be scared" — that never works. It's met with presence. A child borrows our calm until he has his own. And the bedtime du'a is how we lend it.
 
-> *In Your name, O Allah, I live and I die.*
+> *In Your name, O Allah, I live and I die.* (Bukhari 6324, Muslim 2711)
 
 In a few minutes his crying eased into sleeping breath. The little light stayed on. But what truly calmed him wasn't the lamp — Abi knows that.`,
     },
@@ -672,7 +668,7 @@ Dulu Umi akan menyerah saja biar cepat selesai. Tapi kali ini Umi jongkok, tarik
 
 Badai itu butuh waktu, tapi reda sendiri. Anak dua tahun belum punya rem untuk emosinya — yang dia punya cuma rem kita. Kalau kita ikut meledak, dua orang yang badai. Kalau kita tenang, dia punya pegangan.
 
-> *Orang kuat bukanlah yang jago berkelahi, tapi yang menahan diri ketika marah.*
+> *Orang kuat bukanlah yang jago berkelahi, tapi yang menahan diri ketika marah.* (HR. Bukhari 6114, Muslim 2609)
 
 Setelah reda, Umi peluk. Tidak ada ceramah. Mainannya tetap tidak dibeli — tapi Baby Mo belajar bahwa marahnya tidak menakutkan Umi, dan tidak juga menang.`,
       en: `Baby Mo wanted a toy off the shelf, Umi said no. He dropped straight to the shop floor, screaming. Every head turned. My face burned.
@@ -681,7 +677,7 @@ I used to just give in to end it fast. But this time I crouched, took a breath, 
 
 The storm took time, but it passed on its own. A two-year-old has no brakes for his emotions yet — the only brakes he has are ours. If we erupt too, that's two people in a storm. If we stay calm, he has something to hold.
 
-> *The strong one is not the good wrestler; the strong one is he who controls himself when angry.*
+> *The strong one is not the good wrestler; the strong one is he who controls himself when angry.* (Bukhari 6114, Muslim 2609)
 
 After it passed, Umi hugged him. No lecture. The toy still wasn't bought — but Baby Mo learned that his anger doesn't frighten Umi, and doesn't win either.`,
     },
@@ -715,7 +711,7 @@ Karena kalau Abi yang menyusun, yang dia pelajari cuma "kalau susah, panggil Abi
 
 Percobaan keenam berhasil. Tiga balok berdiri. Baby Mo tepuk tangan sendiri, lalu menoleh ke Abi minta tepuk tangan juga. Abi bertepuk paling kencang.
 
-> *Allah mencintai hamba yang apabila mengerjakan sesuatu, ia menyempurnakannya.*
+> *"Amalan yang paling dicintai Allah adalah yang paling terus-menerus, walaupun sedikit."* (HR. Bukhari 6464, Muslim 783)
 
 Membiarkan anak gagal dengan aman adalah salah satu bentuk sayang yang paling sulit. Tapi di situlah ketangguhan lahir — bukan di menara yang Abi susunkan.`,
       en: `Baby Mo stacked blocks. They fell. Stacked again. Fell again. Five times. Abi's hands itched to build him a neat one — but I held back.
@@ -724,7 +720,7 @@ Because if Abi builds it, all he learns is "when it's hard, call Abi." If he suc
 
 The sixth try held. Three blocks standing. Baby Mo clapped for himself, then turned to Abi for applause too. Abi clapped the loudest.
 
-> *Allah loves that when one of you does a task, he does it well.*
+> *"The deeds most beloved to Allah are those done consistently, even if small."* (Bukhari 6464, Muslim 783)
 
 Letting a child fail safely is one of the hardest forms of love. But that's where resilience is born — not in the tower Abi builds for him.`,
     },
@@ -758,7 +754,7 @@ Umi kasih dia mangkuk kecil dan sendok kayu. "Ini tugas Ais: aduk yang ini." Ado
 
 Anak yang dibiarkan membantu tumbuh merasa "aku bagian dari keluarga ini, aku punya peran." Anak yang selalu disuruh minggir karena "lebih cepat sendiri" tumbuh merasa jadi penonton. Berantakan hari ini adalah investasi rasa berguna besok.
 
-> *Sebaik-baik kalian adalah yang paling bermanfaat bagi orang lain.*
+> *Sebaik-baik kalian adalah yang paling bermanfaat bagi orang lain.* (HR. Ath-Thabrani dalam Al-Mu'jam Al-Ausath; dinilai hasan oleh Al-Albani)
 
 Kue itu sedikit bantat. Tapi Baby Ais makan dengan bangga karena "Ais yang bikin." Dan jujur, itu kue terenak yang Umi makan minggu ini.`,
       en: `Umi was rushing to make batter. Baby Ais tugged at my apron, wanting in. The fast way: "later, Umi's busy." But I paused and thought.
@@ -767,7 +763,7 @@ I gave her a little bowl and a wooden spoon. "This is Ais's job: stir this one."
 
 A child allowed to help grows up feeling "I'm part of this family, I have a role." A child always waved aside because "it's faster alone" grows up feeling like a spectator. Today's mess is an investment in tomorrow's sense of worth.
 
-> *The best of people are those most beneficial to others.*
+> *The best of people are those most beneficial to others.* (At-Tabarani, Al-Mu'jam Al-Awsat; graded hasan by Al-Albani)
 
 The cake came out a little dense. But Baby Ais ate it proudly because "Ais made it." And honestly, it was the best cake Umi ate all week.`,
     },
@@ -802,7 +798,7 @@ Abi tunjuk titik-titik air dan bilang: "Itu rezeki dari Allah, sayang. Airnya bi
 
 Anak belajar takjub dari kita. Kalau hujan kita sambut dengan keluhan "yah, hujan", mereka belajar mengeluh. Kalau kita sambut dengan "masya Allah, lihat", mereka belajar melihat tanda-tanda Allah di hal biasa.
 
-> *Ya Allah, jadikanlah hujan ini hujan yang membawa manfaat.*
+> *Ya Allah, jadikanlah hujan ini hujan yang membawa manfaat.* (HR. Bukhari 1032)
 
 Sepuluh menit kami cuma memandangi hujan. Tidak produktif sama sekali. Tapi mungkin itu sepuluh menit terbaik hari itu.`,
       en: `The rain came down hard this afternoon. Abi's reflex was to shut the window and get back to work. But Baby Mo and Baby Ais were already pressed to the glass, amazed. So I sat down between them.
@@ -811,7 +807,7 @@ I pointed at the droplets and said: "That's a gift from Allah, my loves. The wat
 
 Children learn wonder from us. If we greet rain with "ugh, rain," they learn to complain. If we greet it with "masha'Allah, look," they learn to see Allah's signs in ordinary things.
 
-> *O Allah, make it a beneficial rain.*
+> *O Allah, make it a beneficial rain.* (Bukhari 1032)
 
 For ten minutes we just watched the rain. Not productive at all. But maybe the best ten minutes of the day.`,
     },
@@ -845,7 +841,7 @@ Baby Mo memperhatikan. Penasaran. Umi tidak menyuruh, cuma menawarkan satu kuntu
 
 Selera makan tidak bisa dipaksa, cuma bisa diundang. Anak yang dipaksa makan belajar membenci meja makan; anak yang ditawari dengan tenang belajar bahwa mencoba itu aman. Umi tidak butuh dia habiskan sepiring — Umi butuh dia tidak takut mencoba.
 
-> *Makanlah dari yang baik-baik dan bersyukurlah.*
+> *"Makanlah di antara rezeki yang baik-baik yang Kami berikan kepadamu, dan bersyukurlah kepada Allah."* (QS. Al-Baqarah: 172)
 
 Sisa brokolinya? Tetap di piring. Tapi satu suap hari ini lebih berharga dari sepiring yang dipaksakan dengan air mata.`,
       en: `Broccoli on the plate, Baby Mo's mouth locked tight. I used to force it, and we'd both end up crying. This time Umi tried another way: I ate the broccoli myself first, saying "mmm, yummy."
@@ -854,7 +850,7 @@ Baby Mo watched. Curious. I didn't order, just offered one little floret: "Want 
 
 Appetite can't be forced, only invited. A child forced to eat learns to hate the table; a child calmly offered learns that trying is safe. Umi didn't need him to finish a plate — I needed him to not be afraid to try.
 
-> *Eat of the good things and be grateful.*
+> *"Eat from the good things We have provided for you, and be grateful to Allah."* (Qur'an, Al-Baqarah 2:172)
 
 The rest of the broccoli? Still on the plate. But one bite today is worth more than a forced plate with tears.`,
     },
@@ -888,7 +884,7 @@ Dia belum bisa mengucapkannya sendiri. Tapi dia sudah hafal alurnya: bersin, lal
 
 Adab-adab kecil seperti ini — alhamdulillah sehabis bersin — adalah cara halus mengajari anak bahwa setiap hal, bahkan bersin, terhubung dengan Allah. Tubuh ini titipan, dan kita berterima kasih atas cara kerjanya.
 
-> *Jika salah seorang kalian bersin, ucapkanlah alhamdulillah.*
+> *Jika salah seorang kalian bersin, ucapkanlah alhamdulillah.* (HR. Bukhari 6224)
 
 Abi ucapkan "alhamdulillah" untuknya, dan wajah Baby Ais langsung lega — seperti lagu yang akhirnya selesai dengan pas.`,
       en: `Baby Ais gave a small sneeze. Then — this is what made Abi smile — she looked at me, waiting. Because every time she or Baby Mo sneezes, Abi always says "alhamdulillah" then "yarhamukillah".
@@ -897,7 +893,7 @@ She can't say it herself yet. But she's memorised the rhythm: sneeze, then a goo
 
 Tiny adab like this — alhamdulillah after a sneeze — is a gentle way of teaching a child that everything, even a sneeze, connects to Allah. This body is a trust, and we thank Him for how it works.
 
-> *When one of you sneezes, let him say alhamdulillah.*
+> *When one of you sneezes, let him say alhamdulillah.* (Bukhari 6224)
 
 Abi said "alhamdulillah" for her, and Baby Ais's face relaxed at once — like a song that finally ends just right.`,
     },
@@ -931,7 +927,7 @@ Umi bisikkan doa bercermin: "Ya Allah, Engkau telah memperbaiki bentukku, maka p
 
 Cermin mengajari anak melihat luar; doa ini mengajari mereka peduli pada dalam. Umi mau mereka tumbuh tahu bahwa wajah itu pemberian, tapi akhlak itu pilihan — dan yang kedua jauh lebih penting.
 
-> *Ya Allah, sebagaimana Engkau perindah rupaku, perindahlah akhlakku.*
+> *Ya Allah, sebagaimana Engkau perindah rupaku, perindahlah akhlakku.* (HR. Ahmad 3823; dinilai sahih oleh Al-Albani)
 
 Mereka cuma ketawa lihat bayangan. Tapi Umi menanam satu kalimat: cantik dan ganteng itu dari Allah; baik hati itu yang kita usahakan.`,
       en: `Baby Mo and Baby Ais stood before the mirror, pointing at their reflections, laughing. They don't quite grasp it's themselves yet. Umi sat behind them and joined the reflection.
@@ -940,7 +936,7 @@ I whispered the mirror du'a: "O Allah, You have made my form good, so make my ch
 
 The mirror teaches a child to look outward; this du'a teaches them to care about inward. Umi wants them to grow up knowing a face is a gift, but character is a choice — and the second matters far more.
 
-> *O Allah, as You have beautified my form, beautify my character.*
+> *O Allah, as You have beautified my form, beautify my character.* (Ahmad 3823; graded sahih by Al-Albani)
 
 They just laughed at their reflections. But Umi planted one sentence: pretty and handsome are from Allah; kindness is what we work for.`,
     },
@@ -974,7 +970,7 @@ Kami ucap doa masuk masjid di pintu. Di dalam, Baby Mo memandang lampu, karpet, 
 
 Anak yang masa kecilnya dimarahi di masjid akan tumbuh menjauh dari masjid. Anak yang disambut hangat akan tumbuh merasa masjid itu rumah. Abi memilih menanam cinta dulu; adab akan menyusul seiring usia.
 
-> *Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu.*
+> *Ya Allah, bukakanlah untukku pintu-pintu rahmat-Mu.* (HR. Muslim 713)
 
 Di perjalanan pulang Baby Mo masih menunjuk-nunjuk ke arah masjid. Abi berdoa dalam hati: semoga kamu selalu rindu pulang ke sana, Nak.`,
       en: `Abi took Baby Mo to the mosque for the first time. I didn't expect him to sit still and solemn — that's impossible for a two-year-old. I just wanted him to know: this is Allah's house, and you are welcome here.
@@ -983,7 +979,7 @@ We said the entering-the-mosque du'a at the door. Inside, Baby Mo gazed at the l
 
 A child scolded at the mosque in childhood grows up keeping his distance from it. A child welcomed warmly grows up feeling the mosque is home. Abi chose to plant love first; adab will follow with age.
 
-> *O Allah, open for me the doors of Your mercy.*
+> *O Allah, open for me the doors of Your mercy.* (Muslim 713)
 
 On the way home Baby Mo kept pointing back toward the mosque. Abi prayed quietly: may you always long to return there, son.`,
     },
@@ -1017,7 +1013,7 @@ Umi terdiam sebentar. Pertanyaan besar dari jari yang sangat kecil. Umi tidak ma
 
 Anak menyerap konsep Allah jauh lebih awal dari yang kita kira. Tugas kita bukan menjelaskan sempurna — itu mustahil — tapi menanam rasa bahwa Allah itu dekat, baik, dan menyayangi. Rasa aman pada Allah dulu; teologi belakangan.
 
-> *Dan Dia bersama kalian di mana pun kalian berada.*
+> *Dan Dia bersama kalian di mana pun kalian berada.* (QS. Al-Hadid: 4)
 
 Baby Mo cuma mengangguk seolah puas, lalu lanjut makan. Tapi Umi tahu, satu jari yang menunjuk langit tadi adalah awal dari percakapan seumur hidup.`,
       en: `Umi was saying "Allah loves Mo" while feeding him. Suddenly Baby Mo pointed up, at the ceiling, then looked at Umi as if asking: up there?
@@ -1026,7 +1022,7 @@ Umi paused. A big question from a very small finger. I didn't want to answer wit
 
 Children absorb the idea of Allah far earlier than we think. Our job isn't to explain it perfectly — that's impossible — but to plant the feeling that Allah is near, good, and loving. Security in Allah first; theology later.
 
-> *And He is with you wherever you are.*
+> *And He is with you wherever you are.* (Qur'an, Al-Hadid 57:4)
 
 Baby Mo just nodded as if satisfied, then went back to eating. But Umi knows that one finger pointing at the sky was the start of a lifelong conversation.`,
     },
@@ -1060,7 +1056,7 @@ Abi tidak pernah merancang pelajaran "berbagi dengan tetangga." Tapi anak-anak m
 
 Memberi ke tetangga, bahkan separuh biskuit, adalah benih dari hadis tentang menjaga hak tetangga. Anak yang tumbuh terbiasa berbagi dengan orang dekat akan jadi dewasa yang murah hati ke dunia yang lebih luas.
 
-> *Jibril terus berpesan kepadaku tentang tetangga, sampai aku mengira ia akan mewariskannya.*
+> *Jibril terus berpesan kepadaku tentang tetangga, sampai aku mengira ia akan mewariskannya.* (HR. Bukhari 6014, Muslim 2624)
 
 Dua biskuit, dua anak, satu teras kecil. Tapi Abi melihat akhlak besar sedang berlatih dalam tubuh yang sangat kecil.`,
       en: `On the porch, a neighbour's child the same age came to play. Baby Ais was holding a biscuit. Without Abi asking, she broke off half and gave it to her friend. Abi just watched from afar, stunned.
@@ -1069,7 +1065,7 @@ I never designed a lesson on "sharing with neighbours." But the kids absorb it f
 
 Giving to a neighbour, even half a biscuit, is the seed of the hadith about a neighbour's rights. A child who grows up used to sharing with those nearby becomes an adult generous to the wider world.
 
-> *Jibril kept advising me about the neighbour, until I thought he would make him an heir.*
+> *Jibril kept advising me about the neighbour, until I thought he would make him an heir.* (Bukhari 6014, Muslim 2624)
 
 Two biscuits, two children, one small porch. But Abi watched a great character rehearsing in a very small body.`,
     },
@@ -1103,7 +1099,7 @@ Mereka kembar; ikatannya beda. Tapi melihat Baby Mo — yang biasanya rebutan ma
 
 Umi usap kening Baby Ais sambil baca doa untuk orang sakit. Baby Mo memperhatikan, lalu ikut-ikutan mengusap dengan tangannya. Empati itu menular, bahkan dari orang tua ke anak ke saudara dalam satu malam.
 
-> *Tidak ada penyakit yang Allah turunkan kecuali Dia turunkan pula obatnya.*
+> *Tidak ada penyakit yang Allah turunkan kecuali Dia turunkan pula obatnya.* (HR. Bukhari 5678)
 
 Pagi-pagi demamnya turun. Baby Mo masih tidur miring menghadap saudarinya. Umi memandang keduanya dan diam-diam bersyukur: mereka punya satu sama lain.`,
       en: `Baby Ais had a fever all night, fussy, unable to sleep. What Umi didn't expect: Baby Mo wouldn't stay away from his sister. He brought his teddy, placed it beside Baby Ais, then sat keeping watch.
@@ -1112,7 +1108,7 @@ They're twins; the bond is different. But seeing Baby Mo — who usually fights 
 
 Umi stroked Baby Ais's forehead while reading the du'a for the sick. Baby Mo watched, then copied, stroking with his own hand. Empathy is contagious, even from parent to child to sibling in one night.
 
-> *Allah has not sent down a disease without also sending down its cure.*
+> *Allah has not sent down a disease without also sending down its cure.* (Bukhari 5678)
 
 By morning her fever broke. Baby Mo was still asleep on his side, facing his sister. Umi looked at them both and quietly gave thanks: they have each other.`,
     },
@@ -1146,7 +1142,7 @@ Mereka masih setengah ngantuk, rambut berantakan. Tapi Abi percaya: hal pertama 
 
 Kebiasaan pagi adalah jangkar yang tak terlihat. Anak yang harinya selalu dibuka dengan menyebut Allah tumbuh merasa hari itu milik Allah. Bukan ritual berat — cuma satu kalimat, setiap pagi, sampai jadi denyut.
 
-> *Kami berpagi hari dan kerajaan ini milik Allah.*
+> *Kami berpagi hari dan kerajaan ini milik Allah.* (HR. Muslim 2723)
 
 Setelah itu mereka langsung lari main, lupa segalanya. Tidak apa. Yang menanam bukan ingatan mereka — tapi pengulangan kami.`,
       en: `Early morning, before the house gets loud, Abi started a new habit. As soon as Baby Mo and Baby Ais wake, before screens, before anything, we sit a moment and say "alhamdulillah" for waking again today.
@@ -1155,7 +1151,7 @@ They're still half-asleep, hair a mess. But Abi believes: the first thing to tou
 
 The morning habit is an invisible anchor. A child whose day always opens by mentioning Allah grows up feeling the day belongs to Allah. Not a heavy ritual — just one sentence, every morning, until it becomes a pulse.
 
-> *We have reached the morning and the dominion belongs to Allah.*
+> *We have reached the morning and the dominion belongs to Allah.* (Muslim 2723)
 
 After that they run off to play, forgetting everything. That's fine. What plants it isn't their memory — it's our repetition.`,
     },
@@ -1189,7 +1185,7 @@ Lalu Umi tunjukkan versi benarnya: "Kalau Mo kesal, bilang atau usap, begini." U
 
 Butuh puluhan kali. Tapi kemarin, saat kesal, Baby Mo mengangkat tangan… lalu menurunkannya dan malah memeluk. Umi hampir menangis. Kelembutan ternyata bisa diajarkan, satu kalimat tenang setiap kali.
 
-> *Sesungguhnya Allah Maha Lembut dan mencintai kelembutan dalam segala hal.*
+> *Sesungguhnya Allah Maha Lembut dan mencintai kelembutan dalam segala hal.* (HR. Bukhari 6927, Muslim 2165)
 
 Tangan kecil itu masih belajar. Tapi sekarang dia tahu tangannya punya tugas yang lebih baik daripada memukul.`,
       en: `When frustrated, Baby Mo hit — Umi, the floor, sometimes Baby Ais. I didn't hit back (that only teaches that the big may hit the small). I held his hand gently and said the same sentence every time: "Hands are for loving, not for hitting."
@@ -1198,7 +1194,7 @@ Then I showed the right version: "When Mo is upset, say it or stroke, like this.
 
 It took dozens of times. But yesterday, upset, Baby Mo raised his hand… then lowered it and hugged instead. Umi nearly cried. Gentleness, it turns out, can be taught, one calm sentence at a time.
 
-> *Indeed Allah is Gentle and loves gentleness in all things.*
+> *Indeed Allah is Gentle and loves gentleness in all things.* (Bukhari 6927, Muslim 2165)
 
 That little hand is still learning. But now he knows his hands have a better job than hitting.`,
     },
@@ -1233,7 +1229,7 @@ Awalnya mereka cuma dengar. Lalu Baby Mo mulai ikut menyebut: "mam!" (makan) —
 
 Syukur bukan perasaan yang datang sendiri; ia kebiasaan yang dilatih. Anak yang diajak menghitung nikmat tiap malam tumbuh jadi orang yang melihat gelas setengah penuh. Itu hadiah seumur hidup, dibungkus dalam ritual dua menit.
 
-> *Jika kalian bersyukur, niscaya akan Aku tambah nikmat untuk kalian.*
+> *Jika kalian bersyukur, niscaya akan Aku tambah nikmat untuk kalian.* (QS. Ibrahim: 7)
 
 Lalu kami baca doa tidur, dan mereka terlelap. Hari ditutup bukan dengan kurang, tapi dengan cukup. Itu cara Abi mau mereka memandang dunia.`,
       en: `Every night before the sleep du'a, Abi started naming three things I'm grateful for today, out loud. "Alhamdulillah I was healthy today. Alhamdulillah I got to be with Mo and Ais. Alhamdulillah for good food."
@@ -1242,7 +1238,7 @@ At first they just listened. Then Baby Mo started joining in: "mam!" (food) — 
 
 Gratitude isn't a feeling that arrives on its own; it's a trained habit. A child invited to count blessings each night grows into someone who sees the glass half full. That's a lifelong gift, wrapped in a two-minute ritual.
 
-> *If you are grateful, I will surely increase you.*
+> *If you are grateful, I will surely increase you.* (Qur'an, Ibrahim 14:7)
 
 Then we read the sleep du'a, and they drifted off. The day closed not with lack, but with enough. That's how Abi wants them to see the world.`,
     },
@@ -1276,7 +1272,7 @@ Umi bilang: "Sakit sebentar, terus selesai. Umi pegang erat-erat, ya." Umi peluk
 
 Berani bukan berarti tidak takut; berani berarti takut tapi tetap dilewati dengan ada yang menemani. Umi mau Baby Mo tumbuh tahu bahwa dia tidak harus pura-pura kuat — dia cukup tahu bahwa Umi selalu memeluk saat hal sulit datang.
 
-> *Ya Allah, Tuhan manusia, hilangkanlah penyakit dan sembuhkanlah.*
+> *Ya Allah, Tuhan manusia, hilangkanlah penyakit dan sembuhkanlah.* (HR. Bukhari 5743, Muslim 2191)
 
 Lima menit kemudian dia sudah ketawa lagi sambil pegang stiker. Tapi yang Umi harap dia ingat seumur hidup: saat takut, ada tangan yang menggenggam.`,
       en: `Vaccination day. Baby Mo saw the needle and clung to Umi. I didn't say "don't be scared" — because he had every right to be, and denying it only makes him feel alone.
@@ -1285,7 +1281,7 @@ I said: "It hurts for a moment, then it's done. Umi will hold you tight." I hugg
 
 Brave doesn't mean unafraid; brave means afraid but getting through it with someone alongside. Umi wants Baby Mo to grow up knowing he doesn't have to fake being strong — he just needs to know Umi always holds him when the hard thing comes.
 
-> *O Allah, Lord of mankind, remove the harm and heal.*
+> *O Allah, Lord of mankind, remove the harm and heal.* (Bukhari 5743, Muslim 2191)
 
 Five minutes later he was laughing again, clutching a sticker. But what Umi hopes he remembers for life: when scared, there's a hand that holds.`,
     },
@@ -1319,7 +1315,7 @@ Buat Abi, ini bukan sekadar jalan-jalan. Ini mengajarkan anak bahwa keluarga itu
 
 Anak yang tumbuh dekat dengan kakek-neneknya tumbuh dengan akar. Mereka tahu dari mana mereka berasal, dan tahu bahwa cinta keluarga itu mengalir ke atas dan ke bawah, bukan cuma ke samping.
 
-> *Siapa yang ingin dilapangkan rezekinya, sambunglah silaturahmi.*
+> *Siapa yang ingin dilapangkan rezekinya, sambunglah silaturahmi.* (HR. Bukhari 5986, Muslim 2557)
 
 Di perjalanan pulang keduanya tidur kelelahan, masih memegang oleh-oleh dari nenek. Abi berdoa: semoga lingkaran ini tidak pernah putus di tangan mereka.`,
       en: `On the weekend we went to Grandma's house. The moment the door opened, Baby Mo and Baby Ais ran straight into her arms, laughing. Grandma's face lit up like the sun. Abi stood behind, watching, his heart warm.
@@ -1328,7 +1324,7 @@ For Abi, this isn't just an outing. It teaches the children that family is a cir
 
 A child who grows up close to grandparents grows up with roots. They know where they come from, and know that family love flows upward and downward, not just sideways.
 
-> *Whoever wishes for his provision to be expanded, let him keep the ties of kinship.*
+> *Whoever wishes for his provision to be expanded, let him keep the ties of kinship.* (Bukhari 5986, Muslim 2557)
 
 On the way home both slept, exhausted, still clutching treats from Grandma. Abi prayed: may this circle never break in their hands.`,
     },
@@ -1362,7 +1358,7 @@ Umi jongkok dan ajari: "Bilang 'tolong', sayang." Umi peragakan suara lembut. Ba
 
 Adab meminta dengan sopan adalah bekal sosial paling awal. Anak yang belajar "tolong" dan "terima kasih" sejak kecil tumbuh jadi orang yang mudah disayang. Bukan karena manipulatif — tapi karena hormat itu menular.
 
-> *Barang siapa tidak menyayangi manusia, tidak akan disayangi Allah.*
+> *Barang siapa tidak menyayangi manusia, tidak akan disayangi Allah.* (HR. Bukhari 7376, Muslim 2319)
 
 Sekarang "to-yong" jadi kata kesukaannya, dipakai untuk segala hal. Dan Umi dengan senang hati mengabulkan — karena yang dia minta dengan cara baik, pantas dibalas dengan baik.`,
       en: `Baby Ais wanted a biscuit on the table. Her method: pointing and whining "eh, eh!" louder and louder. Umi didn't hand it over right away — not out of stinginess, but because whining mustn't become the way to get things.
@@ -1371,7 +1367,7 @@ I crouched and taught: "Say 'please', love." I demonstrated a soft voice. Baby A
 
 The manner of asking politely is the earliest social provision. A child who learns "please" and "thank you" young grows into someone easy to love. Not because it's manipulative — but because respect is contagious.
 
-> *Whoever does not show mercy to people, Allah will not show mercy to him.*
+> *Whoever does not show mercy to people, Allah will not show mercy to him.* (Bukhari 7376, Muslim 2319)
 
 Now "pwease" is her favourite word, used for everything. And Umi happily grants it — because what she asks for kindly deserves a kind reply.`,
     },
@@ -1426,7 +1422,7 @@ Umi memeluknya. "Masya Allah. Tahukah kamu, orang yang belajar Al-Qur'an dan men
 
 Mata Baby Mo berbinar. Ternyata setiap huruf kecil pun berharga.
 
-> *Sebaik-baik kalian adalah yang belajar Al-Qur'an dan mengajarkannya.*
+> *"Sebaik-baik kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya."* (HR. Bukhari 5027)
 
 Sekarang, ajak si kecil mendengar satu ayat pendek, lalu menirukannya. Awali dengan tangan bersih dan hati yang gembira. 📖`,
       en: `Baby Mo watched Abi wash his hands, then take a book down from a high place, set it on a small cushion, and open it ever so gently — like holding something very precious.
@@ -1453,7 +1449,7 @@ Umi hugged him. "Masha'Allah. Did you know, the one who learns the Qur'an and te
 
 Baby Mo's eyes sparkled. So even every little letter was precious.
 
-> *The best of you are those who learn the Qur'an and teach it.*
+> *"The best of you are those who learn the Qur'an and teach it."* (Bukhari 5027)
 
 Now, have your little one listen to one short verse, then echo it. Begin with clean hands and a happy heart. 📖`,
     },
@@ -1463,7 +1459,7 @@ Now, have your little one listen to one short verse, then echo it. Begin with cl
       en: "The Qur'an is Allah's word — guidance and a love-letter for us. We honour it with clean hands, a happy heart, and by learning to read it.",
     },
     tags: ["al-quran", "ilmu", "adab", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -1500,7 +1496,7 @@ Umi tertawa lembut. "Itulah hadiah orang berpuasa: kebahagiaan saat berbuka. Set
 
 Malam itu Baby Mo tidur dengan bangga. Hari ini ia belajar tiga hal sekaligus: sabar, syukur, dan sayang pada yang kekurangan.
 
-> *Bagi orang yang berpuasa ada dua kebahagiaan: kebahagiaan saat berbuka, dan kebahagiaan saat berjumpa Allah.*
+> *"Orang yang berpuasa memiliki dua kebahagiaan: kebahagiaan ketika berbuka, dan kebahagiaan ketika berjumpa dengan Rabb-nya."* (HR. Bukhari 1904, Muslim 1151)
 
 Sekarang, kalau si kecil ingin mencoba, mulai dari puasa setengah hari. Rayakan berbukanya, dan ajak berbagi satu makanan untuk yang membutuhkan. 🌙🍪`,
       en: `Very early in the morning, Baby Mo saw Abi and Umi eating the pre-dawn meal. "I want to fast too!" he cried eagerly.
@@ -1525,7 +1521,7 @@ Umi laughed gently. "That's the gift of the one who fasts: the joy of breaking i
 
 That night Baby Mo slept proudly. Today he had learned three things at once: patience, gratitude, and love for those who have less.
 
-> *The one who fasts has two joys: the joy of breaking the fast, and the joy of meeting Allah.*
+> *"The fasting person has two joys: a joy when he breaks his fast, and a joy when he meets his Lord."* (Bukhari 1904, Muslim 1151)
 
 Now, if your little one wants to try, start with a half-day fast. Celebrate the breaking, and share one food item with someone in need. 🌙🍪`,
     },
@@ -1535,7 +1531,7 @@ Now, if your little one wants to try, start with a half-day fast. Celebrate the 
       en: "Fasting teaches three things: patience and obeying Allah, feeling hunger so we care for those in need, and gratitude through the joy of breaking it.",
     },
     tags: ["puasa", "ramadan", "sabar", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -1576,7 +1572,7 @@ Maka Baby Mo menyisihkan beberapa butir nasi dan remah roti, lalu menaburkannya 
 
 Umi mengusap kepalanya. "Masya Allah. Rezeki yang dibagi tidak pernah berkurang — malah makin berkah."
 
-> *Tidak ada satu makhluk pun di bumi kecuali Allah yang menanggung rezekinya.*
+> *"Dan tidak ada satu makhluk melata pun di bumi melainkan Allah-lah yang menanggung rezekinya."* (QS. Hud: 6)
 
 Sekarang, ajak si kecil berburu rezeki: hitung lima pemberian Allah hari ini, lalu ucapkan bersama, "Alhamdulillah." 🍚🐦`,
       en: `Baby Mo stared at a spoonful of rice on his plate. "Umi, where does this rice even come from?"
@@ -1605,7 +1601,7 @@ So Baby Mo set aside a few grains of rice and some bread crumbs, then scattered 
 
 Umi stroked his head. "Masha'Allah. Rezeki that is shared never decreases — it only grows more blessed."
 
-> *There is no creature on earth but that its provision is upon Allah.*
+> *"There is no creature on earth but that upon Allah is its provision."* (Qur'an, Hud 11:6)
 
 Now, go on a rezeki hunt with your little one: count five of Allah's gifts today, then say together, "Alhamdulillah." 🍚🐦`,
     },
@@ -1615,7 +1611,7 @@ Now, go on a rezeki hunt with your little one: count five of Allah's gifts today
       en: "Rezeki is every good gift from Allah — not just food, but family, health, and friends. We thank Him with Alhamdulillah and we share it.",
     },
     tags: ["rezeki", "bersyukur", "berbagi", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -1650,7 +1646,7 @@ Mereka membereskan pecahan gelas bersama-sama. Anehnya, Baby Mo merasa lebih bah
 
 Sejak hari itu, kalau Baby Mo berbuat salah, ia langsung mengakuinya. Karena ia sudah tahu rahasianya: kejujuran selalu menuntun pada kebaikan, dan hati yang jujur terasa ringan.
 
-> *Hendaklah kalian jujur, karena kejujuran menuntun kepada kebaikan.*
+> *"Hendaklah kalian selalu jujur, karena kejujuran menuntun kepada kebaikan, dan kebaikan menuntun ke surga."* (HR. Bukhari 6094, Muslim 2607)
 
 Sekarang, ceritakan pada si kecil: kalau berbuat salah, berani jujur itu hebat. Peluk dan puji setiap kali ia jujur — bukan dimarahi. 💙`,
       en: `Crash! The cup slipped from Baby Mo's hand and shattered on the floor. His heart pounded. He looked around — no one was there. Baby Ais was playing in her room.
@@ -1673,7 +1669,7 @@ They cleaned up the broken cup together. Strangely, Baby Mo felt happier after o
 
 From that day on, whenever Baby Mo did something wrong, he admitted it right away. Because he knew the secret now: honesty always leads to good, and an honest heart feels light.
 
-> *Be truthful, for truthfulness leads to goodness.*
+> *"Hold fast to truthfulness, for truthfulness leads to goodness, and goodness leads to Paradise."* (Bukhari 6094, Muslim 2607)
 
 Now, tell your little one: if you make a mistake, being brave and honest is wonderful. Hug and praise them each time they're honest — not scold. 💙`,
     },
@@ -1683,7 +1679,7 @@ Now, tell your little one: if you make a mistake, being brave and honest is wond
       en: "Honesty is sometimes harder than lying, but it makes the heart light and clean, and earns trust. Truthfulness always leads to goodness.",
     },
     tags: ["jujur", "akhlak", "kejujuran", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -1718,7 +1714,7 @@ Maka ia mulai beraksi. Ia membantu membereskan piring. Ia memijat lengan Abi yan
 
 Umi dan Abi berpandangan, dan mata mereka basah. Doa kecil itu adalah hadiah paling indah malam itu.
 
-> *Ridha Allah ada pada ridha orang tua, dan murka Allah ada pada murka orang tua.*
+> *"Ridha Allah ada pada ridha orang tua, dan murka Allah ada pada murka orang tua."* (HR. Tirmidzi 1899)
 
 Sekarang, ajak si kecil membuat "misi cinta" untuk orang tua: satu bantuan, satu pelukan, dan satu doa — "Rabbighfirli wa liwalidayya." 🏡💛`,
       en: `One night Baby Mo asked, "Umi, why do I have to love and obey Umi and Abi?"
@@ -1741,7 +1737,7 @@ So he sprang into action. He helped clear the dishes. He massaged Abi's tired ar
 
 Umi and Abi looked at each other, their eyes wet. That little prayer was the most beautiful gift of the night.
 
-> *Allah's pleasure is in the parents' pleasure, and Allah's displeasure is in the parents' displeasure.*
+> *"The Lord's pleasure is in the parent's pleasure, and the Lord's displeasure is in the parent's displeasure."* (Tirmidzi 1899)
 
 Now, invite your little one to do a "love mission" for their parents: one act of help, one hug, and one prayer — "Rabbighfirli wa liwalidayya." 🏡💛`,
     },
@@ -1751,7 +1747,7 @@ Now, invite your little one to do a "love mission" for their parents: one act of
       en: "Parents care for us with love, asking nothing back. So we honour and love them — for Allah's pleasure lies in our parents' pleasure.",
     },
     tags: ["orang-tua", "berbakti", "keluarga", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   // ═══════════════════════════════════════════════════════════════════
@@ -1787,7 +1783,7 @@ Baby Mo menatap pantulannya di cermin dengan kagum, seakan baru berkenalan denga
 
 Malam itu, sebelum tidur, Baby Mo berbisik, "Terima kasih, Allah, sudah membuat aku."
 
-> *Allah menciptakanmu dalam bentuk yang sebaik-baiknya — maka bersyukurlah.*
+> *"Sungguh, Kami telah menciptakan manusia dalam bentuk yang sebaik-baiknya."* (QS. At-Tin: 4)
 
 Sekarang, main penjelajah tubuh bareng si kecil: tunjuk mata, telinga, tangan, dan dada, lalu ucapkan, "Terima kasih, Allah." 👀👂✋💓`,
       en: `That morning Baby Mo stood in front of the mirror, tilting his head left and right. "Umi," he asked, "who made me? My eyes, my hands, all of it?"
@@ -1810,7 +1806,7 @@ Baby Mo stared at his reflection in awe, as if meeting himself for the first tim
 
 That night, before sleep, Baby Mo whispered, "Thank you, Allah, for making me."
 
-> *Allah created you in the best of forms — so be grateful.*
+> *"We have certainly created man in the best of forms."* (Qur'an, At-Tin 95:4)
 
 Now, play body explorer with your little one: point to eyes, ears, hands, and chest, then say, "Thank you, Allah." 👀👂✋💓`,
     },
@@ -1820,7 +1816,7 @@ Now, play body explorer with your little one: point to eyes, ears, hands, and ch
       en: "Allah made us in the best form — eyes, ears, hands, a beating heart. We give thanks by caring for ourselves and using ourselves for good.",
     },
     tags: ["allah", "ciptaan", "bersyukur", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -1857,7 +1853,7 @@ Menjelang tidur, Baby Mo berkata, "Umi, walaupun aku tidak bisa melihat mereka, 
 
 Umi mencium keningnya. "Masya Allah, sayang. Itulah hadiah dari percaya pada yang gaib: kita jadi baik, bahkan saat tak ada yang terlihat menonton."
 
-> *Bagi setiap orang ada malaikat-malaikat yang menjaganya bergiliran.*
+> *"Bagi manusia ada malaikat-malaikat yang selalu menjaganya secara bergiliran, di depan dan di belakangnya, atas perintah Allah."* (QS. Ar-Ra'd: 11)
 
 Sekarang, ajak si kecil: setiap kali berbuat baik hari ini, bisikkan, "Tolong dicatat, ya." Lihat berapa banyak kebaikan yang bisa terkumpul. ✨`,
       en: `After hearing the word "angels" in a dua, Baby Mo asked, "Umi, what are angels? Why have I never seen them?"
@@ -1882,7 +1878,7 @@ At bedtime, Baby Mo said, "Umi, even though I can't see them, they can see me. S
 
 Umi kissed his forehead. "Masha'Allah, dear. That's the gift of believing in the unseen: we become good, even when no one visible is watching."
 
-> *For everyone there are angels who guard them in turns.*
+> *"For each person there are angels in succession, before and behind him, who protect him by the command of Allah."* (Qur'an, Ar-Ra'd 13:11)
 
 Now, invite your little one: each time you do good today, whisper, "Please write that down." See how many good deeds you can gather. ✨`,
     },
@@ -1892,7 +1888,7 @@ Now, invite your little one: each time you do good today, whisper, "Please write
       en: "Angels are Allah's creation of light — unseen yet always obedient. Two angels record our deeds, so we do good even when no one visible is watching.",
     },
     tags: ["malaikat", "iman", "akhlak", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -1933,7 +1929,7 @@ Umi tersenyum. "Itulah rahasianya, sayang. Saat kita berbagi, kita tidak kehilan
 
 Sejak hari itu, kalau Baby Mo punya sesuatu yang enak, matanya langsung mencari Baby Ais. Karena ia sudah tahu rahasianya: berbagi membuat segala sesuatu terasa lebih manis.
 
-> *Tidak akan berkurang harta karena sedekah — berbagi justru menambah keberkahan.*
+> *"Setiap kebaikan adalah sedekah."* (HR. Bukhari 6021, Muslim 1005)
 
 Sekarang, coba percobaan berbagi bareng si kecil: satu camilan dibagi berdua. Tanyakan, "Lebih enak yang mana?" 🍪💞`,
       en: `Baby Mo clutched two chocolate biscuits tight to his chest. Baby Ais watched him with big, hopeful eyes.
@@ -1962,7 +1958,7 @@ Umi smiled. "That's the secret, dear. When we share, we don't lose our happiness
 
 From that day on, whenever Baby Mo had something nice, his eyes searched for Baby Ais. Because he knew the secret now: sharing makes everything taste sweeter.
 
-> *Wealth is never decreased by charity — giving only adds blessing.*
+> *"Every act of goodness is charity."* (Bukhari 6021, Muslim 1005)
 
 Now, try the sharing experiment with your little one: split one snack between two. Ask, "Which one tasted better?" 🍪💞`,
     },
@@ -1972,7 +1968,7 @@ Now, try the sharing experiment with your little one: split one snack between tw
       en: "Sharing doesn't leave us with less — happiness shared doubles, and Allah adds blessing for those who love to give.",
     },
     tags: ["berbagi", "sedekah", "akhlak", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2005,7 +2001,7 @@ Bersama-sama mereka berbisik doa sebelum tidur. Baby Mo merapatkan matanya, mera
 
 Esok paginya, cahaya masuk lembut lewat jendela. Baby Mo membuka mata, meregangkan tangannya, dan — ia ingat. Sambil tersenyum mengantuk ia berkata, "Alhamdulillah… aku dapat hari baru lagi!"
 
-> *Allah-lah yang menidurkan kita di malam hari dan membangunkan kita di pagi hari.*
+> *"Dan Kami jadikan tidurmu untuk istirahat."* (QS. An-Naba': 9)
 
 Sekarang, tutup hari bersama si kecil dengan doa tidur, dan buka pagi dengan satu ucapan: "Alhamdulillah, hari baru!" 🌙⭐`,
       en: `It was late. The bedroom light was dim, and stars peeked through the curtains. Baby Mo pulled the blanket up to his chin and asked, "Umi, where do we go when we sleep? Why don't I remember anything?"
@@ -2026,7 +2022,7 @@ Together they whispered the dua before sleep. Baby Mo closed his eyes tight, fee
 
 The next morning, light slipped softly through the window. Baby Mo opened his eyes, stretched his arms, and — he remembered. With a sleepy smile he said, "Alhamdulillah… I got a new day again!"
 
-> *It is Allah who takes our souls to rest at night and wakes us in the morning.*
+> *"And We made your sleep a means of rest."* (Qur'an, An-Naba' 78:9)
 
 Now, close the day with your little one with the sleeping dua, and open the morning with one phrase: "Alhamdulillah, a new day!" 🌙⭐`,
     },
@@ -2036,7 +2032,7 @@ Now, close the day with your little one with the sleeping dua, and open the morn
       en: "Sleep is a gift of rest; Allah, the Ever-Watchful, never sleeps. Morning is the gift of new life — greet it with Alhamdulillah.",
     },
     tags: ["tidur", "doa", "tawakal", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2073,7 +2069,7 @@ Baby Mo menengadah ke langit kelabu, membiarkan satu tetes jatuh di pipinya, lal
 
 Sejak hari itu, Baby Mo tidak lagi cemberut saat hujan. Ia tahu, di balik tetes-tetes itu ada kasih sayang yang sedang turun dari langit.
 
-> *Allah menurunkan air dari langit, lalu menghidupkan bumi yang tandus dengannya.*
+> *"Dan Allah menurunkan air dari langit, lalu dengan air itu dihidupkan-Nya bumi sesudah matinya."* (QS. An-Nahl: 65)
 
 Sekarang, saat hujan berikutnya, ajak si kecil menampung setetes di tangan dan berdoa, "Ya Allah, hujan yang bermanfaat." 🌧️🌱`,
       en: `The first drop fell — tap. Then tap-tap-tap, and in no time the rain came down thick outside. Baby Mo and Baby Ais pressed their noses to the window glass.
@@ -2098,7 +2094,7 @@ Baby Mo looked up at the grey sky, let one drop land on his cheek, then beamed. 
 
 From that day on, Baby Mo no longer pouted at the rain. He knew that behind those drops was a mercy coming down from the sky.
 
-> *Allah sends water down from the sky, and with it gives life to the barren earth.*
+> *"And Allah sends down water from the sky and gives life thereby to the earth after its death."* (Qur'an, An-Nahl 16:65)
 
 Now, at the next rain, invite your little one to catch a drop in their hand and pray, "O Allah, a beneficial rain." 🌧️🌱`,
     },
@@ -2108,7 +2104,7 @@ Now, at the next rain, invite your little one to catch a drop in their hand and 
       en: "Rain is Allah's mercy, giving a drink to flowers, trees, animals, and people all at once. Greet it with a dua, not a complaint.",
     },
     tags: ["hujan", "ciptaan", "kasih-sayang", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2151,7 +2147,7 @@ Baby Mo terdiam, lalu tersenyum lebar. Ternyata harta karun itu bukan emas. Hart
 
 Malam itu, sebelum tidur, Baby Mo berbisik sambil memeluk gulingnya, "Terima kasih, Allah, untuk matahari, apel, dan pelukan Umi."
 
-> *Allah satu-satunya yang menciptakan dan menyayangi kita — dan tidak ada satu pun yang serupa dengan-Nya.*
+> *"Katakanlah: Dialah Allah, Yang Maha Esa… dan tidak ada sesuatu pun yang setara dengan-Nya."* (QS. Al-Ikhlas: 1, 4)
 
 Sekarang, yuk berburu harta karun bareng si kecil: cari tiga hal baik hari ini, lalu ucapkan bersama, "Ini dari Allah." 🌟`,
       en: `One calm afternoon, Baby Mo gazed at the sky through the window. Then he asked in a small voice, "Umi… who is Allah? Why can't I see Him?"
@@ -2182,7 +2178,7 @@ Baby Mo went quiet, then beamed. It turned out the treasure wasn't gold. His tre
 
 That night, before sleep, Baby Mo whispered while hugging his pillow, "Thank you, Allah, for the sun, the apple, and Umi's hug."
 
-> *Allah alone created us and loves us — and there is nothing at all like Him.*
+> *"Say: He is Allah, the One… and there is none comparable to Him."* (Qur'an, Al-Ikhlas 112:1, 4)
 
 Now, go on a treasure hunt with your little one: find three good things today, then say together, "This is from Allah." 🌟`,
     },
@@ -2192,7 +2188,7 @@ Now, go on a treasure hunt with your little one: find three good things today, t
       en: "We can't see Allah yet, but we can feel His love in every good thing — the sun, a sweet apple, and a hug.",
     },
     tags: ["allah", "tauhid", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 4,
   },
 
   {
@@ -2227,7 +2223,7 @@ Malam harinya, sesudah makan, Umi memberi mereka kue cokelat. Baby Mo memakannya
 
 Umi memeluknya erat sekali. "Masya Allah, jagoan. Itu namanya menjaga diri karena Allah. Kamu baik bukan hanya saat dilihat orang — tapi juga saat sendirian. Itu yang paling istimewa."
 
-> *Allah mengetahui yang kita rahasiakan dan yang kita tampakkan — Dia selalu melihat.*
+> *"Tidakkah dia mengetahui bahwa sesungguhnya Allah melihat?"* (QS. Al-'Alaq: 14)
 
 Sekarang, tanyakan pada si kecil: "Kalau tidak ada yang melihat, siapa yang tetap melihat?" Lalu tersenyumlah bersama: "Allah." 👀💚`,
       en: `That afternoon Baby Mo and Baby Ais played hide-and-seek. Baby Mo was the best hider. He slipped into the blanket closet, shut the door tight, and sat in the dark.
@@ -2250,7 +2246,7 @@ That night, after dinner, Umi gave them chocolate cookies. Baby Mo ate his with 
 
 Umi hugged him ever so tight. "Masha'Allah, champ. That's guarding yourself for Allah's sake. You're good not only when people are watching — but also when you're alone. That's the most special thing of all."
 
-> *Allah knows what we hide and what we show — He always sees.*
+> *"Does he not know that Allah sees?"* (Qur'an, Al-'Alaq 96:14)
 
 Now, ask your little one: "If no one is watching, who still sees?" Then smile together: "Allah." 👀💚`,
     },
@@ -2260,7 +2256,7 @@ Now, ask your little one: "If no one is watching, who still sees?" Then smile to
       en: "Allah always sees — even in the dark. So we can do good not just when watched, but also when alone.",
     },
     tags: ["allah", "ihsan", "kejujuran", "tanya-anak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2299,7 +2295,7 @@ Sore itu mereka bermain seharian — kejar-kejaran, tertawa, sampai capek dan ba
 
 Abi memandanginya dari pintu, dan matanya berkaca-kaca. Ternyata Baby Mo sudah mengerti: sholat bukan beban yang membuat kita berhenti bermain. Sholat adalah cara kita berterima kasih kepada Yang memberi kita hari yang indah.
 
-> *Dirikanlah sholat untuk mengingat Allah.*
+> *"…dan dirikanlah sholat untuk mengingat-Ku."* (QS. Thaha: 14)
 
 Sekarang, ajak si kecil membuat satu "sujud terima kasih" hari ini — letakkan dahi dengan tenang, lalu ucapkan, "Terima kasih, Allah." 🕌`,
       en: `They were busy building blocks when the call to prayer drifted from the mosque. Abi stopped at once, smiled, and stood up. "One moment, champ. Abi's going to pray first."
@@ -2326,7 +2322,7 @@ That afternoon they played all day — chasing, laughing, until they were tired 
 
 Abi watched from the doorway, his eyes glistening. Baby Mo had understood: prayer isn't a burden that stops our play. Prayer is how we thank the One who gives us a beautiful day.
 
-> *Establish prayer to remember Allah.*
+> *"…and establish prayer for My remembrance."* (Qur'an, Taha 20:14)
 
 Now, invite your little one to make one "thank-you sujud" today — rest the forehead gently, then say, "Thank you, Allah." 🕌`,
     },
@@ -2336,7 +2332,7 @@ Now, invite your little one to make one "thank-you sujud" today — rest the for
       en: "Prayer isn't a burden — it's a happy appointment with Allah, five little hugs of thanks every day.",
     },
     tags: ["sholat", "ibadah", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -2373,7 +2369,7 @@ Saat matahari terbenam, kertas itu sudah penuh dengan bunga warna-warni. Baby Mo
 
 Malam itu Baby Mo tidur dengan senyum. Dalam mimpinya, kebun kebaikannya tumbuh sangat luas — seluas yang bisa ia bayangkan.
 
-> *Surga adalah karunia Allah; kita menujunya dengan iman dan kebaikan-kebaikan kecil yang dijaga.*
+> *Allah berfirman: "Aku telah menyiapkan untuk hamba-hamba-Ku yang saleh apa yang belum pernah dilihat mata, belum pernah didengar telinga, dan belum pernah terlintas di hati manusia."* (HR. Bukhari 3244, Muslim 2824)
 
 Sekarang, buat Kebun Kebaikan bersama si kecil: tiap satu kebaikan hari ini, gambar atau tempel satu bunga. Lihat kebunnya tumbuh! 🌸`,
       en: `After story time, Baby Mo asked, "Umi, what is Jannah like? Is it true there are rivers and no one ever cries?"
@@ -2398,7 +2394,7 @@ As the sun set, the paper was full of colourful flowers. Baby Mo gazed at it in 
 
 That night Baby Mo slept with a smile. In his dream, his garden of good deeds grew vast — as wide as he could imagine.
 
-> *Jannah is Allah's gift; we head toward it with faith and small, steady good deeds.*
+> *Allah says: "I have prepared for My righteous servants what no eye has seen, no ear has heard, and no human heart has ever imagined."* (Bukhari 3244, Muslim 2824)
 
 Now, make a Garden of Good Deeds with your little one: for each kind act today, draw or stick on a flower. Watch the garden grow! 🌸`,
     },
@@ -2408,7 +2404,7 @@ Now, make a Garden of Good Deeds with your little one: for each kind act today, 
       en: "Jannah is Allah's beautiful gift. We plant our way there with small good deeds, every day.",
     },
     tags: ["surga", "akhirat", "kebaikan", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -2447,7 +2443,7 @@ Umi memeluknya. "Itulah cinta yang sebenarnya, sayang. Kita mencintai Nabi ﷺ b
 
 Baby Mo memejamkan mata dan berbisik, "Shalawat untukmu, ya Nabi."
 
-> *Orang akan bersama siapa yang ia cintai — maka cintailah Nabi ﷺ dengan meneladaninya.*
+> *"Seseorang akan bersama orang yang ia cintai."* (HR. Bukhari 6168, Muslim 2640)
 
 Sekarang, kumpulkan "bintang sunnah" bersama si kecil hari ini: ucap salam, tersenyum, sayangi yang kecil. Berapa bintang yang bisa kalian kumpulkan? ⭐`,
       en: `Baby Mo often heard that name spoken with such love: Prophet Muhammad ﷺ. One morning he asked, "Umi, who is Prophet Muhammad? Can I see him?"
@@ -2474,7 +2470,7 @@ Umi hugged him. "That's true love, dear. We love the Prophet ﷺ not just by say
 
 Baby Mo closed his eyes and whispered, "Blessings upon you, O Prophet."
 
-> *A person will be with the one they love — so love the Prophet ﷺ by following his example.*
+> *"A person will be with those he loves."* (Bukhari 6168, Muslim 2640)
 
 Now, collect "sunnah stars" with your little one today: give salam, smile, be kind to the small. How many stars can you gather? ⭐`,
     },
@@ -2484,7 +2480,7 @@ Now, collect "sunnah stars" with your little one today: give salam, smile, be ki
       en: "We can't see the Prophet ﷺ now, but we love him by copying his kindness: greetings, smiles, and care for the small.",
     },
     tags: ["nabi-muhammad", "sunnah", "akhlak", "tanya-anak", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 3,
   },
 
   {
@@ -2533,7 +2529,7 @@ Malam terakhir liburan, biji kacang hijau mereka sudah tumbuh menjadi tunas hija
 
 Umi menyelimutinya. "Selalu ada, sayang. Karena hari yang dimulai bersama Allah, tidak pernah benar-benar membosankan."
 
-> *Sebaik-baik bekal liburan bukan mainan baru, tapi waktu bersama yang dimulai dengan nama Allah.*
+> *"Dua nikmat yang banyak manusia tertipu karenanya: kesehatan dan waktu luang."* (HR. Bukhari 6412)
 
 Sekarang, yuk buat Stoples Liburan-mu sendiri bersama si kecil. Tulis kegiatan-kegiatan kecil, gulung, dan masukkan ke stoples. Jangan lupa: setiap kegiatan dimulai dengan "Bismillah!" 🫙✨`,
       en: `On the first day of the school holidays, the sun shone bright — but Baby Mo just rolled around on the sofa, groaning, "I'm booored. What can we do, Umi?"
@@ -2570,7 +2566,7 @@ On the last night of the break, their mung beans had sprouted into tiny green sh
 
 Umi tucked him in. "There always is, dear. Because a day begun with Allah is never truly boring."
 
-> *The best holiday provision isn't a new toy, but time spent together that begins with the name of Allah.*
+> *"There are two blessings which many people are deceived about: good health and free time."* (Bukhari 6412)
 
 Now, let's make your own Holiday Jar with your little one. Write small activities, roll them up, and drop them in the jar. Don't forget: every activity begins with "Bismillah!" 🫙✨`,
     },
@@ -2580,7 +2576,7 @@ Now, let's make your own Holiday Jar with your little one. Write small activitie
       en: "A memorable holiday isn't about more screen time, but simple time together — and every activity begins with Bismillah.",
     },
     tags: ["liburan", "keluarga", "bersyukur", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 5,
   },
 
   {
@@ -2629,7 +2625,7 @@ Umi memeluknya erat. "Masya Allah. Lihat? Satu salam kecilmu tadi bukan cuma mem
 
 Baby Mo tersenyum bangga. Ternyata, kelas baru itu tidak menakutkan. Ia hanya butuh keberanian sebesar satu kata: salam.
 
-> *Sebarkanlah salam, niscaya kalian saling mencintai.*
+> *"Maukah aku tunjukkan sesuatu yang jika kalian lakukan, kalian akan saling mencintai? Sebarkanlah salam di antara kalian."* (HR. Muslim 54)
 
 Sekarang, kalau si kecil bertemu teman baru besok, ajak ia mencoba rahasia Baby Mo: ucapkan "Assalamualaikum" dengan satu senyum. Pintu pertemanan akan terbuka. 🤝🌟`,
       en: `Today was special. Baby Mo wasn't going to that small, cosy playgroup anymore — today he was moving up to a bigger class, the class for older children. Kindergarten!
@@ -2666,7 +2662,7 @@ Umi hugged him tight. "Masha'Allah. See? That one little greeting didn't just ge
 
 Baby Mo smiled proudly. It turned out the new class wasn't scary at all. He had only needed courage the size of one word: a greeting.
 
-> *Spread the greeting of peace, and you will love one another.*
+> *"Shall I tell you of something which, if you do it, you will love one another? Spread the greeting of peace among yourselves."* (Muslim 54)
 
 Now, if your little one meets a new friend tomorrow, invite them to try Baby Mo's secret: say "Assalamu'alaikum" with a smile. The door to friendship will open. 🤝🌟`,
     },
@@ -2676,7 +2672,7 @@ Now, if your little one meets a new friend tomorrow, invite them to try Baby Mo'
       en: "Greeting first is a small act of courage that opens the door to friendship — and a prayer of good for a new friend.",
     },
     tags: ["persahabatan", "salam", "sekolah", "keberanian", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 5,
   },
 
   {
@@ -2725,7 +2721,7 @@ Malam tiba. Lampu kamar dimatikan, dan kamar menjadi gelap dan teduh. Baby Mo me
 
 Di balik pintu, Umi diam-diam mendengar. Ia menahan napas, lalu tersenyum. Karena Baby Mo, si anak paling cepat sedunia, akhirnya menemukan satu rahasia yang besar di dalam satu kata yang kecil: yang dimulai dengan nama Allah, selalu terasa cukup.
 
-> *Setiap perkara baik yang tidak dimulai dengan Bismillah, maka kurang keberkahannya.*
+> *Rasulullah ﷺ berkata kepada seorang anak kecil: "Nak, sebutlah nama Allah, makanlah dengan tangan kananmu, dan makanlah dari yang dekat denganmu."* (HR. Bukhari 5376, Muslim 2022)
 
 Dan begitulah, satu kata kecil mengubah seluruh hari Baby Mo — bukan menjadi lebih cepat, tapi menjadi lebih berkah.
 
@@ -2762,7 +2758,7 @@ Night came. The bedroom light went out, and the room turned dark and cosy. Baby 
 
 Behind the door, Umi quietly listened. She held her breath, then smiled. Because Baby Mo, the fastest child in the whole world, had finally found one big secret inside one little word: whatever begins with the name of Allah always feels like enough.
 
-> *Every good matter that does not begin with Bismillah is lacking in blessing.*
+> *The Prophet ﷺ said to a young boy: "Child, mention the name of Allah, eat with your right hand, and eat from what is nearest to you."* (Bukhari 5376, Muslim 2022)
 
 And so, one little word changed Baby Mo's whole day — not into something faster, but into something more blessed.
 
@@ -2822,7 +2818,7 @@ Abi bertepuk paling kencang di seluruh rumah. "Kamu tidak menyerah," kata Abi. "
 
 Baby Mo memandang menaranya yang menjulang. Ternyata roboh bukan berarti gagal. Roboh hanya berarti: ayo coba lagi, sedikit lebih sabar.
 
-> *Sesungguhnya Allah mencintai seseorang yang apabila mengerjakan sesuatu, ia menyempurnakannya.*
+> *"Bersemangatlah terhadap apa yang bermanfaat bagimu, mintalah pertolongan kepada Allah, dan jangan merasa lemah."* (HR. Muslim 2664)
 
 Dan menara yang tak mau menyerah itu berdiri sepanjang sore — sama seperti hati kecil yang membangunnya.`,
       en: `Baby Mo had one big dream for someone so small: to build a block tower taller than his own head.
@@ -2855,7 +2851,7 @@ Abi clapped the loudest in the whole house. "You didn't give up," he said. "That
 
 Baby Mo gazed up at his soaring tower. It turned out that falling didn't mean failing. Falling only meant: try again, a little more patiently.
 
-> *Indeed Allah loves that when one of you does a task, he does it well.*
+> *"Strive for what benefits you, seek help from Allah, and do not give up."* (Muslim 2664)
 
 And the tower that wouldn't give up stood all afternoon — just like the little heart that built it.`,
     },
@@ -2865,7 +2861,7 @@ And the tower that wouldn't give up stood all afternoon — just like the little
       en: "Falling isn't failing — it means 'try again, a little more patiently'. Resilience is born when a child is allowed to rise on his own.",
     },
     tags: ["ketangguhan", "sabar", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2903,7 +2899,7 @@ Baby Ais membawakan handuk kecil. Umi menuangkan sedikit susu hangat ke mangkuk.
 
 Baby Ais memandang kucing yang kini hangat dan kenyang itu. Hatinya penuh, sepenuh mangkuk susu tadi. Ternyata tangan yang kecil pun bisa menjadi tempat berlindung bagi yang lebih kecil lagi.
 
-> *Para penyayang akan disayangi oleh Yang Maha Penyayang. Sayangilah yang ada di bumi, niscaya Yang di langit menyayangimu.*
+> *"Orang-orang yang penyayang akan disayangi oleh Yang Maha Penyayang. Sayangilah yang ada di bumi, niscaya Yang di langit akan menyayangi kalian."* (HR. Abu Dawud 4941, Tirmidzi 1924)
 
 Hujan masih turun di luar. Tapi di teras kecil itu, ada satu kucing yang tidak lagi kedinginan — karena seorang anak perempuan memilih untuk menyayangi.`,
       en: `The rain came down hard that afternoon. Baby Ais pressed her nose to the window, watching the droplets race down the glass.
@@ -2926,7 +2922,7 @@ Baby Ais fetched a small towel. Umi poured a little warm milk into a bowl. The c
 
 Baby Ais looked at the cat, now warm and full. Her heart felt full too, as full as that bowl of milk. It turned out even little hands could be a shelter for something littler still.
 
-> *The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will be merciful to you.*
+> *"The merciful are shown mercy by the Most Merciful. Be merciful to those on earth, and the One above the heavens will be merciful to you."* (Abu Dawud 4941, Tirmidzi 1924)
 
 The rain still fell outside. But on that little porch was one cat that was cold no longer — because a little girl chose to be kind.`,
     },
@@ -2936,7 +2932,7 @@ The rain still fell outside. But on that little porch was one cat that was cold 
       en: "Even little hands can be a shelter. Teaching a child gentleness toward small creatures is the first rehearsal of loving others.",
     },
     tags: ["kasih-sayang", "akhlak", "binatang", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -2971,7 +2967,7 @@ Mata Baby Ais masih basah, tapi ia mengangguk. Dan di sanalah mereka berdua, dua
 
 Maaf yang tulus, ternyata, tidak menghancurkan apa-apa. Ia justru membangun sesuatu yang lebih kuat dari sebelumnya.
 
-> *Orang yang paling dicintai Allah adalah yang paling baik akhlaknya, dan yang paling lembut hatinya.*
+> *"…dan tidaklah Allah menambah seorang hamba yang pemaaf melainkan kemuliaan."* (HR. Muslim 2588)
 
 Sore itu istana pasir berdiri lagi. Tapi yang paling kokoh bukan istananya — melainkan persaudaraan yang baru saja diperbaiki dengan satu kata hangat.`,
       en: `In the back garden, Baby Ais was building a sandcastle. It had a tower, a moat, even a flag made from a little leaf at the top. She was very proud.
@@ -2994,7 +2990,7 @@ Baby Ais's eyes were still wet, but she nodded. And there they were, two little 
 
 A sincere sorry, it turned out, destroyed nothing. It built something stronger than before.
 
-> *The most beloved to Allah are those with the best character and the gentlest hearts.*
+> *"…and Allah increases a servant who forgives in nothing but honour."* (Muslim 2588)
 
 That afternoon the sandcastle stood again. But the sturdiest thing wasn't the castle — it was the bond that had just been mended with one warm word.`,
     },
@@ -3004,7 +3000,7 @@ That afternoon the sandcastle stood again. But the sturdiest thing wasn't the ca
       en: "A sincere sorry destroys nothing — it builds something stronger. Show a child the effect on a heart, don't force the word.",
     },
     tags: ["maaf", "empati", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3044,7 +3040,7 @@ Semakin mereka menghitung, semakin banyak bintang yang mereka temukan. Ternyata 
 
 Abi tersenyum dan menyelimuti keduanya. "Betul. Dan Allah suka pada hati yang pandai berterima kasih."
 
-> *Jika kalian bersyukur, niscaya Aku akan menambah nikmat untuk kalian.*
+> *"Sesungguhnya jika kamu bersyukur, pasti Aku akan menambah (nikmat) kepadamu."* (QS. Ibrahim: 7)
 
 Malam itu, Baby Mo dan Baby Ais tertidur dengan langit-langit hati yang penuh bintang. Bukan karena hari mereka sempurna — tapi karena mereka belajar menghitung yang cukup, bukan yang kurang.`,
       en: `Every night, before bed, there was one favourite game in the home of Baby Mo and Baby Ais. It was called: Collecting Stars.
@@ -3069,7 +3065,7 @@ The more they counted, the more stars they found. It turned out even an ordinary
 
 Abi smiled and tucked them both in. "That's right. And Allah loves a heart that knows how to give thanks."
 
-> *If you are grateful, I will surely increase you.*
+> *"If you are grateful, I will surely increase you."* (Qur'an, Ibrahim 14:7)
 
 That night, Baby Mo and Baby Ais drifted to sleep beneath a heart-ceiling full of stars. Not because their day was perfect — but because they'd learned to count what was enough, not what was missing.`,
     },
@@ -3079,7 +3075,7 @@ That night, Baby Mo and Baby Ais drifted to sleep beneath a heart-ceiling full o
       en: "Even an ordinary day is full of stars if we look. Count blessings with a child each night — and they grow up seeing what's enough, not what's missing.",
     },
     tags: ["syukur", "malam", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3120,7 +3116,7 @@ Ia memandang bayangan lemari lagi. Ternyata… cuma lemari. Bayangan gantungan b
 
 "Berani itu bukan berarti tidak takut," bisik Umi sambil mencium keningnya. "Berani itu takut, tapi tetap percaya Allah menjaga."
 
-> *Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk-Nya.*
+> *A'uudzu bikalimaatillaahit-taammaati min syarri maa khalaq.* — "Aku berlindung dengan kalimat-kalimat Allah yang sempurna dari kejahatan makhluk yang Dia ciptakan." (HR. Muslim 2708)
 
 Malam itu Baby Mo tertidur dengan keberanian sebesar biji sawi di dalam dadanya. Kecil. Tapi cukup untuk membuat seluruh gelap terasa aman.`,
       en: `Click. Umi turned off the bedroom light.
@@ -3145,7 +3141,7 @@ He looked at the wardrobe shadow again. It was just… a wardrobe. The coat-hook
 
 "Brave doesn't mean you're not scared," whispered Umi, kissing his forehead. "Brave means you're scared, but you still trust that Allah is watching over you."
 
-> *I seek refuge in the perfect words of Allah from the evil of His creation.*
+> *A'uudhu bikalimaatillaahit-taammaati min sharri maa khalaq.* — "I seek refuge in the perfect words of Allah from the evil of what He has created." (Muslim 2708)
 
 That night Baby Mo fell asleep with a courage the size of a mustard seed inside his chest. Small. But enough to make the whole dark feel safe.`,
     },
@@ -3155,7 +3151,7 @@ That night Baby Mo fell asleep with a courage the size of a mustard seed inside 
       en: "Brave doesn't mean unafraid — it means scared, but still trusting Allah watches over you. Give a child a small du'a, and even the dark feels safe.",
     },
     tags: ["berani", "takut-gelap", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3194,7 +3190,7 @@ Di perjalanan pulang, Baby Mo merasa ada yang aneh. Mangkuknya sudah kosong, tap
 
 Umi tertawa lembut. "Itu kenyang yang paling enak, Sayang."
 
-> *Jibril terus berpesan kepadaku tentang tetangga, hingga aku mengira ia akan menjadikannya ahli waris.*
+> *"Jibril terus-menerus berpesan kepadaku tentang tetangga, sampai aku mengira ia akan menjadikan tetangga sebagai ahli waris."* (HR. Bukhari 6014, Muslim 2624)
 
 Malam itu kolaknya terasa dua kali lebih enak. Karena yang paling manis, ternyata, bukan gulanya — melainkan sepiring yang dibagi dengan tetangga.`,
       en: `The scent of banana stew filled the whole house. Baby Mo and Baby Ais were already sitting nicely at the table, spoons in hand, eyes shining.
@@ -3221,7 +3217,7 @@ On the walk home, Baby Mo felt something odd. His bowl was empty now, yet his he
 
 Umi laughed softly. "That's the most delicious kind of full, sweetheart."
 
-> *Jibril kept advising me about the neighbour, until I thought he would make him an heir.*
+> *"Jibril kept advising me about the neighbour until I thought he would make him an heir."* (Bukhari 6014, Muslim 2624)
 
 That night the stew tasted twice as good. Because the sweetest thing, it turned out, wasn't the sugar — it was a plate shared with a neighbour.`,
     },
@@ -3231,7 +3227,7 @@ That night the stew tasted twice as good. Because the sweetest thing, it turned 
       en: "Sharing fills the heart. The habit of giving to neighbours, done in front of a child, plants a generosity that grows for a lifetime.",
     },
     tags: ["berbagi", "tetangga", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3270,7 +3266,7 @@ Baby Ais terpana. Selama ini, di bawah tanah yang terlihat kosong, sesuatu sedan
 
 "Hal-hal yang baik butuh waktu," kata Abi sambil memeluknya. "Seperti bunga. Seperti hati yang baik. Allah yang menumbuhkan, kita yang menyiram dengan sabar."
 
-> *Sesungguhnya bersama kesulitan ada kemudahan.*
+> *"Sesungguhnya bersama kesulitan ada kemudahan."* (QS. Al-Insyirah: 6)
 
 Beberapa minggu kemudian, bunga matahari itu tumbuh lebih tinggi dari Baby Ais sendiri, wajahnya menghadap matahari. Dan setiap kali memandangnya, Baby Ais ingat: yang ditanam dengan sabar, akan mekar pada waktunya.`,
       en: `Abi gave Baby Ais a single sunflower seed, as small as her fingernail. "Plant this, sweetheart. By Allah's leave, it will grow ever so tall."
@@ -3297,7 +3293,7 @@ Baby Ais was amazed. All this time, beneath the soil that looked so empty, somet
 
 "Good things take time," said Abi, hugging her. "Like a flower. Like a kind heart. Allah makes it grow; we water it with patience."
 
-> *Indeed, with hardship comes ease.*
+> *"Indeed, with hardship comes ease."* (Qur'an, Ash-Sharh 94:6)
 
 A few weeks later, the sunflower grew taller than Baby Ais herself, its face turned toward the sun. And every time she looked at it, Baby Ais remembered: what is planted with patience will bloom in its time.`,
     },
@@ -3307,7 +3303,7 @@ A few weeks later, the sunflower grew taller than Baby Ais herself, its face tur
       en: "What is planted with patience blooms in its time. Good things — a flower, a kind heart — grow slowly in places we cannot see.",
     },
     tags: ["sabar", "syukur", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3342,7 +3338,7 @@ Di depan pintu, Umi sudah menunggu dengan handuk. Ia melihat satu bahu Baby Mo y
 
 Umi memeluk keduanya erat-erat. Bahu yang basah bisa dikeringkan dengan handuk. Tapi hati yang belajar mendahulukan orang lain — itu menghangatkan seluruh rumah.
 
-> *Tidak sempurna iman salah seorang dari kalian sampai ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.*
+> *"Tidak sempurna iman salah seorang dari kalian, hingga ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri."* (HR. Bukhari 13, Muslim 45)
 
 Malam itu, Baby Mo sedikit bersin. Tapi ia tersenyum di balik selimutnya. Karena berbagi payung, ternyata, jauh lebih hangat daripada kering sendirian.`,
       en: `On the way home from the park, the sky suddenly turned grey. The first drop fell — plip. Then plip-plip-plip. Then the rain poured down hard.
@@ -3365,7 +3361,7 @@ At the door, Umi was already waiting with a towel. She saw Baby Mo's one wet sho
 
 Umi hugged them both tightly. A wet shoulder can be dried with a towel. But a heart that learns to put others first — that warms the whole house.
 
-> *None of you truly believes until he loves for his brother what he loves for himself.*
+> *"None of you truly believes until he loves for his brother what he loves for himself."* (Bukhari 13, Muslim 45)
 
 That night, Baby Mo sneezed a little. But he smiled under his blanket. Because sharing an umbrella, it turned out, was far warmer than being dry alone.`,
     },
@@ -3375,7 +3371,7 @@ That night, Baby Mo sneezed a little. But he smiled under his blanket. Because s
       en: "A wet shoulder can be dried; a heart that learns to put others first warms the whole house. Sharing is warmer than being dry alone.",
     },
     tags: ["berbagi", "kasih-sayang", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
   {
@@ -3407,7 +3403,7 @@ Baby Mo melirik adiknya. "Maaf, Ais," gumamnya. Baby Ais terkikik kecil.
 
 "Sekarang, kita titipkan diri kita kepada Allah," kata Abi. Lalu ia membaca pelan, dan si kembar menirukan sebisanya:
 
-> *Bismika Allahumma ahyaa wa amuut.* — Dengan nama-Mu, ya Allah, aku hidup dan aku mati.
+> *Bismika Allahumma ahyaa wa amuut.* — "Dengan nama-Mu, ya Allah, aku hidup dan aku mati." (HR. Bukhari 6324, Muslim 2711)
 
 "Artinya," bisik Abi, "kita tidur dalam pelukan penjagaan Allah. Allah yang menjaga napas kita sampai pagi. Jadi kita tidak perlu takut apa-apa."
 
@@ -3434,7 +3430,7 @@ Baby Mo glanced at his sister. "Sorry, Ais," he mumbled. Baby Ais giggled softly
 
 "Now, let's entrust ourselves to Allah," said Abi. Then he recited softly, and the twins copied as best they could:
 
-> *Bismika Allahumma ahyaa wa amuut.* — In Your name, O Allah, I live and I die.
+> *Bismika Allahumma ahyaa wa amuut.* — "In Your name, O Allah, I live and I die." (Bukhari 6324, Muslim 2711)
 
 "It means," whispered Abi, "we sleep in the embrace of Allah's protection. Allah keeps our breath safe until morning. So we don't need to fear anything."
 
@@ -3452,7 +3448,7 @@ Goodnight, Baby Mo. Goodnight, Baby Ais. See you in a brand-new morning, insha'A
       en: "Clean the heart before sleep: forgive the day, then entrust yourself to Allah. A heart given to Him can always rest in peace.",
     },
     tags: ["malam", "doa-tidur", "akhlak", "buku"],
-    readingTimeMin: 5,
+    readingTimeMin: 3,
   },
 
 
@@ -3500,7 +3496,7 @@ Maka Baby Mo dan Baby Ais naik ke tempat tidur. Abi mematikan lampu, dan dari je
 
 "Sebelum tidur, kita titipkan diri kita kepada Allah, ya," bisik Abi. Lalu mereka membaca bersama, pelan-pelan:
 
-> *Bismika Allahumma ahyaa wa amuut.* — Dengan nama-Mu, ya Allah, aku hidup dan aku mati.
+> *Bismika Allahumma ahyaa wa amuut.* — "Dengan nama-Mu, ya Allah, aku hidup dan aku mati." (HR. Bukhari 6324, Muslim 2711)
 
 "Artinya," kata Abi, "saat kita tidur dan tidak bisa melihat apa-apa, Allah tetap melihat kita. Allah tidak pernah tidur. Jadi kita bisa tidur dengan tenang."
 
@@ -3531,7 +3527,7 @@ So Baby Mo and Baby Ais climbed into bed. Abi switched off the light, and from t
 
 "Before sleep, let's entrust ourselves to Allah," whispered Abi. Then they recited together, slowly:
 
-> *Bismika Allahumma ahyaa wa amuut.* — In Your name, O Allah, I live and I die.
+> *Bismika Allahumma ahyaa wa amuut.* — "In Your name, O Allah, I live and I die." (Bukhari 6324, Muslim 2711)
 
 "It means," said Abi, "when we sleep and can't see anything, Allah still sees us. Allah never sleeps. So we can rest in peace."
 
@@ -3547,7 +3543,7 @@ Goodnight, sweetheart. Sweet dreams. 🌙`,
       en: "The moon seems to follow us because it's so far away, and its light is borrowed from the sun — a night light Allah switched on. When we sleep and can't see, Allah still watches over us.",
     },
     tags: ["malam", "doa-tidur", "fakta-seru", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -3590,7 +3586,7 @@ Umi masuk sambil tersenyum. "Masya Allah, sudah bangun pagi sekali. Tahukah kali
 
 Mereka pun duduk bersila, dan membaca pelan-pelan doa bangun tidur:
 
-> *Alhamdulillahilladzii ahyaanaa ba'da maa amaatanaa wa ilaihin-nusyuur.* — Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami kembali.
+> *Alhamdulillahilladzii ahyaanaa ba'da maa amaatanaa wa ilaihin-nusyuur.* — "Segala puji bagi Allah yang menghidupkan kami setelah mematikan kami, dan kepada-Nya kami kembali." (HR. Bukhari 6312)
 
 "Jadi," kata Baby Ais sambil berpikir keras, "Ais memang nggak menang lawan burung. Tapi Ais menang karena bilang terima kasih duluan?"
 
@@ -3623,7 +3619,7 @@ Umi came in smiling. "Masha'Allah, awake so early. Do you know, there's one thin
 
 So they sat cross-legged and recited, slowly, the waking-up du'a:
 
-> *Alhamdulillahilladhi ahyana ba'da ma amatana wa ilaihin-nushur.* — All praise is for Allah who gave us life after causing us to die, and to Him is the return.
+> *Alhamdulillahilladhi ahyana ba'da ma amatana wa ilaihin-nushur.* — "All praise is for Allah who gave us life after causing us to die, and to Him is the return." (Bukhari 6312)
 
 "So," said Baby Ais, thinking hard, "Ais didn't really beat the birds. But Ais wins because she said thank you first?"
 
@@ -3639,7 +3635,7 @@ Good morning, world! Good morning from Baby Mo and Baby Ais. ☀️`,
       en: "Every morning Allah returns our life and strength — a huge gift. Waking early isn't about beating the rooster; it's about who says thank you first.",
     },
     tags: ["pagi", "syukur", "fakta-seru", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -3680,7 +3676,7 @@ Baby Mo memandang rotinya — roti yang sama, tapi sekarang terasa istimewa. Beg
 
 Baby Mo memegang rotinya dengan dua tangan, menarik napas, dan berkata dengan sungguh-sungguh:
 
-> *Bismillah.* Lalu, "Allahumma baarik lanaa fiimaa razaqtanaa…" — Ya Allah, berkahilah rezeki yang Engkau berikan kepada kami.
+> *Bismillah.* — "Dengan nama Allah." (HR. Abu Dawud 3767)
 
 Gigitan pertama itu terasa paling manis seumur hidupnya. Bukan cuma karena madunya — tapi karena kini ia tahu betapa panjang dan ajaib perjalanan rezeki sampai ke tangannya.
 
@@ -3707,7 +3703,7 @@ Baby Mo looked at his bread — the same bread, but now it felt special. So many
 
 Baby Mo held his bread with both hands, took a breath, and said, sincerely:
 
-> *Bismillah.* Then, "Allahumma barik lana fima razaqtana…" — O Allah, bless what You have provided for us.
+> *Bismillah.* — "In the name of Allah." (Abu Dawud 3767)
 
 That first bite tasted the sweetest of his whole life. Not only because of the honey — but because now he knew how long and wondrous the journey of provision was, all the way to his hands.
 
@@ -3719,7 +3715,7 @@ Next time you eat honey, remember: there are thousands of flowers and a tiny str
       en: "One spoon of honey takes thousands of flowers and a bee's hard work (which Allah names in Surah An-Nahl). Before eating, we pause and give thanks for provision's long journey.",
     },
     tags: ["adab-makan", "syukur", "fakta-seru", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -3760,7 +3756,7 @@ Baby Ais berjongkok dekat-dekat dan berbisik sopan ke arah si semut, "Terima kas
 
 Maka mereka pun membaca doa setelah makan, pelan-pelan:
 
-> *Alhamdulillahilladzii ath'amanaa wa saqaanaa wa ja'alanaa muslimiin.* — Segala puji bagi Allah yang telah memberi kami makan dan minum, dan menjadikan kami muslim.
+> *Alhamdulillaahilladzii ath'amanii haadzaa wa razaqaniihi min ghairi haulin minnii wa laa quwwah.* — "Segala puji bagi Allah yang telah memberiku makanan ini dan merezekikannya kepadaku tanpa daya dan kekuatan dariku." (HR. Abu Dawud 4023, Tirmidzi 3458)
 
 Setelah itu, Baby Ais dengan hati-hati meletakkan satu remah kecil lagi di dekat barisan semut. "Buat kamu, ya," katanya. "Berbagi itu enak."
 
@@ -3789,7 +3785,7 @@ Baby Ais crouched down close and whispered politely to the ant, "Thank you for c
 
 So they recited, slowly, the du'a after eating:
 
-> *Alhamdulillahilladhi at'amana wa saqana wa ja'alana muslimin.* — All praise is for Allah who fed us and gave us drink, and made us Muslims.
+> *Alhamdulillaahilladhii at'amanii haadhaa wa razaqaniihi min ghairi hawlin minnii wa laa quwwah.* — "All praise is for Allah who fed me this and provided it for me without any power or strength from me." (Abu Dawud 4023, Tirmidzi 3458)
 
 After that, Baby Ais carefully placed one more little crumb near the line of ants. "This is for you," she said. "Sharing feels nice."
 
@@ -3803,7 +3799,7 @@ Amazing, isn't it, such a tiny creature. Masha'Allah. 🐜`,
       en: "A tiny ant can lift many times its own weight and always teams up (Allah names it in Surah An-Naml). After eating, we copy that grateful heart — and share.",
     },
     tags: ["adab-makan", "syukur", "fakta-seru", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -3887,7 +3883,7 @@ Because it turns out, this world is full of wonders — for patient eyes and a h
       en: "Our eyes blink 15–20 times a minute without us noticing — a gift from Allah. But the world's beauty is only seen by patient, attentive eyes. Those who notice always find a reason to say 'Masha'Allah'.",
     },
     tags: ["fakta-seru", "sabar", "tadabbur", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
 
@@ -3926,7 +3922,7 @@ Mungkin "da-da" artinya, "Ada Mo di sini. Jangan takut."
 
 Umi memandang dua anak kembarnya dari pintu. Mereka punya banyak hal yang sama: wajah yang mirip, ulang tahun yang sama, mainan yang sama. Tapi yang paling istimewa adalah ini — sebuah bahasa kecil yang hanya milik mereka berdua. Sebuah tali tak terlihat yang Allah ikatkan di hati keduanya.
 
-> *Orang-orang beriman itu bersaudara.*
+> *"Sesungguhnya orang-orang mukmin itu bersaudara."* (QS. Al-Hujurat: 10)
 
 "Semoga kalian selalu saling mengerti, ya," bisik Umi, "bahkan saat kalian sudah besar nanti dan tidak lagi berkata 'da-bu-da'."
 
@@ -3949,7 +3945,7 @@ Maybe "da-da" meant, "Mo is here. Don't be afraid."
 
 Umi watched her two twins from the doorway. They shared so much: matching faces, the same birthday, the same toys. But the most special thing was this — a little language belonging only to the two of them. An invisible thread that Allah had tied between their hearts.
 
-> *The believers are but brothers.*
+> *"The believers are but brothers."* (Qur'an, Al-Hujurat 49:10)
 
 "May you always understand each other," whispered Umi, "even when you're all grown up and no longer say 'da-boo-da'."
 
@@ -3963,7 +3959,7 @@ Having a sibling is like having a best friend from day one. Masha'Allah. 💛`,
       en: "Twins sometimes have their own 'language' — an invisible thread Allah ties between their hearts. Having a sibling is like having a best friend from day one.",
     },
     tags: ["saudara", "kembar", "fakta-seru", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -4001,7 +3997,7 @@ Baby Ais mengangguk setuju sambil mengunyah pisang. "Penuh!"
 
 Umi memeluk keduanya. Ternyata, selimut paling hangat bukanlah selimut bintang atau selimut bulan. Selimut paling hangat adalah saudara di sebelahmu.
 
-> *Perumpamaan orang beriman dalam saling mencintai dan menyayangi seperti satu tubuh.*
+> *"Perumpamaan orang-orang beriman dalam hal saling mencintai, menyayangi, dan berlemah lembut adalah seperti satu tubuh."* (HR. Bukhari 6011, Muslim 2586)
 
 Sejak itu, Umi tidak lagi memaksa mereka tidur sendiri-sendiri. Ia cuma menggeser dua kasur kecil itu menjadi rapat, supaya jadi satu tempat tidur besar. Dan setiap malam, Baby Mo dan Baby Ais tidur berdampingan, di bawah dua selimut yang tercampur jadi satu.
 
@@ -4028,7 +4024,7 @@ Baby Ais nodded in agreement, chewing a banana. "Full!"
 
 Umi hugged them both. It turned out the warmest blanket wasn't the star blanket or the moon blanket. The warmest blanket is the sibling beside you.
 
-> *The likeness of the believers in their love and mercy for one another is like a single body.*
+> *"The believers in their love, mercy and kindness towards one another are like a single body."* (Bukhari 6011, Muslim 2586)
 
 From then on, Umi stopped forcing them to sleep apart. She simply slid the two little beds together to make one big bed. And every night, Baby Mo and Baby Ais slept side by side, under two blankets tangled into one.
 
@@ -4042,7 +4038,7 @@ Goodnight, Mo. Goodnight, Ais. 🌙`,
       en: "The warmest blanket isn't the thickest — it's the sibling beside you. Hearts that love each other don't like sleeping alone.",
     },
     tags: ["saudara", "malam", "kasih-sayang", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -4082,7 +4078,7 @@ Baby Mo mengangguk jujur. "Takut. Tapi Ais lebih takut. Jadi Mo harus jagain. Mo
 
 Umi tertawa dan menciumnya. "Iya, Sayang. Kakak yang hebat. Tahukah kamu, menjaga yang lebih lemah itu disukai Allah."
 
-> *Yang kuat bukanlah yang menang berkelahi, tapi yang menjaga dan menyayangi yang lebih lemah darinya.*
+> *"Bukan termasuk golongan kami orang yang tidak menyayangi yang lebih muda dan tidak menghormati yang lebih tua."* (HR. Tirmidzi 1919)
 
 Lima menit memang tidak lama. Tapi di hati Baby Mo, lima menit itu cukup untuk membuatnya bertekad menjaga saudarinya seumur hidup.
 
@@ -4109,7 +4105,7 @@ Baby Mo nodded honestly. "Scared. But Ais was more scared. So Mo had to protect 
 
 Umi laughed and kissed him. "Yes, sweetheart. A wonderful big brother. Do you know, protecting the weaker one is beloved to Allah."
 
-> *The strong one is not the one who wins fights, but the one who guards and shows mercy to those weaker than him.*
+> *"He is not one of us who does not show mercy to our young and respect to our elders."* (Tirmidzi 1919)
 
 Five minutes really isn't long. But in Baby Mo's heart, those five minutes were enough to make him resolve to protect his sister for a lifetime.
 
@@ -4121,7 +4117,7 @@ And Baby Ais? She really didn't care about the five minutes. But secretly, she w
       en: "Protecting the weaker one — even when we're scared ourselves — is the mark of a strong heart, beloved to Allah. A great big sibling isn't about age, but the courage to care.",
     },
     tags: ["saudara", "berani", "kasih-sayang", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -4167,7 +4163,7 @@ Umi menutup mulutnya, dan matanya benar-benar berkaca-kaca. "Masya Allah… ini 
 
 Umi memeluk kedua anaknya erat-erat, lama sekali. Hadiah itu cuma selembar kertas dengan gambar berkaki delapan. Tapi bagi Umi, itu adalah lukisan paling indah di seluruh dunia — karena dibuat oleh dua tangan kecil yang bekerja sama, dengan hati yang penuh cinta.
 
-> *Ridha Allah ada pada ridha orang tua.*
+> *Seseorang bertanya, "Siapa yang paling berhak aku perlakukan dengan baik?" Rasulullah ﷺ menjawab, "Ibumu." "Lalu siapa?" "Ibumu." "Lalu siapa?" "Ibumu." "Lalu siapa?" "Ayahmu."* (HR. Bukhari 5971, Muslim 2548)
 
 "Terima kasih, Sayang," bisik Umi. "Ini hadiah terindah yang pernah Umi terima."
 
@@ -4202,7 +4198,7 @@ Umi covered her mouth, and her eyes truly welled up. "Masha'Allah… this is for
 
 Umi hugged both her children tight, for a long, long time. The gift was just a sheet of paper with an eight-legged drawing. But to Umi, it was the most beautiful painting in the whole world — because it was made by two little hands working together, with hearts full of love.
 
-> *The pleasure of Allah lies in the pleasure of one's parents.*
+> *A man asked, "Who most deserves my good company?" The Prophet ﷺ said, "Your mother." "Then who?" "Your mother." "Then who?" "Your mother." "Then who?" "Your father."* (Bukhari 5971, Muslim 2548)
 
 "Thank you, my loves," whispered Umi. "This is the loveliest gift I've ever received."
 
@@ -4216,7 +4212,7 @@ It turned out the best part of making a surprise wasn't the surprise — it was 
       en: "The best part of making a surprise isn't the surprise — it's making it together with a beloved sibling. And a small gift from a child's heart is the most precious thing to a parent.",
     },
     tags: ["saudara", "keluarga", "kerja-sama", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 4,
   },
 
   {
@@ -4264,7 +4260,7 @@ Keesokan paginya — "MO!" Pintu terbuka dan Baby Ais berlari masuk. Baby Mo mel
 
 Baby Mo mengangguk kuat-kuat. Lalu, untuk pertama kalinya, ia berkata sesuatu yang membuat Umi terharu: "Mo nggak mau main balok sendirian lagi. Lebih seru sama Ais."
 
-> *Dan Dia menjadikan di antara kalian rasa kasih dan sayang.*
+> *"Barangsiapa ingin dilapangkan rezekinya dan dipanjangkan umurnya, hendaklah ia menyambung silaturahmi."* (HR. Bukhari 5986, Muslim 2557)
 
 Ternyata, mainan terbaik di dunia bukanlah menara balok yang paling tinggi. Mainan terbaik adalah saudara yang duduk di sebelahmu, ikut tertawa, bahkan saat berebut.
 
@@ -4299,7 +4295,7 @@ The next morning — "MO!" The door opened and Baby Ais ran in. Baby Mo leapt fr
 
 Baby Mo nodded hard. Then, for the first time, he said something that moved Umi: "Mo doesn't want to play blocks alone anymore. It's more fun with Ais."
 
-> *And He has placed between you affection and mercy.*
+> *"Whoever wishes for his provision to be expanded and his life to be extended, let him maintain ties of kinship."* (Bukhari 5986, Muslim 2557)
 
 It turned out the best toy in the world wasn't the tallest block tower. The best toy is the sibling sitting beside you, laughing along, even while squabbling.
 
@@ -4311,7 +4307,7 @@ Welcome home, Baby Ais. Baby Mo — and one bed that will, once again, be full t
       en: "Sometimes we only realise how much we love a sibling exactly when they're away. The best toy isn't the tallest tower — it's the sibling sitting beside you.",
     },
     tags: ["saudara", "keluarga", "kasih-sayang", "buku"],
-    readingTimeMin: 6,
+    readingTimeMin: 5,
   },
 
   {
@@ -4322,56 +4318,128 @@ Welcome home, Baby Ais. Baby Mo — and one bed that will, once again, be full t
     published: "2026-06-25",
     title: { id: "Kenapa Harus Minta Izin?", en: "Why Do We Ask Permission?" },
     hook: {
-      id: "Baby Mo mengambil mobil-mobilan Baby Ais tanpa bertanya. Baby Ais menangis keras.",
-      en: "Baby Mo took Baby Ais's car without asking. Baby Ais cried loudly.",
+      id: "Mobil merah Baby Ais tergeletak sendirian, dan Baby Mo langsung mengambilnya. Tapi kenapa rasanya tidak enak waktu Ais balik melakukan hal yang sama?",
+      en: "Baby Ais's red car was lying all alone, and Baby Mo just took it. So why did it feel so bad when Ais did the same thing back?",
     },
     body: {
-      id: `Mobil merah itu diam di lantai. Baby Ais sedang minum susu di dapur.
+      id: `Mobil merah itu tergeletak di lantai ruang tengah. Rodanya mengilap. Pintunya bisa dibuka-tutup. Itu mobil kesayangan Baby Ais.
 
-Baby Mo melihatnya. Diambilnya cepat-cepat. Tidak bertanya.
+Baby Ais sedang di dapur, minum susu.
 
-Baby Ais kembali. "Itu punya Ais!" Ia menangis kencang.
+Baby Mo melihat mobil itu. Melihat ke dapur. Melihat mobil itu lagi. Lalu — hap! — ia mengambilnya. Cepat-cepat. Tanpa bertanya.
 
-Baby Mo kaget. Ia diam saja, memegang mobilnya erat-erat.
+"Ngeeeng!" Mobil merah itu melaju di atas karpet, naik ke sofa, terbang di atas bantal.
 
-Umi datang, hanya bertanya pelan, "Mo, coba tanya dulu sama Ais."
+Baby Ais kembali dengan kumis susu di bibirnya. Ia berhenti. "ITU PUNYA AIS!"
 
-Baby Mo memandang Baby Ais yang masih menangis. Ia mendekat. "Ais... boleh Mo pinjam mobilnya?"
+Lalu tangisnya pecah, kencang sekali.
 
-Baby Ais berhenti menangis. Ia mengangguk. "Boleh. Tapi tanya dulu ya."
+Baby Mo memeluk mobil itu erat-erat. "Tadi nggak ada yang main! Jadi boleh, dong!"
 
-Mereka main bersama. Bergiliran. Saling bertanya dulu sebelum pegang mainan.
+Umi datang dari kamar. Ia tidak mengambil mobil itu dari tangan Baby Mo. Ia cuma duduk dan bertanya, "Mo, robot biru kesayanganmu di mana?"
 
-> *Tidak halal bagi seorang muslim mengambil harta saudaranya tanpa kerelaan darinya.*
+"Di kasur," jawab Baby Mo bingung.
 
-Sekarang, ajak si kecil bilang satu kalimat kecil sebelum pegang mainan orang lain: "Boleh aku pinjam?" 🤝`,
-      en: `The little red car sat on the floor. Baby Ais was having milk in the kitchen.
+"Ais, coba ambil robot biru Mo dari kasur. Jangan tanya dulu, ya."
 
-Baby Mo saw it. He grabbed it fast. He didn't ask.
+Baby Ais mengusap air matanya, lalu berlari ke kamar dan kembali dengan robot biru. Ia langsung memainkannya. "Bip bop bip!"
 
-Baby Ais came back. "That's Ais's!" She cried loudly.
+Mata Baby Mo membulat. "Eh! Itu robotku! Aku nggak bilang boleh!"
 
-Baby Mo froze. He just stood there, holding the car tight.
+"Rasanya bagaimana?" tanya Umi pelan.
 
-Umi came over and simply said, "Mo, try asking Ais first."
+Baby Mo membuka mulut, lalu menutupnya lagi. Rasanya… seperti ada yang diambil dari dadanya. Padahal cuma robot.
 
-Baby Mo looked at Baby Ais, still crying. He stepped closer. "Ais... may Mo borrow the car?"
+"Nggak enak," gumamnya.
 
-Baby Ais stopped crying. She nodded. "Okay. But ask first, okay?"
+"Itu yang Ais rasakan tadi," kata Umi. "Barang orang lain tetap punya orang itu, walaupun sedang tidak dipegang. Makanya ada kalimat ajaib: *Boleh aku pinjam?*"
 
-They played together. Taking turns. Asking first before touching each other's toys.
+Baby Mo memandangi mobil merah di tangannya. Lalu ia berjalan ke Baby Ais, menyodorkan mobilnya dulu.
 
-> *It is not lawful for a Muslim to take his brother's wealth without his consent.*
+"Ais," katanya pelan. "Maaf. Boleh Mo pinjam mobilnya?"
 
-Now, help your little one say one small phrase before touching someone else's toy: "May I borrow this?" 🤝`,
+Baby Ais memandangnya lama. Lalu ia mengangguk. "Boleh. Tapi gantian, ya." Ia menyodorkan robot biru. "Boleh Ais pinjam robotnya?"
+
+"Boleh!"
+
+Sore itu, ruang tengah jadi kota yang sibuk. Mobil merah mengantar robot biru ke mana-mana. Dan setiap kali ada mainan baru yang ingin dipegang, terdengar kalimat yang sama.
+
+"Boleh aku pinjam?"
+
+"Boleh!"
+
+"Boleh aku pinjam?"
+
+"Sebentar ya, habis ini."
+
+Dan itu juga tidak apa-apa.
+
+> *"Janganlah salah seorang dari kalian mengambil barang milik saudaranya, baik bercanda maupun sungguh-sungguh."* (HR. Abu Dawud 5003, Tirmidzi 2160)
+
+Ngobrol bareng si kecil: barang apa yang paling tidak ingin kamu dipinjam tanpa izin? Yuk latihan bilang, "Boleh aku pinjam?" 🤝`,
+      en: `The red car was lying on the living-room floor. Shiny wheels. Doors that opened and closed. It was Baby Ais's favourite car.
+
+Baby Ais was in the kitchen, drinking her milk.
+
+Baby Mo looked at the car. Looked at the kitchen. Looked at the car again. Then — grab! — he took it. Quickly. Without asking.
+
+"Vrrrm!" The red car zoomed across the carpet, up the sofa, flying over the cushions.
+
+Baby Ais came back with a milk moustache. She stopped. "THAT'S AIS'S!"
+
+And she burst into tears, very loudly.
+
+Baby Mo hugged the car tight. "Nobody was playing with it! So it's allowed!"
+
+Umi came out of the bedroom. She didn't take the car from Baby Mo's hands. She just sat down and asked, "Mo, where's your favourite blue robot?"
+
+"On the bed," said Baby Mo, puzzled.
+
+"Ais, go and get Mo's blue robot from the bed. Don't ask first, okay?"
+
+Baby Ais wiped her tears, ran to the bedroom and came back with the blue robot. She started playing with it straight away. "Beep boop beep!"
+
+Baby Mo's eyes went round. "Hey! That's my robot! I didn't say you could!"
+
+"How does that feel?" Umi asked softly.
+
+Baby Mo opened his mouth, then closed it again. It felt… like something had been taken from his chest. Even though it was only a robot.
+
+"Not nice," he mumbled.
+
+"That's how Ais felt just now," said Umi. "Someone's things still belong to them, even when they're not holding them. That's why we have a magic sentence: *May I borrow it?*"
+
+Baby Mo looked at the red car in his hands. Then he walked over to Baby Ais and held the car out first.
+
+"Ais," he said quietly. "Sorry. May I borrow your car?"
+
+Baby Ais looked at him for a long moment. Then she nodded. "Yes. But we take turns." She held out the blue robot. "May Ais borrow your robot?"
+
+"Yes!"
+
+That afternoon, the living room became a busy town. The red car drove the blue robot everywhere. And every time someone wanted to hold a new toy, the same sentence could be heard.
+
+"May I borrow it?"
+
+"Yes!"
+
+"May I borrow it?"
+
+"In a minute, after this."
+
+And that was okay too.
+
+> *"None of you should take his brother's belongings, whether jokingly or seriously."* (Abu Dawud 5003, Tirmidzi 2160)
+
+Talk it over with your little one: what's the one thing you'd least like someone to borrow without asking? Let's practise saying, "May I borrow it?" 🤝`,
     },
     anchor: { type: "parenting", slug: "adab-sehari-hari" },
     takeaway: {
-      id: "Sebelum pegang mainan orang lain — tanya dulu. Biasakan satu kalimat kecil ini sejak dini.",
-      en: "Before touching someone else's toy — ask first. Build this one small habit early.",
+      id: "Anak paling cepat paham soal izin ketika ia merasakan sendiri sisi yang lain — dengan lembut, bukan dengan hukuman.",
+      en: "Children understand permission fastest when they gently feel the other side themselves — not through punishment.",
     },
     tags: ["adab", "izin", "saudara", "buku"],
-    readingTimeMin: 3,
+    readingTimeMin: 4,
   },
 
   {
@@ -4382,52 +4450,120 @@ Now, help your little one say one small phrase before touching someone else's to
     published: "2026-06-26",
     title: { id: "Apa Itu Sedekah?", en: "What Is Sadaqah?" },
     hook: {
-      id: "Baby Mo punya dua koin di tangan. Di luar, ada kakek tua bawa keranjang sapu.",
-      en: "Baby Mo holds two coins. Outside, an old man carries a basket of brooms.",
+      id: "Dua koin di tangan, satu es lilin yang ia impikan, dan seorang kakek penjual sapu yang belum laku seharian. Baby Mo harus memilih.",
+      en: "Two coins in his hand, one ice lolly he'd been dreaming of, and an old broom seller who hadn't sold a thing all day. Baby Mo has to choose.",
     },
     body: {
-      id: `Baby Mo punya dua koin di tangan. Hadiah dari Abi.
+      id: `Baby Mo punya dua koin. Hadiah dari Abi karena sudah membereskan mainan tanpa disuruh. Koinnya berat dan dingin di telapak tangan.
 
-Di luar, ada kakek tua bawa keranjang sapu. Berjalan pelan di bawah matahari.
+Ting… ting… Ia menggoyangkannya di dekat telinga. Bunyinya seperti lonceng kecil.
 
-Abi berkata pelan, "Mo, mau kasih satu koin ke Kakek itu?"
+"Abi, dua koin cukup buat beli es lilin stroberi?" tanyanya.
 
-Baby Mo lihat koinnya. Lalu lihat Kakek. Ia berlari kecil. "Kek! Ini untuk Kakek!"
+"Cukup," kata Abi. "Pas sekali."
 
-Kakek berhenti. Tersenyum lebar. "Terima kasih, Nak."
+Baby Mo tersenyum lebar. Ia sudah membayangkan es lilin merah muda yang dingin, yang menetes ke jari kalau dimakan pelan-pelan.
 
-Baby Mo lari balik ke Abi. Wajahnya senang sekali. "Abi, koinku tinggal satu. Tapi aku senang!"
+Mereka berjalan ke warung. Matahari siang terik sekali. Di pinggir jalan, Baby Mo melihat seorang kakek. Punggungnya bungkuk. Ia memikul banyak sapu lidi dan kemoceng. Langkahnya pelan, dan bajunya basah oleh keringat.
 
-Abi memeluknya. "Itu namanya sedekah, Sayang. Kasih sedikit, bikin senang banyak."
+"Sapu… sapu…," kata Kakek, suaranya serak. Tidak ada yang berhenti.
 
-> *Sedekah itu sama sekali tidak akan mengurangi harta.*
+Baby Mo memperlambat langkah. "Abi, Kakek itu dari tadi jalan terus, ya?"
 
-Sekarang, ajak si kecil menyisihkan satu koin atau mainan untuk diberikan, dan biarkan ia melihat sendiri senyum orang yang menerimanya. 🌱`,
-      en: `Baby Mo holds two coins. A gift from Abi.
+"Sepertinya begitu," kata Abi. "Mungkin belum ada yang membeli sapunya hari ini."
 
-Outside, an old man carries a basket of brooms. Walking slowly under the sun.
+Baby Mo melihat koinnya. Ting… ting… Lalu melihat Kakek. Lalu melihat warung di ujung jalan, tempat es lilin stroberi menunggu.
 
-Abi says quietly, "Mo, want to give the grandfather one coin?"
+Abi tidak berkata apa-apa. Abi hanya menunggu.
 
-Baby Mo looks at his coins. Then at the grandfather. He runs over. "Sir! This is for you!"
+"Abi," kata Baby Mo akhirnya, "kalau aku kasih satu koin ke Kakek, esnya nggak jadi, ya?"
 
-The old man stops. He smiles wide. "Thank you, little one."
+"Nggak jadi hari ini," jawab Abi jujur.
 
-Baby Mo runs back to Abi, beaming. "Abi, I only have one coin left. But I'm happy!"
+Baby Mo menggenggam koinnya erat-erat. Berat sekali memilih. Lalu ia melihat Kakek duduk di trotoar, mengipasi wajahnya dengan topi.
 
-Abi hugs him. "That's called sadaqah, sweetheart. Give a little, make many happy."
+Baby Mo berlari kecil. "Kek! Ini untuk Kakek!"
 
-> *Charity does not decrease wealth at all.*
+Kakek mendongak, kaget. Lalu senyumnya mengembang, lebar sekali, sampai matanya tinggal garis. "Masya Allah… terima kasih, Nak. Semoga Allah membalas kebaikanmu."
 
-Now, help your little one set aside one coin or toy to give, and let them see the receiver's smile for themselves. 🌱`,
+Baby Mo lari kembali ke Abi. Pipinya merah. Dadanya terasa hangat, seperti baru minum teh manis.
+
+"Abi, koinku tinggal satu," katanya. "Tapi kok rasanya malah tambah banyak?"
+
+Abi berjongkok dan memeluknya. "Itu namanya sedekah, Mo. Uangnya berkurang satu. Tapi bahagianya bertambah. Dan Allah tidak pernah lupa."
+
+Mereka meneruskan jalan ke warung. Dengan satu koin, Baby Mo membeli satu es lilin kecil — bukan stroberi, tapi kacang hijau. Ternyata enak juga.
+
+Waktu pulang, mereka lewat lagi di tempat tadi. Kakek sudah tidak ada. Di tempatnya duduk, sapu-sapunya juga tidak ada.
+
+"Abi! Sapunya habis! Ada yang beli!"
+
+"Alhamdulillah," kata Abi.
+
+Baby Mo melompat-lompat sepanjang jalan pulang, sambil menjilat es kacang hijaunya yang menetes ke jari.
+
+> *"Sedekah tidak akan mengurangi harta."* (HR. Muslim 2588)
+
+Ngobrol bareng si kecil: kalau kamu punya dua koin, satu untuk apa dan satu untuk siapa? 🌱`,
+      en: `Baby Mo had two coins. A present from Abi for tidying his toys without being asked. The coins were heavy and cool in his palm.
+
+Ting… ting… He shook them by his ear. They sounded like tiny bells.
+
+"Abi, are two coins enough for a strawberry ice lolly?" he asked.
+
+"Enough," said Abi. "Exactly enough."
+
+Baby Mo grinned. He could already picture the cold pink lolly that drips onto your fingers if you eat it slowly.
+
+They walked to the corner shop. The midday sun was blazing. By the roadside, Baby Mo saw an old man. His back was bent. He was carrying lots of brooms and feather dusters. His steps were slow, and his shirt was wet with sweat.
+
+"Brooms… brooms…," the old man called, his voice hoarse. No one stopped.
+
+Baby Mo slowed down. "Abi, has that grandpa been walking all this time?"
+
+"It looks like it," said Abi. "Maybe nobody has bought a broom from him today."
+
+Baby Mo looked at his coins. Ting… ting… Then at the old man. Then at the shop at the end of the road, where the strawberry lolly was waiting.
+
+Abi didn't say anything. Abi just waited.
+
+"Abi," said Baby Mo at last, "if I give one coin to the grandpa, I can't get the lolly, can I?"
+
+"Not today," Abi answered honestly.
+
+Baby Mo squeezed his coins tight. It was so hard to choose. Then he saw the old man sit down on the pavement, fanning his face with his hat.
+
+Baby Mo trotted over. "Grandpa! This is for you!"
+
+The old man looked up, surprised. Then his smile spread wide, so wide his eyes became two lines. "Masha Allah… thank you, little one. May Allah reward your kindness."
+
+Baby Mo ran back to Abi. His cheeks were red. His chest felt warm, like he had just drunk sweet tea.
+
+"Abi, I only have one coin left," he said. "So why does it feel like I have more?"
+
+Abi crouched down and hugged him. "That's called sadaqah, Mo. The money goes down by one. But the happiness goes up. And Allah never forgets."
+
+They carried on to the shop. With one coin, Baby Mo bought one small lolly — not strawberry, but mung bean. It turned out to be delicious too.
+
+On the way home, they passed the same spot. The old man was gone. Where he had sat, the brooms were gone too.
+
+"Abi! The brooms are gone! Someone bought them!"
+
+"Alhamdulillah," said Abi.
+
+Baby Mo skipped all the way home, licking his mung-bean lolly as it dripped onto his fingers.
+
+> *"Charity does not decrease wealth."* (Muslim 2588)
+
+Talk it over with your little one: if you had two coins, what would one be for, and who would the other be for? 🌱`,
     },
     anchor: { type: "hadith", slug: "menyantuni-anak-yatim" },
     takeaway: {
-      id: "Sedekah bukan kehilangan. Kasih sedikit, bikin senang banyak orang.",
-      en: "Sadaqah isn't a loss. Give a little, and make many people happy.",
+      id: "Sedekah paling bermakna bagi anak adalah yang terasa sedikit berat. Jangan buru-buru memutuskan untuknya — tunggu, dan biarkan ia memilih.",
+      en: "The most meaningful charity for a child is the kind that feels a little heavy. Don't rush to decide for them — wait, and let them choose.",
     },
     tags: ["sedekah", "rezeki", "akhlak", "buku"],
-    readingTimeMin: 3,
+    readingTimeMin: 4,
   },
 
   {
@@ -4438,56 +4574,112 @@ Now, help your little one set aside one coin or toy to give, and let them see th
     published: "2026-06-27",
     title: { id: "Kenapa Berwudhu Sebelum Sholat?", en: "Why Do We Wash Up Before Praying?" },
     hook: {
-      id: "Baby Ais sudah pakai sajadah. Tapi belum cuci tangan.",
-      en: "Baby Ais already has her prayer mat out. But she hasn't washed up yet.",
+      id: "\"Tanganku kan nggak kotor!\" kata Baby Ais. Lalu Abi memberinya kaca pembesar — dan sebuah rahasia tentang tetes-tetes air wudhu.",
+      en: "\"But my hands aren't dirty!\" said Baby Ais. Then Abi handed her a magnifying glass — and a secret about the drops of wudhu water.",
     },
     body: {
-      id: `Baby Ais sudah pakai sajadah. Tapi belum cuci tangan.
+      id: `Adzan Maghrib berkumandang. Baby Ais langsung menggelar sajadah kecilnya yang bergambar bulan sabit. Ia berdiri di atasnya, siap sholat.
 
 "Ais, sudah wudhu?" tanya Abi.
 
-"Belum. Tanganku kan nggak kotor."
+"Belum. Tapi tanganku kan nggak kotor." Baby Ais mengangkat kedua tangannya. "Lihat, bersih!"
 
-Abi tidak menjawab panjang. Ia mengajak Ais ke keran air. "Lihat Abi dulu, ya."
+Abi tersenyum, lalu mengambil kaca pembesar dari laci — yang biasa mereka pakai untuk melihat semut. "Coba lihat pakai ini."
 
-Abi membasuh tangan, kumur, basuh muka, tangan sampai siku, usap kepala, lalu kaki. Pelan-pelan.
+Baby Ais mendekatkan kaca pembesar ke jarinya. Lalu ia menjerit kecil. "Iiih! Ada debu! Ada remah biskuit! Di bawah kuku ada hitam-hitam!"
 
-Baby Ais menirukan satu-satu. Air dingin di tangannya. Ia tertawa kecil.
+"Tadi sore Ais main pasir, kan?" kata Abi sambil tertawa. "Mata kita kadang tidak bisa melihat semuanya. Yuk, ikut Abi."
 
-Selesai wudhu, Baby Ais merasa segar. "Abi, aku berasa bersih banget!"
+Mereka berdiri di depan keran. Air mengalir, dingin dan berkilau.
 
-Abi tersenyum. "Sekarang kita siap sholat. Bersih badan, bersih hati."
+"Rasulullah ﷺ mengajarkan, kalau kita berwudhu dengan baik, bukan cuma debu yang luruh. Kesalahan-kesalahan kecil kita juga ikut jatuh bersama tetes airnya," kata Abi. "Dari wajah, dari tangan, dari kaki, sampai dari bawah kuku."
 
-> *Barangsiapa berwudhu dengan sempurna, keluarlah dosa-dosanya dari tubuhnya, hingga keluar pula dari bawah kuku-kukunya.*
+Baby Ais memandangi airnya dengan mata membulat. "Kesalahan bisa jatuh?"
 
-Sekarang, ajak si kecil berwudhu sendiri, satu gerakan demi satu gerakan, sambil mereka melihat Abi atau Umi mencontohkan dulu. 💧`,
-      en: `Baby Ais already has her prayer mat out. But she hasn't washed up yet.
+"Allah yang membuatnya jatuh. Kita tinggal berwudhu baik-baik. Lihat Abi dulu, ya."
+
+Abi membaca bismillah, lalu membasuh tangan. Baby Ais menirukan. Byur. Dingin!
+
+Berkumur — Baby Ais menggembungkan pipi seperti ikan buntal, lalu pfuuuh.
+
+Membasuh wajah — airnya dingin sampai Baby Ais terkikik.
+
+Tangan sampai siku. Mengusap kepala. Membasuh telinga. Lalu kaki — dan di sini Baby Ais berhenti.
+
+"Abi, tadi kan aku bilang kakiku agak nakal. Aku menendang mainan Mo waktu kesal."
+
+"Kalau begitu, basuh baik-baik," kata Abi lembut. "Lalu nanti minta maaf ke Mo, ya."
+
+Baby Ais membasuh kakinya pelan-pelan sekali. Kanan, lalu kiri. Ia memperhatikan tetes-tetes air yang jatuh ke lantai dan mengalir ke saluran. Wajahnya serius sekali, seolah sedang melihat kesalahannya pergi satu per satu.
+
+Selesai, Abi mengangkat jari telunjuknya dan membaca, "Asyhadu an laa ilaaha illallah…" Baby Ais menirukan, terbata-bata.
+
+Lalu ia berdiri tegak. Wajahnya basah dan bersinar. "Abi! Aku berasa ringan banget! Kayak habis mandi, tapi dalam hati."
+
+Sebelum ke sajadah, Baby Ais mampir dulu ke kamar. "Mo, maaf ya tadi aku tendang robotmu."
+
+Baby Mo mengangguk. "Iya. Aku juga mau wudhu! Aku juga mau ringan!"
+
+Malam itu, ada tiga sajadah berjejer. Satu besar, dua kecil. Dan dua wajah kecil yang masih basah, bersinar, siap menghadap Allah.
+
+> *"Barangsiapa berwudhu lalu memperbagus wudhunya, keluarlah dosa-dosanya dari tubuhnya, hingga keluar dari bawah kuku-kukunya."* (HR. Muslim 245)
+
+Ngobrol bareng si kecil: bagian wudhu mana yang paling kamu suka? Yuk wudhu bersama sebelum sholat berikutnya, satu gerakan demi satu gerakan. 💧`,
+      en: `The Maghrib adhan rang out. Baby Ais rolled out her little prayer mat with the crescent moon on it straight away. She stood on it, ready to pray.
 
 "Ais, have you done wudhu?" asked Abi.
 
-"Not yet. My hands aren't dirty."
+"Not yet. But my hands aren't dirty." Baby Ais held up both hands. "Look, clean!"
 
-Abi didn't explain much. He led her to the tap. "Watch Abi first."
+Abi smiled, then took the magnifying glass out of the drawer — the one they used for looking at ants. "Have a look with this."
 
-Abi washed his hands, rinsed his mouth, washed his face, arms to the elbows, wiped his head, then his feet. Slowly.
+Baby Ais held the magnifying glass to her fingers. Then she gave a little shriek. "Eww! There's dust! There's biscuit crumbs! There's black stuff under my nails!"
 
-Baby Ais copied each step. The water felt cool on her hands. She giggled.
+"You played in the sand this afternoon, didn't you?" Abi laughed. "Our eyes can't always see everything. Come with me."
 
-When she finished, Baby Ais felt fresh. "Abi, I feel so clean!"
+They stood at the tap. The water flowed, cold and sparkling.
 
-Abi smiled. "Now we're ready to pray. Clean body, clean heart."
+"The Prophet ﷺ taught that when we do wudhu well, it's not only dust that washes away. Our little mistakes fall away with the drops of water too," said Abi. "From the face, from the hands, from the feet, even from under the nails."
 
-> *Whoever performs wudhu perfectly, his sins leave his body, even from beneath his fingernails.*
+Baby Ais stared at the water, eyes wide. "Mistakes can fall off?"
 
-Now, let your little one do their own wudhu, one step at a time, after watching you do it first. 💧`,
+"Allah makes them fall away. We just do our wudhu properly. Watch Abi first."
+
+Abi said bismillah, then washed his hands. Baby Ais copied. Splash. Cold!
+
+Rinsing the mouth — Baby Ais puffed her cheeks like a pufferfish, then pfffff.
+
+Washing the face — the water was so cold she giggled.
+
+Arms up to the elbows. Wiping the head. Washing the ears. Then the feet — and here Baby Ais stopped.
+
+"Abi, remember I said my feet were a bit naughty? I kicked Mo's toy when I was cross."
+
+"Then wash them carefully," Abi said gently. "And say sorry to Mo afterwards, okay?"
+
+Baby Ais washed her feet very, very slowly. Right, then left. She watched the drops fall to the floor and run into the drain. Her face was very serious, as if she were watching her mistakes leave one by one.
+
+When she finished, Abi raised his index finger and said, "Ash-hadu an laa ilaaha illallah…" Baby Ais repeated it, stumbling.
+
+Then she stood up straight. Her face was wet and shining. "Abi! I feel so light! Like I've had a bath, but on the inside."
+
+Before going to the prayer mat, Baby Ais stopped by the bedroom. "Mo, sorry I kicked your robot."
+
+Baby Mo nodded. "Okay. I want to do wudhu too! I want to feel light too!"
+
+That evening, three prayer mats lay side by side. One big, two small. And two little faces, still wet and shining, ready to stand before Allah.
+
+> *"Whoever performs wudhu and does it well, his sins leave his body, even from beneath his nails."* (Muslim 245)
+
+Talk it over with your little one: which part of wudhu do you like best? Let's do wudhu together before the next prayer, one step at a time. 💧`,
     },
     anchor: { type: "doa", slug: "selesai-wudhu" },
     takeaway: {
-      id: "Wudhu itu sederhana: bersihkan badan, lalu hati jadi tenang sebelum sholat.",
-      en: "Wudhu is simple: clean the body, and the heart settles before prayer.",
+      id: "Wudhu bukan sekadar cuci tangan. Bagi anak, ia bisa menjadi momen kecil untuk \"melepaskan\" kesalahan hari itu — lalu memperbaikinya.",
+      en: "Wudhu isn't just hand-washing. For a child, it can be a small moment to \"let go\" of the day's mistakes — and then put them right.",
     },
     tags: ["wudhu", "sholat", "ibadah", "buku"],
-    readingTimeMin: 3,
+    readingTimeMin: 4,
   },
 
   {
@@ -4498,60 +4690,116 @@ Now, let your little one do their own wudhu, one step at a time, after watching 
     published: "2026-06-28",
     title: { id: "Semangkuk Sup untuk Pak Becak", en: "A Bowl of Soup for the Pedicab Driver" },
     hook: {
-      id: "Hujan turun deras. Baby Mo dan Baby Ais melihat seorang bapak tukang becak berteduh sendirian, basah dan menggigil, di depan rumah.",
-      en: "Heavy rain fell. Baby Mo and Baby Ais saw a pedicab driver sheltering alone outside their house, soaked and shivering.",
+      id: "Hujan deras, dan seorang bapak tukang becak menggigil di depan rumah. Si kembar punya ide — tapi rantang sup itu panas, payungnya kecil, dan jalannya licin.",
+      en: "Pouring rain, and a pedicab driver shivering outside the house. The twins have an idea — but the soup tin is hot, the umbrella is small, and the path is slippery.",
     },
     body: {
-      id: `Hujan deras sore itu. Baby Mo dan Baby Ais lihat bapak becak menggigil di depan rumah.
+      id: `Sore itu hujan turun deras sekali. Bunyinya di atap seperti ribuan kelereng yang jatuh bersamaan. Tik-tik-tik-tik-TIK!
 
-"Umi, Bapak itu kedinginan," kata Baby Ais.
+Baby Mo dan Baby Ais berlutut di sofa, hidung menempel ke kaca jendela. Di seberang jalan, di bawah pohon ketapang, ada sebuah becak. Di dalamnya duduk seorang bapak. Bajunya basah. Bahunya naik-turun.
 
-Umi sedang masak sup hangat. Baby Mo menarik lengannya. "Boleh kasih ke Bapak itu?"
+"Umi," bisik Baby Ais, "bapak itu gemetar."
 
-Umi menuangkan sup ke rantang kecil. "Siapa yang mau bawa?"
+Dari dapur, tercium wangi sup ayam. Wortel, kentang, seledri, dan kaldu yang mengepul. Sup untuk makan malam.
 
-"Kami berdua!"
+Baby Mo dan Baby Ais saling pandang. Kembar kadang tidak perlu bicara.
 
-Mereka lari kecil di bawah payung Abi. "Pak, ini sup hangat," kata Baby Mo.
+"Umi!" seru mereka bersamaan. "Supnya boleh dikasih ke bapak itu?"
 
-Bapak becak itu terkejut. Matanya berkaca-kaca. "Terima kasih banyak, Nak."
+Umi mematikan kompor dan tersenyum. "Boleh. Tapi siapa yang mau mengantar?"
 
-Baby Mo dan Baby Ais melihat Bapak itu makan sambil senyum lebar. Mereka ikut senyum.
+"KAMI!"
 
-Malam itu Baby Mo bilang ke Baby Ais, "Besok kalau hujan lagi, kita kasih lagi ya?"
+Umi menuang sup ke dalam rantang besi, menutupnya rapat-rapat, lalu membungkusnya dengan kain supaya tidak panas dipegang. Abi mengambil payung besar.
 
-> *Senyummu kepada saudaramu adalah sedekah.*
+Tapi masalah pertama muncul: rantangnya berat. Baby Mo mencoba mengangkat sendiri — miring ke kiri. Baby Ais mencoba sendiri — miring ke kanan.
 
-Sekarang, ajak si kecil memperhatikan orang yang bekerja di luar saat hujan atau panas, lalu berikan sesuatu sekecil pun. ☔`,
-      en: `Heavy rain fell that afternoon. Baby Mo and Baby Ais saw a pedicab driver shivering outside.
+"Berdua!" kata Baby Ais. Mereka memegang satu pegangan bersama, empat tangan kecil di satu gagang. Rantangnya lurus.
 
-"Umi, that man is cold," said Baby Ais.
+Masalah kedua: jalan depan rumah licin dan becek. Air menggenang di mana-mana.
 
-Umi was cooking warm soup. Baby Mo tugged her sleeve. "Can we give some to him?"
+"Pelan-pelan," kata Abi yang memayungi mereka dari belakang. "Kanan… kiri… kanan… kiri…"
 
-Umi poured soup into a small tin. "Who wants to bring it?"
+"Kanan, kiri, kanan, kiri," ulang si kembar, melangkah serempak seperti tentara kecil. Sepatu mereka berbunyi cepak-cepak di genangan.
 
-"Both of us!"
+Sampai di bawah pohon ketapang, bapak tukang becak itu kaget melihat dua anak kecil dan seorang ayah di bawah satu payung.
 
-They ran out under Abi's umbrella. "Sir, this is warm soup," said Baby Mo.
+"Pak," kata Baby Mo, napasnya terengah. "Ini sup hangat. Dari Umi. Eh, dari kami."
 
-The pedicab driver was startled. His eyes welled up. "Thank you so much, little ones."
+"Supaya Bapak nggak kedinginan," tambah Baby Ais.
 
-Baby Mo and Baby Ais watched him eat with a big smile. They smiled too.
+Bapak itu membuka rantangnya. Uap hangat mengepul ke wajahnya. Ia terdiam sebentar. Matanya berkaca-kaca. "Masya Allah… dari pagi saya belum makan, Nak. Terima kasih. Terima kasih banyak."
 
-That night Baby Mo told Baby Ais, "Next time it rains, let's give again, okay?"
+Ia menyuap sup itu, pelan-pelan. Lalu ia tersenyum — senyum yang lebar sekali, sampai giginya yang ompong satu kelihatan.
 
-> *Your smile to your brother is an act of charity.*
+Baby Mo dan Baby Ais ikut tersenyum. Tanpa disuruh. Senyumnya menular, seperti hangatnya sup.
 
-Now, help your little one notice people working outside in rain or heat, and give even something small. ☔`,
+Malam itu, mereka makan malam dengan telur dadar, karena supnya sudah dibagi. Tapi tidak ada yang protes.
+
+Sebelum tidur, Baby Mo berbisik ke Baby Ais di kasur sebelah. "Ais, besok kalau hujan lagi…"
+
+"…kita kasih lagi," jawab Baby Ais, sudah setengah tidur.
+
+> *"Senyummu di hadapan saudaramu adalah sedekah."* (HR. Tirmidzi 1956)
+
+Ngobrol bareng si kecil: siapa saja orang yang bekerja di luar saat hujan atau panas? Apa satu hal kecil yang bisa kita berikan untuk mereka? ☔`,
+      en: `That afternoon the rain came down very hard. On the roof it sounded like thousands of marbles falling at once. Tik-tik-tik-tik-TIK!
+
+Baby Mo and Baby Ais knelt on the sofa, noses pressed to the window. Across the road, under the almond tree, was a pedicab. A man was sitting in it. His clothes were soaked. His shoulders were shaking.
+
+"Umi," whispered Baby Ais, "that man is shivering."
+
+From the kitchen came the smell of chicken soup. Carrots, potatoes, celery, and steaming broth. Soup for dinner.
+
+Baby Mo and Baby Ais looked at each other. Twins sometimes don't need to talk.
+
+"Umi!" they cried together. "Can we give the soup to that man?"
+
+Umi turned off the stove and smiled. "You can. But who's going to take it?"
+
+"US!"
+
+Umi poured the soup into a metal food tin, closed it tight, and wrapped it in a cloth so it wouldn't be too hot to hold. Abi fetched the big umbrella.
+
+But the first problem appeared: the tin was heavy. Baby Mo tried to lift it by himself — it tipped to the left. Baby Ais tried by herself — it tipped to the right.
+
+"Together!" said Baby Ais. They held the handle together, four little hands on one grip. The tin stayed straight.
+
+The second problem: the path outside was slippery and muddy. There were puddles everywhere.
+
+"Slowly," said Abi, holding the umbrella over them from behind. "Right… left… right… left…"
+
+"Right, left, right, left," the twins repeated, stepping in time like little soldiers. Their shoes went splish-splash in the puddles.
+
+When they reached the almond tree, the pedicab driver was surprised to see two small children and a father under one umbrella.
+
+"Sir," said Baby Mo, out of breath. "This is warm soup. From Umi. I mean, from us."
+
+"So you won't be cold," added Baby Ais.
+
+The man opened the tin. Warm steam rose to his face. He was quiet for a moment. His eyes filled with tears. "Masha Allah… I haven't eaten since this morning, children. Thank you. Thank you so much."
+
+He ate the soup, slowly. Then he smiled — a very wide smile, so wide you could see the gap where one tooth was missing.
+
+Baby Mo and Baby Ais smiled too. Without being told. Smiles are catching, like the warmth of soup.
+
+That night, they had omelette for dinner, because the soup had been given away. But nobody complained.
+
+Before sleep, Baby Mo whispered to Baby Ais in the next bed. "Ais, tomorrow if it rains again…"
+
+"…we'll give some again," answered Baby Ais, already half asleep.
+
+> *"Your smiling in the face of your brother is charity."* (Tirmidzi 1956)
+
+Talk it over with your little one: who are the people who work outside in the rain or the heat? What's one small thing we could give them? ☔`,
     },
     anchor: { type: "hadith", slug: "tetangga-keluarga-luas" },
     takeaway: {
-      id: "Kepedulian kecil — semangkuk sup, sebuah senyum — bisa terasa sangat besar bagi orang yang sendirian.",
-      en: "A small act of care — a bowl of soup, a smile — can feel enormous to someone who feels alone.",
+      id: "Biarkan anak yang mengantar kebaikannya sendiri — memegang rantangnya, melihat wajah yang menerima. Itu yang membuatnya ingin mengulang.",
+      en: "Let children deliver their own kindness — holding the tin, seeing the face that receives it. That's what makes them want to do it again.",
     },
-    tags: ["sedekah", "empati", "akhlak", "buku"],
-    readingTimeMin: 3,
+    tags: ["sedekah", "empati", "hujan", "akhlak", "buku"],
+    readingTimeMin: 4,
   },
 
   {
@@ -4562,56 +4810,136 @@ Now, help your little one notice people working outside in rain or heat, and giv
     published: "2026-06-29",
     title: { id: "Antrian Es Krim yang Panjang", en: "The Long Ice Cream Line" },
     hook: {
-      id: "Sepuluh orang mengantre di depan Baby Mo. Es krimnya kelihatan meleleh duluan dalam bayangannya, padahal belum dibeli sama sekali.",
-      en: "Ten people stood ahead of Baby Mo in line. The ice cream was already melting in his imagination, even though he hadn't bought any yet.",
+      id: "Sepuluh orang di depan Baby Mo, dan es krim cokelatnya terasa sejauh bulan. Tapi menunggu ternyata bisa diisi dengan permainan rahasia.",
+      en: "Ten people ahead of Baby Mo, and his chocolate ice cream feels as far away as the moon. But it turns out waiting can be filled with a secret game.",
     },
     body: {
-      id: `Antrean es krim panjang sekali. Baby Mo cemberut. "Lamaaa, Umi!"
+      id: `Hari itu panas sekali. Matahari seperti lampu raksasa yang lupa dimatikan. Dan di taman kota, ada gerobak es krim dengan payung bergaris-garis.
 
-Umi berlutut. "Yuk main sambil nunggu. Hitung, ada berapa baju biru?"
+"Es krim!" Baby Mo berlari ke sana. Lalu ia berhenti mendadak.
 
-Baby Mo mulai menghitung. Biru, merah, kuning... Ia lupa kalau sedang menunggu.
+Di depan gerobak ada antrean. Panjaaang sekali. Baby Mo menghitung dengan jarinya. Satu, dua, tiga… sepuluh orang!
 
-Tanpa sadar, antreannya sudah maju. "Sudah dekat, Umi!"
+"Lamaaa, Umi!" Ia menghentakkan kaki. "Nanti es krimnya habis! Nanti cokelatnya habis duluan!"
 
-"Selamat siang, mau pesan apa?" kata penjualnya, tepat di depan Baby Mo.
+Di kepalanya, ia sudah membayangkan orang terakhir sebelum dia membeli es krim cokelat terakhir. Lalu yang tersisa cuma rasa pare. Baby Mo hampir menangis.
 
-Baby Mo memesan es krim cokelat. Rasanya manis sekali.
+Umi berlutut di depannya. "Mo, kakimu sedang mau lari ke depan, ya?"
 
-"Tadi Mo kira nunggu lama banget," kata Baby Mo sambil menjilat es krimnya. "Tapi nggak lama, ya?"
+Baby Mo mengangguk. Kakinya memang tidak bisa diam.
 
-Umi mengusap kepalanya. "Kalau hati tenang, nunggu jadi nggak berat."
+"Hatimu juga sedang lari," kata Umi. "Yuk, kita kasih hatinya kerjaan. Main *Mata Elang*. Umi sebut satu warna, kamu cari sebanyak-banyaknya. Siap? Cari… BIRU!"
 
-> *Sesungguhnya Allah menyertai orang-orang yang sabar.*
+Baby Mo menoleh ke kiri dan ke kanan. "Baju bapak itu biru! Balon anak itu biru! Langit biru! Sepatu Ais biru!"
 
-Sekarang, ajak si kecil main kecil saat harus menunggu — menghitung warna, atau bernyanyi pelan. 🍦`,
-      en: `The ice cream line was very long. Baby Mo frowned. "So sloooow, Umi!"
+"Empat! Sekarang cari… KUNING!"
 
-Umi knelt down. "Let's play while we wait. Count how many blue shirts you see?"
+"Payung es krim! Bunga di sana! Tas kakak itu!"
 
-Baby Mo started counting. Blue, red, yellow... He forgot he was even waiting.
+Antrean maju satu langkah. Baby Mo tidak sadar.
 
-Before he noticed, the line had moved forward. "We're close now, Umi!"
+"Sekarang cari yang lebih susah. Cari… sesuatu yang Allah ciptakan, yang bisa terbang!"
 
-"Good afternoon, what would you like?" asked the seller, right in front of Baby Mo.
+Baby Mo memicingkan mata. "Burung! Di pohon! Terus… capung! Terus… daun kering yang ketiup angin, itu terbang juga, kan?"
 
-Baby Mo ordered his chocolate ice cream. It tasted so sweet.
+Umi tertawa. "Boleh."
 
-"I thought the wait would be so long," said Baby Mo, licking his ice cream. "But it wasn't, was it?"
+Antrean maju lagi. Dan lagi.
 
-Umi patted his head. "When the heart is calm, waiting feels light."
+Di tengah permainan, Baby Ais menarik baju Baby Mo. "Mo, giliranmu cari. Cari… orang yang lagi senyum!"
 
-> *Indeed, Allah is with those who are patient.*
+Baby Mo melihat sekeliling. Penjual es krim tersenyum. Nenek di bangku tersenyum. Lalu ia melihat anak kecil di depannya — yang juga sedang menunggu dan cemberut, persis seperti Baby Mo tadi.
 
-Now, give your little one a small game to play while waiting — counting colours, or quietly singing. 🍦`,
+Baby Mo menepuk pundaknya. "Mau ikut main? Cari yang warnanya merah!"
+
+Anak itu ragu sebentar, lalu menunjuk. "Itu! Mobil merah!"
+
+Dan sekarang ada tiga anak bermain Mata Elang di antrean es krim.
+
+"Selamat siang, mau rasa apa?"
+
+Baby Mo kaget. Ia sudah di depan gerobak! Dan di wadah besi itu, es krim cokelatnya masih ada. Masih banyak.
+
+"Cokelat!" serunya.
+
+Sambil menjilat es krim di bangku taman, Baby Mo berpikir keras. "Umi, tadi aku kira nunggunya lamaaa banget. Tapi kok cepat?"
+
+"Waktunya sama," kata Umi. "Yang berubah, hatimu. Waktu hatimu tenang, menunggu jadi tidak berat. Itu namanya sabar. Dan Allah bersama orang-orang yang sabar."
+
+Baby Mo menjilat es krimnya lagi. Cokelat menetes ke dagunya. "Allah juga ikut antre tadi?"
+
+Umi tertawa sampai harus memegang perutnya. "Allah bersamamu di mana pun, Mo. Termasuk di antrean es krim."
+
+> *"Sesungguhnya Allah beserta orang-orang yang sabar."* (QS. Al-Baqarah: 153)
+
+Ngobrol bareng si kecil: kapan terakhir kamu harus menunggu lama? Permainan apa yang bisa kita mainkan lain kali? 🍦`,
+      en: `It was a very hot day. The sun was like a giant lamp someone forgot to switch off. And in the town park, there was an ice cream cart with a striped umbrella.
+
+"Ice cream!" Baby Mo ran towards it. Then he stopped suddenly.
+
+In front of the cart was a queue. A loooong one. Baby Mo counted on his fingers. One, two, three… ten people!
+
+"Too loooong, Umi!" He stamped his feet. "The ice cream will run out! The chocolate will be gone first!"
+
+In his head, he could already see the last person before him buying the very last chocolate ice cream. And all that would be left was bitter-gourd flavour. Baby Mo nearly cried.
+
+Umi knelt in front of him. "Mo, your feet want to run to the front, don't they?"
+
+Baby Mo nodded. His feet really couldn't keep still.
+
+"Your heart is running too," said Umi. "Let's give your heart a job. Let's play *Eagle Eyes*. I say a colour, and you find as many as you can. Ready? Find… BLUE!"
+
+Baby Mo looked left and right. "That man's shirt is blue! That kid's balloon is blue! The sky is blue! Ais's shoes are blue!"
+
+"Four! Now find… YELLOW!"
+
+"The ice cream umbrella! The flowers over there! That girl's bag!"
+
+The queue moved forward one step. Baby Mo didn't notice.
+
+"Now a harder one. Find… something Allah created that can fly!"
+
+Baby Mo squinted. "A bird! In the tree! And… a dragonfly! And… a dry leaf blowing in the wind, that's flying too, isn't it?"
+
+Umi laughed. "That counts."
+
+The queue moved forward again. And again.
+
+In the middle of the game, Baby Ais tugged Baby Mo's shirt. "Mo, your turn to find. Find… someone smiling!"
+
+Baby Mo looked around. The ice cream seller was smiling. The grandma on the bench was smiling. Then he saw the little boy in front of him — also waiting and scowling, exactly like Baby Mo had been.
+
+Baby Mo tapped his shoulder. "Want to play? Find something red!"
+
+The boy hesitated, then pointed. "There! A red car!"
+
+And now there were three children playing Eagle Eyes in the ice cream queue.
+
+"Good afternoon, which flavour?"
+
+Baby Mo jumped. He was at the front of the cart! And in the metal tub, the chocolate ice cream was still there. Lots of it.
+
+"Chocolate!" he cried.
+
+Licking his ice cream on the park bench, Baby Mo thought hard. "Umi, I thought the waiting would take ages. So why was it quick?"
+
+"The time was the same," said Umi. "What changed was your heart. When your heart is calm, waiting isn't heavy. That's called patience. And Allah is with those who are patient."
+
+Baby Mo licked his ice cream again. Chocolate dripped down his chin. "Was Allah in the queue too?"
+
+Umi laughed so hard she had to hold her tummy. "Allah is with you everywhere, Mo. Including in the ice cream queue."
+
+> *"Indeed, Allah is with the patient."* (Qur'an, Al-Baqarah 2:153)
+
+Talk it over with your little one: when did you last have to wait a long time? What game could we play next time? 🍦`,
     },
     anchor: { type: "parenting", slug: "tantrum" },
     takeaway: {
-      id: "Menunggu terasa ringan kalau hati ditenangkan dengan permainan kecil sambil menunggu.",
-      en: "Waiting feels lighter when the heart is calmed with a small game while we wait.",
+      id: "Sabar untuk anak bukan \"diam saja\". Beri hatinya pekerjaan — sebuah permainan — dan menunggu berubah jadi petualangan.",
+      en: "Patience for a child isn't \"just be quiet\". Give their heart a job — a game — and waiting turns into an adventure.",
     },
-    tags: ["sabar", "tantrum", "akhlak", "buku"],
-    readingTimeMin: 3,
+    tags: ["sabar", "tantrum", "menunggu", "taman", "buku"],
+    readingTimeMin: 5,
   },
 
   {
@@ -4622,52 +4950,128 @@ Now, give your little one a small game to play while waiting — counting colour
     published: "2026-06-30",
     title: { id: "Apa Itu Adzan?", en: "What Is the Adhan?" },
     hook: {
-      id: "Suara merdu terdengar dari kejauhan. Baby Ais berhenti bermain. \"Umi, itu suara apa? Kenapa semua orang jadi diam mendengarnya?\"",
-      en: "A beautiful voice rang out in the distance. Baby Ais stopped playing. \"Umi, what's that sound? Why does everyone go quiet when they hear it?\"",
+      id: "Suara merdu terdengar dari jauh, dan Abi langsung berhenti bekerja. Baby Ais penasaran — dan menemukan bahwa adzan adalah panggilan yang bisa dijawab.",
+      en: "A beautiful voice drifts from far away, and Abi stops working at once. Baby Ais is curious — and discovers that the adhan is a call you can answer.",
     },
     body: {
-      id: `Suara merdu terdengar dari jauh. Baby Ais berhenti main.
+      id: `Sore itu Baby Ais sedang menyusun boneka-bonekanya jadi barisan, seperti murid di kelas. Kelinci di depan. Beruang di belakang. Jerapah paling ujung karena lehernya panjang.
 
-Abi langsung berhenti kerja. Ia diam, mendengarkan.
+Lalu terdengar suara dari kejauhan. Merdu. Panjang. Seperti nyanyian yang naik ke langit.
 
-Baby Ais memperhatikan Abi. Lalu ia duduk diam juga, ikut mendengarkan.
+*Allaahu akbar, Allaahu akbar…*
 
-Setelah suara itu selesai, Baby Ais bertanya, "Abi, itu suara apa?"
+Baby Ais menoleh ke arah Abi. Abi sedang mengetik di laptop — tapi tiba-tiba jarinya berhenti. Abi menutup laptopnya pelan-pelan. Lalu Abi duduk diam, mendengarkan, dan bibirnya bergerak sedikit.
 
-"Itu adzan, panggilan sholat," kata Abi pelan. "Tandanya, waktunya kita berdoa sebentar."
+Baby Ais memperhatikan. Abi tidak pernah berhenti mengetik, bahkan waktu Baby Mo minta digendong. Tapi suara ini membuat Abi berhenti.
 
-Abi menutup mata, berdoa pelan. Baby Ais menutup mata juga, menirukan Abi.
+Pelan-pelan, Baby Ais meletakkan jerapahnya. Ia ikut duduk diam.
 
-Sejak itu, setiap dengar adzan, Baby Ais berhenti main sebentar. Menutup mata. Berdoa pelan.
+Setelah suara itu selesai, Abi mengangkat tangan dan berdoa sebentar. Lalu ia menoleh dan tersenyum melihat Baby Ais yang duduk tegak seperti patung.
 
-> *Doa di antara adzan dan iqamah tidak akan ditolak.*
+"Abi, itu suara apa? Kenapa Abi langsung berhenti?"
 
-Sekarang, ajak si kecil berhenti sejenak setiap kali dengar adzan, lalu berdoa pelan bersama. 🕌`,
-      en: `A beautiful sound rang out from far away. Baby Ais stopped playing.
+"Itu adzan, sayang. Panggilan untuk sholat. Seseorang di masjid sedang memanggil semua orang: *Ayo sholat! Ayo menuju kebahagiaan!*"
 
-Abi stopped working right away. He stood still, listening.
+"Memanggil kita juga?"
 
-Baby Ais watched Abi. Then she sat still too, listening along.
+"Memanggil kita juga."
 
-When the sound finished, Baby Ais asked, "Abi, what's that sound?"
+Baby Ais berpikir. "Kalau dipanggil, kan harus dijawab, Abi. Kalau Umi panggil Ais, Ais jawab 'Iyaaa!'"
 
-"That's the adhan, the call to pray," Abi said quietly. "It means it's time to pray for a moment."
+Abi tertawa. "Betul sekali! Dan adzan juga bisa dijawab. Rasulullah ﷺ mengajarkan: kalau mendengar adzan, ucapkan seperti yang diucapkan muadzin. Dia bilang *Allaahu akbar*, kita jawab *Allaahu akbar*."
 
-Abi closed his eyes and prayed quietly. Baby Ais closed her eyes too, copying him.
+Mata Baby Ais berbinar. "Kayak main gema!"
 
-Since then, every time she hears the adhan, Baby Ais pauses her play. Closes her eyes. Prays quietly.
+"Kayak main gema," kata Abi.
 
-> *A prayer made between the adhan and the iqamah will not be rejected.*
+Baby Ais tidak sabar menunggu adzan berikutnya. Ia bertanya pada Umi setiap sepuluh menit, "Masih lama adzannya?"
 
-Now, help your little one pause for a moment every time they hear the adhan, and pray quietly together. 🕌`,
+Akhirnya, waktu Maghrib, langit menjadi oranye, dan suara itu datang lagi.
+
+*Allaahu akbar, Allaahu akbar.*
+
+"Allaahu akbar, Allaahu akbar," bisik Baby Ais.
+
+*Asyhadu an laa ilaaha illallaah.*
+
+"Asyhadu an laa… ilaaha… illallaah," ulangnya, sedikit tersandung.
+
+Baby Mo yang sedang main mobil-mobilan berhenti, heran. "Ais ngomong sama siapa?"
+
+"Aku lagi jawab panggilan!" kata Baby Ais serius. "Sini, ikut!"
+
+Maka Baby Mo ikut duduk. Mereka menjawab bersama, kadang terlambat, kadang salah, kadang Abi membisikkan dari belakang. Waktu adzan selesai, Abi membacakan doa sesudah adzan, dan dua tangan kecil ikut terangkat di sampingnya.
+
+Malam itu, barisan boneka Baby Ais berubah. Kelinci, beruang, dan jerapah semuanya menghadap ke satu arah, rapi seperti saf sholat.
+
+"Mereka juga sudah dengar adzan," jelas Baby Ais.
+
+> *"Apabila kalian mendengar adzan, ucapkanlah seperti yang diucapkan muadzin."* (HR. Bukhari 611, Muslim 383)
+
+Ngobrol bareng si kecil: di adzan berikutnya, mau main gema bersama? Siapa yang bisa menjawab paling lengkap? 🕌`,
+      en: `That afternoon Baby Ais was lining up her dolls in rows, like pupils in a classroom. Rabbit at the front. Bear at the back. Giraffe at the very end because of its long neck.
+
+Then a sound came from far away. Beautiful. Long. Like a song rising into the sky.
+
+*Allaahu akbar, Allaahu akbar…*
+
+Baby Ais looked at Abi. Abi was typing on his laptop — but suddenly his fingers stopped. Abi closed the laptop gently. Then Abi sat quietly, listening, and his lips moved a little.
+
+Baby Ais watched. Abi never stopped typing, not even when Baby Mo wanted to be carried. But this sound made Abi stop.
+
+Slowly, Baby Ais put down her giraffe. She sat quietly too.
+
+When the sound ended, Abi raised his hands and made a short du'a. Then he turned and smiled at Baby Ais, sitting up straight like a statue.
+
+"Abi, what was that sound? Why did you stop straight away?"
+
+"That was the adhan, sweetheart. The call to prayer. Someone at the mosque is calling everyone: *Come to prayer! Come to success!*"
+
+"Calling us too?"
+
+"Calling us too."
+
+Baby Ais thought. "If someone calls you, you have to answer, Abi. When Umi calls Ais, Ais says 'Yeees!'"
+
+Abi laughed. "Exactly right! And you can answer the adhan too. The Prophet ﷺ taught: when you hear the adhan, say what the caller says. He says *Allaahu akbar*, we answer *Allaahu akbar*."
+
+Baby Ais's eyes sparkled. "Like an echo game!"
+
+"Like an echo game," said Abi.
+
+Baby Ais couldn't wait for the next adhan. She asked Umi every ten minutes, "Is it nearly time for the adhan?"
+
+At last, at Maghrib, the sky turned orange, and the sound came again.
+
+*Allaahu akbar, Allaahu akbar.*
+
+"Allaahu akbar, Allaahu akbar," whispered Baby Ais.
+
+*Ash-hadu an laa ilaaha illallaah.*
+
+"Ash-hadu an laa… ilaaha… illallaah," she repeated, stumbling a little.
+
+Baby Mo, playing with his cars, stopped, puzzled. "Who's Ais talking to?"
+
+"I'm answering the call!" said Baby Ais seriously. "Come on, join in!"
+
+So Baby Mo sat down too. They answered together, sometimes late, sometimes wrong, sometimes with Abi whispering from behind. When the adhan finished, Abi recited the du'a after the adhan, and two little pairs of hands rose beside him.
+
+That night, Baby Ais's rows of dolls changed. Rabbit, bear and giraffe all faced the same way, neat as a line of people at prayer.
+
+"They heard the adhan too," Baby Ais explained.
+
+> *"When you hear the call, say what the caller says."* (Bukhari 611, Muslim 383)
+
+Talk it over with your little one: at the next adhan, shall we play the echo game together? Who can answer the most? 🕌`,
     },
     anchor: { type: "doa", slug: "mendengar-adzan" },
     takeaway: {
-      id: "Saat dengar adzan, berhenti sebentar dan berdoa pelan — kebiasaan kecil yang tertanam seumur hidup.",
-      en: "When you hear the adhan, pause for a moment and pray quietly — a small habit that stays for a lifetime.",
+      id: "Anak belajar menghormati adzan dengan melihat orang tuanya berhenti. Lalu beri ia cara ikut: menjawab, seperti main gema.",
+      en: "Children learn to honour the adhan by watching their parents stop. Then give them a way to join in: answering it, like an echo game.",
     },
     tags: ["adzan", "sholat", "ibadah", "buku"],
-    readingTimeMin: 3,
+    readingTimeMin: 4,
   },
 
   {
@@ -4678,52 +5082,132 @@ Now, help your little one pause for a moment every time they hear the adhan, and
     published: "2026-07-01",
     title: { id: "Layang-Layang yang Nyangkut", en: "The Kite Stuck in the Tree" },
     hook: {
-      id: "Layang-layang merah Baby Mo nyangkut tinggi di pohon. Talinya kusut. Baby Mo mau menyerah.",
-      en: "Baby Mo's red kite got stuck high in a tree. The string was tangled. Baby Mo wanted to give up.",
+      id: "Layang-layang merah Baby Mo tersangkut tinggi di pohon. Makin kuat ditarik, makin kusut talinya. Ternyata yang ia butuhkan bukan tenaga lebih besar.",
+      en: "Baby Mo's red kite is stuck high in a tree. The harder he pulls, the more tangled the string gets. It turns out what he needs isn't more strength.",
     },
     body: {
-      id: `Layang-layang merah Baby Mo terbang tinggi sekali. Lalu — tersangkut di dahan pohon.
+      id: `Angin sore bertiup kencang di lapangan. Layang-layang merah Baby Mo menari di langit, ekornya yang panjang meliuk-liuk seperti ular.
 
-"Nggak bisa, Abi!" Baby Mo menarik talinya kuat-kuat. Tetap nyangkut.
+"Lihat, Abi! Paling tinggi!"
 
-Abi tidak langsung menarik. Ia duduk dulu, melihat dahannya. "Coba pelan-pelan, Mo. Tarik sedikit, lalu kasih kendur sedikit."
+Tapi angin tiba-tiba berbelok. Layang-layang itu menukik, berputar-putar, lalu — srak! — tersangkut di dahan pohon mangga yang paling tinggi.
 
-Baby Mo menarik pelan. Lalu kendur. Tarik lagi. Kendur lagi.
+"TIDAAAK!"
 
-Talinya mulai bergerak. Sedikit demi sedikit, layang-layang itu lepas dari dahan.
+Baby Mo menarik talinya. Kuat-kuat. Layang-layangnya tidak bergerak. Ia menarik lebih kuat lagi, sampai kakinya terseret di rumput. Dahannya bergoyang, tapi layang-layangnya malah makin terbelit.
 
-"Bisa, Abi! Bisa!" Baby Mo melompat senang, memeluk layang-layangnya lagi.
+"Nggak bisa! Nggak bisa!" Baby Mo menghentak-hentakkan tali. Sekarang talinya kusut di tangannya, seperti mi goreng.
 
-Abi mengusap kepalanya. "Kalau pelan-pelan dan nggak buru-buru, yang susah jadi bisa, Mo."
+Ia melempar gulungan talinya ke rumput dan duduk dengan wajah cemberut. "Aku nyerah. Layang-layangnya jahat."
 
-> *Ya Allah, tidak ada kemudahan kecuali yang Engkau jadikan mudah, dan Engkau menjadikan kesulitan menjadi mudah.*
+Abi duduk di sampingnya. Abi tidak langsung mengambil tali itu. Abi hanya memandangi pohon mangga lama sekali.
 
-Sekarang, kalau si kecil hampir menyerah pada sesuatu yang sulit, ajak ia coba pelan-pelan dulu, lalu baca doa ini bersama. 🪁`,
-      en: `Baby Mo's red kite flew up high. Then — it got caught on a tree branch.
+"Mo, kalau kamu jadi layang-layang itu, dan ada yang menarikmu kuat-kuat padahal kakimu tersangkut, rasanya bagaimana?"
 
-"It's stuck, Abi!" Baby Mo pulled the string hard. Still stuck.
+Baby Mo berpikir. "Sakit. Makin nyangkut."
 
-Abi didn't yank it right away. He sat down first, looking at the branch. "Try slowly, Mo. Pull a little, then loosen a little."
+"Nah. Mungkin yang dibutuhkan bukan tarikan yang lebih kuat. Tapi tarikan yang lebih pelan."
 
-Baby Mo pulled gently. Then loosened. Pulled again. Loosened again.
+Abi mengangkat tangannya dan berdoa pelan, "*Allahumma laa sahla illaa maa ja'altahu sahlaa…* Ya Allah, tidak ada yang mudah kecuali yang Engkau jadikan mudah."
 
-The string began to move. Bit by bit, the kite came free from the branch.
+Baby Mo mengikuti, terbata-bata. "Allahumma laa sahla…"
 
-"It worked, Abi! It worked!" Baby Mo jumped with joy, hugging his kite again.
+Lalu ia mengambil gulungan talinya lagi. Pertama, mengurai benang yang kusut. Satu simpul. Dua simpul. Tiga. Jarinya pegal, tapi ia tidak berhenti. Abi memegangi ujungnya.
 
-Abi patted his head. "When you go slow and don't rush, the hard thing becomes possible, Mo."
+Setelah talinya lurus, Baby Mo berdiri lagi menghadap pohon.
 
-> *O Allah, there is no ease except in what You make easy, and You make hardship easy if You will.*
+"Tarik sedikit," bisik Abi.
 
-Now, when your little one is about to give up on something hard, help them try slowly first, then say this dua together. 🪁`,
+Baby Mo menarik sedikit.
+
+"Sekarang kendurkan."
+
+Baby Mo mengendurkan.
+
+Tarik sedikit. Kendurkan. Tarik sedikit. Kendurkan.
+
+Dahan itu bergoyang pelan, seperti mengangguk. Angin datang lagi, kali ini dari arah yang benar.
+
+Tarik sedikit. Kendurkan.
+
+Lalu — wuuush! — layang-layang merah itu terlepas dari dahan, terangkat angin, dan melayang lagi ke langit. Ekornya meliuk-liuk, seperti tidak pernah terjadi apa-apa.
+
+"BISA, ABI! BISAAA!" Baby Mo melompat-lompat sambil tetap memegang tali, tertawa sampai layang-layangnya ikut menari.
+
+Abi bertepuk tangan. "Siapa yang menyerah tadi?"
+
+Baby Mo nyengir. "Bukan aku. Itu Mo yang tadi."
+
+Sebelum pulang, Baby Mo menurunkan layang-layangnya pelan-pelan. Ia memeluknya, lalu menengadah ke langit. "Terima kasih, Allah, sudah bikin mudah."
+
+> *Allahumma laa sahla illaa maa ja'altahu sahlaa, wa anta taj'alul hazna idzaa syi'ta sahlaa.* — "Ya Allah, tidak ada kemudahan kecuali yang Engkau jadikan mudah, dan Engkau menjadikan kesulitan — jika Engkau kehendaki — menjadi mudah." (HR. Ibnu Hibban 2427)
+
+Ngobrol bareng si kecil: hal apa yang sedang terasa susah buatmu? Yuk coba pelan-pelan, sambil membaca doa ini bersama. 🪁`,
+      en: `The afternoon wind blew hard across the field. Baby Mo's red kite danced in the sky, its long tail wriggling like a snake.
+
+"Look, Abi! The highest!"
+
+But suddenly the wind changed direction. The kite dived, spun round and round, then — shhhk! — got caught on the highest branch of the mango tree.
+
+"NOOOO!"
+
+Baby Mo pulled the string. Hard. The kite didn't move. He pulled even harder, until his feet slid on the grass. The branch shook, but the kite only got more tangled.
+
+"I can't! I can't!" Baby Mo yanked at the string. Now it was knotted in his hands, like a plate of fried noodles.
+
+He threw the reel onto the grass and sat down, scowling. "I give up. The kite is mean."
+
+Abi sat down beside him. Abi didn't take the string straight away. Abi just looked at the mango tree for a long time.
+
+"Mo, if you were that kite, and someone pulled you really hard while your foot was stuck, how would it feel?"
+
+Baby Mo thought. "It would hurt. I'd get more stuck."
+
+"Right. Maybe what's needed isn't a stronger pull. But a gentler one."
+
+Abi raised his hands and prayed softly, "*Allahumma laa sahla illaa maa ja'altahu sahlaa…* O Allah, nothing is easy except what You make easy."
+
+Baby Mo followed, stumbling. "Allahumma laa sahla…"
+
+Then he picked up the reel again. First, untangling the knotted string. One knot. Two knots. Three. His fingers ached, but he didn't stop. Abi held the other end.
+
+Once the string was straight, Baby Mo stood facing the tree again.
+
+"Pull a little," whispered Abi.
+
+Baby Mo pulled a little.
+
+"Now let it go slack."
+
+Baby Mo let it go slack.
+
+Pull a little. Let go. Pull a little. Let go.
+
+The branch swayed gently, as if nodding. The wind came again, this time from the right direction.
+
+Pull a little. Let go.
+
+Then — whoosh! — the red kite slipped off the branch, lifted on the wind, and floated back into the sky. Its tail wriggled as if nothing had ever happened.
+
+"I DID IT, ABI! I DID IIIT!" Baby Mo jumped up and down, still holding the string, laughing until the kite danced along with him.
+
+Abi clapped. "Who gave up a minute ago?"
+
+Baby Mo grinned. "Not me. That was the old Mo."
+
+Before going home, Baby Mo brought the kite down slowly. He hugged it, then looked up at the sky. "Thank you, Allah, for making it easy."
+
+> *Allahumma laa sahla illaa maa ja'altahu sahlaa, wa anta taj'alul hazna idzaa syi'ta sahlaa.* — "O Allah, nothing is easy except what You make easy, and You make the difficult easy if You will." (Ibn Hibban 2427)
+
+Talk it over with your little one: what feels hard for you right now? Let's try it slowly, saying this du'a together. 🪁`,
     },
     anchor: { type: "doa", slug: "doa-dimudahkan-urusan" },
     takeaway: {
-      id: "Yang terasa sulit bisa jadi mudah — kalau dicoba pelan-pelan, sambil minta kemudahan dari Allah.",
-      en: "What feels hard can become easy — if tried slowly, while asking Allah for ease.",
+      id: "Saat anak frustrasi, jangan buru-buru mengambil alih. Bantu ia melambat, berdoa, lalu mencoba lagi dengan tangannya sendiri.",
+      en: "When a child is frustrated, don't rush to take over. Help them slow down, pray, then try again with their own hands.",
     },
     tags: ["sabar", "usaha", "doa", "buku"],
-    readingTimeMin: 3,
+    readingTimeMin: 4,
   },
 
   {
@@ -4734,56 +5218,136 @@ Now, when your little one is about to give up on something hard, help them try s
     published: "2026-07-02",
     title: { id: "Permintaan pada Bintang Jatuh", en: "A Wish Upon a Falling Star" },
     hook: {
-      id: "Sebuah cahaya melesat di langit malam. \"Itu bintang jatuh!\" teriak Baby Ais. \"Aku boleh minta sesuatu, kan?\"",
-      en: "A streak of light shot across the night sky. \"A falling star!\" shouted Baby Ais. \"I get to wish for something, right?\"",
+      id: "\"Itu bintang jatuh! Aku boleh minta sesuatu, kan?\" Baby Ais punya permintaan besar. Tapi kepada siapa sebenarnya ia harus meminta?",
+      en: "\"A shooting star! I can make a wish, can't I?\" Baby Ais has a big wish. But who should she really be asking?",
     },
     body: {
-      id: `Malam itu, Baby Ais duduk di teras bersama Umi, memandangi langit penuh bintang.
+      id: `Malam itu listrik padam di seluruh kampung. Rumah gelap, kipas berhenti, dan udara terasa gerah. Maka Umi mengajak Baby Ais duduk di teras dengan tikar dan sepiring jagung rebus.
 
-Tiba-tiba — wuusshh — sebuah cahaya melesat cepat. "Itu bintang jatuh! Aku boleh minta sesuatu, kan, Umi?"
+Tanpa lampu-lampu rumah, langit jadi penuh sekali. Bintang di mana-mana, seperti gula yang tumpah di atas taplak hitam.
 
-Umi memeluknya. "Bintang itu indah, Sayang. Tapi bintang tidak bisa mengabulkan permintaan. Bintang juga ciptaan Allah, sama seperti kita."
+"Masya Allah," bisik Umi. "Jarang-jarang bisa lihat sebanyak ini."
 
-Baby Ais terdiam. "Jadi... aku minta ke siapa?"
+Baby Ais berbaring telentang, mencoba menghitung. "Satu, dua, tiga… seratus… sejuta…"
 
-"Minta ke Allah saja. Dia yang menciptakan bintang itu, jadi Dia juga yang bisa mengabulkan permintaanmu."
+Tiba-tiba — wuuussh — sebuah cahaya melesat melintasi langit, cepat sekali, lalu hilang.
 
-Baby Ais memejamkan mata, menengadah ke langit. "Allah, aku mau main sama Kak Mo besok, ya."
+Baby Ais langsung duduk. "UMI! ITU BINTANG JATUH! Kata teman di sekolah, kalau lihat bintang jatuh boleh minta apa saja! Aku mau minta sepeda pink yang ada keranjangnya!"
 
-Umi memejamkan mata juga, ikut berdoa pelan di sebelahnya.
+Ia memejamkan mata rapat-rapat dan menunjuk ke langit. "Bintang jatuh, aku mau sepeda pink yang ada—"
 
-Mereka berdua duduk diam sebentar, memandangi langit yang masih berkilau dengan ribuan bintang lain.
+Umi menyentuh tangannya pelan. "Ais, boleh Umi tanya sesuatu dulu?"
 
-> *Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu.*
+Baby Ais membuka satu mata.
 
-Sekarang, kalau si kecil melihat bintang jatuh atau hal indah di langit, ajak ia menutup mata dan berdoa kepada Allah saat itu juga. ⭐`,
-      en: `That night, Baby Ais sat on the porch with Umi, gazing up at a sky full of stars.
+"Bintang itu siapa yang membuat?"
 
-Suddenly — whoosh — a light streaked across the sky. "A falling star! I get to wish for something, right, Umi?"
+"Allah," jawab Baby Ais.
 
-Umi hugged her. "That star is beautiful, sweetheart. But a star can't grant wishes. The star is also Allah's creation, just like us."
+"Bulan?"
 
-Baby Ais went quiet. "So... who do I ask?"
+"Allah."
 
-"Ask Allah instead. He made that star, so He's the one who can grant your wish."
+"Langit, awan, angin?"
 
-Baby Ais closed her eyes and looked up at the sky. "Allah, I want to play with Kak Mo tomorrow, please."
+"Allah, Allah, Allah."
 
-Umi closed her eyes too, praying quietly beside her.
+"Kalau bintangnya saja diciptakan Allah," kata Umi, "bintang bisa mengabulkan permintaan, nggak?"
 
-They sat together for a while, watching the sky still sparkling with a thousand other stars.
+Baby Ais membuka kedua matanya. Ia memandangi langit lama sekali. "Nggak bisa," katanya pelan. "Bintang kan cuma… ciptaan. Kayak aku."
 
-> *Call upon Me, and I will answer you.*
+"Bintang itu indah sekali. Tapi bintang tidak bisa mendengar doamu. Yang bisa mendengar, yang bisa mengabulkan, cuma Yang menciptakan bintang."
 
-Now, when your little one sees a falling star or something beautiful in the sky, help them close their eyes and pray to Allah right then. ⭐`,
+"Jadi aku minta ke Allah?"
+
+"Kapan saja. Tidak perlu menunggu bintang jatuh. Bahkan Allah sendiri yang bilang: *Berdoalah kepada-Ku, niscaya Aku kabulkan.*"
+
+Baby Ais duduk bersila. Ia mengangkat kedua tangannya, seperti yang sering ia lihat Abi lakukan sesudah sholat. Ia berpikir lama.
+
+Lalu ia berdoa pelan. "Ya Allah, aku mau sepeda pink yang ada keranjangnya."
+
+Ia berhenti sebentar. Lalu menambahkan.
+
+"Terus, ya Allah, tolong sembuhkan Nenek yang batuk. Terus, besok aku mau main sama Mo, jangan berantem. Terus… terima kasih sudah bikin bintang sebanyak ini."
+
+Umi memandangnya diam-diam. Doa itu dimulai dengan sepeda, tapi berakhir dengan terima kasih.
+
+Lampu tiba-tiba menyala lagi. Kipas berputar. Dari dalam rumah terdengar Baby Mo bersorak.
+
+Baby Ais menoleh ke langit. Bintang-bintangnya jadi lebih sedikit, kalah oleh lampu. "Umi, bintangnya pergi."
+
+"Bintangnya tetap di sana," kata Umi. "Sama seperti Allah. Selalu ada, walaupun kadang kita lupa melihat."
+
+> *"Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu."* (QS. Ghafir: 60)
+
+Ngobrol bareng si kecil: kalau kamu boleh minta tiga hal kepada Allah malam ini, apa saja? Jangan lupa satu terima kasih di akhir, ya. ⭐`,
+      en: `That night the power went out across the whole neighbourhood. The house was dark, the fan stopped, and the air felt stuffy. So Umi took Baby Ais to sit on the porch with a mat and a plate of boiled corn.
+
+Without the house lights, the sky was completely full. Stars everywhere, like sugar spilled across a black tablecloth.
+
+"Masha Allah," whispered Umi. "We hardly ever get to see this many."
+
+Baby Ais lay on her back, trying to count. "One, two, three… a hundred… a million…"
+
+Suddenly — whoosh — a streak of light shot across the sky, very fast, and vanished.
+
+Baby Ais sat straight up. "UMI! A SHOOTING STAR! My friend at school says if you see a shooting star you can wish for anything! I want a pink bike with a basket!"
+
+She squeezed her eyes shut and pointed at the sky. "Shooting star, I want a pink bike with a—"
+
+Umi touched her hand gently. "Ais, may I ask you something first?"
+
+Baby Ais opened one eye.
+
+"Who made that star?"
+
+"Allah," answered Baby Ais.
+
+"The moon?"
+
+"Allah."
+
+"The sky, the clouds, the wind?"
+
+"Allah, Allah, Allah."
+
+"If even the star was made by Allah," said Umi, "can a star grant wishes?"
+
+Baby Ais opened both eyes. She looked at the sky for a long time. "No," she said quietly. "A star is just… something that was made. Like me."
+
+"Stars are so beautiful. But a star can't hear your prayer. The only One who can hear, and the only One who can grant it, is the One who made the stars."
+
+"So I ask Allah?"
+
+"Any time. You don't need to wait for a shooting star. Allah Himself says: *Call upon Me, and I will answer you.*"
+
+Baby Ais sat cross-legged. She raised both her hands, the way she often saw Abi do after prayer. She thought for a long time.
+
+Then she prayed softly. "O Allah, I want a pink bike with a basket."
+
+She paused. Then she added more.
+
+"And, O Allah, please make Nenek's cough better. And tomorrow I want to play with Mo without fighting. And… thank You for making so many stars."
+
+Umi watched her quietly. The prayer had started with a bike, but it ended with a thank-you.
+
+Suddenly the lights came back on. The fan whirred. From inside, Baby Mo cheered.
+
+Baby Ais looked up at the sky. There were fewer stars now, outshone by the lights. "Umi, the stars went away."
+
+"The stars are still there," said Umi. "Just like Allah. Always there, even when we sometimes forget to look."
+
+> *"Call upon Me; I will respond to you."* (Qur'an, Ghafir 40:60)
+
+Talk it over with your little one: if you could ask Allah for three things tonight, what would they be? Don't forget one thank-you at the end. ⭐`,
     },
     anchor: { type: "doa", slug: "doa-pandai-bersyukur" },
     takeaway: {
-      id: "Keinginan boleh dimiliki — tapi yang diminta adalah Allah, bukan bintang.",
-      en: "It's okay to want things — but the One we ask is Allah, not a star.",
+      id: "Jangan hanya meluruskan \"minta ke bintang\". Ajak anak berdoa langsung kepada Allah — dan lihat bagaimana doanya tumbuh dari keinginan menjadi syukur.",
+      en: "Don't just correct \"wishing on a star\". Help your child pray to Allah directly — and watch the prayer grow from wanting into gratitude.",
     },
-    tags: ["doa", "tauhid", "tanya-anak", "buku"],
-    readingTimeMin: 3,
+    tags: ["doa", "tauhid", "bintang", "malam", "buku"],
+    readingTimeMin: 4,
   },
 
   {
@@ -4794,56 +5358,116 @@ Now, when your little one sees a falling star or something beautiful in the sky,
     published: "2026-07-03",
     title: { id: "Kupu-Kupu di Tangan Baby Ais", en: "The Butterfly in Baby Ais's Hand" },
     hook: {
-      id: "Baby Ais berhasil menangkap kupu-kupu kuning. Ia menggenggamnya erat-erat — terlalu erat.",
-      en: "Baby Ais finally caught a yellow butterfly. She gripped it tight — too tight.",
+      id: "Baby Ais berhasil menangkap kupu-kupu kuning dan ingin memeliharanya selamanya. Tapi makin erat ia menggenggam, makin sedih kupu-kupunya.",
+      en: "Baby Ais catches a yellow butterfly and wants to keep it forever. But the tighter she holds it, the sadder the butterfly gets.",
     },
     body: {
-      id: `Kupu-kupu kuning itu hinggap sebentar di bunga. Baby Ais mengendap-endap, lalu — tertangkap!
+      id: `Di kebun belakang, bunga-bunga kembang sepatu sedang mekar. Merah, merah muda, dan oranye. Dan di antara bunga-bunga itu, terbang seekor kupu-kupu kuning. Sayapnya seperti potongan sinar matahari.
 
-"Aku dapat! Aku mau pelihara dia di kamar," kata Baby Ais, menggenggam kupu-kupu itu erat-erat di kedua tangan.
+Baby Ais menahan napas. Ia mengendap-endap, pelan-pelan, seperti kucing. Satu langkah. Dua langkah. Kupu-kupu itu hinggap di bunga merah, sayapnya membuka-menutup.
 
-Sayap kupu-kupu itu bergerak-gerak, mencoba lepas. Baby Ais menggenggam lebih erat lagi, takut kupu-kupunya kabur.
+HAP!
 
-Baby Mo yang melihat dari dekat berbisik, "Ais, lihat — sayapnya kayak mau patah."
+"DAPAT!" Baby Ais melompat girang. Kupu-kupu itu ada di dalam kedua tangannya yang tertangkup. "Mo! Mo! Aku dapat kupu-kupu! Aku mau pelihara dia di kamar! Selamanya!"
 
-Baby Ais melonggarkan genggamannya sedikit. Sayap kupu-kupu itu kelihatan kusut di antara jarinya.
+Baby Mo berlari mendekat. "Lihat! Lihat!"
 
-Ia membuka telapak tangannya pelan-pelan. Kupu-kupu itu diam sebentar di telapaknya, lalu terbang — pelan, lalu tinggi, menjauh ke arah bunga-bunga lain.
+Baby Ais membuka sedikit celah di antara jarinya. Sayap kuning itu bergerak-gerak, menabrak-nabrak tangannya. Takut kupu-kupunya kabur, Baby Ais buru-buru menggenggam lebih erat.
 
-Baby Ais memandanginya terbang. "Dia lebih suka terbang ya, daripada digenggam terus."
+Gerakan di dalam tangannya jadi makin lemah.
 
-Baby Mo mengangguk. "Mungkin kalau sayang sama sesuatu, kita pegangnya pelan-pelan aja."
+"Ais," bisik Baby Mo. "Lihat tanganmu. Ada bubuk kuning."
 
-> *Sesungguhnya kelembutan tidaklah ada pada sesuatu, kecuali akan menghiasinya.*
+Baby Ais membuka sedikit tangannya. Telapak tangannya penuh debu kuning yang halus seperti bedak. Dan sayap kupu-kupu itu… kusut. Satu sisinya terlipat.
 
-Sekarang, kalau si kecil menangkap serangga atau hewan kecil, ajak ia memegangnya dengan tangan terbuka dan pelan — lalu lepaskan bersama. 🦋`,
-      en: `The yellow butterfly landed on a flower for a moment. Baby Ais crept closer, then — caught it!
+"Itu bubuk sayapnya," kata Umi yang datang membawa keranjang jemuran. Suaranya lembut. "Sayap kupu-kupu itu rapuh sekali, Ais. Kalau terlalu banyak bubuknya hilang, dia susah terbang."
 
-"I got it! I want to keep her in my room," said Baby Ais, gripping the butterfly tight with both hands.
+Mata Baby Ais berkaca-kaca. "Tapi aku sayang sama dia. Aku mau dia sama aku terus."
 
-The butterfly's wings fluttered, trying to escape. Baby Ais gripped even tighter, afraid it would fly away.
+Umi berjongkok di sampingnya. "Umi tahu. Tapi coba pikir. Kalau Ais dipeluk erat-erat terus, nggak boleh lari, nggak boleh main, nggak boleh ketemu Mo… itu rasanya disayang, atau rasanya terkurung?"
 
-Baby Mo, watching nearby, whispered, "Ais, look — her wings look like they might break."
+Baby Ais diam lama sekali. Kupu-kupu di tangannya hampir tidak bergerak.
 
-Baby Ais loosened her grip a little. The butterfly's wings looked crumpled between her fingers.
+"Terkurung," bisiknya.
 
-She slowly opened her palm. The butterfly sat still for a moment, then flew off — slow at first, then higher, away toward the other flowers.
+Pelan-pelan, sangat pelan, Baby Ais membuka telapak tangannya lebar-lebar. Datar. Seperti piring kecil.
 
-Baby Ais watched it go. "I guess she likes flying more than being held."
+Kupu-kupu itu diam saja. Satu detik. Dua detik. Lima detik. Baby Ais tidak berani bernapas.
 
-Baby Mo nodded. "Maybe when we love something, we should hold it gently."
+"Ayo," bisiknya. "Terbang. Nggak apa-apa."
 
-> *Gentleness is not found in anything except that it beautifies it.*
+Lalu sayap yang kusut itu bergetar. Membuka. Menutup. Membuka lagi — dan kupu-kupu kuning itu terangkat, oleng sedikit, lalu terbang. Rendah, lalu tinggi, lalu hinggap di bunga kembang sepatu yang paling atas.
 
-Now, when your little one catches a bug or small creature, help them hold it with open, gentle hands — then let it go together. 🦋`,
+Baby Ais menghela napas panjang. "Dia bisa terbang."
+
+Baby Mo merangkul pundaknya. "Ais, mungkin kalau sayang sama sesuatu, kita pegangnya pelan-pelan aja. Pakai tangan terbuka."
+
+Sore itu Baby Ais tidak menangkap kupu-kupu lagi. Ia duduk diam di dekat kembang sepatu, dengan telapak tangan terbuka di pangkuannya.
+
+Dan sebelum matahari terbenam, sesuatu yang luar biasa terjadi. Seekor kupu-kupu kuning — mungkin yang tadi, mungkin yang lain — terbang turun, dan hinggap sebentar di telapak tangan Baby Ais yang terbuka.
+
+Baby Ais tersenyum sangat lebar, tapi tidak bergerak sedikit pun.
+
+> *"Sesungguhnya kelembutan tidaklah ada pada sesuatu kecuali ia akan menghiasinya, dan tidaklah dicabut dari sesuatu kecuali ia akan memperburuknya."* (HR. Muslim 2594)
+
+Ngobrol bareng si kecil: hewan apa yang ingin kamu sayangi dengan tangan terbuka? Yuk latihan memegang sesuatu dengan sangat lembut. 🦋`,
+      en: `In the back garden, the hibiscus flowers were blooming. Red, pink and orange. And among the flowers flew a yellow butterfly. Its wings were like little pieces of sunshine.
+
+Baby Ais held her breath. She crept, slowly, slowly, like a cat. One step. Two steps. The butterfly landed on a red flower, its wings opening and closing.
+
+SNAP!
+
+"GOT IT!" Baby Ais jumped for joy. The butterfly was inside her cupped hands. "Mo! Mo! I caught a butterfly! I'm going to keep it in my room! Forever!"
+
+Baby Mo ran over. "Let me see! Let me see!"
+
+Baby Ais opened a tiny gap between her fingers. The yellow wings fluttered, bumping against her hands. Afraid it would escape, Baby Ais quickly squeezed tighter.
+
+The movement inside her hands grew weaker.
+
+"Ais," whispered Baby Mo. "Look at your hands. There's yellow powder."
+
+Baby Ais opened her hands a little. Her palms were covered in fine yellow dust, soft as talcum powder. And the butterfly's wings were… crumpled. One side was folded over.
+
+"That's the powder from its wings," said Umi, who had come out with the laundry basket. Her voice was gentle. "Butterfly wings are very delicate, Ais. If too much of the powder comes off, it's hard for them to fly."
+
+Baby Ais's eyes filled with tears. "But I love it. I want it to stay with me always."
+
+Umi crouched down beside her. "I know. But think about it. If Ais were hugged tight all the time, not allowed to run, not allowed to play, not allowed to see Mo… would that feel like being loved, or like being trapped?"
+
+Baby Ais was quiet for a long time. The butterfly in her hands was barely moving.
+
+"Trapped," she whispered.
+
+Slowly, very slowly, Baby Ais opened her hands wide. Flat. Like a little plate.
+
+The butterfly stayed still. One second. Two seconds. Five seconds. Baby Ais didn't dare breathe.
+
+"Go on," she whispered. "Fly. It's okay."
+
+Then the crumpled wings trembled. Opened. Closed. Opened again — and the yellow butterfly lifted, wobbled a little, then flew. Low, then high, then landed on the very top hibiscus flower.
+
+Baby Ais let out a long breath. "It can fly."
+
+Baby Mo put his arm round her shoulders. "Ais, maybe when you love something, you hold it gently. With open hands."
+
+That afternoon Baby Ais didn't catch any more butterflies. She sat quietly by the hibiscus, with her open palms resting in her lap.
+
+And before the sun set, something wonderful happened. A yellow butterfly — maybe the same one, maybe another — floated down and landed for a moment on Baby Ais's open palm.
+
+Baby Ais smiled the biggest smile, but she didn't move even a little bit.
+
+> *"Gentleness is not found in anything except that it beautifies it, and it is not removed from anything except that it makes it ugly."* (Muslim 2594)
+
+Talk it over with your little one: which animal would you like to love with open hands? Let's practise holding something very, very gently. 🦋`,
     },
     anchor: { type: "hadith", slug: "kelembutan-keindahan" },
     takeaway: {
-      id: "Sayang pada makhluk kecil ditunjukkan dengan genggaman yang lembut, bukan yang erat.",
-      en: "Love for small creatures is shown through a gentle hold, not a tight one.",
+      id: "Anak sering menggenggam terlalu erat karena terlalu sayang. Ajari bedanya menyayangi dan memiliki — dengan tangan terbuka.",
+      en: "Children often hold too tightly because they love too much. Teach the difference between loving and owning — with open hands.",
     },
-    tags: ["kelembutan", "hewan", "akhlak", "buku"],
-    readingTimeMin: 3,
+    tags: ["kelembutan", "hewan", "kebun", "akhlak", "buku"],
+    readingTimeMin: 5,
   },
 
   {
@@ -4854,60 +5478,140 @@ Now, when your little one catches a bug or small creature, help them hold it wit
     published: "2026-07-04",
     title: { id: "Hujan Pertama Setelah Lama Kering", en: "The First Rain After a Long Dry Spell" },
     hook: {
-      id: "Sudah lama tidak hujan. Tanah halaman kering dan berdebu. Lalu, satu tetes air jatuh dari langit.",
-      en: "It hadn't rained in a long time. The yard was dry and dusty. Then, one drop of water fell from the sky.",
+      id: "Sudah berminggu-minggu tidak hujan, dan tomat kecil yang ditanam si kembar mulai layu. Mereka menyiraminya setiap hari — lalu belajar berdoa untuk hujan yang bermanfaat.",
+      en: "It hasn't rained for weeks, and the twins' little tomato plant is wilting. They water it every day — then learn to pray for a rain that brings benefit.",
     },
     body: {
-      id: `Sudah berminggu-minggu tidak ada hujan. Tanaman di halaman mulai layu. Tanahnya kering, berdebu kalau diinjak.
+      id: `Di pojok halaman, ada satu pot kecil. Isinya pohon tomat yang ditanam Baby Mo dan Baby Ais bersama Abi. Namanya Pak Tomat. Daunnya dulu hijau segar, dan ada tiga buah tomat kecil yang masih hijau.
 
-Sore itu, langit tiba-tiba menggelap. Lalu — tes, tes, tes — air mulai jatuh.
+Tapi sudah berminggu-minggu tidak turun hujan.
 
-"Hujan! Hujan!" Baby Mo dan Baby Ais berlari ke teras, berteriak girang.
+Matahari bersinar terik setiap hari. Tanah di halaman retak-retak seperti kulit biskuit. Debu beterbangan kalau diinjak. Dan daun Pak Tomat mulai layu, melengkung ke bawah seperti orang yang sedang sedih.
 
-Umi membuka pintu lebar-lebar. "Alhamdulillah, akhirnya hujan turun lagi."
+"Pak Tomat haus," kata Baby Ais.
 
-Hujan makin deras. Bau tanah basah tercium dari halaman. Daun-daun yang layu jadi terlihat segar lagi.
+Maka setiap pagi, si kembar membawa gembor kecil. Baby Mo mengisi air dari keran. Baby Ais menyiramkannya pelan-pelan ke akar. Byur.
 
-"Umi, kenapa kita ucap alhamdulillah? Kan cuma hujan," tanya Baby Ais.
+Tapi siang harinya, tanahnya sudah kering lagi. Daunnya layu lagi.
 
-"Karena hujan ini rezeki, Sayang. Tanaman butuh minum, sama seperti kita."
+"Kenapa nggak bisa segar terus, Abi?" tanya Baby Mo, putus asa.
 
-Baby Mo dan Baby Ais menengadahkan tangan ke arah tetes hujan dari atap, lalu bersama-sama berbisik, "Allahumma shayyiban naafi'an" — ya Allah, jadikan hujan ini bermanfaat.
+"Air dari gembor kita sedikit, Mo. Pak Tomat butuh banyak. Sawah-sawah juga butuh. Sungai juga butuh. Hanya Allah yang bisa menurunkan air sebanyak itu."
 
-Mereka berdua tertawa, membiarkan tetesnya jatuh di telapak tangan.
+"Hujan," kata Baby Ais.
 
-> *Ya Allah, jadikanlah hujan ini hujan yang membawa manfaat.*
+"Hujan," kata Abi.
 
-Sekarang, lain kali hujan turun setelah lama kering, ajak si kecil berdiri di teras, merasakan tetesnya, dan membaca doa ini bersama. 🌧️`,
-      en: `It hadn't rained for weeks. The plants in the yard were starting to wilt. The ground was dry, dusty underfoot.
+Malam itu, sesudah sholat Isya, Baby Ais menambahkan sesuatu di doanya. "Ya Allah, turunin hujan ya. Pak Tomat haus. Sawah juga haus."
 
-That afternoon, the sky suddenly darkened. Then — drip, drip, drip — water began to fall.
+Baby Mo mengintip, lalu ikut menambahkan. "Tapi jangan yang banjir ya, Allah. Yang pas aja."
 
-"Rain! Rain!" Baby Mo and Baby Ais ran to the porch, shouting with joy.
+Abi tersenyum mendengarnya.
 
-Umi threw the door wide open. "Alhamdulillah, the rain is finally back."
+Tiga hari kemudian, sore-sore, langit tiba-tiba berubah. Awan kelabu bergulung-gulung. Angin bertiup dingin. Daun-daun bergoyang.
 
-The rain grew heavier. The smell of wet earth rose from the yard. The wilted leaves looked fresh again.
+Lalu — tes.
 
-"Umi, why do we say alhamdulillah? It's just rain," asked Baby Ais.
+Satu tetes jatuh di pipi Baby Mo.
 
-"Because this rain is a blessing, sweetheart. Plants need a drink, just like we do."
+Tes. Tes. Tes-tes-tes. Lalu bresssss!
 
-Baby Mo and Baby Ais held their hands up to catch the drops falling from the roof, then whispered together, "Allahumma shayyiban naafi'an" — O Allah, make this rain beneficial.
+"HUJAAAN!" Si kembar berlari ke teras, melompat-lompat.
 
-They both laughed, letting the drops fall onto their palms.
+Umi membuka pintu lebar-lebar. "Alhamdulillah."
 
-> *O Allah, make this a beneficial rain.*
+Hujan turun makin deras. Bau tanah basah naik dari halaman, wangi sekali, seperti tanah yang sedang menarik napas lega. Retakan-retakan di tanah terisi air. Dan di pojok halaman, daun-daun Pak Tomat bergoyang-goyang di bawah hujan, seperti sedang menari.
 
-Now, next time it rains after a long dry spell, take your little one to the porch, feel the drops together, and say this dua. 🌧️`,
+"Abi! Pak Tomat minum!"
+
+Abi mengajak mereka menengadahkan tangan, merasakan tetes hujan dari tepi atap. "Ada doa yang diajarkan Rasulullah ﷺ ketika hujan turun. Pendek sekali. *Allahumma shayyiban naafi'an.*"
+
+"Allahumma shayyiban naafi'an," ulang si kembar.
+
+"Artinya, ya Allah, jadikanlah hujan ini hujan yang bermanfaat."
+
+Baby Mo mengangguk serius. "Yang pas. Bukan yang banjir."
+
+"Betul sekali," kata Abi.
+
+Mereka berdiri lama di teras. Tetes hujan jatuh di telapak tangan mereka, dingin dan geli. Dan setiap kali hujan makin deras, Baby Ais berbisik lagi, "Allahumma shayyiban naafi'an."
+
+Seminggu kemudian, Pak Tomat berdiri tegak lagi. Daunnya hijau. Dan salah satu tomatnya mulai berubah warna — oranye, lalu merah.
+
+"Ini tomat dari hujan," kata Baby Ais bangga.
+
+> *Allahumma shayyiban naafi'an.* — "Ya Allah, jadikanlah hujan ini hujan yang membawa manfaat." (HR. Bukhari 1032)
+
+Ngobrol bareng si kecil: siapa saja yang senang kalau hujan turun? Lain kali hujan, yuk berdiri di teras dan baca doanya bersama. 🌧️`,
+      en: `In the corner of the yard there was a small pot. In it grew a tomato plant that Baby Mo and Baby Ais had planted with Abi. They called it Mr Tomato. Its leaves used to be fresh and green, and it had three little tomatoes that were still green.
+
+But it hadn't rained for weeks.
+
+The sun blazed every day. The ground in the yard cracked like a biscuit crust. Dust flew up when you stepped on it. And Mr Tomato's leaves began to wilt, drooping down like someone feeling sad.
+
+"Mr Tomato is thirsty," said Baby Ais.
+
+So every morning, the twins brought out their little watering can. Baby Mo filled it from the tap. Baby Ais poured it slowly onto the roots. Splash.
+
+But by midday, the soil was dry again. The leaves were drooping again.
+
+"Why won't it stay fresh, Abi?" asked Baby Mo, in despair.
+
+"Our watering can only holds a little water, Mo. Mr Tomato needs a lot. The rice fields need it too. The rivers need it too. Only Allah can send down that much water."
+
+"Rain," said Baby Ais.
+
+"Rain," said Abi.
+
+That night, after Isha prayer, Baby Ais added something to her du'a. "O Allah, please send rain. Mr Tomato is thirsty. The rice fields are thirsty too."
+
+Baby Mo peeked, then added his own. "But not the flooding kind, Allah. Just the right amount."
+
+Abi smiled to hear it.
+
+Three days later, in the afternoon, the sky suddenly changed. Grey clouds rolled in. A cool wind blew. Leaves swayed.
+
+Then — plip.
+
+One drop landed on Baby Mo's cheek.
+
+Plip. Plip. Plip-plip-plip. Then whooooosh!
+
+"RAAAIN!" The twins ran to the porch, jumping up and down.
+
+Umi opened the door wide. "Alhamdulillah."
+
+The rain fell harder and harder. The smell of wet earth rose from the yard, so lovely, like the ground letting out a sigh of relief. The cracks in the soil filled with water. And in the corner of the yard, Mr Tomato's leaves bobbed under the rain, as if they were dancing.
+
+"Abi! Mr Tomato is drinking!"
+
+Abi had them hold out their hands to feel the drops falling from the edge of the roof. "There's a du'a the Prophet ﷺ taught for when rain falls. It's very short. *Allahumma shayyiban naafi'an.*"
+
+"Allahumma shayyiban naafi'an," the twins repeated.
+
+"It means, O Allah, make this a rain that brings benefit."
+
+Baby Mo nodded seriously. "The right amount. Not the flooding kind."
+
+"Exactly," said Abi.
+
+They stood on the porch for a long time. Raindrops fell on their palms, cold and tickly. And every time the rain grew heavier, Baby Ais whispered again, "Allahumma shayyiban naafi'an."
+
+A week later, Mr Tomato was standing tall again. His leaves were green. And one of his tomatoes was beginning to change colour — orange, then red.
+
+"This is a rain tomato," said Baby Ais proudly.
+
+> *Allahumma shayyiban naafi'an.* — "O Allah, make it a beneficial rain." (Bukhari 1032)
+
+Talk it over with your little one: who is happy when the rain comes? Next time it rains, let's stand on the porch and say the du'a together. 🌧️`,
     },
     anchor: { type: "doa", slug: "ketika-hujan" },
     takeaway: {
-      id: "Hujan bukan cuma basah — ia rezeki untuk tanaman, dan layak disyukuri bersama.",
-      en: "Rain isn't just wet weather — it's a blessing for plants, worth giving thanks for together.",
+      id: "Anak paling menghargai hujan ketika ia pernah merawat sesuatu yang kehausan. Beri ia satu pot kecil — dan biarkan doanya tumbuh bersama tanamannya.",
+      en: "Children value rain most when they've cared for something thirsty. Give them one small pot — and let their prayers grow with the plant.",
     },
-    tags: ["hujan", "syukur", "doa", "buku"],
-    readingTimeMin: 3,
+    tags: ["hujan", "syukur", "doa", "kebun", "buku"],
+    readingTimeMin: 5,
   },
 
   {
@@ -4918,56 +5622,1489 @@ Now, next time it rains after a long dry spell, take your little one to the porc
     published: "2026-07-05",
     title: { id: "Membantu Umi Bikin Kue", en: "Helping Umi Bake Cookies" },
     hook: {
-      id: "Baby Mo mau bantu bikin kue. Tepungnya malah berhamburan ke lantai dan ke bajunya.",
-      en: "Baby Mo wanted to help bake cookies. The flour ended up scattered across the floor and his shirt.",
+      id: "Baby Mo mau bantu bikin kue. Tepungnya berhamburan, telurnya pecah di lantai, dan ia yakin akan dimarahi. Tapi dapur hari itu menyimpan kejutan.",
+      en: "Baby Mo wants to help bake cookies. The flour goes everywhere, an egg smashes on the floor, and he's sure he'll be told off. But the kitchen has a surprise in store.",
     },
     body: {
-      id: `"Umi, aku mau bantu bikin kue!" Baby Mo sudah berdiri di samping meja dapur, siap-siap.
+      id: `Besok Nenek ulang tahun. Umi akan membuat kue kering cokelat kesukaan Nenek — yang bulat-bulat, dengan butiran cokelat di atasnya.
 
-Umi mengangkatnya ke kursi tinggi. "Boleh. Tapi sebelum mulai, ucapkan dulu ya."
+"Umi, aku mau bantu!" Baby Mo sudah berdiri di samping meja dapur dengan celemek yang kebesaran. Talinya diikat tiga kali di pinggangnya.
 
-"Bismillah," kata Baby Mo, lalu menuang tepung ke mangkuk — terlalu cepat. Tepungnya berhamburan ke meja, ke lantai, ke bajunya sendiri.
+Umi memandangi dapurnya yang bersih mengilap. Lalu memandangi Baby Mo. Lalu tersenyum. "Boleh. Kita mulai dengan bismillah, ya."
 
-Baby Mo terdiam, takut dimarahi. Tapi Umi malah tertawa kecil. "Nggak apa-apa, Mo. Pelan-pelan saja, sedikit demi sedikit."
+"Bismillah!"
 
-Mereka mengaduk adonan bersama-sama. Tangan kecil Baby Mo penuh tepung, tapi ia tersenyum lebar.
+Tugas pertama: menuang tepung. Baby Mo mengangkat kantong tepung yang besar. Berat sekali. Kantongnya miring, miring, miring — dan WUSSS!
 
-Saat adonan dibentuk bulat-bulat dan dimasukkan ke oven, Baby Mo menempelkan wajahnya ke kaca oven, menunggu.
+Tepung tumpah ke mangkuk, ke meja, ke lantai, ke celemek, ke rambut Baby Mo. Ia jadi putih dari kepala sampai kaki, seperti boneka salju.
 
-Begitu kue matang, ia menggigit kue pertamanya sendiri. "Umi, ini kue paling enak! Aku yang bikin!"
+Baby Mo membeku. Ia menunggu suara marah.
 
-Umi memeluknya, masih penuh tepung. "Karena kue ini dibuat dengan bismillah, dan dibuat bersama-sama."
+Tapi yang terdengar malah tawa. Umi tertawa sampai harus bersandar di kulkas. "Mo! Kamu jadi hantu tepung!"
 
-> *Rasulullah ﷺ adalah orang yang sibuk, tetapi beliau masih sempat bermain dan menghabiskan waktu bersama anak-anak.*
+Baby Mo ikut tertawa, lega. Tepung beterbangan dari rambutnya setiap kali ia tertawa.
 
-Sekarang, ajak si kecil membantu satu tugas dapur sederhana bersama — biar berantakan, yang penting dikerjakan bersama. 🍪`,
-      en: `"Umi, I want to help bake cookies!" Baby Mo was already standing by the kitchen counter, ready to go.
+Tugas kedua: memecahkan telur. "Ketuk pelan di pinggir mangkuk," kata Umi.
 
-Umi lifted him onto a high chair. "Of course. But before we start, say it first."
+Baby Mo mengetuk. Terlalu pelan. Tidak retak. Ia mengetuk lagi, lebih kuat — PRAK! Telurnya pecah. Di tangannya. Kuning telurnya meluncur, melewati mangkuk, dan jatuh ke lantai. Plok.
 
-"Bismillah," said Baby Mo, then poured the flour into the bowl — too fast. Flour scattered across the counter, the floor, and his own shirt.
+Bibir Baby Mo mulai bergetar. "Maaf, Umi… aku bikin berantakan terus."
 
-Baby Mo froze, afraid he'd get scolded. But Umi just laughed softly. "It's okay, Mo. Just go slowly, bit by bit."
+Umi berjongkok sampai matanya sejajar. "Mo, tahu nggak? Rasulullah ﷺ, manusia paling mulia, dulu juga suka membantu pekerjaan di rumah. Beliau tidak malu. Dan Umi yakin, waktu pertama kali belajar, semua orang pasti pernah menjatuhkan telur."
 
-They stirred the dough together. Baby Mo's little hands were covered in flour, but he grinned widely.
+"Umi juga pernah?"
 
-As the dough was rolled into balls and placed in the oven, Baby Mo pressed his face to the oven glass, waiting.
+"Umi pernah menjatuhkan sepuluh telur sekaligus," bisik Umi. "Satu kardus."
 
-The moment the cookies were done, he took the first bite himself. "Umi, this is the best cookie! I made it!"
+Baby Mo tertawa lagi.
 
-Umi hugged him, still covered in flour. "Because this cookie was made with bismillah, and made together."
+Mereka membersihkan lantai berdua. Lalu Umi memegang tangan Baby Mo, dan mereka memecahkan telur berikutnya bersama-sama. Tek… krek. Sempurna.
 
-> *The Prophet ﷺ was a busy man, yet he still made time to play and spend time with children.*
+Tugas ketiga: mengaduk. Tugas keempat: membentuk bola-bola kecil. Bola buatan Baby Mo ada yang besar, ada yang kecil, ada yang bentuknya seperti kentang. Tapi Umi tidak membetulkan satu pun.
 
-Now, invite your little one to help with one simple kitchen task together — mess and all, what matters is doing it together. 🍪`,
+Tugas kelima — tugas paling penting: menaburkan butiran cokelat. Baby Mo menaburnya dengan sangat serius, satu per satu, seperti menanam biji.
+
+Kue-kue itu masuk oven. Baby Mo menempelkan hidungnya ke kaca oven, menunggu. Wanginya mulai keluar — cokelat, mentega, manis. Rasanya seperti menunggu sepanjang tahun.
+
+TING!
+
+Kuenya matang. Yang buatan Umi bulat sempurna. Yang buatan Baby Mo… macam-macam. Ada yang gepeng. Ada yang gosong sedikit di pinggir.
+
+"Umi, kueku jelek," katanya pelan.
+
+Umi mengambil satu kue buatan Baby Mo — yang bentuknya seperti kentang — dan menggigitnya. "Hmm. Ini yang paling enak."
+
+"Bohong!"
+
+"Sungguh. Karena yang ini ada rasa *bersama*-nya."
+
+Besoknya, Nenek membuka kotak kue. Ia mengambil satu, yang bentuknya paling aneh, dan memandanginya lama. "Ini pasti buatan Mo," katanya sambil tersenyum. Lalu Nenek memakannya duluan.
+
+> *Aisyah radhiyallahu 'anha ditanya apa yang dilakukan Nabi ﷺ di rumah. Ia menjawab: "Beliau biasa membantu pekerjaan keluarganya, dan bila datang waktu sholat, beliau keluar untuk sholat."* (HR. Bukhari 676)
+
+Ngobrol bareng si kecil: pekerjaan rumah apa yang ingin kamu bantu minggu ini? Berantakan sedikit tidak apa-apa — yang penting bersama. 🍪`,
+      en: `Tomorrow was Nenek's birthday. Umi was going to bake Nenek's favourite chocolate cookies — the round ones, with chocolate sprinkles on top.
+
+"Umi, I want to help!" Baby Mo was already standing by the kitchen counter in an apron that was far too big. The strings were wrapped three times around his waist.
+
+Umi looked at her sparkling clean kitchen. Then at Baby Mo. Then she smiled. "Okay. We start with bismillah."
+
+"Bismillah!"
+
+Job one: pouring the flour. Baby Mo lifted the big bag of flour. It was so heavy. The bag tilted, tilted, tilted — and WHOOSH!
+
+Flour poured into the bowl, onto the counter, onto the floor, onto the apron, into Baby Mo's hair. He was white from head to toe, like a snowman.
+
+Baby Mo froze. He waited for an angry voice.
+
+But what he heard was laughter. Umi laughed so hard she had to lean against the fridge. "Mo! You're a flour ghost!"
+
+Baby Mo laughed too, relieved. Flour puffed out of his hair every time he giggled.
+
+Job two: cracking the eggs. "Tap it gently on the edge of the bowl," said Umi.
+
+Baby Mo tapped. Too gently. No crack. He tapped again, harder — CRACK! The egg broke. In his hand. The yolk slid out, past the bowl, and landed on the floor. Splat.
+
+Baby Mo's lip began to wobble. "Sorry, Umi… I keep making a mess."
+
+Umi crouched down until their eyes were level. "Mo, do you know something? The Prophet ﷺ, the noblest person ever, used to help with the work at home. He wasn't embarrassed. And I'm sure that when everyone first learns, they drop an egg or two."
+
+"Did you ever?"
+
+"I once dropped ten eggs at once," Umi whispered. "A whole box."
+
+Baby Mo laughed again.
+
+They cleaned the floor together. Then Umi held Baby Mo's hands, and they cracked the next egg together. Tap… crack. Perfect.
+
+Job three: stirring. Job four: rolling little balls. Baby Mo's balls were big, small, and one was shaped like a potato. But Umi didn't fix a single one.
+
+Job five — the most important job: sprinkling the chocolate. Baby Mo sprinkled very seriously, one at a time, as if planting seeds.
+
+The cookies went into the oven. Baby Mo pressed his nose to the oven glass, waiting. The smell began to drift out — chocolate, butter, sweetness. It felt like waiting a whole year.
+
+DING!
+
+The cookies were done. Umi's were perfectly round. Baby Mo's were… all sorts. Some were flat. Some were a bit burnt at the edges.
+
+"Umi, my cookies are ugly," he said quietly.
+
+Umi picked up one of Baby Mo's cookies — the potato-shaped one — and bit into it. "Mmm. This one's the tastiest."
+
+"You're fibbing!"
+
+"Truly. Because this one has the taste of *together* in it."
+
+The next day, Nenek opened the box of cookies. She picked one, the strangest-looking of all, and looked at it for a long time. "This must be Mo's," she said with a smile. And Nenek ate it first.
+
+> *Aishah was asked what the Prophet ﷺ did at home. She said: "He used to help with the work of his family, and when the time for prayer came, he would go out to pray."* (Bukhari 676)
+
+Talk it over with your little one: which job at home would you like to help with this week? A little mess is fine — what matters is doing it together. 🍪`,
     },
     anchor: { type: "parenting", slug: "bonding-orangtua" },
     takeaway: {
-      id: "Kebersamaan lebih penting daripada kerapian. Satu tugas kecil bersama lebih berarti dari hasil yang sempurna.",
-      en: "Togetherness matters more than tidiness. One small task done together means more than a perfect result.",
+      id: "Kebersamaan lebih penting daripada kerapian. Satu kue berbentuk kentang yang dibuat bersama lebih berharga dari sekotak kue sempurna.",
+      en: "Togetherness matters more than tidiness. One potato-shaped cookie made together is worth more than a box of perfect ones.",
     },
-    tags: ["bonding", "dapur", "keluarga", "buku"],
-    readingTimeMin: 3,
+    tags: ["bonding", "dapur", "keluarga", "nenek", "buku"],
+    readingTimeMin: 5,
+  },
+
+
+  // ── Batch Oktober–November 2026 ──────────────────────────────────────
+  // Written to the "Cerita v2" bar: a real problem the CHILD solves, a
+  // read-aloud refrain, one exactly-quoted & sourced Islamic anchor, and a
+  // closing question for parent + child instead of a lecture.
+
+  {
+    slug: "awan-petir-di-dada-baby-ais",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-pose-07.png",
+    published: "2026-10-24",
+    title: {
+      id: "Awan Petir di Dada Baby Ais",
+      en: "The Thundercloud in Baby Ais's Chest",
+    },
+    hook: {
+      id: "Puzzle unta Baby Ais tinggal satu keping lagi — lalu, vrooom, semuanya berantakan. Ada awan petir yang tumbuh di dadanya.",
+      en: "Baby Ais's camel puzzle was one piece from done — then, vrooom, it all went flying. A thundercloud began to grow in her chest.",
+    },
+    body: {
+      id: `Baby Ais sedang menyusun puzzle unta. Dua puluh keping! Tinggal satu lagi — punuknya.
+
+Lalu datanglah Baby Mo dengan pesawat mainannya. "Vrooom! Vrooom!"
+
+Kaki Baby Mo menyenggol meja. Kepingan puzzle beterbangan ke mana-mana. Unta yang hampir jadi itu… hilang.
+
+Baby Ais diam. Lalu ada yang aneh di dadanya. Panas. Berat. Bergemuruh. Seperti ada awan petir yang tumbuh di dalam sana, makin besar, makin gelap.
+
+Tangannya mengepal. Ia berdiri, memungut satu keping, dan mengangkatnya tinggi-tinggi, siap dilempar ke arah Baby Mo.
+
+"Ais," panggil Abi dari pintu. Pelan. Tidak marah.
+
+Baby Ais berhenti, tangannya masih di atas.
+
+"Awannya sebesar apa?" tanya Abi.
+
+Baby Ais membentangkan kedua tangannya selebar-lebarnya. "SEBESAR INI!"
+
+Abi mengangguk. "Itu awan yang besar sekali. Mau Abi ajari cara Rasulullah mengecilkan awan seperti itu?"
+
+Baby Ais mengangguk sedikit. Sedikit saja.
+
+"Pertama: kalau marah sambil berdiri, duduk dulu," kata Abi. Baby Ais duduk di lantai. Awannya masih besar, tapi tidak bisa ke mana-mana.
+
+"Kedua: tarik napas, pelan-pelan, sampai perutmu kembung seperti balon." Baby Ais menarik napas. Fuuuh.
+
+"Ketiga: minta tolong sama Allah. *A'uudzu billaahi minasy-syaithaanir-rajiim.*"
+
+Baby Ais mengulanginya, pelan-pelan. *A'uudzu billaahi minasy-syaithaanir-rajiim.*
+
+Awannya… mengecil. Dari sebesar kamar, jadi sebesar bantal.
+
+Duduk. Tarik napas. A'uudzu billah.
+
+Dari sebesar bantal, jadi sebesar apel.
+
+Duduk. Tarik napas. A'uudzu billah.
+
+Sekarang tinggal gerimis kecil di matanya. Baby Ais mengusapnya.
+
+Lalu ia menoleh ke Baby Mo, yang sejak tadi berdiri kaku memeluk pesawatnya. Suaranya masih bergetar, tapi jelas: "Mo. Aku marah. Puzzle-ku berantakan."
+
+Baby Mo menunduk. "Maaf, Ais. Aku nggak lihat." Lalu ia berjongkok dan mulai memungut kepingan satu per satu. "Aku bantu susun lagi, ya?"
+
+Mereka menyusunnya berdua. Kali ini lebih cepat, karena ada empat tangan. Keping terakhir — punuk unta — Baby Mo memberikannya pada Baby Ais. "Kamu yang pasang."
+
+Klik. Untanya utuh.
+
+Sore itu, menara balok Baby Mo roboh disenggol kucing. Wajahnya memerah, tangannya mulai mengepal.
+
+Baby Ais buru-buru datang dan duduk di sampingnya. "Mo," bisiknya, "awannya sebesar apa?"
+
+> *A'uudzu billaahi minasy-syaithaanir-rajiim.* — "Aku berlindung kepada Allah dari setan yang terkutuk." Rasulullah ﷺ mengajarkannya untuk orang yang sedang marah. (HR. Bukhari 3282, Muslim 2610)
+
+Ngobrol bareng si kecil: kalau kamu marah, awannya biasanya sebesar apa? Yuk latihan bertiga sekarang — duduk, tarik napas, A'uudzu billah. ⛈️`,
+      en: `Baby Ais was building a camel puzzle. Twenty pieces! Just one left — the hump.
+
+Then along came Baby Mo with his toy plane. "Vrooom! Vrooom!"
+
+Baby Mo's foot bumped the table. Puzzle pieces flew everywhere. The almost-finished camel… was gone.
+
+Baby Ais went still. Then something strange happened in her chest. Hot. Heavy. Rumbling. As if a thundercloud were growing in there, bigger and darker.
+
+Her hands made fists. She stood up, grabbed a piece, and lifted it high, ready to throw it at Baby Mo.
+
+"Ais," Abi called from the door. Softly. Not angry.
+
+Baby Ais stopped, her hand still in the air.
+
+"How big is the cloud?" Abi asked.
+
+Baby Ais stretched her arms as wide as they would go. "THIS BIG!"
+
+Abi nodded. "That's a very big cloud. Want me to show you how the Prophet taught us to shrink a cloud like that?"
+
+Baby Ais nodded a little. Just a little.
+
+"One: if you're angry while standing, sit down," said Abi. Baby Ais sat on the floor. The cloud was still big, but now it couldn't go anywhere.
+
+"Two: take a breath, slowly, until your tummy puffs up like a balloon." Baby Ais breathed in. Whoooo.
+
+"Three: ask Allah for help. *A'uudzu billaahi minasy-syaithaanir-rajiim.*"
+
+Baby Ais repeated it, slowly. *A'uudzu billaahi minasy-syaithaanir-rajiim.*
+
+The cloud… shrank. From as big as the room to as big as a pillow.
+
+Sit. Breathe. A'uudzu billah.
+
+From as big as a pillow to as big as an apple.
+
+Sit. Breathe. A'uudzu billah.
+
+Now there was only a little drizzle left in her eyes. Baby Ais wiped it away.
+
+Then she turned to Baby Mo, who had been standing stiffly the whole time, hugging his plane. Her voice still wobbled, but it was clear: "Mo. I'm angry. My puzzle got messed up."
+
+Baby Mo looked down. "Sorry, Ais. I didn't see." Then he crouched and began picking up the pieces one by one. "Can I help you build it again?"
+
+They built it together. Faster this time, because there were four hands. The last piece — the camel's hump — Baby Mo handed to Baby Ais. "You put it in."
+
+Click. The camel was whole.
+
+That afternoon, the cat knocked over Baby Mo's block tower. His face went red and his hands began to curl into fists.
+
+Baby Ais hurried over and sat down beside him. "Mo," she whispered, "how big is the cloud?"
+
+> *A'uudzu billaahi minasy-syaithaanir-rajiim.* — "I seek refuge in Allah from the accursed devil." The Prophet ﷺ taught it for someone who is angry. (Bukhari 3282, Muslim 2610)
+
+Talk it over with your little one: when you get angry, how big is your cloud? Let's practise together now — sit, breathe, A'uudzu billah. ⛈️`,
+    },
+    anchor: { type: "doa", slug: "ketika-marah" },
+    takeaway: {
+      id: "Marah itu boleh dirasakan, bukan dilemparkan. Duduk, tarik napas, A'uudzu billah — lalu katakan dengan kata-kata.",
+      en: "Anger is allowed to be felt, not thrown. Sit, breathe, A'uudzu billah — then say it with words.",
+    },
+    tags: ["marah", "emosi", "kembar", "buku"],
+    readingTimeMin: 4,
+  },
+
+  {
+    slug: "duar-siapa-takut-petir",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-wow.png",
+    published: "2026-10-25",
+    title: { id: "DUAR! Siapa Takut Petir?", en: "BOOM! Who's Afraid of Thunder?" },
+    hook: {
+      id: "Setiap kali langit berbunyi DUAR, Baby Mo menghilang ke bawah selimut. Sampai ia tahu apa yang sebenarnya diucapkan petir.",
+      en: "Every time the sky went BOOM, Baby Mo vanished under the blanket. Until he learned what the thunder was really saying.",
+    },
+    body: {
+      id: `Malam itu hujan turun deras. Lalu langit menyala putih sekejap — kilat! — dan sesudahnya:
+
+DUAR!
+
+Baby Mo melompat ke bawah selimut secepat kilat. Yang kelihatan cuma dua kaki kecil yang gemetar.
+
+Baby Ais malah menempelkan hidungnya ke jendela. "Mo! Lihat! Langitnya kayak lampu blitz!"
+
+"Nggak mau!" suara Baby Mo teredam dari dalam selimut.
+
+DUAR!
+
+Selimutnya bergetar makin kencang.
+
+Umi duduk di tepi kasur. Ia tidak menarik selimutnya. Ia cuma berbisik, "Mo, mau main tebak-tebakan? Kita hitung dari kilat sampai bunyinya. Makin besar angkanya, makin jauh petirnya."
+
+Dari dalam selimut, satu mata mengintip.
+
+Kilat! Umi dan Baby Ais menghitung, "Satu… dua… tiga… empat…"
+
+DUAR!
+
+"Empat!" seru Baby Ais. "Jauh!"
+
+Abi masuk membawa segelas air hangat. "Tahu nggak, Mo, petir itu sebenarnya sedang bilang sesuatu."
+
+Baby Mo mengintip dengan dua mata sekarang. "Bilang apa?"
+
+"Petir sedang bertasbih. Memuji Allah. Seperti bedug raksasa yang bilang *Subhanallah* sekeras-kerasnya. Makanya, setiap dengar petir, sahabat Nabi membaca doa ini." Abi mengucapkannya pelan-pelan:
+
+*Subhanalladzi yusabbihur-ra'du bihamdihi wal-mala'ikatu min khifatih.*
+
+"Jadi petirnya nggak marah?" tanya Baby Mo.
+
+"Nggak. Petirnya sedang memuji Allah. Kita boleh ikut memuji."
+
+Kilat! "Satu… dua… tiga… empat… lima…"
+
+DUAR!
+
+Kali ini, dari dalam selimut terdengar suara kecil: "Subhanallah…"
+
+Kilat lagi! Baby Mo menurunkan selimutnya sampai ke dagu. "Satu… dua… tiga… empat… lima… enam…"
+
+DUAR!
+
+"SUBHANALLAH!" seru Baby Mo, lebih keras dari petirnya. Baby Ais tertawa sampai terguling.
+
+Petir makin jauh. Tujuh. Delapan. Sembilan. Bunyinya tinggal "duar" kecil, seperti bedug dari kampung sebelah.
+
+Baby Mo sekarang duduk di samping Baby Ais di jendela. Masih memegang ujung baju Umi — tapi duduk di jendela.
+
+"Ais," katanya, "petirnya sudah capek memuji Allah."
+
+"Gantian kita," jawab Baby Ais. Lalu mereka berbisik bersama, "Subhanallah."
+
+Malam itu Baby Mo tertidur sambil menghitung. Bukan menghitung rasa takut. Menghitung pujian.
+
+> *Subhanalladzi yusabbihur-ra'du bihamdihi wal-mala'ikatu min khifatih.* — "Maha Suci Dzat yang petir bertasbih dengan memuji-Nya, dan para malaikat pun bertasbih karena takut kepada-Nya." (Diriwayatkan dalam Al-Muwatta' Imam Malik)
+
+Ngobrol bareng si kecil: saat hujan petir berikutnya, mau ikut menghitung dan bilang Subhanallah bersama? ⚡`,
+      en: `That night the rain came pouring down. Then the sky flashed white for a moment — lightning! — and after it:
+
+BOOM!
+
+Baby Mo leapt under the blanket faster than lightning. All you could see were two small, trembling feet.
+
+Baby Ais, on the other hand, pressed her nose to the window. "Mo! Look! The sky is like a camera flash!"
+
+"Don't want to!" came Baby Mo's muffled voice from under the blanket.
+
+BOOM!
+
+The blanket shook even harder.
+
+Umi sat on the edge of the bed. She didn't pull the blanket away. She just whispered, "Mo, want to play a guessing game? We count from the flash to the sound. The bigger the number, the farther away the thunder is."
+
+From under the blanket, one eye peeked out.
+
+Flash! Umi and Baby Ais counted, "One… two… three… four…"
+
+BOOM!
+
+"Four!" cried Baby Ais. "Far away!"
+
+Abi came in with a glass of warm water. "Did you know, Mo, the thunder is actually saying something?"
+
+Baby Mo peeked out with both eyes now. "Saying what?"
+
+"The thunder is glorifying Allah. Praising Him. Like a giant drum saying *Subhanallah* as loud as it can. That's why, whenever they heard thunder, a companion of the Prophet would say this du'a." Abi said it slowly:
+
+*Subhanalladzi yusabbihur-ra'du bihamdihi wal-mala'ikatu min khifatih.*
+
+"So the thunder isn't angry?" asked Baby Mo.
+
+"No. The thunder is praising Allah. We can praise along with it."
+
+Flash! "One… two… three… four… five…"
+
+BOOM!
+
+This time, from under the blanket, came a small voice: "Subhanallah…"
+
+Another flash! Baby Mo pulled the blanket down to his chin. "One… two… three… four… five… six…"
+
+BOOM!
+
+"SUBHANALLAH!" shouted Baby Mo, louder than the thunder. Baby Ais laughed so hard she rolled over.
+
+The thunder moved farther away. Seven. Eight. Nine. Now it was only a little "boom", like a drum from the next village.
+
+Baby Mo was sitting beside Baby Ais at the window now. Still holding the corner of Umi's shirt — but sitting at the window.
+
+"Ais," he said, "the thunder is tired of praising Allah."
+
+"Our turn," Baby Ais replied. And together they whispered, "Subhanallah."
+
+That night Baby Mo fell asleep counting. Not counting his fears. Counting praises.
+
+> *Subhanalladzi yusabbihur-ra'du bihamdihi wal-mala'ikatu min khifatih.* — "Glory be to the One whom the thunder glorifies with His praise, and the angels too, out of awe of Him." (Narrated in Imam Malik's Al-Muwatta')
+
+Talk it over with your little one: at the next thunderstorm, shall we count and say Subhanallah together? ⚡`,
+    },
+    anchor: { type: "doa", slug: "mendengar-petir" },
+    takeaway: {
+      id: "Rasa takut anak tidak perlu ditarik paksa dari bawah selimut. Beri ia sesuatu untuk dilakukan — menghitung, lalu memuji Allah.",
+      en: "A child's fear doesn't need to be pulled out from under the blanket. Give them something to do — count, then praise Allah.",
+    },
+    tags: ["petir", "takut", "hujan", "malam", "buku"],
+    readingTimeMin: 4,
+  },
+
+  {
+    slug: "juara-dua-yang-paling-berani",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-run.png",
+    published: "2026-10-26",
+    title: { id: "Juara Dua yang Paling Berani", en: "The Bravest Runner-Up" },
+    hook: {
+      id: "Baby Mo selalu menang lomba lari ke pohon mangga. Selalu. Sampai hari ini, Baby Ais sampai duluan.",
+      en: "Baby Mo always won the race to the mango tree. Always. Until today, when Baby Ais got there first.",
+    },
+    body: {
+      id: `Setiap sore, di taman, Baby Mo dan Baby Ais lomba lari ke pohon mangga.
+
+"Siap… siaaap… MULAI!"
+
+Dan setiap sore, Baby Mo yang menang. Ia akan menepuk batang pohon, mengangkat kedua tangan, dan berteriak, "JUARA SATU!"
+
+Baby Ais akan sampai beberapa detik kemudian, terengah-engah, lalu tersenyum. "Selamat, Mo!"
+
+Selalu begitu. Menang — "Juara satu!" — "Selamat, Mo!"
+
+Tapi sore ini berbeda.
+
+"Siap… siaaap… MULAI!"
+
+Baby Ais melesat seperti kucing yang melihat kupu-kupu. Kakinya kecil tapi cepat sekali. Baby Mo berlari sekuat tenaga — tapi punggung Baby Ais tetap di depan. Makin jauh. Makin jauh.
+
+Tep! Baby Ais yang menepuk pohon duluan.
+
+Baby Mo berhenti. Wajahnya panas. Ia menendang rumput. "Nggak adil! Sepatuku licin! Tadi aku belum siap! Ulang!"
+
+Baby Ais menurunkan tangannya yang tadi terangkat. Senyumnya pelan-pelan hilang.
+
+Abi, yang duduk di bangku taman, memanggil Baby Mo. "Mo, sini sebentar."
+
+Baby Mo datang sambil cemberut, tangan dilipat di dada.
+
+"Kalah itu rasanya nggak enak, ya," kata Abi.
+
+Baby Mo mengangguk keras. Matanya mulai berair.
+
+"Abi mau tanya satu hal saja. Kalau kamu yang menang, Ais biasanya bilang apa?"
+
+Baby Mo terdiam. Ia ingat. Setiap sore. Setiap kali Ais kalah.
+
+"…'Selamat, Mo,'" bisiknya.
+
+"Padahal Ais juga pasti pernah sedih karena kalah, kan?"
+
+Baby Mo menatap Baby Ais di bawah pohon mangga. Adiknya sedang memungut daun, sendirian, tidak merayakan apa-apa.
+
+Rasanya berat sekali. Kakinya seperti ditempeli batu. Mengucapkan selamat ketika kita sendiri sedang sedih — ternyata itu lebih susah daripada lomba lari mana pun.
+
+Tapi Baby Mo berjalan. Satu langkah. Dua langkah. Sampai di bawah pohon mangga.
+
+"Ais," katanya, masih sedikit cemberut. "Selamat. Kamu cepat banget tadi."
+
+Wajah Baby Ais langsung bersinar seperti matahari sore. "Mau lomba lagi?"
+
+Baby Mo menggeleng. Lalu ia duduk di samping adiknya. "Besok saja. Sekarang ceritain dong — gimana caranya kamu bisa secepat itu?"
+
+Dan Baby Ais pun bercerita, panjang sekali, dengan tangan bergerak-gerak seperti sayap.
+
+Abi tersenyum dari bangku. Sore itu ada dua juara. Juara satu lomba lari. Dan juara dua yang paling berani.
+
+> *"Tidak sempurna iman salah seorang dari kalian, hingga ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri."* (HR. Bukhari 13, Muslim 45)
+
+Ngobrol bareng si kecil: kenapa bilang "selamat" waktu kalah itu butuh keberanian? Kapan terakhir kamu melakukannya? 🏃`,
+      en: `Every afternoon, at the park, Baby Mo and Baby Ais raced to the mango tree.
+
+"Ready… set… GO!"
+
+And every afternoon, Baby Mo won. He would slap the tree trunk, throw both arms in the air, and shout, "NUMBER ONE!"
+
+Baby Ais would arrive a few seconds later, out of breath, and smile. "Congratulations, Mo!"
+
+Always the same. A win — "Number one!" — "Congratulations, Mo!"
+
+But this afternoon was different.
+
+"Ready… set… GO!"
+
+Baby Ais shot off like a cat that has spotted a butterfly. Her legs were small but so fast. Baby Mo ran as hard as he could — but Baby Ais's back stayed ahead of him. Farther. And farther.
+
+Tap! Baby Ais touched the tree first.
+
+Baby Mo stopped. His face went hot. He kicked the grass. "Not fair! My shoes are slippery! I wasn't ready! Do it again!"
+
+Baby Ais lowered the arms she had raised. Her smile slowly faded.
+
+Abi, sitting on the park bench, called Baby Mo over. "Mo, come here a moment."
+
+Baby Mo came, scowling, arms folded across his chest.
+
+"Losing doesn't feel nice, does it," said Abi.
+
+Baby Mo nodded hard. His eyes were starting to water.
+
+"I just want to ask you one thing. When you win, what does Ais usually say?"
+
+Baby Mo went quiet. He remembered. Every afternoon. Every time Ais lost.
+
+"…'Congratulations, Mo,'" he whispered.
+
+"And Ais must have felt sad about losing sometimes too, right?"
+
+Baby Mo looked at Baby Ais under the mango tree. His sister was picking up leaves, alone, celebrating nothing.
+
+It felt so heavy. His feet felt like they had stones stuck to them. Saying congratulations while you're sad yourself — that turned out to be harder than any race.
+
+But Baby Mo walked. One step. Two steps. All the way to the mango tree.
+
+"Ais," he said, still scowling a little. "Congratulations. You were really fast."
+
+Baby Ais's face lit up like the afternoon sun. "Want to race again?"
+
+Baby Mo shook his head. Then he sat down beside his sister. "Tomorrow. Right now, tell me — how did you get so fast?"
+
+And Baby Ais told him, for a very long time, her hands flapping like wings.
+
+Abi smiled from the bench. That afternoon there were two champions. The winner of the race. And the bravest runner-up.
+
+> *"None of you truly believes until he loves for his brother what he loves for himself."* (Bukhari 13, Muslim 45)
+
+Talk it over with your little one: why does saying "congratulations" when you lose take courage? When did you last do it? 🏃`,
+    },
+    anchor: { type: "parenting", slug: "rivalitas-saudara" },
+    takeaway: {
+      id: "Mengucapkan selamat saat kalah adalah keberanian yang paling sulit — dan paling indah. Ajak anak mengingat bagaimana saudaranya pernah memperlakukannya.",
+      en: "Congratulating someone when you've lost is the hardest courage — and the most beautiful. Help your child remember how their sibling once treated them.",
+    },
+    tags: ["kalah", "lomba", "kembar", "taman", "buku"],
+    readingTimeMin: 4,
+  },
+
+  {
+    slug: "tujuh-kali-doa-untuk-nenek",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-10-27",
+    title: { id: "Tujuh Kali Doa untuk Nenek", en: "Seven Prayers for Nenek" },
+    hook: {
+      id: "Nenek sakit. Baby Ais membawa gambar bunga matahari dan satu doa yang ia latih di mobil — tujuh kali, dihitung dengan jari.",
+      en: "Nenek is sick. Baby Ais brings a sunflower drawing and one du'a she practised in the car — seven times, counted on her fingers.",
+    },
+    body: {
+      id: `"Nenek sakit," kata Umi pagi itu. "Hari ini kita jenguk, ya."
+
+Baby Ais langsung mengambil krayon. Ia menggambar kebun Nenek: bunga matahari yang tinggi-tinggi, kursi bambu, dan kucing oranye yang suka tidur di sana. Kuningnya banyak sekali. Supaya Nenek ingat kebunnya menunggu.
+
+Di mobil, Umi mengajarkan sebuah doa. "Rasulullah ﷺ mengajarkan doa ini untuk orang sakit. Diucapkan tujuh kali."
+
+*As'alullaahal-'azhiima…*
+
+"As-a-lul-lo-hal-a-zhi-ma," ulang Baby Ais, pelan-pelan.
+
+*…rabbal-'arsyil-'azhiimi…*
+
+"Rob-bal-ar-syil-a-zhi-mi."
+
+*…an yasyfiyak.*
+
+"An yasy-fi-yak." Baby Ais mengulanginya sepanjang jalan. Kadang lancar, kadang tersandung. Baby Mo ikut-ikutan, tapi lalu tertidur dengan mulut terbuka.
+
+"Artinya apa, Umi?"
+
+"Aku memohon kepada Allah Yang Maha Agung, agar menyembuhkanmu."
+
+Di rumah Nenek, semuanya terasa berbeda. Tidak ada suara Nenek memanggil dari dapur. Kamarnya redup. Nenek berbaring, wajahnya pucat, suaranya kecil sekali.
+
+Baby Ais berhenti di pintu. Kertas gambarnya ia remas sedikit. Nenek yang ini bukan Nenek yang biasanya mengejarnya keliling kebun.
+
+"Ais takut, ya?" bisik Umi.
+
+Baby Ais mengangguk.
+
+"Nggak apa-apa. Nenek tetap Nenek. Yuk, pegang tangannya."
+
+Baby Ais berjalan pelan ke samping kasur. Tangan Nenek terasa hangat, dan sedikit keriput, seperti kertas yang lembut. Nenek membuka mata dan tersenyum. "Ais…"
+
+Baby Ais memberikan gambarnya. Nenek memandanginya lama sekali. "Kucingnya mirip," katanya, dan mereka berdua tertawa kecil.
+
+Lalu Baby Ais mengangkat jari-jarinya. Ia mulai berbisik.
+
+"As'alullaahal-'azhiima rabbal-'arsyil-'azhiimi an yasyfiyak." Satu jari.
+
+Dua jari. Tiga jari. Di jari keempat ia lupa di tengah, dan Umi membisikkan lanjutannya.
+
+Lima. Enam. Tujuh.
+
+Tujuh jari terangkat. Nenek menggenggam tangan kecil itu. "Doamu sampai, sayang. Nenek dengar. Allah juga dengar."
+
+Nenek tidak langsung sembuh hari itu. Ia masih harus banyak tidur dan minum obat. Tapi waktu mereka pamit, wajah Nenek tidak sepucat tadi.
+
+Seminggu kemudian, telepon berdering. Suara Nenek terdengar jelas dan ceria. "Ais! Gambarmu Nenek tempel di dinding. Kucingnya setiap hari duduk di bawahnya!"
+
+Baby Ais melompat-lompat. Lalu ia mengangkat tujuh jarinya ke arah telepon, seolah Nenek bisa melihat.
+
+> *As'alullaahal-'azhiima rabbal-'arsyil-'azhiimi an yasyfiyak.* — "Aku memohon kepada Allah Yang Maha Agung, Tuhan 'Arsy yang agung, agar menyembuhkanmu." Diucapkan tujuh kali saat menjenguk orang sakit. (HR. Tirmidzi 2083, Abu Dawud 3106)
+
+Ngobrol bareng si kecil: siapa yang mau kita doakan hari ini? Yuk hitung tujuh dengan jari, bersama-sama. 🌻`,
+      en: `"Nenek is sick," Umi said that morning. "We're going to visit her today."
+
+Baby Ais grabbed her crayons straight away. She drew Nenek's garden: tall, tall sunflowers, the bamboo chair, and the orange cat who liked to nap there. Lots and lots of yellow. So Nenek would remember her garden was waiting.
+
+In the car, Umi taught her a du'a. "The Prophet ﷺ taught this du'a for someone who is sick. You say it seven times."
+
+*As'alullaahal-'azhiima…*
+
+"As-a-lul-lo-hal-a-zhi-ma," Baby Ais repeated, slowly.
+
+*…rabbal-'arsyil-'azhiimi…*
+
+"Rob-bal-ar-syil-a-zhi-mi."
+
+*…an yasyfiyak.*
+
+"An yasy-fi-yak." Baby Ais practised it the whole way. Sometimes smoothly, sometimes stumbling. Baby Mo joined in, then fell asleep with his mouth open.
+
+"What does it mean, Umi?"
+
+"I ask Allah the Almighty to heal you."
+
+At Nenek's house, everything felt different. No Nenek calling from the kitchen. The room was dim. Nenek was lying down, her face pale, her voice very small.
+
+Baby Ais stopped at the door. She crumpled her drawing a little. This Nenek wasn't the Nenek who usually chased her around the garden.
+
+"Are you scared, Ais?" Umi whispered.
+
+Baby Ais nodded.
+
+"That's okay. Nenek is still Nenek. Come, hold her hand."
+
+Baby Ais walked slowly to the bedside. Nenek's hand felt warm and a little wrinkly, like soft paper. Nenek opened her eyes and smiled. "Ais…"
+
+Baby Ais gave her the drawing. Nenek looked at it for a long, long time. "The cat looks just like him," she said, and they both giggled.
+
+Then Baby Ais held up her fingers. She began to whisper.
+
+"As'alullaahal-'azhiima rabbal-'arsyil-'azhiimi an yasyfiyak." One finger.
+
+Two fingers. Three fingers. On the fourth she forgot the middle, and Umi whispered the rest.
+
+Five. Six. Seven.
+
+Seven fingers raised. Nenek held the little hand tight. "Your du'a arrived, sweetheart. Nenek heard it. Allah heard it too."
+
+Nenek didn't get better right away that day. She still needed lots of sleep and medicine. But when they said goodbye, her face wasn't as pale as before.
+
+A week later, the phone rang. Nenek's voice sounded clear and cheerful. "Ais! I stuck your drawing on the wall. The cat sits under it every day!"
+
+Baby Ais jumped up and down. Then she held up seven fingers to the phone, as if Nenek could see.
+
+> *As'alullaahal-'azhiima rabbal-'arsyil-'azhiimi an yasyfiyak.* — "I ask Allah the Almighty, Lord of the Mighty Throne, to heal you." Said seven times when visiting the sick. (Tirmidzi 2083, Abu Dawud 3106)
+
+Talk it over with your little one: who shall we pray for today? Let's count to seven on our fingers, together. 🌻`,
+    },
+    anchor: { type: "doa", slug: "doa-menjenguk-orang-sakit" },
+    takeaway: {
+      id: "Anak boleh takut melihat orang yang ia sayangi sakit. Beri ia peran kecil — sebuah gambar, sebuah doa tujuh kali — supaya takutnya berubah jadi kasih.",
+      en: "Children may feel scared seeing someone they love unwell. Give them a small role — a drawing, a du'a seven times — so the fear turns into care.",
+    },
+    tags: ["sakit", "nenek", "menjenguk", "silaturahmi", "buku"],
+    readingTimeMin: 4,
+  },
+
+  {
+    slug: "baju-yang-terbalik",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-10-28",
+    title: { id: "Baju yang Terbalik", en: "The Back-to-Front Shirt" },
+    hook: {
+      id: "\"Aku bisa sendiri!\" kata Baby Mo. Kepalanya masuk ke lubang lengan, labelnya di depan, dan Umi harus duduk di atas tangannya sendiri supaya tidak membantu.",
+      en: "\"I can do it myself!\" said Baby Mo. His head went into the armhole, the label ended up in front, and Umi had to sit on her own hands so she wouldn't help.",
+    },
+    body: {
+      id: `Pagi itu Baby Mo punya pengumuman penting.
+
+"Mulai hari ini, aku pakai baju SENDIRI!"
+
+Umi mengangkat alis. Kaus hijau bergambar bintang sudah terlipat di kasur. "Yakin, Mo?"
+
+"Aku bisa sendiri!"
+
+Baby Mo memasukkan kepalanya ke dalam kaus. Dorong… dorong… Lho, kok gelap? Kepalanya ternyata masuk ke lubang lengan. Yang keluar cuma sebelah telinga.
+
+Tangan Umi sudah bergerak mau menolong. Tapi Umi ingat: Baby Mo bilang ingin sendiri. Maka Umi melakukan sesuatu yang lucu — ia duduk di atas kedua tangannya sendiri.
+
+"Aku bisa sendiri!" kata Baby Mo dari dalam kaus.
+
+Ia menarik kepalanya keluar, mencoba lagi. Kali ini kepalanya muncul dari lubang yang benar! Tapi… kok ada label menggelitik dagunya? Dan gambar bintangnya ke mana?
+
+Bintangnya ada di punggung. Kausnya terbalik — yang belakang di depan.
+
+Baby Ais yang sedang menyisir rambut bonekanya tertawa cekikikan. "Mo, kamu kayak jalan mundur!"
+
+Baby Mo menunduk, melihat dadanya yang polos. Bibirnya mulai bergetar. Umi masih duduk di atas tangannya. Susah sekali.
+
+"Mau dicoba lagi, atau mau dipakai begitu dulu?" tanya Umi.
+
+Baby Mo berpikir. Lalu ia membusungkan dada. "Begini dulu! Yang penting AKU YANG PAKAI!"
+
+Umi tersenyum lebar, akhirnya membebaskan tangannya — untuk bertepuk. "Kalau begitu, ada doa khusus untuk orang yang baru pakai baju. Yuk."
+
+Mereka mengucapkannya bersama, pelan-pelan:
+
+*Alhamdulillahilladzi kasani hadza wa razaqanihi min ghairi haulin minni wa la quwwah.*
+
+"Artinya," kata Umi, "segala puji bagi Allah yang memberiku pakaian ini, tanpa daya dan kekuatan dariku."
+
+Baby Mo mengerutkan dahi. "Tapi tadi aku pakai kekuatanku, Umi. Susah banget!"
+
+Umi tertawa. "Betul. Tapi siapa yang memberimu tangan untuk menarik? Siapa yang memberi kita baju untuk dipakai?"
+
+Baby Mo melihat kedua tangannya. "…Allah."
+
+"Jadi kamu yang berusaha, Allah yang memberi. Dua-duanya hebat."
+
+Hari itu Baby Mo pergi ke warung bersama Abi dengan kaus terbalik. Bu Warung bertanya, "Wah, bintangnya di belakang, ya?" Baby Mo menjawab dengan bangga, "Aku pakai SENDIRI!"
+
+Sore harinya, waktu ganti baju untuk mandi, Baby Mo memegang kausnya lama sekali. Ia mencari label kecil itu. Label di belakang. Bintang di depan.
+
+Dorong… dorong… plop!
+
+Kepalanya keluar. Bintangnya di depan. Tepat di depan.
+
+"UMIIII!" teriaknya. "Alhamdulillahilladzi kasani hadza!"
+
+> *Alhamdulillahilladzi kasani hadza wa razaqanihi min ghairi haulin minni wa la quwwah.* — "Segala puji bagi Allah yang telah memberiku pakaian ini dan memberikannya kepadaku tanpa daya dan kekuatan dariku." (HR. Abu Dawud 4023, Tirmidzi 3458)
+
+Ngobrol bareng si kecil: apa satu hal yang ingin kamu coba lakukan sendiri minggu ini? Umi dan Abi janji akan duduk di atas tangan. 👕`,
+      en: `That morning Baby Mo had an important announcement.
+
+"Starting today, I put my clothes on BY MYSELF!"
+
+Umi raised an eyebrow. The green T-shirt with the star on it was folded on the bed. "Are you sure, Mo?"
+
+"I can do it myself!"
+
+Baby Mo pushed his head into the shirt. Push… push… Huh, why is it dark? His head had gone into the armhole. Only one ear poked out.
+
+Umi's hands were already moving to help. But Umi remembered: Baby Mo said he wanted to do it himself. So Umi did something funny — she sat on both of her own hands.
+
+"I can do it myself!" said Baby Mo from inside the shirt.
+
+He pulled his head out and tried again. This time his head popped out of the right hole! But… why was a label tickling his chin? And where had the star gone?
+
+The star was on his back. The shirt was back to front.
+
+Baby Ais, who was brushing her doll's hair, giggled. "Mo, you look like you're walking backwards!"
+
+Baby Mo looked down at his plain front. His lip began to wobble. Umi was still sitting on her hands. It was very hard.
+
+"Do you want to try again, or wear it like that for now?" asked Umi.
+
+Baby Mo thought. Then he puffed out his chest. "Like this for now! What matters is I PUT IT ON!"
+
+Umi grinned and finally freed her hands — to clap. "Then there's a special du'a for someone who has just put on clothes. Let's say it."
+
+They said it together, slowly:
+
+*Alhamdulillahilladzi kasani hadza wa razaqanihi min ghairi haulin minni wa la quwwah.*
+
+"It means," said Umi, "all praise is for Allah who gave me this clothing, without any power or strength from me."
+
+Baby Mo frowned. "But I did use my strength, Umi. It was really hard!"
+
+Umi laughed. "True. But who gave you hands to pull with? Who gave us clothes to wear?"
+
+Baby Mo looked at his two hands. "…Allah."
+
+"So you did the trying, and Allah did the giving. Both are wonderful."
+
+That day Baby Mo went to the corner shop with Abi, shirt still back to front. The shopkeeper asked, "Oh, your star's on the back?" Baby Mo answered proudly, "I put it on MYSELF!"
+
+In the afternoon, changing for his bath, Baby Mo held his shirt for a long time. He looked for that little label. Label at the back. Star at the front.
+
+Push… push… pop!
+
+His head came out. The star was at the front. Right at the front.
+
+"UMIIII!" he shouted. "Alhamdulillahilladzi kasani hadza!"
+
+> *Alhamdulillahilladzi kasani hadza wa razaqanihi min ghairi haulin minni wa la quwwah.* — "All praise is for Allah who clothed me with this and provided it for me without any power or strength from me." (Abu Dawud 4023, Tirmidzi 3458)
+
+Talk it over with your little one: what is one thing you'd like to try doing by yourself this week? Umi and Abi promise to sit on their hands. 👕`,
+    },
+    anchor: { type: "doa", slug: "memakai-pakaian" },
+    takeaway: {
+      id: "Baju terbalik yang dipakai sendiri lebih berharga dari baju rapi yang dipakaikan. Kadang tugas kita cuma duduk di atas tangan sendiri.",
+      en: "A back-to-front shirt put on by yourself is worth more than a neat one put on for you. Sometimes our job is just to sit on our hands.",
+    },
+    tags: ["mandiri", "pakaian", "pagi", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "langit-merah-muda-yang-terlewat",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-idea.png",
+    published: "2026-10-29",
+    title: { id: "Langit Merah Muda yang Terlewat", en: "The Pink Sky He Missed" },
+    hook: {
+      id: "Tiga kali Baby Ais memanggil, tiga kali Baby Mo menjawab \"sebentar\". Waktu ia akhirnya menoleh dari layar, langitnya sudah gelap.",
+      en: "Three times Baby Ais called, three times Baby Mo said \"in a minute\". When he finally looked up from the screen, the sky had gone dark.",
+    },
+    body: {
+      id: `Sore itu Baby Mo menonton video di tablet. Kartun truk pemadam kebakaran. Satu selesai, langsung muncul yang berikutnya. Dan berikutnya. Dan berikutnya.
+
+Dari teras, Baby Ais memanggil. "Mo! Sini! Langitnya jadi oranye!"
+
+"Sebentar," jawab Baby Mo. Matanya tidak bergerak dari layar.
+
+Truk merah menyemprotkan air. Video berganti.
+
+"Mo! Sekarang langitnya merah muda! Kayak permen kapas!"
+
+"Sebentaaar."
+
+Video berganti lagi. Truk kuning. Truk biru.
+
+"MO! Ada burung banyak terbang pulang! Cepetan!"
+
+"Iya, sebentar…"
+
+Ketika video berikutnya habis, Baby Mo akhirnya meletakkan tablet dan berlari ke teras.
+
+Langitnya sudah gelap. Ungu tua, lalu hitam. Tidak ada oranye. Tidak ada merah muda. Burung-burungnya sudah pulang.
+
+Baby Ais duduk memeluk lutut. "Tadi bagus banget," katanya pelan. "Ada awan bentuknya kayak gajah."
+
+Baby Mo berdiri lama memandangi langit yang kosong. Dadanya terasa aneh. Bukan marah. Bukan sedih biasa. Seperti kehilangan sesuatu yang tidak bisa diulang.
+
+"Abi," katanya ketika Abi datang, "bisa nggak langitnya diputar ulang? Kayak video?"
+
+Abi duduk di samping mereka. "Video bisa diputar ulang, Mo. Langit sore tadi tidak. Hari ini tidak akan datang dua kali."
+
+Baby Mo terdiam.
+
+"Rasulullah ﷺ pernah bilang, ada dua nikmat yang sering membuat orang tertipu: sehat dan waktu luang. Kita punya waktu, tapi sering tidak sadar sedang menghabiskannya."
+
+"Tabletnya yang nyuri waktuku," gumam Baby Mo.
+
+"Tabletnya cuma kotak kecil," kata Abi lembut. "Yang memutuskan kapan berhenti, siapa?"
+
+Baby Mo berpikir lama. Lalu matanya berbinar. Ia berlari ke dalam dan kembali membawa jam pasir kecil dari dapur — yang biasa Umi pakai untuk merebus telur.
+
+"Besok," katanya, "aku nonton sampai pasirnya habis. Terus aku matikan sendiri. Biar nggak ketinggalan langit lagi."
+
+Abi mengangkat jempol. "Itu ide siapa?"
+
+"Ideku!"
+
+Besok sorenya, pasir terakhir jatuh tepat saat truk pemadam sedang menyemprot. Tangan Baby Mo ragu sebentar di atas tombol. Sebentar saja.
+
+Klik. Layarnya gelap.
+
+Ia berlari ke teras. Baby Ais menunjuk ke atas. Langitnya sedang berubah dari oranye ke merah muda, dan ada satu awan panjang yang bentuknya seperti truk pemadam kebakaran.
+
+"Subhanallah," bisik mereka berdua.
+
+> *"Dua nikmat yang banyak manusia tertipu karenanya: kesehatan dan waktu luang."* (HR. Bukhari 6412)
+
+Ngobrol bareng si kecil: apa yang mungkin kita lewatkan kalau terlalu lama menatap layar? Mau bikin jam pasir sendiri? ⏳`,
+      en: `That afternoon Baby Mo was watching videos on the tablet. A cartoon about fire engines. One ended, and the next started right away. And the next. And the next.
+
+From the porch, Baby Ais called. "Mo! Come here! The sky's turning orange!"
+
+"In a minute," Baby Mo answered. His eyes didn't move from the screen.
+
+The red truck sprayed water. The video changed.
+
+"Mo! Now the sky is pink! Like candy floss!"
+
+"In a minuuute."
+
+The video changed again. Yellow truck. Blue truck.
+
+"MO! Lots of birds are flying home! Hurry!"
+
+"Yes, in a minute…"
+
+When the next video ended, Baby Mo finally put down the tablet and ran to the porch.
+
+The sky was already dark. Deep purple, then black. No orange. No pink. The birds had all gone home.
+
+Baby Ais sat hugging her knees. "It was really pretty," she said quietly. "There was a cloud shaped like an elephant."
+
+Baby Mo stood for a long time looking at the empty sky. His chest felt strange. Not angry. Not the usual sad. More like losing something that can't be played again.
+
+"Abi," he said when Abi came out, "can we replay the sky? Like a video?"
+
+Abi sat down beside them. "Videos can be replayed, Mo. This afternoon's sky can't. Today will never come twice."
+
+Baby Mo said nothing.
+
+"The Prophet ﷺ once said there are two blessings that many people are fooled about: good health and free time. We have time, but we often don't notice we're spending it."
+
+"The tablet stole my time," Baby Mo mumbled.
+
+"The tablet is just a little box," said Abi gently. "Who decides when to stop?"
+
+Baby Mo thought for a long time. Then his eyes lit up. He ran inside and came back with the little sand timer from the kitchen — the one Umi uses for boiling eggs.
+
+"Tomorrow," he said, "I'll watch until the sand runs out. Then I'll turn it off myself. So I don't miss the sky again."
+
+Abi gave a thumbs up. "Whose idea was that?"
+
+"My idea!"
+
+The next afternoon, the last grain of sand fell just as the fire engine was spraying. Baby Mo's hand hovered over the button for a moment. Just a moment.
+
+Click. The screen went dark.
+
+He ran to the porch. Baby Ais pointed up. The sky was turning from orange to pink, and there was one long cloud shaped exactly like a fire engine.
+
+"Subhanallah," they both whispered.
+
+> *"There are two blessings which many people are deceived about: good health and free time."* (Bukhari 6412)
+
+Talk it over with your little one: what might we miss if we look at a screen for too long? Shall we make our own sand timer? ⏳`,
+    },
+    anchor: { type: "parenting", slug: "screen-time" },
+    takeaway: {
+      id: "Aturan layar paling kuat adalah yang anak ikut buat sendiri. Biarkan ia merasakan apa yang terlewat — lalu bantu ia menemukan caranya berhenti.",
+      en: "The strongest screen rule is one the child helps make. Let them feel what they missed — then help them find their own way to stop.",
+    },
+    tags: ["layar", "gadget", "waktu", "sore", "buku"],
+    readingTimeMin: 4,
+  },
+
+  {
+    slug: "pak-telinga-yang-hilang",
+    kind: "story",
+    child: "ais",
+    pose: "baby-mo-alright.png",
+    published: "2026-10-30",
+    title: { id: "Pak Telinga yang Hilang", en: "Mr Ears Goes Missing" },
+    hook: {
+      id: "Kelinci biru Baby Ais hilang di taman. Mereka mencari ke ayunan, perosotan, dan warung. \"Kita cari dulu, lalu kita serahkan ke Allah.\"",
+      en: "Baby Ais's blue rabbit is lost at the park. They search the swings, the slide, and the shop. \"First we look, then we leave it to Allah.\"",
+    },
+    body: {
+      id: `Pak Telinga adalah kelinci biru milik Baby Ais. Telinganya panjang sebelah, karena sering digigit waktu Baby Ais mengantuk. Ia ikut ke mana-mana: ke meja makan, ke kamar mandi (tunggu di luar), dan ke taman.
+
+Sore itu, waktu mau pulang dari taman, Baby Ais menjerit. "Pak Telinga mana?!"
+
+Tangannya kosong. Keranjang sepedanya kosong. Kantong Umi kosong.
+
+Air mata Baby Ais langsung tumpah. "Pak Telinga hilang! Dia sendirian! Nanti dia kedinginan!"
+
+Umi berjongkok dan memegang kedua bahunya. "Ais, dengar. Kita cari dulu, lalu kita serahkan ke Allah. Yuk, kita ingat-ingat. Tadi kita ke mana saja?"
+
+Baby Ais terisak, tapi mulai berpikir. "Ayunan…"
+
+Mereka ke ayunan. Baby Mo merangkak ke bawahnya. Ada sandal jepit, ada daun kering. Tidak ada Pak Telinga.
+
+"Kita cari dulu," gumam Baby Ais, "lalu kita serahkan ke Allah."
+
+"Habis itu ke perosotan!" kata Baby Mo.
+
+Mereka ke perosotan. Baby Mo meluncur turun sambil melihat ke kiri dan ke kanan. Ada botol minum orang lain. Tidak ada Pak Telinga.
+
+"Kita cari dulu, lalu kita serahkan ke Allah."
+
+"Terus kita beli es di warung!"
+
+Mereka ke warung. Ibu warung menggeleng. "Belum lihat, Nak. Nanti kalau ketemu, Ibu simpankan."
+
+Langit mulai gelap. Mereka harus pulang. Tanpa Pak Telinga.
+
+Malam itu Baby Ais tidak bisa tidur. Kasurnya terasa terlalu luas. Ia menangis pelan di bantal.
+
+Umi duduk di sampingnya. "Kita sudah mencari ke semua tempat. Sekarang bagian yang kedua — kita serahkan ke Allah. Ada doa untuk itu: *Hasbunallaahu wa ni'mal-wakiil.* Cukuplah Allah bagi kita, Dia sebaik-baik penolong."
+
+"Kalau Pak Telinga nggak kembali?" bisik Baby Ais.
+
+Umi memeluknya. "Kalau pun tidak kembali, Allah tetap cukup untuk kita. Allah tahu Ais sedih. Allah tidak pernah kehilangan apa pun."
+
+Baby Ais memejamkan mata. "Hasbunallaahu wa ni'mal-wakiil," bisiknya.
+
+Lalu ada yang mengetuk pintu kamar. Baby Mo masuk sambil memeluk beruang cokelatnya — beruang yang tidak pernah, tidak pernah ia pinjamkan pada siapa pun.
+
+"Ini," katanya, menyodorkan beruangnya. "Buat jagain Ais malam ini. Sampai Pak Telinga pulang."
+
+Baby Ais tidur memeluk beruang Baby Mo.
+
+Besok paginya, bel rumah berbunyi. Di depan pagar berdiri ibu warung — dan seorang anak perempuan kecil. Di tangan anak itu ada kelinci biru dengan telinga panjang sebelah, sedikit kotor, tapi utuh.
+
+"Anak saya menemukannya di bawah bangku taman," kata ibu warung. "Dia tidak mau tidur sebelum kelincinya dikembalikan ke pemiliknya."
+
+Baby Ais memeluk Pak Telinga erat-erat. Lalu ia menatap anak perempuan itu. "Terima kasih," katanya. "Kamu mau main ayunan sama kami nanti sore?"
+
+> *Hasbunallaahu wa ni'mal-wakiil.* — "Cukuplah Allah menjadi penolong kami, dan Dia sebaik-baik pelindung." (QS. Ali 'Imran: 173)
+
+Ngobrol bareng si kecil: kalau ada barang kita yang hilang, apa dua hal yang kita lakukan? (Bisikan: cari dulu… lalu serahkan ke Allah.) 🐰`,
+      en: `Mr Ears was Baby Ais's blue rabbit. One of his ears was longer than the other, because Baby Ais chewed it when she got sleepy. He went everywhere with her: to the dinner table, to the bathroom (waiting outside), and to the park.
+
+That afternoon, as they were about to leave the park, Baby Ais shrieked. "Where's Mr Ears?!"
+
+Her hands were empty. Her bike basket was empty. Umi's bag was empty.
+
+Baby Ais burst into tears. "Mr Ears is lost! He's all alone! He'll get cold!"
+
+Umi crouched down and held both her shoulders. "Ais, listen. First we look, then we leave it to Allah. Come on, let's remember. Where did we go today?"
+
+Baby Ais sniffled, but she began to think. "The swings…"
+
+They went to the swings. Baby Mo crawled underneath. There was a flip-flop, there were dry leaves. No Mr Ears.
+
+"First we look," Baby Ais mumbled, "then we leave it to Allah."
+
+"Then the slide!" said Baby Mo.
+
+They went to the slide. Baby Mo slid down looking left and right. There was someone else's water bottle. No Mr Ears.
+
+"First we look, then we leave it to Allah."
+
+"Then we bought ice lollies at the shop!"
+
+They went to the shop. The shopkeeper shook her head. "Haven't seen him, dear. If I find him, I'll keep him safe for you."
+
+The sky was getting dark. They had to go home. Without Mr Ears.
+
+That night Baby Ais couldn't sleep. Her bed felt too big. She cried quietly into her pillow.
+
+Umi sat beside her. "We looked everywhere. Now comes the second part — we leave it to Allah. There's a du'a for that: *Hasbunallaahu wa ni'mal-wakiil.* Allah is enough for us, and He is the best helper."
+
+"What if Mr Ears doesn't come back?" whispered Baby Ais.
+
+Umi hugged her. "Even if he doesn't, Allah is still enough for us. Allah knows Ais is sad. And Allah never loses anything."
+
+Baby Ais closed her eyes. "Hasbunallaahu wa ni'mal-wakiil," she whispered.
+
+Then someone knocked on the bedroom door. Baby Mo came in hugging his brown bear — the bear he never, ever lent to anyone.
+
+"Here," he said, holding out his bear. "To look after you tonight. Until Mr Ears comes home."
+
+Baby Ais slept hugging Baby Mo's bear.
+
+The next morning, the doorbell rang. At the gate stood the shopkeeper — and a little girl. In the girl's hands was a blue rabbit with one long ear, a bit dirty, but whole.
+
+"My daughter found him under the park bench," said the shopkeeper. "She wouldn't go to sleep until we brought him back to his owner."
+
+Baby Ais hugged Mr Ears tight. Then she looked at the girl. "Thank you," she said. "Do you want to play on the swings with us this afternoon?"
+
+> *Hasbunallaahu wa ni'mal-wakiil.* — "Allah is sufficient for us, and He is the best Disposer of affairs." (Qur'an, Ali 'Imran 3:173)
+
+Talk it over with your little one: when we lose something, what are the two things we do? (Whisper: first we look… then we leave it to Allah.) 🐰`,
+    },
+    anchor: { type: "doa", slug: "doa-hasbunallah" },
+    takeaway: {
+      id: "Tawakal untuk anak itu sederhana: cari dulu sungguh-sungguh, lalu serahkan ke Allah. Dan kadang, pertolongan Allah datang lewat tangan seorang anak lain.",
+      en: "Tawakkul for a child is simple: search properly first, then leave it to Allah. And sometimes Allah's help arrives through another child's hands.",
+    },
+    tags: ["hilang", "tawakal", "taman", "kembar", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "perjalanan-paling-panjang-sedunia",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-yes.png",
+    published: "2026-10-31",
+    title: { id: "Perjalanan Paling Panjang Sedunia", en: "The Longest Trip in the World" },
+    hook: {
+      id: "Delapan jam ke rumah Nenek. \"Masih lama?\" tanya si kembar, lagi dan lagi. Abi punya doa yang katanya bisa \"mendekatkan jarak\".",
+      en: "Eight hours to Nenek's house. \"Are we there yet?\" the twins ask, again and again. Abi has a du'a that he says can \"bring the distance closer\".",
+    },
+    body: {
+      id: `Pagi-pagi sekali, mobil sudah penuh. Tas, bantal, termos, sekotak kue untuk Nenek, dan dua anak kembar yang masih memakai piyama.
+
+"Rumah Nenek jauh," kata Abi sambil memasang sabuk pengaman. "Delapan jam."
+
+"Delapan jam itu berapa lama?" tanya Baby Ais.
+
+"Kira-kira… dari bangun tidur sampai makan siang, lalu sampai sore."
+
+Baby Mo membelalak. "Itu perjalanan paling panjang SEDUNIA!"
+
+Sebelum mobil berjalan, Abi mengangkat tangan dan berdoa. Si kembar ikut mengangkat tangan, meskipun belum hafal.
+
+*Allahumma innaa nas'aluka fii safarinaa haadzal-birra wat-taqwaa… Allahumma hawwin 'alainaa safaranaa haadzaa, wathwi 'annaa bu'dah.*
+
+"Artinya apa, Abi?"
+
+"Ya Allah, mudahkanlah perjalanan kami, dan dekatkanlah jaraknya."
+
+Baby Ais memandang jalan di depan. "Jadi jalannya nanti jadi pendek?"
+
+Abi tersenyum. "Kita lihat saja nanti."
+
+Satu jam kemudian.
+
+"Abi, masih lama?"
+
+"Masih, sayang."
+
+Dua jam kemudian.
+
+"Abi, masih lamaaa?"
+
+"Masih."
+
+Tiga jam kemudian, Baby Mo menempelkan pipinya ke kaca. "Abi… masih lama nggak siiih?"
+
+Abi melirik ke kaca spion. "Kita main yuk. Namanya *Cari Ciptaan Allah.* Siapa yang lihat duluan, dapat satu poin. Mulai: cari… sapi!"
+
+"SAPI!" teriak Baby Ais, menunjuk ke sawah. "Satu poin buat aku!"
+
+"Cari… gunung!"
+
+"Itu! Itu! Yang ada awannya di atas!" seru Baby Mo.
+
+Mereka menemukan kerbau yang berendam di lumpur. Sungai yang airnya cokelat. Pohon kelapa yang berbaris seperti tentara. Burung bangau putih yang berdiri dengan satu kaki. Setiap kali, Umi bertanya, "Siapa yang menciptakan?" dan mereka menjawab bersama, "Allaaah!"
+
+Baby Ais mengumpulkan dua puluh tiga poin. Baby Mo mengumpulkan sembilan belas — lalu tertidur di tengah kata "kerbau", dengan mulut terbuka dan kue setengah dimakan di tangannya.
+
+Ia tidur lama sekali.
+
+Waktu ia membuka mata, mobil sudah berhenti. Di luar ada pagar hijau yang ia kenal, pohon jambu, dan Nenek yang melambai-lambai dari teras.
+
+Baby Mo mengucek matanya. "Lho? Sudah sampai?"
+
+"Sudah," kata Abi.
+
+Baby Mo melompat girang. "Abi! Doanya BERHASIL! Jalannya jadi pendek banget!"
+
+Baby Ais memutar bola matanya. "Itu karena kamu TIDUR, Mo."
+
+Abi tertawa sampai harus menyandarkan kepala ke setir. "Dua-duanya benar," katanya. "Allah memudahkan perjalanan dengan banyak cara. Kadang dengan sapi dan gunung. Kadang dengan tidur yang nyenyak."
+
+> *Allahumma innaa nas'aluka fii safarinaa haadzal-birra wat-taqwaa, wa minal-'amali maa tardhaa. Allahumma hawwin 'alainaa safaranaa haadzaa, wathwi 'annaa bu'dah.* — "Ya Allah, kami memohon kebaikan dan ketakwaan dalam perjalanan kami ini, serta amal yang Engkau ridai. Ya Allah, mudahkanlah perjalanan kami ini dan dekatkanlah jaraknya." (HR. Muslim 1342)
+
+Ngobrol bareng si kecil: di perjalanan berikutnya, mau main *Cari Ciptaan Allah*? Siapa yang menurutmu akan menang? 🚗`,
+      en: `Very early in the morning, the car was already full. Bags, pillows, a flask, a box of cakes for Nenek, and two twins still in their pyjamas.
+
+"Nenek's house is far," said Abi, buckling up. "Eight hours."
+
+"How long is eight hours?" asked Baby Ais.
+
+"About… from waking up until lunch, and then until the afternoon."
+
+Baby Mo's eyes went wide. "That's the longest trip in the WORLD!"
+
+Before the car moved, Abi raised his hands and prayed. The twins raised their hands too, though they hadn't memorised it yet.
+
+*Allahumma innaa nas'aluka fii safarinaa haadzal-birra wat-taqwaa… Allahumma hawwin 'alainaa safaranaa haadzaa, wathwi 'annaa bu'dah.*
+
+"What does it mean, Abi?"
+
+"O Allah, make this journey easy for us, and bring its distance closer."
+
+Baby Ais looked at the road ahead. "So the road will get shorter?"
+
+Abi smiled. "We'll see."
+
+One hour later.
+
+"Abi, are we there yet?"
+
+"Not yet, sweetheart."
+
+Two hours later.
+
+"Abi, are we there yeeet?"
+
+"Not yet."
+
+Three hours later, Baby Mo pressed his cheek against the window. "Abi… are we there yet or what?"
+
+Abi glanced in the mirror. "Let's play a game. It's called *Find Allah's Creation.* Whoever spots it first gets a point. Ready: find… a cow!"
+
+"COW!" yelled Baby Ais, pointing at a rice field. "One point for me!"
+
+"Find… a mountain!"
+
+"There! There! The one with the cloud on top!" shouted Baby Mo.
+
+They found a buffalo wallowing in mud. A river with brown water. Coconut trees standing in line like soldiers. A white heron standing on one leg. Each time, Umi asked, "Who created it?" and they answered together, "Allaaah!"
+
+Baby Ais collected twenty-three points. Baby Mo collected nineteen — then fell asleep in the middle of the word "buffalo", mouth open, a half-eaten cake in his hand.
+
+He slept for a very long time.
+
+When he opened his eyes, the car had stopped. Outside was a green fence he knew, a guava tree, and Nenek waving and waving from the porch.
+
+Baby Mo rubbed his eyes. "Huh? We're here?"
+
+"We're here," said Abi.
+
+Baby Mo jumped for joy. "Abi! The du'a WORKED! The road got really short!"
+
+Baby Ais rolled her eyes. "That's because you were ASLEEP, Mo."
+
+Abi laughed so hard he had to rest his head on the steering wheel. "You're both right," he said. "Allah makes journeys easy in lots of ways. Sometimes with cows and mountains. Sometimes with a really good nap."
+
+> *Allahumma innaa nas'aluka fii safarinaa haadzal-birra wat-taqwaa, wa minal-'amali maa tardhaa. Allahumma hawwin 'alainaa safaranaa haadzaa, wathwi 'annaa bu'dah.* — "O Allah, we ask You on this journey of ours for goodness and piety, and for deeds that please You. O Allah, make this journey easy for us and fold up its distance for us." (Muslim 1342)
+
+Talk it over with your little one: on our next trip, shall we play *Find Allah's Creation*? Who do you think will win? 🚗`,
+    },
+    anchor: { type: "doa", slug: "doa-bepergian" },
+    takeaway: {
+      id: "Perjalanan jauh adalah kelas terbuka: doa safar di awal, lalu jendela mobil jadi buku tentang ciptaan Allah.",
+      en: "A long journey is an open classroom: the travel du'a at the start, then the car window becomes a book about Allah's creation.",
+    },
+    tags: ["mudik", "perjalanan", "nenek", "kembar", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "pasukan-pemungut-sampah",
+    kind: "story",
+    child: "both",
+    pose: "baby-mo-ok.png",
+    published: "2026-11-01",
+    title: { id: "Pasukan Pemungut Sampah", en: "The Litter-Picking Squad" },
+    hook: {
+      id: "Seekor burung kecil mematuk bungkus plastik di taman. Baby Mo dan Baby Ais memutuskan sesuatu — dan taman itu tidak pernah sama lagi.",
+      en: "A little bird pecks at a plastic wrapper in the park. Baby Mo and Baby Ais decide something — and the park is never the same again.",
+    },
+    body: {
+      id: `Hari Minggu pagi, taman dekat rumah ramai sekali. Ada yang bersepeda, ada yang jogging, ada yang jualan bubur ayam.
+
+Tapi Baby Ais melihat sesuatu yang lain.
+
+Di bawah bangku, ada botol plastik. Di dekat ayunan, bungkus permen. Di pinggir kolam, gelas kopi yang sudah penyok. Dan di rumput, seekor burung pipit kecil sedang mematuk-matuk bungkus plastik, mengira itu makanan.
+
+"Mo," bisik Baby Ais. "Burungnya mau makan plastik."
+
+Baby Mo bertepuk tangan keras-keras. Burung itu terbang. Tapi bungkus plastiknya masih di sana.
+
+Mereka berdua memandanginya. Lalu memandang satu sama lain. Mereka kembar — kadang mereka tidak perlu bicara untuk tahu isi kepala satu sama lain.
+
+"Abi!" seru mereka bersamaan. "Kami mau mungutin sampah!"
+
+Abi mengangkat alis, lalu tersenyum. Ia mengeluarkan kantong belanja kosong dari tas dan dua pasang sarung tangan kebun. "Boleh. Tapi aturannya: pakai sarung tangan, dan jangan pegang yang tajam. Kalau ketemu beling, panggil Abi."
+
+"Siap, Komandan!"
+
+Maka berdirilah Pasukan Pemungut Sampah. Anggotanya dua orang.
+
+Botol plastik — masuk kantong. Bungkus permen — masuk kantong. Sedotan — masuk kantong. Gelas kopi penyok — masuk kantong.
+
+Seorang anak laki-laki yang sedang main bola berhenti dan menonton. "Kalian lagi ngapain?"
+
+"Kami Pasukan Pemungut Sampah," kata Baby Mo dengan bangga. "Biar burungnya nggak makan plastik."
+
+Anak itu berpikir sebentar. Lalu ia memungut tutup botol di dekat kakinya. "Aku boleh ikut?"
+
+Anggotanya jadi tiga orang.
+
+Lalu datang dua anak kakak-beradik. Lalu seorang kakek yang membawa kantong plastiknya sendiri. Lalu ibu penjual bubur, yang menyumbang kantong besar dan berkata, "Nanti selesai, Ibu traktir bubur, ya!"
+
+Anggotanya jadi tujuh orang.
+
+Sambil memungut, Abi bercerita. "Tahu nggak, Rasulullah ﷺ bilang, menyingkirkan sesuatu yang mengganggu dari jalan itu sedekah."
+
+"Sedekah?" Baby Ais heran. "Tapi kita nggak kasih uang."
+
+"Sedekah bukan cuma uang. Membuat jalan bersih supaya orang tidak tersandung, supaya burung tidak sakit — itu juga hadiah. Hadiah untuk semua yang lewat."
+
+Baby Mo memandangi kantong yang sekarang penuh. "Berarti hari ini kita sedekah banyak banget."
+
+Menjelang siang, taman itu tampak berbeda. Rumputnya hijau, tanpa warna-warni plastik. Kolamnya jernih. Dan di rumput, burung pipit kecil tadi kembali — kali ini mematuk biji-bijian sungguhan.
+
+Pasukan Pemungut Sampah duduk berjejer di bangku, makan bubur ayam gratis.
+
+"Minggu depan lagi?" tanya anak laki-laki pemain bola.
+
+"Minggu depan lagi!" jawab tujuh suara sekaligus.
+
+> *"…dan menyingkirkan gangguan dari jalan adalah sedekah."* (HR. Bukhari 2989, Muslim 1009)
+
+Ngobrol bareng si kecil: di sekitar rumah kita, adakah "gangguan" kecil yang bisa kita singkirkan minggu ini? 🌿`,
+      en: `On Sunday morning the park near home was packed. People cycling, people jogging, someone selling chicken porridge.
+
+But Baby Ais noticed something else.
+
+Under a bench, a plastic bottle. By the swings, a sweet wrapper. At the edge of the pond, a squashed coffee cup. And on the grass, a little sparrow was pecking and pecking at a plastic wrapper, thinking it was food.
+
+"Mo," whispered Baby Ais. "The bird is trying to eat plastic."
+
+Baby Mo clapped loudly. The bird flew off. But the plastic wrapper was still there.
+
+The two of them stared at it. Then at each other. They were twins — sometimes they didn't need to speak to know what the other was thinking.
+
+"Abi!" they cried together. "We want to pick up the litter!"
+
+Abi raised his eyebrows, then smiled. He took an empty shopping bag from his backpack and two pairs of gardening gloves. "Okay. But the rules are: wear gloves, and don't touch anything sharp. If you find broken glass, call me."
+
+"Yes, Commander!"
+
+And so the Litter-Picking Squad was born. It had two members.
+
+Plastic bottle — into the bag. Sweet wrapper — into the bag. Straw — into the bag. Squashed coffee cup — into the bag.
+
+A boy playing football stopped to watch. "What are you doing?"
+
+"We're the Litter-Picking Squad," said Baby Mo proudly. "So the birds don't eat plastic."
+
+The boy thought for a moment. Then he picked up a bottle cap near his foot. "Can I join?"
+
+Now there were three members.
+
+Then came a brother and sister. Then a grandfather who had brought his own plastic bag. Then the porridge seller, who donated a big bag and said, "When you're done, porridge is on me!"
+
+Now there were seven members.
+
+As they picked, Abi told a story. "Did you know, the Prophet ﷺ said that removing something harmful from the path is charity?"
+
+"Charity?" Baby Ais was puzzled. "But we're not giving money."
+
+"Charity isn't only money. Making the path clean so people don't trip, so birds don't get sick — that's a gift too. A gift for everyone who passes by."
+
+Baby Mo looked at the now-full bag. "So today we gave loads of charity."
+
+By late morning, the park looked different. The grass was green, with no flecks of coloured plastic. The pond was clear. And on the grass, the little sparrow was back — this time pecking at real seeds.
+
+The Litter-Picking Squad sat in a row on the bench, eating free chicken porridge.
+
+"Again next week?" asked the football boy.
+
+"Again next week!" answered seven voices at once.
+
+> *"…and removing something harmful from the path is charity."* (Bukhari 2989, Muslim 1009)
+
+Talk it over with your little one: around our home, is there a small "harm" we could remove this week? 🌿`,
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Sedekah anak tidak harus uang. Memungut satu bungkus plastik supaya burung tidak sakit — itu juga sedekah, dan sering menular.",
+      en: "A child's charity doesn't have to be money. Picking up one wrapper so a bird doesn't get sick is charity too — and it's often contagious.",
+    },
+    tags: ["kebersihan", "sedekah", "taman", "alam", "buku"],
+    readingTimeMin: 5,
+  },
+
+  {
+    slug: "pelukan-tidak-pernah-habis",
+    kind: "story",
+    child: "mo",
+    pose: "baby-mo-pose-15.png",
+    published: "2026-11-02",
+    title: { id: "Pelukan Tidak Pernah Habis", en: "Hugs Never Run Out" },
+    hook: {
+      id: "Sepupu bayi datang menginap, dan Umi menggendongnya sepanjang hari. \"Aku juga bayi!\" teriak Baby Mo. Apakah sayang Umi bisa habis?",
+      en: "A baby cousin comes to stay, and Umi holds her all day long. \"I'm a baby too!\" Baby Mo shouts. Can Umi's love run out?",
+    },
+    body: {
+      id: `Hari itu ada tamu kecil di rumah: Dedek Hana, sepupu bayi yang baru berumur tiga bulan. Tante harus pergi ke dokter, jadi Dedek Hana dititipkan seharian.
+
+Dedek Hana kecil sekali. Jari-jarinya sebesar kacang. Kalau menangis, suaranya seperti anak kucing.
+
+Dan Umi menggendongnya. Sepanjang pagi.
+
+Waktu Baby Mo mau menunjukkan menara baloknya, Umi sedang memberi Dedek Hana susu botol. "Sebentar ya, Mo."
+
+Waktu Baby Mo mau dibacakan buku, Umi sedang mengganti popok Dedek Hana. "Sebentar ya, Mo."
+
+Waktu Baby Mo mau dipeluk sebelum tidur siang, Umi sedang menimang Dedek Hana yang rewel. "Sebentar ya, Mo."
+
+Sebentar. Sebentar. Sebentar.
+
+Baby Mo merasa ada yang mengecil di dalam dadanya. Seperti balon yang kempes pelan-pelan.
+
+Lalu ia melakukan sesuatu yang aneh. Ia berbaring di lantai, menendang-nendang kaki ke udara, dan menangis keras-keras: "Oeeek! Oeeek! Aku juga bayi! Gendong aku juga!"
+
+Baby Ais menatapnya bingung. Dedek Hana ikut menangis karena kaget.
+
+Umi tidak marah. Ia membaringkan Dedek Hana di keranjang, lalu duduk di lantai di samping Baby Mo.
+
+"Mo," katanya pelan, "kamu takut sayang Umi habis dibagi ke Dedek Hana, ya?"
+
+Tangis Baby Mo berhenti. Ia mengangguk kecil. Itu persis yang ia rasakan, padahal ia tidak tahu cara mengatakannya.
+
+Umi tersenyum. "Sini. Umi tunjukkan sesuatu."
+
+Umi membuka kedua tangannya lebar-lebar dan memeluk Baby Mo. Lalu ia memanggil, "Ais, sini!" — dan Baby Ais masuk ke pelukan itu juga. Lalu Umi meraih keranjang dan menarik Dedek Hana ke tengah-tengah.
+
+Tiga anak. Satu pelukan. Hangat dan sedikit sesak.
+
+"Lihat," kata Umi. "Tangan Umi cukup. Sayang itu bukan kue yang kalau dibagi jadi kecil. Sayang itu seperti pelukan. Makin banyak yang masuk, makin hangat."
+
+Di tengah pelukan itu, tangan Dedek Hana yang mungil menyentuh jari Baby Mo. Lalu — tiba-tiba — menggenggamnya. Erat sekali, untuk tangan sekecil itu.
+
+Baby Mo membeku. "Umi… dia pegang aku."
+
+"Dia sayang kamu," bisik Umi. "Kamu kakaknya hari ini."
+
+Sore itu, Baby Mo mengambil tugas baru. Ia duduk di samping keranjang dan menyanyikan lagu "Bismillah Dulu" setiap kali Dedek Hana mulai merengek. Kadang berhasil. Kadang tidak. Tapi ia tidak beranjak.
+
+Waktu Tante datang menjemput, Baby Mo berdiri di depan keranjang seperti penjaga. "Tante, Dedek Hana tadi pegang jariku. Kapan dia nginap lagi?"
+
+Malamnya, sebelum tidur, Umi memeluk Baby Mo lama sekali. Tanpa "sebentar". Tanpa "nanti".
+
+"Umi," bisik Baby Mo dengan mata setengah terpejam, "pelukan nggak pernah habis, ya?"
+
+"Nggak pernah, sayang."
+
+> *"Barangsiapa yang tidak menyayangi, maka ia tidak akan disayangi."* Rasulullah ﷺ mengucapkannya saat ada yang heran melihat beliau mencium cucunya. (HR. Bukhari 5997, Muslim 2318)
+
+Ngobrol bareng si kecil: pernah merasa takut sayang Umi atau Abi berkurang? Yuk, coba pelukan sebanyak-banyaknya orang sekarang! 🤗`,
+      en: `There was a tiny guest at home that day: baby Hana, a cousin only three months old. Auntie had to go to the doctor, so baby Hana was staying with them all day.
+
+Baby Hana was so small. Her fingers were the size of peanuts. When she cried, she sounded like a kitten.
+
+And Umi held her. All morning.
+
+When Baby Mo wanted to show off his block tower, Umi was giving baby Hana her bottle. "In a minute, Mo."
+
+When Baby Mo wanted a story read to him, Umi was changing baby Hana's nappy. "In a minute, Mo."
+
+When Baby Mo wanted a hug before his nap, Umi was rocking a fussy baby Hana. "In a minute, Mo."
+
+In a minute. In a minute. In a minute.
+
+Baby Mo felt something shrinking in his chest. Like a balloon slowly going flat.
+
+Then he did something strange. He lay on the floor, kicked his legs in the air, and cried as loudly as he could: "Waaah! Waaah! I'm a baby too! Hold me too!"
+
+Baby Ais stared at him, confused. Baby Hana started crying too, from the shock.
+
+Umi didn't get angry. She laid baby Hana in the basket, then sat on the floor beside Baby Mo.
+
+"Mo," she said softly, "are you worried Umi's love will run out because it's being shared with baby Hana?"
+
+Baby Mo stopped crying. He gave a tiny nod. That was exactly how he felt, even though he hadn't known how to say it.
+
+Umi smiled. "Come here. Let me show you something."
+
+Umi opened her arms wide and hugged Baby Mo. Then she called, "Ais, come here!" — and Baby Ais squeezed into the hug too. Then Umi reached for the basket and pulled baby Hana into the middle.
+
+Three children. One hug. Warm and a little squashed.
+
+"Look," said Umi. "Umi's arms are enough. Love isn't a cake that gets smaller when you share it. Love is like a hug. The more people come in, the warmer it gets."
+
+In the middle of that hug, baby Hana's tiny hand touched Baby Mo's finger. Then — suddenly — it grabbed hold. So tight, for such a small hand.
+
+Baby Mo froze. "Umi… she's holding me."
+
+"She loves you," whispered Umi. "You're her big brother today."
+
+That afternoon, Baby Mo took on a new job. He sat beside the basket and sang "Bismillah First" every time baby Hana began to fuss. Sometimes it worked. Sometimes it didn't. But he didn't leave.
+
+When Auntie came to pick her up, Baby Mo stood in front of the basket like a guard. "Auntie, baby Hana held my finger. When can she stay again?"
+
+That night, before bed, Umi hugged Baby Mo for a very long time. No "in a minute". No "later".
+
+"Umi," Baby Mo whispered, his eyes half closed, "hugs never run out, do they?"
+
+"Never, sweetheart."
+
+> *"Whoever does not show mercy will not be shown mercy."* The Prophet ﷺ said it when someone was surprised to see him kiss his grandson. (Bukhari 5997, Muslim 2318)
+
+Talk it over with your little one: have you ever worried that Umi's or Abi's love might get smaller? Let's try a hug with as many people as we can, right now! 🤗`,
+    },
+    anchor: { type: "hadith", slug: "kasih-sayang-kepada-anak" },
+    takeaway: {
+      id: "Cemburu anak sering berarti satu pertanyaan: \"Apakah sayangmu masih cukup untukku?\" Jawablah dengan pelukan, bukan teguran.",
+      en: "A child's jealousy often means one question: \"Is there still enough love for me?\" Answer it with a hug, not a telling-off.",
+    },
+    tags: ["cemburu", "sepupu", "bayi", "keluarga", "buku"],
+    readingTimeMin: 5,
   },
 
 ];
