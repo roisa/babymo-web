@@ -806,3 +806,13 @@ html.dark .doa-tile { border-color: rgba(255,255,255,0.08); }
 .doa-tile--peach { background: var(--color-peach-soft); }
 .doa-tile--berry { background: var(--color-berry-soft); }
 .doa-tile--brave { background: var(--color-brave-soft); }
+.parent-panel > div > *:first-child { margin-top: 0 !important; }
+
+/* ─── Doodle background: faint stars, moons, clouds and hearts ─────── */
+body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%235F8B5A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.055'%3E%3Cpath d='M30 22l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/%3E%3Cpath d='M190 40a14 14 0 1 0 14 18 11 11 0 0 1-14-18z'/%3E%3Cpath d='M70 150c-8 0-12-5-12-10s5-10 11-9c2-6 7-9 13-8 6 1 10 6 10 11 5 0 8 4 8 8s-4 8-9 8z'/%3E%3Cpath d='M170 170c0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 7-14 15-14 15s-14-8-14-15z'/%3E%3Ccircle cx='120' cy='90' r='2.5'/%3E%3Ccircle cx='220' cy='120' r='2'/%3E%3Ccircle cx='20' cy='210' r='2'/%3E%3Cpath d='M118 210l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z'/%3E%3C/svg%3E");
+  background-size: 240px 240px;
+}
+html.dark body {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='240' height='240' viewBox='0 0 240 240' fill='none' stroke='%23A8CFA2' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' opacity='0.06'%3E%3Cpath d='M30 22l3 7 7 1-5 5 1 7-6-3-6 3 1-7-5-5 7-1z'/%3E%3Cpath d='M190 40a14 14 0 1 0 14 18 11 11 0 0 1-14-18z'/%3E%3Cpath d='M70 150c-8 0-12-5-12-10s5-10 11-9c2-6 7-9 13-8 6 1 10 6 10 11 5 0 8 4 8 8s-4 8-9 8z'/%3E%3Cpath d='M170 170c0-5 4-8 8-8 3 0 5 2 6 4 1-2 3-4 6-4 4 0 8 3 8 8 0 7-14 15-14 15s-14-8-14-15z'/%3E%3Ccircle cx='120' cy='90' r='2.5'/%3E%3Ccircle cx='220' cy='120' r='2'/%3E%3Ccircle cx='20' cy='210' r='2'/%3E%3Cpath d='M118 210l2 5 5 1-4 3 1 5-4-3-4 3 1-5-4-3 5-1z'/%3E%3C/svg%3E");
+}

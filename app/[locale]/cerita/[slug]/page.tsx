@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { ParentPanel } from "@/components/ParentPanel";
 import { notFound } from "next/navigation";
 import { type Locale, absoluteUrl, asset, isLocale, locales, pathFor } from "@/lib/i18n/config";
 import { posePath } from "@/lib/games/poses";
@@ -60,6 +61,15 @@ export default async function CatatanDetail({
 
   const anchor = resolveAnchor(n.anchor, l);
   const isStory = n.kind === "story";
+  // Kids' stories tuck the parent-facing extras into the Ayah & Bunda panel.
+  const ParentWrap = ({ children }: { children: React.ReactNode }) =>
+    isStory ? (
+      <ParentPanel locale={l} className="mt-10">
+        {children}
+      </ParentPanel>
+    ) : (
+      <>{children}</>
+    );
   const narrator = n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman;
 
   // Recommended next story for the end of Book Mode (wraps around the list).
@@ -74,7 +84,7 @@ export default async function CatatanDetail({
   return (
     <>
       <Header locale={l} currentPath={`/cerita/${slug}`} />
-      <main id="main" className="mx-auto max-w-2xl px-5 pb-40 pt-10 sm:px-7 sm:pt-14 md:pb-20">
+      <main id="main" className="sec-cerita mx-auto max-w-2xl px-5 pb-40 pt-10 sm:px-7 sm:pt-14 md:pb-20">
         <nav aria-label="Breadcrumb" className="mb-5 text-[12px] text-whisper">
           <Link href={pathFor(l)} className="hover:text-ink">
             {dict.nav.home}
@@ -180,6 +190,7 @@ export default async function CatatanDetail({
           );
         })()}
 
+        <ParentWrap>
         {/* Takeaway pull-quote */}
         <aside className="mt-10 rounded-[22px] border border-brave/20 bg-brave-soft/40 p-6 sm:p-8">
           <p className="text-[12.5px] font-semibold normal-case-label text-brave-deep">
@@ -213,6 +224,8 @@ export default async function CatatanDetail({
             </Link>
           </section>
         )}
+
+        </ParentWrap>
 
         {/* Watch on Baby Mo — embedded song/episode from the Momen page */}
         {n.video && (

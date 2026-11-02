@@ -55,7 +55,7 @@ export default async function CatatanIndex({
           locale={l}
           section="cerita"
           crumb={dict.nav.catatan}
-          title={dict.catatan.indexTitle}
+          title={l === "id" ? "Yuk, baca cerita Baby Mo & Baby Ais!" : "Story time with Baby Mo & Baby Ais!"}
           sub={dict.catatan.intro}
         >
           <SectionButton href={pathFor(l, "/cerita/tema")}>

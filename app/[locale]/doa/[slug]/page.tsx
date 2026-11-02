@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { ParentPanel } from "@/components/ParentPanel";
+import { doaEmoji, doaTile } from "@/lib/doa-emoji";
 import { notFound } from "next/navigation";
 import { type Locale, absoluteUrl, isLocale, locales, pathFor, siteUrl } from "@/lib/i18n/config";
 import { getDictionary } from "@/lib/i18n/dictionaries";
@@ -82,36 +84,18 @@ export default async function DoaDetail({
           / <span className="text-ink">{doa.title[l]}</span>
         </nav>
 
-        <header className="mb-8">
-          <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
-            <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
-              {GRADE_LABEL[doa.source.grade] ?? labelize(doa.source.grade)}
+        <header className="sec-doa mb-8">
+          <div className="flex items-center gap-4">
+            <span aria-hidden className={`doa-tile doa-tile--${doaTile(slug)} !h-[72px] !w-[72px] !rounded-[22px] !text-[40px]`}>
+              {doaEmoji(slug)}
             </span>
-            <span className="text-whisper">{doa.source.reference}</span>
+            <h1 className="font-display text-[34px] leading-[1.08] text-ink sm:text-[44px]">
+              {doa.title[l]}
+            </h1>
           </div>
-          <h1 className="tracking-display font-serif text-[36px] font-medium leading-[1.08] text-ink sm:text-[44px]">
-            {doa.title[l]}
-          </h1>
-          <p className="mt-3 text-[16px] leading-relaxed text-whisper">
+          <p className="mt-4 text-[17px] leading-relaxed text-ink-soft">
             {doa.context[l]}
           </p>
-          <div className="mt-4">
-            <Byline
-              locale={l}
-              authorSlug={doa.author}
-              reviewerSlug={doa.reviewedBy}
-              compact
-            />
-          </div>
-          <div className="mt-4">
-            <VerificationBadge
-              locale={l}
-              reviewedBy={doa.reviewedBy}
-              kindLabel={l === "id" ? "doa" : "du'a"}
-              title={doa.title[l]}
-              path={`/doa/${slug}`}
-            />
-          </div>
         </header>
 
         {/* Arabic / transliteration / translation — iOS card stack */}
@@ -165,38 +149,62 @@ export default async function DoaDetail({
           </div>
         </section>
 
-        {/* Meta strip */}
-        <dl className="mt-8 grid gap-5 rounded-[22px] border border-hairline bg-paper p-6 text-[14px] sm:grid-cols-3">
-          <div>
-            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
-              {dict.doa.source}
-            </dt>
-            <dd className="mt-1 text-ink">{doa.source.reference}</dd>
-          </div>
-          <div>
-            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
-              {dict.doa.ages}
-            </dt>
-            <dd className="mt-1 text-ink">
-              {doa.ages[0]}–{doa.ages[doa.ages.length - 1]}
-            </dd>
-          </div>
-          <div>
-            <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
-              {dict.doa.situations}
-            </dt>
-            <dd className="mt-1 flex flex-wrap gap-1.5">
-              {doa.situations.map((s) => (
-                <span
-                  key={s}
-                  className="rounded-full bg-paper-2 px-2 py-0.5 text-[12px] text-ink-soft"
-                >
-                  {s}
+        <ParentPanel locale={l} className="mt-8">
+              <div className="flex flex-wrap items-center gap-2 text-[11px]">
+                <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
+                  {GRADE_LABEL[doa.source.grade] ?? labelize(doa.source.grade)}
                 </span>
-              ))}
-            </dd>
-          </div>
-        </dl>
+                <span className="text-whisper">{doa.source.reference}</span>
+              </div>
+              <div>
+                <Byline
+                  locale={l}
+                  authorSlug={doa.author}
+                  reviewerSlug={doa.reviewedBy}
+                  compact
+                />
+              </div>
+              <div>
+                <VerificationBadge
+                  locale={l}
+                  reviewedBy={doa.reviewedBy}
+                  kindLabel={l === "id" ? "doa" : "du'a"}
+                  title={doa.title[l]}
+                  path={`/doa/${slug}`}
+                />
+              </div>
+            <dl className="grid gap-5 rounded-[18px] border border-hairline bg-paper p-5 text-[14px] sm:grid-cols-3">
+              <div>
+                <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
+                  {dict.doa.source}
+                </dt>
+                <dd className="mt-1 text-ink">{doa.source.reference}</dd>
+              </div>
+              <div>
+                <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
+                  {dict.doa.ages}
+                </dt>
+                <dd className="mt-1 text-ink">
+                  {doa.ages[0]}–{doa.ages[doa.ages.length - 1]}
+                </dd>
+              </div>
+              <div>
+                <dt className="text-[12.5px] font-semibold normal-case-label text-whisper">
+                  {dict.doa.situations}
+                </dt>
+                <dd className="mt-1 flex flex-wrap gap-1.5">
+                  {doa.situations.map((s) => (
+                    <span
+                      key={s}
+                      className="rounded-full bg-paper-2 px-2 py-0.5 text-[12px] text-ink-soft"
+                    >
+                      {labelize(s)}
+                    </span>
+                  ))}
+                </dd>
+              </div>
+            </dl>
+        </ParentPanel>
 
         {doa.video && (
           <section className="mt-14">

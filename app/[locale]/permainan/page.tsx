@@ -51,8 +51,12 @@ export default async function GamesIndex({
           locale={l}
           section="main"
           crumb={dict.nav.games}
-          title={dict.pages.games.title}
-          sub={dict.pages.games.description}
+          title={l === "id" ? "Ayo main bareng Baby Mo!" : "Let's play with Baby Mo!"}
+          sub={
+            l === "id"
+              ? "Game gratis untuk belajar hijaiyah, doa, dan kata-kata Arab — main langsung, tanpa daftar."
+              : "Free games for learning hijaiyah, du'as and Arabic words — no sign-up needed."
+          }
         />
         <ul className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {games.map((g) => (

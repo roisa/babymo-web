@@ -62,8 +62,12 @@ export default async function DoaIndex({
           locale={l}
           section="doa"
           crumb={dict.nav.doa}
-          title={dict.doa.indexTitle}
-          sub={dict.doa.indexDescription}
+          title={l === "id" ? "Doa-doa kecil untuk setiap hari" : "Little du'as for every day"}
+          sub={
+            l === "id"
+              ? "Doa pendek untuk tidur, makan, hujan, dan petualangan sehari-hari — lengkap dengan bacaan Arab, cara baca, dan artinya."
+              : "Short du'as for sleeping, eating, rain and everyday adventures — with the Arabic, how to read it, and what it means."
+          }
         >
           <SectionButton href={pathFor(l, "/doa/kategori")}>
             {l === "id" ? "Jelajahi per kategori" : "Browse by category"} →
