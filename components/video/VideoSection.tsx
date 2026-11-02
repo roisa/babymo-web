@@ -3,7 +3,11 @@ import { VideoCard } from "./VideoCard";
 import { getFeaturedVideos } from "@/lib/youtube/loader";
 import { type Locale, pathFor } from "@/lib/i18n/config";
 
-type Props = { locale: Locale };
+type Props = {
+  locale: Locale;
+  /** Grid only — no heading or follow chips (used under YouTubeBand). */
+  compact?: boolean;
+};
 
 /**
  * Homepage "Watch Together with Baby Mo" section.
@@ -11,9 +15,21 @@ type Props = { locale: Locale };
  * to silent (returns null) if no videos are available, so the
  * homepage never breaks even before the YouTube sync has run.
  */
-export function VideoSection({ locale }: Props) {
+export function VideoSection({ locale, compact = false }: Props) {
   const videos = getFeaturedVideos(3);
   if (videos.length === 0) return null;
+
+  if (compact) {
+    return (
+      <section className="mx-auto max-w-6xl px-5 pb-14 sm:px-7 sm:pb-20">
+        <div className="mt-6 grid gap-4 md:grid-cols-3">
+          {videos.map((v) => (
+            <VideoCard key={v.id} video={v} locale={locale} />
+          ))}
+        </div>
+      </section>
+    );
+  }
 
   const heading =
     locale === "id"

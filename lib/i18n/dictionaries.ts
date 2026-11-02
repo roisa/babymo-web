@@ -197,11 +197,11 @@ const id: Dict = {
     relatedAnchor: "Terkait cerita ini",
   },
   home: {
-    eyebrow: "Konten islami ramah anak",
-    heroTitleA: "Pendamping islami",
-    heroTitleB: "tumbuh kembang si kecil.",
+    eyebrow: "Untuk anak muslim 2–8 tahun",
+    heroTitleA: "Menanam cinta pada Allah,",
+    heroTitleB: "dari hal kecil yang anak sukai.",
     heroSub:
-      "Doa harian, kisah teladan, dan permainan edukatif yang dirancang untuk anak muslim usia 2–8 tahun. Tenang dibaca orang tua, menyenangkan dimainkan anak.",
+      "Doa, cerita, dan permainan — dibuat oleh orang tua, untuk keluarga muslim.",
     ctaPrimary: "Jelajahi Doa Harian",
     ctaSecondary: "Mainkan Game Gratis",
     sections: {
@@ -217,8 +217,8 @@ const id: Dict = {
       ceritaTitle: "Cerita Terbaru",
       ceritaSub:
         "Cerita hangat dari Abi & Umi tentang Baby Mo & Baby Ais — tentang akhlak, berbagi, dan sabar.",
-      valuesTitle: "Mengapa Baby Mo",
-      valuesSub: "Tiga prinsip yang kami pegang dalam setiap konten.",
+      valuesTitle: "Janji kami",
+      valuesSub: "Tiga hal yang kami jaga di setiap halaman.",
       faqTitle: "Pertanyaan Umum",
       faqSub: "Hal yang sering ditanyakan orang tua tentang Baby Mo.",
       followTitle: "Ikuti & Dukung Baby Mo",
@@ -230,19 +230,19 @@ const id: Dict = {
     },
     values: [
       {
-        title: "Bersumber jelas",
+        title: "Sesuai sumber",
         body:
-          "Setiap doa dan hadith disertai sumber dan tingkat keshahihan. Tidak ada konten yang tidak diverifikasi.",
+          "Setiap doa & hadith ada sumbernya.",
       },
       {
-        title: "Ramah anak",
+        title: "Aman untuk anak",
         body:
-          "Tanpa iklan eksternal, tanpa data anak yang dikumpulkan, tanpa tautan keluar yang berisiko.",
+          "Tanpa data anak, tanpa tautan berisiko.",
       },
       {
         title: "Tenang untuk orang tua",
         body:
-          "Tipografi besar, kontras tinggi, layout luang. Mudah dibaca di malam hari saat menemani anak.",
+          "Huruf besar, enak dibaca sebelum tidur.",
       },
     ],
     viewAll: "Lihat semua",
@@ -452,11 +452,11 @@ const en: Dict = {
     relatedAnchor: "Related to this story",
   },
   home: {
-    eyebrow: "Child-friendly Islamic content",
-    heroTitleA: "An Islamic companion",
-    heroTitleB: "for raising your child.",
+    eyebrow: "For Muslim kids aged 2–8",
+    heroTitleA: "Planting love for Allah,",
+    heroTitleB: "through the small things kids love.",
     heroSub:
-      "Daily duas, prophetic stories, and educational games designed for Muslim children 2–8 years old. Calm for parents to read, fun for kids to play.",
+      "Du'a, stories, and play — made by parents, for Muslim families.",
     ctaPrimary: "Explore Daily Duas",
     ctaSecondary: "Play Free Games",
     sections: {
@@ -472,8 +472,8 @@ const en: Dict = {
       ceritaTitle: "Latest Stories",
       ceritaSub:
         "Warm stories from Abi & Umi about Baby Mo & Baby Ais — about character, sharing, and patience.",
-      valuesTitle: "Why Baby Mo",
-      valuesSub: "Three principles we hold in every piece of content.",
+      valuesTitle: "Our promise",
+      valuesSub: "Three things we keep on every page.",
       faqTitle: "Common Questions",
       faqSub: "What parents most often ask about Baby Mo.",
       followTitle: "Follow & Support Baby Mo",
@@ -485,19 +485,19 @@ const en: Dict = {
     },
     values: [
       {
-        title: "Sourced",
+        title: "Faithful to sources",
         body:
-          "Every dua and hadith ships with its source and authenticity grading. Nothing unverified.",
+          "Every du'a & hadith shows its source.",
       },
       {
-        title: "Child-safe",
+        title: "Safe for kids",
         body:
-          "No third-party ads, no child data collection, no risky outbound links from kid pages.",
+          "No child data, no risky links.",
       },
       {
         title: "Calm for parents",
         body:
-          "Large type, high contrast, generous spacing. Designed to be read at night while a small hand holds yours.",
+          "Big type, easy to read at bedtime.",
       },
     ],
     viewAll: "View all",

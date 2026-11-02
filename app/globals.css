@@ -245,6 +245,10 @@ body {
 .hero-words > span:nth-child(6) { animation-delay: 410ms; }
 .hero-words > span:nth-child(7) { animation-delay: 480ms; }
 .hero-words > span:nth-child(8) { animation-delay: 550ms; }
+.hero-words > span:nth-child(9) { animation-delay: 620ms; }
+.hero-words > span:nth-child(10) { animation-delay: 690ms; }
+.hero-words > span:nth-child(11) { animation-delay: 760ms; }
+.hero-words > span:nth-child(12) { animation-delay: 830ms; }
 
 /* Mascot: gentle breathing float */
 @keyframes mascot-breathe {
@@ -525,4 +529,10 @@ html {
 
 @media (prefers-reduced-motion: reduce) {
   .sc-star, .sc-cloud, .sc-drops i, .sc-pose { animation: none !important; }
+}
+
+/* ─── Homepage "Satu hari bersama Baby Mo" ─────────────────────────── */
+.moment-label {
+  background: var(--color-brave-soft);
+  color: var(--color-brave-deep);
 }
