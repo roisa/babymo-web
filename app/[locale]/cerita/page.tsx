@@ -11,6 +11,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, graph, itemListSchema } from "@/lib/seo/schemas";
 import { getAllCatatan } from "@/lib/content/catatan";
 import { StoryScene } from "@/components/StoryScene";
+import { StoryArt } from "@/components/story-art/StoryArt";
+import { illusFor } from "@/lib/cerita/illus";
 import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
 
 export async function generateStaticParams() {
@@ -74,7 +76,19 @@ export default async function CatatanIndex({
               <li key={n.slug}>
                 <Link href={pathFor(l, `/cerita/${n.slug}`)} className="shelf-book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
                   <div className="book-cover relative">
-                    <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} className="book-art" />
+                    {(() => {
+                      const art = illusFor(n.slug);
+                      return art?.[0] ? (
+                        <div className="book-art book-art--illus overflow-hidden">
+                          <StoryArt scene={art[0]} title={art[0].alt[l]} portrait />
+                          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10.5px] font-bold text-[var(--sec-deep)] shadow-sm">
+                            ✨ {l === "id" ? "Bergambar" : "Illustrated"}
+                          </span>
+                        </div>
+                      ) : (
+                        <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} className="book-art" />
+                      );
+                    })()}
                     <span className="book-spine" aria-hidden />
                     <span className="book-chip">{dict.catatan.childChip[n.child]}</span>
                   </div>

@@ -1,4 +1,6 @@
 import type { Catatan } from "./types";
+import { illustratedStories } from "./catatan-illustrated";
+import { illustratedStories2 } from "./catatan-illustrated-2";
 
 /**
  * First-person notebook entries by Salman (writing as "Abi") about
@@ -7107,6 +7109,8 @@ Talk it over with your little one: have you ever worried that Umi's or Abi's lov
     readingTimeMin: 5,
   },
 
+  ...illustratedStories,
+  ...illustratedStories2,
 ];
 
 export function getAllCatatan(): Catatan[] {

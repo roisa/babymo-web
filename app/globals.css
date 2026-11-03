@@ -769,6 +769,7 @@ html.dark .sec-sticker { border-color: color-mix(in srgb, var(--sec) 40%, transp
   box-shadow: 0 6px 0 color-mix(in srgb, var(--sec) 35%, var(--color-hairline)), 0 16px 28px -18px rgba(15, 18, 19, 0.45);
 }
 .book-cover .book-art { aspect-ratio: 4 / 5; border-radius: 0; border: 0; }
+.book-cover .book-art--illus { position: relative; display: block; background: #EAF7FF; }
 .book-spine {
   position: absolute; inset: 0 auto 0 0; width: 14px;
   background: linear-gradient(90deg, rgba(0,0,0,0.22), rgba(255,255,255,0.18) 55%, rgba(0,0,0,0.06));
@@ -1116,4 +1117,83 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .bj-confetti { position: absolute; top: 0; width: 9px; height: 14px; border-radius: 3px; animation: bj-confetti 2s linear forwards; }
 @media (prefers-reduced-motion: reduce) {
   .bj-shake, .bj-pop, .bj-float, .bj-pulse, .bj-ring, .bj-star, .bj-confetti { animation: none !important; }
+}
+
+/* ── Story illustrations (components/story-art) ── */
+.story-art { display: block; width: 100%; height: 100%; }
+.story-art [class^="sa-"], .story-art [class*=" sa-"] { transform-box: fill-box; }
+@keyframes sa-spin { to { rotate: 360deg; } }
+.sa-spin { transform-origin: center; animation: sa-spin 30s linear infinite; }
+.sa-spin-fast { transform-origin: center; animation: sa-spin 1.4s linear infinite; }
+@keyframes sa-drift { 0%,100% { translate: -14px 0; } 50% { translate: 14px 0; } }
+.sa-drift { animation: sa-drift 9s ease-in-out infinite; }
+@keyframes sa-twinkle { 0%,100% { opacity: .25; scale: .7; } 50% { opacity: 1; scale: 1.15; } }
+.sa-twinkle { transform-origin: center; animation: sa-twinkle 2.2s ease-in-out infinite; }
+@keyframes sa-pulse { 0%,100% { opacity: .6; } 50% { opacity: 1; } }
+.sa-pulse { animation: sa-pulse 2.4s ease-in-out infinite; }
+@keyframes sa-sway { 0%,100% { rotate: -4deg; } 50% { rotate: 4deg; } }
+.sa-sway { transform-origin: 50% 100%; animation: sa-sway 3s ease-in-out infinite; }
+.sa-hang { transform-origin: 50% 0%; animation: sa-sway 3s ease-in-out infinite; }
+@keyframes sa-sway-slow { 0%,100% { rotate: -1.5deg; } 50% { rotate: 1.5deg; } }
+.sa-sway-slow { transform-origin: 50% 100%; animation: sa-sway-slow 5s ease-in-out infinite; }
+@keyframes sa-curtain { 0%,100% { skew: 0deg 0deg; } 50% { skew: 3deg 0deg; } }
+.sa-curtain { transform-origin: 50% 0%; animation: sa-curtain 4s ease-in-out infinite; }
+@keyframes sa-bob { 0%,100% { translate: 0 0; } 50% { translate: 0 -5px; } }
+.sa-bob { animation: sa-bob 2.6s ease-in-out infinite; }
+@keyframes sa-steam { 0% { translate: 0 6px; opacity: 0; } 40% { opacity: .9; } 100% { translate: 0 -22px; opacity: 0; } }
+.sa-steam { animation: sa-steam 2.4s ease-in-out infinite; }
+@keyframes sa-wag { 0%,100% { rotate: -10deg; } 50% { rotate: 14deg; } }
+.sa-wag { transform-origin: 0% 100%; animation: sa-wag 1.2s ease-in-out infinite; }
+@keyframes sa-blink { 0%,92%,100% { scale: 1 1; } 95% { scale: 1 .1; } }
+.sa-blink { transform-origin: center; animation: sa-blink 4s infinite; }
+@keyframes sa-brush { 0%,100% { rotate: -8deg; } 50% { rotate: 8deg; } }
+.sa-brush { transform-origin: 50% 100%; animation: sa-brush .5s ease-in-out infinite; }
+@keyframes sa-ripple { 0% { scale: .4; opacity: .9; } 100% { scale: 2.2; opacity: 0; } }
+.sa-ripple { transform-origin: center; animation: sa-ripple 1.6s ease-out infinite; }
+@keyframes sa-rain { from { translate: 0 0; } to { translate: -40px 470px; } }
+.sa-raindrop { animation: sa-rain .9s linear infinite; }
+@keyframes sa-rainwin { from { translate: 0 -30px; } to { translate: 0 40px; } }
+.sa-rainwin { animation: sa-rainwin 1s linear infinite; }
+@keyframes sa-rise { 0% { translate: 0 0; opacity: 0; } 15% { opacity: 1; } 100% { translate: 0 -360px; opacity: 0; } }
+.sa-rise { animation: sa-rise 4.5s ease-in infinite; }
+@keyframes sa-fall { from { translate: 0 0; rotate: 0deg; } to { translate: 30px 480px; rotate: 540deg; } }
+.sa-fall { transform-origin: center; animation: sa-fall 3s linear infinite; }
+@keyframes sa-zzz { 0% { translate: 0 0; opacity: 0; } 30% { opacity: 1; } 100% { translate: 30px -70px; opacity: 0; } }
+.sa-zzz { animation: sa-zzz 2.7s ease-out infinite; }
+@keyframes sa-firefly { 0%,100% { translate: 0 0; opacity: .2; } 25% { translate: 18px -14px; opacity: 1; } 50% { translate: 4px -28px; opacity: .4; } 75% { translate: -16px -10px; opacity: 1; } }
+.sa-firefly { animation: sa-firefly 5s ease-in-out infinite; }
+@keyframes sa-leaf { 0% { translate: 0 0; rotate: 0deg; opacity: 0; } 10% { opacity: 1; } 100% { translate: 860px 120px; rotate: 720deg; opacity: 0; } }
+.sa-leaf { transform-origin: center; animation: sa-leaf 7s linear infinite; }
+@keyframes sa-float { 0%,100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+.sa-float { animation: sa-float 3s ease-in-out infinite; }
+@keyframes sa-flutter { 0%,100% { scale: 1 1; } 50% { scale: .3 1; } }
+.sa-flutter { transform-origin: center; animation: sa-flutter .35s ease-in-out infinite; }
+@keyframes sa-flutter-path { 0%,100% { translate: 0 0; } 25% { translate: 30px -20px; } 50% { translate: 60px 0; } 75% { translate: 30px 16px; } }
+.sa-flutter-path { animation: sa-flutter-path 6s ease-in-out infinite; }
+@keyframes sa-fly { from { translate: -200px 0; } to { translate: 900px -40px; } }
+.sa-fly { animation: sa-fly 9s linear infinite; }
+@keyframes sa-wing { 0%,100% { scale: 1 1; } 50% { scale: 1 -.6; } }
+.sa-wing { transform-origin: center; animation: sa-wing .5s ease-in-out infinite; }
+@keyframes sa-flag { 0%,100% { skew: 0deg 0deg; } 50% { skew: 0deg 8deg; } }
+.sa-flag { transform-origin: 0% 50%; animation: sa-flag 1s ease-in-out infinite; }
+.sa-flagup { transform-origin: 0% 100%; animation: sa-sway 2.5s ease-in-out infinite; }
+@keyframes sa-flap { 0%,100% { skew: 0deg 0deg; } 50% { skew: -6deg 0deg; } }
+.sa-flap { transform-origin: 50% 0%; animation: sa-flap 3s ease-in-out infinite; }
+@keyframes sa-crab { 0%,100% { translate: -20px 0; } 50% { translate: 20px 0; } }
+.sa-crab { animation: sa-crab 3s ease-in-out infinite; }
+@keyframes sa-waves { from { translate: 0 0; } to { translate: -160px 0; } }
+.sa-waves { animation: sa-waves 6s linear infinite; }
+.sa-waves2 { animation: sa-waves 4s linear infinite reverse; }
+@keyframes sa-awning { 0%,100% { skew: 0deg 0deg; } 50% { skew: 0deg 1.5deg; } }
+.sa-awning { transform-origin: 50% 0%; animation: sa-awning 3.5s ease-in-out infinite; }
+@keyframes sa-shine { 0%,100% { opacity: .2; } 50% { opacity: .9; } }
+.sa-shine { animation: sa-shine 3s ease-in-out infinite; }
+@keyframes sa-mo-bob { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
+.sa-mo-bob { animation: sa-mo-bob 2.8s ease-in-out infinite; }
+@keyframes sa-mo-hop { 0%,60%,100% { translate: 0 0; } 75% { translate: 0 -26px; } 88% { translate: 0 0; } }
+.sa-mo-hop { animation: sa-mo-hop 1.8s ease-in-out infinite; }
+@keyframes sa-mo-sway { 0%,100% { rotate: -3deg; } 50% { rotate: 3deg; } }
+.sa-mo-sway { transform-origin: 50% 100%; animation: sa-mo-sway 2.6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .story-art * { animation: none !important; }
 }

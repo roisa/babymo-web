@@ -12,6 +12,8 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { BookReader } from "@/components/BookReader";
+import { StoryArt } from "@/components/story-art/StoryArt";
+import { illusFor } from "@/lib/cerita/illus";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
@@ -62,6 +64,7 @@ export default async function CatatanDetail({
 
   const anchor = resolveAnchor(n.anchor, l);
   const isStory = n.kind === "story";
+  const art = illusFor(slug);
   // Kids' stories tuck the parent-facing extras into the Ayah & Bunda panel.
   const ParentWrap = ({ children }: { children: React.ReactNode }) =>
     isStory ? (
@@ -121,7 +124,14 @@ export default async function CatatanDetail({
           <h1 className="font-display text-[36px] font-medium leading-[1.05] text-ink sm:text-[46px]">
             {n.title[l]}
           </h1>
-          {n.pose && (
+          {art && art[0] ? (
+            <figure className="mt-6">
+              <div className="aspect-[16/9] overflow-hidden rounded-[22px] border border-hairline bg-sky-soft shadow-[0_18px_40px_-24px_rgba(0,0,0,0.45)]">
+                <StoryArt scene={art[0]} title={art[0].alt[l]} />
+              </div>
+              <figcaption className="mt-2 text-center text-[12.5px] text-whisper">✨ {art[0].alt[l]}</figcaption>
+            </figure>
+          ) : n.pose && (
             <div className="relative mt-6 flex justify-center">
               <div className="absolute inset-0 -z-10 mx-auto h-40 w-40 rounded-full bg-gradient-to-br from-brave-soft via-sage-soft to-transparent blur-2xl opacity-70" />
               <img
@@ -161,6 +171,7 @@ export default async function CatatanDetail({
               endPose={asset(posePath("baby-mo-pose-15.png"))}
               nextStory={nextStory}
               accent={accentForScene(sceneForCatatan(n))}
+              art={art}
             />
           )}
         </header>
