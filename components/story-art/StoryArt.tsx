@@ -1471,6 +1471,53 @@ function Prop({ k }: { k: ArtProp }) {
           <rect x={-40} y={-8} width={80} height={8} rx={4} fill="#B07443" />
         </g>
       );
+    case "quran":
+      return (
+        <g>
+          <circle className="sa-pulse" cx={0} cy={-80} r={78} fill="#FFF3B0" opacity=".35" />
+          <path d="M-60 0 l50 -40 M60 0 l-50 -40 M-60 -40 l50 40 M60 -40 l-50 40" stroke="#B07443" strokeWidth={8} strokeLinecap="round" />
+          <path d="M-70 -46 q 35 -14 70 0 q 35 -14 70 0 v-12 q -35 -14 -70 0 q -35 -14 -70 0 z" fill="#2E7D5B" />
+          <path d="M-62 -60 q 31 -12 62 0 v-56 q -31 -12 -62 0 z" fill="#FFF8E7" />
+          <path d="M62 -60 q -31 -12 -62 0 v-56 q 31 -12 62 0 z" fill="#FFF8E7" />
+          {[-96, -86, -76].map((y) => <g key={y}><path d={`M-52 ${y} q 22 -6 44 0`} stroke="#C9A55B" strokeWidth={2} fill="none" /><path d={`M8 ${y} q 22 -6 44 0`} stroke="#C9A55B" strokeWidth={2} fill="none" /></g>)}
+        </g>
+      );
+    case "dates":
+      return (
+        <g>
+          <ellipse cx={0} cy={-8} rx={56} ry={12} fill="#F4E2C0" stroke="#E2C98F" strokeWidth={3} />
+          {[[-26, -16], [-6, -20], [14, -16], [32, -14], [4, -30], [-16, -30]].map(([x, y], i) => <ellipse key={i} cx={x} cy={y} rx={11} ry={7} fill="#7A3E1E" transform={`rotate(${i * 25} ${x} ${y})`} />)}
+          <rect x={60} y={-60} width={30} height={60} rx={6} fill="#CFEFFF" opacity=".85" stroke="#B9C6D2" strokeWidth={3} />
+          <rect x={63} y={-40} width={24} height={36} rx={4} fill="#7FD3F5" opacity=".7" />
+        </g>
+      );
+    case "rice":
+      return (
+        <g>
+          <path d="M-46 -30 h92 q 0 30 -46 30 q -46 0 -46 -30 z" fill="#FFFFFF" stroke="#B9C6D2" strokeWidth={3} />
+          <ellipse cx={0} cy={-32} rx={42} ry={18} fill="#FFFDF5" />
+          {Array.from({ length: 14 }, (_, i) => <ellipse key={i} cx={-30 + (i * 37) % 60} cy={-38 + (i * 13) % 12} rx={4} ry={2} fill="#F0E8D0" />)}
+          <g className="sa-steam"><path d="M-10 -56 q 6 -10 0 -20" stroke="#fff" strokeWidth={4} fill="none" opacity=".8" /></g>
+        </g>
+      );
+    case "paddy":
+      return (
+        <g className="sa-sway-slow">
+          {[-60, -36, -12, 12, 36, 60].map((x, i) => (
+            <g key={x}>
+              <path d={`M${x} 0 q ${i % 2 ? 6 : -6} -60 ${i % 2 ? 18 : -18} -110`} stroke="#7BC67B" strokeWidth={4} fill="none" />
+              {[0, 1, 2, 3].map((j) => <ellipse key={j} cx={x + (i % 2 ? 14 : -14) + (i % 2 ? 2 : -2) * j} cy={-90 + j * 10} rx={4} ry={7} fill="#E6C25A" />)}
+            </g>
+          ))}
+        </g>
+      );
+    case "glassbroken":
+      return (
+        <g>
+          <path d="M-40 -6 l14 -14 l6 12 z M-6 -4 l10 -18 l10 16 z M26 -6 l16 -10 l2 12 z M-20 -2 l8 -8 l4 8 z" fill="#CFEFFF" stroke="#9AC4DA" strokeWidth={2} />
+          <ellipse cx={0} cy={-2} rx={60} ry={6} fill="#BFE9FF" opacity=".5" />
+        </g>
+      );
     case "bench":
       return (
         <g>

@@ -136,7 +136,12 @@ export type ArtProp =
   | "apple"
   | "sun"
   | "cookiejar"
-  | "mirror";
+  | "mirror"
+  | "quran"
+  | "dates"
+  | "rice"
+  | "paddy"
+  | "glassbroken";
 
 export type ArtFx =
   | "rain"
