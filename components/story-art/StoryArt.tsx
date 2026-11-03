@@ -944,6 +944,95 @@ function Prop({ k }: { k: ArtProp }) {
           <g className="sa-breathe-blanket"><ellipse cx={70} cy={-50} rx={100} ry={20} fill="#8FC9FF" /></g>
         </g>
       );
+    case "tablet":
+      return (
+        <g>
+          <rect x={-46} y={-66} width={92} height={62} rx={10} fill="#3A3A5A" />
+          <rect x={-38} y={-58} width={76} height={46} rx={4} fill="#7FD3F5" />
+          <g className="sa-bob"><rect x={-24} y={-40} width={36} height={18} rx={4} fill="#FF5A5A" /><rect x={12} y={-34} width={12} height={12} rx={2} fill="#FF5A5A" /><circle cx={-14} cy={-20} r={5} fill="#2B2B2B" /><circle cx={16} cy={-20} r={5} fill="#2B2B2B" /></g>
+          <rect x={-50} y={-6} width={100} height={8} rx={4} fill="#C98A50" />
+        </g>
+      );
+    case "hourglass":
+      return (
+        <g>
+          <rect x={-30} y={-104} width={60} height={10} rx={4} fill="#B5753E" />
+          <rect x={-30} y={-10} width={60} height={10} rx={4} fill="#B5753E" />
+          <path d="M-22 -94 h44 q 0 30 -18 42 q 18 12 18 42 h-44 q 0 -30 18 -42 q -18 -12 -18 -42 z" fill="#E9F8FF" stroke="#B9C6D2" strokeWidth={3} />
+          <path d="M-14 -84 h28 q -4 18 -14 26 q -10 -8 -14 -26 z" fill="#FFC145" />
+          <path d="M-18 -10 q 18 -24 36 0 z" fill="#FFC145" />
+          <rect className="sa-drip" x={-1.5} y={-52} width={3} height={36} fill="#FFC145" />
+        </g>
+      );
+    case "bunny":
+      return (
+        <g className="sa-bob">
+          <ellipse cx={-12} cy={-104} rx={9} ry={28} fill="#7FB2F0" transform="rotate(-8 -12 -104)" />
+          <ellipse cx={14} cy={-92} rx={9} ry={18} fill="#7FB2F0" transform="rotate(30 14 -92)" />
+          <circle cx={0} cy={-66} r={24} fill="#8FC0F5" />
+          <ellipse cx={0} cy={-22} rx={26} ry={24} fill="#8FC0F5" />
+          <ellipse cx={0} cy={-18} rx={14} ry={13} fill="#DCEBFF" />
+          <circle cx={-9} cy={-70} r={3.5} fill="#2B2B2B" /><circle cx={9} cy={-70} r={3.5} fill="#2B2B2B" />
+          <circle cx={0} cy={-60} r={3.5} fill="#FF8FAD" />
+        </g>
+      );
+    case "cradle":
+      return (
+        <g>
+          <path d="M-80 -60 q 0 60 80 60 q 80 0 80 -60 z" fill="#E9C27A" />
+          <path d="M-80 -60 q 80 14 160 0" stroke="#C98A50" strokeWidth={6} fill="none" />
+          <g className="sa-breathe-blanket"><ellipse cx={14} cy={-56} rx={52} ry={16} fill="#FFC9D6" /></g>
+          <circle cx={-40} cy={-66} r={20} fill="#F3CBA5" />
+          <path d="M-52 -82 q 12 -10 24 0" stroke="#FFC9D6" strokeWidth={10} fill="none" strokeLinecap="round" />
+          <path d="M-48 -66 q 4 3 8 0 M-38 -66 q 4 3 8 0" stroke="#5A3A2A" strokeWidth={2} fill="none" strokeLinecap="round" />
+          <circle cx={-40} cy={-58} r={2.5} fill="#E07A7A" />
+        </g>
+      );
+    case "cow":
+      return (
+        <g>
+          <ellipse cx={0} cy={-56} rx={60} ry={34} fill="#fff" stroke="#3A3A3A" strokeWidth={3} />
+          <ellipse cx={-14} cy={-66} rx={16} ry={11} fill="#3A3A3A" /><ellipse cx={26} cy={-50} rx={12} ry={9} fill="#3A3A3A" />
+          {[-40, -18, 22, 42].map((x) => <rect key={x} x={x - 5} y={-30} width={10} height={30} rx={4} fill="#fff" stroke="#3A3A3A" strokeWidth={3} />)}
+          <g className="sa-sway-slow"><ellipse cx={-66} cy={-74} rx={22} ry={20} fill="#fff" stroke="#3A3A3A" strokeWidth={3} />
+          <ellipse cx={-74} cy={-64} rx={13} ry={9} fill="#FFB0C4" />
+          <circle cx={-70} cy={-80} r={3} fill="#2B2B2B" /></g>
+        </g>
+      );
+    case "trashbag":
+      return (
+        <g>
+          <path d="M-34 -70 q -14 40 -6 70 h80 q 8 -30 -6 -70 z" fill="#5BBF5B" />
+          <path d="M-20 -70 l20 -18 l20 18" stroke="#3AA655" strokeWidth={6} fill="none" strokeLinecap="round" />
+          <rect x={-14} y={-50} width={12} height={22} rx={4} fill="#9DD8F5" transform="rotate(-14)" />
+          <rect x={6} y={-48} width={16} height={12} rx={3} fill="#FFD447" />
+        </g>
+      );
+    case "litter":
+      return (
+        <g>
+          <g transform="rotate(80) translate(-6 -6)"><rect x={-6} y={-30} width={14} height={30} rx={4} fill="#9DD8F5" opacity=".9" /></g>
+          <rect x={22} y={-8} width={18} height={8} rx={2} fill="#FF8FAD" />
+          <path d="M-30 0 l6 -14 h14 l2 14 z" fill="#E0B07A" />
+        </g>
+      );
+    case "swing":
+      return (
+        <g>
+          <path d="M-70 0 l20 -190 M70 0 l-20 -190" stroke="#E0503F" strokeWidth={10} strokeLinecap="round" />
+          <rect x={-60} y={-196} width={120} height={12} rx={6} fill="#E0503F" />
+          <g className="sa-sway"><path d="M-20 -186 v120 M20 -186 v120" stroke="#8A8A8A" strokeWidth={3} /><rect x={-28} y={-70} width={56} height={10} rx={4} fill="#5BB8F5" /></g>
+        </g>
+      );
+    case "slide":
+      return (
+        <g>
+          <path d="M-90 0 v-140 M-50 0 v-140" stroke="#5BB8F5" strokeWidth={8} />
+          {[-30, -60, -90, -120].map((y) => <rect key={y} x={-90} y={y} width={40} height={6} fill="#5BB8F5" />)}
+          <rect x={-96} y={-150} width={52} height={12} rx={4} fill="#3AA7DA" />
+          <path d="M-46 -144 q 60 10 120 140 h-20 q -56 -120 -100 -124 z" fill="#FFC145" />
+        </g>
+      );
     case "bench":
       return (
         <g>

@@ -82,7 +82,16 @@ export type ArtProp =
   | "ladybug"
   | "boots"
   | "bench"
-  | "sleeper";
+  | "sleeper"
+  | "tablet"
+  | "hourglass"
+  | "bunny"
+  | "cradle"
+  | "cow"
+  | "trashbag"
+  | "litter"
+  | "swing"
+  | "slide";
 
 export type ArtFx =
   | "rain"
