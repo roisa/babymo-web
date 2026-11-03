@@ -81,7 +81,8 @@ export type ArtProp =
   | "snail"
   | "ladybug"
   | "boots"
-  | "bench";
+  | "bench"
+  | "sleeper";
 
 export type ArtFx =
   | "rain"

@@ -1,5 +1,5 @@
 import type { ArtScene } from "./illus-types";
-import { getPictureBook, pictureBookIllus } from "./picture-books";
+import { getBookPages, getPictureBook, pictureBookIllus } from "./picture-books";
 
 /**
  * Animated illustrations for the illustrated picture-book stories.
@@ -97,9 +97,15 @@ const ILLUS: Record<string, ArtScene[]> = {
 export function illusFor(slug: string): ArtScene[] | null {
   const pb = getPictureBook(slug);
   if (pb) return pictureBookIllus(pb);
+  const bp = getBookPages(slug);
+  if (bp) {
+    const first = bp.pages[0]!.text;
+    const cut = (t: string) => (t.match(/^[^.!?]*[.!?]/)?.[0] ?? t).replace(/["“”]/g, "");
+    return [{ ...bp.cover, at: 0, alt: { id: cut(first.id), en: cut(first.en) } }];
+  }
   return ILLUS[slug] ?? null;
 }
 
 export function hasIllus(slug: string): boolean {
-  return slug in ILLUS || !!getPictureBook(slug);
+  return slug in ILLUS || !!getBookPages(slug);
 }

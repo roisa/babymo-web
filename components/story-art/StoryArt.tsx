@@ -930,6 +930,20 @@ function Prop({ k }: { k: ArtProp }) {
           ))}
         </g>
       );
+    case "sleeper":
+      return (
+        <g>
+          {/* Umi resting under the blanket: hijab + face on the pillow */}
+          <ellipse cx={70} cy={-38} rx={120} ry={34} fill="#6FB2F2" />
+          <ellipse cx={-30} cy={-58} rx={34} ry={30} fill="#C77DFF" />
+          <ellipse cx={-26} cy={-54} rx={22} ry={21} fill="#F3CBA5" />
+          <path d="M-36 -56 q 5 4 10 0 M-22 -56 q 5 4 10 0" stroke="#5A3A2A" strokeWidth={2.4} fill="none" strokeLinecap="round" />
+          <path d="M-29 -45 q 4 3 8 0" stroke="#C0605A" strokeWidth={2.4} fill="none" strokeLinecap="round" />
+          <circle cx={-38} cy={-48} r={3.5} fill="#FF9FB0" opacity=".6" />
+          <circle cx={-14} cy={-48} r={3.5} fill="#FF9FB0" opacity=".6" />
+          <g className="sa-breathe-blanket"><ellipse cx={70} cy={-50} rx={100} ry={20} fill="#8FC9FF" /></g>
+        </g>
+      );
     case "bench":
       return (
         <g>
@@ -1090,7 +1104,7 @@ function pageFocus(scene: ArtScene): number {
   const prop = scene.props?.[0]?.x;
   let f = scene.focus ?? (mo !== undefined && prop !== undefined && Math.abs(mo - prop) < 320 ? (mo + prop) / 2 : (mo ?? prop ?? W / 2));
   // Never let Baby Mo slip off a narrow phone page: keep him near the middle.
-  if (mo !== undefined) f = Math.min(mo + 95, Math.max(mo - 95, f));
+  if (mo !== undefined) f = Math.min(mo + 60, Math.max(mo - 60, f));
   return f;
 }
 
