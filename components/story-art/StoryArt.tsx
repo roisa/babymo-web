@@ -1307,6 +1307,69 @@ function Prop({ k }: { k: ArtProp }) {
           <circle cx={-18} cy={-74} r={10} fill="#F2E39A" /><circle cx={16} cy={-44} r={7} fill="#F2E39A" /><circle cx={20} cy={-80} r={5} fill="#F2E39A" />
         </g>
       );
+    case "rooster":
+      return (
+        <g className="sa-hopframe">
+          <path d="M30 -60 q 50 -40 40 -90 q -20 30 -30 20 q 10 -30 -10 -50 q -6 40 -20 40 z" fill="#3AA655" />
+          <path d="M40 -80 q 30 -20 24 -60 q -14 22 -24 16" fill="#2E7D9A" />
+          <ellipse cx={0} cy={-56} rx={44} ry={34} fill="#F4A261" />
+          <circle cx={-34} cy={-100} r={22} fill="#F4A261" />
+          <path d="M-46 -122 q 4 -16 12 -6 q 4 -16 12 -4 q 6 -12 10 4 z" fill="#FF4D4D" />
+          <path d="M-56 -100 l-16 6 l16 6 z" fill="#FFC145" />
+          <path d="M-46 -84 q -4 14 6 14 q 4 -8 -2 -14 z" fill="#FF4D4D" />
+          <circle cx={-38} cy={-104} r={4} fill="#2B2B2B" />
+          <path d="M-8 -22 v22 M10 -22 v22" stroke="#E6A512" strokeWidth={5} strokeLinecap="round" />
+        </g>
+      );
+    case "bee":
+      return (
+        <g className="sa-flutter-path">
+          <g className="sa-flutter"><ellipse cx={-6} cy={-30} rx={12} ry={16} fill="#E9F8FF" opacity=".85" /><ellipse cx={10} cy={-30} rx={12} ry={16} fill="#E9F8FF" opacity=".85" /></g>
+          <ellipse cx={0} cy={-12} rx={22} ry={15} fill="#FFC145" />
+          <path d="M-8 -26 v28 M6 -26 v28" stroke="#2B2B2B" strokeWidth={5} />
+          <circle cx={-20} cy={-16} r={3} fill="#2B2B2B" />
+        </g>
+      );
+    case "honey":
+      return (
+        <g>
+          <rect x={-60} y={-22} width={70} height={22} rx={8} fill="#E9B76B" />
+          <rect x={-56} y={-26} width={62} height={10} rx={5} fill="#FFC145" />
+          <path className="sa-drip" d="M-20 -16 v12" stroke="#FFB800" strokeWidth={5} strokeLinecap="round" />
+          <path d="M22 -70 h40 v62 q 0 8 -8 8 h-24 q -8 0 -8 -8 z" fill="#FFB800" opacity=".9" />
+          <rect x={18} y={-80} width={48} height={12} rx={4} fill="#C98A50" />
+          <rect x={30} y={-52} width={24} height={16} rx={3} fill="#FFF3B0" />
+        </g>
+      );
+    case "ants":
+      return (
+        <g className="sa-crawl">
+          {[0, 1, 2, 3, 4].map((i) => (
+            <g key={i} transform={`translate(${-80 + i * 34} 0)`}>
+              <circle cx={-6} cy={-6} r={4} fill="#3A2A2A" /><circle cx={2} cy={-6} r={5} fill="#3A2A2A" /><circle cx={11} cy={-7} r={4} fill="#3A2A2A" />
+              <path d="M-4 -2 l-3 4 M2 -2 v4 M8 -2 l3 4 M13 -10 l4 -6" stroke="#3A2A2A" strokeWidth={1.6} />
+              {i === 4 && <rect x={-4} y={-26} width={22} height={14} rx={5} fill="#E9C27A" />}
+            </g>
+          ))}
+        </g>
+      );
+    case "blocks":
+    case "blockstall":
+    case "blocksfall": {
+      const cols = ["#FF5A5A", "#5BB8F5", "#FFC145", "#7BC67B", "#C77DFF", "#FF9F43", "#5BB8F5"];
+      if (k === "blocksfall")
+        return (
+          <g>
+            {cols.map((c, i) => <rect key={i} x={-90 + i * 28} y={-28 - (i % 3) * 6} width={30} height={26} rx={4} fill={c} transform={`rotate(${(i * 37) % 50 - 25} ${-75 + i * 28} -15)`} />)}
+          </g>
+        );
+      const n = k === "blockstall" ? 7 : 3;
+      return (
+        <g className={k === "blockstall" ? "sa-sway-slow" : undefined}>
+          {cols.slice(0, n).map((c, i) => <rect key={i} x={-22} y={-30 - i * 30} width={44} height={30} rx={4} fill={c} stroke="#fff" strokeWidth={2} />)}
+        </g>
+      );
+    }
     case "bench":
       return (
         <g>
