@@ -1211,3 +1211,7 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-crawl { animation: sa-crawl 8s ease-in-out infinite; }
 @keyframes sa-breathe-blanket { 0%,100% { scale: 1 1; } 50% { scale: 1 1.12; } }
 .sa-breathe-blanket { transform-origin: 50% 100%; animation: sa-breathe-blanket 3.6s ease-in-out infinite; }
+@keyframes sa-flash { 0%,86%,94%,100% { opacity: 0; } 88%,92% { opacity: .55; } }
+.sa-flash { opacity: 0; animation: sa-flash 4s linear infinite; }
+@keyframes sa-bolt { 0%,85%,100% { opacity: .4; } 88%,93% { opacity: 1; } }
+.sa-bolt { animation: sa-bolt 4s linear infinite; }

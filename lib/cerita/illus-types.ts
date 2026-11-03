@@ -91,7 +91,15 @@ export type ArtProp =
   | "trashbag"
   | "litter"
   | "swing"
-  | "slide";
+  | "slide"
+  | "shirt"
+  | "shirtback"
+  | "flour"
+  | "egg"
+  | "bowl"
+  | "oven"
+  | "phone"
+  | "drawing";
 
 export type ArtFx =
   | "rain"
@@ -103,7 +111,8 @@ export type ArtFx =
   | "zzz"
   | "fireflies"
   | "leaves"
-  | "notes";
+  | "notes"
+  | "lightning";
 
 export interface ArtItem {
   k: ArtProp;

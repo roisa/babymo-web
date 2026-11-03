@@ -1033,6 +1033,72 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M-46 -144 q 60 10 120 140 h-20 q -56 -120 -100 -124 z" fill="#FFC145" />
         </g>
       );
+    case "shirt":
+    case "shirtback":
+      return (
+        <g className="sa-sway-slow">
+          <path d="M-46 -96 l-30 22 l14 22 l16 -10 v62 h92 v-62 l16 10 l14 -22 l-30 -22 q -16 12 -46 12 q -30 0 -46 -12 z" fill="#5BBF5B" />
+          <path d="M-18 -96 q 18 16 36 0" stroke="#3AA655" strokeWidth={5} fill="none" />
+          {k === "shirt" ? (
+            <path transform="translate(0 -44)" d="M0 -20 L6 -6 L20 -6 L9 3 L13 18 L0 9 L-13 18 L-9 3 L-20 -6 L-6 -6 Z" fill="#FFFFFF" />
+          ) : (
+            <rect x={-8} y={-92} width={16} height={12} rx={2} fill="#fff" />
+          )}
+        </g>
+      );
+    case "flour":
+      return (
+        <g>
+          <path d="M-34 -84 h68 l6 84 h-80 z" fill="#F4ECDD" stroke="#D9C9A8" strokeWidth={3} />
+          <path d="M-34 -84 l10 -12 h48 l10 12" fill="#E8DCC4" />
+          <rect x={-22} y={-58} width={44} height={22} rx={4} fill="#FFC145" />
+          <g className="sa-steam"><circle cx={-6} cy={-104} r={10} fill="#fff" opacity=".9" /><circle cx={10} cy={-112} r={7} fill="#fff" opacity=".8" /></g>
+        </g>
+      );
+    case "egg":
+      return (
+        <g className="sa-bob">
+          <ellipse cx={0} cy={-22} rx={17} ry={22} fill="#FFF6E6" stroke="#E8D4B0" strokeWidth={2} />
+          <ellipse cx={-5} cy={-30} rx={4} ry={7} fill="#fff" />
+        </g>
+      );
+    case "bowl":
+      return (
+        <g>
+          <path d="M-60 -46 h120 q 0 46 -60 46 q -60 0 -60 -46 z" fill="#7FB2F0" />
+          <ellipse cx={0} cy={-46} rx={60} ry={10} fill="#F4E2C0" />
+          <g className="sa-sway"><rect x={18} y={-110} width={8} height={70} rx={4} fill="#C98A50" transform="rotate(20 22 -46)" /></g>
+        </g>
+      );
+    case "oven":
+      return (
+        <g>
+          <rect x={-70} y={-140} width={140} height={140} rx={10} fill="#E8EEF4" stroke="#B9C6D2" strokeWidth={3} />
+          <rect x={-56} y={-104} width={112} height={78} rx={8} fill="#5A3A22" />
+          <rect className="sa-pulse" x={-50} y={-98} width={100} height={66} rx={6} fill="#FFB347" opacity=".7" />
+          {[-28, 0, 28].map((x) => <circle key={x} cx={x} cy={-50} r={10} fill="#D99A55" />)}
+          {[-40, -10, 20, 46].map((x) => <circle key={x} cx={x} cy={-124} r={6} fill="#8A97A6" />)}
+        </g>
+      );
+    case "phone":
+      return (
+        <g className="sa-sway">
+          <rect x={-22} y={-80} width={44} height={80} rx={8} fill="#3A3A5A" />
+          <rect x={-17} y={-72} width={34} height={60} rx={4} fill="#9DD8F5" />
+          <path d="M-8 -50 q 8 -10 16 0 M-12 -56 q 12 -16 24 0" stroke="#fff" strokeWidth={3} fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case "drawing":
+      return (
+        <g className="sa-bob">
+          <rect x={-50} y={-90} width={100} height={90} rx={4} fill="#fff" stroke="#E2C98F" strokeWidth={3} />
+          <path d="M-20 -10 v-40" stroke="#5BBF5B" strokeWidth={4} />
+          <circle cx={-20} cy={-58} r={14} fill="#FFC145" /><circle cx={-20} cy={-58} r={6} fill="#8A5A34" />
+          <path d="M10 -10 v-28" stroke="#5BBF5B" strokeWidth={4} />
+          <circle cx={10} cy={-44} r={10} fill="#FFC145" /><circle cx={10} cy={-44} r={4} fill="#8A5A34" />
+          <ellipse cx={34} cy={-16} rx={10} ry={7} fill="#F4A261" /><circle cx={28} cy={-24} r={6} fill="#F4A261" />
+        </g>
+      );
     case "bench":
       return (
         <g>
@@ -1056,6 +1122,13 @@ function Fx({ k, time, page = false }: { k: ArtFx; time: ArtTime; page?: boolean
           {Array.from({ length: 34 }, (_, i) => (
             <line key={i} className={page ? "sa-raindrop sa-raindrop--tall" : "sa-raindrop"} style={{ animationDelay: `${-((i * 0.13) % 1)}s` }} x1={(i * 37) % W} y1={page ? -360 : -20} x2={(i * 37) % W - 8} y2={page ? -332 : 8} stroke="#DDEBFA" strokeWidth={3} strokeLinecap="round" opacity=".8" />
           ))}
+        </g>
+      );
+    case "lightning":
+      return (
+        <g>
+          <rect className="sa-flash" x={-100} y={page ? -360 : -20} width={W + 200} height={900} fill="#FFFFFF" />
+          <path className="sa-bolt" transform={`translate(${page ? 515 : 640} ${page ? 30 : 20})`} d="M0 0 l-28 70 h22 l-18 70 l50 -90 h-24 l20 -50 z" fill="#FFE066" stroke="#FFB800" strokeWidth={3} />
         </g>
       );
     case "stars":
