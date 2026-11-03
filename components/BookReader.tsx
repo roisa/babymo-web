@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { Literata } from "next/font/google";
 import { asset } from "@/lib/i18n/config";
 import { posePath } from "@/lib/games/poses";
 import { StoryScene } from "@/components/StoryScene";
@@ -8,7 +9,16 @@ import type { SceneKey } from "@/lib/cerita/scene";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import type { ArtScene } from "@/lib/cerita/illus-types";
 
-type Block = { type: "p" | "quote"; html: string };
+type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
+
+/** A real book typeface for the story text (designed for long reading in
+ *  e-books). Headings keep the rounded Baby Mo display face. */
+const bookFace = Literata({
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+  fallback: ["Georgia", "Cambria", "Times New Roman", "serif"],
+});
 
 type Sheet =
   | { kind: "cover" }
@@ -213,7 +223,7 @@ type Props = {
   art?: ArtScene[] | null;
 };
 
-const FONT_STEPS = [19, 22, 26, 30];
+const FONT_STEPS = [17, 19, 22, 25];
 
 function parseBlocks(body: string): Block[] {
   return body
@@ -340,10 +350,13 @@ export function BookReader({
   const paginate = useCallback(() => {
     const content = sizeRef.current;
     if (!content) return;
-    const width = content.clientWidth;
+    // Real pages are a hair narrower than the sizer in the two-page spread
+    // (the spine sits between them), so measure slightly narrower and keep a
+    // little air at the bottom — otherwise the last line can be clipped.
+    const width = content.clientWidth - 6;
     // The sizer already includes the top art band, so the measured content
     // box is the space left for text.
-    const maxH = content.clientHeight;
+    const maxH = content.clientHeight - 4;
     if (maxH < 40 || width < 40) return;
 
     const measurer = document.createElement("div");
@@ -357,6 +370,7 @@ export function BookReader({
 
     const contentPages: Block[][] = [];
     let cur: Block[] = [];
+    measurer.classList.add("bk-prose--first");
     const blocks = blocksRef.current;
 
     const reset = () => {
@@ -368,17 +382,48 @@ export function BookReader({
       measurer.appendChild(el);
     };
 
-    for (const b of blocks) {
-      addEl(b);
-      if (measurer.scrollHeight > maxH && cur.length > 0) {
-        // adding this block overflows — close the current page, then start a
-        // fresh page that begins with this block.
-        contentPages.push(cur);
-        cur = [];
-        reset();
+    const newPage = () => {
+      contentPages.push(cur);
+      cur = [];
+      measurer.classList.remove("bk-prose--first");
+      reset();
+    };
+    // Like a printed book, a long paragraph may continue on the next page:
+    // when it doesn't fit, break it at the last sentence that does.
+    const sentences = (html: string) => html.split(/(?<=[.!?…]["”’']?)\s+(?=\S)/);
+    for (let bi = 0; bi < blocks.length; bi++) {
+      let b: Block = { ...blocks[bi]!, src: bi };
+      for (;;) {
         addEl(b);
+        if (measurer.scrollHeight <= maxH) {
+          cur.push(b);
+          break;
+        }
+        measurer.lastChild?.remove();
+        const parts = b.type === "p" && !/<[a-z]/i.test(b.html) ? sentences(b.html) : [b.html];
+        let fit = 0;
+        for (let k = parts.length - 1; k >= 1; k--) {
+          addEl({ type: "p", html: parts.slice(0, k).join(" ") });
+          const ok = measurer.scrollHeight <= maxH;
+          measurer.lastChild?.remove();
+          if (ok) {
+            fit = k;
+            break;
+          }
+        }
+        if (fit > 0) {
+          cur.push({ ...b, html: parts.slice(0, fit).join(" ") });
+          b = { ...b, html: parts.slice(fit).join(" "), cont: true };
+          newPage();
+          continue;
+        }
+        if (cur.length === 0) {
+          // a single block taller than the page — let it be its own page
+          cur.push(b);
+          break;
+        }
+        newPage();
       }
-      cur.push(b);
     }
     if (cur.length) contentPages.push(cur);
     document.body.removeChild(measurer);
@@ -390,7 +435,7 @@ export function BookReader({
     let lastVig: string | undefined;
     if (art && art.length) {
       contentPages.forEach((p) => {
-        const first = blocks.indexOf(p[0]!);
+        const first = p[0]?.src ?? 0;
         let k = 0;
         art.forEach((sc, j) => {
           if (sc.at <= first) k = j;
@@ -558,17 +603,17 @@ export function BookReader({
             />
           )}
         </div>
-        <div className="bk-prose bk-page-content">
+        <div className={`bk-prose bk-page-content${idx === 1 ? " bk-prose--first" : ""}`} lang={locale}>
           {s.blocks.map((b, i) =>
             b.type === "quote" ? (
               <blockquote key={i} dangerouslySetInnerHTML={{ __html: b.html }} />
             ) : (
-              <p key={i} dangerouslySetInnerHTML={{ __html: b.html }} />
+              <p key={i} className={b.cont ? "bk-cont" : undefined} dangerouslySetInnerHTML={{ __html: b.html }} />
             ),
           )}
         </div>
-        <div className="bk-page-foot">
-          {t.page} {idx}
+        <div className="bk-page-foot bk-page-num" aria-label={`${t.page} ${idx}`}>
+          {idx}
         </div>
       </div>
     );
@@ -737,8 +782,20 @@ export function BookReader({
         @keyframes bkOpenIn{from{transform:scale(.94) translateY(8px);opacity:0}to{transform:none;opacity:1}}
 
         .bk-page{flex:1;min-width:0;position:relative;display:flex;flex-direction:column;
-          background:linear-gradient(180deg,var(--color-paper),var(--color-paper-2));
-          padding:clamp(20px,3.4vw,46px);overflow:hidden;}
+          --bk-paper:#FFFBF1;--bk-paper-2:#F8F1E2;--bk-ink:#2B2620;--bk-accent:#B5532F;
+          background:
+            radial-gradient(120% 80% at 50% 0%,rgba(255,255,255,.55),transparent 60%),
+            linear-gradient(180deg,var(--bk-paper),var(--bk-paper-2));
+          padding:clamp(22px,3.6vw,44px) clamp(24px,4vw,52px) clamp(14px,2.4vw,26px);overflow:hidden;}
+        /* faint paper grain */
+        .bk-page::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;
+          background-image:radial-gradient(rgba(120,90,40,.07) 1px,transparent 1.2px),radial-gradient(rgba(120,90,40,.05) 1px,transparent 1.2px);
+          background-size:7px 7px,11px 11px;background-position:0 0,3px 5px;}
+        /* gutter shading toward the spine, like a bound book */
+        .bk-book--spread .bk-page:first-child::after{content:"";position:absolute;top:0;bottom:0;right:0;width:34px;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(90,60,20,.12));}
+        .bk-book--spread .bk-page:last-child::after{content:"";position:absolute;top:0;bottom:0;left:0;width:34px;pointer-events:none;background:linear-gradient(270deg,transparent,rgba(90,60,20,.12));}
+        .bk-book--single .bk-page::after{content:"";position:absolute;top:0;bottom:0;left:0;width:14px;pointer-events:none;background:linear-gradient(90deg,rgba(90,60,20,.10),transparent);}
+        html.dark .bk-page{--bk-paper:#2A2620;--bk-paper-2:#221F1A;--bk-ink:#EFE7D8;--bk-accent:#F0A27A;}
         .bk-book--single .bk-page{border-radius:16px;}
         .bk-book--spread .bk-page:first-child{border-radius:16px 6px 6px 16px;}
         .bk-book--spread .bk-page:last-child{border-radius:6px 16px 16px 6px;}
@@ -747,10 +804,12 @@ export function BookReader({
 
         .bk-page-content{position:relative;z-index:1;flex:1;min-height:0;overflow:hidden;}
         .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
+        .bk-page-num{font-family:${bookFace.style.fontFamily};font-style:italic;font-size:13px;letter-spacing:0;text-transform:none;color:color-mix(in srgb,var(--bk-ink) 55%,transparent);}
+        .bk-page-num::before,.bk-page-num::after{content:"";display:inline-block;width:18px;height:1px;margin:0 10px;vertical-align:middle;background:currentColor;opacity:.5;}
         /* Top-centered art band that sits above the text on each content page */
         .bk-page-art{flex-shrink:0;height:clamp(94px,18vw,122px);display:flex;align-items:center;justify-content:center;margin-bottom:clamp(8px,1.6vw,14px);}
         .bk-page-art--big{height:clamp(150px,40%,320px);margin-bottom:clamp(10px,1.8vw,16px);}
-        .bk-art-frame{width:100%;height:100%;border-radius:14px;overflow:hidden;box-shadow:0 10px 24px -14px rgba(60,40,10,.55),inset 0 0 0 1px rgba(0,0,0,.05);background:#EAF7FF;}
+        .bk-art-frame{width:100%;height:100%;border-radius:10px;overflow:hidden;box-shadow:0 0 0 1px rgba(90,60,20,.10),0 8px 18px -12px rgba(60,40,10,.45);background:#EAF7FF;}
         .bk-art-frame--cover{border-radius:12px;}
 
         /* Baby Mo character on content pages (alternates with vignettes) */
@@ -853,20 +912,32 @@ export function BookReader({
         .bk-cover-text{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:clamp(16px,3.2vw,30px);}
         .bk-page--cover .bk-page-foot{padding-bottom:clamp(12px,2vw,18px);}
 
-        .bk-prose{font-family:var(--font-serif);color:var(--color-ink);}
-        .bk-prose p{font-size:var(--bk-fs,22px);line-height:1.82;margin:0 0 .72em;}
+        /* Story text set like a printed picture book: a reading serif,
+           book-like leading, gentle paragraph spacing, balanced lines. */
+        .bk-prose{font-family:${bookFace.style.fontFamily};color:var(--bk-ink,var(--color-ink));
+          font-size:var(--bk-fs,19px);font-weight:400;letter-spacing:.003em;
+          font-kerning:normal;font-variant-ligatures:common-ligatures;font-feature-settings:"onum" 0,"liga" 1;
+          -webkit-font-smoothing:antialiased;}
+        .bk-prose p{font-size:var(--bk-fs,19px);line-height:1.62;margin:0 0 .62em;text-wrap:pretty;hanging-punctuation:first;}
         .bk-prose p:last-child{margin-bottom:0;}
-        .bk-prose strong{font-weight:700;}
-        .bk-prose em{font-style:italic;color:var(--color-ink-soft,var(--color-ink));}
-        .bk-prose blockquote{margin:.4em 0;padding:.2em 0 .2em 1em;border-left:3px solid var(--color-clay);
-          font-style:italic;font-size:calc(var(--bk-fs,22px) * 1.02);line-height:1.7;color:var(--color-sage-deep);}
+        .bk-prose strong{font-weight:600;}
+        .bk-prose em{font-style:italic;}
+        /* opening drop cap on the first page */
+        .bk-prose--first p:first-child::first-letter{font-family:var(--font-display);font-weight:700;float:left;
+          font-size:3.35em;line-height:.8;margin:.07em .1em 0 0;color:var(--bk-accent,var(--color-clay));}
+        .bk-prose--first p:first-child::first-line{font-variant-caps:all-small-caps;letter-spacing:.04em;}
+        /* the Qur'an / hadith quote: centred, set off with rules */
+        .bk-prose blockquote{margin:.5em auto .7em;padding:.55em .4em;max-width:30ch;text-align:center;border:0;
+          border-top:1px solid color-mix(in srgb,var(--bk-accent,#B5532F) 35%,transparent);
+          border-bottom:1px solid color-mix(in srgb,var(--bk-accent,#B5532F) 35%,transparent);
+          font-style:italic;font-size:calc(var(--bk-fs,19px) * .98);line-height:1.55;color:color-mix(in srgb,var(--bk-ink,#2B2620) 82%,#1E8C53);text-wrap:balance;}
 
         .bk-cover-inner,.bk-end-inner{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:14px;height:100%;}
         .bk-cover-badge{font-size:11px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--color-clay);}
         .bk-cover-pose{width:clamp(120px,22vw,168px);height:auto;object-fit:contain;filter:drop-shadow(0 12px 22px rgba(0,0,0,.18));}
         .bk-cover-title{font-family:var(--font-display);font-size:clamp(26px,calc(var(--bk-fs,22px) * 1.55),48px);line-height:1.12;color:var(--color-ink);margin:0;}
-        .bk-cover-hook{font-family:var(--font-serif);font-size:calc(var(--bk-fs,22px) * 0.86);line-height:1.6;color:var(--color-whisper);max-width:34ch;margin:0;}
-        .bk-end-quote{font-family:var(--font-serif);font-style:italic;font-size:calc(var(--bk-fs,22px) * 0.98);line-height:1.6;color:var(--color-ink);max-width:32ch;}
+        .bk-cover-hook{font-family:${bookFace.style.fontFamily};font-style:italic;font-size:calc(var(--bk-fs,22px) * 0.86);line-height:1.6;color:var(--color-whisper);max-width:34ch;margin:0;}
+        .bk-end-quote{font-family:${bookFace.style.fontFamily};font-style:italic;font-size:calc(var(--bk-fs,22px) * 0.98);line-height:1.6;color:var(--color-ink);max-width:32ch;}
         .bk-end-pose-wrap{position:relative;display:flex;flex-direction:column;align-items:center;}
         .bk-end-pose-btn{background:none;border:none;padding:0;cursor:pointer;line-height:0;}
         .bk-end-pose-btn:active{transform:scale(.97);}
