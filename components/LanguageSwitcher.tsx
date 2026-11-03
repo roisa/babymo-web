@@ -1,5 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { type Locale, locales, localeShort, pathFor } from "@/lib/i18n/config";
+import { saveLangPref } from "@/lib/i18n/pref";
 
 type Props = {
   currentLocale: Locale;
@@ -26,6 +29,7 @@ export function LanguageSwitcher({ currentLocale, path, variant = "compact" }: P
             key={l}
             href={pathFor(l, path)}
             hrefLang={l}
+            onClick={() => saveLangPref(l)}
             aria-current={active ? "true" : undefined}
             className={
               variant === "compact"

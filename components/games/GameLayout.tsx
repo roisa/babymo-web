@@ -5,6 +5,7 @@ import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
+import { FollowLangPref } from "@/components/games/FollowLangPref";
 import { breadcrumbSchema, graph } from "@/lib/seo/schemas";
 
 export interface Crumb {
@@ -36,6 +37,7 @@ export function GameLayout({
 
   return (
     <>
+      <FollowLangPref locale={locale} />
       <Header locale={locale} currentPath={currentPath} />
       <main
         id="main"
