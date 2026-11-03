@@ -786,7 +786,7 @@ export function BookReader({
         .bk-trigger-title{font-weight:800;font-size:15px;color:var(--color-ink);}
         .bk-trigger-sub{font-size:12px;color:var(--color-whisper);}
 
-        .bk-overlay{position:fixed;inset:0;z-index:120;display:flex;flex-direction:column;
+        .bk-overlay{position:fixed;inset:0;height:100%;height:100dvh;z-index:120;display:flex;flex-direction:column;
           background:radial-gradient(120% 90% at 50% -10%, rgba(60,46,20,.55), rgba(10,9,7,.82));
           -webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);animation:bkFade .25s ease;}
         @keyframes bkFade{from{opacity:0}to{opacity:1}}
@@ -797,7 +797,7 @@ export function BookReader({
         @keyframes bkDrift{0%{transform:translateY(0) rotate(0);opacity:0}10%{opacity:.55}90%{opacity:.4}100%{transform:translateY(-115vh) rotate(220deg);opacity:0}}
 
         .bk-topbar{position:relative;z-index:3;display:flex;align-items:center;justify-content:space-between;
-          padding:16px 16px 12px;padding-top:calc(20px + env(safe-area-inset-top));
+          flex-shrink:0;padding:10px 14px 8px;padding-top:calc(10px + env(safe-area-inset-top));
           background:linear-gradient(180deg,rgba(8,6,4,.5),rgba(8,6,4,0));}
         .bk-fontctl{display:flex;gap:8px;}
         .bk-icon{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:14px;cursor:pointer;
@@ -807,10 +807,13 @@ export function BookReader({
         .bk-icon:disabled{opacity:.4;cursor:default;}
         .bk-icon:active{transform:scale(.95);}
 
-        .bk-stage{position:relative;z-index:1;flex:1;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 8px;min-height:0;}
+        /* The book fills exactly the space between the top and bottom bars,
+           so it never slides under them (phone browsers' vh includes the
+           hidden toolbars, which made a fixed 78vh too tall on iPhone). */
+        .bk-stage{position:relative;z-index:1;flex:1 1 0;display:flex;align-items:center;justify-content:center;gap:10px;padding:0 8px;min-height:0;}
         .bk-book{position:relative;perspective:2200px;}
-        .bk-book--spread{width:min(94vw,1060px);height:min(80vh,720px);}
-        .bk-book--single{width:min(92vw,540px);height:min(78vh,760px);}
+        .bk-book--spread{width:min(94vw,1060px);height:min(100%,720px);}
+        .bk-book--single{width:min(92vw,540px);height:min(100%,760px);}
 
         .bk-sizer{position:absolute;inset:0;visibility:hidden;pointer-events:none;display:flex;}
         .bk-book--spread .bk-sizer .bk-page{width:50%;}
@@ -1044,16 +1047,16 @@ export function BookReader({
         .bk-nav:active:not(:disabled){transform:scale(.92);}
         .bk-nav:disabled{opacity:.25;cursor:default;}
 
-        .bk-botbar{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;gap:14px;
-          padding:14px 16px;padding-bottom:calc(14px + env(safe-area-inset-bottom));}
-        .bk-pgbtn{padding:12px 18px;border-radius:14px;cursor:pointer;font-weight:800;font-size:14px;color:#06231a;
+        .bk-botbar{position:relative;z-index:2;flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:14px;
+          padding:10px 16px;padding-bottom:calc(10px + env(safe-area-inset-bottom));}
+        .bk-pgbtn{padding:12px clamp(12px,3.6vw,18px);white-space:nowrap;border-radius:14px;cursor:pointer;font-weight:800;font-size:14px;color:#06231a;
           border:none;background:linear-gradient(135deg,#FFE3A0,#F0C463);box-shadow:0 6px 18px -8px rgba(0,0,0,.5);}
         .bk-pgbtn:disabled{opacity:.4;cursor:default;filter:saturate(.6);}
         .bk-pgbtn:active:not(:disabled){transform:scale(.97);}
         .bk-pgcount{font-size:13px;font-weight:700;color:rgba(255,255,255,.85);min-width:64px;text-align:center;}
 
         /* Phone: hide the big side arrows, rely on the bottom bar + swipe */
-        @media (max-width: 859px){ .bk-nav{display:none;} }
+        @media (max-width: 859px){ .bk-nav{display:none;} .bk-pic-num{display:none;} }
         /* Desktop/tablet: keep the bottom bar minimal (count only via arrows) */
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
 
