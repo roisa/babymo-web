@@ -834,17 +834,33 @@ function Fx({ k, time }: { k: ArtFx; time: ArtTime }) {
 
 /* ───────── characters ───────── */
 
-function Mo({ m, idx }: { m: ArtMo; idx: number }) {
+/** Empty space under the feet in each pose PNG (fraction of the image
+ *  height), measured from the renders — so the feet land on the ground. */
+const FOOT_PAD: Record<string, number> = {
+  run: 0.105,
+  "pose-12": 0.084,
+  "pose-20": 0.072,
+  "pose-30": 0.083,
+};
+
+function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const s = m.s ?? 235;
   const move = m.move ?? "bob";
+  const pad = (FOOT_PAD[m.pose] ?? 0.09) * s;
+  const cls = move === "still" ? "" : move === "bob" ? "sa-mo-breathe" : `sa-mo-${move}`;
+  const delay = { animationDelay: `${-idx * 0.7}s` };
   return (
-    <g transform={`translate(${m.x} 440)`}>
-      <ellipse cx={0} cy={-4} rx={s * 0.24} ry={9} fill="#000" opacity=".12" />
-      <g className={move === "still" ? "" : `sa-mo-${move}`} style={{ animationDelay: `${-idx * 0.7}s` }}>
+    <g transform={`translate(${m.x} ${ground})`}>
+      {/* contact shadow right under the feet; shrinks when Baby Mo hops */}
+      <g className={move === "hop" ? "sa-shadow-hop" : ""} style={delay}>
+        <ellipse cx={0} cy={2} rx={s * 0.2} ry={s * 0.035} fill="#000" opacity=".16" />
+        <ellipse cx={0} cy={1} rx={s * 0.12} ry={s * 0.02} fill="#000" opacity=".14" />
+      </g>
+      <g className={cls} style={delay}>
         <image
           href={asset(`/baby-mo-poses/baby-mo-${m.pose}.png`)}
           x={-s / 2}
-          y={-s}
+          y={-s + pad}
           width={s}
           height={s}
           transform={m.flip ? "scale(-1 1)" : undefined}
@@ -870,6 +886,8 @@ export function StoryArt({
   const time = scene.time ?? "day";
   const outdoor = ["garden", "park", "market", "street", "beach"].includes(scene.bg);
   const groundY = outdoor ? 410 : 405;
+  // Baby Mo stands on the floor / ground in the foreground
+  const moGround = outdoor ? 428 : 425;
   return (
     <svg
       viewBox={portrait ? `${Math.min(W - 360, Math.max(0, (scene.mo?.[0]?.x ?? W / 2) - 180))} 0 360 ${H}` : `0 0 ${W} ${H}`}
@@ -891,7 +909,7 @@ export function StoryArt({
           <Prop k={p.k} />
         </g>
       ))}
-      {(scene.mo ?? []).map((m, i) => <Mo key={i} m={m} idx={i} />)}
+      {(scene.mo ?? []).map((m, i) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
       {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} />)}
       {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} />}
     </svg>

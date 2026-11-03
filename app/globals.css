@@ -1188,10 +1188,14 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-awning { transform-origin: 50% 0%; animation: sa-awning 3.5s ease-in-out infinite; }
 @keyframes sa-shine { 0%,100% { opacity: .2; } 50% { opacity: .9; } }
 .sa-shine { animation: sa-shine 3s ease-in-out infinite; }
-@keyframes sa-mo-bob { 0%,100% { translate: 0 0; } 50% { translate: 0 -6px; } }
-.sa-mo-bob { animation: sa-mo-bob 2.8s ease-in-out infinite; }
-@keyframes sa-mo-hop { 0%,60%,100% { translate: 0 0; } 75% { translate: 0 -26px; } 88% { translate: 0 0; } }
-.sa-mo-hop { animation: sa-mo-hop 1.8s ease-in-out infinite; }
+/* idle: a gentle breath — feet stay planted (scale from the bottom) */
+@keyframes sa-mo-breathe { 0%,100% { scale: 1 1; } 50% { scale: 1.012 1.025; } }
+.sa-mo-breathe { transform-origin: 50% 100%; animation: sa-mo-breathe 2.8s ease-in-out infinite; }
+/* hop: squash, jump, land — and the shadow shrinks while in the air */
+@keyframes sa-mo-hop { 0%,55%,100% { translate: 0 0; scale: 1 1; } 62% { translate: 0 0; scale: 1.05 .94; } 75% { translate: 0 -30px; scale: .97 1.04; } 88% { translate: 0 0; scale: 1.04 .96; } 94% { scale: 1 1; } }
+.sa-mo-hop { transform-origin: 50% 100%; animation: sa-mo-hop 1.8s ease-in-out infinite; }
+@keyframes sa-shadow-hop { 0%,55%,100% { scale: 1 1; opacity: 1; } 75% { scale: .6 .6; opacity: .5; } 88% { scale: 1 1; opacity: 1; } }
+.sa-shadow-hop { transform-origin: center; animation: sa-shadow-hop 1.8s ease-in-out infinite; }
 @keyframes sa-mo-sway { 0%,100% { rotate: -3deg; } 50% { rotate: 3deg; } }
 .sa-mo-sway { transform-origin: 50% 100%; animation: sa-mo-sway 2.6s ease-in-out infinite; }
 @media (prefers-reduced-motion: reduce) {
