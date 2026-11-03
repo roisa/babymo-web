@@ -1209,3 +1209,5 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-hopframe { animation: sa-hopframe 2.4s ease-in-out infinite; }
 @keyframes sa-crawl { 0%,100% { translate: -12px 0; } 50% { translate: 12px 0; } }
 .sa-crawl { animation: sa-crawl 8s ease-in-out infinite; }
+@keyframes sa-breathe-blanket { 0%,100% { scale: 1 1; } 50% { scale: 1 1.12; } }
+.sa-breathe-blanket { transform-origin: 50% 100%; animation: sa-breathe-blanket 3.6s ease-in-out infinite; }

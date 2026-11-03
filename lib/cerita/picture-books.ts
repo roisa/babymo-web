@@ -1,6 +1,7 @@
 import type { Locale } from "@/lib/i18n/config";
 import type { Catatan, CatatanAnchor } from "@/lib/content/types";
 import type { ArtScene } from "./illus-types";
+import { ADAPTED } from "./picture-books-adapted";
 
 /**
  * Full picture books: every page is one big illustration with a short bit
@@ -294,6 +295,14 @@ const BOOKS: PictureBook[] = [
 
 export function getPictureBook(slug: string): PictureBook | undefined {
   return BOOKS.find((b) => b.slug === slug);
+}
+
+/** Cover + pages for Book Mode: a full picture book, or an older story
+ *  retold as one (see picture-books-adapted.ts). */
+export function getBookPages(slug: string): { cover: PicScene; pages: PicPage[] } | null {
+  const b = getPictureBook(slug);
+  if (b) return { cover: b.cover, pages: b.pages };
+  return ADAPTED[slug] ?? null;
 }
 
 /** Scenes for the story page / shelf (paragraph i = page i). */
