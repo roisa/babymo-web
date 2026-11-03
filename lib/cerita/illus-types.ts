@@ -107,7 +107,18 @@ export type ArtProp =
   | "tomatodry"
   | "tomatored"
   | "cloud"
-  | "cracks";
+  | "cracks"
+  | "icecreamcart"
+  | "icecream"
+  | "popsicle"
+  | "coins"
+  | "brooms"
+  | "laptop"
+  | "giraffe"
+  | "magnifier"
+  | "faucet"
+  | "minaret"
+  | "becak";
 
 export type ArtFx =
   | "rain"
