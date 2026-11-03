@@ -1166,6 +1166,126 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M-90 -6 l20 -4 l10 6 l18 -6 M-20 -2 l14 -8 l12 6 l20 -4 l14 6 M40 -8 l18 4 l20 -6" stroke="#8A6A44" strokeWidth={3} fill="none" strokeLinecap="round" />
         </g>
       );
+    case "icecreamcart":
+      return (
+        <g>
+          <rect x={-70} y={-110} width={140} height={84} rx={10} fill="#FFFFFF" stroke="#B9C6D2" strokeWidth={3} />
+          <rect x={-70} y={-110} width={140} height={20} rx={8} fill="#7FD3F5" />
+          <circle cx={-20} cy={-62} r={16} fill="#FFB0C4" /><circle cx={14} cy={-66} r={16} fill="#8A5A34" /><circle cx={44} cy={-60} r={13} fill="#FFF3B0" />
+          <rect x={-4} y={-250} width={8} height={140} fill="#9AA8B6" />
+          <g className="sa-sway-slow">
+            {[0, 1, 2, 3, 4, 5].map((i) => (
+              <path key={i} d={`M0 -250 L${-100 + i * 33.3} -196 L${-66.7 + i * 33.3} -196 Z`} fill={i % 2 ? "#FFFFFF" : "#FF5A7E"} />
+            ))}
+          </g>
+          {[-46, 46].map((x) => <g key={x} transform={`translate(${x} -16)`}><circle r={16} fill="#3A3A5A" /><circle r={6} fill="#B9C6D2" /></g>)}
+        </g>
+      );
+    case "icecream":
+      return (
+        <g className="sa-bob">
+          <path d="M-18 -50 l18 50 l18 -50 z" fill="#E9B76B" />
+          <path d="M-12 -44 l24 0 M-8 -32 l16 0" stroke="#C98A50" strokeWidth={2} />
+          <circle cx={0} cy={-62} r={20} fill="#8A5A34" />
+          <circle cx={-8} cy={-68} r={5} fill="#A9785A" />
+          <path className="sa-drip" d="M12 -50 q 2 8 0 12" stroke="#8A5A34" strokeWidth={5} strokeLinecap="round" />
+        </g>
+      );
+    case "popsicle":
+      return (
+        <g className="sa-bob">
+          <rect x={-5} y={-30} width={10} height={30} rx={4} fill="#E9C27A" />
+          <rect x={-18} y={-88} width={36} height={62} rx={16} fill="#9BCB6B" />
+          <rect x={-12} y={-80} width={8} height={30} rx={4} fill="#fff" opacity=".4" />
+        </g>
+      );
+    case "coins":
+      return (
+        <g className="sa-float">
+          {[-16, 16].map((x, i) => (
+            <g key={x} transform={`translate(${x} ${i ? -10 : 0})`}>
+              <circle cy={-20} r={20} fill="#FFC145" stroke="#E6A512" strokeWidth={4} />
+              <circle cy={-20} r={10} fill="none" stroke="#E6A512" strokeWidth={3} />
+            </g>
+          ))}
+        </g>
+      );
+    case "brooms":
+      return (
+        <g>
+          {[-30, -10, 10, 30].map((x, i) => (
+            <g key={x} transform={`rotate(${(i - 1.5) * 6})`}>
+              <rect x={x - 3} y={-170} width={6} height={110} fill="#B5753E" />
+              <path d={`M${x - 14} -60 h28 l6 60 h-40 z`} fill={i % 2 ? "#E9C27A" : "#D9A85A"} />
+            </g>
+          ))}
+          <path d="M-40 -110 h80" stroke="#8A5A34" strokeWidth={6} />
+        </g>
+      );
+    case "laptop":
+      return (
+        <g>
+          <path d="M-46 -64 h92 v56 h-92 z" fill="#3A3A5A" />
+          <rect x={-40} y={-58} width={80} height={44} rx={3} fill="#CFEFFF" />
+          {[-48, -40, -32].map((y) => <rect key={y} x={-30} y={y} width={50} height={4} rx={2} fill="#7FB2F0" />)}
+          <path d="M-60 -8 h120 l-8 8 h-104 z" fill="#9AA8B6" />
+        </g>
+      );
+    case "giraffe":
+      return (
+        <g className="sa-bob">
+          <ellipse cx={0} cy={-26} rx={26} ry={20} fill="#FFC145" />
+          <rect x={4} y={-110} width={16} height={86} rx={8} fill="#FFC145" transform="rotate(8 12 -24)" />
+          <ellipse cx={22} cy={-114} rx={18} ry={12} fill="#FFC145" />
+          <circle cx={26} cy={-118} r={3} fill="#2B2B2B" />
+          <path d="M14 -126 v-12 M24 -126 v-12" stroke="#C98A50" strokeWidth={4} strokeLinecap="round" />
+          {[[-8, -30], [10, -20], [12, -70], [14, -94]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={5} fill="#C98A50" />)}
+        </g>
+      );
+    case "magnifier":
+      return (
+        <g className="sa-sway">
+          <rect x={-5} y={-50} width={12} height={50} rx={5} fill="#8A5A34" transform="rotate(-30)" />
+          <circle cx={28} cy={-72} r={30} fill="#E9F8FF" opacity=".75" stroke="#3A3A5A" strokeWidth={7} />
+          <circle cx={20} cy={-80} r={4} fill="#8A6A44" /><circle cx={34} cy={-66} r={3} fill="#8A6A44" />
+        </g>
+      );
+    case "faucet":
+      return (
+        <g>
+          <rect x={-60} y={-14} width={120} height={14} rx={6} fill="#FFFFFF" stroke="#B9C6D2" strokeWidth={3} />
+          <path d="M-10 -170 h40 q 14 0 14 14 v20" stroke="#9AA8B6" strokeWidth={12} fill="none" strokeLinecap="round" />
+          <rect x={-18} y={-180} width={16} height={24} rx={4} fill="#B9C6D2" />
+          <rect x={40} y={-136} width={8} height={120} rx={4} fill="#7FD3F5" opacity=".8" />
+          {[0, 1, 2].map((d) => <circle key={d} className="sa-drip" style={{ animationDelay: `${d * 0.3}s` }} cx={44} cy={-30} r={5} fill="#7FD3F5" />)}
+        </g>
+      );
+    case "minaret":
+      return (
+        <g>
+          <rect x={-26} y={-300} width={52} height={300} fill="#F6EBD5" stroke="#E2C98F" strokeWidth={4} />
+          <rect x={-38} y={-220} width={76} height={14} rx={4} fill="#E2C98F" />
+          <path d="M-26 -300 q 26 -70 52 0 z" fill="#5BBF5B" />
+          <path d="M0 -370 v-20" stroke="#E6B52E" strokeWidth={4} />
+          <path d="M-4 -394 a 8 8 0 1 0 8 -6" fill="none" stroke="#E6B52E" strokeWidth={4} />
+          <rect x={-12} y={-270} width={24} height={36} rx={12} fill="#CFE8D7" />
+          <g className="sa-pulse">
+            <path d="M40 -250 q 20 20 0 40 M56 -262 q 32 32 0 64" stroke="#E6B52E" strokeWidth={5} fill="none" strokeLinecap="round" />
+          </g>
+        </g>
+      );
+    case "becak":
+      return (
+        <g>
+          <path d="M-90 -120 q 0 -50 60 -50 h20 v80 h-80 z" fill="#3A8FD8" />
+          <rect x={-96} y={-90} width={90} height={50} rx={10} fill="#FF5A5A" />
+          <path d="M-6 -60 h70 l30 -50" stroke="#555" strokeWidth={8} fill="none" strokeLinecap="round" />
+          <rect x={80} y={-124} width={30} height={10} rx={5} fill="#3A3A5A" />
+          {[[-80, -28, 28], [-20, -28, 28], [80, -28, 28]].map(([x, y, r], i) => (
+            <g key={i} transform={`translate(${x} ${y})`}><circle r={r} fill="none" stroke="#3A3A5A" strokeWidth={6} /><circle r={5} fill="#3A3A5A" /></g>
+          ))}
+        </g>
+      );
     case "bench":
       return (
         <g>
