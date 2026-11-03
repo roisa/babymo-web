@@ -1402,6 +1402,38 @@ function Prop({ k }: { k: ArtProp }) {
           ))}
         </g>
       );
+    case "jar":
+      return (
+        <g>
+          <rect x={-40} y={-104} width={80} height={104} rx={18} fill="#E9F8FF" opacity=".85" stroke="#B9C6D2" strokeWidth={4} />
+          <rect x={-30} y={-118} width={60} height={18} rx={6} fill="#FF8FAD" />
+          {[["#FFC145", -18, -24, 20], ["#5BB8F5", 10, -30, -15], ["#7BC67B", -6, -52, 35], ["#C77DFF", 16, -60, -30], ["#FF7A7A", -20, -70, 10], ["#FF9F43", 4, -82, 50]].map(([c, x, y, r], i) => (
+            <rect key={i} x={(x as number) - 14} y={(y as number) - 5} width={28} height={10} rx={5} fill={c as string} transform={`rotate(${r} ${x} ${y})`} />
+          ))}
+          <path d="M-30 -96 q -4 40 0 80" stroke="#fff" strokeWidth={5} opacity=".7" fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case "school":
+      return (
+        <g>
+          <rect x={-120} y={-170} width={240} height={170} fill="#FFE8A3" />
+          <path d="M-136 -170 L0 -240 L136 -170 Z" fill="#FF7A7A" />
+          <rect x={-28} y={-84} width={56} height={84} rx={6} fill="#5BB8F5" />
+          {[-84, 56].map((x) => <rect key={x} x={x} y={-140} width={40} height={36} rx={4} fill="#CFEFFF" stroke="#fff" strokeWidth={4} />)}
+          <circle cx={0} cy={-196} r={16} fill="#fff" stroke="#E2C98F" strokeWidth={3} />
+          <path d="M0 -196 v-8 M0 -196 h7" stroke="#3A3A5A" strokeWidth={3} />
+          <path d="M130 -240 v-40" stroke="#9AA8B6" strokeWidth={4} />
+          <g className="sa-sway-slow"><path d="M130 -280 h34 l-8 10 l8 10 h-34 z" fill="#FF5A5A" /></g>
+          {["#FF5A5A", "#FFC145", "#5BBF5B", "#5BB8F5"].map((c, i) => <circle key={c} cx={-90 + i * 14} cy={-176} r={5} fill={c} />)}
+        </g>
+      );
+    case "ball":
+      return (
+        <g className="sa-bob">
+          <circle cx={0} cy={-24} r={24} fill="#FF5A5A" />
+          <path d="M-24 -24 h48 M0 -48 q 16 24 0 48 M0 -48 q -16 24 0 48" stroke="#fff" strokeWidth={4} fill="none" />
+        </g>
+      );
     case "bench":
       return (
         <g>
