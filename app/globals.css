@@ -1215,3 +1215,5 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-flash { opacity: 0; animation: sa-flash 4s linear infinite; }
 @keyframes sa-bolt { 0%,85%,100% { opacity: .4; } 88%,93% { opacity: 1; } }
 .sa-bolt { animation: sa-bolt 4s linear infinite; }
+@keyframes sa-shoot { 0%,60% { translate: 0 0; opacity: 0; } 64% { opacity: 1; } 80% { translate: 220px 90px; opacity: 0; } 100% { opacity: 0; } }
+.sa-shoot { animation: sa-shoot 4.5s ease-out infinite; }

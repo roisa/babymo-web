@@ -99,7 +99,15 @@ export type ArtProp =
   | "bowl"
   | "oven"
   | "phone"
-  | "drawing";
+  | "drawing"
+  | "kite"
+  | "puzzle"
+  | "plane"
+  | "tomato"
+  | "tomatodry"
+  | "tomatored"
+  | "cloud"
+  | "cracks";
 
 export type ArtFx =
   | "rain"
@@ -112,7 +120,8 @@ export type ArtFx =
   | "fireflies"
   | "leaves"
   | "notes"
-  | "lightning";
+  | "lightning"
+  | "shootingstar";
 
 export interface ArtItem {
   k: ArtProp;
