@@ -1474,12 +1474,12 @@ function Prop({ k }: { k: ArtProp }) {
     case "quran":
       return (
         <g>
+          <circle className="sa-pulse" cx={0} cy={-80} r={78} fill="#FFF3B0" opacity=".35" />
           <path d="M-60 0 l50 -40 M60 0 l-50 -40 M-60 -40 l50 40 M60 -40 l-50 40" stroke="#B07443" strokeWidth={8} strokeLinecap="round" />
           <path d="M-70 -46 q 35 -14 70 0 q 35 -14 70 0 v-12 q -35 -14 -70 0 q -35 -14 -70 0 z" fill="#2E7D5B" />
           <path d="M-62 -60 q 31 -12 62 0 v-56 q -31 -12 -62 0 z" fill="#FFF8E7" />
           <path d="M62 -60 q -31 -12 -62 0 v-56 q 31 -12 62 0 z" fill="#FFF8E7" />
           {[-96, -86, -76].map((y) => <g key={y}><path d={`M-52 ${y} q 22 -6 44 0`} stroke="#C9A55B" strokeWidth={2} fill="none" /><path d={`M8 ${y} q 22 -6 44 0`} stroke="#C9A55B" strokeWidth={2} fill="none" /></g>)}
-          <circle className="sa-pulse" cx={0} cy={-90} r={60} fill="#FFF3B0" opacity=".25" />
         </g>
       );
     case "dates":
