@@ -5,7 +5,9 @@ import {
   isLocale,
   locales,
   localeHtmlLang,
+  basePath,
 } from "@/lib/i18n/config";
+import { LANG_PREF_KEY } from "@/lib/i18n/pref";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { JsonLd } from "@/components/JsonLd";
 import { PwaBootstrap } from "@/components/PwaBootstrap";
@@ -81,6 +83,15 @@ export default async function LocaleLayout({
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(){try{var t=localStorage.getItem('babymo.theme');if(t==='dark'||(!t&&window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches)){document.documentElement.classList.add('dark');}}catch(e){}})();`,
+          }}
+        />
+        {/* Open every page in the language the visitor chose with the ID/EN
+            switch: if a link or bookmark points at the other locale, swap
+            the locale segment (keeping path, query and hash) before paint.
+            Visitors who never chose keep the URL's language. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var w=localStorage.getItem(${JSON.stringify(LANG_PREF_KEY)}),c=${JSON.stringify(locale)},b=${JSON.stringify(basePath)};if(!w||w===c||${JSON.stringify(locales)}.indexOf(w)<0)return;var p=location.pathname,x=b+'/'+c;if(p!==x&&p.indexOf(x+'/')!==0)return;document.documentElement.style.visibility='hidden';location.replace(b+'/'+w+p.slice(x.length)+location.search+location.hash);}catch(e){}})();`,
           }}
         />
         <JsonLd

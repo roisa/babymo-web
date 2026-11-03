@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { type Locale, locales, localeShort, pathFor } from "@/lib/i18n/config";
 import { saveLangPref } from "@/lib/i18n/pref";
 
@@ -12,6 +13,14 @@ type Props = {
 };
 
 export function LanguageSwitcher({ currentLocale, path, variant = "compact" }: Props) {
+  // Keep the visitor on the exact page they're reading (e.g. a single puzzle
+  // or du'a), not just the section hub passed in as `path`.
+  const pathname = usePathname();
+  const prefix = `/${currentLocale}`;
+  const here =
+    pathname && (pathname === prefix || pathname.startsWith(`${prefix}/`))
+      ? pathname.slice(prefix.length) || "/"
+      : path;
   return (
     <div
       className={
@@ -27,7 +36,7 @@ export function LanguageSwitcher({ currentLocale, path, variant = "compact" }: P
         return (
           <Link
             key={l}
-            href={pathFor(l, path)}
+            href={pathFor(l, here)}
             hrefLang={l}
             onClick={() => saveLangPref(l)}
             aria-current={active ? "true" : undefined}
