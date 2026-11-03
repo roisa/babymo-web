@@ -1097,3 +1097,23 @@ html.dark .learn-emoji { border-color: rgba(255,255,255,.08); }
 }
 html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); }
 .learn-moon { font-size: 54px; filter: drop-shadow(0 8px 14px rgba(120, 90, 220, .35)); }
+
+/* ── Tantangan Otak (Brain Challenge) ── */
+@keyframes bj-shake { 0%,100% { translate: 0 } 20% { translate: -6px 0 } 40% { translate: 6px 0 } 60% { translate: -4px 0 } 80% { translate: 4px 0 } }
+.bj-shake { animation: bj-shake .4s ease; }
+@keyframes bj-pop { 0% { scale: .6; opacity: 0 } 60% { scale: 1.08; opacity: 1 } 100% { scale: 1 } }
+.bj-pop { animation: bj-pop .45s cubic-bezier(.2,.9,.3,1.3) backwards; }
+@keyframes bj-float { 0%,100% { translate: 0 0 } 50% { translate: 0 -6px } }
+.bj-float { animation: bj-float 2.6s ease-in-out infinite; }
+@keyframes bj-pulse { 0%,100% { scale: 1 } 50% { scale: 1.04 } }
+.bj-pulse { animation: bj-pulse 1.6s ease-in-out infinite; }
+@keyframes bj-ring { 0% { box-shadow: 0 0 0 0 rgba(230,181,46,.7) } 100% { box-shadow: 0 0 0 18px rgba(230,181,46,0) } }
+.bj-ring { animation: bj-ring 1.4s ease-out infinite; }
+@keyframes bj-drain { from { width: 100% } to { width: 0 } }
+@keyframes bj-star { 0% { scale: 0; rotate: -90deg } 70% { scale: 1.3; rotate: 10deg } 100% { scale: 1; rotate: 0deg } }
+.bj-star { display: inline-block; animation: bj-star .5s cubic-bezier(.2,.9,.3,1.4) backwards; }
+@keyframes bj-confetti { 0% { translate: 0 -20px; opacity: 1 } 100% { translate: 0 110vh; opacity: .9; rotate: 540deg } }
+.bj-confetti { position: absolute; top: 0; width: 9px; height: 14px; border-radius: 3px; animation: bj-confetti 2s linear forwards; }
+@media (prefers-reduced-motion: reduce) {
+  .bj-shake, .bj-pop, .bj-float, .bj-pulse, .bj-ring, .bj-star, .bj-confetti { animation: none !important; }
+}
