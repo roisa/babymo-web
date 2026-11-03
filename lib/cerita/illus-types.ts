@@ -120,7 +120,14 @@ export type ArtProp =
   | "minaret"
   | "becak"
   | "robot"
-  | "moon";
+  | "moon"
+  | "rooster"
+  | "bee"
+  | "honey"
+  | "ants"
+  | "blocks"
+  | "blockstall"
+  | "blocksfall";
 
 export type ArtFx =
   | "rain"
