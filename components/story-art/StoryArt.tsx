@@ -1370,6 +1370,38 @@ function Prop({ k }: { k: ArtProp }) {
         </g>
       );
     }
+    case "dog":
+      return (
+        <g>
+          <g transform="translate(44 -60)"><path className="sa-wag" d="M0 0 q 20 -10 22 -34" stroke="#B07443" strokeWidth={10} strokeLinecap="round" fill="none" /></g>
+          <ellipse cx={0} cy={-52} rx={52} ry={30} fill="#C98A50" />
+          {[-34, -14, 18, 36].map((x) => <rect key={x} x={x - 7} y={-34} width={14} height={34} rx={6} fill="#C98A50" />)}
+          <circle cx={-50} cy={-86} r={30} fill="#C98A50" />
+          <ellipse cx={-70} cy={-78} rx={16} ry={12} fill="#E8C49A" />
+          <circle cx={-82} cy={-82} r={6} fill="#2B2B2B" />
+          <ellipse cx={-34} cy={-104} rx={12} ry={22} fill="#8A5A34" transform="rotate(20 -34 -104)" />
+          <g className="sa-blink"><circle cx={-56} cy={-94} r={4.5} fill="#2B2B2B" /></g>
+          <path d="M-74 -68 q 6 6 12 0" stroke="#2B2B2B" strokeWidth={2.5} fill="none" />
+          <path d="M-70 -66 q 4 14 10 4" fill="#FF8FAD" />
+        </g>
+      );
+    case "pictures":
+      return (
+        <g>
+          {[-58, 58].map((x, i) => (
+            <g key={x} transform={`translate(${x} 0)`}>
+              <rect x={-50} y={-100} width={100} height={100} rx={6} fill="#fff" stroke="#E2C98F" strokeWidth={4} />
+              <rect x={-44} y={-94} width={88} height={56} fill="#CFEFFF" />
+              <rect x={-44} y={-38} width={88} height={32} fill="#9BD67B" />
+              <circle cx={24} cy={-80} r={8} fill="#FFC145" />
+              {(i ? [-24, -6] : [-24, -6, 10]).map((cx) => <ellipse key={cx} cx={cx} cy={-78} rx={9} ry={5} fill="#fff" />)}
+              <circle cx={-20} cy={-24} r={7} fill={i ? "#FF8FAD" : "#FF5A5A"} />
+              <circle cx={14} cy={-22} r={8} fill="#F4A261" />
+              {i ? <path d="M10 -24 h8" stroke="#2B2B2B" strokeWidth={2} /> : <><circle cx={11} cy={-24} r={1.6} fill="#2B2B2B" /><circle cx={17} cy={-24} r={1.6} fill="#2B2B2B" /></>}
+            </g>
+          ))}
+        </g>
+      );
     case "bench":
       return (
         <g>

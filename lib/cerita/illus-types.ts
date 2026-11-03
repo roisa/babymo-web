@@ -127,7 +127,9 @@ export type ArtProp =
   | "ants"
   | "blocks"
   | "blockstall"
-  | "blocksfall";
+  | "blocksfall"
+  | "dog"
+  | "pictures";
 
 export type ArtFx =
   | "rain"
