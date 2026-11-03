@@ -1434,6 +1434,43 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M-24 -24 h48 M0 -48 q 16 24 0 48 M0 -48 q -16 24 0 48" stroke="#fff" strokeWidth={4} fill="none" />
         </g>
       );
+    case "apple":
+      return (
+        <g className="sa-bob">
+          <path d="M0 -50 q -34 -14 -34 18 q 0 30 34 32 q 34 -2 34 -32 q 0 -32 -34 -18 z" fill="#FF4D4D" />
+          <path d="M0 -50 q 2 -12 8 -16" stroke="#8A5A34" strokeWidth={4} strokeLinecap="round" fill="none" />
+          <ellipse cx={14} cy={-62} rx={10} ry={5} fill="#5BBF5B" transform="rotate(-20 14 -62)" />
+          <ellipse cx={-14} cy={-34} rx={6} ry={10} fill="#fff" opacity=".4" />
+        </g>
+      );
+    case "sun":
+      return (
+        <g>
+          <g className="sa-spin">{Array.from({ length: 12 }, (_, i) => <rect key={i} x={-5} y={-130} width={10} height={26} rx={5} fill="#FFC145" transform={`rotate(${i * 30} 0 -80)`} />)}</g>
+          <circle cx={0} cy={-80} r={70} fill="#FFE58A" opacity=".35" className="sa-pulse" />
+          <circle cx={0} cy={-80} r={44} fill="#FFC145" />
+        </g>
+      );
+    case "cookiejar":
+      return (
+        <g>
+          <rect x={-36} y={-90} width={72} height={90} rx={16} fill="#E9F8FF" opacity=".85" stroke="#B9C6D2" strokeWidth={4} />
+          <rect x={-28} y={-104} width={56} height={16} rx={6} fill="#C98A50" />
+          {([[-14, -24], [12, -30], [-4, -50], [16, -62], [-16, -70]] as const).map(([x, y], i) => (
+            <g key={i}><circle cx={x} cy={y} r={13} fill="#D99A55" /><circle cx={x - 4} cy={y - 3} r={2.5} fill="#5A3A22" /><circle cx={x + 4} cy={y + 3} r={2.5} fill="#5A3A22" /></g>
+          ))}
+        </g>
+      );
+    case "mirror":
+      return (
+        <g>
+          <rect x={-8} y={-30} width={16} height={30} fill="#C98A50" />
+          <ellipse cx={0} cy={-110} rx={60} ry={82} fill="#C98A50" />
+          <ellipse cx={0} cy={-110} rx={50} ry={72} fill="#CFEFFF" />
+          <path className="sa-shine" d="M-26 -150 l28 -24 M-30 -126 l40 -34" stroke="#fff" strokeWidth={7} strokeLinecap="round" opacity=".75" />
+          <rect x={-40} y={-8} width={80} height={8} rx={4} fill="#B07443" />
+        </g>
+      );
     case "bench":
       return (
         <g>
