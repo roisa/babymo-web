@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Locale } from "@/lib/i18n/config";
 import { t } from "@/lib/games/poses";
@@ -15,10 +16,13 @@ export function SpotOddBoard({
   locale,
   puzzle,
   shareUrl,
+  next,
 }: {
   locale: Locale;
   puzzle: SpotOddPuzzle;
   shareUrl: string;
+  /** The next puzzle in this series, so a win leads straight on. */
+  next?: { href: string; title: string };
 }) {
   const [level, setLevel] = useState<SpotOddLevel>(SPOT_ODD_LEVELS[0]!);
   const total = level.cols * level.rows;
@@ -143,6 +147,14 @@ export function SpotOddBoard({
             <strong className="text-ink">{timeLabel}</strong>.
           </p>
           <div className="mt-4 flex flex-col items-center gap-4">
+            {next && (
+              <Link
+                href={next.href}
+                className="tap rounded-full bg-gradient-to-r from-brave to-sky px-7 py-3.5 text-base font-bold text-white shadow-lg transition active:scale-95"
+              >
+                {locale === "id" ? "Tantangan berikutnya" : "Next challenge"}: {next.title} ▶
+              </Link>
+            )}
             <button
               type="button"
               onClick={() => setRound((r) => r + 1)}

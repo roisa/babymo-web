@@ -58,6 +58,8 @@ export default async function SpotOddPlay({
   if (!puzzle) notFound();
 
   const path = `${PATH}/${slug}`;
+  const idx = SPOT_ODD_PUZZLES.findIndex((p) => p.slug === slug);
+  const nextPuzzle = SPOT_ODD_PUZZLES[(idx + 1) % SPOT_ODD_PUZZLES.length];
   const gameSchema = {
     "@type": "Game",
     name: t(puzzle.title, l),
@@ -91,7 +93,12 @@ export default async function SpotOddPlay({
         </p>
       </header>
 
-      <SpotOddBoard locale={l} puzzle={puzzle} shareUrl={absoluteUrl(l, path)} />
+      <SpotOddBoard
+        locale={l}
+        puzzle={puzzle}
+        shareUrl={absoluteUrl(l, path)}
+        next={nextPuzzle ? { href: pathFor(l, `${PATH}/${nextPuzzle.slug}`), title: t(nextPuzzle.title, l) } : undefined}
+      />
 
       <section className="mx-auto mt-10 max-w-xl rounded-2xl border border-hairline bg-clay-soft/50 p-5">
         <p className="text-sm leading-relaxed text-ink">
