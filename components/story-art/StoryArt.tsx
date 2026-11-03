@@ -1286,6 +1286,27 @@ function Prop({ k }: { k: ArtProp }) {
           ))}
         </g>
       );
+    case "robot":
+      return (
+        <g className="sa-bob">
+          <path d="M0 -112 v-14" stroke="#9AA8B6" strokeWidth={4} /><circle cx={0} cy={-130} r={6} fill="#FF5A5A" className="sa-pulse" />
+          <rect x={-26} y={-112} width={52} height={40} rx={10} fill="#5BB8F5" />
+          <circle cx={-10} cy={-92} r={7} fill="#fff" /><circle cx={10} cy={-92} r={7} fill="#fff" />
+          <circle cx={-10} cy={-92} r={3} fill="#2B2B2B" /><circle cx={10} cy={-92} r={3} fill="#2B2B2B" />
+          <rect x={-30} y={-68} width={60} height={46} rx={8} fill="#3A8FD8" />
+          <rect x={-12} y={-58} width={24} height={14} rx={3} fill="#FFC145" />
+          <rect x={-44} y={-64} width={12} height={34} rx={6} fill="#5BB8F5" /><rect x={32} y={-64} width={12} height={34} rx={6} fill="#5BB8F5" />
+          <rect x={-22} y={-22} width={14} height={22} rx={4} fill="#5BB8F5" /><rect x={8} y={-22} width={14} height={22} rx={4} fill="#5BB8F5" />
+        </g>
+      );
+    case "moon":
+      return (
+        <g className="sa-float">
+          <circle cx={0} cy={-60} r={80} fill="#FFF6C8" opacity=".25" />
+          <circle cx={0} cy={-60} r={56} fill="#FFF3B0" />
+          <circle cx={-18} cy={-74} r={10} fill="#F2E39A" /><circle cx={16} cy={-44} r={7} fill="#F2E39A" /><circle cx={20} cy={-80} r={5} fill="#F2E39A" />
+        </g>
+      );
     case "bench":
       return (
         <g>

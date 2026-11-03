@@ -118,7 +118,9 @@ export type ArtProp =
   | "magnifier"
   | "faucet"
   | "minaret"
-  | "becak";
+  | "becak"
+  | "robot"
+  | "moon";
 
 export type ArtFx =
   | "rain"
