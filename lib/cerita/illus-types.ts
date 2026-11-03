@@ -132,7 +132,11 @@ export type ArtProp =
   | "pictures"
   | "jar"
   | "school"
-  | "ball";
+  | "ball"
+  | "apple"
+  | "sun"
+  | "cookiejar"
+  | "mirror";
 
 export type ArtFx =
   | "rain"
