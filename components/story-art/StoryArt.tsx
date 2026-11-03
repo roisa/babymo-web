@@ -1,0 +1,899 @@
+import { asset } from "@/lib/i18n/config";
+import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@/lib/cerita/illus-types";
+
+/**
+ * Animated SVG picture-book illustration for a story scene.
+ * 800×450 frame: a drawn background (room or outdoors, with time of day),
+ * props with little idle motions, real Baby Mo renders, and effects
+ * (rain, stars, bubbles…). Position lives on an outer <g transform>, the
+ * CSS animation on an inner <g> (a CSS transform would override the SVG
+ * transform attribute). Motion stops for prefers-reduced-motion.
+ */
+
+const W = 800;
+const H = 450;
+const FLOOR = 330;
+
+/* ───────── backgrounds ───────── */
+
+function sky(time: ArtTime) {
+  const c =
+    time === "night"
+      ? ["#1B2350", "#2E2A63", "#3B3473"]
+      : time === "dusk"
+        ? ["#FFB88A", "#FF9AA8", "#B79CF0"]
+        : time === "rain"
+          ? ["#8FA3B8", "#A9B8C8", "#C3CEDA"]
+          : ["#9FDBFF", "#C6EBFF", "#EAF7FF"];
+  return (
+    <>
+      <defs>
+        <linearGradient id={`sa-sky-${time}`} x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0" stopColor={c[0]} />
+          <stop offset=".6" stopColor={c[1]} />
+          <stop offset="1" stopColor={c[2]} />
+        </linearGradient>
+      </defs>
+      <rect width={W} height={H} fill={`url(#sa-sky-${time})`} />
+      {time === "night" && <Moon x={650} y={80} />}
+      {time === "day" && <Sun x={660} y={80} />}
+      {time === "dusk" && <circle cx={640} cy={250} r={70} fill="#FFD27A" opacity=".85" />}
+      {time !== "night" && (
+        <>
+          <Cloud x={160} y={80} s={1} d={0} grey={time === "rain"} />
+          <Cloud x={430} y={55} s={0.75} d={-12} grey={time === "rain"} />
+        </>
+      )}
+    </>
+  );
+}
+
+function Sun({ x, y }: { x: number; y: number }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <g className="sa-spin">
+        {Array.from({ length: 10 }, (_, i) => (
+          <rect key={i} x={-4} y={-62} width={8} height={18} rx={4} fill="#FFC93C" transform={`rotate(${i * 36})`} />
+        ))}
+      </g>
+      <circle r={38} fill="#FFD447" />
+      <circle r={38} fill="url(#sa-sunglow)" />
+    </g>
+  );
+}
+function Moon({ x, y }: { x: number; y: number }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <circle r={60} fill="#FFF3B0" opacity=".18" className="sa-pulse" />
+      <circle r={36} fill="#FFE98A" />
+      <circle cx={16} cy={-10} r={32} fill="#2A2A60" />
+    </g>
+  );
+}
+function Cloud({ x, y, s = 1, d = 0, grey = false }: { x: number; y: number; s?: number; d?: number; grey?: boolean }) {
+  return (
+    <g transform={`translate(${x} ${y}) scale(${s})`}>
+      <g className="sa-drift" style={{ animationDelay: `${d}s` }}>
+        <ellipse cx={0} cy={0} rx={60} ry={24} fill={grey ? "#E2E8EF" : "#fff"} />
+        <circle cx={-22} cy={-14} r={24} fill={grey ? "#E2E8EF" : "#fff"} />
+        <circle cx={16} cy={-20} r={30} fill={grey ? "#E2E8EF" : "#fff"} />
+      </g>
+    </g>
+  );
+}
+
+function Window({ x, y, w = 170, h = 140, time }: { x: number; y: number; w?: number; h?: number; time: ArtTime }) {
+  const sk = time === "night" ? "#22285A" : time === "dusk" ? "#FFB49A" : time === "rain" ? "#A9B8C8" : "#BFE6FF";
+  return (
+    <g>
+      <rect x={x - 8} y={y - 8} width={w + 16} height={h + 16} rx={14} fill="#FFFFFF" />
+      <rect x={x} y={y} width={w} height={h} rx={8} fill={sk} />
+      {time === "night" ? (
+        <>
+          <circle cx={x + w * 0.72} cy={y + h * 0.32} r={16} fill="#FFE98A" />
+          <circle cx={x + w * 0.72 + 8} cy={y + h * 0.32 - 5} r={14} fill={sk} />
+          {[0.2, 0.4, 0.55, 0.3].map((f, i) => (
+            <circle key={i} className="sa-twinkle" style={{ animationDelay: `${i * 0.5}s` }} cx={x + w * f} cy={y + h * (0.25 + i * 0.15)} r={2.5} fill="#fff" />
+          ))}
+        </>
+      ) : time === "rain" ? (
+        <g className="sa-rainwin">
+          {Array.from({ length: 8 }, (_, i) => (
+            <line key={i} x1={x + 12 + i * (w / 8)} y1={y + 10 + (i % 3) * 20} x2={x + 6 + i * (w / 8)} y2={y + 30 + (i % 3) * 20} stroke="#fff" strokeWidth={3} strokeLinecap="round" opacity=".7" />
+          ))}
+        </g>
+      ) : (
+        <>
+          <circle cx={x + w * 0.75} cy={y + h * 0.3} r={16} fill="#FFD447" />
+          <g transform={`translate(${x + w * 0.35} ${y + h * 0.4}) scale(.45)`}>
+            <g className="sa-drift">
+              <ellipse rx={60} ry={24} fill="#fff" />
+              <circle cx={16} cy={-20} r={30} fill="#fff" />
+            </g>
+          </g>
+          <path d={`M${x} ${y + h} q ${w * 0.3} -${h * 0.35} ${w * 0.6} -${h * 0.1} t ${w * 0.4} 0 v ${h * 0.1} z`} fill="#9BD98A" />
+        </>
+      )}
+      <rect x={x + w / 2 - 4} y={y} width={8} height={h} fill="#FFFFFF" />
+      <rect x={x} y={y + h / 2 - 4} width={w} height={8} fill="#FFFFFF" />
+      {/* curtains */}
+      <g transform={`translate(${x - 18} ${y - 14})`}>
+        <path className="sa-curtain" d={`M0 0 h34 c-8 ${h * 0.5} 6 ${h * 0.8} 0 ${h + 26} h-34 z`} fill="#FF9EB5" />
+      </g>
+      <g transform={`translate(${x + w + 18} ${y - 14}) scale(-1 1)`}>
+        <path className="sa-curtain" d={`M0 0 h34 c-8 ${h * 0.5} 6 ${h * 0.8} 0 ${h + 26} h-34 z`} fill="#FF9EB5" />
+      </g>
+    </g>
+  );
+}
+
+function Floor({ color, plank = true }: { color: string; plank?: boolean }) {
+  return (
+    <g>
+      <rect y={FLOOR} width={W} height={H - FLOOR} fill={color} />
+      {plank && [0, 1, 2].map((i) => <line key={i} x1={0} x2={W} y1={FLOOR + 30 + i * 32} y2={FLOOR + 30 + i * 32} stroke="#000" strokeOpacity=".06" strokeWidth={3} />)}
+      <rect y={FLOOR - 6} width={W} height={8} fill="#000" opacity=".06" />
+    </g>
+  );
+}
+
+function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
+  const night = time === "night";
+  switch (bg) {
+    case "bedroom":
+      return (
+        <g>
+          <rect width={W} height={H} fill={night ? "#3A3F73" : "#FFF1E3"} />
+          <g opacity=".5">{Array.from({ length: 9 }, (_, i) => <circle key={i} cx={40 + i * 92} cy={40 + (i % 2) * 34} r={5} fill={night ? "#6A6FA8" : "#FFD6B8"} />)}</g>
+          <Window x={70} y={70} time={time} />
+          {/* bed */}
+          <g>
+            <rect x={470} y={200} width={26} height={170} rx={10} fill="#C08552" />
+            <rect x={490} y={262} width={300} height={70} rx={18} fill="#FFFFFF" />
+            <rect x={530} y={250} width={262} height={92} rx={22} fill={night ? "#7C8CE0" : "#8FC9FF"} />
+            <ellipse cx={538} cy={258} rx={44} ry={22} fill="#fff" />
+            <rect x={486} y={330} width={312} height={22} rx={8} fill="#A86E3E" />
+          </g>
+          <Floor color={night ? "#5A4E7A" : "#E8C7A0"} />
+          <ellipse cx={330} cy={398} rx={190} ry={30} fill={night ? "#7A6BA8" : "#FFB7C9"} opacity=".8" />
+          {night && <rect width={W} height={H} fill="#0B1030" opacity=".22" />}
+        </g>
+      );
+    case "living":
+      return (
+        <g>
+          <rect width={W} height={H} fill={night ? "#2F4A55" : "#E5F4EF"} />
+          <rect y={0} width={W} height={30} fill="#000" opacity=".03" />
+          <Window x={520} y={60} w={200} h={140} time={time} />
+          {/* frame */}
+          <rect x={250} y={80} width={110} height={80} rx={10} fill="#fff" />
+          <path d="M262 150 l30 -36 l24 26 l14 -14 l18 24 z" fill="#8FD18C" />
+          <circle cx={340} cy={102} r={9} fill="#FFD447" />
+          {/* sofa */}
+          <g>
+            <rect x={40} y={200} width={300} height={90} rx={30} fill="#7FB8E6" />
+            <rect x={20} y={240} width={340} height={80} rx={26} fill="#93C7F0" />
+            <rect x={20} y={240} width={50} height={90} rx={22} fill="#7FB8E6" />
+            <rect x={310} y={240} width={50} height={90} rx={22} fill="#7FB8E6" />
+            <rect x={40} y={318} width={14} height={18} fill="#8A5A34" />
+            <rect x={326} y={318} width={14} height={18} fill="#8A5A34" />
+          </g>
+          <Floor color={night ? "#4C5B5F" : "#E9D1AE"} />
+          <ellipse cx={420} cy={395} rx={230} ry={32} fill="#FFCF7A" opacity=".75" />
+          {night && <rect width={W} height={H} fill="#0B1030" opacity=".2" />}
+        </g>
+      );
+    case "kitchen":
+      return (
+        <g>
+          <rect width={W} height={H} fill="#FFF6E4" />
+          <g opacity=".35">
+            {Array.from({ length: 14 }, (_, i) => <line key={`v${i}`} x1={i * 60} x2={i * 60} y1={120} y2={250} stroke="#E9C98F" strokeWidth={2} />)}
+            {[150, 190, 230].map((y) => <line key={y} x1={0} x2={W} y1={y} y2={y} stroke="#E9C98F" strokeWidth={2} />)}
+          </g>
+          <Window x={300} y={30} w={200} h={110} time={time} />
+          {/* cabinets */}
+          <rect x={40} y={20} width={200} height={90} rx={12} fill="#F4A261" />
+          <rect x={560} y={20} width={200} height={90} rx={12} fill="#F4A261" />
+          <rect x={0} y={250} width={W} height={20} fill="#C9A27A" />
+          <rect x={0} y={268} width={W} height={70} fill="#E9B872" />
+          {[60, 220, 380, 540, 700].map((x) => <rect key={x} x={x - 50} y={280} width={100} height={46} rx={8} fill="#F4C687" />)}
+          {/* hanging pans */}
+          <g transform="translate(120 112)"><g className="sa-hang"><line x1={0} y1={0} x2={0} y2={22} stroke="#888" strokeWidth={3} /><circle cy={44} r={22} fill="#556" /></g></g>
+          <g transform="translate(680 112)"><g className="sa-hang" style={{ animationDelay: "-1s" }}><line x1={0} y1={0} x2={0} y2={18} stroke="#888" strokeWidth={3} /><rect x={-6} y={18} width={12} height={40} rx={6} fill="#C0874F" /></g></g>
+          <Floor color="#D9E4EC" plank={false} />
+          <g opacity=".5">{Array.from({ length: 10 }, (_, i) => <rect key={i} x={i * 90} y={FLOOR + ((i % 2) * 40)} width={45} height={40} fill="#C5D3DE" />)}</g>
+        </g>
+      );
+    case "bathroom":
+      return (
+        <g>
+          <rect width={W} height={H} fill="#E3F4FB" />
+          <g opacity=".5">
+            {Array.from({ length: 16 }, (_, i) => <line key={`v${i}`} x1={i * 52} x2={i * 52} y1={0} y2={FLOOR} stroke="#BFE3F2" strokeWidth={3} />)}
+            {Array.from({ length: 7 }, (_, i) => <line key={`h${i}`} x1={0} x2={W} y1={i * 52} y2={i * 52} stroke="#BFE3F2" strokeWidth={3} />)}
+          </g>
+          {/* mirror + sink */}
+          <ellipse cx={260} cy={120} rx={90} ry={80} fill="#fff" />
+          <ellipse cx={260} cy={120} rx={78} ry={68} fill="#CFEFFF" />
+          <path d="M210 90 l40 -30" stroke="#fff" strokeWidth={10} strokeLinecap="round" opacity=".8" className="sa-shine" />
+          <rect x={170} y={236} width={180} height={34} rx={14} fill="#fff" />
+          <rect x={235} y={270} width={50} height={60} fill="#fff" />
+          <rect x={250} y={214} width={20} height={26} rx={6} fill="#B9C6D2" />
+          {/* towel */}
+          <rect x={430} y={90} width={60} height={8} rx={4} fill="#9AA8B6" />
+          <g transform="translate(460 98)"><g className="sa-hang"><rect x={-26} y={0} width={52} height={90} rx={8} fill="#FFB0C4" /><rect x={-26} y={70} width={52} height={8} fill="#FF8FAD" /></g></g>
+          {/* tub */}
+          <rect x={560} y={230} width={240} height={100} rx={30} fill="#fff" />
+          <rect x={580} y={220} width={210} height={20} rx={10} fill="#F2FAFF" />
+          <Floor color="#BFD9E6" plank={false} />
+        </g>
+      );
+    case "garden":
+    case "park":
+      return (
+        <g>
+          {sky(time)}
+          <path d="M0 270 q 200 -60 400 -10 t 400 -20 v 200 h -800 z" fill={night ? "#2F5A4A" : "#A8E28F"} />
+          <path d="M0 310 q 250 -40 500 0 t 300 -10 v 150 h -800 z" fill={night ? "#244A3C" : "#8CD478"} />
+          {bg === "garden" && (
+            <g>
+              {Array.from({ length: 12 }, (_, i) => (
+                <rect key={i} x={i * 70} y={255} width={14} height={70} rx={4} fill={night ? "#6E6A8E" : "#FFFFFF"} />
+              ))}
+              <rect x={0} y={272} width={W} height={10} fill={night ? "#6E6A8E" : "#FFFFFF"} />
+              <rect x={0} y={302} width={W} height={10} fill={night ? "#6E6A8E" : "#FFFFFF"} />
+            </g>
+          )}
+          {bg === "park" && (
+            <g>
+              <path d="M330 450 q 40 -90 120 -150 q 40 -20 90 -20 l 10 10 q -70 20 -110 70 q -40 50 -50 90 z" fill={night ? "#5C5A7A" : "#F2DFB8"} />
+              <g transform="translate(640 330)">
+                <rect x={-70} y={-40} width={140} height={14} rx={6} fill="#B5753E" />
+                <rect x={-70} y={-62} width={140} height={12} rx={6} fill="#C98A50" />
+                <rect x={-60} y={-28} width={10} height={30} fill="#7A4A26" />
+                <rect x={50} y={-28} width={10} height={30} fill="#7A4A26" />
+              </g>
+            </g>
+          )}
+        </g>
+      );
+    case "market":
+      return (
+        <g>
+          {sky(time)}
+          <rect y={280} width={W} height={H - 280} fill="#E8D3B0" />
+          {[0, 1, 2].map((i) => {
+            const x = 30 + i * 260;
+            const c = ["#FF7A7A", "#5BB8F5", "#FFC145"][i]!;
+            return (
+              <g key={i}>
+                <rect x={x + 10} y={150} width={10} height={180} fill="#9C6B3F" />
+                <rect x={x + 210} y={150} width={10} height={180} fill="#9C6B3F" />
+                <g className="sa-awning" style={{ animationDelay: `${-i * 0.7}s` }}>
+                  {Array.from({ length: 6 }, (_, j) => (
+                    <path key={j} d={`M${x + j * 38} 120 h38 v40 q -19 16 -38 0 z`} fill={j % 2 ? "#FFFFFF" : c} />
+                  ))}
+                </g>
+                <rect x={x} y={250} width={230} height={70} rx={8} fill="#C98A50" />
+                <rect x={x} y={250} width={230} height={12} rx={6} fill="#B07443" />
+              </g>
+            );
+          })}
+        </g>
+      );
+    case "street":
+      return (
+        <g>
+          {sky(time)}
+          {[
+            [60, "#FFB4A2", 150],
+            [250, "#A0D8EF", 120],
+            [450, "#FFE08A", 160],
+            [640, "#C7B8F5", 130],
+          ].map(([x, c, h], i) => (
+            <g key={i}>
+              <rect x={x as number} y={300 - (h as number)} width={150} height={h as number} fill={c as string} />
+              <path d={`M${(x as number) - 12} ${300 - (h as number)} l ${87} -60 l ${87} 60 z`} fill="#C8554B" />
+              <rect x={(x as number) + 55} y={240} width={40} height={60} rx={6} fill="#8A5A34" />
+              <rect x={(x as number) + 18} y={300 - (h as number) + 24} width={32} height={30} rx={4} fill={time === "night" ? "#FFE58A" : "#E8F7FF"} />
+              <rect x={(x as number) + 100} y={300 - (h as number) + 24} width={32} height={30} rx={4} fill={time === "night" ? "#FFE58A" : "#E8F7FF"} />
+            </g>
+          ))}
+          <rect y={300} width={W} height={40} fill="#D5D9DE" />
+          <rect y={340} width={W} height={H - 340} fill="#6B7380" />
+          {Array.from({ length: 6 }, (_, i) => <rect key={i} x={30 + i * 140} y={392} width={70} height={8} rx={4} fill="#fff" opacity=".7" />)}
+        </g>
+      );
+    case "mosque":
+      return (
+        <g>
+          <rect width={W} height={H} fill="#FFF7E8" />
+          {[110, 400, 690].map((x, i) => (
+            <g key={x}>
+              <path d={`M${x - 80} 300 v-150 q 0 -80 80 -110 q 80 30 80 110 v150 z`} fill={i === 1 ? "#E8F4EC" : "#F6EBD5"} stroke="#E2C98F" strokeWidth={6} />
+              {i === 1 && <path d={`M${x - 40} 300 v-90 q 0 -40 40 -60 q 40 20 40 60 v90 z`} fill="#CFE8D7" />}
+            </g>
+          ))}
+          {[260, 540].map((x, i) => (
+            <g key={x} transform={`translate(${x} 0)`}>
+              <g className="sa-hang" style={{ animationDelay: `${-i}s` }}>
+                <line x1={0} y1={0} x2={0} y2={70} stroke="#C9A55B" strokeWidth={3} />
+                <path d="M-20 70 h40 l-8 34 h-24 z" fill="#E6B52E" />
+                <circle cy={92} r={10} fill="#FFF3B0" className="sa-pulse" />
+              </g>
+            </g>
+          ))}
+          <rect y={FLOOR - 30} width={W} height={H - FLOOR + 30} fill="#B83B4B" />
+          {Array.from({ length: 5 }, (_, i) => <rect key={i} y={FLOOR - 10 + i * 30} width={W} height={4} fill="#E8B04B" opacity=".6" />)}
+        </g>
+      );
+    case "beach":
+      return (
+        <g>
+          {sky(time)}
+          <rect y={210} width={W} height={90} fill="#4CB8E8" />
+          <g className="sa-waves">
+            <path d="M-40 250 q 40 -14 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 v 60 h -880 z" fill="#7FD3F5" />
+          </g>
+          <g className="sa-waves2">
+            <path d="M-40 290 q 40 -12 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 v 40 h -880 z" fill="#FFFFFF" opacity=".7" />
+          </g>
+          <rect y={300} width={W} height={H - 300} fill="#F7DFA8" />
+          <g opacity=".35">{Array.from({ length: 20 }, (_, i) => <circle key={i} cx={(i * 97) % W} cy={330 + ((i * 53) % 110)} r={3} fill="#C9A060" />)}</g>
+        </g>
+      );
+  }
+}
+
+/* ───────── props ───────── */
+
+function Prop({ k }: { k: ArtProp }) {
+  switch (k) {
+    case "toothbrush":
+      return (
+        <g className="sa-brush">
+          <rect x={-6} y={-110} width={12} height={110} rx={6} fill="#5BB8F5" />
+          <rect x={-10} y={-140} width={20} height={34} rx={6} fill="#fff" />
+          <ellipse cx={0} cy={-142} rx={16} ry={10} fill="#E9F8FF" />
+        </g>
+      );
+    case "cup":
+      return (
+        <g>
+          <path d="M-26 -70 h52 l-6 70 h-40 z" fill="#FFB0C4" />
+          <rect x={-26} y={-74} width={52} height={8} rx={4} fill="#FF8FAD" />
+        </g>
+      );
+    case "veggies":
+      return (
+        <g>
+          <path d="M-70 -50 h140 l-14 50 h-112 z" fill="#C98A50" />
+          {[[-40, "#FF5A5A"], [-8, "#FF5A5A"], [24, "#FF5A5A"]].map(([x, c], i) => (
+            <circle key={i} cx={x as number} cy={-60} r={18} fill={c as string} className="sa-bob" style={{ animationDelay: `${i * 0.3}s` }} />
+          ))}
+          <path d="M40 -56 l28 -40 l8 6 z" fill="#FF8A2B" />
+          <path d="M70 -96 l10 -16 M74 -94 l16 -10" stroke="#3AA655" strokeWidth={5} strokeLinecap="round" />
+          <ellipse cx={-56} cy={-66} rx={22} ry={14} fill="#5BBF5B" />
+        </g>
+      );
+    case "fruit":
+      return (
+        <g>
+          <ellipse cx={0} cy={-14} rx={70} ry={16} fill="#E9C27A" />
+          {[[-34, "#FF5A5A"], [0, "#FFD447"], [34, "#7BC67B"], [-16, "#FF9F43"], [18, "#C77DFF"]].map(([x, c], i) => (
+            <circle key={i} cx={x as number} cy={i > 2 ? -50 : -32} r={18} fill={c as string} />
+          ))}
+        </g>
+      );
+    case "kitten":
+      return (
+        <g>
+          <g transform="translate(34 -26)">
+            <path className="sa-wag" d="M0 0 q 30 -10 26 -46" stroke="#F4A261" strokeWidth={10} strokeLinecap="round" fill="none" />
+          </g>
+          <ellipse cx={0} cy={-26} rx={42} ry={28} fill="#F4A261" />
+          <circle cx={-34} cy={-56} r={28} fill="#F4A261" />
+          <path d="M-56 -76 l6 -26 l16 18 z M-24 -82 l14 -22 l6 26 z" fill="#F4A261" />
+          <g className="sa-blink">
+            <circle cx={-44} cy={-58} r={4.5} fill="#2B2B2B" />
+            <circle cx={-26} cy={-58} r={4.5} fill="#2B2B2B" />
+          </g>
+          <path d="M-38 -46 q 3 4 6 0" stroke="#2B2B2B" strokeWidth={2.5} fill="none" />
+          <circle cx={-35} cy={-50} r={3} fill="#FF8FAD" />
+          <rect x={-30} y={-8} width={12} height={10} rx={5} fill="#E08A45" />
+          <rect x={14} y={-8} width={12} height={10} rx={5} fill="#E08A45" />
+        </g>
+      );
+    case "box":
+      return (
+        <g>
+          <path d="M-60 -70 h120 v70 h-120 z" fill="#C98A50" />
+          <path d="M-60 -70 l-18 -26 h70 l8 26 z M60 -70 l18 -26 h-70 l-8 26 z" fill="#B07443" />
+          <rect x={-60} y={-46} width={120} height={8} fill="#E0B07A" />
+        </g>
+      );
+    case "umbrella":
+      return (
+        <g className="sa-sway">
+          <path d="M0 0 v-120" stroke="#5A4A3A" strokeWidth={6} />
+          <path d="M0 4 q 0 14 -14 12" stroke="#5A4A3A" strokeWidth={6} fill="none" strokeLinecap="round" />
+          <path d="M-90 -110 q 90 -90 180 0 q -22 -14 -45 0 q -22 -14 -45 0 q -22 -14 -45 0 q -22 -14 -45 0 z" fill="#FFC145" />
+          <path d="M0 -170 q -20 30 -45 60 M0 -170 q 20 30 45 60" stroke="#F4A261" strokeWidth={3} fill="none" />
+        </g>
+      );
+    case "puddle":
+      return (
+        <g>
+          <ellipse cx={0} cy={-6} rx={90} ry={16} fill="#7FB3D9" opacity=".7" />
+          <ellipse cx={-20} cy={-6} rx={18} ry={5} fill="none" stroke="#fff" strokeWidth={2} className="sa-ripple" />
+          <ellipse cx={30} cy={-8} rx={14} ry={4} fill="none" stroke="#fff" strokeWidth={2} className="sa-ripple" style={{ animationDelay: "-.8s" }} />
+        </g>
+      );
+    case "towel":
+      return <rect x={-40} y={-16} width={80} height={16} rx={6} fill="#FFB0C4" />;
+    case "fort":
+      return (
+        <g>
+          <path d="M-150 0 l150 -190 l150 190 z" fill="#FFB86B" />
+          <path d="M-150 0 l150 -190 l-40 190 z" fill="#FFCB8F" />
+          <path d="M-40 0 q 40 -110 80 0 z" fill="#5A3E6B" />
+          <path d="M-150 -60 q 150 40 300 0" stroke="#7A6A8A" strokeWidth={2} fill="none" />
+          {Array.from({ length: 9 }, (_, i) => (
+            <circle key={i} className="sa-twinkle" style={{ animationDelay: `${i * 0.25}s` }} cx={-135 + i * 34} cy={-56 + Math.sin(i) * 6 + (i === 4 ? 14 : 0)} r={6} fill={["#FFE066", "#FF8FAD", "#7FD3F5"][i % 3]} />
+          ))}
+        </g>
+      );
+    case "lamp":
+      return (
+        <g>
+          <circle cx={0} cy={-120} r={70} fill="#FFE9A8" opacity=".35" className="sa-pulse" />
+          <rect x={-5} y={-110} width={10} height={110} fill="#8A6A4A" />
+          <ellipse cx={0} cy={-2} rx={34} ry={8} fill="#6B5038" />
+          <path d="M-40 -110 l14 -50 h52 l14 50 z" fill="#FFD27A" />
+        </g>
+      );
+    case "books":
+      return (
+        <g>
+          {[["#FF7A7A", 0], ["#5BB8F5", 22], ["#7BC67B", 44]].map(([c, y], i) => (
+            <rect key={i} x={-50 + i * 4} y={-22 - (y as number)} width={100 - i * 8} height={20} rx={4} fill={c as string} />
+          ))}
+        </g>
+      );
+    case "teddy":
+      return (
+        <g className="sa-bob">
+          <circle cx={-26} cy={-92} r={14} fill="#B07443" />
+          <circle cx={26} cy={-92} r={14} fill="#B07443" />
+          <circle cx={0} cy={-72} r={30} fill="#C98A50" />
+          <ellipse cx={0} cy={-26} rx={34} ry={30} fill="#C98A50" />
+          <ellipse cx={0} cy={-64} rx={12} ry={9} fill="#E8C49A" />
+          <circle cx={-11} cy={-80} r={3.5} fill="#2B2B2B" />
+          <circle cx={11} cy={-80} r={3.5} fill="#2B2B2B" />
+        </g>
+      );
+    case "cookies":
+      return (
+        <g>
+          <ellipse cx={0} cy={-8} rx={60} ry={12} fill="#fff" />
+          {[-28, 0, 28].map((x, i) => (
+            <g key={i}>
+              <circle cx={x} cy={-18 - (i === 1 ? 10 : 0)} r={18} fill="#D99A55" />
+              <circle cx={x - 6} cy={-22 - (i === 1 ? 10 : 0)} r={3} fill="#5A3A22" />
+              <circle cx={x + 6} cy={-14 - (i === 1 ? 10 : 0)} r={3} fill="#5A3A22" />
+            </g>
+          ))}
+        </g>
+      );
+    case "thermometer":
+      return (
+        <g transform="rotate(-20)">
+          <rect x={-7} y={-80} width={14} height={80} rx={7} fill="#fff" stroke="#B9C6D2" strokeWidth={3} />
+          <circle cy={-6} r={11} fill="#FF5A5A" />
+          <rect x={-3} y={-50} width={6} height={44} fill="#FF5A5A" className="sa-pulse" />
+        </g>
+      );
+    case "soup":
+      return (
+        <g>
+          <g className="sa-steam">
+            <path d="M-16 -60 q -10 -16 0 -32 q 10 -16 0 -32" stroke="#fff" strokeWidth={6} fill="none" strokeLinecap="round" opacity=".85" />
+            <path d="M14 -60 q -10 -16 0 -32 q 10 -16 0 -32" stroke="#fff" strokeWidth={6} fill="none" strokeLinecap="round" opacity=".85" />
+          </g>
+          <path d="M-56 -50 h112 q -6 50 -56 50 q -50 0 -56 -50 z" fill="#5BB8F5" />
+          <ellipse cx={0} cy={-50} rx={56} ry={12} fill="#FFC145" />
+        </g>
+      );
+    case "water":
+      return (
+        <g>
+          <path d="M-20 -80 h40 l-5 80 h-30 z" fill="#E3F4FB" stroke="#9FD3EE" strokeWidth={3} />
+          <path d="M-17 -50 h34 l-3 48 h-28 z" fill="#7FD3F5" className="sa-pulse" />
+        </g>
+      );
+    case "flowers":
+      return (
+        <g>
+          {[-30, 0, 30].map((x, i) => (
+            <g key={i} transform={`translate(${x} 0)`}>
+              <g className="sa-sway" style={{ animationDelay: `${-i * 0.6}s` }}>
+                <path d={`M0 0 v-${70 + i * 14}`} stroke="#3AA655" strokeWidth={5} />
+                <g transform={`translate(0 -${70 + i * 14})`}>
+                  {[0, 72, 144, 216, 288].map((r) => <ellipse key={r} cx={0} cy={-12} rx={8} ry={13} fill={["#FF8FAD", "#FFC145", "#C77DFF"][i]} transform={`rotate(${r})`} />)}
+                  <circle r={7} fill="#FFE066" />
+                </g>
+              </g>
+            </g>
+          ))}
+        </g>
+      );
+    case "lantern":
+      return (
+        <g className="sa-sway">
+          <circle cx={0} cy={-70} r={46} fill="#FFE9A8" opacity=".35" className="sa-pulse" />
+          <rect x={-22} y={-110} width={44} height={70} rx={14} fill="#E6B52E" />
+          <rect x={-14} y={-100} width={28} height={50} rx={10} fill="#FFF3B0" />
+          <rect x={-10} y={-122} width={20} height={14} rx={4} fill="#B98A1E" />
+        </g>
+      );
+    case "mat":
+      return (
+        <g>
+          <path d="M-90 0 l20 -40 h140 l20 40 z" fill="#1E8C53" />
+          <path d="M-60 -6 l12 -26 h96 l12 26 z" fill="#2FB36F" />
+          <path d="M0 -30 q -14 8 0 22 q 14 -14 0 -22 z" fill="#E6B52E" />
+        </g>
+      );
+    case "shoes":
+      return (
+        <g>
+          <rect x={-70} y={-16} width={140} height={10} rx={4} fill="#9C6B3F" />
+          {[-46, -14, 18, 48].map((x, i) => <ellipse key={i} cx={x} cy={-24} rx={14} ry={9} fill={["#5BB8F5", "#5BB8F5", "#FF8FAD", "#FF8FAD"][i]} />)}
+        </g>
+      );
+    case "sandcastle":
+      return (
+        <g>
+          <rect x={-70} y={-60} width={140} height={60} fill="#E9C27A" />
+          <rect x={-90} y={-100} width={46} height={100} fill="#E2B866" />
+          <rect x={44} y={-100} width={46} height={100} fill="#E2B866" />
+          <rect x={-26} y={-120} width={52} height={60} fill="#E9C27A" />
+          {[-90, -70, -50, 44, 64, 84, -26, -6, 14].map((x, i) => <rect key={i} x={x} y={i < 6 ? -112 : -132} width={12} height={14} fill={i < 6 ? "#E2B866" : "#E9C27A"} />)}
+          <path d="M-14 0 v-30 q 14 -18 28 0 v30 z" fill="#C79A4E" />
+          <g transform="translate(0 -132)">
+            <line x1={0} y1={0} x2={0} y2={-40} stroke="#8A5A34" strokeWidth={4} />
+            <path className="sa-flag" d="M0 -40 h30 l-6 9 l6 9 h-30 z" fill="#FF5A5A" />
+          </g>
+        </g>
+      );
+    case "bucket":
+      return (
+        <g>
+          <path d="M-30 -56 h60 l-8 56 h-44 z" fill="#FF5A5A" />
+          <path d="M-30 -56 q 30 -40 60 0" stroke="#C0392B" strokeWidth={4} fill="none" />
+          <rect x={30} y={-70} width={8} height={70} rx={4} fill="#FFC145" transform="rotate(20 30 0)" />
+        </g>
+      );
+    case "crab":
+      return (
+        <g className="sa-crab">
+          <ellipse cx={0} cy={-20} rx={34} ry={20} fill="#FF6B5A" />
+          <circle cx={-12} cy={-44} r={6} fill="#fff" /><circle cx={-12} cy={-44} r={3} fill="#222" />
+          <circle cx={12} cy={-44} r={6} fill="#fff" /><circle cx={12} cy={-44} r={3} fill="#222" />
+          <path d="M-34 -22 q -20 -6 -22 -24 M34 -22 q 20 -6 22 -24" stroke="#FF6B5A" strokeWidth={8} fill="none" strokeLinecap="round" />
+          <path d="M-24 -6 l-12 8 M-12 -2 l-8 10 M24 -6 l12 8 M12 -2 l8 10" stroke="#E0503F" strokeWidth={5} strokeLinecap="round" />
+        </g>
+      );
+    case "shell":
+      return (
+        <g>
+          <path d="M0 0 l-22 -8 q 0 -30 22 -34 q 22 4 22 34 z" fill="#FFC9D6" />
+          <path d="M0 0 v-40 M-10 -4 l-6 -30 M10 -4 l6 -30" stroke="#F49BB0" strokeWidth={3} />
+        </g>
+      );
+    case "tent":
+      return (
+        <g>
+          <path d="M-130 0 l130 -150 l130 150 z" fill="#3AA7DA" />
+          <path d="M-130 0 l130 -150 l-30 150 z" fill="#5BB8F5" />
+          <path className="sa-flap" d="M0 -150 l-36 150 h36 z" fill="#2B7FA8" />
+          <path d="M0 -150 v-20" stroke="#8A5A34" strokeWidth={5} />
+        </g>
+      );
+    case "camplight":
+      return (
+        <g>
+          <circle cx={0} cy={-36} r={52} fill="#FFE9A8" opacity=".35" className="sa-pulse" />
+          <rect x={-18} y={-56} width={36} height={50} rx={10} fill="#FFD27A" />
+          <rect x={-22} y={-10} width={44} height={10} rx={4} fill="#5A4A3A" />
+          <path d="M-12 -56 q 12 -20 24 0" stroke="#5A4A3A" strokeWidth={4} fill="none" />
+        </g>
+      );
+    case "bicycle":
+      return (
+        <g>
+          {[-60, 60].map((x) => (
+            <g key={x} transform={`translate(${x} -40)`}>
+              <circle r={38} fill="none" stroke="#2B2B2B" strokeWidth={7} />
+              <g className="sa-spin-fast">
+                {[0, 45, 90, 135].map((r) => <line key={r} x1={-34} x2={34} y1={0} y2={0} stroke="#9AA8B6" strokeWidth={2} transform={`rotate(${r})`} />)}
+              </g>
+            </g>
+          ))}
+          <path d="M-60 -40 l40 -50 h60 l20 50 M-20 -90 l20 50 h-60 M40 -90 l-8 -20 h-16 M-24 -96 h-22" stroke="#FF5A5A" strokeWidth={8} fill="none" strokeLinecap="round" strokeLinejoin="round" />
+        </g>
+      );
+    case "cone":
+      return (
+        <g>
+          <path d="M-22 0 l18 -70 h8 l18 70 z" fill="#FF8A2B" />
+          <rect x={-14} y={-40} width={28} height={10} fill="#fff" />
+          <rect x={-28} y={-6} width={56} height={8} rx={3} fill="#E0701C" />
+        </g>
+      );
+    case "mailbox":
+      return (
+        <g>
+          <rect x={-6} y={-90} width={12} height={90} fill="#8A5A34" />
+          <path d="M-40 -90 v-40 q 40 -30 80 0 v40 z" fill="#3AA7DA" />
+          <g transform="translate(40 -118)"><g className="sa-flagup"><rect x={0} y={-30} width={6} height={36} fill="#8A5A34" /><rect x={0} y={-30} width={22} height={14} fill="#FF5A5A" /></g></g>
+        </g>
+      );
+    case "parcel":
+      return (
+        <g>
+          <rect x={-46} y={-70} width={92} height={70} rx={6} fill="#D9A066" />
+          <rect x={-6} y={-70} width={12} height={70} fill="#FF8FAD" />
+          <rect x={-46} y={-42} width={92} height={10} fill="#FF8FAD" />
+          <path d="M0 -70 q -24 -26 -24 -6 q 0 10 24 6 q 24 4 24 -6 q 0 -20 -24 6 z" fill="#FF5A7E" />
+        </g>
+      );
+    case "envelope":
+      return (
+        <g className="sa-float">
+          <rect x={-40} y={-56} width={80} height={56} rx={6} fill="#fff" stroke="#E2C98F" strokeWidth={3} />
+          <path d="M-40 -56 l40 30 l40 -30" fill="none" stroke="#E2C98F" strokeWidth={3} />
+          <path d="M0 -20 q -12 -12 -12 -4 q 0 6 12 12 q 12 -6 12 -12 q 0 -8 -12 4 z" fill="#FF5A7E" />
+        </g>
+      );
+    case "tree":
+      return (
+        <g>
+          <rect x={-14} y={-130} width={28} height={130} rx={10} fill="#9C6B3F" />
+          <g className="sa-sway-slow">
+            <circle cx={0} cy={-170} r={70} fill="#5BBF5B" />
+            <circle cx={-56} cy={-140} r={46} fill="#4CAF50" />
+            <circle cx={56} cy={-140} r={46} fill="#4CAF50" />
+            <circle cx={-24} cy={-190} r={10} fill="#FF7A7A" />
+            <circle cx={30} cy={-150} r={10} fill="#FF7A7A" />
+          </g>
+        </g>
+      );
+    case "bush":
+      return (
+        <g className="sa-sway-slow">
+          <circle cx={-30} cy={-30} r={32} fill="#5BBF5B" />
+          <circle cx={20} cy={-40} r={40} fill="#4CAF50" />
+          <circle cx={56} cy={-24} r={26} fill="#5BBF5B" />
+        </g>
+      );
+    case "butterfly":
+      return (
+        <g className="sa-flutter-path">
+          <g className="sa-flutter">
+            <ellipse cx={-12} cy={-8} rx={14} ry={18} fill="#C77DFF" />
+            <ellipse cx={12} cy={-8} rx={14} ry={18} fill="#FF8FAD" />
+          </g>
+          <rect x={-2} y={-22} width={4} height={26} rx={2} fill="#3A2A4A" />
+        </g>
+      );
+    case "bird":
+      return (
+        <g className="sa-fly">
+          <path className="sa-wing" d="M-20 0 q 10 -14 20 0 q 10 -14 20 0" stroke="#3A3A5A" strokeWidth={4} fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case "heart":
+      return (
+        <g className="sa-float">
+          <path d="M0 0 q -40 -26 -40 -50 q 0 -22 20 -22 q 14 0 20 14 q 6 -14 20 -14 q 20 0 20 22 q 0 24 -40 50 z" fill="#FF5A7E" />
+        </g>
+      );
+    case "balloon":
+      return (
+        <g className="sa-float">
+          <path d="M0 0 q -8 30 4 70" stroke="#888" strokeWidth={2} fill="none" />
+          <ellipse cx={0} cy={-30} rx={28} ry={34} fill="#FF7A7A" />
+          <ellipse cx={-10} cy={-42} rx={6} ry={10} fill="#fff" opacity=".5" />
+        </g>
+      );
+    case "milk":
+      return (
+        <g>
+          <rect x={-14} y={-70} width={28} height={70} rx={10} fill="#fff" stroke="#B9C6D2" strokeWidth={3} />
+          <rect x={-8} y={-86} width={16} height={18} rx={6} fill="#FFC9D6" />
+        </g>
+      );
+    case "clock":
+      return (
+        <g>
+          <circle cx={0} cy={-40} r={40} fill="#fff" stroke="#C98A50" strokeWidth={6} />
+          <g transform="translate(0 -40)">
+            <g className="sa-spin"><line x1={0} y1={0} x2={0} y2={-28} stroke="#2B2B2B" strokeWidth={4} strokeLinecap="round" /></g>
+            <line x1={0} y1={0} x2={16} y2={0} stroke="#2B2B2B" strokeWidth={5} strokeLinecap="round" />
+          </g>
+        </g>
+      );
+    case "card":
+      return (
+        <g className="sa-bob">
+          <rect x={-46} y={-80} width={92} height={80} rx={8} fill="#FFF3B0" stroke="#E6B52E" strokeWidth={3} />
+          <path d="M0 -30 q -18 -16 -18 -26 q 0 -10 9 -10 q 6 0 9 6 q 3 -6 9 -6 q 9 0 9 10 q 0 10 -18 26 z" fill="#FF5A7E" />
+          <rect x={-30} y={-18} width={60} height={5} rx={2} fill="#E6B52E" />
+        </g>
+      );
+  }
+}
+
+/* ───────── effects ───────── */
+
+function Fx({ k, time }: { k: ArtFx; time: ArtTime }) {
+  const seeds = Array.from({ length: 16 }, (_, i) => ({ x: (i * 53 + 17) % W, d: (i * 0.37) % 3, y: (i * 41) % 260 }));
+  switch (k) {
+    case "rain":
+      return (
+        <g>
+          {Array.from({ length: 34 }, (_, i) => (
+            <line key={i} className="sa-raindrop" style={{ animationDelay: `${-((i * 0.13) % 1)}s` }} x1={(i * 37) % W} y1={-20} x2={(i * 37) % W - 8} y2={8} stroke="#DDEBFA" strokeWidth={3} strokeLinecap="round" opacity=".8" />
+          ))}
+        </g>
+      );
+    case "stars":
+      return (
+        <g>
+          {seeds.map((s, i) => (
+            <path key={i} className="sa-twinkle" style={{ animationDelay: `${s.d}s` }} transform={`translate(${s.x} ${20 + (s.y % 200)})`} d="M0 -7 L2 -2 L7 0 L2 2 L0 7 L-2 2 L-7 0 L-2 -2 Z" fill="#FFF6C8" />
+          ))}
+        </g>
+      );
+    case "sparkle":
+      return (
+        <g>
+          {seeds.slice(0, 9).map((s, i) => (
+            <path key={i} className="sa-twinkle" style={{ animationDelay: `${s.d}s` }} transform={`translate(${s.x} ${60 + s.y})`} d="M0 -10 L3 -3 L10 0 L3 3 L0 10 L-3 3 L-10 0 L-3 -3 Z" fill={time === "night" ? "#FFF6C8" : "#FFC145"} />
+          ))}
+        </g>
+      );
+    case "bubbles":
+      return (
+        <g>
+          {seeds.slice(0, 12).map((s, i) => (
+            <g key={i} transform={`translate(${120 + ((s.x * 0.6) % 520)} 420)`}>
+              <circle className="sa-rise" style={{ animationDelay: `${-s.d * 1.6}s` }} r={8 + (i % 4) * 4} fill="#fff" fillOpacity=".35" stroke="#fff" strokeWidth={2} />
+            </g>
+          ))}
+        </g>
+      );
+    case "hearts":
+      return (
+        <g>
+          {seeds.slice(0, 7).map((s, i) => (
+            <g key={i} transform={`translate(${160 + ((s.x * 0.6) % 480)} 400) scale(.35)`}>
+              <path className="sa-rise" style={{ animationDelay: `${-s.d * 1.5}s` }} d="M0 0 q -40 -26 -40 -50 q 0 -22 20 -22 q 14 0 20 14 q 6 -14 20 -14 q 20 0 20 22 q 0 24 -40 50 z" fill="#FF7A9C" />
+            </g>
+          ))}
+        </g>
+      );
+    case "confetti":
+      return (
+        <g>
+          {Array.from({ length: 26 }, (_, i) => (
+            <rect key={i} className="sa-fall" style={{ animationDelay: `${-((i * 0.29) % 3)}s` }} x={(i * 31) % W} y={-20} width={10} height={14} rx={2} fill={["#FF7A7A", "#FFC145", "#5BB8F5", "#7BC67B", "#C77DFF"][i % 5]} />
+          ))}
+        </g>
+      );
+    case "zzz":
+      return (
+        <g>
+          {["Z", "z", "Z"].map((z, i) => (
+            <text key={i} className="sa-zzz" style={{ animationDelay: `${i * 0.9}s` }} x={560 + i * 26} y={210 - i * 10} fontSize={34 - i * 6} fontWeight={800} fill={time === "night" ? "#E3E8FF" : "#7A86C9"}>
+              {z}
+            </text>
+          ))}
+        </g>
+      );
+    case "fireflies":
+      return (
+        <g>
+          {seeds.slice(0, 12).map((s, i) => (
+            <circle key={i} className="sa-firefly" style={{ animationDelay: `${-s.d * 2}s` }} cx={s.x} cy={180 + (s.y % 180)} r={4} fill="#FFF27A" />
+          ))}
+        </g>
+      );
+    case "leaves":
+      return (
+        <g>
+          {seeds.slice(0, 8).map((s, i) => (
+            <ellipse key={i} className="sa-leaf" style={{ animationDelay: `${-s.d * 2}s` }} cx={-20} cy={60 + s.y * 0.8} rx={9} ry={5} fill={["#7BC67B", "#F4A261", "#FFC145"][i % 3]} />
+          ))}
+        </g>
+      );
+    case "notes":
+      return (
+        <g>
+          {seeds.slice(0, 5).map((s, i) => (
+            <text key={i} className="sa-rise" style={{ animationDelay: `${-s.d * 1.4}s` }} x={300 + i * 50} y={300} fontSize={30} fill="#8A79D9">
+              {i % 2 ? "♪" : "♫"}
+            </text>
+          ))}
+        </g>
+      );
+  }
+}
+
+/* ───────── characters ───────── */
+
+function Mo({ m, idx }: { m: ArtMo; idx: number }) {
+  const s = m.s ?? 235;
+  const move = m.move ?? "bob";
+  return (
+    <g transform={`translate(${m.x} 440)`}>
+      <ellipse cx={0} cy={-4} rx={s * 0.24} ry={9} fill="#000" opacity=".12" />
+      <g className={move === "still" ? "" : `sa-mo-${move}`} style={{ animationDelay: `${-idx * 0.7}s` }}>
+        <image
+          href={asset(`/baby-mo-poses/baby-mo-${m.pose}.png`)}
+          x={-s / 2}
+          y={-s}
+          width={s}
+          height={s}
+          transform={m.flip ? "scale(-1 1)" : undefined}
+          preserveAspectRatio="xMidYMax meet"
+        />
+      </g>
+    </g>
+  );
+}
+
+export function StoryArt({
+  scene,
+  className = "",
+  title,
+  portrait = false,
+}: {
+  scene: ArtScene;
+  className?: string;
+  title?: string;
+  /** 4:5 crop centred on Baby Mo (for book-cover thumbnails) */
+  portrait?: boolean;
+}) {
+  const time = scene.time ?? "day";
+  const outdoor = ["garden", "park", "market", "street", "beach"].includes(scene.bg);
+  const groundY = outdoor ? 410 : 405;
+  return (
+    <svg
+      viewBox={portrait ? `${Math.min(W - 360, Math.max(0, (scene.mo?.[0]?.x ?? W / 2) - 180))} 0 360 ${H}` : `0 0 ${W} ${H}`}
+      className={`story-art ${className}`}
+      role="img"
+      aria-label={title}
+      preserveAspectRatio="xMidYMid slice"
+    >
+      <defs>
+        <radialGradient id="sa-sunglow">
+          <stop offset="0" stopColor="#FFF6C8" stopOpacity=".9" />
+          <stop offset="1" stopColor="#FFD447" stopOpacity="0" />
+        </radialGradient>
+      </defs>
+      <Background bg={scene.bg} time={time} />
+      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} />)}
+      {(scene.props ?? []).map((p: ArtItem, i) => (
+        <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`}>
+          <Prop k={p.k} />
+        </g>
+      ))}
+      {(scene.mo ?? []).map((m, i) => <Mo key={i} m={m} idx={i} />)}
+      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} />)}
+      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} />}
+    </svg>
+  );
+}

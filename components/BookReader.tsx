@@ -5,12 +5,14 @@ import { asset } from "@/lib/i18n/config";
 import { posePath } from "@/lib/games/poses";
 import { StoryScene } from "@/components/StoryScene";
 import type { SceneKey } from "@/lib/cerita/scene";
+import { StoryArt } from "@/components/story-art/StoryArt";
+import type { ArtScene } from "@/lib/cerita/illus-types";
 
 type Block = { type: "p" | "quote"; html: string };
 
 type Sheet =
   | { kind: "cover" }
-  | { kind: "content"; blocks: Block[]; vig?: string; pose?: string }
+  | { kind: "content"; blocks: Block[]; vig?: string; pose?: string; art?: number }
   | { kind: "end" };
 
 /**
@@ -206,6 +208,9 @@ type Props = {
   byline?: string;
   /** Decorative drifting emoji themed to the story (ambient layer). */
   accent?: string[];
+  /** Illustrated stories: animated scenes shown big at the top of each
+   *  page, matched to the text by paragraph index. */
+  art?: ArtScene[] | null;
 };
 
 const FONT_STEPS = [19, 22, 26, 30];
@@ -245,6 +250,7 @@ export function BookReader({
   nextStory,
   byline = "Baby Mo",
   accent = ["✨", "🌙", "⭐"],
+  art = null,
 }: Props) {
   const t =
     locale === "id"
@@ -382,6 +388,20 @@ export function BookReader({
     // illustrated book rather than text. Avoid repeating the same vignette.
     const out: Sheet[] = [{ kind: "cover" }];
     let lastVig: string | undefined;
+    if (art && art.length) {
+      contentPages.forEach((p) => {
+        const first = blocks.indexOf(p[0]!);
+        let k = 0;
+        art.forEach((sc, j) => {
+          if (sc.at <= first) k = j;
+        });
+        out.push({ kind: "content", blocks: p, art: k });
+      });
+      out.push({ kind: "end" });
+      setSheets(out);
+      setPos((prev) => Math.min(prev, out.length - 1));
+      return;
+    }
     contentPages.forEach((p, i) => {
       const text = p.map((b) => b.html.replace(/<[^>]+>/g, "")).join(" ");
       let vig: string | undefined;
@@ -403,7 +423,7 @@ export function BookReader({
     out.push({ kind: "end" });
     setSheets(out);
     setPos((prev) => Math.min(prev, out.length - 1));
-  }, [fontPx]);
+  }, [fontPx, art]);
 
   // Recompute pagination on open / font / layout change.
   useLayoutEffect(() => {
@@ -459,7 +479,13 @@ export function BookReader({
       return (
         <div className="bk-page bk-page--cover" key={key}>
           <div className="bk-cover-scene">
-            <StoryScene scene={scene} pose={coverPose} className="sc--cover" />
+            {art && art[0] ? (
+              <div className="bk-art-frame bk-art-frame--cover">
+                <StoryArt scene={art[0]} title={art[0].alt[locale]} />
+              </div>
+            ) : (
+              <StoryScene scene={scene} pose={coverPose} className="sc--cover" />
+            )}
           </div>
           <div className="bk-cover-text">
             <span className="bk-cover-badge">📖 {t.cover}</span>
@@ -516,8 +542,13 @@ export function BookReader({
     const idx = sheets ? sheets.indexOf(s) : 0;
     return (
       <div className="bk-page" key={key}>
-        <div className="bk-page-art">
-          {(s.vig || s.pose) && (
+        <div className={`bk-page-art${art ? " bk-page-art--big" : ""}`}>
+          {art && s.art !== undefined && art[s.art] && (
+            <div className="bk-art-frame">
+              <StoryArt scene={art[s.art]!} title={art[s.art]!.alt[locale]} />
+            </div>
+          )}
+          {!art && (s.vig || s.pose) && (
             <PageArt
               vig={s.vig}
               poseSrc={s.pose ? asset(posePath(s.pose)) : undefined}
@@ -611,7 +642,7 @@ export function BookReader({
               {/* Invisible sizer — measures the page content box for pagination */}
               <div className="bk-sizer" aria-hidden>
                 <div className="bk-page">
-                  <div className="bk-page-art" />
+                  <div className={`bk-page-art${art ? " bk-page-art--big" : ""}`} />
                   <div className="bk-prose bk-page-content" ref={sizeRef} />
                   <div className="bk-page-foot">0</div>
                 </div>
@@ -718,6 +749,9 @@ export function BookReader({
         .bk-page-foot{position:relative;z-index:1;flex-shrink:0;padding-top:10px;text-align:center;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--color-whisper);}
         /* Top-centered art band that sits above the text on each content page */
         .bk-page-art{flex-shrink:0;height:clamp(94px,18vw,122px);display:flex;align-items:center;justify-content:center;margin-bottom:clamp(8px,1.6vw,14px);}
+        .bk-page-art--big{height:clamp(150px,40%,320px);margin-bottom:clamp(10px,1.8vw,16px);}
+        .bk-art-frame{width:100%;height:100%;border-radius:14px;overflow:hidden;box-shadow:0 10px 24px -14px rgba(60,40,10,.55),inset 0 0 0 1px rgba(0,0,0,.05);background:#EAF7FF;}
+        .bk-art-frame--cover{border-radius:12px;}
 
         /* Baby Mo character on content pages (alternates with vignettes) */
         .bk-cpose{height:clamp(90px,17vw,118px);width:auto;object-fit:contain;pointer-events:none;
@@ -815,6 +849,7 @@ export function BookReader({
         .bk-cover-scene{width:100%;flex-shrink:0;}
         .bk-cover-scene .sc{border-radius:16px 16px 0 0;border-left:0;border-right:0;border-top:0;}
         .bk-cover-scene .sc--cover{aspect-ratio:4 / 3;}
+        .bk-cover-scene .bk-art-frame{aspect-ratio:16 / 10;height:auto;border-radius:16px 16px 0 0;box-shadow:none;}
         .bk-cover-text{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:clamp(16px,3.2vw,30px);}
         .bk-page--cover .bk-page-foot{padding-bottom:clamp(12px,2vw,18px);}
 
