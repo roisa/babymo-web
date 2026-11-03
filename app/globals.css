@@ -1201,3 +1201,11 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 @media (prefers-reduced-motion: reduce) {
   .story-art * { animation: none !important; }
 }
+.sa-raindrop--tall { animation-name: sa-rain-tall; animation-duration: 1.3s; }
+@keyframes sa-rain-tall { from { translate: 0 0; } to { translate: -60px 820px; } }
+@keyframes sa-drip { 0% { translate: 0 0; opacity: 0; } 20% { opacity: 1; } 100% { translate: -6px 60px; opacity: 0; } }
+.sa-drip { animation: sa-drip 1s ease-in infinite; }
+@keyframes sa-hopframe { 0%,70%,100% { translate: 0 0; } 82% { translate: 0 -26px; } }
+.sa-hopframe { animation: sa-hopframe 2.4s ease-in-out infinite; }
+@keyframes sa-crawl { 0%,100% { translate: -12px 0; } 50% { translate: 12px 0; } }
+.sa-crawl { animation: sa-crawl 8s ease-in-out infinite; }

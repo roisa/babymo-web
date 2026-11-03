@@ -1,4 +1,5 @@
 import type { ArtScene } from "./illus-types";
+import { getPictureBook, pictureBookIllus } from "./picture-books";
 
 /**
  * Animated illustrations for the illustrated picture-book stories.
@@ -94,9 +95,11 @@ const ILLUS: Record<string, ArtScene[]> = {
 };
 
 export function illusFor(slug: string): ArtScene[] | null {
+  const pb = getPictureBook(slug);
+  if (pb) return pictureBookIllus(pb);
   return ILLUS[slug] ?? null;
 }
 
 export function hasIllus(slug: string): boolean {
-  return slug in ILLUS;
+  return slug in ILLUS || !!getPictureBook(slug);
 }

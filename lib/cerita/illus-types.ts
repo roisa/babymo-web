@@ -62,7 +62,26 @@ export type ArtProp =
   | "balloon"
   | "milk"
   | "clock"
-  | "card";
+  | "card"
+  | "seed"
+  | "pot"
+  | "sprout"
+  | "seedling"
+  | "plant"
+  | "bloom"
+  | "wateringcan"
+  | "rainbow"
+  | "minirainbow"
+  | "car"
+  | "carmud"
+  | "carshiny"
+  | "hose"
+  | "sponge"
+  | "frog"
+  | "snail"
+  | "ladybug"
+  | "boots"
+  | "bench";
 
 export type ArtFx =
   | "rain"
@@ -106,6 +125,8 @@ export interface ArtScene {
   props?: ArtItem[];
   mo?: ArtMo[];
   fx?: ArtFx[];
+  /** x to centre the full-page (portrait) crop on; defaults to Baby Mo */
+  focus?: number;
   /** short label read by screen readers and shown under the hero art */
   alt: Record<Locale, string>;
 }
