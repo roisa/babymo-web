@@ -13,6 +13,7 @@ import { getAllCatatan } from "@/lib/content/catatan";
 import { StoryScene } from "@/components/StoryScene";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import { illusFor } from "@/lib/cerita/illus";
+import { getPictureBook } from "@/lib/cerita/picture-books";
 import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
 
 export async function generateStaticParams() {
@@ -82,7 +83,9 @@ export default async function CatatanIndex({
                         <div className="book-art book-art--illus overflow-hidden">
                           <StoryArt scene={art[0]} title={art[0].alt[l]} portrait />
                           <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10.5px] font-bold text-[var(--sec-deep)] shadow-sm">
-                            ✨ {l === "id" ? "Bergambar" : "Illustrated"}
+                            {getPictureBook(n.slug)
+                              ? `📖 ${getPictureBook(n.slug)!.pages.length} ${l === "id" ? "halaman" : "pages"}`
+                              : `✨ ${l === "id" ? "Bergambar" : "Illustrated"}`}
                           </span>
                         </div>
                       ) : (

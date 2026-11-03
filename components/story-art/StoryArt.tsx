@@ -13,6 +13,8 @@ import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@
 const W = 800;
 const H = 450;
 const FLOOR = 330;
+/** top of the drawn backdrop — the full-page layout shows sky/wall above y=0 */
+const TOP = -340;
 
 /* ───────── backgrounds ───────── */
 
@@ -34,7 +36,7 @@ function sky(time: ArtTime) {
           <stop offset="1" stopColor={c[2]} />
         </linearGradient>
       </defs>
-      <rect width={W} height={H} fill={`url(#sa-sky-${time})`} />
+      <rect y={TOP} width={W} height={H - TOP} fill={`url(#sa-sky-${time})`} />
       {time === "night" && <Moon x={650} y={80} />}
       {time === "day" && <Sun x={660} y={80} />}
       {time === "dusk" && <circle cx={640} cy={250} r={70} fill="#FFD27A" opacity=".85" />}
@@ -143,7 +145,7 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
     case "bedroom":
       return (
         <g>
-          <rect width={W} height={H} fill={night ? "#3A3F73" : "#FFF1E3"} />
+          <rect y={TOP} width={W} height={H - TOP} fill={night ? "#3A3F73" : "#FFF1E3"} />
           <g opacity=".5">{Array.from({ length: 9 }, (_, i) => <circle key={i} cx={40 + i * 92} cy={40 + (i % 2) * 34} r={5} fill={night ? "#6A6FA8" : "#FFD6B8"} />)}</g>
           <Window x={70} y={70} time={time} />
           {/* bed */}
@@ -156,13 +158,13 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
           </g>
           <Floor color={night ? "#5A4E7A" : "#E8C7A0"} />
           <ellipse cx={330} cy={398} rx={190} ry={30} fill={night ? "#7A6BA8" : "#FFB7C9"} opacity=".8" />
-          {night && <rect width={W} height={H} fill="#0B1030" opacity=".22" />}
+          {night && <rect y={TOP} width={W} height={H - TOP} fill="#0B1030" opacity=".22" />}
         </g>
       );
     case "living":
       return (
         <g>
-          <rect width={W} height={H} fill={night ? "#2F4A55" : "#E5F4EF"} />
+          <rect y={TOP} width={W} height={H - TOP} fill={night ? "#2F4A55" : "#E5F4EF"} />
           <rect y={0} width={W} height={30} fill="#000" opacity=".03" />
           <Window x={520} y={60} w={200} h={140} time={time} />
           {/* frame */}
@@ -180,13 +182,13 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
           </g>
           <Floor color={night ? "#4C5B5F" : "#E9D1AE"} />
           <ellipse cx={420} cy={395} rx={230} ry={32} fill="#FFCF7A" opacity=".75" />
-          {night && <rect width={W} height={H} fill="#0B1030" opacity=".2" />}
+          {night && <rect y={TOP} width={W} height={H - TOP} fill="#0B1030" opacity=".2" />}
         </g>
       );
     case "kitchen":
       return (
         <g>
-          <rect width={W} height={H} fill="#FFF6E4" />
+          <rect y={TOP} width={W} height={H - TOP} fill="#FFF6E4" />
           <g opacity=".35">
             {Array.from({ length: 14 }, (_, i) => <line key={`v${i}`} x1={i * 60} x2={i * 60} y1={120} y2={250} stroke="#E9C98F" strokeWidth={2} />)}
             {[150, 190, 230].map((y) => <line key={y} x1={0} x2={W} y1={y} y2={y} stroke="#E9C98F" strokeWidth={2} />)}
@@ -208,7 +210,7 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
     case "bathroom":
       return (
         <g>
-          <rect width={W} height={H} fill="#E3F4FB" />
+          <rect y={TOP} width={W} height={H - TOP} fill="#E3F4FB" />
           <g opacity=".5">
             {Array.from({ length: 16 }, (_, i) => <line key={`v${i}`} x1={i * 52} x2={i * 52} y1={0} y2={FLOOR} stroke="#BFE3F2" strokeWidth={3} />)}
             {Array.from({ length: 7 }, (_, i) => <line key={`h${i}`} x1={0} x2={W} y1={i * 52} y2={i * 52} stroke="#BFE3F2" strokeWidth={3} />)}
@@ -308,7 +310,7 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
     case "mosque":
       return (
         <g>
-          <rect width={W} height={H} fill="#FFF7E8" />
+          <rect y={TOP} width={W} height={H - TOP} fill="#FFF7E8" />
           {[110, 400, 690].map((x, i) => (
             <g key={x}>
               <path d={`M${x - 80} 300 v-150 q 0 -80 80 -110 q 80 30 80 110 v150 z`} fill={i === 1 ? "#E8F4EC" : "#F6EBD5"} stroke="#E2C98F" strokeWidth={6} />
@@ -733,19 +735,223 @@ function Prop({ k }: { k: ArtProp }) {
           <rect x={-30} y={-18} width={60} height={5} rx={2} fill="#E6B52E" />
         </g>
       );
+    case "seed":
+      return (
+        <g className="sa-float">
+          <circle cx={0} cy={-26} r={26} fill="#FFF3B0" opacity=".55" className="sa-pulse" />
+          <ellipse cx={0} cy={-26} rx={9} ry={13} fill="#6B4A2B" transform="rotate(25 0 -26)" />
+          <ellipse cx={-3} cy={-30} rx={3} ry={6} fill="#A47A50" transform="rotate(25 0 -26)" />
+        </g>
+      );
+    case "pot":
+    case "sprout":
+    case "seedling":
+    case "plant":
+    case "bloom": {
+      const stage = ["pot", "sprout", "seedling", "plant", "bloom"].indexOf(k);
+      const stem = [0, 26, 70, 130, 230][stage]!;
+      return (
+        <g>
+          {stage > 0 && (
+            <g className="sa-sway-slow">
+              <path d={`M0 -58 q ${stage > 2 ? 8 : 3} -${stem / 2} 0 -${stem}`} stroke="#3AA655" strokeWidth={stage > 2 ? 9 : 6} fill="none" strokeLinecap="round" />
+              {stage >= 1 && (
+                <g transform={`translate(0 -${58 + stem})`}>
+                  <ellipse cx={-14} cy={-4} rx={15} ry={8} fill="#5BBF5B" transform="rotate(-25 -14 -4)" />
+                  <ellipse cx={14} cy={-4} rx={15} ry={8} fill="#5BBF5B" transform="rotate(25 14 -4)" />
+                </g>
+              )}
+              {stage >= 2 && (
+                <g>
+                  <ellipse cx={-20} cy={-58 - stem * 0.45} rx={20} ry={10} fill="#4CAF50" transform={`rotate(-30 -20 ${-58 - stem * 0.45})`} />
+                  <ellipse cx={20} cy={-58 - stem * 0.6} rx={20} ry={10} fill="#4CAF50" transform={`rotate(30 20 ${-58 - stem * 0.6})`} />
+                </g>
+              )}
+              {stage >= 3 && (
+                <g>
+                  <ellipse cx={-26} cy={-58 - stem * 0.25} rx={26} ry={12} fill="#5BBF5B" transform={`rotate(-25 -26 ${-58 - stem * 0.25})`} />
+                  <ellipse cx={26} cy={-58 - stem * 0.3} rx={26} ry={12} fill="#5BBF5B" transform={`rotate(25 26 ${-58 - stem * 0.3})`} />
+                </g>
+              )}
+              {stage === 3 && <circle cx={0} cy={-58 - stem - 14} r={13} fill="#7BC67B" stroke="#4CAF50" strokeWidth={3} />}
+              {stage === 4 && (
+                <g transform={`translate(0 -${58 + stem + 20})`}>
+                  <g className="sa-spin" style={{ animationDuration: "40s" }}>
+                    {Array.from({ length: 16 }, (_, r) => (
+                      <ellipse key={r} cx={0} cy={-46} rx={13} ry={28} fill={r % 2 ? "#FFC93C" : "#FFB300"} transform={`rotate(${r * 22.5})`} />
+                    ))}
+                  </g>
+                  <circle r={34} fill="#7A4A26" />
+                  <circle r={24} fill="#5A3418" />
+                  <circle cx={-8} cy={-6} r={3.5} fill="#2B2B2B" />
+                  <circle cx={8} cy={-6} r={3.5} fill="#2B2B2B" />
+                  <path d="M-9 7 q 9 9 18 0" stroke="#2B2B2B" strokeWidth={3} fill="none" strokeLinecap="round" />
+                </g>
+              )}
+            </g>
+          )}
+          <path d="M-44 -62 h88 l-10 62 h-68 z" fill="#E07A4F" />
+          <rect x={-50} y={-70} width={100} height={16} rx={6} fill="#C8623A" />
+          <ellipse cx={0} cy={-62} rx={40} ry={6} fill="#6B4A2B" />
+        </g>
+      );
+    }
+    case "wateringcan":
+      return (
+        <g transform="rotate(-18)">
+          <g className="sa-pour">
+            {[0, 1, 2, 3].map((d) => (
+              <circle key={d} className="sa-drip" style={{ animationDelay: `${d * 0.2}s` }} cx={-96 - d * 4} cy={-40} r={4.5} fill="#7FD3F5" />
+            ))}
+          </g>
+          <path d="M-30 -70 h70 v60 q 0 10 -10 10 h-50 q -10 0 -10 -10 z" fill="#5BB8F5" />
+          <path d="M-30 -50 l-60 -24 l-6 10 l58 30 z" fill="#3AA7DA" />
+          <rect x={-100} y={-80} width={16} height={12} rx={3} fill="#3AA7DA" transform="rotate(-20 -92 -74)" />
+          <path d="M40 -66 q 30 0 30 26 q 0 22 -30 22" stroke="#3AA7DA" strokeWidth={9} fill="none" />
+        </g>
+      );
+    case "rainbow":
+      return (
+        <g className="sa-pulse">
+          {["#FF5A5A", "#FF9F43", "#FFD447", "#5BBF5B", "#5BB8F5", "#8A79D9"].map((c, r) => (
+            <path key={c} d={`M${-260 + r * 18} 0 A ${260 - r * 18} ${230 - r * 18} 0 0 1 ${260 - r * 18} 0`} stroke={c} strokeWidth={18} fill="none" opacity=".9" />
+          ))}
+          <g transform="translate(-250 0)"><ellipse rx={50} ry={22} fill="#fff" /><circle cx={-18} cy={-12} r={22} fill="#fff" /><circle cx={16} cy={-16} r={26} fill="#fff" /></g>
+          <g transform="translate(250 0)"><ellipse rx={50} ry={22} fill="#fff" /><circle cx={-18} cy={-12} r={22} fill="#fff" /><circle cx={16} cy={-16} r={26} fill="#fff" /></g>
+        </g>
+      );
+    case "minirainbow":
+      return (
+        <g className="sa-pulse">
+          {["#FF5A5A", "#FFD447", "#5BBF5B", "#5BB8F5", "#8A79D9"].map((c, r) => (
+            <path key={c} d={`M${-90 + r * 8} 0 A ${90 - r * 8} ${70 - r * 8} 0 0 1 ${90 - r * 8} 0`} stroke={c} strokeWidth={8} fill="none" opacity=".75" />
+          ))}
+        </g>
+      );
+    case "car":
+    case "carmud":
+    case "carshiny":
+      return (
+        <g>
+          <path d="M-170 -40 q 0 -40 40 -46 l40 -50 q 10 -12 30 -12 h110 q 20 0 32 14 l34 48 q 50 4 50 46 v20 q 0 12 -12 12 h-312 q -12 0 -12 -12 z" fill="#FF6B5A" />
+          <path d="M-80 -88 l32 -40 h62 v40 z" fill="#CFEFFF" />
+          <path d="M30 -88 v-40 h40 q 10 0 16 8 l26 32 z" fill="#CFEFFF" />
+          <rect x={-170} y={-48} width={340} height={10} fill="#E0503F" />
+          <circle cx={160} cy={-58} r={10} fill="#FFE58A" />
+          <circle cx={-162} cy={-58} r={8} fill="#FFB3A7" />
+          {[-100, 100].map((x) => (
+            <g key={x} transform={`translate(${x} -14)`}>
+              <circle r={34} fill="#2B2B2B" />
+              <circle r={16} fill="#B9C6D2" />
+            </g>
+          ))}
+          {k === "carmud" && (
+            <g fill="#8A6A44" opacity=".85">
+              <ellipse cx={-120} cy={-40} rx={26} ry={14} />
+              <ellipse cx={-60} cy={-58} rx={18} ry={10} />
+              <ellipse cx={20} cy={-36} rx={30} ry={12} />
+              <ellipse cx={110} cy={-50} rx={22} ry={12} />
+              <circle cx={-100} cy={-30} r={20} />
+              <circle cx={100} cy={-28} r={20} />
+              <ellipse cx={60} cy={-110} rx={14} ry={8} />
+            </g>
+          )}
+          {k === "carshiny" && (
+            <g fill="#FFFFFF">
+              <path className="sa-twinkle" transform="translate(-120 -70)" d="M0 -14 L4 -4 L14 0 L4 4 L0 14 L-4 4 L-14 0 L-4 -4 Z" />
+              <path className="sa-twinkle" style={{ animationDelay: ".6s" }} transform="translate(60 -112)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z" />
+              <path className="sa-twinkle" style={{ animationDelay: "1.2s" }} transform="translate(130 -46)" d="M0 -12 L3 -3 L12 0 L3 3 L0 12 L-3 3 L-12 0 L-3 -3 Z" />
+              <path d="M-150 -76 q 60 -8 120 -2" stroke="#fff" strokeWidth={6} strokeLinecap="round" opacity=".6" fill="none" />
+            </g>
+          )}
+        </g>
+      );
+    case "hose":
+      return (
+        <g>
+          <ellipse cx={0} cy={-14} rx={40} ry={14} fill="none" stroke="#3AA655" strokeWidth={10} />
+          <ellipse cx={0} cy={-24} rx={34} ry={12} fill="none" stroke="#4CAF50" strokeWidth={10} />
+          <path d="M30 -26 q 40 -20 60 -70" stroke="#3AA655" strokeWidth={10} fill="none" strokeLinecap="round" />
+          <g className="sa-spray">
+            {Array.from({ length: 9 }, (_, d) => (
+              <circle key={d} className="sa-drip" style={{ animationDelay: `${d * 0.12}s` }} cx={110 + d * 22} cy={-120 - Math.sin(d / 3) * 40} r={6 - d * 0.3} fill="#7FD3F5" />
+            ))}
+            <path d="M92 -100 q 90 -80 200 -20" stroke="#BFE9FF" strokeWidth={12} fill="none" strokeLinecap="round" opacity=".7" />
+          </g>
+        </g>
+      );
+    case "sponge":
+      return (
+        <g>
+          <rect x={-30} y={-26} width={60} height={26} rx={8} fill="#FFD447" />
+          <rect x={-30} y={-26} width={60} height={9} rx={4} fill="#5BBF5B" />
+          <circle cx={-12} cy={-8} r={3} fill="#E6B52E" /><circle cx={8} cy={-12} r={2.5} fill="#E6B52E" /><circle cx={18} cy={-5} r={2} fill="#E6B52E" />
+        </g>
+      );
+    case "frog":
+      return (
+        <g className="sa-hopframe">
+          <ellipse cx={0} cy={-24} rx={34} ry={24} fill="#5BBF5B" />
+          <circle cx={-16} cy={-48} r={12} fill="#5BBF5B" /><circle cx={16} cy={-48} r={12} fill="#5BBF5B" />
+          <circle cx={-16} cy={-50} r={6} fill="#fff" /><circle cx={16} cy={-50} r={6} fill="#fff" />
+          <circle cx={-15} cy={-50} r={3} fill="#222" /><circle cx={17} cy={-50} r={3} fill="#222" />
+          <path d="M-14 -26 q 14 10 28 0" stroke="#2E7D32" strokeWidth={3} fill="none" strokeLinecap="round" />
+          <circle cx={-22} cy={-28} r={4} fill="#FF8FAD" opacity=".7" /><circle cx={22} cy={-28} r={4} fill="#FF8FAD" opacity=".7" />
+          <ellipse cx={-30} cy={-4} rx={14} ry={6} fill="#4CAF50" /><ellipse cx={30} cy={-4} rx={14} ry={6} fill="#4CAF50" />
+        </g>
+      );
+    case "snail":
+      return (
+        <g className="sa-crawl">
+          <path d="M-40 0 q 0 -16 20 -16 h46 q 20 0 20 16 z" fill="#E9C27A" />
+          <circle cx={-6} cy={-30} r={26} fill="#C98A50" />
+          <path d="M-6 -30 m -16 0 a 16 16 0 1 1 16 16 a 10 10 0 1 1 -8 -12" stroke="#8A5A34" strokeWidth={4} fill="none" />
+          <path d="M34 -14 l6 -22 M42 -12 l10 -20" stroke="#E9C27A" strokeWidth={4} strokeLinecap="round" />
+          <circle cx={40} cy={-37} r={4} fill="#5A3418" /><circle cx={52} cy={-33} r={4} fill="#5A3418" />
+        </g>
+      );
+    case "ladybug":
+      return (
+        <g className="sa-crawl">
+          <circle cx={14} cy={-14} r={8} fill="#2B2B2B" />
+          <ellipse cx={0} cy={-14} rx={16} ry={14} fill="#FF4D4D" />
+          <path d="M0 -28 v28" stroke="#2B2B2B" strokeWidth={2} />
+          <circle cx={-7} cy={-18} r={3} fill="#2B2B2B" /><circle cx={7} cy={-10} r={3} fill="#2B2B2B" /><circle cx={-6} cy={-7} r={2.5} fill="#2B2B2B" />
+        </g>
+      );
+    case "boots":
+      return (
+        <g>
+          {[-22, 22].map((x) => (
+            <g key={x} transform={`translate(${x} 0)`}>
+              <path d="M-12 -46 h24 v34 h12 q 6 0 6 8 v4 h-42 z" fill="#FFC145" />
+              <rect x={-12} y={-50} width={24} height={8} rx={3} fill="#E6A512" />
+            </g>
+          ))}
+        </g>
+      );
+    case "bench":
+      return (
+        <g>
+          <rect x={-80} y={-48} width={160} height={14} rx={6} fill="#B5753E" />
+          <rect x={-80} y={-74} width={160} height={12} rx={6} fill="#C98A50" />
+          <rect x={-70} y={-36} width={10} height={36} fill="#7A4A26" />
+          <rect x={60} y={-36} width={10} height={36} fill="#7A4A26" />
+        </g>
+      );
   }
 }
 
 /* ───────── effects ───────── */
 
-function Fx({ k, time }: { k: ArtFx; time: ArtTime }) {
+function Fx({ k, time, page = false }: { k: ArtFx; time: ArtTime; page?: boolean }) {
   const seeds = Array.from({ length: 16 }, (_, i) => ({ x: (i * 53 + 17) % W, d: (i * 0.37) % 3, y: (i * 41) % 260 }));
   switch (k) {
     case "rain":
       return (
         <g>
           {Array.from({ length: 34 }, (_, i) => (
-            <line key={i} className="sa-raindrop" style={{ animationDelay: `${-((i * 0.13) % 1)}s` }} x1={(i * 37) % W} y1={-20} x2={(i * 37) % W - 8} y2={8} stroke="#DDEBFA" strokeWidth={3} strokeLinecap="round" opacity=".8" />
+            <line key={i} className={page ? "sa-raindrop sa-raindrop--tall" : "sa-raindrop"} style={{ animationDelay: `${-((i * 0.13) % 1)}s` }} x1={(i * 37) % W} y1={page ? -360 : -20} x2={(i * 37) % W - 8} y2={page ? -332 : 8} stroke="#DDEBFA" strokeWidth={3} strokeLinecap="round" opacity=".8" />
           ))}
         </g>
       );
@@ -753,7 +959,7 @@ function Fx({ k, time }: { k: ArtFx; time: ArtTime }) {
       return (
         <g>
           {seeds.map((s, i) => (
-            <path key={i} className="sa-twinkle" style={{ animationDelay: `${s.d}s` }} transform={`translate(${s.x} ${20 + (s.y % 200)})`} d="M0 -7 L2 -2 L7 0 L2 2 L0 7 L-2 2 L-7 0 L-2 -2 Z" fill="#FFF6C8" />
+            <path key={i} className="sa-twinkle" style={{ animationDelay: `${s.d}s` }} transform={`translate(${s.x} ${page ? -300 + ((s.y * 2.1) % 520) : 20 + (s.y % 200)})`} d="M0 -7 L2 -2 L7 0 L2 2 L0 7 L-2 2 L-7 0 L-2 -2 Z" fill="#FFF6C8" />
           ))}
         </g>
       );
@@ -837,10 +1043,16 @@ function Fx({ k, time }: { k: ArtFx; time: ArtTime }) {
 /** Empty space under the feet in each pose PNG (fraction of the image
  *  height), measured from the renders — so the feet land on the ground. */
 const FOOT_PAD: Record<string, number> = {
-  run: 0.105,
-  "pose-12": 0.084,
-  "pose-20": 0.072,
-  "pose-30": 0.083,
+  alright: 0.092, idea: 0.094, ok: 0.092, "pose-01": 0.092, "pose-02": 0.198, "pose-03": 0.092,
+  "pose-04": 0.092, "pose-05": 0.092, "pose-06": 0.076, "pose-07": 0.092, "pose-08": 0.092,
+  "pose-09": 0.084, "pose-10": 0.092, "pose-11": 0.182, "pose-12": 0.086, "pose-13": 0.051,
+  "pose-14": 0.092, "pose-15": 0.092, "pose-16": 0.094, "pose-17": 0.109, "pose-18": 0.074,
+  "pose-19": 0.092, "pose-20": 0.075, "pose-21": 0.092, "pose-22": 0.092, "pose-23": 0.109,
+  "pose-24": 0.092, "pose-25": 0.094, "pose-26": 0.092, "pose-27": 0.092, "pose-28": 0.092,
+  "pose-29": 0.092, "pose-30": 0.085, "pose-31": 0.092, "pose-32": 0.07, "pose-33": 0.092,
+  "pose-34": 0.085, "pose-35": 0.094, "pose-36": 0.092, "pose-37": 0.092, "pose-38": 0.092,
+  "pose-39": 0.066, "pose-40": 0.092, "pose-41": 0.062, "pose-42": 0.083, run: 0.107,
+  "thank-you": 0.092, wow: 0.094, yes: 0.092, yeyy: 0.094,
 };
 
 function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
@@ -871,17 +1083,32 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   );
 }
 
+/** Centre of the full-page crop: the scene's focus, else midway between
+ *  Baby Mo and the main prop (so both are on the page). */
+function pageFocus(scene: ArtScene): number {
+  const mo = scene.mo?.[0]?.x;
+  const prop = scene.props?.[0]?.x;
+  let f = scene.focus ?? (mo !== undefined && prop !== undefined && Math.abs(mo - prop) < 320 ? (mo + prop) / 2 : (mo ?? prop ?? W / 2));
+  // Never let Baby Mo slip off a narrow phone page: keep him near the middle.
+  if (mo !== undefined) f = Math.min(mo + 95, Math.max(mo - 95, f));
+  return f;
+}
+
 export function StoryArt({
   scene,
   className = "",
   title,
   portrait = false,
+  page = false,
 }: {
   scene: ArtScene;
   className?: string;
   title?: string;
   /** 4:5 crop centred on Baby Mo (for book-cover thumbnails) */
   portrait?: boolean;
+  /** full picture-book page: tall portrait crop with sky / wall above the
+   *  scene for the text, anchored to the ground so Baby Mo never gets cut */
+  page?: boolean;
 }) {
   const time = scene.time ?? "day";
   const outdoor = ["garden", "park", "market", "street", "beach"].includes(scene.bg);
@@ -890,11 +1117,17 @@ export function StoryArt({
   const moGround = outdoor ? 428 : 425;
   return (
     <svg
-      viewBox={portrait ? `${Math.min(W - 360, Math.max(0, (scene.mo?.[0]?.x ?? W / 2) - 180))} 0 360 ${H}` : `0 0 ${W} ${H}`}
+      viewBox={
+        page
+          ? `${Math.min(W - 460, Math.max(0, pageFocus(scene) - 230))} -110 460 560`
+          : portrait
+            ? `${Math.min(W - 360, Math.max(0, (scene.mo?.[0]?.x ?? W / 2) - 180))} 0 360 ${H}`
+            : `0 0 ${W} ${H}`
+      }
       className={`story-art ${className}`}
       role="img"
       aria-label={title}
-      preserveAspectRatio="xMidYMid slice"
+      preserveAspectRatio={page ? "xMidYMax slice" : "xMidYMid slice"}
     >
       <defs>
         <radialGradient id="sa-sunglow">
@@ -903,15 +1136,15 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <Background bg={scene.bg} time={time} />
-      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} />)}
+      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
       {(scene.props ?? []).map((p: ArtItem, i) => (
         <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`}>
           <Prop k={p.k} />
         </g>
       ))}
       {(scene.mo ?? []).map((m, i) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
-      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} />)}
-      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} />}
+      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
+      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page} />}
     </svg>
   );
 }

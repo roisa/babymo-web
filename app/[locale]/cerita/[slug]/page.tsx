@@ -14,6 +14,7 @@ import { BookmarkButton } from "@/components/BookmarkButton";
 import { BookReader } from "@/components/BookReader";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import { illusFor } from "@/lib/cerita/illus";
+import { getPictureBook } from "@/lib/cerita/picture-books";
 import { JsonLd } from "@/components/JsonLd";
 import { breadcrumbSchema, catatanSchema, graph, videoObjectSchema } from "@/lib/seo/schemas";
 import { getAllCatatan, getCatatanBySlug } from "@/lib/content/catatan";
@@ -65,6 +66,11 @@ export default async function CatatanDetail({
   const anchor = resolveAnchor(n.anchor, l);
   const isStory = n.kind === "story";
   const art = illusFor(slug);
+  const pb = getPictureBook(slug);
+  const picture = pb
+    ? pb.pages.map((pg) => ({ text: pg.text[l], quote: pg.quote?.[l], scene: { ...pg.scene, at: 0, alt: { id: pg.text.id.slice(0, 80), en: pg.text.en.slice(0, 80) } } }))
+    : null;
+  const pictureCover = pb ? { ...pb.cover, at: 0, alt: pb.title } : null;
   // Kids' stories tuck the parent-facing extras into the Ayah & Bunda panel.
   const ParentWrap = ({ children }: { children: React.ReactNode }) =>
     isStory ? (
@@ -172,6 +178,8 @@ export default async function CatatanDetail({
               nextStory={nextStory}
               accent={accentForScene(sceneForCatatan(n))}
               art={art}
+              picture={picture}
+              pictureCover={pictureCover}
             />
           )}
         </header>

@@ -23,7 +23,10 @@ const bookFace = Literata({
 type Sheet =
   | { kind: "cover" }
   | { kind: "content"; blocks: Block[]; vig?: string; pose?: string; art?: number }
+  | { kind: "pic"; i: number }
   | { kind: "end" };
+
+export type PicturePage = { text: string; quote?: string; scene: ArtScene };
 
 /**
  * Keyword → drawn CSS "vignette" kind. Ordered: more specific first.
@@ -221,6 +224,9 @@ type Props = {
   /** Illustrated stories: animated scenes shown big at the top of each
    *  page, matched to the text by paragraph index. */
   art?: ArtScene[] | null;
+  /** Picture books: every page is one full illustration with its text. */
+  picture?: PicturePage[] | null;
+  pictureCover?: ArtScene | null;
 };
 
 const FONT_STEPS = [17, 19, 22, 25];
@@ -261,6 +267,8 @@ export function BookReader({
   byline = "Baby Mo",
   accent = ["✨", "🌙", "⭐"],
   art = null,
+  picture = null,
+  pictureCover = null,
 }: Props) {
   const t =
     locale === "id"
@@ -348,6 +356,12 @@ export function BookReader({
 
   // Paginate the body to fit the measured page-content box.
   const paginate = useCallback(() => {
+    if (picture && picture.length) {
+      const out: Sheet[] = [{ kind: "cover" }, ...picture.map((_, i) => ({ kind: "pic" as const, i })), { kind: "end" }];
+      setSheets(out);
+      setPos((prev) => Math.min(prev, out.length - 1));
+      return;
+    }
     const content = sizeRef.current;
     if (!content) return;
     // Real pages are a hair narrower than the sizer in the two-page spread
@@ -468,7 +482,7 @@ export function BookReader({
     out.push({ kind: "end" });
     setSheets(out);
     setPos((prev) => Math.min(prev, out.length - 1));
-  }, [fontPx, art]);
+  }, [fontPx, art, picture]);
 
   // Recompute pagination on open / font / layout change.
   useLayoutEffect(() => {
@@ -520,6 +534,35 @@ export function BookReader({
 
   const renderSheet = (s: Sheet | undefined, key: string) => {
     if (!s) return <div className="bk-page bk-page--blank" key={key} aria-hidden />;
+    if (s.kind === "cover" && picture && pictureCover) {
+      return (
+        <div className="bk-page bk-page--pic bk-page--piccover" key={key}>
+          <div className="bk-pic-art">
+            <StoryArt scene={pictureCover} title={title} page />
+          </div>
+          <div className="bk-pic-title">
+            <span className="bk-cover-badge">📖 {t.cover}</span>
+            <h2>{title}</h2>
+          </div>
+          <div className="bk-pic-start">{t.start}</div>
+        </div>
+      );
+    }
+    if (s.kind === "pic" && picture) {
+      const pg = picture[s.i]!;
+      return (
+        <div className="bk-page bk-page--pic" key={key}>
+          <div className="bk-pic-art">
+            <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page />
+          </div>
+          <div className="bk-pic-text">
+            <p className={s.i === 0 ? "bk-pic-first" : undefined}>{pg.text}</p>
+            {pg.quote && <blockquote>{pg.quote}</blockquote>}
+          </div>
+          <div className="bk-pic-num" aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
+        </div>
+      );
+    }
     if (s.kind === "cover") {
       return (
         <div className="bk-page bk-page--cover" key={key}>
@@ -584,6 +627,7 @@ export function BookReader({
         </div>
       );
     }
+    if (s.kind !== "content") return <div className="bk-page bk-page--blank" key={key} aria-hidden />;
     const idx = sheets ? sheets.indexOf(s) : 0;
     return (
       <div className="bk-page" key={key}>
@@ -911,6 +955,32 @@ export function BookReader({
         .bk-cover-scene .bk-art-frame{aspect-ratio:16 / 10;height:auto;border-radius:16px 16px 0 0;box-shadow:none;}
         .bk-cover-text{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:clamp(16px,3.2vw,30px);}
         .bk-page--cover .bk-page-foot{padding-bottom:clamp(12px,2vw,18px);}
+
+        /* ── Picture-book pages: the illustration fills the whole page ── */
+        .bk-page--pic{padding:0;background:#EAF7FF;}
+        .bk-page--pic::before,.bk-page--pic::after{display:none;}
+        .bk-pic-art{position:absolute;inset:0;}
+        .bk-pic-art .story-art{width:100%;height:100%;}
+        .bk-pic-text{position:absolute;left:clamp(12px,3vw,22px);right:clamp(12px,3vw,22px);top:clamp(12px,3vw,22px);z-index:2;
+          padding:clamp(12px,2.4vw,18px) clamp(14px,2.8vw,22px);border-radius:18px;text-align:center;
+          background:rgba(255,251,241,.9);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+          box-shadow:0 10px 26px -18px rgba(40,30,10,.55),inset 0 0 0 1px rgba(255,255,255,.7);
+          font-family:${bookFace.style.fontFamily};color:#2B2620;}
+        .bk-pic-text p{margin:0;font-size:calc(var(--bk-fs,19px) * 1.06);line-height:1.5;text-wrap:balance;}
+        .bk-pic-first::first-letter{font-family:var(--font-display);font-weight:700;color:#B5532F;font-size:1.5em;line-height:1;}
+        .bk-pic-text blockquote{margin:.6em auto 0;padding-top:.55em;max-width:32ch;border-top:1px solid rgba(181,83,47,.35);
+          font-style:italic;font-size:calc(var(--bk-fs,19px) * .9);line-height:1.45;color:#2F5D3F;text-wrap:balance;}
+        .bk-pic-num{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);z-index:2;min-width:30px;padding:2px 10px;border-radius:999px;
+          background:rgba(255,251,241,.85);font-family:${bookFace.style.fontFamily};font-style:italic;font-size:13px;color:#5A4A3A;text-align:center;}
+        .bk-pic-title{position:absolute;left:16px;right:16px;top:clamp(18px,5%,40px);z-index:2;text-align:center;
+          padding:16px 18px;border-radius:22px;background:rgba(255,251,241,.9);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);
+          box-shadow:0 12px 30px -18px rgba(40,30,10,.6);}
+        .bk-pic-title h2{margin:.25em 0 0;font-family:var(--font-display);font-weight:700;font-size:clamp(26px,calc(var(--bk-fs,19px) * 1.7),44px);line-height:1.08;color:#2B2620;}
+        .bk-pic-start{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);z-index:2;padding:8px 16px;border-radius:999px;
+          background:rgba(255,251,241,.92);font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;color:#5A4A3A;white-space:nowrap;}
+        html.dark .bk-pic-text,html.dark .bk-pic-title,html.dark .bk-pic-num,html.dark .bk-pic-start{background:rgba(36,32,26,.88);color:#F1E9DA;}
+        html.dark .bk-pic-title h2{color:#F1E9DA;}
+        html.dark .bk-pic-text blockquote{color:#A8D8B4;}
 
         /* Story text set like a printed picture book: a reading serif,
            book-like leading, gentle paragraph spacing, balanced lines. */
