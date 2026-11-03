@@ -129,7 +129,10 @@ export type ArtProp =
   | "blockstall"
   | "blocksfall"
   | "dog"
-  | "pictures";
+  | "pictures"
+  | "jar"
+  | "school"
+  | "ball";
 
 export type ArtFx =
   | "rain"
