@@ -1099,6 +1099,73 @@ function Prop({ k }: { k: ArtProp }) {
           <ellipse cx={34} cy={-16} rx={10} ry={7} fill="#F4A261" /><circle cx={28} cy={-24} r={6} fill="#F4A261" />
         </g>
       );
+    case "kite":
+      return (
+        <g>
+          <path d="M0 0 q -60 120 -120 260" stroke="#8A8A8A" strokeWidth={2} fill="none" />
+          <g className="sa-sway">
+            <path d="M0 -60 l40 50 l-40 70 l-40 -70 z" fill="#FF5A5A" />
+            <path d="M0 -60 v120 M-40 -10 h80" stroke="#C0392B" strokeWidth={3} />
+            <path className="sa-wag" d="M0 60 q 14 20 -6 40 q -18 20 4 44" stroke="#FFC145" strokeWidth={4} fill="none" />
+            {[80, 104, 128].map((y) => <path key={y} d={`M-8 ${y} l8 -6 l8 6 l-8 6 z`} fill="#5BB8F5" />)}
+          </g>
+        </g>
+      );
+    case "puzzle":
+      return (
+        <g>
+          {[[-40, -8, "#FFC145", -12], [-6, -4, "#5BB8F5", 20], [26, -10, "#FF8FAD", -30], [56, -2, "#7BC67B", 8], [-70, -2, "#C77DFF", 40]].map(([x, y, c, r], i) => (
+            <g key={i} transform={`translate(${x} ${y}) rotate(${r})`}>
+              <rect x={-14} y={-14} width={28} height={28} rx={3} fill={c as string} />
+              <circle cx={14} cy={0} r={6} fill={c as string} /><circle cx={0} cy={-14} r={6} fill={c as string} />
+            </g>
+          ))}
+        </g>
+      );
+    case "plane":
+      return (
+        <g className="sa-bob">
+          <ellipse cx={0} cy={-30} rx={50} ry={14} fill="#5BB8F5" />
+          <path d="M-10 -32 l-24 -36 h14 l34 36 z M-10 -28 l-24 30 h14 l34 -30 z" fill="#3A8FD8" />
+          <path d="M-44 -34 l-12 -20 h10 l12 18 z" fill="#3A8FD8" />
+          {[-10, 6, 22].map((x) => <circle key={x} cx={x} cy={-34} r={4} fill="#E9F8FF" />)}
+          <circle cx={48} cy={-30} r={5} fill="#FF5A5A" />
+        </g>
+      );
+    case "tomato":
+    case "tomatodry":
+    case "tomatored": {
+      const dry = k === "tomatodry";
+      const leaf = dry ? "#B9B05A" : "#4CAF50";
+      return (
+        <g className={dry ? undefined : "sa-sway-slow"}>
+          <path d="M-36 -54 h72 l-8 54 h-56 z" fill="#C9683E" />
+          <rect x={-40} y={-62} width={80} height={12} rx={4} fill="#B05530" />
+          <path d={dry ? "M0 -60 q 4 -50 -10 -90" : "M0 -60 v-100"} stroke={leaf} strokeWidth={6} fill="none" strokeLinecap="round" />
+          {(dry ? [[-24, -96, 30], [18, -110, -30], [-20, -132, 40]] : [[-26, -100, -20], [26, -112, 20], [-24, -140, -30], [22, -150, 30]]).map(([x, y, r], i) => (
+            <ellipse key={i} cx={x} cy={y} rx={20} ry={9} fill={leaf} transform={`rotate(${r} ${x} ${y})`} />
+          ))}
+          {!dry && [[-12, -88], [14, -124], [-8, -136]].map(([x, y], i) => (
+            <circle key={i} cx={x} cy={y} r={10} fill={k === "tomatored" && i === 0 ? "#FF4D4D" : k === "tomatored" && i === 1 ? "#FF9F43" : "#8BCF6B"} />
+          ))}
+        </g>
+      );
+    }
+    case "cloud":
+      return (
+        <g className="sa-bob">
+          <circle cx={-40} cy={-30} r={30} fill="#6B7080" /><circle cx={0} cy={-46} r={40} fill="#5A5F70" /><circle cx={44} cy={-28} r={28} fill="#6B7080" />
+          <rect x={-70} y={-30} width={140} height={30} rx={15} fill="#6B7080" />
+          <path className="sa-bolt" d="M6 -6 l-14 26 h12 l-8 24 l24 -32 h-12 l8 -18 z" fill="#FFE066" />
+        </g>
+      );
+    case "cracks":
+      return (
+        <g>
+          <ellipse cx={0} cy={-4} rx={110} ry={14} fill="#C9A267" opacity=".6" />
+          <path d="M-90 -6 l20 -4 l10 6 l18 -6 M-20 -2 l14 -8 l12 6 l20 -4 l14 6 M40 -8 l18 4 l20 -6" stroke="#8A6A44" strokeWidth={3} fill="none" strokeLinecap="round" />
+        </g>
+      );
     case "bench":
       return (
         <g>
@@ -1129,6 +1196,15 @@ function Fx({ k, time, page = false }: { k: ArtFx; time: ArtTime; page?: boolean
         <g>
           <rect className="sa-flash" x={-100} y={page ? -360 : -20} width={W + 200} height={900} fill="#FFFFFF" />
           <path className="sa-bolt" transform={`translate(${page ? 515 : 640} ${page ? 30 : 20})`} d="M0 0 l-28 70 h22 l-18 70 l50 -90 h-24 l20 -50 z" fill="#FFE066" stroke="#FFB800" strokeWidth={3} />
+        </g>
+      );
+    case "shootingstar":
+      return (
+        <g>
+          <g className="sa-shoot" transform={`translate(${page ? 300 : 200} ${page ? 0 : 40})`}>
+            <path d="M0 0 l-90 -36" stroke="#FFF6C8" strokeWidth={4} strokeLinecap="round" opacity=".7" />
+            <path d="M0 -10 L3 -3 L10 0 L3 3 L0 10 L-3 3 L-10 0 L-3 -3 Z" fill="#FFF6C8" />
+          </g>
         </g>
       );
     case "stars":
