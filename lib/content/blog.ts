@@ -13,6 +13,1148 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    slug: "game-kenalan-baby-mo-puzzle",
+    title: {
+      id: "Kenalan Baby Mo: Game Puzzle Pertama untuk Balita (Gratis)",
+      en: "Meet Baby Mo: A First Puzzle Game for Toddlers (Free)",
+    },
+    excerpt: {
+      id: "Game pertama yang pas untuk si kecil: ketuk sembilan petak sampai Baby Mo muncul. Melatih rasa ingin tahu dan koordinasi tangan — gratis, tanpa iklan, langsung di browser.",
+      en: "The perfect first game: tap nine tiles until Baby Mo appears. Builds curiosity and hand coordination — free, ad-free, right in the browser.",
+    },
+    body: {
+      id: `<p>Untuk anak yang baru pertama kali memegang layar, game yang rumit justru membuat frustrasi. <strong>Kenalan Baby Mo</strong> dibuat sesederhana mungkin: ada sembilan petak, dan di baliknya bersembunyi Baby Mo. Ketuk satu per satu, dan lihat siapa yang muncul!</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener">▶ Main Kenalan Baby Mo sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/puzzle.webp" alt="Tampilan game Kenalan Baby Mo dengan petak-petak puzzle" width="540" height="1080" loading="lazy"><figcaption>Ketuk petaknya, temukan Baby Mo 🧩</figcaption></figure>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Rasa ingin tahu</strong> — setiap petak yang terbuka memancing pertanyaan "di balik yang ini ada apa?".</li>
+  <li><strong>Koordinasi tangan dan mata</strong> — mengetuk tepat di petak adalah latihan motorik halus yang nyata untuk balita.</li>
+  <li><strong>Sebab-akibat</strong> — "kalau aku ketuk, sesuatu terjadi". Pelajaran dasar yang membuat anak percaya diri.</li>
+</ul>
+
+<h2>Cocok untuk siapa?</h2>
+
+<p>Usia 2–6 tahun, terutama yang baru pertama kali main game. Tidak ada waktu, tidak ada kalah — jadi tidak ada tangis. Setelah Baby Mo muncul, si kecil biasanya langsung minta main lagi.</p>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Pangku si kecil dan biarkan ia memilih petak sendiri.</li>
+  <li>Tebak bersama sebelum mengetuk: "Kira-kira bagian apa ya? Tangan? Mata?"</li>
+  <li>Saat Baby Mo muncul, ajak menyapa: "Assalamualaikum, Baby Mo!"</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Main 5–10 menit sudah cukup. Akhiri saat anak masih senang, bukan saat sudah rewel.</li>
+  <li>Jadikan momen bicara: sebut warna, bagian tubuh, dan ekspresi wajah Baby Mo.</li>
+  <li>Ajarkan salam sejak dini — game ini kesempatan yang pas.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Maukah aku tunjukkan sesuatu yang jika kalian lakukan, kalian akan saling mencintai? Sebarkanlah salam di antara kalian." (HR. Muslim 54)</blockquote>
+
+<p>Setelah berkenalan, lanjut ke <a href="/_/blog/game-anak-islami-baby-mo/">game Baby Mo lainnya</a>, atau baca <a href="/_/cerita/">cerita bergambar Baby Mo</a> bersama si kecil.</p>`,
+      en: `<p>For a child holding a screen for the first time, complicated games only frustrate. <strong>Meet Baby Mo</strong> is as simple as it gets: nine tiles, with Baby Mo hiding behind them. Tap them one by one and see who appears!</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener">▶ Play Meet Baby Mo now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/puzzle.webp" alt="Meet Baby Mo game screen with puzzle tiles" width="540" height="1080" loading="lazy"><figcaption>Tap the tiles, find Baby Mo 🧩</figcaption></figure>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Curiosity</strong> — every tile that opens invites "what's behind this one?".</li>
+  <li><strong>Hand-eye coordination</strong> — tapping exactly on a tile is real fine-motor practice for toddlers.</li>
+  <li><strong>Cause and effect</strong> — "when I tap, something happens". A basic lesson that builds confidence.</li>
+</ul>
+
+<h2>Who is it for?</h2>
+
+<p>Ages 2–6, especially first-time players. No timer, no losing — so no tears. Once Baby Mo appears, little ones usually ask to play again straight away.</p>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Sit your child on your lap and let them choose the tiles.</li>
+  <li>Guess together before tapping: "Which part could it be? A hand? An eye?"</li>
+  <li>When Baby Mo appears, greet him: "Assalamu'alaikum, Baby Mo!"</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>5–10 minutes is plenty. Stop while it's still fun, not when they're tired.</li>
+  <li>Make it a talking moment: name colours, body parts and Baby Mo's expressions.</li>
+  <li>Teach salam early — this game is the perfect chance.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "Shall I tell you something that, if you do it, you will love one another? Spread salam among yourselves." (Muslim 54)</blockquote>
+
+<p>After saying hello, try the <a href="/_/blog/game-anak-islami-baby-mo/">other Baby Mo games</a>, or read <a href="/_/cerita/">Baby Mo's picture books</a> together.</p>`,
+    },
+    tags: ["game", "puzzle", "balita", "kenalan-baby-mo"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-doa-harian-anak",
+    title: {
+      id: "Game Doa Harian Anak: 6 Doa dengan Audio Arab Asli (Gratis)",
+      en: "Daily Du'as Game for Kids: 6 Du'as with Real Arabic Audio (Free)",
+    },
+    excerpt: {
+      id: "Enam doa sehari-hari — bangun tidur, kamar mandi, makan, belajar, keluar rumah, dan tidur — lengkap dengan audio, arti, dan kuis kecil. Gratis dan tanpa iklan.",
+      en: "Six everyday du'as — waking up, the bathroom, eating, studying, leaving home and sleeping — with audio, meanings and a little quiz. Free and ad-free.",
+    },
+    body: {
+      id: `<p>Anak menghafal doa paling mudah lewat <em>telinga</em>, bukan lewat tulisan. <strong>Doa Harian</strong> mengajak si kecil mendengar, mengulang, lalu menebak doa untuk setiap momen dalam sehari — dari membuka mata di pagi hari sampai memejamkannya lagi di malam hari.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">▶ Main Doa Harian sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/doa-harian.webp" alt="Tampilan game Doa Harian Baby Mo dengan kartu doa" width="540" height="1080" loading="lazy"><figcaption>Dengar, ulangi, dan uji hafalan 🤲</figcaption></figure>
+
+<h2>Enam doa dalam satu hari</h2>
+
+<ul>
+  <li>Doa bangun tidur</li>
+  <li>Doa masuk kamar mandi</li>
+  <li>Doa sebelum makan</li>
+  <li>Doa sebelum belajar</li>
+  <li>Doa keluar rumah</li>
+  <li>Doa sebelum tidur</li>
+</ul>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Hafalan doa</strong> lewat audio Arab yang bisa diputar berulang kali.</li>
+  <li><strong>Memahami arti</strong> — setiap doa disertai artinya, jadi anak tahu apa yang ia ucapkan.</li>
+  <li><strong>Mengingat momen</strong> — kuis kecil menanyakan doa mana untuk situasi mana.</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Pilih satu doa saja per hari. Putar audionya, lalu ulangi bersama.</li>
+  <li>Praktikkan langsung di momennya: doa makan saat makan, doa tidur saat tidur.</li>
+  <li>Setelah beberapa hari, coba kuisnya — rayakan setiap jawaban benar.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Ucapkan doa dengan suara terdengar di depan anak. Anak meniru apa yang ia dengar setiap hari.</li>
+  <li>Jangan buru-buru: satu doa yang benar-benar dihafal lebih baik daripada enam yang setengah-setengah.</li>
+  <li>Lihat juga daftar <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">doa yang perlu dikenal anak sebelum usia 7</a>.</li>
+</ul>
+
+<blockquote>"Dan Tuhanmu berfirman: Berdoalah kepada-Ku, niscaya akan Aku perkenankan bagimu." (QS. Ghafir: 60)</blockquote>
+
+<p>Ingin teks lengkapnya? Buka <a href="/_/doa/">kumpulan doa harian anak</a>, lalu lanjut uji hafalan di <a href="/_/blog/game-dua-journey-mencocokkan-doa/">Dua Journey</a>.</p>`,
+      en: `<p>Children memorise du'as most easily through their <em>ears</em>, not through text. <strong>Daily Du'as</strong> invites little ones to listen, repeat and then guess the du'a for each moment of the day — from opening their eyes in the morning to closing them again at night.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">▶ Play Daily Du'as now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/doa-harian.webp" alt="Baby Mo Daily Du'as game screen with du'a cards" width="540" height="1080" loading="lazy"><figcaption>Listen, repeat and test yourself 🤲</figcaption></figure>
+
+<h2>Six du'as through the day</h2>
+
+<ul>
+  <li>Waking up</li>
+  <li>Entering the bathroom</li>
+  <li>Before eating</li>
+  <li>Before studying</li>
+  <li>Leaving home</li>
+  <li>Before sleeping</li>
+</ul>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Memorising du'as</strong> with Arabic audio you can replay again and again.</li>
+  <li><strong>Understanding meaning</strong> — each du'a comes with its translation, so children know what they're saying.</li>
+  <li><strong>Remembering the moment</strong> — a little quiz asks which du'a goes with which situation.</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Pick just one du'a a day. Play the audio, then repeat it together.</li>
+  <li>Practise it in the real moment: the eating du'a at meals, the sleep du'a at bedtime.</li>
+  <li>After a few days, try the quiz — and celebrate every right answer.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Say du'as out loud in front of your child. Children copy what they hear every day.</li>
+  <li>Don't rush: one du'a truly memorised beats six half-learned ones.</li>
+  <li>See also the <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">du'as every child should know before age 7</a>.</li>
+</ul>
+
+<blockquote>"And your Lord says: Call upon Me; I will respond to you." (Qur'an 40:60)</blockquote>
+
+<p>Want the full texts? Open the <a href="/_/doa/">daily du'a collection</a>, then test yourselves in <a href="/_/blog/game-dua-journey-mencocokkan-doa/">Dua Journey</a>.</p>`,
+    },
+    tags: ["game", "doa", "doa-harian", "edukasi-anak"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-dua-journey-mencocokkan-doa",
+    title: {
+      id: "Dua Journey: Game Mencocokkan Doa dengan Situasinya (Gratis)",
+      en: "Dua Journey: A Game to Match Du'as with Their Moments (Free)",
+    },
+    excerpt: {
+      id: "Doa yang mana untuk momen ini? Cocokkan kartu doa dengan situasinya dalam tiga tingkat — Mudah, Sedang, dan Hebat. Melatih ingatan dan pemahaman doa.",
+      en: "Which du'a fits this moment? Match du'a cards with their situations across three levels — Easy, Medium and Great. Builds memory and understanding of du'as.",
+    },
+    body: {
+      id: `<p>Menghafal doa adalah langkah pertama. Langkah berikutnya: <em>tahu kapan membacanya</em>. Di <strong>Dua Journey</strong>, anak mencocokkan kartu doa dengan gambar situasinya — mau makan, mau tidur, keluar rumah — sampai semua pasangan ketemu.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">▶ Main Dua Journey sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/dua-journey.webp" alt="Tampilan game Dua Journey dengan kartu doa dan situasi" width="540" height="1080" loading="lazy"><figcaption>Doa yang mana untuk momen ini? 🃏</figcaption></figure>
+
+<h2>Tiga tingkat kesulitan</h2>
+
+<ul>
+  <li><strong>Mudah 🌱</strong> — 3 doa, pas untuk pemula.</li>
+  <li><strong>Sedang 🌿</strong> — lebih banyak doa untuk yang mulai hafal.</li>
+  <li><strong>Hebat 🌟</strong> — sampai 8 doa untuk sang juara.</li>
+</ul>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Memahami doa</strong> — bukan sekadar hafal bunyinya, tapi tahu fungsinya.</li>
+  <li><strong>Daya ingat</strong> — mengingat letak kartu dan pasangannya.</li>
+  <li><strong>Kebiasaan</strong> — anak mulai mengingatkan sendiri: "Eh, belum baca doa makan!"</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Mulai dari tingkat Mudah, walau anak sudah besar. Sukses pertama itu penting.</li>
+  <li>Setiap pasangan yang cocok, bacakan doanya bersama dengan suara pelan.</li>
+  <li>Naik tingkat hanya kalau anak yang minta.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Mainkan Dua Journey setelah anak mengenal doanya lewat <a href="/_/blog/game-doa-harian-anak/">game Doa Harian</a>.</li>
+  <li>Hubungkan dengan hari ini: "Tadi pagi kita baca doa yang mana, ya?"</li>
+  <li>Pujian untuk usaha, bukan hanya untuk jawaban benar.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Doa adalah ibadah." (HR. Abu Dawud 1479, Tirmidzi 2969)</blockquote>
+
+<p>Butuh teks doanya? Buka <a href="/_/doa/">kumpulan doa harian</a>. Atau lihat <a href="/_/blog/game-anak-islami-baby-mo/">semua game Baby Mo</a>.</p>`,
+      en: `<p>Memorising a du'a is step one. Step two: <em>knowing when to say it</em>. In <strong>Dua Journey</strong>, children match du'a cards with pictures of the moment — before eating, before sleep, leaving home — until every pair is found.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">▶ Play Dua Journey now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/dua-journey.webp" alt="Dua Journey game screen with du'a and situation cards" width="540" height="1080" loading="lazy"><figcaption>Which du'a fits this moment? 🃏</figcaption></figure>
+
+<h2>Three levels</h2>
+
+<ul>
+  <li><strong>Easy 🌱</strong> — 3 du'as, perfect for beginners.</li>
+  <li><strong>Medium 🌿</strong> — more du'as for those starting to remember.</li>
+  <li><strong>Great 🌟</strong> — up to 8 du'as for champions.</li>
+</ul>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Understanding du'as</strong> — not just the sounds, but what each one is for.</li>
+  <li><strong>Memory</strong> — remembering where the cards and their pairs are.</li>
+  <li><strong>Habit</strong> — children start reminding themselves: "Oh, we haven't said the eating du'a!"</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Start on Easy, even with older children. A first success matters.</li>
+  <li>For every matched pair, say the du'a together softly.</li>
+  <li>Only move up a level when your child asks to.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Play Dua Journey after your child has met the du'as in the <a href="/_/blog/game-doa-harian-anak/">Daily Du'as game</a>.</li>
+  <li>Connect it to today: "Which du'a did we say this morning?"</li>
+  <li>Praise effort, not only right answers.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "Du'a is worship." (Abu Dawud 1479, Tirmidhi 2969)</blockquote>
+
+<p>Need the du'a texts? Open the <a href="/_/doa/">daily du'a collection</a>. Or see <a href="/_/blog/game-anak-islami-baby-mo/">all Baby Mo games</a>.</p>`,
+    },
+    tags: ["game", "doa", "matching", "edukasi-anak"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-kata-islam-menyusun-kata-arab",
+    title: {
+      id: "Kata Islam: Game Menyusun Kata Arab Pertama untuk Anak (Gratis)",
+      en: "Islamic Words: A Game to Build First Arabic Words (Free)",
+    },
+    excerpt: {
+      id: "21 kata Arab dari keluarga, ibadah, dan alam — Ummi, Abi, Masjid, Syams — disusun huruf demi huruf sambil mendengar cara membacanya. Gratis, tanpa iklan.",
+      en: "21 Arabic words about family, worship and nature — Ummi, Abi, Masjid, Shams — built letter by letter while hearing how they're read. Free, ad-free.",
+    },
+    body: {
+      id: `<p>Setelah mengenal huruf hijaiyah, anak sering bertanya: "Huruf-huruf ini bisa jadi kata apa?" <strong>Kata Islam</strong> menjawabnya. Anak menyeret huruf Arab satu per satu sampai tersusun jadi kata — lalu mendengar cara membacanya.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">▶ Main Kata Islam sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/kata-islam.webp" alt="Tampilan game Kata Islam: menyusun huruf Arab menjadi kata" width="540" height="1080" loading="lazy"><figcaption>Huruf demi huruf, jadilah kata 🔤</figcaption></figure>
+
+<h2>21 kata dalam tiga tema</h2>
+
+<ul>
+  <li><strong>Keluarga & rumah:</strong> Ummi, Abi, Akhi, Ukhti, Bayt (rumah), Maa' (air), Nawm (tidur)…</li>
+  <li><strong>Ibadah:</strong> Allah, Bismillah, Du'a, Masjid, Kitab, Salam, Syukran…</li>
+  <li><strong>Alam:</strong> Syams (matahari), Qamar (bulan), Najm (bintang), Zahrah (bunga), Samak (ikan), Thayr (burung)…</li>
+</ul>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Mengenali bentuk huruf</strong> di dalam kata — tidak lagi berdiri sendiri.</li>
+  <li><strong>Kosakata Arab pertama</strong> yang dekat dengan kehidupan anak.</li>
+  <li><strong>Mendengar dan meniru</strong> cara membaca setiap kata.</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Mulai dari tema keluarga: kata "Ummi" dan "Abi" paling menyenangkan untuk anak.</li>
+  <li>Setelah kata selesai, ucapkan bersama dan tunjuk orangnya: "Ummi!"</li>
+  <li>Pakai kata-kata baru itu sepanjang hari: "Ayo minum <em>maa'</em>!"</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Pastikan anak sudah kenal sebagian huruf hijaiyah. Lihat <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">cara mengenalkan huruf hijaiyah</a>.</li>
+  <li>Satu tema per minggu sudah cukup.</li>
+  <li>Puji usahanya menyusun, bukan kecepatannya.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Sebaik-baik kalian adalah orang yang belajar Al-Qur'an dan mengajarkannya." (HR. Bukhari 5027)</blockquote>
+
+<p>Lanjutkan dengan <a href="/_/blog/game-belajar-hijaiyah-anak/">game Huruf Hijaiyah</a> atau <a href="/_/blog/puzzle-hijaiyah-belajar-sambil-bermain/">puzzle hijaiyah</a>.</p>`,
+      en: `<p>Once children know some hijaiyah letters, they often ask: "What words can these letters make?" <strong>Islamic Words</strong> answers that. Children drag Arabic letters one by one until they form a word — then hear how it's read.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">▶ Play Islamic Words now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/kata-islam.webp" alt="Islamic Words game: arranging Arabic letters into a word" width="540" height="1080" loading="lazy"><figcaption>Letter by letter, a word appears 🔤</figcaption></figure>
+
+<h2>21 words in three themes</h2>
+
+<ul>
+  <li><strong>Family & home:</strong> Ummi, Abi, Akhi, Ukhti, Bayt (house), Maa' (water), Nawm (sleep)…</li>
+  <li><strong>Worship:</strong> Allah, Bismillah, Du'a, Masjid, Kitab, Salam, Shukran…</li>
+  <li><strong>Nature:</strong> Shams (sun), Qamar (moon), Najm (star), Zahrah (flower), Samak (fish), Tayr (bird)…</li>
+</ul>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Recognising letter shapes</strong> inside words — not just on their own.</li>
+  <li><strong>A first Arabic vocabulary</strong> close to children's daily life.</li>
+  <li><strong>Listening and copying</strong> how each word is read.</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Start with family: "Ummi" and "Abi" are the most fun words for children.</li>
+  <li>When a word is done, say it together and point at the person: "Ummi!"</li>
+  <li>Use the new words all day: "Let's drink some <em>maa'</em>!"</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Make sure your child already knows some hijaiyah letters. See <a href="/_/blog/cara-mengenalkan-huruf-hijaiyah-pada-anak/">how to introduce hijaiyah letters</a>.</li>
+  <li>One theme a week is enough.</li>
+  <li>Praise the effort of building, not the speed.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "The best of you are those who learn the Qur'an and teach it." (Bukhari 5027)</blockquote>
+
+<p>Carry on with the <a href="/_/blog/game-belajar-hijaiyah-anak/">Hijaiyah Letters game</a> or the <a href="/_/blog/puzzle-hijaiyah-belajar-sambil-bermain/">hijaiyah puzzles</a>.</p>`,
+    },
+    tags: ["game", "bahasa-arab", "kosa-kata", "hijaiyah"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-dreamtime-rutinitas-tidur-anak",
+    title: {
+      id: "Baby Mo Dreamtime: Game Rutinitas Tidur Islami untuk Balita (Gratis)",
+      en: "Baby Mo Dreamtime: An Islamic Bedtime Routine Game for Toddlers (Free)",
+    },
+    excerpt: {
+      id: "Gosok gigi, ganti baju tidur, berdoa, lalu tidur — empat langkah rutinitas malam yang menenangkan bersama Baby Mo. Membantu si kecil bersiap tidur tanpa drama.",
+      en: "Brush teeth, change into pyjamas, say the du'a, then sleep — a calming four-step bedtime routine with Baby Mo. Helps little ones get ready for bed without the drama.",
+    },
+    body: {
+      id: `<p>Jam tidur sering jadi jam paling ramai di rumah. <strong>Baby Mo Dreamtime</strong> mengubah rutinitas malam jadi permainan yang tenang: anak membantu Baby Mo bersiap tidur, langkah demi langkah, sampai lampu redup dan doa tidur dibaca.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">▶ Main Baby Mo Dreamtime sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/dreamtime.webp" alt="Tampilan game Baby Mo Dreamtime di kamar tidur malam hari" width="540" height="1080" loading="lazy"><figcaption>Rutinitas malam yang menenangkan 🌙</figcaption></figure>
+
+<h2>Empat langkah sebelum tidur</h2>
+
+<ol>
+  <li><strong>Gosok gigi</strong> sampai bersih.</li>
+  <li><strong>Ganti baju</strong> — baju tidur dan celana tidur.</li>
+  <li><strong>Ambil boneka</strong> kesayangan.</li>
+  <li><strong>Berdoa</strong> — <em>Bismika Allahumma ahya wa amut</em> — lalu tidur.</li>
+</ol>
+
+<h2>Kenapa rutinitas penting?</h2>
+
+<p>Balita merasa aman saat tahu apa yang akan terjadi berikutnya. Urutan yang sama setiap malam memberi sinyal ke tubuh dan hati: sebentar lagi waktunya istirahat. Game ini memperkenalkan urutan itu lewat Baby Mo, sehingga anak lebih mudah mengikutinya di dunia nyata.</p>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Mainkan setelah makan malam, bukan tepat sebelum tidur — layar tetap layar.</li>
+  <li>Setelah game selesai, matikan layar dan lakukan langkah yang sama sungguhan.</li>
+  <li>Tutup dengan doa tidur bersama, lampu redup, dan pelukan.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Jaga urutannya sama setiap malam; konsistensi lebih penting daripada kesempurnaan.</li>
+  <li>Biarkan anak memilih bonekanya sendiri — memberi rasa kendali yang menenangkan.</li>
+  <li>Dengarkan juga <a href="/_/blog/lagu-doa-sebelum-tidur-anak/">lagu doa sebelum tidur</a>.</li>
+</ul>
+
+<blockquote>"Bismika Allahumma ahyaa wa amuut" — Dengan nama-Mu, ya Allah, aku hidup dan aku mati. (HR. Bukhari 6324, Muslim 2711)</blockquote>
+
+<p>Baca juga cerita bergambar <a href="/_/cerita/selamat-tidur-sayang/">Selamat Tidur, Sayang</a> sebagai pengantar tidur.</p>`,
+      en: `<p>Bedtime is often the busiest hour at home. <strong>Baby Mo Dreamtime</strong> turns the evening routine into a calm game: children help Baby Mo get ready for bed, step by step, until the lights dim and the sleep du'a is said.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">▶ Play Baby Mo Dreamtime now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/dreamtime.webp" alt="Baby Mo Dreamtime game in a night-time bedroom" width="540" height="1080" loading="lazy"><figcaption>A calming evening routine 🌙</figcaption></figure>
+
+<h2>Four steps before sleep</h2>
+
+<ol>
+  <li><strong>Brush teeth</strong> until they're clean.</li>
+  <li><strong>Change clothes</strong> — pyjama top and bottoms.</li>
+  <li><strong>Fetch a teddy</strong> to cuddle.</li>
+  <li><strong>Say the du'a</strong> — <em>Bismika Allahumma ahya wa amut</em> — then sleep.</li>
+</ol>
+
+<h2>Why routines matter</h2>
+
+<p>Toddlers feel safe when they know what comes next. The same order every night tells the body and heart: rest time is coming. This game introduces that order through Baby Mo, so it's easier to follow in real life.</p>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Play after dinner, not right before sleep — a screen is still a screen.</li>
+  <li>When the game ends, switch off and do the same steps for real.</li>
+  <li>Finish with the sleep du'a together, dim lights and a hug.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Keep the same order every night; consistency beats perfection.</li>
+  <li>Let your child choose their own teddy — a little control is calming.</li>
+  <li>Also listen to the <a href="/_/blog/lagu-doa-sebelum-tidur-anak/">bedtime du'a song</a>.</li>
+</ul>
+
+<blockquote>"Bismika Allahumma ahyaa wa amoot" — In Your name, O Allah, I live and I die. (Bukhari 6324, Muslim 2711)</blockquote>
+
+<p>Also read the picture book <a href="/_/cerita/selamat-tidur-sayang/">Goodnight, My Loves</a> as a bedtime story.</p>`,
+    },
+    tags: ["game", "rutinitas", "tidur", "doa-tidur"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-memory-match-islami-anak",
+    title: {
+      id: "Memory Match Islami: Game Kartu Ingatan untuk Anak (Gratis)",
+      en: "Islamic Memory Match: A Card Memory Game for Kids (Free)",
+    },
+    excerpt: {
+      id: "Balik dua kartu, ingat letaknya! Dari 4 kartu untuk balita sampai 20 kartu untuk juara — bulan, bintang, Ka'bah, masjid, kurma, sampai huruf hijaiyah.",
+      en: "Flip two cards, remember where they are! From 4 cards for toddlers to 20 for champions — moons, stars, the Kaaba, mosques, dates and even hijaiyah letters.",
+    },
+    body: {
+      id: `<p>Permainan kartu ingatan adalah salah satu latihan otak tertua dan paling disukai anak. <strong>Memory Match</strong> Baby Mo memakai gambar-gambar islami yang ceria — bulan, bintang, Ka'bah, lentera, masjid, kurma, Al-Qur'an — sampai huruf hijaiyah untuk yang lebih besar.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener">▶ Main Memory Match sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/memory-match.webp" alt="Tampilan game Memory Match dengan kartu bergambar islami" width="540" height="1080" loading="lazy"><figcaption>Balik dua kartu, ingat letaknya 🎴</figcaption></figure>
+
+<h2>Delapan tingkat, dari balita sampai juara</h2>
+
+<p>Tingkatnya naik pelan-pelan: <strong>Mudah, Pemula, Sedang, Sulit, Dreamtime, Ahli, Master, sampai Juara</strong> — dari 4 kartu untuk usia 2 tahun sampai 20 kartu untuk kakak yang sudah jago. Ada juga set kartu bertema rutinitas tidur dan huruf hijaiyah.</p>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Daya ingat kerja</strong> — menyimpan letak kartu di kepala.</li>
+  <li><strong>Konsentrasi</strong> — fokus beberapa menit tanpa terganggu.</li>
+  <li><strong>Kosakata</strong> — sebut nama setiap gambar: "Ini Ka'bah, ini lentera."</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Mulai dari tingkat yang membuat anak menang di percobaan pertama.</li>
+  <li>Bergantian: Ayah/Bunda membalik dua kartu, lalu giliran anak.</li>
+  <li>Saat menemukan pasangan, ceritakan sedikit tentang gambarnya.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Sesekali "lupa" dengan sengaja — anak senang sekali bisa mengingatkan orang tuanya.</li>
+  <li>Naikkan tingkat hanya setelah anak menang dua kali berturut-turut.</li>
+  <li>Kalau anak frustrasi, turun satu tingkat. Tujuannya senang, bukan menang.</li>
+</ul>
+
+<p>Suka melatih fokus? Coba juga <a href="/_/blog/game-cari-baby-mo-look-and-find/">Cari Baby Mo</a> dan <a href="/_/kuis/">Tantangan Otak Baby Mo</a>.</p>`,
+      en: `<p>Card-matching is one of the oldest brain games — and one children love. Baby Mo's <strong>Memory Match</strong> uses cheerful Islamic pictures — the moon, stars, the Kaaba, lanterns, mosques, dates, the Qur'an — and hijaiyah letters for older children.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener">▶ Play Memory Match now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/memory-match.webp" alt="Memory Match game with Islamic picture cards" width="540" height="1080" loading="lazy"><figcaption>Flip two cards, remember where they are 🎴</figcaption></figure>
+
+<h2>Eight levels, toddler to champion</h2>
+
+<p>The levels rise gently: <strong>Easy, Beginner, Medium, Hard, Dreamtime, Expert, Master and Champion</strong> — from 4 cards for two-year-olds to 20 cards for confident older children. There are also bedtime-themed and hijaiyah-letter card sets.</p>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Working memory</strong> — holding where each card is in your head.</li>
+  <li><strong>Concentration</strong> — focusing for a few minutes without drifting.</li>
+  <li><strong>Vocabulary</strong> — name each picture: "This is the Kaaba, this is a lantern."</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Start at a level where your child wins on the first try.</li>
+  <li>Take turns: you flip two cards, then it's your child's turn.</li>
+  <li>When you find a pair, share a little about the picture.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Now and then "forget" on purpose — children love reminding their parents.</li>
+  <li>Only move up a level after two wins in a row.</li>
+  <li>If frustration shows, drop a level. The goal is fun, not winning.</li>
+</ul>
+
+<p>Enjoy focus games? Try <a href="/_/blog/game-cari-baby-mo-look-and-find/">Find Baby Mo</a> and the <a href="/_/kuis/">Baby Mo Brain Challenge</a>.</p>`,
+    },
+    tags: ["game", "memori", "matching", "fokus"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-forehand-beat-ritme-anak",
+    title: {
+      id: "Forehand Beat: Game Ritme Ceria untuk Anak (Gratis)",
+      en: "Forehand Beat: A Cheerful Rhythm Game for Kids (Free)",
+    },
+    excerpt: {
+      id: "Ketuk untuk melompat, ketuk tiga kali untuk terbang, kumpulkan bintang tanpa kehilangan nyawa. Game ritme Baby Mo yang melatih refleks dan rasa irama.",
+      en: "Tap to jump, tap three times to soar, collect stars without losing a life. Baby Mo's rhythm game builds reflexes and a sense of rhythm.",
+    },
+    body: {
+      id: `<p>Ada hari-hari ketika si kecil butuh <em>bergerak</em>, bukan duduk tenang. <strong>Forehand Beat</strong> adalah game ritme yang ceria: Baby Mo berlari mengikuti irama, dan anak mengetuk layar tepat waktu untuk melompat, terbang, dan mengumpulkan bintang.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener">▶ Main Forehand Beat sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/forehand-beat.webp" alt="Tampilan game Forehand Beat dengan Baby Mo melompat" width="540" height="1080" loading="lazy"><figcaption>Ketuk, lompat, terbang! 🎵</figcaption></figure>
+
+<h2>Cara mainnya</h2>
+
+<ul>
+  <li><strong>Ketuk sekali</strong> untuk melompat.</li>
+  <li><strong>Ketuk tiga kali</strong> untuk terbang tinggi.</li>
+  <li><strong>Kumpulkan bintang ⭐</strong> dan jaga nyawamu ❤️ — tabrak rintangan, nyawa berkurang.</li>
+</ul>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Rasa irama</strong> — mengetuk mengikuti ketukan musik.</li>
+  <li><strong>Refleks dan timing</strong> — kapan harus melompat, kapan menunggu.</li>
+  <li><strong>Ketekunan</strong> — mencoba lagi setelah kalah, sampai skornya naik.</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Main bergantian dan bandingkan jumlah bintang — tantangan keluarga yang seru.</li>
+  <li>Ajak anak bertepuk mengikuti iramanya sebelum mulai.</li>
+  <li>Saat kalah, katakan "Hampir! Coba lagi?" — bukan "Yah, kalah."</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Game ini paling pas untuk sesi singkat 5–10 menit, misalnya setelah belajar.</li>
+  <li>Setelah main, ajak anak bergerak sungguhan: lompat-lompat di tempat mengikuti irama.</li>
+  <li>Belajar menerima kalah dengan baik juga pelajaran akhlak.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, dan pada keduanya ada kebaikan." (HR. Muslim 2664)</blockquote>
+
+<p>Habis bergerak, saatnya tenang: coba <a href="/_/blog/game-dreamtime-rutinitas-tidur-anak/">Baby Mo Dreamtime</a>. Atau lihat <a href="/_/blog/game-anak-islami-baby-mo/">semua game Baby Mo</a>.</p>`,
+      en: `<p>Some days little ones need to <em>move</em>, not sit still. <strong>Forehand Beat</strong> is a cheerful rhythm game: Baby Mo runs to the music, and children tap the screen in time to jump, fly and collect stars.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener">▶ Play Forehand Beat now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/forehand-beat.webp" alt="Forehand Beat game with Baby Mo jumping" width="540" height="1080" loading="lazy"><figcaption>Tap, jump, fly! 🎵</figcaption></figure>
+
+<h2>How it works</h2>
+
+<ul>
+  <li><strong>Tap once</strong> to jump.</li>
+  <li><strong>Tap three times</strong> to soar.</li>
+  <li><strong>Collect stars ⭐</strong> and keep your lives ❤️ — hit an obstacle and you lose one.</li>
+</ul>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>A sense of rhythm</strong> — tapping along to the beat.</li>
+  <li><strong>Reflexes and timing</strong> — when to jump, when to wait.</li>
+  <li><strong>Perseverance</strong> — trying again after losing, until the score climbs.</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Take turns and compare star counts — a fun family challenge.</li>
+  <li>Clap along to the rhythm together before you start.</li>
+  <li>When they lose, say "So close! Again?" — not "Oh no, you lost."</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Best for short 5–10 minute sessions, for example after study time.</li>
+  <li>After playing, get moving for real: jump on the spot to the rhythm.</li>
+  <li>Learning to lose gracefully is a character lesson too.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "The strong believer is better and more beloved to Allah than the weak believer, and in both there is good." (Muslim 2664)</blockquote>
+
+<p>After moving, time to calm down: try <a href="/_/blog/game-dreamtime-rutinitas-tidur-anak/">Baby Mo Dreamtime</a>. Or see <a href="/_/blog/game-anak-islami-baby-mo/">all Baby Mo games</a>.</p>`,
+    },
+    tags: ["game", "musik", "ritme", "refleks"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 3,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-kata-baik-kalimat-thayyibah",
+    title: {
+      id: "Kata Baik: Game Puzzle Kalimat Thayyibah untuk Anak (Gratis)",
+      en: "Kind Words: A Kalimat Thayyibah Puzzle Game for Kids (Free)",
+    },
+    excerpt: {
+      id: "Buka petak teka-teki dan temukan kalimat thayyibah — Bismillah, Alhamdulillah, InsyaAllah, MasyaAllah, Assalamualaikum — beserta kapan mengucapkannya.",
+      en: "Open the puzzle tiles to discover kalimat thayyibah — Bismillah, Alhamdulillah, Insha Allah, Masha Allah, Assalamu'alaikum — and when to say them.",
+    },
+    body: {
+      id: `<p>Kalimat thayyibah adalah ucapan-ucapan baik yang dicintai Allah. Anak bisa mulai mengenalnya sejak kecil — dan <strong>Kata Baik</strong> mengenalkannya lewat puzzle: buka petaknya, susun gambarnya, lalu temukan ucapan baik yang tersembunyi beserta momen mengucapkannya.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">▶ Main Kata Baik sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/kata-baik.webp" alt="Tampilan game puzzle Kata Baik dengan kalimat thayyibah" width="540" height="1080" loading="lazy"><figcaption>Ucapan baik apa yang tersembunyi di sini? 💖</figcaption></figure>
+
+<h2>Ucapan baik yang dipelajari</h2>
+
+<ul>
+  <li><strong>Bismillah</strong> — sebelum memulai sesuatu.</li>
+  <li><strong>Alhamdulillah</strong> — saat bersyukur.</li>
+  <li><strong>InsyaAllah</strong> — saat berjanji atau merencanakan sesuatu.</li>
+  <li><strong>MasyaAllah</strong> — saat kagum melihat sesuatu yang indah.</li>
+  <li><strong>Assalamualaikum</strong> — saat bertemu orang.</li>
+</ul>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Akhlak lisan</strong> — membiasakan mulut mengucapkan yang baik.</li>
+  <li><strong>Mengaitkan ucapan dengan momen</strong> — bukan sekadar hafal kata.</li>
+  <li><strong>Pemecahan masalah</strong> lewat puzzle yang pas untuk anak.</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Setelah puzzle selesai, ucapkan kalimatnya bersama.</li>
+  <li>Cari momennya hari itu juga: "Tadi waktu lihat pelangi, kita bilang apa?"</li>
+  <li>Jadikan kebiasaan keluarga: siapa yang lupa, diingatkan dengan senyum.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Anak meniru. Ucapkan kalimat thayyibah sendiri dengan suara terdengar.</li>
+  <li>Satu kalimat per minggu sudah cukup untuk balita.</li>
+  <li>Dengarkan juga <a href="/_/blog/lagu-bismillah-dulu/">lagu Bismillah Dulu</a>.</li>
+</ul>
+
+<blockquote>"Kalimat yang baik itu seperti pohon yang baik, akarnya kuat dan cabangnya menjulang ke langit." (QS. Ibrahim: 24)</blockquote>
+
+<p>Lihat juga <a href="/_/blog/game-anak-islami-baby-mo/">semua game Baby Mo</a> dan <a href="/_/cerita/">cerita bergambar Baby Mo</a> tentang akhlak.</p>`,
+      en: `<p>Kalimat thayyibah are the good words Allah loves. Children can start learning them very young — and <strong>Kind Words</strong> introduces them through puzzles: open the tiles, complete the picture, and discover the good word hiding inside, along with the moment to say it.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">▶ Play Kind Words now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/kata-baik.webp" alt="Kind Words puzzle game with kalimat thayyibah" width="540" height="1080" loading="lazy"><figcaption>Which good word is hiding here? 💖</figcaption></figure>
+
+<h2>The good words</h2>
+
+<ul>
+  <li><strong>Bismillah</strong> — before starting something.</li>
+  <li><strong>Alhamdulillah</strong> — when we're thankful.</li>
+  <li><strong>Insha Allah</strong> — when promising or planning.</li>
+  <li><strong>Masha Allah</strong> — when amazed by something beautiful.</li>
+  <li><strong>Assalamu'alaikum</strong> — when we meet someone.</li>
+</ul>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>Good speech</strong> — getting used to saying good things.</li>
+  <li><strong>Linking words to moments</strong> — not just memorising them.</li>
+  <li><strong>Problem solving</strong> through child-sized puzzles.</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>When a puzzle is done, say the phrase together.</li>
+  <li>Find the moment that same day: "When we saw the rainbow, what did we say?"</li>
+  <li>Make it a family habit: whoever forgets gets a smiling reminder.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Children copy. Say these words yourself, out loud.</li>
+  <li>One phrase a week is plenty for toddlers.</li>
+  <li>Also listen to the <a href="/_/blog/lagu-bismillah-dulu/">Bismillah First song</a>.</li>
+</ul>
+
+<blockquote>"A good word is like a good tree, whose root is firm and whose branches reach the sky." (Qur'an 14:24)</blockquote>
+
+<p>See also <a href="/_/blog/game-anak-islami-baby-mo/">all Baby Mo games</a> and <a href="/_/cerita/">Baby Mo's picture books</a> about good character.</p>`,
+    },
+    tags: ["game", "akhlak", "kalimat-thayyibah", "puzzle"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-wudhu-bareng-mo",
+    title: {
+      id: "Wudhu Bareng Mo: Belajar Wudhu Langkah demi Langkah untuk Anak (Gratis)",
+      en: "Wudu with Mo: Learn Wudu Step by Step for Kids (Free)",
+    },
+    excerpt: {
+      id: "Sepuluh langkah wudhu dari niat sampai doa, dengan Baby Mo di depan keran. Ketuk tombol air untuk membasuh, lalu uji hafalan lewat game urutkan.",
+      en: "Ten wudu steps from the intention to the du'a, with Baby Mo at the tap. Tap the water button to wash, then test yourself with the ordering game.",
+    },
+    body: {
+      id: `<p>Sebelum sholat, ada wudhu. Dan wudhu adalah ibadah pertama yang bisa anak <em>lakukan sendiri</em> dengan tangannya. <strong>Wudhu Bareng Mo</strong> mengajarkannya satu langkah demi satu: Baby Mo berdiri di depan keran, dan anak mengetuk tombol air untuk ikut membasuh.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-wudhu.html" target="_blank" rel="noopener">▶ Main Wudhu Bareng Mo sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/wudhu.webp" alt="Tampilan game Wudhu Bareng Mo dengan Baby Mo di depan keran" width="540" height="1080" loading="lazy"><figcaption>Wudhu dulu, baru sholat 💧</figcaption></figure>
+
+<h2>Sepuluh langkah wudhu</h2>
+
+<ol>
+  <li>Niat & Bismillah</li>
+  <li>Membasuh kedua telapak tangan</li>
+  <li>Berkumur</li>
+  <li>Membersihkan hidung</li>
+  <li>Membasuh wajah</li>
+  <li>Membasuh tangan sampai siku</li>
+  <li>Mengusap kepala</li>
+  <li>Membersihkan telinga</li>
+  <li>Membasuh kaki sampai mata kaki</li>
+  <li>Doa setelah wudhu</li>
+</ol>
+
+<h2>Apa yang dilatih?</h2>
+
+<ul>
+  <li><strong>Tata cara wudhu</strong> yang benar dan berurutan.</li>
+  <li><strong>Ingatan urutan</strong> — game urutkan menguji langkah mana yang lebih dulu.</li>
+  <li><strong>Doa setelah wudhu</strong> — <em>Asyhadu an laa ilaaha illallah…</em></li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Mainkan sekali bersama, lalu langsung praktik di keran sungguhan.</li>
+  <li>Sebut nama setiap langkah saat anak membasuh: "Sekarang wajah!"</li>
+  <li>Setelah beberapa kali, coba game urutkan — siapa yang paling cepat?</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Wudhu bersama sebelum sholat Maghrib adalah kebiasaan yang paling mudah dimulai.</li>
+  <li>Tidak perlu sempurna di awal; yang penting anak senang menyentuh air dan menyebut Bismillah.</li>
+  <li>Baca juga cerita bergambar <a href="/_/cerita/kenapa-berwudhu-sebelum-sholat/">Kenapa Berwudhu Sebelum Sholat?</a></li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Barangsiapa berwudhu lalu memperbagus wudhunya, keluarlah dosa-dosanya dari tubuhnya, hingga keluar dari bawah kuku-kukunya." (HR. Muslim 245)</blockquote>
+
+<p>Setelah wudhu, lanjut belajar sholat bersama <a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a>, atau baca <a href="/_/blog/cara-mengajarkan-sholat-ke-anak/">cara mengajarkan sholat ke anak</a>.</p>`,
+      en: `<p>Before prayer comes wudu. And wudu is the first act of worship a child can <em>do themselves</em> with their own hands. <strong>Wudu with Mo</strong> teaches it one step at a time: Baby Mo stands at the tap, and children tap the water button to wash along.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-wudhu.html" target="_blank" rel="noopener">▶ Play Wudu with Mo now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/wudhu.webp" alt="Wudu with Mo game with Baby Mo at the tap" width="540" height="1080" loading="lazy"><figcaption>Wudu first, then prayer 💧</figcaption></figure>
+
+<h2>Ten wudu steps</h2>
+
+<ol>
+  <li>Intention & Bismillah</li>
+  <li>Wash both hands</li>
+  <li>Rinse the mouth</li>
+  <li>Clean the nose</li>
+  <li>Wash the face</li>
+  <li>Wash the arms to the elbows</li>
+  <li>Wipe the head</li>
+  <li>Clean the ears</li>
+  <li>Wash the feet to the ankles</li>
+  <li>The du'a after wudu</li>
+</ol>
+
+<h2>What it builds</h2>
+
+<ul>
+  <li><strong>The correct wudu</strong>, in the right order.</li>
+  <li><strong>Remembering the sequence</strong> — the ordering game tests which step comes first.</li>
+  <li><strong>The du'a after wudu</strong> — <em>Ash-hadu an laa ilaaha illallah…</em></li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Play once together, then practise right away at a real tap.</li>
+  <li>Name each step as your child washes: "Now the face!"</li>
+  <li>After a few times, try the ordering game — who's fastest?</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Doing wudu together before Maghrib is the easiest habit to start.</li>
+  <li>It doesn't need to be perfect at first; what matters is enjoying the water and saying Bismillah.</li>
+  <li>Also read the picture book <a href="/_/cerita/kenapa-berwudhu-sebelum-sholat/">Why Do We Do Wudu Before Prayer?</a></li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "Whoever performs wudu and does it well, his sins leave his body, even from beneath his nails." (Muslim 245)</blockquote>
+
+<p>After wudu, learn to pray with <a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a>, or read <a href="/_/blog/cara-mengajarkan-sholat-ke-anak/">how to teach children to pray</a>.</p>`,
+    },
+    tags: ["game", "ibadah", "wudhu", "panduan"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "game-pray-with-mo-panduan-sholat",
+    title: {
+      id: "Pray with Mo: Panduan Sholat Interaktif untuk Anak (Gratis)",
+      en: "Pray with Mo: An Interactive Prayer Guide for Kids (Free)",
+    },
+    excerpt: {
+      id: "Belajar sholat gerakan demi gerakan — takbiratul ihram, qiyam, ruku', sujud, duduk, tasyahud, dan salam — dengan gambar, bacaan Arab, audio, waktu sholat, dan dzikir.",
+      en: "Learn to pray one movement at a time — takbir, standing, ruku', sujud, sitting, tashahhud and salam — with pictures, Arabic recitation, audio, prayer times and dhikr.",
+    },
+    body: {
+      id: `<p>Anak belajar sholat dengan meniru. Tapi kadang mereka butuh melihat setiap gerakan dengan pelan, sambil mendengar bacaannya. <strong>Pray with Mo</strong> adalah panduan sholat interaktif: Baby Mo memperagakan setiap gerakan, lengkap dengan bacaan Arab, latin, arti, dan audio.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener">▶ Main Pray with Mo sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/pray-with-mo.webp" alt="Tampilan Pray with Mo dengan Baby Mo memperagakan gerakan sholat" width="540" height="1080" loading="lazy"><figcaption>Belajar sholat, gerakan demi gerakan 🕌</figcaption></figure>
+
+<h2>Langkah demi langkah</h2>
+
+<ol>
+  <li>Takbiratul ihram</li>
+  <li>Qiyam (berdiri) dan bacaan Al-Fatihah</li>
+  <li>Ruku'</li>
+  <li>Sujud</li>
+  <li>Duduk di antara dua sujud</li>
+  <li>Tasyahud dan salam</li>
+</ol>
+
+<h2>Lebih dari sekadar panduan</h2>
+
+<ul>
+  <li><strong>Waktu sholat</strong> Subuh, Dzuhur, Ashar, Maghrib, dan Isya.</li>
+  <li><strong>Dzikir pemula</strong> setelah sholat.</li>
+  <li><strong>Lencana "Khatam Panduan"</strong> saat semua langkah selesai dipelajari.</li>
+</ul>
+
+<h2>Cara main bersama</h2>
+
+<ol>
+  <li>Pelajari satu gerakan per hari, lalu praktikkan di atas sajadah.</li>
+  <li>Putar audionya dan ulangi bacaan bersama, pelan-pelan.</li>
+  <li>Setelah hafal beberapa gerakan, ajak anak sholat di samping Ayah/Bunda.</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Untuk anak kecil, ikut berdiri di saf saja sudah ibadah yang indah — jangan menuntut sempurna.</li>
+  <li>Hindari memarahi gerakan yang salah; betulkan dengan lembut setelah sholat selesai.</li>
+  <li>Baca panduan lengkap <a href="/_/blog/cara-mengajarkan-sholat-ke-anak/">cara mengajarkan sholat ke anak</a>.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Perintahkan anak-anak kalian untuk sholat ketika berusia tujuh tahun." (HR. Abu Dawud 495)</blockquote>
+
+<p>Mulai dengan <a href="/_/blog/game-wudhu-bareng-mo/">Wudhu Bareng Mo</a>, lalu jaga semangatnya dengan <a href="/_/blog/streak-sholat-mo-jadwal-sholat-anak/">Streak Sholat Mo</a>.</p>`,
+      en: `<p>Children learn to pray by copying. But sometimes they need to see each movement slowly, while hearing what's recited. <strong>Pray with Mo</strong> is an interactive prayer guide: Baby Mo shows each movement, with the Arabic, transliteration, meaning and audio.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener">▶ Play Pray with Mo now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/pray-with-mo.webp" alt="Pray with Mo with Baby Mo showing a prayer movement" width="540" height="1080" loading="lazy"><figcaption>Learn to pray, one movement at a time 🕌</figcaption></figure>
+
+<h2>Step by step</h2>
+
+<ol>
+  <li>Takbiratul ihram</li>
+  <li>Standing (qiyam) and Al-Fatihah</li>
+  <li>Ruku'</li>
+  <li>Sujud</li>
+  <li>Sitting between the two prostrations</li>
+  <li>Tashahhud and salam</li>
+</ol>
+
+<h2>More than a guide</h2>
+
+<ul>
+  <li><strong>Prayer times</strong> for Fajr, Dhuhr, Asr, Maghrib and Isha.</li>
+  <li><strong>Beginner dhikr</strong> after prayer.</li>
+  <li><strong>A "Guide Completed" badge</strong> once every step is learned.</li>
+</ul>
+
+<h2>How to play together</h2>
+
+<ol>
+  <li>Learn one movement a day, then practise it on a prayer mat.</li>
+  <li>Play the audio and repeat the recitation together, slowly.</li>
+  <li>Once a few movements are known, invite your child to pray beside you.</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>For little ones, simply standing in the row is beautiful worship — don't demand perfection.</li>
+  <li>Avoid scolding wrong movements; correct gently after the prayer ends.</li>
+  <li>Read the full guide on <a href="/_/blog/cara-mengajarkan-sholat-ke-anak/">teaching children to pray</a>.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "Instruct your children to pray when they are seven years old." (Abu Dawud 495)</blockquote>
+
+<p>Start with <a href="/_/blog/game-wudhu-bareng-mo/">Wudu with Mo</a>, then keep the habit going with <a href="/_/blog/streak-sholat-mo-jadwal-sholat-anak/">Prayer Streak with Mo</a>.</p>`,
+    },
+    tags: ["game", "ibadah", "sholat", "panduan"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
+    slug: "streak-sholat-mo-jadwal-sholat-anak",
+    title: {
+      id: "Streak Sholat Mo: Jadwal Sholat, Kiblat, dan Streak Harian untuk Anak (Gratis)",
+      en: "Prayer Streak with Mo: Prayer Times, Qibla and a Daily Streak for Kids (Free)",
+    },
+    excerpt: {
+      id: "Jadwal sholat sesuai kotamu, arah kiblat, kalender hijriah, dan streak harian yang merayakan setiap sholat yang dijaga — cara seru membiasakan sholat 5 waktu.",
+      en: "Prayer times for your city, the qibla direction, a Hijri calendar and a daily streak that celebrates every prayer kept — a fun way to build the five-prayer habit.",
+    },
+    body: {
+      id: `<p>Belajar gerakan sholat itu satu hal. <em>Menjaganya setiap hari</em> adalah tantangan berikutnya. <strong>Streak Sholat Mo</strong> membantu anak (dan orang tua!) melihat perjalanan sholatnya: setiap sholat yang dijaga dicentang, dan api streak terus menyala hari demi hari.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-companion/" target="_blank" rel="noopener">▶ Buka Streak Sholat Mo sekarang</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/streak-sholat-mo.webp" alt="Tampilan Streak Sholat Mo dengan jadwal sholat dan streak harian" width="540" height="1080" loading="lazy"><figcaption>Jaga semangat sholat 5 waktu 🔥</figcaption></figure>
+
+<h2>Isinya</h2>
+
+<ul>
+  <li><strong>Jadwal sholat</strong> sesuai kotamu.</li>
+  <li><strong>Arah kiblat</strong> — anak bisa ikut mencari arah sebelum sholat.</li>
+  <li><strong>Kalender hijriah</strong> untuk mengenal bulan-bulan Islam.</li>
+  <li><strong>Streak harian</strong> yang merayakan setiap sholat yang dijaga.</li>
+</ul>
+
+<h2>Kenapa streak membantu?</h2>
+
+<p>Anak suka melihat kemajuan. Satu centang kecil setelah sholat memberi rasa "aku berhasil", dan streak yang terus bertambah membuat mereka ingin menjaganya. Yang penting: streak adalah penyemangat, bukan alat menghukum.</p>
+
+<h2>Cara memakainya bersama</h2>
+
+<ol>
+  <li>Setelah sholat, biarkan anak sendiri yang mencentang.</li>
+  <li>Rayakan hari ke-3, ke-7, dan ke-30 dengan pelukan atau cerita favorit.</li>
+  <li>Kalau streak putus, mulai lagi tanpa drama: "Besok kita mulai lagi, ya."</li>
+</ol>
+
+<h2>Tips untuk Ayah & Bunda</h2>
+
+<ul>
+  <li>Mulai dari satu waktu yang paling mudah, misalnya Maghrib bersama.</li>
+  <li>Untuk anak di bawah 7 tahun, ini latihan pembiasaan — bukan kewajiban.</li>
+  <li>Lengkapi dengan <a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a> untuk belajar gerakannya.</li>
+</ul>
+
+<blockquote>Rasulullah ﷺ bersabda: "Amalan yang paling dicintai Allah adalah yang paling rutin, walaupun sedikit." (HR. Bukhari 6464, Muslim 783)</blockquote>
+
+<p>Baca juga <a href="/_/blog/kebiasaan-kecil-yang-tumbuh-besar/">kebiasaan kecil yang tumbuh besar</a> dan <a href="/_/blog/mengajak-anak-ke-masjid/">mengajak anak ke masjid</a>.</p>`,
+      en: `<p>Learning the movements of prayer is one thing. <em>Keeping it every day</em> is the next challenge. <strong>Prayer Streak with Mo</strong> helps children (and parents!) see their prayer journey: every prayer kept gets a tick, and the streak flame keeps burning day after day.</p>
+
+<p><a class="gmp-play" href="https://play.babymo.id/babymo-companion/" target="_blank" rel="noopener">▶ Open Prayer Streak with Mo now</a></p>
+
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+
+<figure class="gmp-shot"><img src="/_img/games/shots/streak-sholat-mo.webp" alt="Prayer Streak with Mo with prayer times and a daily streak" width="540" height="1080" loading="lazy"><figcaption>Keep the five prayers going 🔥</figcaption></figure>
+
+<h2>What's inside</h2>
+
+<ul>
+  <li><strong>Prayer times</strong> for your city.</li>
+  <li><strong>The qibla direction</strong> — children can help find it before praying.</li>
+  <li><strong>A Hijri calendar</strong> to get to know the Islamic months.</li>
+  <li><strong>A daily streak</strong> that celebrates every prayer kept.</li>
+</ul>
+
+<h2>Why a streak helps</h2>
+
+<p>Children love to see progress. A small tick after prayer gives a sense of "I did it", and a growing streak makes them want to keep it going. What matters: a streak is encouragement, not a tool for punishment.</p>
+
+<h2>How to use it together</h2>
+
+<ol>
+  <li>After praying, let your child tick it themselves.</li>
+  <li>Celebrate day 3, day 7 and day 30 with a hug or a favourite story.</li>
+  <li>If the streak breaks, start again without drama: "We'll begin again tomorrow."</li>
+</ol>
+
+<h2>Tips for parents</h2>
+
+<ul>
+  <li>Start with the easiest prayer, such as Maghrib together.</li>
+  <li>For children under 7 this is gentle habit-building — not an obligation.</li>
+  <li>Pair it with <a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a> to learn the movements.</li>
+</ul>
+
+<blockquote>The Prophet ﷺ said: "The most beloved deeds to Allah are the most consistent ones, even if small." (Bukhari 6464, Muslim 783)</blockquote>
+
+<p>Also read <a href="/_/blog/kebiasaan-kecil-yang-tumbuh-besar/">small habits that grow big</a> and <a href="/_/blog/mengajak-anak-ke-masjid/">taking children to the masjid</a>.</p>`,
+    },
+    tags: ["game", "ibadah", "sholat", "rutinitas"],
+    published: "2026-11-06",
+    updated: "2026-11-06",
+    readingTimeMin: 4,
+    author: "tim-baby-mo",
+  },
+  {
     slug: "persiapan-ramadan-untuk-anak",
     title: {
       id: "Persiapan Ramadan untuk Anak: Mulai dari Sekarang",
@@ -2055,7 +3197,25 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/" target="_blank" rel="noopener">▶ Main semua game di play.babymo.id</a></p>
 
-<p>Mau yang lebih tenang? Pelajari <a href="/_/doa/">doa harian</a> atau tonton <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video edukasi Baby Mo</a>.</p>`,
+<p>Mau yang lebih tenang? Pelajari <a href="/_/doa/">doa harian</a> atau tonton <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">video edukasi Baby Mo</a>.</p>
+
+<h2>Panduan lengkap per game</h2>
+<p>Setiap game punya panduannya sendiri — apa yang dilatih, cara main bersama, dan tips untuk Ayah &amp; Bunda:</p>
+<ul>
+  <li><a href="/_/blog/game-kenalan-baby-mo-puzzle/">Kenalan Baby Mo</a></li>
+  <li><a href="/_/blog/game-doa-harian-anak/">Doa Harian</a></li>
+  <li><a href="/_/blog/game-dua-journey-mencocokkan-doa/">Dua Journey</a></li>
+  <li><a href="/_/blog/game-kata-islam-menyusun-kata-arab/">Kata Islam</a></li>
+  <li><a href="/_/blog/game-belajar-hijaiyah-anak/">Huruf Hijaiyah</a></li>
+  <li><a href="/_/blog/game-cari-baby-mo-look-and-find/">Cari Baby Mo</a></li>
+  <li><a href="/_/blog/game-memory-match-islami-anak/">Memory Match</a></li>
+  <li><a href="/_/blog/game-forehand-beat-ritme-anak/">Forehand Beat</a></li>
+  <li><a href="/_/blog/game-kata-baik-kalimat-thayyibah/">Kata Baik</a></li>
+  <li><a href="/_/blog/game-dreamtime-rutinitas-tidur-anak/">Baby Mo Dreamtime</a></li>
+  <li><a href="/_/blog/game-wudhu-bareng-mo/">Wudhu Bareng Mo</a></li>
+  <li><a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a></li>
+  <li><a href="/_/blog/streak-sholat-mo-jadwal-sholat-anak/">Streak Sholat Mo</a></li>
+</ul>`,
       en: `<p>Looking for <strong>kids’ games that are safe, Islamic, and genuinely useful</strong>? Baby Mo has a set of educational games you can play right in the browser — <strong>free, no ads, no install</strong>. They work on phone, tablet, and laptop, and even play offline once opened.</p>
 
 <h2>Why educational Islamic games?</h2>
@@ -2110,7 +3270,25 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/" target="_blank" rel="noopener">▶ Play all games at play.babymo.id</a></p>
 
-<p>Prefer something calmer? Learn the <a href="/_/doa/">daily duas</a> or watch <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo’s educational videos</a>.</p>`,
+<p>Prefer something calmer? Learn the <a href="/_/doa/">daily duas</a> or watch <a href="/_/blog/video-edukasi-anak-islami-baby-mo/">Baby Mo’s educational videos</a>.</p>
+
+<h2>A full guide for every game</h2>
+<p>Each game has its own guide — what it builds, how to play together, and tips for parents:</p>
+<ul>
+  <li><a href="/_/blog/game-kenalan-baby-mo-puzzle/">Meet Baby Mo</a></li>
+  <li><a href="/_/blog/game-doa-harian-anak/">Daily Du'as</a></li>
+  <li><a href="/_/blog/game-dua-journey-mencocokkan-doa/">Dua Journey</a></li>
+  <li><a href="/_/blog/game-kata-islam-menyusun-kata-arab/">Islamic Words</a></li>
+  <li><a href="/_/blog/game-belajar-hijaiyah-anak/">Hijaiyah Letters</a></li>
+  <li><a href="/_/blog/game-cari-baby-mo-look-and-find/">Find Baby Mo</a></li>
+  <li><a href="/_/blog/game-memory-match-islami-anak/">Memory Match</a></li>
+  <li><a href="/_/blog/game-forehand-beat-ritme-anak/">Forehand Beat</a></li>
+  <li><a href="/_/blog/game-kata-baik-kalimat-thayyibah/">Kind Words</a></li>
+  <li><a href="/_/blog/game-dreamtime-rutinitas-tidur-anak/">Baby Mo Dreamtime</a></li>
+  <li><a href="/_/blog/game-wudhu-bareng-mo/">Wudu with Mo</a></li>
+  <li><a href="/_/blog/game-pray-with-mo-panduan-sholat/">Pray with Mo</a></li>
+  <li><a href="/_/blog/streak-sholat-mo-jadwal-sholat-anak/">Prayer Streak with Mo</a></li>
+</ul>`,
     },
     tags: ["game", "permainan-anak", "islami", "edukasi-anak", "panduan"],
     published: "2026-06-22",
