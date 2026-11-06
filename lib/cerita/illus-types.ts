@@ -170,6 +170,8 @@ export interface ArtItem {
 }
 
 export interface ArtMo {
+  /** "mo" (default) or "ais" — Ais poses come from lib/cerita/ais-poses.ts */
+  who?: "mo" | "ais";
   /** pose name: baby-mo-<pose>.png */
   pose: string;
   x: number;

@@ -1669,7 +1669,9 @@ const FOOT_PAD: Record<string, number> = {
 function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const s = m.s ?? 235;
   const move = m.move ?? "bob";
-  const pad = (FOOT_PAD[m.pose] ?? 0.09) * s;
+  const ais = m.who === "ais";
+  // Ais renders all share one ground line: feet at 725/800
+  const pad = (ais ? 0.094 : FOOT_PAD[m.pose] ?? 0.09) * s;
   const cls = move === "still" ? "" : move === "bob" ? "sa-mo-breathe" : `sa-mo-${move}`;
   const delay = { animationDelay: `${-idx * 0.7}s` };
   return (
@@ -1681,7 +1683,7 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
       </g>
       <g className={cls} style={delay}>
         <image
-          href={asset(`/baby-mo-poses/baby-mo-${m.pose}.png`)}
+          href={asset(ais ? `/baby-ais-poses/baby-ais-${m.pose}.png` : `/baby-mo-poses/baby-mo-${m.pose}.png`)}
           x={-s / 2}
           y={-s + pad}
           width={s}
