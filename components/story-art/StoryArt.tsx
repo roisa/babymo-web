@@ -1518,6 +1518,13 @@ function Prop({ k }: { k: ArtProp }) {
           <ellipse cx={0} cy={-2} rx={60} ry={6} fill="#BFE9FF" opacity=".5" />
         </g>
       );
+    case "goldstar":
+      return (
+        <g className="sa-float">
+          <circle cx={0} cy={-40} r={44} fill="#FFF3B0" opacity=".45" className="sa-pulse" />
+          <path d="M0 -76 L10 -52 L36 -50 L16 -34 L22 -8 L0 -22 L-22 -8 L-16 -34 L-36 -50 L-10 -52 Z" fill="#FFC145" stroke="#E6A512" strokeWidth={3} strokeLinejoin="round" />
+        </g>
+      );
     case "bench":
       return (
         <g>

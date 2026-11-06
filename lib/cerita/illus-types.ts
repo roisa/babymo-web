@@ -141,7 +141,8 @@ export type ArtProp =
   | "dates"
   | "rice"
   | "paddy"
-  | "glassbroken";
+  | "glassbroken"
+  | "goldstar";
 
 export type ArtFx =
   | "rain"
