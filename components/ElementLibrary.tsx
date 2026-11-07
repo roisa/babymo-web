@@ -46,24 +46,31 @@ const T = {
 function FitArt({ k, className }: { k: ArtProp; className?: string }) {
   const g = useRef<SVGGElement>(null);
   const [vb, setVb] = useState("-170 -300 340 320");
+  // motion is held still until the bounds are measured, so flying bugs are framed at home
+  const [measuring, setMeasuring] = useState(true);
   useEffect(() => {
-    const el = g.current;
-    if (!el) return;
-    const svg = el.ownerSVGElement;
-    try {
-      svg?.classList.add("el-measure");
-      const b = el.getBBox();
-      svg?.classList.remove("el-measure");
-      const size = Math.max(b.width, b.height * 1.0625, 60) * 1.25;
-      const cx = b.x + b.width / 2;
-      const bottom = b.y + b.height + size * 0.1;
-      setVb(`${cx - size / 2} ${bottom - size / 1.0625} ${size} ${size / 1.0625}`);
-    } catch {
-      svg?.classList.remove("el-measure");
-    }
+    setMeasuring(true);
+    let raf = requestAnimationFrame(() => {
+      raf = requestAnimationFrame(() => {
+        const el = g.current;
+        if (el) {
+          try {
+            const b = el.getBBox();
+            const size = Math.max(b.width, b.height * 1.0625, 60) * 1.25;
+            const cx = b.x + b.width / 2;
+            const bottom = b.y + b.height + size * 0.1;
+            setVb(`${cx - size / 2} ${bottom - size / 1.0625} ${size} ${size / 1.0625}`);
+          } catch {
+            /* keep default */
+          }
+        }
+        setMeasuring(false);
+      });
+    });
+    return () => cancelAnimationFrame(raf);
   }, [k]);
   return (
-    <svg viewBox={vb} className={`story-art block w-full ${className ?? ""}`} aria-hidden>
+    <svg viewBox={vb} className={`story-art block w-full ${measuring ? "el-measure" : ""} ${className ?? ""}`} aria-hidden>
       <g ref={g}>
         <Prop k={k} />
       </g>
