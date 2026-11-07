@@ -28,6 +28,7 @@ export function Koleksi({ locale, books, facts }: { locale: Locale; books: KBook
         <span>🃏 <b>{ready ? nF : "–"}</b> / {facts.length} {id ? "kartu fakta" : "fact cards"}</span>
       </div>
 
+      <a href={`./../warnai/`} className="kol-color">🖍️ {id ? "Halaman mewarnai cerita →" : "Story colouring pages →"}</a>
       <h2 className="kol-h">{id ? "Buku stiker" : "Sticker book"}</h2>
       <ul className="kol-grid">
         {books.map((b, i) => {
@@ -73,6 +74,7 @@ export function Koleksi({ locale, books, facts }: { locale: Locale; books: KBook
       <style>{`
         .kol-stats{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:18px;}
         .kol-stats span{padding:8px 14px;border-radius:999px;background:var(--color-sun-soft);color:var(--color-ink);font-size:14px;}
+        .kol-color{display:inline-block;margin:0 0 6px;font-weight:800;color:#C2410C;}
         .kol-h{font-family:var(--font-display,inherit);font-size:22px;color:var(--color-ink);margin:22px 0 10px;}
         .kol-sub{margin:-6px 0 10px;font-size:13px;color:var(--color-whisper);}
         .kol-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(104px,1fr));gap:14px;}
