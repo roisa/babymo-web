@@ -323,6 +323,8 @@ export function BookReader({
           readFor: "Dibacakan untuk",
           namePh: "nama si kecil",
           hooray: (n: string) => `Hore, ${n}!`,
+          voice: "Suara",
+          noVoice: "Perangkat ini belum punya suara Bahasa Indonesia, jadi teks disorot tanpa suara. Tambahkan di Pengaturan › Bahasa › Teks-ke-ucapan (pilih Bahasa Indonesia).",
           short: "Pendek",
           shortOn: "Versi pendek untuk si kecil",
           talk: "Ngobrol, yuk!",
@@ -367,6 +369,8 @@ export function BookReader({
           readFor: "Read for",
           namePh: "your child's name",
           hooray: (n: string) => `Hooray, ${n}!`,
+          voice: "Voice",
+          noVoice: "This device has no English voice installed, so the words light up silently. Add one in Settings › Language › Text-to-speech.",
           short: "Short",
           shortOn: "Short version for little ones",
           talk: "Let's talk!",
@@ -630,8 +634,9 @@ export function BookReader({
       if (turnTimer.current) clearTimeout(turnTimer.current);
       const sh = sheets?.[p];
       if (!sh || !picture) return;
-      const rate = night ? 0.8 : 0.92;
-      const pitch = night ? 0.97 : 1.06;
+      // a natural storyteller pace: Indonesian a touch slower, bedtime slower still
+      const rate = night ? 0.8 : locale === "id" ? 0.9 : 0.95;
+      const pitch = night ? 0.95 : 1;
       const next = (delay: number) => {
         turnTimer.current = setTimeout(() => go(1), delay);
       };
@@ -671,14 +676,20 @@ export function BookReader({
     [sheets, picture, night, title, locale, shortMode, childName],
   );
 
-  // read each page as it opens while read-aloud is on
+  // read each page as it opens while read-aloud is on. Keyed on the page itself
+  // (not the sheets array), so a re-layout never restarts the reading.
+  const narrateRef = useRef(narrateAt);
+  narrateRef.current = narrateAt;
+  const curSheet = sheets?.[pos];
+  const pageKey = curSheet ? `${curSheet.kind}-${"i" in curSheet ? curSheet.i : ""}` : "";
   useEffect(() => {
     if (!open || !readOn) return;
     if (skipOnce.current) { skipOnce.current = false; return; }
     setWord(-1);
-    const id = setTimeout(() => narrateAt(pos), 500);
+    const id = setTimeout(() => narrateRef.current(pos), 500);
     return () => clearTimeout(id);
-  }, [open, readOn, pos, narrateAt]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, readOn, pageKey, night, shortMode]);
 
   // stop everything when the book closes
   useEffect(() => {
@@ -752,7 +763,7 @@ export function BookReader({
         setFound((f) => new Set(f).add(pageI));
         playBlip("chime", night);
         burst(host, e.clientX, e.clientY, ["⭐", "✨", "🌟", "✨"]);
-        if (!readOn && findCfg) narrator.speak(`${t.found} ${findCfg.label[locale]}!`, { rate: 1, pitch: 1.15 });
+        if (!readOn && findCfg) narrator.speak(`${t.found} ${findCfg.label[locale]}!`, { rate: 0.95, pitch: 1.04 });
       }
       return;
     }
@@ -766,7 +777,7 @@ export function BookReader({
     playBlip(person ? "boing" : "pop", night);
     burst(host, e.clientX, e.clientY, person ? ["💖", "✨", "💖"] : ["✨", "💫", "✨"]);
     const name = TAP_NAMES[k]?.[locale];
-    if (name && !readOn) narrator.speak(name, { rate: 1, pitch: 1.12 });
+    if (name && !readOn) narrator.speak(name, { rate: 0.95, pitch: 1.04 });
   };
   const findFor = (i: number) => (findCfg ? { k: findCfg.k, zone: findCfg.zone, s: findCfg.s, seed: i + 1 + (slug?.length ?? 0), found: found.has(i) } : undefined);
   const findChip = (i: number) =>
@@ -1153,8 +1164,21 @@ export function BookReader({
               </div>
             )}
           </div>
+          <div className="bk-floatnotes">
           {night && <div className="bk-night-note" role="status">{slept ? t.sleepDone : t.nightOn}</div>}
+          {readOn && narrator.noVoice && <div className="bk-night-note bk-novoice" role="status">{t.noVoice}</div>}
+          {readOn && narrator.voices.length > 1 && (
+            <label className="bk-voicepick">
+              <span>🗣️ {t.voice}</span>
+              <select value={narrator.voiceName} onChange={(e) => { narrator.chooseVoice(e.target.value); setTimeout(() => narrateAt(pos), 50); }}>
+                {narrator.voices.map((v) => (
+                  <option key={v.name} value={v.name}>{v.name.replace(/^(Microsoft|Google)\s+/, "").replace(/\s*-\s*.*$/, "").replace(/\s*\(.*\)$/, (m) => (/natural/i.test(m) ? " ✨" : ""))}</option>
+                ))}
+              </select>
+            </label>
+          )}
           {factToast > 0 && <div className="bk-fact-toast" role="status" key={factToast}>🃏 {t.newFact}</div>}
+          </div>
 
           <div className="bk-stage" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <button
@@ -1266,6 +1290,12 @@ export function BookReader({
         .bk-overlay--night{background:radial-gradient(120% 90% at 50% -10%, rgba(20,24,60,.75), rgba(4,5,14,.94));}
         .bk-overlay--night .bk-book{filter:brightness(.74) saturate(.8) sepia(.12);transition:filter 1.2s ease;}
         .bk-overlay--night .bk-amb{opacity:.25;}
+        .bk-novoice{max-width:min(92vw,520px);text-align:center;line-height:1.35;background:rgba(120,40,30,.75);}
+        .bk-voicepick{position:relative;z-index:3;align-self:center;display:flex;align-items:center;gap:6px;margin-top:4px;padding:3px 6px 3px 12px;border-radius:999px;
+          font-size:12px;font-weight:700;color:#fff;background:rgba(18,14,10,.6);}
+        .bk-voicepick select{max-width:180px;border-radius:999px;border:0;padding:4px 8px;font:inherit;font-weight:800;color:#3a2a00;background:#FFE27A;}
+        .bk-floatnotes{position:absolute;left:0;right:0;top:calc(58px + env(safe-area-inset-top));z-index:6;display:flex;flex-direction:column;align-items:center;gap:6px;pointer-events:none;}
+        .bk-floatnotes > *{pointer-events:auto;}
         .bk-night-note{position:relative;z-index:3;align-self:center;margin-top:-2px;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;
           color:#E3E8FF;background:rgba(40,46,96,.6);}
         @media (prefers-reduced-motion: reduce){ .bk-sfx{animation:none;} }

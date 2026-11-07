@@ -9,7 +9,7 @@
  * Sound words (PLOK!, Bzzz, DUAR!) are drawn big and bouncy so a child can
  * shout them.
  */
-import { useCallback, useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 export type Tok = { w: string; start: number; end: number; sfx: boolean };
 
@@ -47,37 +47,146 @@ export function ReadText({ text, active }: { text: string; active: number }) {
   );
 }
 
-function pickVoice(lang: string): SpeechSynthesisVoice | null {
-  if (typeof window === "undefined" || !window.speechSynthesis) return null;
-  const vs = window.speechSynthesis.getVoices();
-  const want = lang === "id" ? ["id-ID", "id_ID", "id", "in-ID"] : ["en-GB", "en-US", "en"];
-  const match = vs.filter((v) => want.some((w) => v.lang.toLowerCase().startsWith(w.toLowerCase())));
-  const pref = ["Damayanti", "Google", "Natural", "Female", "Siri"];
-  for (const p of pref) {
-    const v = match.find((x) => x.name.includes(p));
-    if (v) return v;
-  }
-  return match[0] ?? null;
+/* ───────── voices ───────── */
+
+const NOVELTY = /Albert|Bad News|Bahh|Bells|Boing|Bubbles|Cellos|Deranged|Good News|Hysterical|Jester|Junior|Organ|Superstar|Trinoids|Whisper|Wobble|Zarvox|Fred|Ralph|Kathy|Princess|Grandma|Grandpa|Rocko|Shelley|Flo|Eddy|Reed|Sandy/;
+const GOOD: Record<string, RegExp> = {
+  id: /Damayanti|Gadis|Ardi|Indonesia/i,
+  en: /Samantha|Karen|Daniel|Moira|Serena|Kate|Aria|Jenny|Libby|Sonia|Ava|Allison|Susan|Martha|Arthur|Catherine/i,
+};
+const langOf = (v: SpeechSynthesisVoice) => v.lang.toLowerCase().replace("_", "-");
+
+/** Voices that really speak this language (Malay only as a last resort for Indonesian). */
+export function voicesFor(lang: string): SpeechSynthesisVoice[] {
+  if (typeof window === "undefined" || !window.speechSynthesis) return [];
+  const vs = window.speechSynthesis.getVoices().filter((v) => !NOVELTY.test(v.name));
+  const own = vs.filter((v) => (lang === "id" ? /^(id|in)(-|$)/.test(langOf(v)) : /^en(-|$)/.test(langOf(v))));
+  if (own.length || lang !== "id") return own;
+  return vs.filter((v) => /^ms(-|$)/.test(langOf(v)));
+}
+
+function score(v: SpeechSynthesisVoice, lang: string) {
+  let s = 0;
+  if (/natural|neural/i.test(v.name)) s += 120; // Edge "(Natural)" voices sound almost human
+  if (/premium|enhanced|siri/i.test(v.name)) s += 90;
+  if (/online/i.test(v.name)) s += 60;
+  if (/google/i.test(v.name)) s += 55;
+  if (GOOD[lang]?.test(v.name)) s += 50;
+  if (lang === "en") s += /en-gb/.test(langOf(v)) ? 12 : /en-us/.test(langOf(v)) ? 10 : /en-(au|ie|nz)/.test(langOf(v)) ? 6 : 0;
+  if (lang === "id" && /^ms/.test(langOf(v))) s -= 80;
+  if (!v.localService) s += 5;
+  return s;
+}
+
+export const VOICE_KEY = (lang: string) => `bm-voice-${lang}`;
+export function pickVoice(lang: string): SpeechSynthesisVoice | null {
+  const vs = voicesFor(lang);
+  if (!vs.length) return null;
+  try {
+    const want = localStorage.getItem(VOICE_KEY(lang));
+    const mine = want && vs.find((v) => v.name === want);
+    if (mine) return mine;
+  } catch {}
+  return [...vs].sort((a, b) => score(b, lang) - score(a, lang))[0] ?? null;
 }
 
 export function speechSupported() {
   return typeof window !== "undefined" && "speechSynthesis" in window && "SpeechSynthesisUtterance" in window;
 }
 
+/* ───────── pronunciation ───────── */
+
+// Indonesian: read Arabic phrases, abbreviations and sound words like a local would
+const ID_WORDS: Record<string, string> = {
+  "assalamu'alaikum": "assalamualaikum", "assalamu’alaikum": "assalamualaikum", "wa'alaikumsalam": "waalaikumsalam",
+  "ﷺ": "shallallahu alaihi wasallam", swt: "subhanahu wa taala", qs: "Quran surat", hr: "hadis riwayat",
+  hp: "ha pe", "hp-nya": "ha pe nya", tpa: "te pe a", bmkg: "be em ka ge", bpbd: "be pe be de", who: "we ha o", sd: "es de", tk: "te ka",
+  innaa: "inna", lillaahi: "lillahi", "raaji'uun": "rojiun", "raaji’uun": "rojiun",
+  "allaahummaghfir": "allahummaghfir", "'aafihi": "afihi", "wa'fu": "wafu", "'anhu": "anhu", warhamhu: "warhamhu",
+  hasbunallaahu: "hasbunallahu", "ni'mal": "nimal", wakiil: "wakil",
+  rabbisyrah: "robbisyroh", lii: "li", shadrii: "shodri", amrii: "amri", "'uqdatan": "uqdatan", lisaanii: "lisani", yafqahuu: "yafqohu", qaulii: "qouli",
+  "qur'an": "quran", "al-qur'an": "al quran", "du'a": "doa", "jum'at": "jumat", "ma'idah": "maidah", "'imran": "imron",
+};
+// English: say the family's Indonesian names and words the Indonesian way
+const EN_WORDS: Record<string, string> = {
+  umi: "Oomee", abi: "Ah-bee", kakek: "Kah-keck", nenek: "Neh-neck", kak: "Kahk", ais: "Ah-ees", tukik: "Too-kick",
+  jingga: "Jing-gah", rimba: "Rim-bah", utan: "Oo-tahn", nala: "Nah-lah", darto: "Dar-toh", rina: "Ree-nah", bu: "Boo", pak: "Pahk", om: "Ohm",
+  masya: "Masha", insya: "Insha", alhamdulillah: "Al-hamdu-lillah", bismillah: "Bis-millah", "assalamu'alaikum": "Assalamu alaikum", "assalamu’alaikum": "Assalamu alaikum",
+  "ﷺ": "peace be upon him", "du'a": "doo-ah", "qur'an": "Koran", sholat: "sha-laat", salat: "sa-laat", peci: "peh-chee", tasbih: "tas-bee",
+  lebaran: "Leh-bah-ran", ketupat: "keh-too-pat", opor: "oh-por", mudik: "moo-dick", sedekah: "seh-deh-kah", dhikr: "thikr", nastar: "nahs-tar",
+  kalimantan: "Kah-lee-mahn-tahn", "an-nahl": "An Nahl", innaa: "Inna", lillaahi: "lillahi", "raaji'uun": "raa-jee-oon", hasbunallaahu: "Has-bu-nallahu",
+  wakiil: "wakeel", rabbisyrah: "Rabbish-rah", lii: "lee", shadrii: "sadree", amrii: "amree", lisaanii: "lisaanee", yafqahuu: "yafqahoo", qaulii: "qawlee",
+  mengaji: "meng-ah-jee", tadarus: "ta-da-roos",
+};
+const ACRONYM = /^(QS|HR|HP|TPA|BMKG|BPBD|WHO|SD|TK|SWT)$/;
+
+/** How one written word should be spoken. */
+export function spokenWord(w: string, lang: string): string {
+  let out = w.replace(/[\u{1F300}-\u{1FAFF}☀-➿️]/gu, "").replace(/[“”"«»]/g, "").replace(/…/g, ",").replace(/[—–]/g, ",");
+  const m = out.match(/^([^\p{L}ﷺ']*)([\p{L}ﷺ'’-]*?)((?:['’]s)?)([^\p{L}ﷺ]*)$/u);
+  if (!m) return out;
+  const [, pre, core0, poss, post] = m as unknown as [string, string, string, string, string];
+  let core = core0;
+  const key = core.toLowerCase();
+  const dict = lang === "id" ? ID_WORDS : EN_WORDS;
+  if (dict[key]) {
+    core = dict[key]!;
+    // "QS." / "HR." are abbreviations, not the end of a sentence
+    if (/^(qs|hr|swt)$/.test(key)) return `${pre}${core}${post.replace(/^\./, "")}`;
+  }
+  else if (ACRONYM.test(core)) core = core; // spelled by the voice
+  else if (core.length >= 2 && core === core.toUpperCase() && /\p{Lu}/u.test(core)) core = core[0] + core.slice(1).toLowerCase(); // TIGA! → Tiga! (not spelled out)
+  core = core.replace(/(\p{L})\1{3,}/gu, "$1$1$1"); // Bzzzzz → Bzzz
+  if (lang === "id") core = core.replace(/['’]/g, ""); // apostrophes in Arabic transliteration
+  return `${pre}${core}${poss}${post}`;
+}
+
+type Chunk = { text: string; toks: { i: number; start: number; end: number }[] };
+/** Split a page into sentences, each with a map from spoken offsets back to the written words. */
+function chunksFor(toks: Tok[], lang: string): Chunk[] {
+  const out: Chunk[] = [];
+  let cur: Chunk = { text: "", toks: [] };
+  toks.forEach((t, i) => {
+    const sw = spokenWord(t.w, lang).trim();
+    if (sw && !/\p{L}|\p{N}/u.test(sw)) {
+      // a lone dash or ellipsis: just a pause after the previous word
+      if (cur.text && !/[,.!?]$/.test(cur.text)) cur.text += ",";
+    } else if (sw) {
+      if (cur.text) cur.text += " ";
+      cur.toks.push({ i, start: cur.text.length, end: cur.text.length + sw.length });
+      cur.text += sw;
+    }
+    if (/[.!?]["”’)]*$/.test(sw) && cur.text) { out.push(cur); cur = { text: "", toks: [] }; }
+  });
+  if (cur.text) out.push(cur);
+  return out;
+}
+
 /** speak(text) → highlights via onWord(i), calls onEnd when done. */
 export function useNarrator(lang: string) {
   const timer = useRef<ReturnType<typeof setInterval> | null>(null);
-  const gotBoundary = useRef(false);
   const token = useRef(0);
+  const [voices, setVoices] = useState<SpeechSynthesisVoice[]>([]);
+  const [voiceName, setVoiceName] = useState<string>("");
+  const [noVoice, setNoVoice] = useState(false);
 
   useEffect(() => {
     if (!speechSupported()) return;
     // voices arrive asynchronously on some browsers
-    const prime = () => window.speechSynthesis.getVoices();
-    prime();
-    window.speechSynthesis.addEventListener?.("voiceschanged", prime);
-    return () => window.speechSynthesis.removeEventListener?.("voiceschanged", prime);
-  }, []);
+    const load = () => {
+      const vs = voicesFor(lang);
+      setVoices(vs);
+      setVoiceName(pickVoice(lang)?.name ?? "");
+    };
+    load();
+    window.speechSynthesis.addEventListener?.("voiceschanged", load);
+    return () => window.speechSynthesis.removeEventListener?.("voiceschanged", load);
+  }, [lang]);
+
+  const chooseVoice = useCallback((name: string) => {
+    try { localStorage.setItem(VOICE_KEY(lang), name); } catch {}
+    setVoiceName(name);
+  }, [lang]);
 
   const stop = useCallback(() => {
     token.current++;
@@ -92,83 +201,101 @@ export function useNarrator(lang: string) {
       const my = ++token.current;
       const toks = tokenize(text);
       const rate = opts.rate ?? 0.92;
-      // estimated timeline, used when the voice sends no boundary events
       const msPerChar = 62 / rate;
-      let acc = 0;
-      const due = toks.map((t) => (acc += (t.w.length + 1.6) * msPerChar + (/[.,!?…]$/.test(t.w) ? 260 / rate : 0)));
-      const startFallback = (finish: boolean) => {
-        let i = 0;
-        opts.onWord?.(0);
-        const t0 = Date.now();
-        timer.current = setInterval(() => {
-          if (token.current !== my) return;
-          const el = Date.now() - t0;
-          while (i < toks.length - 1 && el > due[i]!) i++;
-          opts.onWord?.(i);
-          const last = due[due.length - 1] ?? 0;
-          // finish: no voice, end on the estimate. Otherwise the voice should end on
-          // its own; if it never reports the end, give up after a generous margin.
-          if (finish ? el > last + 300 : el > last * 1.7 + 2500) {
-            if (!finish && speechSupported()) window.speechSynthesis.cancel();
-            if (timer.current) clearInterval(timer.current);
-            timer.current = null;
-            opts.onWord?.(-1);
-            opts.onEnd?.();
-          }
-        }, 90);
-      };
-      if (!speechSupported()) {
-        // no voice at all: still walk the highlight and turn the page
-        startFallback(true);
-        return;
-      }
-      let started = false;
-      const u = new SpeechSynthesisUtterance(text.replace(/[\u{1F300}-\u{1FAFF}☀-➿]/gu, ""));
-      u.lang = lang === "id" ? "id-ID" : "en-GB";
-      const v = pickVoice(lang);
-      if (v) u.voice = v;
-      u.rate = rate;
-      u.pitch = opts.pitch ?? 1.05;
-      gotBoundary.current = false;
-      u.onboundary = (e: SpeechSynthesisEvent) => {
-        if (token.current !== my || e.name === "sentence") return;
-        if (!gotBoundary.current) {
-          gotBoundary.current = true;
-          if (timer.current) clearInterval(timer.current);
-          timer.current = null;
-        }
-        const idx = toks.findIndex((t) => e.charIndex >= t.start && e.charIndex < t.end + 1);
-        if (idx >= 0) opts.onWord?.(idx);
-      };
-      u.onstart = () => {
-        started = true;
-        if (token.current !== my) return;
-        setTimeout(() => {
-          if (token.current === my && !gotBoundary.current && !timer.current) startFallback(false);
-        }, 500);
-      };
-      u.onend = () => {
-        if (token.current !== my) return;
+      const est = (w: string) => (w.length + 1.6) * msPerChar + (/[.,!?…]$/.test(w) ? 260 / rate : 0);
+      const finish = () => {
         if (timer.current) clearInterval(timer.current);
         timer.current = null;
         opts.onWord?.(-1);
         opts.onEnd?.();
       };
-      window.speechSynthesis.speak(u);
-      // some browsers have the API but never speak (no voice installed):
-      // fall back to the silent timeline so the book keeps moving
+      // silent timeline: no voice for this language — the highlight still runs
+      const silent = () => {
+        let acc = 0;
+        const due = toks.map((t) => (acc += est(t.w)));
+        const t0 = Date.now();
+        let i = 0;
+        opts.onWord?.(0);
+        timer.current = setInterval(() => {
+          if (token.current !== my) return;
+          const el = Date.now() - t0;
+          while (i < toks.length - 1 && el > due[i]!) i++;
+          opts.onWord?.(i);
+          if (el > acc + 300) finish();
+        }, 90);
+      };
+      if (!speechSupported()) return silent();
+      const all = window.speechSynthesis.getVoices();
+      const v = pickVoice(lang);
+      // voices are listed but none speaks this language: never let a wrong-language voice read it
+      if (all.length && !v) {
+        setNoVoice(true);
+        return silent();
+      }
+      setNoVoice(false);
+      const chunks = chunksFor(toks, lang);
+      let started = false;
+      const sayChunk = (k: number) => {
+        if (token.current !== my) return;
+        const c = chunks[k];
+        if (!c) return finish();
+        const u = new SpeechSynthesisUtterance(c.text);
+        u.lang = lang === "id" ? (v?.lang ?? "id-ID") : (v?.lang ?? "en-GB");
+        if (v) u.voice = v;
+        u.rate = rate;
+        u.pitch = opts.pitch ?? 1;
+        let gotBoundary = false;
+        u.onboundary = (e: SpeechSynthesisEvent) => {
+          if (token.current !== my || e.name === "sentence") return;
+          gotBoundary = true;
+          if (timer.current) { clearInterval(timer.current); timer.current = null; }
+          const hit = c.toks.find((t) => e.charIndex >= t.start && e.charIndex <= t.end);
+          if (hit) opts.onWord?.(hit.i);
+        };
+        u.onstart = () => {
+          started = true;
+          if (token.current !== my) return;
+          opts.onWord?.(c.toks[0]?.i ?? 0);
+          // this voice sends no word events: estimate inside the sentence
+          setTimeout(() => {
+            if (token.current !== my || gotBoundary || timer.current) return;
+            const t0 = Date.now();
+            let acc = 0;
+            const due = c.toks.map((t) => (acc += est(toks[t.i]!.w)));
+            let j = 0;
+            timer.current = setInterval(() => {
+              if (token.current !== my) return;
+              const el = Date.now() - t0 + 400;
+              while (j < c.toks.length - 1 && el > due[j]!) j++;
+              opts.onWord?.(c.toks[j]!.i);
+              // never trust a voice that forgets to say it's done
+              if (el > acc * 1.8 + 3000) { window.speechSynthesis.cancel(); if (timer.current) clearInterval(timer.current); timer.current = null; sayChunk(k + 1); }
+            }, 90);
+          }, 400);
+        };
+        u.onend = () => {
+          if (token.current !== my) return;
+          if (timer.current) { clearInterval(timer.current); timer.current = null; }
+          // a short natural breath between sentences
+          setTimeout(() => sayChunk(k + 1), /[!?]$/.test(c.text) ? 160 : 120);
+        };
+        u.onerror = () => { if (token.current === my) sayChunk(k + 1); };
+        window.speechSynthesis.speak(u);
+      };
+      sayChunk(0);
+      // some browsers have the API but never speak: fall back to the silent timeline
       setTimeout(() => {
         if (token.current === my && !started) {
           window.speechSynthesis.cancel();
-          startFallback(true);
+          silent();
         }
-      }, 1500);
+      }, 1800);
     },
-    [lang, stop],
+    [lang, stop, voiceName], // eslint-disable-line react-hooks/exhaustive-deps
   );
 
   useEffect(() => stop, [stop]);
-  return { speak, stop };
+  return { speak, stop, voices, voiceName, chooseVoice, noVoice };
 }
 
 /**
