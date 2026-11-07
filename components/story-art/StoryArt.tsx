@@ -85,13 +85,32 @@ function Cloud({ x, y, s = 1, d = 0, grey = false }: { x: number; y: number; s?:
   );
 }
 
-function Window({ x, y, w = 170, h = 140, time }: { x: number; y: number; w?: number; h?: number; time: ArtTime }) {
-  const sk = time === "night" ? "#22285A" : time === "dusk" ? "#FFB49A" : time === "rain" ? "#A9B8C8" : "#BFE6FF";
+function Window({ x, y, w = 170, h = 140, time, rainy = false }: { x: number; y: number; w?: number; h?: number; time: ArtTime; rainy?: boolean }) {
+  // indoor rain falls OUTSIDE, behind the glass — never across the room
+  const wet = rainy || time === "rain";
+  const sk = time === "night" ? (wet ? "#1A2046" : "#22285A") : time === "dusk" ? "#FFB49A" : wet ? "#A9B8C8" : "#BFE6FF";
+  const clip = `sa-win-${x}-${y}`;
   return (
     <g>
       <rect x={x - 8} y={y - 8} width={w + 16} height={h + 16} rx={14} fill="#FFFFFF" />
       <rect x={x} y={y} width={w} height={h} rx={8} fill={sk} />
-      {time === "night" ? (
+      {wet ? (
+        <g>
+          <defs><clipPath id={clip}><rect x={x} y={y} width={w} height={h} rx={8} /></clipPath></defs>
+          <g clipPath={`url(#${clip})`}>
+            {/* soft grey clouds pressing on the glass */}
+            <ellipse cx={x + w * 0.3} cy={y + 6} rx={w * 0.4} ry={22} fill={time === "night" ? "#2C335E" : "#8F9EB0"} />
+            <ellipse cx={x + w * 0.8} cy={y + 2} rx={w * 0.35} ry={18} fill={time === "night" ? "#2C335E" : "#8F9EB0"} />
+            {Array.from({ length: 16 }, (_, i) => (
+              <line key={i} className="sa-winrain" style={{ animationDelay: `${-((i * 0.37) % 0.9)}s` }} x1={x + 6 + ((i * 37) % w)} y1={y - 20} x2={x + 2 + ((i * 37) % w)} y2={y - 4} stroke="#EAF3FF" strokeWidth={2.5} strokeLinecap="round" opacity=".8" />
+            ))}
+            {/* drops sliding down the glass */}
+            {[0.18, 0.46, 0.7, 0.86].map((f, i) => (
+              <circle key={`d${i}`} className="sa-windrop" style={{ animationDelay: `${-i * 1.1}s` }} cx={x + w * f} cy={y + 16} r={3} fill="#fff" opacity=".7" />
+            ))}
+          </g>
+        </g>
+      ) : time === "night" ? (
         <>
           <circle cx={x + w * 0.72} cy={y + h * 0.32} r={16} fill="#FFE98A" />
           <circle cx={x + w * 0.72 + 8} cy={y + h * 0.32 - 5} r={14} fill={sk} />
@@ -99,12 +118,6 @@ function Window({ x, y, w = 170, h = 140, time }: { x: number; y: number; w?: nu
             <circle key={i} className="sa-twinkle" style={{ animationDelay: `${i * 0.5}s` }} cx={x + w * f} cy={y + h * (0.25 + i * 0.15)} r={2.5} fill="#fff" />
           ))}
         </>
-      ) : time === "rain" ? (
-        <g className="sa-rainwin">
-          {Array.from({ length: 8 }, (_, i) => (
-            <line key={i} x1={x + 12 + i * (w / 8)} y1={y + 10 + (i % 3) * 20} x2={x + 6 + i * (w / 8)} y2={y + 30 + (i % 3) * 20} stroke="#fff" strokeWidth={3} strokeLinecap="round" opacity=".7" />
-          ))}
-        </g>
       ) : (
         <>
           <circle cx={x + w * 0.75} cy={y + h * 0.3} r={16} fill="#FFD447" />
@@ -140,7 +153,7 @@ function Floor({ color, plank = true }: { color: string; plank?: boolean }) {
   );
 }
 
-function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
+function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rainy?: boolean }) {
   const night = time === "night";
   switch (bg) {
     case "bedroom":
@@ -148,7 +161,9 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
         <g>
           <rect y={TOP} width={W} height={H - TOP} fill={night ? "#3A3F73" : "#FFF1E3"} />
           <g opacity=".5">{Array.from({ length: 9 }, (_, i) => <circle key={i} cx={40 + i * 92} cy={40 + (i % 2) * 34} r={5} fill={night ? "#6A6FA8" : "#FFD6B8"} />)}</g>
-          <Window x={70} y={70} time={time} />
+          <Window x={70} y={70} time={time} rainy={rainy} />
+          {/* rainy night: a second window above the bed so the rain shows in the phone crop */}
+          {rainy && <Window x={330} y={40} w={120} h={100} time={time} rainy />}
           {/* bed */}
           <g>
             <rect x={470} y={200} width={26} height={170} rx={10} fill="#C08552" />
@@ -167,11 +182,19 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
         <g>
           <rect y={TOP} width={W} height={H - TOP} fill={night ? "#2F4A55" : "#E5F4EF"} />
           <rect y={0} width={W} height={30} fill="#000" opacity=".03" />
-          <Window x={520} y={60} w={200} h={140} time={time} />
-          {/* frame */}
-          <rect x={250} y={80} width={110} height={80} rx={10} fill="#fff" />
-          <path d="M262 150 l30 -36 l24 26 l14 -14 l18 24 z" fill="#8FD18C" />
-          <circle cx={340} cy={102} r={9} fill="#FFD447" />
+          <Window x={520} y={60} w={200} h={140} time={time} rainy={rainy} />
+          {rainy ? (
+            // on rainy days the picture spot becomes a second window, so the
+            // rain is visible even in the narrow phone crop
+            <Window x={240} y={56} w={130} h={112} time={time} rainy />
+          ) : (
+            <g>
+              {/* frame */}
+              <rect x={250} y={80} width={110} height={80} rx={10} fill="#fff" />
+              <path d="M262 150 l30 -36 l24 26 l14 -14 l18 24 z" fill="#8FD18C" />
+              <circle cx={340} cy={102} r={9} fill="#FFD447" />
+            </g>
+          )}
           {/* sofa */}
           <g>
             <rect x={40} y={200} width={300} height={90} rx={30} fill="#7FB8E6" />
@@ -194,7 +217,7 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
             {Array.from({ length: 14 }, (_, i) => <line key={`v${i}`} x1={i * 60} x2={i * 60} y1={120} y2={250} stroke="#E9C98F" strokeWidth={2} />)}
             {[150, 190, 230].map((y) => <line key={y} x1={0} x2={W} y1={y} y2={y} stroke="#E9C98F" strokeWidth={2} />)}
           </g>
-          <Window x={300} y={30} w={200} h={110} time={time} />
+          <Window x={300} y={30} w={200} h={110} time={time} rainy={rainy} />
           {/* cabinets */}
           <rect x={40} y={20} width={200} height={90} rx={12} fill="#F4A261" />
           <rect x={560} y={20} width={200} height={90} rx={12} fill="#F4A261" />
@@ -2622,7 +2645,7 @@ function Prop({ k }: { k: ArtProp }) {
 
 /* ───────── effects ───────── */
 
-function Fx({ k, time, page = false }: { k: ArtFx; time: ArtTime; page?: boolean }) {
+function Fx({ k, time, page = false, indoor = false }: { k: ArtFx; time: ArtTime; page?: boolean; indoor?: boolean }) {
   const seeds = Array.from({ length: 16 }, (_, i) => ({ x: (i * 53 + 17) % W, d: (i * 0.37) % 3, y: (i * 41) % 260 }));
   switch (k) {
     case "rain":
@@ -2636,8 +2659,8 @@ function Fx({ k, time, page = false }: { k: ArtFx; time: ArtTime; page?: boolean
     case "lightning":
       return (
         <g>
-          <rect className="sa-flash" x={-100} y={page ? -360 : -20} width={W + 200} height={900} fill="#FFFFFF" />
-          <path className="sa-bolt" transform={`translate(${page ? 515 : 640} ${page ? 30 : 20})`} d="M0 0 l-28 70 h22 l-18 70 l50 -90 h-24 l20 -50 z" fill="#FFE066" stroke="#FFB800" strokeWidth={3} />
+          <rect className="sa-flash" x={-100} y={page ? -360 : -20} width={W + 200} height={900} fill={indoor ? "#DCE6FF" : "#FFFFFF"} opacity={indoor ? 0.55 : 1} />
+          {!indoor && <path className="sa-bolt" transform={`translate(${page ? 515 : 640} ${page ? 30 : 20})`} d="M0 0 l-28 70 h22 l-18 70 l50 -90 h-24 l20 -50 z" fill="#FFE066" stroke="#FFB800" strokeWidth={3} />}
         </g>
       );
     case "shootingstar":
@@ -2934,6 +2957,10 @@ export function StoryArt({
   const time = scene.time ?? "day";
   const outdoor = ["garden", "park", "market", "street", "beach", "court", "forest", "hill"].includes(scene.bg);
   const quake = (scene.fx ?? []).includes("quake");
+  // rooms: rain stays outside the window, lightning is only a flash through it
+  const indoor = !outdoor && scene.bg !== "underwater" && scene.bg !== "mosque";
+  const indoorRain = indoor && ((scene.fx ?? []).includes("rain") || time === "rain");
+  const fxList = (scene.fx ?? []).filter((f) => !(indoor && f === "rain"));
   const groundY = outdoor ? 410 : 405;
   // Baby Mo stands on the floor / ground in the foreground
   const moGround = outdoor ? 428 : 425;
@@ -2960,7 +2987,7 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <g className={quake ? "sa-quake" : undefined}>
-      <Background bg={scene.bg} time={time} />
+      <Background bg={scene.bg} time={time} rainy={indoorRain} />
       <g style={{ pointerEvents: "none" }}>{(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}</g>
       <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
@@ -2975,7 +3002,7 @@ export function StoryArt({
       </g>
       {/* effects float over the scene but never catch a child's tap */}
       <g style={{ pointerEvents: "none" }}>
-        {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
+        {fxList.filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} indoor={indoor} />)}
         {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page || spread} />}
       </g>
     </svg>

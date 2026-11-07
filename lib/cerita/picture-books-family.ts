@@ -3775,7 +3775,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Malam itu hujan turun deras. DUAR! Petir menyambar. Mo bersembunyi di bawah selimut, gemetar.", en: "That night the rain poured down. BOOM! Thunder crashed. Mo hid under his blanket, trembling." },
-        scene: { focus: 340, bg: "bedroom", time: "rain", mo: [{ pose: "pose-10", x: 340 }], fx: ["lightning"] },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-10", x: 340 }], fx: ["rain", "lightning"] },
       },
       {
         text: { id: "Umi datang dan memeluknya. \"Mo mau dengar cerita tentang ibu paus dan bayinya?\" Mo mengangguk kecil.", en: "Umi came and hugged him. \"Would you like to hear a story about a mother whale and her baby?\" Mo gave a tiny nod." },
