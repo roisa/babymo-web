@@ -1,7 +1,7 @@
 /**
  * Baby Mo & friends pose library — Adam (older brother) and Ayah (Dad).
  *
- *   public/adam-poses/adam-<name>.png   34 renders (incl. 3 six-frame tennis swings)
+ *   public/adam-poses/adam-<name>.png   82 renders (incl. 4 six-frame tennis sequences)
  *   public/ayah-poses/ayah-<name>.png   90 renders (3 of them with Baby Mo in the image)
  *
  * Every PNG is 800×800, transparent, feet on the same ground line as Baby Mo
@@ -77,6 +77,55 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "tennis-stretch-reach", category: "play", mood: "focused", props: ["racket", "ball"], use: "Stretching far, racket low to the ball. Trying hard, a near miss.", low: true },
   { name: "tennis-net-volley", category: "play", mood: "happy", props: ["racket", "ball", "net"], use: "At the net, volleying. The net is part of the image." },
   { name: "tennis-rest-bench", category: "routine", mood: "calm", props: ["bench", "towel", "water bottle", "racket", "ball"], use: "Resting on a bench, towel round his neck, drinking water. Break time, staying hydrated.", low: true },
+  /* ── 2026-11 revision batches (R1–R4, R7, R9–R11): feelings, big brother, salat, learning, bedtime, serve frames ── */
+  { name: "sad-head-down", category: "feel", mood: "sad", use: "Standing, head down, shoulders drooping. Sad, disappointed, missed a chance." },
+  { name: "frustrated-stomp", category: "feel", mood: "frustrated", use: "Stamping one foot, fists down, steam puffs. Frustrated, \"it is too hard!\"" },
+  { name: "sulk-arms-crossed", category: "feel", mood: "sulky", use: "Arms crossed, pouting, looking away. Sulking, jealous, grumpy." },
+  { name: "angry-racket-up", category: "feel", mood: "angry", props: ["racket"], use: "Racket raised as if to throw it, angry shout. A moment of temper before calming down." },
+  { name: "deep-breath-calm", category: "calm", mood: "calm", use: "Eyes closed, hand on chest, slow breath out. Calming down, holding back anger, before a match." },
+  { name: "disappointed-sigh", category: "feel", mood: "disappointed", use: "Hands in pocket, long sigh. Plans cancelled, rained off, let down." },
+  { name: "laugh-tummy", category: "joy", mood: "joy", use: "Laughing hard, hands on tummy. Something funny, a silly mistake." },
+  { name: "surprised-hands-up", category: "feel", mood: "surprised", use: "Hands up, mouth in an O. Surprise, \"what?!\"" },
+  { name: "worried-bite-lip", category: "feel", mood: "worried", use: "Hands clasped, biting lip. Nervous before a match, worried for someone." },
+  { name: "sheepish-scratch-head", category: "feel", mood: "embarrassed", use: "Rubbing the back of his head, sheepish grin. Oops, caught out, shy thanks." },
+  { name: "proud-hands-hips", category: "joy", mood: "proud", use: "Hands on hips, proud grin, sparkles. Did it! Proud big brother." },
+  { name: "tired-hands-knees", category: "feel", mood: "tired", use: "Bent over, hands on knees, panting, sweat drop. After running or a long rally." },
+  { name: "kneel-talk", category: "care", mood: "kind", use: "Kneeling, one hand open, talking gently to someone small. Comforting, explaining, saying sorry.", low: true },
+  { name: "kneel-arms-open", category: "care", mood: "loving", use: "Kneeling with arms wide. Inviting a hug, welcoming the twins.", low: true },
+  { name: "crouch-pat", category: "care", mood: "kind", use: "Crouching, hand out at toddler height as if patting a head. Encouraging a little one.", low: true },
+  { name: "hold-hand-down", category: "care", mood: "kind", use: "Standing, arm reaching down as if holding a toddler's hand. Walking with Mo or Ais." },
+  { name: "handshake-offer", category: "greet", mood: "friendly", use: "Right hand held out for a handshake. \"Barakallah\" after a match, meeting someone, salaman." },
+  { name: "give-ball", category: "care", mood: "kind", props: ["tennis ball"], use: "Bending forward, offering a tennis ball. Sharing, giving back, \"you can borrow it\"." },
+  { name: "sholat-takbir", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: takbiratul ihram, hands beside the ears. Note: hoodie, not peci and koko." },
+  { name: "sholat-qiyam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: standing, hands folded, eyes on the mat." },
+  { name: "sholat-ruku", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: ruku. Note: back is rounded and knees bent; a flat back would be more correct. Use small or redo." },
+  { name: "sholat-sujud", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sujud, forehead on the mat. Wide image.", low: true },
+  { name: "sholat-duduk", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sitting tasyahud, index finger raised.", low: true },
+  { name: "sholat-salam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: salam, head turned to the right.", low: true },
+  { name: "write-card-floor", category: "create", mood: "focused", props: ["card", "crayons"], use: "Lying on his tummy drawing a card. Making a card for Umi or Abi, crossing off a calendar.", low: true },
+  { name: "show-drawing", category: "create", mood: "proud", props: ["drawing"], use: "Holding up a crayon drawing, laughing. Showing a gift, \"look what I made!\"" },
+  { name: "hold-trophy", category: "celebrate", mood: "joy", props: ["trophy"], use: "Holding up a gold trophy, no racket. Winning, prize giving, sharing a win." },
+  { name: "video-call-tablet", category: "screen", mood: "happy", props: ["tablet"], use: "Waving at a tablet. Video call with Abi, Nenek, a friend." },
+  { name: "search-crouch", category: "explore", mood: "curious", use: "Crouching, hand shading his eyes, looking at the ground. Searching for a lost ball or a bug.", low: true },
+  { name: "sorry-hands", category: "feel", mood: "sorry", use: "Palms together, apologetic face. Saying sorry, asking forgiveness, please." },
+  { name: "pj-dua-bed", category: "worship", mood: "calm", props: ["pillow"], use: "Pyjamas, sitting on a pillow, du'a before sleep.", low: true },
+  { name: "pj-yawn", category: "bedtime", mood: "sleepy", use: "Pyjamas, big yawn, rubbing an eye. Bedtime, early morning." },
+  { name: "pj-brush-teeth", category: "routine", mood: "fresh", props: ["toothbrush", "cup"], use: "Pyjamas, brushing teeth with a cup. Bedtime and morning routines." },
+  { name: "pj-sleep-pillow", category: "bedtime", mood: "asleep", props: ["pillow", "blanket"], use: "Asleep on his side under a star blanket. Wide image.", low: true },
+  { name: "pj-read-bed", category: "learn", mood: "happy", props: ["book"], use: "Pyjamas, sitting reading a book with a mosque cover. Bedtime story, reading alone.", low: true },
+  { name: "pj-wake-stretch", category: "bedtime", mood: "happy", props: ["pillow", "blanket"], use: "Waking up, arms stretched in bed. Morning, Fajr, a new day.", low: true },
+  { name: "tennis-serve-1", category: "play", mood: "calm", props: ["racket", "ball"], use: "Serve frame 1/6: stance, ball against the strings." },
+  { name: "tennis-serve-2", category: "play", mood: "happy", props: ["racket", "ball"], use: "Serve frame 2/6: tossing the ball up." },
+  { name: "tennis-serve-3", category: "play", mood: "focused", props: ["racket", "ball"], use: "Serve frame 3/6: trophy position, ball above." },
+  { name: "tennis-serve-4", category: "play", mood: "focused", props: ["racket"], use: "Serve frame 4/6: racket drop behind his back." },
+  { name: "tennis-serve-5", category: "play", mood: "excited", props: ["racket", "ball"], use: "Serve frame 5/6: contact, stretched up high on his toes.", air: true },
+  { name: "tennis-serve-6", category: "play", mood: "calm", props: ["racket"], use: "Serve frame 6/6: follow-through, landing." },
+  { name: "tennis-volley", category: "play", mood: "happy", props: ["racket", "ball"], use: "Volley at the net (net not drawn), ball on the strings. Replaces tennis-net-volley." },
+  { name: "tennis-rest-sit", category: "routine", mood: "calm", props: ["towel", "water bottle", "racket"], use: "Resting, towel round his neck, drinking. Sits on any bench prop. Replaces tennis-rest-bench.", low: true },
+  { name: "tennis-bounce-racket", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bouncing a ball on the racket strings. Practice, teaching the twins." },
+  { name: "tennis-pick-up-ball", category: "play", mood: "happy", props: ["racket", "ball"], use: "Bending to pick up a ball. Between points, tidying up balls.", low: true },
+  { name: "tennis-walk-racket", category: "travel", mood: "joy", props: ["racket"], use: "Walking happily with the racket on his shoulder. Going to or from the court." },
+  { name: "tennis-sad-miss", category: "feel", mood: "sad", props: ["racket"], use: "Racket dragging, head down. After a miss or a lost point." },
 ];
 
 export const AYAH_POSES: FriendPose[] = [
@@ -183,11 +232,32 @@ export const ADAM_FOR: Record<string, string[]> = {
   tennis: ["tennis-hit-forehand", "tennis-ready-wide", "tennis-hold-ball", "tennis-serve-toss"],
   effort: ["tennis-lunge-low", "tennis-stretch-reach", "tennis-backhand-set"],
   win: ["tennis-win-fist", "tennis-jump-reach"],
-  rest: ["tennis-rest-bench"],
+  rest: ["tennis-rest-sit", "tennis-rest-bench"],
+  sad: ["sad-head-down", "disappointed-sigh", "tennis-sad-miss"],
+  frustrated: ["frustrated-stomp", "sulk-arms-crossed", "angry-racket-up"],
+  calmDown: ["deep-breath-calm"],
+  laugh: ["laugh-tummy", "proud-hands-hips"],
+  surprised: ["surprised-hands-up"],
+  nervous: ["worried-bite-lip"],
+  oops: ["sheepish-scratch-head"],
+  tired: ["tired-hands-knees"],
+  bigBrother: ["kneel-talk", "kneel-arms-open", "crouch-pat", "hold-hand-down", "give-ball"],
+  handshake: ["handshake-offer"],
+  sorry: ["sorry-hands", "kneel-talk"],
+  salat: ["sholat-takbir", "sholat-qiyam", "sholat-sujud", "sholat-duduk", "sholat-salam"],
+  draw: ["write-card-floor", "show-drawing"],
+  trophy: ["hold-trophy"],
+  call: ["video-call-tablet"],
+  search: ["search-crouch"],
+  bedtime: ["pj-dua-bed", "pj-yawn", "pj-brush-teeth", "pj-sleep-pillow", "pj-read-bed"],
+  morning: ["pj-wake-stretch"],
+  practice: ["tennis-bounce-racket", "tennis-pick-up-ball", "tennis-walk-racket"],
+  volley: ["tennis-volley"],
   /** six-frame sequences, frame 1 → 6 */
   forehandFrames: ["tennis-forehand-1", "tennis-forehand-2", "tennis-forehand-3", "tennis-forehand-4", "tennis-forehand-5", "tennis-forehand-6"],
   backhandFrames: ["tennis-backhand-1", "tennis-backhand-2", "tennis-backhand-3", "tennis-backhand-4", "tennis-backhand-5", "tennis-backhand-6"],
   swingFrames: ["tennis-swing-1", "tennis-swing-2", "tennis-swing-3", "tennis-swing-4", "tennis-swing-5", "tennis-swing-6"],
+  serveFrames: ["tennis-serve-1", "tennis-serve-2", "tennis-serve-3", "tennis-serve-4", "tennis-serve-5", "tennis-serve-6"],
 };
 
 export const AYAH_FOR: Record<string, string[]> = {
@@ -230,8 +300,10 @@ export const FRIEND_GAPS = [
   "Ayah: carrying or holding a twin, holding hands walking",
   "Ayah: angry or crying",
   "Ayah: cooking, driving, fixing things",
-  "Adam: everyday feelings (sad, angry, scared), school, bedtime, salat",
-  "Adam with the twins (only Ayah has duo poses)",
+  "Adam: iqamah, teaching Iqra, du'a and dzikir sitting (brief batch R5)",
+  "Adam: running without a racket, tying shoes, drinking, kitchen, carrying bags (brief batch R6)",
+  "Adam with the twins: piggyback, hug, high-five, holding hands, reading (brief batch R8)",
+  "Adam: salat in peci and koko (R4 came back in the hoodie), and a flat-backed ruku",
 ];
 
 export const friendPoseSrc = (who: Friend, name: string) => `/${who}-poses/${who}-${name}.png`;
