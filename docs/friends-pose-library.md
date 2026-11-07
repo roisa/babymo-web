@@ -1,11 +1,11 @@
 # Baby Mo & friends — pose library (Adam and Ayah)
 
-There are 208 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
+There are 241 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
 
 | Character | Poses | Files | Reference sheet |
 | --- | --- | --- | --- |
-| Adam (older brother, about 7) | 118 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
-| Ayah (Dad) | 90 | `public/ayah-poses/ayah-<name>.png` | [ayah-pose-library.jpg](ayah-pose-library.jpg) |
+| Adam (older brother, about 7) | 145 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
+| Ayah (Dad) | 96 | `public/ayah-poses/ayah-<name>.png` | [ayah-pose-library.jpg](ayah-pose-library.jpg) |
 
 The code lives in `lib/cerita/friends-poses.ts`. It holds `ADAM_POSES`, `AYAH_POSES`, the quick picks `ADAM_FOR` and `AYAH_FOR`, and `FRIEND_GAPS`.
 
@@ -37,7 +37,7 @@ scene: {
 - **Small losses:** the "zzz" on `ayah-sleep-blanket` was dropped as a stray speck.
 - **Wrong outfit:** the tennis sheets show Adam in his blue hoodie, not the tennis outfit from the brief.
 
-## Adam — 118 poses
+## Adam — 145 poses
 
 ![Adam pose library](adam-pose-library.jpg)
 
@@ -140,6 +140,46 @@ These are from the Adam Pose Revision Brief, batches R1–R4, R7 and R9–R11.
 | `tennis-walk-racket` | travel | Walking happily with the racket on his shoulder. Going to or from the court. |
 | `tennis-sad-miss` | feel | Racket dragging, head down. After a miss or a lost point. |
 
+### Batch 4 (November 2026): 27 more
+
+These come from briefs R5 (iqamah and Iqra), R6 (daily life), R12 (salat in peci and koko), the "helping" batch and R8a (with Mo).
+
+- **⚠ Model check:** five renders are flagged with a `check` field in `friends-poses.ts` and marked red on the reference sheet.
+  - **Baby Mo is off-model** in every scene he appears in (`adam-piggyback-mo`, `adam-hug-mo`, `adam-high-five-mo`, `ayah-carry-mo`, `ayah-hold-hands-twins`). He has wavy brown hair, brown eyes and overalls, instead of smooth glossy black hair and his star jumpsuit. Use these small, or regenerate them with a Mo reference attached.
+  - **`sholat-ruku`** still has a rounded back.
+- **Salat:** the peci-and-koko set now takes the names `sholat-takbir`…`sholat-salam`. The earlier hoodie set is kept as `sholat-hoodie-*`.
+- **Ais is on-model** in `ayah-hold-hands-twins` and `ayah-shoulders-ais`.
+
+| Pose | Type | Notes |
+| --- | --- | --- |
+| `run` | play | Running happily, empty hands. Racing to the door, park jog, chasing the twins. |
+| `tie-shoes` | routine · low | Kneeling, tying a shoelace. Getting ready to go out. |
+| `drink-bottle` | food | Drinking from a blue bottle, hand on hip. After running or tennis. |
+| `stir-bowl` | food | Stirring a mixing bowl. Baking with Abi, kitchen help. |
+| `carry-bags` | care | Carrying two shopping bags. Helping with groceries. |
+| `clap-cheer` | joy | Clapping, eyes closed laughing. Cheering for the twins, good news. |
+| `sholat-takbir` | worship | Salat in peci and koko: takbir, hands beside the ears. Replaces the hoodie version. |
+| `sholat-qiyam` | worship | Salat in peci and koko: standing, hands folded. |
+| `sholat-ruku` | worship | Salat in peci and koko: ruku. **⚠ The back is still rounded with the head dropped; a correct ruku has a flat, level back. Use small or regenerate.** |
+| `sholat-sujud` | worship · low | Salat in peci and koko: sujud. |
+| `sholat-duduk` | worship · low | Salat in peci and koko: sitting tasyahud, finger raised. |
+| `sholat-salam` | worship · low | Salat in peci and koko: salam to the right. |
+| `iqamah` | worship | Calling the iqamah, hands cupped by his mouth. Prayer at home, leading the row. |
+| `teach-iqra-sit` | learn · low | Sitting, pointing at a letter in an Iqra book. Teaching Mo hijaiyah letters. |
+| `dua-sit` | worship · low | Sitting cross-legged in du'a, eyes closed. After salat, before sleep. |
+| `salaman` | greet | Both hands out to shake hands after prayer. Salaman with Abi or the twins. |
+| `quran-rehal-kneel` | worship · low | Kneeling, reading the Qur'an on a wooden rehal. Tadarus, Ramadan. |
+| `dzikir-sit` | worship · low | Sitting on a prayer mat counting tasbih, eyes closed. Dzikir after salat. |
+| `offer` | care | Both palms up, offering. Sharing, "for you", inviting. |
+| `carry-bowl` | care | Walking carefully with a steaming covered bowl. Bringing soup to a neighbour or Umi. |
+| `watering-can` | nature | Watering a potted plant. Garden, caring for plants. |
+| `hug-side` | care | Arms wrapping to the side as if hugging someone beside him, eyes closed, little heart. Place a twin in his arms. |
+| `sedekah-coin` | care | Dropping a coin into a wooden charity box. Sedekah, Friday. |
+| `umbrella` | weather | Holding a big blue umbrella over someone smaller. Rain, sheltering the twins. |
+| `piggyback-mo` | care · duo | Giving Baby Mo a piggyback, both laughing. **⚠ Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate.** |
+| `hug-mo` | care · low, duo | Kneeling, hugging Baby Mo tight. **⚠ Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate.** |
+| `high-five-mo` | celebrate · duo | Bending to high-five Baby Mo. **⚠ Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate.** |
+
 ### Tennis animation sets: 36 frames
 
 There are six six-frame sequences from the tennis animation brief. They play with `seq`, for example `{ who: "adam", pose: "tennis-run-1", seq: ADAM_FOR.runFrames, fps: 8, x }`.
@@ -159,7 +199,7 @@ There are six six-frame sequences from the tennis animation brief. They play wit
 
 The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis-swing-1…6`) are six-frame swings. Use frame 4 or 5 as a single book image, or play them in order as an animation.
 
-## Ayah — 90 poses
+## Ayah — 96 poses
 
 ![Ayah pose library](ayah-pose-library.jpg)
 
@@ -255,6 +295,17 @@ The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis
 | `thumbs-up-stand` | joy | Standing, thumbs up, hand in pocket. Approval. |
 | `cheer-fists-stand` | celebrate | Standing, fists up, knee raised, laughing. |
 | `think-chin-stand-2` | think · alt | Alt of think-chin-stand. |
+
+### Ayah batch 2: 6 more
+
+| Pose | Type | Notes |
+| --- | --- | --- |
+| `carry-mo` | care · duo | Carrying Baby Mo on his hip. **⚠ Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate.** |
+| `hold-hands-twins` | care · duo | Walking, holding Mo and Ais by the hand. Going out, school run, the mosque. **⚠ Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate.** |
+| `shoulders-ais` | care · duo | Baby Ais riding on his shoulders, both laughing. |
+| `cook-pan` | food | Cooking with a pan and spatula, apron on. Breakfast, iftar, helping Umi. |
+| `fix-toolbox` | routine · low | Kneeling, fixing a box with a screwdriver. Repairs, building something together. |
+| `stern-gentle` | learn | Finger raised, hand on hip, gentle but serious. A kind "not like that". |
 
 ## Still missing
 

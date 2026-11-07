@@ -1,8 +1,8 @@
 /**
  * Baby Mo & friends pose library — Adam (older brother) and Ayah (Dad).
  *
- *   public/adam-poses/adam-<name>.png   118 renders (incl. 10 six-frame tennis sequences)
- *   public/ayah-poses/ayah-<name>.png   90 renders (3 of them with Baby Mo in the image)
+ *   public/adam-poses/adam-<name>.png   145 renders (incl. 10 six-frame tennis sequences)
+ *   public/ayah-poses/ayah-<name>.png   96 renders (5 of them with a twin in the image)
  *
  * Every PNG is 800×800, transparent, feet on the same ground line as Baby Mo
  * and Baby Ais (y = 725). Scale is normalised by head size, so a sitting pose
@@ -37,6 +37,8 @@ export interface FriendPose {
   air?: boolean;
   /** Baby Mo is part of the image */
   duo?: boolean;
+  /** model-consistency warning from review: what doesn't match, and what to do */
+  check?: string;
 }
 
 /** Display size relative to Baby Mo / Ais at the same `s`. */
@@ -96,12 +98,12 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "hold-hand-down", category: "care", mood: "kind", use: "Standing, arm reaching down as if holding a toddler's hand. Walking with Mo or Ais." },
   { name: "handshake-offer", category: "greet", mood: "friendly", use: "Right hand held out for a handshake. \"Barakallah\" after a match, meeting someone, salaman." },
   { name: "give-ball", category: "care", mood: "kind", props: ["tennis ball"], use: "Bending forward, offering a tennis ball. Sharing, giving back, \"you can borrow it\"." },
-  { name: "sholat-takbir", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: takbiratul ihram, hands beside the ears. Note: hoodie, not peci and koko." },
-  { name: "sholat-qiyam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: standing, hands folded, eyes on the mat." },
-  { name: "sholat-ruku", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: ruku. Note: back is rounded and knees bent; a flat back would be more correct. Use small or redo." },
-  { name: "sholat-sujud", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sujud, forehead on the mat. Wide image.", low: true },
-  { name: "sholat-duduk", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sitting tasyahud, index finger raised.", low: true },
-  { name: "sholat-salam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: salam, head turned to the right.", low: true },
+  { name: "sholat-hoodie-takbir", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in the hoodie (older set): takbir. Prefer sholat-takbir (peci and koko)." },
+  { name: "sholat-hoodie-qiyam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: standing, hands folded, eyes on the mat." },
+  { name: "sholat-hoodie-ruku", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: ruku. Note: back is rounded and knees bent; a flat back would be more correct. Use small or redo." },
+  { name: "sholat-hoodie-sujud", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sujud, forehead on the mat. Wide image.", low: true },
+  { name: "sholat-hoodie-duduk", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: sitting tasyahud, index finger raised.", low: true },
+  { name: "sholat-hoodie-salam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat: salam, head turned to the right.", low: true },
   { name: "write-card-floor", category: "create", mood: "focused", props: ["card", "crayons"], use: "Lying on his tummy drawing a card. Making a card for Umi or Abi, crossing off a calendar.", low: true },
   { name: "show-drawing", category: "create", mood: "proud", props: ["drawing"], use: "Holding up a crayon drawing, laughing. Showing a gift, \"look what I made!\"" },
   { name: "hold-trophy", category: "celebrate", mood: "joy", props: ["trophy"], use: "Holding up a gold trophy, no racket. Winning, prize giving, sharing a win." },
@@ -163,6 +165,34 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "tennis-run-4", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (4/6): a running cycle in place. Loops; move him across the page. Frame: stride." },
   { name: "tennis-run-5", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (5/6): a running cycle in place. Loops; move him across the page. Frame: push (low)." },
   { name: "tennis-run-6", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (6/6): a running cycle in place. Loops; move him across the page. Frame: pass." },
+  /* ── batch 4 (R5, R6, R12 peci salat, helping, with Mo): see the check field for model warnings ── */
+  { name: "run", category: "play", mood: "happy", use: "Running happily, empty hands. Racing to the door, park jog, chasing the twins." },
+  { name: "tie-shoes", category: "routine", mood: "happy", use: "Kneeling, tying a shoelace. Getting ready to go out.", low: true },
+  { name: "drink-bottle", category: "food", mood: "calm", props: ["water bottle"], use: "Drinking from a blue bottle, hand on hip. After running or tennis." },
+  { name: "stir-bowl", category: "food", mood: "happy", props: ["bowl", "spoon"], use: "Stirring a mixing bowl. Baking with Abi, kitchen help." },
+  { name: "carry-bags", category: "care", mood: "happy", props: ["shopping bags"], use: "Carrying two shopping bags. Helping with groceries." },
+  { name: "clap-cheer", category: "joy", mood: "joy", use: "Clapping, eyes closed laughing. Cheering for the twins, good news." },
+  { name: "sholat-takbir", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in peci and koko: takbir, hands beside the ears. Replaces the hoodie version." },
+  { name: "sholat-qiyam", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in peci and koko: standing, hands folded." },
+  { name: "sholat-ruku", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in peci and koko: ruku.", check: "The back is still rounded with the head dropped; a correct ruku has a flat, level back. Use small or regenerate." },
+  { name: "sholat-sujud", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in peci and koko: sujud.", low: true },
+  { name: "sholat-duduk", category: "worship", mood: "calm", props: ["prayer mat"], use: "Salat in peci and koko: sitting tasyahud, finger raised.", low: true },
+  { name: "sholat-salam", category: "worship", mood: "happy", props: ["prayer mat"], use: "Salat in peci and koko: salam to the right.", low: true },
+  { name: "iqamah", category: "worship", mood: "calm", use: "Calling the iqamah, hands cupped by his mouth. Prayer at home, leading the row." },
+  { name: "teach-iqra-sit", category: "learn", mood: "happy", props: ["Iqra book"], use: "Sitting, pointing at a letter in an Iqra book. Teaching Mo hijaiyah letters.", low: true },
+  { name: "dua-sit", category: "worship", mood: "calm", use: "Sitting cross-legged in du'a, eyes closed. After salat, before sleep.", low: true },
+  { name: "salaman", category: "greet", mood: "happy", use: "Both hands out to shake hands after prayer. Salaman with Abi or the twins." },
+  { name: "quran-rehal-kneel", category: "worship", mood: "happy", props: ["Qur'an", "rehal"], use: "Kneeling, reading the Qur'an on a wooden rehal. Tadarus, Ramadan.", low: true },
+  { name: "dzikir-sit", category: "worship", mood: "calm", props: ["tasbih", "prayer mat"], use: "Sitting on a prayer mat counting tasbih, eyes closed. Dzikir after salat.", low: true },
+  { name: "offer", category: "care", mood: "kind", use: "Both palms up, offering. Sharing, \"for you\", inviting." },
+  { name: "carry-bowl", category: "care", mood: "happy", props: ["covered bowl"], use: "Walking carefully with a steaming covered bowl. Bringing soup to a neighbour or Umi." },
+  { name: "watering-can", category: "nature", mood: "happy", props: ["watering can", "plant"], use: "Watering a potted plant. Garden, caring for plants." },
+  { name: "hug-side", category: "care", mood: "loving", use: "Arms wrapping to the side as if hugging someone beside him, eyes closed, little heart. Place a twin in his arms." },
+  { name: "sedekah-coin", category: "care", mood: "kind", props: ["charity box", "coin"], use: "Dropping a coin into a wooden charity box. Sedekah, Friday." },
+  { name: "umbrella", category: "weather", mood: "kind", props: ["umbrella"], use: "Holding a big blue umbrella over someone smaller. Rain, sheltering the twins." },
+  { name: "piggyback-mo", category: "care", mood: "joy", props: ["Baby Mo"], use: "Giving Baby Mo a piggyback, both laughing.", duo: true, check: "Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate." },
+  { name: "hug-mo", category: "care", mood: "loving", props: ["Baby Mo"], use: "Kneeling, hugging Baby Mo tight.", low: true, duo: true, check: "Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate." },
+  { name: "high-five-mo", category: "celebrate", mood: "joy", props: ["Baby Mo"], use: "Bending to high-five Baby Mo.", duo: true, check: "Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate." },
 ];
 
 export const AYAH_POSES: FriendPose[] = [
@@ -256,6 +286,13 @@ export const AYAH_POSES: FriendPose[] = [
   { name: "thumbs-up-stand", category: "joy", mood: "happy", use: "Standing, thumbs up, hand in pocket. Approval." },
   { name: "cheer-fists-stand", category: "celebrate", mood: "joy", use: "Standing, fists up, knee raised, laughing." },
   { name: "think-chin-stand-2", category: "think", mood: "thoughtful", use: "Alt of think-chin-stand.", alt: true },
+  /* ── batch 2 (with the kids, at home) ── */
+  { name: "carry-mo", category: "care", mood: "joy", props: ["Baby Mo"], use: "Carrying Baby Mo on his hip.", duo: true, check: "Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate." },
+  { name: "hold-hands-twins", category: "care", mood: "happy", props: ["Baby Mo", "Baby Ais"], use: "Walking, holding Mo and Ais by the hand. Going out, school run, the mosque.", duo: true, check: "Baby Mo here does not match his model (wavy brown hair and brown eyes instead of smooth glossy black hair; overalls instead of the star jumpsuit). Use small or regenerate." },
+  { name: "shoulders-ais", category: "care", mood: "joy", props: ["Baby Ais"], use: "Baby Ais riding on his shoulders, both laughing.", duo: true },
+  { name: "cook-pan", category: "food", mood: "happy", props: ["apron", "frying pan"], use: "Cooking with a pan and spatula, apron on. Breakfast, iftar, helping Umi." },
+  { name: "fix-toolbox", category: "routine", mood: "focused", props: ["toolbox", "screwdriver"], use: "Kneeling, fixing a box with a screwdriver. Repairs, building something together.", low: true },
+  { name: "stern-gentle", category: "learn", mood: "serious", use: "Finger raised, hand on hip, gentle but serious. A kind \"not like that\"." },
 ];
 
 export const FRIEND_POSES: Record<Friend, FriendPose[]> = { adam: ADAM_POSES, ayah: AYAH_POSES };
@@ -263,7 +300,7 @@ export const FRIEND_POSES: Record<Friend, FriendPose[]> = { adam: ADAM_POSES, ay
 /** Quick picks for common story moments (first = best). */
 export const ADAM_FOR: Record<string, string[]> = {
   hello: ["wave-hello"],
-  dua: ["dua-hands"],
+  dua: ["dua-sit", "dua-hands"],
   quran: ["quran-read-sit"],
   sedekah: ["sedekah-box"],
   tennis: ["tennis-hit-forehand", "tennis-ready-wide", "tennis-hold-ball", "tennis-serve-toss"],
@@ -282,6 +319,15 @@ export const ADAM_FOR: Record<string, string[]> = {
   handshake: ["handshake-offer"],
   sorry: ["sorry-hands", "kneel-talk"],
   salat: ["sholat-takbir", "sholat-qiyam", "sholat-sujud", "sholat-duduk", "sholat-salam"],
+  iqamah: ["iqamah"],
+  teachIqra: ["teach-iqra-sit"],
+  dzikir: ["dzikir-sit"],
+  salaman: ["salaman", "handshake-offer"],
+  run: ["run"],
+  kitchen: ["stir-bowl", "carry-bowl"],
+  helping: ["carry-bags", "carry-bowl", "watering-can", "offer"],
+  rain: ["umbrella"],
+  withMo: ["hug-mo", "high-five-mo", "piggyback-mo"],
   draw: ["write-card-floor", "show-drawing"],
   trophy: ["hold-trophy"],
   call: ["video-call-tablet"],
@@ -309,7 +355,11 @@ export const AYAH_FOR: Record<string, string[]> = {
   leaving: ["backpack-walk", "backpack-wave-walk", "wave-folder", "traveller-suitcase"],
   proud: ["thumbs-up-stand", "stand-arms-crossed", "thumbs-up-kneel", "cheer-fists-sit"],
   celebrate: ["cheer-fists-stand", "cheer-knee-up", "arms-up-joy-sit", "cheer-kneel"],
-  withMo: ["hug-mo", "read-with-mo", "high-five-mo"],
+  withMo: ["hug-mo", "read-with-mo", "high-five-mo", "carry-mo"],
+  withTwins: ["hold-hands-twins", "shoulders-ais"],
+  cook: ["cook-pan"],
+  fix: ["fix-toolbox"],
+  gentleNo: ["stern-gentle", "stop-hand"],
   teach: ["teach-point-kneel", "teach-book-sit", "idea-book-stand", "kneel-present"],
   idea: ["idea-bulb-sit", "idea-point-stand"],
   think: ["think-chin-stand", "listen-sit-box"],
@@ -340,13 +390,12 @@ export const AYAH_FOR: Record<string, string[]> = {
 /** Moments with no render yet — brief new art or work around them. */
 export const FRIEND_GAPS = [
   "Ayah: salat standing, ruku and sitting (only sujud and du'a exist)",
-  "Ayah: carrying or holding a twin, holding hands walking",
   "Ayah: angry or crying",
-  "Ayah: cooking, driving, fixing things",
-  "Adam: iqamah, teaching Iqra, du'a and dzikir sitting (brief batch R5)",
-  "Adam: running without a racket, tying shoes, drinking, kitchen, carrying bags (brief batch R6)",
+  "Ayah: driving",
   "Adam with the twins: piggyback, hug, high-five, holding hands, reading (brief batch R8)",
-  "Adam: salat in peci and koko (R4 came back in the hoodie), and a flat-backed ruku",
+  "Adam: a flat-backed ruku in peci and koko (both salat sheets came back with a rounded back)",
+  "Adam / Abi with Baby Mo: regenerate with Mo on model (smooth glossy black hair, star jumpsuit)",
+  "Adam with both twins: hold-hands, reading, helping Ais up (brief batch R8b)",
 ];
 
 export const friendPoseSrc = (who: Friend, name: string) => `/${who}-poses/${who}-${name}.png`;
