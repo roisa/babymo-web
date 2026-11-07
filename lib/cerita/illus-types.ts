@@ -128,6 +128,8 @@ export type ArtProp =
   | "becak"
   | "robot"
   | "moon"
+  | "crescent"
+  | "sparrow"
   | "rooster"
   | "bee"
   | "honey"

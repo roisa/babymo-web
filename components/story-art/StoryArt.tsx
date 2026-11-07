@@ -38,7 +38,7 @@ function sky(time: ArtTime, noSun = false) {
         </linearGradient>
       </defs>
       <rect y={TOP} width={W} height={H - TOP} fill={`url(#sa-sky-${time})`} />
-      {time === "night" && <Moon x={650} y={80} />}
+      {time === "night" && !noSun && <Moon x={650} y={80} />}
       {time === "day" && !noSun && <Sun x={660} y={80} />}
       {time === "dusk" && <circle cx={640} cy={250} r={70} fill="#FFD27A" opacity=".85" />}
       {time !== "night" && (
@@ -1584,6 +1584,35 @@ function Prop({ k }: { k: ArtProp }) {
           <rect x={-22} y={-22} width={14} height={22} rx={4} fill="#5BB8F5" /><rect x={8} y={-22} width={14} height={22} rx={4} fill="#5BB8F5" />
         </g>
       );
+    case "crescent":
+      return (
+        <g className="sa-float">
+          <defs>
+            <mask id="sa-cres-m">
+              <rect x={-80} y={-140} width={160} height={160} fill="#000" />
+              <circle cx={0} cy={-60} r={52} fill="#fff" />
+              <circle cx={24} cy={-76} r={44} fill="#000" />
+            </mask>
+          </defs>
+          <circle cx={0} cy={-60} r={72} fill="#FFF6C8" opacity=".18" />
+          <circle cx={0} cy={-60} r={52} fill="#FFF3B0" mask="url(#sa-cres-m)" />
+          <circle cx={-30} cy={-58} r={3.5} fill="#3A3A5A" />
+          <path d="M-36 -40 q7 6 14 2" stroke="#3A3A5A" strokeWidth={3} fill="none" strokeLinecap="round" />
+        </g>
+      );
+    case "sparrow":
+      return (
+        <g className="sa-peck">
+          <path d="M22 -22 l22 -8 l-6 14 z" fill="#8A5A3B" />
+          <ellipse cx={4} cy={-20} rx={26} ry={18} fill="#B07A52" />
+          <ellipse cx={0} cy={-14} rx={16} ry={10} fill="#F3E3C8" />
+          <path d="M6 -26 q12 -2 18 8" stroke="#8A5A3B" strokeWidth={5} fill="none" strokeLinecap="round" />
+          <circle cx={-16} cy={-36} r={14} fill="#B07A52" />
+          <circle cx={-20} cy={-39} r={3} fill="#2A2A3A" />
+          <path d="M-29 -36 l-11 4 l11 3 z" fill="#F2A33A" />
+          <path d="M0 -3 v5 M8 -3 v5" stroke="#F2A33A" strokeWidth={3} strokeLinecap="round" />
+        </g>
+      );
     case "moon":
       return (
         <g className="sa-float">
@@ -2987,7 +3016,7 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <g className={quake ? "sa-quake" : undefined}>
-      <Background bg={scene.bg} time={time} rainy={indoorRain} noSun={(scene.props ?? []).some((p) => p.k === "sun")} />
+      <Background bg={scene.bg} time={time} rainy={indoorRain} noSun={(scene.props ?? []).some((p) => p.k === "sun" || p.k === "moon" || p.k === "crescent")} />
       {/* evening in a room: a warm glow, so dusk reads even when the window is out of the crop */}
       {indoor && time === "dusk" && <rect y={TOP} width={W} height={H - TOP} fill="#FF8A5B" opacity=".13" style={{ pointerEvents: "none" }} />}
       <g style={{ pointerEvents: "none" }}>{(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}</g>
