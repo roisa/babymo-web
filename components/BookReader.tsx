@@ -12,6 +12,7 @@ import { ReadText, useNarrator, useLullabySound, playBlip } from "@/components/b
 import { FIND_IT, TAP_NAMES } from "@/lib/cerita/find-it";
 import { stickerFor, awardSticker, getStickers, collectFact, factKey, isFact } from "@/lib/cerita/stickers";
 import { INTERACTIVE, NAME_KEY } from "@/lib/cerita/interactive";
+import { coloringFor } from "@/lib/cerita/coloring";
 
 type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
 
@@ -28,6 +29,7 @@ type Sheet =
   | { kind: "cover" }
   | { kind: "content"; blocks: Block[]; vig?: string; pose?: string; art?: number }
   | { kind: "pic"; i: number }
+  | { kind: "talk" }
   | { kind: "card" }
   | { kind: "end" };
 
@@ -321,6 +323,11 @@ export function BookReader({
           readFor: "Dibacakan untuk",
           namePh: "nama si kecil",
           hooray: (n: string) => `Hore, ${n}!`,
+          short: "Pendek",
+          shortOn: "Versi pendek untuk si kecil",
+          talk: "Ngobrol, yuk!",
+          talkSub: "Pertanyaan untuk dibahas bersama setelah membaca",
+          color: "🖍️ Halaman mewarnai cerita ini",
         }
       : {
           open: "Read in Book Mode",
@@ -360,6 +367,11 @@ export function BookReader({
           readFor: "Read for",
           namePh: "your child's name",
           hooray: (n: string) => `Hooray, ${n}!`,
+          short: "Short",
+          shortOn: "Short version for little ones",
+          talk: "Let's talk!",
+          talkSub: "Questions to chat about after reading",
+          color: "🖍️ Colouring page for this story",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -411,6 +423,7 @@ export function BookReader({
       const out: Sheet[] = [
         { kind: "cover" },
         ...picture.map((_, i) => ({ kind: "pic" as const, i })),
+        ...(slug && INTERACTIVE[slug]?.talk ? [{ kind: "talk" as const }] : []),
         ...(card ? [{ kind: "card" as const }] : []),
         { kind: "end" },
       ];
@@ -580,6 +593,20 @@ export function BookReader({
     try { localStorage.setItem(NAME_KEY, n.trim()); } catch {}
   };
   const nameIn = (text: string) => (inter?.friend && childName.trim() ? text.split(inter.friend).join(childName.trim()) : text);
+  const [shortMode, setShortMode] = useState(false);
+  useEffect(() => {
+    try { setShortMode(localStorage.getItem("bm-short") === "1"); } catch {}
+  }, []);
+  const toggleShort = () => {
+    setShortMode((v) => {
+      try { localStorage.setItem("bm-short", v ? "0" : "1"); } catch {}
+      return !v;
+    });
+  };
+  const textOf = (i: number) => {
+    const sh = shortMode ? inter?.short?.[i] : undefined;
+    return nameIn(sh ? sh[locale === "id" ? 0 : 1] : picture?.[i]?.text ?? "");
+  };
   const [picked, setPicked] = useState<Record<number, number[]>>({});
   const [chantOn, setChantOn] = useState(-1);
   const choiceDone = (i: number) => {
@@ -615,7 +642,7 @@ export function BookReader({
         if (!pg) return;
         const chant = inter?.chants?.[sh.i];
         const choice = inter?.choices?.[sh.i];
-        narrator.speak(nameIn(pg.text), {
+        narrator.speak(textOf(sh.i), {
           rate, pitch, onWord: setWord,
           onEnd: () => {
             if (choice && !choiceDone(sh.i)) {
@@ -631,6 +658,8 @@ export function BookReader({
             } else next(night ? 2200 : 1300);
           },
         });
+      } else if (sh.kind === "talk" && inter?.talk) {
+        narrator.speak(`${t.talk} ${inter.talk[locale].join(" ")}`, { rate, pitch, onEnd: () => next(night ? 4000 : 3000) });
       } else if (sh.kind === "card") {
         next(400); // the parents' card is for grown-ups to read
       } else if (sh.kind === "end") {
@@ -639,7 +668,7 @@ export function BookReader({
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sheets, picture, night, title, locale],
+    [sheets, picture, night, title, locale, shortMode, childName],
   );
 
   // read each page as it opens while read-aloud is on
@@ -859,6 +888,7 @@ export function BookReader({
     if (s.kind === "cover") return <>{backPanel("BL", hook)}<div className="bk-spine" aria-hidden />{renderSheet(s, "R")}</>;
     if (s.kind === "end") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR")}</>;
     if (s.kind === "card") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR2")}</>;
+    if (s.kind === "talk") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR3")}</>;
     if (s.kind !== "pic") return renderSheet(s, "S");
     const pg = picture[s.i]!;
     // keep the words away from the characters: text on the emptier half
@@ -872,8 +902,8 @@ export function BookReader({
         </div>
         <div className="bk-gutter" aria-hidden />
         <div className={`bk-pic-text bk-spread-text bk-spread-text--${side}`}>
-          <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={nameIn(pg.text)} active={word} /></p>
-          {pg.quote && <blockquote>{pg.quote}</blockquote>}
+          <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={textOf(s.i)} active={word} /></p>
+          {pg.quote && !(shortMode && inter?.short) && <blockquote>{pg.quote}</blockquote>}
           {extras(s.i)}
         </div>
         <div className={`bk-pic-num bk-spread-num--${side}`} aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
@@ -909,8 +939,8 @@ export function BookReader({
             <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page find={findFor(s.i)} />
           </div>
           <div className="bk-pic-text">
-            <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={nameIn(pg.text)} active={sheets?.[pos] === s ? word : -1} /></p>
-            {pg.quote && <blockquote>{pg.quote}</blockquote>}
+            <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={textOf(s.i)} active={sheets?.[pos] === s ? word : -1} /></p>
+            {pg.quote && !(shortMode && inter?.short) && <blockquote>{pg.quote}</blockquote>}
             {extras(s.i)}
           </div>
           <div className="bk-pic-num" aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
@@ -935,6 +965,23 @@ export function BookReader({
             <p className="bk-cover-hook">{hook}</p>
           </div>
           <div className="bk-page-foot">{t.start}</div>
+        </div>
+      );
+    }
+    if (s.kind === "talk" && inter?.talk) {
+      const col = slug ? coloringFor(slug) : undefined;
+      return (
+        <div className="bk-page bk-page--card" key={key}>
+          <div className="bk-card bk-talk">
+            <span className="bk-card-badge">💬 {t.talk}</span>
+            <p className="bk-talk-sub">{t.talkSub}</p>
+            <ol className="bk-card-list">
+              {inter.talk[locale].map((q, i) => (
+                <li key={i}><span className="bk-card-num">{i + 1}</span><span>{q}</span></li>
+              ))}
+            </ol>
+            {col && <a className="bk-talk-color" href={asset(`/${locale}/warnai/#${slug}`)}>{t.color} →</a>}
+          </div>
         </div>
       );
     }
@@ -1095,6 +1142,11 @@ export function BookReader({
                 <button type="button" className={`bk-icon bk-icon--pill${readOn ? " is-on" : ""}`} onClick={toggleRead} aria-pressed={readOn}>
                   <span aria-hidden>{readOn ? "⏸" : "🔊"}</span> <span className="bk-pill-label">{readOn ? t.readStop : t.read}</span>
                 </button>
+                {inter?.short && (
+                  <button type="button" className={`bk-icon bk-icon--pill${shortMode ? " is-on" : ""}`} onClick={toggleShort} aria-pressed={shortMode} aria-label={t.shortOn} title={t.shortOn}>
+                    <span aria-hidden>👶</span> <span className="bk-pill-label">{t.short}</span>
+                  </button>
+                )}
                 <button type="button" className={`bk-icon bk-icon--pill${night ? " is-on" : ""}`} onClick={toggleNight} aria-pressed={night} aria-label={t.night}>
                   <span aria-hidden>🌙</span> <span className="bk-pill-label">{t.night}</span>
                 </button>
@@ -1402,6 +1454,8 @@ export function BookReader({
         .bk-chant-tag{font-size:.7em;font-weight:800;letter-spacing:.04em;color:#2B5A99;text-transform:uppercase;}
         .bk-chant.is-on .bk-chant-tag{color:#7a4a00;}
         .bk-chant-line{font-family:var(--font-display,inherit);font-weight:900;font-size:1.05em;color:#1E3A66;}
+        .bk-talk-sub{margin:4px 0 10px;font-size:13px;color:#6b5a3a;}
+        .bk-talk-color{display:inline-block;margin-top:12px;font-weight:800;font-size:13.5px;color:#C2410C;}
         .bk-dedic{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:#7a4a1a;}
         .bk-dedic input{width:140px;padding:5px 10px;border-radius:999px;border:1.5px dashed #E8B04B;background:rgba(255,255,255,.85);font:inherit;font-weight:800;color:#3a2a00;text-align:center;}
         .bk-sticker{display:flex;align-items:center;gap:12px;margin:10px auto 0;padding:10px 14px;border-radius:18px;max-width:340px;text-align:left;
