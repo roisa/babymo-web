@@ -1372,3 +1372,27 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
   .pl-row::-webkit-scrollbar { display: none; }
   .pl-big { aspect-ratio: auto; height: 40vh; min-height: 0; }
 }
+
+/* ── Sea world (underwater / aquarium) ── */
+@keyframes sa-tent { 0%,100% { rotate: -7deg; } 50% { rotate: 7deg; } }
+.sa-tent { transform-origin: 50% 0%; animation: sa-tent 2.4s ease-in-out infinite; }
+@keyframes sa-camo { 0%,15% { opacity: 0; } 45%,70% { opacity: .95; } 100% { opacity: 0; } }
+.sa-camo { animation: sa-camo 5s ease-in-out infinite; }
+@keyframes sa-swim { 0%,100% { translate: -16px 0; rotate: -1.5deg; } 50% { translate: 16px -10px; rotate: 1.5deg; } }
+.sa-swim { transform-origin: center; animation: sa-swim 5s ease-in-out infinite; }
+@keyframes sa-flap { 0%,100% { rotate: -16deg; } 50% { rotate: 14deg; } }
+.sa-flap { transform-origin: 85% 15%; animation: sa-flap 1.8s ease-in-out infinite; }
+@keyframes sa-crawl { 0% { translate: 0 0; scale: 1; opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { translate: -150px -95px; scale: .55; opacity: 0; } }
+.sa-crawl { transform-origin: center; animation: sa-crawl 5s linear infinite; }
+@keyframes sa-fish { 0%,100% { translate: -18px 0; rotate: -3deg; } 50% { translate: 18px -6px; rotate: 3deg; } }
+.sa-fish { transform-origin: center; animation: sa-fish 3.6s ease-in-out infinite; }
+@keyframes sa-school { 0% { translate: 300px 0; opacity: 0; } 12%,88% { opacity: 1; } 50% { translate: 0 -18px; } 100% { translate: -300px 0; opacity: 0; } }
+.sa-school { animation: sa-school 11s linear infinite; }
+@keyframes sa-jelly { 0%,100% { translate: 0 0; scale: 1 1; } 40% { translate: 0 -22px; scale: 1.04 .88; } }
+.sa-jelly { transform-origin: 50% 0%; animation: sa-jelly 3.4s ease-in-out infinite; }
+@keyframes sa-ray { 0%,100% { opacity: .15; } 50% { opacity: .45; } }
+.sa-ray { animation: sa-ray 7s ease-in-out infinite; }
+@keyframes sa-tankfish { from { translate: 900px 0; } to { translate: -200px 0; } }
+.sa-tankfish { animation: sa-tankfish 16s linear infinite; }
+@keyframes sa-wobble { 0%,100% { rotate: -7deg; } 50% { rotate: 7deg; } }
+.sa-wobble { transform-origin: center; animation: sa-wobble 3s ease-in-out infinite; }

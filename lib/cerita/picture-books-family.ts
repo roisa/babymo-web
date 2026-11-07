@@ -3423,4 +3423,526 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+  /* ───────────────────────── Sea 1. The shy little octopus ───────────────────────── */
+  {
+    slug: "gurita-kecil-yang-pemalu",
+    pose: "baby-mo-pose-35.png",
+    published: "2026-11-18",
+    title: { id: "Gurita Kecil yang Pemalu", en: "The Shy Little Octopus" },
+    hook: {
+      id: "Di akuarium, Mo bertemu gurita yang bersembunyi di balik batu — persis seperti Mo yang bersembunyi di balik rok Umi. Siapa yang akan berani lebih dulu?",
+      en: "At the aquarium, Mo meets an octopus hiding behind a rock — just like Mo hiding behind Umi's skirt. Who will be brave first?",
+    },
+    anchor: { type: "doa", slug: "doa-dilancarkan-bicara" },
+    takeaway: {
+      id: "Malu itu wajar. Anak pemalu tidak perlu dipaksa — ia perlu waktu, rasa aman, dan satu langkah kecil yang dirayakan.",
+      en: "Shyness is normal. A shy child doesn't need pushing — they need time, a feeling of safety and one small step that gets celebrated.",
+    },
+    tags: ["pemalu", "berani", "gurita", "laut", "akuarium", "doa nabi musa"],
+    card: {
+      title: { id: "Saat Anak Pemalu", en: "When Your Child Is Shy" },
+      items: {
+        id: [
+          "Hindari label \"anaknya pemalu\" di depan orang lain. Coba katakan, \"Dia sedang mengamati dulu.\"",
+          "Beri waktu pemanasan: datang lebih awal, tetap di dekatnya, dan biarkan ia bergabung saat siap.",
+          "Latih langkah kecil di rumah (bermain peran salam, mengangkat tangan) dan puji usahanya: \"Kamu berani mencoba!\"",
+        ],
+        en: [
+          "Avoid labelling them \"shy\" in front of others. Try: \"They like to watch first.\"",
+          "Allow warm-up time: arrive early, stay close and let them join when ready.",
+          "Practise small steps at home (role-play salam, raising a hand) and praise the effort: \"You were brave to try!\"",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "underwater",
+      props: [{ k: "seaweed", x: 220 }, { k: "rock", x: 520 }, { k: "octopusshy", x: 380 }, { k: "fishschool", x: 420 }],
+      fx: ["bubbles"],
+    },
+    pages: [
+      {
+        text: { id: "Hari Sabtu, Umi mengajak si kembar ke akuarium besar. Ada kelas untuk anak-anak, dan banyak anak yang belum Mo kenal. Mo bersembunyi di belakang rok Umi.", en: "On Saturday, Umi took the twins to the big aquarium. There was a class for children, full of kids Mo didn't know. Mo hid behind Umi's skirt." },
+        scene: { focus: 330, bg: "aquarium", mo: [{ who: "umi", pose: "explain-hand", x: 280 }, { pose: "pose-10", x: 390 }] },
+      },
+      {
+        text: { id: "Di dalam kaca ada batu besar. Di balik batu itu… ada dua mata bulat yang mengintip!", en: "Inside the glass was a big rock. And behind the rock… two round eyes were peeking out!" },
+        scene: { focus: 380, bg: "aquarium", props: [{ k: "octopushide", x: 420, y: 290, s: 0.8 }], mo: [{ who: "ais", pose: "point-star", x: 300 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Itu gurita! Warnanya berubah-ubah: abu-abu seperti batu, lalu ungu, lalu abu-abu lagi. Gurita itu sedang malu-malu.", en: "It was an octopus! Its colour kept changing: grey like the rock, then purple, then grey again. The octopus was feeling shy." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 250 }, { k: "octopushide", x: 400, s: 1.3 }, { k: "coral", x: 560 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Kakak pemandu bertanya, \"Siapa yang tahu, gurita punya berapa lengan?\" Mo tahu jawabannya: delapan! Tapi suaranya tersangkut di tenggorokan.", en: "The guide asked, \"Who knows how many arms an octopus has?\" Mo knew the answer: eight! But his voice got stuck in his throat." },
+        scene: { focus: 340, bg: "aquarium", mo: [{ pose: "pose-36", x: 330 }, { who: "ais", pose: "wonder-question", x: 440 }] },
+      },
+      {
+        text: { id: "Umi berlutut dan berbisik, \"Tidak apa-apa merasa malu, sayang. Lihat, gurita juga butuh waktu.\"", en: "Umi knelt down and whispered, \"It's okay to feel shy, love. Look, the octopus needs time too.\"" },
+        scene: { focus: 340, bg: "aquarium", props: [{ k: "octopushide", x: 470, y: 290, s: 0.7 }], mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { pose: "pose-14", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Tahukah kamu? Gurita punya tiga jantung dan darahnya berwarna biru! Saat takut, ia bisa bersembunyi di celah sekecil uang koin.", en: "Did you know? An octopus has three hearts and blue blood! When it's scared, it can squeeze into a gap as small as a coin." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "rock", x: 560 }, { k: "octopusshy", x: 400 }, { k: "starfish", x: 280 }, { k: "heart", x: 400, y: 200, s: 0.5 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Mo duduk diam di depan kaca. Ia tidak mengetuk kaca. Ia tidak berteriak. Ia hanya menunggu, sabar sekali.", en: "Mo sat quietly in front of the glass. He didn't tap on it. He didn't shout. He just waited, very patiently." },
+        scene: { focus: 380, bg: "aquarium", props: [{ k: "octopushide", x: 450, y: 290, s: 0.8 }], mo: [{ pose: "pose-06", x: 320 }] },
+      },
+      {
+        text: { id: "Pelan… pelan… gurita keluar dari balik batu. Satu lengan, dua lengan… delapan lengan semuanya!", en: "Slowly… slowly… the octopus came out from behind the rock. One arm, two arms… all eight arms!" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 240 }, { k: "rock", x: 560 }, { k: "octopus", x: 400 }, { k: "fishschool", x: 380 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu gurita menempelkan lengannya ke kaca, tepat di depan Mo, seolah melambai: \"Hai!\"", en: "Then the octopus pressed an arm against the glass, right in front of Mo, as if it were waving: \"Hi!\"" },
+        scene: { focus: 380, bg: "aquarium", props: [{ k: "octopuswave", x: 440, y: 296, s: 0.8 }], mo: [{ pose: "wow", x: 320 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Umi, guritanya berani keluar karena kita tidak memaksanya,\" bisik Mo. Hatinya terasa hangat.", en: "\"Umi, the octopus came out because we didn't force it,\" whispered Mo. His heart felt warm." },
+        scene: { focus: 340, bg: "aquarium", props: [{ k: "octopuswave", x: 450, y: 296, s: 0.7 }], mo: [{ who: "umi", pose: "touched-cheek", x: 270 }, { pose: "pose-31", x: 380 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Umi mengajarkan doa Nabi Musa saat beliau gugup berbicara. Mo mengulanginya pelan-pelan.", en: "Umi taught him the du'a of Prophet Musa for when he felt nervous about speaking. Mo repeated it slowly." },
+        quote: { id: "\"Rabbisyrah lii shadrii, wa yassir lii amrii, wahlul 'uqdatan min lisaanii, yafqahuu qaulii.\" — Ya Tuhanku, lapangkanlah dadaku, mudahkanlah urusanku, dan lepaskanlah kekakuan lidahku, agar mereka mengerti perkataanku. (QS. Thaha: 25–28)", en: "\"Rabbisyrah lii shadrii, wa yassir lii amrii, wahlul 'uqdatan min lisaanii, yafqahuu qaulii.\" — My Lord, open my chest, make my task easy, and untie the knot from my tongue so they understand my words. (Qur'an, Taha 20:25–28)" },
+        scene: { focus: 340, bg: "aquarium", mo: [{ who: "umi", pose: "dua-stand", x: 280 }, { pose: "thank-you", x: 400 }] },
+      },
+      {
+        text: { id: "Kakak pemandu bertanya lagi, \"Ada yang tahu, gurita punya berapa jantung?\" Mo menarik napas, membaca doa dalam hati… lalu mengangkat tangan.", en: "The guide asked again, \"Does anyone know how many hearts an octopus has?\" Mo took a breath, said the du'a in his heart… and raised his hand." },
+        scene: { focus: 380, bg: "aquarium", props: [{ k: "octopus", x: 450, y: 296, s: 0.7 }], mo: [{ pose: "pose-24", x: 330 }] },
+      },
+      {
+        text: { id: "\"TIGA!\" jawab Mo. Suaranya kecil, tapi jelas sekali. Semua anak bertepuk tangan, dan Ais bersorak paling keras.", en: "\"THREE!\" said Mo. His voice was small, but very clear. All the children clapped, and Ais cheered loudest of all." },
+        scene: { focus: 350, bg: "aquarium", mo: [{ pose: "yes", x: 320, move: "hop" }, { who: "ais", pose: "cheer-fist", x: 440 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Seorang anak berkerudung kuning mendekat. \"Aku Nala. Kamu tahu banyak tentang gurita!\" Mo tersenyum malu-malu. \"Assalamu'alaikum… aku Mo.\"", en: "A girl in a yellow hijab came over. \"I'm Nala. You know lots about octopuses!\" Mo gave a shy smile. \"Assalamu'alaikum… I'm Mo.\"" },
+        scene: { focus: 380, bg: "aquarium", props: [{ k: "octopuswave", x: 450, y: 296, s: 0.7 }], mo: [{ pose: "pose-35", x: 330 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Di rumah, Mo menggambar gurita dengan delapan lengan yang melambai. \"Namanya Malu-Malu,\" kata Mo. \"Tapi dia pemberani.\"", en: "At home, Mo drew an octopus with eight waving arms. \"Its name is Shy-Shy,\" said Mo. \"But it's brave.\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "drawing", x: 430, y: 360 }], mo: [{ pose: "pose-29", x: 330 }, { who: "ais", pose: "draw-crayons", x: 450 }] },
+      },
+      {
+        text: { id: "Kamu juga boleh malu. Pelan-pelan saja, seperti gurita kecil. Siapa teman baru yang ingin kamu sapa minggu ini? 🐙", en: "It's okay for you to feel shy too. Take it slowly, like the little octopus. Which new friend would you like to say hello to this week? 🐙" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 250 }, { k: "coral", x: 560 }, { k: "octopuswave", x: 400 }, { k: "fishschool", x: 420 }], fx: ["bubbles", "sparkle"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Sea 2. Little turtles going home ───────────────────────── */
+  {
+    slug: "tukik-pulang-ke-laut",
+    pose: "baby-mo-pose-14.png",
+    published: "2026-11-19",
+    title: { id: "Tukik-Tukik Pulang ke Laut", en: "The Little Turtles Go Home to the Sea" },
+    hook: {
+      id: "Malam ini, seratus tukik kecil akan berjalan ke laut di bawah cahaya bulan. Tapi ada sesuatu di pasir yang menghalangi jalan mereka…",
+      en: "Tonight, a hundred baby turtles will walk to the sea by moonlight. But something on the sand is blocking their way…",
+    },
+    anchor: { type: "doa", slug: "doa-pandai-bersyukur" },
+    takeaway: {
+      id: "Anak-anak peduli pada apa yang mereka lihat dengan mata sendiri. Sekali melihat tukik berjuang menuju laut, sampah plastik tidak lagi terasa sepele.",
+      en: "Children care about what they see with their own eyes. Once they've watched a baby turtle struggle to the sea, plastic litter never feels small again.",
+    },
+    tags: ["penyu", "tukik", "laut", "sampah", "alam", "bersyukur"],
+    card: {
+      title: { id: "Mengajak Anak Menjaga Laut", en: "Helping Children Care for the Sea" },
+      items: {
+        id: [
+          "Biasakan membawa botol minum dan tas belanja sendiri, dan menolak sedotan plastik — anak meniru kebiasaan, bukan nasihat.",
+          "Main \"pungut lima sampah\" setiap ke pantai atau taman (pakai sarung tangan atau capit), lalu cuci tangan bersama.",
+          "Saat ikut pelepasan tukik: ikuti petugas konservasi, jangan menyalakan senter atau flash, dan jangan menggendong tukik.",
+        ],
+        en: [
+          "Make it a habit to bring your own bottle and bag and say no to plastic straws — children copy habits, not lectures.",
+          "Play \"pick up five pieces\" at every beach or park visit (use gloves or a grabber), then wash hands together.",
+          "At a hatchling release, follow the conservation staff, use no torches or camera flash, and don't pick the hatchlings up.",
+        ],
+      },
+    },
+    cover: {
+      focus: 400, bg: "beach", time: "night",
+      props: [{ k: "nest", x: 470 }, { k: "hatchlings", x: 430, y: 440 }],
+      mo: [{ pose: "pose-31", x: 310 }],
+      fx: ["stars"],
+    },
+    pages: [
+      {
+        text: { id: "Sore itu Abi mengajak semua ke pantai penangkaran penyu. \"Hari ini,\" kata Abi, \"tukik-tukik akan pulang ke laut!\"", en: "That afternoon Abi took everyone to the turtle conservation beach. \"Today,\" said Abi, \"the baby turtles are going home to the sea!\"" },
+        scene: { focus: 340, bg: "beach", time: "dusk", props: [{ k: "nest", x: 460 }], mo: [{ who: "ayah", pose: "arms-open-welcome", x: 260 }, { pose: "yeyy", x: 380, move: "hop" }] },
+      },
+      {
+        text: { id: "Dua bulan lalu, seekor ibu penyu datang ke pantai ini. Ia menggali lubang, meninggalkan seratus telur, lalu berenang kembali ke laut.", en: "Two months ago, a mother turtle came to this beach. She dug a hole, left a hundred eggs inside, and swam back to the sea." },
+        scene: { focus: 380, bg: "underwater", props: [{ k: "seaweed", x: 220 }, { k: "turtle", x: 430, y: 300, s: 1.2 }, { k: "coral", x: 580 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Krek… krek… Telur-telur mulai retak. Sebuah kepala kecil muncul dari pasir! \"Tukik!\" teriak Ais.", en: "Crack… crack… The eggs began to split. A tiny head popped out of the sand! \"A baby turtle!\" shouted Ais." },
+        scene: { focus: 360, bg: "beach", time: "dusk", props: [{ k: "nest", x: 430 }, { k: "hatchling", x: 470, y: 400 }], mo: [{ who: "ais", pose: "surprised", x: 300 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam membaca papan di pantai: tukik mencari laut dengan melihat cahaya bulan di atas air. \"Jadi malam ini tidak boleh ada senter atau lampu HP!\"", en: "Kak Adam read the sign on the beach: baby turtles find the sea by looking for moonlight on the water. \"So tonight, no torches or phone lights!\"" },
+        scene: { focus: 340, bg: "beach", time: "dusk", mo: [{ who: "adam", pose: "kneel-talk", x: 290 }, { pose: "pose-22", x: 420 }] },
+      },
+      {
+        text: { id: "Mo ingin menggendong satu tukik. Tapi Abi menggeleng pelan. \"Biarkan mereka berjalan sendiri. Langkah pertama di pasir membuat mereka kuat, dan mereka akan mengingat pantai ini.\"", en: "Mo wanted to pick one up. But Abi gently shook his head. \"Let them walk on their own. Those first steps on the sand make them strong, and they'll remember this beach.\"" },
+        scene: { focus: 340, bg: "beach", time: "dusk", props: [{ k: "hatchling", x: 470, y: 400 }], mo: [{ who: "ayah", pose: "stern-gentle", x: 260 }, { pose: "pose-05", x: 390 }] },
+      },
+      {
+        text: { id: "Bulan muncul. Tukik-tukik berjalan tertatih-tatih ke arah laut. Kecil sekali, tapi mereka tidak berhenti.", en: "The moon came up. The baby turtles waddled towards the sea. So small, but they never stopped." },
+        scene: { focus: 400, bg: "beach", time: "night", props: [{ k: "hatchlings", x: 470, y: 400, s: 1.3 }, { k: "hatchlings", x: 440, y: 440, s: 1.3 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Tapi satu tukik tersangkut di balik gelas plastik yang tergeletak di pasir. Ia berputar-putar kebingungan.", en: "But one baby turtle got stuck behind a plastic cup lying on the sand. It turned round and round, confused." },
+        scene: { focus: 380, bg: "beach", time: "night", props: [{ k: "litter", x: 430, y: 420 }, { k: "hatchling", x: 400, y: 430 }], mo: [{ pose: "pose-33", x: 290 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Kak Adam memungut sampah itu pelan-pelan. Jalannya terbuka! Tukik kecil itu kembali merangkak menuju ombak.", en: "Kak Adam gently picked the litter up. The way was clear! The little turtle crawled on towards the waves." },
+        scene: { focus: 360, bg: "beach", time: "night", props: [{ k: "hatchlings", x: 470, y: 425 }], mo: [{ who: "adam", pose: "crouch-pat", x: 320 }], fx: ["stars", "sparkle"] },
+      },
+      {
+        text: { id: "Di laut, tukik akan tumbuh besar. Penyu suka makan ubur-ubur. Tapi kantong plastik di dalam air… terlihat mirip sekali dengan ubur-ubur.", en: "In the sea, the turtle will grow big. Turtles love to eat jellyfish. But a plastic bag in the water… looks just like a jellyfish." },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "turtle", x: 400, y: 380, s: 0.8 }, { k: "jellyfish", x: 330, y: 250, s: 0.8 }, { k: "plasticbag", x: 470, y: 290, s: 0.8 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Kalau penyu memakan plastik, perutnya bisa sakit,\" kata Abi pelan. Mo memegang tangan Abi erat-erat.", en: "\"If a turtle eats plastic, its tummy can get very sick,\" Abi said quietly. Mo held Abi's hand tight." },
+        scene: { focus: 340, bg: "beach", time: "night", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 280 }, { pose: "pose-09", x: 410 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Allah menitipkan bumi dan laut kepada kita,\" kata Abi. \"Tugas kita menjaganya, bukan merusaknya.\"", en: "\"Allah has entrusted the land and the sea to us,\" said Abi. \"Our job is to look after them, not to spoil them.\"" },
+        quote: { id: "\"Telah tampak kerusakan di darat dan di laut disebabkan perbuatan tangan manusia, supaya Allah merasakan kepada mereka sebagian dari (akibat) perbuatan mereka, agar mereka kembali (ke jalan yang benar).\" (QS. Ar-Rum: 41)", en: "\"Corruption has appeared on land and sea because of what people's hands have done, so that He may let them taste some of what they have done, that perhaps they will return.\" (Qur'an, Ar-Rum 30:41)" },
+        scene: { focus: 340, bg: "beach", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "ais", pose: "calm-sit", x: 410 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Keesokan paginya, mereka kembali membawa kantong besar. Sedotan, botol, kantong plastik… Satu, dua, tiga… empat puluh tujuh sampah!", en: "The next morning they came back with a big bag. Straws, bottles, plastic bags… One, two, three… forty-seven pieces of litter!" },
+        scene: { focus: 340, bg: "beach", props: [{ k: "trashbag", x: 380 }, { k: "litter", x: 330, y: 430 }], mo: [{ pose: "pose-27", x: 290 }, { who: "ais", pose: "thumbs-up-walk", x: 450 }] },
+      },
+      {
+        text: { id: "\"Dari seribu tukik, mungkin hanya satu yang tumbuh menjadi penyu dewasa,\" kata Kak Adam. \"Sedikit sekali!\" kata Ais. \"Karena itu setiap tukik berharga,\" jawab Abi.", en: "\"Out of a thousand baby turtles, maybe only one grows up,\" said Kak Adam. \"That's so few!\" said Ais. \"That's why every single one matters,\" said Abi." },
+        scene: { focus: 340, bg: "beach", mo: [{ who: "adam", pose: "kneel-talk", x: 290 }, { who: "ais", pose: "wonder-question", x: 420 }] },
+      },
+      {
+        text: { id: "Mo meletakkan tangan di dadanya. \"Mo janji bawa botol minum sendiri, dan tidak pakai sedotan plastik lagi.\"", en: "Mo put his hand on his chest. \"I promise to bring my own water bottle, and no more plastic straws.\"" },
+        scene: { focus: 350, bg: "beach", props: [{ k: "water", x: 450 }], mo: [{ pose: "pose-14", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Dua puluh tahun lagi, tukik kecil itu akan menjadi penyu besar. Dan mungkin… ia akan kembali ke pantai yang sama untuk bertelur.", en: "Twenty years from now, that little turtle will be a big turtle. And maybe… she will come back to the very same beach to lay her eggs." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 220 }, { k: "turtle", x: 430, y: 290, s: 1.1 }, { k: "fishschool", x: 420 }, { k: "coral", x: 600 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Laut itu luas sekali, tapi tangan kecil pun bisa menjaganya. Sampah apa yang bisa kamu pungut hari ini? 🐢", en: "The sea is enormous, but even small hands can help look after it. What litter could you pick up today? 🐢" },
+        scene: { focus: 350, bg: "beach", props: [{ k: "hatchling", x: 470, y: 420 }], mo: [{ pose: "yes", x: 330, move: "hop" }], fx: ["sparkle"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Sea 3. Jingga the clownfish ───────────────────────── */
+  {
+    slug: "jingga-ikan-badut-mencari-rumah",
+    pose: "baby-mo-pose-41.png",
+    published: "2026-11-20",
+    title: { id: "Jingga, Ikan Badut yang Mencari Rumah", en: "Jingga the Clownfish Looks for a Home" },
+    hook: {
+      id: "Si kembar berebut selimut. Lalu Umi bercerita tentang Jingga, ikan badut kecil yang kehilangan rumahnya — dan anemon berduri yang membuka lengannya.",
+      en: "The twins are fighting over a blanket. Then Umi tells the story of Jingga, a little clownfish who lost her home — and the stinging anemone who opened its arms.",
+    },
+    anchor: { type: "parenting", slug: "anak-tidak-mau-berbagi" },
+    takeaway: {
+      id: "Cerita membantu anak merasakan apa yang sulit dijelaskan. Ikan badut dan anemon menunjukkan bahwa berbagi bukan kehilangan — tapi saling menjaga.",
+      en: "Stories help children feel what's hard to explain. The clownfish and the anemone show that sharing isn't losing — it's looking after each other.",
+    },
+    tags: ["berbagi", "saudara", "ikan badut", "laut", "tolong-menolong", "cerita tidur"],
+    card: {
+      title: { id: "Saat Kakak-Adik Berebut", en: "When Siblings Fight Over Things" },
+      items: {
+        id: [
+          "Jangan paksa berbagi seketika. Pakai giliran dengan penanda waktu: \"Lima menit untuk Mo, lalu lima menit untuk Ais.\"",
+          "Izinkan setiap anak punya satu-dua barang istimewa yang tidak harus dibagi — itu membuat berbagi barang lain lebih mudah.",
+          "Saat mereka bekerja sama, sebutkan dengan jelas: \"Kalian berbagi selimut, jadi dua-duanya hangat. Masya Allah!\"",
+        ],
+        en: [
+          "Don't force instant sharing. Use turns with a timer: \"Five minutes for Mo, then five minutes for Ais.\"",
+          "Let each child keep one or two special things they don't have to share — it makes sharing everything else easier.",
+          "When they cooperate, name it clearly: \"You shared the blanket, so you're both warm. Masya Allah!\"",
+        ],
+      },
+    },
+    cover: {
+      focus: 400, bg: "underwater",
+      props: [{ k: "seaweed", x: 230 }, { k: "anemone", x: 420 }, { k: "clownfish", x: 400, y: 300 }, { k: "coral", x: 600 }],
+      fx: ["bubbles"],
+    },
+    pages: [
+      {
+        text: { id: "\"Ini selimutku!\" \"Bukan, punyaku!\" Malam itu Mo dan Ais berebut selimut bintang, tarik sana, tarik sini.", en: "\"It's my blanket!\" \"No, it's mine!\" That night Mo and Ais fought over the starry blanket, pulling this way and that." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-27", x: 300 }, { who: "ais", pose: "grumpy", x: 420 }] },
+      },
+      {
+        text: { id: "Umi duduk di antara mereka dan membuka buku. \"Umi punya cerita tentang ikan kecil yang tidak punya rumah.\"", en: "Umi sat between them and opened a book. \"Umi has a story about a little fish who had no home.\"" },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "read-story", x: 340 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Di laut yang hangat, hiduplah ikan badut kecil bernama Jingga. Suatu malam badai datang, dan rumah Jingga tersapu ombak.", en: "In a warm sea lived a little clownfish called Jingga. One night a storm came, and Jingga's home was swept away by the waves." },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "clownfish", x: 400, y: 320 }, { k: "seaweed", x: 560 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Jingga berenang mencari rumah baru. \"Bolehkah aku tinggal di sini?\" tanyanya pada Gurita. \"Maaf, guaku sempit sekali,\" jawab Gurita.", en: "Jingga swam off to look for a new home. \"May I live here?\" she asked the Octopus. \"Sorry, my cave is very small,\" said the Octopus." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "octopushide", x: 470 }, { k: "clownfish", x: 300, y: 300 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Ia bertanya pada Kuda Laut. \"Maaf, aku harus terus berpegangan pada rumput laut,\" jawab Kuda Laut pelan.", en: "She asked the Seahorse. \"Sorry, I have to keep holding on to the seaweed,\" said the Seahorse softly." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 470 }, { k: "seahorse", x: 470, y: 380 }, { k: "clownfish", x: 320, y: 290, flip: true }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Lalu Jingga melihat anemon laut yang cantik. Tapi semua ikan menjauh. \"Hati-hati! Lengan anemon itu bisa menyengat!\"", en: "Then Jingga saw a beautiful sea anemone. But all the other fish swam away. \"Careful! Its arms can sting!\"" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "anemone", x: 450 }, { k: "clownfish", x: 300, y: 300 }, { k: "fishschool", x: 400 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Terus Jingga masuk, Umi?\" tanya Ais. Mo masih memeluk selimut… tapi sudah tidak terlalu erat.", en: "\"So did Jingga go in, Umi?\" asked Ais. Mo was still hugging the blanket… but not quite so tightly." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "wonder-question", x: 300 }, { pose: "pose-31", x: 420 }] },
+      },
+      {
+        text: { id: "Jingga memberanikan diri. \"Anemon, bolehkah aku tinggal di sini? Aku akan membersihkan lenganmu dan mengusir ikan yang mau menggigitmu.\"", en: "Jingga found her courage. \"Anemone, may I live here? I'll keep your arms clean and chase away the fish that try to nibble you.\"" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "anemone", x: 440 }, { k: "clownfish", x: 340, y: 310 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Anemon terdiam lama. Lalu ia membuka lengannya pelan-pelan. \"Masuklah, Jingga.\"", en: "The anemone was quiet for a long time. Then, slowly, it opened its arms. \"Come in, Jingga.\"" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "anemone", x: 400, s: 1.2 }, { k: "clownfish", x: 400, y: 360 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Ajaibnya, sengatan anemon tidak menyakiti Jingga. Tubuh ikan badut dilapisi lendir khusus. Allah menciptakan mereka untuk saling menjaga.", en: "Amazingly, the anemone's sting didn't hurt Jingga. Clownfish are covered in a special slime. Allah made them to look after each other." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "anemone", x: 400, s: 1.2 }, { k: "clownfish", x: 380, y: 340 }, { k: "coral", x: 600 }], fx: ["sparkle", "bubbles"] },
+      },
+      {
+        text: { id: "Sejak itu Jingga menjaga anemon, dan anemon melindungi Jingga. Dua makhluk yang berbeda, satu rumah yang hangat.", en: "From then on Jingga looked after the anemone, and the anemone protected Jingga. Two very different creatures, one warm home." },
+        quote: { id: "\"Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa.\" (QS. Al-Ma'idah: 2)", en: "\"And help one another in goodness and righteousness.\" (Qur'an, Al-Ma'idah 5:2)" },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "seaweed", x: 220 }, { k: "anemone", x: 400 }, { k: "clownfish", x: 420, y: 300 }, { k: "starfish", x: 560 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Umi menutup buku. Mo memandang selimut di tangannya, lalu memandang Ais yang kedinginan.", en: "Umi closed the book. Mo looked at the blanket in his hands, then at Ais, who was feeling cold." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-36", x: 300 }, { who: "ais", pose: "sit-chin-hands", x: 420 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Mo mengangkat ujung selimut. \"Ais, masuk sini. Kita jadi Jingga dan anemon.\"", en: "Mo lifted the edge of the blanket. \"Ais, come in here. We can be Jingga and the anemone.\"" },
+        scene: { focus: 350, bg: "bedroom", time: "night", mo: [{ pose: "pose-41", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Aku anemonnya! Awas, kusengat!\" kata Ais sambil menggelitik Mo. Mereka tertawa sampai Umi ikut tertawa.", en: "\"I'm the anemone! Watch out, I'll sting you!\" said Ais, tickling Mo. They laughed until Umi laughed too." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "giggle", x: 300 }, { pose: "pose-02", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Malam itu, satu selimut cukup untuk berdua. Ternyata berbagi membuat selimut terasa lebih hangat.", en: "That night, one blanket was enough for two. It turns out sharing makes a blanket feel even warmer." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "dua-sit", x: 250 }, { pose: "pose-39", x: 360 }, { who: "ais", pose: "sleep-pillow", x: 450 }], fx: ["zzz", "stars"] },
+      },
+      {
+        text: { id: "Apa yang bisa kamu bagi dengan saudara atau temanmu besok? 🐠", en: "What could you share with your brother, sister or a friend tomorrow? 🐠" },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "anemone", x: 400 }, { k: "clownfish", x: 400, y: 350 }], fx: ["zzz", "bubbles"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Sea 4. The whale's lullaby ───────────────────────── */
+  {
+    slug: "lagu-paus-untuk-bayinya",
+    pose: "baby-mo-pose-39.png",
+    published: "2026-11-21",
+    title: { id: "Lagu Paus untuk Bayinya", en: "A Whale's Song for Her Baby" },
+    hook: {
+      id: "Petir menyambar dan Mo ketakutan. Umi bercerita tentang ibu paus yang berenang ribuan kilometer, bernyanyi pelan sekali — hanya untuk bayinya.",
+      en: "Thunder crashes and Mo is scared. Umi tells him about a mother whale who swims thousands of kilometres, singing very softly — just for her baby.",
+    },
+    anchor: { type: "hadith", slug: "kasih-sayang-kepada-anak" },
+    takeaway: {
+      id: "Rasa aman anak dibangun dari kehadiran yang tenang: dekat, lembut, dan berulang setiap malam. Kasih sayang yang ia terima hari ini kelak akan ia berikan kembali.",
+      en: "A child's sense of safety is built from calm presence: close, gentle and repeated every night. The love they receive today is the love they'll give back one day.",
+    },
+    tags: ["paus", "laut", "ibu", "takut petir", "kasih sayang", "cerita tidur"],
+    card: {
+      title: { id: "Saat Anak Takut Petir atau Gelap", en: "When Your Child Fears Thunder or the Dark" },
+      items: {
+        id: [
+          "Akui rasa takutnya (\"Suaranya keras sekali, ya\") dan tetap di dekatnya — jangan bilang \"begitu saja takut\".",
+          "Jelaskan dengan sederhana (\"petir itu suara listrik di awan\") dan ajarkan doa ketika mendengar petir.",
+          "Buat ritual tidur yang sama setiap malam — lagu, cerita, atau doa yang sama membuat anak merasa aman.",
+        ],
+        en: [
+          "Name the fear (\"That was really loud, wasn't it?\") and stay close — never \"that's nothing to be scared of\".",
+          "Explain simply (\"thunder is the sound of electricity in the clouds\") and teach the du'a for hearing thunder.",
+          "Keep the same bedtime ritual every night — the same song, story or du'a helps children feel safe.",
+        ],
+      },
+    },
+    cover: {
+      focus: 400, bg: "underwater",
+      props: [{ k: "whale", x: 390, y: 300, s: 0.6 }, { k: "whale", x: 430, y: 390, s: 0.27 }],
+      fx: ["notes", "bubbles"],
+    },
+    pages: [
+      {
+        text: { id: "Malam itu hujan turun deras. DUAR! Petir menyambar. Mo bersembunyi di bawah selimut, gemetar.", en: "That night the rain poured down. BOOM! Thunder crashed. Mo hid under his blanket, trembling." },
+        scene: { focus: 340, bg: "bedroom", time: "rain", mo: [{ pose: "pose-10", x: 340 }], fx: ["lightning"] },
+      },
+      {
+        text: { id: "Umi datang dan memeluknya. \"Mo mau dengar cerita tentang ibu paus dan bayinya?\" Mo mengangguk kecil.", en: "Umi came and hugged him. \"Would you like to hear a story about a mother whale and her baby?\" Mo gave a tiny nod." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Di laut yang dingin dan luas, ada ibu paus dan bayinya. Bayi paus itu sepanjang mobil, tapi di samping ibunya ia terlihat sangat kecil.", en: "In a cold, wide sea lived a mother whale and her baby. The baby was as long as a car, but next to his mother he looked very small." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "whale", x: 390, y: 300, s: 0.62 }, { k: "whale", x: 440, y: 390, s: 0.25 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Setiap tahun, mereka berenang jauh sekali — ribuan kilometer — dari laut yang dingin menuju laut yang hangat.", en: "Every year they swim a very long way — thousands of kilometres — from the cold sea to the warm sea." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "whale", x: 390, y: 290, s: 0.55 }, { k: "whale", x: 450, y: 370, s: 0.25 }, { k: "fishschool", x: 400 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Suatu malam, badai datang di atas laut. Ombak bergemuruh. Bayi paus ketakutan dan berhenti berenang.", en: "One night a storm came over the sea. The waves roared. The baby whale got scared and stopped swimming." },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "whale", x: 390, y: 350, s: 0.42 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Ibu paus berenang mendekat sampai tubuh mereka bersentuhan. \"Ibu di sini,\" katanya. Lalu ia mulai bernyanyi, pelan sekali.", en: "The mother whale swam close until their bodies touched. \"I'm here,\" she said. And she began to sing, very softly." },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "whale", x: 390, y: 300, s: 0.6 }, { k: "whale", x: 420, y: 375, s: 0.27 }], fx: ["notes", "bubbles"] },
+      },
+      {
+        text: { id: "Tahukah kamu? Ibu paus bungkuk berbisik kepada bayinya dengan suara yang sangat pelan, supaya hanya bayinya yang mendengar dan pemangsa tidak tahu mereka ada di sana.", en: "Did you know? Humpback whale mothers whisper to their babies very quietly, so only the baby can hear and predators don't know they're there." },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "whale", x: 390, y: 320, s: 0.6 }, { k: "heart", x: 420, y: 200, s: 0.5 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"Umi juga bernyanyi pelan untuk Mo,\" bisik Mo. Umi tersenyum dan mulai bersenandung.", en: "\"You sing softly to me too, Umi,\" Mo whispered. Umi smiled and began to hum." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { pose: "pose-36", x: 410 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Bayi paus tidak bisa bernapas di dalam air. Saat ia lelah, ibunya mendorongnya pelan ke permukaan supaya ia bisa menghirup udara.", en: "Baby whales can't breathe underwater. When he got tired, his mother gently pushed him up to the surface so he could breathe the air." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "whale", x: 390, y: 360, s: 0.6 }, { k: "whale", x: 400, y: 230, s: 0.27 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Perjalanan itu sangat panjang. Ibu paus hampir tidak makan selama berbulan-bulan, karena ia terus menjaga dan menyusui bayinya.", en: "The journey was very long. The mother whale hardly ate for months, because she kept caring for her baby and feeding him her milk." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "whale", x: 390, y: 300, s: 0.6 }, { k: "whale", x: 440, y: 385, s: 0.26 }, { k: "jellyfish", x: 300, y: 240, s: 0.8 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Berbulan-bulan tidak makan?\" bisik Mo. \"Ibu paus sayang sekali sama bayinya.\" \"Begitulah semua ibu,\" jawab Umi pelan.", en: "\"Months without eating?\" Mo whispered. \"The mother whale must love her baby so much.\" \"That's how all mothers are,\" Umi answered softly." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "grateful-hands", x: 280 }, { pose: "wow", x: 410 }] },
+      },
+      {
+        text: { id: "Umi mencium kening Mo. \"Rasulullah ﷺ suka mencium cucunya. Kata beliau, siapa yang menyayangi akan disayangi Allah.\"", en: "Umi kissed Mo's forehead. \"The Prophet ﷺ loved to kiss his grandchildren. He said whoever shows mercy will be shown mercy by Allah.\"" },
+        quote: { id: "\"Barangsiapa yang tidak menyayangi, maka ia tidak akan disayangi.\" (HR. Bukhari dan Muslim)", en: "\"Whoever does not show mercy will not be shown mercy.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "touched-cheek", x: 280 }, { pose: "pose-35", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Akhirnya mereka tiba di laut yang hangat dan biru. Badai sudah lama berlalu, dan bayi paus berenang riang di samping ibunya.", en: "At last they reached the warm blue sea. The storm was long gone, and the baby whale swam happily beside his mother." },
+        scene: { focus: 400, bg: "underwater", props: [{ k: "coral", x: 480 }, { k: "whale", x: 390, y: 280, s: 0.6 }, { k: "whale", x: 440, y: 360, s: 0.26 }, { k: "fishschool", x: 400 }], fx: ["sparkle", "bubbles"] },
+      },
+      {
+        text: { id: "Di luar, hujan pun mulai reda. Petir sudah tidak terdengar lagi. Mata Mo mulai berat.", en: "Outside, the rain was easing too. There was no more thunder. Mo's eyes were getting heavy." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-39", x: 340 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Umi,\" bisik Mo, \"kalau nanti Umi sudah tua dan takut, Mo yang akan bernyanyi untuk Umi.\" Umi memeluk Mo lama sekali.", en: "\"Umi,\" Mo whispered, \"when you're old and you feel scared, I'll be the one who sings to you.\" Umi held him for a long, long time." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "hug-mo", x: 340 }], fx: ["hearts", "stars"] },
+      },
+      {
+        text: { id: "Lagu apa yang paling kamu suka saat dinyanyikan Umi atau Abi? 🐋", en: "Which song do you love most when Umi or Abi sings it to you? 🐋" },
+        scene: { focus: 400, bg: "underwater", time: "night", props: [{ k: "whale", x: 390, y: 310, s: 0.6 }, { k: "whale", x: 430, y: 385, s: 0.26 }], fx: ["notes", "zzz"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Sea 5. The sideways crab ───────────────────────── */
+  {
+    slug: "kepiting-yang-berjalan-miring",
+    pose: "baby-mo-pose-14.png",
+    published: "2026-11-22",
+    title: { id: "Kepiting yang Berjalan Miring", en: "The Crab Who Walked Sideways" },
+    hook: {
+      id: "Mo menertawakan kepiting yang berjalan miring. Lalu sandal baru membuat jalan Mo jadi lucu… dan kali ini Mo yang ditertawakan.",
+      en: "Mo laughs at a crab for walking sideways. Then his new sandals make him walk funny… and this time, it's Mo who gets laughed at.",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Anak belajar empati paling dalam saat ia merasakannya sendiri. Bantu ia menghubungkan rasa sakit ditertawakan dengan cara ia memperlakukan yang berbeda.",
+      en: "Children learn empathy most deeply when they feel it themselves. Help them connect the sting of being laughed at with how they treat anyone different.",
+    },
+    tags: ["mengejek", "empati", "kepiting", "pantai", "perbedaan", "maaf"],
+    card: {
+      title: { id: "Saat Anak Mengejek", en: "When Your Child Teases Others" },
+      items: {
+        id: [
+          "Hentikan dengan tenang, lalu tanyakan: \"Kalau kamu yang ditertawakan, rasanya bagaimana?\"",
+          "Pakai contoh dari alam: kepiting berjalan miring, ikan berenang, burung terbang — semua berbeda karena Allah menciptakannya begitu.",
+          "Jadilah contoh: hindari menertawakan bentuk tubuh, logat, atau cara bicara orang lain di depan anak.",
+        ],
+        en: [
+          "Stop it calmly, then ask: \"If someone laughed at you, how would it feel?\"",
+          "Use nature: crabs walk sideways, fish swim, birds fly — all different because Allah made them that way.",
+          "Model it: avoid laughing at people's bodies, accents or the way they speak in front of your child.",
+        ],
+      },
+    },
+    cover: {
+      focus: 380, bg: "beach",
+      props: [{ k: "crab", x: 430, s: 1.2 }, { k: "sandcastle", x: 540 }],
+      mo: [{ pose: "pose-25", x: 320 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Di pantai, Mo melihat seekor kepiting merah berjalan… miring! Kres-kres-kres, ke kiri. Kres-kres-kres, ke kanan.", en: "At the beach, Mo spotted a red crab walking… sideways! Scuttle-scuttle to the left. Scuttle-scuttle to the right." },
+        scene: { focus: 370, bg: "beach", props: [{ k: "crab", x: 440, s: 1.1 }, { k: "shell", x: 500 }], mo: [{ pose: "wow", x: 320 }] },
+      },
+      {
+        text: { id: "Mo tertawa terbahak-bahak. \"Kepiting aneh! Jalannya salah!\" Mo pura-pura berjalan miring sambil mengejek.", en: "Mo burst out laughing. \"Silly crab! It's walking wrong!\" Mo pretended to walk sideways, making fun of it." },
+        scene: { focus: 370, bg: "beach", props: [{ k: "crab", x: 440, s: 1.1 }], mo: [{ pose: "pose-08", x: 310 }] },
+      },
+      {
+        text: { id: "Ais ikut tertawa dan berjalan miring juga. \"Kres-kres! Aku kepiting aneh!\"", en: "Ais laughed too and walked sideways as well. \"Scuttle-scuttle! I'm a silly crab!\"" },
+        scene: { focus: 360, bg: "beach", props: [{ k: "crab", x: 460, s: 1 }], mo: [{ who: "ais", pose: "giggle", x: 290 }, { pose: "pose-30", x: 380 }] },
+      },
+      {
+        text: { id: "Kepiting kecil itu berlari masuk ke lubang pasir. Ia tidak mau keluar lagi.", en: "The little crab ran into a hole in the sand. It didn't want to come out again." },
+        scene: { focus: 400, bg: "beach", props: [{ k: "puddle", x: 420, s: 0.6 }, { k: "crab", x: 420, y: 418, s: 0.8 }, { k: "shell", x: 520 }] },
+      },
+      {
+        text: { id: "Kak Adam berjongkok. \"Kepiting tidak salah jalan, lho. Kakinya memang menekuk ke samping. Kalau berjalan miring, ia malah bisa lari secepat kilat!\"", en: "Kak Adam crouched down. \"The crab isn't walking wrong, you know. Its legs bend sideways. Walking sideways, it can run as fast as lightning!\"" },
+        scene: { focus: 340, bg: "beach", mo: [{ who: "adam", pose: "kneel-talk", x: 290 }, { pose: "pose-40", x: 420 }] },
+      },
+      {
+        text: { id: "\"Allah menciptakan kakinya pas sekali untuk hidup di pantai yang licin dan berbatu,\" kata Kak Adam. \"Dia tidak aneh. Dia hebat.\"", en: "\"Allah made its legs just right for slippery, rocky beaches,\" said Kak Adam. \"It isn't silly. It's amazing.\"" },
+        scene: { focus: 400, bg: "beach", props: [{ k: "crab", x: 400, s: 1.6 }, { k: "shell", x: 520 }, { k: "starfish", x: 290 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Siang itu, Mo memakai sandal baru yang kebesaran. Plok-plek, plok-plek! Jalannya jadi lucu sekali.", en: "That afternoon, Mo put on new sandals that were too big. Flip-flop, flip-flop! He walked in a very funny way." },
+        scene: { focus: 350, bg: "beach", mo: [{ pose: "pose-34", x: 350 }] },
+      },
+      {
+        text: { id: "Beberapa anak di pantai menunjuk dan tertawa. \"Lihat, jalannya kayak bebek!\"", en: "Some children on the beach pointed and laughed. \"Look, he walks like a duck!\"" },
+        scene: { focus: 350, bg: "beach", mo: [{ pose: "pose-38", x: 350 }] },
+      },
+      {
+        text: { id: "Wajah Mo terasa panas. Hatinya sakit sekali. Mo ingin bersembunyi di lubang pasir, seperti kepiting tadi.", en: "Mo's face went hot. His heart hurt so much. He wanted to hide in a hole in the sand, just like the crab." },
+        scene: { focus: 350, bg: "beach", mo: [{ pose: "pose-10", x: 350 }] },
+      },
+      {
+        text: { id: "Lalu Mo teringat kepiting kecil. \"Ternyata ditertawakan itu tidak enak…\" bisiknya.", en: "Then Mo remembered the little crab. \"Being laughed at feels horrible…\" he whispered." },
+        scene: { focus: 350, bg: "beach", props: [{ k: "crab", x: 470, y: 418, s: 0.8 }], mo: [{ pose: "pose-36", x: 340 }] },
+      },
+      {
+        text: { id: "Umi duduk di samping Mo. \"Allah melarang kita mengolok-olok, karena bisa jadi yang diolok-olok lebih baik dari yang mengolok.\"", en: "Umi sat down beside Mo. \"Allah tells us not to mock others, because the one being mocked may well be better than the one mocking.\"" },
+        quote: { id: "\"Wahai orang-orang yang beriman! Janganlah suatu kaum mengolok-olok kaum yang lain, (karena) boleh jadi mereka (yang diolok-olok) lebih baik dari mereka (yang mengolok-olok).\" (QS. Al-Hujurat: 11)", en: "\"O you who believe, let not some people mock others; perhaps they may be better than them.\" (Qur'an, Al-Hujurat 49:11)" },
+        scene: { focus: 340, bg: "beach", mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { pose: "pose-36", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mo kembali ke lubang kepiting dan berjongkok. \"Maaf ya, kepiting. Mo tidak akan mengejek lagi.\"", en: "Mo went back to the crab's hole and crouched down. \"I'm sorry, crab. I won't make fun of you again.\"" },
+        scene: { focus: 370, bg: "beach", props: [{ k: "puddle", x: 460, s: 0.6 }], mo: [{ pose: "pose-14", x: 340 }] },
+      },
+      {
+        text: { id: "Pelan-pelan kepiting itu keluar lagi, dan menggerak-gerakkan capitnya seperti sedang melambai.", en: "Slowly the crab came out again, and waved its claws as if to say hello." },
+        scene: { focus: 380, bg: "beach", props: [{ k: "crab", x: 440, s: 1.1 }], mo: [{ pose: "pose-31", x: 320 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Kepiting jalannya miring, ikan berenang, burung terbang, Mo jalannya plok-plek,\" kata Ais. \"Semua beda, semua keren!\"", en: "\"Crabs walk sideways, fish swim, birds fly, and Mo goes flip-flop,\" said Ais. \"Everyone's different, and everyone's cool!\"" },
+        scene: { focus: 360, bg: "beach", props: [{ k: "bird", x: 520, y: 200 }], mo: [{ who: "ais", pose: "arms-wide-joy", x: 300 }, { pose: "pose-25", x: 420 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Mereka membuat istana pasir dengan pintu di samping — khusus untuk kepiting yang berjalan miring.", en: "They built a sandcastle with a door on the side — specially for a crab who walks sideways." },
+        scene: { focus: 380, bg: "beach", props: [{ k: "sandcastle", x: 440 }, { k: "crab", x: 520, s: 1 }, { k: "bucket", x: 330 }], mo: [{ pose: "pose-29", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kalau melihat teman yang berbeda, apa yang bisa kamu katakan supaya hatinya senang? 🦀", en: "When you meet a friend who's different, what could you say to make their heart happy? 🦀" },
+        scene: { focus: 370, bg: "beach", props: [{ k: "crab", x: 440, s: 1.1 }], mo: [{ pose: "yes", x: 320, move: "hop" }], fx: ["hearts"] },
+      },
+    ],
+  },
 ];
