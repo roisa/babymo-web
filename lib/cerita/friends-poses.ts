@@ -9,8 +9,9 @@
  * sits at the right height next to a standing one.
  *
  * In StoryArt scenes:  mo: [{ who: "adam", pose: "<name>", x }]
- * StoryArt draws friends bigger than the twins (FRIEND_SCALE): Adam stands
- * 1.4× Baby Mo's height, Ayah 1.9×. Keep `s` the same as Mo's in a scene.
+ * StoryArt draws friends bigger than the twins (FRIEND_SCALE). Standing
+ * heights relative to Abi (measured over all standing poses): Abi 1.00,
+ * Umi ~0.95, Kak Adam ~0.72, the twins ~0.55 (they reach Adam's chest). Keep `s` the same as Mo's in a scene.
  *
  * Pick by `use`. `alt` marks a near-duplicate kept so neighbouring pages
  * don't repeat the same image. `duo` poses already include Baby Mo.
@@ -42,7 +43,7 @@ export interface FriendPose {
 }
 
 /** Display size relative to Baby Mo / Ais at the same `s`. */
-export const FRIEND_SCALE: Record<Friend, number> = { adam: 1.315, ayah: 1.784, umi: 1.784 };
+export const FRIEND_SCALE: Record<Friend, number> = { adam: 1.235, ayah: 1.87, umi: 1.784 };
 
 export const ADAM_POSES: FriendPose[] = [
   { name: "wave-hello", category: "greet", mood: "happy", use: "Standing, one hand up waving, big smile. Arrivals, hello, goodbye." },
