@@ -1,4 +1,7 @@
-// Baby Mo service worker — v2 (2026-05)
+// Baby Mo service worker — v3 (2026-11)
+//
+// v3: bumped to clear cached pose PNGs that were replaced under the same
+// name (cache-first never re-checks). Give replaced art a NEW file name.
 //
 // Strategy:
 //   - HTML navigations: network-first with stale-cache fallback
@@ -10,7 +13,7 @@
 // navigation, install + activate it cleanly. We clear unrelated caches
 // in activate to avoid carrying old kill-switch state forward.
 
-const VERSION = "babymo-v2-20260527";
+const VERSION = "babymo-v3-20261107";
 const HTML_CACHE = `${VERSION}-html`;
 const STATIC_CACHE = `${VERSION}-static`;
 const DATA_CACHE = `${VERSION}-data`;

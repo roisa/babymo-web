@@ -206,7 +206,7 @@ export interface ArtMo {
   /** "bob" (default), "hop", "sway" or "still" */
   move?: "bob" | "hop" | "sway" | "still";
   /** frame-by-frame animation: pose names played in order on a loop
-   *  (e.g. Adam's tennis-forehand-1…6). Repeat a name to hold a frame. */
+   *  (e.g. Adam's tennis-fh-1…6). Repeat a name to hold a frame. */
   seq?: string[];
   /** frames per second for `seq` (default 8) */
   fps?: number;

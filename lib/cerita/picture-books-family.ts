@@ -11,7 +11,7 @@ import type { PictureBook } from "./picture-books";
  * ball with d = contact time leaves the racket on every swing. */
 const FPS = 12 / 1.8;
 const loop = (f: string[]) => [...f, f[5]!, f[5]!, f[0]!, f[0]!, f[0]!, f[0]!];
-const fh = (i: number) => `tennis-forehand-${i}`;
+const fh = (i: number) => `tennis-fh-${i}`;
 const bh = (i: number) => `tennis-backhand-${i}`;
 const pu = (i: number) => `tennis-punch-${i}`;
 const FOREHAND = loop([1, 2, 3, 4, 5, 6].map(fh));
