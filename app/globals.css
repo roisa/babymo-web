@@ -1380,10 +1380,10 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 .sa-camo { animation: sa-camo 5s ease-in-out infinite; }
 @keyframes sa-swim { 0%,100% { translate: -16px 0; rotate: -1.5deg; } 50% { translate: 16px -10px; rotate: 1.5deg; } }
 .sa-swim { transform-origin: center; animation: sa-swim 5s ease-in-out infinite; }
-@keyframes sa-flap { 0%,100% { rotate: -16deg; } 50% { rotate: 14deg; } }
-.sa-flap { transform-origin: 85% 15%; animation: sa-flap 1.8s ease-in-out infinite; }
-@keyframes sa-crawl { 0% { translate: 0 0; scale: 1; opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { translate: -150px -95px; scale: .55; opacity: 0; } }
-.sa-crawl { transform-origin: center; animation: sa-crawl 5s linear infinite; }
+@keyframes sa-flipper { 0%,100% { rotate: -16deg; } 50% { rotate: 14deg; } }
+.sa-flipper { transform-origin: 85% 15%; animation: sa-flipper 1.8s ease-in-out infinite; }
+@keyframes sa-tukik { 0% { translate: 0 0; scale: 1; opacity: 0; } 10% { opacity: 1; } 85% { opacity: 1; } 100% { translate: -150px -95px; scale: .55; opacity: 0; } }
+.sa-tukik { transform-origin: center; animation: sa-tukik 5s linear infinite; }
 @keyframes sa-fish { 0%,100% { translate: -18px 0; rotate: -3deg; } 50% { translate: 18px -6px; rotate: 3deg; } }
 .sa-fish { transform-origin: center; animation: sa-fish 3.6s ease-in-out infinite; }
 @keyframes sa-school { 0% { translate: 300px 0; opacity: 0; } 12%,88% { opacity: 1; } 50% { translate: 0 -18px; } 100% { translate: -300px 0; opacity: 0; } }
@@ -1396,3 +1396,13 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 .sa-tankfish { animation: sa-tankfish 16s linear infinite; }
 @keyframes sa-wobble { 0%,100% { rotate: -7deg; } 50% { rotate: 7deg; } }
 .sa-wobble { transform-origin: center; animation: sa-wobble 3s ease-in-out infinite; }
+
+/* ── Forest / hill / quake / bees ── */
+@keyframes sa-quake { 0%,100% { translate: 0 0; } 10% { translate: -6px 2px; } 20% { translate: 5px -2px; } 30% { translate: -4px 1px; } 40% { translate: 6px 2px; } 50% { translate: -3px -1px; } 60% { translate: 2px 1px; } 70%,90% { translate: 0 0; } }
+.sa-quake { animation: sa-quake 1.6s linear infinite; }
+@keyframes sa-tilt { 0%,40%,100% { rotate: 0deg; } 55% { rotate: -9deg; } 70% { rotate: 7deg; } 85% { rotate: -4deg; } }
+.sa-tilt { transform-origin: 50% 0%; animation: sa-tilt 1.6s ease-in-out infinite; }
+@keyframes sa-dust { 0% { translate: 0 0; opacity: 0; } 20% { opacity: .8; } 100% { translate: 10px 220px; opacity: 0; } }
+.sa-dust { animation: sa-dust 1.8s linear infinite; }
+@keyframes sa-buzz { 0%,100% { translate: 0 0; } 25% { translate: 14px -8px; } 50% { translate: 0 -14px; } 75% { translate: -14px -6px; } }
+.sa-buzz { animation: sa-buzz 2.2s ease-in-out infinite; }
