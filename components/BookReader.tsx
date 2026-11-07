@@ -264,6 +264,43 @@ function parseBlocks(body: string): Block[] {
     });
 }
 
+/* Line icons for the Book Mode controls — same style as the site's icons. */
+const Ico = ({ children }: { children: React.ReactNode }) => (
+  <svg className="bk-ico" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+    {children}
+  </svg>
+);
+const SpeakerIcon = () => (
+  <Ico>
+    <path d="M11 5 6 9H3v6h3l5 4V5z" fill="currentColor" fillOpacity=".15" />
+    <path d="M15.5 8.5a5 5 0 0 1 0 7" />
+    <path d="M18.5 5.5a9 9 0 0 1 0 13" />
+  </Ico>
+);
+/** Playing: three bars bouncing like a sound meter. */
+const PlayingIcon = () => (
+  <span className="bk-eq" aria-hidden><i /><i /><i /></span>
+);
+const ShortIcon = () => (
+  <Ico>
+    <rect x="3" y="4" width="18" height="16" rx="4" />
+    <path d="M7 10h10" />
+    <path d="M7 14h5" />
+  </Ico>
+);
+const MoonIcon = () => (
+  <Ico>
+    <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z" fill="currentColor" fillOpacity=".15" />
+    <path d="M17 3v3M15.5 4.5h3" />
+  </Ico>
+);
+const VoiceIcon = () => (
+  <svg className="bk-ico" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" aria-hidden>
+    <rect x="9" y="3" width="6" height="11" rx="3" />
+    <path d="M5 11a7 7 0 0 0 14 0M12 18v3" />
+  </svg>
+);
+
 export function BookReader({
   locale,
   slug,
@@ -1151,15 +1188,15 @@ export function BookReader({
             {picture && (
               <div className="bk-readctl">
                 <button type="button" className={`bk-icon bk-icon--pill${readOn ? " is-on" : ""}`} onClick={toggleRead} aria-pressed={readOn}>
-                  <span aria-hidden>{readOn ? "⏸" : "🔊"}</span> <span className="bk-pill-label">{readOn ? t.readStop : t.read}</span>
+                  {readOn ? <PlayingIcon /> : <SpeakerIcon />}<span className="bk-pill-label">{readOn ? t.readStop : t.read}</span>
                 </button>
                 {inter?.short && (
                   <button type="button" className={`bk-icon bk-icon--pill${shortMode ? " is-on" : ""}`} onClick={toggleShort} aria-pressed={shortMode} aria-label={t.shortOn} title={t.shortOn}>
-                    <span aria-hidden>👶</span> <span className="bk-pill-label">{t.short}</span>
+                    <ShortIcon /><span className="bk-pill-label">{t.short}</span>
                   </button>
                 )}
                 <button type="button" className={`bk-icon bk-icon--pill${night ? " is-on" : ""}`} onClick={toggleNight} aria-pressed={night} aria-label={t.night}>
-                  <span aria-hidden>🌙</span> <span className="bk-pill-label">{t.night}</span>
+                  <MoonIcon /><span className="bk-pill-label">{t.night}</span>
                 </button>
               </div>
             )}
@@ -1169,7 +1206,7 @@ export function BookReader({
           {readOn && narrator.noVoice && <div className="bk-night-note bk-novoice" role="status">{t.noVoice}</div>}
           {readOn && narrator.voices.length > 1 && (
             <label className="bk-voicepick">
-              <span>🗣️ {t.voice}</span>
+              <span className="bk-voicepick-label"><VoiceIcon /> {t.voice}</span>
               <select value={narrator.voiceName} onChange={(e) => { narrator.chooseVoice(e.target.value); setTimeout(() => narrateAt(pos), 50); }}>
                 {narrator.voices.map((v) => (
                   <option key={v.name} value={v.name}>{v.name.replace(/^(Microsoft|Google)\s+/, "").replace(/\s*-\s*.*$/, "").replace(/\s*\(.*\)$/, (m) => (/natural/i.test(m) ? " ✨" : ""))}</option>
@@ -1277,8 +1314,15 @@ export function BookReader({
         .bk-fontctl{display:flex;gap:8px;}
         .bk-readctl{display:flex;gap:8px;order:3;}
         .bk-topbar{flex-wrap:wrap;gap:8px;}
-        .bk-icon--pill{height:40px;font-size:14px;gap:6px;padding:0 14px;border-radius:999px;}
-        .bk-icon--pill.is-on{background:#FFD447;color:#3a2a00;border-color:#FFD447;}
+        .bk-icon--pill{height:40px;font-size:14px;gap:7px;padding:0 15px 0 12px;border-radius:999px;transition:background .2s ease,color .2s ease,transform .12s ease;}
+        .bk-icon--pill:active{transform:scale(.96);}
+        .bk-icon--pill.is-on{background:#FFD447;color:#3a2a00;border-color:#FFD447;box-shadow:0 4px 14px -4px rgba(255,212,71,.6);}
+        .bk-ico{flex:none;display:block;}
+        .bk-eq{display:inline-flex;align-items:flex-end;gap:2.5px;width:20px;height:16px;padding:0 2px;}
+        .bk-eq i{flex:1;border-radius:2px;background:currentColor;animation:bkEq .9s ease-in-out infinite;}
+        .bk-eq i:nth-child(2){animation-delay:-.3s;} .bk-eq i:nth-child(3){animation-delay:-.6s;}
+        @keyframes bkEq{0%,100%{height:30%}50%{height:100%}}
+        .bk-voicepick-label{display:inline-flex;align-items:center;gap:5px;}
         @media (max-width:520px){ .bk-pill-label{display:none;} .bk-icon--pill{min-width:46px;padding:0 12px;} }
         .bk-w{border-radius:6px;transition:background .15s ease,color .15s ease;}
         .bk-w--on{background:#FFE27A;color:#3a2a00;box-shadow:0 0 0 3px #FFE27A;}
