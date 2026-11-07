@@ -331,6 +331,54 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
           {Array.from({ length: 5 }, (_, i) => <rect key={i} y={FLOOR - 10 + i * 30} width={W} height={4} fill="#E8B04B" opacity=".6" />)}
         </g>
       );
+    case "court": {
+      const night = time === "night";
+      const wet = time === "rain";
+      const grass = night ? "#2E5A44" : "#79C27A";
+      const surf = night ? "#2D4F86" : wet ? "#4F7FB8" : "#4C8DDB";
+      const line = night ? "#C9D3F0" : "#FFFFFF";
+      return (
+        <g>
+          {sky(time)}
+          {/* trees behind the fence */}
+          {[40, 150, 270, 520, 640, 760].map((x, i) => (
+            <g key={x} className="sa-sway-slow" style={{ animationDelay: `${-i * 0.8}s` }}>
+              <circle cx={x} cy={170 + (i % 2) * 14} r={58} fill={night ? "#244A3C" : "#5DAF62"} />
+              <circle cx={x + 34} cy={192} r={40} fill={night ? "#2B5544" : "#6CBE6E"} />
+            </g>
+          ))}
+          {/* chain-link fence */}
+          <rect y={180} width={W} height={112} fill={night ? "#1F3B33" : "#3F7F5B"} opacity=".9" />
+          <g opacity=".35" stroke={night ? "#8FB0A0" : "#CFE9D8"} strokeWidth={2}>
+            {Array.from({ length: 34 }, (_, i) => (
+              <path key={i} d={`M${i * 26 - 112} 292 l112 -112 M${i * 26} 292 l-112 -112`} />
+            ))}
+          </g>
+          {[0, 200, 400, 600, 800].map((x) => <rect key={x} x={x - 5} y={172} width={10} height={124} rx={4} fill={night ? "#6E7C8A" : "#AEB9C4"} />)}
+          {/* ground + court in perspective */}
+          <rect y={290} width={W} height={H - 290} fill={grass} />
+          <path d="M70 296 H730 L900 450 H-100 Z" fill={surf} />
+          <g stroke={line} strokeWidth={5} fill="none" strokeLinejoin="round">
+            <path d="M70 296 H730 L900 450 H-100 Z" />
+            <path d="M150 296 L40 450 M650 296 L760 450" strokeWidth={4} />
+            <path d="M104 360 H696" strokeWidth={4} />
+            <path d="M400 330 V360" strokeWidth={4} />
+          </g>
+          {wet && <ellipse cx={560} cy={410} rx={120} ry={14} fill="#BFD8F2" opacity=".5" />}
+          {/* the net */}
+          <g>
+            <rect x={36} y={276} width={9} height={58} rx={3} fill="#3A3F4A" />
+            <rect x={755} y={276} width={9} height={58} rx={3} fill="#3A3F4A" />
+            <rect x={44} y={284} width={712} height={44} fill="#1E2430" opacity=".25" />
+            <g stroke={night ? "#9AA6BC" : "#2A3242"} strokeWidth={1.5} opacity=".55">
+              {Array.from({ length: 60 }, (_, i) => <path key={i} d={`M${46 + i * 12} 284 v44`} />)}
+              {Array.from({ length: 5 }, (_, i) => <path key={i} d={`M44 ${288 + i * 9} h712`} />)}
+            </g>
+            <rect x={44} y={280} width={712} height={7} rx={2} fill="#FFFFFF" />
+          </g>
+        </g>
+      );
+    }
     case "beach":
       return (
         <g>
@@ -347,6 +395,18 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
         </g>
       );
   }
+}
+
+/** a tennis ball: yellow-green with the white seam */
+function TennisBall({ x = 0, y = 0, r = 10, spin = false }: { x?: number; y?: number; r?: number; spin?: boolean }) {
+  return (
+    <g transform={`translate(${x} ${y})`}>
+      <g className={spin ? "sa-spin-fast" : undefined}>
+        <circle r={r} fill="#D9F04A" stroke="#B5CC2E" strokeWidth={1.5} />
+        <path d={`M${-r * 0.75} ${-r * 0.65} q ${r * 0.75} ${r * 0.65} 0 ${r * 1.3} M${r * 0.75} ${-r * 0.65} q ${-r * 0.75} ${r * 0.65} 0 ${r * 1.3}`} stroke="#fff" strokeWidth={r * 0.18} fill="none" />
+      </g>
+    </g>
+  );
 }
 
 /* ───────── props ───────── */
@@ -1526,6 +1586,100 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M0 -76 L10 -52 L36 -50 L16 -34 L22 -8 L0 -22 L-22 -8 L-16 -34 L-36 -50 L-10 -52 Z" fill="#FFC145" stroke="#E6A512" strokeWidth={3} strokeLinejoin="round" />
         </g>
       );
+    case "racket":
+      return (
+        <g transform="rotate(-24)">
+          <rect x={-4} y={-46} width={8} height={46} rx={4} fill="#F4F4F6" stroke="#2C3E7A" strokeWidth={2} />
+          <ellipse cx={0} cy={-84} rx={28} ry={38} fill="#EEF3FF" fillOpacity=".55" stroke="#2C3E7A" strokeWidth={7} />
+          <g stroke="#9AA7C7" strokeWidth={1.2}>
+            {[-18, -9, 0, 9, 18].map((x) => <path key={x} d={`M${x} -118 v68`} />)}
+            {[-108, -96, -84, -72, -60].map((y) => <path key={y} d={`M-26 ${y} h52`} />)}
+          </g>
+          <path d="M-6 -48 L0 -54 L6 -48" stroke="#2C3E7A" strokeWidth={4} fill="none" />
+        </g>
+      );
+    case "tennisball":
+      return <TennisBall y={-11} />;
+    case "ballbasket":
+      return (
+        <g>
+          {[-30, -10, 10, 30, -20, 0, 20, -8, 12].map((x, i) => (
+            <TennisBall key={i} x={x} y={i < 4 ? -60 : i < 7 ? -78 : -94} r={11} />
+          ))}
+          <path d="M-46 -64 h92 l-8 64 h-76 z" fill="#3B4252" opacity=".25" />
+          <g stroke="#3B4252" strokeWidth={3} fill="none">
+            <path d="M-46 -64 h92 l-8 64 h-76 z" />
+            {[-30, -12, 6, 24].map((x) => <path key={x} d={`M${x} -64 l-2 64`} />)}
+            <path d="M-43 -40 h86 M-40 -18 h80" />
+          </g>
+          <path d="M-46 -64 q 46 -70 92 0" stroke="#3B4252" strokeWidth={4} fill="none" />
+        </g>
+      );
+    case "tennisnet":
+      return (
+        <g>
+          <rect x={-120} y={-66} width={7} height={66} rx={3} fill="#3A3F4A" />
+          <rect x={113} y={-66} width={7} height={66} rx={3} fill="#3A3F4A" />
+          <rect x={-113} y={-58} width={226} height={44} fill="#1E2430" opacity=".18" />
+          <g stroke="#2A3242" strokeWidth={1.4} opacity=".6">
+            {Array.from({ length: 20 }, (_, i) => <path key={i} d={`M${-110 + i * 11.5} -58 v44`} />)}
+            {Array.from({ length: 4 }, (_, i) => <path key={i} d={`M-113 ${-50 + i * 10} h226`} />)}
+          </g>
+          <rect x={-113} y={-62} width={226} height={6} rx={2} fill="#fff" />
+        </g>
+      );
+    case "trophy":
+      return (
+        <g className="sa-bob">
+          <rect x={-26} y={-14} width={52} height={14} rx={3} fill="#8A5A34" />
+          <rect x={-8} y={-38} width={16} height={26} fill="#E6B52E" />
+          <path d="M-34 -96 h68 q 0 50 -34 60 q -34 -10 -34 -60 z" fill="#FFC93C" stroke="#E0A21E" strokeWidth={3} />
+          <path d="M-34 -86 q -24 0 -18 22 q 6 14 22 12 M34 -86 q 24 0 18 22 q -6 14 -22 12" stroke="#E0A21E" strokeWidth={5} fill="none" />
+          <path className="sa-twinkle" d="M14 -104 L17 -97 L24 -94 L17 -91 L14 -84 L11 -91 L4 -94 L11 -97 Z" fill="#FFF6C8" />
+        </g>
+      );
+    case "ballfly":
+      return (
+        <g className="sa-ballx">
+          <g className="sa-bally">
+            <TennisBall r={11} spin />
+          </g>
+        </g>
+      );
+    case "ballbounce":
+      return (
+        <g>
+          <ellipse className="sa-ballshadow" cx={0} cy={0} rx={13} ry={4} fill="#000" opacity=".18" />
+          <g className="sa-bounce">
+            <TennisBall y={-11} r={11} />
+          </g>
+        </g>
+      );
+    case "balltoss":
+      return (
+        <g className="sa-toss">
+          <TennisBall r={11} />
+        </g>
+      );
+    case "swoosh":
+      return (
+        <g className="sa-swoosh" fill="none" stroke="#FFFFFF" strokeLinecap="round">
+          <path d="M-70 -10 q 60 -70 140 -30" strokeWidth={8} opacity=".9" />
+          <path d="M-58 8 q 56 -54 122 -22" strokeWidth={5} opacity=".7" />
+          <path d="M-44 24 q 44 -36 96 -14" strokeWidth={3} opacity=".5" />
+        </g>
+      );
+    case "bonk":
+      return (
+        <g>
+          <g className="sa-spin-fast">
+            {[0, 120, 240].map((a) => (
+              <path key={a} transform={`rotate(${a}) translate(30 0)`} d="M0 -9 L3 -3 L9 0 L3 3 L0 9 L-3 3 L-9 0 L-3 -3 Z" fill="#FFC93C" stroke="#E0A21E" strokeWidth={1.5} />
+            ))}
+          </g>
+          <text x={22} y={-26} fontSize={22} fontWeight={900} fill="#FF7A59" className="sa-pulse">!</text>
+        </g>
+      );
     case "bench":
       return (
         <g>
@@ -1667,6 +1821,12 @@ const FOOT_PAD: Record<string, number> = {
   "thank-you": 0.092, wow: 0.094, yes: 0.092, yeyy: 0.094,
 };
 
+function srcFor(who: NonNullable<ArtMo["who"]>, pose: string) {
+  return who === "mo" ? `/baby-mo-poses/baby-mo-${pose}.png`
+    : who === "ais" ? `/baby-ais-poses/baby-ais-${pose}.png`
+    : `/${who}-poses/${who}-${pose}.png`;
+}
+
 function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const who = m.who ?? "mo";
   // friends are taller than the twins at the same `s`
@@ -1674,10 +1834,7 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const move = m.move ?? "bob";
   // Ais and friend renders all share one ground line: feet at 725/800
   const pad = (who === "mo" ? FOOT_PAD[m.pose] ?? 0.09 : 0.094) * s;
-  const src =
-    who === "mo" ? `/baby-mo-poses/baby-mo-${m.pose}.png`
-    : who === "ais" ? `/baby-ais-poses/baby-ais-${m.pose}.png`
-    : `/${who}-poses/${who}-${m.pose}.png`;
+  const src = srcFor(who, m.pose);
   const cls = move === "still" ? "" : move === "bob" ? "sa-mo-breathe" : `sa-mo-${move}`;
   const delay = { animationDelay: `${-idx * 0.7}s` };
   return (
@@ -1688,15 +1845,38 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
         <ellipse cx={0} cy={1} rx={s * 0.12} ry={s * 0.02} fill="#000" opacity=".14" />
       </g>
       <g className={cls} style={delay}>
-        <image
-          href={asset(src)}
-          x={-s / 2}
-          y={-s + pad}
-          width={s}
-          height={s}
-          transform={m.flip ? "scale(-1 1)" : undefined}
-          preserveAspectRatio="xMidYMax meet"
-        />
+        {m.seq ? (
+          <g className="sa-seq" transform={m.flip ? "scale(-1 1)" : undefined}>
+            {m.seq.map((p, j, all) => {
+              const n = all.length;
+              const dur = n / (m.fps ?? 8);
+              const key = m.key ?? Math.round((n - 1) * 0.66);
+              return (
+                <image
+                  key={j}
+                  className={`sa-f sa-f${n}${j === key ? " sa-key" : ""}`}
+                  style={{ animationDuration: `${dur}s`, animationDelay: `${-((n - j) * dur) / n}s` }}
+                  href={asset(srcFor(who, p))}
+                  x={-s / 2}
+                  y={-s + pad}
+                  width={s}
+                  height={s}
+                  preserveAspectRatio="xMidYMax meet"
+                />
+              );
+            })}
+          </g>
+        ) : (
+          <image
+            href={asset(src)}
+            x={-s / 2}
+            y={-s + pad}
+            width={s}
+            height={s}
+            transform={m.flip ? "scale(-1 1)" : undefined}
+            preserveAspectRatio="xMidYMax meet"
+          />
+        )}
       </g>
     </g>
   );
@@ -1704,12 +1884,17 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
 
 /** Centre of the full-page crop: the scene's focus, else midway between
  *  Baby Mo and the main prop (so both are on the page). */
+const isKid = (m: ArtMo) => !m.who || m.who === "mo" || m.who === "ais";
+
 function pageFocus(scene: ArtScene): number {
-  const mo = scene.mo?.[0]?.x;
+  // keep the first little one on the page (grown-ups are big enough to be cropped a bit)
+  const mo = (scene.mo?.find(isKid) ?? scene.mo?.[0])?.x;
   const prop = scene.props?.[0]?.x;
   let f = scene.focus ?? (mo !== undefined && prop !== undefined && Math.abs(mo - prop) < 320 ? (mo + prop) / 2 : (mo ?? prop ?? W / 2));
   // Never let Baby Mo slip off a narrow phone page: keep him near the middle.
-  if (mo !== undefined) f = Math.min(mo + 60, Math.max(mo - 60, f));
+  // (a little more room when a grown-up shares the page, so both fit)
+  const room = scene.mo?.some((m) => !isKid(m)) ? 85 : 60;
+  if (mo !== undefined) f = Math.min(mo + room, Math.max(mo - room, f));
   return f;
 }
 
@@ -1730,7 +1915,7 @@ export function StoryArt({
   page?: boolean;
 }) {
   const time = scene.time ?? "day";
-  const outdoor = ["garden", "park", "market", "street", "beach"].includes(scene.bg);
+  const outdoor = ["garden", "park", "market", "street", "beach", "court"].includes(scene.bg);
   const groundY = outdoor ? 410 : 405;
   // Baby Mo stands on the floor / ground in the foreground
   const moGround = outdoor ? 428 : 425;
@@ -1757,11 +1942,12 @@ export function StoryArt({
       <Background bg={scene.bg} time={time} />
       {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
       {(scene.props ?? []).map((p: ArtItem, i) => (
-        <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`}>
+        <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`} style={p.d ? ({ "--sa-d": `${p.d}s` } as React.CSSProperties) : undefined}>
           <Prop k={p.k} />
         </g>
       ))}
-      {(scene.mo ?? []).map((m, i) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
+      {/* grown-ups and big brother stand behind the little ones */}
+      {(scene.mo ?? []).map((m, i) => [m, i] as const).sort(([a], [b]) => Number(isKid(a)) - Number(isKid(b))).map(([m, i]) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
       {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
       {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page} />}
     </svg>

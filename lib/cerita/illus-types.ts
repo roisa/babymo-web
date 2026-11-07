@@ -17,7 +17,8 @@ export type ArtBg =
   | "market"
   | "street"
   | "mosque"
-  | "beach";
+  | "beach"
+  | "court";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 
@@ -142,7 +143,19 @@ export type ArtProp =
   | "rice"
   | "paddy"
   | "glassbroken"
-  | "goldstar";
+  | "goldstar"
+  /* tennis */
+  | "racket"
+  | "tennisball"
+  | "ballbasket"
+  | "tennisnet"
+  | "trophy"
+  /* moving tennis balls & motion marks (place them where the action is) */
+  | "ballfly"
+  | "ballbounce"
+  | "balltoss"
+  | "swoosh"
+  | "bonk";
 
 export type ArtFx =
   | "rain"
@@ -167,6 +180,9 @@ export interface ArtItem {
   /** scale (1 = default size) */
   s?: number;
   flip?: boolean;
+  /** animation delay in seconds (moving props) — e.g. to launch a ball on
+   *  the contact frame of a swing */
+  d?: number;
 }
 
 export interface ArtMo {
@@ -181,6 +197,13 @@ export interface ArtMo {
   flip?: boolean;
   /** "bob" (default), "hop", "sway" or "still" */
   move?: "bob" | "hop" | "sway" | "still";
+  /** frame-by-frame animation: pose names played in order on a loop
+   *  (e.g. Adam's tennis-forehand-1…6). Repeat a name to hold a frame. */
+  seq?: string[];
+  /** frames per second for `seq` (default 8) */
+  fps?: number;
+  /** frame shown when motion is reduced (default: about 2/3 through) */
+  key?: number;
 }
 
 export interface ArtScene {
