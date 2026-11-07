@@ -361,6 +361,8 @@ export function BookReader({
           namePh: "nama si kecil",
           hooray: (n: string) => `Hore, ${n}!`,
           voice: "Suara",
+          speedLabel: "Kecepatan",
+          speeds: { slow: "Pelan", mid: "Sedang", fast: "Cepat" },
           noVoice: "Perangkat ini belum punya suara Bahasa Indonesia, jadi teks disorot tanpa suara. Tambahkan di Pengaturan › Bahasa › Teks-ke-ucapan (pilih Bahasa Indonesia).",
           short: "Pendek",
           shortOn: "Versi pendek untuk si kecil",
@@ -407,6 +409,8 @@ export function BookReader({
           namePh: "your child's name",
           hooray: (n: string) => `Hooray, ${n}!`,
           voice: "Voice",
+          speedLabel: "Speed",
+          speeds: { slow: "Slow", mid: "Medium", fast: "Fast" },
           noVoice: "This device has no English voice installed, so the words light up silently. Add one in Settings › Language › Text-to-speech.",
           short: "Short",
           shortOn: "Short version for little ones",
@@ -664,6 +668,14 @@ export function BookReader({
   const turnTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const sleepTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [slept, setSlept] = useState(false);
+  const [speed, setSpeedState] = useState<"slow" | "mid" | "fast">("mid");
+  useEffect(() => {
+    try { const v = localStorage.getItem("bm-speed"); if (v === "slow" || v === "mid" || v === "fast") setSpeedState(v); } catch {}
+  }, []);
+  const setSpeed = (v: "slow" | "mid" | "fast") => {
+    setSpeedState(v);
+    try { localStorage.setItem("bm-speed", v); } catch {}
+  };
   const skipOnce = useRef(false);
 
   const narrateAt = useCallback(
@@ -671,14 +683,15 @@ export function BookReader({
       if (turnTimer.current) clearTimeout(turnTimer.current);
       const sh = sheets?.[p];
       if (!sh || !picture) return;
-      // a natural storyteller pace: Indonesian a touch slower, bedtime slower still
-      const rate = night ? 0.8 : locale === "id" ? 0.9 : 0.95;
+      // a calm storyteller pace (most voices run fast at 1.0); bedtime slower still
+      const base = { slow: locale === "id" ? 0.66 : 0.7, mid: locale === "id" ? 0.76 : 0.8, fast: locale === "id" ? 0.88 : 0.92 }[speed];
+      const rate = night ? base * 0.9 : base;
       const pitch = night ? 0.95 : 1;
       const next = (delay: number) => {
         turnTimer.current = setTimeout(() => go(1), delay);
       };
       if (sh.kind === "cover") {
-        narrator.speak(title, { rate, pitch, onEnd: () => next(night ? 1500 : 900) });
+        narrator.speak(title, { rate, pitch, onEnd: () => next(night ? 2000 : 1400) });
       } else if (sh.kind === "pic") {
         const pg = picture[sh.i];
         if (!pg) return;
@@ -697,7 +710,7 @@ export function BookReader({
                   narrator.speak(t.wellDone, { rate, pitch, onEnd: () => { setChantOn(-1); next(night ? 1400 : 800); } });
                 }, 3600);
               } });
-            } else next(night ? 2200 : 1300);
+            } else next(night ? 3000 : 2000);
           },
         });
       } else if (sh.kind === "talk" && inter?.talk) {
@@ -710,7 +723,7 @@ export function BookReader({
       }
     },
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    [sheets, picture, night, title, locale, shortMode, childName],
+    [sheets, picture, night, title, locale, shortMode, childName, speed],
   );
 
   // read each page as it opens while read-aloud is on. Keyed on the page itself
@@ -726,7 +739,7 @@ export function BookReader({
     const id = setTimeout(() => narrateRef.current(pos), 500);
     return () => clearTimeout(id);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [open, readOn, pageKey, night, shortMode]);
+  }, [open, readOn, pageKey, night, shortMode, speed]);
 
   // stop everything when the book closes
   useEffect(() => {
@@ -792,9 +805,29 @@ export function BookReader({
     setTimeout(() => b.remove(), 1000);
   };
   const onArtTap = (e: React.MouseEvent<HTMLDivElement>, pageI: number) => {
-    const el = (e.target as Element).closest("[data-find],[data-k],[data-who]") as SVGGElement | null;
-    if (!el) return;
     const host = e.currentTarget;
+    let el = (e.target as Element).closest("[data-find],[data-k],[data-who]") as SVGGElement | null;
+    if (!el) {
+      // small fingers miss small things: take the nearest tappable thing within reach
+      const R = 34;
+      let best: { el: SVGGElement; d: number; area: number } | null = null;
+      host.querySelectorAll<SVGGElement>("[data-find],[data-k],[data-who]").forEach((c) => {
+        const b = c.getBoundingClientRect();
+        if (!b.width || !b.height) return;
+        const dx = Math.max(b.left - e.clientX, 0, e.clientX - b.right);
+        const dy = Math.max(b.top - e.clientY, 0, e.clientY - b.bottom);
+        const d = Math.hypot(dx, dy);
+        const area = b.width * b.height;
+        if (d <= R && (!best || d < best.d || (d === best.d && area < best.area))) best = { el: c, d, area };
+      });
+      el = (best as { el: SVGGElement } | null)?.el ?? null;
+    }
+    if (!el) {
+      // the sky, the sea, the floor: still answer every tap with a little sparkle
+      playBlip("pop", true);
+      burst(host, e.clientX, e.clientY, ["✨", "·", "✨"]);
+      return;
+    }
     if (el.dataset.find) {
       if (!found.has(pageI)) {
         setFound((f) => new Set(f).add(pageI));
@@ -1204,6 +1237,15 @@ export function BookReader({
           <div className="bk-floatnotes">
           {night && <div className="bk-night-note" role="status">{slept ? t.sleepDone : t.nightOn}</div>}
           {readOn && narrator.noVoice && <div className="bk-night-note bk-novoice" role="status">{t.noVoice}</div>}
+          {readOn && (
+            <div className="bk-speed" role="group" aria-label={t.speedLabel}>
+              {(["slow", "mid", "fast"] as const).map((k) => (
+                <button type="button" key={k} className={speed === k ? "is-on" : ""} aria-pressed={speed === k} onClick={() => setSpeed(k)}>
+                  {t.speeds[k]}
+                </button>
+              ))}
+            </div>
+          )}
           {readOn && narrator.voices.length > 1 && (
             <label className="bk-voicepick">
               <span className="bk-voicepick-label"><VoiceIcon /> {t.voice}</span>
@@ -1323,6 +1365,9 @@ export function BookReader({
         .bk-eq i:nth-child(2){animation-delay:-.3s;} .bk-eq i:nth-child(3){animation-delay:-.6s;}
         @keyframes bkEq{0%,100%{height:30%}50%{height:100%}}
         .bk-voicepick-label{display:inline-flex;align-items:center;gap:5px;}
+        .bk-speed{display:inline-flex;padding:3px;border-radius:999px;background:rgba(18,14,10,.6);}
+        .bk-speed button{padding:5px 12px;border-radius:999px;font-size:12px;font-weight:800;color:#fff;cursor:pointer;}
+        .bk-speed button.is-on{background:#FFE27A;color:#3a2a00;}
         @media (max-width:520px){ .bk-pill-label{display:none;} .bk-icon--pill{min-width:46px;padding:0 12px;} }
         .bk-w{border-radius:6px;transition:background .15s ease,color .15s ease;}
         .bk-w--on{background:#FFE27A;color:#3a2a00;box-shadow:0 0 0 3px #FFE27A;}
