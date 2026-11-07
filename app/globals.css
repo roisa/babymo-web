@@ -1172,6 +1172,8 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-flutter-path { animation: sa-flutter-path 6s ease-in-out infinite; }
 @keyframes sa-fly { from { translate: -200px 0; } to { translate: 900px -40px; } }
 .sa-fly { animation: sa-fly 9s linear infinite; }
+@keyframes sa-peck { 0%,55%,100% { rotate: 0deg; } 65% { rotate: -28deg; } 75% { rotate: 0deg; } 85% { rotate: -28deg; } }
+.sa-peck { animation: sa-peck 2.6s ease-in-out infinite; transform-origin: 30% 100%; }
 @keyframes sa-wing { 0%,100% { scale: 1 1; } 50% { scale: 1 -.6; } }
 .sa-wing { transform-origin: center; animation: sa-wing .5s ease-in-out infinite; }
 @keyframes sa-flag { 0%,100% { skew: 0deg 0deg; } 50% { skew: 0deg 8deg; } }
