@@ -2,6 +2,7 @@ import type { Locale } from "@/lib/i18n/config";
 import type { Catatan, CatatanAnchor } from "@/lib/content/types";
 import type { ArtScene } from "./illus-types";
 import { ADAPTED } from "./picture-books-adapted";
+import { FAMILY_BOOKS } from "./picture-books-family";
 
 /**
  * Full picture books: every page is one big illustration with a short bit
@@ -289,6 +290,7 @@ const BOOKS: PictureBook[] = [
       },
     ],
   },
+  ...FAMILY_BOOKS,
 ];
 
 /* ───────── helpers ───────── */

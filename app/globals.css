@@ -1266,7 +1266,7 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-toss { animation: sa-toss 2.2s infinite; animation-delay: var(--sa-d, 0s); }
 @keyframes sa-toss { 0%, 100% { translate: 0 0; animation-timing-function: ease-out; } 40% { translate: 0 -150px; animation-timing-function: ease-in-out; } 52% { translate: 0 -156px; animation-timing-function: ease-in; } 88% { translate: 0 0; } }
 /* swing trail: flashes on the swing */
-.sa-swoosh { transform-origin: center; animation: sa-swoosh 1.5s ease-out infinite; animation-delay: var(--sa-d, 0s); }
+.sa-swoosh { transform-origin: center; animation: sa-swoosh 1.8s ease-out infinite; animation-delay: var(--sa-d, 0s); }
 @keyframes sa-swoosh { 0%, 45% { opacity: 0; scale: .6; } 55% { opacity: 1; scale: 1; } 80%, 100% { opacity: 0; scale: 1.15; } }
 @media (prefers-reduced-motion: reduce) {
   .story-art .sa-f { opacity: 0; }
