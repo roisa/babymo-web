@@ -1273,3 +1273,25 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
   .story-art .sa-f.sa-key { opacity: 1; }
   .story-art .sa-ballx, .story-art .sa-bally { opacity: 1; }
 }
+
+/* ── Story art: practice wall, rallies, footwork, progress ── */
+/* ball hit at the wall and back to the player */
+.sa-rebx { animation: sa-rebx 1.8s linear infinite; animation-delay: var(--sa-d, 0s); }
+.sa-reby { animation: sa-reby 1.8s linear infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-rebx { 0% { translate: 0 0; opacity: 0; } 4% { opacity: 1; } 42% { translate: 150px 0; } 84% { translate: 0 0; opacity: 1; } 88%, 100% { translate: 0 0; opacity: 0; } }
+@keyframes sa-reby { 0% { translate: 0 0; animation-timing-function: ease-out; } 21% { translate: 0 -60px; animation-timing-function: ease-in; } 42% { translate: 0 -40px; animation-timing-function: ease-out; } 63% { translate: 0 -70px; animation-timing-function: ease-in; } 84%, 100% { translate: 0 0; } }
+/* a rally: across and back, an arc each way */
+.sa-rallyx { animation: sa-rallyx 3.6s linear infinite; animation-delay: var(--sa-d, 0s); }
+.sa-rallyy { animation: sa-rallyy 3.6s linear infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-rallyx { 0%, 100% { translate: 0 0; } 50% { translate: 340px 0; } }
+@keyframes sa-rallyy { 0% { translate: 0 0; animation-timing-function: ease-out; } 25% { translate: 0 -120px; animation-timing-function: ease-in; } 50% { translate: 0 0; animation-timing-function: ease-out; } 75% { translate: 0 -120px; animation-timing-function: ease-in; } 100% { translate: 0 0; } }
+.sa-target { transform-origin: center; animation: sa-target 1.6s ease-in-out infinite; }
+@keyframes sa-target { 0%, 100% { scale: 1; } 50% { scale: 1.12; } }
+.sa-step { opacity: 0; animation: sa-step 2.1s ease-out infinite; }
+@keyframes sa-step { 0% { opacity: 0; scale: .6; } 12% { opacity: 1; scale: 1; } 70% { opacity: 1; } 100% { opacity: 0; } }
+.sa-grow { transform-origin: 50% 100%; animation: sa-grow 3s ease-out infinite; }
+@keyframes sa-grow { 0% { scale: 1 0; } 30%, 100% { scale: 1 1; } }
+@media (prefers-reduced-motion: reduce) {
+  .story-art .sa-ghost { opacity: 0 !important; }
+  .story-art .sa-step { opacity: 1; }
+}

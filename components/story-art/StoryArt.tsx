@@ -1669,6 +1669,84 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M-44 24 q 44 -36 96 -14" strokeWidth={3} opacity=".5" />
         </g>
       );
+    case "wall":
+      return (
+        <g>
+          <rect x={-130} y={-230} width={260} height={230} rx={6} fill="#5E8C6A" />
+          {Array.from({ length: 9 }, (_, r) => (
+            <g key={r}>
+              {Array.from({ length: 6 }, (_, c) => (
+                <rect key={c} x={-130 + c * 46 + (r % 2 ? 23 : 0) - (r % 2 && c === 5 ? 23 : 0)} y={-230 + r * 25.5} width={44} height={23} rx={3} fill={(r + c) % 3 ? "#6B9A76" : "#628F6D"} />
+              ))}
+            </g>
+          ))}
+          <rect x={-130} y={-96} width={260} height={6} fill="#FFFFFF" opacity=".9" />
+          <g className="sa-pulse">
+            <circle cx={0} cy={-150} r={30} fill="none" stroke="#FFFFFF" strokeWidth={5} />
+            <circle cx={0} cy={-150} r={15} fill="none" stroke="#FFC93C" strokeWidth={5} />
+            <circle cx={0} cy={-150} r={5} fill="#FF7A59" />
+          </g>
+        </g>
+      );
+    case "ballrebound":
+      return (
+        <g className="sa-rebx">
+          <g className="sa-reby">
+            <TennisBall r={11} spin />
+          </g>
+        </g>
+      );
+    case "ballrally":
+      return (
+        <g className="sa-rallyx">
+          <g className="sa-rallyy">
+            <TennisBall r={11} spin />
+          </g>
+        </g>
+      );
+    case "target":
+      return (
+        <g>
+          <g className="sa-target">
+            <ellipse cx={0} cy={-4} rx={58} ry={14} fill="#FF7A59" opacity=".9" />
+            <ellipse cx={0} cy={-4} rx={40} ry={9.5} fill="#FFFFFF" />
+            <ellipse cx={0} cy={-4} rx={22} ry={5.5} fill="#FF7A59" />
+            <ellipse cx={0} cy={-4} rx={7} ry={2} fill="#FFFFFF" />
+          </g>
+        </g>
+      );
+    case "footprints":
+      return (
+        <g>
+          {[[-60, -6], [-25, 4], [10, -8], [45, 3]].map(([x, y], i) => (
+            <g key={i} className="sa-step" style={{ animationDelay: `${i * 0.35}s` }} transform={`translate(${x} ${y}) rotate(${i % 2 ? 8 : -8})`}>
+              <ellipse cx={0} cy={0} rx={13} ry={6} fill="#FFFFFF" opacity=".85" />
+              <ellipse cx={-11} cy={-1} rx={5} ry={4} fill="#FFFFFF" opacity=".85" />
+            </g>
+          ))}
+        </g>
+      );
+    case "ladder":
+      return (
+        <g>
+          <path d="M-150 -6 L150 -6 M-170 14 L170 14" stroke="#FFC93C" strokeWidth={6} strokeLinecap="round" />
+          {Array.from({ length: 8 }, (_, i) => (
+            <path key={i} d={`M${-150 + i * 43} -6 L${-170 + i * 48.5} 14`} stroke="#FFC93C" strokeWidth={5} strokeLinecap="round" />
+          ))}
+        </g>
+      );
+    case "progresschart":
+      return (
+        <g>
+          <rect x={-12} y={-150} width={10} height={150} rx={4} fill="#8A5A34" />
+          <rect x={-90} y={-250} width={180} height={130} rx={10} fill="#FFFFFF" stroke="#E2D3B8" strokeWidth={4} />
+          <path d="M-74 -135 H74" stroke="#C9B99A" strokeWidth={3} />
+          {[22, 38, 55, 70, 92].map((h, i) => (
+            <rect key={i} className="sa-grow" style={{ animationDelay: `${i * 0.25}s` }} x={-68 + i * 28} y={-135 - h} width={20} height={h} rx={4} fill={["#9AD0F5", "#7BC0F0", "#5BB0EB", "#3E9BE0", "#FFC93C"][i]} />
+          ))}
+          <path className="sa-twinkle" d="M58 -238 L61 -231 L68 -228 L61 -225 L58 -218 L55 -225 L48 -228 L55 -231 Z" fill="#FFC93C" />
+        </g>
+      );
     case "bonk":
       return (
         <g>
@@ -1847,6 +1925,28 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
       <g className={cls} style={delay}>
         {m.seq ? (
           <g className="sa-seq" transform={m.flip ? "scale(-1 1)" : undefined}>
+            {/* onion-skin: the same loop shifted one and two frames back, faint */}
+            {(m.ghost ? [2, 1] : []).map((lag) => (
+              <g key={`g${lag}`} className="sa-ghost" opacity={lag === 1 ? 0.32 : 0.15} style={{ filter: "saturate(.6)" }}>
+              {m.seq!.map((p, j, all) => {
+                const n = all.length;
+                const dur = n / (m.fps ?? 8);
+                return (
+                  <image
+                    key={`g${lag}-${j}`}
+                    className={`sa-f sa-f${n}`}
+                    style={{ animationDuration: `${dur}s`, animationDelay: `${-((n - j - lag) * dur) / n}s` }}
+                    href={asset(srcFor(who, p))}
+                    x={-s / 2}
+                    y={-s + pad}
+                    width={s}
+                    height={s}
+                    preserveAspectRatio="xMidYMax meet"
+                  />
+                );
+              })}
+              </g>
+            ))}
             {m.seq.map((p, j, all) => {
               const n = all.length;
               const dur = n / (m.fps ?? 8);

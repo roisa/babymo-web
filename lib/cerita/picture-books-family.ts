@@ -1838,4 +1838,277 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── Forehand trilogy 1. A hundred a day ───────────────────────── */
+  {
+    slug: "seratus-forehand-sehari",
+    pose: "baby-mo-pose-08.png",
+    published: "2026-11-11",
+    title: { id: "Seratus Forehand Sehari", en: "A Hundred Forehands a Day" },
+    hook: {
+      id: "Sekali masuk, Kak Adam kira forehand-nya sudah jago. Ternyata minggu depannya semua melenceng lagi! Abi punya tantangan: seratus forehand setiap hari.",
+      en: "One good shot and Kak Adam thought he'd mastered the forehand. A week later everything went wrong again! Abi has a challenge: a hundred forehands every day.",
+    },
+    anchor: { type: "doa", slug: "doa-ketika-kesulitan" },
+    takeaway: {
+      id: "Bisa sekali beda dengan bisa setiap kali. Kemampuan sejati tumbuh dari latihan kecil yang diulang setiap hari — dan dari percaya bahwa setelah kesulitan ada kemudahan.",
+      en: "Doing it once isn't doing it every time. Real skill grows from small practice repeated daily — and from trusting that ease comes after hardship.",
+    },
+    tags: ["tenis", "forehand", "kak adam", "latihan", "istiqamah", "sabar"],
+    cover: {
+      focus: 390, bg: "park",
+      props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }, { k: "swoosh", x: 350, y: 330, d: TRAIL }],
+      mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Minggu lalu forehand Kak Adam masuk sempurna. \"Aku sudah jago!\" katanya ke semua orang.", en: "Last week Kak Adam's forehand landed perfectly. \"I've mastered it!\" he told everyone." },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "tennis-win-fist", x: 390 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Tapi hari ini… bolanya ke net. Lalu keluar. Lalu ke net lagi. Lalu nyasar ke parkiran!", en: "But today… the ball went into the net. Then out. Then the net again. Then off into the car park!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, s: 1.3, d: HIT }, { k: "tennisnet", x: 560 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "\"Kok bisa begini?\" Kak Adam bingung. \"Kemarin bisa, hari ini nggak bisa!\"", en: "\"How did this happen?\" Kak Adam was puzzled. \"Yesterday I could, today I can't!\"" },
+        scene: { focus: 390, bg: "court", props: [{ k: "tennisball", x: 480 }, { k: "tennisball", x: 530 }, { k: "tennisball", x: 300 }], mo: [{ who: "adam", pose: "tennis-backhand-set", x: 390 }] },
+      },
+      {
+        text: { id: "Abi tersenyum. \"Bisa sekali itu beda dengan bisa setiap kali, Kak. Yang setiap kali itu butuh latihan setiap hari.\"", en: "Abi smiled. \"Doing it once is different from doing it every time, Kak. Every time takes practice every day.\"" },
+        scene: { focus: 350, bg: "court", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "tennis-hold-ball", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Tantangannya: seratus forehand ke tembok latihan, setiap hari. Bukan seratus yang masuk — seratus yang dicoba.\"", en: "\"Here's the challenge: a hundred forehands against the practice wall, every day. Not a hundred good ones — a hundred tries.\"" },
+        scene: { focus: 400, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 275 }, { who: "adam", pose: "tennis-ready-wide", x: 395 }] },
+      },
+      {
+        text: { id: "Hari pertama. Duk… tak… duk… tak. Bola pergi ke tembok, lalu pulang lagi. Dari seratus, yang bagus cuma 23.", en: "Day one. Thock… tock… thock… tock. The ball went to the wall and came home again. Out of a hundred, only 23 were good." },
+        scene: { focus: 390, bg: "park", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }] },
+      },
+      {
+        text: { id: "Baby Mo membuat papan grafik dari kardus. Setiap hari, satu batang. \"Biar kelihatan naiknya, Kak!\"", en: "Baby Mo made a chart out of cardboard. One bar for every day. \"So we can see it go up, Kak!\"" },
+        scene: { focus: 390, bg: "living", props: [{ k: "progresschart", x: 450 }], mo: [{ pose: "pose-08", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari ketiga hujan deras. \"Yah, latihannya libur.\" Abi menggeleng. \"Latihan bayangan di depan cermin!\"", en: "Day three, it poured. \"Oh well, no practice.\" Abi shook his head. \"Shadow swings in front of the mirror!\"" },
+        scene: { focus: 390, bg: "living", time: "rain", props: [{ k: "mirror", x: 520 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: 4, ghost: true, x: 390, move: "still" }], fx: ["rain"] },
+      },
+      {
+        text: { id: "Pelan… pelaaan sekali. Kak Adam melihat ayunannya sendiri di cermin, bagian demi bagian. \"Oh! Badanku nggak berputar!\"", en: "Slowly… veeery slowly. Kak Adam watched his own swing in the mirror, piece by piece. \"Oh! My body isn't turning!\"" },
+        scene: { focus: 390, bg: "living", time: "rain", props: [{ k: "mirror", x: 530 }], mo: [{ who: "adam", pose: fh(2), seq: [fh(1), fh(2), fh(3), fh(3), fh(3), fh(2)], fps: 2, ghost: true, x: 390, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari kelima, tangannya pegal. \"Kamu memegang raket terlalu kencang,\" kata Abi. \"Pegang seperti memegang burung kecil — jangan sampai lepas, jangan sampai sakit.\"", en: "Day five, his hand ached. \"You're squeezing the racket too hard,\" said Abi. \"Hold it like a little bird — don't let it go, don't hurt it.\"" },
+        scene: { focus: 350, bg: "park", props: [{ k: "bird", x: 300, y: 250 }], mo: [{ who: "ayah", pose: "kneel-present", x: 280 }, { who: "adam", pose: "tennis-hold-ball", x: 420 }] },
+      },
+      {
+        text: { id: "Hari kesepuluh, Kak Adam bosan. \"Seratus terus. Capek. Bosan.\" Ia duduk di bangku dan cemberut.", en: "Day ten, Kak Adam was bored. \"A hundred again. Tired. Bored.\" He sat on the bench and sulked." },
+        scene: { focus: 390, bg: "park", time: "dusk", mo: [{ who: "adam", pose: "tennis-rest-bench", x: 390 }] },
+      },
+      {
+        text: { id: "Abi duduk di sampingnya. \"Kalau terasa susah, ingat janji Allah: bersama kesulitan ada kemudahan. Bukan setelah — bersama.\"", en: "Abi sat beside him. \"When it feels hard, remember Allah's promise: with hardship comes ease. Not after — with.\"" },
+        quote: { id: "\"Maka sesungguhnya bersama kesulitan ada kemudahan. Sesungguhnya bersama kesulitan ada kemudahan.\" (QS. Al-Insyirah: 5–6)", en: "\"So surely with hardship comes ease. Surely with hardship comes ease.\" (Qur'an, Ash-Sharh 94:5–6)" },
+        scene: { focus: 340, bg: "park", time: "dusk", mo: [{ who: "ayah", pose: "listen-sit-box", x: 280 }, { who: "adam", pose: "dua-hands", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam berdiri lagi. \"Bismillah. Seratus lagi.\" Si kembar menghitung keras-keras dari pinggir: \"…empat puluh satu! Empat puluh dua!\"", en: "Kak Adam stood up again. \"Bismillah. Another hundred.\" The twins counted out loud from the side: \"…forty-one! Forty-two!\"" },
+        scene: { focus: 360, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }, { k: "ballrebound", x: 395, y: 360, d: HIT }], mo: [{ who: "ais", pose: "cheer-fist", x: 250 }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 335, move: "still" }] },
+      },
+      {
+        text: { id: "Batang-batang di grafik Baby Mo makin tinggi: 23… 41… 61… 88! Sampai Baby Mo harus menambah kardus di atasnya.", en: "The bars on Baby Mo's chart grew taller: 23… 41… 61… 88! Baby Mo had to tape on more cardboard at the top." },
+        scene: { focus: 390, bg: "living", props: [{ k: "progresschart", x: 450, s: 1.1 }], mo: [{ pose: "yeyy", x: 325, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Hari kedua puluh satu. Duk-tak, duk-tak, duk-tak… Si kembar menghitung sampai suaranya serak: \"…sembilan puluh sembilan… SERATUS!\"", en: "Day twenty-one. Thock-tock, thock-tock, thock-tock… The twins counted till they were hoarse: \"…ninety-nine… A HUNDRED!\"" },
+        scene: { focus: 390, bg: "park", time: "dusk", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }, { k: "swoosh", x: 350, y: 330, d: TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Seratus forehand bagus, tanpa satu pun meleset! Kak Adam melompat sambil berteriak, \"Alhamdulillah!\" Kamu sedang melatih apa setiap hari? 💯", en: "A hundred good forehands, not one missed! Kak Adam leapt up shouting, \"Alhamdulillah!\" What are you practising every day? 💯" },
+        scene: { focus: 360, bg: "park", time: "dusk", props: [{ k: "progresschart", x: 470 }], mo: [{ pose: "pose-02", x: 300, move: "hop" }, { who: "adam", pose: "tennis-jump-reach", x: 390 }], fx: ["confetti"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Forehand trilogy 2. Lazy feet ───────────────────────── */
+  {
+    slug: "kaki-kak-adam-yang-malas",
+    pose: "baby-mo-pose-30.png",
+    published: "2026-11-11",
+    title: { id: "Kaki Kak Adam yang Malas", en: "Kak Adam's Lazy Feet" },
+    hook: {
+      id: "Ke tembok, forehand Kak Adam sudah sempurna. Tapi waktu reli dengan Abi, ia selalu terlambat. Ternyata masalahnya bukan di tangan… tapi di kaki!",
+      en: "Against the wall, Kak Adam's forehand is perfect. But rallying with Abi, he's always late. The problem isn't his hands… it's his feet!",
+    },
+    anchor: { type: "parenting", slug: "bonding-orangtua" },
+    takeaway: {
+      id: "Hal kecil yang tak terlihat — seperti langkah kaki — sering jadi kunci. Kerjakan sesuatu dengan sungguh-sungguh sampai ke bagian yang paling kecil.",
+      en: "Small, unseen things — like footsteps — are often the key. Do things properly, right down to the smallest part.",
+    },
+    tags: ["tenis", "forehand", "langkah kaki", "kak adam", "sungguh-sungguh", "abi"],
+    cover: {
+      focus: 380, bg: "court",
+      props: [{ k: "ladder", x: 400 }, { k: "footprints", x: 330, y: 432 }, { k: "ballrally", x: 440, y: 350 }],
+      mo: [{ who: "adam", pose: "tennis-lunge-low", x: 380 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Sekarang forehand Kak Adam ke tembok sudah seratus kali sempurna. \"Ayo reli, Abi!\"", en: "Now Kak Adam could hit a hundred perfect forehands against the wall. \"Let's rally, Abi!\"" },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Tapi bola dari Abi tidak seperti bola dari tembok. Kadang pendek, kadang jauh, kadang ke samping.", en: "But Abi's balls weren't like the wall's. Sometimes short, sometimes deep, sometimes off to the side." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 640, y: 330, flip: true }, { k: "ballbounce", x: 300, d: 0.4 }], mo: [{ who: "adam", pose: "tennis-ready-wide", x: 400 }] },
+      },
+      {
+        text: { id: "Kak Adam selalu terlambat. Bolanya sudah lewat waktu raketnya baru berayun. Wusss… luput!", en: "Kak Adam was always late. The ball had already passed by the time his racket swung. Whoosh… missed!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 460, y: 330, d: 0 }], mo: [{ who: "adam", pose: fh(6), x: 380 }] },
+      },
+      {
+        text: { id: "\"Tanganku sudah benar, kok tetap luput?\" keluh Kak Adam sambil menendang bola pelan.", en: "\"My arm's doing it right, so why do I keep missing?\" moaned Kak Adam, nudging a ball with his foot." },
+        scene: { focus: 390, bg: "court", props: [{ k: "tennisball", x: 470 }], mo: [{ who: "adam", pose: "tennis-backhand-set", x: 390 }] },
+      },
+      {
+        text: { id: "Abi merekam latihan berikutnya dengan ponsel. Lalu mereka menonton bersama, pelan-pelan.", en: "Abi filmed the next practice on his phone. Then they watched it together, slowly." },
+        scene: { focus: 330, bg: "court", props: [{ k: "phone", x: 420, y: 330 }], mo: [{ who: "ayah", pose: "phone-call", x: 270 }, { who: "ais", pose: "video-play", x: 400 }] },
+      },
+      {
+        text: { id: "\"Lihat kakimu,\" kata Abi. Di video, kaki Kak Adam diam saja seperti pohon. Hanya tangannya yang bergerak!", en: "\"Look at your feet,\" said Abi. In the video, Kak Adam's feet stayed still like a tree. Only his arm moved!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "tree", x: 520, s: 0.7 }], mo: [{ who: "adam", pose: fh(3), seq: [fh(1), fh(2), fh(3), fh(4), fh(5), fh(6)], fps: 3, ghost: true, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "\"Kakiku malas!\" seru Kak Adam. Si kembar tertawa. \"Kaki malas! Kaki malas!\"", en: "\"My feet are lazy!\" cried Kak Adam. The twins giggled. \"Lazy feet! Lazy feet!\"" },
+        scene: { focus: 330, bg: "court", mo: [{ pose: "pose-03", x: 390 }, { who: "ais", pose: "giggle", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Rahasia pertama: lompat kecil setiap kali Abi memukul — namanya split step. Hop! Kaki siap ke mana saja.", en: "Secret one: a little hop every time Abi hits — it's called a split step. Hop! Feet ready to go anywhere." },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "tennis-ready-wide", x: 390, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Rahasia kedua: langkah semut. Banyak langkah kecil-kecil untuk mendekati bola, bukan satu langkah raksasa.", en: "Secret two: ant steps. Lots of tiny steps to reach the ball, not one giant stride." },
+        scene: { focus: 390, bg: "court", props: [{ k: "footprints", x: 390, y: 436 }, { k: "ants", x: 520 }], mo: [{ who: "adam", pose: "tennis-lunge-low", x: 390 }] },
+      },
+      {
+        text: { id: "Abi membentangkan tangga latihan di lapangan. Tap-tap-tap-tap! Kak Adam melangkah cepat di setiap kotaknya.", en: "Abi laid an agility ladder on the court. Tap-tap-tap-tap! Kak Adam stepped quickly into every square." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ladder", x: 420 }, { k: "footprints", x: 420, y: 436 }], mo: [{ who: "adam", pose: "tennis-jump-reach", x: 400 }] },
+      },
+      {
+        text: { id: "Si kembar ikut melompat di tangga, sambil bernyanyi: \"Kaki semut, kaki semut, cepat-cepat jangan diam!\"", en: "The twins hopped along the ladder too, singing: \"Ant feet, ant feet, quick quick, don't stand still!\"" },
+        scene: { focus: 340, bg: "court", props: [{ k: "ladder", x: 340 }], mo: [{ pose: "pose-30", x: 390, move: "hop" }, { who: "ais", pose: "jump-joy", x: 280, move: "hop" }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Rahasia ketiga: sampai duluan, berhenti, baru memukul. \"Kaki yang sampai duluan membuat tangan punya waktu.\"", en: "Secret three: get there first, stop, then hit. \"Feet that arrive early give your arm time.\"" },
+        scene: { focus: 350, bg: "court", props: [{ k: "target", x: 430 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "tennis-ready-wide", x: 430 }] },
+      },
+      {
+        text: { id: "Reli dimulai lagi. Hop — langkah semut — berhenti — DUK! Bola pulang ke Abi. Hop — semut — berhenti — DUK!", en: "The rally began again. Hop — ant steps — stop — THOCK! Back to Abi. Hop — ants — stop — THOCK!" },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 450, y: 350, d: HIT }, { k: "footprints", x: 380, y: 436 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Baby Mo menghitung: \"Lima… sepuluh… lima belas… DUA PULUH pukulan tanpa jatuh!\" Rekor baru!", en: "Baby Mo counted: \"Five… ten… fifteen… TWENTY shots without a miss!\" A new record!" },
+        scene: { focus: 340, bg: "court", props: [{ k: "ballrally", x: 300, y: 330 }], mo: [{ pose: "yeyy", x: 300, move: "hop" }, { who: "adam", pose: "tennis-win-fist", x: 430 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "\"Ternyata rahasianya di bagian yang nggak kelihatan,\" kata Kak Adam. Abi mengangguk. \"Allah suka orang yang mengerjakan sesuatu dengan sungguh-sungguh — sampai ke kakinya.\"", en: "\"So the secret was in the part you can't see,\" said Kak Adam. Abi nodded. \"Allah loves people who do things properly — right down to their feet.\"" },
+        quote: { id: "\"Sesungguhnya Allah mencintai seseorang yang apabila bekerja, ia mengerjakannya dengan sungguh-sungguh (itqan).\" (HR. Thabrani)", en: "\"Allah loves that when one of you does a job, he does it with excellence (itqan).\" (Tabarani)" },
+        scene: { focus: 340, bg: "court", time: "dusk", props: [{ k: "footprints", x: 430, y: 436 }], mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 280 }, { who: "adam", pose: "tennis-hold-ball", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Malam itu Baby Mo melompat-lompat di lantai kamar: hop, semut, berhenti! Coba kamu juga — bisakah kakimu jadi kaki semut? 🐜", en: "That night Baby Mo hopped round his bedroom floor: hop, ants, stop! You try too — can your feet be ant feet? 🐜" },
+        scene: { bg: "bedroom", time: "night", props: [{ k: "footprints", x: 380, y: 432 }], mo: [{ pose: "pose-02", x: 360, move: "hop" }], fx: ["stars"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Forehand trilogy 3. The rematch ───────────────────────── */
+  {
+    slug: "forehand-melawan-raka",
+    pose: "baby-mo-pose-25.png",
+    published: "2026-11-11",
+    title: { id: "Forehand Melawan Raka", en: "The Forehand Rematch" },
+    hook: {
+      id: "Sebulan latihan: seratus forehand sehari dan kaki semut. Hari ini Kak Adam bertanding lagi melawan Raka. Apakah semua latihannya cukup?",
+      en: "A month of practice: a hundred forehands a day and ant feet. Today Kak Adam faces Raka again. Will all that practice be enough?",
+    },
+    anchor: { type: "doa", slug: "doa-hasbunallah" },
+    takeaway: {
+      id: "Berusaha sekuat tenaga, lalu bertawakal kepada Allah. Kemenangan disyukuri dengan rendah hati, karena latihan dan pertolongan-Nya.",
+      en: "Try your very hardest, then trust Allah. Welcome a win humbly — it came from practice and from His help.",
+    },
+    tags: ["tenis", "forehand", "pertandingan", "tawakal", "kak adam", "rendah hati"],
+    cover: {
+      focus: 390, bg: "court",
+      props: [{ k: "ballfly", x: 455, y: 360, s: 1.2, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }, { k: "trophy", x: 580 }],
+      mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, ghost: true, x: 390, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Sebulan berlalu. Grafik Baby Mo penuh. Tangga latihan sudah usang. Dan hari ini, turnamen tiba lagi.", en: "A month went by. Baby Mo's chart was full. The agility ladder was worn out. And today, the tournament was back." },
+        scene: { focus: 360, bg: "court", props: [{ k: "progresschart", x: 450 }, { k: "ladder", x: 330 }], mo: [{ who: "adam", pose: "tennis-hold-ball", x: 340 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Di papan tertulis: Adam lawan Raka. Lagi! Perut Kak Adam langsung terasa seperti ada kupu-kupu.", en: "The board said: Adam vs Raka. Again! Butterflies started fluttering in Kak Adam's tummy." },
+        scene: { focus: 390, bg: "court", props: [{ k: "butterfly", x: 440, y: 260 }, { k: "butterfly", x: 480, y: 220 }, { k: "butterfly", x: 350, y: 240 }], mo: [{ who: "adam", pose: "tennis-backhand-set", x: 390 }] },
+      },
+      {
+        text: { id: "\"Abi, gimana kalau aku kalah lagi?\" Abi berlutut. \"Kamu sudah berusaha sekuat tenaga. Sekarang serahkan sisanya kepada Allah.\"", en: "\"Abi, what if I lose again?\" Abi knelt down. \"You've tried your very hardest. Now leave the rest to Allah.\"" },
+        scene: { focus: 340, bg: "court", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "tennis-hold-ball", x: 420 }] },
+      },
+      {
+        text: { id: "Mereka berdoa bersama: \"Hasbunallah wa ni'mal wakiil.\" Cukuplah Allah bagi kami. Kupu-kupunya terbang pelan-pelan.", en: "They prayed together: \"Hasbunallah wa ni'mal wakeel.\" Allah is enough for us. The butterflies slowly flew away." },
+        quote: { id: "\"Hasbunallah wa ni'mal wakiil.\" — Cukuplah Allah bagi kami, dan Dia sebaik-baik pelindung. (QS. Ali 'Imran: 173)", en: "\"Hasbunallah wa ni'mal wakeel.\" — Allah is sufficient for us, and He is the best guardian. (Qur'an, Ali 'Imran 3:173)" },
+        scene: { focus: 340, bg: "court", props: [{ k: "butterfly", x: 520, y: 180 }], mo: [{ who: "ayah", pose: "dua-kneel", x: 280 }, { who: "adam", pose: "dua-hands", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Pertandingan dimulai. Raka memukul bola cepat ke sisi forehand Kak Adam. Dulu, bola seperti ini selalu membuatnya luput.", en: "The match began. Raka hit a fast ball to Kak Adam's forehand side. Before, balls like this always beat him." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballfly", x: 650, y: 320, flip: true, s: 1.1 }], mo: [{ who: "adam", pose: "tennis-ready-wide", x: 400 }] },
+      },
+      {
+        text: { id: "Tapi sekarang: hop — langkah semut — berhenti. Lihat bola. Putar badan. Ayun… peluk bahu. DUK!", en: "But now: hop — ant steps — stop. Watch the ball. Turn. Swing… hug your shoulder. THOCK!" },
+        scene: { focus: 400, bg: "court", props: [{ k: "footprints", x: 380, y: 436 }, { k: "ballfly", x: 455, y: 360, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Bola pulang dengan keras. Raka mengembalikannya. Kak Adam mengembalikannya lagi. Reli panjang dimulai!", en: "The ball flew back hard. Raka returned it. Kak Adam returned it again. A long rally began!" },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 450, y: 350 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Di bangku penonton, Baby Mo menghitung: \"Sembilan… sepuluh… sebelas…\" Baby Ais menutup matanya dengan tangan.", en: "In the stands, Baby Mo counted: \"Nine… ten… eleven…\" Baby Ais covered her eyes with her hands." },
+        scene: { focus: 330, bg: "court", props: [{ k: "bench", x: 330 }, { k: "ballrally", x: 120, y: 280 }], mo: [{ pose: "idea", x: 390 }, { who: "ais", pose: "peek-wall", x: 280 }] },
+      },
+      {
+        text: { id: "Skornya 3–3. Satu poin lagi menentukan pemenang. Lapangan jadi hening sekali.", en: "Three all. One more point would decide it. The court went very quiet." },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "tennisball", x: 470 }], mo: [{ who: "adam", pose: "tennis-ready-wide", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Raka memukul bola tinggi ke sudut. Kak Adam berlari dengan langkah semut — tap-tap-tap-tap — dan sampai duluan.", en: "Raka hit a high ball into the corner. Kak Adam ran with ant steps — tap-tap-tap-tap — and got there first." },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "footprints", x: 330, y: 436 }, { k: "ballfly", x: 640, y: 300, flip: true }], mo: [{ who: "adam", pose: "tennis-lunge-low", x: 390 }] },
+      },
+      {
+        text: { id: "Lalu semuanya terasa melambat. Lihat bola… putar badan… ayun dari bawah ke atas…", en: "Then everything seemed to slow down. Watch the ball… turn… swing from low to high…" },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: fh(3), seq: [fh(1), fh(2), fh(3), fh(4), fh(5), fh(6), fh(6), fh(6)], fps: 2.5, ghost: true, x: 390, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "DUK! Bolanya melesat lurus menyusuri garis, melewati Raka… dan jatuh tepat di dalam garis. MASUK!", en: "THOCK! The ball shot straight down the line, past Raka… and landed right inside. IN!" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "ballfly", x: 455, y: 360, s: 1.3 }, { k: "swoosh", x: 440, y: 320, d: -0.6 }, { k: "target", x: 640 }], mo: [{ who: "adam", pose: "tennis-hit-forehand", x: 390, move: "still" }], fx: ["shootingstar"] },
+      },
+      {
+        text: { id: "\"KAK ADAM MENANG!\" Si kembar melompat dari bangku. Abi mengangkat kedua tangannya tinggi-tinggi.", en: "\"KAK ADAM WON!\" The twins leapt off the bench. Abi threw both arms high in the air." },
+        scene: { focus: 330, bg: "court", time: "dusk", mo: [{ pose: "yeyy", x: 390, move: "hop" }, { who: "ayah", pose: "cheer-fists-stand", x: 270 }, { who: "ais", pose: "jump-cheer", x: 490, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Kak Adam tidak menyombong. Ia berjalan ke net dan mengulurkan tangan. \"Barakallah, Raka. Reli kita tadi seru sekali!\"", en: "Kak Adam didn't show off. He walked to the net and held out his hand. \"Barakallah, Raka. That rally was amazing!\"" },
+        scene: { focus: 400, bg: "court", time: "dusk", props: [{ k: "tennisnet", x: 520 }], mo: [{ who: "adam", pose: "wave-hello", x: 400 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Waktu menerima piala, Kak Adam berbisik, \"Alhamdulillah. Ini dari latihan setiap hari… dan pertolongan Allah.\"", en: "Receiving the trophy, Kak Adam whispered, \"Alhamdulillah. This came from practising every day… and from Allah's help.\"" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "trophy", x: 470, y: 330 }], mo: [{ who: "adam", pose: "tennis-win-fist", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Besok paginya, ada dua raket di depan tembok latihan: satu besar, satu kecil. \"Mo, mau Kakak ajari forehand?\" Kamu mau belajar apa sampai jago? 🎾", en: "The next morning there were two rackets by the practice wall: one big, one small. \"Mo, shall I teach you the forehand?\" What do you want to practise until you're great? 🎾" },
+        scene: { focus: 370, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }], mo: [{ pose: "pose-25", x: 300 }, { who: "adam", pose: "tennis-ready-wide", x: 405 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
