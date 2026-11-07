@@ -20,7 +20,9 @@ export type ArtBg =
   | "beach"
   | "court"
   | "supermarket"
-  | "clinic";
+  | "clinic"
+  | "underwater"
+  | "aquarium";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 
@@ -186,7 +188,26 @@ export type ArtProp =
   | "jars3"
   | "pricetag"
   | "ketupat"
-  | "swimring";
+  | "swimring"
+  | "octopus"
+  | "octopuswave"
+  | "octopusshy"
+  | "octopushide"
+  | "rock"
+  | "turtle"
+  | "hatchling"
+  | "hatchlings"
+  | "nest"
+  | "clownfish"
+  | "anemone"
+  | "whale"
+  | "jellyfish"
+  | "starfish"
+  | "coral"
+  | "seaweed"
+  | "fishschool"
+  | "seahorse"
+  | "plasticbag";
 
 export type ArtFx =
   | "rain"

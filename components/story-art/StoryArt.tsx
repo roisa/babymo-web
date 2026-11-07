@@ -440,6 +440,93 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
           <Floor color={night ? "#4C5B5F" : "#D8E7EF"} plank={false} />
         </g>
       );
+    case "underwater": {
+      const deep = time === "night";
+      const c = deep ? ["#1A4C86", "#0F2F5E", "#081B3A"] : ["#7FDDF5", "#2E9AD6", "#14609E"];
+      return (
+        <g>
+          <defs>
+            <linearGradient id={`sa-sea-${time}`} x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor={c[0]} />
+              <stop offset=".55" stopColor={c[1]} />
+              <stop offset="1" stopColor={c[2]} />
+            </linearGradient>
+            <linearGradient id="sa-ray" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#fff" stopOpacity=".55" />
+              <stop offset="1" stopColor="#fff" stopOpacity="0" />
+            </linearGradient>
+          </defs>
+          <rect y={TOP} width={W} height={H - TOP} fill={`url(#sa-sea-${time})`} />
+          {/* the bright surface far above, rippling */}
+          <g className="sa-waves" opacity=".35">
+            <path d={`M-40 ${TOP + 30} q 40 -12 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 v -40 h -880 z`} fill="#E9FBFF" />
+          </g>
+          {/* light rays slanting down */}
+          {[90, 260, 470, 640].map((x, i) => (
+            <path key={i} className="sa-ray" style={{ animationDelay: `${-i * 1.4}s` }} d={`M${x} ${TOP} l60 0 l${110 - i * 10} 560 l-110 0 z`} fill="url(#sa-ray)" opacity={deep ? 0.12 : 0.35} />
+          ))}
+          {/* far reef silhouettes */}
+          <path d="M-20 330 q 60 -90 120 -40 q 40 -70 100 -10 q 50 -60 110 10 q 60 -80 130 -20 q 50 -50 110 0 q 60 -70 130 20 v 120 h -800 z" fill={deep ? "#0B2650" : "#2777B4"} opacity=".55" />
+          {/* sand */}
+          <path d="M-20 360 q 120 -26 260 -6 t 280 -4 t 300 8 V 460 H -20 z" fill={deep ? "#5D6F86" : "#F2D9A2"} />
+          <path d="M-20 392 q 140 -14 300 0 t 300 0 t 260 2" stroke={deep ? "#4E5F75" : "#E2C27F"} strokeWidth={5} fill="none" opacity=".7" />
+          <g opacity={deep ? 0.25 : 0.4}>{Array.from({ length: 16 }, (_, i) => <circle key={i} cx={(i * 97 + 30) % W} cy={380 + ((i * 37) % 60)} r={3} fill={deep ? "#9FB2C8" : "#C99B55"} />)}</g>
+          {/* drifting specks / plankton */}
+          {Array.from({ length: 14 }, (_, i) => (
+            <circle key={`p${i}`} className="sa-rise" style={{ animationDelay: `${-((i * 0.7) % 4.5)}s`, animationDuration: `${7 + (i % 4)}s` }} cx={(i * 61 + 20) % W} cy={420} r={2 + (i % 3)} fill={deep ? "#BFF6FF" : "#fff"} opacity=".6" />
+          ))}
+        </g>
+      );
+    }
+    case "aquarium":
+      return (
+        <g>
+          <defs>
+            <linearGradient id="sa-tank" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stopColor="#8FE3F7" />
+              <stop offset=".6" stopColor="#3AA4DA" />
+              <stop offset="1" stopColor="#1C6FA8" />
+            </linearGradient>
+          </defs>
+          {/* dim hall */}
+          <rect y={TOP} width={W} height={H - TOP} fill="#1E3352" />
+          {/* the big tank window */}
+          <rect x={-10} y={TOP + 60} width={W + 20} height={FLOOR - 24 - (TOP + 60)} fill="url(#sa-tank)" />
+          {[120, 380, 600].map((x, i) => (
+            <path key={i} className="sa-ray" style={{ animationDelay: `${-i * 2}s` }} d={`M${x} ${TOP + 60} l50 0 l80 ${FLOOR - 24 - (TOP + 60)} l-90 0 z`} fill="#fff" opacity=".18" />
+          ))}
+          <path d={`M-10 ${FLOOR - 70} q 120 -24 260 -4 t 300 -6 t 260 6 V ${FLOOR - 24} H -10 z`} fill="#F2D9A2" />
+          {/* kelp and coral inside the tank */}
+          {[60, 200, 690, 760].map((x, i) => (
+            <g key={i} transform={`translate(${x} ${FLOOR - 40})`}>
+              <path className="sa-sway" style={{ animationDelay: `${-i * 0.8}s` }} d="M0 0 q -18 -60 4 -120 q 16 -50 -6 -110" stroke="#3FA76A" strokeWidth={14} fill="none" strokeLinecap="round" />
+            </g>
+          ))}
+          <g transform={`translate(560 ${FLOOR - 36})`}>
+            <path d="M0 0 v-40 M0 -24 l-22 -26 M0 -30 l20 -30 M-22 -50 l-8 -16 M20 -60 l10 -14" stroke="#FF7FA8" strokeWidth={11} strokeLinecap="round" fill="none" />
+          </g>
+          {/* fish crossing the tank */}
+          {[{ y: TOP + 200, c: "#FFC93C", d: 0, s: 1 }, { y: TOP + 300, c: "#FF8A2B", d: -6, s: 0.8 }, { y: 40, c: "#7FD3F5", d: -3, s: 1.2 }, { y: 140, c: "#FFB3D9", d: -9, s: 0.7 }].map((f, i) => (
+            <g key={i} transform={`translate(0 ${f.y}) scale(${f.s})`}>
+              <g className="sa-tankfish" style={{ animationDelay: `${f.d}s` }}>
+                <ellipse cx={0} cy={0} rx={24} ry={13} fill={f.c} />
+                <path d="M20 0 l18 -12 v24 z" fill={f.c} />
+                <circle cx={-12} cy={-3} r={3} fill="#1B2350" />
+              </g>
+            </g>
+          ))}
+          {Array.from({ length: 10 }, (_, i) => (
+            <circle key={`b${i}`} className="sa-rise" style={{ animationDelay: `${-((i * 0.6) % 4.5)}s` }} cx={(i * 83 + 40) % W} cy={FLOOR - 60} r={4 + (i % 3) * 2} fill="#fff" fillOpacity=".3" stroke="#fff" strokeOpacity=".7" strokeWidth={1.5} />
+          ))}
+          {/* tank frame */}
+          <rect x={-10} y={TOP + 52} width={W + 20} height={12} fill="#0E2236" />
+          <rect x={-10} y={FLOOR - 28} width={W + 20} height={14} fill="#0E2236" />
+          {[0, 266, 533, 800].map((x) => <rect key={x} x={x - 6} y={TOP + 52} width={12} height={FLOOR - 14 - (TOP + 52)} fill="#0E2236" />)}
+          {/* floor with the tank's glow on it */}
+          <rect y={FLOOR - 14} width={W} height={H - FLOOR + 14} fill="#26405F" />
+          <rect y={FLOOR - 14} width={W} height={40} fill="#4FB6E6" opacity=".18" />
+        </g>
+      );
     case "beach":
       return (
         <g>
@@ -2015,6 +2102,269 @@ function Prop({ k }: { k: ArtProp }) {
               </g>
             </g>
           ))}
+        </g>
+      );
+    case "octopus":
+    case "octopusshy":
+    case "octopuswave": {
+      const body = "#B57BE8", dark = "#9A5FD6", light = "#D6B2F7";
+      const arms = [-2.5, -1.5, -0.5, 0.5, 1.5, 2.5];
+      return (
+        <g>
+          <g className="sa-bob" style={{ animationDuration: "3.2s" }}>
+            {arms.map((a, i) => (
+              <g key={i} transform={`translate(${a * 13} -56)`}>
+                <g className="sa-tent" style={{ animationDelay: `${-i * 0.35}s` }}>
+                  <path d={`M0 0 q ${a * 10} 26 ${a * 18} 44 q ${a * 4} 10 ${a * 12 + (a > 0 ? 8 : -8)} 4`} stroke={body} strokeWidth={15} strokeLinecap="round" fill="none" />
+                  {[16, 30].map((t) => <circle key={t} cx={a * (t / 2.6)} cy={t + 2} r={2.6} fill={light} />)}
+                </g>
+              </g>
+            ))}
+            {k === "octopuswave" && (
+              <g transform="translate(46 -70)">
+                <g className="sa-wag" style={{ animationDuration: ".9s" }}>
+                  <path d="M0 0 q 26 -8 30 -44 q 2 -12 -8 -14" stroke={body} strokeWidth={14} strokeLinecap="round" fill="none" />
+                </g>
+              </g>
+            )}
+            <ellipse cx={0} cy={-98} rx={50} ry={52} fill={body} />
+            <ellipse cx={-14} cy={-122} rx={20} ry={14} fill={light} opacity=".7" />
+            <circle cx={24} cy={-128} r={6} fill={dark} opacity=".5" />
+            <circle cx={34} cy={-108} r={4} fill={dark} opacity=".5" />
+            <ellipse cx={0} cy={-58} rx={40} ry={12} fill={dark} opacity=".35" />
+            <g className="sa-blink">
+              <circle cx={-18} cy={-90} r={12} fill="#fff" /><circle cx={18} cy={-90} r={12} fill="#fff" />
+              <circle cx={-16} cy={k === "octopusshy" ? -85 : -88} r={7} fill="#2B1B47" /><circle cx={20} cy={k === "octopusshy" ? -85 : -88} r={7} fill="#2B1B47" />
+              <circle cx={-14} cy={k === "octopusshy" ? -88 : -91} r={2.5} fill="#fff" /><circle cx={22} cy={k === "octopusshy" ? -88 : -91} r={2.5} fill="#fff" />
+            </g>
+            <ellipse cx={-34} cy={-74} rx={k === "octopusshy" ? 11 : 8} ry={k === "octopusshy" ? 7 : 5} fill="#FF8FB8" opacity={k === "octopusshy" ? 1 : 0.8} />
+            <ellipse cx={34} cy={-74} rx={k === "octopusshy" ? 11 : 8} ry={k === "octopusshy" ? 7 : 5} fill="#FF8FB8" opacity={k === "octopusshy" ? 1 : 0.8} />
+            {k === "octopusshy" ? (
+              <g>
+                {/* two arms curled up over its mouth: shy */}
+                <path d="M-30 -56 q -4 -16 14 -20 q 10 -2 12 6" stroke={body} strokeWidth={14} strokeLinecap="round" fill="none" />
+                <path d="M30 -56 q 4 -16 -14 -20 q -10 -2 -12 6" stroke={body} strokeWidth={14} strokeLinecap="round" fill="none" />
+                <path d="M-30 -56 q -4 -16 14 -20" stroke={light} strokeWidth={3} strokeLinecap="round" fill="none" opacity=".7" />
+              </g>
+            ) : (
+              <path d="M-8 -72 q 8 7 16 0" stroke="#2B1B47" strokeWidth={3} fill="none" strokeLinecap="round" />
+            )}
+          </g>
+        </g>
+      );
+    }
+    case "octopushide":
+      return (
+        <g>
+          {/* the octopus peeking from behind its rock, changing colour */}
+          <g transform="translate(30 -112)">
+            <ellipse cx={0} cy={0} rx={34} ry={30} fill="#8A7F73" />
+            <ellipse className="sa-camo" cx={0} cy={0} rx={34} ry={30} fill="#B57BE8" />
+            <g className="sa-blink">
+              <circle cx={-12} cy={-4} r={9} fill="#fff" /><circle cx={12} cy={-4} r={9} fill="#fff" />
+              <circle cx={-10} cy={-2} r={5} fill="#2B1B47" /><circle cx={14} cy={-2} r={5} fill="#2B1B47" />
+            </g>
+          </g>
+          <g transform="translate(74 -40)">
+            <g className="sa-tent" style={{ animationDuration: "3.4s" }}>
+              <path d="M0 0 q 22 10 26 34 q 2 8 -8 8" stroke="#8A7F73" strokeWidth={11} strokeLinecap="round" fill="none" />
+            </g>
+          </g>
+          <path d="M-90 0 q -6 -70 40 -96 q 40 -26 86 -6 q 46 22 44 102 z" fill="#7B8A99" />
+          <path d="M-60 -60 q 20 -26 50 -24" stroke="#9AAAB8" strokeWidth={8} strokeLinecap="round" fill="none" />
+          <circle cx={20} cy={-40} r={9} fill="#FF9EC7" opacity=".8" />
+          <circle cx={-40} cy={-20} r={6} fill="#FFC145" opacity=".8" />
+        </g>
+      );
+    case "rock":
+      return (
+        <g>
+          <path d="M-90 0 q -6 -70 40 -96 q 40 -26 86 -6 q 46 22 44 102 z" fill="#7B8A99" />
+          <path d="M-60 -60 q 20 -26 50 -24" stroke="#9AAAB8" strokeWidth={8} strokeLinecap="round" fill="none" />
+          <circle cx={20} cy={-40} r={9} fill="#FF9EC7" opacity=".8" />
+        </g>
+      );
+    case "turtle":
+      return (
+        <g transform="translate(0 -70)">
+          <g className="sa-swim">
+            <g transform="translate(-30 4)"><g className="sa-flap"><path d="M0 0 q -30 18 -66 14 q 20 -20 56 -28 z" fill="#8CC56E" /></g></g>
+            <path d="M44 6 q 22 8 30 -4 q -12 -10 -30 -6 z" fill="#8CC56E" />
+            <ellipse cx={0} cy={0} rx={56} ry={34} fill="#5E8F3E" />
+            <path d="M-38 -14 l20 -12 l22 0 l20 12 l-6 20 l-22 6 l-26 -6 z" fill="#7FB255" />
+            <path d="M-38 -14 l-14 18 M38 -14 l14 18 M-18 -26 v-6 M4 -26 v-6" stroke="#4A7530" strokeWidth={3} />
+            <ellipse cx={0} cy={22} rx={50} ry={10} fill="#E6E2A8" />
+            <ellipse cx={-70} cy={-4} rx={22} ry={16} fill="#8CC56E" />
+            <g className="sa-blink"><circle cx={-78} cy={-8} r={4.5} fill="#1E2A16" /></g>
+            <path d="M-88 2 q 6 4 12 0" stroke="#1E2A16" strokeWidth={2.5} fill="none" strokeLinecap="round" />
+          </g>
+        </g>
+      );
+    case "hatchling":
+      return (
+        <g transform="scale(1.6)"><g className="sa-crab" style={{ animationDuration: "1.6s" }}>
+          <ellipse cx={0} cy={-10} rx={16} ry={10} fill="#5B4A3A" />
+          <path d="M-8 -14 l6 -4 l6 4" stroke="#7A6650" strokeWidth={2} fill="none" />
+          <ellipse cx={-19} cy={-12} rx={7} ry={6} fill="#6E5C49" />
+          <circle cx={-21} cy={-14} r={1.6} fill="#fff" />
+          <path d="M-10 -4 l-8 6 M10 -4 l8 6" stroke="#6E5C49" strokeWidth={4} strokeLinecap="round" />
+        </g></g>
+      );
+    case "hatchlings":
+      return (
+        <g>
+          {[[-90, 0, 0], [-40, 18, -0.9], [10, 4, -1.8], [60, 22, -2.6], [100, 8, -3.4], [-120, 26, -4.2]].map(([x, y, d], i) => (
+            <g key={i} transform={`translate(${x} ${y}) scale(1.5)`}>
+              <g className="sa-crawl" style={{ animationDelay: `${d}s` }}>
+                <ellipse cx={0} cy={-8} rx={13} ry={8} fill="#5B4A3A" />
+                <ellipse cx={-15} cy={-12} rx={6} ry={5} fill="#6E5C49" />
+                <circle cx={-17} cy={-13} r={1.4} fill="#fff" />
+                <path d="M-8 -3 l-7 5 M8 -3 l7 5" stroke="#6E5C49" strokeWidth={3.5} strokeLinecap="round" />
+              </g>
+            </g>
+          ))}
+        </g>
+      );
+    case "nest":
+      return (
+        <g transform="scale(1.4)">
+          <ellipse cx={0} cy={-14} rx={70} ry={24} fill="#E2C07F" />
+          <ellipse cx={0} cy={-20} rx={52} ry={14} fill="#C9A060" />
+          {([[-26, -24], [-8, -28], [10, -24], [28, -27], [-14, -16], [16, -15]] as const).map(([x, y], i) => (
+            <g key={i}>
+              <circle cx={x} cy={y} r={9} fill="#FFFBF0" />
+              {i % 2 === 0 && <path d={`M${x - 7} ${y - 2} l4 -4 l3 4 l4 -4 l3 4`} stroke="#C9B48A" strokeWidth={1.5} fill="none" />}
+            </g>
+          ))}
+        </g>
+      );
+    case "clownfish":
+      return (
+        <g transform="translate(0 -40)">
+          <g className="sa-fish">
+            <path d="M30 0 l26 -18 q -6 18 0 36 z" fill="#FF8A2B" stroke="#2B2B2B" strokeWidth={2} />
+            <ellipse cx={0} cy={0} rx={40} ry={24} fill="#FF8A2B" />
+            {[-18, 4, 26].map((x) => <path key={x} d={`M${x} -22 q 8 22 0 44`} stroke="#fff" strokeWidth={9} fill="none" />)}
+            {[-18, 4, 26].map((x) => <path key={`o${x}`} d={`M${x - 5} -21 q 8 21 0 42 M${x + 5} -21 q 8 21 0 42`} stroke="#2B2B2B" strokeWidth={1.5} fill="none" opacity=".6" />)}
+            <path d="M-6 -22 q 10 -14 22 -2" fill="#FF8A2B" stroke="#2B2B2B" strokeWidth={1.5} />
+            <circle cx={-26} cy={-4} r={6} fill="#fff" />
+            <circle cx={-27} cy={-3} r={3.5} fill="#1B1B1B" />
+            <path d="M-38 6 q 4 3 8 0" stroke="#1B1B1B" strokeWidth={2} fill="none" />
+          </g>
+        </g>
+      );
+    case "anemone":
+      return (
+        <g>
+          {Array.from({ length: 13 }, (_, i) => {
+            const a = (i - 6) * 12;
+            return (
+              <g key={i} transform={`translate(${(i - 6) * 7} -20) rotate(${a})`}>
+                <g className="sa-sway" style={{ animationDelay: `${-i * 0.27}s`, animationDuration: "2.6s" }}>
+                  <path d="M0 0 q -8 -40 4 -78" stroke="#FF9EC7" strokeWidth={11} strokeLinecap="round" fill="none" />
+                  <circle cx={4} cy={-80} r={7} fill="#FFD1E6" />
+                </g>
+              </g>
+            );
+          })}
+          <ellipse cx={0} cy={-12} rx={56} ry={18} fill="#8E5BD0" />
+          <ellipse cx={0} cy={-18} rx={40} ry={8} fill="#A97BE0" />
+        </g>
+      );
+    case "whale":
+      return (
+        <g transform="translate(0 -110)">
+          <g className="sa-swim" style={{ animationDuration: "9s" }}>
+            <g transform="translate(190 -6)"><g className="sa-flap" style={{ animationDuration: "3s" }}><path d="M0 0 q 30 -10 54 -52 q 4 30 -18 52 q 22 22 18 52 q -24 -42 -54 -52 z" fill="#3F6FB8" /></g></g>
+            <path d="M-210 10 q 0 -90 120 -96 q 150 -6 250 58 q 30 20 36 34 q -40 30 -150 40 q -160 14 -230 -8 q -26 -10 -26 -28 z" fill="#4A7FC9" />
+            <path d="M-204 26 q 40 40 170 34 q 110 -6 150 -30 q -100 18 -190 14 q -96 -6 -130 -18 z" fill="#DCEBFA" />
+            {[-150, -120, -90, -60, -30, 0, 30].map((x) => <path key={x} d={`M${x} ${36 + Math.abs(x + 60) / 12} q 10 -2 20 0`} stroke="#B9CFEA" strokeWidth={3} strokeLinecap="round" />)}
+            <g transform="translate(-60 30)"><g className="sa-flap" style={{ animationDuration: "3.6s" }}><path d="M0 0 q 10 40 -30 66 q 6 -40 30 -66 z" fill="#3F6FB8" /></g></g>
+            <g className="sa-blink"><circle cx={-150} cy={-10} r={8} fill="#13264A" /><circle cx={-148} cy={-13} r={2.5} fill="#fff" /></g>
+            <path d="M-190 14 q 30 14 60 6" stroke="#13264A" strokeWidth={3.5} fill="none" strokeLinecap="round" />
+            <ellipse cx={-118} cy={6} rx={12} ry={6} fill="#FF9EC7" opacity=".55" />
+            {[[-110, -60], [-40, -66], [30, -50]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={5} fill="#6E9AD8" />)}
+          </g>
+        </g>
+      );
+    case "jellyfish":
+      return (
+        <g transform="translate(0 -150)">
+          <g className="sa-jelly">
+            {[-24, -12, 0, 12, 24].map((x, i) => (
+              <path key={x} className="sa-tent" style={{ animationDelay: `${-i * 0.3}s`, animationDuration: "2s" }} d={`M${x} 0 q 8 20 0 40 q -8 20 0 40`} stroke="#FFC6E3" strokeWidth={4} fill="none" strokeLinecap="round" opacity=".85" />
+            ))}
+            <path d="M-40 4 q 0 -50 40 -50 q 40 0 40 50 q -10 -6 -20 0 q -10 -6 -20 0 q -10 -6 -20 0 q -10 -6 -20 0 z" fill="#FFB3D9" opacity=".9" />
+            <ellipse cx={-12} cy={-30} rx={10} ry={6} fill="#fff" opacity=".6" />
+            <circle cx={-10} cy={-14} r={3.5} fill="#5A2346" /><circle cx={10} cy={-14} r={3.5} fill="#5A2346" />
+            <path d="M-5 -6 q 5 4 10 0" stroke="#5A2346" strokeWidth={2} fill="none" />
+          </g>
+        </g>
+      );
+    case "starfish":
+      return (
+        <g transform="translate(0 -22)">
+          <g className="sa-wobble" style={{ animationDuration: "4s" }}>
+            <path d="M0 -26 L8 -8 L26 -8 L12 4 L18 22 L0 11 L-18 22 L-12 4 L-26 -8 L-8 -8 Z" fill="#FF9F43" stroke="#F07F1E" strokeWidth={4} strokeLinejoin="round" />
+            {[[0, -14], [8, 2], [-8, 2], [12, -6], [-12, -6]].map(([x, y], i) => <circle key={i} cx={x} cy={y} r={2} fill="#FFD9A8" />)}
+            <circle cx={-4} cy={-4} r={2} fill="#3A2A1A" /><circle cx={4} cy={-4} r={2} fill="#3A2A1A" />
+          </g>
+        </g>
+      );
+    case "coral":
+      return (
+        <g>
+          <path d="M-60 0 v-40 M-60 -26 l-22 -26 M-60 -32 l20 -30 M-82 -52 l-8 -18 M-40 -62 l10 -16" stroke="#FF7FA8" strokeWidth={12} strokeLinecap="round" fill="none" />
+          <path d="M10 0 q -40 -70 0 -110 q 40 40 0 110 z" fill="#FFB347" opacity=".9" />
+          <path d="M10 -10 v-90 M10 -40 l-18 -30 M10 -50 l18 -30" stroke="#F08A24" strokeWidth={3} fill="none" />
+          <circle cx={62} cy={-24} r={26} fill="#C77DFF" />
+          <path d="M44 -24 q 18 -14 36 0 M46 -14 q 16 -10 32 0 M48 -34 q 14 -10 28 0" stroke="#A35BE0" strokeWidth={3} fill="none" />
+        </g>
+      );
+    case "seaweed":
+      return (
+        <g>
+          {[[-30, "#3FA76A", 0], [0, "#5CC283", -0.8], [28, "#2F8F5A", -1.6]].map(([x, c, d], i) => (
+            <g key={i} transform={`translate(${x} 0)`}>
+              <path className="sa-sway" style={{ animationDelay: `${d}s`, animationDuration: "3.6s" }} d={`M0 0 q -18 -50 4 -${100 + i * 20} q 16 -40 -6 -${150 + i * 20}`} stroke={c as string} strokeWidth={13} fill="none" strokeLinecap="round" />
+            </g>
+          ))}
+        </g>
+      );
+    case "fishschool":
+      return (
+        <g transform="translate(0 -200)">
+          <g className="sa-school">
+            {[[0, 0], [30, -16], [30, 16], [60, -30], [60, 0], [60, 30], [90, -14], [90, 14]].map(([x, y], i) => (
+              <g key={i} transform={`translate(${x} ${y})`}>
+                <ellipse cx={0} cy={0} rx={14} ry={7} fill={i % 2 ? "#FFE066" : "#9BE4FF"} />
+                <path d="M12 0 l10 -7 v14 z" fill={i % 2 ? "#FFE066" : "#9BE4FF"} />
+                <circle cx={-7} cy={-1} r={1.8} fill="#1B2350" />
+              </g>
+            ))}
+          </g>
+        </g>
+      );
+    case "seahorse":
+      return (
+        <g transform="translate(0 -90)">
+          <g className="sa-bob" style={{ animationDuration: "2.4s" }}>
+            <path d="M0 -40 q 22 -4 22 18 q 0 26 -14 44 q -10 14 2 30 q 10 12 -2 18 q -14 4 -16 -12 q -4 -16 2 -28 q 8 -18 0 -36 q -14 -4 -16 -18 q 0 -14 22 -16 z" fill="#FFC145" />
+            <path d="M-18 -30 l-18 6 l18 4 z" fill="#FFC145" />
+            <path d="M14 -30 q 10 10 4 22" stroke="#F0A020" strokeWidth={4} fill="none" />
+            <circle cx={-6} cy={-30} r={3} fill="#3A2A1A" />
+          </g>
+        </g>
+      );
+    case "plasticbag":
+      return (
+        <g transform="translate(0 -160)">
+          <g className="sa-drift" style={{ animationDuration: "6s" }}>
+            <g className="sa-wobble" style={{ animationDuration: "3s" }}>
+              <path d="M-30 -30 q -8 -26 6 -30 q 8 10 4 24 M30 -30 q 8 -26 -6 -30 q -8 10 -4 24" stroke="#E8EEF3" strokeWidth={5} fill="none" />
+              <path d="M-34 -30 h68 q 10 50 -4 76 q -20 10 -30 -4 q -10 14 -30 4 q -14 -26 -4 -76 z" fill="#F4F8FB" opacity=".75" stroke="#D3DCE4" strokeWidth={2} />
+            </g>
+          </g>
         </g>
       );
     case "swimring":
