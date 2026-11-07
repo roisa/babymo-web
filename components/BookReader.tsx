@@ -290,6 +290,7 @@ export function BookReader({
           nextStory: "Baca cerita berikutnya",
           tapReveal: "Ketuk untuk lihat! 👆",
           babymo: "Baby Mo",
+          backTag: "Cerita bergambar untuk dibaca bersama",
         }
       : {
           open: "Read in Book Mode",
@@ -309,6 +310,7 @@ export function BookReader({
           nextStory: "Read the next story",
           tapReveal: "Tap to reveal! 👆",
           babymo: "Baby Mo",
+          backTag: "A picture book to read together",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -498,9 +500,13 @@ export function BookReader({
 
   const total = sheets?.length ?? 1;
 
+  // Picture books on a wide screen: one story page per spread, its
+  // illustration running across both halves like a printed picture book.
+  const picSpread = isSpread && !!(picture && picture.length);
+
   const go = (delta: number) => {
     setPos((p) => {
-      const nextLeft = isSpread
+      const nextLeft = isSpread && !picSpread
         ? Math.max(0, Math.min(p + delta * 2, (total % 2 === 0 ? total : total + 1) - 2))
         : Math.max(0, Math.min(p + delta, total - 1));
       if (nextLeft !== p) setDir(delta > 0 ? "next" : "prev");
@@ -530,6 +536,43 @@ export function BookReader({
     const dy = p.clientY - touch.current.y;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy)) go(dx < 0 ? 1 : -1);
     touch.current = null;
+  };
+
+  /** Solid back-cover panel for the empty half of the opening / closing spread. */
+  const backPanel = (key: string, blurb?: string) => (
+    <div className="bk-page bk-page--back" key={key}>
+      <div className="bk-back-inner">
+        <span className="bk-back-logo">Baby Mo</span>
+        {blurb && <p className="bk-back-blurb">{blurb}</p>}
+        <span className="bk-back-tag">{t.backTag}</span>
+        <span className="bk-back-url">babymo.id</span>
+      </div>
+    </div>
+  );
+
+  const renderSpread = (s: Sheet | undefined) => {
+    if (!s || !picture) return null;
+    if (s.kind === "cover") return <>{backPanel("BL", hook)}<div className="bk-spine" aria-hidden />{renderSheet(s, "R")}</>;
+    if (s.kind === "end") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR")}</>;
+    if (s.kind !== "pic") return renderSheet(s, "S");
+    const pg = picture[s.i]!;
+    // keep the words away from the characters: text on the emptier half
+    const xs = (pg.scene.mo ?? []).map((m) => m.x);
+    const mid = xs.length ? xs.reduce((a, b) => a + b, 0) / xs.length : 400;
+    const side = mid > 410 ? "left" : "right";
+    return (
+      <div className="bk-page bk-page--spread" key="SP">
+        <div className="bk-pic-art">
+          <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} spread />
+        </div>
+        <div className="bk-gutter" aria-hidden />
+        <div className={`bk-pic-text bk-spread-text bk-spread-text--${side}`}>
+          <p className={s.i === 0 ? "bk-pic-first" : undefined}>{pg.text}</p>
+          {pg.quote && <blockquote>{pg.quote}</blockquote>}
+        </div>
+        <div className={`bk-pic-num bk-spread-num--${side}`} aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
+      </div>
+    );
   };
 
   const renderSheet = (s: Sheet | undefined, key: string) => {
@@ -664,7 +707,7 @@ export function BookReader({
   };
 
   const atStart = pos <= 0;
-  const atEnd = isSpread ? pos + 2 >= total : pos >= total - 1;
+  const atEnd = isSpread && !picSpread ? pos + 2 >= total : pos >= total - 1;
 
   return (
     <>
@@ -677,7 +720,7 @@ export function BookReader({
       </button>
 
       {open && (
-        <div className="bk-overlay" role="dialog" aria-modal="true" aria-label={title}>
+        <div className={`bk-overlay${isSpread ? " bk-overlay--wide" : ""}`} role="dialog" aria-modal="true" aria-label={title}>
           <div className="bk-ambient" aria-hidden>
             {accent.map((em, i) => (
               <span key={i} className="bk-amb" style={{ "--i": i } as React.CSSProperties}>
@@ -737,8 +780,10 @@ export function BookReader({
                 </div>
               </div>
 
-              <div className={`bk-leaf bk-leaf--${dir}`} key={`${pos}-${isSpread}`}>
-                {isSpread ? (
+              <div className={`bk-leaf bk-leaf--${dir}${picSpread ? " bk-leaf--spreadpic" : ""}`} key={`${pos}-${isSpread}`}>
+                {picSpread ? (
+                  renderSpread(sheets?.[pos])
+                ) : isSpread ? (
                   <>
                     {renderSheet(sheets?.[pos], "L")}
                     <div className="bk-spine" aria-hidden />
@@ -1056,6 +1101,32 @@ export function BookReader({
         .bk-pgcount{font-size:13px;font-weight:700;color:rgba(255,255,255,.85);min-width:64px;text-align:center;}
 
         /* Phone: hide the big side arrows, rely on the bottom bar + swipe */
+
+        /* ── Wide screens: calm motion, one continuous picture per spread ── */
+        .bk-overlay--wide .bk-ambient{display:none;}
+        .bk-book--spread .bk-leaf--next,.bk-book--spread .bk-leaf--prev{animation:bkSoftIn .5s ease;}
+        .bk-book--spread .bk-leaf--open{animation:bkSoftIn .45s ease;}
+        @keyframes bkSoftIn{from{opacity:0}to{opacity:1}}
+        .bk-page--spread{flex:1 1 100%;border-radius:16px;overflow:hidden;}
+        .bk-page--spread .bk-pic-art .story-art{width:100%;height:100%;}
+        .bk-gutter{position:absolute;top:0;bottom:0;left:50%;width:90px;transform:translateX(-50%);z-index:1;pointer-events:none;
+          background:linear-gradient(90deg,transparent 0,rgba(60,40,15,.07) 38%,rgba(60,40,15,.2) 49.5%,rgba(255,255,255,.18) 50.5%,rgba(60,40,15,.07) 62%,transparent 100%);}
+        .bk-spread-text{right:auto;width:min(40%,420px);}
+        .bk-spread-text--left{left:clamp(18px,3vw,34px);}
+        .bk-spread-text--right{left:auto;right:clamp(18px,3vw,34px);}
+        .bk-spread-num--left{left:25%;}
+        .bk-spread-num--right{left:75%;}
+        .bk-leaf--spreadpic .bk-spine{display:none;}
+        .bk-page--back{background:linear-gradient(160deg,#C6643C,#A94F2C);color:#FFF4E6;}
+        html.dark .bk-page--back{background:linear-gradient(160deg,#7A3A22,#5C2B19);}
+        .bk-back-inner{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:12%;text-align:center;
+          background-image:radial-gradient(rgba(255,255,255,.08) 1.5px,transparent 1.6px);background-size:22px 22px;}
+        .bk-back-logo{font-family:var(--font-display);font-weight:800;font-size:clamp(28px,3.4vw,46px);letter-spacing:.01em;}
+        .bk-back-blurb{margin:0;max-width:30ch;font-size:calc(var(--bk-fs,19px) * 1.02);line-height:1.55;opacity:.95;text-wrap:balance;}
+        .bk-back-tag{font-size:13px;letter-spacing:.06em;text-transform:uppercase;opacity:.75;}
+        .bk-back-url{margin-top:6px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);font-weight:700;font-size:13px;}
+        .bk-book--spread .bk-page--back:first-child{border-radius:16px 6px 6px 16px;}
+        .bk-book--spread .bk-page--back:last-child{border-radius:6px 16px 16px 6px;}
         @media (max-width: 859px){ .bk-nav{display:none;} .bk-pic-num{display:none;} }
         /* Desktop/tablet: keep the bottom bar minimal (count only via arrows) */
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
