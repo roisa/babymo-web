@@ -3945,4 +3945,530 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+  /* ───────────────────────── New 6. The orangutan's tree ───────────────────────── */
+  {
+    slug: "orangutan-dan-pohon-untuk-anaknya",
+    pose: "baby-mo-pose-11.png",
+    published: "2026-11-23",
+    title: { id: "Orangutan dan Pohon untuk Anaknya", en: "The Orangutan and a Tree for Her Baby" },
+    hook: {
+      id: "Bayi orangutan dipeluk ibunya selama tujuh tahun. Tapi suatu hari, pohon-pohon rumah mereka tumbang… Hari ini, Mo dan keluarganya menanam harapan.",
+      en: "A baby orangutan stays in its mother's arms for seven years. But one day, the trees they call home come crashing down… Today, Mo and his family plant some hope.",
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Anak belum bisa menyelamatkan hutan, tapi ia bisa menanam satu pohon dan merawatnya. Kebiasaan kecil itulah yang kelak menjadi kepedulian besar.",
+      en: "Children can't save a rainforest yet, but they can plant one tree and look after it. Small habits like that grow into a lifetime of caring.",
+    },
+    tags: ["orangutan", "hutan", "pohon", "menanam", "alam", "kalimantan"],
+    card: {
+      title: { id: "Mengenalkan Anak Menjaga Hutan", en: "Helping Children Care for Forests" },
+      items: {
+        id: [
+          "Tanam satu tanaman bersama dan beri anak tugas merawatnya setiap hari — menyiram, melihat daun baru, mencatat tingginya.",
+          "Biasakan memakai kertas dua sisi dan memilah sampah. Jelaskan sederhana: \"Kertas berasal dari pohon.\"",
+          "Ceritakan sebab-akibat dengan lembut (pohon = rumah hewan dan udara segar), lalu langsung tunjukkan apa yang bisa kita lakukan.",
+        ],
+        en: [
+          "Grow one plant together and give your child the job of caring for it daily — watering, spotting new leaves, measuring it.",
+          "Use both sides of paper and sort your rubbish. Explain simply: \"Paper comes from trees.\"",
+          "Explain cause and effect gently (trees = animal homes and fresh air), then go straight to what we can do.",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "forest",
+      props: [{ k: "orangutan", x: 380 }],
+      fx: ["leaves"],
+    },
+    pages: [
+      {
+        text: { id: "Abi pulang membawa bibit pohon kecil. \"Hari ini kita menanam pohon,\" kata Abi. \"Tapi dulu, Abi mau cerita kenapa pohon itu penting sekali.\"", en: "Abi came home with a little tree seedling. \"Today we're planting a tree,\" said Abi. \"But first, let me tell you why trees matter so much.\"" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "seedling", x: 450 }], mo: [{ who: "ayah", pose: "kneel-present", x: 280 }, { pose: "pose-26", x: 400 }] },
+      },
+      {
+        text: { id: "Jauh di hutan Kalimantan, hiduplah seekor ibu orangutan bernama Ibu Rimba, dan bayinya yang kecil bernama Utan.", en: "Far away in the forests of Kalimantan lived a mother orangutan called Ibu Rimba, and her tiny baby, Utan." },
+        scene: { focus: 380, bg: "forest", props: [{ k: "orangutan", x: 390 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Setiap hari Ibu Rimba berayun dari dahan ke dahan, dan Utan memeluk erat bulu ibunya. Tidak pernah dilepaskan.", en: "Every day Ibu Rimba swung from branch to branch, and Utan held tight to his mother's fur. She never, ever let go." },
+        scene: { focus: 380, bg: "forest", props: [{ k: "orangutanswing", x: 420, y: 380, s: 0.85 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Tahukah kamu? Bayi orangutan tinggal bersama ibunya sampai umur tujuh atau delapan tahun — lebih lama dari hampir semua hewan lain di dunia.", en: "Did you know? Baby orangutans stay with their mothers until they're seven or eight years old — longer than almost any other animal in the world." },
+        scene: { focus: 380, bg: "forest", props: [{ k: "orangutan", x: 390 }, { k: "heart", x: 440, y: 160, s: 0.5 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Tujuh tahun? Itu kan umur Kak Adam!\" seru Mo. Kak Adam tertawa. \"Berarti Kak Adam masih boleh dipeluk Umi terus, dong.\"", en: "\"Seven years? That's how old Kak Adam is!\" said Mo. Kak Adam laughed. \"So I'm still allowed lots of hugs from Umi, then.\"" },
+        scene: { focus: 340, bg: "garden", mo: [{ who: "adam", pose: "laugh-tummy", x: 290 }, { pose: "wow", x: 420 }] },
+      },
+      {
+        text: { id: "Ibu Rimba mengajari Utan banyak hal: buah mana yang boleh dimakan, dan cara membuat sarang dari daun. Setiap malam, sarang baru!", en: "Ibu Rimba taught Utan so many things: which fruits were good to eat, and how to make a nest out of leaves. A brand-new nest every night!" },
+        scene: { focus: 380, bg: "forest", time: "dusk", props: [{ k: "orangutan", x: 390 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Tapi suatu hari terdengar suara keras. Brrrrrm! Pohon-pohon besar tumbang satu per satu.", en: "But one day there was a loud noise. Brrrrrm! The big trees came crashing down, one after another." },
+        scene: { focus: 380, bg: "forest", time: "dusk", props: [{ k: "stump", x: 300 }, { k: "stump", x: 460, s: 1.2 }, { k: "cloud", x: 380, y: 260, s: 0.5 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Hutan rumah mereka menjadi semakin kecil. Ibu Rimba harus berjalan jauh sekali untuk mencari buah, sambil terus menggendong Utan.", en: "Their forest home kept getting smaller. Ibu Rimba had to walk a very long way to find fruit, carrying Utan the whole time." },
+        scene: { focus: 380, bg: "forest", time: "dusk", props: [{ k: "stump", x: 260 }, { k: "orangutan", x: 410, s: 0.8 }, { k: "stump", x: 540 }] },
+      },
+      {
+        text: { id: "\"Kasihan Utan,\" bisik Ais. Matanya berkaca-kaca. Mo diam, menggenggam bibit pohon erat-erat.", en: "\"Poor Utan,\" whispered Ais, her eyes filling with tears. Mo was quiet, holding the seedling tight." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "seedling", x: 450 }], mo: [{ who: "ais", pose: "sad-tears", x: 300 }, { pose: "pose-36", x: 410 }] },
+      },
+      {
+        text: { id: "\"Kabar baiknya,\" kata Abi, \"banyak orang baik yang menjaga hutan dan menanam pohon lagi. Ada juga tempat yang merawat orangutan sampai mereka bisa pulang ke hutan.\"", en: "\"Here's the good news,\" said Abi. \"Lots of kind people protect the forests and plant trees again. There are even places that care for orangutans until they can go home to the forest.\"" },
+        scene: { focus: 340, bg: "garden", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 280 }, { who: "ais", pose: "calm-sit", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Di tempat yang dulu gundul, pohon-pohon kecil mulai tumbuh. Pelan-pelan, hutan itu menjadi rumah lagi untuk Ibu Rimba dan Utan.", en: "Where the ground had been bare, little trees began to grow. Slowly, the forest became a home again for Ibu Rimba and Utan." },
+        scene: { focus: 380, bg: "forest", props: [{ k: "plant", x: 270 }, { k: "orangutan", x: 400 }, { k: "seedling", x: 530 }], fx: ["sparkle", "leaves"] },
+      },
+      {
+        text: { id: "\"Menanam pohon itu sedekah,\" kata Abi. \"Setiap kali burung, hewan, atau manusia menikmatinya, pahalanya terus mengalir.\"", en: "\"Planting a tree is a kind of charity,\" said Abi. \"Every time a bird, an animal or a person enjoys it, the reward keeps flowing.\"" },
+        quote: { id: "\"Tidaklah seorang muslim menanam pohon atau menanam tanaman, lalu dimakan oleh burung, manusia, atau binatang, melainkan itu menjadi sedekah baginya.\" (HR. Bukhari dan Muslim)", en: "\"No Muslim plants a tree or sows a crop, and a bird, person or animal eats from it, except that it counts as charity for him.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "seedling", x: 440 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { pose: "pose-22", x: 400 }] },
+      },
+      {
+        text: { id: "Mo menggali tanah, Kak Adam memasukkan bibit, dan Ais menyiramnya. \"Bismillah. Tumbuh yang besar, ya, pohon!\"", en: "Mo dug the soil, Kak Adam put the seedling in, and Ais watered it. \"Bismillah. Grow big and strong, little tree!\"" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "seedling", x: 400 }], mo: [{ who: "adam", pose: "watering-can", x: 300 }, { pose: "pose-11", x: 460 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mo mendapat ide. \"Abi, kertas juga dari pohon, kan? Mulai sekarang Mo menggambar di dua sisi kertas!\"", en: "Mo had an idea. \"Abi, paper comes from trees too, doesn't it? From now on I'll draw on both sides of the paper!\"" },
+        scene: { focus: 350, bg: "living", props: [{ k: "drawing", x: 450, y: 360 }], mo: [{ pose: "idea", x: 340 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Malam itu, jauh di Kalimantan, Utan tidur di sarang daun yang baru, di dalam pelukan ibunya.", en: "That night, far away in Kalimantan, Utan slept in a brand-new leaf nest, wrapped in his mother's arms." },
+        scene: { focus: 380, bg: "forest", time: "night", props: [{ k: "orangutan", x: 390 }], fx: ["zzz", "stars"] },
+      },
+      {
+        text: { id: "Setiap pagi Mo menyapa pohonnya: \"Assalamu'alaikum, pohon!\" Pohon apa yang ingin kamu tanam? 🌳", en: "Every morning Mo says hello to his tree: \"Assalamu'alaikum, tree!\" What tree would you like to plant? 🌳" },
+        scene: { focus: 350, bg: "garden", props: [{ k: "plant", x: 450 }], mo: [{ pose: "pose-01", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+  /* ───────────────────────── New 7. When the earth shakes ───────────────────────── */
+  {
+    slug: "saat-bumi-bergoyang",
+    pose: "baby-mo-pose-27.png",
+    published: "2026-11-24",
+    title: { id: "Saat Bumi Bergoyang", en: "When the Ground Shakes" },
+    hook: {
+      id: "Lampu berayun, bingkai foto miring, lantai bergoyang! Si kembar tahu persis apa yang harus dilakukan: merunduk, berlindung, berpegangan.",
+      en: "The lamp swings, the picture frame tilts, the floor shakes! The twins know exactly what to do: drop, cover and hold on.",
+    },
+    anchor: { type: "doa", slug: "doa-hasbunallah" },
+    takeaway: {
+      id: "Indonesia sering mengalami gempa. Anak yang sudah berlatih tidak panik — ia tahu langkahnya, dan ia tahu Allah selalu menjaga.",
+      en: "Indonesia has earthquakes often. A child who has practised doesn't panic — they know the steps, and they know Allah is always watching over them.",
+    },
+    tags: ["gempa", "keselamatan", "siaga bencana", "tenang", "doa", "keluarga"],
+    card: {
+      title: { id: "Siaga Gempa Bersama Anak", en: "Earthquake-Ready with Children" },
+      items: {
+        id: [
+          "Ajarkan \"Merunduk, Berlindung, Berpegangan\" (di bawah meja kokoh, jauh dari jendela dan lemari), lalu latih seperti permainan beberapa kali setahun.",
+          "Sepakati titik kumpul keluarga dan siapkan tas siaga: air, senter, peluit, obat, makanan ringan, dan salinan dokumen.",
+          "Setelah gempa: keluar dengan tenang (jangan pakai lift), ikuti info BMKG/BPBD, dan beri ruang untuk anak bercerita tentang rasa takutnya.",
+        ],
+        en: [
+          "Teach \"Drop, Cover, Hold On\" (under a sturdy table, away from windows and cupboards), and practise it like a game a few times a year.",
+          "Agree on a family meeting point and pack a go-bag: water, torch, whistle, medicine, snacks and copies of documents.",
+          "After a quake: leave calmly (never use the lift), follow official updates, and give your child space to talk about feeling scared.",
+        ],
+      },
+    },
+    cover: {
+      focus: 380, bg: "living",
+      props: [{ k: "table", x: 380 }, { k: "framefall", x: 520, y: 200 }],
+      mo: [{ pose: "pose-10", x: 380 }],
+      fx: ["quake"],
+    },
+    pages: [
+      {
+        text: { id: "Sore itu tenang sekali. Mo membangun menara balok, Ais menggambar, dan Umi menyiram tanaman di dekat jendela.", en: "It was a quiet afternoon. Mo was building a block tower, Ais was drawing, and Umi was watering the plants by the window." },
+        scene: { focus: 340, bg: "living", props: [{ k: "blockstall", x: 440 }], mo: [{ pose: "pose-36", x: 330 }, { who: "ais", pose: "draw-floor", x: 230 }] },
+      },
+      {
+        text: { id: "Tiba-tiba lantai bergoyang! Lampu berayun, gelas bergetar, bingkai foto miring. GRRRR… \"Umi!\" teriak Mo.", en: "Suddenly the floor began to shake! The lamp swung, the glasses rattled, the picture frame tilted. RUMBLE… \"Umi!\" shouted Mo." },
+        scene: { focus: 360, bg: "living", props: [{ k: "framefall", x: 420, y: 210 }, { k: "blocksfall", x: 440 }], mo: [{ pose: "pose-33", x: 330 }], fx: ["quake"] },
+      },
+      {
+        text: { id: "Umi berseru dengan suara tenang: \"Gempa! Merunduk, berlindung, berpegangan!\"", en: "Umi called out in a calm voice: \"Earthquake! Drop, cover, hold on!\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "framefall", x: 430, y: 210 }], mo: [{ who: "umi", pose: "idea-finger", x: 300 }], fx: ["quake"] },
+      },
+      {
+        text: { id: "Si kembar merunduk ke bawah meja yang kokoh, melindungi kepala dengan tangan, dan berpegangan pada kaki meja.", en: "The twins dropped down under the sturdy table, covered their heads with their hands, and held on to the table leg." },
+        scene: { focus: 380, bg: "living", props: [{ k: "table", x: 380 }], mo: [{ pose: "pose-10", x: 340 }, { who: "ais", pose: "scared-hide", x: 420 }], fx: ["quake"] },
+      },
+      {
+        text: { id: "Umi ikut berlindung di samping mereka, jauh dari jendela dan lemari. Pelan-pelan Umi berbisik, \"Hasbunallah wa ni'mal wakiil.\"", en: "Umi took cover next to them, away from the window and the cupboard. Softly she whispered, \"Hasbunallah wa ni'mal wakiil.\"" },
+        quote: { id: "\"Hasbunallaahu wa ni'mal wakiil.\" — Cukuplah Allah menjadi penolong kami, dan Dia sebaik-baik pelindung. (QS. Ali 'Imran: 173)", en: "\"Hasbunallaahu wa ni'mal wakiil.\" — Allah is enough for us, and He is the best Protector. (Qur'an, Ali 'Imran 3:173)" },
+        scene: { focus: 360, bg: "living", props: [{ k: "table", x: 400 }], mo: [{ who: "umi", pose: "dua-kneel", x: 270 }, { pose: "pose-10", x: 410 }], fx: ["quake"] },
+      },
+      {
+        text: { id: "Lalu goyangannya berhenti. Sunyi. Mo masih gemetar, dan air matanya mulai keluar.", en: "Then the shaking stopped. Silence. Mo was still trembling, and tears began to fall." },
+        scene: { focus: 360, bg: "living", props: [{ k: "table", x: 380 }, { k: "blocksfall", x: 520 }], mo: [{ pose: "pose-09", x: 360 }] },
+      },
+      {
+        text: { id: "Umi memeluk Mo dan Ais erat-erat. \"Kalian hebat. Kalian melakukan semuanya dengan benar.\"", en: "Umi held Mo and Ais tight. \"You were wonderful. You did everything exactly right.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "hug-mo", x: 320 }, { who: "ais", pose: "hug-heart", x: 440 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Setelah goyangan berhenti, mereka keluar rumah dengan tenang — berjalan, tidak berlari — menuju lapangan terbuka.", en: "Once the shaking had stopped, they left the house calmly — walking, not running — towards the open field." },
+        scene: { focus: 340, bg: "street", mo: [{ who: "umi", pose: "walk-bag", x: 280 }, { pose: "pose-42", x: 400 }] },
+      },
+      {
+        text: { id: "Di titik kumpul, para tetangga sudah berkumpul. Abi datang dari masjid dan langsung menggandeng si kembar. \"Alhamdulillah, kalian selamat.\"", en: "At the meeting point, the neighbours had gathered. Abi came from the mosque and took the twins' hands straight away. \"Alhamdulillah, you're safe.\"" },
+        scene: { focus: 370, bg: "park", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 370, s: 210 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Bumi kita seperti kue lapis raksasa yang kadang bergeser sedikit,\" jelas Abi. \"Indonesia sering ada gempa, jadi kita harus selalu siap.\"", en: "\"The earth is like a giant layer cake that sometimes shifts a little,\" Abi explained. \"Indonesia has lots of earthquakes, so we always need to be ready.\"" },
+        scene: { focus: 340, bg: "park", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { pose: "pose-23", x: 410 }] },
+      },
+      {
+        text: { id: "\"Kalau gempanya datang lagi?\" tanya Mo pelan. \"Kita sudah tahu caranya,\" jawab Abi. \"Dan Allah selalu bersama kita.\"", en: "\"What if it comes again?\" Mo asked quietly. \"We know what to do now,\" said Abi. \"And Allah is always with us.\"" },
+        scene: { focus: 340, bg: "park", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 280 }, { pose: "pose-05", x: 410 }] },
+      },
+      {
+        text: { id: "Malamnya mereka menyiapkan tas siaga: senter, air minum, obat, roti, dan peluit. \"Peluitnya untuk memanggil bantuan,\" kata Abi.", en: "That evening they packed a go-bag: a torch, water, medicine, bread and a whistle. \"The whistle is for calling for help,\" said Abi." },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "flashlight", x: 420, y: 400, s: 0.6 }, { k: "water", x: 470, s: 0.8 }], mo: [{ who: "umi", pose: "kneel-smile", x: 250 }, { pose: "pose-22", x: 350 }] },
+      },
+      {
+        text: { id: "Abi membuat permainan latihan. Kalau Abi bilang \"Gempa!\", semua merunduk ke bawah meja secepat kilat!", en: "Abi made it into a practice game. Whenever Abi said \"Earthquake!\", everyone dived under the table as fast as lightning!" },
+        scene: { focus: 360, bg: "living", props: [{ k: "table", x: 420 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 260 }, { pose: "pose-10", x: 420 }] },
+      },
+      {
+        text: { id: "Ais yang paling cepat! \"Merunduk, berlindung, berpegangan!\" serunya bangga.", en: "Ais was the fastest! \"Drop, cover, hold on!\" she cheered proudly." },
+        scene: { focus: 350, bg: "living", mo: [{ who: "ais", pose: "cheer-fist", x: 350 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Sebelum tidur, mereka berdoa agar Allah menjaga semua orang yang rumahnya terkena gempa.", en: "Before bed, they made du'a for Allah to protect everyone whose homes had been hit by earthquakes." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "dua-sit", x: 270 }, { pose: "pose-12", x: 400 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Kamu masih ingat tiga langkahnya? Merunduk, berlindung, berpegangan! 🏠", en: "Can you remember the three steps? Drop, cover, hold on! 🏠" },
+        scene: { focus: 360, bg: "living", props: [{ k: "table", x: 420 }], mo: [{ pose: "pose-27", x: 330 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+  /* ───────────────────────── New 8. Kakek's chair ───────────────────────── */
+  {
+    slug: "kursi-kakek",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-11-25",
+    title: { id: "Kursi Kakek", en: "Kakek's Chair" },
+    hook: {
+      id: "Kursi cokelat itu kini kosong. Hanya tasbih hijau Kakek yang tertinggal. Mo bertanya: apakah Kakek masih bisa menerima hadiah dari kita?",
+      en: "The brown armchair is empty now. Only Kakek's green prayer beads are left. Mo wonders: can Kakek still receive a gift from us?",
+    },
+    anchor: { type: "hadith", slug: "doa-anak-shalih" },
+    takeaway: {
+      id: "Anak perlu kata-kata yang jujur tentang kematian, izin untuk bersedih, dan sesuatu untuk dilakukan. Doa mengubah rindu menjadi hadiah.",
+      en: "Children need honest words about death, permission to feel sad, and something they can do. Du'a turns missing someone into a gift.",
+    },
+    tags: ["kematian", "duka", "kakek", "rindu", "doa", "sedekah"],
+    card: {
+      title: { id: "Saat Anak Bertanya tentang Kematian", en: "When Children Ask About Death" },
+      items: {
+        id: [
+          "Pakai kata yang jelas: \"Kakek meninggal. Tubuhnya berhenti bekerja.\" Hindari \"Kakek tidur\" atau \"pergi jauh\" — itu bisa membingungkan dan menakutkan.",
+          "Tidak apa-apa anak melihat Anda menangis. Beri nama perasaannya, dan siap menjawab pertanyaan yang sama berulang kali.",
+          "Beri anak sesuatu untuk dilakukan: mendoakan, bersedekah atas nama almarhum, atau menggambar kenangan bersama.",
+        ],
+        en: [
+          "Use clear words: \"Kakek died. His body stopped working.\" Avoid \"he's sleeping\" or \"he went away\" — these can confuse and frighten.",
+          "It's okay for your child to see you cry. Name the feelings, and be ready to answer the same questions many times.",
+          "Give them something to do: make du'a, give charity in the person's name, or draw happy memories together.",
+        ],
+      },
+    },
+    cover: {
+      focus: 380, bg: "living",
+      props: [{ k: "kakekchair", x: 440 }],
+      mo: [{ pose: "pose-36", x: 320 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Di rumah Nenek ada kursi cokelat yang empuk. Itu kursi Kakek. Di sana Kakek biasa duduk, berdzikir dengan tasbih hijaunya.", en: "At Nenek's house there was a soft brown armchair. It was Kakek's chair. That's where he always sat, doing dhikr with his green prayer beads." },
+        scene: { focus: 380, bg: "living", props: [{ k: "kakekchair", x: 440 }, { k: "photo", x: 560, y: 210 }], mo: [{ pose: "pose-14", x: 320 }] },
+      },
+      {
+        text: { id: "Kakek suka memangku Mo dan bercerita tentang kampung: kerbau yang malas, sungai yang jernih, dan layang-layang yang terbang tinggi.", en: "Kakek loved to sit Mo on his lap and tell stories about his village: a lazy water buffalo, a clear river and kites flying high." },
+        scene: { focus: 380, bg: "living", props: [{ k: "kakekchair", x: 440 }, { k: "photo", x: 400, y: 220, s: 0.8 }], mo: [{ pose: "pose-07", x: 320 }], fx: ["sparkle", "hearts"] },
+      },
+      {
+        text: { id: "Suatu pagi, telepon berdering. Abi mendengarkan lama sekali, lalu duduk pelan-pelan. \"Innaa lillaahi wa innaa ilaihi raaji'uun.\"", en: "One morning the phone rang. Abi listened for a long time, then slowly sat down. \"Innaa lillaahi wa innaa ilaihi raaji'uun.\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "phone", x: 430, y: 380, s: 0.8 }], mo: [{ who: "ayah", pose: "stressed-head-sit", x: 330 }] },
+      },
+      {
+        text: { id: "Abi memanggil anak-anak. \"Kakek sudah meninggal pagi ini,\" katanya pelan. \"Tubuh Kakek berhenti bekerja, dan Allah sudah memanggil Kakek pulang.\"", en: "Abi called the children over. \"Kakek died this morning,\" he said gently. \"His body stopped working, and Allah has called him home.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-40", x: 390 }, { who: "ais", pose: "sad-tears", x: 470 }] },
+      },
+      {
+        text: { id: "\"Kapan Kakek kembali?\" tanya Mo. Abi memeluknya. \"Kakek tidak akan kembali ke dunia, sayang. Tapi Kakek sudah tidak sakit lagi.\"", en: "\"When is Kakek coming back?\" asked Mo. Abi hugged him. \"Kakek won't come back to this world, love. But he isn't in pain any more.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ayah", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mo melihat mata Abi basah. \"Abi menangis?\" \"Iya. Abi sedih karena rindu. Rasulullah ﷺ juga menangis ketika putranya wafat. Menangis itu tidak apa-apa.\"", en: "Mo saw that Abi's eyes were wet. \"Abi, are you crying?\" \"Yes. I'm sad because I miss him. The Prophet ﷺ cried too when his little son died. It's okay to cry.\"" },
+        quote: { id: "\"Mata boleh menangis dan hati boleh bersedih, tetapi kami tidak mengucapkan kecuali yang diridai Tuhan kami.\" (HR. Bukhari)", en: "\"The eyes shed tears and the heart grieves, but we say only what pleases our Lord.\" (Bukhari)" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ayah", pose: "grateful-hug-sit", x: 290 }, { pose: "pose-14", x: 420 }] },
+      },
+      {
+        text: { id: "Di rumah Nenek, banyak orang datang untuk mendoakan Kakek. Ais menangis di pangkuan Umi. Umi membiarkannya menangis sampai lega.", en: "At Nenek's house, many people came to pray for Kakek. Ais cried in Umi's lap. Umi let her cry until she felt better." },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { who: "ais", pose: "cry-sit", x: 400 }] },
+      },
+      {
+        text: { id: "Kursi Kakek kosong. Peci dan tasbih hijaunya masih di sana. Mo menyentuh tasbih itu pelan-pelan, satu butir, dua butir…", en: "Kakek's chair was empty. His peci and green prayer beads were still there. Mo gently touched the beads, one, two…" },
+        scene: { focus: 380, bg: "living", time: "dusk", props: [{ k: "kakekchair", x: 440 }], mo: [{ pose: "pose-36", x: 320 }] },
+      },
+      {
+        text: { id: "\"Abi,\" tanya Mo, \"apa Kakek masih bisa menerima hadiah dari kita?\"", en: "\"Abi,\" Mo asked, \"can Kakek still get presents from us?\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "calm-sit", x: 280 }, { pose: "pose-05", x: 410 }] },
+      },
+      {
+        text: { id: "Abi tersenyum. \"Bisa. Rasulullah ﷺ bersabda, ada tiga hal yang terus mengalir untuk orang yang sudah meninggal. Salah satunya: doa anak yang shalih.\"", en: "Abi smiled. \"Yes. The Prophet ﷺ said three things keep flowing to a person after they die. One of them is the du'a of a good child.\"" },
+        quote: { id: "\"Apabila manusia meninggal dunia, terputuslah amalnya kecuali tiga perkara: sedekah jariyah, ilmu yang bermanfaat, dan anak shalih yang mendoakannya.\" (HR. Muslim)", en: "\"When a person dies, their deeds end except three: ongoing charity, beneficial knowledge, or a righteous child who prays for them.\" (Muslim)" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "teach-book-sit", x: 280 }, { pose: "pose-31", x: 410 }] },
+      },
+      {
+        text: { id: "\"Mo kan cucu Kakek,\" kata Mo. \"Boleh Mo mendoakan Kakek?\" \"Tentu, sayang. Doamu adalah hadiah terindah untuk Kakek.\"", en: "\"I'm Kakek's grandson,\" said Mo. \"Can I pray for him?\" \"Of course, love. Your du'a is the most beautiful present Kakek could get.\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 280 }, { pose: "pose-41", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mo mengangkat kedua tangannya. \"Ya Allah, ampuni Kakek, sayangi Kakek, lapangkan kubur Kakek, dan kumpulkan kami lagi di surga-Mu.\"", en: "Mo raised both his hands. \"O Allah, forgive Kakek, have mercy on him, make his grave spacious, and bring us together again in Your Paradise.\"" },
+        quote: { id: "\"Allaahummaghfir lahu warhamhu wa 'aafihi wa'fu 'anhu.\" — Ya Allah, ampunilah dia, rahmatilah dia, selamatkanlah dia, dan maafkanlah dia. (HR. Muslim)", en: "\"Allaahummaghfir lahu warhamhu wa 'aafihi wa'fu 'anhu.\" — O Allah, forgive him, have mercy on him, keep him safe and pardon him. (Muslim)" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ pose: "thank-you", x: 300 }, { who: "ais", pose: "dua-hands-closed", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam memasukkan uang tabungannya ke kotak sedekah. \"Atas nama Kakek,\" katanya, \"supaya pahalanya terus mengalir.\"", en: "Kak Adam put his savings into the charity box. \"In Kakek's name,\" he said, \"so the reward keeps flowing to him.\"" },
+        scene: { focus: 350, bg: "living", time: "dusk", mo: [{ who: "adam", pose: "sedekah-box", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Malamnya, Mo dan Ais menggambar cerita Kakek: kerbau yang malas, sungai yang jernih, dan Kakek yang tersenyum. Mereka rindu… tapi juga tersenyum.", en: "That night, Mo and Ais drew Kakek's stories: the lazy buffalo, the clear river and Kakek smiling. They missed him… but they smiled too." },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "drawing", x: 370, y: 390 }], mo: [{ who: "ais", pose: "draw-crayons", x: 300 }, { pose: "pose-35", x: 430 }] },
+      },
+      {
+        text: { id: "Umi memeluk Mo sebelum tidur. \"Rindu itu tanda cinta. Setiap kali Mo rindu Kakek, kirimkan doa, ya.\"", en: "Umi hugged Mo before bed. \"Missing someone is a sign of love. Whenever you miss Kakek, send him a du'a.\"" },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "hug-mo", x: 340 }], fx: ["stars", "hearts"] },
+      },
+      {
+        text: { id: "Kalau kamu rindu seseorang yang sudah tiada, doa apa yang ingin kamu kirimkan untuknya? 🤲", en: "If you miss someone who has passed away, what du'a would you like to send them? 🤲" },
+        scene: { focus: 380, bg: "living", time: "night", props: [{ k: "kakekchair", x: 450 }], mo: [{ pose: "pose-12", x: 330 }], fx: ["stars"] },
+      },
+    ],
+  },
+  /* ───────────────────────── New 9. When the lights go out, the stars come on ───────────────────────── */
+  {
+    slug: "saat-lampu-padam-bintang-menyala",
+    pose: "baby-mo-pose-31.png",
+    published: "2026-11-26",
+    title: { id: "Saat Lampu Padam, Bintang Menyala", en: "When the Lights Go Out, the Stars Come On" },
+    hook: {
+      id: "Klik! Mati lampu. Gelap gulita. Mo dan Ais ketakutan… sampai Abi mengajak mereka naik ke bukit dan melihat langit yang penuh bintang.",
+      en: "Click! A power cut. Pitch dark. Mo and Ais are scared… until Abi takes them up the hill to see a sky full of stars.",
+    },
+    anchor: { type: "parenting", slug: "takut-gelap" },
+    takeaway: {
+      id: "Rasa takut pada gelap bisa berubah menjadi rasa takjub. Saat anak melihat bintang, ia belajar bahwa gelap juga ciptaan Allah — dan di dalamnya ada keindahan.",
+      en: "Fear of the dark can turn into wonder. When children see the stars, they learn that darkness is also Allah's creation — and it holds beautiful things.",
+    },
+    tags: ["takut gelap", "bintang", "langit", "bulan", "mati lampu", "ciptaan allah"],
+    card: {
+      title: { id: "Saat Anak Takut Gelap", en: "When Your Child Fears the Dark" },
+      items: {
+        id: [
+          "Jangan meremehkan (\"begitu saja takut\"). Lampu tidur yang redup itu tidak apa-apa.",
+          "Buat gelap jadi menyenangkan: melihat bintang, wayang bayangan dengan senter, atau berburu \"harta karun\" dengan senter.",
+          "Ajarkan doa sebelum tidur dan ingatkan dengan lembut bahwa Allah selalu melihat dan menjaga, terang maupun gelap.",
+        ],
+        en: [
+          "Don't dismiss it (\"there's nothing to be scared of\"). A dim night light is fine.",
+          "Make the dark fun: stargazing, shadow puppets or a torch treasure hunt.",
+          "Teach the bedtime du'a and gently remind them that Allah always sees and protects us, in the light and in the dark.",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "hill", time: "night",
+      props: [{ k: "telescope", x: 460 }],
+      mo: [{ pose: "pose-31", x: 340 }],
+      fx: ["stars", "milkyway", "shootingstar"],
+    },
+    pages: [
+      {
+        text: { id: "Malam itu, tiba-tiba — klik! Semua lampu padam. Rumah jadi gelap gulita. \"Umi! Mo takut!\"", en: "That night, suddenly — click! All the lights went out. The house was pitch dark. \"Umi! I'm scared!\"" },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "pose-10", x: 340 }] },
+      },
+      {
+        text: { id: "Abi menyalakan senter. \"Mati lampu, sayang. Listriknya sedang diperbaiki. Abi di sini.\"", en: "Abi switched on a torch. \"It's a power cut, love. They're fixing the electricity. I'm right here.\"" },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "flashlight", x: 330, y: 330, s: 0.8 }], mo: [{ who: "ayah", pose: "kneel-arms-open", x: 260 }, { pose: "pose-05", x: 420 }] },
+      },
+      {
+        text: { id: "\"Gelap itu seram,\" bisik Ais sambil memeluk boneka kelincinya erat-erat.", en: "\"The dark is spooky,\" whispered Ais, hugging her toy bunny tight." },
+        scene: { focus: 350, bg: "living", time: "night", mo: [{ who: "ais", pose: "hug-bunny-sit", x: 350 }] },
+      },
+      {
+        text: { id: "Abi tersenyum. \"Mau lihat sesuatu yang hanya bisa dilihat saat gelap? Ayo ke bukit belakang rumah!\"", en: "Abi smiled. \"Want to see something you can only see in the dark? Let's go up the hill behind the house!\"" },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ who: "ayah", pose: "idea-point-stand", x: 280 }, { pose: "pose-26", x: 410 }] },
+      },
+      {
+        text: { id: "Di bukit, mereka berbaring di atas tikar dan menengadah ke atas… \"MASYA ALLAH!\" Langit penuh bintang!", en: "On the hill, they lay on a mat and looked up… \"MASYA ALLAH!\" The sky was full of stars!" },
+        scene: { focus: 350, bg: "hill", time: "night", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-31", x: 330 }, { who: "ais", pose: "point-star", x: 440 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "\"Garis bercahaya itu namanya Bima Sakti,\" kata Abi. \"Ada miliaran bintang di sana. Kalau lampu kota menyala, kita tidak bisa melihatnya.\"", en: "\"That glowing band is called the Milky Way,\" said Abi. \"There are billions of stars in it. When the city lights are on, we can't see it.\"" },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ who: "ayah", pose: "calm-sit", x: 330 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "Tahukah kamu? Setiap bintang sebenarnya adalah matahari yang sangat, sangat jauh. Ada yang jauh lebih besar dari matahari kita!", en: "Did you know? Every star is really a sun that is very, very far away. Some are much bigger than our own Sun!" },
+        scene: { focus: 360, bg: "hill", time: "night", props: [{ k: "sun", x: 420, y: 200, s: 0.6 }], mo: [{ who: "ais", pose: "point-moon", x: 320 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "Kak Adam membawa teropong. Ais mengintip bulan. \"Bulannya ada lubang-lubangnya!\" \"Itu namanya kawah,\" kata Kak Adam.", en: "Kak Adam brought a telescope. Ais peeked at the moon. \"The moon has holes in it!\" \"Those are called craters,\" said Kak Adam." },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ who: "ais", pose: "telescope", x: 320 }, { who: "adam", pose: "kneel-talk", x: 440 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Wuuush! Sebuah garis cahaya melintas di langit. \"Bintang jatuh!\" teriak Mo sambil menunjuk.", en: "Whoosh! A streak of light shot across the sky. \"A shooting star!\" shouted Mo, pointing." },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ pose: "pose-15", x: 340 }], fx: ["stars", "milkyway", "shootingstar"] },
+      },
+      {
+        text: { id: "\"Itu sebenarnya batu kecil dari luar angkasa yang terbakar saat masuk ke langit kita,\" jelas Abi. \"Makanya terlihat seperti garis api.\"", en: "\"It's really a tiny space rock burning up as it enters our sky,\" Abi explained. \"That's why it looks like a line of fire.\"" },
+        scene: { focus: 340, bg: "hill", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { pose: "wow", x: 410 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Siapa yang memasang semua lampu langit ini?\" tanya Ais. \"Allah,\" jawab Abi. \"Allah menghias langit dengan bintang-bintang.\"", en: "\"Who put up all these sky lights?\" asked Ais. \"Allah,\" said Abi. \"Allah decorated the sky with stars.\"" },
+        quote: { id: "\"Dan sungguh, telah Kami hiasi langit yang dekat dengan bintang-bintang.\" (QS. Al-Mulk: 5)", en: "\"And We have certainly beautified the nearest heaven with lamps.\" (Qur'an, Al-Mulk 67:5)" },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ who: "ais", pose: "wonder-question", x: 300 }, { who: "ayah", pose: "calm-sit", x: 430 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "Abi bercerita, dulu para pelaut dan kafilah menemukan jalan pulang dengan melihat bintang. \"Bintang itu seperti peta di langit.\"", en: "Abi told them that long ago, sailors and caravans found their way home by looking at the stars. \"The stars are like a map in the sky.\"" },
+        scene: { focus: 350, bg: "hill", time: "night", props: [{ k: "telescope", x: 450 }], mo: [{ pose: "pose-22", x: 340 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "\"Ternyata gelap tidak selalu seram,\" kata Mo pelan. \"Tanpa gelap, kita tidak bisa melihat bintang.\"", en: "\"So the dark isn't always scary,\" Mo said softly. \"Without the dark, we couldn't see the stars.\"" },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ pose: "idea", x: 350 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "Klik! Di bawah bukit, lampu-lampu rumah menyala lagi. \"Yaaah,\" kata si kembar. Mereka masih ingin melihat bintang!", en: "Click! Down below the hill, the house lights came back on. \"Awww,\" said the twins. They still wanted to look at the stars!" },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ pose: "pose-28", x: 320 }, { who: "ais", pose: "giggle", x: 430 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Di kamar, Mo meminta lampu tidurnya dimatikan saja. \"Mo mau membayangkan bintang-bintang,\" katanya sambil memejamkan mata.", en: "In his room, Mo asked for his night light to be switched off. \"I want to imagine the stars,\" he said, closing his eyes." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-12", x: 340 }], fx: ["stars", "zzz"] },
+      },
+      {
+        text: { id: "Malam ini, coba lihat ke langit. Berapa bintang yang bisa kamu hitung? ✨", en: "Tonight, try looking up at the sky. How many stars can you count? ✨" },
+        scene: { focus: 350, bg: "hill", time: "night", mo: [{ pose: "pose-18", x: 340 }], fx: ["stars", "milkyway", "shootingstar"] },
+      },
+    ],
+  },
+  /* ───────────────────────── New 10. The bee and the honey ───────────────────────── */
+  {
+    slug: "lebah-kecil-dan-madu",
+    pose: "baby-mo-pose-07.png",
+    published: "2026-11-27",
+    title: { id: "Lebah Kecil dan Madu dari Allah", en: "The Little Bee and the Honey from Allah" },
+    hook: {
+      id: "Bzzz! Mo ingin mengusir lebah. Tapi lebah ternyata menari, bekerja sama, dan membuat madu — sampai punya surat sendiri di Al-Qur'an!",
+      en: "Bzzz! Mo wants to swat the bee away. But bees dance, work as a team and make honey — they even have their own surah in the Qur'an!",
+    },
+    anchor: { type: "doa", slug: "doa-pandai-bersyukur" },
+    takeaway: {
+      id: "Rasa ingin tahu adalah obat rasa takut. Saat anak tahu apa yang dilakukan lebah, ia berhenti mengibas — dan mulai bersyukur.",
+      en: "Curiosity is the cure for fear. Once children know what bees do, they stop swatting — and start feeling grateful.",
+    },
+    tags: ["lebah", "madu", "serangga", "an-nahl", "kerja sama", "bersyukur"],
+    card: {
+      title: { id: "Berani pada Lebah dan Serangga", en: "Being Brave Around Bees and Bugs" },
+      items: {
+        id: [
+          "Ajarkan \"diam seperti patung\", lalu menjauh pelan-pelan. Mengibas-ngibas justru membuat lebah merasa terancam.",
+          "Jika tersengat: cabut sengatnya, kompres dingin. Segera cari pertolongan bila wajah bengkak atau anak sulit bernapas.",
+          "Madu tidak boleh diberikan untuk bayi di bawah 1 tahun. Untuk anak yang lebih besar, madu bisa jadi cara seru mengenal ayat Allah.",
+        ],
+        en: [
+          "Teach \"freeze like a statue\", then walk away slowly. Swatting makes bees feel threatened.",
+          "If stung: remove the sting and use a cold compress. Get help quickly if the face swells or your child struggles to breathe.",
+          "Never give honey to babies under 1 year old. For older children, honey is a lovely way to talk about Allah's signs.",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "garden",
+      props: [{ k: "flowers", x: 440 }, { k: "bee", x: 420, y: 250 }, { k: "honey", x: 300 }],
+      mo: [{ pose: "pose-07", x: 360 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Bzzz! Seekor lebah terbang di dekat Mo. \"Pergi! Pergi!\" Mo mengibas-ngibaskan tangannya, ketakutan.", en: "Bzzz! A bee flew close to Mo. \"Go away! Go away!\" Mo flapped his hands, frightened." },
+        scene: { focus: 350, bg: "garden", props: [{ k: "flowers", x: 460 }, { k: "bee", x: 430, y: 250 }], mo: [{ pose: "pose-33", x: 330 }] },
+      },
+      {
+        text: { id: "\"Tenang, Mo,\" kata Umi pelan. \"Diam seperti patung, ya. Lebah tidak akan menyengat kalau tidak merasa terancam.\"", en: "\"Stay calm, Mo,\" Umi said softly. \"Freeze like a statue. Bees don't sting unless they feel threatened.\"" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "bee", x: 440, y: 240 }], mo: [{ who: "umi", pose: "idea-finger", x: 270 }, { pose: "pose-14", x: 400 }] },
+      },
+      {
+        text: { id: "Mo diam… diam… Lebah itu terbang mengelilinginya, lalu pergi ke bunga. Fiuh!", en: "Mo stayed still… very still… The bee buzzed around him, then flew off to a flower. Phew!" },
+        scene: { focus: 360, bg: "garden", props: [{ k: "flowers", x: 450 }, { k: "bee", x: 460, y: 300 }], mo: [{ pose: "pose-40", x: 330 }] },
+      },
+      {
+        text: { id: "\"Mau lihat rumah lebah sungguhan?\" tanya Umi. Siang itu, Umi mengajak si kembar ke peternakan lebah milik Pak Darto.", en: "\"Want to see a real bee house?\" asked Umi. That afternoon, Umi took the twins to Pak Darto's bee farm." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "beebox", x: 470 }], mo: [{ who: "umi", pose: "walk-bag", x: 270 }, { who: "ais", pose: "jump-joy", x: 380 }] },
+      },
+      {
+        text: { id: "Di sana ada kotak-kotak kayu. Di dalam setiap kotak, ada ribuan lebah yang bekerja bersama-sama. Bzzz-bzzz-bzzz!", en: "There were rows of wooden boxes. Inside each box, thousands of bees were working together. Bzzz-bzzz-bzzz!" },
+        scene: { focus: 370, bg: "garden", props: [{ k: "beebox", x: 290 }, { k: "beebox", x: 450 }], mo: [{ pose: "wow", x: 370 }] },
+      },
+      {
+        text: { id: "\"Lebah membuat sarang dari lilin berbentuk segi enam yang rapi sekali,\" kata Pak Darto. Ais menghitung sisinya: satu, dua… enam!", en: "\"Bees build their homes from wax in perfect six-sided shapes,\" said Pak Darto. Ais counted the sides: one, two… six!" },
+        scene: { focus: 360, bg: "garden", props: [{ k: "hive", x: 420, y: 330, s: 0.9 }], mo: [{ who: "ais", pose: "point-star", x: 300 }] },
+      },
+      {
+        text: { id: "Tahukah kamu? Saat menemukan bunga, lebah pulang ke sarang dan menari. Tariannya memberi tahu teman-temannya di mana bunga itu berada!", en: "Did you know? When a bee finds flowers, it flies home and does a dance. The dance tells its friends where the flowers are!" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "flowers", x: 300 }, { k: "bee", x: 380, y: 240 }, { k: "bee", x: 460, y: 280 }, { k: "bee", x: 420, y: 200 }], fx: ["sparkle", "notes"] },
+      },
+      {
+        text: { id: "Sambil minum nektar, lebah membawa serbuk sari dari bunga ke bunga. Karena itulah bunga bisa menjadi buah — apel, jeruk, dan semangka!", en: "As they drink nectar, bees carry pollen from flower to flower. That's how flowers turn into fruit — apples, oranges and watermelons!" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "flowers", x: 320 }, { k: "bee", x: 380, y: 270 }, { k: "fruit", x: 470 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Seekor lebah seumur hidupnya hanya membuat madu setetes kecil — kurang dari satu sendok teh,\" kata Pak Darto. \"Tapi bersama-sama, mereka mengisi satu toples penuh!\"", en: "\"In its whole life, one bee makes only a tiny drop of honey — less than a teaspoon,\" said Pak Darto. \"But together, they fill a whole jar!\"" },
+        scene: { focus: 370, bg: "garden", props: [{ k: "honey", x: 410 }, { k: "bee", x: 440, y: 230 }], mo: [{ pose: "pose-31", x: 310 }] },
+      },
+      {
+        text: { id: "Umi tersenyum. \"Ada surat di Al-Qur'an yang namanya An-Nahl, artinya Lebah. Allah sendiri yang mengajari lebah membuat sarang.\"", en: "Umi smiled. \"There's a surah in the Qur'an called An-Nahl, which means The Bee. Allah Himself taught the bees how to build their homes.\"" },
+        quote: { id: "\"Dan Tuhanmu mengilhamkan kepada lebah: 'Buatlah sarang di gunung-gunung, di pohon-pohon…' Dari perut lebah itu keluar minuman yang bermacam-macam warnanya, di dalamnya terdapat obat bagi manusia.\" (QS. An-Nahl: 68–69)", en: "\"And your Lord inspired the bee: 'Make homes in the mountains and the trees…' From their bellies comes a drink of varying colours, in which there is healing for people.\" (Qur'an, An-Nahl 16:68–69)" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "hive", x: 470, y: 330, s: 0.8 }], mo: [{ who: "umi", pose: "explain-book", x: 300 }] },
+      },
+      {
+        text: { id: "\"Lebah punya surat sendiri?\" Mo terbelalak. \"Wah, lebah pasti istimewa sekali!\"", en: "\"Bees have their own surah?\" Mo's eyes went wide. \"Wow, bees must be really special!\"" },
+        scene: { focus: 350, bg: "garden", props: [{ k: "bee", x: 450, y: 240 }], mo: [{ pose: "wow", x: 340 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Pak Darto memberi mereka sesendok madu. Manis, harum, dan hangat di tenggorokan. \"Alhamdulillah,\" kata Mo sambil tersenyum lebar.", en: "Pak Darto gave them each a spoonful of honey. Sweet, fragrant and warm in their throats. \"Alhamdulillah,\" said Mo with a big smile." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "honey", x: 420 }], mo: [{ pose: "pose-07", x: 320 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mo teringat lebah tadi pagi. \"Maaf ya, lebah. Mo kira kamu jahat. Ternyata kamu pekerja keras.\"", en: "Mo remembered the bee from that morning. \"Sorry, little bee. I thought you were mean. You're actually a hard worker.\"" },
+        scene: { focus: 350, bg: "garden", props: [{ k: "flowers", x: 460 }, { k: "bee", x: 450, y: 260 }], mo: [{ pose: "pose-14", x: 340 }] },
+      },
+      {
+        text: { id: "Di rumah, Mo dan Ais menanam bunga di halaman. \"Supaya lebah punya restoran!\" kata Ais.", en: "At home, Mo and Ais planted flowers in the garden. \"So the bees have a restaurant!\" said Ais." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "flowers", x: 440 }], mo: [{ who: "ais", pose: "plant-trowel", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Beberapa hari kemudian, seekor lebah datang ke bunga mereka. Kali ini Mo tidak mengibas. Mo hanya duduk tenang dan berbisik, \"Selamat makan, lebah.\"", en: "A few days later, a bee visited their flowers. This time Mo didn't swat. He just sat calmly and whispered, \"Enjoy your meal, little bee.\"" },
+        scene: { focus: 360, bg: "garden", props: [{ k: "flowers", x: 450 }, { k: "bee", x: 450, y: 290 }], mo: [{ pose: "pose-06", x: 330 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Kalau ada lebah di dekatmu, apa yang harus kamu lakukan? Diam seperti patung! 🐝", en: "If a bee comes close to you, what should you do? Freeze like a statue! 🐝" },
+        scene: { focus: 350, bg: "garden", props: [{ k: "flowers", x: 460 }, { k: "bee", x: 440, y: 250 }], mo: [{ pose: "pose-27", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];

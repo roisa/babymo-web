@@ -22,7 +22,9 @@ export type ArtBg =
   | "supermarket"
   | "clinic"
   | "underwater"
-  | "aquarium";
+  | "aquarium"
+  | "forest"
+  | "hill";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 
@@ -207,7 +209,19 @@ export type ArtProp =
   | "seaweed"
   | "fishschool"
   | "seahorse"
-  | "plasticbag";
+  | "plasticbag"
+  | "orangutan"
+  | "orangutanswing"
+  | "stump"
+  | "armchair"
+  | "kakekchair"
+  | "photo"
+  | "framefall"
+  | "table"
+  | "flashlight"
+  | "telescope"
+  | "hive"
+  | "beebox";
 
 export type ArtFx =
   | "rain"
@@ -221,7 +235,9 @@ export type ArtFx =
   | "leaves"
   | "notes"
   | "lightning"
-  | "shootingstar";
+  | "shootingstar"
+  | "milkyway"
+  | "quake";
 
 export interface ArtItem {
   k: ArtProp;
