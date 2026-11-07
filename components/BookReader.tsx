@@ -10,6 +10,7 @@ import { StoryArt } from "@/components/story-art/StoryArt";
 import type { ArtScene } from "@/lib/cerita/illus-types";
 import { ReadText, useNarrator, useLullabySound, playBlip } from "@/components/book/readaloud";
 import { FIND_IT, TAP_NAMES } from "@/lib/cerita/find-it";
+import { stickerFor, awardSticker, getStickers, collectFact, factKey, isFact } from "@/lib/cerita/stickers";
 
 type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
 
@@ -308,6 +309,11 @@ export function BookReader({
           sleepDone: "Selamat tidur 🌙",
           find: "Cari",
           found: "Ketemu!",
+          sticker: "Hore! Kamu dapat stiker baru!",
+          stickerAgain: "Stiker cerita ini sudah ada di koleksimu",
+          stickers: (n: number) => `Koleksimu: ${n} stiker`,
+          seeCollection: "Lihat koleksi stikermu →",
+          newFact: "Kartu fakta baru!",
         }
       : {
           open: "Read in Book Mode",
@@ -336,6 +342,11 @@ export function BookReader({
           sleepDone: "Good night 🌙",
           find: "Find",
           found: "Found it!",
+          sticker: "Hooray! You earned a new sticker!",
+          stickerAgain: "This story's sticker is already in your collection",
+          stickers: (n: number) => `Your collection: ${n} stickers`,
+          seeCollection: "See your sticker book →",
+          newFact: "New fact card!",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -688,6 +699,28 @@ export function BookReader({
       </div>
     ) : null;
 
+  /* ── stickers + fact cards ── */
+  const [award, setAward] = useState<{ fresh: boolean; count: number } | null>(null);
+  const [factToast, setFactToast] = useState(0);
+  useEffect(() => {
+    if (!open || !slug || !picture) return;
+    const cur = sheets?.[pos];
+    if (cur?.kind === "end" && !award) {
+      const fresh = awardSticker(slug);
+      setAward({ fresh, count: Object.keys(getStickers()).length });
+      if (fresh) playBlip("chime", night);
+    }
+    if (cur?.kind === "pic") {
+      const pg = picture[cur.i];
+      if (pg && isFact(pg.text, slug, cur.i) && collectFact(factKey(slug, cur.i))) {
+        setFactToast(Date.now());
+        setTimeout(() => setFactToast(0), 2600);
+      }
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open, pos, sheets]);
+  useEffect(() => { if (!open) setAward(null); }, [open]);
+
   const waveNow = () => {
     setWaved((w) => w + 1);
     if (waveTimer.current) clearTimeout(waveTimer.current);
@@ -850,6 +883,16 @@ export function BookReader({
             )}
             <p className="bk-end-word">{t.end}</p>
             <p className="bk-end-sub">{t.endSub}</p>
+            {award && slug && (
+              <div className={`bk-sticker${award.fresh ? " is-fresh" : ""}`}>
+                <span className="bk-sticker-badge" aria-hidden>{stickerFor(slug)}</span>
+                <span className="bk-sticker-text">
+                  <b>{award.fresh ? t.sticker : t.stickerAgain}</b>
+                  <span>{t.stickers(award.count)}</span>
+                  <a href={asset(`/${locale}/koleksi/`)}>{t.seeCollection}</a>
+                </span>
+              </div>
+            )}
             {nextStory && (
               <a className="bk-nextstory" href={nextStory.href}>
                 <span className="bk-nextstory-label">📖 {t.nextStory}</span>
@@ -956,6 +999,7 @@ export function BookReader({
             )}
           </div>
           {night && <div className="bk-night-note" role="status">{slept ? t.sleepDone : t.nightOn}</div>}
+          {factToast > 0 && <div className="bk-fact-toast" role="status" key={factToast}>🃏 {t.newFact}</div>}
 
           <div className="bk-stage" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <button
@@ -1238,6 +1282,18 @@ export function BookReader({
           font-size:11.5px;font-weight:800;color:#3a2a00;background:rgba(255,255,255,.92);box-shadow:0 4px 12px -6px rgba(0,0,0,.4);}
         .bk-findchip.is-found{background:#FFE27A;}
         .bk-findcount{font-weight:700;opacity:.75;}
+        .bk-sticker{display:flex;align-items:center;gap:12px;margin:10px auto 0;padding:10px 14px;border-radius:18px;max-width:340px;text-align:left;
+          background:linear-gradient(135deg,#FFF6D6,#FFE7F0);box-shadow:0 8px 20px -14px rgba(0,0,0,.5);}
+        .bk-sticker-badge{flex:none;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;font-size:34px;background:#fff;
+          box-shadow:0 0 0 4px #FFD447, 0 6px 14px -6px rgba(0,0,0,.4);}
+        .bk-sticker.is-fresh .bk-sticker-badge{animation:bkStickerIn .9s cubic-bezier(.2,1.6,.4,1) both;}
+        @keyframes bkStickerIn{0%{transform:scale(0) rotate(-40deg)}100%{transform:scale(1) rotate(0)}}
+        .bk-sticker-text{display:flex;flex-direction:column;gap:2px;font-size:12.5px;color:#4a3a1a;}
+        .bk-sticker-text b{font-size:13.5px;color:#3a2a00;}
+        .bk-sticker-text a{font-weight:800;color:#C2410C;}
+        .bk-fact-toast{position:relative;z-index:3;align-self:center;margin-top:4px;padding:6px 14px;border-radius:999px;font-size:13px;font-weight:800;
+          color:#3a2a00;background:#FFE27A;box-shadow:0 6px 16px -8px rgba(0,0,0,.5);animation:bkToast 2.6s ease both;}
+        @keyframes bkToast{0%{opacity:0;transform:translateY(-8px) scale(.9)}12%,85%{opacity:1;transform:none}100%{opacity:0}}
         .bk-tapburst{position:absolute;z-index:4;pointer-events:none;width:0;height:0;}
         .bk-tapburst i{position:absolute;left:-10px;top:-10px;font-style:normal;font-size:22px;animation:bkTapBurst .9s ease-out forwards;
           --a:calc(var(--n) * 90deg - 135deg);}

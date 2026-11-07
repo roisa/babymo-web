@@ -64,6 +64,9 @@ export default async function CatatanIndex({
           <SectionButton href={pathFor(l, "/cerita/tema")}>
             {l === "id" ? "Jelajahi per tema" : "Browse by theme"} →
           </SectionButton>
+          <SectionButton href={pathFor(l, "/koleksi")}>
+            ⭐ {l === "id" ? "Koleksi stikerku" : "My sticker book"}
+          </SectionButton>
         </SectionHeader>
 
         {/* ── Shelf 1: picture-book covers for kids ── */}
