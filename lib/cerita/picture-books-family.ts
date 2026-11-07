@@ -1151,7 +1151,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Hujan turun, jadi malam ini mereka sholat Isya berjamaah di rumah. Abi menggelar sajadah.", en: "It was raining, so tonight they prayed Isha together at home. Abi laid out the prayer mats." },
-        scene: { focus: 320, bg: "living", time: "rain", props: [{ k: "mat", x: 450 }], mo: [{ pose: "pose-21", x: 390 }, { who: "ayah", pose: "kneel-present", x: 265 }] },
+        scene: { focus: 320, bg: "living", time: "night", props: [{ k: "mat", x: 450 }], mo: [{ pose: "pose-21", x: 390 }, { who: "ayah", pose: "kneel-present", x: 265 }], fx: ["rain"] },
       },
       {
         text: { id: "\"Abi jadi imam di depan. Kak Adam di belakang Abi. Mo dan Ais di sebelah Kak Adam.\"", en: "\"I'll lead at the front. Kak Adam behind me. Mo and Ais next to Kak Adam.\"" },
@@ -1180,7 +1180,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Allahu Akbar.\" Semua mulai sholat. Rumah jadi hening. Hanya ada suara hujan dan bacaan Abi.", en: "\"Allahu Akbar.\" Everyone began to pray. The house went quiet. Just the rain and Abi's recitation." },
-        scene: { bg: "living", time: "rain", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-35", x: 360 }], fx: ["sparkle"] },
+        scene: { bg: "living", time: "night", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-35", x: 360 }], fx: ["rain"] },
       },
       {
         text: { id: "Di tengah sholat, seekor kepik merah merayap di dinding. Baby Mo ingin menunjuknya… tapi ia ingat: gerbong kereta tidak boleh lepas!", en: "In the middle of the prayer, a little red ladybird crawled up the wall. Baby Mo wanted to point… but he remembered: the train carriages mustn't come loose!" },
@@ -1423,19 +1423,19 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Setiap selesai Maghrib, Kak Adam membaca Al-Qur'an. Suaranya pelan dan indah, seperti air yang mengalir.", en: "Every evening after Maghrib, Kak Adam read the Qur'an. His voice was soft and beautiful, like flowing water." },
-        scene: { focus: 390, bg: "living", time: "dusk", mo: [{ who: "adam", pose: "quran-read-sit", x: 390 }], fx: ["sparkle"] },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "adam", pose: "quran-read-sit", x: 390 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Baby Mo duduk mendengarkan sambil menopang dagu. \"Kak, aku juga mau bisa baca seperti Kakak!\"", en: "Baby Mo sat listening, chin in his hands. \"Kak, I want to read like you!\"" },
-        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ pose: "pose-12", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 420 }] },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "pose-12", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 420 }] },
       },
       {
         text: { id: "Abi tersenyum. \"Kak Adam dulu juga mulai dari Iqra jilid satu. Mau jadi guru adikmu, Kak?\"", en: "Abi smiled. \"Kak Adam started with Iqra book one too. Would you like to be your brother's teacher, Kak?\"" },
-        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "proud-hands-hips", x: 420 }], fx: ["sparkle"] },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "proud-hands-hips", x: 420 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Kak Adam membuka buku Iqra kecil. \"Ini alif — berdiri tegak seperti tiang. Coba bilang: a!\" \"A!\"", en: "Kak Adam opened a little Iqra book. \"This is alif — standing tall like a pole. Say: a!\" \"A!\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-41", x: 290 }, { who: "adam", pose: "teach-iqra-sit", x: 430 }] },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-41", x: 290 }, { who: "adam", pose: "teach-iqra-sit", x: 430 }] },
       },
       {
         text: { id: "\"Ini ba — seperti perahu dengan satu titik di bawah. Ba!\" Baby Mo menunjuk. \"Perahu! Ba!\"", en: "\"This is ba — like a boat with one dot underneath. Ba!\" Baby Mo pointed. \"A boat! Ba!\"" },

@@ -19,7 +19,7 @@ const TOP = -340;
 
 /* ───────── backgrounds ───────── */
 
-function sky(time: ArtTime) {
+function sky(time: ArtTime, noSun = false) {
   const c =
     time === "night"
       ? ["#1B2350", "#2E2A63", "#3B3473"]
@@ -39,7 +39,7 @@ function sky(time: ArtTime) {
       </defs>
       <rect y={TOP} width={W} height={H - TOP} fill={`url(#sa-sky-${time})`} />
       {time === "night" && <Moon x={650} y={80} />}
-      {time === "day" && <Sun x={660} y={80} />}
+      {time === "day" && !noSun && <Sun x={660} y={80} />}
       {time === "dusk" && <circle cx={640} cy={250} r={70} fill="#FFD27A" opacity=".85" />}
       {time !== "night" && (
         <>
@@ -153,7 +153,7 @@ function Floor({ color, plank = true }: { color: string; plank?: boolean }) {
   );
 }
 
-function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rainy?: boolean }) {
+function Background({ bg, time, rainy = false, noSun = false }: { bg: ArtBg; time: ArtTime; rainy?: boolean; noSun?: boolean }) {
   const night = time === "night";
   switch (bg) {
     case "bedroom":
@@ -259,7 +259,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
     case "park":
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           <path d="M0 270 q 200 -60 400 -10 t 400 -20 v 200 h -800 z" fill={night ? "#2F5A4A" : "#A8E28F"} />
           <path d="M0 310 q 250 -40 500 0 t 300 -10 v 150 h -800 z" fill={night ? "#244A3C" : "#8CD478"} />
           {bg === "garden" && (
@@ -287,7 +287,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
     case "market":
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           <rect y={280} width={W} height={H - 280} fill="#E8D3B0" />
           {[0, 1, 2].map((i) => {
             const x = 30 + i * 260;
@@ -311,7 +311,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
     case "street":
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           {[
             [60, "#FFB4A2", 150],
             [250, "#A0D8EF", 120],
@@ -362,7 +362,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
       const line = night ? "#C9D3F0" : "#FFFFFF";
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           {/* trees behind the fence */}
           {[40, 150, 270, 520, 640, 760].map((x, i) => (
             <g key={x} className="sa-sway-slow" style={{ animationDelay: `${-i * 0.8}s` }}>
@@ -590,7 +590,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
     case "hill":
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           {time === "night" && <rect y={TOP} width={W} height={H - TOP} fill="#0E1433" opacity=".35" />}
           <path d="M-20 300 q 160 -60 360 -30 t 480 -10 V 460 H -20 z" fill={time === "night" ? "#24324A" : "#7DC46B"} />
           <path d="M-20 340 q 220 -46 440 -16 t 400 6 V 460 H -20 z" fill={time === "night" ? "#2E3F5A" : "#93D37D"} />
@@ -606,7 +606,7 @@ function Background({ bg, time, rainy = false }: { bg: ArtBg; time: ArtTime; rai
     case "beach":
       return (
         <g>
-          {sky(time)}
+          {sky(time, noSun)}
           <rect y={210} width={W} height={90} fill="#4CB8E8" />
           <g className="sa-waves">
             <path d="M-40 250 q 40 -14 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 t 80 0 v 60 h -880 z" fill="#7FD3F5" />
@@ -2987,7 +2987,9 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <g className={quake ? "sa-quake" : undefined}>
-      <Background bg={scene.bg} time={time} rainy={indoorRain} />
+      <Background bg={scene.bg} time={time} rainy={indoorRain} noSun={(scene.props ?? []).some((p) => p.k === "sun")} />
+      {/* evening in a room: a warm glow, so dusk reads even when the window is out of the crop */}
+      {indoor && time === "dusk" && <rect y={TOP} width={W} height={H - TOP} fill="#FF8A5B" opacity=".13" style={{ pointerEvents: "none" }} />}
       <g style={{ pointerEvents: "none" }}>{(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}</g>
       <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
