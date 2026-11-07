@@ -1,5 +1,6 @@
 import { asset } from "@/lib/i18n/config";
 import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@/lib/cerita/illus-types";
+import { FRIEND_SCALE } from "@/lib/cerita/friends-poses";
 
 /**
  * Animated SVG picture-book illustration for a story scene.
@@ -1667,11 +1668,16 @@ const FOOT_PAD: Record<string, number> = {
 };
 
 function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
-  const s = m.s ?? 235;
+  const who = m.who ?? "mo";
+  // friends are taller than the twins at the same `s`
+  const s = (m.s ?? 235) * (who === "adam" || who === "ayah" ? FRIEND_SCALE[who] : 1);
   const move = m.move ?? "bob";
-  const ais = m.who === "ais";
-  // Ais renders all share one ground line: feet at 725/800
-  const pad = (ais ? 0.094 : FOOT_PAD[m.pose] ?? 0.09) * s;
+  // Ais and friend renders all share one ground line: feet at 725/800
+  const pad = (who === "mo" ? FOOT_PAD[m.pose] ?? 0.09 : 0.094) * s;
+  const src =
+    who === "mo" ? `/baby-mo-poses/baby-mo-${m.pose}.png`
+    : who === "ais" ? `/baby-ais-poses/baby-ais-${m.pose}.png`
+    : `/${who}-poses/${who}-${m.pose}.png`;
   const cls = move === "still" ? "" : move === "bob" ? "sa-mo-breathe" : `sa-mo-${move}`;
   const delay = { animationDelay: `${-idx * 0.7}s` };
   return (
@@ -1683,7 +1689,7 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
       </g>
       <g className={cls} style={delay}>
         <image
-          href={asset(ais ? `/baby-ais-poses/baby-ais-${m.pose}.png` : `/baby-mo-poses/baby-mo-${m.pose}.png`)}
+          href={asset(src)}
           x={-s / 2}
           y={-s + pad}
           width={s}
