@@ -201,7 +201,7 @@ export function useNarrator(lang: string) {
       const my = ++token.current;
       const toks = tokenize(text);
       const rate = opts.rate ?? 0.92;
-      const msPerChar = 62 / rate;
+      const msPerChar = 58 / rate;
       const est = (w: string) => (w.length + 1.6) * msPerChar + (/[.,!?…]$/.test(w) ? 260 / rate : 0);
       const finish = () => {
         if (timer.current) clearInterval(timer.current);
@@ -277,7 +277,7 @@ export function useNarrator(lang: string) {
           if (token.current !== my) return;
           if (timer.current) { clearInterval(timer.current); timer.current = null; }
           // a short natural breath between sentences
-          setTimeout(() => sayChunk(k + 1), /[!?]$/.test(c.text) ? 160 : 120);
+          setTimeout(() => sayChunk(k + 1), /[!?]$/.test(c.text) ? 450 : 380);
         };
         u.onerror = () => { if (token.current === my) sayChunk(k + 1); };
         window.speechSynthesis.speak(u);

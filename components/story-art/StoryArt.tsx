@@ -2961,7 +2961,7 @@ export function StoryArt({
       </defs>
       <g className={quake ? "sa-quake" : undefined}>
       <Background bg={scene.bg} time={time} />
-      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
+      <g style={{ pointerEvents: "none" }}>{(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}</g>
       <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
         <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`} style={p.d ? ({ "--sa-d": `${p.d}s` } as React.CSSProperties) : undefined}>
@@ -2973,8 +2973,11 @@ export function StoryArt({
       {(scene.mo ?? []).map((m, i) => [m, i] as const).sort(([a], [b]) => Number(isKid(a)) - Number(isKid(b))).map(([m, i]) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
       </g>
       </g>
-      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
-      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page || spread} />}
+      {/* effects float over the scene but never catch a child's tap */}
+      <g style={{ pointerEvents: "none" }}>
+        {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
+        {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page || spread} />}
+      </g>
     </svg>
   );
 }
