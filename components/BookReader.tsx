@@ -8,6 +8,7 @@ import { StoryScene } from "@/components/StoryScene";
 import type { SceneKey } from "@/lib/cerita/scene";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import type { ArtScene } from "@/lib/cerita/illus-types";
+import { ReadText, useNarrator, useLullabySound } from "@/components/book/readaloud";
 
 type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
 
@@ -296,6 +297,11 @@ export function BookReader({
           babymo: "Baby Mo",
           backTag: "Cerita bergambar untuk dibaca bersama",
           cardBadge: "Kartu untuk Ayah & Bunda",
+          read: "Bacakan",
+          readStop: "Berhenti",
+          night: "Mode tidur",
+          nightOn: "Mode tidur aktif · suara ombak pelan",
+          sleepDone: "Selamat tidur 🌙",
         }
       : {
           open: "Read in Book Mode",
@@ -317,6 +323,11 @@ export function BookReader({
           babymo: "Baby Mo",
           backTag: "A picture book to read together",
           cardBadge: "A card for parents",
+          read: "Read to me",
+          readStop: "Stop",
+          night: "Bedtime",
+          nightOn: "Bedtime mode · soft waves",
+          sleepDone: "Good night 🌙",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -525,6 +536,98 @@ export function BookReader({
     });
   };
 
+  /* ── read-aloud + bedtime ── */
+  const [readOn, setReadOn] = useState(false);
+  const [night, setNight] = useState(false);
+  const [word, setWord] = useState(-1);
+  const narrator = useNarrator(locale);
+  const lullaby = useLullabySound();
+  const turnTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const sleepTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const [slept, setSlept] = useState(false);
+  const skipOnce = useRef(false);
+
+  const narrateAt = useCallback(
+    (p: number) => {
+      if (turnTimer.current) clearTimeout(turnTimer.current);
+      const sh = sheets?.[p];
+      if (!sh || !picture) return;
+      const rate = night ? 0.8 : 0.92;
+      const pitch = night ? 0.97 : 1.06;
+      const next = (delay: number) => {
+        turnTimer.current = setTimeout(() => go(1), delay);
+      };
+      if (sh.kind === "cover") {
+        narrator.speak(title, { rate, pitch, onEnd: () => next(night ? 1500 : 900) });
+      } else if (sh.kind === "pic") {
+        const pg = picture[sh.i];
+        if (!pg) return;
+        narrator.speak(pg.text, { rate, pitch, onWord: setWord, onEnd: () => next(night ? 2200 : 1300) });
+      } else if (sh.kind === "card") {
+        next(400); // the parents' card is for grown-ups to read
+      } else if (sh.kind === "end") {
+        narrator.speak(locale === "id" ? "Tamat." : "The end.", { rate, pitch });
+        setReadOn(false);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [sheets, picture, night, title, locale],
+  );
+
+  // read each page as it opens while read-aloud is on
+  useEffect(() => {
+    if (!open || !readOn) return;
+    if (skipOnce.current) { skipOnce.current = false; return; }
+    setWord(-1);
+    const id = setTimeout(() => narrateAt(pos), 500);
+    return () => clearTimeout(id);
+  }, [open, readOn, pos, narrateAt]);
+
+  // stop everything when the book closes
+  useEffect(() => {
+    if (open) return;
+    narrator.stop();
+    lullaby.stop();
+    setReadOn(false);
+    setNight(false);
+    setWord(-1);
+    if (turnTimer.current) clearTimeout(turnTimer.current);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  // bedtime: the waves fade out 20 s after "The End", or after 20 minutes
+  useEffect(() => {
+    if (!night) return;
+    const atEndNow = sheets?.[pos]?.kind === "end";
+    if (sleepTimer.current) clearTimeout(sleepTimer.current);
+    sleepTimer.current = setTimeout(() => { lullaby.stop(); setSlept(true); }, atEndNow ? 20000 : 20 * 60000);
+    return () => { if (sleepTimer.current) clearTimeout(sleepTimer.current); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [night, pos]);
+
+  const toggleRead = () => {
+    if (readOn) {
+      setReadOn(false);
+      narrator.stop();
+      setWord(-1);
+      if (turnTimer.current) clearTimeout(turnTimer.current);
+    } else {
+      skipOnce.current = true;
+      setReadOn(true);
+      narrateAt(pos); // start inside the tap so phones allow the voice
+    }
+  };
+  const toggleNight = () => {
+    if (night) {
+      setNight(false);
+      lullaby.stop();
+    } else {
+      setNight(true);
+      setSlept(false);
+      lullaby.start();
+    }
+  };
+
   const waveNow = () => {
     setWaved((w) => w + 1);
     if (waveTimer.current) clearTimeout(waveTimer.current);
@@ -579,7 +682,7 @@ export function BookReader({
         </div>
         <div className="bk-gutter" aria-hidden />
         <div className={`bk-pic-text bk-spread-text bk-spread-text--${side}`}>
-          <p className={s.i === 0 ? "bk-pic-first" : undefined}>{pg.text}</p>
+          <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={pg.text} active={word} /></p>
           {pg.quote && <blockquote>{pg.quote}</blockquote>}
         </div>
         <div className={`bk-pic-num bk-spread-num--${side}`} aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
@@ -611,7 +714,7 @@ export function BookReader({
             <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page />
           </div>
           <div className="bk-pic-text">
-            <p className={s.i === 0 ? "bk-pic-first" : undefined}>{pg.text}</p>
+            <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={pg.text} active={sheets?.[pos] === s ? word : -1} /></p>
             {pg.quote && <blockquote>{pg.quote}</blockquote>}
           </div>
           <div className="bk-pic-num" aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
@@ -748,7 +851,7 @@ export function BookReader({
       </button>
 
       {open && (
-        <div className={`bk-overlay${isSpread ? " bk-overlay--wide" : ""}`} role="dialog" aria-modal="true" aria-label={title}>
+        <div className={`bk-overlay${isSpread ? " bk-overlay--wide" : ""}${night ? " bk-overlay--night" : ""}`} role="dialog" aria-modal="true" aria-label={title}>
           <div className="bk-ambient" aria-hidden>
             {accent.map((em, i) => (
               <span key={i} className="bk-amb" style={{ "--i": i } as React.CSSProperties}>
@@ -781,7 +884,18 @@ export function BookReader({
                 A+
               </button>
             </div>
+            {picture && (
+              <div className="bk-readctl">
+                <button type="button" className={`bk-icon bk-icon--pill${readOn ? " is-on" : ""}`} onClick={toggleRead} aria-pressed={readOn}>
+                  <span aria-hidden>{readOn ? "⏸" : "🔊"}</span> <span className="bk-pill-label">{readOn ? t.readStop : t.read}</span>
+                </button>
+                <button type="button" className={`bk-icon bk-icon--pill${night ? " is-on" : ""}`} onClick={toggleNight} aria-pressed={night} aria-label={t.night}>
+                  <span aria-hidden>🌙</span> <span className="bk-pill-label">{t.night}</span>
+                </button>
+              </div>
+            )}
           </div>
+          {night && <div className="bk-night-note" role="status">{slept ? t.sleepDone : t.nightOn}</div>}
 
           <div className="bk-stage" onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
             <button
@@ -873,6 +987,24 @@ export function BookReader({
           flex-shrink:0;padding:10px 14px 8px;padding-top:calc(10px + env(safe-area-inset-top));
           background:linear-gradient(180deg,rgba(8,6,4,.5),rgba(8,6,4,0));}
         .bk-fontctl{display:flex;gap:8px;}
+        .bk-readctl{display:flex;gap:8px;order:3;}
+        .bk-topbar{flex-wrap:wrap;gap:8px;}
+        .bk-icon--pill{height:40px;font-size:14px;gap:6px;padding:0 14px;border-radius:999px;}
+        .bk-icon--pill.is-on{background:#FFD447;color:#3a2a00;border-color:#FFD447;}
+        @media (max-width:520px){ .bk-pill-label{display:none;} .bk-icon--pill{min-width:46px;padding:0 12px;} }
+        .bk-w{border-radius:6px;transition:background .15s ease,color .15s ease;}
+        .bk-w--on{background:#FFE27A;color:#3a2a00;box-shadow:0 0 0 3px #FFE27A;}
+        .bk-sfx{display:inline-block;font-family:var(--font-display, inherit);font-weight:900;font-size:1.22em;letter-spacing:.02em;color:#E8475F;
+          text-shadow:0 2px 0 #FFD447;transform:rotate(var(--r,0deg));animation:bkSfx 1.6s ease-in-out infinite;}
+        .bk-sfx.bk-w--on{color:#E8475F;animation:bkSfxPop .5s ease-out;}
+        @keyframes bkSfx{0%,100%{transform:rotate(var(--r,0deg)) scale(1)}50%{transform:rotate(calc(var(--r,0deg) * -1)) scale(1.08)}}
+        @keyframes bkSfxPop{0%{transform:scale(1)}40%{transform:scale(1.45)}100%{transform:scale(1)}}
+        .bk-overlay--night{background:radial-gradient(120% 90% at 50% -10%, rgba(20,24,60,.75), rgba(4,5,14,.94));}
+        .bk-overlay--night .bk-book{filter:brightness(.74) saturate(.8) sepia(.12);transition:filter 1.2s ease;}
+        .bk-overlay--night .bk-amb{opacity:.25;}
+        .bk-night-note{position:relative;z-index:3;align-self:center;margin-top:-2px;padding:4px 12px;border-radius:999px;font-size:12px;font-weight:700;
+          color:#E3E8FF;background:rgba(40,46,96,.6);}
+        @media (prefers-reduced-motion: reduce){ .bk-sfx{animation:none;} }
         .bk-icon{display:inline-flex;align-items:center;justify-content:center;min-width:46px;height:46px;padding:0 12px;border-radius:14px;cursor:pointer;
           border:1px solid rgba(255,255,255,.45);background:rgba(18,14,10,.62);color:#fff;font-weight:800;font-size:17px;
           box-shadow:0 3px 12px rgba(0,0,0,.4);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);}
