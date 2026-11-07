@@ -47,24 +47,24 @@ scene: {
 | `dua-hands` | worship | Standing, palms cupped in du'a, eyes closed. Before eating, bedtime du'a, thanking Allah. |
 | `quran-read-sit` | worship · low | Sitting cross-legged holding an open Qur'an, gentle smile. Reading, Ramadan, teaching the twins. |
 | `sedekah-box` | care | Dropping a coin into a "Sedekah" box. Charity, sharing, Friday, Ramadan stories. |
-| `tennis-forehand-1` | play | Forehand frame 1/6: ready stance. Animation or the start of a rally. |
-| `tennis-forehand-2` | play | Forehand frame 2/6: racket up, turning. |
-| `tennis-forehand-3` | play | Forehand frame 3/6: take-back, free hand reaching out. |
-| `tennis-forehand-4` | play | Forehand frame 4/6: racket dropping low, stepping in. |
-| `tennis-forehand-5` | play | Forehand frame 5/6: contact, ball on the strings. |
-| `tennis-forehand-6` | play | Forehand frame 6/6: follow-through, satisfied smile. |
+| `tennis-forehand-1` | play | Forehand 1/6: ready stance, racket in front, smiling. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-forehand-2` | play | Forehand 2/6: unit turn: racket up behind his head, free hand pointing at the ball. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-forehand-3` | play | Forehand 3/6: take-back, the ball coming in. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-forehand-4` | play | Forehand 4/6: contact beside his body, ball on the strings. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-forehand-5` | play | Forehand 5/6: follow-through, racket swinging up. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-forehand-6` | play | Forehand 6/6: finish over his shoulder (hug your shoulder), cheering. Play with ADAM_FOR.forehandFrames; contact is frame 4. |
+| `tennis-punch-1` | play | Short punch swing 1/6: ready stance. Not a full forehand; use for a block, a low ball or a volley-style return. |
+| `tennis-punch-2` | play | Short punch swing 2/6: racket up beside his head. Not a full forehand; use for a block, a low ball or a volley-style return. |
+| `tennis-punch-3` | play | Short punch swing 3/6: racket back high, free hand out. Not a full forehand; use for a block, a low ball or a volley-style return. |
+| `tennis-punch-4` | play | Short punch swing 4/6: racket dropping low, stepping in. Not a full forehand; use for a block, a low ball or a volley-style return. |
+| `tennis-punch-5` | play | Short punch swing 5/6: low contact in front, ball on the strings. Not a full forehand; use for a block, a low ball or a volley-style return. |
+| `tennis-punch-6` | play | Short punch swing 6/6: extends forward at chest height (a short, volley-like finish). Not a full forehand; use for a block, a low ball or a volley-style return. |
 | `tennis-backhand-1` | play | Two-handed backhand 1/6: ready stance. |
 | `tennis-backhand-2` | play | Backhand 2/6: shoulder turn, racket up. |
 | `tennis-backhand-3` | play | Backhand 3/6: take-back over the shoulder. |
 | `tennis-backhand-4` | play | Backhand 4/6: swing low, stepping in. |
 | `tennis-backhand-5` | play | Backhand 5/6: contact, ball on the strings. |
 | `tennis-backhand-6` | play | Backhand 6/6: follow-through over the shoulder, laughing. |
-| `tennis-swing-1` | play | Second forehand set 1/6: ready, smiling. Front-facing, friendlier for book pages. |
-| `tennis-swing-2` | play | Swing 2/6: racket up, free hand pointing at the ball. |
-| `tennis-swing-3` | play | Swing 3/6: take-back, ball coming in. |
-| `tennis-swing-4` | play | Swing 4/6: contact, determined face. |
-| `tennis-swing-5` | play | Swing 5/6: follow-through. |
-| `tennis-swing-6` | play | Swing 6/6: finish over the shoulder, cheering. |
 | `tennis-hold-ball` | play | Standing relaxed, racket down, ball in hand. Before a match, "want to play?" |
 | `tennis-serve-toss` | play | Serve: tossing the ball up, racket back. Start of a game. |
 | `tennis-hit-forehand` | play | Hitting a forehand, ball on the racket. Single-image "playing tennis". |
@@ -197,7 +197,9 @@ There are six six-frame sequences from the tennis animation brief. They play wit
 | `tennis-shuffle-1…6` | wide, step out, hop, close, step out, wide | Footwork, front view; loops while he slides across |
 | `tennis-run-1…6` | run cycle | Running with the racket; loops while he moves |
 
-The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis-swing-1…6`) are six-frame swings. Use frame 4 or 5 as a single book image, or play them in order as an animation.
+**Forehand note:** `tennis-forehand-1…6` is the full forehand (contact at frame 4, finish over the shoulder). The short, volley-like set is `tennis-punch-1…6`; it was named "forehand" before November 2026.
+
+The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis-punch-1…6`) are six-frame swings. Use frame 4 or 5 as a single book image, or play them in order as an animation.
 
 ## Ayah — 96 poses
 

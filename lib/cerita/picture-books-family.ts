@@ -13,10 +13,10 @@ const FPS = 12 / 1.8;
 const loop = (f: string[]) => [...f, f[5]!, f[5]!, f[0]!, f[0]!, f[0]!, f[0]!];
 const fh = (i: number) => `tennis-forehand-${i}`;
 const bh = (i: number) => `tennis-backhand-${i}`;
-const sw = (i: number) => `tennis-swing-${i}`;
+const pu = (i: number) => `tennis-punch-${i}`;
 const FOREHAND = loop([1, 2, 3, 4, 5, 6].map(fh));
 const BACKHAND = loop([1, 2, 3, 4, 5, 6].map(bh));
-const SWING = loop([1, 2, 3, 4, 5, 6].map(sw));
+const PUNCH = loop([1, 2, 3, 4, 5, 6].map(pu));
 /* Adam's animation sets (lib/cerita/friends-poses.ts ADAM_FOR) */
 const six = (b: string) => [1, 2, 3, 4, 5, 6].map((i) => `${b}-${i}`);
 const WAVE = six("tennis-wave").slice(1, 5);
@@ -24,10 +24,13 @@ const CELEBRATE = [...six("tennis-celebrate"), "tennis-celebrate-6", "tennis-cel
 const RUN = six("tennis-run");
 const SHUFFLE = six("tennis-shuffle");
 const BOUNCE = six("tennis-bounce");
-/** contact is frame 5 (index 4) → 4 / FPS seconds into the loop */
+/** backhand contact is frame 5 (index 4) → 4 / FPS seconds into the loop */
 const HIT = 0.6;
+/** forehand contact is frame 4 (index 3), beside the body */
+const FH_HIT = 0.45;
 /** the swoosh peaks 55% into its 1.8 s loop */
 const TRAIL = HIT - 0.99;
+const FH_TRAIL = FH_HIT - 0.99;
 
 export const FAMILY_BOOKS: PictureBook[] = [
   /* ───────────────────────── Tennis 1. The wobbly forehand ───────────────────────── */
@@ -48,7 +51,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     tags: ["tenis", "kak adam", "sabar", "latihan", "olahraga", "abi"],
     cover: {
       focus: 360, bg: "court",
-      props: [{ k: "ballbasket", x: 560 }, { k: "ballfly", x: 455, y: 360, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }],
+      props: [{ k: "ballbasket", x: 560 }, { k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }],
       mo: [{ pose: "yeyy", x: 270, move: "hop" }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }],
     },
     pages: [
@@ -82,7 +85,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Rahasia pertama: mata ke bola. \"Lihat bolanya terus, sampai menempel di senar raket!\"", en: "Secret one: eyes on the ball. \"Keep watching it until it touches the strings!\"" },
-        scene: { focus: 380, bg: "court", props: [{ k: "ballbounce", x: 470 }], mo: [{ who: "adam", pose: sw(3), x: 390 }, { pose: "pose-08", x: 270 }] },
+        scene: { focus: 380, bg: "court", props: [{ k: "ballbounce", x: 470 }], mo: [{ who: "adam", pose: fh(3), x: 390 }, { pose: "pose-08", x: 270 }] },
       },
       {
         text: { id: "Rahasia kedua: putar badan, seperti pintu yang membuka. Kriiiet… buka!", en: "Secret two: turn your body, like a door swinging open. Creeeak… open!" },
@@ -90,7 +93,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Rahasia ketiga: ayun dari bawah ke atas, lalu raketnya mendarat di bahu — seperti memeluk diri sendiri.", en: "Secret three: swing from low to high, and let the racket land on your shoulder — like giving yourself a hug." },
-        scene: { focus: 380, bg: "court", props: [{ k: "swoosh", x: 420, y: 300, d: TRAIL }], mo: [{ who: "adam", pose: fh(4), seq: FOREHAND, fps: FPS, x: 380, move: "still" }] },
+        scene: { focus: 380, bg: "court", props: [{ k: "swoosh", x: 335, y: 300, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(4), seq: FOREHAND, fps: FPS, x: 380, move: "still" }] },
       },
       {
         text: { id: "Abi membuat lagu: \"Lihat bola, putar badan, ayun… peluk bahu!\" Mo dan Ais ikut bernyanyi sambil menari.", en: "Abi made up a song: \"Watch the ball, turn around, swing… hug your shoulder!\" Mo and Ais sang along and danced." },
@@ -98,11 +101,11 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Kak Adam berlatih lagi. Sekali, dua kali… sepuluh kali. Kadang masuk, kadang nyangkut di net, kadang nyasar ke pohon.", en: "Kak Adam practised again. Once, twice… ten times. Sometimes in, sometimes stuck in the net, sometimes lost in a tree." },
-        scene: { focus: 380, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }, { k: "ballbasket", x: 250 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 380, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "ballbasket", x: 250 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Baby Mo menghitung dengan jarinya. \"Lima… enam… TUJUH masuk berturut-turut!\"", en: "Baby Mo counted on his fingers. \"Five… six… SEVEN in a row!\"" },
-        scene: { focus: 330, bg: "court", props: [{ k: "ballfly", x: 485, y: 360, d: HIT }], mo: [{ pose: "idea", x: 280 }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 420, move: "still" }], fx: ["sparkle"] },
+        scene: { focus: 330, bg: "court", props: [{ k: "ballfly", x: 400, y: 330, d: FH_HIT }], mo: [{ pose: "idea", x: 280 }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 420, move: "still" }], fx: ["sparkle"] },
       },
       {
         text: { id: "Lalu Abi memukul bola yang paling cepat. Kak Adam melihat bola, memutar badan, dan… DUK!", en: "Then Abi hit his fastest ball. Kak Adam watched it, turned, and… THWACK!" },
@@ -235,7 +238,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Forehand Kak Adam sekarang sudah keren. Tapi ada satu rahasia kecil yang ia sembunyikan.", en: "Kak Adam's forehand was looking great now. But he was hiding one little secret." },
-        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Setiap bola datang ke sisi kirinya, Kak Adam lari memutar… jauh sekali… supaya bisa memukul pakai forehand.", en: "Whenever a ball came to his left side, Kak Adam ran all the way round it… really far… so he could hit a forehand." },
@@ -421,7 +424,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Gampang!\" kata Kak Adam. \"Lihat ya — lihat bola, putar badan, ayun!\" WUSSS! Bolanya melesat secepat kilat.", en: "\"Easy!\" said Kak Adam. \"Watch — eyes on the ball, turn, swing!\" WHOOSH! The ball shot off like lightning." },
-        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Baby Mo mencoba. Ayun… luput. Ayun… luput lagi. Bolanya menggelinding ke bawah bangku.", en: "Baby Mo tried. Swing… miss. Swing… miss again. The ball rolled under the bench." },
@@ -1011,7 +1014,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"ABIII!\" Tiga anak berlari bersamaan. Abi berlutut dan menangkap mereka semua sekaligus.", en: "\"ABIII!\" Three children ran at once. Abi knelt and caught them all together." },
-        scene: { focus: 370, bg: "living", time: "dusk", mo: [{ who: "ais", pose: "arms-wide-joy", x: 470 }, { who: "ayah", pose: "hug-mo", x: 300 }, { who: "adam", pose: "wave-hello", x: 400 }], fx: ["hearts", "confetti"] },
+        scene: { focus: 370, bg: "living", time: "dusk", mo: [{ who: "ais", pose: "arms-wide-joy", x: 470 }, { who: "ayah", pose: "hug-mo", x: 300 }, { who: "adam", pose: "run", x: 400 }], fx: ["hearts", "confetti"] },
       },
       {
         text: { id: "Abi membaca doa pulang dari perjalanan, dan anak-anak ikut menirukan pelan-pelan.", en: "Abi said the du'a for coming home from a journey, and the children repeated it softly." },
@@ -1070,7 +1073,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Sekarang lari keliling taman!\" Kak Adam melesat paling depan. Wusss!", en: "\"Now run round the park!\" Kak Adam shot off in front. Whoosh!" },
-        scene: { focus: 380, bg: "park", mo: [{ who: "adam", pose: "tennis-run-1", seq: RUN, fps: 10, move: "still", x: 390 }], fx: ["leaves"] },
+        scene: { focus: 380, bg: "park", mo: [{ who: "adam", pose: "run", move: "hop", x: 390 }], fx: ["leaves"] },
       },
       {
         text: { id: "Abi berlari di tengah. Baby Ais di belakangnya. Dan Baby Mo… paling belakang, dengan kaki pendeknya: tuk-tuk-tuk-tuk.", en: "Abi ran in the middle. Baby Ais behind him. And Baby Mo… right at the back, on his short legs: pitter-patter-pitter." },
@@ -1111,7 +1114,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Sejak hari itu, setiap Ahad pagi mereka lari bersama. Kak Adam selalu di samping Baby Mo.", en: "From then on, every Sunday morning they ran together. Kak Adam always stayed beside Baby Mo." },
-        scene: { focus: 330, bg: "park", props: [{ k: "sun", x: 480, y: 130 }], mo: [{ pose: "run", x: 300, move: "hop" }, { who: "adam", pose: "tennis-run-1", seq: RUN, fps: 10, move: "still", x: 420 }], fx: ["leaves"] },
+        scene: { focus: 330, bg: "park", props: [{ k: "sun", x: 480, y: 130 }], mo: [{ pose: "run", x: 300, move: "hop" }, { who: "adam", pose: "run", move: "hop", x: 420 }], fx: ["leaves"] },
       },
       {
         text: { id: "Olahraga apa yang paling kamu suka? Ajak Abi atau Umi bergerak bersama besok pagi! 🏃", en: "What's your favourite way to move? Ask Abi or Umi to exercise with you tomorrow morning! 🏃" },
@@ -1153,7 +1156,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Kak Adam membaca iqamah dengan suara jelas. \"Qad qaamatish shalaah…\" Baby Mo terkagum-kagum.", en: "Kak Adam called the iqamah in a clear voice. \"Qad qaamatish shalaah…\" Baby Mo was amazed." },
-        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "wow", x: 290 }, { who: "adam", pose: "dua-hands", x: 420 }], fx: ["notes"] },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "wow", x: 290 }, { who: "adam", pose: "iqamah", x: 420 }], fx: ["notes"] },
       },
       {
         text: { id: "Tapi barisannya berantakan. Baby Mo terlalu maju. Baby Ais terlalu mundur. Ada celah besar di tengah.", en: "But the row was a mess. Baby Mo was too far forward. Baby Ais was too far back. There was a big gap in the middle." },
@@ -1186,7 +1189,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Assalamu'alaikum warahmatullah.\" Selesai! Lalu semua bersalaman, dari yang paling kecil sampai Abi.", en: "\"Assalamu'alaikum warahmatullah.\" Done! Then everyone shook hands, from the littlest all the way to Abi." },
-        scene: { focus: 330, bg: "living", time: "night", mo: [{ who: "ais", pose: "heart-hands", x: 280 }, { pose: "thank-you", x: 390 }], fx: ["hearts"] },
+        scene: { focus: 330, bg: "living", time: "night", mo: [{ who: "adam", pose: "salaman", x: 275 }, { pose: "thank-you", x: 390 }], fx: ["hearts"] },
       },
       {
         text: { id: "\"Kenapa harus rapat, Abi?\" tanya Baby Ais. \"Supaya tidak ada celah. Di saf, semua sama: yang besar, yang kecil, semua bersebelahan.\"", en: "\"Why do we stand so close, Abi?\" asked Baby Ais. \"So there are no gaps. In the row everyone is equal: big and small, side by side.\"" },
@@ -1429,15 +1432,15 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Kak Adam membuka buku Iqra kecil. \"Ini alif — berdiri tegak seperti tiang. Coba bilang: a!\" \"A!\"", en: "Kak Adam opened a little Iqra book. \"This is alif — standing tall like a pole. Say: a!\" \"A!\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-41", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 430 }] },
+        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-41", x: 290 }, { who: "adam", pose: "teach-iqra-sit", x: 430 }] },
       },
       {
         text: { id: "\"Ini ba — seperti perahu dengan satu titik di bawah. Ba!\" Baby Mo menunjuk. \"Perahu! Ba!\"", en: "\"This is ba — like a boat with one dot underneath. Ba!\" Baby Mo pointed. \"A boat! Ba!\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-08", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 430 }], fx: ["sparkle"] },
+        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-08", x: 290 }, { who: "adam", pose: "teach-iqra-sit", x: 430 }], fx: ["sparkle"] },
       },
       {
         text: { id: "\"Ta — perahunya dapat dua titik di atas. Tsa — tiga titik!\" Baby Mo mengerutkan dahi. \"Kok perahunya sama semua?\"", en: "\"Ta — the boat gets two dots on top. Tha — three dots!\" Baby Mo frowned. \"Why are all the boats the same?\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-33", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 430 }] },
+        scene: { focus: 340, bg: "living", props: [{ k: "books", x: 360 }], mo: [{ pose: "pose-33", x: 290 }, { who: "adam", pose: "teach-iqra-sit", x: 430 }] },
       },
       {
         text: { id: "Hari kedua, Baby Mo tertukar ba dan ta. Hari ketiga, ia lupa tsa. Ia menutup bukunya. \"Susah, Kak!\"", en: "On day two, Baby Mo mixed up ba and ta. On day three, he forgot tha. He closed the book. \"It's hard, Kak!\"" },
@@ -1639,7 +1642,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Baby Ais mulai menangis. \"Kuenya rusak! Kejutannya gagal!\" Kak Adam pun menunduk sedih.", en: "Baby Ais began to cry. \"The cake's ruined! The surprise is spoilt!\" Even Kak Adam hung his head." },
-        scene: { focus: 330, bg: "kitchen", mo: [{ who: "ais", pose: "sad-tears", x: 280 }, { who: "adam", pose: "sad-head-down", x: 410 }] },
+        scene: { focus: 330, bg: "kitchen", mo: [{ who: "ais", pose: "cry-sit", x: 280 }, { who: "adam", pose: "sad-head-down", x: 410 }] },
       },
       {
         text: { id: "Abi memeluk mereka. \"Umi tidak butuh kue yang sempurna. Umi butuh tahu bahwa kalian sayang Umi.\"", en: "Abi hugged them. \"Umi doesn't need a perfect cake. She needs to know you love her.\"" },
@@ -1820,7 +1823,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Pukulan terakhir: Kak Adam forehand, Abi backhand, Baby Mo dan Baby Ais berteriak, \"Masuuuk!\"", en: "Final shots: Kak Adam's forehand, Abi's backhand, and Baby Mo and Baby Ais yelling, \"It's iiin!\"" },
-        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "\"Jadi siapa pemenangnya?\" tanya Baby Mo. Abi mengangkat piala kecil. \"Pemenangnya… KELUARGA KITA!\"", en: "\"So who won?\" asked Baby Mo. Abi held up a little trophy. \"The winner is… OUR FAMILY!\"" },
@@ -1837,7 +1840,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Di jalan pulang, Kak Adam menggandeng Baby Mo, Abi menggendong Baby Ais. \"Minggu depan pertandingan lagi?\" \"PASTI!\"", en: "On the way home, Kak Adam held Baby Mo's hand and Abi carried Baby Ais. \"Another match next week?\" \"DEFINITELY!\"" },
-        scene: { focus: 300, bg: "street", time: "dusk", mo: [{ pose: "pose-42", x: 330 }, { who: "adam", pose: "hold-hand-down", x: 420 }, { who: "ayah", pose: "backpack-walk", x: 225 }] },
+        scene: { focus: 300, bg: "street", time: "dusk", mo: [{ pose: "pose-42", x: 330 }, { who: "adam", pose: "hold-hand-down", x: 420 }, { who: "ayah", pose: "shoulders-ais", x: 225 }] },
       },
       {
         text: { id: "Permainan apa yang paling seru dimainkan bersama keluargamu? Ajak semua main hari ini — tanpa perlu ada yang kalah! 🏆", en: "What's the most fun game to play with your family? Get everyone playing today — no losers needed! 🏆" },
@@ -1864,7 +1867,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     tags: ["tenis", "forehand", "kak adam", "latihan", "istiqamah", "sabar"],
     cover: {
       focus: 390, bg: "park",
-      props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }, { k: "swoosh", x: 350, y: 330, d: TRAIL }],
+      props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 280, y: 330, d: FH_HIT }, { k: "swoosh", x: 265, y: 330, d: FH_TRAIL }],
       mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }],
       fx: ["sparkle"],
     },
@@ -1875,7 +1878,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Tapi hari ini… bolanya ke net. Lalu keluar. Lalu ke net lagi. Lalu nyasar ke parkiran!", en: "But today… the ball went into the net. Then out. Then the net again. Then off into the car park!" },
-        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, s: 1.3, d: HIT }, { k: "tennisnet", x: 560 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, s: 1.3, d: FH_HIT }, { k: "tennisnet", x: 560 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "\"Kok bisa begini?\" Kak Adam bingung. \"Kemarin bisa, hari ini nggak bisa!\"", en: "\"How did this happen?\" Kak Adam was puzzled. \"Yesterday I could, today I can't!\"" },
@@ -1891,7 +1894,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Hari pertama. Duk… tak… duk… tak. Bola pergi ke tembok, lalu pulang lagi. Dari seratus, yang bagus cuma 23.", en: "Day one. Thock… tock… thock… tock. The ball went to the wall and came home again. Out of a hundred, only 23 were good." },
-        scene: { focus: 390, bg: "park", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }] },
+        scene: { focus: 390, bg: "park", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 280, y: 330, d: FH_HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }] },
       },
       {
         text: { id: "Baby Mo membuat papan grafik dari kardus. Setiap hari, satu batang. \"Biar kelihatan naiknya, Kak!\"", en: "Baby Mo made a chart out of cardboard. One bar for every day. \"So we can see it go up, Kak!\"" },
@@ -1920,7 +1923,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Kak Adam berdiri lagi. \"Bismillah. Seratus lagi.\" Si kembar menghitung keras-keras dari pinggir: \"…empat puluh satu! Empat puluh dua!\"", en: "Kak Adam stood up again. \"Bismillah. Another hundred.\" The twins counted out loud from the side: \"…forty-one! Forty-two!\"" },
-        scene: { focus: 360, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }, { k: "ballrebound", x: 395, y: 360, d: HIT }], mo: [{ who: "ais", pose: "cheer-fist", x: 250 }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 335, move: "still" }] },
+        scene: { focus: 360, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }, { k: "ballrebound", x: 310, y: 330, d: FH_HIT }], mo: [{ who: "ais", pose: "cheer-fist", x: 250 }, { who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 335, move: "still" }] },
       },
       {
         text: { id: "Batang-batang di grafik Baby Mo makin tinggi: 23… 41… 61… 88! Sampai Baby Mo harus menambah kardus di atasnya.", en: "The bars on Baby Mo's chart grew taller: 23… 41… 61… 88! Baby Mo had to tape on more cardboard at the top." },
@@ -1928,7 +1931,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Hari kedua puluh satu. Duk-tak, duk-tak, duk-tak… Si kembar menghitung sampai suaranya serak: \"…sembilan puluh sembilan… SERATUS!\"", en: "Day twenty-one. Thock-tock, thock-tock, thock-tock… The twins counted till they were hoarse: \"…ninety-nine… A HUNDRED!\"" },
-        scene: { focus: 390, bg: "park", time: "dusk", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 365, y: 360, d: HIT }, { k: "swoosh", x: 350, y: 330, d: TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }], fx: ["sparkle"] },
+        scene: { focus: 390, bg: "park", time: "dusk", props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 280, y: 330, d: FH_HIT }, { k: "swoosh", x: 265, y: 330, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 305, move: "still" }], fx: ["sparkle"] },
       },
       {
         text: { id: "Seratus forehand bagus, tanpa satu pun meleset! Kak Adam melompat sambil berteriak, \"Alhamdulillah!\" Kamu sedang melatih apa setiap hari? 💯", en: "A hundred good forehands, not one missed! Kak Adam leapt up shouting, \"Alhamdulillah!\" What are you practising every day? 💯" },
@@ -1962,7 +1965,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Sekarang forehand Kak Adam ke tembok sudah seratus kali sempurna. \"Ayo reli, Abi!\"", en: "Now Kak Adam could hit a hundred perfect forehands against the wall. \"Let's rally, Abi!\"" },
-        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 455, y: 360, d: HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Tapi bola dari Abi tidak seperti bola dari tembok. Kadang pendek, kadang jauh, kadang ke samping.", en: "But Abi's balls weren't like the wall's. Sometimes short, sometimes deep, sometimes off to the side." },
@@ -2010,7 +2013,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Reli dimulai lagi. Hop — langkah semut — berhenti — DUK! Bola pulang ke Abi. Hop — semut — berhenti — DUK!", en: "The rally began again. Hop — ant steps — stop — THOCK! Back to Abi. Hop — ants — stop — THOCK!" },
-        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 450, y: 350, d: HIT }, { k: "footprints", x: 380, y: 436 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 365, y: 320, d: FH_HIT }, { k: "footprints", x: 380, y: 436 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Baby Mo menghitung: \"Lima… sepuluh… lima belas… DUA PULUH pukulan tanpa jatuh!\" Rekor baru!", en: "Baby Mo counted: \"Five… ten… fifteen… TWENTY shots without a miss!\" A new record!" },
@@ -2046,7 +2049,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     tags: ["tenis", "forehand", "pertandingan", "tawakal", "kak adam", "rendah hati"],
     cover: {
       focus: 390, bg: "court",
-      props: [{ k: "ballfly", x: 455, y: 360, s: 1.2, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }, { k: "trophy", x: 580 }],
+      props: [{ k: "ballfly", x: 370, y: 330, s: 1.2, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }, { k: "trophy", x: 580 }],
       mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, ghost: true, x: 390, move: "still" }],
       fx: ["sparkle"],
     },
@@ -2074,11 +2077,11 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Tapi sekarang: hop — langkah semut — berhenti. Lihat bola. Putar badan. Ayun… peluk bahu. DUK!", en: "But now: hop — ant steps — stop. Watch the ball. Turn. Swing… hug your shoulder. THOCK!" },
-        scene: { focus: 400, bg: "court", props: [{ k: "footprints", x: 380, y: 436 }, { k: "ballfly", x: 455, y: 360, d: HIT }, { k: "swoosh", x: 430, y: 330, d: TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 400, bg: "court", props: [{ k: "footprints", x: 380, y: 436 }, { k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Bola pulang dengan keras. Raka mengembalikannya. Kak Adam mengembalikannya lagi. Reli panjang dimulai!", en: "The ball flew back hard. Raka returned it. Kak Adam returned it again. A long rally began!" },
-        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 450, y: 350 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballrally", x: 365, y: 320 }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
       },
       {
         text: { id: "Di bangku penonton, Baby Mo menghitung: \"Sembilan… sepuluh… sebelas…\" Baby Ais menutup matanya dengan tangan.", en: "In the stands, Baby Mo counted: \"Nine… ten… eleven…\" Baby Ais covered her eyes with her hands." },
