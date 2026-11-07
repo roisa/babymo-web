@@ -1424,3 +1424,7 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 .sa-winrain { animation: sa-winrain .85s linear infinite; }
 @keyframes sa-windrop { 0% { translate: 0 0; opacity: 0; } 15% { opacity: .8; } 100% { translate: 0 110px; opacity: 0; } }
 .sa-windrop { animation: sa-windrop 4.2s ease-in infinite; }
+
+/* Element library (team page): optional still mode */
+.el-still .story-art [class^="sa-"], .el-still .story-art [class*=" sa-"],
+.story-art.el-measure [class^="sa-"], .story-art.el-measure [class*=" sa-"] { animation: none !important; }
