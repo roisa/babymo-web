@@ -1406,3 +1406,13 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 .sa-dust { animation: sa-dust 1.8s linear infinite; }
 @keyframes sa-buzz { 0%,100% { translate: 0 0; } 25% { translate: 14px -8px; } 50% { translate: 0 -14px; } 75% { translate: -14px -6px; } }
 .sa-buzz { animation: sa-buzz 2.2s ease-in-out infinite; }
+
+/* ── Book Mode: tap-to-play + find-it ── */
+@keyframes sa-poke { 0% { translate: 0 0; scale: 1 1; } 25% { translate: 0 -22px; scale: .94 1.08; } 50% { translate: 0 0; scale: 1.1 .9; } 70% { rotate: -6deg; scale: 1 1; } 85% { rotate: 5deg; } 100% { translate: 0 0; rotate: 0deg; scale: 1 1; } }
+.sa-poke { transform-origin: 50% 100%; animation: sa-poke .8s ease-out; }
+@keyframes sa-poke-color { 0% { filter: hue-rotate(0deg); } 50% { filter: hue-rotate(160deg) saturate(1.4); } 100% { filter: hue-rotate(0deg); } }
+.sa-poke-color { animation: sa-poke .8s ease-out, sa-poke-color .9s ease-in-out; }
+@keyframes sa-find { 0%,88%,100% { rotate: 0deg; } 92% { rotate: -12deg; } 96% { rotate: 10deg; } }
+.sa-find { transform-origin: 50% 100%; animation: sa-find 4.5s ease-in-out infinite; }
+@keyframes sa-found { 0% { scale: 1; } 40% { scale: 1.8; } 100% { scale: 1.25; } }
+.sa-find.is-found { animation: sa-found .6s ease-out forwards; filter: drop-shadow(0 0 6px #FFE27A) drop-shadow(0 0 2px #fff); }

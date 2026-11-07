@@ -168,6 +168,7 @@ export default async function CatatanDetail({
           {isStory && (
             <BookReader
               locale={l}
+              slug={slug}
               title={n.title[l]}
               hook={n.hook[l]}
               body={n.body[l]}
