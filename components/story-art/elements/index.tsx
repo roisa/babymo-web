@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
+import { Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
 /**
@@ -50,4 +51,24 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   fruit: { draw: Fruit, group: "food", note: "Basket of fruit: apple, banana, orange, grapes, pear." },
   veggies: { draw: Veggies, group: "food", note: "Crate of tomatoes, carrot and lettuce." },
   water: { draw: Water, group: "food", note: "Glass of water with bubbles." },
+  car: { draw: CarPlain, group: "outdoor", note: "Family car." },
+  carmud: { draw: CarMud, group: "outdoor", note: "Car covered in mud splashes." },
+  carshiny: { draw: CarShiny, group: "outdoor", note: "Freshly washed car, twinkles." },
+  bicycle: { draw: Bicycle, group: "outdoor", note: "Bicycle with a basket, wheels spin." },
+  umbrella: { draw: Umbrella, group: "outdoor", note: "Striped umbrella, sways." },
+  bench: { draw: Bench, group: "outdoor", note: "Park bench." },
+  kite: { draw: Kite, group: "play", note: "Kite with a bow tail, sways in the wind." },
+  sandcastle: { draw: Sandcastle, group: "sea", note: "Sandcastle with a waving flag." },
+  bucket: { draw: Bucket, group: "sea", note: "Beach bucket and spade." },
+  shell: { draw: Shell, group: "sea", note: "Pink scallop shell." },
+  crab: { draw: Crab, group: "sea", note: "Smiling crab, scuttles sideways." },
+  tent: { draw: Tent, group: "outdoor", note: "Camping tent with bunting, door flaps." },
+  lantern: { draw: Lantern, group: "outdoor", note: "Glowing lantern, sways." },
+  sleeper: { draw: Sleeper, group: "home", note: "Umi resting in bed, blanket breathes." },
+  blocks: { draw: BlocksLow, group: "play", note: "Three toy blocks." },
+  blockstall: { draw: BlocksTall, group: "play", note: "Wobbly tall tower of blocks." },
+  blocksfall: { draw: BlocksFall, group: "play", note: "Tower fallen over." },
+  drawing: { draw: Drawing, group: "play", note: "Child's crayon drawing, taped." },
+  quran: { draw: Quran, group: "faith", note: "The Qur'an open on a rehal stand, glowing." },
+  minaret: { draw: Minaret, group: "faith", note: "Mosque minaret, adzan waves." },
 };
