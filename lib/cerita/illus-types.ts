@@ -219,7 +219,7 @@ export interface ArtItem {
 export interface ArtMo {
   /** "mo" (default), "ais" (lib/cerita/ais-poses.ts) or a friend —
    *  "adam" / "ayah" (lib/cerita/friends-poses.ts, drawn taller automatically) */
-  who?: "mo" | "ais" | "adam" | "ayah";
+  who?: "mo" | "ais" | "adam" | "ayah" | "umi";
   /** pose name: baby-mo-<pose>.png */
   pose: string;
   x: number;

@@ -3108,4 +3108,319 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+  /* ───────────────────────── Umi 1. A day just for Umi ───────────────────────── */
+  {
+    slug: "satu-hari-untuk-umi",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-11-15",
+    title: { id: "Satu Hari untuk Umi", en: "A Day Just for Umi" },
+    hook: {
+      id: "Hari ini Umi libur! Abi dan anak-anak mengambil alih semua tugas Umi… dan ternyata daftarnya panjaaang sekali.",
+      en: "Today Umi gets a day off! Abi and the children take over all of Umi's jobs… and the list turns out to be very, very long.",
+    },
+    anchor: { type: "hadith", slug: "berbakti-pada-ibu" },
+    takeaway: {
+      id: "Anak menghargai apa yang ia pahami. Saat anak ikut merasakan pekerjaan ibu, rasa terima kasih tumbuh dengan sendirinya — dan Rasulullah ﷺ menyebut ibu tiga kali sebelum ayah.",
+      en: "Children value what they understand. When they get to feel a mother's work for themselves, gratitude grows on its own — and the Prophet ﷺ named the mother three times before the father.",
+    },
+    tags: ["umi", "ibu", "berbakti", "membantu", "terima kasih", "keluarga"],
+    card: {
+      title: { id: "Mengajak Anak Menghargai Umi", en: "Helping Children Appreciate Mum" },
+      items: {
+        id: [
+          "Beri tugas kecil sesuai usia: 2–3 tahun merapikan mainan dan menaruh baju kotor di keranjang; 4–5 tahun menyiram tanaman dan menata meja; 7 tahun ke atas menyapu dan melipat baju.",
+          "Ceritakan pekerjaan yang tak terlihat: \"Umi sedang memasak supaya kita kuat.\" Anak menghargai apa yang ia pahami.",
+          "Biasakan \"terima kasih, Umi\" setiap hari, dan sesekali buat \"Hari Istimewa untuk Umi\" bersama Abi.",
+        ],
+        en: [
+          "Give small jobs by age: 2–3 years tidy toys and put dirty clothes in the basket; 4–5 years water plants and set the table; 7 and up sweep and fold clothes.",
+          "Name the invisible work: \"Umi is cooking so we grow strong.\" Children value what they understand.",
+          "Make \"thank you, Umi\" a daily habit, and now and then plan a \"Special Day for Umi\" with Abi.",
+        ],
+      },
+    },
+    cover: {
+      focus: 340, bg: "living",
+      props: [{ k: "card", x: 420, y: 330 }],
+      mo: [{ who: "umi", pose: "touched-cheek", x: 250 }, { pose: "thank-you", x: 360 }, { who: "ais", pose: "heart-hands", x: 440 }],
+      fx: ["hearts"],
+    },
+    pages: [
+      {
+        text: { id: "Malam itu Abi berbisik kepada anak-anak: \"Ssst! Besok hari istimewa untuk Umi. Umi istirahat, kita yang mengerjakan semua tugas Umi.\"", en: "That night Abi whispered to the children: \"Shh! Tomorrow is a special day for Umi. Umi rests, and we do all of Umi's jobs.\"" },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "lamp", x: 470 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 260 }, { pose: "pose-03", x: 380 }, { who: "ais", pose: "giggle", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Pagi-pagi, si kembar berbaris di depan Umi. \"Selamat pagi, Umi! Hari ini Umi duduk saja, ya!\" Umi menempelkan tangan di pipinya. \"Masya Allah…\"", en: "Early in the morning, the twins lined up in front of Umi. \"Good morning, Umi! Today you just sit, okay?\" Umi pressed her hands to her cheek. \"Masya Allah…\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "touched-cheek", x: 260 }, { pose: "yeyy", x: 390, move: "hop" }, { who: "ais", pose: "arms-wide-joy", x: 470 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam menulis daftar tugas Umi: memasak, belanja, mencuci baju, menyapu, menyiram bunga, membacakan cerita… Daftarnya makin panjang!", en: "Kak Adam wrote a list of Umi's jobs: cooking, shopping, washing clothes, sweeping, watering the flowers, reading stories… The list kept getting longer!" },
+        scene: { focus: 350, bg: "living", props: [{ k: "card", x: 330, y: 400, s: 0.8 }], mo: [{ who: "adam", pose: "write-card-floor", x: 300 }, { pose: "pose-23", x: 420 }] },
+      },
+      {
+        text: { id: "\"Banyak sekali!\" kata Baby Mo. \"Umi mengerjakan semua ini setiap hari?\" Abi mengangguk. \"Setiap hari, tanpa libur.\"", en: "\"That's so many!\" said Baby Mo. \"Umi does all this every day?\" Abi nodded. \"Every day, with no days off.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ayah", pose: "think-chin-stand", x: 260 }, { pose: "wow", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Tugas pertama: sarapan. Abi menggoreng telur dan Kak Adam mengocok adonan pancake. Dapur jadi berisik dan wangi!", en: "Job one: breakfast. Abi fried the eggs and Kak Adam whisked the pancake batter. The kitchen got noisy and smelled delicious!" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "egg", x: 440, y: 330 }], mo: [{ who: "ayah", pose: "cook-pan", x: 270 }, { who: "adam", pose: "stir-bowl", x: 390 }] },
+      },
+      {
+        text: { id: "Baby Ais menyiram bunga di teras. Byur! Bunganya basah… sandal Ais juga basah. Ais tertawa geli.", en: "Baby Ais watered the flowers on the porch. Splash! The flowers got wet… and so did Ais's sandals. Ais giggled." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "flowers", x: 440 }, { k: "puddle", x: 360 }], mo: [{ who: "ais", pose: "watering-can", x: 320 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Baby Mo menyapu teras. Debu beterbangan ke hidungnya. Haaa-ciuuu! \"Alhamdulillah!\" kata Mo sambil tertawa.", en: "Baby Mo swept the porch. Dust flew up his nose. Aaa-choo! \"Alhamdulillah!\" said Mo, laughing." },
+        scene: { focus: 340, bg: "garden", props: [{ k: "brooms", x: 420 }], mo: [{ pose: "pose-27", x: 320 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Lalu melipat baju. Lipatan Mo jadi gulungan seperti lemper, dan Ais memasukkan kaus kaki ke kantong baju Abi.", en: "Then folding the laundry. Mo's folds turned into rolls like lemper rice snacks, and Ais tucked socks into Abi's shirt pocket." },
+        scene: { focus: 340, bg: "bedroom", props: [{ k: "shirt", x: 340, y: 380 }, { k: "shirtback", x: 430, y: 380 }], mo: [{ pose: "pose-33", x: 280 }, { who: "ais", pose: "shrug", x: 420 }] },
+      },
+      {
+        text: { id: "Umi duduk membaca buku sambil minum teh hangat. Sesekali Umi tertawa melihat baju-baju yang menggulung lucu.", en: "Umi sat reading a book with a warm cup of tea. Every now and then she laughed at the funny rolled-up clothes." },
+        scene: { focus: 340, bg: "living", props: [{ k: "cup", x: 440 }], mo: [{ who: "umi", pose: "read-sit", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Siang hari mereka berbelanja ke pasar bersama Abi. Belanjaan ternyata berat! Kak Adam membawa dua tas besar.", en: "At noon they went to the market with Abi. Shopping turned out to be heavy! Kak Adam carried two big bags." },
+        scene: { focus: 340, bg: "market", props: [{ k: "veggies", x: 470, y: 255 }], mo: [{ who: "adam", pose: "carry-bags", x: 280 }, { pose: "run", x: 400 }] },
+      },
+      {
+        text: { id: "Sore hari Baby Mo berbaring di lantai. \"Ternyata jadi Umi itu capek sekali ya…\" Ais mengangguk sambil menopang dagu.", en: "In the afternoon Baby Mo flopped on the floor. \"Being Umi is really tiring…\" Ais nodded, her chin in her hands." },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "pose-17", x: 300 }, { who: "ais", pose: "sit-chin-hands", x: 420 }] },
+      },
+      {
+        text: { id: "Abi duduk bersama mereka. \"Ada yang bertanya kepada Rasulullah ﷺ, siapa yang paling berhak kita perlakukan dengan baik? Beliau menjawab: ibumu, ibumu, ibumu — baru kemudian ayahmu.\"", en: "Abi sat with them. \"Someone asked the Prophet ﷺ who deserves our kindness most. He answered: your mother, your mother, your mother — and then your father.\"" },
+        quote: { id: "\"Ibumu.\" \"Kemudian siapa?\" \"Ibumu.\" \"Kemudian siapa?\" \"Ibumu.\" \"Kemudian siapa?\" \"Ayahmu.\" (HR. Bukhari dan Muslim)", en: "\"Your mother.\" \"Then who?\" \"Your mother.\" \"Then who?\" \"Your mother.\" \"Then who?\" \"Your father.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ayah", pose: "teach-book-sit", x: 270 }, { pose: "pose-06", x: 400 }] },
+      },
+      {
+        text: { id: "Mereka membuat kartu besar: \"UMI, UMI, UMI ❤️\". Di pojok bawah ada tulisan kecil: \"Abi juga.\" Abi tertawa membacanya.", en: "They made a big card: \"UMI, UMI, UMI ❤️\". In the bottom corner, in tiny letters: \"Abi too.\" Abi laughed when he read it." },
+        scene: { focus: 340, bg: "living", props: [{ k: "drawing", x: 380, y: 360 }], mo: [{ who: "ais", pose: "draw-crayons", x: 310 }, { pose: "pose-29", x: 430 }] },
+      },
+      {
+        text: { id: "Malamnya mereka memberikan kartu itu. Umi menangkupkan tangan di dada. \"Alhamdulillah… Umi merasa sangat disayang hari ini.\"", en: "That evening they gave Umi the card. Umi put her hands to her heart. \"Alhamdulillah… Umi feels so loved today.\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", props: [{ k: "drawing", x: 400, y: 330 }], mo: [{ who: "umi", pose: "grateful-hands", x: 270 }, { pose: "pose-05", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mo berbisik, \"Umi, satu tugas boleh Umi kerjakan malam ini: memeluk Mo.\" Umi tertawa dan memeluknya erat-erat.", en: "Mo whispered, \"Umi, you can do just one job tonight: hug Mo.\" Umi laughed and hugged him tight." },
+        scene: { focus: 340, bg: "bedroom", time: "night", props: [{ k: "teddy", x: 450 }], mo: [{ who: "umi", pose: "hug-mo", x: 330 }], fx: ["hearts", "stars"] },
+      },
+      {
+        text: { id: "Sebelum tidur, Umi mendoakan mereka satu per satu. Apa yang bisa kamu bantu untuk Umimu hari ini? 💗", en: "Before sleep, Umi made du'a for each of them. What can you do to help your Umi today? 💗" },
+        scene: { focus: 340, bg: "bedroom", time: "night", props: [{ k: "lamp", x: 470, s: 0.85 }], mo: [{ who: "umi", pose: "dua-stand", x: 260 }, { pose: "pose-12", x: 390, move: "sway" }], fx: ["zzz", "stars"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Umi 2. Umi's little kitchen ───────────────────────── */
+  {
+    slug: "dapur-kecil-umi",
+    pose: "baby-mo-yes.png",
+    published: "2026-11-16",
+    title: { id: "Koki Kecil di Dapur Umi", en: "Little Chefs in Umi's Kitchen" },
+    hook: {
+      id: "Hari ini si kembar jadi koki kecil! Ada aturan zona panas, wortel yang dihitung, telur yang jatuh — plok! — dan semangkuk sup untuk tetangga.",
+      en: "Today the twins are little chefs! There's a hot-zone rule, carrots to count, an egg that goes — splat! — and a bowl of soup for the neighbour.",
+    },
+    anchor: { type: "hadith", slug: "tetangga-keluarga-luas" },
+    takeaway: {
+      id: "Dapur adalah ruang kelas yang lezat: anak belajar berhitung, sabar menunggu, bertanggung jawab saat tumpah, dan berbagi dengan tetangga — selama aturan amannya jelas.",
+      en: "The kitchen is a delicious classroom: children learn counting, patience, owning their spills and sharing with neighbours — as long as the safety rules are clear.",
+    },
+    tags: ["umi", "memasak", "dapur", "keamanan", "tetangga", "berbagi"],
+    card: {
+      title: { id: "Memasak Bersama Balita dengan Aman", en: "Cooking Safely with Little Ones" },
+      items: {
+        id: [
+          "Tugas sesuai usia: 2–3 tahun mencuci sayur dan mengaduk adonan dingin; 4–5 tahun menakar, menyobek sayur, memotong yang lembut dengan pisau plastik; 7 tahun ke atas memecah telur dan memotong dengan pendampingan.",
+          "Buat \"zona panas\" yang jelas di sekitar kompor dan oven. Pisau tajam dan api tetap tugas orang dewasa.",
+          "Cuci tangan pakai sabun 20 detik (dua kali lagu \"Selamat Ulang Tahun\"), dan anggap tumpahan sebagai bagian dari belajar — bereskan bersama.",
+        ],
+        en: [
+          "Jobs by age: 2–3 years wash vegetables and stir cold mixtures; 4–5 years measure, tear leaves and cut soft food with a plastic knife; 7 and up crack eggs and cut with an adult beside them.",
+          "Mark a clear \"hot zone\" around the stove and oven. Sharp knives and flames stay grown-up jobs.",
+          "Wash hands with soap for 20 seconds (\"Happy Birthday\" twice), and treat spills as part of learning — clean up together.",
+        ],
+      },
+    },
+    cover: {
+      focus: 340, bg: "kitchen",
+      props: [{ k: "veggies", x: 470, y: 330 }],
+      mo: [{ who: "umi", pose: "cook-stove", x: 290 }, { who: "ais", pose: "chef-whisk", x: 430 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Hari Sabtu, Umi bertanya, \"Siapa yang mau jadi koki kecil hari ini?\" \"Aku! Aku!\" teriak si kembar sambil melompat.", en: "On Saturday, Umi asked, \"Who wants to be a little chef today?\" \"Me! Me!\" shouted the twins, jumping up and down." },
+        scene: { focus: 340, bg: "kitchen", mo: [{ who: "umi", pose: "explain-hand", x: 260 }, { pose: "yes", x: 370, move: "hop" }, { who: "ais", pose: "jump-joy", x: 445 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Aturan pertama: cuci tangan pakai sabun sambil bernyanyi \"Selamat Ulang Tahun\" dua kali. Busanya sampai ke siku Mo!", en: "Rule one: wash hands with soap while singing \"Happy Birthday\" twice. Mo's bubbles went all the way up to his elbows!" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "faucet", x: 430 }], mo: [{ pose: "pose-20", x: 330 }], fx: ["bubbles", "notes"] },
+      },
+      {
+        text: { id: "Aturan kedua: \"Kompor itu zona panas,\" kata Umi. \"Hanya Umi yang boleh di dekatnya. Koki kecil berdiri di belakang keset, ya.\"", en: "Rule two: \"The stove is the hot zone,\" said Umi. \"Only Umi goes near it. Little chefs stand behind the mat, okay?\"" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "mat", x: 410 }], mo: [{ who: "umi", pose: "idea-finger", x: 260 }, { pose: "pose-14", x: 410 }] },
+      },
+      {
+        text: { id: "Hari ini mereka memasak sup sayur. Mo dan Ais mencuci wortel dan buncis di baskom. Cipratannya ke mana-mana!", en: "Today they were making vegetable soup. Mo and Ais washed carrots and green beans in a basin. Water splashed everywhere!" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "veggies", x: 380, y: 350 }, { k: "bowl", x: 380 }], mo: [{ pose: "pose-11", x: 290 }, { who: "ais", pose: "chef-bowl", x: 450 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Pisau tajam adalah tugas Umi. Kak Adam memotong tahu yang lembut dengan pisau plastik, dan Mo menghitung irisan wortel: satu, dua… dua puluh!", en: "Sharp knives are Umi's job. Kak Adam cut soft tofu with a plastic knife, and Mo counted the carrot slices: one, two… twenty!" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "veggies", x: 440, y: 330, s: 0.8 }], mo: [{ who: "adam", pose: "stir-bowl", x: 290 }, { pose: "pose-22", x: 410 }] },
+      },
+      {
+        text: { id: "Ais membawa telur dari kulkas. Hati-hati… hati-hati… PLOK! Satu telur jatuh ke lantai. Mata Ais membulat.", en: "Ais carried the eggs from the fridge. Careful… careful… SPLAT! One egg fell on the floor. Ais's eyes went wide." },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "egg", x: 420 }], mo: [{ who: "ais", pose: "surprised", x: 330 }, { pose: "pose-28", x: 450 }] },
+      },
+      {
+        text: { id: "Umi berlutut dan tersenyum. \"Tidak apa-apa, sayang. Koki hebat juga pernah menjatuhkan telur. Ayo kita bersihkan bersama.\"", en: "Umi knelt down and smiled. \"It's okay, love. Great chefs drop eggs too. Let's clean it up together.\"" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "towel", x: 420 }], mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { who: "ais", pose: "sit-chin-hands", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Lalu Umi memasak sup di kompor. Blup, blup, blup! Si kembar menunggu di belakang keset sambil menghirup baunya. Hmmm!", en: "Then Umi cooked the soup on the stove. Blub, blub, blub! The twins waited behind the mat, sniffing. Mmmm!" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "mat", x: 440 }], mo: [{ who: "umi", pose: "cook-stove", x: 290 }, { pose: "pose-26", x: 440 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Menunggu itu susah! Mo menghitung sampai seratus. Dua kali. Ais menghitung jarum jam yang berputar pelan sekali.", en: "Waiting is hard! Mo counted to a hundred. Twice. Ais watched the clock hand creep around very, very slowly." },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "clock", x: 440, y: 230 }], mo: [{ pose: "pose-05", x: 300 }, { who: "ais", pose: "sit-chin-hands", x: 410 }] },
+      },
+      {
+        text: { id: "Akhirnya supnya matang! Mereka membaca doa sebelum makan, lalu… sluurp! \"Sup buatan kita sendiri paling enak!\"", en: "At last the soup was ready! They said the du'a before eating, and then… slurp! \"Soup we made ourselves is the best!\"" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "soup", x: 400 }], mo: [{ pose: "pose-07", x: 300 }, { who: "ais", pose: "eat-bowl", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Supnya masih banyak. Umi mengangkat jari: \"Bagaimana kalau kita antar semangkuk untuk Bu Rina di sebelah?\"", en: "There was still plenty of soup. Umi raised a finger: \"How about we take a bowl to Bu Rina next door?\"" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "soup", x: 430 }], mo: [{ who: "umi", pose: "idea-finger", x: 270 }, { pose: "idea", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam membawa mangkuk dengan dua tangan, pelan-pelan. Mo berjalan di depan sambil melambai, \"Assalamu'alaikum, Bu Rina!\"", en: "Kak Adam carried the bowl in both hands, slowly. Mo walked in front, waving, \"Assalamu'alaikum, Bu Rina!\"" },
+        quote: { id: "\"Jibril senantiasa berwasiat kepadaku tentang tetangga, sampai aku mengira bahwa dia akan mewariskannya.\" (HR. Bukhari dan Muslim)", en: "\"Jibril kept urging me to be good to neighbours, until I thought he would make them heirs.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "street", mo: [{ who: "adam", pose: "carry-bowl", x: 290 }, { pose: "pose-32", x: 410 }] },
+      },
+      {
+        text: { id: "Bu Rina tersenyum lebar dan mengembalikan mangkuknya berisi pisang goreng hangat. Berbagi itu ternyata kembali lagi!", en: "Bu Rina smiled widely and sent the bowl back full of warm fried bananas. Sharing has a way of coming back!" },
+        scene: { focus: 340, bg: "street", props: [{ k: "bowl", x: 430, y: 330 }], mo: [{ pose: "yeyy", x: 330, move: "hop" }], fx: ["hearts", "sparkle"] },
+      },
+      {
+        text: { id: "\"Koki hebat juga membereskan dapur,\" kata Umi. Mereka mencuci mangkuk bersama, dan busa sabun menempel di hidung Ais.", en: "\"Great chefs clean the kitchen too,\" said Umi. They washed the bowls together, and soap bubbles stuck to Ais's nose." },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "faucet", x: 430 }], mo: [{ who: "umi", pose: "ok-sign", x: 260 }, { who: "ais", pose: "giggle", x: 400 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Abi pulang dan mencicipi sup. \"Masya Allah, siapa kokinya?\" \"KAMI!\" jawab si kembar bangga.", en: "Abi came home and tasted the soup. \"Masya Allah, who's the chef?\" \"US!\" the twins answered proudly." },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "soup", x: 450 }], mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 260 }, { pose: "pose-04", x: 390 }] },
+      },
+      {
+        text: { id: "Malam itu Umi berbisik, \"Terima kasih, koki-koki kecil Umi.\" Kalau memasak bersama Umi, kamu mau memasak apa? 🥕", en: "That night Umi whispered, \"Thank you, my little chefs.\" If you cooked with your Umi, what would you make? 🥕" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "umi", pose: "cheer-happy", x: 270 }, { pose: "yeyy", x: 400, move: "hop" }], fx: ["confetti"] },
+      },
+    ],
+  },
+  /* ───────────────────────── Umi 3. The tablet needs to sleep too ───────────────────────── */
+  {
+    slug: "tablet-juga-perlu-tidur",
+    pose: "baby-mo-idea.png",
+    published: "2026-11-17",
+    title: { id: "Tablet Juga Perlu Tidur", en: "The Tablet Needs to Sleep Too" },
+    hook: {
+      id: "\"Satu video lagi, Umi!\" Saat pasir di jam pasir habis, tablet harus tidur. Mo menangis… lalu menemukan hari paling seru tanpa layar.",
+      en: "\"One more video, Umi!\" When the sand in the hourglass runs out, the tablet has to sleep. Mo cries… and then finds the most fun day without a screen.",
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Batas layar paling mudah dijalankan dengan tanda waktu yang terlihat, nada yang lembut, dan pengganti yang seru. Aturan yang sama untuk orang tua membuat anak lebih mudah menerimanya.",
+      en: "Screen limits work best with a timer children can see, a gentle voice and a fun alternative. When parents follow the same rule, children accept it more easily.",
+    },
+    tags: ["umi", "screen time", "layar", "tablet", "emosi", "bermain"],
+    card: {
+      title: { id: "Aturan Layar untuk Balita", en: "Screen Rules for Little Ones" },
+      items: {
+        id: [
+          "WHO menyarankan: di bawah 2 tahun sebaiknya tanpa layar (video call bersama keluarga boleh); usia 2–4 tahun paling lama 1 jam sehari — lebih sedikit lebih baik, dan ditemani.",
+          "Pakai penanda waktu yang bisa dilihat anak (jam pasir atau timer) dan beri aba-aba 5 menit sebelum selesai. Saat anak menangis, akui perasaannya tanpa mengubah aturannya.",
+          "Buat zona bebas layar: meja makan, kamar tidur, dan satu jam sebelum tidur — berlaku juga untuk Abi dan Umi.",
+        ],
+        en: [
+          "The WHO advises: no screen time under 2 (video calls with family are fine); ages 2–4 no more than 1 hour a day — less is better, and watch together.",
+          "Use a timer children can see (an hourglass or a timer) and give a 5-minute warning. If they cry, name the feeling without changing the rule.",
+          "Make screen-free zones: the dinner table, bedrooms and the hour before bed — for Abi and Umi too.",
+        ],
+      },
+    },
+    cover: {
+      focus: 340, bg: "living",
+      props: [{ k: "tablet", x: 450, y: 330 }, { k: "hourglass", x: 520, y: 330 }],
+      mo: [{ who: "umi", pose: "idea-finger", x: 260 }, { pose: "idea", x: 390 }],
+      fx: ["zzz"],
+    },
+    pages: [
+      {
+        text: { id: "Baby Mo sedang menonton video kereta di tablet. Satu video… dua video… sepuluh video! Tut-tuuut!", en: "Baby Mo was watching train videos on the tablet. One video… two videos… ten videos! Choo-choo!" },
+        scene: { focus: 340, bg: "living", props: [{ k: "tablet", x: 420, y: 360 }], mo: [{ pose: "pose-06", x: 330 }] },
+      },
+      {
+        text: { id: "Umi datang membawa jam pasir. \"Mo, kalau pasirnya sudah habis, tablet tidur ya.\" Mo mengangguk… tanpa menoleh.", en: "Umi came over with an hourglass. \"Mo, when the sand runs out, the tablet goes to sleep, okay?\" Mo nodded… without looking up." },
+        scene: { focus: 340, bg: "living", props: [{ k: "hourglass", x: 410, y: 340 }], mo: [{ who: "umi", pose: "explain-hand", x: 260 }, { pose: "pose-06", x: 420 }] },
+      },
+      {
+        text: { id: "Lima menit lagi, kata Umi. Lalu pasir terakhir jatuh. \"Satu lagi, Umi! SATU LAGI!\" Mo menangis keras.", en: "Five more minutes, said Umi. Then the last grain of sand fell. \"One more, Umi! ONE MORE!\" Mo cried loudly." },
+        scene: { focus: 340, bg: "living", props: [{ k: "hourglass", x: 430, y: 340 }], mo: [{ pose: "pose-09", x: 330 }] },
+      },
+      {
+        text: { id: "Umi tidak marah. Umi berlutut dan berbicara pelan: \"Mo sedih, ya? Boleh sedih. Umi peluk. Tapi tablet tetap tidur.\"", en: "Umi didn't get angry. She knelt down and spoke softly: \"You're sad, aren't you? It's okay to be sad. Umi will hug you. But the tablet still sleeps.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "kneel-smile", x: 280 }, { pose: "pose-10", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Mata Mo perlu istirahat,\" kata Umi. \"Dan otak Mo tumbuh paling cepat saat Mo bermain, berlari, dan mengobrol dengan orang-orang yang Mo sayang.\"", en: "\"Your eyes need a rest,\" said Umi. \"And your brain grows fastest when you play, run and talk with the people you love.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "explain-hand", x: 260 }, { pose: "pose-23", x: 410 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka menidurkan tablet di kotaknya. \"Selamat tidur, tablet!\" kata Baby Ais sambil menyelimutinya dengan sapu tangan.", en: "They tucked the tablet into its box. \"Good night, tablet!\" said Baby Ais, covering it with a hanky like a blanket." },
+        scene: { focus: 340, bg: "living", props: [{ k: "box", x: 400 }, { k: "tablet", x: 400, y: 340, s: 0.7 }], mo: [{ who: "ais", pose: "giggle", x: 300 }, { pose: "pose-40", x: 470 }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "\"Terus kita main apa?\" tanya Ais sambil cemberut. Mo mengangkat bahu. Rumah tiba-tiba terasa sepi.", en: "\"So what do we play now?\" Ais grumbled. Mo shrugged. The house suddenly felt very quiet." },
+        scene: { focus: 340, bg: "living", mo: [{ who: "ais", pose: "grumpy", x: 300 }, { pose: "pose-33", x: 420 }] },
+      },
+      {
+        text: { id: "Umi mengangkat jari. \"Umi punya ide: lomba menara balok paling tinggi! Siapa yang menang, boleh memilih buku cerita malam ini.\"", en: "Umi raised a finger. \"Umi has an idea: a contest for the tallest block tower! The winner picks tonight's bedtime story.\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "blockstall", x: 430 }], mo: [{ who: "umi", pose: "idea-finger", x: 260 }, { pose: "wow", x: 380 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Menaranya tinggi… tinggi… lebih tinggi dari Mo! Lalu — GUBRAK! Semua balok jatuh, dan mereka tertawa sampai perut sakit.", en: "The tower grew tall… taller… taller than Mo! Then — CRASH! All the blocks came down, and they laughed until their tummies hurt." },
+        scene: { focus: 340, bg: "living", props: [{ k: "blocksfall", x: 400 }], mo: [{ pose: "pose-02", x: 300 }, { who: "ais", pose: "giggle", x: 470 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Siangnya mereka berburu siput di kebun dengan kaca pembesar. \"Lihat, Mo! Rumahnya dibawa ke mana-mana!\"", en: "After lunch they went snail hunting in the garden with a magnifying glass. \"Look, Mo! It carries its house everywhere!\"" },
+        scene: { focus: 340, bg: "garden", props: [{ k: "snail", x: 420 }], mo: [{ who: "ais", pose: "magnifier-leaf", x: 310 }, { pose: "pose-15", x: 450 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Sore hari, layar boleh bangun sebentar — untuk video call dengan Nenek, bersama Umi. \"Assalamu'alaikum, Nenek!\" Mo melambai.", en: "In the afternoon the screen could wake up for a little while — for a video call with Nenek, together with Umi. \"Assalamu'alaikum, Nenek!\" Mo waved." },
+        scene: { focus: 340, bg: "living", mo: [{ who: "umi", pose: "idea-tablet", x: 270 }, { pose: "pose-01", x: 400 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Saat makan malam, Abi ikut menidurkan HP-nya di keranjang. \"Aturan meja makan berlaku untuk semua, termasuk Abi!\"", en: "At dinner, Abi put his phone to sleep in the basket too. \"The table rule is for everyone, Abi included!\"" },
+        scene: { focus: 340, bg: "kitchen", props: [{ k: "phone", x: 440, y: 330, s: 0.8 }, { k: "rice", x: 360, y: 350 }], mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 250 }, { pose: "pose-21", x: 400 }] },
+      },
+      {
+        text: { id: "Satu jam sebelum tidur, semua layar sudah tidur. Ais pemenang lomba balok, jadi Ais memilih cerita. Umi membacakannya dengan suara lucu.", en: "An hour before bed, every screen was asleep. Ais had won the block contest, so she chose the story. Umi read it in funny voices." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "read-story", x: 300 }, { who: "ais", pose: "read-cushion", x: 430 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Mo memandang Umi. \"Umi, tadi Mo menangis keras. Tapi Umi tetap lembut.\" Kata Abi, kelembutan membuat segalanya jadi indah.", en: "Mo looked at Umi. \"Umi, I cried really loudly earlier. But you stayed gentle.\" Abi says gentleness makes everything beautiful." },
+        quote: { id: "\"Sesungguhnya kelembutan tidaklah ada pada sesuatu kecuali akan menghiasinya.\" (HR. Muslim)", en: "\"Gentleness is never in anything except that it beautifies it.\" (Muslim)" },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ who: "umi", pose: "grateful-hands", x: 270 }, { pose: "pose-35", x: 400 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Maaf ya, Umi.\" Umi memeluk Mo erat. \"Besok tablet bangun lagi sebentar. Tapi hari ini paling seru, kan?\" Mo mengangguk.", en: "\"Sorry, Umi.\" Umi hugged Mo tight. \"Tomorrow the tablet wakes up again for a little while. But today was the most fun, wasn't it?\" Mo nodded." },
+        scene: { focus: 340, bg: "bedroom", time: "night", props: [{ k: "teddy", x: 460 }], mo: [{ who: "umi", pose: "hug-mo", x: 330 }], fx: ["hearts", "stars"] },
+      },
+      {
+        text: { id: "Si kembar tidur nyenyak, dan tablet pun tidur di kotaknya. Mainan apa yang paling seru tanpa layar di rumahmu? 🧱", en: "The twins slept soundly, and the tablet slept in its box too. What's the most fun thing to play at your house without a screen? 🧱" },
+        scene: { focus: 340, bg: "bedroom", time: "night", props: [{ k: "box", x: 470 }, { k: "tablet", x: 470, y: 340, s: 0.6 }], mo: [{ pose: "pose-39", x: 300 }, { who: "ais", pose: "sleep-pillow", x: 400 }], fx: ["zzz", "stars"] },
+      },
+    ],
+  },
 ];

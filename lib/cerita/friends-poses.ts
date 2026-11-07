@@ -17,7 +17,7 @@
  */
 import type { AisCategory } from "./ais-poses";
 
-export type Friend = "adam" | "ayah";
+export type Friend = "adam" | "ayah" | "umi";
 export type FriendCategory = AisCategory;
 
 export interface FriendPose {
@@ -42,7 +42,7 @@ export interface FriendPose {
 }
 
 /** Display size relative to Baby Mo / Ais at the same `s`. */
-export const FRIEND_SCALE: Record<Friend, number> = { adam: 1.315, ayah: 1.784 };
+export const FRIEND_SCALE: Record<Friend, number> = { adam: 1.315, ayah: 1.784, umi: 1.784 };
 
 export const ADAM_POSES: FriendPose[] = [
   { name: "wave-hello", category: "greet", mood: "happy", use: "Standing, one hand up waving, big smile. Arrivals, hello, goodbye." },
@@ -295,7 +295,75 @@ export const AYAH_POSES: FriendPose[] = [
   { name: "stern-gentle", category: "learn", mood: "serious", use: "Finger raised, hand on hip, gentle but serious. A kind \"not like that\"." },
 ];
 
-export const FRIEND_POSES: Record<Friend, FriendPose[]> = { adam: ADAM_POSES, ayah: AYAH_POSES };
+
+/**
+ * Umi (Bu Nur) — the twins' mother. 58 renders in public/umi-poses/umi-<name>.png.
+ * Main look: light lilac-grey hijab, pink short-sleeved top over grey long
+ * sleeves, rust-brown skirt, sandals. `cardigan-*` poses are her going-out look
+ * (cream hijab, pink cardigan); don't mix the two looks on one page.
+ */
+export const UMI_POSES: FriendPose[] = [
+  { name: "think-question", category: "think", mood: "curious", use: "Finger at chin, a \"?\" beside her. Wondering, asking the children a question, \"hmm, what should we do?\"" },
+  { name: "quran-rehal", category: "worship", mood: "calm", props: ["Qur'an", "rehal"], use: "Sitting cross-legged reading the Qur'an on a wooden stand, pointing at the line. Teaching the twins to read, Ramadan, after Maghrib.", low: true },
+  { name: "dua-kneel-joy", category: "worship", mood: "joyful", use: "Kneeling, palms up, smiling with eyes closed. A happy du'a, thanking Allah, an answered prayer.", low: true },
+  { name: "grateful-hands", category: "care", mood: "content", use: "Hands together at her chest, eyes closed, soft smile. Touched, grateful, \"Alhamdulillah\", proud of the children." },
+  { name: "wave-skip", category: "greet", mood: "cheerful", use: "Waving with a little skip, sparkle by her hand. Excited hello, welcoming the children home." },
+  { name: "cheer-happy", category: "celebrate", mood: "overjoyed", use: "Both fists up, eyes closed, big smile, sparkles. Celebrating a child's success, good news, \"yay!\"." },
+  { name: "explain-hand", category: "learn", mood: "warm", use: "One hand on her chest, the other opening to the side. Explaining gently, telling a story, \"let me tell you…\"." },
+  { name: "dua-sit", category: "worship", mood: "peaceful", use: "Sitting cross-legged, palms up, eyes closed. Du'a after sholat, bedtime du'a, calm moment.", low: true },
+  { name: "read-sit", category: "learn", mood: "happy", props: ["book"], use: "Sitting cross-legged reading a green book (Islamic cover). Story time, reading together, reading the Qur'an.", low: true },
+  { name: "shrug-smile", category: "think", mood: "playful", use: "Both palms up and out, smiling. \"Who knows?\", \"where did it go?\", a gentle question, playful puzzled." },
+  { name: "fist-pump-hop", category: "celebrate", mood: "excited", use: "Fist pump with one foot kicked up behind. \"Hooray!\", winning, excited news." },
+  { name: "open-arms-present", category: "greet", mood: "welcoming", use: "Both arms open to the sides, smiling. \"Ta-da!\", showing something, welcoming guests." },
+  { name: "idea-tablet", category: "screen", mood: "bright", props: ["tablet"], use: "Finger up with an idea, holding a tablet. Screen-time rules, looking something up, planning, a phone call." },
+  { name: "ok-sign", category: "joy", mood: "confident", use: "Hand on hip, OK sign. \"All good!\", agreeing, \"you can do it\"." },
+  { name: "ok-wink", category: "joy", mood: "playful", use: "Wink with an OK sign, hand on hip. Playful approval, a fun secret plan." },
+  { name: "present-book", category: "learn", mood: "warm", props: ["book"], use: "Holding a blue book to her chest, other hand presenting. Introducing a story, library, a gift book." },
+  { name: "present-book-mosque", category: "learn", mood: "warm", props: ["book"], use: "Holding a blue book with a mosque on it, other hand presenting. Teaching about the masjid, a new picture book.", alt: true },
+  { name: "present-quran", category: "worship", mood: "warm", props: ["Qur'an"], use: "Holding a green Qur'an to her chest, other hand presenting. Inviting the children to read/mengaji." },
+  { name: "welcome-walk", category: "greet", mood: "loving", use: "Walking forward with arms wide open. Running to hug, welcoming home, \"come here, sayang!\"." },
+  { name: "touched-cheek", category: "feel", mood: "tender", use: "Hands together by her cheek, eyes closed, sweet smile. Touched by kindness, \"so sweet\", a loving moment, sleepy." },
+  { name: "cheer-fists", category: "celebrate", mood: "delighted", use: "Both fists raised, sparkle, bright smile. Proud, cheering the children on, \"masyaAllah!\"." },
+  { name: "thumbs-up", category: "joy", mood: "proud", use: "Thumbs up, hand on hip. Good job, well done, \"great choice\"." },
+  { name: "idea-finger", category: "think", mood: "bright", use: "Finger up with a sparkle, hand on hip. \"I have an idea!\", reminding, a rule or tip." },
+  { name: "explain-book", category: "learn", mood: "bright", props: ["book"], use: "Finger up while holding an open green book. Teaching a lesson, reading a hadith, explaining." },
+  { name: "think-quiet", category: "think", mood: "thoughtful", use: "Hand at chin, looking aside quietly. Thinking, considering, listening carefully.", alt: true },
+  { name: "groceries", category: "routine", mood: "happy", props: ["basket", "vegetables"], use: "Shopping basket of vegetables on her arm, thumbs up. Market, supermarket, back from shopping." },
+  { name: "teach-book", category: "learn", mood: "engaged", props: ["picture book"], use: "Holding an open picture book (moon and mosque), finger up. Reading aloud, story time, teaching." },
+  { name: "walk-bag", category: "travel", mood: "cheerful", props: ["handbag"], use: "Walking with a shoulder bag. Going out, to the market, to school pick-up, mudik." },
+  { name: "cook-stove", category: "food", mood: "happy", props: ["stove", "pot", "apron"], use: "Wearing an apron, stirring a pot on a stove (stove drawn in). Cooking, sahur, Lebaran opor, kitchen help." },
+  { name: "dua-kneel", category: "worship", mood: "peaceful", use: "Sitting on her heels, palms up, eyes closed. Du'a on the prayer mat, after sholat, quiet prayer.", low: true },
+  { name: "prayer-mat", category: "worship", mood: "gentle", props: ["sajadah"], use: "Kneeling and unrolling a prayer mat. Getting ready to pray, inviting the children to sholat.", low: true },
+  { name: "stir-pot", category: "food", mood: "focused", props: ["pot", "small stove"], use: "Behind a small stove, stirring a pot with a wooden spoon (cut off at the waist by the counter). Cooking, kitchen scenes.", low: true },
+  { name: "read-story", category: "learn", mood: "animated", props: ["picture book"], use: "Sitting, reading a picture book (moon and mosque) aloud, excited face. Bedtime story, reading to the twins.", low: true },
+  { name: "hug-mo", category: "care", mood: "loving", use: "Kneeling, hugging Baby Mo tight; both smiling. Comfort, welcome home, making up after a fuss.", low: true, duo: true, check: "Baby Mo is drawn a little large next to Umi; fine for a close hug, avoid placing another standing Mo on the same page." },
+  { name: "hold-quran", category: "worship", mood: "calm", props: ["Qur'an"], use: "Standing, holding the Qur'an to her chest. Going to the masjid/TPA, before mengaji." },
+  { name: "dua-stand", category: "worship", mood: "peaceful", use: "Standing, palms up, eyes closed. Du'a before leaving, du'a for the children." },
+  { name: "kneel-smile", category: "calm", mood: "gentle", use: "Sitting on her heels, hands on her knees, smiling. Talking at child height, listening, sitting together.", low: true },
+  { name: "welcome-palms", category: "greet", mood: "welcoming", use: "Arms low and open, palms up, smiling. \"Come, let's…\", inviting, offering a choice." },
+  { name: "thank-you", category: "care", mood: "grateful", use: "Palms together, eyes closed, smiling. Thank you, \"Alhamdulillah\", apologising gently." },
+  { name: "read-stand", category: "learn", mood: "focused", props: ["Qur'an"], use: "Standing, reading an open green book/Qur'an. Reading, checking a recipe, a reminder." },
+  { name: "read-quran-sit", category: "worship", mood: "happy", props: ["Qur'an"], use: "Sitting, holding a big open Qur'an, smiling. Mengaji together, Ramadan tadarus.", low: true },
+  { name: "arms-up", category: "celebrate", mood: "overjoyed", use: "Both arms high in the air. Big celebration, Lebaran joy, \"we did it!\"." },
+  { name: "offer", category: "care", mood: "kind", use: "Hands cupped forward, looking down kindly. Giving something, sedekah, offering food." },
+  { name: "wave", category: "greet", mood: "friendly", use: "Waving with a warm smile. Hello, goodbye, school drop-off." },
+  { name: "stand", category: "calm", mood: "neutral", use: "Standing straight, arms relaxed at her sides. Neutral listening, background figure, waiting." },
+  { name: "cardigan-skip-cheer", category: "celebrate", mood: "joyful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Skipping forward, fist up. Happy outing, good news on the way." },
+  { name: "cardigan-open-arms", category: "greet", mood: "welcoming", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Arms wide open. Welcoming, arriving at Nenek's, \"ta-da!\"." },
+  { name: "cardigan-wink-cheer", category: "celebrate", mood: "playful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Wink, fist up, little kick. Cheering, \"you did it!\"." },
+  { name: "cardigan-think", category: "think", mood: "curious", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Finger at chin, thinking. Planning, choosing, wondering." },
+  { name: "cardigan-wave", category: "greet", mood: "friendly", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Waving. Hello, goodbye, meeting someone outside." },
+  { name: "cardigan-hands-folded", category: "calm", mood: "gentle", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Hands folded in front, gentle smile. Waiting politely, listening, at an event." },
+  { name: "cardigan-listen", category: "think", mood: "attentive", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Hand behind her ear, listening. \"What was that?\", listening for a sound, a quiz." },
+  { name: "cardigan-idea", category: "think", mood: "bright", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Finger up with an idea, mid-step. \"I know!\", a tip on the go." },
+  { name: "cardigan-wave-happy", category: "greet", mood: "cheerful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Eyes closed, waving with sparkle. Excited hello across the street." },
+  { name: "cardigan-walk", category: "travel", mood: "cheerful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Walking briskly, arms swinging. Going out, walking to the market or masjid." },
+  { name: "cardigan-wave-walk", category: "greet", mood: "friendly", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Walking and waving. Arriving, greeting neighbours on the way." },
+  { name: "cardigan-dua-kneel", category: "worship", mood: "peaceful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Kneeling, palms up, eyes closed. Du'a, Eid prayer outdoors.", low: true },
+  { name: "cardigan-dua-kneel-joy", category: "worship", mood: "joyful", use: "[Cardigan outfit: cream hijab, pink cardigan, dark-brown skirt — the going-out look; don't mix with the pink-top look on one page.] Kneeling, palms up, looking up with a happy open smile. Thankful du'a, an answered prayer.", low: true },
+];
+
+export const FRIEND_POSES: Record<Friend, FriendPose[]> = { adam: ADAM_POSES, ayah: AYAH_POSES, umi: UMI_POSES };
 
 /** Quick picks for common story moments (first = best). */
 export const ADAM_FOR: Record<string, string[]> = {
@@ -387,10 +455,36 @@ export const AYAH_FOR: Record<string, string[]> = {
   announce: ["megaphone"],
 };
 
+export const UMI_FOR: Record<string, string[]> = {
+  hello: ["wave", "wave-skip", "cardigan-wave"],
+  welcomeHome: ["welcome-walk", "open-arms-present", "welcome-palms", "cardigan-open-arms"],
+  goingOut: ["walk-bag", "cardigan-walk", "cardigan-wave-walk"],
+  proud: ["thumbs-up", "ok-sign", "cheer-fists", "grateful-hands"],
+  celebrate: ["cheer-happy", "arms-up", "fist-pump-hop", "cardigan-skip-cheer"],
+  withMo: ["hug-mo"],
+  cook: ["cook-stove", "stir-pot"],
+  shop: ["groceries", "walk-bag"],
+  teach: ["teach-book", "explain-book", "explain-hand", "present-book", "idea-finger"],
+  idea: ["idea-finger", "idea-tablet", "cardigan-idea"],
+  think: ["think-question", "think-quiet", "cardigan-think"],
+  question: ["think-question", "shrug-smile", "cardigan-listen"],
+  love: ["touched-cheek", "grateful-hands", "hug-mo"],
+  thanks: ["thank-you", "grateful-hands"],
+  give: ["offer"],
+  listen: ["kneel-smile", "cardigan-listen", "stand"],
+  dua: ["dua-stand", "dua-kneel", "dua-sit", "dua-kneel-joy", "cardigan-dua-kneel"],
+  salat: ["prayer-mat", "dua-kneel"],
+  quran: ["quran-rehal", "read-quran-sit", "hold-quran", "present-quran"],
+  read: ["read-story", "read-sit", "read-stand", "teach-book"],
+  screen: ["idea-tablet"],
+  calm: ["stand", "kneel-smile", "cardigan-hands-folded"],
+};
+
 /** Moments with no render yet — brief new art or work around them. */
 export const FRIEND_GAPS = [
   "Ayah: salat standing, ruku and sitting (only sujud and du'a exist)",
   "Ayah: angry or crying",
+  "Umi: sad / tired / worried, sleeping, salat movements, holding a baby, with Ais or Adam, driving or on the phone",
   "Ayah: driving",
   "Adam with the twins: piggyback, hug, high-five, holding hands, reading (brief batch R8)",
   "Adam: a flat-backed ruku in peci and koko (both salat sheets came back with a rounded back)",
