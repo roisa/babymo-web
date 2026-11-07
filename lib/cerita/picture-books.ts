@@ -30,6 +30,14 @@ export interface PictureBook {
   tags: string[];
   cover: PicScene;
   pages: PicPage[];
+  /** "Kartu untuk Ayah & Bunda": three practical tips shown on a closing
+   *  card in Book Mode and under the story (screenshot-friendly). */
+  card?: ParentCard;
+}
+
+export interface ParentCard {
+  title: Record<Locale, string>;
+  items: Record<Locale, string[]>;
 }
 
 const BOOKS: PictureBook[] = [
@@ -301,9 +309,9 @@ export function getPictureBook(slug: string): PictureBook | undefined {
 
 /** Cover + pages for Book Mode: a full picture book, or an older story
  *  retold as one (see picture-books-adapted.ts). */
-export function getBookPages(slug: string): { cover: PicScene; pages: PicPage[] } | null {
+export function getBookPages(slug: string): { cover: PicScene; pages: PicPage[]; card?: ParentCard } | null {
   const b = getPictureBook(slug);
-  if (b) return { cover: b.cover, pages: b.pages };
+  if (b) return { cover: b.cover, pages: b.pages, card: b.card };
   return ADAPTED[slug] ?? null;
 }
 

@@ -71,6 +71,7 @@ export default async function CatatanDetail({
     ? pb.pages.map((pg) => ({ text: pg.text[l], quote: pg.quote?.[l], scene: { ...pg.scene, at: 0, alt: { id: pg.text.id.slice(0, 80), en: pg.text.en.slice(0, 80) } } }))
     : null;
   const pictureCover = pb ? { ...pb.cover, at: 0, alt: n.title } : null;
+  const card = pb?.card ? { title: pb.card.title[l], items: pb.card.items[l] } : null;
   // Kids' stories tuck the parent-facing extras into the Ayah & Bunda panel.
   const ParentWrap = ({ children }: { children: React.ReactNode }) =>
     isStory ? (
@@ -180,6 +181,7 @@ export default async function CatatanDetail({
               art={art}
               picture={picture}
               pictureCover={pictureCover}
+              card={card}
             />
           )}
         </header>
@@ -187,6 +189,19 @@ export default async function CatatanDetail({
         <div className="catatan-body">
           {renderBody(n.body[l])}
         </div>
+
+        {card && (
+          <aside className="parent-card" aria-label={card.title}>
+            <span className="parent-card-badge">{l === "id" ? "Kartu untuk Ayah & Bunda" : "A card for parents"}</span>
+            <h2 className="parent-card-title">{card.title}</h2>
+            <ol className="parent-card-list">
+              {card.items.map((it, i) => (
+                <li key={i}><span className="parent-card-num">{i + 1}</span><span>{it}</span></li>
+              ))}
+            </ol>
+            <span className="parent-card-foot">babymo.id</span>
+          </aside>
+        )}
 
         {isStory && (
           <StoryCelebrate

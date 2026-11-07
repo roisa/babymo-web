@@ -1313,3 +1313,24 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
   .story-art .sa-score:first-of-type { opacity: 1; }
   .story-art .sa-mark { opacity: .55; }
 }
+
+/* ── Story art: practical-life props ── */
+.sa-germ { transform-origin: center; animation: sa-germ 2.4s ease-in-out infinite; }
+@keyframes sa-germ { 0%, 100% { translate: 0 0; rotate: -8deg; } 50% { translate: 6px -8px; rotate: 8deg; } }
+.sa-flicker { transform-origin: 50% 100%; animation: sa-flicker .5s ease-in-out infinite alternate; }
+@keyframes sa-flicker { from { scale: 1 1; rotate: -3deg; } to { scale: .9 1.08; rotate: 3deg; } }
+.sa-coindrop { opacity: 0; animation: sa-coindrop 2.1s ease-in infinite; }
+@keyframes sa-coindrop { 0% { translate: 0 -30px; opacity: 0; } 15% { opacity: 1; } 55% { translate: 0 60px; opacity: 1; } 60%, 100% { translate: 0 60px; opacity: 0; } }
+.sa-fill { transform-origin: 50% 100%; }
+@media (prefers-reduced-motion: reduce) { .story-art .sa-coindrop { opacity: 0; } }
+
+/* ── Parents' card under picture-book stories (screenshot-friendly) ── */
+.parent-card { margin: 2rem auto 0; max-width: 34rem; padding: 1.4rem 1.5rem; border-radius: 1.4rem; background: #FFFFFF;
+  border: 2px dashed #F0B98A; box-shadow: 0 18px 40px -26px rgba(90,50,10,.45); display: flex; flex-direction: column; gap: .8rem; }
+html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
+.parent-card-badge { align-self: flex-start; padding: .2rem .75rem; border-radius: 999px; background: #FDE3CE; color: #A9472A; font-weight: 800; font-size: .75rem; letter-spacing: .04em; text-transform: uppercase; }
+.parent-card-title { margin: 0; font-family: var(--font-display); font-weight: 800; font-size: 1.35rem; line-height: 1.25; }
+.parent-card-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: .7rem; }
+.parent-card-list li { display: flex; gap: .7rem; align-items: flex-start; line-height: 1.5; }
+.parent-card-num { flex: 0 0 1.8rem; height: 1.8rem; border-radius: 50%; display: grid; place-items: center; background: #4FB477; color: #fff; font-weight: 900; font-size: .9rem; }
+.parent-card-foot { align-self: flex-end; font-size: .75rem; font-weight: 700; color: #B5532F; opacity: .8; }

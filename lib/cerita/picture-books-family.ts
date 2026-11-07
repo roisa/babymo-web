@@ -2578,4 +2578,322 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── Practical 1. Lost in the supermarket ───────────────────────── */
+  {
+    slug: "baby-mo-terpisah-di-supermarket",
+    pose: "baby-mo-pose-40.png",
+    published: "2026-11-13",
+    title: { id: "Baby Mo Terpisah di Supermarket", en: "Baby Mo Gets Lost at the Supermarket" },
+    hook: {
+      id: "Baby Mo mengejar balon dan… di mana Abi? Ia ingat tiga langkah ajaib: berhenti, cari penolong aman, dan nyanyikan nomor Abi!",
+      en: "Baby Mo chases a balloon and… where's Abi? He remembers three magic steps: stop, find a safe helper, and sing Abi's number!",
+    },
+    anchor: { type: "doa", slug: "keluar-rumah" },
+    takeaway: {
+      id: "Anak yang terpisah butuh rencana sederhana yang sudah dilatih: diam di tempat, cari penolong aman, dan hafal nomor orang tua. Latihlah seperti permainan sebelum keluar rumah.",
+      en: "A child who gets separated needs a simple plan they've practised: stay put, find a safe helper, and know a parent's number. Practise it like a game before you go out.",
+    },
+    tags: ["keamanan anak", "anak hilang", "supermarket", "nomor telepon", "abi", "berani"],
+    card: {
+      title: { id: "Kalau Anak Terpisah di Tempat Ramai", en: "If Your Child Gets Separated in a Crowd" },
+      items: {
+        id: [
+          "Ajarkan nomor HP Ayah/Bunda lewat lagu, dan tulis di gelang atau kartu di saku anak.",
+          "Sepakati sebelum masuk: kalau terpisah, BERHENTI di tempat — orang tua yang akan kembali mencari.",
+          "Tunjukkan penolong aman: kasir atau satpam berseragam, atau ibu yang sedang bersama anak-anaknya. Jangan ikut siapa pun ke luar atau ke parkiran.",
+        ],
+        en: [
+          "Teach your phone number with a song, and write it on a wristband or a card in their pocket.",
+          "Agree before you go in: if we get separated, STOP where you are — the grown-up comes back to find you.",
+          "Point out safe helpers: a cashier or security guard in uniform, or a mum with her children. Never go outside or to the car park with anyone.",
+        ],
+      },
+    },
+    cover: {
+      focus: 380, bg: "supermarket",
+      props: [{ k: "counter", x: 520 }, { k: "phonecard", x: 360, y: 230, s: 0.9 }],
+      mo: [{ pose: "pose-40", x: 330 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Hari Sabtu, Abi mengajak Baby Mo dan Baby Ais belanja ke supermarket. \"Bismillahi tawakkaltu 'alallah,\" doa Abi sebelum berangkat.", en: "On Saturday, Abi took Baby Mo and Baby Ais shopping at the supermarket. \"Bismillahi tawakkaltu 'alallah,\" Abi prayed before they left." },
+        quote: { id: "\"Bismillahi tawakkaltu 'alallah, laa haula wa laa quwwata illaa billaah.\" — Dengan nama Allah, aku bertawakal kepada Allah. (HR. Abu Dawud dan Tirmidzi)", en: "\"Bismillahi tawakkaltu 'alallah, laa hawla wa laa quwwata illaa billaah.\" — In Allah's name, I trust in Allah. (Abu Dawud and Tirmidhi)" },
+        scene: { focus: 330, bg: "street", props: [{ k: "car", x: 560, s: 1.2 }], mo: [{ pose: "pose-35", x: 390 }, { who: "ayah", pose: "dua-kneel", x: 260 }] },
+      },
+      {
+        text: { id: "Di pintu masuk, Abi berlutut. \"Ingat tiga langkah ajaib kalau terpisah? Satu: BERHENTI. Dua: cari PENOLONG AMAN. Tiga: sebut NOMOR ABI.\"", en: "At the entrance, Abi knelt down. \"Remember the three magic steps if we get separated? One: STOP. Two: find a SAFE HELPER. Three: say ABI'S NUMBER.\"" },
+        scene: { focus: 330, bg: "supermarket", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-33", x: 400 }, { who: "ais", pose: "think-question", x: 500 }] },
+      },
+      {
+        text: { id: "\"Dan nomor Abi ada lagunya!\" Mereka bernyanyi: \"Nol delapan satu dua, tiga empat lima enam, tujuh delapan sembilan — itu nomor Abi!\"", en: "\"And Abi's number has a song!\" They sang: \"Oh-eight-one-two, three-four-five-six, seven-eight-nine — that's Abi's number!\"" },
+        scene: { focus: 360, bg: "supermarket", props: [{ k: "phonecard", x: 410, y: 230, s: 0.85 }], mo: [{ pose: "pose-30", x: 330, move: "sway" }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Supermarketnya besar sekali. Rak-raknya tinggi, penuh warna. Baby Mo mendorong troli kecil dengan bangga.", en: "The supermarket was huge. The shelves were tall and colourful. Baby Mo proudly pushed a little trolley." },
+        scene: { focus: 360, bg: "supermarket", props: [{ k: "trolley", x: 470 }], mo: [{ pose: "pose-21", x: 350 }] },
+      },
+      {
+        text: { id: "Lalu Baby Mo melihat balon merah melayang di lorong sebelah. \"Balon!\" Ia berlari mengejarnya… tuk-tuk-tuk…", en: "Then Baby Mo saw a red balloon floating in the next aisle. \"A balloon!\" He ran after it… pitter-patter…" },
+        scene: { focus: 380, bg: "supermarket", props: [{ k: "balloon", x: 500, y: 200 }], mo: [{ pose: "run", x: 360, move: "hop" }] },
+      },
+      {
+        text: { id: "Balonnya hilang di balik rak. Baby Mo menoleh. Rak tinggi. Orang-orang asing. Di mana Abi? Di mana Ais?", en: "The balloon vanished behind a shelf. Baby Mo turned round. Tall shelves. Strangers. Where was Abi? Where was Ais?" },
+        scene: { bg: "supermarket", mo: [{ pose: "pose-40", x: 360 }] },
+      },
+      {
+        text: { id: "Dadanya berdebar. Ia ingin lari ke mana saja dan berteriak. Matanya mulai basah…", en: "His heart pounded. He wanted to run anywhere and shout. His eyes started to fill with tears…" },
+        scene: { bg: "supermarket", mo: [{ pose: "pose-37", x: 360, move: "sway" }] },
+      },
+      {
+        text: { id: "Lalu ia ingat suara Abi: \"Satu: BERHENTI.\" Baby Mo berhenti. Tarik napas… buang. \"Abi pasti kembali mencariku di sini.\"", en: "Then he remembered Abi's voice: \"One: STOP.\" Baby Mo stopped. Breathe in… breathe out. \"Abi will come back to look for me here.\"" },
+        scene: { bg: "supermarket", mo: [{ pose: "pose-07", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Dua: cari PENOLONG AMAN.\" Bukan sembarang orang — tapi kasir atau satpam berseragam, atau ibu yang sedang bersama anak-anaknya.", en: "\"Two: find a SAFE HELPER.\" Not just anyone — a cashier or security guard in uniform, or a mum who's with her own children." },
+        scene: { focus: 370, bg: "supermarket", props: [{ k: "counter", x: 455, s: 0.85 }], mo: [{ pose: "pose-08", x: 320 }] },
+      },
+      {
+        text: { id: "Seorang pria tak dikenal berkata, \"Ayo ikut Om keluar, kita cari ayahmu di parkiran.\" Baby Mo menggeleng keras. \"Tidak. Aku tunggu di dalam!\"", en: "A man he didn't know said, \"Come outside with me, we'll find your dad in the car park.\" Baby Mo shook his head hard. \"No. I'm waiting inside!\"" },
+        scene: { focus: 360, bg: "supermarket", mo: [{ pose: "pose-10", x: 360 }] },
+      },
+      {
+        text: { id: "Ia berjalan ke meja kasir berseragam biru. \"Kak, aku terpisah dari Abi.\" Kakak kasir tersenyum dan berjongkok. \"Kamu pintar sekali datang ke sini.\"", en: "He walked to the cashier's desk, to the lady in the blue uniform. \"Excuse me, I got separated from Abi.\" She smiled and crouched down. \"You were so clever to come here.\"" },
+        scene: { focus: 370, bg: "supermarket", props: [{ k: "counter", x: 455, s: 0.85 }], mo: [{ pose: "pose-21", x: 320 }] },
+      },
+      {
+        text: { id: "\"Tiga: NOMOR ABI!\" Baby Mo bernyanyi: \"Nol delapan satu dua, tiga empat lima enam, tujuh delapan sembilan!\" Kakak kasir menelepon.", en: "\"Three: ABI'S NUMBER!\" Baby Mo sang: \"Oh-eight-one-two, three-four-five-six, seven-eight-nine!\" The cashier made the call." },
+        scene: { focus: 370, bg: "supermarket", props: [{ k: "counter", x: 460, s: 0.85 }, { k: "phonecard", x: 330, y: 215, s: 0.85 }], mo: [{ pose: "pose-30", x: 320, move: "sway" }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Tak lama terdengar suara yang paling ia kenal: \"MO!\" Abi berlari bersama Baby Ais, lalu memeluknya erat sekali.", en: "Soon he heard the voice he knew best: \"MO!\" Abi came running with Baby Ais and hugged him very tight." },
+        scene: { focus: 350, bg: "supermarket", mo: [{ who: "ayah", pose: "hug-mo", x: 330 }, { who: "ais", pose: "run", x: 480 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Abi takut sekali,\" bisik Abi. \"Tapi Mo hebat: berhenti, cari penolong aman, dan ingat nomor Abi. Terima kasih sudah memakai tiga langkah ajaib.\"", en: "\"I was so scared,\" Abi whispered. \"But you were brilliant: you stopped, found a safe helper and remembered my number. Thank you for using the three magic steps.\"" },
+        scene: { focus: 330, bg: "supermarket", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-41", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka berterima kasih kepada kakak kasir. Baby Ais langsung minta diajari lagu nomor Abi juga.", en: "They thanked the cashier. Baby Ais immediately asked to learn the Abi's-number song too." },
+        scene: { focus: 330, bg: "supermarket", props: [{ k: "counter", x: 470, s: 0.85 }], mo: [{ pose: "thank-you", x: 400 }, { who: "ais", pose: "heart-hands", x: 280 }] },
+      },
+      {
+        text: { id: "Ayo latihan! Apa tiga langkah ajaib kalau kamu terpisah? Dan… kamu sudah hafal nomor Ayah atau Bunda? 📞", en: "Let's practise! What are the three magic steps if you get separated? And… do you know Mum's or Dad's number by heart? 📞" },
+        scene: { focus: 360, bg: "living", props: [{ k: "phonecard", x: 400, y: 230, s: 0.85 }], mo: [{ pose: "pose-08", x: 330 }], fx: ["notes"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Practical 2. My body is a trust ───────────────────────── */
+  {
+    slug: "tubuhku-amanah-dari-allah",
+    pose: "baby-mo-pose-34.png",
+    published: "2026-11-13",
+    title: { id: "Tubuhku, Amanah dari Allah", en: "My Body Is a Gift from Allah" },
+    hook: {
+      id: "Sebelum berenang di pantai, Abi mengajari si kembar aturan baju renang: bagian yang tertutup baju renang itu istimewa dan dijaga. Plus permainan seru: rahasia atau kejutan?",
+      en: "Before a beach swim, Abi teaches the twins the swimsuit rule: the parts your swimsuit covers are special and private. Plus a fun game: secret or surprise?",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Pendidikan keamanan tubuh bisa dimulai sejak kecil, dengan bahasa sederhana dan tenang: aurat dijaga, boleh berkata \"tidak\", tidak ada rahasia yang membuat takut, dan selalu boleh cerita.",
+      en: "Body safety can start early, in simple, calm words: private parts are kept private, it's okay to say \"no\", no scary secrets, and they can always tell you.",
+    },
+    tags: ["keamanan tubuh", "aurat", "malu", "rahasia", "berani berkata tidak", "abi"],
+    card: {
+      title: { id: "Mengajarkan Keamanan Tubuh pada Anak", en: "Teaching Body Safety to Young Children" },
+      items: {
+        id: [
+          "Pakai nama yang jelas dan tenang. Aturan baju renang: bagian yang tertutup baju renang tidak boleh dilihat atau disentuh orang lain — kecuali Ayah/Bunda saat membersihkan, atau dokter bersama Ayah/Bunda.",
+          "Bedakan kejutan (menyenangkan, nanti dibuka) dan rahasia yang bikin takut. Tidak ada rahasia tentang tubuh — semuanya boleh diceritakan.",
+          "Latih kalimat \"Jangan! Aku tidak mau!\", lalu pergi dan cerita. Tegaskan: bukan salah anak, dan Ayah/Bunda tidak akan marah.",
+        ],
+        en: [
+          "Use clear, calm words. The swimsuit rule: nobody may look at or touch the parts a swimsuit covers — except Mum or Dad when washing, or a doctor with Mum or Dad there.",
+          "Tell surprises (happy, opened later) apart from secrets that feel scary. There are no secrets about bodies — they can tell you everything.",
+          "Practise \"No! I don't want to!\", then walk away and tell. Make it clear: it's never their fault, and you won't be cross.",
+        ],
+      },
+    },
+    cover: {
+      focus: 340, bg: "beach",
+      props: [{ k: "swimring", x: 480 }, { k: "heart", x: 340, y: 220, s: 0.7 }],
+      mo: [{ pose: "pose-34", x: 380 }, { who: "ais", pose: "heart-hands", x: 270 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"Besok kita berenang di pantai!\" seru Abi. Si kembar melompat-lompat sambil memeluk pelampung.", en: "\"Tomorrow we're going swimming at the beach!\" Abi announced. The twins jumped up and down hugging their swim rings." },
+        scene: { focus: 340, bg: "living", props: [{ k: "swimring", x: 470 }], mo: [{ pose: "yeyy", x: 380, move: "hop" }, { who: "ais", pose: "jump-cheer", x: 270, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Sebelum tidur, Abi duduk di karpet. \"Abi mau ajari satu aturan penting. Namanya aturan baju renang.\"", en: "Before bed, Abi sat on the rug. \"I want to teach you one important rule. It's called the swimsuit rule.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-12", x: 400 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Tubuh kita amanah dari Allah. Bagian yang tertutup baju renang itu istimewa — namanya aurat. Kita menjaganya dengan rasa malu yang baik.\"", en: "\"Our bodies are a gift Allah has trusted us with. The parts your swimsuit covers are special — they're called 'aurat'. We look after them with good modesty.\"" },
+        quote: { id: "\"Malu itu sebagian dari iman.\" (HR. Bukhari dan Muslim)", en: "\"Modesty is part of faith.\" (Bukhari and Muslim)" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "heart", x: 470, y: 230, s: 0.7 }], mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 270 }, { who: "ais", pose: "sit-chin-hands", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Aturannya: tidak ada yang boleh melihat atau menyentuh bagian itu. Kecuali Umi atau Abi saat memandikan, atau dokter waktu Umi dan Abi ada di sampingmu.\"", en: "\"The rule: nobody may look at or touch those parts. Except Umi or Abi when we bathe you, or a doctor when Umi and Abi are right beside you.\"" },
+        scene: { focus: 330, bg: "bathroom", props: [{ k: "towel", x: 470 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-33", x: 400 }] },
+      },
+      {
+        text: { id: "\"Dan kita juga tidak melihat atau menyentuh aurat orang lain,\" tambah Abi. \"Itu cara kita saling menghormati.\"", en: "\"And we don't look at or touch other people's private parts either,\" Abi added. \"That's how we respect each other.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "heart-hands", x: 280 }, { pose: "pose-34", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Kalau ada yang mencoba?\" tanya Baby Ais. \"Kamu boleh berteriak keras: 'JANGAN! AKU TIDAK MAU!' lalu pergi dan cerita ke Umi atau Abi.\"", en: "\"What if someone tries?\" asked Baby Ais. \"You can shout loudly: 'NO! I DON'T WANT TO!' then walk away and tell Umi or Abi.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "megaphone", x: 280 }, { who: "ayah", pose: "thumbs-up-kneel", x: 420 }] },
+      },
+      {
+        text: { id: "Si kembar berlatih berteriak sambil berdiri tegak. \"JANGAN! AKU TIDAK MAU!\" Suara Baby Mo paling kencang sampai Kak Adam mengintip dari pintu.", en: "The twins practised shouting, standing up tall. \"NO! I DON'T WANT TO!\" Baby Mo's voice was so loud that Kak Adam peeked in at the door." },
+        scene: { focus: 340, bg: "bedroom", time: "night", mo: [{ pose: "pose-26", x: 290 }, { who: "adam", pose: "surprised-hands-up", x: 430 }] },
+      },
+      {
+        text: { id: "\"Sekarang main tebak-tebakan: RAHASIA atau KEJUTAN?\" kata Abi. \"Kejutan itu menyenangkan dan nanti dibuka. Rahasia yang bikin perut takut — itu harus diceritakan.\"", en: "\"Now a guessing game: SECRET or SURPRISE?\" said Abi. \"A surprise is happy and gets opened later. A secret that makes your tummy scared — that must be told.\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "parcel", x: 470 }, { k: "cloud", x: 300, y: 170, s: 0.6 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 270 }, { pose: "pose-33", x: 400 }] },
+      },
+      {
+        text: { id: "\"Kado ulang tahun untuk Umi, disembunyikan sampai besok?\" \"KEJUTAN!\" teriak si kembar. Benar!", en: "\"A birthday present for Umi, hidden until tomorrow?\" \"SURPRISE!\" shouted the twins. Correct!" },
+        scene: { focus: 330, bg: "living", props: [{ k: "parcel", x: 470 }], mo: [{ who: "ais", pose: "gift-box", x: 280 }, { pose: "yeyy", x: 400, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "\"Seseorang bilang: 'Jangan bilang Umi ya, ini rahasia kita,' dan perutmu jadi takut?\" Baby Mo berpikir. \"Itu RAHASIA BURUK. Harus cerita!\"", en: "\"Someone says: 'Don't tell Umi, it's our secret,' and your tummy feels scared?\" Baby Mo thought. \"That's a BAD SECRET. I have to tell!\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "cloud", x: 340, y: 170, s: 0.6 }], mo: [{ pose: "idea", x: 390 }] },
+      },
+      {
+        text: { id: "\"Tepat sekali,\" kata Abi. \"Tidak ada rahasia tentang tubuh. Semuanya boleh diceritakan ke Umi atau Abi — kapan saja.\"", en: "\"Exactly,\" said Abi. \"There are no secrets about bodies. You can tell Umi or Abi anything — any time.\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-41", x: 400 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Kalau aku cerita, Abi marah nggak?\" bisik Baby Ais. Abi memeluknya. \"Tidak pernah. Kalau ada yang berbuat begitu, itu BUKAN salahmu. Abi akan menjagamu.\"", en: "\"If I tell, will you be cross?\" whispered Baby Ais. Abi hugged her. \"Never. If anyone does that, it is NOT your fault. I'll keep you safe.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "hug-heart", x: 400 }, { who: "ayah", pose: "hand-heart-kneel", x: 270 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Besoknya di pantai, si kembar memakai baju renang yang menutup rapi. Mereka berganti baju di ruang bilas, bukan di pinggir pantai.", en: "The next day at the beach, the twins wore swimsuits that covered them neatly. They changed in the changing room, not on the sand." },
+        scene: { focus: 360, bg: "beach", props: [{ k: "swimring", x: 470 }, { k: "towel", x: 560 }], mo: [{ pose: "pose-21", x: 350 }] },
+      },
+      {
+        text: { id: "Mereka bermain air, tertawa, dan berenang dengan pelampung bersama Abi. Byur! Ciprat! Seru sekali!", en: "They splashed, laughed and swam with their rings alongside Abi. Splash! Splosh! Such fun!" },
+        scene: { focus: 340, bg: "beach", props: [{ k: "swimring", x: 330, y: 400 }], mo: [{ who: "ais", pose: "jump-joy", x: 260, move: "hop" }, { pose: "yeyy", x: 420, move: "hop" }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Malamnya Baby Mo berdoa, \"Terima kasih, ya Allah, untuk tubuhku. Aku akan menjaganya.\"", en: "That night Baby Mo prayed, \"Thank you, ya Allah, for my body. I'll look after it.\"" },
+        scene: { bg: "bedroom", time: "night", mo: [{ pose: "pose-35", x: 360 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Ayo ingat bersama: apa aturan baju renang? Dan apa bedanya rahasia dengan kejutan? 💛", en: "Let's remember together: what's the swimsuit rule? And what's the difference between a secret and a surprise? 💛" },
+        scene: { focus: 330, bg: "living", props: [{ k: "swimring", x: 480 }], mo: [{ pose: "pose-08", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Practical 3. Vaccine day ───────────────────────── */
+  {
+    slug: "jarum-kecil-pahlawan-besar",
+    pose: "baby-mo-yes.png",
+    published: "2026-11-13",
+    title: { id: "Jarum Kecil, Pahlawan Besar", en: "Little Needle, Big Hero" },
+    hook: {
+      id: "Hari ini si kembar imunisasi di Posyandu. Baby Mo takut jarum! Tapi ia belajar trik meniup lilin… dan tentang pasukan kecil yang menjaga tubuhnya.",
+      en: "Today the twins get their vaccines at the Posyandu. Baby Mo is scared of needles! But he learns the candle-blowing trick… and about the tiny army that guards his body.",
+    },
+    anchor: { type: "doa", slug: "ketika-sakit" },
+    takeaway: {
+      id: "Anak lebih berani saat diberi tahu dengan jujur: sakitnya sebentar, ada trik napas, dan menangis itu boleh. Imunisasi adalah ikhtiar menjaga tubuh — amanah dari Allah.",
+      en: "Children are braver when told the truth: it hurts just a little, there's a breathing trick, and crying is allowed. Vaccines are an effort to protect the body — a gift from Allah.",
+    },
+    tags: ["imunisasi", "posyandu", "kesehatan", "berani", "si kembar", "abi"],
+    card: {
+      title: { id: "Supaya Imunisasi Lebih Tenang", en: "For a Calmer Vaccine Visit" },
+      items: {
+        id: [
+          "Jujur tapi lembut: \"Rasanya seperti digigit semut sebentar, lalu selesai.\" Jangan bilang \"nggak sakit\".",
+          "Pangku dan peluk anak, lalu ajak \"tiup lilin\" pelan-pelan saat disuntik. Puji keberaniannya — menangis tetap boleh.",
+          "Demam ringan atau pegal sesudahnya biasa: beri minum, istirahat, dan peluk. Kalau demam tinggi atau ragu, hubungi tenaga kesehatan.",
+        ],
+        en: [
+          "Honest but gentle: \"It feels like a quick ant bite, then it's done.\" Don't say \"it won't hurt\".",
+          "Hold them on your lap, and \"blow out a candle\" slowly together during the injection. Praise their courage — crying is still okay.",
+          "A mild fever or a sore arm afterwards is common: drinks, rest and cuddles. If the fever is high or you're unsure, contact a health worker.",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "clinic",
+      props: [{ k: "plaster", x: 470, y: 230 }, { k: "germs", x: 560, y: 260, s: 0.7 }],
+      mo: [{ pose: "yes", x: 360 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Pagi itu Abi berkata, \"Hari ini kita ke Posyandu. Si kembar ditimbang, diukur, dan imunisasi.\"", en: "That morning Abi said, \"Today we're going to the Posyandu. The twins will be weighed, measured, and get their vaccines.\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ayah", pose: "check-watch", x: 260 }, { pose: "pose-33", x: 390 }] },
+      },
+      {
+        text: { id: "\"Imunisasi itu disuntik?\" Baby Mo langsung bersembunyi di balik sofa. \"Aku nggak mau! Jarumnya sakit!\"", en: "\"Vaccines mean injections?\" Baby Mo dived behind the sofa. \"I don't want to! Needles hurt!\"" },
+        scene: { bg: "living", mo: [{ pose: "pose-10", x: 360, move: "sway" }] },
+      },
+      {
+        text: { id: "Abi berlutut. \"Abi jujur, ya: rasanya seperti digigit semut sebentar. Lalu selesai. Dan Abi punya trik rahasia.\"", en: "Abi knelt down. \"I'll be honest: it feels like a quick ant bite. Then it's done. And I've got a secret trick.\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "ants", x: 470 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-40", x: 400 }] },
+      },
+      {
+        text: { id: "Di Posyandu ramai sekali. Ada bayi, kakak-kakak, dan ibu-ibu kader yang ramah. Baby Ais menunjuk timbangan yang tergantung. \"Itu ayunan?\"", en: "The Posyandu was busy. Babies, big kids, and friendly volunteer mums. Baby Ais pointed at the hanging scale. \"Is that a swing?\"" },
+        scene: { focus: 380, bg: "clinic", props: [{ k: "dacin", x: 470 }], mo: [{ who: "ais", pose: "think-question", x: 330 }] },
+      },
+      {
+        text: { id: "\"Itu dacin, timbangan bayi,\" kata Abi. Si kembar ditimbang bergantian. \"Masya Allah, beratnya naik! Sehat!\"", en: "\"That's a dacin, a baby scale,\" said Abi. The twins took turns being weighed. \"Masha Allah, you've grown heavier! Healthy!\"" },
+        scene: { focus: 380, bg: "clinic", props: [{ k: "dacin", x: 470 }], mo: [{ pose: "yeyy", x: 340, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu tinggi badan diukur di papan berwarna. \"Aku sudah sampai garis kuning!\" seru Baby Ais bangga.", en: "Then their height was measured on the colourful chart. \"I've reached the yellow line!\" Baby Ais said proudly." },
+        scene: { focus: 520, bg: "clinic", mo: [{ who: "ais", pose: "arms-wide-joy", x: 560 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sambil menunggu, Abi bercerita. \"Di dunia ada kuman-kuman kecil yang bikin sakit. Kita tidak bisa melihat mereka.\"", en: "While they waited, Abi told a story. \"There are tiny germs in the world that make us ill. We can't see them.\"" },
+        scene: { focus: 350, bg: "clinic", props: [{ k: "germs", x: 480, y: 280 }], mo: [{ pose: "pose-26", x: 330 }] },
+      },
+      {
+        text: { id: "\"Imunisasi itu seperti mengajari tubuhmu mengenali kuman, jadi tubuhmu punya pasukan kecil yang siap menjaga.\"", en: "\"A vaccine is like teaching your body to recognise the germs, so it has a tiny army ready to protect you.\"" },
+        scene: { focus: 350, bg: "clinic", props: [{ k: "germs", x: 500, y: 280, s: 0.8 }, { k: "goldstar", x: 400, y: 220, s: 0.8 }], mo: [{ pose: "yes", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Menjaga tubuh itu juga ibadah,\" tambah Abi. \"Rasulullah ﷺ mengajarkan kita berobat dan berikhtiar supaya sehat.\"", en: "\"Looking after our bodies is worship too,\" Abi added. \"The Prophet ﷺ taught us to seek treatment and make an effort to stay healthy.\"" },
+        quote: { id: "\"Berobatlah, karena Allah tidak menurunkan penyakit kecuali menurunkan pula obatnya.\" (HR. Abu Dawud dan Tirmidzi)", en: "\"Seek treatment, for Allah has not sent down a disease without also sending down its cure.\" (Abu Dawud and Tirmidhi)" },
+        scene: { focus: 330, bg: "clinic", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "ais", pose: "sit-chin-hands", x: 400 }] },
+      },
+      {
+        text: { id: "\"Baby Mo!\" panggil bu bidan. Kaki Baby Mo gemetar. Abi memangkunya dan memeluknya erat.", en: "\"Baby Mo!\" called the midwife. Baby Mo's legs wobbled. Abi sat him on his lap and held him tight." },
+        scene: { bg: "clinic", mo: [{ who: "ayah", pose: "hug-mo", x: 360 }] },
+      },
+      {
+        text: { id: "\"Sekarang trik rahasia,\" bisik Abi. \"Bayangkan ada lilin ulang tahun. Tarik napas… lalu tiup pelaaan… fuuuh.\"", en: "\"Now the secret trick,\" Abi whispered. \"Imagine a birthday candle. Breathe in… then blow sloooowly… fwoooo.\"" },
+        scene: { focus: 380, bg: "clinic", props: [{ k: "candle", x: 470 }], mo: [{ pose: "pose-07", x: 370 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Fuuuh… cekit! Seperti digigit semut. Baby Mo meringis, air matanya keluar sedikit… lalu selesai!", en: "Fwoooo… prick! Like an ant bite. Baby Mo winced, a little tear came out… and then it was over!" },
+        scene: { bg: "clinic", props: [{ k: "candle", x: 480 }], mo: [{ pose: "pose-27", x: 360 }] },
+      },
+      {
+        text: { id: "Bu bidan menempelkan plester bergambar bintang. \"Kamu berani sekali.\" \"Tapi aku nangis,\" kata Baby Mo. \"Berani itu boleh sambil nangis,\" jawab Abi.", en: "The midwife stuck on a star plaster. \"You were so brave.\" \"But I cried,\" said Baby Mo. \"You can be brave and cry at the same time,\" said Abi." },
+        scene: { focus: 360, bg: "clinic", props: [{ k: "plaster", x: 470, y: 230 }], mo: [{ pose: "pose-25", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Giliran Baby Ais. Ia meniup lilin bayangan lebih panjang dari Baby Mo. Fuuuuuuh! Lalu tos dengan kembarannya.", en: "Baby Ais's turn. She blew her pretend candle even longer than Baby Mo. Fwooooooo! Then she high-fived her twin." },
+        scene: { focus: 330, bg: "clinic", props: [{ k: "candle", x: 470 }], mo: [{ who: "ais", pose: "trophy-cheer", x: 290 }, { pose: "yeyy", x: 400, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Malamnya badan Baby Mo agak hangat. Abi memberinya minum dan memeluknya. \"Itu tanda pasukan kecilmu sedang berlatih.\"", en: "That night Baby Mo felt a little warm. Abi gave him a drink and a cuddle. \"That's your tiny army doing its training.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "cup", x: 470 }], mo: [{ pose: "pose-12", x: 400 }, { who: "ayah", pose: "hand-heart-kneel", x: 270 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Kalau kamu imunisasi nanti, trik apa yang mau kamu pakai? Coba tiup lilin bayanganmu sekarang: fuuuh! 🕯️", en: "When it's your turn for a vaccine, which trick will you use? Try blowing your pretend candle now: fwoooo! 🕯️" },
+        scene: { bg: "living", props: [{ k: "candle", x: 470 }], mo: [{ pose: "pose-07", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];

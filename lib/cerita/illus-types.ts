@@ -18,7 +18,9 @@ export type ArtBg =
   | "street"
   | "mosque"
   | "beach"
-  | "court";
+  | "court"
+  | "supermarket"
+  | "clinic";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 
@@ -172,7 +174,19 @@ export type ArtProp =
   | "racketbroken"
   | "spool"
   | "whistle"
-  | "cap";
+  | "cap"
+  /* practical-life books */
+  | "counter"
+  | "trolley"
+  | "phonecard"
+  | "germs"
+  | "dacin"
+  | "candle"
+  | "plaster"
+  | "jars3"
+  | "pricetag"
+  | "ketupat"
+  | "swimring";
 
 export type ArtFx =
   | "rain"
