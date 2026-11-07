@@ -1984,6 +1984,23 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
 
 /** Centre of the full-page crop: the scene's focus, else midway between
  *  Baby Mo and the main prop (so both are on the page). */
+/** Two-page spreads: slide the characters and props onto one page so
+ *  nobody stands in the fold; the text sits on the other page. Matches the
+ *  side BookReader picks (characters mostly right of 410 → text on the left). */
+export function spreadShift(scene: ArtScene): number {
+  const mo = scene.mo ?? [];
+  if (!mo.length) return 0;
+  const mid = mo.reduce((a, m) => a + m.x, 0) / mo.length;
+  const target = mid > 410 ? 575 : 225;
+  const xs = [...mo.map((m) => m.x), ...(scene.props ?? []).filter((p) => (p.y ?? 999) > 250).map((p) => p.x)];
+  const lo = Math.min(...xs);
+  const hi = Math.max(...xs);
+  let d = target - mid;
+  d = Math.max(d, 70 - lo);
+  d = Math.min(d, 730 - hi);
+  return Math.round(d);
+}
+
 const isKid = (m: ArtMo) => !m.who || m.who === "mo" || m.who === "ais";
 
 function pageFocus(scene: ArtScene): number {
@@ -2004,6 +2021,7 @@ export function StoryArt({
   title,
   portrait = false,
   page = false,
+  spread = false,
 }: {
   scene: ArtScene;
   className?: string;
@@ -2013,6 +2031,9 @@ export function StoryArt({
   /** full picture-book page: tall portrait crop with sky / wall above the
    *  scene for the text, anchored to the ground so Baby Mo never gets cut */
   page?: boolean;
+  /** two-page spread: the whole 800-wide scene as one continuous picture,
+   *  with extra sky / wall above for the text, anchored to the ground */
+  spread?: boolean;
 }) {
   const time = scene.time ?? "day";
   const outdoor = ["garden", "park", "market", "street", "beach", "court"].includes(scene.bg);
@@ -2022,7 +2043,9 @@ export function StoryArt({
   return (
     <svg
       viewBox={
-        page
+        spread
+          ? `0 -150 ${W} 600`
+          : page
           ? `${Math.min(W - 460, Math.max(0, pageFocus(scene) - 230))} -110 460 560`
           : portrait
             ? `${Math.min(W - 360, Math.max(0, (scene.mo?.[0]?.x ?? W / 2) - 180))} 0 360 ${H}`
@@ -2031,7 +2054,7 @@ export function StoryArt({
       className={`story-art ${className}`}
       role="img"
       aria-label={title}
-      preserveAspectRatio={page ? "xMidYMax slice" : "xMidYMid slice"}
+      preserveAspectRatio={page || spread ? "xMidYMax slice" : "xMidYMid slice"}
     >
       <defs>
         <radialGradient id="sa-sunglow">
@@ -2040,7 +2063,8 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <Background bg={scene.bg} time={time} />
-      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
+      {(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
+      <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
         <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`} style={p.d ? ({ "--sa-d": `${p.d}s` } as React.CSSProperties) : undefined}>
           <Prop k={p.k} />
@@ -2048,8 +2072,9 @@ export function StoryArt({
       ))}
       {/* grown-ups and big brother stand behind the little ones */}
       {(scene.mo ?? []).map((m, i) => [m, i] as const).sort(([a], [b]) => Number(isKid(a)) - Number(isKid(b))).map(([m, i]) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
-      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page} />)}
-      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page} />}
+      </g>
+      {(scene.fx ?? []).filter((f) => f !== "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}
+      {(time === "rain" && !(scene.fx ?? []).includes("rain") && outdoor) && <Fx k="rain" time={time} page={page || spread} />}
     </svg>
   );
 }
