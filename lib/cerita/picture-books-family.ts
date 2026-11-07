@@ -1654,19 +1654,19 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Ceklek! \"Assalamu'alaikum!\" Umi pulang. Dapurnya masih sedikit bersalju, dan baunya sedikit gosong.", en: "Click! \"Assalamu'alaikum!\" Umi was home. The kitchen was still a bit snowy and smelled a bit burnt." },
-        scene: { focus: 330, bg: "kitchen", props: [{ k: "flour", x: 480, y: 330 }], mo: [{ pose: "pose-26", x: 380 }, { who: "ais", pose: "peek-wall", x: 270 }] },
+        scene: { focus: 330, bg: "kitchen", props: [{ k: "flour", x: 480, y: 330 }], mo: [{ who: "umi", pose: "wave", x: 270 }, { pose: "pose-26", x: 390 }] },
       },
       {
         text: { id: "\"KEJUTAAAN!\" Mereka memberikan kue miring dan kartunya. Umi memandang kue itu… lalu tertawa sambil menangis bahagia.", en: "\"SURPRIIISE!\" They handed over the lopsided cake and the card. Umi looked at it… then laughed and cried happy tears." },
-        scene: { focus: 330, bg: "living", props: [{ k: "card", x: 470, y: 320 }, { k: "heart", x: 470, y: 220, s: 0.7 }], mo: [{ pose: "yeyy", x: 380, move: "hop" }, { who: "adam", pose: "show-drawing", x: 270 }], fx: ["confetti", "hearts"] },
+        scene: { focus: 330, bg: "living", props: [{ k: "card", x: 440, y: 330 }, { k: "heart", x: 440, y: 230, s: 0.6 }], mo: [{ who: "umi", pose: "touched-cheek", x: 260 }, { pose: "yeyy", x: 370, move: "hop" }], fx: ["confetti", "hearts"] },
       },
       {
         text: { id: "\"Ini kue paling enak sedunia,\" kata Umi, sambil memakan bagian yang tidak gosong. \"Karena isinya cinta.\"", en: "\"This is the best cake in the world,\" said Umi, eating the un-burnt bits. \"Because it's full of love.\"" },
-        scene: { focus: 330, bg: "living", props: [{ k: "cookies", x: 470 }], mo: [{ pose: "pose-07", x: 390 }, { who: "ais", pose: "heart-hands-smile", x: 280 }], fx: ["hearts"] },
+        scene: { focus: 330, bg: "living", props: [{ k: "cookies", x: 340 }], mo: [{ who: "umi", pose: "kneel-smile", x: 260 }, { pose: "pose-07", x: 410 }], fx: ["hearts"] },
       },
       {
         text: { id: "Apa yang bisa kamu buat untuk Umi hari ini? Ingat — tidak perlu sempurna, yang penting penuh cinta! 🎂", en: "What could you make for your mum today? Remember — it doesn't need to be perfect, just full of love! 🎂" },
-        scene: { bg: "kitchen", props: [{ k: "bowl", x: 470 }, { k: "heart", x: 470, y: 230, s: 0.6 }], mo: [{ pose: "thank-you", x: 360 }], fx: ["sparkle"] },
+        scene: { bg: "kitchen", props: [{ k: "heart", x: 450, y: 230, s: 0.6 }], mo: [{ who: "umi", pose: "hug-mo", x: 340 }], fx: ["hearts", "sparkle"] },
       },
     ],
   },
