@@ -475,4 +475,459 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── Abi 1. Abi comes home ───────────────────────── */
+  {
+    slug: "abi-pulang-kerja",
+    pose: "baby-mo-pose-41.png",
+    published: "2026-11-08",
+    title: { id: "Abi Pulang Kerja", en: "Abi Comes Home" },
+    hook: {
+      id: "Baby Mo menunggu Abi pulang sejak sore. Tapi waktu Abi datang, Abi capek sekali… dan tertidur di tengah cerita!",
+      en: "Baby Mo has been waiting for Abi since the afternoon. But when Abi gets home he's so tired… he falls asleep in the middle of the story!",
+    },
+    anchor: { type: "hadith", slug: "menafkahi-keluarga" },
+    takeaway: {
+      id: "Anak belajar menghargai kerja orang tua saat diajak melihatnya sebagai bentuk sayang — dan diberi kesempatan membalas sayang itu.",
+      en: "Children learn to value a parent's work when they see it as a kind of love — and get a chance to love back.",
+    },
+    tags: ["abi", "ayah", "bekerja", "sayang", "terima kasih", "keluarga"],
+    cover: {
+      focus: 330, bg: "living", time: "dusk",
+      props: [{ k: "heart", x: 470, y: 230, s: 0.7 }],
+      mo: [{ who: "ayah", pose: "hug-mo", x: 330 }],
+      fx: ["hearts"],
+    },
+    pages: [
+      {
+        text: { id: "Setiap sore, Baby Mo duduk di dekat jendela. Ia sedang menunggu seseorang.", en: "Every afternoon, Baby Mo sat by the window. He was waiting for someone." },
+        scene: { bg: "living", time: "dusk", props: [{ k: "clock", x: 500, y: 230 }], mo: [{ pose: "pose-12", x: 360 }] },
+      },
+      {
+        text: { id: "Jarum jam berputar pelaaan sekali. \"Jam, cepat dong. Abi kapan pulang?\"", en: "The clock hands turned sooo slowly. \"Hurry up, clock. When is Abi coming home?\"" },
+        scene: { bg: "living", time: "dusk", props: [{ k: "clock", x: 470, y: 220, s: 1.3 }], mo: [{ pose: "pose-22", x: 340 }] },
+      },
+      {
+        text: { id: "Ceklek! Pintu terbuka. \"Assalamu'alaikum!\" Baby Mo melompat. \"Wa'alaikumussalam, ABI!\"", en: "Click! The door opened. \"Assalamu'alaikum!\" Baby Mo leapt up. \"Wa'alaikumussalam, ABI!\"" },
+        scene: { focus: 310, bg: "living", time: "dusk", mo: [{ pose: "run", x: 270, move: "hop" }, { who: "ayah", pose: "wave-folder", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Abi berlutut dan merentangkan tangan. Baby Mo berlari secepat roket ke pelukannya.", en: "Abi knelt down and opened his arms. Baby Mo raced like a rocket into his hug." },
+        scene: { bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Abi, ayo main! Ayo baca cerita! Ayo bikin menara!\" Baby Mo menarik-narik tangan Abi.", en: "\"Abi, let's play! Let's read a story! Let's build a tower!\" Baby Mo tugged at Abi's hand." },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "blocks", x: 470 }, { k: "books", x: 540 }], mo: [{ pose: "pose-34", x: 370 }, { who: "ayah", pose: "yawn-stretch-stand", x: 250 }] },
+      },
+      {
+        text: { id: "Abi tersenyum, tapi matanya sayu. \"Abi capek sekali hari ini, Mo. Tapi satu cerita… boleh.\"", en: "Abi smiled, but his eyes were droopy. \"I'm really tired today, Mo. But one story… sure.\"" },
+        scene: { focus: 320, bg: "living", time: "night", props: [{ k: "lamp", x: 520, s: 0.85 }], mo: [{ pose: "pose-40", x: 380 }, { who: "ayah", pose: "yawn-sit", x: 260 }] },
+      },
+      {
+        text: { id: "Mereka duduk berdua. \"Pada suatu hari… ada seekor kucing… yang ingin… terbang…\"", en: "They sat together. \"Once upon a time… there was a cat… who wanted… to fly…\"" },
+        scene: { bg: "living", time: "night", props: [{ k: "lamp", x: 520, s: 0.85 }], mo: [{ who: "ayah", pose: "read-with-mo", x: 350 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Suara Abi makin pelan… makin pelan… lalu terdengar: \"Krrrr… krrrr…\" Abi tertidur!", en: "Abi's voice got softer… and softer… and then: \"Zzzzz… zzzzz…\" Abi was asleep!" },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "books", x: 470 }], mo: [{ pose: "pose-26", x: 400 }, { who: "ayah", pose: "doze-sit", x: 280 }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Baby Mo ingin membangunkannya. Tapi lalu ia melihat sepatu Abi yang berdebu dan tas kerja yang berat.", en: "Baby Mo wanted to wake him. But then he saw Abi's dusty shoes and his heavy work bag." },
+        scene: { bg: "living", time: "night", props: [{ k: "shoes", x: 480 }, { k: "box", x: 560, s: 0.8 }], mo: [{ pose: "pose-22", x: 370 }] },
+      },
+      {
+        text: { id: "Ia teringat kata Umi: \"Abi bekerja dari pagi supaya kita punya rumah, makanan, dan buku cerita.\"", en: "He remembered what Umi said: \"Abi works from morning so we have a home, food and storybooks.\"" },
+        scene: { bg: "living", time: "night", props: [{ k: "rice", x: 470 }, { k: "books", x: 560 }], mo: [{ pose: "pose-07", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Diam-diam Baby Mo mengambil selimut kecilnya dan menyelimuti kaki Abi. Pelan… pelan…", en: "Very quietly, Baby Mo fetched his little blanket and tucked it over Abi's feet. Gently… gently…" },
+        scene: { focus: 320, bg: "living", time: "night", props: [{ k: "towel", x: 300 }], mo: [{ pose: "pose-36", x: 390 }, { who: "ayah", pose: "doze-sit", x: 270 }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Lalu ia membawakan segelas air dan menaruhnya di samping Abi. \"Biar kalau bangun, Abi nggak haus.\"", en: "Then he brought a glass of water and set it beside Abi. \"So Abi won't be thirsty when he wakes up.\"" },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "cup", x: 340 }], mo: [{ pose: "pose-04", x: 410 }, { who: "ayah", pose: "doze-sit", x: 270 }] },
+      },
+      {
+        text: { id: "Abi membuka satu matanya dan tersenyum. \"Siapa yang menyelimuti Abi, ya?\" \"Rahasia!\" bisik Baby Mo.", en: "Abi opened one eye and smiled. \"Now who tucked me in?\" \"It's a secret!\" whispered Baby Mo." },
+        scene: { focus: 330, bg: "living", time: "night", mo: [{ pose: "pose-03", x: 400 }, { who: "ayah", pose: "hug-pillow-sit", x: 275 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Terima kasih sudah bekerja, Abi,\" kata Baby Mo. Abi memeluknya. \"Bekerja untuk keluarga itu sedekah paling besar, Mo.\"", en: "\"Thank you for working, Abi,\" said Baby Mo. Abi hugged him. \"Working for your family is the biggest charity, Mo.\"" },
+        quote: { id: "\"Dinar yang paling besar pahalanya adalah dinar yang kamu nafkahkan untuk keluargamu.\" (HR. Muslim)", en: "\"The dinar with the greatest reward is the one you spend on your family.\" (Muslim)" },
+        scene: { bg: "living", time: "night", mo: [{ who: "ayah", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Besok ceritanya dilanjutkan, ya. Kucingnya belum terbang,\" kata Abi. Baby Mo tertawa.", en: "\"Let's finish the story tomorrow. The cat hasn't flown yet,\" said Abi. Baby Mo giggled." },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "books", x: 470 }, { k: "kitten", x: 530 }], mo: [{ pose: "pose-05", x: 400 }, { who: "ayah", pose: "ok-wink-sit", x: 275 }] },
+      },
+      {
+        text: { id: "Malam itu Baby Mo berdoa, \"Ya Allah, jagalah Abi yang capek bekerja.\" Apa yang bisa kamu lakukan saat Abi atau Umi pulang? 🏠", en: "That night Baby Mo prayed, \"O Allah, look after Abi, who works so hard.\" What could you do when Abi or Umi gets home? 🏠" },
+        scene: { bg: "bedroom", time: "night", props: [{ k: "teddy", x: 480 }, { k: "lamp", x: 560, s: 0.85 }], mo: [{ pose: "pose-35", x: 360 }], fx: ["stars"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Abi 2. First sujud with Abi ───────────────────────── */
+  {
+    slug: "sujud-pertama-bersama-abi",
+    pose: "baby-mo-pose-17.png",
+    published: "2026-11-08",
+    title: { id: "Sujud Pertama Bersama Abi", en: "My First Sujud with Abi" },
+    hook: {
+      id: "Baby Mo sholat di samping Abi. Waktu sujud, ia tidak mau bangun — karena ada banyak sekali yang ingin ia bisikkan!",
+      en: "Baby Mo prays beside Abi. In sujud he doesn't want to get up — there's so much he wants to whisper!",
+    },
+    anchor: { type: "parenting", slug: "mulai-sholat" },
+    takeaway: {
+      id: "Anak kecil belajar sholat dengan meniru dan merasa dekat. Ajak di samping kita, biarkan meniru, dan kenalkan sujud sebagai waktu berbisik kepada Allah.",
+      en: "Little ones learn to pray by copying and feeling close. Keep them beside you, let them copy, and present sujud as a time to whisper to Allah.",
+    },
+    tags: ["sholat", "sujud", "abi", "doa", "meniru", "ibadah"],
+    cover: {
+      focus: 330, bg: "living", time: "dusk",
+      props: [{ k: "mat", x: 330 }],
+      mo: [{ pose: "pose-17", x: 380 }, { who: "ayah", pose: "sujud", x: 250 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Adzan Maghrib terdengar dari masjid. Abi menutup bukunya. \"Waktunya sholat, Mo.\"", en: "The Maghrib adhan drifted over from the mosque. Abi closed his book. \"Time to pray, Mo.\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "minaret", x: 560, y: 300, s: 0.7 }], mo: [{ pose: "pose-31", x: 380 }, { who: "ayah", pose: "check-watch", x: 260 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"Aku ikut! Aku mau sholat di samping Abi!\" Baby Mo berlari mengambil peci kecilnya.", en: "\"Me too! I want to pray next to Abi!\" Baby Mo ran to get his little cap." },
+        scene: { bg: "living", time: "dusk", mo: [{ pose: "run", x: 360, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka berwudhu dulu. Air dingin di wajah. Air dingin di tangan. \"Brrr, segar!\"", en: "First they did wudhu. Cool water on the face. Cool water on the hands. \"Brrr, fresh!\"" },
+        scene: { focus: 330, bg: "bathroom", props: [{ k: "faucet", x: 470 }], mo: [{ pose: "pose-28", x: 370 }, { who: "ayah", pose: "hands-together-thanks", x: 250 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Abi menggelar dua sajadah: satu besar, satu kecil. \"Yang kecil untuk jagoan.\"", en: "Abi laid out two prayer mats: one big, one small. \"The little one is for my champion.\"" },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "mat", x: 400 }, { k: "mat", x: 250, s: 1.3 }], mo: [{ pose: "pose-25", x: 400 }, { who: "ayah", pose: "kneel-present", x: 260 }] },
+      },
+      {
+        text: { id: "\"Allahu Akbar.\" Abi mengangkat tangan. Baby Mo melirik, lalu ikut mengangkat tangannya tinggi-tinggi.", en: "\"Allahu Akbar.\" Abi raised his hands. Baby Mo peeked, then raised his hands up high too." },
+        scene: { bg: "living", time: "dusk", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-26", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Abi membungkuk — ruku. Baby Mo membungkuk juga… sampai hampir terguling. Ups!", en: "Abi bowed — ruku. Baby Mo bowed too… so far he nearly toppled over. Oops!" },
+        scene: { bg: "living", time: "dusk", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-34", x: 360, move: "sway" }] },
+      },
+      {
+        text: { id: "Lalu Abi turun bersujud. Dahi, hidung, tangan, lutut, dan ujung kaki menyentuh sajadah.", en: "Then Abi went down into sujud. Forehead, nose, hands, knees and toes all touched the mat." },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "mat", x: 260 }], mo: [{ pose: "pose-40", x: 400 }, { who: "ayah", pose: "sujud", x: 260 }] },
+      },
+      {
+        text: { id: "Baby Mo ikut bersujud di sajadah kecilnya. Hidungnya menempel. Sajadahnya wangi sabun.", en: "Baby Mo went into sujud on his little mat. His nose touched it. The mat smelled of soap." },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "mat", x: 400 }], mo: [{ pose: "pose-17", x: 400 }, { who: "ayah", pose: "sujud", x: 255 }] },
+      },
+      {
+        text: { id: "Waktu Abi bangun, Baby Mo masih sujud. Abi duduk… Baby Mo masih sujud. Abi mengucap salam… Baby Mo MASIH sujud!", en: "When Abi got up, Baby Mo was still in sujud. Abi sat… Baby Mo was still in sujud. Abi said the salam… Baby Mo was STILL in sujud!" },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "mat", x: 400 }], mo: [{ pose: "pose-17", x: 400 }, { who: "ayah", pose: "surprised-cheeks-sit", x: 260 }] },
+      },
+      {
+        text: { id: "\"Mo? Kamu tertidur?\" bisik Abi. Baby Mo mengangkat kepala. \"Belum selesai, Abi! Aku lagi bisik-bisik sama Allah.\"", en: "\"Mo? Did you fall asleep?\" whispered Abi. Baby Mo lifted his head. \"I'm not done, Abi! I'm whispering to Allah.\"" },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "mat", x: 400 }], mo: [{ pose: "pose-23", x: 400 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Bisik apa saja?\" tanya Abi. Baby Mo menghitung dengan jari: \"Minta Umi sehat. Minta Ais nggak ambil mainanku. Minta kucing tetangga cepat punya anak…\"", en: "\"Whispering what?\" asked Abi. Baby Mo counted on his fingers: \"For Umi to be healthy. For Ais not to take my toys. For the neighbour's cat to have kittens soon…\"" },
+        scene: { bg: "living", time: "night", props: [{ k: "kitten", x: 490 }, { k: "heart", x: 440, y: 230, s: 0.6 }], mo: [{ pose: "idea", x: 360 }] },
+      },
+      {
+        text: { id: "Abi tertawa pelan dan memeluknya. \"Masya Allah. Kamu tahu, Mo? Sujud itu waktu kita paling dekat dengan Allah.\"", en: "Abi laughed softly and hugged him. \"Masha Allah. Do you know, Mo? Sujud is when we're closest to Allah.\"" },
+        quote: { id: "\"Keadaan seorang hamba paling dekat dengan Rabbnya adalah ketika ia sedang sujud, maka perbanyaklah doa.\" (HR. Muslim)", en: "\"The closest a servant is to his Lord is when he is in prostration, so make plenty of du'a.\" (Muslim)" },
+        scene: { bg: "living", time: "night", props: [{ k: "mat", x: 470 }], mo: [{ who: "ayah", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Jadi boleh bisik-bisik lama?\" \"Boleh. Allah selalu mendengar, mau bisik pelan atau keras.\"", en: "\"So I can whisper for a long time?\" \"Yes. Allah always hears — soft whispers or loud ones.\"" },
+        scene: { focus: 330, bg: "living", time: "night", mo: [{ pose: "pose-07", x: 400 }, { who: "ayah", pose: "hand-heart-kneel", x: 265 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sejak hari itu, Baby Mo selalu membawa sajadah kecilnya setiap kali Abi berkata, \"Waktunya sholat.\"", en: "From that day, Baby Mo always brought his little mat whenever Abi said, \"Time to pray.\"" },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "mat", x: 410 }], mo: [{ pose: "yes", x: 400 }, { who: "ayah", pose: "thumbs-up-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "Kadang Baby Ais ikut, kadang Kak Adam yang di depan. Sajadahnya berjajar seperti kereta.", en: "Sometimes Baby Ais joined, sometimes Kak Adam stood at the front. The mats lined up like a train." },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "mat", x: 400 }], mo: [{ who: "ais", pose: "dua-mat", x: 255 }, { pose: "pose-35", x: 400 }, { who: "adam", pose: "dua-hands", x: 330 }] },
+      },
+      {
+        text: { id: "Dan setiap sujud, Baby Mo berbisik paling lama. Kalau kamu sujud, kamu mau bisik apa kepada Allah? 🤲", en: "And in every sujud, Baby Mo whispered the longest. When you're in sujud, what will you whisper to Allah? 🤲" },
+        scene: { bg: "living", time: "night", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-17", x: 360 }], fx: ["stars", "sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Abi 3. Abi's headache ───────────────────────── */
+  {
+    slug: "hari-abi-pusing",
+    pose: "baby-mo-pose-04.png",
+    published: "2026-11-08",
+    title: { id: "Hari Abi Pusing", en: "The Day Abi Had a Headache" },
+    hook: {
+      id: "Kepala Abi pusing. Si kembar ingin menolong — dengan \"mode semut\": jalan jinjit, bicara berbisik, dan hadiah-hadiah kecil.",
+      en: "Abi has a headache. The twins want to help — in \"ant mode\": tiptoeing, whispering, and leaving little gifts.",
+    },
+    anchor: { type: "doa", slug: "doa-kedua-orang-tua" },
+    takeaway: {
+      id: "Anak bisa diajak merawat orang tuanya sejak kecil: berbicara lembut, menolong hal kecil, dan mendoakan.",
+      en: "Even little children can care for their parents: speaking gently, helping in small ways, and praying for them.",
+    },
+    tags: ["abi", "sakit", "merawat", "berbakti", "si kembar", "doa orang tua"],
+    cover: {
+      focus: 320, bg: "living",
+      props: [{ k: "cup", x: 450 }, { k: "heart", x: 470, y: 230, s: 0.6 }],
+      mo: [{ pose: "pose-04", x: 380 }, { who: "ayah", pose: "grateful-heart-sit", x: 255 }, { who: "ais", pose: "heart-hands", x: 470 }],
+      fx: ["hearts"],
+    },
+    pages: [
+      {
+        text: { id: "Hari Ahad pagi, Baby Mo dan Baby Ais sedang bermain drum panci. DUNG! DUNG! TRANG!", en: "On Sunday morning, Baby Mo and Baby Ais were playing pot drums. BOOM! BOOM! CLANG!" },
+        scene: { focus: 330, bg: "kitchen", props: [{ k: "bowl", x: 470 }, { k: "soup", x: 540 }], mo: [{ pose: "pose-30", x: 390, move: "sway" }, { who: "ais", pose: "headphones-dance", x: 270 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Lalu mereka melihat Abi duduk sambil memegang kepala. Matanya terpejam. \"Abi kenapa?\"", en: "Then they saw Abi sitting, holding his head. His eyes were shut. \"What's wrong, Abi?\"" },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-40", x: 380 }, { who: "ayah", pose: "stressed-head-sit", x: 255 }] },
+      },
+      {
+        text: { id: "\"Kepala Abi pusing, Sayang,\" kata Abi pelan. \"Abi butuh istirahat sebentar.\"", en: "\"My head hurts, sweetheart,\" Abi said softly. \"I need to rest for a little while.\"" },
+        scene: { focus: 320, bg: "living", mo: [{ who: "ais", pose: "sad-tears", x: 380 }, { who: "ayah", pose: "stressed-head-sit", x: 255 }] },
+      },
+      {
+        text: { id: "Si kembar berkumpul di pojok. \"Kita harus menolong Abi,\" bisik Baby Ais. \"Tapi bagaimana?\"", en: "The twins huddled in a corner. \"We have to help Abi,\" whispered Baby Ais. \"But how?\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "teddy", x: 480 }], mo: [{ pose: "pose-22", x: 390 }, { who: "ais", pose: "think-question", x: 280 }] },
+      },
+      {
+        text: { id: "\"Aku tahu! MODE SEMUT!\" kata Baby Mo. \"Semut itu jalannya pelan, nggak berisik, tapi kerjanya banyak!\"", en: "\"I know! ANT MODE!\" said Baby Mo. \"Ants walk quietly, they don't make noise, but they get lots done!\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "ants", x: 480 }], mo: [{ pose: "idea", x: 380 }, { who: "ais", pose: "idea-bulb", x: 270 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mode semut dimulai. Panci disimpan. Mereka berjalan jinjit: tuk… tuk… tuk… Sangat pelan.", en: "Ant mode began. The pots went away. They tiptoed: tip… tip… tip… Very quietly." },
+        scene: { focus: 330, bg: "living", props: [{ k: "ants", x: 480 }], mo: [{ pose: "pose-42", x: 390 }, { who: "ais", pose: "peek-wall", x: 270 }] },
+      },
+      {
+        text: { id: "Semut pertama, Baby Mo, membawa segelas air hangat dengan dua tangan. Pelan… jangan tumpah…", en: "Ant number one, Baby Mo, carried a glass of warm water with both hands. Slowly… don't spill…" },
+        scene: { focus: 320, bg: "living", props: [{ k: "cup", x: 420 }], mo: [{ pose: "pose-04", x: 390 }, { who: "ayah", pose: "drink-cup-sit", x: 260 }] },
+      },
+      {
+        text: { id: "Semut kedua, Baby Ais, membawa bantal kecil dan menaruhnya di belakang punggung Abi.", en: "Ant number two, Baby Ais, brought a little cushion and tucked it behind Abi's back." },
+        scene: { focus: 320, bg: "living", mo: [{ who: "ais", pose: "hug-star-stand", x: 390 }, { who: "ayah", pose: "hug-pillow-sit", x: 260 }] },
+      },
+      {
+        text: { id: "Lalu dua semut kecil memijat bahu Abi dengan jari-jari mungil mereka. Pijat… pijat… pijat.", en: "Then the two little ants massaged Abi's shoulders with their tiny fingers. Squeeze… squeeze… squeeze." },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-36", x: 390 }, { who: "ayah", pose: "calm-sit", x: 260 }, { who: "ais", pose: "heart-hands-smile", x: 160 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Baby Ais menggambar kartu: Abi tersenyum, dengan matahari besar. Tulisannya: \"Cepat sembuh, Abi.\"", en: "Baby Ais drew a card: Abi smiling, with a big sun. It said: \"Get well soon, Abi.\"" },
+        scene: { bg: "living", props: [{ k: "drawing", x: 480 }], mo: [{ who: "ais", pose: "draw-floor", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Baby Mo menutup tirai supaya cahaya tidak menyilaukan, lalu duduk diam menemani Abi.", en: "Baby Mo closed the curtains so the light wasn't too bright, then sat quietly beside Abi." },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "lamp", x: 520, s: 0.85 }], mo: [{ pose: "pose-12", x: 390 }, { who: "ayah", pose: "doze-sit", x: 260 }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Sebelum tidur siang, si kembar berdoa untuk Abi: \"Rabbighfirlii wa li waalidayya, warhamhumaa kamaa rabbayaanii shaghiiraa.\"", en: "Before their nap, the twins prayed for Abi: \"Rabbighfirlii wa li waalidayya, warhamhumaa kamaa rabbayaanii shaghiiraa.\"" },
+        quote: { id: "\"Ya Tuhanku, sayangilah keduanya sebagaimana mereka berdua telah mendidikku waktu kecil.\" (QS. Al-Isra: 24)", en: "\"My Lord, have mercy on them both, as they raised me when I was small.\" (Qur'an, Al-Isra 17:24)" },
+        scene: { focus: 330, bg: "bedroom", props: [{ k: "heart", x: 470, y: 240, s: 0.6 }], mo: [{ pose: "pose-35", x: 390 }, { who: "ais", pose: "dua-hands-closed", x: 275 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sore harinya, Abi bangun dan meregangkan badan. \"Masya Allah… kepala Abi sudah ringan!\"", en: "That afternoon, Abi woke up and stretched. \"Masha Allah… my head feels light again!\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", mo: [{ pose: "wow", x: 390 }, { who: "ayah", pose: "stretch-up-sit", x: 260 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Abi melihat gelas kosong, bantal kecil, dan kartu bergambar matahari. \"Siapa semut-semut baik ini?\"", en: "Abi saw the empty glass, the little cushion and the sunshine card. \"Who were these kind little ants?\"" },
+        scene: { focus: 330, bg: "living", time: "dusk", props: [{ k: "drawing", x: 450 }, { k: "cup", x: 520 }], mo: [{ who: "ais", pose: "giggle", x: 390 }, { who: "ayah", pose: "surprised-cheeks-sit", x: 265 }] },
+      },
+      {
+        text: { id: "\"KAMI!\" Si kembar melompat ke pelukan Abi. \"Terima kasih, semut-semut kesayangan Abi.\"", en: "\"US!\" The twins jumped into Abi's arms. \"Thank you, my favourite little ants.\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", mo: [{ who: "ais", pose: "arms-wide-joy", x: 440 }, { who: "ayah", pose: "hug-mo", x: 320 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malam itu, panci-panci kembali jadi drum — tapi pelan saja. Kalau Abi atau Umi sakit, kamu mau jadi semut apa? 🐜", en: "That night, the pots became drums again — but softly. If Abi or Umi felt unwell, what kind of ant would you be? 🐜" },
+        scene: { focus: 330, bg: "kitchen", time: "night", props: [{ k: "bowl", x: 470 }, { k: "ants", x: 540 }], mo: [{ pose: "pose-30", x: 390, move: "sway" }, { who: "ais", pose: "giggle", x: 275 }], fx: ["notes"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Abi 4. Abi's watch ───────────────────────── */
+  {
+    slug: "jam-tangan-ajaib-abi",
+    pose: "baby-mo-pose-08.png",
+    published: "2026-11-08",
+    title: { id: "Jam Tangan Ajaib Abi", en: "Abi's Magic Watch" },
+    hook: {
+      id: "Abi sering melirik jam tangannya, lalu tiba-tiba berhenti bekerja. Baby Mo yakin jam itu ajaib. Apa rahasianya?",
+      en: "Abi keeps glancing at his watch and then suddenly stops working. Baby Mo is sure it's magic. What's the secret?",
+    },
+    anchor: { type: "doa", slug: "mendengar-adzan" },
+    takeaway: {
+      id: "Anak belajar bahwa sholat punya waktunya dari melihat orang tua menghentikan kesibukan saat adzan.",
+      en: "Children learn that prayer has its times by watching their parents put things down when the adhan calls.",
+    },
+    tags: ["abi", "waktu sholat", "adzan", "jam", "disiplin", "sholat"],
+    cover: {
+      focus: 320, bg: "living",
+      props: [{ k: "clock", x: 470, y: 220 }],
+      mo: [{ pose: "pose-08", x: 380 }, { who: "ayah", pose: "check-watch", x: 260 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Abi punya jam tangan hitam. Setiap hari Abi meliriknya — lirik, lirik, lirik.", en: "Abi had a black watch. Every day he glanced at it — glance, glance, glance." },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-22", x: 380 }, { who: "ayah", pose: "check-watch", x: 260 }] },
+      },
+      {
+        text: { id: "Siang itu Abi sedang mengetik di laptop. Tak-tik-tak-tik. Lalu Abi melirik jamnya… dan langsung berdiri!", en: "That noon Abi was typing on his laptop. Tap-tap-tap-tap. Then he glanced at his watch… and stood straight up!" },
+        scene: { focus: 320, bg: "living", props: [{ k: "laptop", x: 450 }], mo: [{ pose: "pose-40", x: 390 }, { who: "ayah", pose: "laptop-stand", x: 260 }] },
+      },
+      {
+        text: { id: "Sore hari Abi sedang menelepon. \"Iya, Pak… baik…\" Lirik jam — \"Maaf, nanti saya telepon lagi.\" Klik!", en: "In the afternoon Abi was on the phone. \"Yes… certainly…\" Glance at the watch — \"Sorry, I'll call you back.\" Click!" },
+        scene: { focus: 320, bg: "living", time: "dusk", mo: [{ pose: "pose-33", x: 390 }, { who: "ayah", pose: "phone-call", x: 260 }] },
+      },
+      {
+        text: { id: "\"Jam tangan Abi pasti AJAIB!\" pikir Baby Mo. \"Jamnya bisa menyuruh Abi berhenti!\"", en: "\"Abi's watch must be MAGIC!\" thought Baby Mo. \"It can make Abi stop!\"" },
+        scene: { bg: "living", time: "dusk", props: [{ k: "clock", x: 480, y: 220, s: 1.2 }], mo: [{ pose: "wow", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Baby Mo mengajak Baby Ais menyelidiki. Mereka bersembunyi di balik sofa dengan kaca pembesar.", en: "Baby Mo got Baby Ais to investigate. They hid behind the sofa with a magnifying glass." },
+        scene: { focus: 330, bg: "living", props: [{ k: "magnifier", x: 470 }], mo: [{ pose: "pose-09", x: 390 }, { who: "ais", pose: "magnifier-peek", x: 275 }] },
+      },
+      {
+        text: { id: "Mereka mengamati. Setiap Abi berhenti, selalu ada suara yang sama dari kejauhan: \"Allaahu Akbar, Allaahu Akbar…\"", en: "They watched. Every time Abi stopped, the same sound came from far away: \"Allaahu Akbar, Allaahu Akbar…\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "minaret", x: 560, y: 300, s: 0.7 }], mo: [{ pose: "pose-31", x: 390 }, { who: "ais", pose: "surprised", x: 275 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"Abi! Kami tahu rahasianya!\" kata si kembar. \"Jam Abi berbunyi adzan!\" Abi tertawa.", en: "\"Abi! We know the secret!\" said the twins. \"Your watch plays the adhan!\" Abi laughed." },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-08", x: 390 }, { who: "ayah", pose: "cheer-kneel", x: 260 }] },
+      },
+      {
+        text: { id: "\"Jamnya biasa saja,\" kata Abi. \"Abi melihat jam supaya tahu kapan waktu sholat datang. Sholat itu punya waktunya sendiri.\"", en: "\"It's just an ordinary watch,\" said Abi. \"I look at it so I know when prayer time is coming. Each prayer has its own time.\"" },
+        quote: { id: "\"Sesungguhnya sholat itu adalah kewajiban yang ditentukan waktunya atas orang-orang yang beriman.\" (QS. An-Nisa: 103)", en: "\"Indeed, prayer has been decreed upon the believers at fixed times.\" (Qur'an, An-Nisa 4:103)" },
+        scene: { focus: 320, bg: "living", props: [{ k: "clock", x: 470, y: 220 }], mo: [{ pose: "pose-22", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "\"Subuh waktu langit masih gelap. Zuhur waktu matahari di atas kepala. Ashar waktu bayangan memanjang…\"", en: "\"Fajr is when the sky is still dark. Dhuhr is when the sun is overhead. Asr is when shadows grow long…\"" },
+        scene: { bg: "garden", props: [{ k: "sun", x: 420, y: 120 }], mo: [{ pose: "pose-15", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"…Maghrib waktu matahari terbenam, dan Isya waktu bintang-bintang keluar.\"", en: "\"…Maghrib is when the sun sets, and Isha is when the stars come out.\"" },
+        scene: { bg: "garden", time: "night", props: [{ k: "moon", x: 470, y: 120 }], mo: [{ pose: "pose-41", x: 350 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Kalau adzan datang, sepenting apa pun pekerjaan Abi, Abi berhenti dulu. Karena Allah yang memanggil.\"", en: "\"When the adhan comes, however important my work is, I stop first. Because it's Allah calling.\"" },
+        scene: { focus: 320, bg: "living", props: [{ k: "laptop", x: 460 }], mo: [{ pose: "pose-07", x: 390 }, { who: "ayah", pose: "hand-heart-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "\"Aku juga mau punya jam tangan!\" kata Baby Mo. Abi mengambil spidol dan menggambar jam di pergelangan tangannya.", en: "\"I want a watch too!\" said Baby Mo. Abi took a marker and drew a watch on his wrist." },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-25", x: 390 }, { who: "ayah", pose: "write-notepad-sit", x: 260 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mulai hari itu, Baby Mo jadi Petugas Penjaga Waktu Sholat. Setiap mendengar adzan, ia berteriak, \"WAKTUNYA SHOLAT!\"", en: "From that day, Baby Mo became the Prayer-Time Keeper. Whenever he heard the adhan, he shouted, \"PRAYER TIME!\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "minaret", x: 560, y: 300, s: 0.7 }], mo: [{ pose: "pose-26", x: 390 }, { who: "ais", pose: "megaphone", x: 275 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Lalu ia berhenti bermain, menjawab adzan pelan-pelan, dan berlari mengambil sajadah kecilnya.", en: "Then he stopped playing, answered the adhan softly, and ran to fetch his little prayer mat." },
+        scene: { bg: "living", props: [{ k: "mat", x: 470 }, { k: "blocks", x: 560 }], mo: [{ pose: "run", x: 360, move: "hop" }] },
+      },
+      {
+        text: { id: "Abi tersenyum bangga. \"Ternyata yang ajaib bukan jamnya — tapi hati yang mau berhenti waktu dipanggil Allah.\"", en: "Abi smiled proudly. \"The magic isn't the watch — it's a heart that's ready to stop when Allah calls.\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "mat", x: 430 }], mo: [{ pose: "pose-35", x: 390 }, { who: "ayah", pose: "dua-mat-kneel", x: 260 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kalau kamu punya jam tangan ajaib, kamu mau berhenti untuk apa saja? Coba gambar jam di tanganmu! ⌚", en: "If you had a magic watch, what would you stop for? Try drawing a watch on your wrist! ⌚" },
+        scene: { bg: "living", time: "dusk", props: [{ k: "clock", x: 480, y: 220 }], mo: [{ pose: "alright", x: 360 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Abi 5. Who falls asleep first ───────────────────────── */
+  {
+    slug: "siapa-yang-tidur-duluan",
+    pose: "baby-mo-pose-39.png",
+    published: "2026-11-08",
+    title: { id: "Siapa yang Tidur Duluan?", en: "Who Falls Asleep First?" },
+    hook: {
+      id: "Abi bertugas menidurkan si kembar malam ini. Tapi ceritanya terlalu panjang… dan yang tertidur duluan justru Abi!",
+      en: "Abi's on bedtime duty tonight. But the story is too long… and the first one to fall asleep is Abi!",
+    },
+    anchor: { type: "doa", slug: "sebelum-tidur" },
+    takeaway: {
+      id: "Rutinitas tidur yang hangat — cerita, doa, dan tawa — membuat anak menutup hari dengan tenang, bahkan ketika orang tua sendiri kelelahan.",
+      en: "A warm bedtime routine — a story, a du'a and a laugh — helps children end the day calmly, even when parents are worn out too.",
+    },
+    tags: ["tidur", "abi", "doa sebelum tidur", "si kembar", "lucu", "malam"],
+    cover: {
+      focus: 350, bg: "bedroom", time: "night",
+      props: [{ k: "books", x: 520 }],
+      mo: [{ pose: "pose-03", x: 450 }, { who: "ayah", pose: "sleep-blanket", x: 255, flip: true }],
+      fx: ["zzz", "stars"],
+    },
+    pages: [
+      {
+        text: { id: "Malam itu Umi menginap di rumah Nenek. \"Malam ini Abi yang menidurkan kalian,\" kata Abi gagah.", en: "That night Umi was staying at Grandma's. \"Tonight I'll put you to bed,\" said Abi bravely." },
+        scene: { focus: 320, bg: "bedroom", time: "night", mo: [{ pose: "pose-25", x: 390 }, { who: "ayah", pose: "stand-arms-crossed", x: 260 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Sikat gigi — beres. Pakai piyama — beres. Pipis dulu — beres. \"Sekarang naik kasur!\"", en: "Teeth brushed — done. Pyjamas on — done. Wee first — done. \"Now into bed!\"" },
+        scene: { focus: 320, bg: "bedroom", time: "night", mo: [{ who: "ais", pose: "brush-teeth", x: 390 }, { who: "ayah", pose: "clipboard-check", x: 260 }] },
+      },
+      {
+        text: { id: "\"Cerita dulu, Abi! Yang panjaaang!\" pinta Baby Mo. Baby Ais mengangguk-angguk.", en: "\"Story first, Abi! A looong one!\" begged Baby Mo. Baby Ais nodded and nodded." },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "books", x: 470 }], mo: [{ pose: "pose-05", x: 390 }, { who: "ais", pose: "sit-chin-hands", x: 280 }] },
+      },
+      {
+        text: { id: "Abi membuka buku. \"Di sebuah hutan, hiduplah seekor jerapah yang lehernya sangat… sangat… panjang…\"", en: "Abi opened the book. \"In a forest there lived a giraffe whose neck was very… very… long…\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "giraffe", x: 520, s: 0.7 }], mo: [{ who: "ayah", pose: "read-with-mo", x: 340 }, { who: "ais", pose: "read-cushion", x: 470 }] },
+      },
+      {
+        text: { id: "\"…jerapah itu berjalan… dan berjalan…\" Abi menguap. \"Hoaaam… dan berjalan…\"", en: "\"…the giraffe walked… and walked…\" Abi yawned. \"Hooaaam… and walked…\"" },
+        scene: { focus: 320, bg: "bedroom", time: "night", props: [{ k: "giraffe", x: 470, s: 0.6 }], mo: [{ pose: "pose-12", x: 390 }, { who: "ayah", pose: "yawn-sit", x: 260 }] },
+      },
+      {
+        text: { id: "Kepala Abi terangguk-angguk. Bukunya miring. \"Abi?\" Hening. Lalu: \"Krrrrr… pssst… krrrrr…\"", en: "Abi's head nodded and nodded. The book tilted. \"Abi?\" Silence. Then: \"Snorrre… pssst… snorrre…\"" },
+        scene: { focus: 320, bg: "bedroom", time: "night", props: [{ k: "books", x: 440 }], mo: [{ pose: "pose-40", x: 390 }, { who: "ayah", pose: "doze-sit", x: 260 }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Si kembar saling pandang… lalu tertawa sambil menutup mulut. \"Abi tidur duluan!\"", en: "The twins looked at each other… then giggled behind their hands. \"Abi fell asleep first!\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ pose: "pose-03", x: 390 }, { who: "ais", pose: "giggle", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Sekarang kita yang menidurkan Abi,\" bisik Baby Ais. \"Mode semut!\"", en: "\"Now we put Abi to bed,\" whispered Baby Ais. \"Ant mode!\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "ants", x: 480 }], mo: [{ who: "ais", pose: "idea-point", x: 280 }, { pose: "pose-25", x: 390 }] },
+      },
+      {
+        text: { id: "Baby Mo menaruh bantal di bawah kepala Abi. Baby Ais menyelimutinya sampai ke dagu.", en: "Baby Mo slid a pillow under Abi's head. Baby Ais pulled the blanket right up to his chin." },
+        scene: { focus: 350, bg: "bedroom", time: "night", mo: [{ pose: "pose-36", x: 450 }, { who: "ayah", pose: "sleep-blanket", x: 255, flip: true }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Baby Mo menaruh boneka beruangnya di samping Abi. \"Supaya Abi nggak takut gelap.\"", en: "Baby Mo put his teddy next to Abi. \"So Abi isn't scared of the dark.\"" },
+        scene: { focus: 360, bg: "bedroom", time: "night", props: [{ k: "teddy", x: 395 }], mo: [{ who: "ais", pose: "hug-teddy-wink", x: 470 }, { who: "ayah", pose: "sleep-blanket", x: 260, flip: true }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Lalu mereka mematikan lampu. Klik. Hanya bulan yang mengintip dari jendela.", en: "Then they switched off the light. Click. Only the moon peeked in through the window." },
+        scene: { bg: "bedroom", time: "night", props: [{ k: "lamp", x: 480, s: 0.85 }], mo: [{ pose: "pose-28", x: 360 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Kita belum berdoa,\" kata Baby Ais. Mereka berbaring dan berdoa pelan: \"Bismika Allaahumma ahyaa wa amuut.\"", en: "\"We haven't said our du'a,\" said Baby Ais. They lay down and prayed softly: \"Bismika Allaahumma ahyaa wa amuut.\"" },
+        quote: { id: "\"Dengan nama-Mu ya Allah, aku hidup dan aku mati.\" (HR. Bukhari)", en: "\"In Your name, O Allah, I live and I die.\" (Bukhari)" },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ pose: "pose-35", x: 390 }, { who: "ais", pose: "dua-hands-closed", x: 280 }], fx: ["stars", "sparkle"] },
+      },
+      {
+        text: { id: "\"Dan doa untuk Abi juga,\" tambah Baby Mo. \"Ya Allah, semoga Abi mimpi jerapahnya sampai.\"", en: "\"And one for Abi too,\" added Baby Mo. \"O Allah, let Abi dream the giraffe gets there.\"" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "giraffe", x: 500, s: 0.5 }], mo: [{ pose: "pose-07", x: 390 }, { who: "ais", pose: "heart-hands", x: 280 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Tengah malam Abi terbangun. Ada bantal, selimut, boneka beruang… dan dua anak yang tidur pulas.", en: "At midnight Abi woke up. There was a pillow, a blanket, a teddy… and two children fast asleep." },
+        scene: { focus: 320, bg: "bedroom", time: "night", props: [{ k: "teddy", x: 470 }], mo: [{ pose: "pose-39", x: 400 }, { who: "ayah", pose: "surprised-cheeks-sit", x: 270 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Abi tertawa tanpa suara. \"Siapa menidurkan siapa, ya?\" Ia mencium kening keduanya.", en: "Abi laughed without a sound. \"So who put who to bed?\" He kissed them both on the forehead." },
+        scene: { focus: 330, bg: "bedroom", time: "night", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 270 }, { who: "ais", pose: "sleep-pillow", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Besok paginya Abi berkata, \"Malam ini, Abi cerita yang pendek saja!\" Si kembar tertawa. Siapa yang biasanya tidur duluan di rumahmu? 🦒", en: "The next morning Abi said, \"Tonight, I'll tell a short story!\" The twins laughed. Who usually falls asleep first at your house? 🦒" },
+        scene: { focus: 320, bg: "bedroom", props: [{ k: "giraffe", x: 480, s: 0.6 }], mo: [{ pose: "yeyy", x: 390, move: "hop" }, { who: "ayah", pose: "stretch-up-sit", x: 260 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
