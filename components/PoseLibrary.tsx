@@ -4,7 +4,7 @@ import { useEffect, useMemo, useState, useCallback } from "react";
 import { asset, type Locale } from "@/lib/i18n/config";
 
 export interface PoseRow {
-  who: "mo" | "ais" | "adam" | "ayah";
+  who: "mo" | "ais" | "adam" | "ayah" | "umi";
   name: string;
   src: string;
   category: string;
@@ -31,8 +31,9 @@ const WHO: Record<PoseRow["who"], { label: string; color: string; soft: string }
   ais: { label: "Baby Ais", color: "#d9568f", soft: "#fbe7f1" },
   adam: { label: "Kak Adam", color: "#2f7fd6", soft: "#e2effc" },
   ayah: { label: "Abi", color: "#8a6a3f", soft: "#f3ece1" },
+  umi: { label: "Umi", color: "#9b6bc4", soft: "#f1e8f8" },
 };
-const WHO_ORDER: PoseRow["who"][] = ["mo", "ais", "adam", "ayah"];
+const WHO_ORDER: PoseRow["who"][] = ["mo", "ais", "adam", "ayah", "umi"];
 
 const T = {
   id: {
@@ -117,7 +118,7 @@ const SYN: Record<string, string[]> = {
   baca: ["read", "book"], membaca: ["read", "book"], buku: ["book"], belajar: ["learn", "study"], sekolah: ["school"], tulis: ["write"], menulis: ["write"], gambar: ["draw"], menggambar: ["draw"],
   hujan: ["rain", "umbrella"], payung: ["umbrella"], panas: ["hot", "sun"], dingin: ["cold"], tanaman: ["plant"], bunga: ["flower"], kucing: ["cat", "kitten"],
   hadiah: ["gift", "present"], kado: ["gift", "present"], ulang: ["birthday"], lebaran: ["eid", "lebaran"], ramadan: ["ramadan", "fast"], puasa: ["fast", "ramadan"],
-  kakak: ["adam"], adik: ["baby", "twins"], ayah: ["ayah", "abi"], abi: ["abi", "ayah"], kembar: ["twins"], pikir: ["think"], berpikir: ["think"], ide: ["idea"],
+  kakak: ["adam"], adik: ["baby", "twins"], ayah: ["ayah", "abi"], abi: ["abi", "ayah"], umi: ["umi"], ibu: ["umi"], bunda: ["umi"], mama: ["umi"], nur: ["umi"], belanja: ["groceries", "shop", "market"], jilbab: ["hijab"], kerudung: ["hijab"], kembar: ["twins"], pikir: ["think"], berpikir: ["think"], ide: ["idea"],
   hp: ["phone", "screen"], telepon: ["phone"], tv: ["tv", "screen"], mobil: ["car"], kerja: ["work", "laptop"], masak: ["cook"], memasak: ["cook"],
 };
 const norm = (s: string) => s.toLowerCase().replace(/['’`]/g, "");

@@ -7,7 +7,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { PoseLibrary, type PoseRow, type FrameSet } from "@/components/PoseLibrary";
 import { MO_POSES, moPoseSrc } from "@/lib/cerita/mo-poses";
 import { AIS_POSES, AIS_CATEGORIES, AIS_FOR, aisPoseSrc } from "@/lib/cerita/ais-poses";
-import { ADAM_POSES, AYAH_POSES, ADAM_FOR, AYAH_FOR, friendPoseSrc } from "@/lib/cerita/friends-poses";
+import { ADAM_POSES, AYAH_POSES, UMI_POSES, ADAM_FOR, AYAH_FOR, friendPoseSrc } from "@/lib/cerita/friends-poses";
 import { getBookPages } from "@/lib/cerita/picture-books";
 import { ADAPTED } from "@/lib/cerita/picture-books-adapted";
 import { getAllCatatan } from "@/lib/content/catatan";
@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     locale,
     path: "/pose",
     title: locale === "id" ? "Pustaka Pose — Tim Baby Mo" : "Pose Library — Baby Mo Team",
-    description: locale === "id" ? "Cari pose Baby Mo, Baby Ais, Kak Adam dan Abi." : "Find poses of Baby Mo, Baby Ais, Kak Adam and Abi.",
+    description: locale === "id" ? "Cari pose Baby Mo, Baby Ais, Kak Adam, Abi dan Umi." : "Find poses of Baby Mo, Baby Ais, Kak Adam, Abi and Umi.",
     noindex: true,
   });
 }
@@ -81,6 +81,7 @@ export default async function PosePage({ params }: { params: Promise<{ locale: s
     ...AIS_POSES.map((p) => ({ who: "ais" as const, name: p.name, src: aisPoseSrc(p.name), category: p.category, mood: p.mood, use: p.use, props: p.props, low: p.low, check: p.check, books: used("ais", p.name) })),
     ...ADAM_POSES.map((p) => ({ who: "adam" as const, name: p.name, src: friendPoseSrc("adam", p.name), category: p.category, mood: p.mood, use: p.use, props: p.props, low: p.low, air: p.air, duo: p.duo, alt: p.alt, check: p.check, books: used("adam", p.name) })),
     ...AYAH_POSES.map((p) => ({ who: "ayah" as const, name: p.name, src: friendPoseSrc("ayah", p.name), category: p.category, mood: p.mood, use: p.use, props: p.props, low: p.low, air: p.air, duo: p.duo, alt: p.alt, check: p.check, books: used("ayah", p.name) })),
+    ...UMI_POSES.map((p) => ({ who: "umi" as const, name: p.name, src: friendPoseSrc("umi", p.name), category: p.category, mood: p.mood, use: p.use, props: p.props, low: p.low, air: p.air, duo: p.duo, alt: p.alt, check: p.check, books: used("umi", p.name) })),
   ];
   const sets: FrameSet[] = [
     ...frameSets("adam", ADAM_FOR),
@@ -97,8 +98,8 @@ export default async function PosePage({ params }: { params: Promise<{ locale: s
           <h1 className="mt-1 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">{id ? "Pustaka Pose" : "Pose Library"} 🧸</h1>
           <p className="mt-2 text-base leading-relaxed text-whisper">
             {id
-              ? `${rows.length} pose Baby Mo, Baby Ais, Kak Adam dan Abi. Cari dengan kata (misalnya "doa", "tidur", "raket", "sedih"), saring per tokoh atau kategori, lalu klik pose untuk melihat detail, menyalin nama, atau mengunduh PNG-nya.`
-              : `${rows.length} poses of Baby Mo, Baby Ais, Kak Adam and Abi. Search by word (e.g. "dua", "sleep", "racket", "sad"), filter by character or category, then click a pose to see details, copy its name or download the PNG.`}
+              ? `${rows.length} pose Baby Mo, Baby Ais, Kak Adam, Abi dan Umi. Cari dengan kata (misalnya "doa", "tidur", "raket", "sedih"), saring per tokoh atau kategori, lalu klik pose untuk melihat detail, menyalin nama, atau mengunduh PNG-nya.`
+              : `${rows.length} poses of Baby Mo, Baby Ais, Kak Adam, Abi and Umi. Search by word (e.g. "dua", "sleep", "racket", "sad"), filter by character or category, then click a pose to see details, copy its name or download the PNG.`}
           </p>
         </header>
         <PoseLibrary locale={l} rows={rows} sets={sets} categories={AIS_CATEGORIES} />
