@@ -155,7 +155,15 @@ export type ArtProp =
   | "ballbounce"
   | "balltoss"
   | "swoosh"
-  | "bonk";
+  | "bonk"
+  /* practice & rally motion */
+  | "wall"
+  | "ballrebound"
+  | "ballrally"
+  | "target"
+  | "footprints"
+  | "ladder"
+  | "progresschart";
 
 export type ArtFx =
   | "rain"
@@ -204,6 +212,9 @@ export interface ArtMo {
   fps?: number;
   /** frame shown when motion is reduced (default: about 2/3 through) */
   key?: number;
+  /** onion-skin trail: the two previous frames of `seq` show faintly behind
+   *  (slow-motion / "watch the swing" moments) */
+  ghost?: boolean;
 }
 
 export interface ArtScene {
