@@ -318,3 +318,17 @@ Notes say what she is doing and which story moments the pose fits. *alt* = near-
 | 063 | `megaphone` | loud | megaphone | Shouting into a megaphone. Announcements, calling everyone, 'Ayo!' |
 | 098 | `chef-bowl` | happy | chef hat, apron, whisk, bowl | Chef holding whisk and bowl (alt to 017). |
 | 099 | `doctor-clipboard` | helpful | lab coat, stethoscope, clipboard | Doctor with clipboard, pointing up. Explaining, health tips. |
+
+
+## Gap batch (November 2026): 6 more
+
+These fill the old gaps for sujud, grumpy, crying hard, running, scared and "I don't know". All six are on-model.
+
+| Pose | Type | Notes |
+| --- | --- | --- |
+| `sujud` | worship · low | Sujud on a prayer mat. Fills the Ais sujud gap. |
+| `grumpy` | feel | Arms crossed, frowning, little grey cloud. Grumpy, cross, sulking. |
+| `cry-sit` | feel · low | Sitting on the floor crying, rubbing her eyes. A fall, a big upset. |
+| `run` | play | Running fast and happy. |
+| `scared-hide` | feel · low | Crouching, hiding her face behind her hands, peeking. Scared, shy, thunder. |
+| `shrug` | think | Palms up, puzzled, question mark. "I don't know". |

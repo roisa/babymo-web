@@ -65,6 +65,8 @@ export interface AisPose {
   use: string;
   /** sitting / kneeling / lying (needs less height in the scene) */
   low?: boolean;
+  /** model-consistency warning from review */
+  check?: string;
 }
 
 export const AIS_POSES: AisPose[] = [
@@ -178,6 +180,13 @@ export const AIS_POSES: AisPose[] = [
   { name: "lie-chin-hands", category: "calm", mood: "dreamy", props: [], use: "Lying on tummy, chin in hands. Daydreaming, listening, lazy afternoon. Wide pose.", low: true },
   { name: "dua-hands-closed", category: "worship", mood: "peaceful", props: [], use: "Kneeling, palms together, eyes closed. Du'a, gratitude, saying sorry (alt to 029).", low: true },
   { name: "hug-bunny-happy", category: "care", mood: "happy", props: ["bunny plush"], use: "Sitting, hugging bunny, eyes closed smile. Toy found, comfort, bedtime.", low: true },
+  /* ── gap batch (sujud, grumpy, crying, running, scared, shrug) ── */
+  { name: "sujud", category: "worship", mood: "calm", props: ["prayer mat"], use: "Sujud on a prayer mat. Fills the Ais sujud gap.", low: true },
+  { name: "grumpy", category: "feel", mood: "grumpy", props: [], use: "Arms crossed, frowning, little grey cloud. Grumpy, cross, sulking." },
+  { name: "cry-sit", category: "feel", mood: "sad", props: [], use: "Sitting on the floor crying, rubbing her eyes. A fall, a big upset.", low: true },
+  { name: "run", category: "play", mood: "happy", props: [], use: "Running fast and happy." },
+  { name: "scared-hide", category: "feel", mood: "scared", props: [], use: "Crouching, hiding her face behind her hands, peeking. Scared, shy, thunder.", low: true },
+  { name: "shrug", category: "think", mood: "puzzled", props: [], use: "Palms up, puzzled, question mark. \"I don't know\"." },
 ];
 
 /** Quick picks for common story moments (first = best). */
@@ -190,12 +199,17 @@ export const AIS_FOR: Record<string, string[]> = {
   idea: ["idea-bulb", "idea-point"],
   surprised: ["surprised", "dreamy-delight"],
   awe: ["dreamy-delight", "point-star", "point-moon", "telescope"],
-  sad: ["sad-tears", "hug-bunny-sit", "hug-star-sit"],
+  sad: ["sad-tears", "cry-sit", "hug-bunny-sit", "hug-star-sit"],
+  grumpy: ["grumpy"],
+  scared: ["scared-hide", "peek-wall"],
+  dontKnow: ["shrug"],
+  run: ["run"],
+  sujud: ["sujud"],
   sick: ["sick-blanket"],
   shy: ["peek-wall"],
   calm: ["calm-sit", "sit-chin-hands", "headphones-kneel"],
   listening: ["sit-chin-hands", "read-cushion", "lie-chin-hands"],
-  dua: ["dua-mat", "dua-kneel", "dua-hands-closed"],
+  dua: ["dua-mat", "dua-kneel", "dua-hands-closed", "sujud"],
   thankful: ["dua-hands-closed", "heart-hands", "heart-hands-smile"],
   sorry: ["dua-hands-closed", "hug-heart"],
   quran: ["quran-rehal", "read-quran-sit"],
@@ -225,12 +239,6 @@ export const AIS_FOR: Record<string, string[]> = {
 
 /** Moments with no Ais render yet — use Baby Mo, change the scene, or brief new art. */
 export const AIS_GAPS = [
-  "sujud (prostration) — use Baby Mo pose-17 or show Ais on the mat with dua-mat",
-  "angry / grumpy / tantrum",
-  "crying hard or lying down upset",
-  "running fast (only walking poses)",
-  "scared / hiding face",
-  "shrug / 'I don't know'",
   "pointing sideways at something on the ground (only pointing up)",
   "sitting at a table eating with family",
 ];
