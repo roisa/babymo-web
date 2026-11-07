@@ -1,10 +1,10 @@
 # Baby Mo & friends — pose library (Adam and Ayah)
 
-There are 172 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
+There are 208 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
 
 | Character | Poses | Files | Reference sheet |
 | --- | --- | --- | --- |
-| Adam (older brother, about 7) | 82 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
+| Adam (older brother, about 7) | 118 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
 | Ayah (Dad) | 90 | `public/ayah-poses/ayah-<name>.png` | [ayah-pose-library.jpg](ayah-pose-library.jpg) |
 
 The code lives in `lib/cerita/friends-poses.ts`. It holds `ADAM_POSES`, `AYAH_POSES`, the quick picks `ADAM_FOR` and `AYAH_FOR`, and `FRIEND_GAPS`.
@@ -37,7 +37,7 @@ scene: {
 - **Small losses:** the "zzz" on `ayah-sleep-blanket` was dropped as a stray speck.
 - **Wrong outfit:** the tennis sheets show Adam in his blue hoodie, not the tennis outfit from the brief.
 
-## Adam — 82 poses
+## Adam — 118 poses
 
 ![Adam pose library](adam-pose-library.jpg)
 
@@ -139,6 +139,23 @@ These are from the Adam Pose Revision Brief, batches R1–R4, R7 and R9–R11.
 | `tennis-pick-up-ball` | play · low | Bending to pick up a ball. Between points, tidying up balls. |
 | `tennis-walk-racket` | travel | Walking happily with the racket on his shoulder. Going to or from the court. |
 | `tennis-sad-miss` | feel | Racket dragging, head down. After a miss or a lost point. |
+
+### Tennis animation sets: 36 frames
+
+There are six six-frame sequences from the tennis animation brief. They play with `seq`, for example `{ who: "adam", pose: "tennis-run-1", seq: ADAM_FOR.runFrames, fps: 8, x }`.
+
+- **Built for animation:** each set shares one scale and its own ground line, and every frame is anchored on Adam's head, so the loop doesn't jitter sideways. Jump frames (`celebrate-4`, `celebrate-5`, `shuffle-3`) stay in the air.
+- **Effects dropped:** the sheets' little effects (wave sparkles, the swing trail on the miss, dizzy swirls) were cut away. The bounced ball is kept in every `tennis-bounce` frame.
+- **Racket:** the blue racket matches the first tennis renders.
+
+| Set | Frames 1–6 | Use |
+| --- | --- | --- |
+| `tennis-wave-1…6` | raise, wave ×4, lower | Hello and goodbye at the court; loop frames 2–5 |
+| `tennis-oops-1…6` | swing and miss, look back, oops, shake it off, determined, ready again | A miss handled with a smile |
+| `tennis-celebrate-1…6` | see it, crouch, jump up, fist up, star jump, land | Winning a point or a match |
+| `tennis-bounce-1…6` | hold, drop, falling, ground, rising, catch | Before a serve; loops |
+| `tennis-shuffle-1…6` | wide, step out, hop, close, step out, wide | Footwork, front view; loops while he slides across |
+| `tennis-run-1…6` | run cycle | Running with the racket; loops while he moves |
 
 The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis-swing-1…6`) are six-frame swings. Use frame 4 or 5 as a single book image, or play them in order as an animation.
 

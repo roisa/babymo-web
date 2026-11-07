@@ -1,7 +1,7 @@
 /**
  * Baby Mo & friends pose library — Adam (older brother) and Ayah (Dad).
  *
- *   public/adam-poses/adam-<name>.png   82 renders (incl. 4 six-frame tennis sequences)
+ *   public/adam-poses/adam-<name>.png   118 renders (incl. 10 six-frame tennis sequences)
  *   public/ayah-poses/ayah-<name>.png   90 renders (3 of them with Baby Mo in the image)
  *
  * Every PNG is 800×800, transparent, feet on the same ground line as Baby Mo
@@ -126,6 +126,43 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "tennis-pick-up-ball", category: "play", mood: "happy", props: ["racket", "ball"], use: "Bending to pick up a ball. Between points, tidying up balls.", low: true },
   { name: "tennis-walk-racket", category: "travel", mood: "joy", props: ["racket"], use: "Walking happily with the racket on his shoulder. Going to or from the court." },
   { name: "tennis-sad-miss", category: "feel", mood: "sad", props: ["racket"], use: "Racket dragging, head down. After a miss or a lost point." },
+  /* ── tennis animation sets (from the tennis brief): six frames each, same scale and ground; play with seq ── */
+  { name: "tennis-wave-1", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (1/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: raise." },
+  { name: "tennis-wave-2", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (2/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: wave left." },
+  { name: "tennis-wave-3", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (3/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: wave right." },
+  { name: "tennis-wave-4", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (4/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: wave left." },
+  { name: "tennis-wave-5", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (5/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: wave right." },
+  { name: "tennis-wave-6", category: "greet", mood: "happy", props: ["racket"], use: "Wave hello with the racket, 6 frames (6/6): raise, wave, wave, wave, wave, lower. Loop frames 2\u20135 for a waving loop. Frame: lower." },
+  { name: "tennis-oops-1", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (1/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: swing and miss." },
+  { name: "tennis-oops-2", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (2/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: look back." },
+  { name: "tennis-oops-3", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (3/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: oops." },
+  { name: "tennis-oops-4", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (4/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: shake it off." },
+  { name: "tennis-oops-5", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (5/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: determined." },
+  { name: "tennis-oops-6", category: "feel", mood: "sheepish", props: ["racket"], use: "Miss, then try again (6/6): swing and miss, look back, oops (scratching his head), shake it off, ready again. Frame: ready again." },
+  { name: "tennis-celebrate-1", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (1/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: see it." },
+  { name: "tennis-celebrate-2", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (2/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: crouch." },
+  { name: "tennis-celebrate-3", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (3/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: jump up." },
+  { name: "tennis-celebrate-4", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (4/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: fist up (air).", air: true },
+  { name: "tennis-celebrate-5", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (5/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: star jump (air).", air: true },
+  { name: "tennis-celebrate-6", category: "celebrate", mood: "joy", props: ["racket"], use: "Win celebration (6/6): see it, crouch, jump up, fist up, star jump, land smiling. Frame: land smiling." },
+  { name: "tennis-bounce-1", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (1/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: hold." },
+  { name: "tennis-bounce-2", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (2/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: drop." },
+  { name: "tennis-bounce-3", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (3/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: falling." },
+  { name: "tennis-bounce-4", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (4/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: ground." },
+  { name: "tennis-bounce-5", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (5/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: rising." },
+  { name: "tennis-bounce-6", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bounce the ball before serving (6/6): hold, drop, falling, hits the ground, rising, catch. Loops. Frame: catch." },
+  { name: "tennis-shuffle-1", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (1/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: wide." },
+  { name: "tennis-shuffle-2", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (2/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: step out." },
+  { name: "tennis-shuffle-3", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (3/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: hop (air).", air: true },
+  { name: "tennis-shuffle-4", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (4/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: close." },
+  { name: "tennis-shuffle-5", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (5/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: step out." },
+  { name: "tennis-shuffle-6", category: "play", mood: "focused", props: ["racket"], use: "Side shuffle, front view (6/6): wide, step out, hop, close, step out, wide. Loops; slide him across the court. Frame: wide." },
+  { name: "tennis-run-1", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (1/6): a running cycle in place. Loops; move him across the page. Frame: stride." },
+  { name: "tennis-run-2", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (2/6): a running cycle in place. Loops; move him across the page. Frame: push." },
+  { name: "tennis-run-3", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (3/6): a running cycle in place. Loops; move him across the page. Frame: pass." },
+  { name: "tennis-run-4", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (4/6): a running cycle in place. Loops; move him across the page. Frame: stride." },
+  { name: "tennis-run-5", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (5/6): a running cycle in place. Loops; move him across the page. Frame: push (low)." },
+  { name: "tennis-run-6", category: "play", mood: "happy", props: ["racket"], use: "Run with racket (6/6): a running cycle in place. Loops; move him across the page. Frame: pass." },
 ];
 
 export const AYAH_POSES: FriendPose[] = [
@@ -257,6 +294,12 @@ export const ADAM_FOR: Record<string, string[]> = {
   forehandFrames: ["tennis-forehand-1", "tennis-forehand-2", "tennis-forehand-3", "tennis-forehand-4", "tennis-forehand-5", "tennis-forehand-6"],
   backhandFrames: ["tennis-backhand-1", "tennis-backhand-2", "tennis-backhand-3", "tennis-backhand-4", "tennis-backhand-5", "tennis-backhand-6"],
   swingFrames: ["tennis-swing-1", "tennis-swing-2", "tennis-swing-3", "tennis-swing-4", "tennis-swing-5", "tennis-swing-6"],
+  waveFrames: ["tennis-wave-1", "tennis-wave-2", "tennis-wave-3", "tennis-wave-4", "tennis-wave-5", "tennis-wave-6"],
+  oopsFrames: ["tennis-oops-1", "tennis-oops-2", "tennis-oops-3", "tennis-oops-4", "tennis-oops-5", "tennis-oops-6"],
+  celebrateFrames: ["tennis-celebrate-1", "tennis-celebrate-2", "tennis-celebrate-3", "tennis-celebrate-4", "tennis-celebrate-5", "tennis-celebrate-6"],
+  ballBounceFrames: ["tennis-bounce-1", "tennis-bounce-2", "tennis-bounce-3", "tennis-bounce-4", "tennis-bounce-5", "tennis-bounce-6"],
+  shuffleFrames: ["tennis-shuffle-1", "tennis-shuffle-2", "tennis-shuffle-3", "tennis-shuffle-4", "tennis-shuffle-5", "tennis-shuffle-6"],
+  runFrames: ["tennis-run-1", "tennis-run-2", "tennis-run-3", "tennis-run-4", "tennis-run-5", "tennis-run-6"],
   serveFrames: ["tennis-serve-1", "tennis-serve-2", "tennis-serve-3", "tennis-serve-4", "tennis-serve-5", "tennis-serve-6"],
 };
 
