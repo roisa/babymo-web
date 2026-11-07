@@ -2896,4 +2896,216 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── Practical 4. Three jars ───────────────────────── */
+  {
+    slug: "celengan-raket-impian-kak-adam",
+    pose: "baby-mo-pose-08.png",
+    published: "2026-11-14",
+    title: { id: "Celengan Raket Impian Kak Adam", en: "Kak Adam's Racket Savings Jar" },
+    hook: {
+      id: "Kak Adam ingin raket baru seharga 300 ribu. Abi memberinya tiga toples: SEDEKAH, TABUNG, dan JAJAN. Bisakah ia menabung — tanpa tergoda es krim setiap hari?",
+      en: "Kak Adam wants a new racket that costs 300 thousand. Abi gives him three jars: GIVE, SAVE and SPEND. Can he save up — without buying ice cream every day?",
+    },
+    anchor: { type: "doa", slug: "mendapat-rezeki" },
+    takeaway: {
+      id: "Kebiasaan uang yang baik dimulai dari toples kecil: berbagi dulu, menabung untuk tujuan, dan jajan secukupnya. Menunggu sesuatu yang diinginkan membuat hasilnya terasa lebih manis.",
+      en: "Good money habits start with small jars: give first, save for a goal, and spend a little. Waiting for something you want makes it feel even sweeter.",
+    },
+    tags: ["menabung", "uang", "sedekah", "kak adam", "sabar", "butuh atau ingin"],
+    card: {
+      title: { id: "Mengenalkan Uang pada Anak", en: "Teaching Kids About Money" },
+      items: {
+        id: [
+          "Siapkan tiga toples — Sedekah, Tabung, Jajan — dan biasakan membagi setiap uang yang diterima, dimulai dari sedekah.",
+          "Latih \"butuh atau ingin?\" dengan pertanyaan sederhana: \"Kalau tidak dibeli sekarang, apa yang terjadi?\"",
+          "Buat target bergambar dan hitung minggunya bersama. Rayakan saat tercapai — dan biarkan anak membayar sendiri di kasir.",
+        ],
+        en: [
+          "Set up three jars — Give, Save, Spend — and make a habit of splitting every bit of money, starting with giving.",
+          "Practise \"need or want?\" with a simple question: \"If we don't buy it now, what happens?\"",
+          "Make a picture goal and count the weeks together. Celebrate when you get there — and let your child pay at the till themselves.",
+        ],
+      },
+    },
+    cover: {
+      focus: 360, bg: "living",
+      props: [{ k: "jars3", x: 470 }, { k: "pricetag", x: 300, y: 260 }],
+      mo: [{ who: "adam", pose: "sedekah-coin", x: 330 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Kak Adam tumbuh tinggi. Raket lamanya sekarang terasa kecil. Di toko olahraga, ia melihat raket biru yang keren sekali.", en: "Kak Adam had grown taller. His old racket felt small now. At the sports shop he spotted a really cool blue racket." },
+        scene: { focus: 380, bg: "market", props: [{ k: "racket", x: 470, y: 330, s: 1.2 }, { k: "pricetag", x: 440, y: 230, s: 0.9 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu ia melihat label harganya: Rp 300.000. \"Tiga ratus ribu?!\" Matanya membulat.", en: "Then he saw the price tag: Rp 300,000. \"Three hundred thousand?!\" His eyes went round." },
+        scene: { focus: 380, bg: "market", props: [{ k: "pricetag", x: 420, y: 240, s: 1.1 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 350 }] },
+      },
+      {
+        text: { id: "\"Abi, belikan, ya?\" Abi tersenyum. \"Bagaimana kalau Kak Adam menabung sendiri? Abi bantu caranya.\"", en: "\"Abi, can you buy it?\" Abi smiled. \"How about you save up for it yourself? I'll show you how.\"" },
+        scene: { focus: 340, bg: "market", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "adam", pose: "sorry-hands", x: 410 }] },
+      },
+      {
+        text: { id: "Di rumah, Abi menaruh tiga toples di meja. \"Ini toples SEDEKAH, ini TABUNG, dan ini JAJAN. Setiap dapat uang, kita bagi tiga.\"", en: "At home, Abi set three jars on the table. \"This is the GIVE jar, this is SAVE, and this is SPEND. Whenever you get money, we split it three ways.\"" },
+        scene: { focus: 390, bg: "living", props: [{ k: "jars3", x: 470 }], mo: [{ who: "ayah", pose: "kneel-present", x: 270 }] },
+      },
+      {
+        text: { id: "\"Kenapa sedekah duluan?\" tanya Baby Mo. \"Karena rezeki itu dari Allah,\" kata Abi. \"Kita berbagi dulu, baru menyimpan untuk diri sendiri.\"", en: "\"Why does giving come first?\" asked Baby Mo. \"Because everything we have comes from Allah,\" said Abi. \"We share first, then save for ourselves.\"" },
+        scene: { focus: 360, bg: "living", props: [{ k: "jars3", x: 470 }], mo: [{ pose: "pose-33", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam mencari uang dengan membantu di rumah: menyapu teras, mencuci mobil Abi, dan merapikan bola tenis.", en: "Kak Adam earned money by helping at home: sweeping the porch, washing Abi's car, and tidying up the tennis balls." },
+        scene: { focus: 380, bg: "street", props: [{ k: "brooms", x: 480 }, { k: "bucket", x: 300 }], mo: [{ who: "adam", pose: "carry-bags", x: 390 }] },
+      },
+      {
+        text: { id: "Setiap Ahad, ting-ting-ting! Koin masuk ke tiga toples. Toples TABUNG makin penuh.", en: "Every Sunday, ting-ting-ting! Coins went into the three jars. The SAVE jar grew fuller and fuller." },
+        scene: { focus: 390, bg: "living", props: [{ k: "jars3", x: 470 }], mo: [{ who: "adam", pose: "sedekah-coin", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu datang ujian: gerobak es krim lewat. Teng-teng-teng! Si kembar bersorak. Kak Adam melirik toples TABUNG…", en: "Then came the test: the ice cream cart rolled by. Ting-a-ling! The twins cheered. Kak Adam glanced at the SAVE jar…" },
+        scene: { focus: 380, bg: "street", props: [{ k: "icecreamcart", x: 520 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 380 }, { pose: "yeyy", x: 270, move: "hop" }] },
+      },
+      {
+        text: { id: "Abi mengajak main tebak-tebakan. \"BUTUH atau INGIN? Air minum?\" \"BUTUH!\" \"Es krim setiap hari?\" Si kembar tertawa. \"INGIN!\"", en: "Abi started a guessing game. \"NEED or WANT? Drinking water?\" \"NEED!\" \"Ice cream every day?\" The twins giggled. \"WANT!\"" },
+        scene: { focus: 330, bg: "street", props: [{ k: "water", x: 470 }, { k: "icecream", x: 540 }], mo: [{ who: "ais", pose: "idea-point", x: 280 }, { pose: "pose-03", x: 390 }] },
+      },
+      {
+        text: { id: "Kak Adam memakai uang dari toples JAJAN saja: satu es krim kecil, dibagi tiga dengan adik-adiknya. Toples TABUNG tetap aman!", en: "Kak Adam used only the SPEND jar: one small ice cream, shared three ways with his little brother and sister. The SAVE jar stayed safe!" },
+        scene: { focus: 340, bg: "street", props: [{ k: "icecream", x: 470 }], mo: [{ who: "ais", pose: "giggle", x: 270 }, { who: "adam", pose: "offer", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Suatu hari, Dimas datang dengan sepatu yang sobek. \"Ibuku belum bisa beli yang baru.\" Kak Adam membuka toples SEDEKAH.", en: "One day, Dimas came over with torn shoes. \"My mum can't buy new ones yet.\" Kak Adam opened the GIVE jar." },
+        scene: { focus: 380, bg: "living", props: [{ k: "shoes", x: 480 }, { k: "jars3", x: 300, s: 0.7 }], mo: [{ who: "adam", pose: "kneel-talk", x: 400 }] },
+      },
+      {
+        text: { id: "Bersama Abi, mereka membelikan Dimas sepatu sederhana. Dimas tersenyum lebar. Dada Kak Adam terasa hangat sekali.", en: "Together with Abi, they bought Dimas a simple pair of shoes. Dimas grinned. Kak Adam's chest felt really warm." },
+        quote: { id: "\"Dan orang-orang yang apabila membelanjakan (harta), mereka tidak berlebihan dan tidak (pula) kikir, di antara keduanya secara wajar.\" (QS. Al-Furqan: 67)", en: "\"And those who, when they spend, are neither wasteful nor stingy, but keep a balance between the two.\" (Qur'an, Al-Furqan 25:67)" },
+        scene: { focus: 340, bg: "street", props: [{ k: "shoes", x: 470 }], mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 270 }, { who: "adam", pose: "proud-hands-hips", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Minggu demi minggu. Baby Mo mewarnai satu kotak di kertas target setiap Ahad. Tinggal tiga kotak… dua… SATU!", en: "Week after week. Every Sunday Baby Mo coloured one box on the goal chart. Three boxes left… two… ONE!" },
+        scene: { focus: 390, bg: "living", props: [{ k: "progresschart", x: 450 }], mo: [{ pose: "pose-08", x: 320 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Akhirnya toples TABUNG penuh! Mereka menghitung bersama: \"…dua ratus sembilan puluh… TIGA RATUS RIBU!\"", en: "At last the SAVE jar was full! They counted together: \"…two hundred and ninety… THREE HUNDRED THOUSAND!\"" },
+        scene: { focus: 390, bg: "living", props: [{ k: "jars3", x: 470 }, { k: "coins", x: 330, y: 400 }], mo: [{ who: "adam", pose: "tennis-celebrate-1", seq: CELEBRATE, fps: 8, x: 330, move: "still" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Di toko, Kak Adam membayar sendiri di kasir. Raket biru itu kini miliknya — dan rasanya jauh lebih istimewa karena hasil tabungannya.", en: "At the shop, Kak Adam paid at the till himself. The blue racket was his now — and it felt so much more special because he'd saved for it." },
+        scene: { focus: 380, bg: "market", props: [{ k: "counter", x: 470, s: 0.85 }], mo: [{ who: "adam", pose: "tennis-walk-racket", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Raket lamanya? Ia berikan untuk Baby Mo. \"Sekarang kita punya dua raket!\" Kamu sedang menabung untuk apa? 🪙", en: "And his old racket? He gave it to Baby Mo. \"Now we've got two rackets!\" What are you saving up for? 🪙" },
+        scene: { focus: 340, bg: "court", props: [{ k: "racket", x: 270, y: 380 }], mo: [{ pose: "pose-25", x: 300 }, { who: "adam", pose: "give-ball", x: 430 }], fx: ["hearts"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Practical 5. Eid at Nenek's ───────────────────────── */
+  {
+    slug: "lebaran-paling-seru-di-rumah-nenek",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-11-14",
+    title: { id: "Lebaran Paling Seru di Rumah Nenek", en: "The Best Eid Ever at Nenek's House" },
+    hook: {
+      id: "Takbir berkumandang, ketupat bergoyang, dan rumah Nenek penuh sepupu! Si kembar belajar cara bermaaf-maafan, berterima kasih atas amplop Lebaran… dan tidak makan sepuluh nastar.",
+      en: "Takbir rings out, ketupat sway, and Nenek's house is full of cousins! The twins learn how to say sorry and forgive, how to say thank you for Eid money… and not to eat ten nastar cookies.",
+    },
+    anchor: { type: "hadith", slug: "silaturahmi-rezeki" },
+    takeaway: {
+      id: "Lebaran adalah sekolah adab yang paling meriah: bermaafan, menyambung silaturahmi, berterima kasih, dan berbagi. Latih kalimat-kalimatnya di rumah, supaya anak percaya diri di tengah keramaian.",
+      en: "Eid is the liveliest school of good manners: forgiving each other, keeping family ties, saying thank you and sharing. Practise the words at home so children feel confident in the crowd.",
+    },
+    tags: ["lebaran", "idul fitri", "silaturahmi", "maaf", "terima kasih", "keluarga"],
+    card: {
+      title: { id: "Adab Lebaran untuk Si Kecil", en: "Eid Manners for Little Ones" },
+      items: {
+        id: [
+          "Latih kalimatnya di rumah: salam sambil menyalami, \"mohon maaf lahir dan batin\", dan \"terima kasih, semoga Allah membalas\".",
+          "Amplop Lebaran dibuka di rumah, tidak dibandingkan dengan sepupu. Ajak anak menyisihkan sebagian untuk sedekah.",
+          "Keramaian bisa melelahkan: siapkan pojok tenang untuk istirahat, ingatkan minum air, dan batasi kue manis.",
+        ],
+        en: [
+          "Practise the words at home: salam with a handshake, \"mohon maaf lahir dan batin\" (please forgive me, inside and out), and \"thank you, may Allah reward you\".",
+          "Eid money envelopes are opened at home, not compared with cousins. Encourage setting some aside to give.",
+          "Crowds can be tiring: plan a quiet corner for a break, remind them to drink water, and go easy on the sweet cookies.",
+        ],
+      },
+    },
+    cover: {
+      focus: 340, bg: "mosque",
+      props: [{ k: "ketupat", x: 400, y: 280 }, { k: "lantern", x: 560, y: 200 }],
+      mo: [{ pose: "yeyy", x: 330, move: "hop" }, { who: "ais", pose: "arms-wide-joy", x: 220 }, { who: "adam", pose: "clap-cheer", x: 450 }],
+      fx: ["confetti"],
+    },
+    pages: [
+      {
+        text: { id: "Malam terakhir Ramadan, takbir berkumandang dari masjid: \"Allahu Akbar, Allahu Akbar, Allahu Akbar, laa ilaaha illallahu wallahu akbar…\"", en: "On the last night of Ramadan, the takbir rang out from the mosque: \"Allahu Akbar, Allahu Akbar, Allahu Akbar, laa ilaaha illallahu wallahu akbar…\"" },
+        scene: { focus: 340, bg: "street", time: "night", props: [{ k: "minaret", x: 560, y: 300, s: 0.7 }, { k: "lantern", x: 470, y: 230 }], mo: [{ pose: "pose-30", x: 330, move: "sway" }, { who: "ais", pose: "lantern", x: 230 }], fx: ["stars", "notes"] },
+      },
+      {
+        text: { id: "Pagi Idul Fitri, semua memakai baju baru. Mereka sholat Id di lapangan masjid, berjajar rapi bersama ratusan orang.", en: "On Eid morning, everyone wore new clothes. They prayed the Eid prayer at the mosque grounds, lined up neatly with hundreds of people." },
+        scene: { focus: 340, bg: "mosque", props: [{ k: "mat", x: 330 }], mo: [{ who: "adam", pose: "sholat-qiyam", x: 450 }, { pose: "pose-35", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu mudik ke rumah Nenek! Di depan pintu tergantung ketupat yang bergoyang tertiup angin.", en: "Then off to Nenek's house! Ketupat hung by the door, swaying in the breeze." },
+        scene: { focus: 360, bg: "street", props: [{ k: "ketupat", x: 420, y: 280 }, { k: "car", x: 230, s: 1.0 }], mo: [{ pose: "run", x: 380, move: "hop" }] },
+      },
+      {
+        text: { id: "Di dalam, sepupu-sepupu berlarian dan ada bau opor yang lezat. Ramai sekali! Baby Ais memegang erat tangan Kak Adam.", en: "Inside, cousins were running everywhere and there was a delicious smell of opor. So noisy! Baby Ais held Kak Adam's hand tight." },
+        scene: { focus: 340, bg: "living", props: [{ k: "soup", x: 520 }], mo: [{ who: "adam", pose: "hold-hand-down", x: 410 }, { who: "ais", pose: "peek-wall", x: 290 }] },
+      },
+      {
+        text: { id: "\"Ingat yang kita latih?\" bisik Abi. Si kembar mengangguk dan menyalami Nenek: \"Assalamu'alaikum, Nenek. Mohon maaf lahir dan batin.\"", en: "\"Remember what we practised?\" whispered Abi. The twins nodded and greeted Nenek: \"Assalamu'alaikum, Nenek. Mohon maaf lahir dan batin.\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ais", pose: "dua-hands-closed", x: 280 }, { pose: "thank-you", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Lahir dan batin itu apa?\" tanya Baby Mo. \"Kesalahan yang kelihatan dan yang tersembunyi di hati,\" jawab Abi. \"Lebaran itu waktunya hati bersih lagi.\"", en: "\"What does 'inside and out' mean?\" asked Baby Mo. \"Mistakes people can see, and ones hidden in our hearts,\" said Abi. \"Eid is when our hearts get clean again.\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 270 }, { pose: "pose-33", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu Kak Adam meminta maaf pada sepupunya, Fatih. \"Maaf ya, waktu itu aku menang tenis sambil menyombong.\" Fatih tertawa. \"Aku juga minta maaf!\"", en: "Then Kak Adam said sorry to his cousin Fatih. \"Sorry I showed off when I won at tennis.\" Fatih laughed. \"I'm sorry too!\"" },
+        scene: { focus: 390, bg: "living", mo: [{ who: "adam", pose: "salaman", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Om Fahri membagikan amplop Lebaran. Baby Mo hampir langsung membukanya! Abi berbisik, \"Terima kasih dulu, dan dibukanya nanti di rumah.\"", en: "Uncle Fahri handed out Eid money envelopes. Baby Mo almost ripped his open! Abi whispered, \"Say thank you first, and open it later at home.\"" },
+        scene: { focus: 360, bg: "living", props: [{ k: "envelope", x: 430, y: 270 }], mo: [{ pose: "pose-26", x: 350 }] },
+      },
+      {
+        text: { id: "\"Terima kasih, Om. Semoga Allah membalas kebaikan Om,\" kata Baby Mo. Om Fahri tersenyum lebar.", en: "\"Thank you, Uncle. May Allah reward your kindness,\" said Baby Mo. Uncle Fahri grinned." },
+        scene: { focus: 360, bg: "living", props: [{ k: "envelope", x: 430, y: 270 }], mo: [{ pose: "thank-you", x: 350 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Sepupu Rara pamer, \"Amplopku lebih tebal!\" Baby Ais cemberut. Kak Adam berbisik, \"Rezeki tidak untuk dibandingkan, Ais. Semuanya hadiah.\"", en: "Cousin Rara boasted, \"My envelope's thicker!\" Baby Ais pouted. Kak Adam whispered, \"Gifts aren't for comparing, Ais. They're all presents.\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "envelope", x: 430, y: 250 }], mo: [{ who: "ais", pose: "grumpy", x: 280 }, { who: "adam", pose: "kneel-talk", x: 420 }] },
+      },
+      {
+        text: { id: "Di meja ada toples nastar yang harum. Satu… dua… tiga… Baby Mo mengambil yang keempat. \"Perutku penuh nanas!\"", en: "On the table was a jar of fragrant nastar pineapple cookies. One… two… three… Baby Mo reached for a fourth. \"My tummy's full of pineapple!\"" },
+        scene: { focus: 360, bg: "kitchen", props: [{ k: "cookiejar", x: 440 }], mo: [{ pose: "pose-05", x: 350 }] },
+      },
+      {
+        text: { id: "\"Tiga cukup, sekarang minum air putih,\" kata Abi. \"Nanti masih ada ketupat dan opor!\" Baby Mo meneguk air sampai habis.", en: "\"Three's enough, now have some water,\" said Abi. \"There's still ketupat and opor to come!\" Baby Mo gulped down his water." },
+        scene: { focus: 330, bg: "kitchen", props: [{ k: "water", x: 470 }], mo: [{ who: "ayah", pose: "stern-gentle", x: 260 }, { pose: "pose-04", x: 390 }] },
+      },
+      {
+        text: { id: "Setelah makan ketupat dan opor bersama, Nenek bercerita bahwa menyambung silaturahmi membuat rezeki lapang dan umur berkah.", en: "After eating ketupat and opor together, Nenek explained that keeping family ties brings blessings in what we have and in our lives." },
+        quote: { id: "\"Barang siapa ingin dilapangkan rezekinya dan dipanjangkan umurnya, hendaklah ia menyambung silaturahmi.\" (HR. Bukhari dan Muslim)", en: "\"Whoever would like their provision to be increased and their life to be blessed, let them keep ties with their family.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "living", props: [{ k: "ketupat", x: 470, y: 280 }, { k: "soup", x: 300 }], mo: [{ pose: "pose-12", x: 380 }, { who: "ais", pose: "sit-chin-hands", x: 260 }] },
+      },
+      {
+        text: { id: "Sore itu Baby Ais lelah dengan keramaian. Abi mengajaknya ke teras yang sepi. Mereka duduk berdua, menarik napas panjang.", en: "That afternoon Baby Ais got tired of the noise. Abi took her out to the quiet porch. They sat together and took long, slow breaths." },
+        scene: { focus: 330, bg: "garden", time: "dusk", mo: [{ who: "ayah", pose: "calm-sit", x: 270 }, { who: "ais", pose: "calm-sit", x: 400 }] },
+      },
+      {
+        text: { id: "Di rumah, mereka membuka amplop. Si kembar menyisihkan sebagian untuk toples sedekah — seperti Kak Adam. Ting! Ting!", en: "At home, they opened the envelopes. The twins put some aside in the giving jar — just like Kak Adam. Ting! Ting!" },
+        scene: { focus: 360, bg: "living", time: "night", props: [{ k: "jars3", x: 470 }], mo: [{ pose: "pose-08", x: 320 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Lebaran paling seru!\" kata Baby Mo sebelum tidur. Kamu sudah hafal kalimat Lebaran? Coba ucapkan: \"Mohon maaf lahir dan batin!\" 🌙", en: "\"The best Eid ever!\" said Baby Mo before bed. Do you know the Eid words? Try saying: \"Mohon maaf lahir dan batin!\" 🌙" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "ketupat", x: 470, y: 280 }], mo: [{ pose: "pose-39", x: 360 }, { who: "ais", pose: "sleep-pillow", x: 250 }], fx: ["stars"] },
+      },
+    ],
+  },
 ];
