@@ -379,6 +379,67 @@ function Background({ bg, time }: { bg: ArtBg; time: ArtTime }) {
         </g>
       );
     }
+    case "supermarket": {
+      const shelf = (x: number, cols: string[]) => (
+        <g key={x}>
+          <rect x={x} y={70} width={170} height={232} rx={6} fill="#D9DEE6" />
+          {[0, 1, 2, 3].map((r) => (
+            <g key={r}>
+              <rect x={x} y={124 + r * 52} width={170} height={8} fill="#AEB7C4" />
+              {Array.from({ length: 6 }, (_, i) => (
+                <rect key={i} x={x + 8 + i * 27} y={88 + r * 52 + ((i + r) % 2) * 6} width={20} height={36 - ((i + r) % 2) * 6} rx={4} fill={cols[(i + r) % cols.length]} />
+              ))}
+            </g>
+          ))}
+        </g>
+      );
+      return (
+        <g>
+          <rect y={TOP} width={W} height={H - TOP} fill={night ? "#3A3F55" : "#F4F7FB"} />
+          {[40, 590].map((x, i) => (
+            <g key={x} className="sa-sway-slow" style={{ animationDelay: `${-i}s` }}>
+              <path d={`M${x + 60} 0 v22`} stroke="#9AA5B4" strokeWidth={2} />
+              <rect x={x} y={22} width={120} height={30} rx={8} fill={i ? "#FF8A5C" : "#4FB477"} />
+              <text x={x + 60} y={43} fontSize={16} fontWeight={800} fill="#fff" textAnchor="middle">{i ? "BUAH" : "SAYUR"}</text>
+            </g>
+          ))}
+          {shelf(20, ["#FF7A7A", "#FFC145", "#7BC67B", "#5BB8F5"])}
+          {shelf(210, ["#C77DFF", "#FF9F68", "#4FB477", "#FFE066"])}
+          {shelf(600, ["#5BB8F5", "#FF7A9C", "#FFC145", "#7BC67B"])}
+          <rect y={FLOOR - 30} width={W} height={H - FLOOR + 30} fill={night ? "#585E72" : "#E8EBF0"} />
+          {Array.from({ length: 9 }, (_, i) => <rect key={i} x={i * 100} y={FLOOR - 30} width={2} height={H - FLOOR + 30} fill="#CBD1DA" />)}
+          <rect y={FLOOR + 20} width={W} height={2} fill="#CBD1DA" />
+          <rect y={FLOOR + 70} width={W} height={2} fill="#CBD1DA" />
+        </g>
+      );
+    }
+    case "clinic":
+      return (
+        <g>
+          <rect y={TOP} width={W} height={H - TOP} fill={night ? "#2F4A55" : "#F3FBF8"} />
+          <rect y={170} width={W} height={130} fill={night ? "#3B5A63" : "#DDF3EC"} />
+          {/* poster: hand washing + heart */}
+          <g transform="translate(70 70)">
+            <rect width={130} height={92} rx={10} fill="#FFFFFF" stroke="#BFE3D6" strokeWidth={4} />
+            <path d="M65 64 q -24 -16 -24 -30 q 0 -12 12 -12 q 8 0 12 8 q 4 -8 12 -8 q 12 0 12 12 q 0 14 -24 30 z" fill="#FF7A9C" />
+            <rect x={18} y={74} width={94} height={8} rx={4} fill="#9ED8C3" />
+          </g>
+          {/* height chart */}
+          <g transform="translate(600 40)">
+            <rect width={44} height={250} rx={8} fill="#FFFFFF" stroke="#BFE3D6" strokeWidth={3} />
+            {Array.from({ length: 9 }, (_, i) => (
+              <rect key={i} x={6} y={20 + i * 26} width={i % 2 ? 14 : 24} height={3} fill={["#FF7A7A", "#FFC145", "#7BC67B", "#5BB8F5"][i % 4]} />
+            ))}
+            <path className="sa-twinkle" d="M30 10 L33 17 L40 20 L33 23 L30 30 L27 23 L20 20 L27 17 Z" fill="#FFC145" />
+          </g>
+          {/* green cross */}
+          <g transform="translate(400 110)">
+            <circle r={34} fill="#FFFFFF" />
+            <path d="M-8 -22 h16 v14 h14 v16 h-14 v14 h-16 v-14 h-14 v-16 h14 z" fill="#4FB477" />
+          </g>
+          <Floor color={night ? "#4C5B5F" : "#D8E7EF"} plank={false} />
+        </g>
+      );
     case "beach":
       return (
         <g>
@@ -1829,6 +1890,140 @@ function Prop({ k }: { k: ArtProp }) {
           <path d="M30 -8 q 26 0 34 8 h-38 z" fill="#2C5FAE" />
           <circle cx={2} cy={-38} r={4} fill="#2C5FAE" />
           <path d="M-8 -22 l4 -7 l4 7 l-6 -4 h7 z" fill="#FFFFFF" />
+        </g>
+      );
+    case "counter":
+      return (
+        <g>
+          <rect x={-110} y={-110} width={220} height={110} rx={10} fill="#5BB8F5" />
+          <rect x={-110} y={-118} width={220} height={14} rx={6} fill="#3E9BE0" />
+          <rect x={30} y={-160} width={56} height={42} rx={6} fill="#3B4252" />
+          <rect x={38} y={-154} width={40} height={16} rx={3} fill="#A8F0C8" className="sa-pulse" />
+          <rect x={-90} y={-200} width={96} height={34} rx={8} fill="#FFC145" />
+          <text x={-42} y={-177} fontSize={17} fontWeight={900} fill="#5A3A00" textAnchor="middle">KASIR</text>
+          <path d="M-42 -166 v48" stroke="#9AA5B4" strokeWidth={3} />
+          <g className="sa-bob"><circle cx={-70} cy={-60} r={16} fill="#FFFFFF" /><path d="M-70 -70 l4 7 l8 1 l-6 6 l2 8 l-8 -4 l-8 4 l2 -8 l-6 -6 l8 -1 z" fill="#4FB477" /></g>
+        </g>
+      );
+    case "trolley":
+      return (
+        <g>
+          <path d="M-70 -110 h-22" stroke="#5B6573" strokeWidth={7} strokeLinecap="round" />
+          <path d="M-70 -110 l16 80 h104 l14 -72 z" fill="#EAF2FB" stroke="#5B6573" strokeWidth={5} strokeLinejoin="round" />
+          <g stroke="#9AA5B4" strokeWidth={2}>{[-40, -15, 10, 35].map((x) => <path key={x} d={`M${x} -104 v70`} />)}</g>
+          <rect x={-40} y={-124} width={24} height={28} rx={4} fill="#FF7A7A" />
+          <circle cx={4} cy={-112} r={14} fill="#FFC145" />
+          <rect x={22} y={-130} width={18} height={34} rx={4} fill="#7BC67B" />
+          <circle cx={-40} cy={-10} r={10} fill="#3B4252" /><circle cx={36} cy={-10} r={10} fill="#3B4252" />
+        </g>
+      );
+    case "phonecard":
+      return (
+        <g className="sa-bob">
+          <rect x={-90} y={-60} width={180} height={64} rx={12} fill="#FFFFFF" stroke="#FFC145" strokeWidth={4} />
+          <text x={0} y={-36} fontSize={14} fontWeight={800} fill="#B5532F" textAnchor="middle">NOMOR ABI</text>
+          <text x={0} y={-12} fontSize={21} fontWeight={900} fill="#2B2620" textAnchor="middle" letterSpacing="1">0812-3456-789</text>
+        </g>
+      );
+    case "germs":
+      return (
+        <g>
+          {[[-60, -40, 1], [10, -90, 0.8], [60, -30, 1.1], [-20, -130, 0.7]].map(([x, y, sc], i) => (
+            <g key={i} transform={`translate(${x} ${y}) scale(${sc})`}>
+              <g className="sa-germ" style={{ animationDelay: `${-i * 0.6}s` }}>
+                {[0, 45, 90, 135, 180, 225, 270, 315].map((a) => <path key={a} transform={`rotate(${a})`} d="M0 -20 v-8" stroke="#6BBF59" strokeWidth={4} strokeLinecap="round" />)}
+                <circle r={20} fill="#8FD46F" />
+                <circle cx={-7} cy={-4} r={4} fill="#fff" /><circle cx={7} cy={-4} r={4} fill="#fff" />
+                <circle cx={-7} cy={-3} r={2} fill="#2B3A20" /><circle cx={7} cy={-3} r={2} fill="#2B3A20" />
+                <path d="M-7 8 q 7 -5 14 0" stroke="#2B3A20" strokeWidth={2} fill="none" />
+              </g>
+            </g>
+          ))}
+        </g>
+      );
+    case "dacin":
+      return (
+        <g>
+          <path d="M0 -330 v40" stroke="#8A5A34" strokeWidth={6} />
+          <g className="sa-sway-slow">
+            <rect x={-60} y={-292} width={120} height={14} rx={5} fill="#B5753E" />
+            <circle cx={-48} cy={-285} r={8} fill="#8A5A34" />
+            <path d="M40 -278 v80" stroke="#7A8794" strokeWidth={3} />
+            <path d="M0 -278 l-38 92 h76 z" fill="none" stroke="#C9A55B" strokeWidth={3} />
+            <path d="M-46 -186 q 46 40 92 0 z" fill="#FF9AA8" stroke="#E07088" strokeWidth={3} />
+            <path d="M-46 -186 q 46 18 92 0" fill="none" stroke="#FFFFFF" strokeWidth={3} strokeDasharray="6 6" />
+          </g>
+        </g>
+      );
+    case "candle":
+      return (
+        <g>
+          <rect x={-10} y={-50} width={20} height={50} rx={4} fill="#FFB0C0" />
+          <path d="M-10 -40 l20 -6 M-10 -26 l20 -6 M-10 -12 l20 -6" stroke="#FFFFFF" strokeWidth={3} />
+          <path d="M0 -50 v-8" stroke="#3B4252" strokeWidth={2} />
+          <g className="sa-flicker"><path d="M0 -84 q 12 14 0 26 q -12 -12 0 -26 z" fill="#FFC145" /><path d="M0 -74 q 5 7 0 14 q -5 -7 0 -14 z" fill="#FFF6C8" /></g>
+        </g>
+      );
+    case "plaster":
+      return (
+        <g className="sa-bob" transform="rotate(-18)">
+          <rect x={-40} y={-16} width={80} height={32} rx={14} fill="#F2C9A0" />
+          <rect x={-14} y={-16} width={28} height={32} fill="#E8B88A" />
+          {[-6, 0, 6].map((x) => [-6, 0, 6].map((y) => <circle key={`${x}${y}`} cx={x} cy={y} r={1.6} fill="#C99A70" />))}
+          <path className="sa-twinkle" d="M30 -30 L33 -23 L40 -20 L33 -17 L30 -10 L27 -17 L20 -20 L27 -23 Z" fill="#FFC145" />
+        </g>
+      );
+    case "jars3":
+      return (
+        <g>
+          {[["SEDEKAH", "#4FB477", -100], ["TABUNG", "#3E9BE0", 0], ["JAJAN", "#FF8A5C", 100]].map(([label, col, x], i) => (
+            <g key={label as string} transform={`translate(${x} 0)`}>
+              <rect x={-36} y={-112} width={72} height={112} rx={14} fill="#EAF6FF" fillOpacity=".7" stroke="#9FC3DE" strokeWidth={4} />
+              <rect x={-30} y={-120} width={60} height={14} rx={5} fill={col as string} />
+              <rect x={-14} y={-118} width={28} height={6} rx={3} fill="#2B3A4A" opacity=".5" />
+              <g className="sa-fill" style={{ animationDelay: `${i * 0.7}s` }}>
+                {Array.from({ length: 5 - i }, (_, j) => <ellipse key={j} cx={(j % 2 ? 8 : -8)} cy={-10 - j * 9} rx={20} ry={6} fill="#FFC93C" stroke="#E0A21E" strokeWidth={2} />)}
+              </g>
+              <g className="sa-coindrop" style={{ animationDelay: `${i * 0.7}s` }}>
+                <ellipse cx={0} cy={-150} rx={11} ry={11} fill="#FFC93C" stroke="#E0A21E" strokeWidth={2} />
+              </g>
+              <rect x={-36} y={-64} width={72} height={22} fill={col as string} opacity=".92" />
+              <text x={0} y={-48} fontSize={label === "SEDEKAH" ? 11 : 13} fontWeight={900} fill="#FFFFFF" textAnchor="middle">{label}</text>
+            </g>
+          ))}
+        </g>
+      );
+    case "pricetag":
+      return (
+        <g className="sa-sway-slow">
+          <path d="M0 -150 v30" stroke="#9AA5B4" strokeWidth={2} />
+          <path d="M-46 -120 h92 l14 22 l-14 22 h-92 z" fill="#FFE066" stroke="#E0A21E" strokeWidth={3} />
+          <circle cx={-34} cy={-98} r={5} fill="#FFFFFF" />
+          <text x={8} y={-91} fontSize={18} fontWeight={900} fill="#5A3A00" textAnchor="middle">Rp 300rb</text>
+        </g>
+      );
+    case "ketupat":
+      return (
+        <g>
+          {[-40, 0, 40].map((x, i) => (
+            <g key={x} transform={`translate(${x} ${-170 + (i % 2) * 18})`}>
+              <path d="M0 -60 v40" stroke="#6E8B3D" strokeWidth={2} />
+              <g className="sa-sway" style={{ animationDelay: `${-i * 0.5}s` }}>
+                <path d="M0 -22 l20 22 l-20 22 l-20 -22 z" fill="#C9D86A" stroke="#7FA33A" strokeWidth={3} />
+                <path d="M-10 -11 l20 22 M10 -11 l-20 22 M0 -22 v44" stroke="#7FA33A" strokeWidth={2} />
+                <path d="M0 22 q -4 10 -10 14 M0 22 q 4 10 10 14" stroke="#7FA33A" strokeWidth={2} fill="none" />
+              </g>
+            </g>
+          ))}
+        </g>
+      );
+    case "swimring":
+      return (
+        <g className="sa-bob">
+          <circle cx={0} cy={-36} r={34} fill="#FF7A7A" />
+          <circle cx={0} cy={-36} r={16} fill="none" stroke="#FFFFFF" strokeWidth={0} />
+          <circle cx={0} cy={-36} r={16} fill="#E5F4EF" />
+          {[0, 90, 180, 270].map((a) => <path key={a} transform={`translate(0 -36) rotate(${a})`} d="M16 -6 h18 v12 h-18 z" fill="#FFFFFF" />)}
         </g>
       );
     case "bonk":

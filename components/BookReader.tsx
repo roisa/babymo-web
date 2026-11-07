@@ -24,6 +24,7 @@ type Sheet =
   | { kind: "cover" }
   | { kind: "content"; blocks: Block[]; vig?: string; pose?: string; art?: number }
   | { kind: "pic"; i: number }
+  | { kind: "card" }
   | { kind: "end" };
 
 export type PicturePage = { text: string; quote?: string; scene: ArtScene };
@@ -227,6 +228,8 @@ type Props = {
   /** Picture books: every page is one full illustration with its text. */
   picture?: PicturePage[] | null;
   pictureCover?: ArtScene | null;
+  /** "Kartu untuk Ayah & Bunda" — three practical tips, its own page before the end. */
+  card?: { title: string; items: string[] } | null;
 };
 
 const FONT_STEPS = [17, 19, 22, 25];
@@ -269,6 +272,7 @@ export function BookReader({
   art = null,
   picture = null,
   pictureCover = null,
+  card = null,
 }: Props) {
   const t =
     locale === "id"
@@ -291,6 +295,7 @@ export function BookReader({
           tapReveal: "Ketuk untuk lihat! 👆",
           babymo: "Baby Mo",
           backTag: "Cerita bergambar untuk dibaca bersama",
+          cardBadge: "Kartu untuk Ayah & Bunda",
         }
       : {
           open: "Read in Book Mode",
@@ -311,6 +316,7 @@ export function BookReader({
           tapReveal: "Tap to reveal! 👆",
           babymo: "Baby Mo",
           backTag: "A picture book to read together",
+          cardBadge: "A card for parents",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -359,7 +365,12 @@ export function BookReader({
   // Paginate the body to fit the measured page-content box.
   const paginate = useCallback(() => {
     if (picture && picture.length) {
-      const out: Sheet[] = [{ kind: "cover" }, ...picture.map((_, i) => ({ kind: "pic" as const, i })), { kind: "end" }];
+      const out: Sheet[] = [
+        { kind: "cover" },
+        ...picture.map((_, i) => ({ kind: "pic" as const, i })),
+        ...(card ? [{ kind: "card" as const }] : []),
+        { kind: "end" },
+      ];
       setSheets(out);
       setPos((prev) => Math.min(prev, out.length - 1));
       return;
@@ -484,7 +495,7 @@ export function BookReader({
     out.push({ kind: "end" });
     setSheets(out);
     setPos((prev) => Math.min(prev, out.length - 1));
-  }, [fontPx, art, picture]);
+  }, [fontPx, art, picture, card]);
 
   // Recompute pagination on open / font / layout change.
   useLayoutEffect(() => {
@@ -554,6 +565,7 @@ export function BookReader({
     if (!s || !picture) return null;
     if (s.kind === "cover") return <>{backPanel("BL", hook)}<div className="bk-spine" aria-hidden />{renderSheet(s, "R")}</>;
     if (s.kind === "end") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR")}</>;
+    if (s.kind === "card") return <>{renderSheet(s, "L")}<div className="bk-spine" aria-hidden />{backPanel("BR2")}</>;
     if (s.kind !== "pic") return renderSheet(s, "S");
     const pg = picture[s.i]!;
     // keep the words away from the characters: text on the emptier half
@@ -624,6 +636,22 @@ export function BookReader({
             <p className="bk-cover-hook">{hook}</p>
           </div>
           <div className="bk-page-foot">{t.start}</div>
+        </div>
+      );
+    }
+    if (s.kind === "card" && card) {
+      return (
+        <div className="bk-page bk-page--card" key={key}>
+          <div className="bk-card">
+            <span className="bk-card-badge">{t.cardBadge}</span>
+            <h3 className="bk-card-title">{card.title}</h3>
+            <ol className="bk-card-list">
+              {card.items.map((it, i) => (
+                <li key={i}><span className="bk-card-num">{i + 1}</span><span>{it}</span></li>
+              ))}
+            </ol>
+            <span className="bk-card-foot">babymo.id</span>
+          </div>
         </div>
       );
     }
@@ -1127,6 +1155,19 @@ export function BookReader({
         .bk-back-url{margin-top:6px;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.16);font-weight:700;font-size:13px;}
         .bk-book--spread .bk-page--back:first-child{border-radius:16px 6px 6px 16px;}
         .bk-book--spread .bk-page--back:last-child{border-radius:6px 16px 16px 6px;}
+
+        /* ── Parents' card ── */
+        .bk-page--card{background:linear-gradient(170deg,#FFF6E8,#FDECD6);}
+        html.dark .bk-page--card{background:linear-gradient(170deg,#2E2820,#272118);}
+        .bk-card{margin:auto;width:min(88%,460px);max-height:calc(100% - 24px);overflow:auto;padding:clamp(18px,4vw,30px);border-radius:22px;background:#FFFFFF;
+          box-shadow:0 18px 40px -24px rgba(90,50,10,.45);border:2px dashed #F0B98A;display:flex;flex-direction:column;gap:12px;}
+        html.dark .bk-card{background:#332C23;border-color:#8A5A34;}
+        .bk-card-badge{align-self:flex-start;padding:4px 12px;border-radius:999px;background:#FDE3CE;color:#A9472A;font-weight:800;font-size:12px;letter-spacing:.04em;text-transform:uppercase;}
+        .bk-card-title{margin:0;font-family:var(--font-display);font-weight:800;font-size:clamp(20px,calc(var(--bk-fs,19px) * 1.15),28px);line-height:1.2;color:var(--color-ink);}
+        .bk-card-list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:12px;}
+        .bk-card-list li{display:flex;gap:12px;align-items:flex-start;font-size:clamp(14px,calc(var(--bk-fs,19px) * .8),18px);line-height:1.45;color:var(--color-ink);}
+        .bk-card-num{flex:0 0 30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#4FB477;color:#fff;font-weight:900;}
+        .bk-card-foot{align-self:flex-end;font-size:12px;font-weight:700;color:#B5532F;opacity:.8;}
         @media (max-width: 859px){ .bk-nav{display:none;} .bk-pic-num{display:none;} }
         /* Desktop/tablet: keep the bottom bar minimal (count only via arrows) */
         @media (min-width: 860px){ .bk-botbar .bk-pgbtn{display:none;} }
