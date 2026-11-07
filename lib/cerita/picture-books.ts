@@ -52,7 +52,7 @@ const BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Suatu pagi, Abi memberi Baby Mo sebutir biji kecil. \"Ini biji bunga matahari,\" kata Abi.", en: "One morning, Abi gave Baby Mo a tiny seed. \"This is a sunflower seed,\" said Abi." },
-        scene: { bg: "garden", props: [{ k: "seed", x: 470, y: 300 }, { k: "tree", x: 150 }], mo: [{ pose: "pose-21", x: 360 }], fx: ["sparkle"] },
+        scene: { focus: 305, bg: "garden", props: [{ k: "seed", x: 300, y: 300 }, { k: "tree", x: 150 }], mo: [{ pose: "pose-21", x: 365 }, { who: "ayah", pose: "kneel-present", x: 245 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Bijinya kecil sekali, lebih kecil dari kuku jarinya. \"Masa sih ini bisa jadi bunga?\" pikir Baby Mo.", en: "It was so small — smaller than his fingernail. \"Can this really become a flower?\" Baby Mo wondered." },
@@ -72,7 +72,7 @@ const BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Kok belum tumbuh?\" Baby Mo cemberut. Abi tersenyum. \"Bijinya sedang bekerja di dalam tanah. Kita harus sabar.\"", en: "\"Why hasn't it grown?\" Baby Mo frowned. Abi smiled. \"The seed is busy working under the soil. We have to be patient.\"" },
-        scene: { bg: "garden", props: [{ k: "pot", x: 500 }], mo: [{ pose: "pose-27", x: 340 }] },
+        scene: { focus: 330, bg: "garden", props: [{ k: "pot", x: 430 }], mo: [{ pose: "pose-27", x: 340 }, { who: "ayah", pose: "teach-point-kneel", x: 228 }] },
       },
       {
         text: { id: "Setiap pagi Baby Mo menyiram potnya sambil bernyanyi: \"Siram sedikit, tunggu sedikit, Allah yang menumbuhkan, sedikit demi sedikit!\"", en: "Every morning Baby Mo watered the pot and sang: \"Water a little, wait a little, Allah makes it grow, little by little!\"" },
@@ -109,7 +109,7 @@ const BOOKS: PictureBook[] = [
       {
         text: { id: "Abi berlutut di sampingnya. \"Kita yang menanam dan menyiram. Tapi yang menumbuhkan biji kecil jadi bunga besar adalah Allah.\"", en: "Abi knelt beside him. \"We planted and watered. But the One who turns a tiny seed into a big flower is Allah.\"" },
         quote: { id: "\"Sesungguhnya Allah menumbuhkan butir tumbuh-tumbuhan dan biji buah-buahan.\" (QS. Al-An'am: 95)", en: "\"Indeed, Allah is the One who splits the grain and the seed.\" (Qur'an, Al-An'am 6:95)" },
-        scene: { bg: "garden", props: [{ k: "bloom", x: 480, s: 0.8 }], mo: [{ pose: "thank-you", x: 340 }], fx: ["sparkle"] },
+        scene: { focus: 330, bg: "garden", props: [{ k: "bloom", x: 440, s: 0.8 }], mo: [{ pose: "thank-you", x: 340 }, { who: "ayah", pose: "teach-point-kneel", x: 228 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Malam itu Baby Mo berdoa, \"Terima kasih, ya Allah, untuk bunga matahariku.\" Kamu ingin menanam apa? 🌻", en: "That night Baby Mo prayed, \"Thank you, ya Allah, for my sunflower.\" What would you like to plant? 🌻" },
@@ -224,15 +224,15 @@ const BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "Mobil Abi baru pulang dari perjalanan jauh. Badannya penuh lumpur!", en: "Abi's car had just come back from a long trip. It was covered in mud!" },
-        scene: { bg: "street", props: [{ k: "carmud", x: 540, s: 1.45 }], mo: [{ pose: "pose-40", x: 290 }] },
+        scene: { focus: 350, bg: "street", props: [{ k: "carmud", x: 540, s: 1.45 }], mo: [{ pose: "pose-40", x: 290 }, { who: "ayah", pose: "wave-hello", x: 410 }] },
       },
       {
         text: { id: "\"Ayo kita cuci,\" kata Abi. Baby Mo melompat. \"Aku bantu! Aku bantu!\"", en: "\"Let's wash it,\" said Abi. Baby Mo jumped up. \"I'll help! I'll help!\"" },
-        scene: { bg: "street", props: [{ k: "carmud", x: 530, s: 1.45 }, { k: "bucket", x: 380 }], mo: [{ pose: "yeyy", x: 280, move: "hop" }] },
+        scene: { focus: 258, bg: "street", props: [{ k: "carmud", x: 530, s: 1.45 }, { k: "bucket", x: 360 }], mo: [{ pose: "yeyy", x: 285, move: "hop" }, { who: "ayah", pose: "idea-point-stand", x: 168 }] },
       },
       {
         text: { id: "Abi mengisi ember dengan air dan sabun. Busanya naik tinggi seperti awan.", en: "Abi filled a bucket with water and soap. The foam rose up high like a cloud." },
-        scene: { bg: "street", props: [{ k: "bucket", x: 430, s: 1.4 }, { k: "sponge", x: 520 }], mo: [{ pose: "wow", x: 300 }], fx: ["bubbles"] },
+        scene: { focus: 385, bg: "street", props: [{ k: "bucket", x: 385, s: 1.2 }, { k: "sponge", x: 560 }], mo: [{ pose: "wow", x: 300 }, { who: "ayah", pose: "kneel-present", x: 475, flip: true }], fx: ["bubbles"] },
       },
       {
         text: { id: "Baby Mo mendapat tugas penting: menggosok roda dengan spons kuning.", en: "Baby Mo got an important job: scrubbing the wheels with the yellow sponge." },
@@ -256,7 +256,7 @@ const BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Mo,\" panggil Abi, \"roda yang satu lagi masih kotor!\"", en: "\"Mo,\" called Abi, \"the other wheel is still dirty!\"" },
-        scene: { bg: "street", props: [{ k: "carmud", x: 540, s: 1.45 }], mo: [{ pose: "pose-33", x: 290 }] },
+        scene: { focus: 350, bg: "street", props: [{ k: "carmud", x: 540, s: 1.45 }], mo: [{ pose: "pose-33", x: 290 }, { who: "ayah", pose: "idea-point-stand", x: 410 }] },
       },
       {
         text: { id: "Baby Mo menatap spons, lalu menatap Abi. Ia ingat: \"Kalau menolong, harus sampai selesai.\"", en: "Baby Mo looked at the sponge, then at Abi. He remembered: \"When you help, you help until it's done.\"" },
@@ -268,7 +268,7 @@ const BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Lalu Abi menyalakan selang. Ssssh! Air menyembur dan membilas semua busa.", en: "Then Abi turned on the hose. Shhhh! The water sprayed and rinsed away all the foam." },
-        scene: { bg: "street", props: [{ k: "hose", x: 240 }, { k: "car", x: 630, s: 1.45 }], mo: [{ pose: "wow", x: 380 }] },
+        scene: { focus: 320, bg: "street", props: [{ k: "hose", x: 240 }, { k: "car", x: 630, s: 1.45 }], mo: [{ pose: "wow", x: 380 }, { who: "ayah", pose: "kneel-present", x: 260 }] },
       },
       {
         text: { id: "Dan di dalam semburan air, muncul pelangi kecil! \"Abi, ada pelangi buatan kita!\"", en: "And inside the spray, a little rainbow appeared! \"Abi, we made a rainbow!\"" },
@@ -281,7 +281,7 @@ const BOOKS: PictureBook[] = [
       {
         text: { id: "Abi memeluknya. \"Terima kasih sudah menolong sampai selesai, Mo. Allah suka orang yang tolong-menolong dalam kebaikan.\"", en: "Abi hugged him. \"Thank you for helping right to the end, Mo. Allah loves people who help each other do good.\"" },
         quote: { id: "\"Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa.\" (QS. Al-Ma'idah: 2)", en: "\"And help one another in goodness and righteousness.\" (Qur'an, Al-Ma'idah 5:2)" },
-        scene: { bg: "street", props: [{ k: "carshiny", x: 580, s: 1.45 }], mo: [{ pose: "thank-you", x: 330 }], fx: ["hearts"] },
+        scene: { bg: "street", props: [{ k: "carshiny", x: 580, s: 1.45 }], mo: [{ who: "ayah", pose: "hug-mo", x: 330 }], fx: ["hearts"] },
       },
       {
         text: { id: "Sore itu mereka naik mobil yang bersih ke rumah Nenek. Kamu bisa membantu apa di rumah hari ini? 🚗", en: "That afternoon they drove the clean car to Grandma's house. What can you help with at home today? 🚗" },

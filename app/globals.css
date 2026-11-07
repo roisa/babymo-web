@@ -1217,3 +1217,59 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
 .sa-bolt { animation: sa-bolt 4s linear infinite; }
 @keyframes sa-shoot { 0%,60% { translate: 0 0; opacity: 0; } 64% { opacity: 1; } 80% { translate: 220px 90px; opacity: 0; } 100% { opacity: 0; } }
 .sa-shoot { animation: sa-shoot 4.5s ease-out infinite; }
+
+/* ── Story art: tennis & frame-by-frame motion ── */
+/* frame sequences: each frame is visible for 1/n of the loop (a hair longer,
+   so there is never a blank instant between two frames) */
+.sa-f { opacity: 0; animation-timing-function: step-end; animation-iteration-count: infinite; }
+@keyframes sa-f2 { 0% { opacity: 1; } 50.600%, 100% { opacity: 0; } }
+.sa-f2 { animation-name: sa-f2; }
+@keyframes sa-f3 { 0% { opacity: 1; } 33.933%, 100% { opacity: 0; } }
+.sa-f3 { animation-name: sa-f3; }
+@keyframes sa-f4 { 0% { opacity: 1; } 25.600%, 100% { opacity: 0; } }
+.sa-f4 { animation-name: sa-f4; }
+@keyframes sa-f5 { 0% { opacity: 1; } 20.600%, 100% { opacity: 0; } }
+.sa-f5 { animation-name: sa-f5; }
+@keyframes sa-f6 { 0% { opacity: 1; } 17.267%, 100% { opacity: 0; } }
+.sa-f6 { animation-name: sa-f6; }
+@keyframes sa-f7 { 0% { opacity: 1; } 14.886%, 100% { opacity: 0; } }
+.sa-f7 { animation-name: sa-f7; }
+@keyframes sa-f8 { 0% { opacity: 1; } 13.100%, 100% { opacity: 0; } }
+.sa-f8 { animation-name: sa-f8; }
+@keyframes sa-f9 { 0% { opacity: 1; } 11.711%, 100% { opacity: 0; } }
+.sa-f9 { animation-name: sa-f9; }
+@keyframes sa-f10 { 0% { opacity: 1; } 10.600%, 100% { opacity: 0; } }
+.sa-f10 { animation-name: sa-f10; }
+@keyframes sa-f11 { 0% { opacity: 1; } 9.691%, 100% { opacity: 0; } }
+.sa-f11 { animation-name: sa-f11; }
+@keyframes sa-f12 { 0% { opacity: 1; } 8.933%, 100% { opacity: 0; } }
+.sa-f12 { animation-name: sa-f12; }
+@keyframes sa-f13 { 0% { opacity: 1; } 8.292%, 100% { opacity: 0; } }
+.sa-f13 { animation-name: sa-f13; }
+@keyframes sa-f14 { 0% { opacity: 1; } 7.743%, 100% { opacity: 0; } }
+.sa-f14 { animation-name: sa-f14; }
+@keyframes sa-f15 { 0% { opacity: 1; } 7.267%, 100% { opacity: 0; } }
+.sa-f15 { animation-name: sa-f15; }
+@keyframes sa-f16 { 0% { opacity: 1; } 6.850%, 100% { opacity: 0; } }
+.sa-f16 { animation-name: sa-f16; }
+/* a ball hit across the page: x linear, y up then down (ease), pause, repeat */
+.sa-ballx { animation: sa-ballx 1.8s linear infinite; animation-delay: var(--sa-d, 0s); }
+.sa-bally { animation: sa-bally 1.8s linear infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-ballx { 0% { translate: 0 0; opacity: 0; } 4% { opacity: 1; } 60% { translate: 300px 0; opacity: 1; } 62%, 100% { translate: 300px 0; opacity: 0; } }
+@keyframes sa-bally { 0% { translate: 0 0; animation-timing-function: ease-out; } 30% { translate: 0 -120px; animation-timing-function: ease-in; } 60%, 100% { translate: 0 10px; } }
+/* bouncing ball with squash */
+.sa-bounce { animation: sa-bounce 0.9s infinite; animation-delay: var(--sa-d, 0s); transform-origin: 50% 100%; }
+@keyframes sa-bounce { 0%, 100% { translate: 0 0; scale: 1.15 .85; animation-timing-function: ease-out; } 10% { scale: 1 1; } 50% { translate: 0 -70px; scale: 1 1; animation-timing-function: ease-in; } 92% { scale: 1 1; } }
+.sa-ballshadow { animation: sa-ballshadow 0.9s infinite; animation-delay: var(--sa-d, 0s); transform-origin: center; }
+@keyframes sa-ballshadow { 0%, 100% { scale: 1; opacity: .22; animation-timing-function: ease-out; } 50% { scale: .5; opacity: .08; animation-timing-function: ease-in; } }
+/* serve toss: straight up, hang at the top, back down */
+.sa-toss { animation: sa-toss 2.2s infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-toss { 0%, 100% { translate: 0 0; animation-timing-function: ease-out; } 40% { translate: 0 -150px; animation-timing-function: ease-in-out; } 52% { translate: 0 -156px; animation-timing-function: ease-in; } 88% { translate: 0 0; } }
+/* swing trail: flashes on the swing */
+.sa-swoosh { transform-origin: center; animation: sa-swoosh 1.5s ease-out infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-swoosh { 0%, 45% { opacity: 0; scale: .6; } 55% { opacity: 1; scale: 1; } 80%, 100% { opacity: 0; scale: 1.15; } }
+@media (prefers-reduced-motion: reduce) {
+  .story-art .sa-f { opacity: 0; }
+  .story-art .sa-f.sa-key { opacity: 1; }
+  .story-art .sa-ballx, .story-art .sa-bally { opacity: 1; }
+}
