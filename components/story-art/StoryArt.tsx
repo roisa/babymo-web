@@ -2788,6 +2788,7 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const delay = { animationDelay: `${-idx * 0.7}s` };
   return (
     <g transform={`translate(${m.x} ${ground})`}>
+      <g data-who={who} className="sa-tap">
       {/* contact shadow right under the feet; shrinks when Baby Mo hops */}
       <g className={move === "hop" ? "sa-shadow-hop" : ""} style={delay}>
         <ellipse cx={0} cy={2} rx={s * 0.2} ry={s * 0.035} fill="#000" opacity=".16" />
@@ -2849,6 +2850,7 @@ function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
           />
         )}
       </g>
+      </g>
     </g>
   );
 }
@@ -2886,6 +2888,26 @@ function pageFocus(scene: ArtScene): number {
   return f;
 }
 
+/** Where the hidden item goes: inside the phone crop, clear of characters and props. */
+function FindItem({ find, scene, page, groundY }: { find: NonNullable<Parameters<typeof StoryArt>[0]["find"]>; scene: ArtScene; page: boolean; groundY: number }) {
+  const focus = page ? pageFocus(scene) : 400;
+  const busy = [...(scene.mo ?? []).map((m) => ({ x: m.x, r: m.who && m.who !== "mo" && m.who !== "ais" ? 80 : 60 })), ...(scene.props ?? []).map((p) => ({ x: p.x, r: 46 * (p.s ?? 1) }))];
+  const cands: number[] = [];
+  for (let x = focus - 115; x <= focus + 115; x += 15) if (busy.every((b) => Math.abs(b.x - x) > b.r)) cands.push(x);
+  const pool = cands.length ? cands : [focus - 110, focus + 110];
+  const h = Math.abs(Math.sin(find.seed * 12.9898) * 43758.5453) % 1;
+  const x = pool[Math.floor(h * pool.length)]!;
+  const zone = find.zone === "water" && scene.bg !== "underwater" && scene.bg !== "aquarium" ? "ground" : find.zone;
+  const y = zone === "ground" ? groundY + 22 + h * 14 : zone === "water" ? 210 + h * 90 : 150 + h * 80;
+  return (
+    <g transform={`translate(${Math.round(x)} ${Math.round(y)}) scale(${find.s})`}>
+      <g className={`sa-tap sa-find${find.found ? " is-found" : ""}`} data-find="1" data-k={find.k}>
+        <Prop k={find.k} />
+      </g>
+    </g>
+  );
+}
+
 export function StoryArt({
   scene,
   className = "",
@@ -2893,8 +2915,11 @@ export function StoryArt({
   portrait = false,
   page = false,
   spread = false,
+  find,
 }: {
   scene: ArtScene;
+  /** "Cari, yuk!" hidden item (Book Mode): drawn small near the action */
+  find?: { k: ArtProp; zone: "ground" | "water" | "sky"; s: number; seed: number; found?: boolean };
   className?: string;
   title?: string;
   /** 4:5 crop centred on Baby Mo (for book-cover thumbnails) */
@@ -2940,9 +2965,10 @@ export function StoryArt({
       <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
         <g key={i} transform={`translate(${p.x} ${p.y ?? groundY}) scale(${(p.s ?? 1) * (p.flip ? -1 : 1)} ${p.s ?? 1})`} style={p.d ? ({ "--sa-d": `${p.d}s` } as React.CSSProperties) : undefined}>
-          <Prop k={p.k} />
+          <g className="sa-tap" data-k={p.k}><Prop k={p.k} /></g>
         </g>
       ))}
+      {find && <FindItem find={find} scene={scene} page={page} groundY={groundY} />}
       {/* grown-ups and big brother stand behind the little ones */}
       {(scene.mo ?? []).map((m, i) => [m, i] as const).sort(([a], [b]) => Number(isKid(a)) - Number(isKid(b))).map(([m, i]) => <Mo key={i} m={m} idx={i} ground={moGround} />)}
       </g>

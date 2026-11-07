@@ -8,7 +8,8 @@ import { StoryScene } from "@/components/StoryScene";
 import type { SceneKey } from "@/lib/cerita/scene";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import type { ArtScene } from "@/lib/cerita/illus-types";
-import { ReadText, useNarrator, useLullabySound } from "@/components/book/readaloud";
+import { ReadText, useNarrator, useLullabySound, playBlip } from "@/components/book/readaloud";
+import { FIND_IT, TAP_NAMES } from "@/lib/cerita/find-it";
 
 type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
 
@@ -207,6 +208,8 @@ function PageArt({
 
 type Props = {
   locale: "id" | "en";
+  /** story slug — turns on per-book extras (find-it, stickers) */
+  slug?: string;
   title: string;
   hook: string;
   body: string;
@@ -259,6 +262,7 @@ function parseBlocks(body: string): Block[] {
 
 export function BookReader({
   locale,
+  slug,
   title,
   hook,
   body,
@@ -302,6 +306,8 @@ export function BookReader({
           night: "Mode tidur",
           nightOn: "Mode tidur aktif · suara ombak pelan",
           sleepDone: "Selamat tidur 🌙",
+          find: "Cari",
+          found: "Ketemu!",
         }
       : {
           open: "Read in Book Mode",
@@ -328,6 +334,8 @@ export function BookReader({
           night: "Bedtime",
           nightOn: "Bedtime mode · soft waves",
           sleepDone: "Good night 🌙",
+          find: "Find",
+          found: "Found it!",
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -628,6 +636,58 @@ export function BookReader({
     }
   };
 
+  /* ── tap-to-play + "Cari, yuk!" ── */
+  const findCfg = slug ? FIND_IT[slug] : undefined;
+  const [found, setFound] = useState<Set<number>>(() => new Set());
+  const burst = (host: HTMLElement, x: number, y: number, chars: string[]) => {
+    const r = host.getBoundingClientRect();
+    const b = document.createElement("span");
+    b.className = "bk-tapburst";
+    b.style.left = `${x - r.left}px`;
+    b.style.top = `${y - r.top}px`;
+    chars.forEach((ch, i) => {
+      const it = document.createElement("i");
+      it.textContent = ch;
+      it.style.setProperty("--n", String(i));
+      b.appendChild(it);
+    });
+    host.appendChild(b);
+    setTimeout(() => b.remove(), 1000);
+  };
+  const onArtTap = (e: React.MouseEvent<HTMLDivElement>, pageI: number) => {
+    const el = (e.target as Element).closest("[data-find],[data-k],[data-who]") as SVGGElement | null;
+    if (!el) return;
+    const host = e.currentTarget;
+    if (el.dataset.find) {
+      if (!found.has(pageI)) {
+        setFound((f) => new Set(f).add(pageI));
+        playBlip("chime", night);
+        burst(host, e.clientX, e.clientY, ["⭐", "✨", "🌟", "✨"]);
+        if (!readOn && findCfg) narrator.speak(`${t.found} ${findCfg.label[locale]}!`, { rate: 1, pitch: 1.15 });
+      }
+      return;
+    }
+    const k = el.dataset.k ?? el.dataset.who ?? "";
+    el.classList.remove("sa-poke", "sa-poke-color");
+    void el.getBoundingClientRect();
+    el.classList.add("sa-poke");
+    if (k.startsWith("octopus")) el.classList.add("sa-poke-color");
+    setTimeout(() => el.classList.remove("sa-poke", "sa-poke-color"), 900);
+    const person = !!el.dataset.who;
+    playBlip(person ? "boing" : "pop", night);
+    burst(host, e.clientX, e.clientY, person ? ["💖", "✨", "💖"] : ["✨", "💫", "✨"]);
+    const name = TAP_NAMES[k]?.[locale];
+    if (name && !readOn) narrator.speak(name, { rate: 1, pitch: 1.12 });
+  };
+  const findFor = (i: number) => (findCfg ? { k: findCfg.k, zone: findCfg.zone, s: findCfg.s, seed: i + 1 + (slug?.length ?? 0), found: found.has(i) } : undefined);
+  const findChip = (i: number) =>
+    findCfg && picture ? (
+      <div className={`bk-findchip${found.has(i) ? " is-found" : ""}`} aria-live="polite">
+        {found.has(i) ? `✅ ${t.found}` : `🔍 ${t.find} ${findCfg.label[locale]}`}
+        <span className="bk-findcount">⭐ {found.size}/{picture.length}</span>
+      </div>
+    ) : null;
+
   const waveNow = () => {
     setWaved((w) => w + 1);
     if (waveTimer.current) clearTimeout(waveTimer.current);
@@ -677,8 +737,8 @@ export function BookReader({
     const side = mid > 410 ? "left" : "right";
     return (
       <div className="bk-page bk-page--spread" key="SP">
-        <div className="bk-pic-art">
-          <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} spread />
+        <div className="bk-pic-art" onClick={(e) => onArtTap(e, s.i)}>
+          <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} spread find={findFor(s.i)} />
         </div>
         <div className="bk-gutter" aria-hidden />
         <div className={`bk-pic-text bk-spread-text bk-spread-text--${side}`}>
@@ -710,8 +770,8 @@ export function BookReader({
       const pg = picture[s.i]!;
       return (
         <div className="bk-page bk-page--pic" key={key}>
-          <div className="bk-pic-art">
-            <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page />
+          <div className="bk-pic-art" onClick={(e) => onArtTap(e, s.i)}>
+            <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page find={findFor(s.i)} />
           </div>
           <div className="bk-pic-text">
             <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={pg.text} active={sheets?.[pos] === s ? word : -1} /></p>
@@ -952,9 +1012,14 @@ export function BookReader({
             <button type="button" className="bk-pgbtn" onClick={() => go(-1)} disabled={atStart}>
               ‹ {t.prev}
             </button>
-            <span className="bk-pgcount">
-              {Math.min(pos + 1, total)} / {total}
-            </span>
+            {(() => {
+              const cur = sheets?.[pos];
+              return cur?.kind === "pic" && findChip(cur.i) ? findChip(cur.i) : (
+                <span className="bk-pgcount">
+                  {Math.min(pos + 1, total)} / {total}
+                </span>
+              );
+            })()}
             <button type="button" className="bk-pgbtn" onClick={() => go(1)} disabled={atEnd}>
               {t.next} ›
             </button>
@@ -1168,6 +1233,16 @@ export function BookReader({
         .bk-page--pic{padding:0;background:#EAF7FF;}
         .bk-page--pic::before,.bk-page--pic::after{display:none;}
         .bk-pic-art{position:absolute;inset:0;}
+        .bk-pic-art [data-k],.bk-pic-art [data-who],.bk-pic-art [data-find]{cursor:pointer;}
+        .bk-findchip{display:flex;flex-direction:column;align-items:center;gap:1px;padding:5px 12px;border-radius:14px;max-width:46vw;text-align:center;line-height:1.15;
+          font-size:11.5px;font-weight:800;color:#3a2a00;background:rgba(255,255,255,.92);box-shadow:0 4px 12px -6px rgba(0,0,0,.4);}
+        .bk-findchip.is-found{background:#FFE27A;}
+        .bk-findcount{font-weight:700;opacity:.75;}
+        .bk-tapburst{position:absolute;z-index:4;pointer-events:none;width:0;height:0;}
+        .bk-tapburst i{position:absolute;left:-10px;top:-10px;font-style:normal;font-size:22px;animation:bkTapBurst .9s ease-out forwards;
+          --a:calc(var(--n) * 90deg - 135deg);}
+        @keyframes bkTapBurst{0%{transform:translate(0,0) scale(.4);opacity:0}25%{opacity:1}
+          100%{transform:rotate(var(--a)) translateY(-54px) rotate(calc(var(--a) * -1)) scale(1);opacity:0}}
         .bk-pic-art .story-art{width:100%;height:100%;}
         .bk-pic-text{position:absolute;left:clamp(12px,3vw,22px);right:clamp(12px,3vw,22px);top:clamp(12px,3vw,22px);z-index:2;
           padding:clamp(12px,2.4vw,18px) clamp(14px,2.8vw,22px);border-radius:18px;text-align:center;

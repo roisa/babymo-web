@@ -234,3 +234,30 @@ export function useLullabySound() {
   useEffect(() => stop, [stop]);
   return { start, stop };
 }
+
+/** Tiny tap sounds made in the browser: pop (creatures), boing (characters), chime (found it!). */
+let blipCtx: AudioContext | null = null;
+export function playBlip(kind: "pop" | "boing" | "chime", quiet = false) {
+  if (typeof window === "undefined") return;
+  const AC = window.AudioContext || (window as unknown as { webkitAudioContext?: typeof AudioContext }).webkitAudioContext;
+  if (!AC) return;
+  blipCtx ??= new AC();
+  const c = blipCtx;
+  void c.resume();
+  const now = c.currentTime;
+  const notes = kind === "chime" ? [784, 988, 1319] : [kind === "boing" ? 420 : 520];
+  notes.forEach((f, i) => {
+    const o = c.createOscillator();
+    const g = c.createGain();
+    o.type = kind === "pop" ? "triangle" : "sine";
+    const t = now + i * 0.09;
+    o.frequency.setValueAtTime(f, t);
+    if (kind !== "chime") o.frequency.exponentialRampToValueAtTime(f * (kind === "boing" ? 2.1 : 1.7), t + 0.14);
+    g.gain.setValueAtTime(0.0001, t);
+    g.gain.exponentialRampToValueAtTime(quiet ? 0.05 : 0.14, t + 0.02);
+    g.gain.exponentialRampToValueAtTime(0.0001, t + (kind === "chime" ? 0.5 : 0.22));
+    o.connect(g).connect(c.destination);
+    o.start(t);
+    o.stop(t + 0.6);
+  });
+}
