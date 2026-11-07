@@ -1,6 +1,8 @@
 import { asset } from "@/lib/i18n/config";
 import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@/lib/cerita/illus-types";
 import { FRIEND_SCALE } from "@/lib/cerita/friends-poses";
+import { ELEMENTS } from "./elements";
+import { SkyCloud, SkyMoon, SkySun } from "./elements/nature";
 
 /**
  * Animated SVG picture-book illustration for a story scene.
@@ -51,39 +53,9 @@ function sky(time: ArtTime, noSun = false) {
   );
 }
 
-function Sun({ x, y }: { x: number; y: number }) {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <g className="sa-spin">
-        {Array.from({ length: 10 }, (_, i) => (
-          <rect key={i} x={-4} y={-62} width={8} height={18} rx={4} fill="#FFC93C" transform={`rotate(${i * 36})`} />
-        ))}
-      </g>
-      <circle r={38} fill="#FFD447" />
-      <circle r={38} fill="url(#sa-sunglow)" />
-    </g>
-  );
-}
-function Moon({ x, y }: { x: number; y: number }) {
-  return (
-    <g transform={`translate(${x} ${y})`}>
-      <circle r={60} fill="#FFF3B0" opacity=".18" className="sa-pulse" />
-      <circle r={36} fill="#FFE98A" />
-      <circle cx={16} cy={-10} r={32} fill="#2A2A60" />
-    </g>
-  );
-}
-function Cloud({ x, y, s = 1, d = 0, grey = false }: { x: number; y: number; s?: number; d?: number; grey?: boolean }) {
-  return (
-    <g transform={`translate(${x} ${y}) scale(${s})`}>
-      <g className="sa-drift" style={{ animationDelay: `${d}s` }}>
-        <ellipse cx={0} cy={0} rx={60} ry={24} fill={grey ? "#E2E8EF" : "#fff"} />
-        <circle cx={-22} cy={-14} r={24} fill={grey ? "#E2E8EF" : "#fff"} />
-        <circle cx={16} cy={-20} r={30} fill={grey ? "#E2E8EF" : "#fff"} />
-      </g>
-    </g>
-  );
-}
+const Sun = SkySun;
+const Moon = SkyMoon;
+const Cloud = SkyCloud;
 
 function Window({ x, y, w = 170, h = 140, time, rainy = false }: { x: number; y: number; w?: number; h?: number; time: ArtTime; rainy?: boolean }) {
   // indoor rain falls OUTSIDE, behind the glass — never across the room
@@ -635,7 +607,14 @@ function TennisBall({ x = 0, y = 0, r = 10, spin = false }: { x?: number; y?: nu
 
 /* ───────── props ───────── */
 
-function Prop({ k }: { k: ArtProp }) {
+export function Prop({ k }: { k: ArtProp }) {
+  const El = ELEMENTS[k]?.draw;
+  if (El) return <El />;
+  return <LegacyProp k={k} />;
+}
+
+/** Older inline drawings — props move into ./elements as they are redrawn. */
+export function LegacyProp({ k }: { k: ArtProp }) {
   switch (k) {
     case "toothbrush":
       return (
