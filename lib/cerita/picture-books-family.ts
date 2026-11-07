@@ -930,4 +930,458 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── Family 1. Abi's work trip ───────────────────────── */
+  {
+    slug: "abi-pergi-tiga-hari",
+    pose: "baby-mo-pose-01.png",
+    published: "2026-11-09",
+    title: { id: "Abi Pergi Tiga Hari", en: "Abi Goes Away for Three Days" },
+    hook: {
+      id: "Abi harus pergi kerja ke kota lain selama tiga hari. Kak Adam berjanji menjaga adik-adiknya. Bisakah ia?",
+      en: "Abi has to work in another city for three days. Kak Adam promises to look after the little ones. Can he do it?",
+    },
+    anchor: { type: "doa", slug: "doa-kembali-dari-perjalanan" },
+    takeaway: {
+      id: "Saat orang tua bepergian, rutinitas kecil, telepon video, dan tanggung jawab sederhana untuk si kakak membuat rindu terasa lebih ringan.",
+      en: "When a parent travels, small routines, video calls and a simple job for the big sibling make missing them feel lighter.",
+    },
+    tags: ["abi", "kak adam", "rindu", "bepergian", "telepon video", "tanggung jawab"],
+    cover: {
+      focus: 300, bg: "street",
+      props: [{ k: "heart", x: 470, y: 230, s: 0.6 }],
+      mo: [{ pose: "pose-01", x: 330 }, { who: "ayah", pose: "traveller-suitcase", x: 210 }, { who: "adam", pose: "wave-hello", x: 450 }],
+      fx: ["hearts"],
+    },
+    pages: [
+      {
+        text: { id: "Pagi itu ada koper di depan pintu. \"Abi harus kerja di kota lain tiga hari,\" kata Abi.", en: "That morning there was a suitcase by the door. \"I have to work in another city for three days,\" said Abi." },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-40", x: 380 }, { who: "ayah", pose: "traveller-suitcase", x: 250 }] },
+      },
+      {
+        text: { id: "\"Tiga hari itu berapa lama?\" tanya Baby Mo. \"Tiga kali tidur,\" jawab Abi.", en: "\"How long is three days?\" asked Baby Mo. \"Three sleeps,\" said Abi." },
+        scene: { focus: 320, bg: "living", props: [{ k: "moon", x: 470, y: 160 }], mo: [{ pose: "pose-33", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "Abi memandang Kak Adam. \"Kak, tolong bantu Umi menjaga adik-adik, ya.\" Kak Adam berdiri tegak. \"Siap, Abi!\"", en: "Abi looked at Kak Adam. \"Kak, please help Umi look after the little ones.\" Kak Adam stood up tall. \"Ready, Abi!\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 260 }, { who: "adam", pose: "wave-hello", x: 400 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sebelum berangkat, Abi berdoa dan mereka berpelukan lama sekali. \"Assalamu'alaikum!\"", en: "Before leaving, Abi prayed and they hugged for a long, long time. \"Assalamu'alaikum!\"" },
+        scene: { bg: "street", props: [{ k: "car", x: 560, s: 1.2 }], mo: [{ who: "ayah", pose: "hug-mo", x: 330 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malam pertama, rumah terasa sepi. Baby Mo memeluk boneka dan bertanya, \"Abi lagi apa, ya?\"", en: "The first night, the house felt quiet. Baby Mo hugged his teddy and asked, \"What's Abi doing now?\"" },
+        scene: { bg: "bedroom", time: "night", props: [{ k: "teddy", x: 470 }], mo: [{ pose: "pose-12", x: 360 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Tring-tring! Tablet berbunyi. Ada wajah Abi di layar! \"Abiii!\" si kembar berebut melambai.", en: "Ring-ring! The tablet chimed. Abi's face was on the screen! \"Abiii!\" The twins jostled to wave." },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "tablet", x: 470, y: 330 }], mo: [{ pose: "pose-01", x: 390 }, { who: "ais", pose: "video-play", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Di kamar hotel, Abi tersenyum lebar. \"Abi kangen. Hari ini kalian ngapain saja?\"", en: "In his hotel room, Abi grinned. \"I miss you. What did you all do today?\"" },
+        scene: { focus: 375, bg: "bedroom", time: "night", props: [{ k: "lamp", x: 530, s: 0.85 }], mo: [{ who: "ayah", pose: "video-call-sit", x: 360 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Kak Adam melapor seperti kapten: \"Adik-adik sudah sikat gigi, sudah sholat Isya, dan Mo cuma nangis sekali!\"", en: "Kak Adam reported like a captain: \"The little ones brushed their teeth, prayed Isha, and Mo only cried once!\"" },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "tablet", x: 480, y: 330 }], mo: [{ pose: "pose-03", x: 280 }, { who: "adam", pose: "wave-hello", x: 400 }] },
+      },
+      {
+        text: { id: "Hari kedua, Kak Adam membacakan Al-Qur'an untuk si kembar, persis seperti yang biasa dilakukan Abi.", en: "On day two, Kak Adam recited Qur'an for the twins, just the way Abi always did." },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "pose-12", x: 290 }, { who: "adam", pose: "quran-read-sit", x: 420 }, { who: "ais", pose: "sit-chin-hands", x: 190 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Waktu Baby Mo sedih, Kak Adam mengajaknya mencoret kalender. \"Lihat, Mo. Tinggal satu kotak lagi!\"", en: "When Baby Mo felt sad, Kak Adam helped him cross off the calendar. \"Look, Mo. Only one box left!\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "card", x: 360, y: 300, s: 1.3 }], mo: [{ pose: "pose-08", x: 280 }, { who: "adam", pose: "wave-hello", x: 420 }] },
+      },
+      {
+        text: { id: "Hari ketiga, mereka membuat kartu besar bertuliskan: SELAMAT DATANG, ABI! Penuh gambar bintang dan hati.", en: "On day three, they made a big card that said: WELCOME HOME, ABI! It was covered in stars and hearts." },
+        scene: { focus: 330, bg: "living", props: [{ k: "drawing", x: 470 }], mo: [{ who: "ais", pose: "draw-floor", x: 280 }, { pose: "pose-25", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sore itu terdengar suara koper di jalan: grrrk… grrrk… Pintu terbuka. \"Assalamu'alaikum!\"", en: "That afternoon came the sound of a suitcase on the road: grrrk… grrrk… The door opened. \"Assalamu'alaikum!\"" },
+        scene: { focus: 330, bg: "street", time: "dusk", mo: [{ pose: "pose-26", x: 390 }, { who: "ayah", pose: "traveller-suitcase", x: 260 }] },
+      },
+      {
+        text: { id: "\"ABIII!\" Tiga anak berlari bersamaan. Abi berlutut dan menangkap mereka semua sekaligus.", en: "\"ABIII!\" Three children ran at once. Abi knelt and caught them all together." },
+        scene: { focus: 370, bg: "living", time: "dusk", mo: [{ who: "ais", pose: "arms-wide-joy", x: 470 }, { who: "ayah", pose: "hug-mo", x: 300 }, { who: "adam", pose: "wave-hello", x: 400 }], fx: ["hearts", "confetti"] },
+      },
+      {
+        text: { id: "Abi membaca doa pulang dari perjalanan, dan anak-anak ikut menirukan pelan-pelan.", en: "Abi said the du'a for coming home from a journey, and the children repeated it softly." },
+        quote: { id: "\"Aayibuuna taa-ibuuna 'aabiduuna li rabbinaa haamiduun.\" — Kami kembali, bertaubat, beribadah, dan memuji Tuhan kami. (HR. Muslim)", en: "\"Aayibuuna taa-ibuuna 'aabiduuna li rabbinaa haamiduun.\" — We return, repenting, worshipping and praising our Lord. (Muslim)" },
+        scene: { focus: 330, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "dua-kneel", x: 260 }, { pose: "pose-35", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Abi memeluk Kak Adam paling lama. \"Terima kasih sudah menjaga adik-adik, Kapten.\"", en: "Abi hugged Kak Adam the longest. \"Thank you for looking after the little ones, Captain.\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malam itu semua tidur nyenyak — rumahnya sudah lengkap lagi. Kalau Abi atau Umi pergi, apa yang bisa kamu bantu di rumah? 🧳", en: "That night everyone slept soundly — the house was complete again. If Abi or Umi went away, how could you help at home? 🧳" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "drawing", x: 500, y: 250 }], mo: [{ pose: "pose-39", x: 380 }, { who: "ais", pose: "sleep-pillow", x: 270 }], fx: ["stars", "zzz"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Family 2. Morning exercise ───────────────────────── */
+  {
+    slug: "olahraga-pagi-bersama-abi",
+    pose: "baby-mo-run.png",
+    published: "2026-11-09",
+    title: { id: "Olahraga Pagi Bersama Abi", en: "Morning Exercise with Abi" },
+    hook: {
+      id: "Setelah Subuh, Abi mengajak semua olahraga. Kak Adam ingin lari paling cepat, Baby Mo paling lambat — tapi semua sampai!",
+      en: "After Fajr, Abi gets everyone moving. Kak Adam wants to be fastest, Baby Mo is the slowest — but everyone gets there!",
+    },
+    anchor: { type: "parenting", slug: "bonding-orangtua" },
+    takeaway: {
+      id: "Badan adalah amanah dari Allah. Olahraga bersama setiap pagi membuat anak sehat, dekat dengan orang tua, dan belajar menyemangati yang lebih lambat.",
+      en: "Our bodies are a trust from Allah. Moving together every morning keeps children healthy, close to their parents, and kind to the slower ones.",
+    },
+    tags: ["olahraga", "pagi", "sehat", "abi", "kak adam", "subuh"],
+    cover: {
+      focus: 320, bg: "park",
+      props: [{ k: "sun", x: 470, y: 130 }],
+      mo: [{ pose: "run", x: 380, move: "hop" }, { who: "ayah", pose: "run", x: 250 }],
+      fx: ["leaves"],
+    },
+    pages: [
+      {
+        text: { id: "Selesai sholat Subuh, langit masih jingga. Abi mengikat tali sepatunya. \"Siapa mau olahraga?\"", en: "After Fajr prayer, the sky was still orange. Abi tied his shoelaces. \"Who wants to exercise?\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", props: [{ k: "shoes", x: 470 }], mo: [{ pose: "pose-28", x: 390 }, { who: "ayah", pose: "tie-shoes", x: 265 }] },
+      },
+      {
+        text: { id: "\"AKU!\" Kak Adam sudah memakai sepatu. Baby Mo masih memakai satu sepatu… di tangan.", en: "\"ME!\" Kak Adam already had his shoes on. Baby Mo had one shoe on… his hand." },
+        scene: { focus: 340, bg: "living", time: "dusk", props: [{ k: "shoes", x: 330 }], mo: [{ pose: "pose-33", x: 290 }, { who: "adam", pose: "tennis-win-fist", x: 420 }] },
+      },
+      {
+        text: { id: "Di taman, Abi memimpin pemanasan. \"Tangan ke atas… tarik ke samping… seperti pohon kena angin!\"", en: "At the park, Abi led the warm-up. \"Arms up… stretch to the side… like a tree in the wind!\"" },
+        scene: { focus: 320, bg: "park", props: [{ k: "tree", x: 520 }], mo: [{ pose: "pose-41", x: 390, move: "sway" }, { who: "ayah", pose: "stretch-side-stand", x: 260 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Baby Ais menguap lebar sambil meregang. \"Hoaaam… aku masih setengah tidur!\" Semua tertawa.", en: "Baby Ais yawned hugely as she stretched. \"Hooaam… I'm still half asleep!\" Everyone laughed." },
+        scene: { focus: 330, bg: "park", mo: [{ who: "ais", pose: "wake-stretch", x: 280 }, { pose: "pose-03", x: 390 }] },
+      },
+      {
+        text: { id: "\"Sekarang lari keliling taman!\" Kak Adam melesat paling depan. Wusss!", en: "\"Now run round the park!\" Kak Adam shot off in front. Whoosh!" },
+        scene: { focus: 380, bg: "park", mo: [{ who: "adam", pose: "tennis-jump-reach", x: 390 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Abi berlari di tengah. Baby Ais di belakangnya. Dan Baby Mo… paling belakang, dengan kaki pendeknya: tuk-tuk-tuk-tuk.", en: "Abi ran in the middle. Baby Ais behind him. And Baby Mo… right at the back, on his short legs: pitter-patter-pitter." },
+        scene: { focus: 320, bg: "park", mo: [{ pose: "run", x: 380, move: "hop" }, { who: "ayah", pose: "run", x: 250 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "\"Tungguuu!\" Baby Mo terengah-engah. \"Aku paling lambat. Aku nggak mau lari lagi!\"", en: "\"Waaait!\" Baby Mo panted. \"I'm the slowest. I don't want to run any more!\"" },
+        scene: { bg: "park", props: [{ k: "bench", x: 500 }], mo: [{ pose: "pose-37", x: 360 }] },
+      },
+      {
+        text: { id: "Kak Adam berhenti, lalu berlari kembali. \"Ayo, Mo! Kita lari bareng. Kakak jadi kura-kura juga!\"", en: "Kak Adam stopped, then ran back. \"Come on, Mo! Let's run together. I'll be a tortoise too!\"" },
+        scene: { focus: 330, bg: "park", mo: [{ pose: "pose-40", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka berlari pelan berdampingan sambil berhitung: \"Satu, dua, Bismillah! Tiga, empat, Alhamdulillah!\"", en: "They jogged slowly side by side, counting: \"One, two, Bismillah! Three, four, Alhamdulillah!\"" },
+        scene: { focus: 330, bg: "park", mo: [{ pose: "pose-42", x: 300, move: "hop" }, { who: "adam", pose: "tennis-hold-ball", x: 420 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Garis finis ada di pohon besar. Semua sampai — yang cepat dan yang lambat. \"Horeee!\"", en: "The finish line was the big tree. Everyone made it — fast ones and slow ones. \"Hooray!\"" },
+        scene: { focus: 320, bg: "park", props: [{ k: "tree", x: 520 }], mo: [{ pose: "yeyy", x: 380, move: "hop" }, { who: "ayah", pose: "cheer-fists-stand", x: 250 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Lalu mereka duduk di rumput dan minum air pelan-pelan, duduk dulu, tiga tegukan — seperti cara Rasulullah ﷺ.", en: "Then they sat on the grass and drank water slowly — sitting down, in three sips — the way the Prophet ﷺ did." },
+        scene: { focus: 330, bg: "park", props: [{ k: "water", x: 480 }], mo: [{ who: "ais", pose: "drink-bottle", x: 400 }, { who: "ayah", pose: "drink-water-sit", x: 270 }] },
+      },
+      {
+        text: { id: "\"Kenapa sih kita harus olahraga, Abi?\" tanya Baby Ais. \"Karena badan kita titipan dari Allah. Kita jaga baik-baik.\"", en: "\"Why do we have to exercise, Abi?\" asked Baby Ais. \"Because our bodies are a gift Allah has trusted us with. We look after them.\"" },
+        quote: { id: "\"Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, dan pada keduanya ada kebaikan.\" (HR. Muslim)", en: "\"The strong believer is better and more beloved to Allah than the weak believer, and there is good in both.\" (Muslim)" },
+        scene: { focus: 320, bg: "park", mo: [{ who: "ais", pose: "think-question", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Kuat itu bukan cuma lari cepat,\" tambah Abi. \"Menunggu adik yang lambat juga butuh hati yang kuat.\" Kak Adam tersenyum malu.", en: "\"Being strong isn't just running fast,\" Abi added. \"Waiting for a slower little one takes a strong heart too.\" Kak Adam smiled shyly." },
+        scene: { focus: 340, bg: "park", mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 280 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Sarapannya buah segar. Baby Mo makan pisang paling cepat. \"Lihat! Aku juara makan pisang!\"", en: "Breakfast was fresh fruit. Baby Mo ate his banana fastest of all. \"Look! I'm the banana champion!\"" },
+        scene: { focus: 320, bg: "kitchen", props: [{ k: "fruit", x: 480 }], mo: [{ pose: "pose-02", x: 390, move: "hop" }, { who: "ayah", pose: "eat-fruit-sit", x: 260 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Sejak hari itu, setiap Ahad pagi mereka lari bersama. Kak Adam selalu di samping Baby Mo.", en: "From then on, every Sunday morning they ran together. Kak Adam always stayed beside Baby Mo." },
+        scene: { focus: 330, bg: "park", props: [{ k: "sun", x: 480, y: 130 }], mo: [{ pose: "run", x: 300, move: "hop" }, { who: "adam", pose: "tennis-jump-reach", x: 420 }], fx: ["leaves"] },
+      },
+      {
+        text: { id: "Olahraga apa yang paling kamu suka? Ajak Abi atau Umi bergerak bersama besok pagi! 🏃", en: "What's your favourite way to move? Ask Abi or Umi to exercise with you tomorrow morning! 🏃" },
+        scene: { bg: "park", props: [{ k: "sun", x: 480, y: 130 }, { k: "ball", x: 470 }], mo: [{ pose: "yes", x: 360 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Family 3. Straight rows ───────────────────────── */
+  {
+    slug: "saf-lurus-seperti-kereta",
+    pose: "baby-mo-pose-35.png",
+    published: "2026-11-09",
+    title: { id: "Saf Lurus seperti Kereta", en: "Straight Rows like a Train" },
+    hook: {
+      id: "Sholat berjamaah di rumah! Abi jadi imam, Kak Adam di saf depan. Tapi Baby Mo tidak bisa diam di barisannya…",
+      en: "Praying together at home! Abi leads, Kak Adam is in the front row. But Baby Mo can't stay still in his row…",
+    },
+    anchor: { type: "parenting", slug: "mulai-sholat" },
+    takeaway: {
+      id: "Sholat berjamaah di rumah mengajarkan anak tentang kebersamaan, kerapian, dan bahwa setiap orang punya tempatnya di barisan.",
+      en: "Praying together at home teaches children togetherness and tidiness — and that everyone has a place in the row.",
+    },
+    tags: ["sholat berjamaah", "saf", "abi", "kak adam", "si kembar", "ibadah"],
+    cover: {
+      focus: 330, bg: "living", time: "dusk",
+      props: [{ k: "mat", x: 400 }, { k: "mat", x: 260 }],
+      mo: [{ pose: "pose-35", x: 400 }, { who: "ais", pose: "dua-mat", x: 260 }, { who: "adam", pose: "dua-hands", x: 330 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Hujan turun, jadi malam ini mereka sholat Isya berjamaah di rumah. Abi menggelar sajadah.", en: "It was raining, so tonight they prayed Isha together at home. Abi laid out the prayer mats." },
+        scene: { focus: 320, bg: "living", time: "rain", props: [{ k: "mat", x: 450 }], mo: [{ pose: "pose-21", x: 390 }, { who: "ayah", pose: "kneel-present", x: 265 }] },
+      },
+      {
+        text: { id: "\"Abi jadi imam di depan. Kak Adam di belakang Abi. Mo dan Ais di sebelah Kak Adam.\"", en: "\"I'll lead at the front. Kak Adam behind me. Mo and Ais next to Kak Adam.\"" },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "mat", x: 280 }, { k: "mat", x: 400 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { who: "adam", pose: "dua-hands", x: 410 }] },
+      },
+      {
+        text: { id: "Kak Adam membaca iqamah dengan suara jelas. \"Qad qaamatish shalaah…\" Baby Mo terkagum-kagum.", en: "Kak Adam called the iqamah in a clear voice. \"Qad qaamatish shalaah…\" Baby Mo was amazed." },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "wow", x: 290 }, { who: "adam", pose: "dua-hands", x: 420 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Tapi barisannya berantakan. Baby Mo terlalu maju. Baby Ais terlalu mundur. Ada celah besar di tengah.", en: "But the row was a mess. Baby Mo was too far forward. Baby Ais was too far back. There was a big gap in the middle." },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "mat", x: 270 }, { k: "mat", x: 420 }], mo: [{ pose: "pose-30", x: 420, move: "sway" }, { who: "ais", pose: "think-question", x: 250 }] },
+      },
+      {
+        text: { id: "Abi menoleh dan tersenyum. \"Sebelum mulai, kita rapikan saf dulu. Saf yang lurus itu bagian dari sholat yang sempurna.\"", en: "Abi turned and smiled. \"Before we start, let's straighten the row. A straight row is part of a complete prayer.\"" },
+        quote: { id: "\"Luruskanlah saf-saf kalian, karena lurusnya saf termasuk kesempurnaan sholat.\" (HR. Bukhari dan Muslim)", en: "\"Straighten your rows, for straight rows are part of the perfection of prayer.\" (Bukhari and Muslim)" },
+        scene: { focus: 320, bg: "living", time: "night", mo: [{ pose: "pose-22", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Seperti kereta!\" kata Kak Adam. \"Bahu ketemu bahu, kaki ketemu kaki. Gerbongnya nempel, nggak ada yang lepas.\"", en: "\"Like a train!\" said Kak Adam. \"Shoulder to shoulder, foot to foot. The carriages stay joined — none come loose.\"" },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "idea", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }] },
+      },
+      {
+        text: { id: "\"Tuuut tuuut!\" Baby Mo dan Baby Ais bergeser sampai bahu mereka menempel ke Kak Adam. Barisannya lurus!", en: "\"Choo choo!\" Baby Mo and Baby Ais shuffled until their shoulders touched Kak Adam's. The row was straight!" },
+        scene: { focus: 330, bg: "living", time: "night", props: [{ k: "mat", x: 330 }], mo: [{ pose: "pose-35", x: 410 }, { who: "ais", pose: "dua-mat", x: 255 }, { who: "adam", pose: "dua-hands", x: 330 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Allahu Akbar.\" Semua mulai sholat. Rumah jadi hening. Hanya ada suara hujan dan bacaan Abi.", en: "\"Allahu Akbar.\" Everyone began to pray. The house went quiet. Just the rain and Abi's recitation." },
+        scene: { bg: "living", time: "rain", props: [{ k: "mat", x: 360 }], mo: [{ pose: "pose-35", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Di tengah sholat, seekor kepik merah merayap di dinding. Baby Mo ingin menunjuknya… tapi ia ingat: gerbong kereta tidak boleh lepas!", en: "In the middle of the prayer, a little red ladybird crawled up the wall. Baby Mo wanted to point… but he remembered: the train carriages mustn't come loose!" },
+        scene: { bg: "living", time: "night", props: [{ k: "ladybug", x: 470, y: 220 }], mo: [{ pose: "pose-07", x: 360 }] },
+      },
+      {
+        text: { id: "Mereka sujud bersama — Abi, Kak Adam, Baby Ais, dan Baby Mo — dahi di sajadah, berbaris rapi.", en: "They went into sujud together — Abi, Kak Adam, Baby Ais and Baby Mo — foreheads on the mats, in a neat row." },
+        scene: { focus: 320, bg: "living", time: "night", props: [{ k: "mat", x: 390 }], mo: [{ pose: "pose-17", x: 390 }, { who: "ayah", pose: "sujud", x: 250 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Assalamu'alaikum warahmatullah.\" Selesai! Lalu semua bersalaman, dari yang paling kecil sampai Abi.", en: "\"Assalamu'alaikum warahmatullah.\" Done! Then everyone shook hands, from the littlest all the way to Abi." },
+        scene: { focus: 330, bg: "living", time: "night", mo: [{ who: "ais", pose: "heart-hands", x: 280 }, { pose: "thank-you", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Kenapa harus rapat, Abi?\" tanya Baby Ais. \"Supaya tidak ada celah. Di saf, semua sama: yang besar, yang kecil, semua bersebelahan.\"", en: "\"Why do we stand so close, Abi?\" asked Baby Ais. \"So there are no gaps. In the row everyone is equal: big and small, side by side.\"" },
+        scene: { focus: 320, bg: "living", time: "night", mo: [{ who: "ais", pose: "wonder-question", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "Abi lalu memimpin doa, dan semua tangan terangkat bersama. \"Aamiin!\"", en: "Then Abi led the du'a, and every hand went up together. \"Aamiin!\"" },
+        scene: { focus: 320, bg: "living", time: "night", mo: [{ pose: "pose-35", x: 390 }, { who: "ayah", pose: "dua-kneel", x: 260 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Besok Subuh aku mau jadi lokomotifnya!\" kata Baby Mo. Kak Adam tertawa. \"Lokomotif itu imam, Mo. Nanti kalau sudah besar!\"", en: "\"At Fajr I want to be the engine!\" said Baby Mo. Kak Adam laughed. \"The engine is the imam, Mo. When you're bigger!\"" },
+        scene: { focus: 340, bg: "living", time: "night", mo: [{ pose: "pose-02", x: 290, move: "hop" }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Sebelum tidur, Baby Mo menata empat sajadah berjajar rapi untuk Subuh — seperti kereta yang siap berangkat.", en: "Before bed, Baby Mo laid out four mats in a tidy line for Fajr — like a train ready to go." },
+        scene: { focus: 360, bg: "living", time: "night", props: [{ k: "mat", x: 300 }, { k: "mat", x: 420 }, { k: "mat", x: 540 }], mo: [{ pose: "pose-36", x: 360 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Pernahkah kamu sholat berjamaah di rumah? Siapa yang jadi lokomotif di keluargamu? 🚂", en: "Have you ever prayed together at home? Who's the engine in your family? 🚂" },
+        scene: { bg: "living", time: "night", props: [{ k: "mat", x: 450 }], mo: [{ pose: "alright", x: 360 }], fx: ["stars"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Family 4. Adam's trophy ───────────────────────── */
+  {
+    slug: "piala-kak-adam",
+    pose: "baby-mo-pose-27.png",
+    published: "2026-11-09",
+    title: { id: "Piala Kak Adam", en: "Kak Adam's Trophy" },
+    hook: {
+      id: "Kak Adam pulang membawa piala tenis. Semua memujinya. Tapi Baby Mo malah cemberut dan bersembunyi. Kenapa?",
+      en: "Kak Adam comes home with a tennis trophy. Everyone praises him. But Baby Mo sulks and hides. Why?",
+    },
+    anchor: { type: "parenting", slug: "rivalitas-saudara" },
+    takeaway: {
+      id: "Rasa cemburu antarsaudara itu wajar. Akui perasaannya, beri perhatian yang adil, dan bantu setiap anak melihat kelebihannya sendiri.",
+      en: "Jealousy between siblings is normal. Name the feeling, share attention fairly, and help each child see their own gifts.",
+    },
+    tags: ["cemburu", "kakak adik", "adil", "kak adam", "piala", "abi"],
+    cover: {
+      focus: 340, bg: "living",
+      props: [{ k: "trophy", x: 440, y: 330 }],
+      mo: [{ pose: "pose-27", x: 280 }, { who: "adam", pose: "tennis-win-fist", x: 430 }],
+    },
+    pages: [
+      {
+        text: { id: "\"Aku JUARA SATU!\" Kak Adam masuk rumah sambil mengangkat piala emas yang berkilau.", en: "\"I WON FIRST PLACE!\" Kak Adam burst in holding up a shining gold trophy." },
+        scene: { focus: 390, bg: "living", props: [{ k: "trophy", x: 470, y: 300 }], mo: [{ who: "adam", pose: "tennis-win-fist", x: 390 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Abi bertepuk tangan. Umi memotret. Nenek menelepon. \"Masya Allah, hebat sekali Adam!\"", en: "Abi clapped. Umi took photos. Grandma phoned. \"Masha Allah, well done, Adam!\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "trophy", x: 470, y: 300 }], mo: [{ who: "ayah", pose: "cheer-fists-stand", x: 280 }, { who: "adam", pose: "tennis-hold-ball", x: 410 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Piala itu ditaruh di rak paling tinggi. Semua orang yang lewat berhenti dan memandanginya.", en: "The trophy went on the highest shelf. Everyone who walked past stopped to look at it." },
+        scene: { bg: "living", props: [{ k: "trophy", x: 450, y: 230 }, { k: "books", x: 450, y: 330 }], mo: [{ pose: "wow", x: 340 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Baby Mo memandangi piala itu lama sekali. Dadanya terasa aneh — panas dan sesak.", en: "Baby Mo stared at the trophy for a long time. His chest felt strange — hot and tight." },
+        scene: { bg: "living", time: "dusk", props: [{ k: "trophy", x: 460, y: 230 }, { k: "cloud", x: 360, y: 150, s: 0.6 }], mo: [{ pose: "pose-27", x: 350 }] },
+      },
+      {
+        text: { id: "\"Aku nggak punya piala,\" gumamnya. \"Nggak ada yang bilang aku hebat.\" Ia bersembunyi di balik sofa.", en: "\"I haven't got a trophy,\" he mumbled. \"Nobody says I'm great.\" He hid behind the sofa." },
+        scene: { bg: "living", time: "dusk", mo: [{ pose: "pose-38", x: 360 }] },
+      },
+      {
+        text: { id: "Abi mencarinya dan duduk di lantai di sampingnya. \"Ada yang sedang sedih, ya?\"", en: "Abi found him and sat on the floor beside him. \"Is somebody feeling sad?\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", mo: [{ pose: "pose-38", x: 390 }, { who: "ayah", pose: "listen-sit-box", x: 260 }] },
+      },
+      {
+        text: { id: "\"Semua sayang Kak Adam. Aku nggak,\" isak Baby Mo. Abi mengangguk pelan. \"Mo merasa cemburu, ya. Itu perasaan yang wajar.\"", en: "\"Everyone loves Kak Adam. Not me,\" sniffed Baby Mo. Abi nodded gently. \"You're feeling jealous. That's a normal feeling.\"" },
+        scene: { focus: 320, bg: "living", time: "dusk", mo: [{ pose: "pose-37", x: 390 }, { who: "ayah", pose: "hand-heart-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "Abi memeluknya erat. \"Sayang Abi untuk Kak Adam tidak mengambil sayang Abi untuk Mo. Hati Abi muat untuk semua.\"", en: "Abi hugged him tight. \"My love for Kak Adam doesn't take away my love for you. My heart has room for everyone.\"" },
+        quote: { id: "\"Bertakwalah kepada Allah dan berlaku adillah di antara anak-anak kalian.\" (HR. Bukhari dan Muslim)", en: "\"Fear Allah and be fair between your children.\" (Bukhari and Muslim)" },
+        scene: { bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "hug-mo", x: 340 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Kak Adam pandai tenis. Mo pandai apa, ya?\" tanya Abi. Baby Mo berpikir. \"…Aku pandai menggambar!\"", en: "\"Kak Adam is good at tennis. What's Mo good at?\" asked Abi. Baby Mo thought. \"…I'm good at drawing!\"" },
+        scene: { focus: 320, bg: "living", props: [{ k: "drawing", x: 480 }], mo: [{ pose: "idea", x: 390 }, { who: "ayah", pose: "think-chin-stand", x: 260 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Dan Mo pandai membuat semua orang tertawa,\" tambah Abi. \"Itu juga hadiah dari Allah.\"", en: "\"And Mo is good at making everyone laugh,\" Abi added. \"That's a gift from Allah too.\"" },
+        scene: { focus: 320, bg: "living", mo: [{ pose: "pose-03", x: 390 }, { who: "ayah", pose: "cheer-kneel", x: 265 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam ternyata mendengar dari pintu. Ia menurunkan pialanya dan duduk di samping Baby Mo.", en: "Kak Adam had been listening at the door. He took down his trophy and sat beside Baby Mo." },
+        scene: { focus: 340, bg: "living", props: [{ k: "trophy", x: 360, y: 340 }], mo: [{ pose: "pose-12", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }] },
+      },
+      {
+        text: { id: "\"Mo, kamu yang paling keras teriak 'Ka-kak A-dam!' di pertandingan. Piala ini juga punyamu sedikit.\"", en: "\"Mo, you shouted 'Kak A-dam!' the loudest at the match. This trophy is a little bit yours too.\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "trophy", x: 360, y: 320 }], mo: [{ pose: "pose-40", x: 290 }, { who: "adam", pose: "tennis-win-fist", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Baby Mo memeluk piala itu, lalu berlari mengambil krayon. \"Aku mau buat sesuatu untuk Kakak!\"", en: "Baby Mo hugged the trophy, then ran for his crayons. \"I'm going to make something for you, Kak!\"" },
+        scene: { bg: "living", props: [{ k: "trophy", x: 450, y: 330 }], mo: [{ pose: "run", x: 350, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Ia menggambar Kak Adam memukul bola, dengan tulisan besar: KAKAKKU JUARA. Kak Adam menempelkannya di samping piala.", en: "He drew Kak Adam hitting a ball, with big letters: MY BROTHER THE CHAMPION. Kak Adam stuck it up beside the trophy." },
+        scene: { focus: 340, bg: "living", props: [{ k: "drawing", x: 470, y: 260 }, { k: "trophy", x: 520, y: 330 }], mo: [{ pose: "pose-25", x: 300 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Sekarang di rak paling tinggi ada dua hadiah: piala emas dan gambar krayon. Dua-duanya sama berharganya.", en: "Now the highest shelf held two prizes: a gold trophy and a crayon drawing. Both just as precious." },
+        scene: { bg: "living", props: [{ k: "trophy", x: 400, y: 230 }, { k: "drawing", x: 500, y: 240 }, { k: "books", x: 450, y: 330 }], mo: [{ pose: "yeyy", x: 330, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Pernahkah kamu merasa cemburu pada kakak atau adikmu? Apa kelebihan yang Allah berikan untukmu? 🏆", en: "Have you ever felt jealous of your brother or sister? What special gift has Allah given you? 🏆" },
+        scene: { bg: "living", time: "dusk", props: [{ k: "drawing", x: 470 }], mo: [{ pose: "pose-29", x: 360 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Family 5. Friday sedekah ───────────────────────── */
+  {
+    slug: "kotak-sedekah-jumat",
+    pose: "baby-mo-thank-you.png",
+    published: "2026-11-09",
+    title: { id: "Kotak Sedekah Jumat", en: "The Friday Charity Box" },
+    hook: {
+      id: "Setiap Jumat, Kak Adam memasukkan koin ke kotak sedekah. Baby Mo ingin ikut — tapi koinnya cuma satu dan ia ingin membeli permen!",
+      en: "Every Friday, Kak Adam drops a coin in the charity box. Baby Mo wants to join in — but he has one coin and he wants sweets!",
+    },
+    anchor: { type: "parenting", slug: "anak-tidak-mau-berbagi" },
+    takeaway: {
+      id: "Sedekah tidak selalu uang. Anak bisa belajar bersedekah lewat senyum, tenaga, dan berbagi — dimulai dari teladan di rumah.",
+      en: "Charity isn't only money. Children learn to give through smiles, helping hands and sharing — starting from the example at home.",
+    },
+    tags: ["sedekah", "jumat", "berbagi", "kak adam", "kebaikan", "abi"],
+    cover: {
+      focus: 340, bg: "living",
+      props: [{ k: "coins", x: 470, y: 330 }],
+      mo: [{ pose: "thank-you", x: 280 }, { who: "adam", pose: "sedekah-box", x: 410 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Setiap Jumat pagi, ada bunyi yang sama di rumah: ting! Itu suara koin Kak Adam masuk ke kotak sedekah.", en: "Every Friday morning, the same sound rang through the house: ting! It was Kak Adam's coin dropping into the charity box." },
+        scene: { focus: 390, bg: "living", mo: [{ who: "adam", pose: "sedekah-box", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Uangnya untuk apa, Kak?\" tanya Baby Mo. \"Nanti Abi bawa ke masjid, untuk membantu orang yang membutuhkan.\"", en: "\"What's the money for, Kak?\" asked Baby Mo. \"Abi takes it to the mosque, to help people who need it.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "pose-33", x: 290 }, { who: "adam", pose: "sedekah-box", x: 420 }] },
+      },
+      {
+        text: { id: "Baby Mo punya satu koin dari celengannya. Ia memandangi koin itu… lalu toko permen di ujung jalan.", en: "Baby Mo had one coin from his piggy bank. He looked at the coin… then at the sweet shop down the road." },
+        scene: { bg: "street", props: [{ k: "coins", x: 450, y: 320, s: 0.7 }, { k: "icecreamcart", x: 580 }], mo: [{ pose: "pose-22", x: 340 }] },
+      },
+      {
+        text: { id: "\"Kalau koinnya kumasukkan ke kotak, aku nggak bisa beli permen,\" pikirnya. Wajahnya jadi kusut.", en: "\"If I put my coin in the box, I can't buy sweets,\" he thought. His face scrunched up." },
+        scene: { bg: "living", props: [{ k: "coins", x: 460, y: 330, s: 0.7 }], mo: [{ pose: "pose-27", x: 360 }] },
+      },
+      {
+        text: { id: "Kak Adam duduk di sampingnya. \"Tahu nggak, Mo? Sedekah itu nggak harus pakai uang.\"", en: "Kak Adam sat down beside him. \"Did you know, Mo? Charity doesn't have to be money.\"" },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "pose-40", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Kata Rasulullah ﷺ, setiap kebaikan itu sedekah. Senyum, menolong, bahkan menyingkirkan batu dari jalan!\"", en: "\"The Prophet ﷺ said every good deed is charity. A smile, helping out, even moving a stone off the path!\"" },
+        quote: { id: "\"Setiap kebaikan adalah sedekah.\" (HR. Bukhari dan Muslim)", en: "\"Every good deed is charity.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "wow", x: 290 }, { who: "adam", pose: "dua-hands", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Berarti aku bisa sedekah hari ini tanpa koin?\" Baby Mo melompat. \"Ayo kita berburu kebaikan!\"", en: "\"So I can give charity today without a coin?\" Baby Mo jumped up. \"Let's go hunting for good deeds!\"" },
+        scene: { focus: 340, bg: "living", mo: [{ pose: "yeyy", x: 290, move: "hop" }, { who: "adam", pose: "tennis-win-fist", x: 420 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Kebaikan pertama: tersenyum pada Pak Satpam. Pak Satpam tersenyum balik. \"Satu!\" hitung Kak Adam.", en: "Good deed one: smiling at the security guard. He smiled back. \"One!\" counted Kak Adam." },
+        scene: { bg: "street", mo: [{ pose: "pose-16", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kebaikan kedua: memungut sampah plastik di depan rumah dan membuangnya ke tempat sampah. \"Dua!\"", en: "Good deed two: picking up plastic litter outside the house and putting it in the bin. \"Two!\"" },
+        scene: { focus: 340, bg: "street", props: [{ k: "litter", x: 470 }, { k: "trashbag", x: 540 }], mo: [{ pose: "pose-23", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kebaikan ketiga: membantu Abi membawa belanjaan. Berat sekali — tapi berdua dengan Kak Adam, jadi ringan. \"Tiga!\"", en: "Good deed three: helping Abi carry the shopping. Very heavy — but shared with Kak Adam, it felt light. \"Three!\"" },
+        scene: { focus: 320, bg: "street", props: [{ k: "veggies", x: 470 }], mo: [{ pose: "pose-04", x: 370 }, { who: "ayah", pose: "thumbs-up-stand", x: 250 }] },
+      },
+      {
+        text: { id: "Kebaikan keempat: berbagi kue dengan Baby Ais, padahal kuenya tinggal dua. \"Empat!\"", en: "Good deed four: sharing a biscuit with Baby Ais, even though there were only two left. \"Four!\"" },
+        scene: { focus: 330, bg: "kitchen", props: [{ k: "cookies", x: 470 }], mo: [{ pose: "pose-25", x: 390 }, { who: "ais", pose: "heart-hands-smile", x: 280 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Sore harinya Baby Mo memandangi koinnya lagi. Lalu ia berjalan ke kotak sedekah… dan TING!", en: "That afternoon Baby Mo looked at his coin again. Then he walked to the charity box… and TING!" },
+        scene: { focus: 340, bg: "living", time: "dusk", props: [{ k: "coins", x: 450, y: 320, s: 0.7 }], mo: [{ pose: "thank-you", x: 300 }, { who: "adam", pose: "sedekah-box", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Lho, permennya?\" tanya Kak Adam. Baby Mo tersenyum. \"Hatiku sudah manis duluan. Nggak perlu permen.\"", en: "\"What about the sweets?\" asked Kak Adam. Baby Mo smiled. \"My heart's already sweet. I don't need sweets.\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ pose: "pose-07", x: 290 }, { who: "adam", pose: "wave-hello", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Abi mendengarnya dan memeluk keduanya. \"Masya Allah. Hari ini rumah kita penuh sedekah.\"", en: "Abi heard and hugged them both. \"Masha Allah. Today our home is full of charity.\"" },
+        scene: { focus: 330, bg: "living", time: "dusk", mo: [{ who: "ayah", pose: "hug-mo", x: 320 }, { who: "adam", pose: "wave-hello", x: 450 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Jumat depannya, ada dua bunyi di rumah: ting! dan ting! Kak Adam dan Baby Mo, bersebelahan.", en: "The next Friday there were two sounds in the house: ting! and ting! Kak Adam and Baby Mo, side by side." },
+        scene: { focus: 340, bg: "living", props: [{ k: "coins", x: 450, y: 330, s: 0.7 }], mo: [{ pose: "thank-you", x: 300 }, { who: "adam", pose: "sedekah-box", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari ini kamu bisa sedekah apa — senyum, tenaga, atau berbagi? Coba hitung kebaikanmu sampai malam! 💛", en: "What charity can you give today — a smile, a helping hand, or sharing? Count your good deeds until bedtime! 💛" },
+        scene: { bg: "living", props: [{ k: "heart", x: 470, y: 240, s: 0.7 }], mo: [{ pose: "pose-25", x: 360 }], fx: ["hearts"] },
+      },
+    ],
+  },
 ];
