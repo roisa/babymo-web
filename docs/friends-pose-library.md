@@ -1,10 +1,10 @@
 # Baby Mo & friends — pose library (Adam and Ayah)
 
-There are 124 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
+There are 172 transparent renders. Use them in StoryArt scenes next to Baby Mo and Baby Ais.
 
 | Character | Poses | Files | Reference sheet |
 | --- | --- | --- | --- |
-| Adam (older brother, about 7) | 34 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
+| Adam (older brother, about 7) | 82 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
 | Ayah (Dad) | 90 | `public/ayah-poses/ayah-<name>.png` | [ayah-pose-library.jpg](ayah-pose-library.jpg) |
 
 The code lives in `lib/cerita/friends-poses.ts`. It holds `ADAM_POSES`, `AYAH_POSES`, the quick picks `ADAM_FOR` and `AYAH_FOR`, and `FRIEND_GAPS`.
@@ -37,7 +37,7 @@ scene: {
 - **Small losses:** the "zzz" on `ayah-sleep-blanket` was dropped as a stray speck.
 - **Wrong outfit:** the tennis sheets show Adam in his blue hoodie, not the tennis outfit from the brief.
 
-## Adam — 34 poses
+## Adam — 82 poses
 
 ![Adam pose library](adam-pose-library.jpg)
 
@@ -77,6 +77,68 @@ scene: {
 | `tennis-stretch-reach` | play · low | Stretching far, racket low to the ball. Trying hard, a near miss. |
 | `tennis-net-volley` | play | At the net, volleying. The net is part of the image. |
 | `tennis-rest-bench` | routine · low | Resting on a bench, towel round his neck, drinking water. Break time, staying hydrated. |
+
+
+### Revision batches (November 2026): 48 more
+
+These are from the Adam Pose Revision Brief, batches R1–R4, R7 and R9–R11.
+
+- **Scaled by height, not head size.** These sheets draw Adam with a bigger head, so each sheet is scaled so his standing poses are 640 px tall, matching the first 34 renders.
+- **Salat (R4):** drawn in the hoodie, not the peci and koko the brief asked for. `sholat-ruku` has a rounded back and bent knees; use it small, or redo it.
+- **Serve frames (R9):** the sheet's number labels and haze were cut away. `tennis-serve-5` (the jump) is about 10% smaller so the racket and ball fit.
+- **Racket:** the R9 and R11 tennis poses have a yellow-and-black racket, where the earlier tennis renders have a blue one.
+- **Replacements:** `tennis-volley` and `tennis-rest-sit` replace `tennis-net-volley` and `tennis-rest-bench`, which have the net and bench baked in.
+
+| Pose | Type | Notes and story use |
+| --- | --- | --- |
+| `sad-head-down` | feel | Standing, head down, shoulders drooping. Sad, disappointed, missed a chance. |
+| `frustrated-stomp` | feel | Stamping one foot, fists down, steam puffs. Frustrated, "it is too hard!" |
+| `sulk-arms-crossed` | feel | Arms crossed, pouting, looking away. Sulking, jealous, grumpy. |
+| `angry-racket-up` | feel | Racket raised as if to throw it, angry shout. A moment of temper before calming down. |
+| `deep-breath-calm` | calm | Eyes closed, hand on chest, slow breath out. Calming down, holding back anger, before a match. |
+| `disappointed-sigh` | feel | Hands in pocket, long sigh. Plans cancelled, rained off, let down. |
+| `laugh-tummy` | joy | Laughing hard, hands on tummy. Something funny, a silly mistake. |
+| `surprised-hands-up` | feel | Hands up, mouth in an O. Surprise, "what?!" |
+| `worried-bite-lip` | feel | Hands clasped, biting lip. Nervous before a match, worried for someone. |
+| `sheepish-scratch-head` | feel | Rubbing the back of his head, sheepish grin. Oops, caught out, shy thanks. |
+| `proud-hands-hips` | joy | Hands on hips, proud grin, sparkles. Did it! Proud big brother. |
+| `tired-hands-knees` | feel | Bent over, hands on knees, panting, sweat drop. After running or a long rally. |
+| `kneel-talk` | care · low | Kneeling, one hand open, talking gently to someone small. Comforting, explaining, saying sorry. |
+| `kneel-arms-open` | care · low | Kneeling with arms wide. Inviting a hug, welcoming the twins. |
+| `crouch-pat` | care · low | Crouching, hand out at toddler height as if patting a head. Encouraging a little one. |
+| `hold-hand-down` | care | Standing, arm reaching down as if holding a toddler's hand. Walking with Mo or Ais. |
+| `handshake-offer` | greet | Right hand held out for a handshake. "Barakallah" after a match, meeting someone, salaman. |
+| `give-ball` | care | Bending forward, offering a tennis ball. Sharing, giving back, "you can borrow it". |
+| `sholat-takbir` | worship | Salat: takbiratul ihram, hands beside the ears. Note: hoodie, not peci and koko. |
+| `sholat-qiyam` | worship | Salat: standing, hands folded, eyes on the mat. |
+| `sholat-ruku` | worship | Salat: ruku. Note: back is rounded and knees bent; a flat back would be more correct. Use small or redo. |
+| `sholat-sujud` | worship · low | Salat: sujud, forehead on the mat. Wide image. |
+| `sholat-duduk` | worship · low | Salat: sitting tasyahud, index finger raised. |
+| `sholat-salam` | worship · low | Salat: salam, head turned to the right. |
+| `write-card-floor` | create · low | Lying on his tummy drawing a card. Making a card for Umi or Abi, crossing off a calendar. |
+| `show-drawing` | create | Holding up a crayon drawing, laughing. Showing a gift, "look what I made!" |
+| `hold-trophy` | celebrate | Holding up a gold trophy, no racket. Winning, prize giving, sharing a win. |
+| `video-call-tablet` | screen | Waving at a tablet. Video call with Abi, Nenek, a friend. |
+| `search-crouch` | explore · low | Crouching, hand shading his eyes, looking at the ground. Searching for a lost ball or a bug. |
+| `sorry-hands` | feel | Palms together, apologetic face. Saying sorry, asking forgiveness, please. |
+| `pj-dua-bed` | worship · low | Pyjamas, sitting on a pillow, du'a before sleep. |
+| `pj-yawn` | bedtime | Pyjamas, big yawn, rubbing an eye. Bedtime, early morning. |
+| `pj-brush-teeth` | routine | Pyjamas, brushing teeth with a cup. Bedtime and morning routines. |
+| `pj-sleep-pillow` | bedtime · low | Asleep on his side under a star blanket. Wide image. |
+| `pj-read-bed` | learn · low | Pyjamas, sitting reading a book with a mosque cover. Bedtime story, reading alone. |
+| `pj-wake-stretch` | bedtime · low | Waking up, arms stretched in bed. Morning, Fajr, a new day. |
+| `tennis-serve-1` | play | Serve frame 1/6: stance, ball against the strings. |
+| `tennis-serve-2` | play | Serve frame 2/6: tossing the ball up. |
+| `tennis-serve-3` | play | Serve frame 3/6: trophy position, ball above. |
+| `tennis-serve-4` | play | Serve frame 4/6: racket drop behind his back. |
+| `tennis-serve-5` | play · air | Serve frame 5/6: contact, stretched up high on his toes. |
+| `tennis-serve-6` | play | Serve frame 6/6: follow-through, landing. |
+| `tennis-volley` | play | Volley at the net (net not drawn), ball on the strings. Replaces tennis-net-volley. |
+| `tennis-rest-sit` | routine · low | Resting, towel round his neck, drinking. Sits on any bench prop. Replaces tennis-rest-bench. |
+| `tennis-bounce-racket` | play | Bouncing a ball on the racket strings. Practice, teaching the twins. |
+| `tennis-pick-up-ball` | play · low | Bending to pick up a ball. Between points, tidying up balls. |
+| `tennis-walk-racket` | travel | Walking happily with the racket on his shoulder. Going to or from the court. |
+| `tennis-sad-miss` | feel | Racket dragging, head down. After a miss or a lost point. |
 
 The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis-swing-1…6`) are six-frame swings. Use frame 4 or 5 as a single book image, or play them in order as an animation.
 
@@ -183,5 +245,7 @@ The three tennis sets (`tennis-forehand-1…6`, `tennis-backhand-1…6`, `tennis
 - Ayah: carrying or holding a twin, holding hands walking
 - Ayah: angry or crying
 - Ayah: cooking, driving, fixing things
-- Adam: everyday feelings (sad, angry, scared), school, bedtime, salat — batches 1–12 of the Adam brief cover these
-- Adam with the twins (batches 13–14 of the Adam brief)
+- Adam: iqamah, teaching Iqra, du'a and dzikir sitting (brief batch R5)
+- Adam: running without a racket, tying shoes, drinking, kitchen, carrying bags (brief batch R6)
+- Adam with the twins: piggyback, hug, high-five, holding hands, reading (brief batch R8)
+- Adam: salat in peci and koko, and a flat-backed ruku
