@@ -1747,6 +1747,90 @@ function Prop({ k }: { k: ArtProp }) {
           <path className="sa-twinkle" d="M58 -238 L61 -231 L68 -228 L61 -225 L58 -218 L55 -225 L48 -228 L55 -231 Z" fill="#FFC93C" />
         </g>
       );
+    case "scoreboard":
+    case "scoreboardfixed": {
+      const steps = ["0", "15", "30", "40", "GAME"];
+      return (
+        <g>
+          <rect x={-8} y={-120} width={16} height={120} rx={4} fill="#5B6573" />
+          <rect x={-86} y={-230} width={172} height={118} rx={12} fill="#1F3B2D" stroke="#C9A55B" strokeWidth={5} />
+          <text x={-46} y={-205} fontSize={15} fontWeight={800} fill="#C9E6D3" textAnchor="middle">ADAM</text>
+          <text x={46} y={-205} fontSize={15} fontWeight={800} fill="#C9E6D3" textAnchor="middle">LAWAN</text>
+          <path d="M0 -218 V-124" stroke="#C9A55B" strokeWidth={2} opacity=".6" />
+          {k === "scoreboard" ? (
+            steps.map((v, i) => (
+              <text key={v} className="sa-score" style={{ animationDelay: `${i * 1.2}s` }} x={-46} y={-148} fontSize={v.length > 2 ? 22 : 40} fontWeight={900} fill="#FFE066" textAnchor="middle">{v}</text>
+            ))
+          ) : (
+            <text x={-46} y={-148} fontSize={40} fontWeight={900} fill="#FFE066" textAnchor="middle">40</text>
+          )}
+          <text x={46} y={-148} fontSize={40} fontWeight={900} fill="#FFFFFF" textAnchor="middle">{k === "scoreboard" ? "0" : "40"}</text>
+        </g>
+      );
+    }
+    case "ballroll":
+      return (
+        <g className="sa-roll">
+          <ellipse cx={0} cy={0} rx={12} ry={3.5} fill="#000" opacity=".15" />
+          <TennisBall y={-11} r={11} spin />
+        </g>
+      );
+    case "ballmark":
+      return (
+        <g>
+          <ellipse cx={0} cy={-2} rx={70} ry={5} fill="#FFFFFF" />
+          <ellipse className="sa-mark" cx={-6} cy={-2} rx={16} ry={5} fill="#7A90B8" opacity=".55" />
+          <g className="sa-puff">
+            {[-18, -6, 8, 20].map((x, i) => <circle key={i} cx={x} cy={-8 - (i % 2) * 6} r={6 + (i % 2) * 2} fill="#FFFFFF" opacity=".75" />)}
+          </g>
+          <g className="sa-land">
+            <TennisBall y={-11} r={11} />
+          </g>
+        </g>
+      );
+    case "racketbroken":
+      return (
+        <g transform="rotate(-24)">
+          <rect x={-4} y={-46} width={8} height={46} rx={4} fill="#F4F4F6" stroke="#2C3E7A" strokeWidth={2} />
+          <ellipse cx={0} cy={-84} rx={28} ry={38} fill="#EEF3FF" fillOpacity=".35" stroke="#2C3E7A" strokeWidth={7} />
+          <g stroke="#9AA7C7" strokeWidth={1.4} fill="none">
+            {[-18, 0, 18].map((x) => <path key={x} d={`M${x} -118 v68`} />)}
+            {[-108, -84, -60].map((y) => <path key={y} d={`M-26 ${y} h52`} />)}
+            <path className="sa-wiggle" d="M-9 -118 q -6 20 4 34 q 8 12 -2 22" />
+            <path className="sa-wiggle" d="M9 -50 q 8 -14 -2 -26" style={{ animationDelay: "-.4s" }} />
+          </g>
+          <g className="sa-spin-fast" transform="translate(0 -84)">
+            <path d="M0 -40 L3 -33 L10 -30 L3 -27 L0 -20 L-3 -27 L-10 -30 L-3 -33 Z" fill="#FFC93C" />
+          </g>
+        </g>
+      );
+    case "spool":
+      return (
+        <g>
+          <rect x={-26} y={-52} width={52} height={10} rx={3} fill="#3B4252" />
+          <rect x={-26} y={-10} width={52} height={10} rx={3} fill="#3B4252" />
+          <rect x={-20} y={-44} width={40} height={36} fill="#F2F2F2" />
+          {[-38, -30, -22, -14].map((y) => <path key={y} d={`M-20 ${y} h40`} stroke="#C8CCD6" strokeWidth={2} />)}
+          <path className="sa-wiggle" d="M20 -26 q 30 -10 40 -40" stroke="#E8E8E8" strokeWidth={2} fill="none" />
+        </g>
+      );
+    case "whistle":
+      return (
+        <g className="sa-bob">
+          <path d="M-22 -30 h30 a14 14 0 1 1 -2 18 h-28 z" fill="#C9D3DE" stroke="#7A8794" strokeWidth={2} />
+          <circle cx={14} cy={-21} r={5} fill="#7A8794" />
+          {[0, 1, 2].map((i) => <path key={i} className="sa-pulse" style={{ animationDelay: `${i * .3}s` }} d={`M${-30 - i * 10} ${-38 - i * 6} l-8 -8`} stroke="#5BB8F5" strokeWidth={3} strokeLinecap="round" />)}
+        </g>
+      );
+    case "cap":
+      return (
+        <g>
+          <path d="M-28 -6 q 0 -34 30 -34 q 30 0 30 34 z" fill="#3E7DD8" />
+          <path d="M30 -8 q 26 0 34 8 h-38 z" fill="#2C5FAE" />
+          <circle cx={2} cy={-38} r={4} fill="#2C5FAE" />
+          <path d="M-8 -22 l4 -7 l4 7 l-6 -4 h7 z" fill="#FFFFFF" />
+        </g>
+      );
     case "bonk":
       return (
         <g>

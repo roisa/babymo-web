@@ -163,7 +163,16 @@ export type ArtProp =
   | "target"
   | "footprints"
   | "ladder"
-  | "progresschart";
+  | "progresschart"
+  /* tennis life */
+  | "scoreboard"
+  | "scoreboardfixed"
+  | "ballroll"
+  | "ballmark"
+  | "racketbroken"
+  | "spool"
+  | "whistle"
+  | "cap";
 
 export type ArtFx =
   | "rain"

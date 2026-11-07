@@ -24,6 +24,9 @@ const CELEBRATE = [...six("tennis-celebrate"), "tennis-celebrate-6", "tennis-cel
 const RUN = six("tennis-run");
 const SHUFFLE = six("tennis-shuffle");
 const BOUNCE = six("tennis-bounce");
+/** serve: contact is frame 5 (index 4) → HIT, like the backhand */
+const SERVE = loop(six("tennis-serve"));
+const OOPS = [...six("tennis-oops"), "tennis-oops-6", "tennis-oops-6"];
 /** backhand contact is frame 5 (index 4) → 4 / FPS seconds into the loop */
 const HIT = 0.6;
 /** forehand contact is frame 4 (index 3), beside the body */
@@ -2118,6 +2121,460 @@ export const FAMILY_BOOKS: PictureBook[] = [
       {
         text: { id: "Besok paginya, ada dua raket di depan tembok latihan: satu besar, satu kecil. \"Mo, mau Kakak ajari forehand?\" Kamu mau belajar apa sampai jago? 🎾", en: "The next morning there were two rackets by the practice wall: one big, one small. \"Mo, shall I teach you the forehand?\" What do you want to practise until you're great? 🎾" },
         scene: { focus: 370, bg: "park", props: [{ k: "wall", x: 520, s: 0.8 }], mo: [{ pose: "pose-25", x: 300 }, { who: "adam", pose: "tennis-wave-2", seq: WAVE, fps: 4, move: "still", x: 405 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Tennis life 1. Love means zero ───────────────────────── */
+  {
+    slug: "love-itu-artinya-nol",
+    pose: "baby-mo-pose-33.png",
+    published: "2026-11-12",
+    title: { id: "Love Itu Artinya Nol", en: "Love Means Zero" },
+    hook: {
+      id: "Di tenis, skor nol disebut \"love\", lalu loncat ke 15, 30, 40! Kak Adam mengajari keluarganya cara menghitung skor tenis yang aneh tapi seru.",
+      en: "In tennis, zero is called \"love\", and then it jumps to 15, 30, 40! Kak Adam teaches his family tennis's strange but fun way of keeping score.",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Belajar aturan permainan bersama membuat anak lebih sabar dan sportif. Skor boleh nol — tapi bermain dengan cinta tidak pernah nol.",
+      en: "Learning a game's rules together makes children more patient and sporting. The score can be zero — but playing with love never is.",
+    },
+    tags: ["tenis", "skor", "berhitung", "kak adam", "keluarga", "sportif"],
+    cover: {
+      focus: 360, bg: "court",
+      props: [{ k: "scoreboard", x: 560 }, { k: "ballfly", x: 370, y: 330, d: FH_HIT }],
+      mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }, { pose: "pose-33", x: 270 }],
+    },
+    pages: [
+      {
+        text: { id: "Sejak menang melawan Raka, Kak Adam ingin main pertandingan sungguhan. \"Tapi Kak, menghitung skornya gimana?\" tanya Baby Mo.", en: "Ever since beating Raka, Kak Adam wanted to play real matches. \"But Kak, how do you count the score?\" asked Baby Mo." },
+        scene: { focus: 330, bg: "living", props: [{ k: "racket", x: 470 }], mo: [{ pose: "pose-33", x: 290 }, { who: "adam", pose: "proud-hands-hips", x: 400 }] },
+      },
+      {
+        text: { id: "\"Gampang!\" kata Kak Adam. \"Kalau belum dapat poin, skornya NOL. Tapi di tenis, nol namanya… LOVE!\"", en: "\"Easy!\" said Kak Adam. \"If you haven't won a point, your score is ZERO. But in tennis, zero is called… LOVE!\"" },
+        scene: { focus: 340, bg: "living", props: [{ k: "heart", x: 460, y: 220, s: 0.8 }], mo: [{ pose: "pose-26", x: 280 }, { who: "adam", pose: "kneel-talk", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Love? Cinta?\" Baby Ais tertawa sampai terguling. \"Jadi kalau kalah, kita dapat cinta?\"", en: "\"Love? Like hearts?\" Baby Ais laughed so hard she rolled over. \"So when we lose, we get love?\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ais", pose: "giggle", x: 280 }, { pose: "pose-03", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Lalu Kak Adam membuat papan skor dari kardus. \"Poin pertama bukan satu, tapi LIMA BELAS. Lalu TIGA PULUH. Lalu EMPAT PULUH!\"", en: "Then Kak Adam made a scoreboard out of cardboard. \"The first point isn't one, it's FIFTEEN. Then THIRTY. Then FORTY!\"" },
+        scene: { focus: 370, bg: "living", props: [{ k: "scoreboard", x: 425, s: 0.85 }], mo: [{ who: "adam", pose: "kneel-talk", x: 300 }] },
+      },
+      {
+        text: { id: "\"Kenapa loncat-loncat begitu?\" tanya Baby Mo. Abi tersenyum. \"Konon dulu skornya dihitung pakai jam: seperempat, setengah, tiga perempat…\"", en: "\"Why does it jump like that?\" asked Baby Mo. Abi smiled. \"They say long ago the score was kept on a clock: a quarter, a half, three quarters…\"" },
+        scene: { focus: 330, bg: "living", props: [{ k: "clock", x: 470, y: 220, s: 1.2 }], mo: [{ pose: "pose-33", x: 390 }, { who: "ayah", pose: "teach-point-kneel", x: 265 }] },
+      },
+      {
+        text: { id: "\"Dan kalau sudah 40 lalu menang satu poin lagi — GAME! Satu babak selesai!\"", en: "\"And when you're at 40 and win one more point — GAME! One game is done!\"" },
+        scene: { focus: 370, bg: "living", props: [{ k: "scoreboard", x: 425, s: 0.85 }], mo: [{ who: "adam", pose: "clap-cheer", x: 305 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Mereka ke lapangan untuk mencoba. Kak Adam melawan Abi. Baby Mo dan Baby Ais jadi wasit dengan suara keras.", en: "They went to the court to try it out. Kak Adam against Abi. Baby Mo and Baby Ais were the umpires, with very loud voices." },
+        scene: { focus: 330, bg: "court", props: [{ k: "bench", x: 280 }, { k: "whistle", x: 470, y: 250 }], mo: [{ who: "ais", pose: "megaphone", x: 260 }, { pose: "pose-25", x: 390 }] },
+      },
+      {
+        text: { id: "Kak Adam servis. CTAK! Abi tidak sempat memukul. \"LIMA BELAS – LOVE!\" teriak Baby Ais.", en: "Kak Adam served. CRACK! Abi couldn't reach it. \"FIFTEEN – LOVE!\" shouted Baby Ais." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballfly", x: 420, y: 165, d: HIT }], mo: [{ who: "adam", pose: "tennis-serve-1", seq: SERVE, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Reli panjang… DUK! Forehand Kak Adam masuk. \"TIGA PULUH – LOVE!\" Baby Mo bertepuk sampai tangannya merah.", en: "A long rally… THOCK! Kak Adam's forehand landed in. \"THIRTY – LOVE!\" Baby Mo clapped until his hands went red." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Lalu Abi memukul bola tinggi. Kak Adam meleset! \"Tiga puluh – LIMA BELAS,\" kata Baby Ais. \"Abi dapat poin!\"", en: "Then Abi hit a high ball. Kak Adam missed! \"Thirty – FIFTEEN,\" said Baby Ais. \"Abi gets a point!\"" },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "tennis-oops-1", seq: OOPS, fps: 5, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Poin demi poin. 40 – 30. Lalu 40 – 40! \"Kalau sama-sama 40, namanya DEUCE,\" kata Kak Adam. \"Harus menang dua poin berturut-turut!\"", en: "Point by point. 40 – 30. Then 40 – 40! \"When it's 40 all, it's called DEUCE,\" said Kak Adam. \"You have to win two points in a row!\"" },
+        scene: { focus: 370, bg: "court", props: [{ k: "scoreboardfixed", x: 425, s: 0.85 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 305 }] },
+      },
+      {
+        text: { id: "Deuce… Adam unggul… deuce lagi… Abi unggul… DEUCE LAGI! Si kembar sampai bingung menghitung.", en: "Deuce… advantage Adam… deuce again… advantage Abi… DEUCE AGAIN! The twins got all muddled counting." },
+        scene: { focus: 330, bg: "court", props: [{ k: "ballrally", x: 365, y: 320 }], mo: [{ who: "ais", pose: "shrug", x: 280 }, { pose: "pose-34", x: 390 }] },
+      },
+      {
+        text: { id: "Akhirnya Kak Adam menang dua poin berturut-turut. \"GAME, KAK ADAM!\" Semua bersorak — Abi juga.", en: "At last Kak Adam won two points in a row. \"GAME, KAK ADAM!\" Everyone cheered — Abi too." },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: "tennis-celebrate-1", seq: CELEBRATE, fps: 8, x: 390, move: "still" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Abi menyalami Kak Adam. \"Abi kalah, tapi senang. Abi ingin kamu menang juga.\"", en: "Abi shook Kak Adam's hand. \"I lost, but I'm happy. I wanted you to win too.\"" },
+        quote: { id: "\"Tidaklah sempurna iman salah seorang dari kalian hingga ia mencintai untuk saudaranya apa yang ia cintai untuk dirinya sendiri.\" (HR. Bukhari dan Muslim)", en: "\"None of you truly believes until he loves for his brother what he loves for himself.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "court", time: "dusk", mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 280 }, { who: "adam", pose: "handshake-offer", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Jadi love itu nol,\" kata Baby Mo pelan. \"Tapi kalau main bareng keluarga, love-nya banyak sekali.\"", en: "\"So love means zero,\" Baby Mo said slowly. \"But when you play with your family, there's lots and lots of love.\"" },
+        scene: { focus: 330, bg: "court", time: "dusk", props: [{ k: "heart", x: 340, y: 220, s: 0.8 }], mo: [{ pose: "pose-07", x: 390 }, { who: "ais", pose: "heart-hands", x: 275 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Coba hitung skor tenis bersama Abi atau Umi: love, 15, 30, 40… GAME! Kamu ingat semua, kan? 🎾", en: "Try counting a tennis score with Abi or Umi: love, 15, 30, 40… GAME! Can you remember them all? 🎾" },
+        scene: { focus: 370, bg: "living", time: "night", props: [{ k: "scoreboard", x: 425, s: 0.85 }], mo: [{ pose: "idea", x: 310 }], fx: ["stars"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Tennis life 2. The ball kid ───────────────────────── */
+  {
+    slug: "penjaga-bola-cilik",
+    pose: "baby-mo-wow.png",
+    published: "2026-11-12",
+    title: { id: "Penjaga Bola Cilik", en: "The Little Ball Kid" },
+    hook: {
+      id: "Kak Adam jadi penjaga bola di turnamen besar! Tugasnya: berlari cepat, diam seperti patung, dan menolong pemain tanpa terlihat.",
+      en: "Kak Adam becomes a ball kid at a big tournament! His job: run fast, stand still as a statue, and help the players without being noticed.",
+    },
+    anchor: { type: "parenting", slug: "bonding-orangtua" },
+    takeaway: {
+      id: "Pekerjaan kecil yang dilakukan dengan sungguh-sungguh dan rendah hati sangat berharga. Anak belajar bahwa menolong orang lain itu membanggakan, walau tak ada yang bertepuk tangan.",
+      en: "Small jobs done carefully and humbly are precious. Children learn that helping others is something to be proud of, even when nobody claps.",
+    },
+    tags: ["tenis", "penjaga bola", "menolong", "kak adam", "turnamen", "rendah hati"],
+    cover: {
+      focus: 380, bg: "court",
+      props: [{ k: "ballroll", x: 470 }, { k: "ballbasket", x: 600 }],
+      mo: [{ who: "adam", pose: "tennis-run-1", seq: RUN, fps: 10, x: 380, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Ada turnamen remaja di stadion kota! Pelatih bertanya, \"Siapa mau jadi penjaga bola?\" Tangan Kak Adam langsung terangkat paling tinggi.", en: "There was a teen tournament at the city stadium! The coach asked, \"Who wants to be a ball kid?\" Kak Adam's hand shot up the highest." },
+        scene: { focus: 390, bg: "court", props: [{ k: "whistle", x: 520, y: 250 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Penjaga bola itu apa?\" tanya Baby Ais. \"Yang mengambil bola-bola supaya pertandingan lancar,\" jawab Kak Adam bangga.", en: "\"What's a ball kid?\" asked Baby Ais. \"Someone who fetches the balls so the match keeps going,\" Kak Adam said proudly." },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ais", pose: "think-question", x: 280 }, { who: "adam", pose: "proud-hands-hips", x: 410 }] },
+      },
+      {
+        text: { id: "Latihan pertama: berlari cepat, membungkuk, ambil bola, lalu kembali berdiri di tempat. Wus — ambil — wus!", en: "First practice: run fast, bend down, grab the ball, then get back to your spot. Whoosh — grab — whoosh!" },
+        scene: { focus: 380, bg: "court", props: [{ k: "ballroll", x: 500 }], mo: [{ who: "adam", pose: "tennis-pick-up-ball", x: 390 }] },
+      },
+      {
+        text: { id: "Latihan kedua: menggelindingkan bola ke teman di ujung lapangan. Pelan, lurus, tanpa memantul.", en: "Second practice: roll the ball to a friend at the other end. Gently, straight, no bouncing." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballroll", x: 520, d: 0.3 }, { k: "ballroll", x: 520, d: 1.6 }], mo: [{ who: "adam", pose: "crouch-pat", x: 380 }] },
+      },
+      {
+        text: { id: "Latihan ketiga paling susah: diam seperti patung saat bola sedang dimainkan. Tidak boleh garuk-garuk. Tidak boleh bersin!", en: "The third practice was the hardest: stand as still as a statue while the ball is in play. No scratching. No sneezing!" },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "sorry-hands", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Di rumah, si kembar ikut berlatih jadi patung. Baby Mo bertahan tiga detik… lalu tertawa. \"Hidungku gatal!\"", en: "At home, the twins practised being statues too. Baby Mo lasted three seconds… then burst out laughing. \"My nose is itchy!\"" },
+        scene: { focus: 330, bg: "living", mo: [{ pose: "pose-03", x: 390 }, { who: "ais", pose: "calm-sit", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari turnamen tiba. Stadion ramai. Kak Adam memakai kaus seragam dan topi biru. Jantungnya berdebar.", en: "Tournament day came. The stadium was packed. Kak Adam wore a uniform shirt and a blue cap. His heart was pounding." },
+        scene: { focus: 390, bg: "court", props: [{ k: "cap", x: 300, y: 330 }, { k: "ballbasket", x: 560 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 400 }] },
+      },
+      {
+        text: { id: "Pemain pertama memukul bola ke net. Tuk. Kak Adam melesat, mengambil bola, dan kembali secepat kilat!", en: "The first player hit the ball into the net. Tok. Kak Adam dashed out, grabbed the ball, and was back in a flash!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "tennisnet", x: 560 }], mo: [{ who: "adam", pose: "tennis-run-1", seq: RUN, fps: 10, x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "Ia menggelindingkan bola ke ujung lapangan. Lurus sekali! Penjaga bola lain mengacungkan jempol.", en: "He rolled the ball to the far end. Perfectly straight! The other ball kid gave him a thumbs up." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballroll", x: 520 }], mo: [{ who: "adam", pose: "crouch-pat", x: 380 }] },
+      },
+      {
+        text: { id: "Lalu ia berdiri diam. Bola terbang ke kiri, ke kanan, berputar… Kak Adam tetap seperti patung, matanya saja yang bergerak.", en: "Then he stood still. The ball flew left, right, spinning… Kak Adam stayed like a statue — only his eyes moved." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballrally", x: 240, y: 260 }], mo: [{ who: "adam", pose: "sorry-hands", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Matahari terik. Seorang pemain berkeringat. Kak Adam berlari membawakan handuk. \"Terima kasih, Dik,\" kata pemain itu.", en: "The sun was blazing. A player was sweating. Kak Adam ran over with a towel. \"Thanks, little one,\" said the player." },
+        scene: { focus: 390, bg: "court", props: [{ k: "sun", x: 560, y: 130 }, { k: "towel", x: 480, y: 330 }], mo: [{ who: "adam", pose: "offer", x: 390 }] },
+      },
+      {
+        text: { id: "Tidak ada yang bertepuk tangan untuk penjaga bola. Tapi tanpa mereka, pertandingan akan lama sekali.", en: "Nobody clapped for the ball kids. But without them, the match would have taken forever." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballbasket", x: 530 }], mo: [{ who: "adam", pose: "tennis-pick-up-ball", x: 390 }] },
+      },
+      {
+        text: { id: "Abi melihat dari tribun. \"Orang yang paling baik adalah yang paling bermanfaat untuk orang lain,\" bisiknya pada si kembar.", en: "Abi watched from the stands. \"The best people are the most useful to others,\" he whispered to the twins." },
+        quote: { id: "\"Sebaik-baik manusia adalah yang paling bermanfaat bagi manusia.\" (HR. Ahmad dan Thabrani)", en: "\"The best of people are those most beneficial to people.\" (Ahmad and Tabarani)" },
+        scene: { focus: 320, bg: "court", props: [{ k: "bench", x: 330 }], mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 260 }, { who: "ais", pose: "heart-hands", x: 390 }] },
+      },
+      {
+        text: { id: "Setelah final, sang juara berjalan menghampiri Kak Adam dan memberinya bola bertanda tangan. \"Penjaga bola terbaik hari ini!\"", en: "After the final, the champion walked over to Kak Adam and gave him a signed ball. \"Best ball kid today!\"" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "goldstar", x: 470, y: 220 }], mo: [{ who: "adam", pose: "give-ball", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Pulang ke rumah, Kak Adam lelah tapi tersenyum lebar. \"Hari ini aku tidak memukul satu bola pun… tapi rasanya seperti juara.\"", en: "Back home, Kak Adam was tired but grinning. \"I didn't hit a single ball today… but I feel like a champion.\"" },
+        scene: { focus: 340, bg: "living", time: "dusk", mo: [{ who: "adam", pose: "tired-hands-knees", x: 420 }, { pose: "yeyy", x: 290, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Pekerjaan kecil apa yang bisa kamu lakukan untuk menolong orang lain hari ini — tanpa perlu tepuk tangan? 🎾", en: "What small job could you do to help someone today — no clapping needed? 🎾" },
+        scene: { bg: "court", time: "dusk", props: [{ k: "ballroll", x: 470 }], mo: [{ pose: "thank-you", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Tennis life 3. The honest line call ───────────────────────── */
+  {
+    slug: "garis-yang-jujur",
+    pose: "baby-mo-pose-07.png",
+    published: "2026-11-12",
+    title: { id: "Garis yang Jujur", en: "The Honest Line Call" },
+    hook: {
+      id: "Di pertandingan junior tidak ada hakim garis — pemain sendiri yang memutuskan bola masuk atau keluar. Saat poin penting, Kak Adam harus memilih: menang, atau jujur?",
+      en: "In junior matches there are no line judges — the players call their own lines. On a big point, Kak Adam has to choose: win, or be honest?",
+    },
+    anchor: { type: "parenting", slug: "anak-bohong" },
+    takeaway: {
+      id: "Kejujuran paling diuji saat tidak ada yang melihat. Puji anak setiap kali ia memilih jujur, terutama ketika itu membuatnya rugi.",
+      en: "Honesty is tested most when nobody is watching. Praise children every time they choose honesty — especially when it costs them.",
+    },
+    tags: ["tenis", "jujur", "sportif", "kak adam", "pertandingan", "amanah"],
+    cover: {
+      focus: 400, bg: "court",
+      props: [{ k: "ballmark", x: 520 }],
+      mo: [{ who: "adam", pose: "search-crouch", x: 360 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Kak Adam ikut pertandingan junior pertamanya di luar kota. Lawannya bernama Dimas, anak yang tinggi dan pukulannya keras.", en: "Kak Adam played his first junior match out of town. His opponent was Dimas, a tall boy with a big, hard hit." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 640, y: 320, flip: true }], mo: [{ who: "adam", pose: "tennis-ready-wide", x: 390 }] },
+      },
+      {
+        text: { id: "\"Di pertandingan junior tidak ada hakim garis,\" kata panitia. \"Kalian sendiri yang memutuskan: bola masuk atau keluar.\"", en: "\"There are no line judges in junior matches,\" said the organiser. \"You decide for yourselves: in or out.\"" },
+        scene: { focus: 390, bg: "court", props: [{ k: "whistle", x: 520, y: 250 }, { k: "ballmark", x: 470 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 380 }] },
+      },
+      {
+        text: { id: "Aturannya: kalau bola menyentuh garis sedikit saja — itu MASUK. Kalau ragu, bola dianggap masuk untuk lawan.", en: "The rule: if the ball touches the line even a tiny bit — it's IN. If you're not sure, you give the point to your opponent." },
+        scene: { focus: 420, bg: "court", props: [{ k: "ballmark", x: 520 }], mo: [{ who: "adam", pose: "tennis-hold-ball", x: 360 }] },
+      },
+      {
+        text: { id: "Pertandingan seru sekali. Servis Kak Adam masuk. Forehand Dimas menyambar. Bola bolak-balik seperti ping-pong raksasa!", en: "The match was so exciting. Kak Adam's serve went in. Dimas's forehand whipped back. The ball zoomed to and fro like giant ping-pong!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballrally", x: 365, y: 320, d: FH_HIT }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Skornya 5–5. Kak Adam butuh satu game lagi. Abi, Baby Mo, dan Baby Ais menahan napas di bangku.", en: "Five games all. Kak Adam needed one more game. Abi, Baby Mo and Baby Ais held their breath on the bench." },
+        scene: { focus: 330, bg: "court", props: [{ k: "bench", x: 330 }], mo: [{ pose: "pose-34", x: 390 }, { who: "ais", pose: "scared-hide", x: 270 }] },
+      },
+      {
+        text: { id: "Dimas memukul bola keras ke pojok. Bola jatuh… TEPAT di garis belakang. Tuk!", en: "Dimas smashed the ball into the corner. It landed… RIGHT on the baseline. Tok!" },
+        scene: { focus: 420, bg: "court", props: [{ k: "ballmark", x: 480 }], mo: [{ who: "adam", pose: "tennis-stretch-reach", x: 340 }] },
+      },
+      {
+        text: { id: "Kak Adam melihatnya jelas: bola menyentuh garis. Tapi tidak ada yang melihat sedekat dia. Dimas ada di ujung lain.", en: "Kak Adam saw it clearly: the ball touched the line. But nobody was as close as he was. Dimas was at the other end." },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballmark", x: 470 }, { k: "magnifier", x: 470, y: 300, s: 0.8 }], mo: [{ who: "adam", pose: "search-crouch", x: 360 }] },
+      },
+      {
+        text: { id: "Sebuah suara kecil berbisik di kepalanya: \"Bilang saja keluar. Nggak ada yang tahu. Kamu bisa menang.\"", en: "A little voice whispered in his head: \"Just say it was out. Nobody will know. You could win.\"" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "cloud", x: 390, y: 160, s: 0.6 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 390 }] },
+      },
+      {
+        text: { id: "Lalu ia ingat: Allah selalu melihat, walaupun tidak ada orang yang melihat. Ia menarik napas panjang.", en: "Then he remembered: Allah always sees, even when nobody else does. He took a long breath." },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: "deep-breath-calm", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam mengangkat tangan dan menunjuk ke bawah. \"MASUK! Bolanya kena garis. Poinmu, Dimas!\"", en: "Kak Adam raised his hand and pointed down. \"IN! It touched the line. Your point, Dimas!\"" },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballmark", x: 500 }], mo: [{ who: "adam", pose: "offer", x: 370 }] },
+      },
+      {
+        text: { id: "Dimas terdiam, lalu mengacungkan jempol dari seberang net. \"Terima kasih, Adam!\"", en: "Dimas paused, then gave a thumbs up from across the net. \"Thanks, Adam!\"" },
+        scene: { focus: 400, bg: "court", props: [{ k: "tennisnet", x: 520 }], mo: [{ who: "adam", pose: "proud-hands-hips", x: 380 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Kak Adam kalah game itu, lalu kalah pertandingannya 5–7. Ia duduk di bangku, menyeka keringat.", en: "Kak Adam lost that game, and then the match, 5–7. He sat on the bench, wiping off sweat." },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: "tennis-rest-sit", x: 390 }] },
+      },
+      {
+        text: { id: "Abi duduk di sampingnya. \"Hari ini kamu kalah skor, tapi menang yang paling penting. Kamu jujur saat tidak ada yang melihat.\"", en: "Abi sat beside him. \"Today you lost the score, but you won the most important thing. You were honest when nobody was watching.\"" },
+        quote: { id: "\"Wahai orang-orang yang beriman, bertakwalah kepada Allah dan hendaklah kamu bersama orang-orang yang benar (jujur).\" (QS. At-Taubah: 119)", en: "\"O you who believe, be mindful of Allah and be with those who are truthful.\" (Qur'an, At-Tawbah 9:119)" },
+        scene: { focus: 340, bg: "court", time: "dusk", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 280 }, { who: "adam", pose: "sad-head-down", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Lalu Dimas datang dengan dua botol air. \"Minggu depan latihan bareng, yuk? Aku suka main sama pemain jujur.\"", en: "Then Dimas came over with two water bottles. \"Want to practise together next week? I like playing with honest players.\"" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "water", x: 500 }], mo: [{ who: "adam", pose: "drink-bottle", x: 390 }] },
+      },
+      {
+        text: { id: "Di perjalanan pulang, Baby Mo berkata, \"Kak, Kakak itu juara jujur.\" Kak Adam tertawa. \"Itu piala yang tidak pernah hilang.\"", en: "On the way home, Baby Mo said, \"Kak, you're the honesty champion.\" Kak Adam laughed. \"That's a trophy you can never lose.\"" },
+        scene: { focus: 330, bg: "street", time: "dusk", props: [{ k: "goldstar", x: 470, y: 220 }], mo: [{ pose: "pose-25", x: 300 }, { who: "adam", pose: "laugh-tummy", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Pernahkah kamu jujur walaupun membuatmu rugi? Bagaimana rasanya di hatimu? 💛", en: "Have you ever told the truth even when it cost you? How did it feel in your heart? 💛" },
+        scene: { bg: "court", time: "dusk", props: [{ k: "ballmark", x: 480 }], mo: [{ pose: "pose-07", x: 340 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Tennis life 4. Snap! ───────────────────────── */
+  {
+    slug: "senar-putus",
+    pose: "baby-mo-pose-26.png",
+    published: "2026-11-12",
+    title: { id: "Senar Putus!", en: "Snap! The String Broke!" },
+    hook: {
+      id: "PLENG! Senar raket kesayangan Kak Adam putus di tengah latihan. Ia pergi ke toko Pak Harun, tukang senar raket, dan belajar merawat raketnya.",
+      en: "PING! A string on Kak Adam's favourite racket snaps mid-practice. He visits Pak Harun the stringer and learns how to look after his racket.",
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Barang yang rusak bisa jadi pelajaran: sabar, merawat milik sendiri, dan berterima kasih kepada orang yang membantu memperbaikinya.",
+      en: "A broken thing can teach a lot: patience, caring for your belongings, and thanking the people who help fix them.",
+    },
+    tags: ["tenis", "raket", "merawat barang", "kak adam", "berterima kasih", "sabar"],
+    cover: {
+      focus: 380, bg: "court",
+      props: [{ k: "racketbroken", x: 480, y: 330 }],
+      mo: [{ who: "adam", pose: "surprised-hands-up", x: 360 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Sore itu Kak Adam berlatih servis roket. Satu… dua… tiga puluh kali. CTAK! CTAK! CTAK!", en: "That afternoon Kak Adam practised his rocket serve. One… two… thirty times. CRACK! CRACK! CRACK!" },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballfly", x: 420, y: 165, d: HIT }], mo: [{ who: "adam", pose: "tennis-serve-1", seq: SERVE, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Servis ke tiga puluh satu… PLENG! Bunyinya aneh. Bolanya jatuh lemas di depan kakinya.", en: "Serve number thirty-one… PING! A funny sound. The ball flopped down in front of his feet." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballbounce", x: 470 }, { k: "bonk", x: 470, y: 200 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 380 }] },
+      },
+      {
+        text: { id: "Ia melihat raketnya. Satu senar putus dan melengkung seperti mi! \"Raketkuuu!\"", en: "He looked at his racket. One string had snapped and curled up like a noodle! \"My racket!\"" },
+        scene: { focus: 400, bg: "court", props: [{ k: "racketbroken", x: 480, y: 330, s: 1.2 }], mo: [{ who: "adam", pose: "sad-head-down", x: 360 }] },
+      },
+      {
+        text: { id: "Kak Adam ingin menangis. Raket itu hadiah dari Abi. \"Aku merusaknya…\"", en: "Kak Adam felt like crying. The racket was a present from Abi. \"I broke it…\"" },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: "sorry-hands", x: 390 }] },
+      },
+      {
+        text: { id: "Abi berlutut. \"Senar putus itu tandanya kamu rajin berlatih, Kak. Raket juga bisa capek. Ayo kita bawa ke dokter raket.\"", en: "Abi knelt down. \"A snapped string means you've practised hard, Kak. Rackets get tired too. Let's take it to the racket doctor.\"" },
+        scene: { focus: 340, bg: "court", time: "dusk", props: [{ k: "racketbroken", x: 400, y: 330, s: 0.8 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "adam", pose: "worried-bite-lip", x: 440 }] },
+      },
+      {
+        text: { id: "\"Dokter raket?\" Baby Mo terbelalak. \"Raket bisa sakit?\" Baby Ais langsung menyiapkan plester.", en: "\"A racket doctor?\" Baby Mo's eyes went wide. \"Can rackets get sick?\" Baby Ais got a plaster ready straight away." },
+        scene: { focus: 330, bg: "living", mo: [{ pose: "pose-40", x: 390 }, { who: "ais", pose: "doctor-kit", x: 280 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Toko Pak Harun kecil dan penuh raket tergantung seperti buah-buahan. Di mejanya ada gulungan senar putih yang panjang sekali.", en: "Pak Harun's shop was small and full of rackets hanging like fruit. On his table sat a roll of very long white string." },
+        scene: { focus: 390, bg: "market", props: [{ k: "spool", x: 500 }, { k: "racket", x: 280 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 390 }] },
+      },
+      {
+        text: { id: "Pak Harun mencabut senar lama satu per satu, lalu memasang senar baru: atas, bawah, atas, bawah — seperti menganyam tikar.", en: "Pak Harun pulled out the old strings one by one, then threaded in new ones: over, under, over, under — like weaving a mat." },
+        scene: { focus: 400, bg: "market", props: [{ k: "spool", x: 510 }, { k: "racket", x: 430, y: 330 }], mo: [{ who: "adam", pose: "search-crouch", x: 340 }] },
+      },
+      {
+        text: { id: "\"Senarnya harus ditarik pas,\" kata Pak Harun. \"Terlalu kencang, bolanya mental keras. Terlalu kendur, bolanya loyo.\"", en: "\"The strings have to be pulled just right,\" said Pak Harun. \"Too tight and the ball bounces off hard. Too loose and it goes floppy.\"" },
+        scene: { focus: 400, bg: "market", props: [{ k: "spool", x: 520 }], mo: [{ who: "adam", pose: "surprised-hands-up", x: 390 }] },
+      },
+      {
+        text: { id: "Menunggu itu lama. Kak Adam ingin cepat-cepat. Tapi ia belajar duduk sabar sambil memperhatikan tangan Pak Harun yang lincah.", en: "Waiting took ages. Kak Adam wanted it done fast. But he learned to sit patiently and watch Pak Harun's quick hands." },
+        scene: { focus: 390, bg: "market", props: [{ k: "clock", x: 520, y: 220 }], mo: [{ who: "adam", pose: "tennis-rest-sit", x: 390 }] },
+      },
+      {
+        text: { id: "\"Selesai!\" Raketnya seperti baru. Senarnya putih dan rapi. Kak Adam memetiknya: ting-ting!", en: "\"Done!\" The racket looked brand new. The strings were white and neat. Kak Adam plucked them: ting-ting!" },
+        scene: { focus: 390, bg: "market", props: [{ k: "racket", x: 480, y: 330, s: 1.2 }], mo: [{ who: "adam", pose: "clap-cheer", x: 380 }], fx: ["notes", "sparkle"] },
+      },
+      {
+        text: { id: "Pak Harun memberi tiga pesan: \"Jangan dibanting. Jangan dijemur di mobil panas. Simpan di tasnya.\"", en: "Pak Harun gave three tips: \"Don't slam it down. Don't leave it in a hot car. Keep it in its bag.\"" },
+        scene: { focus: 400, bg: "market", props: [{ k: "racket", x: 300, y: 330 }], mo: [{ who: "adam", pose: "offer", x: 400 }] },
+      },
+      {
+        text: { id: "Kak Adam membungkuk dan berkata, \"Terima kasih banyak, Pak Harun!\" Abi tersenyum bangga.", en: "Kak Adam bowed his head and said, \"Thank you so much, Pak Harun!\" Abi smiled proudly." },
+        quote: { id: "\"Barang siapa tidak berterima kasih kepada manusia, ia tidak bersyukur kepada Allah.\" (HR. Abu Dawud dan Tirmidzi)", en: "\"Whoever does not thank people has not thanked Allah.\" (Abu Dawud and Tirmidhi)" },
+        scene: { focus: 340, bg: "market", mo: [{ who: "ayah", pose: "stand-arms-crossed", x: 270 }, { who: "adam", pose: "sorry-hands", x: 410 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Besoknya, servis pertama dengan senar baru: CTAK! Bolanya melesat lebih kencang dari sebelumnya!", en: "The next day, his first serve with new strings: CRACK! The ball flew faster than ever!" },
+        scene: { focus: 400, bg: "court", props: [{ k: "ballfly", x: 420, y: 165, s: 1.2, d: HIT }], mo: [{ who: "adam", pose: "tennis-serve-1", seq: SERVE, fps: FPS, x: 390, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sejak hari itu, setiap selesai latihan, Kak Adam mengelap raketnya dan memasukkannya ke tas. \"Istirahat ya, raket.\"", en: "From that day on, after every practice, Kak Adam wiped his racket and put it in its bag. \"Have a rest, racket.\"" },
+        scene: { focus: 390, bg: "living", time: "dusk", props: [{ k: "towel", x: 480 }], mo: [{ who: "adam", pose: "tennis-walk-racket", x: 380 }] },
+      },
+      {
+        text: { id: "Barang apa yang paling kamu sayangi? Bagaimana caramu merawatnya supaya awet? 🎾", en: "What's your favourite thing? How do you look after it so it lasts? 🎾" },
+        scene: { bg: "living", time: "night", props: [{ k: "racket", x: 470 }], mo: [{ pose: "pose-12", x: 350 }], fx: ["stars"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Tennis life 5. Doubles with Raka ───────────────────────── */
+  {
+    slug: "ganda-bersama-raka",
+    pose: "baby-mo-yeyy.png",
+    published: "2026-11-12",
+    title: { id: "Ganda Bersama Raka", en: "Doubles with Raka" },
+    hook: {
+      id: "Dulu lawan, sekarang satu tim! Kak Adam dan Raka main ganda. Tapi dua pemain hebat belum tentu jadi tim hebat… mereka harus belajar bicara.",
+      en: "Once rivals, now teammates! Kak Adam and Raka play doubles. But two good players don't always make a good team… they have to learn to talk.",
+    },
+    anchor: { type: "parenting", slug: "rivalitas-saudara" },
+    takeaway: {
+      id: "Kerja sama butuh bicara, saling percaya, dan saling menyemangati. Anak belajar bahwa tim yang saling menguatkan lebih kuat dari pemain hebat yang sendirian.",
+      en: "Teamwork needs talking, trusting and cheering each other on. Children learn that a team that holds each other up beats a great player on their own.",
+    },
+    tags: ["tenis", "ganda", "kerja sama", "kak adam", "persahabatan", "tim"],
+    cover: {
+      focus: 380, bg: "court",
+      props: [{ k: "ballrally", x: 380, y: 320 }, { k: "trophy", x: 590 }],
+      mo: [{ who: "adam", pose: "tennis-volley", x: 380 }],
+      fx: ["confetti"],
+    },
+    pages: [
+      {
+        text: { id: "Ada turnamen ganda anak-anak! Raka mengirim pesan: \"Adam, mau jadi pasanganku?\" Kak Adam melompat kegirangan.", en: "There was a kids' doubles tournament! Raka sent a message: \"Adam, want to be my partner?\" Kak Adam jumped for joy." },
+        scene: { focus: 390, bg: "living", props: [{ k: "phone", x: 470, y: 320 }], mo: [{ who: "adam", pose: "tennis-celebrate-1", seq: CELEBRATE, fps: 8, x: 380, move: "still" }] },
+      },
+      {
+        text: { id: "\"Ganda itu dua lawan dua,\" jelas Kak Adam pada si kembar. \"Lapangannya lebih lebar, dan kita harus bekerja sama.\"", en: "\"Doubles is two against two,\" Kak Adam explained to the twins. \"The court's wider, and we have to work together.\"" },
+        scene: { focus: 330, bg: "living", mo: [{ who: "ais", pose: "sit-chin-hands", x: 280 }, { who: "adam", pose: "kneel-talk", x: 420 }] },
+      },
+      {
+        text: { id: "Latihan pertama kacau! Bola datang ke tengah. Kak Adam lari. Raka juga lari. DUK! Raket mereka beradu. Bolanya lewat.", en: "The first practice was chaos! A ball came down the middle. Kak Adam ran. Raka ran too. CLONK! Their rackets bumped. The ball went past." },
+        scene: { focus: 390, bg: "court", props: [{ k: "bonk", x: 470, y: 210 }, { k: "ballfly", x: 440, y: 330 }], mo: [{ who: "adam", pose: "tennis-oops-3", x: 390 }] },
+      },
+      {
+        text: { id: "Bola berikutnya juga ke tengah. Kali ini dua-duanya diam, saling menunggu. Bolanya lewat lagi. Mereka tertawa malu.", en: "The next ball went down the middle too. This time they both froze, waiting for each other. It went past again. They laughed, embarrassed." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballroll", x: 470 }], mo: [{ who: "adam", pose: "sheepish-scratch-head", x: 390 }] },
+      },
+      {
+        text: { id: "Abi memberi rahasia ganda: \"Bicaralah! Teriak 'PUNYAKU!' kalau kamu yang ambil, dan 'PUNYAMU!' kalau temanmu.\"", en: "Abi shared the doubles secret: \"Talk! Shout 'MINE!' if you'll take it, and 'YOURS!' if it's your partner's.\"" },
+        scene: { focus: 340, bg: "court", mo: [{ who: "ayah", pose: "megaphone", x: 270 }, { who: "adam", pose: "tennis-hold-ball", x: 410 }] },
+      },
+      {
+        text: { id: "Mereka mencoba lagi. \"PUNYAKU!\" teriak Kak Adam — DUK! \"PUNYAMU!\" teriaknya lagi, dan Raka memukul dengan mantap.", en: "They tried again. \"MINE!\" shouted Kak Adam — THOCK! \"YOURS!\" he shouted next, and Raka hit it cleanly." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }], mo: [{ who: "adam", pose: fh(1), seq: FOREHAND, fps: FPS, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Rahasia kedua: setelah setiap poin — menang atau kalah — beri tos dan satu kata baik. \"Bagus!\" \"Nggak apa-apa!\"", en: "Secret two: after every point — won or lost — give a high five and one kind word. \"Nice!\" \"No worries!\"" },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "tennis-wave-2", seq: WAVE, fps: 4, x: 390, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari turnamen. Lawan mereka kakak-beradik yang sudah lama main bersama. Pukulan mereka rapi seperti mesin.", en: "Tournament day. Their opponents were two brothers who'd played together for years. Their shots were as neat as a machine." },
+        scene: { focus: 390, bg: "court", props: [{ k: "ballrally", x: 365, y: 320 }], mo: [{ who: "adam", pose: "worried-bite-lip", x: 390 }] },
+      },
+      {
+        text: { id: "Set pertama, Kak Adam dan Raka kalah 2–6. Kak Adam ingin menyalahkan Raka. Tapi Raka berkata duluan, \"Maaf ya, banyak bolaku nyangkut.\"", en: "In the first set, Kak Adam and Raka lost 2–6. Kak Adam wanted to blame Raka. But Raka spoke first: \"Sorry, lots of my shots hit the net.\"" },
+        scene: { focus: 390, bg: "court", props: [{ k: "tennisnet", x: 530 }], mo: [{ who: "adam", pose: "disappointed-sigh", x: 380 }] },
+      },
+      {
+        text: { id: "Kak Adam menggeleng dan tersenyum. \"Bolaku juga. Kita tim — menang bareng, kalah bareng. Ayo bangkit bareng!\"", en: "Kak Adam shook his head and smiled. \"Mine too. We're a team — we win together, we lose together. Let's bounce back together!\"" },
+        scene: { focus: 390, bg: "court", mo: [{ who: "adam", pose: "handshake-offer", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Set kedua berbeda. \"Punyaku!\" \"Punyamu!\" \"Bagus!\" Kak Adam maju ke net dan — PLUK — voli yang manis sekali!", en: "The second set was different. \"Mine!\" \"Yours!\" \"Nice!\" Kak Adam rushed the net and — POP — a lovely volley!" },
+        scene: { focus: 390, bg: "court", props: [{ k: "tennisnet", x: 520 }, { k: "ballfly", x: 430, y: 300, s: 0.9 }], mo: [{ who: "adam", pose: "tennis-volley", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka bergerak seperti dua tangan pada satu badan: satu maju, satu mundur. Skor menyusul: 4–4… 5–5… 6–5!", en: "They moved like two hands on one body: one forward, one back. The score crept up: 4–4… 5–5… 6–5!" },
+        scene: { focus: 390, bg: "court", time: "dusk", props: [{ k: "footprints", x: 380, y: 436 }, { k: "ballrally", x: 365, y: 320 }], mo: [{ who: "adam", pose: "tennis-shuffle-1", seq: SHUFFLE, fps: 8, x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Poin terakhir. Servis roket Kak Adam… kembali… Raka menyambar di net… MASUK! Mereka menang set kedua dan super tie-break!", en: "Final point. Kak Adam's rocket serve… returned… Raka pounced at the net… IN! They won the second set and the super tie-break!" },
+        scene: { focus: 390, bg: "court", time: "dusk", mo: [{ who: "adam", pose: "tennis-celebrate-1", seq: CELEBRATE, fps: 8, x: 390, move: "still" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Abi memeluk mereka berdua. \"Kalian seperti bangunan: satu bagian menguatkan bagian yang lain.\"", en: "Abi hugged them both. \"You're like a building: each part holds the other part up.\"" },
+        quote: { id: "\"Seorang mukmin dengan mukmin lainnya seperti sebuah bangunan, yang saling menguatkan satu sama lain.\" (HR. Bukhari dan Muslim)", en: "\"A believer to another believer is like a building whose parts hold each other up.\" (Bukhari and Muslim)" },
+        scene: { focus: 340, bg: "court", time: "dusk", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 280 }, { who: "adam", pose: "hold-trophy", x: 420 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Pialanya cuma satu. \"Minggu ini di rumahmu, minggu depan di rumahku,\" kata Raka. Mereka tertawa — pasangan paling adil sedunia.", en: "There was only one trophy. \"This week at your house, next week at mine,\" said Raka. They laughed — the fairest partners in the world." },
+        scene: { focus: 390, bg: "street", time: "dusk", props: [{ k: "trophy", x: 480 }], mo: [{ who: "adam", pose: "laugh-tummy", x: 380 }, { pose: "yeyy", x: 270, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Malam itu Baby Mo dan Baby Ais berlatih teriak di kamar: \"PUNYAKU!\" \"PUNYAMU!\" Siapa pasangan terbaikmu di rumah? 🤝", en: "That night Baby Mo and Baby Ais practised shouting in their room: \"MINE!\" \"YOURS!\" Who's your best partner at home? 🤝" },
+        scene: { focus: 330, bg: "bedroom", time: "night", props: [{ k: "balloon", x: 470, y: 230 }], mo: [{ pose: "pose-02", x: 390, move: "hop" }, { who: "ais", pose: "megaphone", x: 275 }], fx: ["stars"] },
       },
     ],
   },
