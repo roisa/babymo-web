@@ -1295,3 +1295,21 @@ html.dark .learn-month { background: linear-gradient(110deg, #262046, #15303B); 
   .story-art .sa-ghost { opacity: 0 !important; }
   .story-art .sa-step { opacity: 1; }
 }
+
+/* ── Story art: scoreboard, rolling ball, ball mark, snapped strings ── */
+.sa-score { opacity: 0; animation: sa-score 6s step-end infinite; }
+@keyframes sa-score { 0% { opacity: 1; } 20%, 100% { opacity: 0; } }
+.sa-roll { animation: sa-roll 2.6s linear infinite; animation-delay: var(--sa-d, 0s); }
+@keyframes sa-roll { 0% { translate: -160px 0; opacity: 0; } 8% { opacity: 1; } 85% { opacity: 1; } 100% { translate: 160px 0; opacity: 0; } }
+.sa-land { animation: sa-land 2.4s infinite; }
+@keyframes sa-land { 0% { translate: -90px -120px; animation-timing-function: ease-in; } 40% { translate: -6px 0; } 45% { translate: -6px 0; scale: 1.2 .8; } 52%, 100% { translate: -6px 0; scale: 1; } }
+.sa-mark { opacity: 0; animation: sa-mark 2.4s infinite; transform-origin: center; }
+@keyframes sa-mark { 0%, 40% { opacity: 0; scale: .4; } 46%, 92% { opacity: .55; scale: 1; } 100% { opacity: 0; } }
+.sa-puff { opacity: 0; animation: sa-puff 2.4s infinite; transform-origin: 50% 100%; }
+@keyframes sa-puff { 0%, 40% { opacity: 0; scale: .3; } 48% { opacity: .9; scale: 1; } 70%, 100% { opacity: 0; scale: 1.4; translate: 0 -10px; } }
+.sa-wiggle { transform-origin: 50% 0; animation: sa-wiggle 1.2s ease-in-out infinite; }
+@keyframes sa-wiggle { 0%, 100% { rotate: -6deg; } 50% { rotate: 6deg; } }
+@media (prefers-reduced-motion: reduce) {
+  .story-art .sa-score:first-of-type { opacity: 1; }
+  .story-art .sa-mark { opacity: .55; }
+}
