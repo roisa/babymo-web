@@ -2644,7 +2644,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Dadanya berdebar. Ia ingin lari ke mana saja dan berteriak. Matanya mulai basah…", en: "His heart pounded. He wanted to run anywhere and shout. His eyes started to fill with tears…" },
-        scene: { bg: "supermarket", mo: [{ pose: "pose-37", x: 360, move: "sway" }] },
+        scene: { bg: "supermarket", mo: [{ pose: "pose-09", x: 360, move: "sway" }] },
       },
       {
         text: { id: "Lalu ia ingat suara Abi: \"Satu: BERHENTI.\" Baby Mo berhenti. Tarik napas… buang. \"Abi pasti kembali mencariku di sini.\"", en: "Then he remembered Abi's voice: \"One: STOP.\" Baby Mo stopped. Breathe in… breathe out. \"Abi will come back to look for me here.\"" },

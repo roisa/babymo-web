@@ -11,6 +11,7 @@ import type { ArtScene } from "@/lib/cerita/illus-types";
 import { ReadText, useNarrator, useLullabySound, playBlip } from "@/components/book/readaloud";
 import { FIND_IT, TAP_NAMES } from "@/lib/cerita/find-it";
 import { stickerFor, awardSticker, getStickers, collectFact, factKey, isFact } from "@/lib/cerita/stickers";
+import { INTERACTIVE, NAME_KEY } from "@/lib/cerita/interactive";
 
 type Block = { type: "p" | "quote"; html: string; src?: number; cont?: boolean };
 
@@ -314,6 +315,12 @@ export function BookReader({
           stickers: (n: number) => `Koleksimu: ${n} stiker`,
           seeCollection: "Lihat koleksi stikermu →",
           newFact: "Kartu fakta baru!",
+          yourTurn: "Giliranmu!",
+          yourTurnSay: "Ayo, giliranmu!",
+          wellDone: "Hebat!",
+          readFor: "Dibacakan untuk",
+          namePh: "nama si kecil",
+          hooray: (n: string) => `Hore, ${n}!`,
         }
       : {
           open: "Read in Book Mode",
@@ -347,6 +354,12 @@ export function BookReader({
           stickers: (n: number) => `Your collection: ${n} stickers`,
           seeCollection: "See your sticker book →",
           newFact: "New fact card!",
+          yourTurn: "Your turn!",
+          yourTurnSay: "Now it's your turn!",
+          wellDone: "Well done!",
+          readFor: "Read for",
+          namePh: "your child's name",
+          hooray: (n: string) => `Hooray, ${n}!`,
         };
 
   const blocksRef = useRef<Block[]>(parseBlocks(body));
@@ -555,6 +568,25 @@ export function BookReader({
     });
   };
 
+  /* ── join the story: name, chants, choices ── */
+  const inter = slug ? INTERACTIVE[slug] : undefined;
+  const [childName, setChildName] = useState("");
+  useEffect(() => {
+    try { setChildName(localStorage.getItem(NAME_KEY) ?? ""); } catch {}
+  }, []);
+  const saveName = (v: string) => {
+    const n = v.replace(/[<>]/g, "").slice(0, 20);
+    setChildName(n);
+    try { localStorage.setItem(NAME_KEY, n.trim()); } catch {}
+  };
+  const nameIn = (text: string) => (inter?.friend && childName.trim() ? text.split(inter.friend).join(childName.trim()) : text);
+  const [picked, setPicked] = useState<Record<number, number[]>>({});
+  const [chantOn, setChantOn] = useState(-1);
+  const choiceDone = (i: number) => {
+    const c = inter?.choices?.[i];
+    return !c || (picked[i] ?? []).some((o) => c.options[o]?.good);
+  };
+
   /* ── read-aloud + bedtime ── */
   const [readOn, setReadOn] = useState(false);
   const [night, setNight] = useState(false);
@@ -581,7 +613,24 @@ export function BookReader({
       } else if (sh.kind === "pic") {
         const pg = picture[sh.i];
         if (!pg) return;
-        narrator.speak(pg.text, { rate, pitch, onWord: setWord, onEnd: () => next(night ? 2200 : 1300) });
+        const chant = inter?.chants?.[sh.i];
+        const choice = inter?.choices?.[sh.i];
+        narrator.speak(nameIn(pg.text), {
+          rate, pitch, onWord: setWord,
+          onEnd: () => {
+            if (choice && !choiceDone(sh.i)) {
+              // ask, then wait for the child to tap an answer
+              narrator.speak(`${choice.q[locale]} ${choice.options.map((o) => o.label[locale]).join("? ")}?`, { rate, pitch });
+            } else if (chant) {
+              setChantOn(sh.i);
+              narrator.speak(t.yourTurnSay, { rate, pitch: pitch + 0.08, onEnd: () => {
+                turnTimer.current = setTimeout(() => {
+                  narrator.speak(t.wellDone, { rate, pitch, onEnd: () => { setChantOn(-1); next(night ? 1400 : 800); } });
+                }, 3600);
+              } });
+            } else next(night ? 2200 : 1300);
+          },
+        });
       } else if (sh.kind === "card") {
         next(400); // the parents' card is for grown-ups to read
       } else if (sh.kind === "end") {
@@ -721,6 +770,54 @@ export function BookReader({
   }, [open, pos, sheets]);
   useEffect(() => { if (!open) setAward(null); }, [open]);
 
+  const pick = (i: number, o: number, e: React.MouseEvent) => {
+    const c = inter?.choices?.[i];
+    const opt = c?.options[o];
+    if (!c || !opt) return;
+    setPicked((p) => ({ ...p, [i]: [...(p[i] ?? []).filter((x) => x !== o), o] }));
+    const host = (e.currentTarget as HTMLElement).closest(".bk-page") as HTMLElement | null;
+    if (opt.good) {
+      playBlip("chime", night);
+      if (host) burst(host, e.clientX, e.clientY, ["🎉", "⭐", "✨", "🎉"]);
+    } else playBlip("pop", night);
+    narrator.speak(opt.reply[locale], {
+      rate: night ? 0.8 : 0.95,
+      onEnd: () => {
+        if (opt.good && readOn) turnTimer.current = setTimeout(() => go(1), 900);
+      },
+    });
+  };
+  const extras = (i: number) => {
+    const chant = inter?.chants?.[i];
+    const c = inter?.choices?.[i];
+    const mine = picked[i] ?? [];
+    const last = mine.length ? c?.options[mine[mine.length - 1]!] : undefined;
+    return (
+      <>
+        {c && (
+          <div className="bk-choice">
+            <p className="bk-choice-q">🤔 {c.q[locale]}</p>
+            <div className="bk-choice-opts">
+              {c.options.map((o, k) => (
+                <button type="button" key={k} onClick={(e) => pick(i, k, e)}
+                  className={`bk-choice-btn${mine.includes(k) ? (o.good ? " is-good" : " is-bad") : ""}`}>
+                  {mine.includes(k) ? (o.good ? "✅ " : "🙈 ") : ""}{o.label[locale]}
+                </button>
+              ))}
+            </div>
+            {last && <p className={`bk-choice-reply${last.good ? " is-good" : ""}`} key={mine.length}>{last.reply[locale]}</p>}
+          </div>
+        )}
+        {chant && (
+          <div className={`bk-chant${chantOn === i ? " is-on" : ""}`}>
+            <span className="bk-chant-tag">🎤 {t.yourTurn}</span>
+            <span className="bk-chant-line">“{chant[locale]}”</span>
+          </div>
+        )}
+      </>
+    );
+  };
+
   const waveNow = () => {
     setWaved((w) => w + 1);
     if (waveTimer.current) clearTimeout(waveTimer.current);
@@ -775,8 +872,9 @@ export function BookReader({
         </div>
         <div className="bk-gutter" aria-hidden />
         <div className={`bk-pic-text bk-spread-text bk-spread-text--${side}`}>
-          <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={pg.text} active={word} /></p>
+          <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={nameIn(pg.text)} active={word} /></p>
           {pg.quote && <blockquote>{pg.quote}</blockquote>}
+          {extras(s.i)}
         </div>
         <div className={`bk-pic-num bk-spread-num--${side}`} aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
       </div>
@@ -794,6 +892,10 @@ export function BookReader({
           <div className="bk-pic-title">
             <span className="bk-cover-badge">📖 {t.cover}</span>
             <h2>{title}</h2>
+            <label className="bk-dedic" onClick={(e) => e.stopPropagation()}>
+              <span>❤️ {t.readFor}</span>
+              <input value={childName} onChange={(e) => saveName(e.target.value)} placeholder={t.namePh} maxLength={20} aria-label={t.readFor} />
+            </label>
           </div>
           <div className="bk-pic-start">{t.start}</div>
         </div>
@@ -807,8 +909,9 @@ export function BookReader({
             <StoryArt scene={pg.scene} title={pg.scene.alt[locale]} page find={findFor(s.i)} />
           </div>
           <div className="bk-pic-text">
-            <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={pg.text} active={sheets?.[pos] === s ? word : -1} /></p>
+            <p className={s.i === 0 ? "bk-pic-first" : undefined}><ReadText text={nameIn(pg.text)} active={sheets?.[pos] === s ? word : -1} /></p>
             {pg.quote && <blockquote>{pg.quote}</blockquote>}
+            {extras(s.i)}
           </div>
           <div className="bk-pic-num" aria-label={`${t.page} ${s.i + 1}`}>{s.i + 1}</div>
         </div>
@@ -887,7 +990,7 @@ export function BookReader({
               <div className={`bk-sticker${award.fresh ? " is-fresh" : ""}`}>
                 <span className="bk-sticker-badge" aria-hidden>{stickerFor(slug)}</span>
                 <span className="bk-sticker-text">
-                  <b>{award.fresh ? t.sticker : t.stickerAgain}</b>
+                  <b>{award.fresh ? (childName.trim() ? `${t.hooray(childName.trim())} ${t.sticker.replace(/^Hore!\s*|^Hooray!\s*/, "")}` : t.sticker) : t.stickerAgain}</b>
                   <span>{t.stickers(award.count)}</span>
                   <a href={asset(`/${locale}/koleksi/`)}>{t.seeCollection}</a>
                 </span>
@@ -1282,6 +1385,25 @@ export function BookReader({
           font-size:11.5px;font-weight:800;color:#3a2a00;background:rgba(255,255,255,.92);box-shadow:0 4px 12px -6px rgba(0,0,0,.4);}
         .bk-findchip.is-found{background:#FFE27A;}
         .bk-findcount{font-weight:700;opacity:.75;}
+        .bk-choice{margin-top:10px;padding-top:10px;border-top:1.5px dashed rgba(0,0,0,.12);}
+        .bk-choice-q{margin:0 0 8px;font-weight:800;font-size:.86em;color:#5a3a00;}
+        .bk-choice-opts{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;}
+        .bk-choice-btn{flex:1 1 40%;min-height:42px;padding:8px 12px;border-radius:14px;font:inherit;font-size:.78em;font-weight:800;line-height:1.25;cursor:pointer;
+          color:#3a2a00;background:#FFF3C4;border:2px solid #FFD447;box-shadow:0 3px 0 #E8B92E;transition:transform .12s ease;}
+        .bk-choice-btn:active{transform:translateY(2px);box-shadow:0 1px 0 #E8B92E;}
+        .bk-choice-btn.is-good{background:#D9F7DD;border-color:#5BBF5B;box-shadow:0 3px 0 #3E9A3E;}
+        .bk-choice-btn.is-bad{background:#FFE3E3;border-color:#FF9B9B;box-shadow:0 3px 0 #E07070;animation:bkNo .4s ease;}
+        @keyframes bkNo{0%,100%{transform:translateX(0)}25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+        .bk-choice-reply{margin:8px 0 0;font-size:.8em;font-weight:700;color:#B4462E;animation:bkToast 4s ease both;}
+        .bk-choice-reply.is-good{color:#2F7A2F;}
+        .bk-chant{display:flex;flex-direction:column;align-items:center;gap:2px;margin-top:10px;padding:8px 12px;border-radius:16px;background:#EAF4FF;border:2px dashed #7FB3F0;}
+        .bk-chant.is-on{background:#FFE27A;border-color:#E8B92E;animation:bkChant 1s ease-in-out infinite;}
+        @keyframes bkChant{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+        .bk-chant-tag{font-size:.7em;font-weight:800;letter-spacing:.04em;color:#2B5A99;text-transform:uppercase;}
+        .bk-chant.is-on .bk-chant-tag{color:#7a4a00;}
+        .bk-chant-line{font-family:var(--font-display,inherit);font-weight:900;font-size:1.05em;color:#1E3A66;}
+        .bk-dedic{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:8px;font-size:13px;font-weight:700;color:#7a4a1a;}
+        .bk-dedic input{width:140px;padding:5px 10px;border-radius:999px;border:1.5px dashed #E8B04B;background:rgba(255,255,255,.85);font:inherit;font-weight:800;color:#3a2a00;text-align:center;}
         .bk-sticker{display:flex;align-items:center;gap:12px;margin:10px auto 0;padding:10px 14px;border-radius:18px;max-width:340px;text-align:left;
           background:linear-gradient(135deg,#FFF6D6,#FFE7F0);box-shadow:0 8px 20px -14px rgba(0,0,0,.5);}
         .bk-sticker-badge{flex:none;display:grid;place-items:center;width:58px;height:58px;border-radius:50%;font-size:34px;background:#fff;
