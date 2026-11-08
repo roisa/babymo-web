@@ -300,5 +300,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
   // the public privacy policy (also entered in App Store Connect)
   out.push({ url: `${siteUrl}/privacy/`, changeFrequency: "yearly", priority: 0.3 });
+  // App Store marketing + support pages
+  out.push({ url: `${siteUrl}/app/`, changeFrequency: "monthly", priority: 0.6 });
+  out.push({ url: `${siteUrl}/support/`, changeFrequency: "yearly", priority: 0.3 });
   return out;
 }
