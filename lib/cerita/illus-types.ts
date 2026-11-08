@@ -128,6 +128,8 @@ export type ArtProp =
   | "tablet"
   | "hourglass"
   | "bunny"
+  | "rabbit"
+  | "ring"
   | "cradle"
   | "cow"
   | "trashbag"
