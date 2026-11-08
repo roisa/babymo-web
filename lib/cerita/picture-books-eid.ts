@@ -582,6 +582,352 @@ const RAW: PictureBook[] = [
       },
     ],
   },
+  /* ───────────────────────── 1 Muharram: the Hijri New Year ───────────────────────── */
+  {
+    slug: "tahun-baru-hijriah-si-kembar",
+    pose: "baby-mo-pose-23.png",
+    published: "2027-01-05",
+    title: { id: "Tahun Baru Hijriah Si Kembar", en: "The Twins' Hijri New Year" },
+    hook: {
+      id: "\"Tahun baru lagi? Bukannya tahun baru itu bulan Januari?\" Mo bingung melihat pawai obor. Ternyata ada kalender yang mengikuti bulan, dan kisahnya dimulai dari sebuah perjalanan besar: hijrah!",
+      en: "\"Another New Year? Isn't New Year in January?\" Mo is puzzled by the torch parade. It turns out there's a calendar that follows the moon, and it begins with a great journey: the Hijrah!",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Kalender Hijriah mengikuti bulan dan dimulai dari peristiwa hijrah. Setiap tahun baru, kita juga bisa \"berhijrah\": pindah dari kebiasaan kurang baik ke kebiasaan yang lebih baik.",
+      en: "The Hijri calendar follows the moon and begins with the Hijrah. Every new year, we can make our own \"hijrah\": moving from a not-so-good habit to a better one.",
+    },
+    tags: ["1 muharram", "tahun baru islam", "hijrah", "kalender hijriah", "bulan islam", "si kembar"],
+    card: {
+      title: { id: "Tahun Baru Hijriah Bersama Anak", en: "The Hijri New Year with Your Child" },
+      items: {
+        id: [
+          "Hafalkan 12 nama bulan Hijriah dengan lagu. Tempel kalender Hijriah di rumah dan cari tanggal-tanggal penting bersama.",
+          "Ceritakan hijrah dengan sederhana: Rasulullah ﷺ dan para sahabat pindah ke Madinah, dan Allah selalu bersama mereka.",
+          "Ajak setiap anggota keluarga menulis satu \"hijrah kecil\" dan menempelnya di kulkas.",
+        ],
+        en: [
+          "Learn the 12 Hijri months with a song. Put up a Hijri calendar at home and look for the special dates together.",
+          "Tell the Hijrah simply: the Prophet ﷺ and his companions moved to Madinah, and Allah was always with them.",
+          "Have each family member write one \"little hijrah\" and stick it on the fridge.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "street", time: "night",
+      props: [{ k: "obor", x: 455, s: 0.7 }],
+      mo: [{ pose: "pose-31", x: 335 }],
+      fx: ["stars"],
+    },
+    pages: [
+      {
+        text: { id: "Malam itu, ada obor-obor menyala di jalan. \"Ada apa, Kak? Lebaran lagi?\" tanya Mo. Kak Adam tertawa. \"Bukan! Besok 1 Muharram — Tahun Baru Islam!\"", en: "That night, torches were glowing in the street. \"What's happening, Kak? Is it Eid again?\" asked Mo. Kak Adam laughed. \"No! Tomorrow is 1 Muharram — the Islamic New Year!\"" },
+        scene: { focus: 390, bg: "street", time: "night", mo: [{ who: "adam", pose: "clap-cheer", x: 335 }, { pose: "pose-40", x: 445 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Tahun baru lagi? Bukannya tahun baru itu bulan Januari?\" Mo menggaruk kepala, bingung sekali.", en: "\"Another New Year? Isn't New Year in January?\" Mo scratched his head, very confused." },
+        scene: { focus: 390, bg: "living", time: "night", props: [{ k: "muharram1", x: 448, y: 300, s: 0.75 }], mo: [{ pose: "pose-23", x: 335 }] },
+      },
+      {
+        text: { id: "\"Ada dua kalender,\" jelas Abi. \"Kalender Masehi mengikuti matahari. Kalender Hijriah mengikuti bulan — dari bulan sabit ke bulan sabit lagi.\"", en: "\"There are two calendars,\" Abi explained. \"The Gregorian calendar follows the sun. The Hijri calendar follows the moon — from one new crescent to the next.\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 330 }, { pose: "pose-31", x: 450 }] },
+      },
+      {
+        text: { id: "\"Bulannya ada dua belas,\" kata Umi. Lalu Umi bernyanyi: \"Muharram, Safar, Rabiul Awal, Rabiul Akhir, Jumadil Awal, Jumadil Akhir…\"", en: "\"There are twelve months,\" said Umi. Then she sang: \"Muharram, Safar, Rabi' al-Awwal, Rabi' al-Akhir, Jumada al-Ula, Jumada al-Akhirah…\"" },
+        quote: {
+          id: "\"Sesungguhnya bilangan bulan di sisi Allah ialah dua belas bulan, dalam ketetapan Allah pada waktu Dia menciptakan langit dan bumi…\" (QS. At-Taubah: 36)",
+          en: "\"Indeed, the number of months with Allah is twelve, in the decree of Allah from the day He created the heavens and the earth…\" (Qur'an, At-Tawbah 9:36)",
+        },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "umi", pose: "cheer-happy", x: 330 }, { who: "ais", pose: "headphones-dance", x: 450 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"…Rajab, Sya'ban, Ramadan, Syawal, Dzulqa'dah, Dzulhijjah!\" Si kembar ikut bernyanyi sambil menari sampai hafal.", en: "\"…Rajab, Sha'ban, Ramadan, Shawwal, Dhul-Qa'dah, Dhul-Hijjah!\" The twins sang and danced along until they knew it by heart." },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ pose: "pose-30", x: 330 }, { who: "ais", pose: "jump-joy", x: 455 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"Kenapa namanya Hijriah?\" tanya Ais. Abi bercerita tentang hijrah: Rasulullah ﷺ dan para sahabat pindah dari Mekah ke Madinah, supaya bisa beribadah dengan aman.", en: "\"Why is it called Hijri?\" asked Ais. Abi told them about the Hijrah: the Prophet ﷺ and his companions moved from Makkah to Madinah, so they could worship in safety." },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "read-book-sit", x: 330 }, { who: "ais", pose: "think-question", x: 450 }] },
+      },
+      {
+        text: { id: "\"Di perjalanan, Rasulullah ﷺ dan sahabatnya, Abu Bakar, bersembunyi di sebuah gua. Abu Bakar khawatir. Tapi Rasulullah ﷺ berkata: Jangan bersedih, sesungguhnya Allah bersama kita.\"", en: "\"On the way, the Prophet ﷺ and his friend Abu Bakr hid in a cave. Abu Bakr was worried. But the Prophet ﷺ said: Do not be sad, Allah is with us.\"" },
+        quote: {
+          id: "\"…ketika dia berkata kepada sahabatnya: Janganlah engkau bersedih, sesungguhnya Allah bersama kita.\" (QS. At-Taubah: 40)",
+          en: "\"…when he said to his companion: Do not grieve, indeed Allah is with us.\" (Qur'an, At-Tawbah 9:40)",
+        },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ pose: "pose-36", x: 390, move: "still" }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "\"Allah bersama kita…\" bisik Mo. \"Jadi kalau Mo takut gelap, Allah juga bersama Mo?\" \"Selalu,\" jawab Abi sambil tersenyum.", en: "\"Allah is with us…\" whispered Mo. \"So when I'm scared of the dark, Allah is with me too?\" \"Always,\" said Abi with a smile." },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 330 }, { pose: "pose-14", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Dari peristiwa hijrah itulah kalender Islam dihitung,\" kata Abi. \"Khalifah Umar bin Khattab yang menetapkannya.\" Mo mengangguk-angguk seperti profesor.", en: "\"The Islamic calendar is counted from the Hijrah,\" said Abi. \"The caliph Umar ibn al-Khattab decided it.\" Mo nodded like a little professor." },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "idea-point-stand", x: 330 }, { pose: "pose-04", x: 450 }] },
+      },
+      {
+        text: { id: "\"Hijrah artinya pindah,\" kata Kak Adam. \"Kita juga bisa berhijrah — pindah dari kebiasaan jelek ke kebiasaan baik!\"", en: "\"Hijrah means moving,\" said Kak Adam. \"We can make a hijrah too — moving from a bad habit to a good one!\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "adam", pose: "proud-hands-hips", x: 335 }, { pose: "pose-31", x: 445 }] },
+      },
+      {
+        text: { id: "Lalu mereka ikut pawai obor keliling kampung. Api-api kecil menari di sepanjang jalan. \"Selamat Tahun Baru Islam!\"", en: "Then they joined the torch parade around the neighbourhood. Little flames danced all along the road. \"Happy Islamic New Year!\"" },
+        scene: { focus: 390, bg: "street", time: "night", props: [{ k: "obor", x: 455, s: 0.7 }], mo: [{ pose: "pose-42", x: 335 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Pulangnya, semua menulis \"hijrah kecil\". Mo menulis: \"Tidak rebutan mainan lagi.\" Kak Adam menulis: \"Tidak marah kalau kalah tenis.\"", en: "Back home, everyone wrote a \"little hijrah\". Mo wrote: \"No more grabbing toys.\" Kak Adam wrote: \"Don't get cross when I lose at tennis.\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "adam", pose: "write-card-floor", x: 335 }, { pose: "pose-22", x: 445 }] },
+      },
+      {
+        text: { id: "Ais menulis: \"Merapikan tempat tidur sendiri setiap pagi.\" Mereka menempelnya di kulkas. \"Satu tahun, satu hijrah kecil. Bismillah!\"", en: "Ais wrote: \"Make my own bed every morning.\" They stuck them on the fridge. \"One year, one little hijrah. Bismillah!\"" },
+        scene: { focus: 390, bg: "kitchen", time: "night", mo: [{ who: "ais", pose: "checklist", x: 330 }, { pose: "pose-27", x: 455 }] },
+      },
+      {
+        text: { id: "Pagi 1 Muharram, Ais sedang main balok. Mo ingin sekali ikut merebutnya… tapi ia ingat hijrahnya. \"Ais duluan saja, deh.\" Ais tersenyum lebar.", en: "On the morning of 1 Muharram, Ais was playing with blocks. Mo really wanted to grab them… but he remembered his hijrah. \"You go first, Ais.\" Ais gave a huge smile." },
+        scene: { focus: 390, bg: "playroom", mo: [{ pose: "pose-25", x: 330 }, { who: "ais", pose: "blocks-build", x: 455 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Abi mengacungkan jempol. \"Selamat Tahun Baru Hijriah! Hijrah pertamamu berhasil, Mo!\"", en: "Abi gave a thumbs up. \"Happy Hijri New Year! Your first hijrah worked, Mo!\"" },
+        scene: { focus: 390, bg: "playroom", mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 330 }, { pose: "pose-02", x: 450 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Hijrah kecil apa yang ingin kamu mulai tahun ini? 🌙", en: "What little hijrah would you like to start this year? 🌙" },
+        scene: { focus: 390, bg: "living", props: [{ k: "muharram1", x: 448, y: 300, s: 0.75 }], mo: [{ pose: "idea", x: 335 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Asyura: the sea that parted ───────────────────────── */
+  {
+    slug: "puasa-asyura-si-kembar",
+    pose: "baby-mo-pose-33.png",
+    published: "2027-01-06",
+    title: { id: "Puasa Asyura dan Laut yang Terbelah", en: "The Ashura Fast and the Parted Sea" },
+    hook: {
+      id: "Di pantai, ombak merobohkan istana pasir Mo. \"Lautnya kuat sekali!\" Lalu Abi bercerita tentang laut yang terbelah dan hari ketika Nabi Musa diselamatkan — hari Asyura.",
+      en: "At the beach, a wave knocks down Mo's sandcastle. \"The sea is so strong!\" Then Abi tells the story of the sea that parted and the day Prophet Musa was saved — the day of Ashura.",
+    },
+    anchor: { type: "parenting", slug: "puasa-pertama" },
+    takeaway: {
+      id: "Puasa Asyura (10 Muharram) adalah tanda syukur atas pertolongan Allah kepada Nabi Musa. Disunnahkan juga berpuasa tanggal 9. Saat takut, ingatlah: Allah bersama kita.",
+      en: "The Ashura fast (10 Muharram) is a way of thanking Allah for saving Prophet Musa. Fasting the 9th too is sunnah. When we're afraid, remember: Allah is with us.",
+    },
+    tags: ["asyura", "muharram", "nabi musa", "puasa sunnah", "pantai", "si kembar"],
+    card: {
+      title: { id: "Mengenalkan Hari Asyura", en: "Introducing the Day of Ashura" },
+      items: {
+        id: [
+          "Ceritakan kisah Nabi Musa dengan fokus pada keyakinannya: \"Tuhanku bersamaku.\" Ajak anak mengulang kalimat itu saat takut.",
+          "Ajak anak berpuasa tanggal 9 dan 10 Muharram semampunya — boleh setengah hari untuk yang masih kecil.",
+          "Hubungkan dengan rasa syukur: puasa adalah cara berterima kasih kepada Allah atas pertolongan-Nya.",
+        ],
+        en: [
+          "Tell Prophet Musa's story focusing on his trust: \"My Lord is with me.\" Encourage your child to repeat it when they're scared.",
+          "Invite your child to fast on 9 and 10 Muharram as they are able — half a day is fine for little ones.",
+          "Link it to gratitude: fasting is a way of thanking Allah for His help.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "beach",
+      props: [{ k: "sandcastle", x: 450, s: 0.8 }],
+      mo: [{ pose: "pose-33", x: 335 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Libur sekolah! Tanggal 8 Muharram, keluarga si kembar berlibur ke pantai. Ombak berdebur: byurrr… byurrr…", en: "School holidays! On 8 Muharram, the twins' family went to the beach. The waves crashed: whoosh… whoosh…" },
+        scene: { focus: 390, bg: "beach", mo: [{ pose: "pose-20", x: 330 }, { who: "ais", pose: "wave-big", x: 455 }] },
+      },
+      {
+        text: { id: "Mo membangun istana pasir yang tinggi. Ombak datang — BYUR! — istananya roboh. \"Lautnya kuat sekali, Abi!\"", en: "Mo built a tall sandcastle. A wave came — SPLASH! — and the castle crumbled. \"The sea is so strong, Abi!\"" },
+        scene: { focus: 390, bg: "beach", props: [{ k: "bucket", x: 450, s: 0.8 }], mo: [{ pose: "pose-33", x: 335 }] },
+      },
+      {
+        text: { id: "\"Laut memang kuat,\" kata Abi. \"Tapi Allah jauh lebih kuat. Mau dengar kisah laut yang terbelah?\" \"Mauuu!\"", en: "\"The sea is strong,\" said Abi. \"But Allah is far stronger. Want to hear the story of the sea that parted?\" \"Yesss!\"" },
+        scene: { focus: 390, bg: "beach", mo: [{ who: "ayah", pose: "calm-sit", x: 330 }, { pose: "pose-26", x: 450 }] },
+      },
+      {
+        text: { id: "\"Dahulu, Nabi Musa 'alaihissalam dan kaumnya dikejar oleh Firaun, raja yang sangat zalim, bersama tentaranya yang banyak sekali.\"", en: "\"Long ago, Prophet Musa, peace be upon him, and his people were chased by Pharaoh, a very cruel king, with a huge army.\"" },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ pose: "pose-33", x: 330 }, { who: "ais", pose: "scared-hide", x: 455 }] },
+      },
+      {
+        text: { id: "\"Di depan mereka ada laut. Di belakang mereka ada tentara Firaun. Kaumnya ketakutan: Kita pasti tersusul!\"", en: "\"In front of them was the sea. Behind them was Pharaoh's army. His people were terrified: We'll surely be caught!\"" },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ who: "ais", pose: "scared-hide", x: 390 }] },
+      },
+      {
+        text: { id: "\"Tapi Nabi Musa berkata dengan yakin: Sekali-kali tidak! Sesungguhnya Tuhanku bersamaku, Dia akan memberi petunjuk kepadaku.\"", en: "\"But Prophet Musa said, full of trust: Never! My Lord is with me; He will guide me.\"" },
+        quote: {
+          id: "\"Dia (Musa) menjawab: Sekali-kali tidak akan (tersusul); sesungguhnya Tuhanku bersamaku, Dia akan memberi petunjuk kepadaku.\" (QS. Asy-Syu'ara: 62)",
+          en: "\"He said: No! Indeed, my Lord is with me; He will guide me.\" (Qur'an, Ash-Shu'ara 26:62)",
+        },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 330 }, { pose: "pose-31", x: 450 }] },
+      },
+      {
+        text: { id: "\"Allah memerintahkan Nabi Musa memukulkan tongkatnya ke laut. Laut pun terbelah! Ada jalan kering di tengahnya, dan airnya berdiri tinggi seperti gunung.\" Mo ternganga.", en: "\"Allah told Prophet Musa to strike the sea with his staff. And the sea parted! A dry path appeared in the middle, with water standing tall like mountains.\" Mo's mouth fell open." },
+        quote: {
+          id: "\"Lalu Kami wahyukan kepada Musa: Pukullah laut itu dengan tongkatmu. Maka terbelahlah lautan itu, dan setiap belahan seperti gunung yang besar.\" (QS. Asy-Syu'ara: 63)",
+          en: "\"Then We inspired Musa: Strike the sea with your staff. And it parted, and each portion was like a great towering mountain.\" (Qur'an, Ash-Shu'ara 26:63)",
+        },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ pose: "wow", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Nabi Musa dan kaumnya menyeberang dengan selamat. Hari itu tanggal 10 Muharram — hari Asyura.\" Ais menghembuskan napas lega. \"Alhamdulillah, selamat!\"", en: "\"Prophet Musa and his people crossed safely. That day was 10 Muharram — the day of Ashura.\" Ais let out a big breath. \"Alhamdulillah, they were saved!\"" },
+        scene: { focus: 390, bg: "beach", time: "dusk", props: [{ k: "muharram10", x: 448, y: 300, s: 0.75 }], mo: [{ who: "ais", pose: "heart-hands-smile", x: 335 }] },
+      },
+      {
+        text: { id: "\"Karena bersyukur, Nabi Musa berpuasa di hari itu,\" kata Abi. \"Rasulullah ﷺ juga berpuasa di hari Asyura, dan mengajak kita ikut berpuasa.\"", en: "\"To give thanks, Prophet Musa fasted on that day,\" said Abi. \"The Prophet ﷺ fasted on Ashura too, and encouraged us to fast.\"" },
+        quote: {
+          id: "Saat tiba di Madinah, Rasulullah ﷺ mendapati orang-orang berpuasa di hari Asyura karena hari itu Allah menyelamatkan Musa. Beliau bersabda, \"Aku lebih berhak atas Musa daripada kalian,\" lalu beliau berpuasa dan memerintahkan untuk berpuasa. (HR. Bukhari 2004)",
+          en: "When he came to Madinah, the Prophet ﷺ found people fasting on Ashura because on that day Allah saved Musa. He said, \"I am closer to Musa than you,\" so he fasted it and told others to fast. (Bukhari 2004)",
+        },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 330 }, { pose: "pose-22", x: 450 }] },
+      },
+      {
+        text: { id: "\"Puasa Asyura menghapus dosa setahun yang lalu,\" kata Umi. \"Dan Rasulullah ﷺ ingin berpuasa juga sehari sebelumnya, tanggal 9.\"", en: "\"The Ashura fast wipes away the sins of the year before,\" said Umi. \"And the Prophet ﷺ wanted to fast the day before it too, the 9th.\"" },
+        quote: {
+          id: "\"Puasa hari Asyura, aku berharap kepada Allah agar menghapus dosa setahun sebelumnya.\" (HR. Muslim 1162). \"Jika aku masih hidup tahun depan, sungguh aku akan berpuasa pada hari kesembilan.\" (HR. Muslim 1134)",
+          en: "\"Fasting the day of Ashura, I hope Allah will wipe out the sins of the year before.\" (Muslim 1162). \"If I live until next year, I will fast on the ninth as well.\" (Muslim 1134)",
+        },
+        scene: { focus: 390, bg: "beach", time: "dusk", mo: [{ who: "umi", pose: "explain-hand", x: 330 }, { who: "ais", pose: "ok-wink", x: 450 }] },
+      },
+      {
+        text: { id: "Ais menghitung dengan jari. \"Berarti kita puasa dua hari: tanggal 9 dan tanggal 10! Mulai besok!\"", en: "Ais counted on her fingers. \"So we fast two days: the 9th and the 10th! Starting tomorrow!\"" },
+        scene: { focus: 390, bg: "beach", time: "dusk", props: [{ k: "muharram10", x: 448, y: 300, s: 0.75 }], mo: [{ who: "ais", pose: "checklist", x: 335 }] },
+      },
+      {
+        text: { id: "Dini hari, mereka sahur di penginapan. Mo menguap lebar-lebar. \"Haaah… Mo kuat… Mo kuat…\"", en: "Before dawn, they ate sahur at the guesthouse. Mo gave an enormous yawn. \"Haaah… I'm strong… I'm strong…\"" },
+        scene: { focus: 390, bg: "kitchen", time: "night", props: [{ k: "sahur", x: 445, y: 340, s: 0.6 }], mo: [{ pose: "pose-39", x: 335, move: "still" }], fx: ["zzz"] },
+      },
+      {
+        text: { id: "Siangnya, pantai panas sekali. Mo melihat orang minum es kelapa. Glek. Tapi Mo ingat Nabi Musa yang yakin kepada Allah. \"Mo juga bisa sabar!\"", en: "At midday the beach was very hot. Mo saw people drinking iced coconut. Gulp. But he remembered Prophet Musa's trust in Allah. \"I can be patient too!\"" },
+        scene: { focus: 390, bg: "beach", mo: [{ pose: "pose-27", x: 390 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Saat Maghrib, mereka berbuka di tepi pantai sambil melihat matahari terbenam. Langit jingga, ombak tenang, kurmanya manis sekali.", en: "At sunset they broke their fast by the sea, watching the sun go down. Orange sky, calm waves, and the sweetest dates." },
+        scene: { focus: 390, bg: "beach", time: "dusk", props: [{ k: "dates", x: 440, s: 0.7 }], mo: [{ pose: "thank-you", x: 335 }] },
+      },
+      {
+        text: { id: "Mo berbisik, \"Ya Allah, terima kasih sudah menyelamatkan Nabi Musa. Dan terima kasih sudah menjaga kami.\"", en: "Mo whispered, \"O Allah, thank You for saving Prophet Musa. And thank You for looking after us.\"" },
+        scene: { focus: 390, bg: "beach", time: "night", mo: [{ pose: "pose-12", x: 390, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Kalau kamu sedang takut, kalimat apa yang bisa membuatmu berani? 🌊", en: "When you're scared, what words can help you feel brave? 🌊" },
+        scene: { focus: 390, bg: "beach", props: [{ k: "sandcastle", x: 450, s: 0.8 }], mo: [{ pose: "pose-27", x: 335 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Isra Mi'raj: the gift of prayer ───────────────────────── */
+  {
+    slug: "hadiah-isra-miraj",
+    pose: "baby-mo-wow.png",
+    published: "2027-01-07",
+    title: { id: "Hadiah dari Isra Mi'raj", en: "The Gift from Isra Mi'raj" },
+    hook: {
+      id: "\"Sholat lagi? Lima kali sehari itu banyak sekali!\" keluh Mo. Lalu Abi bercerita tentang perjalanan malam yang paling menakjubkan — dan ternyata dulu sholat bukan lima kali, tapi LIMA PULUH!",
+      en: "\"Praying again? Five times a day is so many!\" Mo grumbles. Then Abi tells him about the most amazing night journey — and it turns out prayer wasn't five times at first, but FIFTY!",
+    },
+    anchor: { type: "parenting", slug: "mulai-sholat" },
+    takeaway: {
+      id: "Sholat lima waktu adalah hadiah langsung dari Allah pada malam Isra Mi'raj: lima kali dikerjakan, pahalanya seperti lima puluh.",
+      en: "The five daily prayers are a gift straight from Allah on the night of Isra Mi'raj: we pray five, and the reward is like fifty.",
+    },
+    tags: ["isra mi'raj", "rajab", "sholat lima waktu", "masjidil aqsa", "bintang", "si kembar"],
+    card: {
+      title: { id: "Isra Mi'raj dan Semangat Sholat", en: "Isra Mi'raj and Loving Prayer" },
+      items: {
+        id: [
+          "Ceritakan Isra Mi'raj di bawah langit malam: perjalanan ke Masjidil Aqsa lalu naik ke langit, dan hadiah sholat dari Allah.",
+          "Bagian \"50 menjadi 5, pahalanya tetap 50\" disukai anak — pakai untuk menumbuhkan rasa syukur, bukan rasa berat.",
+          "Buat kartu lima bintang: Subuh, Dzuhur, Ashar, Maghrib, Isya. Warnai satu bintang setiap selesai sholat.",
+        ],
+        en: [
+          "Tell the story of Isra Mi'raj under the night sky: the journey to al-Aqsa, the ascent through the heavens, and Allah's gift of prayer.",
+          "Children love \"fifty became five, but the reward is still fifty\" — use it to grow gratitude, not a sense of burden.",
+          "Make a five-star card: Fajr, Dhuhr, Asr, Maghrib, Isha. Colour one star after each prayer.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "garden", time: "night",
+      props: [{ k: "rajab27", x: 448, y: 300, s: 0.75 }],
+      mo: [{ pose: "wow", x: 335 }],
+      fx: ["stars", "milkyway"],
+    },
+    pages: [
+      {
+        text: { id: "\"Allahu Akbar, Allahu Akbar…\" Adzan Ashar berkumandang. Mo cemberut. \"Aduh, sholat lagi? Tadi kan sudah!\"", en: "\"Allahu Akbar, Allahu Akbar…\" The call for Asr rang out. Mo pouted. \"Oh no, praying again? We already did!\"" },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "pose-23", x: 390 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "\"Sehari lima kali, Abi! Banyak sekali!\" kata Mo sambil mengangkat lima jarinya.", en: "\"Five times a day, Abi! That's so many!\" said Mo, holding up five fingers." },
+        scene: { focus: 390, bg: "living", mo: [{ who: "ayah", pose: "think-chin-stand", x: 330 }, { pose: "pose-24", x: 450 }] },
+      },
+      {
+        text: { id: "Abi tersenyum. \"Mau tahu rahasia? Dulu perintah sholat itu bukan lima kali… tapi LIMA PULUH kali sehari!\" \"HAH?!\"", en: "Abi smiled. \"Want to know a secret? At first, the command wasn't five prayers a day… it was FIFTY!\" \"WHAT?!\"" },
+        scene: { focus: 390, bg: "living", mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 330 }, { pose: "pose-31", x: 450 }] },
+      },
+      {
+        text: { id: "Malamnya, di bawah langit penuh bintang, Abi bercerita tentang Isra Mi'raj — perjalanan malam yang paling menakjubkan.", en: "That night, under a sky full of stars, Abi told them about Isra Mi'raj — the most amazing night journey ever." },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "calm-sit", x: 330 }, { pose: "pose-06", x: 450 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "\"Dalam satu malam, Allah memperjalankan Rasulullah ﷺ dari Masjidil Haram di Mekah ke Masjidil Aqsa yang jauh sekali. Itu namanya Isra.\"", en: "\"In a single night, Allah took the Prophet ﷺ from al-Masjid al-Haram in Makkah to al-Masjid al-Aqsa, very far away. That is the Isra.\"" },
+        quote: {
+          id: "\"Mahasuci (Allah) yang telah memperjalankan hamba-Nya (Muhammad) pada malam hari dari Masjidil Haram ke Masjidil Aqsa yang telah Kami berkahi sekelilingnya…\" (QS. Al-Isra: 1)",
+          en: "\"Exalted is He who took His servant by night from al-Masjid al-Haram to al-Masjid al-Aqsa, whose surroundings We have blessed…\" (Qur'an, Al-Isra 17:1)",
+        },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ais", pose: "point-star", x: 390 }], fx: ["stars", "milkyway"] },
+      },
+      {
+        text: { id: "\"Lalu Rasulullah ﷺ dinaikkan ke langit — tinggi, tinggi sekali, melewati tujuh lapis langit. Itu namanya Mi'raj.\" Mo mendongak jauh ke atas.", en: "\"Then the Prophet ﷺ was taken up into the heavens — high, so high, through seven heavens. That is the Mi'raj.\" Mo looked way, way up." },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ pose: "pose-15", x: 390 }], fx: ["stars", "milkyway", "shootingstar"] },
+      },
+      {
+        text: { id: "\"Di sana, Allah memberikan hadiah istimewa untuk Rasulullah ﷺ dan untuk kita semua: perintah sholat, lima puluh kali sehari.\"", en: "\"There, Allah gave a special gift to the Prophet ﷺ and to all of us: the command to pray, fifty times a day.\"" },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ pose: "wow", x: 390 }], fx: ["stars", "sparkle"] },
+      },
+      {
+        text: { id: "\"Dalam perjalanan kembali, Nabi Musa menyarankan Rasulullah ﷺ memohon keringanan, karena umatnya tidak akan sanggup. Rasulullah ﷺ pun memohon… berkali-kali.\"", en: "\"On the way back, Prophet Musa advised the Prophet ﷺ to ask for it to be made lighter, because his people would not manage. So the Prophet ﷺ asked… again and again.\"" },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 330 }, { who: "ais", pose: "think-question", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Sampai akhirnya menjadi lima kali sehari. Tapi Allah berfirman: pahalanya tetap seperti lima puluh!\"", en: "\"Until finally it became five times a day. But Allah said: the reward is still like fifty!\"" },
+        quote: {
+          id: "Allah berfirman: \"Ia (sholat) lima, dan ia (nilainya) lima puluh. Ketetapan-Ku tidak akan berubah.\" (HR. Bukhari 349, Muslim 162)",
+          en: "Allah said: \"They are five, and they are fifty. My word does not change.\" (Bukhari 349, Muslim 162)",
+        },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 330 }, { pose: "pose-31", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Mo menghitung. \"Lima… tapi pahalanya lima puluh? Itu seperti beli satu dapat sepuluh!\" Semua tertawa.", en: "Mo worked it out. \"Five… but the reward of fifty? That's like buy one, get ten!\" Everyone laughed." },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ pose: "pose-02", x: 390 }], fx: ["confetti", "stars"] },
+      },
+      {
+        text: { id: "\"Itulah kenapa sholat istimewa,\" kata Umi. \"Sholat adalah hadiah langsung dari Allah — waktu kita bisa berbicara dengan-Nya.\"", en: "\"That's why prayer is so special,\" said Umi. \"It's a gift straight from Allah — our time to talk to Him.\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "umi", pose: "kneel-smile", x: 330 }, { who: "ais", pose: "heart-hands", x: 450 }] },
+      },
+      {
+        text: { id: "Mo menggambar lima bintang di kertas: Subuh, Dzuhur, Ashar, Maghrib, Isya. \"Setiap selesai sholat, Mo warnai satu!\"", en: "Mo drew five stars on a piece of paper: Fajr, Dhuhr, Asr, Maghrib, Isha. \"After each prayer, I'll colour one in!\"" },
+        scene: { focus: 390, bg: "living", time: "night", props: [{ k: "prayerstars", x: 450, y: 300, s: 0.5 }], mo: [{ pose: "pose-04", x: 335 }] },
+      },
+      {
+        text: { id: "Besok paginya, adzan Subuh berkumandang. Mo bangun sambil mengucek mata. \"Hadiah pertama hari ini!\"", en: "The next morning, the call for Fajr rang out. Mo woke up rubbing his eyes. \"The first gift of the day!\"" },
+        scene: { focus: 390, bg: "bedroom", time: "night", mo: [{ pose: "pose-26", x: 390 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Sorenya, adzan Ashar terdengar. Kali ini Mo yang pertama berlari mengambil sajadah. \"Ayo, Ais! Hadiah ketiga!\"", en: "In the afternoon, the call for Asr sounded. This time Mo was first to run for his prayer mat. \"Come on, Ais! Gift number three!\"" },
+        scene: { focus: 390, bg: "living", props: [{ k: "mat", x: 448 }], mo: [{ pose: "run", x: 335, move: "hop" }] },
+      },
+      {
+        text: { id: "Abi tersenyum lebar. Hari itu Mo, Ais, dan Kak Adam sholat berjamaah dengan semangat — tidak ada yang cemberut lagi.", en: "Abi grinned. That day Mo, Ais and Kak Adam prayed together happily — no more pouting." },
+        scene: { focus: 390, bg: "living", mo: [{ who: "adam", pose: "sholat-takbir", x: 335 }, { pose: "thank-you", x: 445 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sholat mana yang paling kamu suka, dan kenapa? ⭐", en: "Which prayer do you like best, and why? ⭐" },
+        scene: { focus: 390, bg: "garden", time: "night", props: [{ k: "rajab27", x: 448, y: 300, s: 0.75 }], mo: [{ pose: "thank-you", x: 335 }], fx: ["stars", "milkyway"] },
+      },
+    ],
+  },
 ];
 
 /** Space out groups for the phone page; a lone character keeps its spot so

@@ -318,3 +318,24 @@ export function KaabaScreen() {
     </g>
   );
 }
+
+/** Mo's five-prayer star card: Subuh, Dzuhur, Ashar, Maghrib, Isya. */
+export function PrayerStars({ done = 2 }: { done?: number }) {
+  const names = ["Subuh", "Dzuhur", "Ashar", "Maghrib", "Isya"];
+  return (
+    <g>
+      <rect x={-120} y={-118} width={240} height={100} rx={14} fill="#FFFFFF" />
+      <rect x={-120} y={-118} width={240} height={10} rx={5} fill="#FFC83D" />
+      {names.map((n, i) => {
+        const x = -96 + i * 48;
+        const on = i < done;
+        return (
+          <g key={n} transform={`translate(${x} -70)`}>
+            <path d={STAR} transform="scale(2)" fill={on ? "#FFC83D" : "#FFFFFF"} stroke={on ? "#E0A21E" : "#C9D3DE"} strokeWidth={0.9} className={on ? "sa-twinkle" : undefined} style={on ? { animationDelay: `${i * 0.4}s` } : undefined} />
+            <text x={0} y={36} fontSize={11} fontWeight={800} fill="#5A6475" textAnchor="middle" fontFamily="system-ui, sans-serif">{n}</text>
+          </g>
+        );
+      })}
+    </g>
+  );
+}
