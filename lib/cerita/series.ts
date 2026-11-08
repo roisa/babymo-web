@@ -208,6 +208,21 @@ export const SERIES: StorySeries[] = [
       "malam-takbiran-si-kembar",
     ],
   },
+  {
+    key: "hari-besar-islam",
+    emoji: "🕌",
+    title: { id: "Hari Besar Islam", en: "Islamic Celebrations" },
+    blurb: {
+      id: "Idul Fitri, Idul Adha, haji, Tahun Baru Hijriah, Asyura, dan Isra Mi'raj — merayakan hari-hari besar Islam bersama si kembar sambil belajar sunnahnya.",
+      en: "Eid al-Fitr, Eid al-Adha, Hajj, the Hijri New Year, Ashura and Isra Mi'raj — celebrating the big days of Islam with the twins and learning their sunnahs.",
+    },
+    books: [
+      "pagi-idul-fitri-si-kembar",
+      "lebaran-paling-seru-di-rumah-nenek",
+      "ketupat-untuk-tetangga-baru",
+      "bintang-syawal-ais",
+    ],
+  },
 ];
 
 export interface SeriesPlace {

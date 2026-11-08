@@ -3,6 +3,7 @@ import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { BallGreen, BallHopper, BallMachine, BallOrange, BallRed, BallTube, CourtBrush, Medal, MiniNet, Racket, RacketBag, SportBottle, UmpireChairProp } from "./tennis";
+import { EidRows, Nastar, OporKetupat, Sandals, Syawal0, Syawal1, Syawal3, Syawal6 } from "./eid";
 import { InfaqBox, TakjilBag, HijaiyahBlocks, Siwak, TakjilStall, Bedug, DatesWater, Fanous, IftarTable, Ketupat, KolakBowl, Obor, RamadanCalendar0, RamadanCalendar1, RamadanCalendarHalf, RamadanCalendarFull, RamadanGarland, SahurTray, Tasbih, ZakatRice } from "./ramadan";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
@@ -15,7 +16,7 @@ import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Pud
  * without touching any story data. The team gallery (/elemen) lists every
  * prop and marks which ones are already redrawn.
  */
-export type ElementGroup = "nature" | "sky" | "critters" | "home" | "food" | "play" | "outdoor" | "sea" | "tennis" | "ramadan" | "faith" | "symbols";
+export type ElementGroup = "nature" | "sky" | "critters" | "home" | "food" | "play" | "outdoor" | "sea" | "tennis" | "ramadan" | "eid" | "faith" | "symbols";
 
 export interface ArtElement {
   draw: ComponentType;
@@ -109,4 +110,12 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   infaqbox: { draw: InfaqBox, group: "ramadan", note: "Mosque charity box, a coin drops in." },
   siwak: { draw: Siwak, group: "ramadan", note: "Siwak twig toothbrush." },
   ketupat: { draw: Ketupat, group: "ramadan", note: "Three woven ketupat hanging, sway." },
+  nastar: { draw: Nastar, group: "eid", note: "Jar of nastar cookies with a red lid." },
+  opor: { draw: OporKetupat, group: "eid", note: "Eid lunch: ketupat on a plate and steaming opor." },
+  syawal0: { draw: Syawal0, group: "eid", note: "Six-day Syawal fasting tracker, day 1 waiting." },
+  syawal1: { draw: Syawal1, group: "eid", note: "Syawal tracker, first star." },
+  syawal3: { draw: Syawal3, group: "eid", note: "Syawal tracker, three days done." },
+  syawal6: { draw: Syawal6, group: "eid", note: "Syawal tracker, all six done." },
+  sandals: { draw: Sandals, group: "eid", note: "Sandals at the prayer field, one pair mismatched." },
+  eidmats: { draw: EidRows, group: "eid", note: "Row of prayer mats at the Eid field." },
 };
