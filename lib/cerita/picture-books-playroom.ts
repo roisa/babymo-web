@@ -401,7 +401,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "\"Misi berhasil!\" Mereka bertos bertiga. Pak Beruang selamat, dan tidak ada yang terluka lagi.", en: "\"Mission complete!\" They did a three-way high five. Mr Bear was safe, and nobody else got hurt." },
-        scene: { focus: 380, bg: "play-firefighter", props: [{ k: "teddy", x: 560, s: 0.5 }], mo: [{ who: "ayah", pose: "high-five-mo", x: 270 }, { pose: "yeyy", x: 400, move: "hop" }, { who: "ais", pose: "cheer-wink", x: 500 }], fx: ["confetti"] },
+        scene: { focus: 380, bg: "play-firefighter", props: [{ k: "teddy", x: 560, s: 0.5 }], mo: [{ who: "ayah", pose: "cheer-kneel", x: 270 }, { pose: "yeyy", x: 400, move: "hop" }, { who: "ais", pose: "cheer-wink", x: 500 }], fx: ["confetti"] },
       },
       {
         text: { id: "Lalu Komandan Abi duduk serius. \"Sekarang pelajaran pemadam sungguhan. Api itu panas dan berbahaya. Korek api, kompor, dan lilin bukan mainan. Kalau melihat api, jangan didekati — panggil orang dewasa.\"", en: "Then Chief Abi sat down seriously. \"Now a real firefighter lesson. Fire is hot and dangerous. Matches, stoves and candles are not toys. If you see fire, don't go near it — call a grown-up.\"" },
@@ -1011,8 +1011,8 @@ const RAW: PictureBook[] = [
         scene: { focus: 380, bg: "living", mo: [{ pose: "pose-10", x: 390, move: "still" }] },
       },
       {
-        text: { id: "Abi tidak bilang \"jangan takut\". Abi menggandeng Mo ke ruang main kolam renang. \"Yuk latihan dulu. Di sini, airnya pura-pura.\"", en: "Abi didn't say \"don't be scared\". He led Mo to the swimming-pool playroom. \"Let's practise first. In here, the water is pretend.\"" },
-        scene: { focus: 380, bg: "play-pool", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }] },
+        text: { id: "Abi tidak bilang \"jangan takut\". Abi mengajak Mo ke ruang main kolam renang. \"Yuk latihan dulu. Di sini, airnya pura-pura.\"", en: "Abi didn't say \"don't be scared\". He took Mo to the swimming-pool playroom. \"Let's practise first. In here, the water is pretend.\"" },
+        scene: { focus: 380, bg: "play-pool", mo: [{ who: "ayah", pose: "wave-hello", x: 270 }, { pose: "pose-32", x: 400 }] },
       },
       {
         text: { id: "\"Langkah pertama: meniup gelembung. Tarik napas lewat mulut… lalu tiup pelan-pelan, seperti meniup lilin. Fuuuh!\"", en: "\"Step one: blowing bubbles. Breathe in through your mouth… then blow out slowly, like blowing out a candle. Whoooo!\"" },
@@ -1484,8 +1484,8 @@ const RAW: PictureBook[] = [
         scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-03", x: 340 }, { who: "ais", pose: "jump-joy", x: 460, move: "hop" }], fx: ["confetti"] },
       },
       {
-        text: { id: "Abi mengangkat Mo tinggi-tinggi. \"Nah, ini dia dino paling kuat — yang bisa menahan marahnya!\"", en: "Abi lifted Mo up high. \"Here he is — the strongest dino of all, the one who can hold back his anger!\"" },
-        scene: { focus: 380, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "carry-mo", x: 370, move: "still" }], fx: ["hearts"] },
+        text: { id: "Abi bertepuk tangan paling keras. \"Nah, ini dia dino paling kuat — yang bisa menahan marahnya!\"", en: "Abi cheered the loudest. \"Here he is — the strongest dino of all, the one who can hold back his anger!\"" },
+        scene: { focus: 380, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "cheer-fists-stand", x: 270 }, { pose: "yes", x: 400 }], fx: ["hearts"] },
       },
       {
         text: { id: "Kapan terakhir kamu marah? Yuk latih napas dino bersama — tarik panjaaang, embuskan pelaaan! 🦖", en: "When were you last angry? Let's practise dino breath together — breathe in looong, out slooowly! 🦖" },
@@ -1574,7 +1574,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Sore itu Abi mengajak si kembar berjalan kaki ke warung. Di depan pintu, Mo tiba-tiba berhenti. \"Abi, lupa sesuatu!\"", en: "That afternoon Abi took the twins on a walk to the corner shop. At the front door, Mo suddenly stopped. \"Abi, we forgot something!\"" },
-        scene: { focus: 380, bg: "garden", time: "dusk", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }, { pose: "pose-24", x: 470 }] },
+        scene: { focus: 380, bg: "garden", time: "dusk", mo: [{ who: "ayah", pose: "wave-hello", x: 270 }, { pose: "pose-24", x: 390 }, { who: "ais", pose: "backpack-walk", x: 490 }] },
       },
       {
         text: { id: "\"Doa keluar rumah!\" Mereka membacanya bersama sebelum melangkah.", en: "\"The dua for leaving home!\" They said it together before stepping out." },
@@ -1582,8 +1582,8 @@ const RAW: PictureBook[] = [
         scene: { focus: 380, bg: "garden", mo: [{ who: "ayah", pose: "dua-kneel", x: 280 }, { pose: "thank-you", x: 400 }, { who: "ais", pose: "dua-hands-closed", x: 500, move: "still" }] },
       },
       {
-        text: { id: "Di tepi jalan, Mo menggenggam tangan Abi erat. Berhenti. Lihat kanan… kiri… kanan lagi. Dengarkan. \"Aman! Ayo jalan!\"", en: "At the roadside, Mo held Abi's hand tight. Stop. Look right… left… right again. Listen. \"All clear! Let's go!\"" },
-        scene: { focus: 380, bg: "street", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 380 }] },
+        text: { id: "Di tepi jalan, Mo berdiri dekat Abi. Berhenti. Lihat kanan… kiri… kanan lagi. Dengarkan. \"Aman! Ayo jalan!\"", en: "At the roadside, Mo stood close to Abi. Stop. Look right… left… right again. Listen. \"All clear! Let's go!\"" },
+        scene: { focus: 380, bg: "street", mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 270 }, { pose: "pose-15", x: 390 }, { who: "ais", pose: "binoculars-2", x: 490 }] },
       },
       {
         text: { id: "Pak Polisi di perempatan melambai kepada mereka. \"Wah, ada polisi cilik yang tertib!\" Mo memberi hormat dengan bangga.", en: "The police officer at the crossroads waved at them. \"Look, a well-behaved little police officer!\" Mo saluted proudly." },
