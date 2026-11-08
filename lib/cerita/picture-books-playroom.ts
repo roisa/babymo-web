@@ -1717,14 +1717,15 @@ const isKid = (who?: string) => !who || who === "mo" || who === "ais";
  * apart, grown-ups 120 from their neighbour, the group centred on the focus,
  * and props pulled in so nothing important falls off the edge.
  */
-function stage(sc: PicScene): PicScene {
+export function stage(sc: PicScene): PicScene {
   const cast = [...(sc.mo ?? [])].map((m, i) => ({ m, i })).sort((a, b) => a.m.x - b.m.x);
   if (!cast.length) return sc;
   const c = sc.focus ?? cast.reduce((t, { m }) => t + m.x, 0) / cast.length;
   const xs = [0];
   for (let k = 1; k < cast.length; k++) {
     const kids = isKid(cast[k - 1]!.m.who) && isKid(cast[k]!.m.who);
-    xs.push(xs[k - 1]! + (kids ? (cast.length === 2 ? 125 : 105) : 120));
+    const adam = cast[k - 1]!.m.who === "adam" || cast[k]!.m.who === "adam";
+    xs.push(xs[k - 1]! + (kids ? (cast.length === 2 ? 125 : 105) : adam ? 108 : 120));
   }
   const shift = c - xs[xs.length - 1]! / 2;
   const mo = [...sc.mo!];

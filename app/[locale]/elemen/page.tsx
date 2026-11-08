@@ -12,6 +12,8 @@ import { getBookPages } from "@/lib/cerita/picture-books";
 import { ADAPTED } from "@/lib/cerita/picture-books-adapted";
 import { getAllCatatan } from "@/lib/content/catatan";
 import { PHOTO_BG } from "@/components/story-art/photo-bg";
+import { COURT_KINDS, COURT_LABEL } from "@/components/story-art/courts";
+import { StoryArt } from "@/components/story-art/StoryArt";
 import { asset } from "@/lib/i18n/config";
 
 /**
@@ -90,6 +92,29 @@ export default async function ElementPage({ params }: { params: Promise<{ locale
           </p>
         </header>
         <ElementLibrary locale={l} rows={rows} />
+
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl font-medium text-ink">{id ? "Lapangan tenis" : "Tennis courts"} 🎾</h2>
+          <p className="mt-1 max-w-3xl text-sm text-whisper">
+            {id
+              ? "Latar lapangan untuk cerita Kak Adam. Semua memakai perspektif yang sama, jadi bola, ayunan, dan net selalu pas. Siang, senja, malam (lampu sorot menyala), dan hujan otomatis."
+              : "Court backgrounds for the Kak Adam stories. They share one perspective, so balls, swings and the net always line up. Day, dusk, night (floodlights on) and rain are automatic."}
+          </p>
+          <ul className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {COURT_KINDS.map((k) => (
+              <li key={k} className="overflow-hidden rounded-2xl bg-white ring-1 ring-hairline">
+                <div className="grid grid-cols-2 gap-px bg-hairline">
+                  <StoryArt scene={{ bg: k, at: 0, alt: { id: k, en: k } } as never} className="block aspect-video w-full" />
+                  <StoryArt scene={{ bg: k, time: "night", at: 0, alt: { id: k, en: k } } as never} className="block aspect-video w-full" />
+                </div>
+                <div className="px-3 py-2">
+                  <p className="font-mono text-sm font-bold text-ink">{`bg: "${k}"`}</p>
+                  <p className="text-xs text-whisper">{COURT_LABEL[k][l]}{bgs.get(k) ? ` · ${id ? `${bgs.get(k)}× dipakai` : `used ${bgs.get(k)}×`}` : ""}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
 
         <section className="mt-14">
           <h2 className="font-serif text-2xl font-medium text-ink">{id ? "Latar dunia Baby Mo" : "Baby Mo world backgrounds"} 🏠</h2>
