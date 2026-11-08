@@ -298,5 +298,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       });
     }
   }
+  // the public privacy policy (also entered in App Store Connect)
+  out.push({ url: `${siteUrl}/privacy/`, changeFrequency: "yearly", priority: 0.3 });
   return out;
 }
