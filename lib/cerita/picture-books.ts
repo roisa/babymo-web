@@ -3,6 +3,7 @@ import type { Catatan, CatatanAnchor } from "@/lib/content/types";
 import type { ArtScene } from "./illus-types";
 import { ADAPTED } from "./picture-books-adapted";
 import { FAMILY_BOOKS } from "./picture-books-family";
+import { PLAYROOM_BOOKS } from "./picture-books-playroom";
 
 /**
  * Full picture books: every page is one big illustration with a short bit
@@ -299,6 +300,7 @@ const BOOKS: PictureBook[] = [
     ],
   },
   ...FAMILY_BOOKS,
+  ...PLAYROOM_BOOKS,
 ];
 
 /* ───────── helpers ───────── */

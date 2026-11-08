@@ -1,7 +1,7 @@
 import type { ComponentType } from "react";
 import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
-import { Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
+import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
 /**
@@ -70,5 +70,6 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   blocksfall: { draw: BlocksFall, group: "play", note: "Tower fallen over." },
   drawing: { draw: Drawing, group: "play", note: "Child's crayon drawing, taped." },
   quran: { draw: Quran, group: "faith", note: "The Qur'an open on a rehal stand, glowing." },
+  ladderup: { draw: LadderUp, group: "play", note: "Standing step ladder for climbing scenes." },
   minaret: { draw: Minaret, group: "faith", note: "Mosque minaret, adzan waves." },
 };
