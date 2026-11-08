@@ -16,12 +16,12 @@ import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
 export const metadata: Metadata = {
   title: "Baby Mo — Aplikasi Belajar Islam untuk Anak · Islamic learning app for kids",
   description:
-    "Baby Mo for iPhone and iPad: 11 Islamic games, daily du'as with Arabic audio, a step-by-step prayer and wudhu guide, memory and matching games, prayer times and a bedtime routine for children aged 2–8. Free, no ads, no account, works offline.",
+    "Baby Mo for iPhone and iPad: 12 Islamic games, daily du'as with Arabic audio, a step-by-step prayer and wudhu guide, the 28 hijaiyah letters, memory and matching games, prayer times and a bedtime routine for children aged 2–8. Free, no ads, no account, works offline.",
   alternates: { canonical: "https://babymo.id/app/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Baby Mo — Belajar Islam sambil bermain",
-    description: "11 game islami, doa harian dengan audio Arab, panduan sholat & wudhu, rutinitas tidur. Gratis, tanpa iklan, tanpa akun.",
+    description: "12 game islami, doa harian dengan audio Arab, panduan sholat & wudhu, huruf hijaiyah, rutinitas tidur. Gratis, tanpa iklan, tanpa akun.",
     url: "https://babymo.id/app/",
     images: [{ url: "https://babymo.id/app-store/app-hub-v1.webp" }],
   },
@@ -46,9 +46,9 @@ const HERO_SLIDES: { src: string; t: Bi }[] = [
 ];
 
 const STATS: { n: string; t: Bi }[] = [
-  { n: "11", t: { id: "game islami", en: "Islamic games" } },
+  { n: "12", t: { id: "game islami", en: "Islamic games" } },
   { n: "6", t: { id: "doa harian + audio", en: "daily du'as + audio" } },
-  { n: "7", t: { id: "level Memory Match", en: "Memory Match levels" } },
+  { n: "28", t: { id: "huruf hijaiyah", en: "hijaiyah letters" } },
   { n: "10", t: { id: "langkah wudhu", en: "wudhu steps" } },
   { n: "2", t: { id: "bahasa: ID & EN", en: "languages: ID & EN" } },
   { n: "0", t: { id: "iklan, akun, pelacak", en: "ads, accounts, trackers" } },
@@ -99,6 +99,16 @@ const SHOWCASE: { shot: string; kicker: Bi; title: Bi; points: Bi[] }[] = [
     ],
   },
   {
+    shot: "/app-store/app-huruf-v2.webp",
+    kicker: { id: "Huruf Hijaiyah", en: "Hijaiyah letters" },
+    title: { id: "Dari alif sampai ya, dengan suara", en: "From alif to ya, with sound" },
+    points: [
+      { id: "Huruf Hijaiyah: 28 huruf dalam 9 pelajaran bertahap — dengar suaranya, lalu kuis dan bintang.", en: "Hijaiyah Letters: 28 letters in 9 step-by-step lessons — hear each one, then a quiz and stars." },
+      { id: "Pulau Hijaiyah: jelajahi pulau kotak-kotak bersama Baby Mo dan temukan 28 huruf yang tersembunyi.", en: "Hijaiyah Island: explore a blocky island with Baby Mo and find the 28 hidden letters." },
+      { id: "Kata Islam: susun huruf menjadi kata Arab pertama.", en: "Islamic Words: put letters together into first Arabic words." },
+    ],
+  },
+  {
     shot: "/app-store/app-memory-v1.webp",
     kicker: { id: "Game seru", en: "Fun games" },
     title: { id: "Game seru yang melatih ingatan", en: "Fun games that train young minds" },
@@ -122,7 +132,7 @@ const LITTLE: { icon: string; t: Bi; d: Bi }[] = [
 const AGES: { age: string; color: string; t: Bi; games: Bi }[] = [
   { age: "2–3", color: "#FFB627", t: { id: "Kenalan & bermain", en: "Meet & play" }, games: { id: "Kenalan dengan Baby Mo (puzzle), Cari Baby Mo, Memory Match mudah, Dreamtime", en: "Meet Baby Mo (puzzle), Find Baby Mo, easy Memory Match, Dreamtime" } },
   { age: "3–5", color: "#3FA57A", t: { id: "Doa & kebiasaan baik", en: "Du'as & good habits" }, games: { id: "Doa Harian, Dua Journey, Wudhu Bareng Mo, Puzzle Kalimat Thayyibah", en: "Daily Du'as, Dua Journey, Wudhu with Mo, Kind Words puzzle" } },
-  { age: "5–8", color: "#5AA9E6", t: { id: "Ibadah & tantangan", en: "Worship & challenges" }, games: { id: "Sholat Bareng Mo, Wudhu Bareng Mo, Memory Match level sulit, Forehand Beat", en: "Pray with Mo, Wudhu with Mo, harder Memory Match levels, Forehand Beat" } },
+  { age: "5–8", color: "#5AA9E6", t: { id: "Membaca & beribadah", en: "Reading & worship" }, games: { id: "Huruf Hijaiyah, Pulau Hijaiyah, Kata Islam, Sholat Bareng Mo, Memory Match level sulit", en: "Hijaiyah Letters, Hijaiyah Island, Islamic Words, Pray with Mo, harder Memory Match levels" } },
 ];
 
 const NOS: Bi[] = [
@@ -380,8 +390,8 @@ export default function AppMarketingPage() {
                 </h1>
                 <p className="lede">
                   <B t={{
-                    id: "11 game islami, doa harian dengan suara Arab, panduan wudhu & sholat, game ingatan, dan rutinitas tidur — untuk anak 2–8 tahun, dimainkan bersama Ayah dan Bunda.",
-                    en: "11 Islamic games, daily du'as with Arabic audio, wudhu & prayer guides, memory games and a bedtime routine — for children aged 2–8, to enjoy together with their parents.",
+                    id: "12 game islami, doa harian dengan suara Arab, panduan wudhu & sholat, huruf hijaiyah, game ingatan, dan rutinitas tidur — untuk anak 2–8 tahun, dimainkan bersama Ayah dan Bunda.",
+                    en: "12 Islamic games, daily du'as with Arabic audio, wudhu & prayer guides, the hijaiyah letters, memory games and a bedtime routine — for children aged 2–8, to enjoy together with their parents.",
                   }} />
                 </p>
                 <div className="cta">
