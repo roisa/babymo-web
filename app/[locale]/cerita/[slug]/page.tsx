@@ -24,6 +24,7 @@ import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
 import { getParentingBySlug } from "@/lib/content/parenting";
 import { labelize } from "@/lib/labelize";
+import { seriesOf } from "@/lib/cerita/series";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -88,9 +89,13 @@ export default async function CatatanDetail({
   if (isStory) {
     const stories = getAllCatatan().filter((c) => c.kind === "story");
     const i = stories.findIndex((c) => c.slug === slug);
-    const nx = i >= 0 && stories.length > 1 ? stories[(i + 1) % stories.length] : null;
+    // inside a series, the next book of the series comes first
+    const inSeries = seriesOf(slug)?.next;
+    const nx = (inSeries ? stories.find((c) => c.slug === inSeries) : null) ?? (i >= 0 && stories.length > 1 ? stories[(i + 1) % stories.length] : null);
     if (nx) nextStory = { href: pathFor(l, `/cerita/${nx.slug}`), title: nx.title[l] };
   }
+  const place = isStory ? seriesOf(slug) : null;
+  const titleOf = (s2: string | null) => (s2 ? getAllCatatan().find((c) => c.slug === s2)?.title[l] ?? null : null);
 
   return (
     <>
@@ -131,6 +136,29 @@ export default async function CatatanDetail({
           <h1 className="font-display text-[36px] font-medium leading-[1.05] text-ink sm:text-[46px]">
             {n.title[l]}
           </h1>
+          {place && (
+            <nav aria-label={place.series.title[l]} className="series-strip mt-4">
+              <a href={pathFor(l, `/cerita/seri/${place.series.key}`)} className="series-strip-name">
+                <span aria-hidden>{place.series.emoji}</span> {place.series.title[l]}
+              </a>
+              <span className="series-strip-count">
+                {l === "id" ? `Buku ${place.index + 1} dari ${place.series.books.length}` : `Book ${place.index + 1} of ${place.series.books.length}`}
+              </span>
+              <span className="series-strip-dots" aria-hidden>
+                {place.series.books.map((b, k) => (
+                  <i key={b} className={k === place.index ? "is-on" : k < place.index ? "is-past" : undefined} />
+                ))}
+              </span>
+              <span className="series-strip-nav">
+                {place.prev && (
+                  <a href={pathFor(l, `/cerita/${place.prev}`)} rel="prev" title={titleOf(place.prev) ?? undefined}>← {l === "id" ? "Sebelumnya" : "Previous"}</a>
+                )}
+                {place.next && (
+                  <a href={pathFor(l, `/cerita/${place.next}`)} rel="next" title={titleOf(place.next) ?? undefined}>{l === "id" ? "Berikutnya" : "Next"} →</a>
+                )}
+              </span>
+            </nav>
+          )}
           {art && art[0] ? (
             <figure className="mt-6">
               <div className="aspect-[16/9] overflow-hidden rounded-[22px] border border-hairline bg-sky-soft shadow-[0_18px_40px_-24px_rgba(0,0,0,0.45)]">

@@ -2,7 +2,7 @@
   "name": "babymo-web",
   "version": "0.1.0",
   "private": true,
-  "description": "Baby Mo — Islamic parenting knowledge platform for Indonesian Muslim families.",
+  "description": "Baby Mo \u2014 Islamic parenting knowledge platform for Indonesian Muslim families.",
   "scripts": {
     "dev": "next dev",
     "og": "node scripts/generate-og.mjs",
@@ -15,7 +15,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "check:stories": "tsx scripts/check-stories.ts"
   },
   "dependencies": {
     "adhan": "^4.4.3",
@@ -31,6 +32,7 @@
     "@types/react-dom": "19.0.3",
     "postcss": "8.5.1",
     "tailwindcss": "4.3.0",
+    "tsx": "^4.19.2",
     "typescript": "5.7.3"
   },
   "engines": {

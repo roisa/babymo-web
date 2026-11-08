@@ -1428,3 +1428,32 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 /* Element library (team page): optional still mode */
 .el-still .story-art [class^="sa-"], .el-still .story-art [class*=" sa-"],
 .story-art.el-measure [class^="sa-"], .story-art.el-measure [class*=" sa-"] { animation: none !important; }
+
+/* ── Story series strip (cerita/[slug]) ── */
+.series-strip{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;padding:10px 14px;border-radius:18px;background:var(--color-paper-2,#F4F2EC);border:1px solid var(--color-hairline,#E5E2D9);font-size:14px}
+.series-strip-name{font-weight:800;color:var(--color-ink,#0E1213);text-decoration:none}
+.series-strip-name:hover{text-decoration:underline}
+.series-strip-count{color:var(--color-whisper,#6B7068);font-weight:600}
+.series-strip-dots{display:flex;flex-wrap:wrap;gap:4px;flex-basis:100%}
+.series-strip-dots i{width:9px;height:9px;border-radius:50%;background:var(--color-hairline,#E5E2D9)}
+.series-strip-dots i.is-past{background:#9FD3B4}
+.series-strip-dots i.is-on{background:#1E8C53;transform:scale(1.25)}
+.series-strip-nav{display:flex;gap:8px;margin-left:auto}
+.series-strip-nav a{padding:5px 12px;border-radius:999px;background:var(--color-paper,#FBFAF6);border:1px solid var(--color-hairline,#E5E2D9);font-weight:700;font-size:13px;color:var(--color-ink,#0E1213);text-decoration:none}
+.series-go{display:inline-flex;align-items:center;gap:6px;padding:11px 18px;border-radius:999px;background:#1E8C53;color:#fff;font-weight:800;font-size:15px;text-decoration:none;box-shadow:0 6px 16px -8px rgba(30,140,83,.6)}
+.series-done-mark{display:none;margin-left:4px;color:#1E8C53}
+.is-done .series-done-mark{display:inline}
+.is-done{border-color:#9FD3B4 !important}
+
+/* ── Shelf filters + series row (cerita) ── */
+.shelf-chips{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin-top:6px}
+.shelf-chips-label{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.08em;color:var(--color-whisper,#6B7068);margin-right:4px}
+.shelf-chip{padding:7px 13px;border-radius:999px;border:1.5px solid var(--color-hairline,#E5E2D9);background:var(--color-paper,#FBFAF6);font-weight:700;font-size:13.5px;color:var(--color-ink,#0E1213);cursor:pointer;min-height:36px}
+.shelf-chip.is-on{background:var(--sec-deep,#1E8C53);border-color:var(--sec-deep,#1E8C53);color:#fff}
+[data-shelf-item].is-read .book-cover::after{content:"⭐";position:absolute;left:8px;top:8px;font-size:18px;filter:drop-shadow(0 1px 2px rgba(0,0,0,.3))}
+.series-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:14px;overflow-x:auto;padding:4px 2px 12px;scroll-snap-type:x mandatory}
+.series-card{scroll-snap-align:start;display:flex;flex-direction:column;gap:6px;padding:16px;border-radius:22px;border:1.5px solid var(--color-hairline,#E5E2D9);background:var(--color-paper,#FBFAF6);text-decoration:none;color:var(--color-ink,#0E1213)}
+.series-card:hover{border-color:var(--sec-deep,#1E8C53)}
+.series-card-emoji{font-size:30px;line-height:1}
+.series-card-title{font-weight:800;font-size:17px;line-height:1.25}
+.series-card-meta{font-size:13px;color:var(--color-whisper,#6B7068);font-weight:600}
