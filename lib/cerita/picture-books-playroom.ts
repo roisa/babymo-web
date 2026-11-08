@@ -80,7 +80,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Lalu Abi mematikan lampu. Ruangan jadi gelap, hanya bintang-bintang yang berkelip. \"Ini luar angkasa malam,\" bisik Abi.", en: "Then Abi switched off the light. The room went dark, and only the stars twinkled. \"This is space at night,\" whispered Abi." },
-        scene: { focus: 390, bg: "play-space", time: "night", mo: [{ pose: "pose-33", x: 330 }, { who: "ais", pose: "point-star", x: 470 }], fx: ["stars"] },
+        scene: { focus: 380, bg: "play-space", time: "night", mo: [{ who: "ayah", pose: "calm-sit", x: 260, move: "still" }, { pose: "pose-33", x: 380 }, { who: "ais", pose: "point-star", x: 480 }], fx: ["stars"] },
       },
       {
         text: { id: "Mo memeluk lututnya. \"Ais… di luar angkasa jauh sekali dari rumah. Kalau kita tersesat, siapa yang tahu kita di mana?\"", en: "Mo hugged his knees. \"Ais… space is so far from home. If we get lost, who will know where we are?\"" },
@@ -102,7 +102,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Lampu menyala lagi. \"Pusat kendali memanggil kapten dan navigator!\" panggil Umi dari pintu. \"Saatnya mendarat — makan malam sudah siap!\"", en: "The light came back on. \"Mission control calling the captain and navigator!\" Umi called from the door. \"Time to land — dinner is ready!\"" },
-        scene: { focus: 370, bg: "play-space", mo: [{ who: "umi", pose: "welcome-walk", x: 260 }, { pose: "run", x: 410, move: "hop" }, { who: "ais", pose: "run", x: 510, move: "hop" }] },
+        scene: { focus: 370, bg: "play-space", time: "dusk", mo: [{ who: "umi", pose: "welcome-walk", x: 260 }, { pose: "run", x: 410, move: "hop" }, { who: "ais", pose: "run", x: 510, move: "hop" }] },
       },
       {
         text: { id: "Malamnya, Mo mengintip langit dari kamar. Bintang yang asli jauh lebih jauh dari roket kardusnya. Tapi Mo tahu: di mana pun ia berada, Allah dekat.", en: "That night, Mo peeked at the sky from his room. The real stars were much farther than his cardboard rocket. But Mo knew: wherever he was, Allah was near." },
@@ -311,7 +311,7 @@ const RAW: PictureBook[] = [
         scene: { focus: 390, bg: "play-train", mo: [{ who: "adam", pose: "clap-cheer", x: 270 }, { pose: "yeyy", x: 410, move: "hop" }, { who: "ais", pose: "jump-joy", x: 530, move: "hop" }], fx: ["confetti"] },
       },
       {
-        text: { id: "Umi mengintip dari pintu. \"Masya Allah, keretanya rapi sekali.\" \"Kak Adam yang mengajari gantian!\" kata Ais. \"Tapi Mo yang memberi duluan,\" kata Kak Adam.", en: "Umi peeked in at the door. \"Masya Allah, what a tidy train.\" \"Kak Adam taught us to take turns!\" said Ais. \"But Mo was the first to give,\" said Kak Adam." },
+        text: { id: "Umi mengintip dari pintu. \"Masya Allah, keretanya rapi sekali.\" \"Kak Adam yang mengajari gantian!\" jawab Mo. \"Tapi Mo yang memberi duluan,\" kata Kak Adam.", en: "Umi peeked in at the door. \"Masya Allah, what a tidy train.\" \"Kak Adam taught us to take turns!\" said Mo. \"But Mo was the first to give,\" said Kak Adam." },
         quote: { id: "\"…Dan tolong-menolonglah kamu dalam (mengerjakan) kebajikan dan takwa…\" (QS. Al-Ma'idah: 2)", en: "\"…And help one another in goodness and righteousness…\" (Qur'an, Al-Ma'idah 5:2)" },
         scene: { focus: 370, bg: "play-train", mo: [{ who: "umi", pose: "touched-cheek", x: 260 }, { pose: "pose-35", x: 400 }, { who: "adam", pose: "hug-side", x: 520 }], fx: ["hearts"] },
       },
@@ -418,7 +418,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Sore itu, Umi pulang membawa banyak belanjaan. Mo dan Ais berpandangan. \"Darurat! Umi kerepotan!\" Mereka berlari membantu.", en: "That afternoon, Umi came home with lots of shopping. Mo and Ais looked at each other. \"Emergency! Umi needs help!\" They ran to help." },
-        scene: { focus: 380, bg: "garden", mo: [{ who: "umi", pose: "groceries", x: 260 }, { pose: "run", x: 410, move: "hop" }, { who: "ais", pose: "run", x: 520, move: "hop" }] },
+        scene: { focus: 380, bg: "garden", time: "dusk", mo: [{ who: "umi", pose: "groceries", x: 260 }, { pose: "run", x: 410, move: "hop" }, { who: "ais", pose: "run", x: 520, move: "hop" }] },
       },
       {
         text: { id: "Mo membawa kantong sayur, Ais membawa roti. \"Terima kasih, pemadam-pemadam kecil Umi,\" kata Umi. Ternyata menolong itu rasanya hangat sekali.", en: "Mo carried the vegetable bag and Ais carried the bread. \"Thank you, my little firefighters,\" said Umi. Helping felt so warm inside." },
@@ -487,7 +487,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "\"Lalu kita tunggu,\" kata Abi. \"Disiram, dijaga dari burung dan hama, sampai empat bulan.\" \"EMPAT BULAN?!\" seru Mo.", en: "\"Then we wait,\" said Abi. \"Watering it, guarding it from birds and bugs, for four months.\" \"FOUR MONTHS?!\" cried Mo." },
-        scene: { focus: 390, bg: "play-farm", props: [{ k: "paddy", x: 490, s: 0.7 }], mo: [{ pose: "pose-31", x: 340 }, { who: "ais", pose: "watering-can", x: 440, move: "still" }] },
+        scene: { focus: 380, bg: "play-farm", props: [{ k: "paddy", x: 500, s: 0.7 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 260 }, { pose: "pose-31", x: 380 }, { who: "ais", pose: "watering-can", x: 480, move: "still" }] },
       },
       {
         text: { id: "Tugas kedua: memberi makan sapi. Moooo! Sapi butuh rumput dan air setiap hari, baru bisa memberi susu.", en: "Second job: feeding the cow. Mooooo! A cow needs grass and water every day before she can give milk." },
@@ -495,7 +495,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Tugas ketiga: mengambil telur. Ais menemukan satu… dua… tiga butir! \"Ayamnya harus makan dan minum dulu, baru bisa bertelur,\" kata Abi.", en: "Third job: collecting eggs. Ais found one… two… three! \"The hens have to eat and drink first before they can lay,\" said Abi." },
-        scene: { focus: 390, bg: "play-farm", props: [{ k: "egg", x: 450, y: 380, s: 0.7 }, { k: "rooster", x: 520, s: 0.6 }], mo: [{ who: "ais", pose: "excited-fists", x: 340 }, { pose: "pose-37", x: 450 }] },
+        scene: { focus: 380, bg: "play-farm", props: [{ k: "egg", x: 450, y: 380, s: 0.7 }, { k: "rooster", x: 520, s: 0.6 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 260 }, { who: "ais", pose: "excited-fists", x: 380 }, { pose: "pose-37", x: 480 }] },
       },
       {
         text: { id: "Tugas keempat: memanen wortel. Mo menarik sekuat tenaga. Hup… hup… PLOP! Ia jatuh terduduk sambil memegang wortel besar.", en: "Fourth job: pulling up carrots. Mo pulled with all his might. Heave… heave… PLOP! He landed on his bottom holding a huge carrot." },
@@ -614,7 +614,7 @@ const RAW: PictureBook[] = [
         scene: { focus: 370, bg: "play-underwater", time: "night", props: [{ k: "flashlight", x: 480, y: 360, s: 0.7 }], mo: [{ who: "ayah", pose: "teach-book-sit", x: 270 }, { pose: "pose-06", x: 400, move: "still" }] },
       },
       {
-        text: { id: "\"Badai datang, dan Nabi Yunus ditelan ikan yang sangat besar. Di dalamnya gelap sekali — gelap malam, gelap laut, dan gelap perut ikan.\"", en: "\"A storm came, and Prophet Yunus was swallowed by an enormous fish. Inside it was so dark — the dark of night, the dark of the sea, and the dark of the fish's belly.\"" },
+        text: { id: "\"Di tengah laut, Nabi Yunus jatuh ke dalam air dan ditelan ikan yang sangat besar. Di dalamnya gelap sekali — gelap malam, gelap laut, dan gelap perut ikan.\"", en: "\"Out at sea, Prophet Yunus ended up in the water and was swallowed by an enormous fish. Inside it was so dark — the dark of night, the dark of the sea, and the dark of the fish's belly.\"" },
         scene: { focus: 390, bg: "play-underwater", time: "night", props: [{ k: "whale", x: 480, y: 250, s: 0.6 }], mo: [{ pose: "pose-31", x: 360 }], fx: ["bubbles"] },
       },
       {
@@ -1020,7 +1020,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Abi mengisi baskom dengan air sungguhan. Mo meniup… blub-blub-blub! Gelembung-gelembung muncul. Mo tertawa kecil.", en: "Abi filled a basin with real water. Mo blew… blub-blub-blub! Bubbles popped up. Mo giggled." },
-        scene: { focus: 390, bg: "play-pool", props: [{ k: "bowl", x: 470, y: 400, s: 0.7 }], mo: [{ pose: "pose-03", x: 370 }], fx: ["bubbles"] },
+        scene: { focus: 380, bg: "play-pool", props: [{ k: "bowl", x: 470, y: 400, s: 0.7 }], mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 270 }, { pose: "pose-03", x: 400 }], fx: ["bubbles"] },
       },
       {
         text: { id: "\"Kalau kamu meniup, air tidak bisa masuk hidung,\" kata Abi. \"Hidungmu punya penjaga: napasmu sendiri.\"", en: "\"When you're blowing out, water can't get up your nose,\" said Abi. \"Your nose has a guard: your own breath.\"" },
@@ -1166,7 +1166,7 @@ const RAW: PictureBook[] = [
         scene: { focus: 390, bg: "play-airport", props: [{ k: "plane", x: 480, y: 220, s: 0.6 }], mo: [{ pose: "pose-37", x: 380 }], fx: ["sparkle"] },
       },
       {
-        text: { id: "Nenek menunggu di pintu kedatangan dengan tangan terbuka. \"Cucu-cucu Nenek sudah sampai! Alhamdulillah!\"", en: "Grandma was waiting at arrivals with open arms. \"My grandchildren are here! Alhamdulillah!\"" },
+        text: { id: "Sampai di rumah Nenek, Nenek sudah menunggu di depan pintu dengan tangan terbuka. \"Cucu-cucu Nenek sudah sampai! Alhamdulillah!\"", en: "At Grandma's house, Grandma was waiting at the door with open arms. \"My grandchildren are here! Alhamdulillah!\"" },
         scene: { focus: 380, bg: "street", mo: [{ pose: "run", x: 380, move: "hop" }, { who: "ais", pose: "run", x: 490, move: "hop" }], fx: ["hearts"] },
       },
       {
@@ -1574,7 +1574,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Sore itu Abi mengajak si kembar berjalan kaki ke warung. Di depan pintu, Mo tiba-tiba berhenti. \"Abi, lupa sesuatu!\"", en: "That afternoon Abi took the twins on a walk to the corner shop. At the front door, Mo suddenly stopped. \"Abi, we forgot something!\"" },
-        scene: { focus: 380, bg: "garden", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }, { pose: "pose-24", x: 470 }] },
+        scene: { focus: 380, bg: "garden", time: "dusk", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }, { pose: "pose-24", x: 470 }] },
       },
       {
         text: { id: "\"Doa keluar rumah!\" Mereka membacanya bersama sebelum melangkah.", en: "\"The dua for leaving home!\" They said it together before stepping out." },
@@ -1693,7 +1693,7 @@ const RAW: PictureBook[] = [
       },
       {
         text: { id: "Sore itu si kembar memasukkan uang jajan ke kotak sedekah pembangunan masjid. Klinting! \"Sebagian batanya dari kita, ya, Abi?\"", en: "That afternoon the twins put their pocket money in the mosque building fund box. Clink! \"Some of the bricks are from us, right, Abi?\"" },
-        scene: { focus: 380, bg: "mosque", props: [{ k: "coins", x: 470, s: 0.6 }], mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 270 }, { pose: "thank-you", x: 390 }, { who: "ais", pose: "heart-hands", x: 490 }], fx: ["hearts"] },
+        scene: { focus: 380, bg: "mosque", time: "dusk", props: [{ k: "coins", x: 470, s: 0.6 }], mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 270 }, { pose: "thank-you", x: 390 }, { who: "ais", pose: "heart-hands", x: 490 }], fx: ["hearts"] },
       },
       {
         text: { id: "Malamnya, masjid balok itu masih berdiri di ruang main. Si kembar sepakat tidak membongkarnya sampai besok. Karena masjid itu… milik mereka berdua.", en: "That night the block mosque was still standing in the playroom. The twins agreed not to take it down until tomorrow. Because it belonged… to both of them." },
