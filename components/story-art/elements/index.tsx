@@ -3,6 +3,7 @@ import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { BallGreen, BallHopper, BallMachine, BallOrange, BallRed, BallTube, CourtBrush, Medal, MiniNet, Racket, RacketBag, SportBottle, UmpireChairProp } from "./tennis";
+import { Bedug, DatesWater, Fanous, IftarTable, Ketupat, KolakBowl, Obor, RamadanCalendar0, RamadanCalendar1, RamadanCalendarHalf, RamadanCalendarFull, RamadanGarland, SahurTray, Tasbih, ZakatRice } from "./ramadan";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
 /**
@@ -14,7 +15,7 @@ import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Pud
  * without touching any story data. The team gallery (/elemen) lists every
  * prop and marks which ones are already redrawn.
  */
-export type ElementGroup = "nature" | "sky" | "critters" | "home" | "food" | "play" | "outdoor" | "sea" | "tennis" | "faith" | "symbols";
+export type ElementGroup = "nature" | "sky" | "critters" | "home" | "food" | "play" | "outdoor" | "sea" | "tennis" | "ramadan" | "faith" | "symbols";
 
 export interface ArtElement {
   draw: ComponentType;
@@ -88,4 +89,19 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   medal: { draw: Medal, group: "tennis", note: "Finisher's medal on a ribbon." },
   courtbrush: { draw: CourtBrush, group: "tennis", note: "Clay-court drag brush." },
   umpirechair: { draw: UmpireChairProp, group: "tennis", note: "Umpire chair." },
+  fanous: { draw: Fanous, group: "ramadan", note: "Ramadan lantern (fanous) with coloured glass, glows." },
+  garland: { draw: RamadanGarland, group: "ramadan", note: "Crescent-and-star garland, place high (y ≈ 130)." },
+  obor: { draw: Obor, group: "ramadan", note: "Two bamboo torches for takbiran, flames flicker." },
+  bedug: { draw: Bedug, group: "ramadan", note: "Mosque drum on its stand, beater swings." },
+  tasbih: { draw: Tasbih, group: "ramadan", note: "Prayer beads with a tassel." },
+  kolak: { draw: KolakBowl, group: "ramadan", note: "Steaming bowl of kolak (takjil)." },
+  iftar: { draw: IftarTable, group: "ramadan", note: "Iftar table: dates, kolak, fried snacks, water." },
+  sahur: { draw: SahurTray, group: "ramadan", note: "Sahur tray: rice and egg, milk, banana." },
+  zakat: { draw: ZakatRice, group: "ramadan", note: "Rice sack for zakat fitrah with a scoop." },
+  ramcal: { draw: RamadanCalendar0, group: "ramadan", note: "Ramadan wall calendar, empty — day 1 waiting." },
+  ramcal1: { draw: RamadanCalendar1, group: "ramadan", note: "Ramadan calendar with the first star." },
+  ramcalhalf: { draw: RamadanCalendarHalf, group: "ramadan", note: "Ramadan calendar, 15 stars (halfway)." },
+  ramcalfull: { draw: RamadanCalendarFull, group: "ramadan", note: "Ramadan calendar, all 30 stars." },
+  dates: { draw: DatesWater, group: "ramadan", note: "Bowl of dates with a glass of water." },
+  ketupat: { draw: Ketupat, group: "ramadan", note: "Three woven ketupat hanging, sway." },
 };

@@ -183,9 +183,24 @@ export const SERIES: StorySeries[] = [
       "antrian-es-krim-yang-panjang",
       "tiga-bola-es-krim",
       "pertama-kali-ke-masjid",
-      "tarawih-pertama-baby-mo",
       "bismillah-dulu",
       "berbagi-payung",
+    ],
+  },
+  {
+    key: "ramadan-si-kembar",
+    emoji: "🏮",
+    title: { id: "Ramadan Si Kembar", en: "The Twins' Ramadan" },
+    blurb: {
+      id: "Dari lentera pertama sampai pagi Lebaran — sahur, puasa bedug, berbuka, tarawih, zakat, dan malam takbiran bersama Mo dan Ais.",
+      en: "From the first lantern to Eid morning — sahur, a half-day fast, iftar, tarawih, zakat and the night of takbir with Mo and Ais.",
+    },
+    books: [
+      "lampu-ramadan-si-kembar",
+      "puasa-bedug-si-kembar",
+      "menunggu-bedug-maghrib",
+      "tarawih-pertama-baby-mo",
+      "malam-takbiran-si-kembar",
     ],
   },
 ];

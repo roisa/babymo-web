@@ -280,7 +280,21 @@ export type ArtProp =
   | "flashlight"
   | "telescope"
   | "hive"
-  | "beebox";
+  | "beebox"
+  /* Ramadan & Eid */
+  | "fanous"
+  | "garland"
+  | "obor"
+  | "bedug"
+  | "tasbih"
+  | "kolak"
+  | "iftar"
+  | "sahur"
+  | "zakat"
+  | "ramcal"
+  | "ramcal1"
+  | "ramcalhalf"
+  | "ramcalfull";
 
 export type ArtFx =
   | "rain"
