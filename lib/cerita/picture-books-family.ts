@@ -175,7 +175,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Bayangkan ada rak di langit,\" kata Abi. \"Angkat bolanya pelan-pelan, lalu taruh di rak itu. Jangan dilempar — ditaruh.\"", en: "\"Imagine a shelf in the sky,\" said Abi. \"Lift the ball gently and place it on that shelf. Don't throw it — place it.\"" },
-        scene: { focus: 390, bg: "court", props: [{ k: "balltoss", x: 440, y: 240 }], mo: [{ who: "adam", pose: "tennis-serve-toss", x: 390, move: "still" }], fx: ["sparkle"] },
+        scene: { focus: 330, bg: "court", props: [{ k: "balltoss", x: 440, y: 240 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "adam", pose: "tennis-serve-toss", x: 390, move: "still" }], fx: ["sparkle"] },
       },
       {
         text: { id: "Naik… berhenti… turun. Bolanya jatuh kembali ke tangannya. Naik… berhenti… turun. Lagi dan lagi.", en: "Up… pause… down. The ball dropped back into his hand. Up… pause… down. Again and again." },
@@ -261,7 +261,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Pegang raketnya dengan dua tangan,\" kata Abi, \"seperti memegang segelas susu penuh. Kuat, tapi hati-hati.\"", en: "\"Hold the racket with both hands,\" said Abi, \"like holding a full glass of milk. Firm, but careful.\"" },
-        scene: { focus: 380, bg: "court", props: [{ k: "milk", x: 500 }], mo: [{ who: "adam", pose: bh(1), x: 390 }], fx: ["sparkle"] },
+        scene: { focus: 330, bg: "court", props: [{ k: "milk", x: 500 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "adam", pose: bh(1), x: 390 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Baby Mo langsung mencoba dengan gelas susunya. Pegang dua tangan… goyang sedikit… \"Nggak tumpah!\"", en: "Baby Mo tried it straight away with his cup of milk. Two hands… a little wobble… \"Didn't spill!\"" },
@@ -645,7 +645,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Bisik apa saja?\" tanya Abi. Baby Mo menghitung dengan jari: \"Minta Umi sehat. Minta Ais nggak ambil mainanku. Minta kucing tetangga cepat punya anak…\"", en: "\"Whispering what?\" asked Abi. Baby Mo counted on his fingers: \"For Umi to be healthy. For Ais not to take my toys. For the neighbour's cat to have kittens soon…\"" },
-        scene: { bg: "living", time: "night", props: [{ k: "kitten", x: 490 }, { k: "heart", x: 440, y: 230, s: 0.6 }], mo: [{ pose: "idea", x: 360 }] },
+        scene: { focus: 300, bg: "living", time: "night", props: [{ k: "kitten", x: 490 }, { k: "heart", x: 440, y: 230, s: 0.6 }], mo: [{ who: "ayah", pose: "listen-sit-box", x: 240 }, { pose: "idea", x: 360 }] },
       },
       {
         text: { id: "Abi tertawa pelan dan memeluknya. \"Masya Allah. Kamu tahu, Mo? Sujud itu waktu kita paling dekat dengan Allah.\"", en: "Abi laughed softly and hugged him. \"Masha Allah. Do you know, Mo? Sujud is when we're closest to Allah.\"" },
@@ -1629,7 +1629,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Adonan masuk oven. \"Tiga puluh menit,\" kata Abi. Sambil menunggu, mereka membersihkan dapur yang bersalju.", en: "Into the oven went the batter. \"Thirty minutes,\" said Abi. While they waited, they cleaned the snowy kitchen." },
-        scene: { focus: 330, bg: "kitchen", props: [{ k: "oven", x: 520 }, { k: "brooms", x: 380 }], mo: [{ pose: "pose-23", x: 380 }, { who: "ais", pose: "thumbs-up-walk", x: 270 }] },
+        scene: { focus: 388, bg: "kitchen", props: [{ k: "oven", x: 520 }, { k: "brooms", x: 380 }], mo: [{ pose: "pose-23", x: 390, s: 205 }, { who: "ayah", pose: "check-watch", x: 300, s: 205 }, { who: "ais", pose: "thumbs-up-walk", x: 475, s: 205 }] },
       },
       {
         text: { id: "Lalu mereka membuat kartu. Baby Mo menggambar hati. Baby Ais menggambar bunga. Kak Adam menulis: UNTUK UMI TERSAYANG.", en: "Then they made a card. Baby Mo drew a heart. Baby Ais drew a flower. Kak Adam wrote: FOR OUR DEAREST UMI." },
@@ -1794,7 +1794,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Aturan nomor satu, kata Abi: \"Yang paling kecil boleh memantul-mantulkan bola tiga kali sebelum memukul.\"", en: "Rule number one, said Abi: \"The littlest players may bounce the ball three times before hitting.\"" },
-        scene: { focus: 330, bg: "court", props: [{ k: "ballbounce", x: 330 }], mo: [{ who: "ais", pose: "tennis", x: 260 }, { pose: "pose-29", x: 400 }] },
+        scene: { focus: 388, bg: "court", props: [{ k: "ballbounce", x: 330 }], mo: [{ who: "ais", pose: "tennis", x: 390, s: 205 }, { who: "ayah", pose: "idea-point-stand", x: 300, s: 205 }, { pose: "pose-29", x: 475, s: 205 }] },
       },
       {
         text: { id: "Aturan nomor dua: \"Kalau ada yang jatuh, semua berhenti dan membantu dulu.\" Aturan nomor tiga: \"Dilarang cemberut!\"", en: "Rule two: \"If anyone falls, everybody stops and helps first.\" Rule three: \"No sulking allowed!\"" },
@@ -1988,11 +1988,11 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Lihat kakimu,\" kata Abi. Di video, kaki Kak Adam diam saja seperti pohon. Hanya tangannya yang bergerak!", en: "\"Look at your feet,\" said Abi. In the video, Kak Adam's feet stayed still like a tree. Only his arm moved!" },
-        scene: { focus: 390, bg: "court", props: [{ k: "tree", x: 520, s: 0.7 }], mo: [{ who: "adam", pose: fh(3), seq: [fh(1), fh(2), fh(3), fh(4), fh(5), fh(6)], fps: 3, ghost: true, x: 390, move: "still" }] },
+        scene: { focus: 330, bg: "court", props: [{ k: "tree", x: 520, s: 0.7 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "adam", pose: fh(3), seq: [fh(1), fh(2), fh(3), fh(4), fh(5), fh(6)], fps: 3, ghost: true, x: 390, move: "still" }] },
       },
       {
         text: { id: "\"Kakiku malas!\" seru Kak Adam. Si kembar tertawa. \"Kaki malas! Kaki malas!\"", en: "\"My feet are lazy!\" cried Kak Adam. The twins giggled. \"Lazy feet! Lazy feet!\"" },
-        scene: { focus: 330, bg: "court", mo: [{ pose: "pose-03", x: 390 }, { who: "ais", pose: "giggle", x: 280 }], fx: ["sparkle"] },
+        scene: { focus: 388, bg: "court", mo: [{ pose: "pose-03", x: 390, s: 205 }, { who: "adam", pose: "sheepish-scratch-head", x: 300, s: 205 }, { who: "ais", pose: "giggle", x: 475, s: 205 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Rahasia pertama: lompat kecil setiap kali Abi memukul — namanya split step. Hop! Kaki siap ke mana saja.", en: "Secret one: a little hop every time Abi hits — it's called a split step. Hop! Feet ready to go anywhere." },
@@ -2725,7 +2725,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     pages: [
       {
         text: { id: "\"Besok kita berenang di pantai!\" seru Abi. Si kembar melompat-lompat sambil memeluk pelampung.", en: "\"Tomorrow we're going swimming at the beach!\" Abi announced. The twins jumped up and down hugging their swim rings." },
-        scene: { focus: 340, bg: "living", props: [{ k: "swimring", x: 470 }], mo: [{ pose: "yeyy", x: 380, move: "hop" }, { who: "ais", pose: "jump-cheer", x: 270, move: "hop" }], fx: ["confetti"] },
+        scene: { focus: 388, bg: "living", props: [{ k: "swimring", x: 470 }], mo: [{ pose: "yeyy", x: 390, s: 205, move: "hop" }, { who: "ayah", pose: "cheer-fists-stand", x: 300, s: 205 }, { who: "ais", pose: "jump-cheer", x: 475, s: 205, move: "hop" }], fx: ["confetti"] },
       },
       {
         text: { id: "Sebelum tidur, Abi duduk di karpet. \"Abi mau ajari satu aturan penting. Namanya aturan baju renang.\"", en: "Before bed, Abi sat on the rug. \"I want to teach you one important rule. It's called the swimsuit rule.\"" },
@@ -2847,7 +2847,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Itu dacin, timbangan bayi,\" kata Abi. Si kembar ditimbang bergantian. \"Masya Allah, beratnya naik! Sehat!\"", en: "\"That's a dacin, a baby scale,\" said Abi. The twins took turns being weighed. \"Masha Allah, you've grown heavier! Healthy!\"" },
-        scene: { focus: 380, bg: "clinic", props: [{ k: "dacin", x: 470 }], mo: [{ pose: "yeyy", x: 340, move: "hop" }], fx: ["sparkle"] },
+        scene: { focus: 290, bg: "clinic", props: [{ k: "dacin", x: 470 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 230 }, { pose: "yeyy", x: 350, move: "hop" }], fx: ["sparkle"] },
       },
       {
         text: { id: "Lalu tinggi badan diukur di papan berwarna. \"Aku sudah sampai garis kuning!\" seru Baby Ais bangga.", en: "Then their height was measured on the colourful chart. \"I've reached the yellow line!\" Baby Ais said proudly." },
@@ -2872,7 +2872,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Sekarang trik rahasia,\" bisik Abi. \"Bayangkan ada lilin ulang tahun. Tarik napas… lalu tiup pelaaan… fuuuh.\"", en: "\"Now the secret trick,\" Abi whispered. \"Imagine a birthday candle. Breathe in… then blow sloooowly… fwoooo.\"" },
-        scene: { focus: 380, bg: "clinic", props: [{ k: "candle", x: 470 }], mo: [{ pose: "pose-07", x: 370 }], fx: ["sparkle"] },
+        scene: { focus: 310, bg: "clinic", props: [{ k: "candle", x: 470 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 250 }, { pose: "pose-07", x: 370 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Fuuuh… cekit! Seperti digigit semut. Baby Mo meringis, air matanya keluar sedikit… lalu selesai!", en: "Fwoooo… prick! Like an ant bite. Baby Mo winced, a little tear came out… and then it was over!" },
@@ -2880,7 +2880,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Bu bidan menempelkan plester bergambar bintang. \"Kamu berani sekali.\" \"Tapi aku nangis,\" kata Baby Mo. \"Berani itu boleh sambil nangis,\" jawab Abi.", en: "The midwife stuck on a star plaster. \"You were so brave.\" \"But I cried,\" said Baby Mo. \"You can be brave and cry at the same time,\" said Abi." },
-        scene: { focus: 360, bg: "clinic", props: [{ k: "plaster", x: 470, y: 230 }], mo: [{ pose: "pose-25", x: 360 }], fx: ["sparkle"] },
+        scene: { focus: 300, bg: "clinic", props: [{ k: "plaster", x: 470, y: 230 }], mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 240 }, { pose: "pose-25", x: 360 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Giliran Baby Ais. Ia meniup lilin bayangan lebih panjang dari Baby Mo. Fuuuuuuh! Lalu tos dengan kembarannya.", en: "Baby Ais's turn. She blew her pretend candle even longer than Baby Mo. Fwooooooo! Then she high-fived her twin." },
@@ -2953,7 +2953,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Kenapa sedekah duluan?\" tanya Baby Mo. \"Karena rezeki itu dari Allah,\" kata Abi. \"Kita berbagi dulu, baru menyimpan untuk diri sendiri.\"", en: "\"Why does giving come first?\" asked Baby Mo. \"Because everything we have comes from Allah,\" said Abi. \"We share first, then save for ourselves.\"" },
-        scene: { focus: 360, bg: "living", props: [{ k: "jars3", x: 470 }], mo: [{ pose: "pose-33", x: 330 }], fx: ["sparkle"] },
+        scene: { focus: 290, bg: "living", props: [{ k: "jars3", x: 470 }], mo: [{ who: "ayah", pose: "teach-book-sit", x: 230 }, { pose: "pose-33", x: 350 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Kak Adam mencari uang dengan membantu di rumah: menyapu teras, mencuci mobil Abi, dan merapikan bola tenis.", en: "Kak Adam earned money by helping at home: sweeping the porch, washing Abi's car, and tidying up the tennis balls." },
@@ -3059,7 +3059,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Ingat yang kita latih?\" bisik Abi. Si kembar mengangguk dan menyalami Nenek: \"Assalamu'alaikum, Nenek. Mohon maaf lahir dan batin.\"", en: "\"Remember what we practised?\" whispered Abi. The twins nodded and greeted Nenek: \"Assalamu'alaikum, Nenek. Mohon maaf lahir dan batin.\"" },
-        scene: { focus: 330, bg: "living", mo: [{ who: "ais", pose: "dua-hands-closed", x: 280 }, { pose: "thank-you", x: 390 }], fx: ["hearts"] },
+        scene: { focus: 388, bg: "living", mo: [{ who: "ais", pose: "dua-hands-closed", x: 390, s: 205 }, { who: "ayah", pose: "stand-arms-crossed", x: 300, s: 205 }, { pose: "thank-you", x: 475, s: 205 }], fx: ["hearts"] },
       },
       {
         text: { id: "\"Lahir dan batin itu apa?\" tanya Baby Mo. \"Kesalahan yang kelihatan dan yang tersembunyi di hati,\" jawab Abi. \"Lebaran itu waktunya hati bersih lagi.\"", en: "\"What does 'inside and out' mean?\" asked Baby Mo. \"Mistakes people can see, and ones hidden in our hearts,\" said Abi. \"Eid is when our hearts get clean again.\"" },
@@ -3142,7 +3142,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
     cover: {
       focus: 340, bg: "living",
       props: [{ k: "card", x: 420, y: 330 }],
-      mo: [{ who: "umi", pose: "touched-cheek", x: 250 }, { pose: "thank-you", x: 360 }, { who: "ais", pose: "heart-hands", x: 440 }],
+      mo: [{ pose: "thank-you", x: 390, s: 205 }, { who: "umi", pose: "touched-cheek", x: 300, s: 205 }, { who: "ais", pose: "heart-hands", x: 475, s: 205 }],
       fx: ["hearts"],
     },
     pages: [
@@ -3366,7 +3366,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Lima menit lagi, kata Umi. Lalu pasir terakhir jatuh. \"Satu lagi, Umi! SATU LAGI!\" Mo menangis keras.", en: "Five more minutes, said Umi. Then the last grain of sand fell. \"One more, Umi! ONE MORE!\" Mo cried loudly." },
-        scene: { focus: 340, bg: "living", props: [{ k: "hourglass", x: 430, y: 340 }], mo: [{ pose: "pose-09", x: 330 }] },
+        scene: { focus: 290, bg: "living", props: [{ k: "hourglass", x: 430, y: 340 }], mo: [{ who: "umi", pose: "think-quiet", x: 230 }, { pose: "pose-09", x: 350 }] },
       },
       {
         text: { id: "Umi tidak marah. Umi berlutut dan berbicara pelan: \"Mo sedih, ya? Boleh sedih. Umi peluk. Tapi tablet tetap tidur.\"", en: "Umi didn't get angry. She knelt down and spoke softly: \"You're sad, aren't you? It's okay to be sad. Umi will hug you. But the tablet still sleeps.\"" },
@@ -3616,7 +3616,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Dari seribu tukik, mungkin hanya satu yang tumbuh menjadi penyu dewasa,\" kata Kak Adam. \"Sedikit sekali!\" kata Ais. \"Karena itu setiap tukik berharga,\" jawab Abi.", en: "\"Out of a thousand baby turtles, maybe only one grows up,\" said Kak Adam. \"That's so few!\" said Ais. \"That's why every single one matters,\" said Abi." },
-        scene: { focus: 340, bg: "beach", mo: [{ who: "adam", pose: "kneel-talk", x: 290 }, { who: "ais", pose: "wonder-question", x: 420 }] },
+        scene: { focus: 388, bg: "beach", mo: [{ who: "ais", pose: "wonder-question", x: 475, s: 205 }, { who: "ayah", pose: "hand-heart-kneel", x: 300, s: 205 }, { who: "adam", pose: "kneel-talk", x: 390, s: 205 }] },
       },
       {
         text: { id: "Mo meletakkan tangan di dadanya. \"Mo janji bawa botol minum sendiri, dan tidak pakai sedotan plastik lagi.\"", en: "Mo put his hand on his chest. \"I promise to bring my own water bottle, and no more plastic straws.\"" },
@@ -3900,7 +3900,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Allah menciptakan kakinya pas sekali untuk hidup di pantai yang licin dan berbatu,\" kata Kak Adam. \"Dia tidak aneh. Dia hebat.\"", en: "\"Allah made its legs just right for slippery, rocky beaches,\" said Kak Adam. \"It isn't silly. It's amazing.\"" },
-        scene: { focus: 400, bg: "beach", props: [{ k: "crab", x: 400, s: 1.6 }, { k: "shell", x: 520 }, { k: "starfish", x: 290 }], fx: ["sparkle"] },
+        scene: { focus: 380, bg: "beach", props: [{ k: "crab", x: 400, s: 1.6 }, { k: "shell", x: 520 }, { k: "starfish", x: 290 }], mo: [{ who: "adam", pose: "kneel-talk", x: 300 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Siang itu, Mo memakai sandal baru yang kebesaran. Plok-plek, plok-plek! Jalannya jadi lucu sekali.", en: "That afternoon, Mo put on new sandals that were too big. Flip-flop, flip-flop! He walked in a very funny way." },
@@ -4134,7 +4134,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Malamnya mereka menyiapkan tas siaga: senter, air minum, obat, roti, dan peluit. \"Peluitnya untuk memanggil bantuan,\" kata Abi.", en: "That evening they packed a go-bag: a torch, water, medicine, bread and a whistle. \"The whistle is for calling for help,\" said Abi." },
-        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "flashlight", x: 420, y: 400, s: 0.6 }, { k: "water", x: 470, s: 0.8 }], mo: [{ who: "umi", pose: "kneel-smile", x: 250 }, { pose: "pose-22", x: 350 }] },
+        scene: { focus: 340, bg: "living", time: "night", props: [{ k: "flashlight", x: 420, y: 400, s: 0.6 }, { k: "water", x: 470, s: 0.8 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 230 }, { who: "umi", pose: "kneel-smile", x: 350 }, { pose: "pose-22", x: 450 }] },
       },
       {
         text: { id: "Abi membuat permainan latihan. Kalau Abi bilang \"Gempa!\", semua merunduk ke bawah meja secepat kilat!", en: "Abi made it into a practice game. Whenever Abi said \"Earthquake!\", everyone dived under the table as fast as lightning!" },
