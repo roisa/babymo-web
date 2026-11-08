@@ -3386,11 +3386,11 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Umi mengangkat jari. \"Umi punya ide: lomba menara balok paling tinggi! Siapa yang menang, boleh memilih buku cerita malam ini.\"", en: "Umi raised a finger. \"Umi has an idea: a contest for the tallest block tower! The winner picks tonight's bedtime story.\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "blockstall", x: 430 }], mo: [{ who: "umi", pose: "idea-finger", x: 260 }, { pose: "wow", x: 380 }], fx: ["sparkle"] },
+        scene: { focus: 340, bg: "playroom", props: [{ k: "blockstall", x: 430 }], mo: [{ who: "umi", pose: "idea-finger", x: 260 }, { pose: "wow", x: 380 }], fx: ["sparkle"] },
       },
       {
         text: { id: "Menaranya tinggi… tinggi… lebih tinggi dari Mo! Lalu — GUBRAK! Semua balok jatuh, dan mereka tertawa sampai perut sakit.", en: "The tower grew tall… taller… taller than Mo! Then — CRASH! All the blocks came down, and they laughed until their tummies hurt." },
-        scene: { focus: 340, bg: "living", props: [{ k: "blocksfall", x: 400 }], mo: [{ pose: "pose-02", x: 300 }, { who: "ais", pose: "giggle", x: 470 }], fx: ["confetti"] },
+        scene: { focus: 340, bg: "playroom", props: [{ k: "blocksfall", x: 400 }], mo: [{ pose: "pose-02", x: 300 }, { who: "ais", pose: "giggle", x: 470 }], fx: ["confetti"] },
       },
       {
         text: { id: "Siangnya mereka berburu siput di kebun dengan kaca pembesar. \"Lihat, Mo! Rumahnya dibawa ke mana-mana!\"", en: "After lunch they went snail hunting in the garden with a magnifying glass. \"Look, Mo! It carries its house everywhere!\"" },
