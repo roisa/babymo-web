@@ -246,10 +246,23 @@ html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data
 .blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.5;pointer-events:none}
 .b1{width:460px;height:460px;background:#BDEBCF;top:-200px;left:-120px}
 .b2{width:420px;height:420px;background:#CFE6FF;top:-120px;right:-140px}
+.b3{width:360px;height:360px;background:#FFE1EA;top:140px;left:40%}
 @media (prefers-color-scheme:dark){.blob{opacity:.16}}
 .hero .wrap{position:relative;z-index:1}
 .hero .mo{display:block;margin:0 auto;width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 14px 16px rgba(0,0,0,.18));animation:bob 4s ease-in-out infinite}
 .hero h1{font-size:clamp(36px,6vw,56px);line-height:1.05;font-weight:800;margin:6px 0 8px}
+.grad{background:linear-gradient(90deg,#1E8C53,#2FB3A0 40%,#5AA9E6 70%,#8B7CF6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.bubble{display:inline-block;position:relative;margin:4px 0 6px;padding:8px 16px;border-radius:18px;background:var(--card);border:1px solid var(--line);font-weight:800;font-size:15px;box-shadow:var(--shadow)}
+.bubble::after{content:"";position:absolute;left:50%;top:-7px;width:12px;height:12px;background:var(--card);border-left:1px solid var(--line);border-top:1px solid var(--line);transform:translateX(-50%) rotate(45deg)}
+.hero p b{font-weight:800}
+.c1{color:#E0812A}.c2{color:#E0507A}.c3{color:#1E8C53}.c4{color:#7A5CF0}.c5{color:#2F86C9}.c6{color:#C94F4F}
+@media (prefers-color-scheme:dark){.c1{color:#FFB66B}.c2{color:#FF8FB0}.c3{color:#5CCB8C}.c4{color:#B4A6FF}.c5{color:#7CC4F5}.c6{color:#FF9A9A}}
+.tags{position:absolute;inset:0;pointer-events:none;display:none}
+@media(min-width:900px){.tags{display:block}}
+.tag{position:absolute;padding:9px 14px;border-radius:999px;font-weight:800;font-size:14px;color:#14181A;box-shadow:var(--shadow);animation:bob 5s ease-in-out infinite}
+.t1{background:#E6E0FF;top:40px;left:4%}.t2{background:#DDF5E6;top:120px;left:12%;animation-delay:-1.5s}
+.t3{background:#FFE8B8;top:44px;right:5%;animation-delay:-2.5s}.t4{background:#FFE1EA;top:128px;right:12%;animation-delay:-3.5s}
+@media (prefers-reduced-motion:reduce){.tag{animation:none}}
 .hero p{color:var(--soft);font-size:18px;margin:0 auto;max-width:32em}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -8px}}
 @media (prefers-reduced-motion:reduce){.hero .mo{animation:none}}
@@ -354,12 +367,25 @@ export default function SupportPage() {
 
         <main>
           <header className="hero">
-            <div className="blob b1" /><div className="blob b2" />
+            <div className="blob b1" /><div className="blob b2" /><div className="blob b3" />
             <div className="wrap">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img className="mo" src={asset("/baby-mo-poses/baby-mo-idea.png")} alt="" width={120} height={120} />
-              <h1><B t={{ id: "Ada yang bisa Mo bantu?", en: "How can Mo help?" }} /></h1>
-              <p><B t={{ id: "Jawaban cepat untuk pertanyaan Ayah dan Bunda tentang aplikasi Baby Mo.", en: "Quick answers to parents' questions about the Baby Mo app." }} /></p>
+              <div className="bubble"><B t={{ id: "Assalamu'alaikum! 👋", en: "Assalamu'alaikum! 👋" }} /></div>
+              <h1>
+                <span data-l="id">Ada yang bisa <span className="grad">Mo bantu</span>?</span>
+                <span data-l="en">How can <span className="grad">Mo help</span>?</span>
+              </h1>
+              <p>
+                <span data-l="id">Jawaban cepat untuk pertanyaan <b className="c1">Ayah</b> dan <b className="c2">Bunda</b> — tentang <b className="c3">game</b>, <b className="c4">suara</b>, <b className="c5">jadwal sholat</b>, dan <b className="c6">privasi</b>.</span>
+                <span data-l="en">Quick answers for <b className="c1">mums</b> and <b className="c2">dads</b> — about <b className="c3">games</b>, <b className="c4">sound</b>, <b className="c5">prayer times</b> and <b className="c6">privacy</b>.</span>
+              </p>
+              <div className="tags" aria-hidden="true">
+                <span className="tag t1">🔊 <B t={{ id: "Suara", en: "Sound" }} /></span>
+                <span className="tag t2">🕌 <B t={{ id: "Sholat", en: "Prayer" }} /></span>
+                <span className="tag t3">🌗 <B t={{ id: "Tema", en: "Theme" }} /></span>
+                <span className="tag t4">🔒 <B t={{ id: "Privasi", en: "Privacy" }} /></span>
+              </div>
               <label className="search">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7" /><path d="m20 20-3.5-3.5" /></svg>
                 <input id="faq-q" suppressHydrationWarning type="search" placeholder="Cari: suara, bahasa, jadwal sholat…" aria-label="Cari pertanyaan / Search questions" autoComplete="off" />
