@@ -1,0 +1,322 @@
+import type { Metadata } from "next";
+import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
+import { LISTING } from "@/lib/content/app-store-kit";
+import { asset } from "@/lib/i18n/config";
+
+/**
+ * babymo.id/app-store-kit — team page for the App Store submission:
+ * screenshots + caption banners at Apple's required sizes (download one,
+ * a group, or everything as a ZIP) and every App Store Connect field ready
+ * to copy. Not linked from the site and not indexed.
+ * Images live in public/app-store-kit/ (made from real captures of the app).
+ */
+export const metadata: Metadata = {
+  title: "App Store Kit — Baby Mo",
+  robots: { index: false, follow: false },
+};
+
+const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
+const RAW = ["01-home", "02-games", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-tenis", "08-tenis-play", "09-memory", "10-dream"];
+const BANNER_NAMES = ["Home", "13 games", "Daily du'as", "Prayer", "Wudhu", "Hijaiyah letters", "Tennis", "Dreamtime", "Safe for kids"];
+
+type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
+const groups: Group[] = [];
+for (const dev of ["iphone", "ipad"] as const) {
+  for (const lang of ["id", "en"] as const) {
+    groups.push({
+      id: `banner-${dev}-${lang}`,
+      title: `Banners · ${dev === "iphone" ? 'iPhone 6.9"' : 'iPad 13"'} · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
+      size: dev === "iphone" ? "1320 × 2868 px" : "2064 × 2752 px",
+      note: lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization.",
+      files: SHOTS.map((k, i) => ({
+        src: `app-store-kit/banners/${dev}-${lang}-${k}.jpg`,
+        thumb: `app-store-kit/thumbs/${dev}-${lang}-${k}.webp`,
+        name: `${k} ${BANNER_NAMES[i]}`,
+      })),
+    });
+  }
+}
+for (const dev of ["iphone", "ipad"] as const) {
+  for (const lang of ["id", "en"] as const) {
+    groups.push({
+      id: `raw-${dev}-${lang}`,
+      title: `Plain screenshots · ${dev === "iphone" ? 'iPhone 6.9"' : 'iPad 13"'} · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
+      size: dev === "iphone" ? "1320 × 2868 px" : "2064 × 2752 px",
+      note: "No captions. Use them instead of the banners, or for the website and social posts.",
+      files: RAW.map((k) => ({
+        src: `app-store-kit/raw/${dev}-${lang}-${k}.jpg`,
+        thumb: `app-store-kit/thumbs/raw-${dev}-${lang}-${k}.webp`,
+        name: k,
+      })),
+    });
+  }
+}
+
+type Field = { label: string; value: string; limit?: number; bytes?: boolean; where: string };
+const L = LISTING;
+const fields = (lang: "id" | "en"): Field[] => [
+  { label: "Name", value: L.name[lang], limit: 30, where: "App Information → Localizable Information" },
+  { label: "Subtitle", value: L.subtitle[lang], limit: 30, where: "App Information → Localizable Information" },
+  { label: "Promotional Text", value: L.promo[lang], limit: 170, where: "Version → Promotional Text (can change any time)" },
+  { label: "Description", value: L.desc[lang], limit: 4000, where: "Version → Description" },
+  { label: "Keywords", value: L.keywords[lang], limit: 100, bytes: true, where: "Version → Keywords (comma-separated, no spaces)" },
+];
+
+const FACTS: { label: string; value: string; where: string; note?: string }[] = [
+  { label: "Primary language", value: "Indonesian", where: "App Information", note: "Add English (U.S.) as a second localization." },
+  { label: "Bundle ID", value: "id.babymo.app", where: "App Information (from Xcode)" },
+  { label: "SKU", value: "babymo-ios-001", where: "New App form (any unique code you like)" },
+  { label: "Version", value: "1.0", where: "Version (MARKETING_VERSION in Xcode)" },
+  { label: "Primary category", value: "Education", where: "App Information → Category" },
+  { label: "Secondary category", value: "Games — subcategories: Family, Educational", where: "App Information → Category" },
+  { label: "Support URL", value: "https://babymo.id/support/", where: "Version → Support URL (required)" },
+  { label: "Marketing URL", value: "https://babymo.id/app/", where: "Version → Marketing URL" },
+  { label: "Privacy Policy URL", value: "https://babymo.id/privacy/", where: "App Privacy → Privacy Policy URL" },
+  { label: "Copyright", value: "2026 Ibra Creative", where: "Version → Copyright", note: "Apple adds the © sign." },
+  { label: "Price", value: "Free (Rp 0)", where: "Pricing and Availability", note: "Availability: all countries, or start with Indonesia, Malaysia, Singapore and Brunei." },
+  { label: "Sign-in required for review", value: "No — the app has no accounts", where: "App Review Information → Sign-In Information (uncheck)" },
+];
+
+const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2–8 (daily du'as, prayer and wudhu guides, Arabic letters, and a tennis-learning game). There are no accounts, ads, in-app purchases, chat or social features.
+
+• No login is needed: open the app and choose a language.
+• Location is optional and only used for prayer times and the Qibla compass in the Prayer tab. If permission is denied, the user can pick a city by hand. Approximate coordinates (rounded to about 1 km) are sent to api.aladhan.com and api.bigdatacloud.net to calculate prayer times and show the city name; nothing else leaves the device.
+• The child's nickname, stars and progress are stored only on the device.
+• Read-aloud uses the device's built-in speech voices. Labels such as "PRO" in Memory Match are difficulty levels, not purchases.
+• All games work offline.
+
+Privacy policy: https://babymo.id/privacy/ · Support: https://babymo.id/support/`;
+
+const AGE: [string, string][] = [
+  ["Cartoon or fantasy violence", "None"], ["Realistic violence", "None"], ["Prolonged graphic or sadistic violence", "None"],
+  ["Profanity or crude humor", "None"], ["Mature or suggestive themes", "None"], ["Horror or fear themes", "None"],
+  ["Medical or treatment information", "None"], ["Alcohol, tobacco or drug use or references", "None"],
+  ["Sexual content or nudity", "None"], ["Simulated gambling", "None"], ["Contests", "None"],
+  ["Unrestricted web access", "No"], ["User-generated content", "No"], ["Messaging and chat", "No"],
+  ["Advertising", "No"], ["Parental controls", "No"], ["Age assurance", "No"],
+];
+
+const PRIVACY: [string, string][] = [
+  ["Do you or your third-party partners collect data from this app?", "Yes — only Coarse Location (see below)"],
+  ["Data type", "Location → Coarse Location"],
+  ["Used for", "App Functionality (prayer times and Qibla)"],
+  ["Linked to the user's identity?", "No"],
+  ["Used for tracking?", "No"],
+  ["Everything else (contact info, health, identifiers, usage data, diagnostics…)", "Not collected"],
+];
+
+const CHECK: { t: string; d: string }[] = [
+  { t: "Add the encryption key to Info.plist", d: "ITSAppUsesNonExemptEncryption = NO (Boolean). The app only uses standard HTTPS, so this skips the export-compliance question on every build." },
+  { t: "Soften the location permission text", d: 'Info.plist NSLocationWhenInUseUsageDescription, for example: "Baby Mo uses your location only to show prayer times and the Qibla. You can also pick a city instead." Reviewers prefer text that says the feature is optional.' },
+  { t: "Sync the latest web build into the iOS app", d: "In babymo-app: git pull, then npx cap sync ios. This brings in Huruf Hijaiyah, the tennis game and the latest fixes." },
+  { t: "Test on a real iPhone and iPad", d: "Open every game once, try airplane mode, deny location once, and switch ID/EN and light/dark." },
+  { t: "Archive and upload", d: "Xcode → Product → Archive → Distribute App → App Store Connect. Wait for the build to finish processing, then select it in the version page." },
+  { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
+  { t: "Upload screenshots for iPhone 6.9\" and iPad 13\"", d: "Both are required because the app runs on iPad too. Apple scales them for the smaller devices. Up to 10 per device and language." },
+  { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
+  { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
+];
+
+const NOTES: string[] = [
+  "Kids Category: leave it off for version 1.0. Apps in the Kids Category must put a parental gate in front of every link that leaves the app and every share button, and Baby Mo has both (the footer links and Share on results). You can opt in later after adding a gate.",
+  "iPad: the games show in a phone-width column in the middle of the iPad screen, and the Pray with Mo header doesn't stretch to full width. That's allowed, but a reviewer or parent will notice. The iPad banners present it well; improving the iPad layouts would help ratings.",
+  "Memory Match still shows a \"PRO\" badge on the Juara level. It's only a difficulty level (the review notes say so), but renaming it would avoid any question about paid content.",
+];
+
+const CSS = `
+:root{color-scheme:light;--bg:#F6F7F4;--card:#FFFFFF;--ink:#16201B;--soft:#5D6A63;--line:#E2E6E1;--accent:#12A15A;--accent-ink:#FFFFFF;--warn:#B35C00;--warn-bg:#FFF4DE;--chip:#EEF4F0}
+@media (prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#101412;--card:#181E1B;--ink:#E9EFEB;--soft:#9DABA3;--line:#28312C;--accent:#4FD08D;--accent-ink:#06231A;--warn:#FFC266;--warn-bg:#2A2214;--chip:#1F2824}}
+*{box-sizing:border-box}html,body{margin:0;background:var(--bg);color:var(--ink)}
+body{font-family:var(--f-body),system-ui,sans-serif;font-size:15px;line-height:1.55}
+.w{max-width:1120px;margin:0 auto;padding-block:28px 64px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-round),var(--f-body),sans-serif;margin:0;letter-spacing:-.01em}
+h1{font-size:clamp(30px,5vw,44px);line-height:1.05}h2{font-size:26px;margin:44px 0 6px}h3{font-size:18px}
+.lead{color:var(--soft);max-width:60ch;margin:8px 0 0}
+.top{display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+.top img{width:84px;height:84px;border-radius:20px;box-shadow:0 10px 24px -14px rgba(0,0,0,.5)}
+.btn{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:12px;border:1px solid var(--line);background:var(--card);color:var(--ink);font:inherit;font-weight:800;cursor:pointer;text-decoration:none}
+.btn.pri{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.btn:disabled{opacity:.6;cursor:wait}.btn:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:18px}
+.status{font-weight:700;color:var(--soft)}
+.toc{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}.toc a{font-weight:700;color:var(--ink);background:var(--chip);border-radius:999px;padding:6px 12px;text-decoration:none;font-size:14px}
+.group{margin-top:22px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:16px}
+.ghead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
+.ghead p{margin:2px 0 0;color:var(--soft);font-size:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}
+.grid.ipad{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.tile{display:flex;flex-direction:column;gap:6px;min-width:0}
+.tile img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
+.tile a{font-size:13px;font-weight:800;color:var(--accent);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.lang{display:flex;gap:6px;margin:10px 0 0}
+.lang button{font:inherit;font-weight:800;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--soft);cursor:pointer}
+.lang button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.field{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:14px 16px;margin-top:12px;min-width:0}
+.fhead{display:flex;justify-content:space-between;gap:10px;align-items:center;flex-wrap:wrap}
+.fhead small{color:var(--soft);font-size:13px}
+.count{font-size:13px;font-weight:800;color:var(--accent);font-variant-numeric:tabular-nums}.count.over{color:#D9480F}
+.val{margin-top:8px;white-space:pre-wrap;word-break:break-word;background:var(--chip);border-radius:10px;padding:10px 12px;font-size:14.5px;max-height:320px;overflow:auto}
+.copy{min-height:36px;padding:6px 12px;font-size:14px}
+.kv{display:grid;grid-template-columns:1fr;gap:10px;margin-top:12px}
+@media(min-width:760px){.kv{grid-template-columns:1fr 1fr}}
+table{width:100%;border-collapse:collapse;font-size:14.5px}td{padding:8px 10px;border-top:1px solid var(--line);vertical-align:top}td:last-child{font-weight:800;white-space:nowrap}
+.tbl{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:6px 6px;margin-top:12px;overflow-x:auto}
+.check{list-style:none;padding:0;margin:12px 0 0;display:grid;gap:10px}
+.check li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.check input{width:22px;height:22px;margin-top:2px;accent-color:var(--accent);flex:0 0 auto}
+.check b{display:block}.check span{color:var(--soft);font-size:14px}
+.check li.done b{text-decoration:line-through;color:var(--soft)}
+.note{background:var(--warn-bg);color:var(--ink);border-radius:14px;padding:12px 14px;margin-top:10px;font-size:14.5px}
+.note b{color:var(--warn)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:800;opacity:0;transition:opacity .2s;pointer-events:none}
+.toast.on{opacity:1}
+`;
+
+const SCRIPT = `
+(function(){
+var toast=document.getElementById('toast'),tt;
+function say(m){toast.textContent=m;toast.classList.add('on');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('on')},1600)}
+document.addEventListener('click',function(e){
+  var c=e.target.closest('[data-copy]'); if(c){var el=document.getElementById(c.getAttribute('data-copy')),txt=el.textContent;
+    (navigator.clipboard?navigator.clipboard.writeText(txt):Promise.reject()).then(function(){say('Copied')}).catch(function(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);say('Selected — press Copy')});}
+  var l=e.target.closest('[data-lang]'); if(l){var v=l.getAttribute('data-lang');document.querySelectorAll('[data-lang]').forEach(function(b){b.setAttribute('aria-pressed',String(b===l))});document.querySelectorAll('[data-pane]').forEach(function(p){p.hidden=p.getAttribute('data-pane')!==v});}
+  var z=e.target.closest('[data-zip]'); if(z){zip(z);}
+});
+function zip(btn){
+  if(!window.JSZip){say('ZIP tool is still loading — try again');return;}
+  var sel=btn.getAttribute('data-zip'),files=[].slice.call(document.querySelectorAll(sel==='all'?'[data-file]':'#'+sel+' [data-file]'));
+  var z=new JSZip(),done=0,label=btn.textContent; btn.disabled=true;
+  Promise.all(files.map(function(a){return fetch(a.href).then(function(r){return r.blob()}).then(function(b){z.file(a.getAttribute('data-file'),b);done++;btn.textContent='Preparing '+done+'/'+files.length+'…';})}))
+  .then(function(){return z.generateAsync({type:'blob'})}).then(function(b){var u=URL.createObjectURL(b),a=document.createElement('a');a.href=u;a.download=(sel==='all'?'baby-mo-app-store-kit':sel)+'.zip';document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(u)},4000);say('Download started');})
+  .catch(function(){say('Download failed — check your connection')}).then(function(){btn.disabled=false;btn.textContent=label;});
+}
+document.querySelectorAll('.check input').forEach(function(cb){var k='ask-'+cb.id;try{cb.checked=localStorage.getItem(k)==='1'}catch(e){}cb.closest('li').classList.toggle('done',cb.checked);
+  cb.addEventListener('change',function(){try{localStorage.setItem(k,cb.checked?'1':'0')}catch(e){}cb.closest('li').classList.toggle('done',cb.checked)})});
+})();`;
+
+function count(f: Field) {
+  const n = f.bytes ? new TextEncoder().encode(f.value).length : [...f.value].length;
+  return { n, over: f.limit ? n > f.limit : false };
+}
+
+export default function AppStoreKit() {
+  return (
+    <html lang="en" className={STORE_FONT_VARS}>
+      <head>
+        <script src={asset("/vendor/jszip-3.10.1.min.js")} defer />
+      </head>
+      <body>
+        <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <main className="w">
+          <div className="top">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={asset("/app-store-kit/app-icon-1024.png")} alt="Baby Mo app icon" width={84} height={84} />
+            <div>
+              <h1>Baby Mo · App Store Kit</h1>
+              <p className="lead">Everything for the App Store Connect submission: screenshots at Apple&apos;s sizes, caption banners, and every listing field ready to copy. All facts are checked against the app.</p>
+            </div>
+          </div>
+          <div className="bar">
+            <button className="btn pri" data-zip="all" type="button">⬇ Download everything (ZIP)</button>
+            <a className="btn" href={asset("/app-store-kit/app-icon-1024.png")} download="baby-mo-app-icon-1024.png">App icon 1024 px</a>
+          </div>
+          <nav className="toc" aria-label="Sections">
+            <a href="#screens">Screenshots</a><a href="#listing">Listing text</a><a href="#info">App information</a>
+            <a href="#age">Age rating</a><a href="#privacy">App privacy</a><a href="#review">Review notes</a><a href="#checklist">Checklist</a><a href="#notes">Heads-up</a>
+          </nav>
+
+          <h2 id="screens">Screenshots &amp; banners</h2>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone 6.9&quot;</b> and for <b>iPad 13&quot;</b>, because the app also runs on iPad. Apple scales them down for smaller devices. Upload the banners in order 01 → 09; the first three show in search results.</p>
+          {groups.map((g) => (
+            <section className="group" id={g.id} key={g.id}>
+              <div className="ghead">
+                <div><h3>{g.title}</h3><p>{g.size} · {g.files.length} images · {g.note}</p></div>
+                <button className="btn" data-zip={g.id} type="button">⬇ Download group (ZIP)</button>
+              </div>
+              <div className={`grid${g.id.includes("ipad") ? " ipad" : ""}`}>
+                {g.files.map((f) => (
+                  <div className="tile" key={f.src}>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={asset("/" + f.thumb)} alt={f.name} loading="lazy" />
+                    <a href={asset("/" + f.src)} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
+
+          <h2 id="listing">Listing text</h2>
+          <p className="lead">Paste each field into App Store Connect. The counter shows Apple&apos;s limit (keywords count in bytes).</p>
+          <div className="lang" role="group" aria-label="Language">
+            <button type="button" data-lang="id" aria-pressed="true">Bahasa Indonesia (primary)</button>
+            <button type="button" data-lang="en" aria-pressed="false">English (U.S.)</button>
+          </div>
+          {(["id", "en"] as const).map((lang) => (
+            <div data-pane={lang} hidden={lang !== "id"} key={lang}>
+              {fields(lang).map((f, i) => {
+                const c = count(f), id = `f-${lang}-${i}`;
+                return (
+                  <div className="field" key={id}>
+                    <div className="fhead">
+                      <div><b>{f.label}</b> <small>· {f.where}</small></div>
+                      <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
+                        {f.limit ? <span className={`count${c.over ? " over" : ""}`}>{c.n} / {f.limit}</span> : null}
+                        <button className="btn copy" type="button" data-copy={id}>Copy</button>
+                      </div>
+                    </div>
+                    <div className="val" id={id}>{f.value}</div>
+                  </div>
+                );
+              })}
+            </div>
+          ))}
+
+          <h2 id="info">App information</h2>
+          <div className="kv">
+            {FACTS.map((f, i) => (
+              <div className="field" key={f.label} style={{ marginTop: 0 }}>
+                <div className="fhead"><div><b>{f.label}</b> <small>· {f.where}</small></div><button className="btn copy" type="button" data-copy={`k-${i}`}>Copy</button></div>
+                <div className="val" id={`k-${i}`}>{f.value}</div>
+                {f.note ? <small style={{ color: "var(--soft)", display: "block", marginTop: 6 }}>{f.note}</small> : null}
+              </div>
+            ))}
+          </div>
+
+          <h2 id="age">Age rating</h2>
+          <p className="lead">App Information → Age Rating. With these answers the rating comes out as <b>4+</b>.</p>
+          <div className="tbl"><table><tbody>{AGE.map(([q, a]) => <tr key={q}><td>{q}</td><td>{a}</td></tr>)}</tbody></table></div>
+
+          <h2 id="privacy">App privacy</h2>
+          <p className="lead">App Privacy → Data Types. These match the privacy policy at babymo.id/privacy.</p>
+          <div className="tbl"><table><tbody>{PRIVACY.map(([q, a]) => <tr key={q}><td>{q}</td><td>{a}</td></tr>)}</tbody></table></div>
+
+          <h2 id="review">Notes for App Review</h2>
+          <div className="field">
+            <div className="fhead"><div><b>Notes</b> <small>· App Review Information → Notes</small></div><button className="btn copy" type="button" data-copy="review-notes">Copy</button></div>
+            <div className="val" id="review-notes">{REVIEW_NOTES}</div>
+          </div>
+          <div className="field">
+            <div className="fhead"><div><b>Export compliance</b> <small>· asked when you select a build</small></div></div>
+            <div className="val">Does your app use encryption? → Yes, only standard HTTPS (exempt). Choose &quot;None of the algorithms mentioned above&quot;. After adding ITSAppUsesNonExemptEncryption = NO to Info.plist, Apple stops asking.</div>
+          </div>
+          <div className="field">
+            <div className="fhead"><div><b>Content rights</b> <small>· App Information</small></div></div>
+            <div className="val">Does your app contain, show or access third-party content? → Yes, and you have the rights: Qur&apos;an and hadith texts are public domain, fonts are open-licensed (SIL OFL), and prayer times come from the free AlAdhan API.</div>
+          </div>
+
+          <h2 id="checklist">Before you press Submit</h2>
+          <ul className="check">
+            {CHECK.map((c, i) => (
+              <li key={c.t}><input type="checkbox" id={`c${i}`} aria-label={c.t} /><label htmlFor={`c${i}`}><b>{c.t}</b><span>{c.d}</span></label></li>
+            ))}
+          </ul>
+
+          <h2 id="notes">Heads-up</h2>
+          {NOTES.map((n) => <div className="note" key={n}><b>Note · </b>{n}</div>)}
+        </main>
+        <div className="toast" id="toast" role="status" aria-live="polite" />
+        <script dangerouslySetInnerHTML={{ __html: SCRIPT }} />
+      </body>
+    </html>
+  );
+}
