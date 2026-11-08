@@ -308,7 +308,17 @@ export type ArtProp =
   | "syawal3"
   | "syawal6"
   | "sandals"
-  | "eidmats";
+  | "eidmats"
+  | "goat"
+  | "kaaba"
+  | "kaabascreen"
+  | "besek"
+  | "zamzam"
+  | "arafah9"
+  | "adha10"
+  | "muharram1"
+  | "muharram10"
+  | "rajab27";
 
 export type ArtFx =
   | "rain"
