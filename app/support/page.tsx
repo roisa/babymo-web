@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Baloo_2, Inter } from "next/font/google";
+import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { asset } from "@/lib/i18n/config";
 import { INSTAGRAM_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-pages";
 
@@ -10,8 +10,6 @@ import { INSTAGRAM_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
  * searchable, plus quick fixes and a ready-made bug-report email. Keep every
  * answer true to the app (babymo-app repo) and to the privacy policy.
  */
-const rounded = Baloo_2({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-round", display: "swap" });
-const inter = Inter({ subsets: ["latin"], variable: "--f-body", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Bantuan · Support — Baby Mo",
@@ -337,7 +335,7 @@ gs.forEach(function(g){g.hidden=!g.querySelector('[data-faq]:not([hidden])')});d
 export default function SupportPage() {
   const bugHref = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent("Laporan masalah / Bug report — Baby Mo")}&body=${BUG_BODY}`;
   return (
-    <html lang="id" data-lang="id" className={`${rounded.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="id" data-lang="id" className={STORE_FONT_VARS} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
         <script dangerouslySetInnerHTML={{ __html: SEARCH_SCRIPT }} />
