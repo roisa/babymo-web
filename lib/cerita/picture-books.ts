@@ -5,6 +5,7 @@ import { ADAPTED } from "./picture-books-adapted";
 import { FAMILY_BOOKS } from "./picture-books-family";
 import { PLAYROOM_BOOKS } from "./picture-books-playroom";
 import { TENNIS_BOOKS } from "./picture-books-tennis";
+import { MORE_BOOKS } from "./picture-books-more";
 
 /**
  * Full picture books: every page is one big illustration with a short bit
@@ -303,6 +304,7 @@ const BOOKS: PictureBook[] = [
   ...FAMILY_BOOKS,
   ...PLAYROOM_BOOKS,
   ...TENNIS_BOOKS,
+  ...MORE_BOOKS,
 ];
 
 /* ───────── helpers ───────── */
