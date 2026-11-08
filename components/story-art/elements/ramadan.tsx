@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { C, GroundShadow, Shine, crescentPath } from "./kit";
 
 /**
@@ -145,7 +146,7 @@ export function Tasbih() {
   const n = 22;
   const beads = Array.from({ length: n }, (_, i) => {
     const a = (i / n) * Math.PI * 2;
-    return [Math.cos(a) * 34, -34 + Math.sin(a) * 18] as const;
+    return [Math.round(Math.cos(a) * 3400) / 100, Math.round((-34 + Math.sin(a) * 18) * 100) / 100] as const;
   });
   return (
     <g className="sa-sway-slow">
@@ -369,3 +370,161 @@ export const RamadanCalendar0 = () => <RamadanCalendar done={0} />;
 export const RamadanCalendar1 = () => <RamadanCalendar done={1} />;
 export const RamadanCalendarHalf = () => <RamadanCalendar done={15} />;
 export const RamadanCalendarFull = () => <RamadanCalendar done={30} />;
+
+/* ───────────────────────── more Ramadan ───────────────────────── */
+
+/** Takjil stall at the Ramadan market: striped awning, trays of treats. */
+export function TakjilStall() {
+  const stripes = [-120, -80, -40, 0, 40, 80];
+  return (
+    <g>
+      <GroundShadow rx={140} ry={9} />
+      {/* poles */}
+      <rect x={-122} y={-196} width={8} height={196} rx={3} fill="#9A6A3F" />
+      <rect x={114} y={-196} width={8} height={196} rx={3} fill="#9A6A3F" />
+      {/* awning, flaps sway */}
+      <g className="sa-awning">
+        <path d="M-134 -206 h268 l-10 -30 h-248 z" fill="#FFFFFF" />
+        {stripes.map((x, i) => (
+          <path key={x} d={`M${x - 4} -236 h${i % 2 ? 0 : 40} l${i % 2 ? 0 : 6} 30 h${i % 2 ? 0 : -42} z`} fill="#2E9E6B" />
+        ))}
+        {[-120, -80, -40, 0, 40, 80, 120].map((x, i) => (
+          <path key={x} d={`M${x - 14} -206 q 14 20 28 0 z`} fill={i % 2 ? "#FFFFFF" : "#2E9E6B"} />
+        ))}
+      </g>
+      {/* sign */}
+      <rect x={-46} y={-188} width={92} height={26} rx={8} fill="#FFC83D" />
+      <text x={0} y={-169} fontSize={17} fontWeight={900} fill="#5A3A00" textAnchor="middle" fontFamily="system-ui, sans-serif">TAKJIL</text>
+      {/* counter */}
+      <rect x={-130} y={-74} width={260} height={74} rx={8} fill={C.b1} />
+      <rect x={-130} y={-74} width={260} height={10} rx={5} fill={C.b2} />
+      <path d="M-110 -50 h220" stroke={C.b0} strokeWidth={3} opacity=".4" />
+      {/* trays: klepon, kue lapis, es buah, gorengan */}
+      <g transform="translate(-92 -76)">
+        <ellipse rx={30} ry={7} fill="#E9EEF3" />
+        {([[-14, -6], [0, -8], [14, -6], [-7, -14], [7, -14]] as const).map(([x, y], i) => (
+          <g key={i}><circle cx={x} cy={y} r={7} fill="#4FB255" /><circle cx={x - 2} cy={y - 3} r={2} fill="#fff" opacity=".6" />{[-3, 0, 3].map((d) => <circle key={d} cx={x + d} cy={y - 7} r={1} fill="#fff" />)}</g>
+        ))}
+      </g>
+      <g transform="translate(-30 -76)">
+        <ellipse rx={28} ry={7} fill="#E9EEF3" />
+        {[-14, 0, 14].map((x) => (
+          <g key={x} transform={`translate(${x} -4)`}>
+            {["#FF6B6B", "#FFF3E0", "#FF6B6B", "#FFF3E0", "#FF6B6B"].map((c, j) => <rect key={j} x={-6} y={-18 + j * 3.6} width={12} height={3.6} fill={c} />)}
+          </g>
+        ))}
+      </g>
+      <g transform="translate(32 -76)">
+        {[-12, 12].map((x) => (
+          <g key={x} transform={`translate(${x} 0)`}>
+            <path d="M-10 -30 h20 l-3 30 h-14 z" fill="#E3F4FF" opacity=".9" />
+            <path d="M-9 -20 h18 l-2 20 h-14 z" fill="#FF8FAD" opacity=".85" />
+            <circle cx={-3} cy={-12} r={3} fill="#FFE066" /><circle cx={3} cy={-7} r={3} fill="#74C968" /><circle cx={-2} cy={-4} r={2.5} fill="#FF6B6B" />
+          </g>
+        ))}
+      </g>
+      <g transform="translate(96 -76)">
+        <ellipse rx={30} ry={7} fill="#E9EEF3" />
+        <ellipse cx={-10} cy={-8} rx={12} ry={6} fill="#D98E2B" />
+        <ellipse cx={10} cy={-8} rx={12} ry={6} fill="#E8A53C" />
+        <ellipse cx={0} cy={-15} rx={11} ry={5} fill="#C77F22" />
+      </g>
+      {/* string lights */}
+      <path d="M-118 -200 Q 0 -176 118 -200" stroke="#8A6A2E" strokeWidth={1.5} fill="none" />
+      {[-90, -50, -10, 30, 70, 104].map((x, i) => (
+        <circle key={x} cx={x} cy={-200 + 24 * (1 - (x / 118) ** 2)} r={4} fill={["#FFE066", "#FF8FAD", "#7FD3F5"][i % 3]} className="sa-pulse" style={{ animationDelay: `${i * 0.3}s` }} />
+      ))}
+    </g>
+  );
+}
+
+/** Hijaiyah letter blocks — alif, ba, ta — drawn as shapes, so they render
+ *  the same on every device. */
+export function HijaiyahBlocks() {
+  const ink = "#2A2B3D";
+  const blocks: { x: number; c: string; d: ReactNode }[] = [
+    // alif: one tall upright stroke
+    { x: -58, c: "#FF8FAD", d: <path d="M0 -22 q 2 22 0 40" stroke={ink} strokeWidth={6} strokeLinecap="round" fill="none" /> },
+    // ba: a little boat with one dot below
+    { x: 0, c: "#FFC83D", d: <g><path d="M-19 -8 q -3 12 7 12 h24 q 9 0 7 -10" stroke={ink} strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" fill="none" /><circle cx={0} cy={14} r={3.6} fill={ink} /></g> },
+    // ta: the same boat with two dots on top
+    { x: 58, c: "#7FD3F5", d: <g><path d="M-19 -8 q -3 12 7 12 h24 q 9 0 7 -10" stroke={ink} strokeWidth={5} strokeLinecap="round" strokeLinejoin="round" fill="none" /><circle cx={-5} cy={-10} r={3.6} fill={ink} /><circle cx={5} cy={-10} r={3.6} fill={ink} /></g> },
+  ];
+  return (
+    <g>
+      <GroundShadow rx={96} ry={7} />
+      {blocks.map((b, i) => (
+        <g key={b.x} transform={`translate(${b.x} -28)`}>
+          <g className="sa-wobble" style={{ animationDelay: `${-i * 0.7}s`, animationDuration: "4s" }}>
+            <rect x={-26} y={-26} width={52} height={52} rx={9} fill={b.c} />
+            <rect x={-26} y={-26} width={52} height={10} rx={5} fill="#fff" opacity=".35" />
+            <rect x={-20} y={-20} width={40} height={40} rx={7} fill="#FFFFFF" opacity=".55" />
+            {b.d}
+          </g>
+        </g>
+      ))}
+    </g>
+  );
+}
+
+/** Siwak — a twig toothbrush with a frayed tip. */
+export function Siwak() {
+  return (
+    <g className="sa-sway-slow">
+      <g transform="rotate(-62)">
+        <rect x={-6} y={-100} width={12} height={92} rx={6} fill="#B98A55" />
+        <rect x={-6} y={-100} width={4} height={92} rx={2} fill="#D6AE7A" />
+        {[-80, -60, -40].map((y) => <path key={y} d={`M-6 ${y} h12`} stroke="#9A6E3E" strokeWidth={1.5} opacity=".6" />)}
+        <path d="M-6 -100 l-3 -16 M-3 -100 l-1 -18 M0 -100 v-19 M3 -100 l1 -18 M6 -100 l3 -16" stroke="#F1E3C6" strokeWidth={2.4} strokeLinecap="round" />
+      </g>
+    </g>
+  );
+}
+
+/** A see-through plastic bag stuffed with takjil treats. */
+export function TakjilBag() {
+  return (
+    <g className="sa-sway-slow">
+      <GroundShadow rx={46} ry={6} />
+      {/* handles */}
+      <path d="M-24 -96 q -4 -30 12 -30 q 12 0 10 26 M24 -96 q 4 -30 -12 -30 q -12 0 -10 26" stroke="#E3EAF0" strokeWidth={6} fill="none" strokeLinecap="round" />
+      {/* treats inside */}
+      <circle cx={-16} cy={-30} r={11} fill="#4FB255" />
+      <circle cx={-2} cy={-24} r={11} fill="#4FB255" />
+      <rect x={4} y={-62} width={26} height={44} rx={5} fill="#FF8FAD" opacity=".9" />
+      <rect x={4} y={-62} width={26} height={8} rx={3} fill="#E3F4FF" />
+      <ellipse cx={-14} cy={-58} rx={18} ry={10} fill="#D98E2B" transform="rotate(-20 -14 -58)" />
+      <path d="M-30 -80 h30 v18 h-30 z" fill="#F2C063" />
+      <path d="M-30 -74 h30" stroke="#D99A3A" strokeWidth={2} />
+      {/* the bag itself */}
+      <path d="M-38 -100 h76 l6 92 q 0 8 -8 8 h-72 q -8 0 -8 -8 z" fill="#FFFFFF" opacity=".5" />
+      <path d="M-38 -100 h76" stroke="#E3EAF0" strokeWidth={4} strokeLinecap="round" />
+      <path d="M-30 -88 q -4 40 0 76" stroke="#fff" strokeWidth={5} fill="none" opacity=".8" strokeLinecap="round" />
+    </g>
+  );
+}
+
+/** Mosque charity box (kotak infak) with a coin dropping in. */
+export function InfaqBox() {
+  return (
+    <g>
+      <GroundShadow rx={50} ry={7} />
+      <rect x={-6} y={-46} width={12} height={46} rx={4} fill={C.b0} />
+      <rect x={-30} y={-54} width={60} height={10} rx={4} fill={C.b0} />
+      <rect x={-40} y={-128} width={80} height={76} rx={10} fill="#2E7D5B" />
+      <rect x={-40} y={-128} width={80} height={14} rx={7} fill="#3FA57A" />
+      <rect x={-18} y={-124} width={36} height={6} rx={3} fill="#1E4F3A" />
+      <path d={crescentPath(13, 6, -4, 11)} transform="translate(-4 -84)" fill="#FFC83D" />
+      <path d={STAR} transform="translate(14 -92) scale(.6)" fill="#FFC83D" />
+      <rect x={-34} y={-110} width={5} height={52} rx={2.5} fill="#fff" opacity=".3" />
+      {/* coin drops into the slot */}
+      <g className="sa-coindrop" style={{ animationDuration: "2.4s" }}>
+        <g transform="translate(0 -184)">
+          <circle r={11} fill="#FFC83D" />
+          <circle r={7.5} fill="none" stroke="#E0A21E" strokeWidth={2} />
+          <Shine x={-3} y={-4} r={2.4} />
+        </g>
+      </g>
+    </g>
+  );
+}
