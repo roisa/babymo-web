@@ -37,6 +37,14 @@ const B = ({ t }: { t: Bi }) => (
   </>
 );
 
+const HERO_SLIDES: { src: string; t: Bi }[] = [
+  { src: "/app-store/app-hub-v1.webp", t: { id: "Beranda", en: "Home" } },
+  { src: "/app-store/app-doa-v1.webp", t: { id: "Doa Harian", en: "Daily du'as" } },
+  { src: "/app-store/app-sholat-v1.webp", t: { id: "Sholat Bareng Mo", en: "Pray with Mo" } },
+  { src: "/app-store/app-wudhu-v1.webp", t: { id: "Wudhu Bareng Mo", en: "Wudhu with Mo" } },
+  { src: "/app-store/app-dream-v1.webp", t: { id: "Dreamtime", en: "Dreamtime" } },
+];
+
 const STATS: { n: string; t: Bi }[] = [
   { n: "11", t: { id: "game islami", en: "Islamic games" } },
   { n: "6", t: { id: "doa harian + audio", en: "daily du'as + audio" } },
@@ -195,16 +203,34 @@ html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data
 .trust{display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;margin:0;list-style:none;color:var(--soft);font-weight:700;font-size:15px}
 .trust li::before{content:"✓ ";color:var(--green);font-weight:900}
 
-.stage{position:relative;justify-self:center;width:min(340px,82vw);aspect-ratio:9/16.5}
-.phone{position:absolute;inset:0;border-radius:44px;background:#16181C;padding:11px;box-shadow:0 40px 80px -30px rgba(10,30,20,.55),inset 0 0 0 2px #2A2D33}
-.phone img{width:100%;height:100%;object-fit:cover;object-position:top;border-radius:34px;display:block;background:#fff}
-.float{position:absolute;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);font-weight:800;font-size:14px;white-space:nowrap;animation:bob 5s ease-in-out infinite}
+.stage{position:relative;justify-self:center;width:min(330px,78vw)}
+.phone{position:relative;border-radius:52px;background:linear-gradient(145deg,#2A2D33,#121417);padding:14px;box-shadow:0 50px 90px -34px rgba(10,30,20,.6),inset 0 0 0 2px #3A3D44,inset 0 0 0 6px #16181C}
+.screen{position:relative;width:100%;border-radius:39px;overflow:hidden;background:#F5F1FA;display:flex;flex-direction:column}
+.sbar{flex:0 0 auto;height:40px;display:flex;align-items:center;justify-content:space-between;padding:6px 26px 0;font:700 13px/1 var(--f-body),sans-serif;color:#14181A;background:#F5F1FA}
+.sbar .ico{display:flex;gap:5px;align-items:center}
+.sbar .bat{width:22px;height:11px;border:1.6px solid #14181A;border-radius:3px;position:relative}
+.sbar .bat::after{content:"";position:absolute;inset:1.5px 4px 1.5px 1.5px;background:#14181A;border-radius:1px}
+.island{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:30%;height:22px;border-radius:14px;background:#0B0B0C;z-index:2}
+.view{position:relative;aspect-ratio:390/664;overflow:hidden;margin:0 6px 6px;border-radius:26px;background:#fff}
+.strip{display:flex;width:600%;height:100%;animation:slide 20s cubic-bezier(.7,0,.3,1) infinite}
+.strip img{width:calc(100% / 6);height:100%;object-fit:cover;object-position:top;display:block;flex:0 0 auto}
+.stage:hover .strip,.stage:hover .dots i,.stage:hover .cap>span{animation-play-state:paused}
+@keyframes slide{0%,16%{transform:translateX(0)}20%,36%{transform:translateX(-16.6667%)}40%,56%{transform:translateX(-33.3333%)}60%,76%{transform:translateX(-50%)}80%,96%{transform:translateX(-66.6667%)}100%{transform:translateX(-83.3333%)}}
+.dots{position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);display:flex;gap:7px}
+.dots i{width:8px;height:8px;border-radius:99px;background:color-mix(in srgb,var(--ink) 22%,transparent);animation:dot 20s infinite}
+@keyframes dot{0%,16%{width:24px;background:var(--green)}20%,100%{width:8px}}
+.cap{position:absolute;left:0;right:0;bottom:-74px;height:30px;display:flex;justify-content:center}
+.cap>span{position:absolute;padding:5px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap;opacity:0;animation:cap 20s infinite}
+@keyframes cap{0%,15%{opacity:1;transform:none}19%,100%{opacity:0;transform:translateY(4px)}}
+.float{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);font-weight:800;font-size:14px;white-space:nowrap;animation:bob 5s ease-in-out infinite}
 .float .ic{font-size:20px}
-.f1{top:30%;left:-22%}.f2{top:52%;right:-24%;animation-delay:-1.6s}.f3{bottom:4%;left:-18%;animation-delay:-3.2s}
-@media(max-width:520px){.f1{left:-6%}.f2{right:-6%}.f3{left:-4%}}
+.f1{top:26%;left:-30%}.f2{top:50%;right:-30%;animation-delay:-1.6s}.f3{bottom:12%;left:-26%;animation-delay:-3.2s}
+@media(max-width:900px){.f1{left:-16%}.f2{right:-16%}.f3{left:-12%}}
+@media(max-width:520px){.float{display:none}}
+.hero .stage{margin-bottom:84px}
 .peek{position:absolute;width:44%;right:-16%;bottom:-6%;filter:drop-shadow(0 18px 18px rgba(0,0,0,.2));animation:bob 4s ease-in-out infinite}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@media (prefers-reduced-motion:reduce){.float,.peek{animation:none}}
+@media (prefers-reduced-motion:reduce){.float,.peek,.strip,.dots i,.cap>span{animation:none}.dots i:first-child{width:24px;background:var(--green)}.cap>span:first-child{opacity:1}}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px}
@@ -372,9 +398,21 @@ export default function AppMarketingPage() {
 
               <div className="stage" aria-hidden="true">
                 <div className="phone">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={asset("/app-store/app-hub-v1.webp")} alt="" width={390} height={664} />
+                  <div className="screen">
+                    <div className="sbar"><span>9:41</span><span className="ico">●●● <span className="bat" /></span></div>
+                    <div className="view">
+                      <div className="strip">
+                        {[...HERO_SLIDES, HERO_SLIDES[0]!].map((sl, i) => (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img key={i} src={asset(sl.src)} alt="" width={390} height={844} loading={i === 0 ? "eager" : "lazy"} />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="island" />
                 </div>
+                <div className="dots">{HERO_SLIDES.map((sl, i) => <i key={sl.src} style={{ animationDelay: `${i * 4}s` }} />)}</div>
+                <div className="cap">{HERO_SLIDES.map((sl, i) => <span key={sl.src} style={{ animationDelay: `${i * 4}s` }}><B t={sl.t} /></span>)}</div>
                 <div className="float f1"><span className="ic">🔊</span><B t={{ id: "Suara Arab asli", en: "Real Arabic audio" }} /></div>
                 <div className="float f2"><span className="ic">⭐</span><B t={{ id: "+3 bintang!", en: "+3 stars!" }} /></div>
                 <div className="float f3"><span className="ic">🕌</span><B t={{ id: "Dzuhur · 12:00", en: "Dhuhr · 12:00" }} /></div>
