@@ -206,6 +206,16 @@ const GROUPS: Group[] = [
   },
 ];
 
+/** Home-screen top bar, positions in % of the cropped screenshot (app-hub-v1). */
+const BUTTONS: { x: number; y: number; t: Bi; d: Bi }[] = [
+  { x: 17.5, y: 6, t: { id: "⭐ Bintang", en: "⭐ Stars" }, d: { id: "Jumlah bintang yang dikumpulkan si kecil dari semua game.", en: "How many stars your child has collected across the games." } },
+  { x: 57, y: 23, t: { id: "ID / EN", en: "ID / EN" }, d: { id: "Ganti bahasa Indonesia atau Inggris.", en: "Switch between Indonesian and English." } },
+  { x: 69, y: 23, t: { id: "🌗 Tema", en: "🌗 Theme" }, d: { id: "Mode terang atau gelap.", en: "Light or dark mode." } },
+  { x: 80.5, y: 23, t: { id: "🔊 Suara", en: "🔊 Sound" }, d: { id: "Nyalakan atau matikan suara. Cek ini dulu kalau suara tidak keluar.", en: "Sound on or off. Check this first if there's no sound." } },
+  { x: 92, y: 23, t: { id: "✨ Kejutan", en: "✨ Surprise" }, d: { id: "Ketuk untuk percikan bintang dan kata-kata penyemangat.", en: "Tap for a burst of sparkles and a word of encouragement." } },
+  { x: 54, y: 89, t: { id: "✏️ Nama si kecil", en: "✏️ Child's name" }, d: { id: "Ketik nama panggilan supaya Baby Mo menyapanya. Tersimpan hanya di perangkat.", en: "Type a nickname so Baby Mo greets them. Stored only on the device." } },
+];
+
 const BUG_BODY = encodeURIComponent(
   "Perangkat / Device (contoh: iPhone 13):\nVersi iOS / iOS version:\nGame atau layar / Game or screen:\nApa yang terjadi / What happened:\nApa yang seharusnya terjadi / What should happen:\n\n(Lampirkan tangkapan layar bila ada / Attach a screenshot if you can)\n",
 );
@@ -299,6 +309,19 @@ details[open] summary{border-bottom:1px dashed var(--line)}
 .ans p{margin:0 0 10px}
 .ans ol,.ans ul{padding-left:20px;margin:0 0 10px}
 .ans li{margin:5px 0}
+.guide{display:grid;gap:18px;margin-top:18px;align-items:center}
+@media(min-width:820px){.guide{grid-template-columns:1.1fr 1fr}}
+.gshot{position:relative;aspect-ratio:780/400;border-radius:24px;overflow:hidden;border:8px solid #16181C;box-shadow:var(--shadow);background:#fff}
+.gshot img{width:100%;height:auto;display:block}
+.pin{position:absolute;transform:translate(-50%,-50%);width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#FF5A7E;color:#fff;font-weight:900;font-size:12px;box-shadow:0 0 0 2px #fff,0 6px 14px -4px rgba(0,0,0,.4)}
+.gshot .pin{animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 3px #fff,0 0 0 3px rgba(255,90,126,.0)}50%{box-shadow:0 0 0 3px #fff,0 0 0 9px rgba(255,90,126,.25)}}
+@media (prefers-reduced-motion:reduce){.gshot .pin{animation:none}}
+.pin.static{position:static;transform:none;flex:0 0 auto;box-shadow:none;width:26px;height:26px;font-size:13px}
+.legend{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.legend li{display:flex;gap:12px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:10px 14px}
+.legend b{display:block;font-size:15px}
+.legend small{display:block;color:var(--soft);font-size:14px;line-height:1.4}
 .empty{display:none;text-align:center;background:var(--card);border:1px dashed var(--line);border-radius:20px;padding:24px;margin-top:20px}
 .empty.show{display:block}
 
@@ -313,7 +336,7 @@ details[open] summary{border-bottom:1px dashed var(--line)}
 .cbox .ic{font-size:26px}
 .cbox b{display:block;font-family:var(--f-round);font-size:20px;margin:6px 0 2px}
 .cbox span.s{display:block;color:#CFE8DA;font-size:14px}
-.searching .topics,.searching #coba{display:none}
+.searching .topics,.searching #coba,.searching #tombol{display:none}
 
 .safe{display:grid;gap:10px;margin-top:16px}
 @media(min-width:760px){.safe{grid-template-columns:repeat(3,1fr)}}
@@ -352,6 +375,7 @@ export default function SupportPage() {
             </a>
             <div className="links">
               <a href="#coba"><B t={{ id: "Coba dulu", en: "Quick fixes" }} /></a>
+              <a href="#tombol"><B t={{ id: "Tombol", en: "Buttons" }} /></a>
               <a href="#faq">FAQ</a>
               <a href="#kontak"><B t={{ id: "Hubungi", en: "Contact" }} /></a>
               <a href={asset("/app/")}><B t={{ id: "Tentang app", en: "About the app" }} /></a>
@@ -407,6 +431,27 @@ export default function SupportPage() {
                 <div className="step"><div className="n">1</div><h3><B t={{ id: "Tutup & buka lagi", en: "Close & reopen" }} /></h3><p><B t={{ id: "Usap ke atas dari bawah layar, geser Baby Mo ke atas untuk menutupnya, lalu buka kembali.", en: "Swipe up from the bottom of the screen, flick Baby Mo away to close it, then open it again." }} /></p></div>
                 <div className="step"><div className="n">2</div><h3><B t={{ id: "Perbarui aplikasi", en: "Update the app" }} /></h3><p><B t={{ id: "Buka App Store, ketuk foto profil Anda, lalu perbarui Baby Mo jika ada versi baru.", en: "Open the App Store, tap your profile photo, and update Baby Mo if a new version is available." }} /></p></div>
                 <div className="step"><div className="n">3</div><h3><B t={{ id: "Mulai ulang perangkat", en: "Restart the device" }} /></h3><p><B t={{ id: "Matikan iPhone/iPad sebentar lalu nyalakan lagi. Data Baby Mo tetap aman.", en: "Turn the iPhone/iPad off for a moment, then on again. Your Baby Mo data stays safe." }} /></p></div>
+              </div>
+            </div>
+          </section>
+
+          <section id="tombol" style={{ paddingTop: 10 }}>
+            <div className="wrap">
+              <div className="kick"><B t={{ id: "Kenali tombolnya", en: "Know the buttons" }} /></div>
+              <h2><B t={{ id: "Tombol di bagian atas Beranda", en: "The buttons at the top of Home" }} /></h2>
+              <div className="guide">
+                <div className="gshot">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={asset("/app-store/app-hub-v1.webp")} alt="" width={390} height={664} loading="lazy" />
+                  {BUTTONS.map((b, i) => (
+                    <span className="pin" key={i} style={{ left: `${b.x}%`, top: `${b.y}%` }}>{i + 1}</span>
+                  ))}
+                </div>
+                <ol className="legend">
+                  {BUTTONS.map((b, i) => (
+                    <li key={i}><span className="pin static">{i + 1}</span><span><b><B t={b.t} /></b><small><B t={b.d} /></small></span></li>
+                  ))}
+                </ol>
               </div>
             </div>
           </section>
