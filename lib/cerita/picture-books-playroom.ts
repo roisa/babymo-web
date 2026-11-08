@@ -857,6 +857,430 @@ const RAW: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── 9. Pet corner: the borrowed rabbit ───────────────────────── */
+  {
+    slug: "amanah-si-kelinci-putih",
+    pose: "baby-mo-pose-05.png",
+    published: "2026-12-06",
+    title: { id: "Amanah Si Kelinci Putih", en: "The White Rabbit We Looked After" },
+    hook: {
+      id: "Tante Rara menitipkan kelinci putihnya selama tiga hari. Si kembar senang sekali! Tapi di hari kedua, Mo terlalu asyik bermain dan lupa sesuatu yang penting.",
+      en: "Auntie Rara leaves her white rabbit with the twins for three days. They're thrilled! But on day two, Mo is so busy playing that he forgets something important.",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Merawat hewan titipan mengajarkan amanah: sesuatu yang dipercayakan kepada kita harus dijaga, bahkan saat tidak ada yang melihat.",
+      en: "Caring for a borrowed pet teaches amanah: what is entrusted to us must be looked after, even when nobody is watching.",
+    },
+    tags: ["amanah", "tanggung jawab", "hewan", "kelinci", "merawat", "umi"],
+    card: {
+      title: { id: "Melatih Tanggung Jawab Kecil", en: "Training Small Responsibilities" },
+      items: {
+        id: [
+          "Buat daftar tugas bergambar yang bisa dicentang anak sendiri: beri makan, beri minum, bersihkan.",
+          "Saat anak lupa, fokus pada memperbaiki — \"Ayo kita isi airnya sekarang\" — bukan pada mempermalukan.",
+          "Kenalkan kata amanah: barang atau tugas yang dipercayakan kepada kita, dan Allah melihat bagaimana kita menjaganya.",
+        ],
+        en: [
+          "Make a picture checklist your child can tick themselves: food, water, clean up.",
+          "When they forget, focus on fixing it — \"Let's fill the water now\" — not on shaming.",
+          "Introduce the word amanah: something entrusted to us, and Allah sees how we look after it.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-pet",
+      props: [{ k: "rabbit", x: 470, s: 0.7 }],
+      mo: [{ pose: "pose-05", x: 340 }, { who: "ais", pose: "hug-bunny-happy", x: 440, move: "still" }],
+      fx: ["hearts"],
+    },
+    pages: [
+      {
+        text: { id: "Tok tok! Tante Rara datang membawa keranjang. Di dalamnya ada kelinci putih bernama Kapas. \"Bisa titip Kapas tiga hari? Tante harus menjenguk Nenek di kampung.\"", en: "Knock knock! Auntie Rara arrived with a basket. Inside was a white rabbit called Kapas. \"Could you look after Kapas for three days? I have to visit Grandma in the village.\"" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "rabbit", x: 470, s: 0.7 }], mo: [{ pose: "wow", x: 340 }, { who: "ais", pose: "dreamy-delight", x: 230 }] },
+      },
+      {
+        text: { id: "\"Mau! Mau!\" seru si kembar. Umi tersenyum. \"Kalau begitu, Kapas jadi amanah kita. Amanah itu sesuatu yang dipercayakan — harus dijaga baik-baik.\"", en: "\"Yes! Yes!\" cried the twins. Umi smiled. \"Then Kapas is our amanah. An amanah is something trusted to us — we have to look after it well.\"" },
+        scene: { focus: 380, bg: "play-pet", mo: [{ who: "umi", pose: "explain-hand", x: 270 }, { pose: "pose-02", x: 390, move: "hop" }, { who: "ais", pose: "jump-joy", x: 490, move: "hop" }] },
+      },
+      {
+        text: { id: "Ais membuat daftar tugas bergambar: 🥕 makan pagi, 💧 air minum, 🧹 bersihkan kandang. \"Mo tugas air, aku tugas makan!\"", en: "Ais made a picture checklist: 🥕 breakfast, 💧 water, 🧹 clean the hutch. \"Mo does water, I do food!\"" },
+        scene: { focus: 390, bg: "play-pet", mo: [{ who: "ais", pose: "checklist", x: 340 }, { pose: "pose-25", x: 460 }] },
+      },
+      {
+        text: { id: "Hari pertama berjalan sempurna. Kapas makan wortel — krauk, krauk — dan minum dari mangkuk yang diisi Mo.", en: "Day one went perfectly. Kapas munched carrots — crunch, crunch — and drank from the bowl Mo filled." },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "rabbit", x: 460, s: 0.7 }, { k: "veggies", x: 540, s: 0.5 }], mo: [{ pose: "pose-37", x: 360 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Hari kedua, Kak Adam mengajak main bola di halaman. Seru sekali! Mo berlari, menendang, tertawa… sampai sore.", en: "On day two, Kak Adam asked Mo to play football in the garden. So much fun! Mo ran, kicked and laughed… until the afternoon." },
+        scene: { focus: 390, bg: "garden", props: [{ k: "ball", x: 470 }], mo: [{ pose: "run", x: 340, move: "hop" }, { who: "adam", pose: "run", x: 470, move: "hop" }] },
+      },
+      {
+        text: { id: "Saat masuk rumah, Mo melihat Kapas berbaring lemas di pojok. Mangkuk airnya… kosong.", en: "When Mo came inside, he saw Kapas lying limp in the corner. The water bowl was… empty." },
+        scene: { focus: 400, bg: "play-pet", props: [{ k: "rabbit", x: 480, s: 0.6 }, { k: "bowl", x: 400, y: 400, s: 0.5 }], mo: [{ pose: "pose-33", x: 330 }] },
+      },
+      {
+        text: { id: "\"Aku lupa!\" Mo panik. Matanya panas. \"Kapas haus seharian gara-gara aku!\"", en: "\"I forgot!\" Mo panicked. His eyes stung. \"Kapas was thirsty all day because of me!\"" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "rabbit", x: 480, s: 0.6 }], mo: [{ pose: "pose-09", x: 370, move: "still" }] },
+      },
+      {
+        text: { id: "Umi datang dengan tenang. \"Kita perbaiki sekarang, ya. Isi airnya, pelan-pelan.\" Mo mengisi mangkuk dengan tangan gemetar.", en: "Umi came calmly. \"Let's fix it now. Fill the water, gently.\" Mo filled the bowl with shaking hands." },
+        scene: { focus: 380, bg: "play-pet", props: [{ k: "water", x: 420, y: 400, s: 0.6 }, { k: "rabbit", x: 500, s: 0.6 }], mo: [{ who: "umi", pose: "offer", x: 270 }, { pose: "pose-05", x: 390 }] },
+      },
+      {
+        text: { id: "Kapas mendekat… mencium air… lalu minum lama sekali. Slurp, slurp, slurp. Pelan-pelan telinganya tegak lagi.", en: "Kapas hopped closer… sniffed the water… and drank for a long time. Lap, lap, lap. Slowly, her ears stood up again." },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "bowl", x: 430, y: 400, s: 0.5 }, { k: "rabbit", x: 490, s: 0.7 }], mo: [{ pose: "pose-35", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Umi… Mo bukan penjaga yang baik,\" bisik Mo. Umi memeluknya. \"Semua orang bisa lupa, Sayang. Penjaga yang baik adalah yang mau memperbaiki dan belajar.\"", en: "\"Umi… I'm not a good keeper,\" Mo whispered. Umi hugged him. \"Everyone forgets sometimes, sweetheart. A good keeper is one who fixes it and learns.\"" },
+        scene: { focus: 370, bg: "play-pet", mo: [{ who: "umi", pose: "hug-mo", x: 370, move: "still" }] },
+      },
+      {
+        text: { id: "\"Rasulullah ﷺ bersabda, setiap kita adalah penjaga, dan akan ditanya tentang apa yang kita jaga. Hari ini, Mo penjaga Kapas.\"", en: "\"The Prophet ﷺ said that each of us is a shepherd, and will be asked about what we look after. Today, Mo is Kapas's shepherd.\"" },
+        quote: { id: "\"Setiap kalian adalah pemimpin, dan setiap kalian akan dimintai pertanggungjawaban atas yang dipimpinnya.\" (HR. Bukhari 893, Muslim 1829)", en: "\"Each of you is a shepherd, and each of you will be asked about his flock.\" (Bukhari 893, Muslim 1829)" },
+        scene: { focus: 380, bg: "play-pet", mo: [{ who: "umi", pose: "teach-book", x: 270 }, { pose: "pose-22", x: 390 }, { who: "ais", pose: "sit-chin-hands", x: 490, move: "still" }] },
+      },
+      {
+        text: { id: "Mo punya ide. Ia menggambar jam besar dan menempelkannya di kandang: matahari terbit = air, matahari di atas = air, matahari terbenam = air!", en: "Mo had an idea. He drew a big clock and stuck it on the hutch: sunrise = water, sun up high = water, sunset = water!" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "clock", x: 490, y: 330, s: 0.6 }], mo: [{ pose: "idea", x: 370 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Hari ketiga, Mo tidak lupa sekali pun. Bahkan sebelum main, ia mengecek mangkuk dulu. \"Penuh! Oke, Kapas, Mo main dulu, ya!\"", en: "On day three, Mo didn't forget once. Even before playing, he checked the bowl first. \"Full! Okay Kapas, I'm off to play!\"" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "bowl", x: 430, y: 400, s: 0.5 }, { k: "rabbit", x: 490, s: 0.7 }], mo: [{ pose: "pose-25", x: 350 }] },
+      },
+      {
+        text: { id: "Sore itu Tante Rara kembali. Kapas melompat-lompat sehat. \"Masya Allah, kalian penjaga yang hebat!\" Mo menunduk malu. \"Mo pernah lupa sekali, Tante. Tapi sudah belajar.\"", en: "That afternoon Auntie Rara came back. Kapas was hopping about, healthy. \"Masya Allah, what great keepers!\" Mo looked down shyly. \"I forgot once, Auntie. But I learned.\"" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "rabbit", x: 500, s: 0.7 }], mo: [{ pose: "pose-35", x: 360 }, { who: "ais", pose: "heart-hands-smile", x: 250 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya, Mo berbisik sebelum tidur, \"Ya Allah, bantu Mo menjaga amanah — kelinci, mainan, dan janji.\"", en: "That night, Mo whispered before sleep, \"Ya Allah, help me look after my amanah — rabbits, toys and promises.\"" },
+        scene: { focus: 360, bg: "bedroom", time: "night", mo: [{ pose: "pose-12", x: 360, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Apa amanah kecilmu di rumah? Menyiram tanaman, merapikan mainan, atau memberi makan kucing? 🐰", en: "What's your little amanah at home? Watering plants, tidying toys, or feeding the cat? 🐰" },
+        scene: { focus: 390, bg: "play-pet", props: [{ k: "rabbit", x: 470, s: 0.7 }], mo: [{ pose: "pose-05", x: 340 }, { who: "ais", pose: "hug-bunny-happy", x: 440, move: "still" }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 10. Pool: the first bubble ───────────────────────── */
+  {
+    slug: "gelembung-pertama-baby-mo",
+    pose: "baby-mo-pose-27.png",
+    published: "2026-12-07",
+    title: { id: "Gelembung Pertama Baby Mo", en: "Baby Mo's First Bubble" },
+    hook: {
+      id: "Besok Mo ikut kelas berenang pertama. Tapi Mo takut air masuk ke hidung! Di ruang main kolam renang, Abi mengajarinya satu langkah kecil: meniup gelembung.",
+      en: "Tomorrow is Mo's first swimming lesson. But Mo is scared of water going up his nose! In the swimming-pool playroom, Abi teaches him one small step: blowing bubbles.",
+    },
+    anchor: { type: "doa", slug: "doa-dimudahkan-urusan" },
+    takeaway: {
+      id: "Rasa takut mengecil saat dipecah menjadi langkah-langkah kecil yang dilatih dalam suasana bermain, ditemani doa dan pelukan.",
+      en: "Fear shrinks when it's broken into small steps practised through play, with a dua and a hug.",
+    },
+    tags: ["berenang", "takut", "berani", "langkah kecil", "doa", "abi"],
+    card: {
+      title: { id: "Saat Anak Takut Mencoba Hal Baru", en: "When Your Child Is Scared to Try Something New" },
+      items: {
+        id: [
+          "Pecah menjadi langkah kecil: meniup gelembung di baskom dulu, baru mencelupkan wajah, baru menendang kaki.",
+          "Latihan pura-pura di rumah membuat tempat baru terasa akrab. Main peran dulu, baru hari sebenarnya.",
+          "Ajarkan doa dimudahkan urusan, dan rayakan setiap langkah kecil — bukan hanya hasil akhirnya.",
+        ],
+        en: [
+          "Break it into tiny steps: blow bubbles in a bowl first, then dip the face, then kick the legs.",
+          "Pretend practice at home makes a new place feel familiar. Role-play first, then the real day.",
+          "Teach the dua for ease, and celebrate every small step — not only the final result.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-pool",
+      props: [{ k: "swimring", x: 470, y: 400, s: 0.8 }],
+      mo: [{ pose: "pose-27", x: 350 }, { who: "ayah", pose: "thumbs-up-kneel", x: 240 }],
+      fx: ["bubbles"],
+    },
+    pages: [
+      {
+        text: { id: "\"Besok kelas berenang pertama!\" kata Abi. Ais melompat-lompat senang. Tapi Mo diam saja, memeluk handuknya.", en: "\"Tomorrow is the first swimming lesson!\" said Abi. Ais bounced with joy. But Mo stayed quiet, hugging his towel." },
+        scene: { focus: 380, bg: "living", props: [{ k: "towel", x: 470 }], mo: [{ who: "ayah", pose: "cheer-fists-stand", x: 260 }, { pose: "pose-39", x: 390, move: "still" }, { who: "ais", pose: "jump-joy", x: 490, move: "hop" }] },
+      },
+      {
+        text: { id: "\"Mo takut,\" bisiknya. \"Nanti airnya masuk hidung. Nanti Mo tenggelam.\"", en: "\"I'm scared,\" he whispered. \"The water will go up my nose. I'll sink.\"" },
+        scene: { focus: 380, bg: "living", mo: [{ pose: "pose-10", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Abi tidak bilang \"jangan takut\". Abi menggandeng Mo ke ruang main kolam renang. \"Yuk latihan dulu. Di sini, airnya pura-pura.\"", en: "Abi didn't say \"don't be scared\". He led Mo to the swimming-pool playroom. \"Let's practise first. In here, the water is pretend.\"" },
+        scene: { focus: 380, bg: "play-pool", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }] },
+      },
+      {
+        text: { id: "\"Langkah pertama: meniup gelembung. Tarik napas lewat mulut… lalu tiup pelan-pelan, seperti meniup lilin. Fuuuh!\"", en: "\"Step one: blowing bubbles. Breathe in through your mouth… then blow out slowly, like blowing out a candle. Whoooo!\"" },
+        scene: { focus: 380, bg: "play-pool", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-22", x: 400 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Abi mengisi baskom dengan air sungguhan. Mo meniup… blub-blub-blub! Gelembung-gelembung muncul. Mo tertawa kecil.", en: "Abi filled a basin with real water. Mo blew… blub-blub-blub! Bubbles popped up. Mo giggled." },
+        scene: { focus: 390, bg: "play-pool", props: [{ k: "bowl", x: 470, y: 400, s: 0.7 }], mo: [{ pose: "pose-03", x: 370 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Kalau kamu meniup, air tidak bisa masuk hidung,\" kata Abi. \"Hidungmu punya penjaga: napasmu sendiri.\"", en: "\"When you're blowing out, water can't get up your nose,\" said Abi. \"Your nose has a guard: your own breath.\"" },
+        scene: { focus: 380, bg: "play-pool", mo: [{ who: "ayah", pose: "idea-point-stand", x: 270 }, { pose: "pose-31", x: 400 }] },
+      },
+      {
+        text: { id: "\"Langkah kedua: menendang seperti katak!\" Mo berbaring tengkurap di karpet dan menendang-nendang. Duk-duk-duk!", en: "\"Step two: kicking like a frog!\" Mo lay on his tummy on the rug and kicked. Thump-thump-thump!" },
+        scene: { focus: 390, bg: "play-pool", props: [{ k: "frog", x: 500, s: 0.6 }], mo: [{ pose: "pose-17", x: 380, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Langkah ketiga: memakai pelampung dan percaya.\" Ais memasangkan pelampung bebek ke pinggang Mo. \"Kamu pasti bisa, Mo!\"", en: "\"Step three: wearing a float and trusting.\" Ais put the duck float around Mo's waist. \"You can do it, Mo!\"" },
+        scene: { focus: 390, bg: "play-pool", props: [{ k: "swimring", x: 360, y: 380, s: 0.7 }], mo: [{ pose: "pose-27", x: 360 }, { who: "ais", pose: "cheer-fist", x: 470 }] },
+      },
+      {
+        text: { id: "Malam itu Mo masih sedikit takut. Abi mengajarinya doa. \"Kalau sesuatu terasa sulit, minta Allah memudahkannya.\"", en: "That night Mo was still a little scared. Abi taught him a dua. \"When something feels hard, ask Allah to make it easy.\"" },
+        quote: { id: "\"Allahumma laa sahla illaa maa ja'altahu sahlaa, wa anta taj'alul hazna idzaa syi'ta sahlaa.\" — Ya Allah, tidak ada yang mudah kecuali yang Engkau jadikan mudah, dan Engkau jadikan yang sulit menjadi mudah jika Engkau menghendakinya. (HR. Ibnu Hibban 2427)", en: "\"Allahumma la sahla illa ma ja'altahu sahla, wa anta taj'alul hazna idha shi'ta sahla.\" — O Allah, nothing is easy except what You make easy, and You make the hard easy if You will. (Ibn Hibban 2427)" },
+        scene: { focus: 370, bg: "bedroom", time: "night", mo: [{ who: "ayah", pose: "dua-kneel", x: 270 }, { pose: "thank-you", x: 400 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Besoknya, di kolam renang, airnya terasa dingin. Kaki Mo gemetar. Ia memegang tangan Abi erat-erat. \"Bismillah…\"", en: "The next day, at the swimming pool, the water felt cold. Mo's legs trembled. He held Abi's hand tight. \"Bismillah…\"" },
+        scene: { focus: 380, bg: "play-pool", props: [{ k: "swimring", x: 400, y: 380, s: 0.7 }], mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-33", x: 400 }] },
+      },
+      {
+        text: { id: "Mo mengingat langkah pertama. Tarik napas… celupkan wajah… blub-blub-blub! Gelembung pertama di kolam renang!", en: "Mo remembered step one. Breathe in… face in… blub-blub-blub! His first bubbles in the pool!" },
+        scene: { focus: 390, bg: "play-pool", mo: [{ pose: "pose-26", x: 390 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Lalu langkah kedua — tendang seperti katak! Duk-duk-duk! Pelampung bebek membawanya maju sedikit… sedikit… sampai ke Abi!", en: "Then step two — kick like a frog! Thump-thump-thump! The duck float carried him forward a little… a little… all the way to Abi!" },
+        scene: { focus: 380, bg: "play-pool", props: [{ k: "swimring", x: 420, y: 380, s: 0.7 }], mo: [{ who: "ayah", pose: "arms-open-welcome", x: 260 }, { pose: "pose-20", x: 410 }], fx: ["bubbles", "sparkle"] },
+      },
+      {
+        text: { id: "\"MASYA ALLAH, MO!\" Ais bersorak dari pinggir kolam. Mo tertawa sampai air memercik ke mana-mana.", en: "\"MASYA ALLAH, MO!\" Ais cheered from the side. Mo laughed so hard the water splashed everywhere." },
+        scene: { focus: 390, bg: "play-pool", mo: [{ pose: "yes", x: 340 }, { who: "ais", pose: "jump-joy", x: 460, move: "hop" }], fx: ["confetti", "bubbles"] },
+      },
+      {
+        text: { id: "\"Abi, ternyata takutnya mengecil kalau dicoba sedikit-sedikit,\" kata Mo sambil menggigil dalam handuk. \"Dan kalau Allah yang memudahkan,\" tambah Abi.", en: "\"Abi, the scared feeling gets smaller when you try a little at a time,\" said Mo, shivering in his towel. \"And when Allah makes it easy,\" added Abi." },
+        scene: { focus: 380, bg: "play-pool", props: [{ k: "towel", x: 500 }], mo: [{ who: "ayah", pose: "hug-mo", x: 370, move: "still" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya, Mo tertidur sambil tersenyum. Dalam mimpinya, ia berenang bersama ikan-ikan — blub, blub, blub.", en: "That night Mo fell asleep smiling. In his dream, he swam with the fish — blub, blub, blub." },
+        scene: { focus: 360, bg: "bedroom", time: "night", mo: [{ pose: "pose-39", x: 360, move: "still" }], fx: ["stars", "zzz"] },
+      },
+      {
+        text: { id: "Apa yang dulu kamu takuti, tapi sekarang sudah berani? Langkah kecil apa yang membantumu? 🏊", en: "What were you once scared of but now feel brave about? Which small step helped you? 🏊" },
+        scene: { focus: 390, bg: "play-pool", props: [{ k: "swimring", x: 470, y: 400, s: 0.8 }], mo: [{ pose: "pose-27", x: 350 }, { who: "ais", pose: "cheer-wink", x: 250 }], fx: ["bubbles"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 11. Airport: first flight to Nenek ───────────────────────── */
+  {
+    slug: "bandara-di-ruang-main",
+    pose: "baby-mo-pose-20.png",
+    published: "2026-12-08",
+    title: { id: "Bandara di Ruang Main", en: "The Playroom Airport" },
+    hook: {
+      id: "Minggu depan si kembar akan naik pesawat ke rumah Nenek untuk pertama kali. Mo takut suara mesinnya! Kak Adam membuka bandara di ruang main untuk latihan.",
+      en: "Next week the twins will fly to Grandma's for the very first time. Mo is scared of the engine noise! Kak Adam opens a playroom airport to practise.",
+    },
+    anchor: { type: "doa", slug: "naik-kendaraan" },
+    takeaway: {
+      id: "Perjalanan pertama terasa lebih ringan bila anak tahu urutannya lewat bermain peran — dan punya doa untuk dibaca saat berangkat.",
+      en: "A first journey feels lighter when a child knows the steps through role-play — and has a dua to say as they set off.",
+    },
+    tags: ["pesawat", "perjalanan", "doa naik kendaraan", "takut", "kak adam", "nenek"],
+    card: {
+      title: { id: "Menyiapkan Anak untuk Perjalanan Pertama", en: "Preparing a Child for Their First Trip" },
+      items: {
+        id: [
+          "Main peran urutannya di rumah: antre, periksa tas, duduk, pakai sabuk, lepas landas. Yang dikenal tidak menakutkan.",
+          "Ceritakan suara-suara yang akan didengar (mesin, pengumuman) sebelum berangkat, supaya tidak mengagetkan.",
+          "Hafalkan bersama doa naik kendaraan dan bacalah bersama saat duduk di kursi.",
+        ],
+        en: [
+          "Role-play the steps at home: queue, bag check, sit, seatbelt, take-off. What's familiar isn't frightening.",
+          "Describe the sounds they'll hear (engines, announcements) beforehand, so nothing comes as a shock.",
+          "Learn the travelling dua together and say it together once you're seated.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-airport",
+      props: [{ k: "plane", x: 500, y: 230, s: 0.6 }],
+      mo: [{ pose: "pose-20", x: 360 }, { who: "adam", pose: "wave-hello", x: 470 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"Minggu depan kita naik pesawat ke rumah Nenek!\" kata Umi. Ais bersorak. Tapi Mo menutup telinganya. \"Pesawat itu berisik… NGEEEENG!\"", en: "\"Next week we're flying to Grandma's!\" said Umi. Ais cheered. But Mo covered his ears. \"Planes are so loud… NYEEEOW!\"" },
+        scene: { focus: 380, bg: "living", mo: [{ who: "umi", pose: "cheer-happy", x: 270 }, { pose: "pose-33", x: 390 }, { who: "ais", pose: "jump-joy", x: 490, move: "hop" }] },
+      },
+      {
+        text: { id: "Kak Adam punya ide. \"Bandara Ruang Main dibuka! Penumpang Mo dan penumpang Ais, silakan masuk!\"", en: "Kak Adam had an idea. \"The Playroom Airport is open! Passenger Mo and Passenger Ais, please come in!\"" },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "adam", pose: "proud-hands-hips", x: 280 }, { pose: "wow", x: 400 }, { who: "ais", pose: "traveller", x: 500 }] },
+      },
+      {
+        text: { id: "Pertama, antre di loket. Ais menyerahkan tiket kertasnya. \"Tujuan: Rumah Nenek. Kursi nomor satu!\"", en: "First, queue at the counter. Ais handed over her paper ticket. \"Destination: Grandma's House. Seat number one!\"" },
+        scene: { focus: 390, bg: "play-airport", props: [{ k: "card", x: 430, y: 330, s: 0.6 }], mo: [{ who: "ais", pose: "traveller-hat", x: 340 }, { who: "adam", pose: "offer", x: 470 }] },
+      },
+      {
+        text: { id: "Kedua, pemeriksaan tas. Mo memasukkan ranselnya ke terowongan kardus. Tit-tit! \"Aman! Isinya boneka dan biskuit,\" kata petugas Kak Adam.", en: "Second, the bag check. Mo pushed his backpack through the cardboard tunnel. Beep-beep! \"All clear! Teddy and biscuits,\" said Officer Kak Adam." },
+        scene: { focus: 390, bg: "play-airport", props: [{ k: "box", x: 480, s: 0.6 }], mo: [{ pose: "pose-32", x: 360 }, { who: "adam", pose: "laugh-tummy", x: 260 }] },
+      },
+      {
+        text: { id: "Ketiga, duduk dan pasang sabuk pengaman. Klik! Kak Adam memakai topi pilot. \"Selamat siang, para penumpang. Ini Kapten Adam berbicara.\"", en: "Third, sit down and fasten your seatbelt. Click! Kak Adam put on a pilot's cap. \"Good afternoon, passengers. This is Captain Adam speaking.\"" },
+        scene: { focus: 380, bg: "play-airport", props: [{ k: "cap", x: 300, y: 300, s: 0.6 }], mo: [{ who: "adam", pose: "wave-hello", x: 280 }, { pose: "pose-06", x: 400, move: "still" }, { who: "ais", pose: "sit-chin-hands", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "\"Sebelum terbang, kita baca doa naik kendaraan,\" kata Kapten Adam. Semua mengangkat tangan.", en: "\"Before we fly, we say the travelling dua,\" said Captain Adam. Everyone raised their hands." },
+        quote: { id: "\"Subhaanalladzii sakhkhara lanaa haadzaa wa maa kunnaa lahuu muqriniin, wa innaa ilaa rabbinaa lamunqalibuun.\" — Maha Suci Allah yang telah menundukkan kendaraan ini untuk kami, padahal kami sebelumnya tidak mampu menguasainya, dan sungguh kami akan kembali kepada Tuhan kami. (QS. Az-Zukhruf: 13–14)", en: "\"Subhanalladhi sakhkhara lana hadha wa ma kunna lahu muqrinin, wa inna ila rabbina lamunqalibun.\" — Glory be to Him who has subjected this to us, for we could never have done it ourselves, and to our Lord we shall surely return. (Qur'an, Az-Zukhruf 43:13–14)" },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "adam", pose: "dua-hands", x: 280 }, { pose: "thank-you", x: 400 }, { who: "ais", pose: "dua-hands-closed", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "\"Pesawat bersiap lepas landas!\" Kak Adam membuat suara mesin: \"NGEEEEEEENG!\" Mo menutup telinga… tapi lalu mengintip.", en: "\"Prepare for take-off!\" Kak Adam made the engine sound: \"NYEEEEEEOW!\" Mo covered his ears… but then peeked." },
+        scene: { focus: 390, bg: "play-airport", props: [{ k: "plane", x: 480, y: 230, s: 0.6 }], mo: [{ pose: "pose-16", x: 360 }] },
+      },
+      {
+        text: { id: "\"Suaranya keras karena mesinnya bekerja keras mengangkat kita,\" kata Kak Adam. \"Itu suara pesawat yang sehat!\"", en: "\"It's loud because the engines are working hard to lift us,\" said Kak Adam. \"That's the sound of a healthy plane!\"" },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "adam", pose: "kneel-talk", x: 280 }, { pose: "pose-40", x: 400 }] },
+      },
+      {
+        text: { id: "Mo menurunkan tangannya. Lalu ia merentangkan lengannya seperti sayap. \"NGEEEENG! Mo juga pesawat!\"", en: "Mo lowered his hands. Then he spread his arms like wings. \"NYEEEOW! I'm a plane too!\"" },
+        scene: { focus: 390, bg: "play-airport", mo: [{ pose: "pose-20", x: 380 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka \"terbang\" melewati awan bantal, gunung kardus, dan laut karpet biru. \"Di bawah sana ada rumah Nenek!\" seru Ais.", en: "They \"flew\" over pillow clouds, cardboard mountains and a blue-rug sea. \"There's Grandma's house down there!\" shouted Ais." },
+        scene: { focus: 390, bg: "play-airport", mo: [{ pose: "pose-20", x: 340 }, { who: "ais", pose: "arms-wide-joy", x: 460 }] },
+      },
+      {
+        text: { id: "\"Pesawat akan mendarat. Kencangkan sabuk!\" Duk… duk… Mendarat dengan mulus. Semua bertepuk tangan.", en: "\"We're about to land. Seatbelts on!\" Bump… bump… A smooth landing. Everyone clapped." },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "adam", pose: "clap-cheer", x: 280 }, { pose: "yeyy", x: 400, move: "hop" }, { who: "ais", pose: "cheer-wink", x: 500 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Seminggu kemudian, di bandara sungguhan, semuanya terasa akrab: antre, periksa tas, duduk, sabuk. Klik!", en: "A week later, at the real airport, everything felt familiar: queue, bag check, sit down, seatbelt. Click!" },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "ayah", pose: "traveller-suitcase", x: 280 }, { pose: "pose-32", x: 400 }, { who: "ais", pose: "traveller", x: 500 }] },
+      },
+      {
+        text: { id: "Mesin berbunyi NGEEEENG. Mo menggenggam tangan Umi, lalu membaca doanya sendiri, pelan dan lengkap. \"Subhaanalladzii sakhkhara lanaa…\"", en: "The engines roared NYEEEOW. Mo held Umi's hand and said the dua all by himself, softly and all the way through. \"Subhanalladhi sakhkhara lana…\"" },
+        scene: { focus: 380, bg: "play-airport", mo: [{ who: "umi", pose: "dua-sit", x: 280, move: "still" }, { pose: "thank-you", x: 400 }] },
+      },
+      {
+        text: { id: "Di luar jendela, awan-awan putih lewat seperti kapas. \"Umi, Mo nggak takut lagi. Mo malah senang!\"", en: "Outside the window, white clouds drifted by like cotton. \"Umi, I'm not scared any more. I'm happy!\"" },
+        scene: { focus: 390, bg: "play-airport", props: [{ k: "plane", x: 480, y: 220, s: 0.6 }], mo: [{ pose: "pose-37", x: 380 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Nenek menunggu di pintu kedatangan dengan tangan terbuka. \"Cucu-cucu Nenek sudah sampai! Alhamdulillah!\"", en: "Grandma was waiting at arrivals with open arms. \"My grandchildren are here! Alhamdulillah!\"" },
+        scene: { focus: 380, bg: "street", mo: [{ pose: "run", x: 380, move: "hop" }, { who: "ais", pose: "run", x: 490, move: "hop" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Ke mana kamu ingin pergi naik pesawat? Yuk hafalkan doa naik kendaraan bersama! ✈️", en: "Where would you like to fly? Let's learn the travelling dua together! ✈️" },
+        scene: { focus: 390, bg: "play-airport", props: [{ k: "plane", x: 500, y: 230, s: 0.6 }], mo: [{ pose: "pose-20", x: 360 }, { who: "ais", pose: "traveller", x: 470 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 12. Treasure hunt: the ring that belonged to Umi ───────────────────────── */
+  {
+    slug: "harta-karun-milik-umi",
+    pose: "baby-mo-pose-31.png",
+    published: "2026-12-09",
+    title: { id: "Harta Karun Milik Umi", en: "The Treasure That Belonged to Umi" },
+    hook: {
+      id: "Abi menyembunyikan koin cokelat untuk berburu harta karun. Tapi Mo menemukan harta yang lain: cincin berkilau di bawah bantal. \"Ini harta karunku!\" Benarkah?",
+      en: "Abi hides chocolate coins for a treasure hunt. But Mo finds a different treasure: a sparkling ring under a cushion. \"This is my treasure!\" Is it, though?",
+    },
+    anchor: { type: "parenting", slug: "anak-bohong" },
+    takeaway: {
+      id: "Barang temuan adalah amanah. Anak yang terbiasa mengembalikan barang orang lain sedang membangun kejujuran yang akan dibawanya seumur hidup.",
+      en: "Found things are an amanah. A child used to returning what belongs to others is building an honesty they'll carry for life.",
+    },
+    tags: ["jujur", "amanah", "barang temuan", "harta karun", "umi", "abi"],
+    card: {
+      title: { id: "Mengajarkan Kejujuran soal Barang Temuan", en: "Teaching Honesty About Found Things" },
+      items: {
+        id: [
+          "Buat aturan keluarga yang sederhana: \"Yang bukan milik kita, kita kembalikan atau kita tanyakan.\"",
+          "Saat anak mengembalikan sesuatu, ceritakan betapa lega pemiliknya. Biarkan ia merasakan senangnya jujur.",
+          "Jangan menjebak atau menguji anak dengan sengaja. Kejujuran tumbuh dari rasa aman, bukan rasa curiga.",
+        ],
+        en: [
+          "Make a simple family rule: \"If it isn't ours, we give it back or we ask.\"",
+          "When your child returns something, tell them how relieved the owner was. Let them feel the joy of honesty.",
+          "Don't set traps or test your child on purpose. Honesty grows from safety, not suspicion.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-treasure",
+      props: [{ k: "coins", x: 480, s: 0.7 }],
+      mo: [{ pose: "pose-31", x: 350 }, { who: "ais", pose: "magnifier-wink", x: 460, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"Ahoy, para pemburu harta karun!\" seru Abi. \"Di ruang main ini tersembunyi sepuluh koin emas. Siapa yang bisa menemukannya?\"", en: "\"Ahoy, treasure hunters!\" called Abi. \"Ten gold coins are hidden in this playroom. Who can find them?\"" },
+        scene: { focus: 380, bg: "play-treasure", mo: [{ who: "ayah", pose: "megaphone", x: 270 }, { pose: "pose-26", x: 390 }, { who: "ais", pose: "explorer-map", x: 490 }] },
+      },
+      {
+        text: { id: "Ais membawa kaca pembesar. Mo membawa peta coretan. \"Petunjuk pertama: di tempat yang ada ombaknya!\"", en: "Ais brought a magnifying glass. Mo brought a scribbled map. \"First clue: where the waves are!\"" },
+        scene: { focus: 390, bg: "play-treasure", props: [{ k: "card", x: 470, y: 320, s: 0.6 }], mo: [{ who: "ais", pose: "magnifier-peek", x: 340 }, { pose: "pose-15", x: 450 }] },
+      },
+      {
+        text: { id: "Di balik gambar laut — dua koin! Di dalam peti kayu — tiga koin! Ting, ting, ting! Koin cokelat berbungkus emas.", en: "Behind the sea picture — two coins! Inside the wooden chest — three coins! Ting, ting, ting! Chocolate coins in gold wrappers." },
+        scene: { focus: 390, bg: "play-treasure", props: [{ k: "coins", x: 470, s: 0.7 }], mo: [{ pose: "pose-02", x: 360, move: "hop" }, { who: "ais", pose: "excited-fists", x: 250 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mo mengangkat bantal besar. Di bawahnya ada sesuatu yang berkilau… bukan koin cokelat. Sebuah cincin emas!", en: "Mo lifted a big cushion. Underneath, something sparkled… not a chocolate coin. A gold ring!" },
+        scene: { focus: 390, bg: "play-treasure", props: [{ k: "ring", x: 470, y: 400, s: 0.8 }], mo: [{ pose: "wow", x: 370 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"HARTA KARUN SUNGGUHAN!\" bisik Mo. Ia menggenggamnya erat. \"Ini punyaku. Aku yang menemukan!\"", en: "\"REAL TREASURE!\" Mo whispered. He clutched it tight. \"It's mine. I found it!\"" },
+        scene: { focus: 390, bg: "play-treasure", mo: [{ pose: "pose-28", x: 380 }] },
+      },
+      {
+        text: { id: "Ia memasukkan cincin itu ke saku. Tapi sakunya terasa berat. Hatinya juga. Mo jadi tidak semangat mencari koin lagi.", en: "He slipped the ring into his pocket. But his pocket felt heavy. So did his heart. Mo didn't feel like hunting for coins any more." },
+        scene: { focus: 390, bg: "play-treasure", mo: [{ pose: "pose-38", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Dari dapur terdengar suara Umi. \"Abi, lihat cincin Umi tidak? Cincin dari Nenek… sudah dua hari Umi cari.\" Suaranya sedih.", en: "Umi's voice came from the kitchen. \"Abi, have you seen my ring? The one Grandma gave me… I've been looking for two days.\" She sounded sad." },
+        scene: { focus: 380, bg: "kitchen", mo: [{ who: "umi", pose: "think-quiet", x: 330 }] },
+      },
+      {
+        text: { id: "Mo memegang sakunya. Jadi ini bukan harta karun. Ini milik Umi — hadiah dari Nenek.", en: "Mo touched his pocket. So it wasn't treasure after all. It was Umi's — a present from Grandma." },
+        scene: { focus: 390, bg: "play-treasure", mo: [{ pose: "pose-33", x: 390 }] },
+      },
+      {
+        text: { id: "Abi berjongkok di samping Mo. \"Kenapa diam, Kapten?\" Mo mengeluarkan cincinnya pelan-pelan. \"Mo… menemukan ini. Tadi Mo mau simpan.\"", en: "Abi knelt beside Mo. \"Why so quiet, Captain?\" Mo slowly took out the ring. \"I… found this. I was going to keep it.\"" },
+        scene: { focus: 380, bg: "play-treasure", props: [{ k: "ring", x: 420, y: 340, s: 0.7 }], mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-14", x: 400 }] },
+      },
+      {
+        text: { id: "\"Terima kasih sudah jujur,\" kata Abi lembut. \"Barang yang kita temukan itu amanah. Allah menyuruh kita mengembalikan amanah kepada pemiliknya.\"", en: "\"Thank you for being honest,\" said Abi softly. \"Things we find are an amanah. Allah tells us to return trusts to their owners.\"" },
+        quote: { id: "\"Sesungguhnya Allah menyuruh kamu menyampaikan amanat kepada yang berhak menerimanya…\" (QS. An-Nisa: 58)", en: "\"Indeed, Allah commands you to render trusts to whom they are due…\" (Qur'an, An-Nisa 4:58)" },
+        scene: { focus: 380, bg: "play-treasure", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 270 }, { pose: "pose-06", x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "Mo berlari ke dapur. \"Umi! Umi! Mo menemukan harta karun… milik Umi!\" Ia membuka genggamannya.", en: "Mo ran to the kitchen. \"Umi! Umi! I found treasure… and it's yours!\" He opened his hand." },
+        scene: { focus: 380, bg: "kitchen", props: [{ k: "ring", x: 420, y: 340, s: 0.7 }], mo: [{ who: "umi", pose: "touched-cheek", x: 270 }, { pose: "run", x: 400, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mata Umi berkaca-kaca. \"Masya Allah… cincin Nenek! Terima kasih, Sayang.\" Umi memeluk Mo erat sekali.", en: "Umi's eyes filled with tears. \"Masya Allah… Grandma's ring! Thank you, sweetheart.\" She hugged Mo very tight." },
+        scene: { focus: 370, bg: "kitchen", mo: [{ who: "umi", pose: "hug-mo", x: 370, move: "still" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Aneh — saku Mo sekarang kosong, tapi hatinya terasa ringan dan hangat. Lebih hangat dari koin cokelat mana pun.", en: "Funny — Mo's pocket was empty now, but his heart felt light and warm. Warmer than any chocolate coin." },
+        scene: { focus: 390, bg: "kitchen", mo: [{ pose: "pose-07", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Mereka kembali berburu. Koin kesepuluh ternyata ada di dalam sepatu Abi! Si kembar tertawa sampai berguling.", en: "They went back to the hunt. The tenth coin was inside Abi's shoe! The twins laughed till they rolled on the floor." },
+        scene: { focus: 380, bg: "play-treasure", props: [{ k: "coins", x: 480, s: 0.7 }], mo: [{ who: "ayah", pose: "cheer-kneel", x: 270 }, { pose: "pose-18", x: 400, move: "still" }, { who: "ais", pose: "giggle", x: 500 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Malamnya Umi memakai cincinnya lagi. \"Ini sekarang punya dua cerita,\" kata Umi. \"Cerita dari Nenek, dan cerita tentang Mo yang jujur.\"", en: "That evening Umi wore her ring again. \"It has two stories now,\" she said. \"One from Grandma, and one about honest Mo.\"" },
+        scene: { focus: 370, bg: "living", time: "night", mo: [{ who: "umi", pose: "grateful-hands", x: 280 }, { pose: "pose-35", x: 400 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Pernahkah kamu menemukan barang milik orang lain? Apa yang kamu lakukan? 💍", en: "Have you ever found something that belonged to someone else? What did you do? 💍" },
+        scene: { focus: 390, bg: "play-treasure", props: [{ k: "coins", x: 480, s: 0.7 }], mo: [{ pose: "pose-31", x: 350 }, { who: "ais", pose: "magnifier-wink", x: 460, move: "still" }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
 
 /* ───────── layout ───────── */

@@ -392,3 +392,59 @@ export function Water() {
     </g>
   );
 }
+
+/** A real white rabbit, sitting, ears up, nose twitching. */
+export function Rabbit() {
+  return (
+    <g>
+      <GroundShadow rx={44} ry={6} />
+      <g className="sa-bob">
+        {/* ears */}
+        <g transform="rotate(-10 -18 -78)">
+          <ellipse cx={-18} cy={-104} rx={9} ry={26} fill="#F4F4F7" />
+          <ellipse cx={-18} cy={-102} rx={4.5} ry={18} fill="#FFC2CF" />
+        </g>
+        <g transform="rotate(12 6 -78)">
+          <ellipse cx={6} cy={-104} rx={9} ry={26} fill="#E9E9EF" />
+          <ellipse cx={6} cy={-102} rx={4.5} ry={18} fill="#FFB3C3" />
+        </g>
+        {/* body + tail */}
+        <circle cx={34} cy={-26} r={10} fill="#FFFFFF" />
+        <ellipse cx={10} cy={-28} rx={32} ry={27} fill="#E9E9EF" />
+        <ellipse cx={8} cy={-31} rx={29} ry={24} fill="#FAFAFC" />
+        {/* head */}
+        <circle cx={-14} cy={-62} r={22} fill="#E9E9EF" />
+        <circle cx={-15} cy={-64} r={20} fill="#FFFFFF" />
+        <g className="sa-blink">
+          <circle cx={-24} cy={-66} r={3.6} fill={C.ink} />
+          <circle cx={-8} cy={-66} r={3.6} fill={C.ink} />
+          <Shine x={-23} y={-67.4} r={1.2} o={1} />
+          <Shine x={-7} y={-67.4} r={1.2} o={1} />
+        </g>
+        <path d="M-18 -57 h5 l-2.5 3 z" fill="#FF8FAD" />
+        <path d="M-20.5 -52 q2.5 3 5 0 q2.5 3 5 0" stroke={C.ink} strokeWidth={1.6} fill="none" strokeLinecap="round" />
+        <circle cx={-30} cy={-56} r={3.5} fill="#FFB3C1" opacity=".55" />
+        <circle cx={-2} cy={-56} r={3.5} fill="#FFB3C1" opacity=".55" />
+        <path d="M-30 -55 h-10 M-29 -52 l-9 3 M-2 -55 h10 M-3 -52 l9 3" stroke="#C9CBD6" strokeWidth={1.2} strokeLinecap="round" />
+        {/* paws */}
+        <ellipse cx={-14} cy={-4} rx={9} ry={5} fill="#F1F1F5" />
+        <ellipse cx={20} cy={-4} rx={11} ry={5} fill="#F1F1F5" />
+      </g>
+    </g>
+  );
+}
+
+/** A small gold ring with a pink gem, sparkling. Centre at (0,-30). */
+export function Ring() {
+  return (
+    <g className="sa-float">
+      <circle cx={0} cy={-34} r={34} fill="#FFF3B0" opacity=".35" className="sa-pulse" />
+      <ellipse cx={0} cy={-26} rx={22} ry={20} fill="none" stroke="#C9921A" strokeWidth={8} />
+      <ellipse cx={0} cy={-27} rx={22} ry={20} fill="none" stroke="#FFC83D" strokeWidth={5} />
+      <path d="M-14 -40 q8 -6 18 -4" stroke="#FFF1B8" strokeWidth={2.5} fill="none" strokeLinecap="round" />
+      <path d="M-9 -52 L0 -62 L9 -52 L0 -44 Z" fill="#FF5A9E" stroke="#D63C7E" strokeWidth={1.5} strokeLinejoin="round" />
+      <path d="M-4 -54 L0 -59 L3 -55 Z" fill="#fff" opacity=".8" />
+      <path className="sa-twinkle" transform="translate(18 -56)" d="M0 -8 L2 -2 L8 0 L2 2 L0 8 L-2 2 L-8 0 L-2 -2 Z" fill="#fff" />
+    </g>
+  );
+}

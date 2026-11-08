@@ -1,6 +1,6 @@
 import type { ComponentType } from "react";
 import type { ArtProp } from "@/lib/cerita/illus-types";
-import { Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
+import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
@@ -45,6 +45,8 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   cup: { draw: Cup, group: "food", note: "Pink mug of tea with a heart." },
   towel: { draw: Towel, group: "home", note: "Two folded towels." },
   goldstar: { draw: GoldStar, group: "symbols", note: "Shiny reward star, glows." },
+  ring: { draw: Ring, group: "home", note: "Gold ring with a pink gem, sparkles." },
+  rabbit: { draw: Rabbit, group: "critters", note: "Real white rabbit, sits and blinks." },
   kitten: { draw: Kitten, group: "critters", note: "Ginger kitten, blinks and wags." },
   cookies: { draw: Cookies, group: "food", note: "Choc-chip cookies on a plate." },
   soup: { draw: Soup, group: "food", note: "Steaming bowl of soup with a spoon." },
