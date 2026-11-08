@@ -295,7 +295,7 @@ html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data
 .step h3{font-size:18px;margin-bottom:4px}
 .step p{margin:0;color:var(--soft);font-size:15px}
 
-.group{margin-top:30px}
+.fgroup{margin-top:30px}
 .ghead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 .ghead .ic{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;font-size:20px}
 .ghead h3{font-size:22px}
@@ -461,7 +461,7 @@ export default function SupportPage() {
               <div className="kick"><B t={{ id: "Pertanyaan umum", en: "Frequently asked" }} /></div>
               <h2><B t={{ id: "Jawaban per topik", en: "Answers by topic" }} /></h2>
               {GROUPS.map((g) => (
-                <div className="group" id={g.id} data-group key={g.id}>
+                <div className="fgroup" id={g.id} data-group key={g.id}>
                   <div className="ghead">
                     <span className="ic" style={{ background: g.tone }} aria-hidden="true">{g.icon}</span>
                     <h3><B t={g.title} /></h3>

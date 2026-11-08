@@ -91,8 +91,8 @@ html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data
 .short{display:grid;gap:12px;grid-template-columns:1fr;margin-top:26px}
 @media(min-width:640px){.short{grid-template-columns:repeat(2,1fr)}}
 @media(min-width:980px){.short{grid-template-columns:repeat(4,1fr)}}
-.sc{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;font-weight:600;line-height:1.45}
-.sc .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:10px}
+.pcard{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:18px;font-weight:600;line-height:1.45}
+.pcard .ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;font-size:22px;margin-bottom:10px}
 
 .layout{display:grid;gap:24px;padding:30px 0 10px}
 @media(min-width:900px){.layout{grid-template-columns:260px 1fr;align-items:start}}
@@ -180,7 +180,7 @@ export default function PrivacyPolicyPage() {
               {(["id", "en"] as const).map((lang) => (
                 <div className="short" data-l={lang} key={lang}>
                   {L[lang].summary.map((s, i) => (
-                    <div className="sc" key={i}>
+                    <div className="pcard" key={i}>
                       <div className="ic" style={{ background: TINTS[i % TINTS.length] }} aria-hidden="true">{SUMMARY_ICONS[i] ?? "✓"}</div>
                       <span dangerouslySetInnerHTML={{ __html: s }} />
                     </div>
