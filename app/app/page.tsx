@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
-import { Baloo_2, Inter } from "next/font/google";
+import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { asset } from "@/lib/i18n/config";
 import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-pages";
 
@@ -12,8 +12,6 @@ import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
  * (public/app-store, versioned filenames because the service worker caches
  * images).
  */
-const rounded = Baloo_2({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-round", display: "swap" });
-const inter = Inter({ subsets: ["latin"], variable: "--f-body", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Baby Mo — Aplikasi Belajar Islam untuk Anak · Islamic learning app for kids",
@@ -315,7 +313,7 @@ function StoreButton() {
 
 export default function AppMarketingPage() {
   return (
-    <html lang="id" data-lang="id" className={`${rounded.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="id" data-lang="id" className={STORE_FONT_VARS} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
       </head>

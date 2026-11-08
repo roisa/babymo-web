@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Baloo_2, Inter } from "next/font/google";
+import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { PRIVACY_EMAIL, PRIVACY_HTML, PRIVACY_UPDATED } from "@/lib/content/privacy";
 import { LANG_SCRIPT } from "@/lib/content/store-pages";
 import { asset } from "@/lib/i18n/config";
@@ -12,8 +12,6 @@ import { asset } from "@/lib/i18n/config";
  * used at /id/privasi and /en/privasi); this page only lays it out: the
  * "in short" list becomes cards, the sections get anchors and a contents list.
  */
-const rounded = Baloo_2({ subsets: ["latin"], weight: ["600", "700", "800"], variable: "--f-round", display: "swap" });
-const inter = Inter({ subsets: ["latin"], variable: "--f-body", display: "swap" });
 
 export const metadata: Metadata = {
   title: "Kebijakan Privasi · Privacy Policy — Baby Mo",
@@ -131,7 +129,7 @@ footer a{margin:0 8px;font-weight:600}
 export default function PrivacyPolicyPage() {
   const L = { id: parse("id"), en: parse("en") };
   return (
-    <html lang="id" data-lang="id" className={`${rounded.variable} ${inter.variable}`} suppressHydrationWarning>
+    <html lang="id" data-lang="id" className={STORE_FONT_VARS} suppressHydrationWarning>
       <head>
         <script dangerouslySetInnerHTML={{ __html: LANG_SCRIPT }} />
       </head>
