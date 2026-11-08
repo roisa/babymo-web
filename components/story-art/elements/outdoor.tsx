@@ -468,3 +468,25 @@ export function Minaret() {
     </g>
   );
 }
+
+/** A red step ladder standing up, leaning slightly (for climbing pages). */
+export function LadderUp() {
+  return (
+    <g>
+      <GroundShadow rx={44} ry={6} />
+      <g transform="rotate(-6)">
+        <rect x={-34} y={-230} width={10} height={230} rx={4} fill="#D9473A" />
+        <rect x={24} y={-230} width={10} height={230} rx={4} fill="#D9473A" />
+        <rect x={-32} y={-226} width={3} height={222} rx={1.5} fill="#FF8A7E" />
+        <rect x={26} y={-226} width={3} height={222} rx={1.5} fill="#FF8A7E" />
+        {Array.from({ length: 6 }, (_, i) => (
+          <g key={i}>
+            <rect x={-26} y={-206 + i * 36} width={52} height={9} rx={4} fill="#E6A512" />
+            <rect x={-26} y={-206 + i * 36} width={52} height={3.5} rx={1.75} fill="#FFD25A" />
+          </g>
+        ))}
+        <rect x={-38} y={-238} width={76} height={10} rx={5} fill="#B83A2F" />
+      </g>
+    </g>
+  );
+}

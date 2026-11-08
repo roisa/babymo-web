@@ -206,6 +206,7 @@ export type ArtProp =
   | "target"
   | "footprints"
   | "ladder"
+  | "ladderup"
   | "progresschart"
   /* tennis life */
   | "scoreboard"
