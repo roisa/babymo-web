@@ -46,6 +46,7 @@ export const SERIES: StorySeries[] = [
       "piala-kak-adam",
       "kak-adam-jadi-pelatih",
       "pertandingan-keluarga",
+      "lapangan-rumput-dan-kaki-raka",
       "final-di-stadion",
     ],
   },
@@ -166,6 +167,25 @@ export const SERIES: StorySeries[] = [
       "kenapa-harus-minta-izin-untuk-anak",
       "kenapa-sayang-orang-tua-untuk-anak",
       "apa-itu-surga-untuk-anak",
+    ],
+  },
+  {
+    key: "hari-hari-si-kembar",
+    emoji: "🎒",
+    title: { id: "Hari-hari Si Kembar", en: "The Twins' Everyday Adventures" },
+    blurb: {
+      id: "Sekolah, toko es krim, masjid, dan jalan-jalan — petualangan kecil Mo dan Ais yang penuh adab dan kasih sayang.",
+      en: "School, the ice-cream shop, the mosque and outings — Mo and Ais's little adventures, full of good manners and love.",
+    },
+    books: [
+      "teman-baru-di-kelas-baru",
+      "satu-bekal-tiga-sahabat",
+      "antrian-es-krim-yang-panjang",
+      "tiga-bola-es-krim",
+      "pertama-kali-ke-masjid",
+      "tarawih-pertama-baby-mo",
+      "bismillah-dulu",
+      "berbagi-payung",
     ],
   },
 ];
