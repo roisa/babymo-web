@@ -3519,7 +3519,7 @@ export const FAMILY_BOOKS: PictureBook[] = [
       },
       {
         text: { id: "Di rumah, Mo menggambar gurita dengan delapan lengan yang melambai. \"Namanya Malu-Malu,\" kata Mo. \"Tapi dia pemberani.\"", en: "At home, Mo drew an octopus with eight waving arms. \"Its name is Shy-Shy,\" said Mo. \"But it's brave.\"" },
-        scene: { focus: 340, bg: "living", props: [{ k: "drawing", x: 430, y: 360 }], mo: [{ pose: "pose-29", x: 330 }, { who: "ais", pose: "draw-crayons", x: 450 }] },
+        scene: { focus: 340, bg: "play-underwater", props: [{ k: "drawing", x: 430, y: 360 }], mo: [{ pose: "pose-29", x: 330 }, { who: "ais", pose: "draw-crayons", x: 450 }] },
       },
       {
         text: { id: "Kamu juga boleh malu. Pelan-pelan saja, seperti gurita kecil. Siapa teman baru yang ingin kamu sapa minggu ini? 🐙", en: "It's okay for you to feel shy too. Take it slowly, like the little octopus. Which new friend would you like to say hello to this week? 🐙" },

@@ -11,6 +11,8 @@ import type { ArtProp } from "@/lib/cerita/illus-types";
 import { getBookPages } from "@/lib/cerita/picture-books";
 import { ADAPTED } from "@/lib/cerita/picture-books-adapted";
 import { getAllCatatan } from "@/lib/content/catatan";
+import { PHOTO_BG } from "@/components/story-art/photo-bg";
+import { asset } from "@/lib/i18n/config";
 
 /**
  * Element Library — a team tool (not in the menu, not indexed) listing every
@@ -43,6 +45,7 @@ function allProps(): ArtProp[] {
 
 function usage(l: Locale) {
   const n = new Map<string, number>();
+  const bgs = new Map<string, number>();
   const books = new Map<string, Set<string>>();
   const titles = new Map<string, string>();
   for (const c of getAllCatatan()) titles.set(c.slug, c.title[l]);
@@ -52,6 +55,7 @@ function usage(l: Locale) {
     const b = getBookPages(slug);
     if (!b) continue;
     for (const sc of [b.cover, ...b.pages.map((p) => p.scene)]) {
+      bgs.set(sc.bg, (bgs.get(sc.bg) ?? 0) + 1);
       for (const p of sc.props ?? []) {
         n.set(p.k, (n.get(p.k) ?? 0) + 1);
         if (!books.has(p.k)) books.set(p.k, new Set());
@@ -59,7 +63,7 @@ function usage(l: Locale) {
       }
     }
   }
-  return { n, books };
+  return { n, books, bgs };
 }
 
 export default async function ElementPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -67,7 +71,7 @@ export default async function ElementPage({ params }: { params: Promise<{ locale
   if (!isLocale(locale)) notFound();
   const l = locale as Locale;
   const id = l === "id";
-  const { n, books } = usage(l);
+  const { n, books, bgs } = usage(l);
   const rows: ElementRow[] = allProps()
     .map((k) => ({ k, uses: n.get(k) ?? 0, books: [...(books.get(k) ?? [])].sort() }))
     .sort((a, b) => b.uses - a.uses || a.k.localeCompare(b.k));
@@ -86,6 +90,30 @@ export default async function ElementPage({ params }: { params: Promise<{ locale
           </p>
         </header>
         <ElementLibrary locale={l} rows={rows} />
+
+        <section className="mt-14">
+          <h2 className="font-serif text-2xl font-medium text-ink">{id ? "Latar dunia Baby Mo" : "Baby Mo world backgrounds"} 🏠</h2>
+          <p className="mt-1 max-w-3xl text-sm text-whisper">
+            {id
+              ? "Render 3D dari video YouTube Baby Mo. Pakai di adegan dengan bg: \"nama\". Malam, senja dan hujan otomatis jadi lapisan warna di atasnya."
+              : "3D renders from the Baby Mo YouTube series. Use in a scene with bg: \"name\". Night, dusk and rain are applied automatically as a colour wash."}
+          </p>
+          <ul className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {Object.entries(PHOTO_BG).map(([k, p]) => (
+              <li key={k} className="overflow-hidden rounded-2xl bg-white ring-1 ring-hairline">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={asset(p!.src)} alt={p!.name ?? k} loading="lazy" className="block aspect-video w-full object-cover" />
+                <div className="flex items-baseline justify-between gap-2 px-3 py-2">
+                  <div>
+                    <p className="font-mono text-sm font-bold text-ink">{`bg: "${k}"`}</p>
+                    <p className="text-xs text-whisper">{p!.name}</p>
+                  </div>
+                  <p className="shrink-0 text-xs text-whisper">{bgs.get(k) ? (id ? `${bgs.get(k)}× dipakai` : `used ${bgs.get(k)}×`) : "—"}</p>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
       </main>
       <Footer locale={l} currentPath="/elemen" />
       <MobileNav locale={l} />

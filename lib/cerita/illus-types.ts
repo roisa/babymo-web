@@ -29,7 +29,37 @@ export type ArtBg =
   | "playroom"
   | "classroom"
   | "masterbedroom"
-  | "school";
+  | "school"
+  // themed playrooms from the show (pretend-play scenes)
+  | "icecreamshop"
+  | "play-airport"
+  | "play-amusement"
+  | "play-beach"
+  | "play-carnival"
+  | "play-castle"
+  | "play-circus"
+  | "play-dinosaur"
+  | "play-dragon"
+  | "play-firefighter"
+  | "play-spacecity"
+  | "play-construction"
+  | "play-chef"
+  | "play-mountain"
+  | "play-pet"
+  | "play-pirate"
+  | "play-police"
+  | "play-robot"
+  | "play-space"
+  | "play-superhero"
+  | "play-pool"
+  | "play-train"
+  | "play-underwater"
+  | "play-volcano"
+  | "play-zoo"
+  | "play-camping"
+  | "play-city"
+  | "play-farm"
+  | "play-treasure";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 
