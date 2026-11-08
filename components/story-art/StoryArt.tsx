@@ -1,6 +1,6 @@
 import { asset } from "@/lib/i18n/config";
 import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@/lib/cerita/illus-types";
-import { FRIEND_SCALE } from "@/lib/cerita/friends-poses";
+import { AIS_SCALE, FRIEND_SCALE } from "@/lib/cerita/friends-poses";
 import { ELEMENTS } from "./elements";
 import { PHOTO_BG, PhotoBackground } from "./photo-bg";
 import { SkyCloud, SkyMoon, SkySun } from "./elements/nature";
@@ -2811,7 +2811,7 @@ function srcFor(who: NonNullable<ArtMo["who"]>, pose: string) {
 function Mo({ m, idx, ground }: { m: ArtMo; idx: number; ground: number }) {
   const who = m.who ?? "mo";
   // friends are taller than the twins at the same `s`
-  const s = (m.s ?? 235) * (who === "adam" || who === "ayah" || who === "umi" ? FRIEND_SCALE[who] : 1);
+  const s = (m.s ?? 235) * (who === "adam" || who === "ayah" || who === "umi" ? FRIEND_SCALE[who] : who === "ais" ? AIS_SCALE : 1);
   const move = m.move ?? "bob";
   // Ais and friend renders all share one ground line: feet at 725/800
   const pad = (who === "mo" ? FOOT_PAD[m.pose] ?? 0.09 : 0.094) * s;

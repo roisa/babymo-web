@@ -4121,8 +4121,8 @@ export const FAMILY_BOOKS: PictureBook[] = [
         scene: { focus: 340, bg: "street", mo: [{ who: "umi", pose: "walk-bag", x: 280 }, { pose: "pose-42", x: 400 }] },
       },
       {
-        text: { id: "Di titik kumpul, para tetangga sudah berkumpul. Abi datang dari masjid dan langsung menggandeng si kembar. \"Alhamdulillah, kalian selamat.\"", en: "At the meeting point, the neighbours had gathered. Abi came from the mosque and took the twins' hands straight away. \"Alhamdulillah, you're safe.\"" },
-        scene: { focus: 370, bg: "park", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 370, s: 210 }], fx: ["hearts"] },
+        text: { id: "Di titik kumpul, para tetangga sudah berkumpul. Abi datang dari masjid dan langsung menghampiri si kembar. \"Alhamdulillah, kalian selamat.\"", en: "At the meeting point, the neighbours had gathered. Abi came from the mosque and went straight to the twins. \"Alhamdulillah, you're safe.\"" },
+        scene: { focus: 370, bg: "park", mo: [{ who: "ayah", pose: "wave-hello", x: 260, s: 210 }, { pose: "pose-32", x: 380, s: 210 }, { who: "ais", pose: "backpack-walk", x: 480, s: 210 }], fx: ["hearts"] },
       },
       {
         text: { id: "\"Bumi kita seperti kue lapis raksasa yang kadang bergeser sedikit,\" jelas Abi. \"Indonesia sering ada gempa, jadi kita harus selalu siap.\"", en: "\"The earth is like a giant layer cake that sometimes shifts a little,\" Abi explained. \"Indonesia has lots of earthquakes, so we always need to be ready.\"" },

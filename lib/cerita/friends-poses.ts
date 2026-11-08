@@ -14,7 +14,10 @@
  * Umi ~0.95, Kak Adam ~0.72, the twins ~0.55 (they reach Adam's chest). Keep `s` the same as Mo's in a scene.
  *
  * Pick by `use`. `alt` marks a near-duplicate kept so neighbouring pages
- * don't repeat the same image. `duo` poses already include Baby Mo.
+ * don't repeat the same image. `duo` poses already include Baby Mo — never
+ * put a separate Mo on the same page, and skip duo poses whose `check` says
+ * Mo doesn't match his model (hold-hands-twins, carry-mo, Adam's duo poses):
+ * draw Abi/Adam and the twins as separate characters instead.
  */
 import type { AisCategory } from "./ais-poses";
 
@@ -44,6 +47,9 @@ export interface FriendPose {
 
 /** Display size relative to Baby Mo / Ais at the same `s`. */
 export const FRIEND_SCALE: Record<Friend, number> = { adam: 1.235, ayah: 1.87, umi: 1.784 };
+/** Baby Ais is drawn at 93% of Baby Mo: her hijab makes her head read ~8% bigger
+ *  at the same size, and at 0.93 the twins' faces and heights match. */
+export const AIS_SCALE = 0.93;
 
 export const ADAM_POSES: FriendPose[] = [
   { name: "wave-hello", category: "greet", mood: "happy", use: "Standing, one hand up waving, big smile. Arrivals, hello, goodbye." },
