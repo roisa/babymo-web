@@ -174,7 +174,7 @@ const BOOKS: PictureBook[] = [
       },
       {
         text: { id: "\"Umi, bermanfaat itu apa?\" tanya Baby Mo. \"Coba lihat ke luar,\" kata Umi. \"Siapa yang senang dengan hujan?\"", en: "\"Umi, what does beneficial mean?\" asked Baby Mo. \"Look outside,\" said Umi. \"Who is happy about the rain?\"" },
-        scene: { bg: "living", time: "rain", focus: 560, mo: [{ pose: "pose-08", x: 520 }] },
+        scene: { bg: "living", time: "rain", focus: 460, mo: [{ who: "umi", pose: "explain-hand", x: 400 }, { pose: "pose-08", x: 520 }] },
       },
       {
         text: { id: "Pohon-pohon minum. Bunga-bunga mandi. Daun-daun berkilau seperti baru dicuci.", en: "The trees were drinking. The flowers were having a bath. The leaves shone as if they'd just been washed." },

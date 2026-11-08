@@ -44,7 +44,8 @@ const err = (where: string, msg: string) => errors.push(`${where}: ${msg}`);
 const warn = (where: string, msg: string) => warnings.push(`${where}: ${msg}`);
 
 const stories = getAllCatatan().filter((c) => c.kind === "story");
-const SPEAK = /(kata|tanya|jawab|seru|bisik|panggil)\s+(Abi|Umi|Kak Adam|Ais)\b/g;
+// "ingat kata Abi" (remembering what someone said) is fine without them on the page
+const SPEAK = /(?<!ingat )(kata|tanya|jawab|seru|bisik|panggil)\s+(Abi|Umi|Kak Adam|Ais)\b/g;
 const WHO: Record<string, string> = { Abi: "ayah", Umi: "umi", "Kak Adam": "adam", Ais: "ais" };
 const odd = (s: string) => ((s.match(/"/g) ?? []).length % 2 === 1);
 
@@ -77,6 +78,7 @@ for (const st of stories) {
       const q = (rest as { quote?: { id: string; en: string } }).quote;
       if (q && (!q.id?.trim() || !q.en?.trim())) err(where, "quote missing a translation");
       const whoOnPage = new Set<string>(cast.map((m) => m.who ?? "mo"));
+      if ((sc.props ?? []).some((p) => p.k === "sleeper")) whoOnPage.add("umi"); // Umi resting in bed
       for (const m of text.id.matchAll(SPEAK)) if (!whoOnPage.has(WHO[m[2]!]!)) warn(where, `${m[2]} speaks but isn't in the picture`);
       if (/\b(Malam itu|Malamnya|tengah malam)\b/.test(text.id) && (sc.time ?? "day") === "day") warn(where, "night text on a daytime page");
     }
