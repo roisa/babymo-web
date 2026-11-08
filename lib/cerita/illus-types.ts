@@ -299,7 +299,16 @@ export type ArtProp =
   | "hijaiyah"
   | "siwak"
   | "takjilbag"
-  | "infaqbox";
+  | "infaqbox"
+  /* Eid & Islamic year */
+  | "nastar"
+  | "opor"
+  | "syawal0"
+  | "syawal1"
+  | "syawal3"
+  | "syawal6"
+  | "sandals"
+  | "eidmats";
 
 export type ArtFx =
   | "rain"
