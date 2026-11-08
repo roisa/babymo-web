@@ -16,12 +16,12 @@ import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
 export const metadata: Metadata = {
   title: "Baby Mo — Aplikasi Belajar Islam untuk Anak · Islamic learning app for kids",
   description:
-    "Baby Mo for iPhone and iPad: 11 Islamic games, daily du'as with Arabic audio, a step-by-step prayer and wudhu guide, the hijaiyah letters, prayer times and a bedtime routine for children aged 2–8. Free, no ads, no account, works offline.",
+    "Baby Mo for iPhone and iPad: 11 Islamic games, daily du'as with Arabic audio, a step-by-step prayer and wudhu guide, memory and matching games, prayer times and a bedtime routine for children aged 2–8. Free, no ads, no account, works offline.",
   alternates: { canonical: "https://babymo.id/app/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Baby Mo — Belajar Islam sambil bermain",
-    description: "11 game islami, doa harian dengan audio Arab, panduan sholat & wudhu, huruf hijaiyah. Gratis, tanpa iklan, tanpa akun.",
+    description: "11 game islami, doa harian dengan audio Arab, panduan sholat & wudhu, rutinitas tidur. Gratis, tanpa iklan, tanpa akun.",
     url: "https://babymo.id/app/",
     images: [{ url: "https://babymo.id/app-store/app-hub-v1.webp" }],
   },
@@ -48,7 +48,7 @@ const HERO_SLIDES: { src: string; t: Bi }[] = [
 const STATS: { n: string; t: Bi }[] = [
   { n: "11", t: { id: "game islami", en: "Islamic games" } },
   { n: "6", t: { id: "doa harian + audio", en: "daily du'as + audio" } },
-  { n: "28", t: { id: "huruf hijaiyah", en: "hijaiyah letters" } },
+  { n: "7", t: { id: "level Memory Match", en: "Memory Match levels" } },
   { n: "10", t: { id: "langkah wudhu", en: "wudhu steps" } },
   { n: "2", t: { id: "bahasa: ID & EN", en: "languages: ID & EN" } },
   { n: "0", t: { id: "iklan, akun, pelacak", en: "ads, accounts, trackers" } },
@@ -63,7 +63,7 @@ const DAY: { time: Bi; icon: string; title: Bi; body: Bi; shot: string; tone: st
   {
     time: { id: "Siang", en: "Midday" }, icon: "🎮", tone: "#D9F2FF", shot: "/app-store/app-find-v1.webp",
     title: { id: "Main sambil belajar", en: "Play and learn" },
-    body: { id: "Cari Baby Mo di kamar, ruang keluarga, sampai Pasar Ramadan. Memory Match dari 4 kartu (usia 2+) sampai 18 kartu (usia 5+), plus mode hijaiyah.", en: "Find Baby Mo in his bedroom, the living room and even a Ramadan market. Memory Match grows from 4 cards (age 2+) to 18 cards (age 5+), with a hijaiyah mode too." },
+    body: { id: "Cari Baby Mo di kamar, ruang keluarga, sampai Pasar Ramadan. Memory Match dari 4 kartu (usia 2+) sampai 20 kartu (usia 5+).", en: "Find Baby Mo in his bedroom, the living room and even a Ramadan market. Memory Match grows from 4 cards (age 2+) to 20 cards (age 5+)." },
   },
   {
     time: { id: "Sore", en: "Afternoon" }, icon: "🕌", tone: "#DDF5E6", shot: "/app-store/app-wudhu-v1.webp",
@@ -99,13 +99,13 @@ const SHOWCASE: { shot: string; kicker: Bi; title: Bi; points: Bi[] }[] = [
     ],
   },
   {
-    shot: "/app-store/app-hijaiyah-v1.webp",
-    kicker: { id: "Huruf Hijaiyah", en: "Hijaiyah letters" },
-    title: { id: "Dari alif sampai ya, dengan suara", en: "From alif to ya, with sound" },
+    shot: "/app-store/app-memory-v1.webp",
+    kicker: { id: "Game seru", en: "Fun games" },
+    title: { id: "Game seru yang melatih ingatan", en: "Fun games that train young minds" },
     points: [
-      { id: "28 huruf Arab dengan audio, kuis, dan bintang.", en: "28 Arabic letters with audio, quizzes and stars." },
-      { id: "Pulau Hijaiyah: jelajahi pulau, gali, bangun, dan temukan huruf yang tersembunyi.", en: "Hijaiyah Island: explore, dig, build and find the hidden letters." },
-      { id: "Kata Islam: susun huruf menjadi kata Arab pertama.", en: "Islamic Words: put letters together into first Arabic words." },
+      { id: "Memory Match: 7 level, dari 4 kartu untuk balita sampai 20 kartu untuk juara.", en: "Memory Match: 7 levels, from 4 cards for toddlers to 20 cards for champions." },
+      { id: "Dua Journey: cocokkan doa dengan momennya, dalam 3 level.", en: "Dua Journey: match each du'a to its moment, across 3 levels." },
+      { id: "Puzzle Kalimat Thayyibah dan Cari Baby Mo — dari kamar sampai Pasar Ramadan.", en: "Kind Words puzzle and Find Baby Mo — from his bedroom to a Ramadan market." },
     ],
   },
 ];
@@ -122,7 +122,7 @@ const LITTLE: { icon: string; t: Bi; d: Bi }[] = [
 const AGES: { age: string; color: string; t: Bi; games: Bi }[] = [
   { age: "2–3", color: "#FFB627", t: { id: "Kenalan & bermain", en: "Meet & play" }, games: { id: "Kenalan dengan Baby Mo (puzzle), Cari Baby Mo, Memory Match mudah, Dreamtime", en: "Meet Baby Mo (puzzle), Find Baby Mo, easy Memory Match, Dreamtime" } },
   { age: "3–5", color: "#3FA57A", t: { id: "Doa & kebiasaan baik", en: "Du'as & good habits" }, games: { id: "Doa Harian, Dua Journey, Wudhu Bareng Mo, Puzzle Kalimat Thayyibah", en: "Daily Du'as, Dua Journey, Wudhu with Mo, Kind Words puzzle" } },
-  { age: "5–8", color: "#5AA9E6", t: { id: "Membaca & beribadah", en: "Reading & worship" }, games: { id: "Huruf Hijaiyah, Pulau Hijaiyah, Kata Islam, Sholat Bareng Mo, Forehand Beat", en: "Hijaiyah Letters, Hijaiyah Island, Islamic Words, Pray with Mo, Forehand Beat" } },
+  { age: "5–8", color: "#5AA9E6", t: { id: "Ibadah & tantangan", en: "Worship & challenges" }, games: { id: "Sholat Bareng Mo, Wudhu Bareng Mo, Memory Match level sulit, Forehand Beat", en: "Pray with Mo, Wudhu with Mo, harder Memory Match levels, Forehand Beat" } },
 ];
 
 const NOS: Bi[] = [
@@ -228,9 +228,9 @@ html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data
 @media(max-width:900px){.f1{left:-16%}.f2{right:-16%}.f3{left:-12%}}
 @media(max-width:520px){.float{display:none}}
 .hero .stage{margin-bottom:84px}
-.peek{position:absolute;width:44%;right:-16%;bottom:-6%;filter:drop-shadow(0 18px 18px rgba(0,0,0,.2));animation:bob 4s ease-in-out infinite}
+.mo-peek{position:absolute;width:44%;right:-16%;bottom:-6%;filter:drop-shadow(0 18px 18px rgba(0,0,0,.2));animation:bob 4s ease-in-out infinite}
 @keyframes bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@media (prefers-reduced-motion:reduce){.float,.peek,.strip,.dots i,.cap>span{animation:none}.dots i:first-child{width:24px;background:var(--green)}.cap>span:first-child{opacity:1}}
+@media (prefers-reduced-motion:reduce){.float,.mo-peek,.strip,.dots i,.cap>span{animation:none}.dots i:first-child{width:24px;background:var(--green)}.cap>span:first-child{opacity:1}}
 
 /* stats */
 .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px}
@@ -380,8 +380,8 @@ export default function AppMarketingPage() {
                 </h1>
                 <p className="lede">
                   <B t={{
-                    id: "11 game islami, doa harian dengan suara Arab, panduan wudhu & sholat, huruf hijaiyah, dan rutinitas tidur — untuk anak 2–8 tahun, dimainkan bersama Ayah dan Bunda.",
-                    en: "11 Islamic games, daily du'as with Arabic audio, wudhu & prayer guides, the hijaiyah letters and a bedtime routine — for children aged 2–8, to enjoy together with their parents.",
+                    id: "11 game islami, doa harian dengan suara Arab, panduan wudhu & sholat, game ingatan, dan rutinitas tidur — untuk anak 2–8 tahun, dimainkan bersama Ayah dan Bunda.",
+                    en: "11 Islamic games, daily du'as with Arabic audio, wudhu & prayer guides, memory games and a bedtime routine — for children aged 2–8, to enjoy together with their parents.",
                   }} />
                 </p>
                 <div className="cta">
@@ -417,7 +417,7 @@ export default function AppMarketingPage() {
                 <div className="float f2"><span className="ic">⭐</span><B t={{ id: "+3 bintang!", en: "+3 stars!" }} /></div>
                 <div className="float f3"><span className="ic">🕌</span><B t={{ id: "Dzuhur · 12:00", en: "Dhuhr · 12:00" }} /></div>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="peek" src={asset("/baby-mo-poses/baby-mo-pose-01.png")} alt="" width={200} height={200} />
+                <img className="mo-peek" src={asset("/baby-mo-poses/baby-mo-pose-01.png")} alt="" width={200} height={200} />
               </div>
             </div>
 
