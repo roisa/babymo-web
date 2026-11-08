@@ -345,6 +345,243 @@ const RAW: PictureBook[] = [
       },
     ],
   },
+  /* ───────────────────────── Eid al-Adha: the qurban goat ───────────────────────── */
+  {
+    slug: "kambing-qurban-si-kembar",
+    pose: "baby-mo-pose-31.png",
+    published: "2027-01-03",
+    title: { id: "Kambing Qurban Si Kembar", en: "The Twins' Qurban Goat" },
+    hook: {
+      id: "Seminggu sebelum Idul Adha, ada seekor kambing putih di halaman. Mo menamainya Si Embek dan langsung sayang padanya. Tapi Si Embek adalah kambing qurban…",
+      en: "A week before Eid al-Adha, a white goat arrives in the garden. Mo names him Si Embek and loves him straight away. But Si Embek is the qurban goat…",
+    },
+    anchor: { type: "hadith", slug: "kelembutan-keindahan" },
+    takeaway: {
+      id: "Qurban adalah tanda taat kepada Allah seperti Nabi Ibrahim, dilakukan dengan lembut kepada hewan, dan dagingnya dibagikan supaya banyak orang bahagia.",
+      en: "Qurban is a sign of obeying Allah like Prophet Ibrahim, done with gentleness to the animal, and its meat is shared so many people are happy.",
+    },
+    tags: ["idul adha", "qurban", "nabi ibrahim", "sayang hewan", "berbagi", "si kembar"],
+    card: {
+      title: { id: "Menjelaskan Qurban kepada Anak", en: "Explaining Qurban to Children" },
+      items: {
+        id: [
+          "Wajar jika anak sedih berpisah dengan hewan qurban. Akui perasaannya, lalu ceritakan bahwa Islam memerintahkan berbuat baik kepada hewan, bahkan saat menyembelih.",
+          "Anak kecil tidak perlu menyaksikan penyembelihan. Libatkan mereka di bagian yang menyenangkan: memberi makan, mengantar daging.",
+          "Ceritakan kisah Nabi Ibrahim dengan bahasa sederhana: taat kepada Allah, dan Allah Maha Penyayang.",
+        ],
+        en: [
+          "It's natural for a child to feel sad about the qurban animal. Acknowledge it, then explain that Islam commands kindness to animals, even at slaughter.",
+          "Young children don't need to watch the slaughter. Involve them in the happy parts: feeding the animal, delivering the meat.",
+          "Tell the story of Prophet Ibrahim simply: he obeyed Allah, and Allah is the Most Merciful.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "garden",
+      props: [{ k: "goat", x: 450, s: 0.75 }],
+      mo: [{ pose: "pose-31", x: 335 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Seminggu sebelum Idul Adha, ada tamu istimewa di halaman: seekor kambing putih! \"Mbeeek!\"", en: "A week before Eid al-Adha, a special guest arrived in the garden: a white goat! \"Maaa-aaah!\"" },
+        scene: { focus: 390, bg: "garden", props: [{ k: "goat", x: 450, s: 0.75 }], mo: [{ pose: "pose-31", x: 335 }] },
+      },
+      {
+        text: { id: "\"Ini kambing qurban kita,\" kata Abi. Mo langsung memberinya nama. \"Namanya… Si Embek!\"", en: "\"This is our qurban goat,\" said Abi. Mo named him straight away. \"His name is… Si Embek!\"" },
+        scene: { focus: 390, bg: "garden", mo: [{ who: "ayah", pose: "thumbs-up-stand", x: 330 }, { pose: "pose-29", x: 450 }] },
+      },
+      {
+        text: { id: "Setiap pagi, si kembar memberi Si Embek rumput dan air. Si Embek mengunyah… kunyah, kunyah… sambil mengedip-ngedip.", en: "Every morning, the twins gave Si Embek grass and water. Si Embek chewed… munch, munch… blinking his eyes." },
+        scene: { focus: 390, bg: "garden", props: [{ k: "goat", x: 450, s: 0.75 }], mo: [{ who: "ais", pose: "watering-can", x: 335 }] },
+      },
+      {
+        text: { id: "\"Abi, kenapa kita berqurban?\" tanya Ais suatu sore.", en: "\"Abi, why do we do qurban?\" asked Ais one afternoon." },
+        scene: { focus: 390, bg: "garden", time: "dusk", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 330 }, { who: "ais", pose: "think-question", x: 450 }] },
+      },
+      {
+        text: { id: "Abi bercerita tentang Nabi Ibrahim 'alaihissalam, yang sangat taat kepada Allah. Allah menguji beliau dengan perintah yang berat, dan beliau siap menaatinya. Lalu Allah menggantinya dengan seekor domba yang besar.", en: "Abi told them about Prophet Ibrahim, peace be upon him, who obeyed Allah completely. Allah tested him with a very hard command, and he was ready to obey. Then Allah sent a great ram in its place." },
+        quote: {
+          id: "\"Dan Kami tebus anak itu dengan seekor sembelihan yang besar.\" (QS. Ash-Shaffat: 107)",
+          en: "\"And We ransomed him with a great sacrifice.\" (Qur'an, As-Saffat 37:107)",
+        },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "read-book-sit", x: 330 }, { pose: "pose-06", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Jadi qurban itu tanda kita taat kepada Allah,\" kata Abi. \"Dan supaya kita bisa berbagi daging dengan banyak orang.\"", en: "\"So qurban is a sign that we obey Allah,\" said Abi. \"And a way to share meat with lots of people.\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 330 }, { who: "ais", pose: "heart-hands-smile", x: 450 }] },
+      },
+      {
+        text: { id: "Malam sebelum Idul Adha, Mo duduk memeluk lutut di dekat Si Embek. \"Mo sayang Si Embek…\"", en: "On the night before Eid al-Adha, Mo sat hugging his knees beside Si Embek. \"I love Si Embek…\"" },
+        scene: { focus: 390, bg: "garden", time: "night", props: [{ k: "goat", x: 450, s: 0.75 }], mo: [{ pose: "pose-39", x: 335, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Abi duduk di sampingnya. \"Sayang pada hewan itu baik, Mo. Rasulullah ﷺ mengajarkan kita berbuat baik kepada hewan — bahkan saat menyembelihnya.\"", en: "Abi sat beside him. \"Loving animals is good, Mo. The Prophet ﷺ taught us to be kind to animals — even when slaughtering them.\"" },
+        quote: {
+          id: "\"Sesungguhnya Allah mewajibkan berbuat baik dalam segala hal. Jika kalian menyembelih, sembelihlah dengan baik: tajamkan pisaunya dan tenangkan hewannya.\" (HR. Muslim 1955)",
+          en: "\"Allah has prescribed excellence in everything. When you slaughter, slaughter well: sharpen the blade and put the animal at ease.\" (Muslim 1955)",
+        },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "calm-sit", x: 330 }, { pose: "pose-14", x: 450 }], fx: ["stars"] },
+      },
+      {
+        text: { id: "\"Si Embek tidak akan kesakitan?\" \"Para petugas melakukannya dengan cepat dan tenang, sambil menyebut nama Allah,\" jawab Abi lembut. Mo mengangguk pelan.", en: "\"Won't Si Embek be hurt?\" \"The helpers do it quickly and calmly, saying Allah's name,\" said Abi gently. Mo nodded slowly." },
+        scene: { focus: 390, bg: "garden", time: "night", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 330 }, { pose: "pose-33", x: 450 }] },
+      },
+      {
+        text: { id: "Pagi Idul Adha, takbir menggema lagi. Seluruh keluarga sholat Id di lapangan, lalu pulang lewat jalan yang lain.", en: "On the morning of Eid al-Adha, the takbir rang out again. The whole family prayed Eid at the field, then came home a different way." },
+        scene: { focus: 390, bg: "park", props: [{ k: "eidmats", x: 392, s: 0.8 }], mo: [{ pose: "pose-42", x: 330 }, { who: "ais", pose: "wave-hello", x: 455 }], fx: ["notes"] },
+      },
+      {
+        text: { id: "Siangnya, panitia qurban di masjid sibuk sekali. Kak Adam ikut membantu membungkus daging ke dalam besek-besek kecil.", en: "At midday, the qurban team at the mosque was very busy. Kak Adam helped pack the meat into little woven boxes." },
+        scene: { focus: 390, bg: "mosque", props: [{ k: "besek", x: 448, s: 0.8 }], mo: [{ who: "adam", pose: "carry-bags", x: 335 }] },
+      },
+      {
+        text: { id: "Abi menjelaskan, \"Dagingnya kita makan sebagian, kita simpan sebagian, dan kita sedekahkan sebagian untuk yang membutuhkan.\"", en: "Abi explained, \"We eat some of the meat, keep some, and give some in charity to people in need.\"" },
+        quote: {
+          id: "Tentang daging qurban, Rasulullah ﷺ bersabda: \"Makanlah, simpanlah, dan bersedekahlah.\" (HR. Muslim 1971)",
+          en: "About the qurban meat, the Prophet ﷺ said: \"Eat, store some, and give in charity.\" (Muslim 1971)",
+        },
+        scene: { focus: 390, bg: "mosque", mo: [{ who: "ayah", pose: "idea-point-stand", x: 330 }, { pose: "pose-22", x: 450 }] },
+      },
+      {
+        text: { id: "Mo dan Ais mengantar besek ke rumah-rumah. \"Assalamu'alaikum! Ini daging qurban untuk Nenek!\" Nenek itu tersenyum. \"Alhamdulillah, sudah lama Nenek tidak makan daging.\"", en: "Mo and Ais delivered the boxes from house to house. \"Assalamu'alaikum! Here's some qurban meat for you, Nenek!\" The old lady smiled. \"Alhamdulillah, I haven't had meat for so long.\"" },
+        scene: { focus: 390, bg: "street", props: [{ k: "besek", x: 448, s: 0.7 }], mo: [{ pose: "pose-22", x: 335 }] },
+      },
+      {
+        text: { id: "Mo terdiam. Sekarang ia mengerti: Si Embek membuat banyak sekali orang bahagia hari ini.", en: "Mo went quiet. Now he understood: Si Embek had made so many people happy today." },
+        scene: { focus: 390, bg: "street", mo: [{ pose: "pose-14", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya Abi berkata, \"Ingat, yang sampai kepada Allah bukan daging atau darahnya, tapi ketakwaan kita.\" Mo memeluk Abi erat-erat.", en: "That night Abi said, \"Remember, it isn't the meat or the blood that reaches Allah, but our devotion.\" Mo hugged Abi tight." },
+        quote: {
+          id: "\"Daging dan darahnya itu sekali-kali tidak dapat mencapai (keridaan) Allah, tetapi ketakwaan dari kamulah yang dapat mencapainya.\" (QS. Al-Hajj: 37)",
+          en: "\"Neither their meat nor their blood reaches Allah, but what reaches Him is your devotion.\" (Qur'an, Al-Hajj 22:37)",
+        },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "hug-mo", x: 390, move: "still" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Kalau kamu berqurban nanti, kepada siapa kamu ingin berbagi daging? 🐐", en: "When you give qurban one day, who would you like to share the meat with? 🐐" },
+        scene: { focus: 390, bg: "garden", props: [{ k: "besek", x: 448, s: 0.7 }], mo: [{ pose: "pose-41", x: 335 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── Hajj: Kakek goes on Hajj ───────────────────────── */
+  {
+    slug: "kakek-pergi-haji",
+    pose: "baby-mo-pose-01.png",
+    published: "2027-01-04",
+    title: { id: "Kakek Pergi Haji", en: "Grandpa Goes on Hajj" },
+    hook: {
+      id: "Kakek berangkat haji ke Mekah! Dari rumah, si kembar mengikuti perjalanan Kakek langkah demi langkah — berihram, bertawaf, ber-sa'i, wukuf di Arafah — sampai Kakek pulang membawa air zamzam.",
+      en: "Grandpa is off to Makkah for Hajj! From home, the twins follow his journey step by step — ihram, tawaf, sa'i, standing at Arafah — until Grandpa comes home with zamzam water.",
+    },
+    anchor: { type: "doa", slug: "doa-kembali-dari-perjalanan" },
+    takeaway: {
+      id: "Haji adalah perjalanan ibadah ke Baitullah bagi yang mampu. Yang di rumah pun bisa ikut berbuat baik: mendoakan, berpuasa Arafah, dan berqurban.",
+      en: "Hajj is a journey of worship to the House of Allah for those who are able. Those at home can join in too: praying for the pilgrims, fasting on Arafah and giving qurban.",
+    },
+    tags: ["haji", "idul adha", "ka'bah", "arafah", "kakek", "si kembar"],
+    card: {
+      title: { id: "Mengenalkan Ibadah Haji kepada Anak", en: "Introducing Hajj to Children" },
+      items: {
+        id: [
+          "Ikuti perjalanan haji kerabat atau tayangan haji bersama anak, dan jelaskan tiap langkah dengan sederhana: ihram, tawaf, sa'i, wukuf, melempar jumrah.",
+          "Main \"manasik cilik\" di rumah: berjalan tujuh putaran, berjalan bolak-balik tujuh kali sambil bertalbiyah.",
+          "Ajak anak berpuasa Arafah semampunya dan mendoakan para jamaah haji.",
+        ],
+        en: [
+          "Follow a relative's Hajj, or watch Hajj coverage together, and explain each step simply: ihram, tawaf, sa'i, standing at Arafah, stoning the pillars.",
+          "Play \"little pilgrims\" at home: walk seven circuits, walk back and forth seven times while saying the talbiyah.",
+          "Invite your child to fast on the day of Arafah as they are able, and to pray for the pilgrims.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "living",
+      props: [{ k: "kaabascreen", x: 450, s: 0.5 }],
+      mo: [{ pose: "pose-01", x: 335 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Kakek berangkat haji ke Mekah hari ini! Dari depan rumah, si kembar melambai ke langit. Wuuung — \"Itu pesawat Kakek!\"", en: "Grandpa was flying to Makkah for Hajj today! From outside the house, the twins waved at the sky. Whoosh — \"That's Grandpa's plane!\"" },
+        scene: { focus: 390, bg: "street", props: [{ k: "plane", x: 395, y: 150, s: 0.6 }], mo: [{ pose: "pose-01", x: 330 }, { who: "ais", pose: "wave-big", x: 455 }] },
+      },
+      {
+        text: { id: "\"Doakan Kakek, ya,\" pesan Kakek sebelum berangkat. Si kembar mengangkat tangan dan berdoa supaya Kakek sehat dan selamat.", en: "\"Pray for me,\" Grandpa had said before leaving. The twins raised their hands and prayed for Grandpa to be healthy and safe." },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "thank-you", x: 330 }, { who: "ais", pose: "dua-hands-closed", x: 455 }] },
+      },
+      {
+        text: { id: "Abi membentangkan peta. \"Kita ikuti perjalanan haji Kakek, langkah demi langkah!\" Ais sudah siap jadi penjelajah.", en: "Abi spread out a map. \"Let's follow Grandpa's Hajj, step by step!\" Ais was ready to be an explorer." },
+        scene: { focus: 390, bg: "living", mo: [{ who: "ayah", pose: "idea-point-stand", x: 330 }, { who: "ais", pose: "explorer-map", x: 450 }] },
+      },
+      {
+        text: { id: "Langkah pertama: ihram. Kakek memakai dua helai kain putih, lalu bertalbiyah: \"Labbaik Allahumma labbaik!\" Artinya, \"Aku datang memenuhi panggilan-Mu, ya Allah!\"", en: "Step one: ihram. Grandpa wore two plain white cloths and called out the talbiyah: \"Labbayk Allahumma labbayk!\" It means, \"Here I am, O Allah, answering Your call!\"" },
+        quote: {
+          id: "Talbiyah Rasulullah ﷺ: \"Labbaik Allahumma labbaik, labbaika laa syariika laka labbaik, innal hamda wan ni'mata laka wal mulk, laa syariika lak.\" (HR. Bukhari 1549)",
+          en: "The Prophet's talbiyah ﷺ: \"Labbayk Allahumma labbayk, labbayka la sharika laka labbayk, innal-hamda wan-ni'mata laka wal-mulk, la sharika lak.\" (Bukhari 1549)",
+        },
+        scene: { focus: 390, bg: "living", props: [{ k: "towel", x: 448, s: 0.8 }], mo: [{ pose: "pose-22", x: 335 }] },
+      },
+      {
+        text: { id: "Malamnya, Kakek menelepon dengan video. Di layar terlihat Ka'bah, dikelilingi lautan orang berbaju putih. \"Masya Allah!\" seru Mo.", en: "That night Grandpa video-called. On the screen was the Ka'bah, surrounded by a sea of people in white. \"Masya Allah!\" cried Mo." },
+        scene: { focus: 390, bg: "living", time: "night", props: [{ k: "kaabascreen", x: 450, s: 0.5 }], mo: [{ pose: "pose-31", x: 335 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Kakek bertawaf,\" kata Abi. \"Berjalan mengelilingi Ka'bah tujuh kali sambil berdzikir dan berdoa.\"", en: "\"Grandpa is doing tawaf,\" said Abi. \"Walking around the Ka'bah seven times, remembering Allah and making du'a.\"" },
+        scene: { focus: 390, bg: "living", time: "night", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 330 }, { who: "ais", pose: "wonder-question", x: 450 }] },
+      },
+      {
+        text: { id: "Besoknya, si kembar main manasik cilik seperti di TK: berjalan mengelilingi karpet tujuh kali. \"Satu… dua… tiga…\" Di putaran ketujuh, Mo pusing! Hihi.", en: "The next day, the twins played little pilgrims like at kindergarten: walking round the rug seven times. \"One… two… three…\" On lap seven, Mo was dizzy! Hee hee." },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "run", x: 330, move: "hop" }, { who: "ais", pose: "run", x: 455 }] },
+      },
+      {
+        text: { id: "Lalu sa'i: berjalan bolak-balik antara bukit Shafa dan Marwah tujuh kali. Abi bercerita tentang Siti Hajar yang berlari-lari mencari air untuk bayinya, Ismail.", en: "Then sa'i: walking back and forth between the hills of Safa and Marwah seven times. Abi told them how Hajar ran to and fro looking for water for her baby, Ismail." },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "pose-20", x: 390 }] },
+      },
+      {
+        text: { id: "\"Lalu Allah memancarkan air dari dalam tanah — air zamzam! Sampai sekarang airnya masih mengalir,\" kata Abi. \"Wah!\" kata Mo dan Ais bersamaan.", en: "\"Then Allah made water gush from the ground — zamzam! It's still flowing today,\" said Abi. \"Wow!\" said Mo and Ais together." },
+        scene: { focus: 390, bg: "living", props: [{ k: "zamzam", x: 448, s: 0.9 }], mo: [{ who: "ayah", pose: "arms-open-welcome", x: 335 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Tanggal 9 Dzulhijjah, Kakek wukuf di Padang Arafah — berdoa sejak siang sampai matahari terbenam. Hari yang paling penting dalam ibadah haji.", en: "On 9 Dhul-Hijjah, Grandpa stood at the plain of Arafah — praying from midday until sunset. The most important day of Hajj." },
+        scene: { focus: 390, bg: "living", props: [{ k: "arafah9", x: 448, y: 300, s: 0.75 }], mo: [{ pose: "pose-12", x: 335, move: "still" }] },
+      },
+      {
+        text: { id: "\"Kita yang di rumah juga bisa ikut,\" kata Umi. \"Berpuasa di hari Arafah. Pahalanya besar sekali!\" Ais langsung ingin mencoba.", en: "\"We can join in from home too,\" said Umi. \"By fasting on the day of Arafah. The reward is huge!\" Ais wanted to try straight away." },
+        quote: {
+          id: "\"Puasa hari Arafah, aku berharap kepada Allah agar menghapus dosa setahun sebelumnya dan setahun sesudahnya.\" (HR. Muslim 1162)",
+          en: "\"Fasting the day of Arafah, I hope Allah will wipe out the sins of the year before it and the year after it.\" (Muslim 1162)",
+        },
+        scene: { focus: 390, bg: "living", mo: [{ who: "umi", pose: "explain-hand", x: 330 }, { who: "ais", pose: "cheer-fist", x: 450 }] },
+      },
+      {
+        text: { id: "Setelah itu Kakek melempar jumrah: melempar batu-batu kecil, tanda kita melawan bisikan setan. Mo menirukannya. \"Hap! Pergi kau, setan!\"", en: "After that, Grandpa threw pebbles at the pillars, a sign that we resist Shaytan's whispers. Mo pretended to throw. \"Hup! Go away, Shaytan!\"" },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "pose-15", x: 390 }] },
+      },
+      {
+        text: { id: "Hampir sebulan kemudian, Kakek pulang! Wajahnya bercahaya. Oleh-olehnya kurma dan air zamzam. \"Kakeeek!\" Mo melompat kegirangan.", en: "Almost a month later, Grandpa came home! His face was glowing. He brought dates and zamzam water. \"Grandpaaa!\" Mo jumped for joy." },
+        scene: { focus: 390, bg: "living", props: [{ k: "zamzam", x: 448, s: 0.9 }], mo: [{ pose: "pose-02", x: 335 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "\"Kek, haji itu rasanya bagaimana?\" tanya Ais. Kata Kakek, \"Jutaan orang dari seluruh dunia, berbaju sama, berdoa kepada Allah yang sama. Rasanya seperti satu keluarga besar.\"", en: "\"Grandpa, what was Hajj like?\" asked Ais. Grandpa said, \"Millions of people from all over the world, dressed the same, praying to the same Allah. It felt like one big family.\"" },
+        scene: { focus: 390, bg: "living", mo: [{ who: "ais", pose: "wonder-question", x: 390 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Abi tersenyum. \"Haji yang mabrur, balasannya surga.\" Mo menggenggam tangan Ais. \"Nanti kalau sudah besar, kita pergi haji bersama, ya!\"", en: "Abi smiled. \"An accepted Hajj is rewarded with nothing less than Paradise.\" Mo held Ais's hand. \"When we're grown up, let's go on Hajj together!\"" },
+        quote: {
+          id: "\"Haji yang mabrur tidak ada balasan baginya selain surga.\" (HR. Bukhari 1773, Muslim 1349)",
+          en: "\"An accepted Hajj has no reward except Paradise.\" (Bukhari 1773, Muslim 1349)",
+        },
+        scene: { focus: 390, bg: "living", mo: [{ pose: "pose-27", x: 330 }, { who: "ais", pose: "heart-hands-smile", x: 455 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kalau suatu hari kamu pergi haji, doa apa yang ingin kamu panjatkan di sana? 🕋", en: "If you go on Hajj one day, what will you pray for there? 🕋" },
+        scene: { focus: 390, bg: "living", props: [{ k: "kaabascreen", x: 450, s: 0.5 }], mo: [{ pose: "thank-you", x: 335 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
 
 /** Space out groups for the phone page; a lone character keeps its spot so

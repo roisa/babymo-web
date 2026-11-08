@@ -221,6 +221,8 @@ export const SERIES: StorySeries[] = [
       "lebaran-paling-seru-di-rumah-nenek",
       "ketupat-untuk-tetangga-baru",
       "bintang-syawal-ais",
+      "kambing-qurban-si-kembar",
+      "kakek-pergi-haji",
     ],
   },
 ];
