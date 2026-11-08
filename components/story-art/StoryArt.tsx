@@ -3,6 +3,7 @@ import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@
 import { AIS_SCALE, FRIEND_SCALE } from "@/lib/cerita/friends-poses";
 import { ELEMENTS } from "./elements";
 import { PHOTO_BG, PhotoBackground } from "./photo-bg";
+import { TennisCourt, isCourt } from "./courts";
 import { SkyCloud, SkyMoon, SkySun } from "./elements/nature";
 
 /**
@@ -128,6 +129,7 @@ function Floor({ color, plank = true }: { color: string; plank?: boolean }) {
 
 function Background({ bg, time, rainy = false, noSun = false }: { bg: ArtBg; time: ArtTime; rainy?: boolean; noSun?: boolean }) {
   const night = time === "night";
+  if (isCourt(bg)) return <TennisCourt kind={bg} time={time} sky={sky(time, noSun)} rainy={rainy} />;
   switch (bg) {
     case "bedroom":
       return (
@@ -327,54 +329,6 @@ function Background({ bg, time, rainy = false, noSun = false }: { bg: ArtBg; tim
           {Array.from({ length: 5 }, (_, i) => <rect key={i} y={FLOOR - 10 + i * 30} width={W} height={4} fill="#E8B04B" opacity=".6" />)}
         </g>
       );
-    case "court": {
-      const night = time === "night";
-      const wet = time === "rain";
-      const grass = night ? "#2E5A44" : "#79C27A";
-      const surf = night ? "#2D4F86" : wet ? "#4F7FB8" : "#4C8DDB";
-      const line = night ? "#C9D3F0" : "#FFFFFF";
-      return (
-        <g>
-          {sky(time, noSun)}
-          {/* trees behind the fence */}
-          {[40, 150, 270, 520, 640, 760].map((x, i) => (
-            <g key={x} className="sa-sway-slow" style={{ animationDelay: `${-i * 0.8}s` }}>
-              <circle cx={x} cy={170 + (i % 2) * 14} r={58} fill={night ? "#244A3C" : "#5DAF62"} />
-              <circle cx={x + 34} cy={192} r={40} fill={night ? "#2B5544" : "#6CBE6E"} />
-            </g>
-          ))}
-          {/* chain-link fence */}
-          <rect y={180} width={W} height={112} fill={night ? "#1F3B33" : "#3F7F5B"} opacity=".9" />
-          <g opacity=".35" stroke={night ? "#8FB0A0" : "#CFE9D8"} strokeWidth={2}>
-            {Array.from({ length: 34 }, (_, i) => (
-              <path key={i} d={`M${i * 26 - 112} 292 l112 -112 M${i * 26} 292 l-112 -112`} />
-            ))}
-          </g>
-          {[0, 200, 400, 600, 800].map((x) => <rect key={x} x={x - 5} y={172} width={10} height={124} rx={4} fill={night ? "#6E7C8A" : "#AEB9C4"} />)}
-          {/* ground + court in perspective */}
-          <rect y={290} width={W} height={H - 290} fill={grass} />
-          <path d="M70 296 H730 L900 450 H-100 Z" fill={surf} />
-          <g stroke={line} strokeWidth={5} fill="none" strokeLinejoin="round">
-            <path d="M70 296 H730 L900 450 H-100 Z" />
-            <path d="M150 296 L40 450 M650 296 L760 450" strokeWidth={4} />
-            <path d="M104 360 H696" strokeWidth={4} />
-            <path d="M400 330 V360" strokeWidth={4} />
-          </g>
-          {wet && <ellipse cx={560} cy={410} rx={120} ry={14} fill="#BFD8F2" opacity=".5" />}
-          {/* the net */}
-          <g>
-            <rect x={36} y={276} width={9} height={58} rx={3} fill="#3A3F4A" />
-            <rect x={755} y={276} width={9} height={58} rx={3} fill="#3A3F4A" />
-            <rect x={44} y={284} width={712} height={44} fill="#1E2430" opacity=".25" />
-            <g stroke={night ? "#9AA6BC" : "#2A3242"} strokeWidth={1.5} opacity=".55">
-              {Array.from({ length: 60 }, (_, i) => <path key={i} d={`M${46 + i * 12} 284 v44`} />)}
-              {Array.from({ length: 5 }, (_, i) => <path key={i} d={`M44 ${288 + i * 9} h712`} />)}
-            </g>
-            <rect x={44} y={280} width={712} height={7} rx={2} fill="#FFFFFF" />
-          </g>
-        </g>
-      );
-    }
     case "supermarket": {
       const shelf = (x: number, cols: string[]) => (
         <g key={x}>
@@ -2964,7 +2918,7 @@ export function StoryArt({
   spread?: boolean;
 }) {
   const time = scene.time ?? "day";
-  const outdoor = ["garden", "park", "market", "street", "beach", "court", "forest", "hill", "school"].includes(scene.bg);
+  const outdoor = ["garden", "park", "market", "street", "beach", "forest", "hill", "school"].includes(scene.bg) || (isCourt(scene.bg) && scene.bg !== "court-indoor");
   const photo = PHOTO_BG[scene.bg];
   const quake = (scene.fx ?? []).includes("quake");
   // rooms: rain stays outside the window, lightning is only a flash through it

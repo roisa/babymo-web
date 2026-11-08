@@ -2,6 +2,7 @@ import type { ComponentType } from "react";
 import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
+import { BallGreen, BallHopper, BallMachine, BallOrange, BallRed, BallTube, CourtBrush, Medal, MiniNet, Racket, RacketBag, SportBottle, UmpireChairProp } from "./tennis";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
 /**
@@ -74,4 +75,17 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   quran: { draw: Quran, group: "faith", note: "The Qur'an open on a rehal stand, glowing." },
   ladderup: { draw: LadderUp, group: "play", note: "Standing step ladder for climbing scenes." },
   minaret: { draw: Minaret, group: "faith", note: "Mosque minaret, adzan waves." },
+  racket: { draw: Racket, group: "tennis", note: "Junior racket with grip tape." },
+  ballbasket: { draw: BallHopper, group: "tennis", note: "Ball hopper full of balls." },
+  ballred: { draw: BallRed, group: "tennis", note: "Red stage ball (mini court, slowest)." },
+  ballorange: { draw: BallOrange, group: "tennis", note: "Orange stage ball." },
+  ballgreen: { draw: BallGreen, group: "tennis", note: "Green stage ball." },
+  ballmachine: { draw: BallMachine, group: "tennis", note: "Ball machine, fires balls." },
+  racketbag: { draw: RacketBag, group: "tennis", note: "Tennis bag with a racket handle." },
+  sportbottle: { draw: SportBottle, group: "tennis", note: "Sports water bottle." },
+  balltube: { draw: BallTube, group: "tennis", note: "Tube of three balls." },
+  mininet: { draw: MiniNet, group: "tennis", note: "Portable low net for mini-tennis." },
+  medal: { draw: Medal, group: "tennis", note: "Finisher's medal on a ribbon." },
+  courtbrush: { draw: CourtBrush, group: "tennis", note: "Clay-court drag brush." },
+  umpirechair: { draw: UmpireChairProp, group: "tennis", note: "Umpire chair." },
 };
