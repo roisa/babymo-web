@@ -1281,6 +1281,430 @@ const RAW: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── 13. Beach: a shell for Nenek ───────────────────────── */
+  {
+    slug: "kerang-untuk-nenek",
+    pose: "baby-mo-pose-35.png",
+    published: "2026-12-10",
+    title: { id: "Kerang untuk Nenek", en: "A Shell for Grandma" },
+    hook: {
+      id: "Di ruang main pantai, Mo menemukan kerang paling cantik sedunia — merah muda dan berkilau. Ia ingin menyimpannya selamanya. Lalu Ais teringat Nenek yang sedang sakit dan rindu laut.",
+      en: "In the beach playroom, Mo finds the prettiest shell in the world — pink and shiny. He wants to keep it forever. Then Ais remembers Grandma, who is unwell and misses the sea.",
+    },
+    anchor: { type: "hadith", slug: "silaturahmi-rezeki" },
+    takeaway: {
+      id: "Memberi hadiah — apalagi barang yang kita sayangi — menumbuhkan cinta dan menyambung silaturahmi, bahkan dari jauh.",
+      en: "Giving a gift — especially something we love — grows love and keeps family ties strong, even from far away.",
+    },
+    tags: ["hadiah", "berbagi", "nenek", "silaturahmi", "pantai", "umi"],
+    card: {
+      title: { id: "Mengajak Anak Memberi Hadiah", en: "Helping Children Give Gifts" },
+      items: {
+        id: [
+          "Ajak anak memilih atau membuat hadiah sendiri — gambar, kerang, kartu. Yang penting dari hatinya, bukan harganya.",
+          "Biarkan anak merasakan senangnya melihat wajah penerima, lewat video call atau kunjungan.",
+          "Jangan paksa memberi barang kesayangan. Tawarkan pilihan, dan puji niat baiknya.",
+        ],
+        en: [
+          "Let your child choose or make the gift — a drawing, a shell, a card. What matters is the heart, not the price.",
+          "Let them see the receiver's face, by video call or a visit, so they feel the joy of giving.",
+          "Don't force them to give away a treasured thing. Offer choices and praise the good intention.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-beach",
+      props: [{ k: "shell", x: 460, y: 380, s: 0.9 }],
+      mo: [{ pose: "pose-35", x: 360 }, { who: "ais", pose: "heart-hands-smile", x: 470 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Ruang main hari ini jadi pantai! Ada ombak di dinding, pelampung, payung, dan keranjang penuh kerang.", en: "Today the playroom was a beach! There were waves on the wall, swim rings, an umbrella and a basket full of shells." },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "bucket", x: 480 }], mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "arms-wide-joy", x: 460 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Si kembar mencari kerang. Ada yang putih, ada yang bergaris, ada yang seperti kipas kecil.", en: "The twins hunted for shells. Some were white, some were stripy, some looked like tiny fans." },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "shell", x: 470, y: 400, s: 0.7 }], mo: [{ who: "ais", pose: "magnifier-peek", x: 330 }, { pose: "pose-34", x: 450 }] },
+      },
+      {
+        text: { id: "Lalu Mo menemukannya: kerang merah muda yang berkilau seperti mutiara. \"Ini kerang paling cantik sedunia!\"", en: "Then Mo found it: a pink shell that shimmered like a pearl. \"This is the prettiest shell in the world!\"" },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "shell", x: 440, y: 360, s: 1 }], mo: [{ pose: "wow", x: 360 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Ini punyaku. Akan kusimpan di bawah bantal selamanya,\" kata Mo sambil menggenggamnya erat.", en: "\"It's mine. I'm keeping it under my pillow forever,\" said Mo, holding it tight." },
+        scene: { focus: 390, bg: "play-beach", mo: [{ pose: "pose-04", x: 380 }] },
+      },
+      {
+        text: { id: "Ais tiba-tiba diam. \"Mo… Nenek suka sekali laut. Tapi Nenek sedang sakit, tidak bisa ke pantai.\"", en: "Ais went quiet. \"Mo… Grandma loves the sea. But she's poorly and can't go to the beach.\"" },
+        scene: { focus: 390, bg: "play-beach", mo: [{ who: "ais", pose: "wonder-question", x: 340 }, { pose: "pose-40", x: 460 }] },
+      },
+      {
+        text: { id: "Mo memandang kerangnya. Lalu memandang Ais. Kerangnya cantik sekali… Ia menggenggamnya makin erat.", en: "Mo looked at his shell. Then he looked at Ais. The shell was so beautiful… He held it even tighter." },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "shell", x: 470, y: 380, s: 0.7 }], mo: [{ pose: "pose-16", x: 380 }] },
+      },
+      {
+        text: { id: "Umi duduk di pasir bersama mereka. \"Hadiah yang paling berharga itu bukan yang paling mahal, tapi yang paling kita sayangi.\"", en: "Umi sat on the sand with them. \"The most precious gift isn't the most expensive one — it's the one we love the most.\"" },
+        scene: { focus: 380, bg: "play-beach", mo: [{ who: "umi", pose: "kneel-smile", x: 280, move: "still" }, { pose: "pose-06", x: 400, move: "still" }, { who: "ais", pose: "sit-chin-hands", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "\"Rasulullah ﷺ mengajarkan kita untuk saling memberi hadiah. Kenapa, ya? Supaya hati kita saling menyayangi.\"", en: "\"The Prophet ﷺ taught us to give each other gifts. Why? So that our hearts love one another.\"" },
+        quote: { id: "\"Saling memberi hadiahlah kalian, niscaya kalian akan saling mencintai.\" (HR. Bukhari dalam Al-Adab Al-Mufrad 594)", en: "\"Give gifts to one another, and you will love one another.\" (Bukhari, Al-Adab Al-Mufrad 594)" },
+        scene: { focus: 380, bg: "play-beach", mo: [{ who: "umi", pose: "explain-hand", x: 280 }, { pose: "pose-31", x: 400 }] },
+      },
+      {
+        text: { id: "Mo membuka genggamannya. \"Kalau kerang ini untuk Nenek… Nenek bisa mendengar laut, kan? Kata Kak Adam, kalau kerang ditempel di telinga, ada suara ombaknya.\"", en: "Mo opened his hand. \"If this shell is for Grandma… she could hear the sea, right? Kak Adam says if you hold a shell to your ear, you can hear the waves.\"" },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "shell", x: 440, y: 350, s: 0.8 }], mo: [{ pose: "pose-14", x: 370 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Mereka membungkus kerang itu dengan kertas biru dan pita kuning. Ais menggambar laut di kartunya: \"Untuk Nenek, dari laut ruang main.\"", en: "They wrapped the shell in blue paper with a yellow ribbon. Ais drew the sea on a card: \"For Grandma, from the playroom sea.\"" },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "parcel", x: 480, s: 0.6 }], mo: [{ who: "ais", pose: "draw-floor", x: 330, move: "still" }, { pose: "pose-25", x: 440 }] },
+      },
+      {
+        text: { id: "Abi mengirim paket kecil itu ke kampung Nenek. Mo menghitung hari. Satu… dua… tiga…", en: "Abi posted the little parcel to Grandma's village. Mo counted the days. One… two… three…" },
+        scene: { focus: 380, bg: "street", props: [{ k: "mailbox", x: 480 }], mo: [{ who: "ayah", pose: "wave-hello", x: 280 }, { pose: "pose-05", x: 400 }] },
+      },
+      {
+        text: { id: "Hari keempat, tablet Umi berbunyi. Video call dari Nenek! \"Assalamu'alaikum, cucu-cucu Nenek!\"", en: "On day four, Umi's tablet rang. A video call from Grandma! \"Assalamu'alaikum, my darling grandchildren!\"" },
+        scene: { focus: 390, bg: "living", mo: [{ who: "ais", pose: "laptop", x: 330, move: "still" }, { pose: "pose-01", x: 450 }] },
+      },
+      {
+        text: { id: "Nenek menempelkan kerang merah muda di telinganya. \"Masya Allah… Nenek bisa mendengar laut! Ini hadiah terindah.\" Mata Nenek berkaca-kaca bahagia.", en: "Grandma held the pink shell to her ear. \"Masya Allah… I can hear the sea! This is the loveliest present.\" Her eyes shone with happy tears." },
+        scene: { focus: 390, bg: "living", props: [{ k: "shell", x: 480, y: 330, s: 0.7 }], mo: [{ pose: "pose-37", x: 370 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "\"Nenek jadi semangat cepat sembuh,\" kata Nenek. \"Supaya bisa ke pantai sungguhan bersama kalian.\"", en: "\"Now I want to get better quickly,\" said Grandma, \"so I can go to a real beach with you.\"" },
+        scene: { focus: 380, bg: "living", mo: [{ who: "umi", pose: "touched-cheek", x: 280 }, { pose: "pose-07", x: 400 }, { who: "ais", pose: "heart-hands", x: 500 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya, bantal Mo tidak ada kerangnya. Tapi hatinya terasa penuh. Ternyata memberi itu rasanya lebih indah daripada menyimpan.", en: "That night there was no shell under Mo's pillow. But his heart felt full. Giving felt even lovelier than keeping." },
+        scene: { focus: 360, bg: "bedroom", time: "night", mo: [{ pose: "pose-12", x: 360, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Siapa yang ingin kamu beri hadiah? Hadiah apa yang bisa kamu buat sendiri? 🐚", en: "Who would you like to give a present to? What gift could you make yourself? 🐚" },
+        scene: { focus: 390, bg: "play-beach", props: [{ k: "shell", x: 460, y: 380, s: 0.9 }], mo: [{ pose: "pose-35", x: 360 }, { who: "ais", pose: "heart-hands-smile", x: 470 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 14. Dinosaur: the strongest dino ───────────────────────── */
+  {
+    slug: "dino-paling-kuat",
+    pose: "baby-mo-pose-27.png",
+    published: "2026-12-11",
+    title: { id: "Dino Paling Kuat", en: "The Strongest Dino" },
+    hook: {
+      id: "Mo jadi T-Rex yang mengaum paling keras di ruang main dinosaurus. Tapi saat kalah lomba dari Ais, aumannya berubah jadi marah. Siapa sebenarnya dino paling kuat?",
+      en: "Mo is a T-Rex with the loudest roar in the dinosaur playroom. But when he loses a race to Ais, his roar turns angry. Who is really the strongest dino?",
+    },
+    anchor: { type: "parenting", slug: "tantrum" },
+    takeaway: {
+      id: "Anak butuh alat sederhana untuk menenangkan diri — seperti \"napas dino\" — dan pengertian bahwa kuat itu menahan marah, bukan melampiaskannya.",
+      en: "Children need a simple tool to calm down — like a \"dino breath\" — and to learn that being strong means holding back anger, not letting it out.",
+    },
+    tags: ["marah", "menahan diri", "tantrum", "dinosaurus", "abi", "saudara"],
+    card: {
+      title: { id: "Saat Anak Meledak Marah", en: "When Your Child Explodes with Anger" },
+      items: {
+        id: [
+          "Beri nama perasaannya: \"Kamu marah karena kalah, ya.\" Anak lebih cepat tenang saat merasa dimengerti.",
+          "Latih \"napas dino\" saat tenang: tarik napas panjang lewat hidung, embuskan pelan seperti dino yang mengantuk. Nanti dipakai saat marah.",
+          "Ajarkan doa saat marah dan pujilah setiap kali anak berhasil menahan diri, sekecil apa pun.",
+        ],
+        en: [
+          "Name the feeling: \"You're angry because you lost.\" Children calm faster when they feel understood.",
+          "Practise \"dino breath\" when calm: a long breath in through the nose, out slowly like a sleepy dinosaur. Then use it when angry.",
+          "Teach the dua for anger and praise every time your child holds back, however small.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-dinosaur",
+      mo: [{ pose: "pose-27", x: 350 }, { who: "ais", pose: "cheer-wink", x: 470 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"ROAAARRR!\" Ruang main hari ini penuh dinosaurus — di dinding, di rak, bahkan ada gunung berapi mainan!", en: "\"ROAAARRR!\" Today the playroom was full of dinosaurs — on the walls, on the shelves, and there was even a toy volcano!" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-27", x: 340 }, { who: "ais", pose: "jump-joy", x: 460, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Aku T-Rex! Dino paling kuat sedunia!\" Mo menghentak-hentakkan kakinya. Bum, bum, bum!", en: "\"I'm a T-Rex! The strongest dino in the world!\" Mo stomped his feet. Boom, boom, boom!" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-04", x: 380 }] },
+      },
+      {
+        text: { id: "\"Aku Triceratops!\" kata Ais. \"Ayo lomba lari ke pohon palem!\" \"Siap… mulai!\"", en: "\"I'm a Triceratops!\" said Ais. \"Let's race to the palm tree!\" \"Ready… go!\"" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "run", x: 340, move: "hop" }, { who: "ais", pose: "run", x: 460, move: "hop" }] },
+      },
+      {
+        text: { id: "Ais sampai duluan. \"Hore! Triceratops menang!\"", en: "Ais got there first. \"Hooray! Triceratops wins!\"" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ who: "ais", pose: "trophy-cheer", x: 450 }, { pose: "pose-40", x: 330 }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Wajah Mo memerah. Dadanya panas. \"ROAAARRR!\" — kali ini bukan main-main. Ia menendang dino-dino mainan sampai berhamburan.", en: "Mo's face went red. His chest felt hot. \"ROAAARRR!\" — this time it wasn't a game. He kicked the toy dinosaurs everywhere." },
+        scene: { focus: 390, bg: "play-dinosaur", props: [{ k: "blocksfall", x: 480 }], mo: [{ pose: "pose-27", x: 370 }] },
+      },
+      {
+        text: { id: "Ais mundur ketakutan dan menangis. \"Mo jahat!\"", en: "Ais backed away, scared, and cried. \"Mo, you're mean!\"" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ who: "ais", pose: "scared-hide", x: 470, move: "still" }, { pose: "pose-33", x: 340 }] },
+      },
+      {
+        text: { id: "Abi datang dan berjongkok, tenang sekali. \"Mo marah karena kalah, ya?\" Mo mengangguk. Air matanya jatuh.", en: "Abi came and crouched down, very calm. \"You're angry because you lost?\" Mo nodded. His tears fell." },
+        scene: { focus: 370, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-09", x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "\"Marah itu boleh. Tapi menendang dan membuat orang takut itu tidak boleh. Yuk coba napas dino: tarik napas panjaaang lewat hidung…\"", en: "\"Feeling angry is allowed. But kicking and scaring people isn't. Let's try dino breath: breathe in looong through your nose…\"" },
+        scene: { focus: 370, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "calm-sit", x: 270, move: "still" }, { pose: "pose-36", x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "\"…lalu embuskan pelan-pelan, seperti dino yang mengantuk. Fuuuuh.\" Sekali. Dua kali. Tiga kali. Dada Mo mulai dingin.", en: "\"…then breathe out slowly, like a sleepy dinosaur. Whoooo.\" Once. Twice. Three times. Mo's chest began to cool." },
+        scene: { focus: 380, bg: "play-dinosaur", mo: [{ pose: "pose-12", x: 380, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Tahu tidak siapa yang paling kuat?\" tanya Abi. \"T-Rex!\" \"Bukan. Kata Rasulullah ﷺ, orang paling kuat adalah yang bisa menahan dirinya saat marah.\"", en: "\"Do you know who's the strongest?\" asked Abi. \"T-Rex!\" \"No. The Prophet ﷺ said the strongest person is the one who controls himself when angry.\"" },
+        quote: { id: "\"Orang yang kuat bukanlah yang pandai bergulat, tetapi orang yang kuat adalah yang mampu menahan dirinya ketika marah.\" (HR. Bukhari 6114, Muslim 2609)", en: "\"The strong person is not the one who wrestles well, but the strong one is he who controls himself when angry.\" (Bukhari 6114, Muslim 2609)" },
+        scene: { focus: 370, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { pose: "pose-31", x: 400 }] },
+      },
+      {
+        text: { id: "\"Dan kalau marah datang lagi, ucapkan: A'uudzu billaahi minasy-syaithaanir-rajiim.\" Mo mengulanginya pelan-pelan.", en: "\"And if anger comes again, say: A'udhu billahi minash-shaytanir-rajim.\" Mo repeated it slowly." },
+        quote: { id: "Rasulullah ﷺ melihat seseorang yang sangat marah dan bersabda: \"Aku tahu satu kalimat yang jika ia ucapkan, hilanglah marahnya: A'uudzu billaahi minasy-syaithaanir-rajiim.\" (HR. Bukhari 3282, Muslim 2610)", en: "The Prophet ﷺ saw a man who was very angry and said: \"I know a phrase which, if he said it, his anger would go: A'udhu billahi minash-shaytanir-rajim.\" (Bukhari 3282, Muslim 2610)" },
+        scene: { focus: 380, bg: "play-dinosaur", mo: [{ pose: "thank-you", x: 380 }] },
+      },
+      {
+        text: { id: "Mo berjalan ke Ais. \"Ais… maaf ya, tadi Mo menakutimu dan menendang dino-dinonya. Selamat, kamu menang.\"", en: "Mo walked over to Ais. \"Ais… sorry I scared you and kicked the dinosaurs. Well done, you won.\"" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-14", x: 340 }, { who: "ais", pose: "sad-tears", x: 460, move: "still" }] },
+      },
+      {
+        text: { id: "Ais mengusap matanya dan tersenyum kecil. \"…Bantu aku bangunkan dino-dinonya?\" Mereka merapikan semuanya bersama.", en: "Ais wiped her eyes and gave a little smile. \"…Help me stand the dinosaurs back up?\" They tidied everything together." },
+        scene: { focus: 390, bg: "play-dinosaur", props: [{ k: "blocks", x: 470, s: 0.8 }], mo: [{ pose: "pose-25", x: 340 }, { who: "ais", pose: "blocks-build", x: 450, move: "still" }] },
+      },
+      {
+        text: { id: "\"Lomba lagi?\" tanya Ais. Kali ini Mo kalah lagi… tapi ia hanya tertawa dan menarik napas dino. \"Fuuuh! Selamat, Triceratops!\"", en: "\"Race again?\" asked Ais. Mo lost again… but this time he just laughed and took a dino breath. \"Whoooo! Well done, Triceratops!\"" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-03", x: 340 }, { who: "ais", pose: "jump-joy", x: 460, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Abi mengangkat Mo tinggi-tinggi. \"Nah, ini dia dino paling kuat — yang bisa menahan marahnya!\"", en: "Abi lifted Mo up high. \"Here he is — the strongest dino of all, the one who can hold back his anger!\"" },
+        scene: { focus: 380, bg: "play-dinosaur", mo: [{ who: "ayah", pose: "carry-mo", x: 370, move: "still" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Kapan terakhir kamu marah? Yuk latih napas dino bersama — tarik panjaaang, embuskan pelaaan! 🦖", en: "When were you last angry? Let's practise dino breath together — breathe in looong, out slooowly! 🦖" },
+        scene: { focus: 390, bg: "play-dinosaur", mo: [{ pose: "pose-27", x: 350 }, { who: "ais", pose: "cheer-wink", x: 470 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 15. Police & rescue: little traffic police ───────────────────────── */
+  {
+    slug: "polisi-lalu-lintas-cilik",
+    pose: "baby-mo-pose-24.png",
+    published: "2026-12-12",
+    title: { id: "Polisi Lalu Lintas Cilik", en: "The Little Traffic Police" },
+    hook: {
+      id: "Mo jadi polisi lalu lintas di ruang main! Tapi saat jadi pengemudi, ia mengebut melewati lampu merah — BRAK! Hari itu si kembar belajar aturan jalan yang sungguhan.",
+      en: "Mo becomes a traffic officer in the playroom! But when he takes a turn as driver, he zooms through a red light — CRASH! That day the twins learn the real rules of the road.",
+    },
+    anchor: { type: "doa", slug: "keluar-rumah" },
+    takeaway: {
+      id: "Aturan keselamatan paling mudah diingat lewat bermain peran: bergandengan tangan, lihat kanan-kiri, menyeberang di zebra cross — dan doa keluar rumah.",
+      en: "Safety rules stick best through role-play: hold hands, look both ways, cross at the zebra crossing — and say the dua for leaving home.",
+    },
+    tags: ["keselamatan", "lalu lintas", "menyeberang", "polisi", "doa keluar rumah", "abi"],
+    card: {
+      title: { id: "Aturan Jalan untuk Balita", en: "Road Rules for Little Ones" },
+      items: {
+        id: [
+          "Selalu bergandengan tangan dengan orang dewasa di dekat jalan — jadikan ini aturan, bukan pilihan.",
+          "Latih \"berhenti, lihat kanan-kiri-kanan, dengar, baru jalan\" di rumah dengan lampu lalu lintas dari kertas.",
+          "Di mobil, kursi anak dan sabuk pengaman setiap kali, walaupun perjalanannya dekat.",
+        ],
+        en: [
+          "Always hold a grown-up's hand near the road — make it a rule, not a choice.",
+          "Practise \"stop, look both ways, listen, then go\" at home with paper traffic lights.",
+          "In the car, a child seat and seatbelt every time, even for short trips.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-police",
+      props: [{ k: "cone", x: 480, s: 0.7 }],
+      mo: [{ pose: "pose-24", x: 360 }, { who: "ais", pose: "megaphone", x: 470 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Ngiu-ngiu! Ruang main hari ini jadi kantor polisi. Ada mobil patroli, helikopter, dan kerucut oranye.", en: "Nee-naw! Today the playroom was a police station. There were patrol cars, a helicopter and orange cones." },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "cone", x: 490, s: 0.7 }], mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "jump-joy", x: 440, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kak Adam membuat jalan dari selotip di lantai, lengkap dengan zebra cross dan lampu lalu lintas dari kardus.", en: "Kak Adam made a road from tape on the floor, with a zebra crossing and traffic lights made of cardboard." },
+        scene: { focus: 380, bg: "play-police", props: [{ k: "box", x: 480, s: 0.6 }], mo: [{ who: "adam", pose: "proud-hands-hips", x: 290 }, { pose: "wow", x: 410 }] },
+      },
+      {
+        text: { id: "\"Aku polisinya!\" Ais meniup peluit. Priit! \"Lampu merah: berhenti! Lampu hijau: jalan!\"", en: "\"I'm the police officer!\" Ais blew the whistle. Preet! \"Red light: stop! Green light: go!\"" },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "whistle", x: 460, y: 300, s: 0.6 }], mo: [{ who: "ais", pose: "megaphone", x: 360 }] },
+      },
+      {
+        text: { id: "Mo jadi pengemudi mobil mainan. Ngeeeng! Ia ingin cepat-cepat sampai. Lampu merah menyala… tapi Mo terus melaju.", en: "Mo was the toy-car driver. Vroooom! He wanted to get there fast. The red light came on… but Mo kept going." },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "car", x: 480, s: 0.35 }], mo: [{ pose: "run", x: 360, move: "hop" }] },
+      },
+      {
+        text: { id: "BRAK! Mobil Mo menabrak mobil Kak Adam yang sedang menyeberang. Dua mobil terguling, satu rodanya lepas.", en: "CRASH! Mo's car smashed into Kak Adam's car, which was crossing. Both cars tipped over, and one wheel came off." },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "carmud", x: 470, s: 0.35 }], mo: [{ pose: "pose-33", x: 350 }] },
+      },
+      {
+        text: { id: "\"Untung ini mobil mainan,\" kata Kak Adam pelan. \"Kalau di jalan sungguhan, orang bisa terluka.\" Mo terdiam.", en: "\"Good thing they're toy cars,\" said Kak Adam quietly. \"On a real road, people could get hurt.\" Mo went quiet." },
+        scene: { focus: 380, bg: "play-police", mo: [{ who: "adam", pose: "kneel-talk", x: 290 }, { pose: "pose-38", x: 410, move: "still" }] },
+      },
+      {
+        text: { id: "Abi datang membawa topi polisi. \"Yuk, Abi ajari aturan jalan sungguhan. Aturan pertama: dekat jalan, selalu bergandengan tangan.\"", en: "Abi came in with a police cap. \"Let me teach you the real road rules. Rule one: near the road, always hold hands.\"" },
+        scene: { focus: 380, bg: "play-police", props: [{ k: "cap", x: 300, y: 300, s: 0.6 }], mo: [{ who: "ayah", pose: "idea-point-stand", x: 270 }, { pose: "pose-22", x: 400 }] },
+      },
+      {
+        text: { id: "\"Aturan kedua: sebelum menyeberang, berhenti. Lihat kanan, lihat kiri, lihat kanan lagi. Dengarkan. Baru jalan.\"", en: "\"Rule two: before crossing, stop. Look right, look left, look right again. Listen. Then walk.\"" },
+        scene: { focus: 390, bg: "play-police", mo: [{ pose: "pose-15", x: 350 }, { who: "ais", pose: "binoculars", x: 460 }] },
+      },
+      {
+        text: { id: "\"Aturan ketiga: menyeberang di zebra cross, dan di mobil selalu pakai sabuk pengaman. Klik!\"", en: "\"Rule three: cross at the zebra crossing, and in the car always wear a seatbelt. Click!\"" },
+        scene: { focus: 390, bg: "play-police", mo: [{ pose: "pose-25", x: 350 }, { who: "ais", pose: "ok-wink", x: 460 }] },
+      },
+      {
+        text: { id: "Mereka berlatih bergantian. Kali ini Mo berhenti di lampu merah, menunggu, lalu jalan saat hijau. Polisi Ais mengacungkan jempol!", en: "They practised, taking turns. This time Mo stopped at the red light, waited, and went on green. Officer Ais gave a thumbs up!" },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "carshiny", x: 470, s: 0.35 }], mo: [{ pose: "pose-29", x: 340 }, { who: "ais", pose: "thumbs-up-walk", x: 230 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Sore itu Abi mengajak si kembar berjalan kaki ke warung. Di depan pintu, Mo tiba-tiba berhenti. \"Abi, lupa sesuatu!\"", en: "That afternoon Abi took the twins on a walk to the corner shop. At the front door, Mo suddenly stopped. \"Abi, we forgot something!\"" },
+        scene: { focus: 380, bg: "garden", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 330 }, { pose: "pose-24", x: 470 }] },
+      },
+      {
+        text: { id: "\"Doa keluar rumah!\" Mereka membacanya bersama sebelum melangkah.", en: "\"The dua for leaving home!\" They said it together before stepping out." },
+        quote: { id: "\"Bismillaahi tawakkaltu 'alallaah, laa hawla wa laa quwwata illaa billaah.\" — Dengan nama Allah, aku bertawakal kepada Allah. Tiada daya dan kekuatan kecuali dengan pertolongan Allah. (HR. Abu Dawud 5095, Tirmidzi 3426)", en: "\"Bismillahi tawakkaltu 'alallah, la hawla wa la quwwata illa billah.\" — In the name of Allah, I trust in Allah. There is no power and no strength except with Allah. (Abu Dawud 5095, Tirmidhi 3426)" },
+        scene: { focus: 380, bg: "garden", mo: [{ who: "ayah", pose: "dua-kneel", x: 280 }, { pose: "thank-you", x: 400 }, { who: "ais", pose: "dua-hands-closed", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "Di tepi jalan, Mo menggenggam tangan Abi erat. Berhenti. Lihat kanan… kiri… kanan lagi. Dengarkan. \"Aman! Ayo jalan!\"", en: "At the roadside, Mo held Abi's hand tight. Stop. Look right… left… right again. Listen. \"All clear! Let's go!\"" },
+        scene: { focus: 380, bg: "street", mo: [{ who: "ayah", pose: "hold-hands-twins", x: 380 }] },
+      },
+      {
+        text: { id: "Pak Polisi di perempatan melambai kepada mereka. \"Wah, ada polisi cilik yang tertib!\" Mo memberi hormat dengan bangga.", en: "The police officer at the crossroads waved at them. \"Look, a well-behaved little police officer!\" Mo saluted proudly." },
+        scene: { focus: 390, bg: "street", mo: [{ pose: "pose-04", x: 380 }, { who: "ais", pose: "wave-big", x: 270 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Malamnya, Mo membetulkan roda mobil mainannya. \"Mulai sekarang, Mo pengemudi paling hati-hati,\" bisiknya.", en: "That night, Mo fixed his toy car's wheel. \"From now on, I'm the most careful driver,\" he whispered." },
+        scene: { focus: 370, bg: "bedroom", time: "night", props: [{ k: "carshiny", x: 470, s: 0.3 }], mo: [{ pose: "pose-06", x: 360, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Coba sebutkan tiga aturan jalan Abi! Lalu hafalkan doa keluar rumah bersama Ayah atau Bunda. 🚦", en: "Can you say Abi's three road rules? Then learn the dua for leaving home with your mum or dad. 🚦" },
+        scene: { focus: 390, bg: "play-police", props: [{ k: "cone", x: 480, s: 0.7 }], mo: [{ pose: "pose-24", x: 360 }, { who: "ais", pose: "megaphone", x: 470 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 16. Construction: building a mosque together ───────────────────────── */
+  {
+    slug: "masjid-balok-kita",
+    pose: "baby-mo-pose-25.png",
+    published: "2026-12-13",
+    title: { id: "Masjid Balok Kita", en: "Our Block Mosque" },
+    hook: {
+      id: "Di ruang main alat berat, si kembar ingin membangun masjid dari balok. Mo ingin cepat dan sendiri, Ais ingin rapi. Menaranya roboh berkali-kali — sampai mereka belajar membangun bersama.",
+      en: "In the construction playroom, the twins want to build a mosque out of blocks. Mo wants to go fast and alone, Ais wants it neat. The minaret keeps falling — until they learn to build together.",
+    },
+    anchor: { type: "parenting", slug: "rivalitas-saudara" },
+    takeaway: {
+      id: "Kakak-adik belajar bekerja sama saat diberi tujuan bersama dan peran yang jelas — dan saat setiap usaha mereka dihargai.",
+      en: "Siblings learn to cooperate when they share a goal and have clear roles — and when each one's effort is valued.",
+    },
+    tags: ["kerja sama", "saudara", "masjid", "sedekah", "membangun", "abi"],
+    card: {
+      title: { id: "Saat Kakak-Adik Berebut Peran", en: "When Siblings Clash Over a Project" },
+      items: {
+        id: [
+          "Beri tujuan bersama yang lebih besar dari mereka berdua: \"Kita bangun masjid untuk boneka-boneka.\"",
+          "Bagi peran sesuai kelebihan masing-masing: yang cepat mengambil balok, yang teliti menyusun.",
+          "Rayakan hasilnya sebagai \"karya kita\", bukan \"punyaku\" — dan sambungkan dengan sedekah nyata bila bisa.",
+        ],
+        en: [
+          "Give a shared goal bigger than both of them: \"Let's build a mosque for the toys.\"",
+          "Split roles by strengths: the fast one fetches blocks, the careful one stacks them.",
+          "Celebrate the result as \"ours\", not \"mine\" — and link it to real charity if you can.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-construction",
+      props: [{ k: "blockstall", x: 480, s: 0.8 }],
+      mo: [{ pose: "pose-25", x: 340 }, { who: "ais", pose: "blocks-castle", x: 420, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Ruang main hari ini penuh alat berat: ekskavator, truk molen, dan derek kuning. \"Ayo kita jadi tukang bangunan!\"", en: "Today the playroom was full of construction machines: a digger, a cement mixer and a yellow crane. \"Let's be builders!\"" },
+        scene: { focus: 390, bg: "play-construction", mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "arms-wide-joy", x: 460 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Kita bangun masjid!\" usul Ais. \"Dengan kubah dan menara yang tinggi!\" \"Setuju!\"", en: "\"Let's build a mosque!\" Ais suggested. \"With a dome and a tall minaret!\" \"Yes!\"" },
+        scene: { focus: 390, bg: "play-construction", mo: [{ who: "ais", pose: "idea-point", x: 340 }, { pose: "pose-25", x: 460 }] },
+      },
+      {
+        text: { id: "Mo langsung menumpuk balok secepat kilat. Tuk-tuk-tuk! \"Lihat, menaranya sudah tinggi!\"", en: "Mo stacked blocks as fast as lightning. Tok-tok-tok! \"Look, the minaret's already tall!\"" },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blockstall", x: 480, s: 0.8 }], mo: [{ pose: "pose-29", x: 360 }] },
+      },
+      {
+        text: { id: "\"Mo, bawahnya miring!\" kata Ais. \"Biar! Aku yang bangun!\" — GUBRAK! Menaranya roboh.", en: "\"Mo, the bottom's wonky!\" said Ais. \"Leave it! I'm building it!\" — CRASH! The minaret fell." },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blocksfall", x: 470 }], mo: [{ pose: "pose-33", x: 340 }, { who: "ais", pose: "shrug", x: 450 }] },
+      },
+      {
+        text: { id: "Mereka mencoba lagi. Kali ini Ais menyusun pelan-pelan sekali, dan Mo bosan menunggu. \"Lamaaa!\" Mo menarik satu balok — roboh lagi!", en: "They tried again. This time Ais stacked so slowly that Mo got bored. \"Too slooow!\" He tugged one block — down it came again!" },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blocksfall", x: 470 }], mo: [{ who: "ais", pose: "grumpy", x: 340 }, { pose: "pose-28", x: 450 }] },
+      },
+      {
+        text: { id: "\"Masjidnya punyaku!\" \"Bukan, punyaku!\" Mereka saling cemberut, membelakangi tumpukan balok.", en: "\"It's my mosque!\" \"No, mine!\" They sulked with their backs to the pile of blocks." },
+        scene: { focus: 390, bg: "play-construction", mo: [{ pose: "pose-38", x: 340, move: "still" }, { who: "ais", pose: "grumpy", x: 460 }] },
+      },
+      {
+        text: { id: "Abi memakai helm kuning. \"Mandor Abi datang! Tahu tidak, tukang bangunan sungguhan tidak membangun sendirian. Ada yang mengangkut, ada yang menyusun, semua bekerja sama.\"", en: "Abi put on a yellow hard hat. \"Foreman Abi's here! Did you know real builders never build alone? Some carry, some stack — everyone works together.\"" },
+        scene: { focus: 380, bg: "play-construction", mo: [{ who: "ayah", pose: "stand-arms-crossed", x: 270 }, { pose: "pose-40", x: 390 }, { who: "ais", pose: "think-question", x: 490 }] },
+      },
+      {
+        text: { id: "\"Mo cepat — Mo jadi pengangkut balok. Ais teliti — Ais jadi penyusun. Dan kita mulai dari fondasi yang kuat.\"", en: "\"Mo is fast — Mo carries the blocks. Ais is careful — Ais does the stacking. And we start with a strong foundation.\"" },
+        scene: { focus: 380, bg: "play-construction", mo: [{ who: "ayah", pose: "idea-point-stand", x: 270 }, { pose: "pose-27", x: 390 }, { who: "ais", pose: "ok-wink", x: 490 }] },
+      },
+      {
+        text: { id: "Mo mengangkut balok dengan truk mainan. Brmmm! Ais menyusunnya lurus-lurus. Satu lantai… dua lantai… lalu kubah biru di atasnya!", en: "Mo carried blocks in a toy truck. Brrmmm! Ais stacked them straight. One floor… two floors… then a blue dome on top!" },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blocks", x: 470, s: 0.9 }], mo: [{ pose: "run", x: 340, move: "hop" }, { who: "ais", pose: "blocks-build", x: 440, move: "still" }] },
+      },
+      {
+        text: { id: "Terakhir, menara. Mo memegangi bagian bawahnya, Ais menaruh balok paling atas pelan-pelan. \"Bismillah…\" Berdiri!", en: "Last of all, the minaret. Mo held the bottom steady while Ais placed the top block gently. \"Bismillah…\" It stood!" },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blockstall", x: 470, s: 0.8 }], mo: [{ pose: "pose-36", x: 350, move: "still" }, { who: "ais", pose: "blocks-tower", x: 410, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"MASJID KITA!\" seru mereka bersama. Bukan masjidku, bukan masjidmu — masjid kita.", en: "\"OUR MOSQUE!\" they shouted together. Not my mosque, not your mosque — our mosque." },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blockstall", x: 480, s: 0.8 }], mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "jump-joy", x: 420, move: "hop" }], fx: ["confetti"] },
+      },
+      {
+        text: { id: "Abi bercerita, \"Membangun masjid sungguhan itu amal yang sangat besar. Rasulullah ﷺ bersabda, Allah akan membangunkan rumah di surga untuknya.\"", en: "Abi said, \"Building a real mosque is a very great deed. The Prophet ﷺ said Allah will build a house in Paradise for the one who builds it.\"" },
+        quote: { id: "\"Barangsiapa membangun masjid karena Allah, Allah akan membangunkan untuknya rumah yang semisal di surga.\" (HR. Bukhari 450, Muslim 533)", en: "\"Whoever builds a mosque for the sake of Allah, Allah will build for him a house like it in Paradise.\" (Bukhari 450, Muslim 533)" },
+        scene: { focus: 380, bg: "play-construction", mo: [{ who: "ayah", pose: "teach-book-sit", x: 270, move: "still" }, { pose: "pose-31", x: 400 }, { who: "ais", pose: "sit-chin-hands", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "\"Kita kan belum bisa membangun masjid sungguhan,\" kata Mo. \"Tapi bisa membantu,\" jawab Abi. \"Masjid dekat rumah sedang membangun tempat wudhu baru.\"", en: "\"But we can't build a real mosque yet,\" said Mo. \"You can help, though,\" Abi replied. \"The mosque near our house is building a new wudhu area.\"" },
+        scene: { focus: 380, bg: "play-construction", mo: [{ who: "ayah", pose: "teach-point-kneel", x: 280 }, { pose: "pose-23", x: 400 }] },
+      },
+      {
+        text: { id: "Sore itu si kembar memasukkan uang jajan ke kotak sedekah pembangunan masjid. Klinting! \"Sebagian batanya dari kita, ya, Abi?\"", en: "That afternoon the twins put their pocket money in the mosque building fund box. Clink! \"Some of the bricks are from us, right, Abi?\"" },
+        scene: { focus: 380, bg: "mosque", props: [{ k: "coins", x: 470, s: 0.6 }], mo: [{ who: "ayah", pose: "thumbs-up-kneel", x: 270 }, { pose: "thank-you", x: 390 }, { who: "ais", pose: "heart-hands", x: 490 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya, masjid balok itu masih berdiri di ruang main. Si kembar sepakat tidak membongkarnya sampai besok. Karena masjid itu… milik mereka berdua.", en: "That night the block mosque was still standing in the playroom. The twins agreed not to take it down until tomorrow. Because it belonged… to both of them." },
+        scene: { focus: 380, bg: "play-construction", time: "night", props: [{ k: "blockstall", x: 470, s: 0.8 }], mo: [{ pose: "pose-12", x: 340, move: "still" }, { who: "ais", pose: "sleep-pillow", x: 240, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Apa yang bisa kamu bangun bersama saudaramu? Siapa yang mengangkut, siapa yang menyusun? 🕌", en: "What could you build together with your brother or sister? Who carries, and who stacks? 🕌" },
+        scene: { focus: 390, bg: "play-construction", props: [{ k: "blockstall", x: 480, s: 0.8 }], mo: [{ pose: "pose-25", x: 340 }, { who: "ais", pose: "blocks-castle", x: 420, move: "still" }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
 
 /* ───────── layout ───────── */

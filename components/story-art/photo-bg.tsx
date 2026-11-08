@@ -55,7 +55,7 @@ export const PHOTO_BG: Partial<Record<ArtBg, PhotoBg>> = {
   "play-carnival": { src: "/story-bg/bg-play-carnival-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#C9C0B9", name: "Ruang main karnaval" },
   "play-castle": { src: "/story-bg/bg-play-castle-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#59430C", name: "Ruang main istana" },
   "play-circus": { src: "/story-bg/bg-play-circus-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#CDC0B9", name: "Ruang main sirkus" },
-  "play-dinosaur": { src: "/story-bg/bg-play-dinosaur-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#C9C3B8", name: "Ruang main dinosaurus" },
+  "play-dinosaur": { src: "/story-bg/bg-play-dinosaur-v2.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#C9C3B8", name: "Ruang main dinosaurus" },
   "play-dragon": { src: "/story-bg/bg-play-dragon-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#BFCBD4", name: "Ruang main naga" },
   "play-firefighter": { src: "/story-bg/bg-play-firefighter-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#E97051", name: "Ruang main pemadam kebakaran" },
   "play-spacecity": { src: "/story-bg/bg-play-spacecity-v1.webp", ar: 1.7778, h: 760, cx: 0.5, by: 1, top: "#C3C0C0", name: "Ruang main kota masa depan" },
