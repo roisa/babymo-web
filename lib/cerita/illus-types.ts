@@ -24,7 +24,12 @@ export type ArtBg =
   | "underwater"
   | "aquarium"
   | "forest"
-  | "hill";
+  | "hill"
+  // Baby Mo world renders only (see components/story-art/photo-bg.tsx)
+  | "playroom"
+  | "classroom"
+  | "masterbedroom"
+  | "school";
 
 export type ArtTime = "day" | "dusk" | "night" | "rain";
 

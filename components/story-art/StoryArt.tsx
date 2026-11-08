@@ -2,6 +2,7 @@ import { asset } from "@/lib/i18n/config";
 import type { ArtBg, ArtFx, ArtItem, ArtMo, ArtProp, ArtScene, ArtTime } from "@/lib/cerita/illus-types";
 import { FRIEND_SCALE } from "@/lib/cerita/friends-poses";
 import { ELEMENTS } from "./elements";
+import { PHOTO_BG, PhotoBackground } from "./photo-bg";
 import { SkyCloud, SkyMoon, SkySun } from "./elements/nature";
 
 /**
@@ -2963,7 +2964,8 @@ export function StoryArt({
   spread?: boolean;
 }) {
   const time = scene.time ?? "day";
-  const outdoor = ["garden", "park", "market", "street", "beach", "court", "forest", "hill"].includes(scene.bg);
+  const outdoor = ["garden", "park", "market", "street", "beach", "court", "forest", "hill", "school"].includes(scene.bg);
+  const photo = PHOTO_BG[scene.bg];
   const quake = (scene.fx ?? []).includes("quake");
   // rooms: rain stays outside the window, lightning is only a flash through it
   const indoor = !outdoor && scene.bg !== "underwater" && scene.bg !== "mosque";
@@ -2995,9 +2997,13 @@ export function StoryArt({
         </radialGradient>
       </defs>
       <g className={quake ? "sa-quake" : undefined}>
-      <Background bg={scene.bg} time={time} rainy={indoorRain} noSun={(scene.props ?? []).some((p) => p.k === "sun" || p.k === "moon" || p.k === "crescent")} />
+      {photo ? (
+        <PhotoBackground p={photo} time={time} rainy={indoorRain} />
+      ) : (
+        <Background bg={scene.bg} time={time} rainy={indoorRain} noSun={(scene.props ?? []).some((p) => p.k === "sun" || p.k === "moon" || p.k === "crescent")} />
+      )}
       {/* evening in a room: a warm glow, so dusk reads even when the window is out of the crop */}
-      {indoor && time === "dusk" && <rect y={TOP} width={W} height={H - TOP} fill="#FF8A5B" opacity=".13" style={{ pointerEvents: "none" }} />}
+      {!photo && indoor && time === "dusk" && <rect y={TOP} width={W} height={H - TOP} fill="#FF8A5B" opacity=".13" style={{ pointerEvents: "none" }} />}
       <g style={{ pointerEvents: "none" }}>{(scene.fx ?? []).filter((f) => f === "stars").map((f) => <Fx key={f} k={f} time={time} page={page || spread} />)}</g>
       <g transform={spread ? `translate(${spreadShift(scene)} 0)` : undefined}>
       {(scene.props ?? []).map((p: ArtItem, i) => (
