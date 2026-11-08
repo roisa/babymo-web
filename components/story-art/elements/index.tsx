@@ -3,7 +3,7 @@ import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { BallGreen, BallHopper, BallMachine, BallOrange, BallRed, BallTube, CourtBrush, Medal, MiniNet, Racket, RacketBag, SportBottle, UmpireChairProp } from "./tennis";
-import { KaabaScreen, Adha10, Arafah9, Besek, Cow, Goat, Kaaba, Muharram1, Muharram10, Rajab27, Zamzam, EidRows, Nastar, OporKetupat, Sandals, Syawal0, Syawal1, Syawal3, Syawal6 } from "./eid";
+import { PrayerStars, KaabaScreen, Adha10, Arafah9, Besek, Cow, Goat, Kaaba, Muharram1, Muharram10, Rajab27, Zamzam, EidRows, Nastar, OporKetupat, Sandals, Syawal0, Syawal1, Syawal3, Syawal6 } from "./eid";
 import { InfaqBox, TakjilBag, HijaiyahBlocks, Siwak, TakjilStall, Bedug, DatesWater, Fanous, IftarTable, Ketupat, KolakBowl, Obor, RamadanCalendar0, RamadanCalendar1, RamadanCalendarHalf, RamadanCalendarFull, RamadanGarland, SahurTray, Tasbih, ZakatRice } from "./ramadan";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
@@ -121,6 +121,7 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   goat: { draw: Goat, group: "eid", note: "Qurban goat, tail wags and blinks." },
   cow: { draw: Cow, group: "eid", note: "Cow with a bell, tail swishes." },
   kaaba: { draw: Kaaba, group: "eid", note: "The Ka'bah with its gold band, on marble." },
+  prayerstars: { draw: PrayerStars, group: "faith", note: "Five-prayer star card, two stars coloured." },
   kaabascreen: { draw: KaabaScreen, group: "eid", note: "The Ka'bah on a screen at home (video call / TV)." },
   besek: { draw: Besek, group: "eid", note: "Woven bamboo boxes of qurban meat." },
   zamzam: { draw: Zamzam, group: "eid", note: "Bottle of zamzam water." },

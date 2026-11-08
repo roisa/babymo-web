@@ -312,6 +312,7 @@ export type ArtProp =
   | "goat"
   | "kaaba"
   | "kaabascreen"
+  | "prayerstars"
   | "besek"
   | "zamzam"
   | "arafah9"

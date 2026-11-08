@@ -223,6 +223,9 @@ export const SERIES: StorySeries[] = [
       "bintang-syawal-ais",
       "kambing-qurban-si-kembar",
       "kakek-pergi-haji",
+      "tahun-baru-hijriah-si-kembar",
+      "puasa-asyura-si-kembar",
+      "hadiah-isra-miraj",
     ],
   },
 ];
