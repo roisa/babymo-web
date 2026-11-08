@@ -430,6 +430,433 @@ const RAW: PictureBook[] = [
       },
     ],
   },
+
+  /* ───────────────────────── 5. Farm: little farmers ───────────────────────── */
+  {
+    slug: "petani-cilik-di-ruang-main",
+    pose: "baby-mo-pose-04.png",
+    published: "2026-12-02",
+    title: { id: "Petani Cilik di Ruang Main", en: "Little Farmers in the Playroom" },
+    hook: {
+      id: "Mo mendorong piringnya — nasi dan wortel masih banyak. Besoknya Abi mengajak si kembar jadi petani sehari. Ternyata sebutir nasi punya perjalanan yang panjang sekali!",
+      en: "Mo pushes his plate away — still full of rice and carrots. The next day Abi makes the twins farmers for a day. It turns out one grain of rice has a very long journey!",
+    },
+    anchor: { type: "parenting", slug: "susah-makan" },
+    takeaway: {
+      id: "Anak lebih menghargai makanan saat ia tahu perjalanannya — dan saat ia boleh mengambil porsi kecil dulu, lalu menambah.",
+      en: "Children value food more once they know its journey — and when they may take a small portion first and ask for more.",
+    },
+    tags: ["makanan", "bersyukur", "petani", "susah makan", "adab makan", "abi"],
+    card: {
+      title: { id: "Saat Anak Tidak Menghabiskan Makanan", en: "When Your Child Leaves Food on the Plate" },
+      items: {
+        id: [
+          "Mulai dengan porsi kecil. Lebih baik anak minta tambah daripada dipaksa menghabiskan piring yang terlalu penuh.",
+          "Ceritakan perjalanan makanan: dari petani, peternak, pedagang, sampai dapur. Ajak ke pasar atau kebun bila bisa.",
+          "Biasakan Bismillah sebelum makan dan doa sesudah makan, agar makan menjadi waktu bersyukur, bukan waktu bertengkar.",
+        ],
+        en: [
+          "Start with small portions. Better that your child asks for more than is forced through an over-full plate.",
+          "Tell the journey of food: from farmer and herder to seller and kitchen. Visit a market or garden if you can.",
+          "Make Bismillah before and the dua after eating a habit, so mealtimes are about gratitude, not battles.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-farm",
+      props: [{ k: "veggies", x: 500, s: 0.6 }],
+      mo: [{ pose: "pose-04", x: 340 }, { who: "ais", pose: "watering-can", x: 460, move: "still" }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "Makan malam sudah siap. Tapi Mo hanya menyuap tiga sendok. \"Mo kenyang,\" katanya, lalu mendorong piringnya. Nasi dan wortel masih banyak.", en: "Dinner was ready. But Mo only ate three spoonfuls. \"I'm full,\" he said, pushing his plate away. There was still lots of rice and carrot left." },
+        scene: { focus: 370, bg: "kitchen", time: "dusk", props: [{ k: "rice", x: 470, y: 330, s: 0.7 }], mo: [{ who: "umi", pose: "think-quiet", x: 280 }, { pose: "pose-23", x: 400 }] },
+      },
+      {
+        text: { id: "Umi tidak marah. Umi hanya bertanya, \"Mo tahu tidak, nasi ini datang dari mana?\" \"Dari magic com!\" jawab Mo yakin. Ais tertawa.", en: "Umi didn't get cross. She only asked, \"Mo, do you know where this rice comes from?\" \"The rice cooker!\" Mo said confidently. Ais giggled." },
+        scene: { focus: 370, bg: "kitchen", time: "dusk", mo: [{ who: "umi", pose: "think-question", x: 270 }, { pose: "pose-29", x: 390 }, { who: "ais", pose: "giggle", x: 490 }] },
+      },
+      {
+        text: { id: "Besok paginya, Abi membuka pintu ruang main peternakan. Ada lumbung merah, ladang hijau, dan kincir angin. \"Hari ini kita jadi petani!\"", en: "The next morning, Abi opened the door to the farm playroom. There was a red barn, green fields and a windmill. \"Today we're farmers!\"" },
+        scene: { focus: 380, bg: "play-farm", mo: [{ who: "ayah", pose: "arms-open-welcome", x: 270 }, { pose: "wow", x: 390 }, { who: "ais", pose: "jump-joy", x: 490, move: "hop" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Tugas pertama: menanam padi. Abi memberi mereka segenggam benih. \"Satu benih, satu lubang. Pelan-pelan, ya.\"", en: "First job: planting rice. Abi gave them a handful of seeds. \"One seed, one hole. Gently now.\"" },
+        scene: { focus: 380, bg: "play-farm", props: [{ k: "seed", x: 470, s: 0.8 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "ais", pose: "plant-trowel", x: 390, move: "still" }, { pose: "pose-05", x: 490 }] },
+      },
+      {
+        text: { id: "\"Lalu kita tunggu,\" kata Abi. \"Disiram, dijaga dari burung dan hama, sampai empat bulan.\" \"EMPAT BULAN?!\" seru Mo.", en: "\"Then we wait,\" said Abi. \"Watering it, guarding it from birds and bugs, for four months.\" \"FOUR MONTHS?!\" cried Mo." },
+        scene: { focus: 390, bg: "play-farm", props: [{ k: "paddy", x: 490, s: 0.7 }], mo: [{ pose: "pose-31", x: 340 }, { who: "ais", pose: "watering-can", x: 440, move: "still" }] },
+      },
+      {
+        text: { id: "Tugas kedua: memberi makan sapi. Moooo! Sapi butuh rumput dan air setiap hari, baru bisa memberi susu.", en: "Second job: feeding the cow. Mooooo! A cow needs grass and water every day before she can give milk." },
+        scene: { focus: 390, bg: "play-farm", props: [{ k: "cow", x: 500, s: 0.6 }], mo: [{ pose: "pose-15", x: 350 }, { who: "ais", pose: "giggle", x: 250 }] },
+      },
+      {
+        text: { id: "Tugas ketiga: mengambil telur. Ais menemukan satu… dua… tiga butir! \"Ayamnya harus makan dan minum dulu, baru bisa bertelur,\" kata Abi.", en: "Third job: collecting eggs. Ais found one… two… three! \"The hens have to eat and drink first before they can lay,\" said Abi." },
+        scene: { focus: 390, bg: "play-farm", props: [{ k: "egg", x: 450, y: 380, s: 0.7 }, { k: "rooster", x: 520, s: 0.6 }], mo: [{ who: "ais", pose: "excited-fists", x: 340 }, { pose: "pose-37", x: 450 }] },
+      },
+      {
+        text: { id: "Tugas keempat: memanen wortel. Mo menarik sekuat tenaga. Hup… hup… PLOP! Ia jatuh terduduk sambil memegang wortel besar.", en: "Fourth job: pulling up carrots. Mo pulled with all his might. Heave… heave… PLOP! He landed on his bottom holding a huge carrot." },
+        scene: { focus: 390, bg: "play-farm", props: [{ k: "veggies", x: 490, s: 0.6 }], mo: [{ pose: "pose-18", x: 360, move: "still" }, { who: "ais", pose: "giggle", x: 460 }] },
+      },
+      {
+        text: { id: "Mo rebahan kecapekan. \"Abi… jadi petani itu capek sekali.\" \"Iya,\" kata Abi. \"Dan semua makanan di piring kita melewati tangan-tangan yang capek seperti itu.\"", en: "Mo flopped down, worn out. \"Abi… being a farmer is so tiring.\" \"Yes,\" said Abi. \"And every bit of food on our plates passed through tired hands like that.\"" },
+        scene: { focus: 370, bg: "play-farm", mo: [{ who: "ayah", pose: "hand-heart-kneel", x: 270 }, { pose: "pose-17", x: 410, move: "still" }] },
+      },
+      {
+        text: { id: "\"Petani menanam, peternak memberi makan hewan, sopir mengantar, pedagang menjual, Umi memasak… Tapi siapa yang menumbuhkan padinya?\" \"Allah!\" jawab si kembar.", en: "\"Farmers plant, herders feed the animals, drivers deliver, sellers sell, Umi cooks… But who makes the rice grow?\" \"Allah!\" answered the twins." },
+        quote: { id: "\"Maka hendaklah manusia itu memperhatikan makanannya. Sesungguhnya Kami telah mencurahkan air (dari langit), kemudian Kami belah bumi, lalu Kami tumbuhkan biji-bijian di bumi itu.\" (QS. 'Abasa: 24–27)", en: "\"Then let mankind look at their food: how We pour down water, then split the earth, and cause grain to grow in it.\" (Qur'an, 'Abasa 80:24–27)" },
+        scene: { focus: 380, bg: "play-farm", mo: [{ who: "ayah", pose: "idea-point-stand", x: 270 }, { pose: "pose-24", x: 390 }, { who: "ais", pose: "idea-point", x: 490 }] },
+      },
+      {
+        text: { id: "Mo teringat piringnya semalam. Nasi yang tidak dimakan… wortel yang didorong… Ia jadi diam.", en: "Mo remembered his plate from last night. The rice he didn't eat… the carrots he pushed away… He went quiet." },
+        scene: { focus: 390, bg: "play-farm", mo: [{ pose: "pose-38", x: 390, move: "still" }] },
+      },
+      {
+        text: { id: "Malamnya, Umi menyajikan nasi, telur dadar, dan sup wortel. Kali ini Mo mengambil porsi kecil dulu. \"Bismillah.\"", en: "That evening, Umi served rice, omelette and carrot soup. This time Mo took a small portion first. \"Bismillah.\"" },
+        scene: { focus: 370, bg: "kitchen", time: "night", props: [{ k: "soup", x: 480, y: 340, s: 0.6 }], mo: [{ who: "umi", pose: "offer", x: 270 }, { pose: "thank-you", x: 390 }] },
+      },
+      {
+        text: { id: "Suap demi suap… sampai habis! Sebutir nasi yang jatuh pun ia ambil. \"Perjalanannya panjang,\" katanya serius.", en: "Spoonful by spoonful… all gone! He even picked up a grain of rice that fell. \"It came a long way,\" he said seriously." },
+        quote: { id: "\"Jika suapan salah seorang dari kalian jatuh, hendaklah ia mengambilnya, membersihkan kotorannya, lalu memakannya, dan jangan membiarkannya untuk setan.\" (HR. Muslim 2033)", en: "\"If any of you drops a morsel, let them pick it up, wipe off any dirt and eat it, and not leave it for Shaytan.\" (Muslim 2033)" },
+        scene: { focus: 380, bg: "kitchen", time: "night", props: [{ k: "rice", x: 480, y: 340, s: 0.6 }], mo: [{ pose: "pose-07", x: 380 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Umi tersenyum lebar. \"Masya Allah. Kalau perutmu kecil, ambil sedikit dulu. Nanti kalau masih lapar, boleh tambah.\" Mo mengangguk.", en: "Umi smiled wide. \"Masya Allah. If your tummy is small, take a little first. If you're still hungry, you can have more.\" Mo nodded." },
+        scene: { focus: 370, bg: "kitchen", time: "night", mo: [{ who: "umi", pose: "touched-cheek", x: 270 }, { pose: "pose-25", x: 400 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Selesai makan, si kembar berdoa bersama. Terima kasih, Allah. Terima kasih, Pak Tani.", en: "After the meal, the twins said the dua together. Thank you, Allah. Thank you, farmers." },
+        quote: { id: "\"Alhamdulillahilladzi ath'amanaa wa saqaanaa wa ja'alanaa muslimiin.\" — Segala puji bagi Allah yang telah memberi kami makan dan minum, serta menjadikan kami muslim. (HR. Abu Dawud 3850)", en: "\"Alhamdulillahilladhi at'amana wa saqana wa ja'alana muslimin.\" — All praise is for Allah who gave us food and drink and made us Muslims. (Abu Dawud 3850)" },
+        scene: { focus: 390, bg: "kitchen", time: "night", mo: [{ pose: "thank-you", x: 340 }, { who: "ais", pose: "dua-hands-closed", x: 460, move: "still" }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Makanan apa yang paling kamu suka? Coba tebak — dari mana asalnya? 🌾", en: "What's your favourite food? Can you guess where it comes from? 🌾" },
+        scene: { focus: 390, bg: "play-farm", props: [{ k: "veggies", x: 500, s: 0.6 }], mo: [{ pose: "pose-04", x: 330 }, { who: "ais", pose: "watering-can", x: 450, move: "still" }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 6. Underwater: sorry from inside the whale ───────────────────────── */
+  {
+    slug: "maaf-dari-perut-paus",
+    pose: "baby-mo-pose-14.png",
+    published: "2026-12-03",
+    title: { id: "Maaf dari Perut Paus", en: "Sorry from Inside the Whale" },
+    hook: {
+      id: "Mo merobohkan istana karang Ais, lalu berbohong. Ia bersembunyi di benteng bantal yang ia sebut \"perut paus\". Di dalam yang gelap, Abi bercerita tentang Nabi Yunus.",
+      en: "Mo knocks down Ais's coral palace, then fibs about it. He hides in a pillow fort he calls \"the whale's belly\". In the dark inside, Abi tells him about Prophet Yunus.",
+    },
+    anchor: { type: "doa", slug: "doa-ketika-kesulitan" },
+    takeaway: {
+      id: "Rasa berat setelah berbuat salah adalah tanda hati yang hidup. Ajari anak mengakuinya: minta ampun kepada Allah, lalu minta maaf kepada orang yang disakiti.",
+      en: "The heavy feeling after doing wrong is a sign of a living heart. Teach your child to own it: ask Allah's forgiveness, then say sorry to the one they hurt.",
+    },
+    tags: ["minta maaf", "jujur", "nabi yunus", "doa", "laut", "abi", "saudara"],
+    card: {
+      title: { id: "Membantu Anak Berani Mengaku Salah", en: "Helping Your Child Own a Mistake" },
+      items: {
+        id: [
+          "Beri waktu anak untuk tenang dulu. Pengakuan lebih mudah keluar dari hati yang merasa aman, bukan takut dimarahi.",
+          "Saat anak mengaku, ucapkan terima kasih atas kejujurannya sebelum membahas kesalahannya.",
+          "Ajarkan urutannya: minta ampun kepada Allah, minta maaf kepada yang disakiti, lalu perbaiki bersama.",
+        ],
+        en: [
+          "Give your child time to calm down. A confession comes easier from a heart that feels safe, not scared.",
+          "When they own up, thank them for their honesty before talking about the mistake.",
+          "Teach the order: ask Allah's forgiveness, say sorry to the one who was hurt, then fix it together.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-underwater",
+      props: [{ k: "whale", x: 500, y: 250, s: 0.5 }],
+      mo: [{ pose: "pose-34", x: 340 }, { who: "ais", pose: "wave-hello", x: 460 }],
+      fx: ["bubbles"],
+    },
+    pages: [
+      {
+        text: { id: "Ruang main hari ini berubah jadi dasar laut! Ada ikan, terumbu karang, dan paus biru besar di dinding.", en: "Today the playroom became the bottom of the sea! There were fish, coral reefs and a big blue whale on the wall." },
+        scene: { focus: 390, bg: "play-underwater", mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "arms-wide-joy", x: 460 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Kita penyelam!\" kata Ais. Ia membangun istana karang dari balok warna-warni. Tinggi dan cantik sekali.", en: "\"We're divers!\" said Ais. She built a coral palace out of colourful blocks. It was tall and beautiful." },
+        scene: { focus: 400, bg: "play-underwater", props: [{ k: "blockstall", x: 500, s: 0.8 }], mo: [{ who: "ais", pose: "blocks-tower", x: 380, move: "still" }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Mo jadi hiu. \"Nyam, nyam, nyam!\" Ia berenang-renang mengelilingi istana… lalu — BRUK! Tangannya menabrak istana itu.", en: "Mo was a shark. \"Chomp, chomp, chomp!\" He swam round and round the palace… then — CRASH! His arm knocked right into it." },
+        scene: { focus: 400, bg: "play-underwater", props: [{ k: "blocksfall", x: 490 }], mo: [{ pose: "pose-11", x: 370, move: "hop" }] },
+      },
+      {
+        text: { id: "Istana karang runtuh. Ais menatap balok-balok yang berserakan. \"Mo! Kenapa dirobohkan?!\"", en: "The coral palace tumbled down. Ais stared at the scattered blocks. \"Mo! Why did you knock it down?!\"" },
+        scene: { focus: 390, bg: "play-underwater", props: [{ k: "blocksfall", x: 470 }], mo: [{ who: "ais", pose: "sad-tears", x: 340, move: "still" }, { pose: "pose-33", x: 460 }] },
+      },
+      {
+        text: { id: "\"Bukan aku!\" jawab Mo cepat. \"Ombaknya yang merobohkan!\" Tapi di dalam dada Mo, ada rasa berat — seperti batu.", en: "\"Not me!\" Mo said quickly. \"A wave knocked it over!\" But inside Mo's chest there was a heavy feeling — like a stone." },
+        scene: { focus: 390, bg: "play-underwater", mo: [{ pose: "pose-28", x: 340 }, { who: "ais", pose: "cry-sit", x: 460, move: "still" }] },
+      },
+      {
+        text: { id: "Mo berlari dan bersembunyi di dalam benteng bantal. \"Ini perut paus,\" bisiknya. Di dalamnya gelap dan sunyi.", en: "Mo ran off and hid inside the pillow fort. \"This is the whale's belly,\" he whispered. Inside, it was dark and quiet." },
+        scene: { focus: 400, bg: "play-underwater", props: [{ k: "fort", x: 470 }], mo: [{ pose: "pose-10", x: 350, move: "still" }] },
+      },
+      {
+        text: { id: "Ais masih menangis. Mo bisa mendengarnya dari dalam benteng bantal. Rasa beratnya makin besar.", en: "Ais was still crying. Mo could hear her from inside the pillow fort. The heavy feeling grew bigger." },
+        scene: { focus: 400, bg: "play-underwater", props: [{ k: "fort", x: 480 }], mo: [{ who: "ais", pose: "cry-sit", x: 350, move: "still" }] },
+      },
+      {
+        text: { id: "Tok, tok. Abi masuk sambil membawa senter. \"Boleh Abi masuk ke perut paus?\" Mo mengangguk pelan.", en: "Knock, knock. Abi crawled in with a torch. \"May I come into the whale's tummy?\" Mo nodded slowly." },
+        scene: { focus: 370, bg: "play-underwater", time: "night", props: [{ k: "flashlight", x: 470, y: 360, s: 0.7 }], mo: [{ who: "ayah", pose: "kneel-arms-open", x: 270 }, { pose: "pose-39", x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "\"Abi mau cerita. Dulu ada seorang nabi bernama Nabi Yunus. Suatu hari beliau pergi meninggalkan kaumnya dalam keadaan marah, lalu naik kapal ke tengah laut.\"", en: "\"Let me tell you a story. Long ago there was a prophet called Prophet Yunus. One day he left his people in anger and sailed out to sea.\"" },
+        scene: { focus: 370, bg: "play-underwater", time: "night", props: [{ k: "flashlight", x: 480, y: 360, s: 0.7 }], mo: [{ who: "ayah", pose: "teach-book-sit", x: 270 }, { pose: "pose-06", x: 400, move: "still" }] },
+      },
+      {
+        text: { id: "\"Badai datang, dan Nabi Yunus ditelan ikan yang sangat besar. Di dalamnya gelap sekali — gelap malam, gelap laut, dan gelap perut ikan.\"", en: "\"A storm came, and Prophet Yunus was swallowed by an enormous fish. Inside it was so dark — the dark of night, the dark of the sea, and the dark of the fish's belly.\"" },
+        scene: { focus: 390, bg: "play-underwater", time: "night", props: [{ k: "whale", x: 480, y: 250, s: 0.6 }], mo: [{ pose: "pose-31", x: 360 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "\"Di sana, Nabi Yunus mengakui kesalahannya kepada Allah dan berdoa dengan sepenuh hati…\"", en: "\"There, Prophet Yunus admitted his mistake to Allah and prayed with all his heart…\"" },
+        quote: { id: "\"Laa ilaaha illaa anta, subhaanaka, innii kuntu minazh-zhaalimiin.\" — Tidak ada tuhan selain Engkau. Maha Suci Engkau. Sungguh, aku termasuk orang-orang yang zalim. (QS. Al-Anbiya: 87)", en: "\"La ilaha illa anta, subhanaka, inni kuntu minaz-zalimin.\" — There is no god but You. Glory be to You. Indeed, I have been among the wrongdoers. (Qur'an, Al-Anbiya 21:87)" },
+        scene: { focus: 370, bg: "play-underwater", time: "night", mo: [{ who: "ayah", pose: "dua-kneel", x: 270 }, { pose: "thank-you", x: 400 }] },
+      },
+      {
+        text: { id: "\"Allah mendengar doanya dan menyelamatkannya. Ikan besar itu mengeluarkannya ke pantai dengan selamat.\" Mo terdiam lama.", en: "\"Allah heard his prayer and saved him. The great fish put him out safely on the shore.\" Mo was quiet for a long time." },
+        quote: { id: "\"Maka Kami kabulkan doanya dan Kami selamatkan dia dari kedukaan. Dan demikianlah Kami menyelamatkan orang-orang yang beriman.\" (QS. Al-Anbiya: 88)", en: "\"So We answered him and saved him from distress. And thus do We save the believers.\" (Qur'an, Al-Anbiya 21:88)" },
+        scene: { focus: 390, bg: "play-underwater", time: "night", mo: [{ pose: "pose-36", x: 390, move: "still" }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "\"Abi… tadi Mo yang merobohkan istana Ais. Mo bohong.\" Abi memeluk Mo. \"Terima kasih sudah jujur. Sekarang minta ampun kepada Allah dulu, lalu minta maaf kepada Ais.\"", en: "\"Abi… it was me who knocked down Ais's palace. I fibbed.\" Abi hugged him. \"Thank you for being honest. Now ask Allah's forgiveness first, then say sorry to Ais.\"" },
+        scene: { focus: 370, bg: "play-underwater", time: "night", mo: [{ who: "ayah", pose: "hug-mo", x: 360, move: "still" }] },
+      },
+      {
+        text: { id: "Mo keluar dari benteng bantal. Wajahnya merah. \"Ais… maaf. Tadi aku yang merobohkan. Aku juga bohong. Maaf, ya.\"", en: "Mo came out of the pillow fort. His face was red. \"Ais… I'm sorry. It was me who knocked it down. And I fibbed. I'm sorry.\"" },
+        scene: { focus: 390, bg: "play-underwater", mo: [{ pose: "pose-14", x: 340 }, { who: "ais", pose: "surprised", x: 460 }] },
+      },
+      {
+        text: { id: "Ais mengusap matanya. \"…Bantu aku bangun lagi?\" \"Iya!\" Mereka membangun istana karang baru — lebih tinggi, dengan jendela untuk ikan-ikan.", en: "Ais wiped her eyes. \"…Help me build it again?\" \"Yes!\" They built a new coral palace — even taller, with windows for the fish." },
+        scene: { focus: 400, bg: "play-underwater", props: [{ k: "blockstall", x: 500, s: 0.8 }], mo: [{ pose: "pose-26", x: 330 }, { who: "ais", pose: "blocks-tower", x: 420, move: "still" }], fx: ["bubbles", "sparkle"] },
+      },
+      {
+        text: { id: "Pernahkah kamu merasa berat di dada setelah berbuat salah? Apa yang membuatnya ringan lagi? 🐋", en: "Have you ever felt heavy inside after doing something wrong? What made it light again? 🐋" },
+        scene: { focus: 390, bg: "play-underwater", mo: [{ pose: "pose-35", x: 340 }, { who: "ais", pose: "heart-hands", x: 460 }], fx: ["bubbles"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 7. Little chef: the twins' restaurant ───────────────────────── */
+  {
+    slug: "restoran-koki-cilik",
+    pose: "baby-mo-pose-37.png",
+    published: "2026-12-04",
+    title: { id: "Restoran Koki Cilik", en: "The Little Chefs' Restaurant" },
+    hook: {
+      id: "Si kembar membuka restoran untuk Abi dan Umi! Mo ingin memakai pisau besar dan kompor seperti koki sungguhan. Tapi koki cilik punya tugas penting sendiri.",
+      en: "The twins open a restaurant for Abi and Umi! Mo wants to use the big knife and the stove like a real chef. But little chefs have important jobs of their own.",
+    },
+    anchor: { type: "parenting", slug: "adab-sehari-hari" },
+    takeaway: {
+      id: "Dapur adalah kelas terbaik: anak belajar membantu, menjaga keselamatan, dan adab makan — Bismillah, tangan kanan, ambil yang dekat.",
+      en: "The kitchen is the best classroom: children learn to help, stay safe and practise table manners — Bismillah, right hand, eat what's near you.",
+    },
+    tags: ["memasak", "adab makan", "tangan kanan", "keselamatan", "membantu", "umi", "abi"],
+    card: {
+      title: { id: "Tugas Dapur yang Aman untuk Balita", en: "Safe Kitchen Jobs for Little Ones" },
+      items: {
+        id: [
+          "Tugas aman: mencuci sayur dan buah, mengaduk adonan dingin, menata piring, menyobek daun selada, mengelap meja.",
+          "Buat \"garis aman\" tiga langkah dari kompor. Pisau tajam, kompor, dan panci panas hanya untuk orang dewasa.",
+          "Saat makan bersama, latih tiga adab: Bismillah, tangan kanan, dan ambil yang dekat — dengan contoh, bukan omelan.",
+        ],
+        en: [
+          "Safe jobs: washing fruit and veg, stirring cold batter, laying the table, tearing lettuce, wiping the table.",
+          "Make a \"safe line\" three steps from the stove. Sharp knives, the hob and hot pans are grown-ups only.",
+          "At meals, practise three manners: Bismillah, right hand, eat what's near you — by example, not by nagging.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-chef",
+      mo: [{ pose: "pose-37", x: 340 }, { who: "ais", pose: "chef-whisk", x: 460 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"Selamat datang di Restoran Koki Cilik!\" Ais memakai topi koki. Mo memasang menu buatan sendiri.", en: "\"Welcome to the Little Chefs' Restaurant!\" Ais put on her chef's hat. Mo hung up the menu he had made." },
+        scene: { focus: 390, bg: "play-chef", props: [{ k: "card", x: 500, y: 310, s: 0.6 }], mo: [{ who: "ais", pose: "chef-bowl-wink", x: 340 }, { pose: "pose-29", x: 450 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Tamu pertama datang: Abi dan Umi! \"Kami pesan… sup paling enak sedunia,\" kata Abi.", en: "The first guests arrived: Abi and Umi! \"We'd like… the tastiest soup in the world,\" said Abi." },
+        scene: { focus: 380, bg: "play-chef", mo: [{ who: "ayah", pose: "wave-hello", x: 260 }, { who: "umi", pose: "wave-skip", x: 380 }, { pose: "pose-24", x: 500 }] },
+      },
+      {
+        text: { id: "Mo berlari ke dapur sungguhan. \"Aku mau pakai pisau besar dan kompor, biar seperti koki beneran!\"", en: "Mo ran to the real kitchen. \"I want to use the big knife and the stove, like a real chef!\"" },
+        scene: { focus: 390, bg: "kitchen", mo: [{ pose: "run", x: 390, move: "hop" }] },
+      },
+      {
+        text: { id: "Umi cepat-cepat menyusul. \"Stop dulu, Chef Mo. Pisau tajam dan kompor panas itu tugas orang dewasa. Koki cilik punya tugas sendiri yang penting.\"", en: "Umi hurried after him. \"Hold on, Chef Mo. Sharp knives and a hot stove are grown-up jobs. Little chefs have their own important jobs.\"" },
+        scene: { focus: 370, bg: "kitchen", mo: [{ who: "umi", pose: "explain-hand", x: 270 }, { pose: "pose-40", x: 400 }] },
+      },
+      {
+        text: { id: "\"Tugas koki cilik: mencuci sayur, mengaduk adonan, menata piring, dan… mencicipi!\" Mo dan Ais tertawa.", en: "\"Little chefs' jobs: washing vegetables, stirring the batter, laying the plates, and… tasting!\" Mo and Ais laughed." },
+        scene: { focus: 380, bg: "kitchen", props: [{ k: "veggies", x: 500, s: 0.6 }], mo: [{ who: "umi", pose: "idea-finger", x: 270 }, { pose: "pose-03", x: 390 }, { who: "ais", pose: "giggle", x: 490 }] },
+      },
+      {
+        text: { id: "Mo mencuci tomat dan wortel di baskom. Ais mengaduk adonan. Aduk… aduk… aduk!", en: "Mo washed the tomatoes and carrots in a bowl. Ais stirred the batter. Stir… stir… stir!" },
+        scene: { focus: 390, bg: "kitchen", props: [{ k: "bowl", x: 400, y: 330, s: 0.7 }], mo: [{ pose: "pose-27", x: 330 }, { who: "ais", pose: "chef-whisk", x: 460 }], fx: ["bubbles"] },
+      },
+      {
+        text: { id: "Umi memotong sayur dan menyalakan kompor. Si kembar menonton dari garis aman — tiga langkah dari kompor.", en: "Umi chopped the vegetables and lit the stove. The twins watched from the safe line — three steps from the stove." },
+        scene: { focus: 370, bg: "kitchen", mo: [{ who: "umi", pose: "cook-stove", x: 270 }, { pose: "pose-40", x: 410 }, { who: "ais", pose: "sit-chin-hands", x: 510, move: "still" }] },
+      },
+      {
+        text: { id: "Supnya jadi! Mo membawanya ke meja pelan-pelan dengan dua tangan. \"Silakan, Tuan Abi!\"", en: "The soup was ready! Mo carried it to the table slowly, with both hands. \"Here you are, Sir Abi!\"" },
+        scene: { focus: 380, bg: "play-chef", props: [{ k: "soup", x: 480, y: 340, s: 0.6 }], mo: [{ who: "ayah", pose: "thumbs-up-sit", x: 270 }, { pose: "pose-21", x: 400 }] },
+      },
+      {
+        text: { id: "Abi mengambil sendok dengan tangan kiri… lalu berhenti. \"Eh, koki-koki, Abi lupa sesuatu. Apa, ya?\"", en: "Abi picked up the spoon with his left hand… then stopped. \"Hmm, chefs, I've forgotten something. What is it?\"" },
+        scene: { focus: 380, bg: "play-chef", props: [{ k: "soup", x: 360, y: 350, s: 0.5 }], mo: [{ who: "ayah", pose: "puzzled-scratch-sit", x: 270 }, { pose: "pose-16", x: 400 }, { who: "ais", pose: "think-question", x: 500 }] },
+      },
+      {
+        text: { id: "\"BISMILLAH!\" seru Ais. \"Dan pakai tangan kanan!\" tambah Mo. Abi tertawa. \"Pintar! Koki-koki ini juga tahu adab makan.\"", en: "\"BISMILLAH!\" called Ais. \"And use your right hand!\" added Mo. Abi laughed. \"Clever! These chefs know their table manners too.\"" },
+        scene: { focus: 380, bg: "play-chef", mo: [{ who: "ayah", pose: "cheer-fists-sit", x: 270 }, { who: "ais", pose: "idea-point", x: 390 }, { pose: "pose-25", x: 490 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Umi bercerita, dulu ada anak kecil bernama Umar yang tangannya ke mana-mana saat makan. Nabi ﷺ menasihatinya dengan lembut.", en: "Umi told them about a little boy called Umar whose hand wandered all over the dish while he ate. The Prophet ﷺ advised him gently." },
+        quote: { id: "\"Wahai anak, sebutlah nama Allah, makanlah dengan tangan kananmu, dan makanlah yang ada di dekatmu.\" (HR. Bukhari 5376, Muslim 2022)", en: "\"Young man, mention Allah's name, eat with your right hand, and eat from what is near you.\" (Bukhari 5376, Muslim 2022)" },
+        scene: { focus: 380, bg: "play-chef", mo: [{ who: "umi", pose: "read-story", x: 280, move: "still" }, { pose: "pose-06", x: 400, move: "still" }, { who: "ais", pose: "sit-chin-hands", x: 500, move: "still" }] },
+      },
+      {
+        text: { id: "Mo mencicipi supnya. \"Aduh, panas!\" \"Tunggu sebentar sampai hangat,\" kata Umi. Mo menunggu sambil menghitung sampai sepuluh.", en: "Mo tasted the soup. \"Ow, hot!\" \"Wait a little till it's warm,\" said Umi. Mo waited, counting to ten." },
+        scene: { focus: 380, bg: "play-chef", props: [{ k: "soup", x: 480, y: 340, s: 0.6 }], mo: [{ who: "umi", pose: "ok-sign", x: 270 }, { pose: "pose-33", x: 400 }] },
+      },
+      {
+        text: { id: "\"Enak sekali!\" kata Abi dan Umi bersamaan. \"Alhamdulillah,\" kata Mo bangga. \"Masakan Umi, bantuan kami!\"", en: "\"Delicious!\" said Abi and Umi together. \"Alhamdulillah,\" said Mo proudly. \"Umi's cooking, our helping!\"" },
+        scene: { focus: 380, bg: "play-chef", mo: [{ who: "ayah", pose: "grateful-heart-sit", x: 260 }, { who: "umi", pose: "cheer-happy", x: 380 }, { pose: "pose-04", x: 500 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Tamu terakhir datang: Kak Adam, lapar setelah latihan tenis. \"Masih ada sup?\" Mo memberikan mangkuknya sendiri — porsi koki!", en: "The last guest arrived: Kak Adam, hungry after tennis practice. \"Any soup left?\" Mo gave him his own bowl — the chef's portion!" },
+        scene: { focus: 380, bg: "play-chef", props: [{ k: "soup", x: 400, y: 340, s: 0.6 }], mo: [{ who: "adam", pose: "drink-bottle", x: 280 }, { pose: "pose-41", x: 420 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Restoran tutup. Si kembar mencuci piring plastik dan mengelap meja. Koki hebat selalu membereskan dapurnya.", en: "The restaurant closed. The twins washed the plastic plates and wiped the table. Great chefs always tidy their kitchen." },
+        scene: { focus: 390, bg: "play-chef", mo: [{ pose: "pose-25", x: 340 }, { who: "ais", pose: "chef-bowl", x: 460 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Kalau kamu punya restoran, menu apa yang mau kamu masak? Jangan lupa: Bismillah dan tangan kanan! 🍳", en: "If you had a restaurant, what would be on the menu? Don't forget: Bismillah and your right hand! 🍳" },
+        scene: { focus: 390, bg: "play-chef", mo: [{ pose: "pose-37", x: 340 }, { who: "ais", pose: "chef-whisk", x: 460 }], fx: ["sparkle"] },
+      },
+    ],
+  },
+
+  /* ───────────────────────── 8. Camping & forest: the broken mango tree ───────────────────────── */
+  {
+    slug: "pohon-mangga-yang-patah",
+    pose: "baby-mo-pose-09.png",
+    published: "2026-12-05",
+    title: { id: "Pohon Mangga yang Patah", en: "The Broken Mango Tree" },
+    hook: {
+      id: "Penjelajah butuh kayu untuk api unggun! Mo mematahkan dahan pohon mangga kecil milik Umi. Bisakah pohon yang patah sembuh lagi?",
+      en: "Explorers need wood for a campfire! Mo snaps branches off Umi's little mango tree. Can a broken tree get better?",
+    },
+    anchor: { type: "parenting", slug: "bersyukur" },
+    takeaway: {
+      id: "Merawat tanaman bersama mengajarkan bahwa semua makhluk hidup layak disayangi — dan bahwa kesalahan bisa diperbaiki dengan tangan sendiri.",
+      en: "Caring for plants together teaches that every living thing deserves care — and that mistakes can be mended with our own hands.",
+    },
+    tags: ["pohon", "alam", "menanam", "sedekah", "meminta maaf", "berkemah", "umi", "abi"],
+    card: {
+      title: { id: "Menanam Cinta Alam pada Anak", en: "Growing a Love of Nature" },
+      items: {
+        id: [
+          "Beri anak satu tanaman \"miliknya\" untuk disiram setiap hari. Rasa memiliki menumbuhkan rasa sayang.",
+          "Saat anak merusak tanaman, ajak memperbaikinya bersama — mengikat dahan, menanam bibit baru — bukan hanya dimarahi.",
+          "Ceritakan bahwa menanam pohon adalah sedekah yang pahalanya terus mengalir, setiap kali buahnya dimakan burung atau manusia.",
+        ],
+        en: [
+          "Give your child one plant of their \"own\" to water every day. Ownership grows care.",
+          "When a plant gets damaged, fix it together — tie the branch, plant a new seedling — rather than only scolding.",
+          "Tell them that planting a tree is charity that keeps rewarding, every time a bird or a person eats its fruit.",
+        ],
+      },
+    },
+    cover: {
+      focus: 390, bg: "play-camping",
+      props: [{ k: "lantern", x: 500 }],
+      mo: [{ pose: "pose-26", x: 340 }, { who: "ais", pose: "explorer-map", x: 450 }],
+      fx: ["sparkle"],
+    },
+    pages: [
+      {
+        text: { id: "\"Ayo berkemah!\" Ruang main hari ini penuh pohon, tenda, dan suara jangkrik dari dinding hutan.", en: "\"Let's go camping!\" Today the playroom was full of trees, a tent and the sound of crickets from the forest wall." },
+        scene: { focus: 390, bg: "play-camping", mo: [{ pose: "yeyy", x: 340, move: "hop" }, { who: "ais", pose: "explorer-map", x: 460 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Ais membaca peta. Mo membawa senter. \"Penjelajah butuh api unggun!\" kata Mo. \"Kita cari kayu bakar!\"", en: "Ais read the map. Mo carried the torch. \"Explorers need a campfire!\" said Mo. \"Let's find firewood!\"" },
+        scene: { focus: 390, bg: "play-camping", props: [{ k: "flashlight", x: 430, y: 350, s: 0.7 }], mo: [{ pose: "pose-08", x: 340 }, { who: "ais", pose: "explorer-map", x: 470 }] },
+      },
+      {
+        text: { id: "Mo berlari ke halaman. Di sana ada pohon mangga kecil yang baru ditanam Umi. Krak! Krak! Mo mematahkan dua dahannya.", en: "Mo ran out to the garden. There was the little mango tree Umi had just planted. Snap! Snap! Mo broke off two of its branches." },
+        scene: { focus: 400, bg: "garden", props: [{ k: "plant", x: 490 }], mo: [{ pose: "run", x: 370, move: "hop" }] },
+      },
+      {
+        text: { id: "\"Dapat kayu bakar!\" Mo kembali dengan bangga. Tapi Ais melihat ke luar jendela. \"Mo… pohon mangganya Umi jadi botak.\"", en: "\"Got the firewood!\" Mo came back proudly. But Ais looked out of the window. \"Mo… Umi's mango tree has gone bald.\"" },
+        scene: { focus: 390, bg: "play-camping", mo: [{ pose: "pose-04", x: 340 }, { who: "ais", pose: "surprised", x: 460 }] },
+      },
+      {
+        text: { id: "Umi berdiri di dekat pohon kecil itu. Umi tidak berteriak. Umi hanya mengusap dahannya yang patah pelan-pelan.", en: "Umi stood by the little tree. She didn't shout. She just stroked its broken branch gently." },
+        scene: { focus: 380, bg: "garden", props: [{ k: "plant", x: 460 }], mo: [{ who: "umi", pose: "think-quiet", x: 330 }] },
+      },
+      {
+        text: { id: "Mo mendekat sambil menyembunyikan dahan di punggungnya. \"Umi… pohonnya sakit, ya?\"", en: "Mo came closer, hiding the branches behind his back. \"Umi… is the tree hurt?\"" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "plant", x: 480 }], mo: [{ who: "umi", pose: "kneel-smile", x: 280, move: "still" }, { pose: "pose-28", x: 400 }] },
+      },
+      {
+        text: { id: "\"Pohon itu makhluk hidup, Sayang. Ia minum, tumbuh, dan bertasbih kepada Allah dengan caranya sendiri.\"", en: "\"A tree is alive, sweetheart. It drinks, it grows, and it glorifies Allah in its own way.\"" },
+        quote: { id: "\"…Dan tidak ada sesuatu pun melainkan bertasbih dengan memuji-Nya, tetapi kamu tidak mengerti tasbih mereka…\" (QS. Al-Isra: 44)", en: "\"…There is nothing that does not glorify Him with praise, but you do not understand their glorification…\" (Qur'an, Al-Isra 17:44)" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "plant", x: 490 }], mo: [{ who: "umi", pose: "explain-hand", x: 270 }, { pose: "pose-40", x: 400 }] },
+      },
+      {
+        text: { id: "\"Pohon memberi kita buah, udara segar, dan tempat berteduh. Burung-burung juga membuat rumah di dahannya.\"", en: "\"Trees give us fruit, fresh air and shade. Birds make their homes in their branches too.\"" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "tree", x: 500 }, { k: "bird", x: 470, y: 180, s: 0.8 }], mo: [{ who: "umi", pose: "idea-finger", x: 270 }, { pose: "pose-31", x: 390 }] },
+      },
+      {
+        text: { id: "Mata Mo berkaca-kaca. \"Maaf, pohon. Maaf, Umi. Mo kira cuma kayu.\" Umi memeluknya erat.", en: "Mo's eyes filled with tears. \"Sorry, tree. Sorry, Umi. I thought it was just wood.\" Umi hugged him tight." },
+        scene: { focus: 380, bg: "garden", props: [{ k: "plant", x: 500 }], mo: [{ who: "umi", pose: "hug-mo", x: 370, move: "still" }] },
+      },
+      {
+        text: { id: "Abi datang membawa tali dan sebatang tongkat. \"Ayo kita obati.\" Mereka mengikat dahan yang retak ke tongkat, seperti perban untuk pohon.", en: "Abi came with some string and a stick. \"Let's make it better.\" They tied the cracked branch to the stick, like a bandage for the tree." },
+        scene: { focus: 380, bg: "garden", props: [{ k: "plant", x: 480 }], mo: [{ who: "ayah", pose: "fix-toolbox", x: 280, move: "still" }, { pose: "pose-05", x: 400 }] },
+      },
+      {
+        text: { id: "Lalu Abi memberi mereka satu bibit baru. \"Bagaimana kalau kita tanam satu lagi? Menanam pohon itu sedekah yang pahalanya terus mengalir.\"", en: "Then Abi gave them a new seedling. \"Shall we plant another one? Planting a tree is charity whose reward keeps flowing.\"" },
+        quote: { id: "\"Tidaklah seorang muslim menanam pohon atau menabur benih, lalu dimakan oleh burung, manusia, atau hewan, kecuali itu menjadi sedekah baginya.\" (HR. Bukhari 2320, Muslim 1553)", en: "\"No Muslim plants a tree or sows a seed from which a bird, a person or an animal eats, but it is charity for him.\" (Bukhari 2320, Muslim 1553)" },
+        scene: { focus: 380, bg: "garden", props: [{ k: "seedling", x: 480 }], mo: [{ who: "ayah", pose: "teach-point-kneel", x: 270 }, { who: "ais", pose: "gardener-sapling", x: 390 }, { pose: "pose-26", x: 490 }] },
+      },
+      {
+        text: { id: "Ais memasukkan bibitnya, Mo menimbun tanah, lalu menyiramnya. \"Bismillah. Tumbuh yang besar, ya!\"", en: "Ais put the seedling in, Mo patted the soil down, then watered it. \"Bismillah. Grow big and strong!\"" },
+        scene: { focus: 390, bg: "garden", props: [{ k: "seedling", x: 470 }], mo: [{ pose: "pose-36", x: 340, move: "still" }, { who: "ais", pose: "watering-can", x: 440, move: "still" }] },
+      },
+      {
+        text: { id: "Setiap pagi Mo menyiram pohon-pohonnya. Satu minggu… dua minggu… lalu muncul daun-daun kecil yang hijau dan mengilap!", en: "Every morning Mo watered his trees. One week… two weeks… and then little green, shiny leaves appeared!" },
+        scene: { focus: 390, bg: "garden", props: [{ k: "sprout", x: 440 }, { k: "plant", x: 510 }], mo: [{ pose: "pose-31", x: 350 }], fx: ["sparkle"] },
+      },
+      {
+        text: { id: "Suatu sore, seekor burung kecil hinggap di dekat pohon mangga yang sudah sembuh. \"Cip-cip!\" Mo berbisik, \"Selamat datang di rumahmu.\"", en: "One afternoon, a little bird landed by the mended mango tree. \"Tweet-tweet!\" Mo whispered, \"Welcome home.\"" },
+        scene: { focus: 390, bg: "garden", time: "dusk", props: [{ k: "plant", x: 470 }, { k: "sparrow", x: 520 }], mo: [{ pose: "pose-35", x: 360 }], fx: ["hearts"] },
+      },
+      {
+        text: { id: "Malamnya, mereka berkemah lagi di ruang main — kali ini di dekat api unggun mainan. \"Terima kasih, Allah, untuk pohon-pohon,\" kata Mo.", en: "That night they camped in the playroom again — this time by the toy campfire. \"Thank you, Allah, for the trees,\" said Mo." },
+        scene: { focus: 390, bg: "play-camping", time: "night", mo: [{ pose: "thank-you", x: 330 }, { who: "ais", pose: "dua-hands-closed", x: 470, move: "still" }], fx: ["stars"] },
+      },
+      {
+        text: { id: "Pohon apa yang ada di dekat rumahmu? Yuk sapa dan siram ia hari ini! 🌳", en: "Which tree grows near your home? Go and say hello and give it some water today! 🌳" },
+        scene: { focus: 390, bg: "play-camping", mo: [{ pose: "pose-41", x: 340 }, { who: "ais", pose: "gardener-sapling", x: 460 }], fx: ["sparkle"] },
+      },
+    ],
+  },
 ];
 
 /* ───────── layout ───────── */
