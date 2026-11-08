@@ -3,7 +3,7 @@ import type { ArtProp } from "@/lib/cerita/illus-types";
 import { Ring, Rabbit, Balloon, Books, Box, Clock, Cookies, Cup, Fruit, GoldStar, Kitten, Lamp, Mat, Soup, Teddy, Towel, Veggies, Water } from "./home";
 import { LadderUp, Bench, Bicycle, BlocksFall, BlocksLow, BlocksTall, Bucket, CarMud, CarPlain, CarShiny, Crab, Drawing, Kite, Lantern, Minaret, Quran, Sandcastle, Shell, Sleeper, Tent, Umbrella } from "./outdoor";
 import { BallGreen, BallHopper, BallMachine, BallOrange, BallRed, BallTube, CourtBrush, Medal, MiniNet, Racket, RacketBag, SportBottle, UmpireChairProp } from "./tennis";
-import { Bedug, DatesWater, Fanous, IftarTable, Ketupat, KolakBowl, Obor, RamadanCalendar0, RamadanCalendar1, RamadanCalendarHalf, RamadanCalendarFull, RamadanGarland, SahurTray, Tasbih, ZakatRice } from "./ramadan";
+import { InfaqBox, TakjilBag, HijaiyahBlocks, Siwak, TakjilStall, Bedug, DatesWater, Fanous, IftarTable, Ketupat, KolakBowl, Obor, RamadanCalendar0, RamadanCalendar1, RamadanCalendarHalf, RamadanCalendarFull, RamadanGarland, SahurTray, Tasbih, ZakatRice } from "./ramadan";
 import { Bee, Bird, Bush, Butterfly, CrescentProp, Flowers, Heart, MoonProp, Puddle, StormCloud, SunProp, Tree } from "./nature";
 
 /**
@@ -103,5 +103,10 @@ export const ELEMENTS: Partial<Record<ArtProp, ArtElement>> = {
   ramcalhalf: { draw: RamadanCalendarHalf, group: "ramadan", note: "Ramadan calendar, 15 stars (halfway)." },
   ramcalfull: { draw: RamadanCalendarFull, group: "ramadan", note: "Ramadan calendar, all 30 stars." },
   dates: { draw: DatesWater, group: "ramadan", note: "Bowl of dates with a glass of water." },
+  takjilstall: { draw: TakjilStall, group: "ramadan", note: "Ramadan market takjil stall, awning flaps, lights glow." },
+  hijaiyah: { draw: HijaiyahBlocks, group: "ramadan", note: "Letter blocks alif, ba, ta (drawn shapes), wobble." },
+  takjilbag: { draw: TakjilBag, group: "ramadan", note: "Plastic bag stuffed with takjil treats." },
+  infaqbox: { draw: InfaqBox, group: "ramadan", note: "Mosque charity box, a coin drops in." },
+  siwak: { draw: Siwak, group: "ramadan", note: "Siwak twig toothbrush." },
   ketupat: { draw: Ketupat, group: "ramadan", note: "Three woven ketupat hanging, sway." },
 };

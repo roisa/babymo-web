@@ -294,7 +294,12 @@ export type ArtProp =
   | "ramcal"
   | "ramcal1"
   | "ramcalhalf"
-  | "ramcalfull";
+  | "ramcalfull"
+  | "takjilstall"
+  | "hijaiyah"
+  | "siwak"
+  | "takjilbag"
+  | "infaqbox";
 
 export type ArtFx =
   | "rain"
