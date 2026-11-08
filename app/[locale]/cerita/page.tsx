@@ -15,6 +15,8 @@ import { StoryArt } from "@/components/story-art/StoryArt";
 import { illusFor } from "@/lib/cerita/illus";
 import { getBookPages } from "@/lib/cerita/picture-books";
 import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
+import { SERIES, seriesOf } from "@/lib/cerita/series";
+import { ShelfFilters } from "@/components/ShelfFilters";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -49,6 +51,21 @@ export default async function CatatanIndex({
   const notes = getAllCatatan();
   const stories = notes.filter((n) => n.kind === "story");
   const parentNotes = notes.filter((n) => n.kind !== "story");
+  // which characters appear in each book (from its pictures), for the filter chips
+  const charsOf = (slug: string, child: string) => {
+    const set = new Set<string>();
+    const b = getBookPages(slug);
+    if (b) for (const sc of [b.cover, ...b.pages.map((p) => p.scene)]) for (const m of sc.mo ?? []) set.add(m.who ?? "mo");
+    if (!set.size) (child === "both" ? ["mo", "ais"] : [child]).forEach((c) => set.add(c));
+    return [...set].join(" ");
+  };
+  const CHARS = [
+    { key: "mo", label: "Baby Mo" },
+    { key: "ais", label: "Baby Ais" },
+    { key: "adam", label: "Kak Adam" },
+    { key: "ayah", label: "Abi" },
+    { key: "umi", label: "Umi" },
+  ];
 
   return (
     <>
@@ -69,15 +86,34 @@ export default async function CatatanIndex({
           </SectionButton>
         </SectionHeader>
 
+        {/* ── Series: books with a reading order ── */}
+        <section className="sec-cerita mb-14" aria-labelledby="shelf-series">
+          <h2 id="shelf-series" className="font-display flex items-center gap-2 text-[26px] text-ink sm:text-[30px]">
+            <span aria-hidden>🗂️</span> {l === "id" ? "Seri cerita" : "Story series"}
+          </h2>
+          <p className="mt-1 text-[15px] text-whisper">{l === "id" ? "Baca berurutan, buku demi buku." : "Read them in order, book by book."}</p>
+          <div className="series-row mt-4">
+            {SERIES.map((x) => (
+              <Link key={x.key} href={pathFor(l, `/cerita/seri/${x.key}`)} className="series-card tap">
+                <span className="series-card-emoji" aria-hidden>{x.emoji}</span>
+                <span className="series-card-title">{x.title[l]}</span>
+                <span className="series-card-meta">{l === "id" ? `${x.books.length} buku` : `${x.books.length} books`}</span>
+                <span className="line-clamp-3 text-[13px] leading-relaxed text-whisper">{x.blurb[l]}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+
         {/* ── Shelf 1: picture-book covers for kids ── */}
         <section className="sec-cerita" aria-labelledby="shelf-kids">
           <h2 id="shelf-kids" className="font-display flex items-center gap-2 text-[26px] text-ink sm:text-[30px]">
             <span aria-hidden>📚</span> {l === "id" ? "Rak cerita anak" : "Kids' story shelf"}
             <span className="ml-1 rounded-full bg-[var(--sec-soft)] px-2.5 py-0.5 font-sans text-[13px] font-bold text-[var(--sec-deep)]">{stories.length}</span>
           </h2>
+          <ShelfFilters locale={l} total={stories.length} chars={CHARS} series={SERIES.map((x) => ({ key: x.key, label: `${x.emoji} ${x.title[l]}` }))} />
           <ul className="shelf mt-6 grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4">
             {stories.map((n, i) => (
-              <li key={n.slug}>
+              <li key={n.slug} data-shelf-item={n.slug} data-chars={charsOf(n.slug, n.child)} data-series={seriesOf(n.slug)?.series.key ?? ""}>
                 <Link href={pathFor(l, `/cerita/${n.slug}`)} className="shelf-book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
                   <div className="book-cover relative">
                     {(() => {

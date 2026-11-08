@@ -1,0 +1,27 @@
+name: Story checks
+
+# Runs on every pull request: type-checks the site and checks every picture
+# book (poses, props, images, duo poses, translations, series). Warnings are
+# printed in the log; errors fail the check. Read-only — no secrets, no deploy.
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Type-check
+        run: npx tsc --noEmit -p .
+      - name: Check stories
+        run: npm run check:stories
