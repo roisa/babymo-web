@@ -19,6 +19,21 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
+/* Images retaken on 10 Nov 2026 after the daily-loop updates; the old version stays downloadable as "versi lama". */
+const CHANGED = new Set(["01", "02", "04", "06", "10", "01-home", "03-doa", "07-pulau", "09-hewan", "11-dream", "12-susun"]);
+const CHANGE_NOTE: Record<string, string> = {
+  "01": "Home now shows the Misi Hari Ini card (1/3 done, 5-day streak)",
+  "02": "Doa Harian with the new du'a card, stars and icons",
+  "04": "Same treasure card, a small rainbow toast on top",
+  "06": "Baby Mo now stands between the animals (partly behind the sheep)",
+  "10": "Dreamtime with the moon-streak and bedtime-story cards",
+  "01-home": "Misi Hari Ini card",
+  "03-doa": "New du'a card, stars and icons",
+  "07-pulau": "Rainbow toast at the top",
+  "09-hewan": "Baby Mo between the animals",
+  "11-dream": "Moon streak + story of the night",
+  "12-susun": "Kata Hari Ini + Ronde Kilat cards",
+};
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const DEVICES = [
   { key: "iphone63", label: 'iPhone · Dynamic Island (medium display)', size: "1206 × 2622 px", upload: true },
@@ -153,6 +168,8 @@ h1{font-size:clamp(30px,5vw,44px);line-height:1.05}h2{font-size:26px;margin:44px
 .grid.wide{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .tile{display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
+.tile .new{font-size:12px;line-height:1.3;color:var(--soft)}
+.tile a.old{font-weight:700;color:var(--soft)}
 .tile a{font-size:13px;font-weight:800;color:var(--accent);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .lang{display:flex;gap:6px;margin:10px 0 0}
 .lang button{font:inherit;font-weight:800;padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:var(--card);color:var(--soft);cursor:pointer}
@@ -232,7 +249,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken 10 Nov 2026</b> after the daily missions & game loops: images marked ✨ Baru changed (home missions card, Doa Harian, Dreamtime, Susun Huruf, small changes in Pulau and Sahabat Hewan) and each keeps a “↩ versi lama” link to the previous version; everything else is unchanged. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
@@ -245,6 +262,11 @@ export default function AppStoreKit() {
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={asset("/" + f.thumb)} alt={f.name} loading="lazy" />
                     <a href={asset("/" + f.src)} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
+                    {(() => { const k = f.src.split("/").pop()!.replace(/\.jpg$/, "").split("-").slice(2).join("-");
+                      return CHANGED.has(k) ? (<>
+                        <span className="new">✨ Baru: {CHANGE_NOTE[k]}</span>
+                        <a className="old" href={asset("/app-store-kit/prev/" + f.src.replace("app-store-kit/", ""))} download>↩ versi lama</a>
+                      </>) : null; })()}
                   </div>
                 ))}
               </div>
