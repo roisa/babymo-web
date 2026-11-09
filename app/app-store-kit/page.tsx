@@ -120,7 +120,7 @@ const CHECK: { t: string; d: string }[] = [
 
 const NOTES: string[] = [
   "Kids Category: leave it off for version 1.0. Apps in the Kids Category must put a parental gate in front of every link that leaves the app and every share button, and Baby Mo has both (the footer links and Share on results). You can opt in later after adding a gate.",
-  "iPad: the games show in a phone-width column in the middle of the iPad screen, and the Pray with Mo header doesn't stretch to full width. That's allowed, but a reviewer or parent will notice. The iPad banners present it well; improving the iPad layouts would help ratings.",
+  "iPad: the app is portrait-only (iPhone and iPad) with UIRequiresFullScreen, and on iPad every game is scaled to fill the screen. The iPad screenshots were captured that way. If you later want landscape on iPad, remove UIRequiresFullScreen and add the landscape orientations back in Info.plist — and check the layouts first.",
   "Memory Match still shows a \"PRO\" badge on the Juara level. It's only a difficulty level (the review notes say so), but renaming it would avoid any question about paid content.",
 ];
 
