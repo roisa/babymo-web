@@ -15,9 +15,9 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09"];
-const RAW = ["01-home", "02-games", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-tenis", "08-tenis-play", "09-memory", "10-dream"];
-const BANNER_NAMES = ["Home", "13 games", "Daily du'as", "Prayer", "Wudhu", "Hijaiyah letters", "Tennis", "Dreamtime", "Safe for kids"];
+const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
+const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
+const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const groups: Group[] = [];
@@ -60,6 +60,7 @@ const fields = (lang: "id" | "en"): Field[] => [
   { label: "Promotional Text", value: L.promo[lang], limit: 170, where: "Version → Promotional Text (can change any time)" },
   { label: "Description", value: L.desc[lang], limit: 4000, where: "Version → Description" },
   { label: "Keywords", value: L.keywords[lang], limit: 100, bytes: true, where: "Version → Keywords (comma-separated, no spaces)" },
+  { label: "What's New in This Version", value: L.whatsNew[lang], limit: 4000, where: "Version → What's New (only shown for updates, not for 1.0)" },
 ];
 
 const FACTS: { label: string; value: string; where: string; note?: string }[] = [
@@ -77,7 +78,7 @@ const FACTS: { label: string; value: string; where: string; note?: string }[] = 
   { label: "Sign-in required for review", value: "No — the app has no accounts", where: "App Review Information → Sign-In Information (uncheck)" },
 ];
 
-const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2–8 (daily du'as, prayer and wudhu guides, Arabic letters, and a tennis-learning game). There are no accounts, ads, in-app purchases, chat or social features.
+const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2–8 with 15 games: daily du'as, prayer and wudhu guides, Arabic letters, a letter-hunt island, a tennis-learning game, caring for farm animals and a little garden. There are no accounts, ads, in-app purchases, chat or social features.
 
 • No login is needed: open the app and choose a language.
 • Location is optional and only used for prayer times and the Qibla compass in the Prayer tab. If permission is denied, the user can pick a city by hand. Approximate coordinates (rounded to about 1 km) are sent to api.aladhan.com and api.bigdatacloud.net to calculate prayer times and show the city name; nothing else leaves the device.
@@ -108,7 +109,7 @@ const PRIVACY: [string, string][] = [
 const CHECK: { t: string; d: string }[] = [
   { t: "Add the encryption key to Info.plist", d: "ITSAppUsesNonExemptEncryption = NO (Boolean). The app only uses standard HTTPS, so this skips the export-compliance question on every build." },
   { t: "Soften the location permission text", d: 'Info.plist NSLocationWhenInUseUsageDescription, for example: "Baby Mo uses your location only to show prayer times and the Qibla. You can also pick a city instead." Reviewers prefer text that says the feature is optional.' },
-  { t: "Sync the latest web build into the iOS app", d: "In babymo-app: git pull, then npx cap sync ios. This brings in Huruf Hijaiyah, the tennis game and the latest fixes." },
+  { t: "Sync the latest web build into the iOS app", d: "In babymo-app: git pull, then npx cap sync ios. This brings in Sahabat Hewan Mo, Kebun Kecil Ais, the 12-du'a Doa Harian, the new Huruf Hijaiyah and Pulau Hijaiyah features, the tennis updates and the latest fixes." },
   { t: "Test on a real iPhone and iPad", d: "Open every game once, try airplane mode, deny location once, and switch ID/EN and light/dark." },
   { t: "Archive and upload", d: "Xcode → Product → Archive → Distribute App → App Store Connect. Wait for the build to finish processing, then select it in the version page." },
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
@@ -226,7 +227,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone 6.9&quot;</b> and for <b>iPad 13&quot;</b>, because the app also runs on iPad. Apple scales them down for smaller devices. Upload the banners in order 01 → 09; the first three show in search results.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone 6.9&quot;</b> and for <b>iPad 13&quot;</b>, because the app also runs on iPad. Apple scales them down for smaller devices. Upload the banners in order 01 → 10; the first three show in search results. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
