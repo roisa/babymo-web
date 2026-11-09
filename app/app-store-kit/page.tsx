@@ -20,35 +20,28 @@ const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-hur
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
+const DEVICES = [
+  { key: "iphone63", label: 'iPhone · Dynamic Island (medium display)', size: "1206 × 2622 px", upload: true },
+  { key: "ipad", label: 'iPad 13" display', size: "2064 × 2752 px", upload: true },
+  { key: "ipad2048", label: 'iPad 13" display · alternative size', size: "2048 × 2732 px", upload: false },
+] as const;
 const groups: Group[] = [];
-for (const dev of ["iphone", "ipad"] as const) {
-  for (const lang of ["id", "en"] as const) {
-    groups.push({
-      id: `banner-${dev}-${lang}`,
-      title: `Banners · ${dev === "iphone" ? 'iPhone 6.9"' : 'iPad 13"'} · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
-      size: dev === "iphone" ? "1320 × 2868 px" : "2064 × 2752 px",
-      note: lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization.",
-      files: SHOTS.map((k, i) => ({
-        src: `app-store-kit/banners/${dev}-${lang}-${k}.jpg`,
-        thumb: `app-store-kit/thumbs/${dev}-${lang}-${k}.webp`,
-        name: `${k} ${BANNER_NAMES[i]}`,
-      })),
-    });
-  }
-}
-for (const dev of ["iphone", "ipad"] as const) {
-  for (const lang of ["id", "en"] as const) {
-    groups.push({
-      id: `raw-${dev}-${lang}`,
-      title: `Plain screenshots · ${dev === "iphone" ? 'iPhone 6.9"' : 'iPad 13"'} · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
-      size: dev === "iphone" ? "1320 × 2868 px" : "2064 × 2752 px",
-      note: "No captions. Use them instead of the banners, or for the website and social posts.",
-      files: RAW.map((k) => ({
-        src: `app-store-kit/raw/${dev}-${lang}-${k}.jpg`,
-        thumb: `app-store-kit/thumbs/raw-${dev}-${lang}-${k}.webp`,
-        name: k,
-      })),
-    });
+for (const kind of ["banner", "raw"] as const) {
+  for (const d of DEVICES) {
+    for (const lang of ["id", "en"] as const) {
+      const keys = kind === "banner" ? SHOTS : RAW;
+      groups.push({
+        id: `${kind}-${d.key}-${lang}`,
+        title: `${kind === "banner" ? "Banners" : "Plain screenshots"} · ${d.label} · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
+        size: d.size,
+        note: (d.upload ? "" : "Use only if App Store Connect rejects the 2064 × 2752 set. ") +
+          (kind === "raw" ? "No captions. Use them instead of the banners, or for the website and social posts." :
+            lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."),
+        files: keys.map((k, i) => kind === "banner"
+          ? { src: `app-store-kit/banners/${d.key}-${lang}-${k}.jpg`, thumb: `app-store-kit/thumbs/${d.key}-${lang}-${k}.webp`, name: `${k} ${BANNER_NAMES[i]}` }
+          : { src: `app-store-kit/raw/${d.key}-${lang}-${k}.jpg`, thumb: `app-store-kit/thumbs/raw-${d.key}-${lang}-${k}.webp`, name: k }),
+      });
+    }
   }
 }
 
@@ -123,7 +116,7 @@ const CHECK: { t: string; d: string }[] = [
   { t: "Archive and upload", d: "Xcode → Product → Archive → Distribute App → App Store Connect. Wait for the build to finish processing, then select it in the version page." },
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
   { t: "Upload the header and search-results artwork", d: "Product Page Information → Header and Search Results, for both languages. Use the 16:9 header (or the 21:9 one) and the 3:2 search image from the section above." },
-  { t: "Upload screenshots for iPhone 6.9\" and iPad 13\"", d: "Both are required because the app runs on iPad too. Apple scales them for the smaller devices. Up to 10 per device and language." },
+  { t: "Upload screenshots for iPhone (medium display) and iPad 13\"", d: "Both are required because the app runs on iPad too: iPhone 1206 × 2622, iPad 2064 × 2752 (2048 × 2732 as a fallback). Up to 10 per device and language." },
   { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
   { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
 ];
@@ -238,7 +231,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone 6.9&quot;</b> and for <b>iPad 13&quot;</b>, because the app also runs on iPad. Apple scales them down for smaller devices. Upload the banners in order 01 → 10; the first three show in search results. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
