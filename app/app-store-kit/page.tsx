@@ -52,6 +52,15 @@ for (const dev of ["iphone", "ipad"] as const) {
   }
 }
 
+const CREATIVE: { id: string; title: string; size: string; note: string; base: string; ext: string }[] = [
+  { id: "header-16x9", title: "Header · 16:9 (recommended)", size: "5244 × 2950 px · PNG", ext: "png",
+    note: "Product Page Information → Header and Search Results → Header → Upload. Apple can also reuse this one size in Search Results.", base: "header-16x9" },
+  { id: "header-21x9", title: "Header · 21:9 (alternative)", size: "3840 × 1646 px · JPG", ext: "jpg",
+    note: "The wider header size, if you prefer it to 16:9. Upload only one header per language.", base: "header-21x9" },
+  { id: "search-3x2", title: "Search Results · 3:2", size: "3840 × 2560 px · PNG", ext: "png",
+    note: "Header and Search Results → Search Results → Upload.", base: "search-3x2" },
+];
+
 type Field = { label: string; value: string; limit?: number; bytes?: boolean; where: string };
 const L = LISTING;
 const fields = (lang: "id" | "en"): Field[] => [
@@ -113,6 +122,7 @@ const CHECK: { t: string; d: string }[] = [
   { t: "Test on a real iPhone and iPad", d: "Open every game once, try airplane mode, deny location once, and switch ID/EN and light/dark." },
   { t: "Archive and upload", d: "Xcode → Product → Archive → Distribute App → App Store Connect. Wait for the build to finish processing, then select it in the version page." },
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
+  { t: "Upload the header and search-results artwork", d: "Product Page Information → Header and Search Results, for both languages. Use the 16:9 header (or the 21:9 one) and the 3:2 search image from the section above." },
   { t: "Upload screenshots for iPhone 6.9\" and iPad 13\"", d: "Both are required because the app runs on iPad too. Apple scales them for the smaller devices. Up to 10 per device and language." },
   { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
   { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
@@ -146,6 +156,7 @@ h1{font-size:clamp(30px,5vw,44px);line-height:1.05}h2{font-size:26px;margin:44px
 .ghead p{margin:2px 0 0;color:var(--soft);font-size:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}
 .grid.ipad{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.grid.wide{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .tile{display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
 .tile a{font-size:13px;font-weight:800;color:var(--accent);text-decoration:none;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
@@ -222,7 +233,7 @@ export default function AppStoreKit() {
             <a className="btn" href={asset("/app-store-kit/app-icon-1024.png")} download="baby-mo-app-icon-1024.png">App icon 1024 px</a>
           </div>
           <nav className="toc" aria-label="Sections">
-            <a href="#screens">Screenshots</a><a href="#listing">Listing text</a><a href="#info">App information</a>
+            <a href="#screens">Screenshots</a><a href="#creative">Header &amp; search</a><a href="#listing">Listing text</a><a href="#info">App information</a>
             <a href="#age">Age rating</a><a href="#privacy">App privacy</a><a href="#review">Review notes</a><a href="#checklist">Checklist</a><a href="#notes">Heads-up</a>
           </nav>
 
@@ -245,6 +256,33 @@ export default function AppStoreKit() {
               </div>
             </section>
           ))}
+
+          <h2 id="creative">Header &amp; Search Results</h2>
+          <p className="lead">The product page header and the search-results artwork (App Store Connect → Product Page Information → <b>Header and Search Results</b>). No transparency, as Apple requires. The headline and characters sit in the middle so nothing important is hidden when Apple crops the image or places the app icon and Get button on top. Upload the <b>ID</b> files to the Indonesian localization and the <b>EN</b> files to English (U.S.).</p>
+          <section className="group" id="creative-assets">
+            <div className="ghead">
+              <div><h3>Header &amp; search artwork · ID + EN</h3><p>6 images · Baby Mo, Kak Adam and Ais with the farm friends and hijaiyah blocks</p></div>
+              <button className="btn" data-zip="creative-assets" type="button">⬇ Download group (ZIP)</button>
+            </div>
+            {CREATIVE.map((c) => (
+              <div key={c.id} style={{ marginTop: 14 }}>
+                <b>{c.title}</b> <small style={{ color: "var(--soft)" }}>· {c.size}</small>
+                <p style={{ margin: "2px 0 8px", color: "var(--soft)", fontSize: 14 }}>{c.note}</p>
+                <div className="grid wide">
+                  {(["id", "en"] as const).map((lang) => {
+                    const file = `${c.base}-${lang}.${c.ext}`;
+                    return (
+                      <div className="tile" key={file}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={asset(`/app-store-kit/thumbs/${c.base}-${lang}.webp`)} alt={`${c.title} ${lang.toUpperCase()}`} loading="lazy" />
+                        <a href={asset(`/app-store-kit/creative/${file}`)} download data-file={file}>⬇ {lang === "id" ? "Bahasa Indonesia" : "English (U.S.)"}</a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            ))}
+          </section>
 
           <h2 id="listing">Listing text</h2>
           <p className="lead">Paste each field into App Store Connect. The counter shows Apple&apos;s limit (keywords count in bytes).</p>
