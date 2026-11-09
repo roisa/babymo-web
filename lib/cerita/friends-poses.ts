@@ -1,7 +1,7 @@
 /**
  * Baby Mo & friends pose library — Adam (older brother) and Ayah (Dad).
  *
- *   public/adam-poses/adam-<name>.png   151 renders (incl. 11 six-frame tennis sequences)
+ *   public/adam-poses/adam-<name>.png   163 renders (incl. 13 six-frame tennis sequences)
  *   public/ayah-poses/ayah-<name>.png   96 renders (5 of them with a twin in the image)
  *
  * Every PNG is 800×800, transparent, feet on the same ground line as Baby Mo
@@ -135,6 +135,18 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "tennis-serve-blue-4", category: "play", mood: "focused", props: ["racket"], use: "Blue-racket serve 4/6: racket drop behind his back, looking up at the ball." },
   { name: "tennis-serve-blue-5", category: "play", mood: "excited", props: ["racket"], use: "Blue-racket serve 5/6: contact, stretched up on his toes, racket high. About 11% smaller so the racket fits.", air: true },
   { name: "tennis-serve-blue-6", category: "play", mood: "happy", props: ["racket"], use: "Blue-racket serve 6/6: follow-through across his body, back leg kicking up." },
+  { name: "tennis-fh-one-1", category: "play", mood: "happy", props: ["racket"], use: "One-handed forehand (alt) 1/6: side-on ready stance, racket in front. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-one-2", category: "play", mood: "focused", props: ["racket"], use: "One-handed forehand (alt) 2/6: unit turn, racket up behind, free hand pointing at the ball. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-one-3", category: "play", mood: "focused", props: ["racket"], use: "One-handed forehand (alt) 3/6: take-back, racket high, free arm reaching out. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-one-4", category: "play", mood: "focused", props: ["racket"], use: "One-handed forehand (alt) 4/6: contact out to his side, racket low and level. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-one-5", category: "play", mood: "focused", props: ["racket"], use: "One-handed forehand (alt) 5/6: swinging through, stepping in. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-one-6", category: "play", mood: "happy", props: ["racket"], use: "One-handed forehand (alt) 6/6: finish over his shoulder, laughing. No ball drawn. Play with ADAM_FOR.forehandOneFrames." },
+  { name: "tennis-fh-two-1", category: "play", mood: "happy", props: ["racket"], use: "Two-handed forehand 1/6: ready stance, both hands on the grip. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
+  { name: "tennis-fh-two-2", category: "play", mood: "focused", props: ["racket"], use: "Two-handed forehand 2/6: turn, racket up behind his shoulder with both hands. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
+  { name: "tennis-fh-two-3", category: "play", mood: "focused", props: ["racket"], use: "Two-handed forehand 3/6: take-back high with both hands. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
+  { name: "tennis-fh-two-4", category: "play", mood: "focused", props: ["racket"], use: "Two-handed forehand 4/6: swinging down and through with both hands. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
+  { name: "tennis-fh-two-5", category: "play", mood: "focused", props: ["racket"], use: "Two-handed forehand 5/6: extending through the ball, arms straight. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
+  { name: "tennis-fh-two-6", category: "play", mood: "happy", props: ["racket"], use: "Two-handed forehand 6/6: finish over his shoulder, smiling. No ball drawn. Play with ADAM_FOR.forehandTwoFrames." },
   { name: "tennis-volley", category: "play", mood: "happy", props: ["racket", "ball"], use: "Volley at the net (net not drawn), ball on the strings. Replaces tennis-net-volley." },
   { name: "tennis-rest-sit", category: "routine", mood: "calm", props: ["towel", "water bottle", "racket"], use: "Resting, towel round his neck, drinking. Sits on any bench prop. Replaces tennis-rest-bench.", low: true },
   { name: "tennis-bounce-racket", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bouncing a ball on the racket strings. Practice, teaching the twins." },
@@ -428,6 +440,8 @@ export const ADAM_FOR: Record<string, string[]> = {
   shuffleFrames: ["tennis-shuffle-1", "tennis-shuffle-2", "tennis-shuffle-3", "tennis-shuffle-4", "tennis-shuffle-5", "tennis-shuffle-6"],
   runFrames: ["tennis-run-1", "tennis-run-2", "tennis-run-3", "tennis-run-4", "tennis-run-5", "tennis-run-6"],
   serveFrames: ["tennis-serve-1", "tennis-serve-2", "tennis-serve-3", "tennis-serve-4", "tennis-serve-5", "tennis-serve-6"],
+  forehandOneFrames: ["tennis-fh-one-1", "tennis-fh-one-2", "tennis-fh-one-3", "tennis-fh-one-4", "tennis-fh-one-5", "tennis-fh-one-6"],
+  forehandTwoFrames: ["tennis-fh-two-1", "tennis-fh-two-2", "tennis-fh-two-3", "tennis-fh-two-4", "tennis-fh-two-5", "tennis-fh-two-6"],
   serveBlueFrames: ["tennis-serve-blue-1", "tennis-serve-blue-2", "tennis-serve-blue-3", "tennis-serve-blue-4", "tennis-serve-blue-5", "tennis-serve-blue-6"],
 };
 

@@ -4,7 +4,7 @@ There are 241 transparent renders. Use them in StoryArt scenes next to Baby Mo a
 
 | Character | Poses | Files | Reference sheet |
 | --- | --- | --- | --- |
-| Adam (older brother, about 7) | 151 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
+| Adam (older brother, about 7) | 163 | `public/adam-poses/adam-<name>.png` | [adam-pose-library.jpg](adam-pose-library.jpg) |
 | Ayah (Dad) | 96 | `public/ayah-poses/ayah-<name>.png` | [ayah-pose-library.jpg](ayah-pose-library.jpg) |
 
 The code lives in `lib/cerita/friends-poses.ts`. It holds `ADAM_POSES`, `AYAH_POSES`, the quick picks `ADAM_FOR` and `AYAH_FOR`, and `FRIEND_GAPS`.
@@ -37,7 +37,7 @@ scene: {
 - **Small losses:** the "zzz" on `ayah-sleep-blanket` was dropped as a stray speck.
 - **Wrong outfit:** the tennis sheets show Adam in his blue hoodie, not the tennis outfit from the brief.
 
-## Adam — 151 poses
+## Adam — 163 poses
 
 ![Adam pose library](adam-pose-library.jpg)
 
@@ -88,6 +88,7 @@ These are from the Adam Pose Revision Brief, batches R1–R4, R7 and R9–R11.
 - **Serve frames (R9):** the sheet's number labels and haze were cut away. `tennis-serve-5` (the jump) is about 10% smaller so the racket and ball fit.
 - **Racket:** the R9 and R11 tennis poses have a yellow-and-black racket, where the earlier tennis renders have a blue one.
 - **Blue-racket serve (November 2026):** `tennis-serve-blue-1…6` is a second serve set with the blue racket from the first tennis renders, made to sit beside the forehand and backhand sets. It has no ball, so add `balltoss`/`ballfly` props. Play it with `ADAM_FOR.serveBlueFrames`. One scale for frames 1–4 and 6, each anchored on his hair so the loop does not jitter; frame 5 is about 11% smaller so the raised racket fits the frame.
+- **Forehand sets (November 2026):** `tennis-fh-one-1…6` is a second one-handed forehand (alternate look to `tennis-fh-1…6`) and `tennis-fh-two-1…6` is a two-handed forehand. Both use the blue racket, have no ball, and play with `ADAM_FOR.forehandOneFrames` / `forehandTwoFrames`. One scale per set, frames anchored on his hair.
 - **Replacements:** `tennis-volley` and `tennis-rest-sit` replace `tennis-net-volley` and `tennis-rest-bench`, which have the net and bench baked in.
 
 | Pose | Type | Notes and story use |
@@ -140,6 +141,18 @@ These are from the Adam Pose Revision Brief, batches R1–R4, R7 and R9–R11.
 | `tennis-serve-blue-4` | play | Blue-racket serve 4/6: racket drop behind his back, eyes on the ball. |
 | `tennis-serve-blue-5` | play · air | Blue-racket serve 5/6: contact, up on his toes, racket high (about 11% smaller so it fits). |
 | `tennis-serve-blue-6` | play | Blue-racket serve 6/6: follow-through, back leg kicking up. |
+| `tennis-fh-one-1` | play | One-handed forehand (alt) 1/6: side-on ready stance, racket in front. |
+| `tennis-fh-one-2` | play | One-handed forehand (alt) 2/6: unit turn, racket up behind, free hand pointing at the ball. |
+| `tennis-fh-one-3` | play | One-handed forehand (alt) 3/6: take-back, racket high, free arm reaching out. |
+| `tennis-fh-one-4` | play | One-handed forehand (alt) 4/6: contact out to his side, racket low and level. |
+| `tennis-fh-one-5` | play | One-handed forehand (alt) 5/6: swinging through, stepping in. |
+| `tennis-fh-one-6` | play | One-handed forehand (alt) 6/6: finish over his shoulder, laughing. |
+| `tennis-fh-two-1` | play | Two-handed forehand 1/6: ready stance, both hands on the grip. |
+| `tennis-fh-two-2` | play | Two-handed forehand 2/6: turn, racket up behind his shoulder with both hands. |
+| `tennis-fh-two-3` | play | Two-handed forehand 3/6: take-back high with both hands. |
+| `tennis-fh-two-4` | play | Two-handed forehand 4/6: swinging down and through with both hands. |
+| `tennis-fh-two-5` | play | Two-handed forehand 5/6: extending through the ball, arms straight. |
+| `tennis-fh-two-6` | play | Two-handed forehand 6/6: finish over his shoulder, smiling. |
 | `tennis-volley` | play | Volley at the net (net not drawn), ball on the strings. Replaces tennis-net-volley. |
 | `tennis-rest-sit` | routine · low | Resting, towel round his neck, drinking. Sits on any bench prop. Replaces tennis-rest-bench. |
 | `tennis-bounce-racket` | play | Bouncing a ball on the racket strings. Practice, teaching the twins. |
