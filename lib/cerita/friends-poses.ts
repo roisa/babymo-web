@@ -1,7 +1,7 @@
 /**
  * Baby Mo & friends pose library — Adam (older brother) and Ayah (Dad).
  *
- *   public/adam-poses/adam-<name>.png   145 renders (incl. 10 six-frame tennis sequences)
+ *   public/adam-poses/adam-<name>.png   151 renders (incl. 11 six-frame tennis sequences)
  *   public/ayah-poses/ayah-<name>.png   96 renders (5 of them with a twin in the image)
  *
  * Every PNG is 800×800, transparent, feet on the same ground line as Baby Mo
@@ -129,6 +129,12 @@ export const ADAM_POSES: FriendPose[] = [
   { name: "tennis-serve-4", category: "play", mood: "focused", props: ["racket"], use: "Serve frame 4/6: racket drop behind his back." },
   { name: "tennis-serve-5", category: "play", mood: "excited", props: ["racket", "ball"], use: "Serve frame 5/6: contact, stretched up high on his toes.", air: true },
   { name: "tennis-serve-6", category: "play", mood: "calm", props: ["racket"], use: "Serve frame 6/6: follow-through, landing." },
+  { name: "tennis-serve-blue-1", category: "play", mood: "calm", props: ["racket"], use: "Blue-racket serve 1/6: side-on stance, racket held low in both hands. No ball drawn: add a balltoss prop. Play with ADAM_FOR.serveBlueFrames." },
+  { name: "tennis-serve-blue-2", category: "play", mood: "happy", props: ["racket"], use: "Blue-racket serve 2/6: tossing arm up, racket swinging back low." },
+  { name: "tennis-serve-blue-3", category: "play", mood: "focused", props: ["racket"], use: "Blue-racket serve 3/6: trophy position, tossing hand high, racket up behind his head." },
+  { name: "tennis-serve-blue-4", category: "play", mood: "focused", props: ["racket"], use: "Blue-racket serve 4/6: racket drop behind his back, looking up at the ball." },
+  { name: "tennis-serve-blue-5", category: "play", mood: "excited", props: ["racket"], use: "Blue-racket serve 5/6: contact, stretched up on his toes, racket high. About 11% smaller so the racket fits.", air: true },
+  { name: "tennis-serve-blue-6", category: "play", mood: "happy", props: ["racket"], use: "Blue-racket serve 6/6: follow-through across his body, back leg kicking up." },
   { name: "tennis-volley", category: "play", mood: "happy", props: ["racket", "ball"], use: "Volley at the net (net not drawn), ball on the strings. Replaces tennis-net-volley." },
   { name: "tennis-rest-sit", category: "routine", mood: "calm", props: ["towel", "water bottle", "racket"], use: "Resting, towel round his neck, drinking. Sits on any bench prop. Replaces tennis-rest-bench.", low: true },
   { name: "tennis-bounce-racket", category: "play", mood: "focused", props: ["racket", "ball"], use: "Bouncing a ball on the racket strings. Practice, teaching the twins." },
@@ -422,6 +428,7 @@ export const ADAM_FOR: Record<string, string[]> = {
   shuffleFrames: ["tennis-shuffle-1", "tennis-shuffle-2", "tennis-shuffle-3", "tennis-shuffle-4", "tennis-shuffle-5", "tennis-shuffle-6"],
   runFrames: ["tennis-run-1", "tennis-run-2", "tennis-run-3", "tennis-run-4", "tennis-run-5", "tennis-run-6"],
   serveFrames: ["tennis-serve-1", "tennis-serve-2", "tennis-serve-3", "tennis-serve-4", "tennis-serve-5", "tennis-serve-6"],
+  serveBlueFrames: ["tennis-serve-blue-1", "tennis-serve-blue-2", "tennis-serve-blue-3", "tennis-serve-blue-4", "tennis-serve-blue-5", "tennis-serve-blue-6"],
 };
 
 export const AYAH_FOR: Record<string, string[]> = {
