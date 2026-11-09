@@ -122,6 +122,7 @@ const CHECK: { t: string; d: string }[] = [
 ];
 
 const NOTES: string[] = [
+  "\"File dimensions are invalid\" means the image doesn't match the slot. Check the sizes listed under the upload box: the iPhone slot (Dynamic Island, medium display) takes 1206 × 2622, the iPad 13\" slot takes 2064 × 2752 (or the 2048 × 2732 fallback set). Drop iPhone files only on the iPhone tab and iPad files only on the iPad tab.",
   "Kids Category: leave it off for version 1.0. Apps in the Kids Category must put a parental gate in front of every link that leaves the app and every share button, and Baby Mo has both (the footer links and Share on results). You can opt in later after adding a gate.",
   "iPad: the app is portrait-only (iPhone and iPad) with UIRequiresFullScreen, and on iPad every game is scaled to fill the screen. The iPad screenshots were captured that way. If you later want landscape on iPad, remove UIRequiresFullScreen and add the landscape orientations back in Info.plist — and check the layouts first.",
   "Memory Match still shows a \"PRO\" badge on the Juara level. It's only a difficulty level (the review notes say so), but renaming it would avoid any question about paid content.",
