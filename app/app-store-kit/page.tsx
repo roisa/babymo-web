@@ -19,20 +19,17 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
-/* Images retaken on 10 Nov 2026 after the daily-loop updates; the old version stays downloadable as "versi lama". */
-const CHANGED = new Set(["01", "02", "04", "06", "10", "01-home", "03-doa", "07-pulau", "09-hewan", "11-dream", "12-susun"]);
+/* Images retaken on 10 Nov 2026 (second retake) after the Pojok Doa, Pray with Mo, Build the Word and beach-island updates;
+   the version before this retake stays downloadable as "versi lama" (public/app-store-kit/prev/). */
+const CHANGED = new Set(["02", "04", "08", "02-doa-tab", "04-sholat", "07-pulau", "12-susun"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "Home now shows the Misi Hari Ini card (1/3 done, 5-day streak)",
-  "02": "Doa Harian with the new du'a card, stars and icons",
-  "04": "Same treasure card, a small rainbow toast on top",
-  "06": "Baby Mo now stands between the animals (partly behind the sheep)",
-  "10": "Dreamtime with the moon-streak and bedtime-story cards",
-  "01-home": "Misi Hari Ini card",
-  "03-doa": "New du'a card, stars and icons",
-  "07-pulau": "Rainbow toast at the top",
-  "09-hewan": "Baby Mo between the animals",
-  "11-dream": "Moon streak + story of the night",
-  "12-susun": "Kata Hari Ini + Ronde Kilat cards",
+  "02": "Caption now says 14 du'as (was 12); same du'a screen",
+  "04": "Hijaiyah Island is now a tropical beach island; caption \"di pulau tropis\" / \"on a tropical island\"",
+  "08": "Redesigned Pray with Mo home: the 7 prayer steps (2/7 learned)",
+  "02-doa-tab": "Pojok Doa: Doa Pagi, du'a of the day, stickers, stars and streak",
+  "04-sholat": "Pray with Mo home focused on the 7 prayer steps",
+  "07-pulau": "Beach island: palms, sea, the village and letter cubes",
+  "12-susun": "Build the Word layout polish",
 };
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const DEVICES = [
@@ -126,7 +123,7 @@ const PRIVACY: [string, string][] = [
 const CHECK: { t: string; d: string }[] = [
   { t: "Add the encryption key to Info.plist", d: "ITSAppUsesNonExemptEncryption = NO (Boolean). The app only uses standard HTTPS, so this skips the export-compliance question on every build." },
   { t: "Soften the location permission text", d: 'Info.plist NSLocationWhenInUseUsageDescription, for example: "Baby Mo uses your location only to show prayer times and the Qibla. You can also pick a city instead." Reviewers prefer text that says the feature is optional.' },
-  { t: "Sync the latest web build into the iOS app", d: "In babymo-app: git pull, then npx cap sync ios. This brings in Sahabat Hewan Mo, Kebun Kecil Ais, the 12-du'a Doa Harian, the new Huruf Hijaiyah and Pulau Hijaiyah features, the tennis updates and the latest fixes." },
+  { t: "Sync the latest web build into the iOS app", d: "In babymo-app: git pull, then npx cap sync ios. This brings in Sahabat Hewan Mo, Kebun Kecil Ais, the 14-du'a Doa Harian, the new Huruf Hijaiyah and Pulau Hijaiyah features, the tennis updates and the latest fixes." },
   { t: "Test on a real iPhone and iPad", d: "Open every game once, try airplane mode, deny location once, and switch ID/EN and light/dark." },
   { t: "Archive and upload", d: "Xcode → Product → Archive → Distribute App → App Store Connect. Wait for the build to finish processing, then select it in the version page." },
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
@@ -249,7 +246,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken 10 Nov 2026</b> after the daily missions & game loops: images marked ✨ Baru changed (home missions card, Doa Harian, Dreamtime, Susun Huruf, small changes in Pulau and Sahabat Hewan) and each keeps a “↩ versi lama” link to the previous version; everything else is unchanged. Refreshed November 2026 with the latest build: 15 games, 12 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken again 10 Nov 2026</b> with the latest build: images marked ✨ Baru changed (banners 02 Daily du'as, 04 Hijaiyah Island and 08 Prayer; plain screenshots Pojok Doa, Pray with Mo, Pulau Hijaiyah and Susun Huruf) and each keeps a “↩ versi lama” link to the version before this retake; everything else is unchanged. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
