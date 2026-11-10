@@ -96,9 +96,9 @@ const FACTS: { label: string; value: string; where: string; note?: string }[] = 
 const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2–8 with 15 games: daily du'as, prayer and wudhu guides, Arabic letters, a letter-hunt island, a tennis-learning game, caring for farm animals and a little garden. There are no accounts, ads, in-app purchases, chat or social features.
 
 • No login is needed: open the app and choose a language.
-• Location is optional and only used for prayer times and the Qibla compass in the Prayer tab. If permission is denied, the user can pick a city by hand. Approximate coordinates (rounded to about 1 km) are sent to api.aladhan.com and api.bigdatacloud.net to calculate prayer times and show the city name; nothing else leaves the device.
+• Location is optional and only used for prayer times and the Qibla compass in the Prayer tab. If permission is denied, the user can pick a city by hand. Prayer times and the Qibla are calculated on the device; no location or other data ever leaves the device.
 • The child's nickname, stars and progress are stored only on the device.
-• Read-aloud uses the device's built-in speech voices. Labels such as "PRO" in Memory Match are difficulty levels, not purchases.
+• Arabic read-aloud plays recordings bundled with the app (the device's speech voice is a fallback). There are no analytics or third-party SDKs, and every link out of the app and every share option is behind a parental gate (a maths question for grown-ups).
 • All games work offline.
 
 Privacy policy: https://babymo.id/privacy/ · Support: https://babymo.id/support/`;
@@ -354,7 +354,7 @@ export default function AppStoreKit() {
           </div>
           <div className="field">
             <div className="fhead"><div><b>Content rights</b> <small>· App Information</small></div></div>
-            <div className="val">Does your app contain, show or access third-party content? → Yes, and you have the rights: Qur&apos;an and hadith texts are public domain, fonts are open-licensed (SIL OFL), and prayer times come from the free AlAdhan API.</div>
+            <div className="val">Does your app contain, show or access third-party content? → Yes, and you have the rights: Qur&apos;an and hadith texts are public domain, fonts are open-licensed (SIL OFL), and prayer times are calculated on the device.</div>
           </div>
 
           <h2 id="checklist">Before you press Submit</h2>
