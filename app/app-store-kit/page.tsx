@@ -19,17 +19,17 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
-/* Images retaken on 10 Nov 2026 (second retake) after the Pojok Doa, Pray with Mo, Build the Word and beach-island updates;
+/* Images retaken on 10 Nov 2026 (third retake) after the iOS glass redesign of Pray with Mo and the fresh look of the older games;
    the version before this retake stays downloadable as "versi lama" (public/app-store-kit/prev/). */
-const CHANGED = new Set(["02", "04", "08", "02-doa-tab", "04-sholat", "07-pulau", "12-susun"]);
+const CHANGED = new Set(["03", "08", "10", "04-sholat", "06-huruf", "11-dream", "12-susun"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "02": "Caption now says 14 du'as (was 12); same du'a screen",
-  "04": "Hijaiyah Island is now a tropical beach island; caption \"di pulau tropis\" / \"on a tropical island\"",
-  "08": "Redesigned Pray with Mo home: the 7 prayer steps (2/7 learned)",
-  "02-doa-tab": "Pojok Doa: Doa Pagi, du'a of the day, stickers, stars and streak",
-  "04-sholat": "Pray with Mo home focused on the 7 prayer steps",
-  "07-pulau": "Beach island: palms, sea, the village and letter cubes",
-  "12-susun": "Build the Word layout polish",
+  "03": "Huruf Hijaiyah fresh look: glass letter card, Fredoka letter name, capsule buttons",
+  "08": "Pray with Mo iOS glass redesign: glass hero card with the prayer countdown and glass step cards",
+  "10": "Dreamtime night-glass cards and capsule buttons",
+  "04-sholat": "Pray with Mo iOS glass redesign (hero card, Live Activity countdown, step cards)",
+  "06-huruf": "Glass letter card, Fredoka letter name, capsule buttons",
+  "11-dream": "Night-glass cards, capsule Game Hub button",
+  "12-susun": "Fredoka/Nunito type, glass cards, capsule buttons",
 };
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const DEVICES = [
@@ -246,7 +246,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken again 10 Nov 2026</b> with the latest build: images marked ✨ Baru changed (banners 02 Daily du'as, 04 Hijaiyah Island and 08 Prayer; plain screenshots Pojok Doa, Pray with Mo, Pulau Hijaiyah and Susun Huruf) and each keeps a “↩ versi lama” link to the version before this retake; everything else is unchanged. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a third time 10 Nov 2026</b> after the iOS glass redesign: images marked ✨ Baru changed (banners 03 Hijaiyah letters, 08 Prayer and 10 Safe for kids; plain screenshots Pray with Mo, Huruf Hijaiyah, Dreamtime and Susun Huruf) and each keeps a “↩ versi lama” link to the version before this retake; everything else is unchanged. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
