@@ -272,7 +272,7 @@ export default function AppStoreKit() {
           ))}
 
           <h2 id="creative">Header &amp; Search Results</h2>
-          <p className="lead">The product page header and the search-results artwork (App Store Connect → Product Page Information → <b>Header and Search Results</b>). No transparency, as Apple requires. The headline and characters sit in the middle so nothing important is hidden when Apple crops the image or places the app icon and Get button on top. Upload the <b>ID</b> files to the Indonesian localization and the <b>EN</b> files to English (U.S.).</p>
+          <p className="lead">The product page header and the search-results artwork (App Store Connect → Product Page Information → <b>Header and Search Results</b>). No transparency, as Apple requires. <b>✨ New design:</b> the App Store shows the header zoomed and cropped, with the status bar and the back/share buttons on top and the app card over the bottom, so a headline at the top got cut off. The new art has <b>no text</b> (your app name and subtitle already sit right below it); Baby Mo, Kak Adam and Ais stand together in the centre band, with sky at the top and grass at the bottom, so nothing important is ever hidden. The ID and EN files are the same picture; upload them to both localizations. Upload the <b>ID</b> files to the Indonesian localization and the <b>EN</b> files to English (U.S.).</p>
           <section className="group" id="creative-assets">
             <div className="ghead">
               <div><h3>Header &amp; search artwork · ID + EN</h3><p>6 images · Baby Mo, Kak Adam and Ais with the farm friends and hijaiyah blocks</p></div>
