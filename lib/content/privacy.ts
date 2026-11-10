@@ -7,8 +7,8 @@
  * the App Store privacy answers before shipping.
  */
 
-export const PRIVACY_UPDATED = { id: "8 November 2026", en: "8 November 2026" } as const;
-export const PRIVACY_EMAIL = "hello@babymo.id";
+export const PRIVACY_UPDATED = { id: "10 November 2026", en: "10 November 2026" } as const;
+export const PRIVACY_EMAIL = "roisa.mscdr@icloud.com";
 
 export const PRIVACY_HTML = {
   en: `
@@ -45,11 +45,11 @@ export const PRIVACY_HTML = {
 <p>The services below may receive limited technical information. We have chosen privacy-respecting options and none of them receive your child's name or any account details:</p>
 <ul>
   <li><strong>Hosting (GitHub Pages).</strong> babymo.id and play.babymo.id are static websites hosted by GitHub. Like any web server, GitHub may keep short-lived technical logs (such as IP address and browser type) for security. We do not receive or use these logs.</li>
-  <li><strong>Website analytics (Cloudflare Web Analytics, websites only).</strong> If enabled, this counts page views in aggregate. It uses no cookies, does not fingerprint visitors and does not identify anyone. It is never used inside the iOS app.</li>
-  <li><strong>Prayer times (AlAdhan) and city name (BigDataCloud), games and app only.</strong> If you allow location, approximate coordinates — rounded to about 1 km — are sent to <em>api.aladhan.com</em> to calculate today's prayer times and to <em>api.bigdatacloud.net</em> to show your city's name. Nothing else is sent with them. On babymo.id, prayer times are calculated entirely on your device and no coordinates are sent anywhere.</li>
+  <li><strong>Website analytics (Cloudflare Web Analytics, babymo.id only).</strong> If enabled, this counts page views on the babymo.id website in aggregate. It uses no cookies, does not fingerprint visitors and does not identify anyone. The games at play.babymo.id and the iOS app contain no analytics at all.</li>
+  <li><strong>Prayer times.</strong> Prayer times (Indonesian Ministry of Religious Affairs parameters) and the Qibla direction are calculated <em>entirely on your device</em>. No coordinates or other data are sent to any service, and no city-name lookup is used.</li>
   <li><strong>Videos (YouTube).</strong> Some pages on babymo.id show Baby Mo videos using YouTube's privacy-enhanced mode (youtube-nocookie.com). YouTube may collect information when a video is played, under Google's privacy policy. The iOS app does not embed YouTube.</li>
-  <li><strong>Read-aloud voices.</strong> Stories and duas are read by your device's built-in speech engine. Baby Mo does not record or send audio. (Some browsers may use their own online voices — that is controlled by your browser or operating system.)</li>
-  <li><strong>Links for parents.</strong> Pages for parents may link to WhatsApp, Instagram, TikTok, YouTube or donation pages (Saweria, Trakteer, PayPal). These open only if you tap them, and those sites have their own privacy policies.</li>
+  <li><strong>Read-aloud voices.</strong> Arabic letters, du'as and words are played from recordings bundled with the app and website; anything without a recording is read by your device's built-in speech engine. Baby Mo does not record or send audio, and the app does not use the microphone.</li>
+  <li><strong>Links for parents.</strong> Pages for parents may link to WhatsApp, Instagram, TikTok, YouTube or donation pages (Saweria, Trakteer, PayPal). These open only if you tap them, and those sites have their own privacy policies. In the iOS app, every link that leaves the app and every share option is behind a <strong>parental gate</strong> (a question for grown-ups).</li>
 </ul>
 <p>Fonts, images, sounds and code are served from our own websites or bundled inside the app.</p>
 
@@ -62,7 +62,8 @@ export const PRIVACY_HTML = {
   <li><strong>On-device storage:</strong> nicknames, progress and settings are kept on your device, not on our servers.</li>
   <li><strong>No ads, no profiling, no tracking,</strong> and no selling or sharing of data with anyone.</li>
   <li><strong>Encrypted connections:</strong> our websites and the services above use HTTPS.</li>
-  <li><strong>Reduced precision:</strong> location sent for prayer times is rounded to about 1 km and is not linked to any identity.</li>
+  <li><strong>Nothing leaves the device:</strong> location used for prayer times and the Qibla never leaves your device.</li>
+  <li><strong>Parental gate:</strong> in the iOS app, links out of the app and sharing require a grown-up to answer a question first.</li>
   <li><strong>Parents in control:</strong> you can clear everything at any time (see section 7).</li>
 </ul>
 
@@ -123,11 +124,11 @@ Website: <a href="https://babymo.id">babymo.id</a></p>
 <p>Layanan berikut dapat menerima informasi teknis yang terbatas. Kami memilih opsi yang menghormati privasi, dan tidak satu pun menerima nama anak atau data akun:</p>
 <ul>
   <li><strong>Hosting (GitHub Pages).</strong> babymo.id dan play.babymo.id adalah situs statis yang dihosting oleh GitHub. Seperti server web pada umumnya, GitHub dapat menyimpan log teknis sementara (seperti alamat IP dan jenis browser) untuk keamanan. Kami tidak menerima atau menggunakan log tersebut.</li>
-  <li><strong>Analitik situs (Cloudflare Web Analytics, hanya situs web).</strong> Bila diaktifkan, layanan ini menghitung jumlah kunjungan halaman secara agregat. Tanpa cookie, tanpa sidik jari perangkat, dan tidak mengidentifikasi siapa pun. Tidak pernah digunakan di dalam aplikasi iOS.</li>
-  <li><strong>Jadwal sholat (AlAdhan) dan nama kota (BigDataCloud), hanya permainan dan aplikasi.</strong> Jika Anda mengizinkan lokasi, koordinat perkiraan — dibulatkan sekitar 1 km — dikirim ke <em>api.aladhan.com</em> untuk menghitung jadwal sholat hari itu dan ke <em>api.bigdatacloud.net</em> untuk menampilkan nama kota. Tidak ada data lain yang ikut dikirim. Di babymo.id, jadwal sholat dihitung sepenuhnya di perangkat Anda tanpa mengirim koordinat ke mana pun.</li>
+  <li><strong>Analitik situs (Cloudflare Web Analytics, hanya babymo.id).</strong> Bila diaktifkan, layanan ini menghitung jumlah kunjungan halaman di situs babymo.id secara agregat. Tanpa cookie, tanpa sidik jari perangkat, dan tidak mengidentifikasi siapa pun. Permainan di play.babymo.id dan aplikasi iOS sama sekali tidak memakai analitik.</li>
+  <li><strong>Jadwal sholat.</strong> Jadwal sholat (parameter Kementerian Agama RI) dan arah kiblat dihitung <em>sepenuhnya di perangkat Anda</em>. Tidak ada koordinat atau data lain yang dikirim ke layanan mana pun, dan tidak ada pencarian nama kota.</li>
   <li><strong>Video (YouTube).</strong> Beberapa halaman babymo.id menampilkan video Baby Mo dengan mode privasi YouTube (youtube-nocookie.com). YouTube dapat mengumpulkan informasi saat video diputar, sesuai kebijakan privasi Google. Aplikasi iOS tidak menyematkan YouTube.</li>
-  <li><strong>Suara pembaca.</strong> Cerita dan doa dibacakan oleh mesin suara bawaan perangkat Anda. Baby Mo tidak merekam atau mengirim suara. (Beberapa browser dapat memakai suara daring miliknya sendiri — hal itu diatur oleh browser atau sistem operasi Anda.)</li>
-  <li><strong>Tautan untuk orang tua.</strong> Halaman untuk orang tua dapat berisi tautan ke WhatsApp, Instagram, TikTok, YouTube, atau halaman donasi (Saweria, Trakteer, PayPal). Tautan ini hanya terbuka jika Anda mengetuknya, dan situs-situs tersebut memiliki kebijakan privasinya sendiri.</li>
+  <li><strong>Suara pembaca.</strong> Huruf, doa, dan kata berbahasa Arab diputar dari rekaman yang sudah dibundel di aplikasi dan situs; selebihnya dibacakan oleh mesin suara bawaan perangkat Anda. Baby Mo tidak merekam atau mengirim suara, dan aplikasi tidak memakai mikrofon.</li>
+  <li><strong>Tautan untuk orang tua.</strong> Halaman untuk orang tua dapat berisi tautan ke WhatsApp, Instagram, TikTok, YouTube, atau halaman donasi (Saweria, Trakteer, PayPal). Tautan ini hanya terbuka jika Anda mengetuknya, dan situs-situs tersebut memiliki kebijakan privasinya sendiri. Di aplikasi iOS, setiap tautan ke luar aplikasi dan fitur berbagi dilindungi <strong>gerbang orang tua</strong> (pertanyaan untuk orang dewasa).</li>
 </ul>
 <p>Font, gambar, suara, dan kode disajikan dari situs kami sendiri atau sudah dibundel di dalam aplikasi.</p>
 
@@ -140,7 +141,8 @@ Website: <a href="https://babymo.id">babymo.id</a></p>
   <li><strong>Disimpan di perangkat:</strong> nama panggilan, kemajuan, dan pengaturan tersimpan di perangkat Anda, bukan di server kami.</li>
   <li><strong>Tanpa iklan, tanpa profil, tanpa pelacakan,</strong> dan tanpa menjual atau membagikan data kepada siapa pun.</li>
   <li><strong>Koneksi terenkripsi:</strong> situs kami dan layanan di atas menggunakan HTTPS.</li>
-  <li><strong>Presisi dikurangi:</strong> lokasi yang dikirim untuk jadwal sholat dibulatkan sekitar 1 km dan tidak terhubung dengan identitas siapa pun.</li>
+  <li><strong>Tidak ada yang keluar dari perangkat:</strong> lokasi untuk jadwal sholat dan kiblat tidak pernah meninggalkan perangkat Anda.</li>
+  <li><strong>Gerbang orang tua:</strong> di aplikasi iOS, tautan ke luar aplikasi dan fitur berbagi memerlukan jawaban pertanyaan dari orang dewasa terlebih dahulu.</li>
   <li><strong>Orang tua memegang kendali:</strong> Anda dapat menghapus semuanya kapan saja (lihat bagian 7).</li>
 </ul>
 
