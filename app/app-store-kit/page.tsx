@@ -21,11 +21,12 @@ const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Islan
 
 /* Images retaken on 10 Nov 2026 (fourth retake, for the App Store re-submission) after babymo-app #138–#157;
    the version before this retake stays downloadable as "versi lama" (public/app-store-kit/prev/). */
-const CHANGED = new Set(["01", "04", "07", "01-home", "02-doa-tab", "07-pulau", "10-kebun"]);
+const CHANGED = new Set(["01", "04", "07", "10", "01-home", "02-doa-tab", "07-pulau", "10-kebun"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "Hub star jar now 44px (no longer touches the top edge)",
+  "01": "No \"Gratis / Free\" pill (no price claims in screenshots); Hub star jar now 44px",
   "04": "Pulau Hijaiyah round glass back and menu buttons",
   "07": "Kebun Ais: Ais stands higher, above the garden beds",
+  "10": "No price claim: headline now \"Aman untuk si kecil, tanpa iklan & akun\" (was \"gratis selamanya / free forever\"), no \"Gratis / Free\" pill",
   "01-home": "Star jar now 44px in the Hub header",
   "02-doa-tab": "Star jar now 44px in the Hub header",
   "07-pulau": "Round glass back and menu buttons in the top bar",
@@ -246,7 +247,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a fourth time 10 Nov 2026</b> for the re-submission, with the current games build: images marked ✨ Baru changed (banners 01 Home, 04 Hijaiyah Island and 07 Ais's Garden; plain screenshots Home, Pojok Doa, Pulau Hijaiyah and Kebun Ais) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a fourth time 10 Nov 2026</b> for the re-submission, with the current games build: images marked ✨ Baru changed (banners 01 Home, 04 Hijaiyah Island, 07 Ais's Garden and 10 Safe for kids; plain screenshots Home, Pojok Doa, Pulau Hijaiyah and Kebun Ais) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
