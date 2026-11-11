@@ -19,9 +19,10 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
-/* Images retaken on 10 Nov 2026 (fourth retake, for the App Store re-submission) after babymo-app #138–#157;
-   the version before this retake stays downloadable as "versi lama" (public/app-store-kit/prev/). */
-const CHANGED = new Set(["01", "04", "07", "10", "01-home", "02-doa-tab", "07-pulau", "10-kebun"]);
+/* Images retaken on 11 Nov 2026 (fifth retake, for the App Store re-submission) after babymo-app #159–#193
+   (illustrated Play / Prayer / Duas menus); the version before this retake stays downloadable as "versi lama"
+   (public/app-store-kit/prev/). */
+const CHANGED = new Set(["01", "01-home", "02-doa-tab"]);
 const CHANGE_NOTE: Record<string, string> = {
   "01": "No \"Gratis / Free\" pill (no price claims in screenshots); Hub star jar now 44px",
   "04": "Pulau Hijaiyah round glass back and menu buttons",
@@ -136,9 +137,9 @@ const CHECK: { t: string; d: string }[] = [
 
 const NOTES: string[] = [
   "\"File dimensions are invalid\" means the image doesn't match the slot. Check the sizes listed under the upload box: the iPhone slot (Dynamic Island, medium display) takes 1206 × 2622, the iPad 13\" slot takes 2064 × 2752 (or the 2048 × 2732 fallback set). Drop iPhone files only on the iPhone tab and iPad files only on the iPad tab.",
-  "Kids Category: leave it off for version 1.0. Apps in the Kids Category must put a parental gate in front of every link that leaves the app and every share button, and Baby Mo has both (the footer links and Share on results). You can opt in later after adding a gate.",
+  "Kids Category: the iOS build has a parental gate (a grown-up sum) in front of every link that leaves the app and every share button, collects no data and calls no third-party services, so it meets Guideline 1.3. Paste the review notes above when you re-submit.",
   "iPad: the app is portrait-only (iPhone and iPad) with UIRequiresFullScreen, and on iPad every game is scaled to fill the screen. The iPad screenshots were captured that way. If you later want landscape on iPad, remove UIRequiresFullScreen and add the landscape orientations back in Info.plist — and check the layouts first.",
-  "Memory Match still shows a \"PRO\" badge on the Juara level. It's only a difficulty level (the review notes say so), but renaming it would avoid any question about paid content.",
+  "Every new build needs a higher build number than the one Apple already has; Xcode bumps it on upload. Before archiving run git pull and npx cap sync ios so the app has the latest games.",
 ];
 
 const CSS = `
@@ -247,7 +248,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a fourth time 10 Nov 2026</b> for the re-submission, with the current games build: images marked ✨ Baru changed (banners 01 Home, 04 Hijaiyah Island, 07 Ais's Garden and 10 Safe for kids; plain screenshots Home, Pojok Doa, Pulau Hijaiyah and Kebun Ais) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a fifth time 11 Nov 2026</b> for the re-submission, with the current games build (new illustrated Play, Prayer and Duas menus): images marked ✨ Baru changed (banner 01 Home; plain screenshots Home and Pojok Doa) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
