@@ -19,10 +19,10 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
-/* Images retaken on 11 Nov 2026 (fifth retake, for the App Store re-submission) after babymo-app #159–#193
-   (illustrated Play / Prayer / Duas menus); the version before this retake stays downloadable as "versi lama"
-   (public/app-store-kit/prev/). */
-const CHANGED = new Set(["01", "01-home", "02-doa-tab"]);
+/* Images retaken on 11 Nov 2026 (sixth retake, for the App Store re-submission): only the Game Hub (Play tab) changed —
+   floating top bar, glass cards, one-row missions (babymo-app #194–#198). The version before this retake stays
+   downloadable as "versi lama" (public/app-store-kit/prev/). */
+const CHANGED = new Set(["01", "01-home"]);
 const CHANGE_NOTE: Record<string, string> = {
   "01": "No \"Gratis / Free\" pill (no price claims in screenshots); Hub star jar now 44px",
   "04": "Pulau Hijaiyah round glass back and menu buttons",
@@ -248,7 +248,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a fifth time 11 Nov 2026</b> for the re-submission, with the current games build (new illustrated Play, Prayer and Duas menus): images marked ✨ Baru changed (banner 01 Home; plain screenshots Home and Pojok Doa) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a sixth time 11 Nov 2026</b> for the re-submission, only for the Game Hub (glass cards, floating top bar, one-row missions): images marked ✨ Baru changed (banner 01 Home and plain screenshot 01 Home) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
