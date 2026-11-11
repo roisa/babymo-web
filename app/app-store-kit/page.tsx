@@ -19,19 +19,23 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
 
-/* Images retaken on 11 Nov 2026 (sixth retake, for the App Store re-submission): only the Game Hub (Play tab) changed —
-   floating top bar, glass cards, one-row missions (babymo-app #194–#198). The version before this retake stays
+/* Images retaken on 11 Nov 2026 (seventh retake, games build babymo-games-v198): new Game Hub (big Baby Mo, du'a hands icon),
+   Duas tab with the Ramadan Du'as series, redesigned du'a pages, Wudhu step pages, Dreamtime start and Pray with Mo scenery
+   (babymo-app #199–#252); banners 01, 02, 08 and 10 use the new render-2 Baby Mo poses. The version before this retake stays
    downloadable as "versi lama" (public/app-store-kit/prev/). */
-const CHANGED = new Set(["01", "01-home"]);
+const CHANGED = new Set(["01", "02", "08", "09", "10", "01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "11-dream"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "No \"Gratis / Free\" pill (no price claims in screenshots); Hub star jar now 44px",
-  "04": "Pulau Hijaiyah round glass back and menu buttons",
-  "07": "Kebun Ais: Ais stands higher, above the garden beds",
-  "10": "No price claim: headline now \"Aman untuk si kecil, tanpa iklan & akun\" (was \"gratis selamanya / free forever\"), no \"Gratis / Free\" pill",
-  "01-home": "Star jar now 44px in the Hub header",
-  "02-doa-tab": "Star jar now 44px in the Hub header",
-  "07-pulau": "Round glass back and menu buttons in the top bar",
-  "10-kebun": "Ais stands higher so she shows above the beds",
+  "01": "New Game Hub (big Baby Mo, du'a hands icon); Baby Mo arms-wide pose from the new render-2 series",
+  "02": "New du'a page (scene header, centred title, tap button, reading speed); Baby Mo du'a pose (render 2)",
+  "08": "Pray with Mo with mosque scenery; Baby Mo hands-clasped pose (render 2)",
+  "09": "New Wudhu step page (courtyard scene, step title plate)",
+  "10": "New illustrated Dreamtime start screen; Baby Mo with a checklist (render 2)",
+  "01-home": "New Game Hub: big Baby Mo, du'a hands icon",
+  "02-doa-tab": "Duas tab with the new Ramadan Du'as series card",
+  "03-doa": "New du'a page: scene header, centred title, tap button, Normal / Slow / Slower",
+  "04-sholat": "Pray with Mo with mosque scenery",
+  "05-wudhu": "New Wudhu step page with courtyard scene",
+  "11-dream": "New illustrated Dreamtime start screen",
 };
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const DEVICES = [
@@ -248,7 +252,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a sixth time 11 Nov 2026</b> for the re-submission, only for the Game Hub (glass cards, floating top bar, one-row missions): images marked ✨ Baru changed (banner 01 Home and plain screenshot 01 Home) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, new render-2 Baby Mo poses on the banners): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 du'as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
