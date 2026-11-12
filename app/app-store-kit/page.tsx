@@ -21,15 +21,15 @@ const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Islan
 
 /* Images retaken on 11 Nov 2026 (seventh retake, games build babymo-games-v198): new Game Hub (big Baby Mo, du'a hands icon),
    Duas tab with the Ramadan Du'as series, redesigned du'a pages, Wudhu step pages, Dreamtime start and Pray with Mo scenery
-   (babymo-app #199–#252); banners 01, 02, 08 and 10 use the new render-2 Baby Mo poses. The version before this retake stays
+   (babymo-app #199–#252); banners 01, 02, 08 and 10 use the original high-quality Baby Mo render (render 1). The version before this retake stays
    downloadable as "versi lama" (public/app-store-kit/prev/). */
 const CHANGED = new Set(["01", "02", "08", "09", "10", "01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "11-dream"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "New Game Hub (big Baby Mo, du'a hands icon); Baby Mo arms-wide pose from the new render-2 series",
-  "02": "New du'a page (scene header, centred title, tap button, reading speed); Baby Mo du'a pose (render 2)",
-  "08": "Pray with Mo with mosque scenery; Baby Mo hands-clasped pose (render 2)",
+  "01": "New Game Hub (big Baby Mo, du'a hands icon); Baby Mo arms-wide pose (render 1)",
+  "02": "New du'a page (scene header, centred title, tap button, reading speed); Baby Mo du'a pose (render 1)",
+  "08": "Pray with Mo with mosque scenery; Baby Mo hands-clasped pose (render 1)",
   "09": "New Wudhu step page (courtyard scene, step title plate)",
-  "10": "New illustrated Dreamtime start screen; Baby Mo with a checklist (render 2)",
+  "10": "New illustrated Dreamtime start screen; Baby Mo with a checklist (render 1)",
   "01-home": "New Game Hub: big Baby Mo, du'a hands icon",
   "02-doa-tab": "Duas tab with the new Ramadan Du'as series card",
   "03-doa": "New du'a page: scene header, centred title, tap button, Normal / Slow / Slower",
@@ -252,7 +252,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 15 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
