@@ -165,7 +165,7 @@ const CHECK: { t: string; d: string }[] = [
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
   { t: "Upload the header and search-results artwork", d: "Product Page Information → Header and Search Results, for both languages. Use the 16:9 header (or the 21:9 one) and the 3:2 search image from the section above." },
   { t: "Upload screenshots for iPhone (medium display) and iPad 13\"", d: "Both are required because the app runs on iPad too: iPhone 1206 × 2622, iPad 2064 × 2752 (2048 × 2732 as a fallback). Up to 10 per device and language." },
-  { t: "Upload Apple Watch screenshots", d: "Build 12 ships the watch app in the same archive, so App Store Connect adds an Apple Watch tab: 416 × 496 px, up to 10 per language. Use the two sets from the Apple Watch section above (ID and EN, order 01 → 07)." },
+  { t: "Upload Apple Watch screenshots", d: "Build 12 ships the watch app in the same archive, so App Store Connect adds an Apple Watch tab: 416 × 496 px, up to 10 per language. Use the two banner sets from the Apple Watch section above (ID and EN, order 01 → 07)." },
   { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
   { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
 ];
@@ -308,27 +308,29 @@ export default function AppStoreKit() {
           ))}
 
           <h2 id="watch">Apple Watch screenshots</h2>
-          <p className="lead">iOS Build 12 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. Retaken 12 Nov 2026 with the new screen titles, tasbih sounds and wrist-motion counting. These are plain simulator captures from the Apple Watch Series 11 (46mm) — <b>416 × 496 px PNG</b>, a size the watch slot accepts; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07.</p>
-          {(["id", "en"] as const).map((lang) => (
-            <section className="group" id={`watch-${lang}`} key={`watch-${lang}`}>
-              <div className="ghead">
-                <div><h3>Apple Watch · {lang === "id" ? "Bahasa Indonesia" : "English (U.S.)"}</h3><p>416 × 496 px · {WATCH_SCREENS.length} images · {lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."}</p></div>
-                <button className="btn" data-zip={`watch-${lang}`} type="button">⬇ Download group (ZIP)</button>
-              </div>
-              <div className="grid ipad">
-                {WATCH_SCREENS.map((s) => {
-                  const file = `watch-${lang}-${s.key}.png`;
-                  return (
-                    <div className="tile" key={file}>
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={asset(`/app-store-kit/watch/${file}`)} alt={`${s.name} (${lang.toUpperCase()})`} loading="lazy" />
-                      <a href={asset(`/app-store-kit/watch/${file}`)} download data-file={file}>⬇ {s.name}</a>
-                    </div>
-                  );
-                })}
-              </div>
-            </section>
-          ))}
+          <p className="lead">iOS Build 13 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih with wrist-motion counting, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. Like the iPhone sets there are <b>caption banners</b> (upload these) and <b>plain captures</b> (for the website and social posts) — all exactly <b>416 × 496 px PNG</b>, captured on the Apple Watch Series 11 (46mm) simulator; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07. Retake after a watch-app change with <code>scripts/generate-watch-banners.py</code>.</p>
+          {(["banner", "plain"] as const).map((kind) =>
+            (["id", "en"] as const).map((lang) => (
+              <section className="group" id={`watch-${kind}-${lang}`} key={`watch-${kind}-${lang}`}>
+                <div className="ghead">
+                  <div><h3>{kind === "banner" ? "Banners" : "Plain screenshots"} · Apple Watch · {lang === "id" ? "Bahasa Indonesia" : "English (U.S.)"}</h3><p>416 × 496 px · {WATCH_SCREENS.length} images · {kind === "plain" ? "No captions. For the website and social posts, or if you prefer bare screens." : lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."}</p></div>
+                  <button className="btn" data-zip={`watch-${kind}-${lang}`} type="button">⬇ Download group (ZIP)</button>
+                </div>
+                <div className="grid ipad">
+                  {WATCH_SCREENS.map((s) => {
+                    const file = `${kind === "banner" ? "banner" : "watch"}-${lang}-${s.key}.png`;
+                    return (
+                      <div className="tile" key={file}>
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img src={asset(`/app-store-kit/watch/${file}`)} alt={`${s.name} (${lang.toUpperCase()})`} loading="lazy" />
+                        <a href={asset(`/app-store-kit/watch/${file}`)} download data-file={file}>⬇ {s.name}</a>
+                      </div>
+                    );
+                  })}
+                </div>
+              </section>
+            ))
+          )}
 
           <h2 id="creative">Header &amp; Search Results</h2>
           <p className="lead">The product page header and the search-results artwork (App Store Connect → Product Page Information → <b>Header and Search Results</b>). No transparency, as Apple requires. <b>✨ Updated 12 Nov 2026:</b> Kak Adam is now the sharper waving render (was a softer tennis pose). <b>11 Nov 2026:</b> livelier scene (sun rays, puffy clouds, golden-dome mosque, trees, bunting, balloons, butterflies and flowers); Baby Mo and Ais the same height, Kak Adam a little taller. <b>✨ New design:</b> the App Store shows the header zoomed and cropped, with the status bar and the back/share buttons on top and the app card over the bottom, so a headline at the top got cut off. The new art has <b>no text</b> (your app name and subtitle already sit right below it); Baby Mo, Kak Adam and Ais stand together in the centre band, with sky at the top and grass at the bottom, so nothing important is ever hidden. The ID and EN files are the same picture; upload them to both localizations. Upload the <b>ID</b> files to the Indonesian localization and the <b>EN</b> files to English (U.S.).</p>
