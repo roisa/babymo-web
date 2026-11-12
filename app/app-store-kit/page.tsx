@@ -79,6 +79,19 @@ for (const kind of ["banner", "raw"] as const) {
   }
 }
 
+/* iPhone Duo also takes landscape (2853 × 2007). The app runs upright, so these show the real
+   portrait game screens side by side on a landscape banner. Banners only. */
+for (const lang of ["id", "en"] as const) {
+  groups.push({
+    id: `banner-duol-${lang}`,
+    title: `Banners · iPhone Duo · landscape · ${lang === "id" ? "Bahasa Indonesia" : "English"}`,
+    size: "2853 × 2007 px",
+    note: "Use these instead of the portrait Duo set if you prefer landscape (upload one orientation per language). " +
+      (lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."),
+    files: SHOTS.map((k, i) => ({ src: `app-store-kit/banners/duol-${lang}-${k}.jpg`, thumb: `app-store-kit/thumbs/duol-${lang}-${k}.webp`, name: `${k} ${BANNER_NAMES[i]}` })),
+  });
+}
+
 const CREATIVE: { id: string; title: string; size: string; note: string; base: string; ext: string }[] = [
   { id: "header-16x9", title: "Header · 16:9 (recommended)", size: "5244 × 2950 px · PNG", ext: "png",
     note: "Product Page Information → Header and Search Results → Header → Upload. Apple can also reuse this one size in Search Results.", base: "header-16x9" },
@@ -185,7 +198,7 @@ h1{font-size:clamp(30px,5vw,44px);line-height:1.05}h2{font-size:26px;margin:44px
 .ghead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .ghead p{margin:2px 0 0;color:var(--soft);font-size:14px}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(118px,1fr));gap:12px}
-.grid.ipad{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}
+.grid.ipad{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.grid.land{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .grid.wide{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
 .tile{display:flex;flex-direction:column;gap:6px;min-width:0}
 .tile img{width:100%;height:auto;border-radius:10px;border:1px solid var(--line);background:#fff;display:block}
@@ -270,14 +283,14 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape, plus a <b>landscape</b> Duo banner set (2853 × 2007) further down: the app runs upright, so those show two real portrait game screens side by side. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
                 <div><h3>{g.title}</h3><p>{g.size} · {g.files.length} images · {g.note}</p></div>
                 <button className="btn" data-zip={g.id} type="button">⬇ Download group (ZIP)</button>
               </div>
-              <div className={`grid${g.id.includes("ipad") || g.id.includes("duo") ? " ipad" : ""}`}>
+              <div className={`grid${g.id.includes("duol") ? " land" : g.id.includes("ipad") || g.id.includes("duo") ? " ipad" : ""}`}>
                 {g.files.map((f) => (
                   <div className="tile" key={f.src}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
