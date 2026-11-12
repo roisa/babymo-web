@@ -308,7 +308,7 @@ export default function AppStoreKit() {
           ))}
 
           <h2 id="watch">Apple Watch screenshots</h2>
-          <p className="lead">iOS Build 12 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. These are plain simulator captures from the Apple Watch Series 11 (46mm) — <b>416 × 496 px PNG</b>, a size the watch slot accepts; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07.</p>
+          <p className="lead">iOS Build 12 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. Retaken 12 Nov 2026 with the new screen titles, tasbih sounds and wrist-motion counting. These are plain simulator captures from the Apple Watch Series 11 (46mm) — <b>416 × 496 px PNG</b>, a size the watch slot accepts; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07.</p>
           {(["id", "en"] as const).map((lang) => (
             <section className="group" id={`watch-${lang}`} key={`watch-${lang}`}>
               <div className="ghead">
