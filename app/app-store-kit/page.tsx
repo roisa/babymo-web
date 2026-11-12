@@ -57,6 +57,7 @@ const DEVICES = [
   { key: "iphone63", label: 'iPhone · Dynamic Island (medium display)', size: "1206 × 2622 px", upload: true },
   { key: "ipad", label: 'iPad 13" display', size: "2064 × 2752 px", upload: true },
   { key: "ipad2048", label: 'iPad 13" display · alternative size', size: "2048 × 2732 px", upload: false },
+  { key: "duo", label: "iPhone Duo", size: "2007 × 2853 px", upload: true },
 ] as const;
 const groups: Group[] = [];
 for (const kind of ["banner", "raw"] as const) {
@@ -157,7 +158,7 @@ const CHECK: { t: string; d: string }[] = [
 ];
 
 const NOTES: string[] = [
-  "\"File dimensions are invalid\" means the image doesn't match the slot. Check the sizes listed under the upload box: the iPhone slot (Dynamic Island, medium display) takes 1206 × 2622, the iPad 13\" slot takes 2064 × 2752 (or the 2048 × 2732 fallback set). Drop iPhone files only on the iPhone tab and iPad files only on the iPad tab.",
+  "\"File dimensions are invalid\" means the image doesn't match the slot. Check the sizes listed under the upload box: the iPhone slot (Dynamic Island, medium display) takes 1206 × 2622, the iPad 13\" slot takes 2064 × 2752 (or the 2048 × 2732 fallback set). The iPhone Duo slot takes 2007 × 2853. Drop iPhone files only on the iPhone tab, Duo files only on the iPhone Duo tab, and iPad files only on the iPad tab.",
   "Kids Category: the iOS build has a parental gate (a grown-up sum) in front of every link that leaves the app and every share button, collects no data and calls no third-party services, so it meets Guideline 1.3. Paste the review notes above when you re-submit.",
   "iPad: the app is portrait-only (iPhone and iPad) with UIRequiresFullScreen, and on iPad every game is scaled to fill the screen. The iPad screenshots were captured that way. If you later want landscape on iPad, remove UIRequiresFullScreen and add the landscape orientations back in Info.plist — and check the layouts first.",
   "Every new build needs a higher build number than the one Apple already has; Xcode bumps it on upload. Before archiving run git pull and npx cap sync ios so the app has the latest games.",
@@ -269,21 +270,21 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
+          <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
               <div className="ghead">
                 <div><h3>{g.title}</h3><p>{g.size} · {g.files.length} images · {g.note}</p></div>
                 <button className="btn" data-zip={g.id} type="button">⬇ Download group (ZIP)</button>
               </div>
-              <div className={`grid${g.id.includes("ipad") ? " ipad" : ""}`}>
+              <div className={`grid${g.id.includes("ipad") || g.id.includes("duo") ? " ipad" : ""}`}>
                 {g.files.map((f) => (
                   <div className="tile" key={f.src}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img src={asset("/" + f.thumb)} alt={f.name} loading="lazy" />
                     <a href={asset("/" + f.src)} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
                     {(() => { const k = f.src.split("/").pop()!.replace(/\.jpg$/, "").split("-").slice(2).join("-");
-                      return CHANGED.has(k) ? (<>
+                      return CHANGED.has(k) && !f.src.includes("/duo-") ? (<>
                         <span className="new">✨ Baru: {CHANGE_NOTE[k]}</span>
                         <a className="old" href={asset("/app-store-kit/prev/" + f.src.replace("app-store-kit/", ""))} download>↩ versi lama</a>
                       </>) : null; })()}
