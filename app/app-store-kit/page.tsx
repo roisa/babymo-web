@@ -37,6 +37,21 @@ const CHANGE_NOTE: Record<string, string> = {
   "05-wudhu": "New Wudhu step page with courtyard scene",
   "11-dream": "New illustrated Dreamtime start screen",
 };
+/* Apple Watch (iOS Build 12): the watch app ships inside the same iPhone
+   archive, so App Store Connect also shows an Apple Watch screenshot tab.
+   Captured 12 Nov 2026 on the Apple Watch Series 11 (46mm) simulator —
+   416 × 496 px, a size the watch slot accepts; Apple scales it for smaller
+   watches. Plain PNG straight from the simulator (no banners needed). */
+const WATCH_SCREENS: { key: string; name: string }[] = [
+  { key: "home", name: "01 Home — Mo greets" },
+  { key: "dua", name: "02 Du'a player (riding)" },
+  { key: "tasbih", name: "03 Tasbih" },
+  { key: "prayer", name: "04 Prayer times" },
+  { key: "ramadan", name: "05 Ramadan" },
+  { key: "pet", name: "06 Mimi the pet" },
+  { key: "duas", name: "07 All du'as" },
+];
+
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
 const DEVICES = [
   { key: "iphone63", label: 'iPhone · Dynamic Island (medium display)', size: "1206 × 2622 px", upload: true },
@@ -105,6 +120,7 @@ const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2
 • The child's nickname, stars and progress are stored only on the device.
 • Arabic read-aloud plays recordings bundled with the app (the device's speech voice is a fallback). There are no analytics or third-party SDKs, and every link out of the app and every share option is behind a parental gate (a maths question for grown-ups).
 • All games work offline.
+• The archive includes a small Apple Watch app: five daily du'as in the same recorded voice, a tasbih counter, on-device prayer times (the parent picks a city by hand — the watch never uses location), Ramadan countdowns and a simple pet check-in. Like the iPhone app it is fully offline, has no accounts and collects no data.
 
 Privacy policy: https://babymo.id/privacy/ · Support: https://babymo.id/support/`;
 
@@ -135,6 +151,7 @@ const CHECK: { t: string; d: string }[] = [
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
   { t: "Upload the header and search-results artwork", d: "Product Page Information → Header and Search Results, for both languages. Use the 16:9 header (or the 21:9 one) and the 3:2 search image from the section above." },
   { t: "Upload screenshots for iPhone (medium display) and iPad 13\"", d: "Both are required because the app runs on iPad too: iPhone 1206 × 2622, iPad 2064 × 2752 (2048 × 2732 as a fallback). Up to 10 per device and language." },
+  { t: "Upload Apple Watch screenshots", d: "Build 12 ships the watch app in the same archive, so App Store Connect adds an Apple Watch tab: 416 × 496 px, up to 10 per language. Use the two sets from the Apple Watch section above (ID and EN, order 01 → 07)." },
   { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
   { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
 ];
@@ -247,7 +264,7 @@ export default function AppStoreKit() {
             <a className="btn" href={asset("/app-store-kit/app-icon-1024.png")} download="baby-mo-app-icon-1024.png">App icon 1024 px</a>
           </div>
           <nav className="toc" aria-label="Sections">
-            <a href="#screens">Screenshots</a><a href="#creative">Header &amp; search</a><a href="#listing">Listing text</a><a href="#info">App information</a>
+            <a href="#screens">Screenshots</a><a href="#watch">Apple Watch</a><a href="#creative">Header &amp; search</a><a href="#listing">Listing text</a><a href="#info">App information</a>
             <a href="#age">Age rating</a><a href="#privacy">App privacy</a><a href="#review">Review notes</a><a href="#checklist">Checklist</a><a href="#notes">Heads-up</a>
           </nav>
 
@@ -272,6 +289,29 @@ export default function AppStoreKit() {
                       </>) : null; })()}
                   </div>
                 ))}
+              </div>
+            </section>
+          ))}
+
+          <h2 id="watch">Apple Watch screenshots</h2>
+          <p className="lead">iOS Build 12 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. These are plain simulator captures from the Apple Watch Series 11 (46mm) — <b>416 × 496 px PNG</b>, a size the watch slot accepts; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07.</p>
+          {(["id", "en"] as const).map((lang) => (
+            <section className="group" id={`watch-${lang}`} key={`watch-${lang}`}>
+              <div className="ghead">
+                <div><h3>Apple Watch · {lang === "id" ? "Bahasa Indonesia" : "English (U.S.)"}</h3><p>416 × 496 px · {WATCH_SCREENS.length} images · {lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."}</p></div>
+                <button className="btn" data-zip={`watch-${lang}`} type="button">⬇ Download group (ZIP)</button>
+              </div>
+              <div className="grid ipad">
+                {WATCH_SCREENS.map((s) => {
+                  const file = `watch-${lang}-${s.key}.png`;
+                  return (
+                    <div className="tile" key={file}>
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img src={asset(`/app-store-kit/watch/${file}`)} alt={`${s.name} (${lang.toUpperCase()})`} loading="lazy" />
+                      <a href={asset(`/app-store-kit/watch/${file}`)} download data-file={file}>⬇ {s.name}</a>
+                    </div>
+                  );
+                })}
               </div>
             </section>
           ))}
