@@ -13,6 +13,156 @@ import type { BlogPost } from "./types";
  */
 export const blogPosts: BlogPost[] = [
   {
+    "slug": "game-huruf-hijaiyah-anak",
+    "title": {
+      "id": "Game Huruf Hijaiyah: 28 Huruf dalam 9 Pelajaran untuk Anak (Gratis)",
+      "en": "Hijaiyah Letters Game: All 28 Arabic Letters in 9 Lessons for Kids (Free)"
+    },
+    "excerpt": {
+      "id": "Dengar suaranya, tulis mengikuti titik, lalu tangkap hurufnya di balon. 28 huruf hijaiyah dalam 9 pelajaran bertahap bersama Baby Mo — gratis, tanpa iklan.",
+      "en": "Hear each sound, trace it along the dots, then catch the letter in a balloon. The 28 hijaiyah letters in 9 step-by-step lessons with Baby Mo — free and ad-free."
+    },
+    "body": {
+      "id": "<p>Mengenal huruf hijaiyah adalah langkah pertama menuju membaca Al-Qur’an. <strong>Huruf Hijaiyah</strong> mengajak si kecil berkenalan dengan 28 huruf satu per satu: mendengar bunyinya, menuliskannya, lalu menemukannya lagi dalam permainan.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-hijaiyah-classic.html\" target=\"_blank\" rel=\"noopener\">▶ Main Huruf Hijaiyah sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-huruf-hijaiyah.mp4\" poster=\"/_img/games/video/id-huruf-hijaiyah.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Huruf Hijaiyah Baby Mo\"></video><figcaption>Dengar, tulis, lalu tangkap hurufnya 🔤</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li><strong>9 pelajaran bertahap</strong> — dari alif, ba, ta, tsa sampai ya.</li>\n  <li><strong>Dengar</strong> bunyi setiap huruf dan contoh katanya.</li>\n  <li><strong>Tulis</strong> huruf dengan jari mengikuti titik-titik.</li>\n  <li><strong>Tangkap Huruf</strong> — pilih balon berisi huruf yang disebut, lalu kuis kecil dan bintang.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Mengenal bentuk dan bunyi 28 huruf hijaiyah.</li>\n  <li>Motorik halus lewat menulis huruf.</li>\n  <li>Mendengar dan membedakan bunyi yang mirip.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Satu pelajaran per hari sudah cukup — ulangi besok sebelum lanjut.</li>\n  <li>Ucapkan bunyinya bersama, lalu cari huruf yang sama di mushaf atau buku iqra.</li>\n  <li>Rayakan setiap huruf baru; jangan menunggu semuanya hafal.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ bersabda: “Sebaik-baik kalian adalah orang yang belajar Al-Qur’an dan mengajarkannya.” (HR. Bukhari 5027)</blockquote>\n\n<p>Sudah kenal hurufnya? Jelajahi <a href=\"/_/blog/game-belajar-hijaiyah-anak/\">Pulau Hijaiyah</a> atau susun kata pertama di <a href=\"/_/blog/game-kata-islam-menyusun-kata-arab/\">Kata Islam</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Knowing the hijaiyah letters is the first step towards reading the Qur’an. <strong>Hijaiyah Letters</strong> introduces little ones to the 28 letters one by one: hearing the sound, tracing it, then finding it again in a game.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-hijaiyah-classic.html\" target=\"_blank\" rel=\"noopener\">▶ Play Hijaiyah Letters now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-huruf-hijaiyah.mp4\" poster=\"/_img/games/video/en-huruf-hijaiyah.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Baby Mo Hijaiyah Letters game video\"></video><figcaption>Listen, trace, then catch the letter 🔤</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li><strong>9 step-by-step lessons</strong> — from alif, ba, ta, tha all the way to ya.</li>\n  <li><strong>Listen</strong> to each letter’s sound and an example word.</li>\n  <li><strong>Trace</strong> the letter with a finger along the dots.</li>\n  <li><strong>Letter Catch</strong> — pick the balloon with the letter you hear, then a little quiz and stars.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>Recognising the shapes and sounds of the 28 letters.</li>\n  <li>Fine motor skills through tracing.</li>\n  <li>Listening for sounds that are close to each other.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>One lesson a day is plenty — repeat it tomorrow before moving on.</li>\n  <li>Say the sounds together, then find the same letter in a mushaf or iqra book.</li>\n  <li>Celebrate every new letter; don’t wait until they know them all.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ said: “The best of you are those who learn the Qur’an and teach it.” (Bukhari 5027)</blockquote>\n\n<p>Know the letters? Explore <a href=\"/_/blog/game-belajar-hijaiyah-anak/\">Hijaiyah Island</a> or build first words in <a href=\"/_/blog/game-kata-islam-menyusun-kata-arab/\">Islamic Words</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "hijaiyah",
+      "huruf-arab",
+      "huruf-hijaiyah"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
+    "slug": "game-sahabat-hewan-mo",
+    "title": {
+      "id": "Sahabat Hewan Mo: Game Merawat Hewan untuk Belajar Akhlak (Gratis)",
+      "en": "Mo's Animal Friends: An Animal-Care Game That Teaches Kindness (Free)"
+    },
+    "excerpt": {
+      "id": "Beri makan dengan Bismillah, beri minum, bersihkan, dan elus pelan-pelan. Game peternakan kecil Baby Mo yang mengajarkan kasih sayang kepada hewan.",
+      "en": "Feed with Bismillah, give water, clean up and stroke gently. Baby Mo’s little farm game teaches children kindness to animals."
+    },
+    "body": {
+      "id": "<p>Anak-anak sangat menyukai hewan — dan itu kesempatan emas untuk belajar akhlak. Di <strong>Sahabat Hewan Mo</strong>, si kecil merawat kucing Mimi dan hewan-hewan di peternakan kecil Baby Mo, satu per satu, dengan lembut.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-sahabat-hewan.html\" target=\"_blank\" rel=\"noopener\">▶ Main Sahabat Hewan Mo sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-sahabat-hewan.mp4\" poster=\"/_img/games/video/id-sahabat-hewan.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Sahabat Hewan Mo\"></video><figcaption>Bismillah, lalu beri makan dengan lembut 🐱</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li><strong>Beri makan</strong> sambil mengucap Bismillah.</li>\n  <li><strong>Beri minum</strong>, <strong>bersihkan</strong>, dan <strong>elus pelan-pelan</strong>.</li>\n  <li>Ambil telur dan susu, lalu <strong>berbagi</strong> dengan keluarga dan tetangga.</li>\n  <li>Buka buku sahabat berisi kisah dan adab terhadap hewan.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Kasih sayang dan kelembutan kepada makhluk Allah.</li>\n  <li>Tanggung jawab merawat setiap hari.</li>\n  <li>Kebiasaan mengucap Bismillah sebelum memberi makan.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Tanyakan: “Kalau kamu haus, rasanya bagaimana?” supaya anak memahami perasaan hewan.</li>\n  <li>Ajak memberi makan kucing atau burung di sekitar rumah setelah bermain.</li>\n  <li>Ingatkan: elus pelan-pelan, tidak memukul, tidak menarik ekor.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ bersabda tentang seorang lelaki yang memberi minum anjing yang kehausan: “Allah berterima kasih kepadanya dan mengampuninya.” Para sahabat bertanya apakah berbuat baik kepada hewan juga berpahala. Beliau menjawab: “Pada setiap makhluk hidup ada pahala.” (HR. Bukhari 2363, Muslim 2244)</blockquote>\n\n<p>Lanjutkan dengan berkebun di <a href=\"/_/blog/game-kebun-kecil-ais/\">Kebun Kecil Ais</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Children love animals — a golden chance to learn good character. In <strong>Mo’s Animal Friends</strong>, little ones look after Mimi the cat and the animals on Baby Mo’s small farm, one by one, gently.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-sahabat-hewan.html\" target=\"_blank\" rel=\"noopener\">▶ Play Mo's Animal Friends now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-sahabat-hewan.mp4\" poster=\"/_img/games/video/en-sahabat-hewan.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Mo's Animal Friends game video\"></video><figcaption>Bismillah, then feed them gently 🐱</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li><strong>Feed</strong> the animals while saying Bismillah.</li>\n  <li><strong>Give water</strong>, <strong>clean up</strong> and <strong>stroke gently</strong>.</li>\n  <li>Collect eggs and milk, then <strong>share</strong> with family and neighbours.</li>\n  <li>Open the friends book with stories and manners towards animals.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>Kindness and gentleness towards Allah’s creatures.</li>\n  <li>Responsibility for daily care.</li>\n  <li>The habit of saying Bismillah before feeding.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>Ask: “How does it feel when you’re thirsty?” to help children understand animals.</li>\n  <li>After playing, feed a cat or birds near your home together.</li>\n  <li>Remind them: stroke gently, no hitting, no pulling tails.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ told of a man who gave water to a thirsty dog: “Allah thanked him and forgave him.” The companions asked whether there is reward in kindness to animals. He said: “There is a reward for every living creature.” (Bukhari 2363, Muslim 2244)</blockquote>\n\n<p>Next, try gardening in <a href=\"/_/blog/game-kebun-kecil-ais/\">Ais's Little Garden</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "akhlak",
+      "hewan",
+      "sahabat-hewan"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
+    "slug": "game-kebun-kecil-ais",
+    "title": {
+      "id": "Kebun Kecil Ais: Game Berkebun yang Mengajarkan Sabar dan Berbagi (Gratis)",
+      "en": "Ais's Little Garden: A Gardening Game About Patience and Sharing (Free)"
+    },
+    "excerpt": {
+      "id": "Tanam benih, siram, cabut rumput, panen tomat dan stroberi, lalu bagikan hasilnya. Game berkebun bersama Ais — gratis dan tanpa iklan.",
+      "en": "Plant seeds, water, pull the weeds, harvest tomatoes and strawberries, then share them. A gardening game with Ais — free and ad-free."
+    },
+    "body": {
+      "id": "<p>Menanam mengajarkan sesuatu yang sulit diajarkan dengan kata-kata: <em>sabar</em>. Di <strong>Kebun Kecil Ais</strong>, si kecil membantu Ais merawat kebunnya dari benih sampai panen — lalu belajar bahwa hasil terbaik adalah yang dibagikan.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-kebun-ais.html\" target=\"_blank\" rel=\"noopener\">▶ Main Kebun Kecil Ais sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-kebun-ais.mp4\" poster=\"/_img/games/video/id-kebun-ais.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Kebun Kecil Ais\"></video><figcaption>Tanam, siram, panen, lalu berbagi 🌱</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li>Pilih petak dan <strong>tanam</strong> benih.</li>\n  <li><strong>Siram</strong> setiap hari dan <strong>cabut</strong> rumput liar.</li>\n  <li><strong>Panen</strong> tomat, stroberi, bunga matahari, dan lainnya.</li>\n  <li><strong>Berbagi</strong> hasil panen dan kumpulkan halaman di buku kebun.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Sabar menunggu tanaman tumbuh.</li>\n  <li>Merawat sesuatu setiap hari.</li>\n  <li>Senang berbagi dengan orang lain.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Tanam biji kacang hijau di kapas bersama anak dan amati setiap hari.</li>\n  <li>Tanyakan: “Hasil panennya mau dibagi ke siapa?”</li>\n  <li>Hubungkan dengan rasa syukur: hujan, matahari, dan tanah adalah nikmat Allah.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ bersabda: “Tidaklah seorang muslim menanam pohon atau tanaman, lalu dimakan oleh burung, manusia, atau hewan, melainkan menjadi sedekah baginya.” (HR. Bukhari 2320, Muslim 1553)</blockquote>\n\n<p>Lanjutkan merawat hewan di <a href=\"/_/blog/game-sahabat-hewan-mo/\">Sahabat Hewan Mo</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Gardening teaches something that is hard to teach with words: <em>patience</em>. In <strong>Ais’s Little Garden</strong>, little ones help Ais look after her garden from seed to harvest — and learn that the best harvest is the one you share.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-kebun-ais.html\" target=\"_blank\" rel=\"noopener\">▶ Play Ais's Little Garden now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-kebun-ais.mp4\" poster=\"/_img/games/video/en-kebun-ais.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Ais's Little Garden game video\"></video><figcaption>Plant, water, harvest, then share 🌱</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li>Choose a bed and <strong>plant</strong> the seeds.</li>\n  <li><strong>Water</strong> every day and <strong>pull</strong> the weeds.</li>\n  <li><strong>Harvest</strong> tomatoes, strawberries, sunflowers and more.</li>\n  <li><strong>Share</strong> the harvest and fill the garden book.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>Patience while plants grow.</li>\n  <li>Caring for something every day.</li>\n  <li>Enjoying sharing with others.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>Grow mung beans on cotton wool together and look at them every day.</li>\n  <li>Ask: “Who shall we share the harvest with?”</li>\n  <li>Link it to gratitude: rain, sunshine and soil are gifts from Allah.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ said: “No Muslim plants a tree or sows a crop, and then a bird, a person or an animal eats from it, except that it is charity for him.” (Bukhari 2320, Muslim 1553)</blockquote>\n\n<p>Next, look after the animals in <a href=\"/_/blog/game-sahabat-hewan-mo/\">Mo's Animal Friends</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "akhlak",
+      "berkebun",
+      "kebun-ais"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
+    "slug": "game-akademi-tenis-kak-adam",
+    "title": {
+      "id": "Akademi Tenis Kak Adam: Game Tenis Langkah demi Langkah untuk Anak (Gratis)",
+      "en": "Kak Adam's Tennis Academy: A Step-by-Step Tennis Game for Kids (Free)"
+    },
+    "excerpt": {
+      "id": "Tunggu pantulan, forehand, backhand dua tangan, servis, sampai menghitung skor — belajar dasar tenis bersama Kak Adam, dengan bintang di setiap pelajaran.",
+      "en": "Wait for the bounce, forehand, two-handed backhand, serving and scoring — learn tennis basics with Kak Adam, with stars for every lesson."
+    },
+    "body": {
+      "id": "<p>Kak Adam suka sekali tenis — dan ia ingin mengajak adik-adiknya ikut berlatih. <strong>Akademi Tenis Kak Adam</strong> memperkenalkan dasar-dasar tenis lewat pelajaran pendek: lihat bolanya, tunggu pantulannya, lalu pukul di saat yang tepat.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-tenis-adam.html\" target=\"_blank\" rel=\"noopener\">▶ Main Akademi Tenis sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-tenis-adam.mp4\" poster=\"/_img/games/video/id-tenis-adam.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Akademi Tenis Kak Adam\"></video><figcaption>Forehand atau backhand? Pukul bersama Kak Adam 🎾</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li><strong>Tunggu pantulan</strong> — belajar memperhatikan bola.</li>\n  <li><strong>Forehand</strong> dan <strong>backhand dua tangan</strong>: ketuk sisi yang benar saat bola datang.</li>\n  <li><strong>Servis</strong> dan <strong>menghitung skor</strong> tenis.</li>\n  <li>Kumpulkan bintang dan buka pelajaran berikutnya sampai sertifikat.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Koordinasi mata dan tangan.</li>\n  <li>Fokus dan ketepatan waktu.</li>\n  <li>Sportivitas: kalah dan menang sama-sama bagian dari belajar.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Setelah bermain, ajak anak bermain lempar tangkap bola sungguhan.</li>\n  <li>Puji usahanya, bukan hanya hasilnya.</li>\n  <li>Ingatkan: sebelum olahraga baca Bismillah, sesudahnya Alhamdulillah.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ bersabda: “Mukmin yang kuat lebih baik dan lebih dicintai Allah daripada mukmin yang lemah, dan pada keduanya ada kebaikan.” (HR. Muslim 2664)</blockquote>\n\n<p>Masih ingin bergerak? Coba <a href=\"/_/blog/game-forehand-beat-ritme-anak/\">Forehand Beat</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Kak Adam loves tennis — and he wants his little brother and sister to practise too. <strong>Kak Adam’s Tennis Academy</strong> introduces the basics in short lessons: watch the ball, wait for the bounce, then hit at just the right moment.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-tenis-adam.html\" target=\"_blank\" rel=\"noopener\">▶ Play the Tennis Academy now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-tenis-adam.mp4\" poster=\"/_img/games/video/en-tenis-adam.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Kak Adam's Tennis Academy game video\"></video><figcaption>Forehand or backhand? Hit it with Kak Adam 🎾</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li><strong>Wait for the bounce</strong> — learning to watch the ball.</li>\n  <li><strong>Forehand</strong> and <strong>two-handed backhand</strong>: tap the right side as the ball arrives.</li>\n  <li><strong>Serving</strong> and <strong>keeping score</strong> in tennis.</li>\n  <li>Collect stars and unlock the next lesson, all the way to a certificate.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>Hand–eye coordination.</li>\n  <li>Focus and timing.</li>\n  <li>Good sportsmanship: winning and losing are both part of learning.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>After playing, have a real game of throw-and-catch.</li>\n  <li>Praise the effort, not only the result.</li>\n  <li>Remind them: Bismillah before sport, Alhamdulillah after.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ said: “The strong believer is better and more beloved to Allah than the weak believer, while there is good in both.” (Muslim 2664)</blockquote>\n\n<p>Want to keep moving? Try <a href=\"/_/blog/game-forehand-beat-ritme-anak/\">Forehand Beat</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "olahraga",
+      "tenis",
+      "kak-adam"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
+    "slug": "game-doa-ramadan-anak",
+    "title": {
+      "id": "Game Doa Ramadan untuk Anak: 11 Doa dengan Suara Arab Asli (Gratis)",
+      "en": "Ramadan Du'as Game for Kids: 11 Du'as with Real Arabic Audio (Free)"
+    },
+    "excerpt": {
+      "id": "Doa melihat hilal, niat puasa, berbuka, Lailatul Qadr, zakat, sampai takbir Idul Fitri — 11 doa Ramadan dengan suara, arti, dan kata yang menyala satu per satu.",
+      "en": "Seeing the crescent, the intention to fast, breaking the fast, Laylatul Qadr, zakat and the Eid takbir — 11 Ramadan du'as with audio, meaning and words that light up one by one."
+    },
+    "body": {
+      "id": "<p>Ramadan adalah bulan yang paling ditunggu anak-anak: sahur bersama, berbuka, tarawih, lalu Lebaran. <strong>Doa Ramadan</strong> menemani setiap momennya dengan doa yang tepat — dibacakan dengan suara Arab asli dan kata yang menyala satu per satu.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-doa-harian.html?series=ramadan\" target=\"_blank\" rel=\"noopener\">▶ Main Doa Ramadan sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-doa-ramadan.mp4\" poster=\"/_img/games/video/id-doa-ramadan.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Doa Ramadan Baby Mo\"></video><figcaption>Doa berbuka, dibacakan kata demi kata 🌙</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li><strong>11 doa Ramadan</strong>: melihat hilal, niat puasa, “aku sedang puasa”, berbuka, sesudah berbuka, untuk tuan rumah, witir, Lailatul Qadr, zakat, takbir, dan ucapan Id.</li>\n  <li>Dengarkan suaranya — kata menyala mengikuti bacaan, bisa diperlambat.</li>\n  <li>Ketuk tombol aksi dan ikuti adegannya bersama Mo dan keluarganya.</li>\n  <li>Kumpulkan bintang di setiap doa.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Mengenal doa-doa Ramadan sejak dini.</li>\n  <li>Memahami arti doa yang diucapkan.</li>\n  <li>Menyambut Ramadan dengan gembira.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Pelajari satu doa sebelum momennya: doa berbuka beberapa hari sebelum Ramadan.</li>\n  <li>Baca doa berbuka bersama saat azan Maghrib.</li>\n  <li>Lihat juga <a href=\"/_/blog/persiapan-ramadan-untuk-anak/\">persiapan Ramadan untuk anak</a>.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ bersabda: “Barang siapa berpuasa Ramadan karena iman dan mengharap pahala, diampuni dosa-dosanya yang telah lalu.” (HR. Bukhari 38, Muslim 760)</blockquote>\n\n<p>Ingin doa sehari-hari juga? Buka <a href=\"/_/blog/game-doa-harian-anak/\">Doa Harian</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Ramadan is the month children look forward to most: suhoor together, iftar, tarawih and then Eid. <strong>Ramadan Du'as</strong> brings the right du'a to every moment — read with real Arabic audio while each word lights up.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-doa-harian.html?series=ramadan\" target=\"_blank\" rel=\"noopener\">▶ Play Ramadan Du'as now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-doa-ramadan.mp4\" poster=\"/_img/games/video/en-doa-ramadan.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Baby Mo Ramadan Du'as game video\"></video><figcaption>The iftar du'a, word by word 🌙</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li><strong>11 Ramadan du'as</strong>: seeing the crescent, the intention to fast, “I am fasting”, breaking the fast, after iftar, for the host, witr, Laylatul Qadr, zakat, the takbir and the Eid greeting.</li>\n  <li>Listen — each word lights up as it is read, and you can slow it down.</li>\n  <li>Tap the action button and follow the scene with Mo and his family.</li>\n  <li>Collect stars for every du'a.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>Getting to know the Ramadan du'as early.</li>\n  <li>Understanding what each du'a means.</li>\n  <li>Welcoming Ramadan with joy.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>Learn a du'a before its moment: the iftar du'a a few days before Ramadan.</li>\n  <li>Say the iftar du'a together at the Maghrib adhan.</li>\n  <li>See also <a href=\"/_/blog/persiapan-ramadan-untuk-anak/\">getting children ready for Ramadan</a>.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ said: “Whoever fasts Ramadan out of faith and hoping for reward, his past sins are forgiven.” (Bukhari 38, Muslim 760)</blockquote>\n\n<p>Want the everyday du'as too? Open <a href=\"/_/blog/game-doa-harian-anak/\">Daily Du'as</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "doa",
+      "ramadan",
+      "puasa"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
+    "slug": "game-tasbih-sebelum-tidur-anak",
+    "title": {
+      "id": "Tasbih Sebelum Tidur untuk Anak: 33 · 33 · 34 bersama Baby Mo (Gratis)",
+      "en": "Bedtime Tasbih for Kids: 33 · 33 · 34 with Baby Mo (Free)"
+    },
+    "excerpt": {
+      "id": "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — ketuk manik demi manik bersama Baby Mo, dengan versi singkat untuk si kecil. Rutinitas malam yang menenangkan.",
+      "en": "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — tap bead by bead with Baby Mo, with a short version for little ones. A calming bedtime routine."
+    },
+    "body": {
+      "id": "<p>Menjelang tidur, anak butuh sesuatu yang menenangkan. <strong>Tasbih Sebelum Tidur</strong> mengajak si kecil berdzikir bersama Baby Mo: ketuk untuk menghitung, dengar bacaannya, dan lihat lingkaran tasbih terisi pelan-pelan.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-doa-harian.html?doa=bedtime_tasbih\" target=\"_blank\" rel=\"noopener\">▶ Main Tasbih Sebelum Tidur sekarang</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/id-tasbih.mp4\" poster=\"/_img/games/video/id-tasbih.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Video game Tasbih Sebelum Tidur\"></video><figcaption>Ketuk, hitung, dan tenang 📿</figcaption></figure>\n\n<h2>Apa yang dimainkan?</h2>\n\n<ul>\n  <li><strong>Subhanallah 33×</strong>, <strong>Alhamdulillah 33×</strong>, <strong>Allahu akbar 34×</strong>.</li>\n  <li>Ketuk layar untuk setiap hitungan — lingkaran tasbih terisi.</li>\n  <li><strong>Versi singkat</strong> untuk anak yang masih kecil: cukup satu kali setiap bacaan.</li>\n  <li>Selesai? Lanjutkan dengan doa sebelum tidur.</li>\n</ul>\n\n<h2>Apa yang dilatih?</h2>\n\n<ul>\n  <li>Kebiasaan dzikir sebelum tidur.</li>\n  <li>Belajar berhitung sampai 33.</li>\n  <li>Menenangkan diri sebelum tidur.</li>\n</ul>\n\n<h2>Tips untuk Ayah & Bunda</h2>\n\n<ul>\n  <li>Lakukan di tempat tidur dengan lampu redup.</li>\n  <li>Mulai dengan versi singkat, lalu naik pelan-pelan.</li>\n  <li>Contohkan: anak paling mudah meniru dzikir orang tuanya.</li>\n</ul>\n\n<blockquote>Rasulullah ﷺ mengajarkan kepada Ali dan Fatimah: “Apabila kalian berdua hendak tidur, bertakbirlah 34 kali, bertasbihlah 33 kali, dan bertahmidlah 33 kali. Itu lebih baik bagi kalian daripada seorang pembantu.” (HR. Bukhari 3705, Muslim 2727)</blockquote>\n\n<p>Bagian dari rutinitas malam: lanjutkan dengan <a href=\"/_/blog/game-dreamtime-rutinitas-tidur-anak/\">Baby Mo Dreamtime</a>. Lihat juga <a href=\"/_/permainan/\">semua game Baby Mo</a> — semuanya juga ada di <a href=\"/app/\">aplikasi Baby Mo</a> untuk iPhone dan iPad.</p>",
+      "en": "<p>Before sleep, children need something calming. <strong>Bedtime Tasbih</strong> invites little ones to make dhikr with Baby Mo: tap to count, hear the words, and watch the tasbih circle slowly fill up.</p>\n\n<p><a class=\"gmp-play\" href=\"https://play.babymo.id/babymo-doa-harian.html?doa=bedtime_tasbih\" target=\"_blank\" rel=\"noopener\">▶ Play Bedtime Tasbih now</a></p>\n\n<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>\n\n<figure class=\"gmp-shot\"><video src=\"/_img/games/video/en-tasbih.mp4\" poster=\"/_img/games/video/en-tasbih.webp\" autoplay muted loop playsinline preload=\"metadata\" width=\"540\" height=\"960\" aria-label=\"Bedtime Tasbih game video\"></video><figcaption>Tap, count and calm down 📿</figcaption></figure>\n\n<h2>What children do</h2>\n\n<ul>\n  <li><strong>Subhanallah 33×</strong>, <strong>Alhamdulillah 33×</strong>, <strong>Allahu akbar 34×</strong>.</li>\n  <li>Tap the screen for every count — the tasbih circle fills up.</li>\n  <li>A <strong>short version</strong> for the youngest: just once for each phrase.</li>\n  <li>Done? Carry on with the du'a before sleeping.</li>\n</ul>\n\n<h2>What it builds</h2>\n\n<ul>\n  <li>A habit of dhikr before sleep.</li>\n  <li>Counting up to 33.</li>\n  <li>Calming down at bedtime.</li>\n</ul>\n\n<h2>Tips for parents</h2>\n\n<ul>\n  <li>Do it in bed with the lights dimmed.</li>\n  <li>Start with the short version, then build up slowly.</li>\n  <li>Lead by example: children copy their parents’ dhikr most easily.</li>\n</ul>\n\n<blockquote>The Prophet ﷺ taught Ali and Fatimah: “When you go to bed, say Allahu akbar 34 times, Subhanallah 33 times and Alhamdulillah 33 times. That is better for you than a servant.” (Bukhari 3705, Muslim 2727)</blockquote>\n\n<p>Part of the bedtime routine: carry on with <a href=\"/_/blog/game-dreamtime-rutinitas-tidur-anak/\">Baby Mo Dreamtime</a>. See <a href=\"/_/permainan/\">all Baby Mo games</a> — they are all in the <a href=\"/app/\">Baby Mo app</a> for iPhone and iPad too.</p>"
+    },
+    "tags": [
+      "game",
+      "dzikir",
+      "tidur",
+      "tasbih"
+    ],
+    "published": "2026-11-13",
+    "updated": "2026-11-13",
+    "readingTimeMin": 2,
+    "author": "tim-baby-mo"
+  },
+  {
     slug: "game-kenalan-baby-mo-puzzle",
     title: {
       id: "Kenalan Baby Mo: Game Puzzle Pertama untuk Balita (Gratis)",
@@ -27,9 +177,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener">▶ Main Kenalan Baby Mo sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/puzzle.webp" alt="Tampilan game Kenalan Baby Mo dengan petak-petak puzzle" width="540" height="1080" loading="lazy"><figcaption>Ketuk petaknya, temukan Baby Mo 🧩</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-puzzle.mp4" poster="/_img/games/video/id-puzzle.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Kenalan Baby Mo dengan petak-petak puzzle"></video><figcaption>Ketuk petaknya, temukan Baby Mo 🧩</figcaption></figure>
 
 <h2>Apa yang dilatih?</h2>
 
@@ -66,9 +216,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle.html" target="_blank" rel="noopener">▶ Play Meet Baby Mo now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/puzzle.webp" alt="Meet Baby Mo game screen with puzzle tiles" width="540" height="1080" loading="lazy"><figcaption>Tap the tiles, find Baby Mo 🧩</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-puzzle.mp4" poster="/_img/games/video/en-puzzle.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Meet Baby Mo game screen with puzzle tiles"></video><figcaption>Tap the tiles, find Baby Mo 🧩</figcaption></figure>
 
 <h2>What it builds</h2>
 
@@ -104,39 +254,39 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "puzzle", "balita", "kenalan-baby-mo"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
   {
     slug: "game-doa-harian-anak",
     title: {
-      id: "Game Doa Harian Anak: 6 Doa dengan Audio Arab Asli (Gratis)",
-      en: "Daily Du'as Game for Kids: 6 Du'as with Real Arabic Audio (Free)",
+      id: "Game Doa Harian Anak: 14 Doa dengan Audio Arab Asli (Gratis)",
+      en: "Daily Du'as Game for Kids: 14 Du'as with Real Arabic Audio (Free)",
     },
     excerpt: {
-      id: "Enam doa sehari-hari — bangun tidur, kamar mandi, makan, belajar, keluar rumah, dan tidur — lengkap dengan audio, arti, dan kuis kecil. Gratis dan tanpa iklan.",
-      en: "Six everyday du'as — waking up, the bathroom, eating, studying, leaving home and sleeping — with audio, meanings and a little quiz. Free and ad-free.",
+      id: "14 doa sehari-hari dari bangun tidur sampai tidur lagi — kata menyala mengikuti suara Arab asli, bisa diperlambat, lengkap dengan arti dan kuis kecil. Gratis dan tanpa iklan.",
+      en: "14 everyday du'as from waking up to bedtime — each word lights up with the real Arabic audio, can be slowed down, with meanings and a little quiz. Free and ad-free.",
     },
     body: {
       id: `<p>Anak menghafal doa paling mudah lewat <em>telinga</em>, bukan lewat tulisan. <strong>Doa Harian</strong> mengajak si kecil mendengar, mengulang, lalu menebak doa untuk setiap momen dalam sehari — dari membuka mata di pagi hari sampai memejamkannya lagi di malam hari.</p>
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">▶ Main Doa Harian sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/doa-harian.webp" alt="Tampilan game Doa Harian Baby Mo dengan kartu doa" width="540" height="1080" loading="lazy"><figcaption>Dengar, ulangi, dan uji hafalan 🤲</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-doa-harian.mp4" poster="/_img/games/video/id-doa-harian.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Doa Harian Baby Mo dengan kartu doa"></video><figcaption>Dengar, ulangi, dan uji hafalan 🤲</figcaption></figure>
 
-<h2>Enam doa dalam satu hari</h2>
+<h2>14 doa dalam satu hari</h2>
 
 <ul>
-  <li>Doa bangun tidur</li>
-  <li>Doa masuk kamar mandi</li>
-  <li>Doa sebelum makan</li>
-  <li>Doa sebelum belajar</li>
-  <li>Doa keluar rumah</li>
-  <li>Doa sebelum tidur</li>
+  <li><strong>Pagi:</strong> doa bangun tidur, masuk dan keluar kamar mandi, keluar rumah.</li>
+  <li><strong>Siang:</strong> doa naik kendaraan, belajar, sebelum makan, sesudah makan.</li>
+  <li><strong>Sore:</strong> doa ketika hujan, masuk rumah, dzikir sore.</li>
+  <li><strong>Malam:</strong> doa untuk orang tua, tasbih sebelum tidur, doa sebelum tidur.</li>
 </ul>
+
+<p>Setiap kata Arab menyala satu per satu mengikuti suaranya, bisa diperlambat (sampai 0,5×) dan diulang 2×. Ada juga seri <a href="/_/blog/game-doa-ramadan-anak/">Doa Ramadan</a> dengan 11 doa.</p>
 
 <h2>Apa yang dilatih?</h2>
 
@@ -158,7 +308,7 @@ export const blogPosts: BlogPost[] = [
 
 <ul>
   <li>Ucapkan doa dengan suara terdengar di depan anak. Anak meniru apa yang ia dengar setiap hari.</li>
-  <li>Jangan buru-buru: satu doa yang benar-benar dihafal lebih baik daripada enam yang setengah-setengah.</li>
+  <li>Jangan buru-buru: satu doa yang benar-benar dihafal lebih baik daripada banyak doa yang setengah-setengah.</li>
   <li>Lihat juga daftar <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">doa yang perlu dikenal anak sebelum usia 7</a>.</li>
 </ul>
 
@@ -169,20 +319,20 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-doa-harian.html" target="_blank" rel="noopener">▶ Play Daily Du'as now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/doa-harian.webp" alt="Baby Mo Daily Du'as game screen with du'a cards" width="540" height="1080" loading="lazy"><figcaption>Listen, repeat and test yourself 🤲</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-doa-harian.mp4" poster="/_img/games/video/en-doa-harian.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Baby Mo Daily Du'as game screen with du'a cards"></video><figcaption>Listen, repeat and test yourself 🤲</figcaption></figure>
 
-<h2>Six du'as through the day</h2>
+<h2>14 du'as through the day</h2>
 
 <ul>
-  <li>Waking up</li>
-  <li>Entering the bathroom</li>
-  <li>Before eating</li>
-  <li>Before studying</li>
-  <li>Leaving home</li>
-  <li>Before sleeping</li>
+  <li><strong>Morning:</strong> waking up, entering and leaving the bathroom, leaving home.</li>
+  <li><strong>Daytime:</strong> riding, studying, before eating, after eating.</li>
+  <li><strong>Afternoon:</strong> when it rains, coming home, the evening dhikr.</li>
+  <li><strong>Night:</strong> the du'a for parents, the bedtime tasbih, before sleeping.</li>
 </ul>
+
+<p>Each Arabic word lights up as it is read, and you can slow it down (to 0.5×) or repeat it twice. There is also a <a href="/_/blog/game-doa-ramadan-anak/">Ramadan Du'as</a> series with 11 du'as.</p>
 
 <h2>What it builds</h2>
 
@@ -204,7 +354,7 @@ export const blogPosts: BlogPost[] = [
 
 <ul>
   <li>Say du'as out loud in front of your child. Children copy what they hear every day.</li>
-  <li>Don't rush: one du'a truly memorised beats six half-learned ones.</li>
+  <li>Don't rush: one du'a truly memorised beats many half-learned ones.</li>
   <li>See also the <a href="/_/blog/doa-harian-anak-sebelum-usia-7/">du'as every child should know before age 7</a>.</li>
 </ul>
 
@@ -214,7 +364,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "doa", "doa-harian", "edukasi-anak"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -233,9 +383,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">▶ Main Dua Journey sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/dua-journey.webp" alt="Tampilan game Dua Journey dengan kartu doa dan situasi" width="540" height="1080" loading="lazy"><figcaption>Doa yang mana untuk momen ini? 🃏</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-dua-journey.mp4" poster="/_img/games/video/id-dua-journey.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Dua Journey dengan kartu doa dan situasi"></video><figcaption>Doa yang mana untuk momen ini? 🃏</figcaption></figure>
 
 <h2>Tiga tingkat kesulitan</h2>
 
@@ -276,9 +426,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-dua-game.html" target="_blank" rel="noopener">▶ Play Dua Journey now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/dua-journey.webp" alt="Dua Journey game screen with du'a and situation cards" width="540" height="1080" loading="lazy"><figcaption>Which du'a fits this moment? 🃏</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-dua-journey.mp4" poster="/_img/games/video/en-dua-journey.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Dua Journey game screen with du'a and situation cards"></video><figcaption>Which du'a fits this moment? 🃏</figcaption></figure>
 
 <h2>Three levels</h2>
 
@@ -318,7 +468,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "doa", "matching", "edukasi-anak"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
@@ -337,9 +487,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">▶ Main Kata Islam sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/kata-islam.webp" alt="Tampilan game Kata Islam: menyusun huruf Arab menjadi kata" width="540" height="1080" loading="lazy"><figcaption>Huruf demi huruf, jadilah kata 🔤</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-kata-islam.mp4" poster="/_img/games/video/id-kata-islam.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Kata Islam: menyusun huruf Arab menjadi kata"></video><figcaption>Huruf demi huruf, jadilah kata 🔤</figcaption></figure>
 
 <h2>21 kata dalam tiga tema</h2>
 
@@ -380,9 +530,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-arabic-spelling.html" target="_blank" rel="noopener">▶ Play Islamic Words now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/kata-islam.webp" alt="Islamic Words game: arranging Arabic letters into a word" width="540" height="1080" loading="lazy"><figcaption>Letter by letter, a word appears 🔤</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-kata-islam.mp4" poster="/_img/games/video/en-kata-islam.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Islamic Words game: arranging Arabic letters into a word"></video><figcaption>Letter by letter, a word appears 🔤</figcaption></figure>
 
 <h2>21 words in three themes</h2>
 
@@ -422,7 +572,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "bahasa-arab", "kosa-kata", "hijaiyah"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -441,9 +591,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">▶ Main Baby Mo Dreamtime sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/dreamtime.webp" alt="Tampilan game Baby Mo Dreamtime di kamar tidur malam hari" width="540" height="1080" loading="lazy"><figcaption>Rutinitas malam yang menenangkan 🌙</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-dreamtime.mp4" poster="/_img/games/video/id-dreamtime.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Baby Mo Dreamtime di kamar tidur malam hari"></video><figcaption>Rutinitas malam yang menenangkan 🌙</figcaption></figure>
 
 <h2>Empat langkah sebelum tidur</h2>
 
@@ -481,9 +631,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-dreamtime.html" target="_blank" rel="noopener">▶ Play Baby Mo Dreamtime now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/dreamtime.webp" alt="Baby Mo Dreamtime game in a night-time bedroom" width="540" height="1080" loading="lazy"><figcaption>A calming evening routine 🌙</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-dreamtime.mp4" poster="/_img/games/video/en-dreamtime.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Baby Mo Dreamtime game in a night-time bedroom"></video><figcaption>A calming evening routine 🌙</figcaption></figure>
 
 <h2>Four steps before sleep</h2>
 
@@ -520,7 +670,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "rutinitas", "tidur", "doa-tidur"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -539,9 +689,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener">▶ Main Memory Match sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/memory-match.webp" alt="Tampilan game Memory Match dengan kartu bergambar islami" width="540" height="1080" loading="lazy"><figcaption>Balik dua kartu, ingat letaknya 🎴</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-memory-match.mp4" poster="/_img/games/video/id-memory-match.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Memory Match dengan kartu bergambar islami"></video><figcaption>Balik dua kartu, ingat letaknya 🎴</figcaption></figure>
 
 <h2>Delapan tingkat, dari balita sampai juara</h2>
 
@@ -576,9 +726,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-memory-match.html" target="_blank" rel="noopener">▶ Play Memory Match now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/memory-match.webp" alt="Memory Match game with Islamic picture cards" width="540" height="1080" loading="lazy"><figcaption>Flip two cards, remember where they are 🎴</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-memory-match.mp4" poster="/_img/games/video/en-memory-match.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Memory Match game with Islamic picture cards"></video><figcaption>Flip two cards, remember where they are 🎴</figcaption></figure>
 
 <h2>Eight levels, toddler to champion</h2>
 
@@ -612,7 +762,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "memori", "matching", "fokus"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
@@ -631,9 +781,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener">▶ Main Forehand Beat sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/forehand-beat.webp" alt="Tampilan game Forehand Beat dengan Baby Mo melompat" width="540" height="1080" loading="lazy"><figcaption>Ketuk, lompat, terbang! 🎵</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-forehand-beat.mp4" poster="/_img/games/video/id-forehand-beat.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Forehand Beat dengan Baby Mo melompat"></video><figcaption>Ketuk, lompat, terbang! 🎵</figcaption></figure>
 
 <h2>Cara mainnya</h2>
 
@@ -674,9 +824,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/baby-mo-forehand-beat.html" target="_blank" rel="noopener">▶ Play Forehand Beat now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/forehand-beat.webp" alt="Forehand Beat game with Baby Mo jumping" width="540" height="1080" loading="lazy"><figcaption>Tap, jump, fly! 🎵</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-forehand-beat.mp4" poster="/_img/games/video/en-forehand-beat.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Forehand Beat game with Baby Mo jumping"></video><figcaption>Tap, jump, fly! 🎵</figcaption></figure>
 
 <h2>How it works</h2>
 
@@ -716,7 +866,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "musik", "ritme", "refleks"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
@@ -735,9 +885,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">▶ Main Kata Baik sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/kata-baik.webp" alt="Tampilan game puzzle Kata Baik dengan kalimat thayyibah" width="540" height="1080" loading="lazy"><figcaption>Ucapan baik apa yang tersembunyi di sini? 💖</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-kata-baik.mp4" poster="/_img/games/video/id-kata-baik.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game puzzle Kata Baik dengan kalimat thayyibah"></video><figcaption>Ucapan baik apa yang tersembunyi di sini? 💖</figcaption></figure>
 
 <h2>Ucapan baik yang dipelajari</h2>
 
@@ -780,9 +930,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-puzzle-katabaik.html" target="_blank" rel="noopener">▶ Play Kind Words now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/kata-baik.webp" alt="Kind Words puzzle game with kalimat thayyibah" width="540" height="1080" loading="lazy"><figcaption>Which good word is hiding here? 💖</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-kata-baik.mp4" poster="/_img/games/video/en-kata-baik.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Kind Words puzzle game with kalimat thayyibah"></video><figcaption>Which good word is hiding here? 💖</figcaption></figure>
 
 <h2>The good words</h2>
 
@@ -824,7 +974,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "akhlak", "kalimat-thayyibah", "puzzle"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -843,9 +993,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-wudhu.html" target="_blank" rel="noopener">▶ Main Wudhu Bareng Mo sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/wudhu.webp" alt="Tampilan game Wudhu Bareng Mo dengan Baby Mo di depan keran" width="540" height="1080" loading="lazy"><figcaption>Wudhu dulu, baru sholat 💧</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-wudhu.mp4" poster="/_img/games/video/id-wudhu.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan game Wudhu Bareng Mo dengan Baby Mo di depan keran"></video><figcaption>Wudhu dulu, baru sholat 💧</figcaption></figure>
 
 <h2>Sepuluh langkah wudhu</h2>
 
@@ -893,9 +1043,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-wudhu.html" target="_blank" rel="noopener">▶ Play Wudu with Mo now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/wudhu.webp" alt="Wudu with Mo game with Baby Mo at the tap" width="540" height="1080" loading="lazy"><figcaption>Wudu first, then prayer 💧</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-wudhu.mp4" poster="/_img/games/video/en-wudhu.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Wudu with Mo game with Baby Mo at the tap"></video><figcaption>Wudu first, then prayer 💧</figcaption></figure>
 
 <h2>Ten wudu steps</h2>
 
@@ -942,7 +1092,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "ibadah", "wudhu", "panduan"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -961,9 +1111,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener">▶ Main Pray with Mo sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/pray-with-mo.webp" alt="Tampilan Pray with Mo dengan Baby Mo memperagakan gerakan sholat" width="540" height="1080" loading="lazy"><figcaption>Belajar sholat, gerakan demi gerakan 🕌</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-pray-with-mo.mp4" poster="/_img/games/video/id-pray-with-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan Pray with Mo dengan Baby Mo memperagakan gerakan sholat"></video><figcaption>Belajar sholat, gerakan demi gerakan 🕌</figcaption></figure>
 
 <h2>Langkah demi langkah</h2>
 
@@ -1007,9 +1157,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-pray-with-mo.html" target="_blank" rel="noopener">▶ Play Pray with Mo now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/pray-with-mo.webp" alt="Pray with Mo with Baby Mo showing a prayer movement" width="540" height="1080" loading="lazy"><figcaption>Learn to pray, one movement at a time 🕌</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-pray-with-mo.mp4" poster="/_img/games/video/en-pray-with-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Pray with Mo with Baby Mo showing a prayer movement"></video><figcaption>Learn to pray, one movement at a time 🕌</figcaption></figure>
 
 <h2>Step by step</h2>
 
@@ -1052,7 +1202,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "ibadah", "sholat", "panduan"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -1071,9 +1221,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-companion/" target="_blank" rel="noopener">▶ Buka Streak Sholat Mo sekarang</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/streak-sholat-mo.webp" alt="Tampilan Streak Sholat Mo dengan jadwal sholat dan streak harian" width="540" height="1080" loading="lazy"><figcaption>Jaga semangat sholat 5 waktu 🔥</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/id-streak-sholat-mo.mp4" poster="/_img/games/video/id-streak-sholat-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Tampilan Streak Sholat Mo dengan jadwal sholat dan streak harian"></video><figcaption>Jaga semangat sholat 5 waktu 🔥</figcaption></figure>
 
 <h2>Isinya</h2>
 
@@ -1111,9 +1261,9 @@ export const blogPosts: BlogPost[] = [
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-companion/" target="_blank" rel="noopener">▶ Open Prayer Streak with Mo now</a></p>
 
-<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
 
-<figure class="gmp-shot"><img src="/_img/games/shots/streak-sholat-mo.webp" alt="Prayer Streak with Mo with prayer times and a daily streak" width="540" height="1080" loading="lazy"><figcaption>Keep the five prayers going 🔥</figcaption></figure>
+<figure class="gmp-shot"><video src="/_img/games/video/en-streak-sholat-mo.mp4" poster="/_img/games/video/en-streak-sholat-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Prayer Streak with Mo with prayer times and a daily streak"></video><figcaption>Keep the five prayers going 🔥</figcaption></figure>
 
 <h2>What's inside</h2>
 
@@ -1150,7 +1300,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "ibadah", "sholat", "rutinitas"],
     published: "2026-11-06",
-    updated: "2026-11-06",
+    updated: "2026-11-13",
     readingTimeMin: 4,
     author: "tim-baby-mo",
   },
@@ -3333,6 +3483,9 @@ export const blogPosts: BlogPost[] = [
       id: `<p><strong>Cari Baby Mo</strong> adalah game cari objek tersembunyi: di setiap scene, anak mencari benda-benda — dan Baby Mo yang ngumpet — sebelum semuanya ketemu. Tenang, penuh warna, dan melatih konsentrasi tanpa terasa seperti belajar.</p>
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">▶ Main Cari Baby Mo sekarang</a></p>
+
+<style>.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<figure class="gmp-shot"><video src="/_img/games/video/id-cari-baby-mo.mp4" poster="/_img/games/video/id-cari-baby-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Video game Cari Baby Mo"></video><figcaption>Temukan benda-benda dan Baby Mo yang ngumpet 🔍</figcaption></figure>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
 
 <h2>Apa yang dilatih?</h2>
@@ -3356,6 +3509,9 @@ export const blogPosts: BlogPost[] = [
       en: `<p><strong>Find Baby Mo</strong> is a hidden-object game: in each scene, kids look for objects — and a hidden Baby Mo — before finding them all. Calm, colorful, and focus-building without feeling like a lesson.</p>
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-look-and-find.html" target="_blank" rel="noopener">▶ Play Find Baby Mo now</a></p>
+
+<style>.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<figure class="gmp-shot"><video src="/_img/games/video/en-cari-baby-mo.mp4" poster="/_img/games/video/en-cari-baby-mo.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Find Baby Mo game video"></video><figcaption>Find the objects — and Baby Mo hiding 🔍</figcaption></figure>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
 
 <h2>What it builds</h2>
@@ -3379,7 +3535,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "cari-objek", "fokus", "cari-baby-mo", "edukasi-anak"],
     published: "2026-06-22",
-    updated: "2026-06-22",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
@@ -3397,6 +3553,9 @@ export const blogPosts: BlogPost[] = [
       id: `<p>Mengenalkan <strong>huruf hijaiyah</strong> tidak harus dengan hafalan yang kaku. Lewat game <strong>Huruf Hijaiyah</strong> dari Baby Mo, anak mengenal bentuk dan bunyi huruf Arab satu per satu, dengan cara yang ceria dan interaktif.</p>
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Main game Hijaiyah sekarang</a></p>
+
+<style>.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<figure class="gmp-shot"><video src="/_img/games/video/id-hijaiyah.mp4" poster="/_img/games/video/id-hijaiyah.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Video game Pulau Hijaiyah"></video><figcaption>Jelajahi pulau dan temukan 28 huruf hijaiyah 🏝️</figcaption></figure>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
 
 <h2>Lihat di dalam game</h2>
@@ -3433,6 +3592,9 @@ export const blogPosts: BlogPost[] = [
       en: `<p>Introducing the <strong>hijaiyah letters</strong> doesn’t have to be rigid memorization. With Baby Mo’s <strong>Hijaiyah Letters</strong> game, kids get to know the shape and sound of each Arabic letter one by one, in a cheerful, interactive way.</p>
 
 <p><a class="gmp-play" href="https://play.babymo.id/babymo-hijaiyah.html" target="_blank" rel="noopener">▶ Play the Hijaiyah game now</a></p>
+
+<style>.gmp-shot{margin:1.4em auto;max-width:300px;text-align:center}.gmp-shot img,.gmp-shot video{width:100%;height:auto;border-radius:22px;border:1px solid var(--color-hairline);box-shadow:0 16px 36px -16px rgba(0,0,0,.45);display:block}.gmp-shot figcaption{margin-top:8px;font-size:12px;color:var(--color-whisper)}</style>
+<figure class="gmp-shot"><video src="/_img/games/video/en-hijaiyah.mp4" poster="/_img/games/video/en-hijaiyah.webp" autoplay muted loop playsinline preload="metadata" width="540" height="960" aria-label="Hijaiyah Island game video"></video><figcaption>Explore the island and find all 28 letters 🏝️</figcaption></figure>
 <style>.gmp-play{display:inline-block;margin:.4em 0;padding:12px 22px;border-radius:999px;background:linear-gradient(135deg,#3FD08C,#1FA971);color:#fff!important;font-weight:800;text-decoration:none!important;box-shadow:0 8px 20px -8px rgba(31,169,113,.55);}</style>
 
 <h2>A look inside the game</h2>
@@ -3469,7 +3631,7 @@ export const blogPosts: BlogPost[] = [
     },
     tags: ["game", "hijaiyah", "belajar-membaca", "edukasi-anak"],
     published: "2026-06-22",
-    updated: "2026-06-22",
+    updated: "2026-11-13",
     readingTimeMin: 3,
     author: "tim-baby-mo",
   },
