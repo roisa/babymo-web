@@ -15,8 +15,10 @@ import { StoryArt } from "@/components/story-art/StoryArt";
 import { illusFor } from "@/lib/cerita/illus";
 import { getBookPages } from "@/lib/cerita/picture-books";
 import { poseForCatatan, sceneForCatatan } from "@/lib/cerita/scene";
-import { SERIES, seriesOf } from "@/lib/cerita/series";
+import { SERIES, seriesOf, ageOf } from "@/lib/cerita/series";
 import { ShelfFilters } from "@/components/ShelfFilters";
+import { ShelfMore } from "@/components/shelf/ShelfMore";
+import { ContinueReading } from "@/components/shelf/ContinueReading";
 
 export async function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
@@ -67,6 +69,44 @@ export default async function CatatanIndex({
     { key: "umi", label: "Umi" },
   ];
 
+  const book = (n: (typeof stories)[number], i: number, hTag: "h3" | "span" = "h3") => {
+    const art = illusFor(n.slug);
+    const pages = getBookPages(n.slug)?.pages.length;
+    const H = hTag;
+    return (
+      <Link href={pathFor(l, `/cerita/${n.slug}`)} className="shelf-book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
+        <div className="book-cover relative">
+          {art?.[0] ? (
+            <div className="book-art book-art--illus overflow-hidden">
+              <StoryArt scene={art[0]} title={art[0].alt[l]} portrait />
+            </div>
+          ) : (
+            <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} className="book-art" />
+          )}
+          <span className="book-spine" aria-hidden />
+          <span className="book-chip">👶 {l === "id" ? `${ageOf(n.slug)} th` : `ages ${ageOf(n.slug)}`}</span>
+          <H className="book-title font-display">{n.title[l]}</H>
+        </div>
+        <p className="book-meta">
+          {pages ? `📖 ${pages} ${l === "id" ? "hlm" : "pages"} · ` : ""}⏱ {n.readingTimeMin} {l === "id" ? "menit" : "min"}
+        </p>
+        <p className="mt-1 line-clamp-2 text-[13.5px] leading-relaxed text-whisper">{n.hook[l]}</p>
+      </Link>
+    );
+  };
+  // interleave the series (book 1 of each, then book 2…) so the first screen is varied
+  const order = new Map<string, number>();
+  SERIES.forEach((x, si) => x.books.forEach((slug, k) => { if (!order.has(slug)) order.set(slug, k * SERIES.length + si); }));
+  const shelfOrder = [...stories].sort((a, b) => (order.get(a.slug) ?? 1e6) - (order.get(b.slug) ?? 1e6));
+  const newest = [...stories].sort((a, b) => b.published.localeCompare(a.published)).slice(0, 8);
+  const titleOf = new Map(stories.map((n) => [n.slug, n.title[l]]));
+  const continueData = SERIES.map((x) => ({
+    key: x.key,
+    emoji: x.emoji,
+    title: x.title[l],
+    books: x.books.filter((b) => titleOf.has(b)).map((b) => ({ slug: b, title: titleOf.get(b)!, href: pathFor(l, `/cerita/${b}`) })),
+  }));
+
   return (
     <>
       <Header locale={l} currentPath="/cerita" />
@@ -86,6 +126,20 @@ export default async function CatatanIndex({
           </SectionButton>
         </SectionHeader>
 
+        <ContinueReading locale={l} series={continueData} />
+
+        {/* ── New on the shelf ── */}
+        <section className="sec-cerita mb-14" aria-labelledby="shelf-new">
+          <h2 id="shelf-new" className="font-display flex items-center gap-2 text-[26px] text-ink sm:text-[30px]">
+            <span aria-hidden>✨</span> {l === "id" ? "Baru di rak" : "New on the shelf"}
+          </h2>
+          <div className="new-row mt-5">
+            {newest.map((n, i) => (
+              <div key={n.slug} className="new-row-item">{book(n, i, "span")}</div>
+            ))}
+          </div>
+        </section>
+
         {/* ── Series: books with a reading order ── */}
         <section className="sec-cerita mb-14" aria-labelledby="shelf-series">
           <h2 id="shelf-series" className="font-display flex items-center gap-2 text-[26px] text-ink sm:text-[30px]">
@@ -97,7 +151,7 @@ export default async function CatatanIndex({
               <Link key={x.key} href={pathFor(l, `/cerita/seri/${x.key}`)} className="series-card tap">
                 <span className="series-card-emoji" aria-hidden>{x.emoji}</span>
                 <span className="series-card-title">{x.title[l]}</span>
-                <span className="series-card-meta">{l === "id" ? `${x.books.length} buku` : `${x.books.length} books`}</span>
+                <span className="series-card-meta">{l === "id" ? `${x.books.length} buku · 👶 ${x.age} th` : `${x.books.length} books · 👶 ages ${x.age}`}</span>
                 <span className="line-clamp-3 text-[13px] leading-relaxed text-whisper">{x.blurb[l]}</span>
               </Link>
             ))}
@@ -112,36 +166,13 @@ export default async function CatatanIndex({
           </h2>
           <ShelfFilters locale={l} total={stories.length} chars={CHARS} series={SERIES.map((x) => ({ key: x.key, label: `${x.emoji} ${x.title[l]}` }))} />
           <ul className="shelf mt-6 grid grid-cols-2 gap-x-4 gap-y-9 sm:grid-cols-3 sm:gap-x-6 lg:grid-cols-4">
-            {stories.map((n, i) => (
+            {shelfOrder.map((n, i) => (
               <li key={n.slug} data-shelf-item={n.slug} data-chars={charsOf(n.slug, n.child)} data-series={seriesOf(n.slug)?.series.key ?? ""}>
-                <Link href={pathFor(l, `/cerita/${n.slug}`)} className="shelf-book tap group block" style={{ ["--tilt" as string]: `${(i % 3) - 1}deg` }}>
-                  <div className="book-cover relative">
-                    {(() => {
-                      const art = illusFor(n.slug);
-                      return art?.[0] ? (
-                        <div className="book-art book-art--illus overflow-hidden">
-                          <StoryArt scene={art[0]} title={art[0].alt[l]} portrait />
-                          <span className="absolute right-2 top-2 rounded-full bg-white/90 px-2 py-0.5 text-[10.5px] font-bold text-[var(--sec-deep)] shadow-sm">
-                            {getBookPages(n.slug)
-                              ? `📖 ${getBookPages(n.slug)!.pages.length} ${l === "id" ? "halaman" : "pages"}`
-                              : `✨ ${l === "id" ? "Bergambar" : "Illustrated"}`}
-                          </span>
-                        </div>
-                      ) : (
-                        <StoryScene scene={sceneForCatatan(n)} pose={poseForCatatan(n)} className="book-art" />
-                      );
-                    })()}
-                    <span className="book-spine" aria-hidden />
-                    <span className="book-chip">{dict.catatan.childChip[n.child]}</span>
-                  </div>
-                  <h3 className="font-display mt-3 text-[17px] leading-snug text-ink group-hover:text-[var(--sec-deep)] sm:text-[19px]">
-                    {n.title[l]}
-                  </h3>
-                  <p className="mt-1 line-clamp-2 text-[13.5px] leading-relaxed text-whisper">{n.hook[l]}</p>
-                </Link>
+                {book(n, i)}
               </li>
             ))}
           </ul>
+          <ShelfMore locale={l} />
         </section>
 
         {/* ── Shelf 2: Abi & Umi's notes, for parents ── */}
@@ -155,7 +186,7 @@ export default async function CatatanIndex({
               : "Short notes from Abi & Umi on raising the twins — one moment, one lesson."}
           </p>
           <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-            {parentNotes.map((n) => (
+            {parentNotes.slice(0, 6).map((n) => (
               <li key={n.slug}>
                 <Link href={pathFor(l, `/cerita/${n.slug}`)} className="lift tap group flex h-full items-start gap-3 rounded-[20px] border border-hairline bg-paper p-4">
                   <span aria-hidden className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage-soft text-[16px]">
@@ -171,6 +202,28 @@ export default async function CatatanIndex({
               </li>
             ))}
           </ul>
+          {parentNotes.length > 6 && (
+            <details className="notes-more mt-4">
+              <summary className="shelf-more tap">{l === "id" ? `Lihat semua catatan (${parentNotes.length - 6} lagi)` : `See all notes (${parentNotes.length - 6} more)`}</summary>
+              <ul className="mt-4 grid gap-3 sm:grid-cols-2">
+                {parentNotes.slice(6).map((n) => (
+              <li key={n.slug}>
+                <Link href={pathFor(l, `/cerita/${n.slug}`)} className="lift tap group flex h-full items-start gap-3 rounded-[20px] border border-hairline bg-paper p-4">
+                  <span aria-hidden className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-sage-soft text-[16px]">
+                    {n.pov === "umi" ? "👩" : "👨"}
+                  </span>
+                  <span className="min-w-0">
+                    <span className="block text-[12.5px] font-semibold text-sage-deep">
+                      {n.pov === "umi" ? dict.catatan.byUmi : dict.catatan.bySalman} · {n.readingTimeMin} {dict.blog.readingTime}
+                    </span>
+                    <span className="mt-0.5 block font-display text-[17px] leading-snug text-ink group-hover:text-sage-deep">{n.title[l]}</span>
+                  </span>
+                </Link>
+              </li>
+            ))}
+              </ul>
+            </details>
+          )}
         </section>
 
         <p className="mt-12 rounded-[18px] border border-hairline bg-paper-2 px-5 py-4 text-[12.5px] leading-relaxed text-whisper">

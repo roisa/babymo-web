@@ -13,11 +13,14 @@ export interface StorySeries {
   blurb: Record<Locale, string>;
   /** reading order */
   books: string[];
+  /** suggested age band, e.g. "3–6" */
+  age: string;
 }
 
 export const SERIES: StorySeries[] = [
   {
     key: "tenis-kak-adam",
+    age: "4–8",
     emoji: "🎾",
     title: { id: "Perjalanan Tenis Kak Adam", en: "Kak Adam's Tennis Journey" },
     blurb: {
@@ -52,6 +55,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "ruang-main",
+    age: "2–5",
     emoji: "🧸",
     title: { id: "Petualangan Ruang Main", en: "Playroom Adventures" },
     blurb: {
@@ -79,6 +83,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "dunia-laut-alam",
+    age: "3–6",
     emoji: "🐙",
     title: { id: "Dunia Laut & Alam", en: "Sea & Nature" },
     blurb: {
@@ -100,6 +105,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "bersama-abi",
+    age: "3–6",
     emoji: "👨",
     title: { id: "Bersama Abi", en: "With Abi" },
     blurb: {
@@ -122,6 +128,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "bersama-umi",
+    age: "3–6",
     emoji: "👩",
     title: { id: "Bersama Umi", en: "With Umi" },
     blurb: {
@@ -141,6 +148,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "tanya-iman",
+    age: "4–8",
     emoji: "🌙",
     title: { id: "Si Kecil Bertanya", en: "Little Questions of Faith" },
     blurb: {
@@ -171,6 +179,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "hari-hari-si-kembar",
+    age: "2–5",
     emoji: "🎒",
     title: { id: "Hari-hari Si Kembar", en: "The Twins' Everyday Adventures" },
     blurb: {
@@ -189,6 +198,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "ramadan-si-kembar",
+    age: "3–7",
     emoji: "🏮",
     title: { id: "Ramadan Si Kembar", en: "The Twins' Ramadan" },
     blurb: {
@@ -210,6 +220,7 @@ export const SERIES: StorySeries[] = [
   },
   {
     key: "hari-besar-islam",
+    age: "4–8",
     emoji: "🕌",
     title: { id: "Hari Besar Islam", en: "Islamic Celebrations" },
     blurb: {
@@ -249,4 +260,9 @@ export function seriesOf(slug: string): SeriesPlace | null {
       };
   }
   return null;
+}
+
+/** Suggested age band for any story: its series' band, else a gentle default. */
+export function ageOf(slug: string): string {
+  return seriesOf(slug)?.series.age ?? "3–6";
 }

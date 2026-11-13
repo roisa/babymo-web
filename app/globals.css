@@ -1457,3 +1457,21 @@ html.dark .parent-card { background: #2E2820; border-color: #8A5A34; }
 .series-card-emoji{font-size:30px;line-height:1}
 .series-card-title{font-weight:800;font-size:17px;line-height:1.25}
 .series-card-meta{font-size:13px;color:var(--color-whisper,#6B7068);font-weight:600}
+
+/* ─── Shelf v2: title on the cover, meta line, new row, show more, continue ─── */
+.book-title{position:absolute;left:14px;right:0;bottom:0;padding:34px 12px 12px 14px;color:#fff;font-size:16px;line-height:1.15;font-weight:700;text-shadow:0 1px 3px rgba(0,0,0,.45);background:linear-gradient(180deg,transparent,rgba(20,16,50,.55) 45%,rgba(20,16,50,.82))}
+@media (min-width:640px){.book-title{font-size:18px}}
+.book-meta{margin-top:10px;font-size:12.5px;font-weight:700;color:var(--sec-deep,#1E8C53)}
+.new-row{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(150px,44%);gap:16px;overflow-x:auto;padding:6px 4px 14px;scroll-snap-type:x mandatory}
+@media (min-width:640px){.new-row{grid-auto-columns:minmax(180px,23%)}}
+.new-row-item{scroll-snap-align:start}
+.shelf-more{padding:13px 24px;border-radius:999px;border:1.5px solid var(--color-hairline);background:var(--color-paper);color:var(--color-ink);font-weight:800;font-size:15px;box-shadow:0 8px 18px -12px rgba(0,0,0,.35)}
+.shelf-more:hover{border-color:var(--sec-deep,#1E8C53)}
+.continue-card{display:flex;align-items:center;gap:14px;padding:16px 18px;border-radius:24px;text-decoration:none;color:var(--color-ink);background:linear-gradient(135deg,var(--sec-soft,#EAF7EF),var(--color-paper));border:1.5px solid var(--color-hairline);box-shadow:0 14px 28px -20px rgba(0,0,0,.45)}
+.continue-emoji{flex:none;display:grid;place-items:center;width:56px;height:56px;border-radius:18px;background:var(--color-paper);font-size:30px;box-shadow:0 6px 14px -8px rgba(0,0,0,.35)}
+.continue-body{display:flex;flex-direction:column;gap:2px;min-width:0;flex:1}
+.continue-kick{font-size:12.5px;font-weight:800;color:var(--sec-deep,#1E8C53)}
+.continue-title{font-family:var(--font-display,inherit);font-size:20px;font-weight:700;line-height:1.15}
+.continue-meta{font-size:13px;color:var(--color-whisper)}
+.continue-go{flex:none;display:grid;place-items:center;width:40px;height:40px;border-radius:50%;background:var(--sec-deep,#1E8C53);color:#fff;font-weight:800}
+.notes-more>summary{list-style:none;display:table;margin:0 auto;cursor:pointer}.notes-more>summary::-webkit-details-marker{display:none}.notes-more[open]>summary{display:none}
