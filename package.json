@@ -16,7 +16,8 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
-    "check:stories": "tsx scripts/check-stories.ts"
+    "check:stories": "tsx scripts/check-stories.ts",
+    "build:rekam-cerita": "tsx scripts/build-rekam-cerita.ts"
   },
   "dependencies": {
     "adhan": "^4.4.3",
