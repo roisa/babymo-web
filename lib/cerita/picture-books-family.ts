@@ -52,6 +52,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "New skills grow from small practice repeated patiently — and from parents who laugh along when it goes wrong.",
     },
     tags: ["tenis", "kak adam", "sabar", "latihan", "olahraga", "abi"],
+    card: {
+      title: { id: "Saat Anak Sulit Menguasai Sesuatu", en: "When a New Skill Is Hard" },
+      items: {
+        id: [
+          "Bagi keterampilan jadi langkah kecil dan latih satu langkah dulu.",
+          "Tertawalah bersama saat gagal. Suasana ringan membuat anak mau mencoba lagi.",
+          "Ceritakan hal yang dulu sulit bagi Ayah atau Bunda dan bagaimana akhirnya bisa.",
+        ],
+        en: [
+          "Break the skill into small steps and practise one step at a time.",
+          "Laugh together when it goes wrong. A light mood makes children want to try again.",
+          "Tell them something that was hard for you once, and how you got there.",
+        ],
+      },
+    },
     cover: {
       focus: 360, bg: "court",
       props: [{ k: "ballbasket", x: 560 }, { k: "ballfly", x: 370, y: 330, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }],
@@ -142,6 +157,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Break a hard thing into small steps, practise them one at a time, and ask Allah to make it easy.",
     },
     tags: ["tenis", "servis", "kak adam", "doa", "latihan", "sabar"],
+    card: {
+      title: { id: "Memecah Tugas yang Sulit", en: "Breaking Down Hard Things" },
+      items: {
+        id: [
+          "Saat anak bilang \"susah\", tanyakan: \"Langkah pertamanya apa?\"",
+          "Ajarkan doa dimudahkan urusan sebelum mencoba sesuatu yang baru.",
+          "Rayakan setiap langkah kecil yang berhasil, bukan hanya hasil akhirnya.",
+        ],
+        en: [
+          "When your child says \"it's too hard\", ask: \"What's the first step?\"",
+          "Teach the du'a for ease before trying something new.",
+          "Celebrate every small step that works, not only the final result.",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "balltoss", x: 440, y: 230 }, { k: "ballbasket", x: 560 }],
@@ -233,6 +263,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "The thing we avoid is usually the thing we most need to practise — slowly, with both hands.",
     },
     tags: ["tenis", "backhand", "kak adam", "berani", "latihan", "abi"],
+    card: {
+      title: { id: "Berani Melatih yang Dihindari", en: "Practising What We Avoid" },
+      items: {
+        id: [
+          "Perhatikan apa yang sering dihindari anak — biasanya itu yang paling perlu dilatih.",
+          "Latih pelan-pelan dan dampingi dengan \"dua tangan\": tangan anak dan tangan Ayah Bunda.",
+          "Akui rasa takutnya, lalu ajak mencoba sekali saja hari ini.",
+        ],
+        en: [
+          "Notice what your child keeps avoiding — that's usually what most needs practice.",
+          "Practise slowly, \"with two hands\": theirs and yours.",
+          "Acknowledge the fear, then invite them to try just once today.",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "ballfly", x: 460, y: 355, d: HIT }, { k: "swoosh", x: 440, y: 320, d: TRAIL }],
@@ -323,6 +368,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Winning is fun; losing kindly is greater. Teach children to shake hands, say barakallah, and learn from a loss.",
     },
     tags: ["tenis", "pertandingan", "sportif", "kak adam", "kalah", "menahan marah"],
+    card: {
+      title: { id: "Kalah dengan Baik Hati", en: "Losing Well" },
+      items: {
+        id: [
+          "Latih kebiasaan berjabat tangan dan mengucap \"barakallah\" setelah bermain, menang atau kalah.",
+          "Setelah kalah, beri waktu sedih dulu, baru tanyakan: \"Apa yang kamu pelajari?\"",
+          "Saat bermain di rumah, sesekali biarkan anak kalah agar ia terbiasa.",
+        ],
+        en: [
+          "Make a habit of shaking hands and saying \"barakallah\" after every game, win or lose.",
+          "After a loss, allow some sadness first, then ask: \"What did you learn?\"",
+          "When playing at home, let your child lose sometimes so it becomes familiar.",
+        ],
+      },
+    },
     cover: {
       focus: 370, bg: "court",
       props: [{ k: "trophy", x: 520 }, { k: "ballbounce", x: 460 }],
@@ -414,6 +474,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Big siblings learn patience by teaching the little ones — and by remembering that someone was patient with them, too.",
     },
     tags: ["tenis", "kakak adik", "sabar", "kak adam", "mengajar", "balon"],
+    card: {
+      title: { id: "Kakak Mengajari Adik", en: "When an Older Sibling Teaches" },
+      items: {
+        id: [
+          "Beri kakak satu hal kecil untuk diajarkan ke adiknya, misalnya memakai sepatu.",
+          "Ingatkan kakak: \"Dulu kamu juga diajari pelan-pelan.\"",
+          "Puji kesabaran kakak di depan adik, bukan hanya hasilnya.",
+        ],
+        en: [
+          "Give the older child one small thing to teach, like putting on shoes.",
+          "Remind them: \"You were taught slowly once too.\"",
+          "Praise the older child's patience in front of the younger one, not just the result.",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "court",
       props: [{ k: "balloon", x: 330, y: 250 }],
@@ -505,6 +580,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Children learn to value a parent's work when they see it as a kind of love — and get a chance to love back.",
     },
     tags: ["abi", "ayah", "bekerja", "sayang", "terima kasih", "keluarga"],
+    card: {
+      title: { id: "Menghargai Kerja Orang Tua", en: "Valuing a Parent's Work" },
+      items: {
+        id: [
+          "Ceritakan pekerjaan Ayah atau Bunda dengan kata sederhana: \"Ayah bekerja supaya kita bisa makan dan belajar.\"",
+          "Buat ritual menyambut di pintu: salam, pelukan, dan membawakan sandal.",
+          "Ajak anak mendoakan orang tua yang bekerja dan berterima kasih atas nafkahnya.",
+        ],
+        en: [
+          "Describe your work in simple words: \"I work so we can eat and learn.\"",
+          "Create a welcome ritual at the door: salam, a hug, bringing slippers.",
+          "Pray together for the parent who works and thank them for providing.",
+        ],
+      },
+    },
     cover: {
       focus: 330, bg: "living", time: "dusk",
       props: [{ k: "heart", x: 470, y: 230, s: 0.7 }],
@@ -596,6 +686,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Little ones learn to pray by copying and feeling close. Keep them beside you, let them copy, and present sujud as a time to whisper to Allah.",
     },
     tags: ["sholat", "sujud", "abi", "doa", "meniru", "ibadah"],
+    card: {
+      title: { id: "Mengenalkan Sholat pada Balita", en: "Introducing Prayer to Toddlers" },
+      items: {
+        id: [
+          "Sediakan sajadah kecil milik anak di samping sajadah Ayah atau Bunda.",
+          "Biarkan anak meniru gerakan tanpa dikoreksi terlalu banyak. Yang penting ia merasa dekat.",
+          "Kenalkan sujud sebagai waktu berbisik kepada Allah: \"Kamu boleh minta apa saja.\"",
+        ],
+        en: [
+          "Put a small prayer mat for your child next to yours.",
+          "Let them copy the movements without too much correcting. Feeling close matters most.",
+          "Introduce sujud as whispering time with Allah: \"You can ask Him for anything.\"",
+        ],
+      },
+    },
     cover: {
       focus: 330, bg: "living", time: "dusk",
       props: [{ k: "mat", x: 330 }],
@@ -687,6 +792,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Even little children can care for their parents: speaking gently, helping in small ways, and praying for them.",
     },
     tags: ["abi", "sakit", "merawat", "berbakti", "si kembar", "doa orang tua"],
+    card: {
+      title: { id: "Saat Orang Tua Sakit", en: "When a Parent Is Unwell" },
+      items: {
+        id: [
+          "Beri anak tugas kecil untuk merawat: mengambil air, memijat pelan, menyelimuti.",
+          "Ajarkan berbicara lembut dan bermain lebih tenang saat ada yang sakit.",
+          "Ajak anak membaca doa untuk kedua orang tua: Rabbighfirli wa liwalidayya.",
+        ],
+        en: [
+          "Give your child small caring jobs: fetching water, a gentle massage, a blanket.",
+          "Teach them to speak softly and play quietly when someone is unwell.",
+          "Say the du'a for parents together: Rabbighfirli wa liwalidayya.",
+        ],
+      },
+    },
     cover: {
       focus: 320, bg: "living",
       props: [{ k: "cup", x: 450 }, { k: "heart", x: 470, y: 230, s: 0.6 }],
@@ -778,6 +898,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Children learn that prayer has its times by watching their parents put things down when the adhan calls.",
     },
     tags: ["abi", "waktu sholat", "adzan", "jam", "disiplin", "sholat"],
+    card: {
+      title: { id: "Adzan dan Waktu Sholat", en: "The Adhan and Prayer Times" },
+      items: {
+        id: [
+          "Saat adzan, hentikan kegiatan bersama — matikan TV, letakkan gawai.",
+          "Ajarkan menjawab adzan dengan kalimat yang sama, pelan-pelan.",
+          "Tunjukkan jadwal sholat di jam atau aplikasi, dan biarkan anak \"mengumumkan\" waktunya.",
+        ],
+        en: [
+          "When the adhan sounds, pause together — TV off, phones down.",
+          "Teach your child to repeat the adhan's words softly.",
+          "Show the prayer times on a clock or app, and let your child \"announce\" them.",
+        ],
+      },
+    },
     cover: {
       focus: 320, bg: "living",
       props: [{ k: "clock", x: 470, y: 220 }],
@@ -869,6 +1004,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "A warm bedtime routine — a story, a du'a and a laugh — helps children end the day calmly, even when parents are worn out too.",
     },
     tags: ["tidur", "abi", "doa sebelum tidur", "si kembar", "lucu", "malam"],
+    card: {
+      title: { id: "Rutinitas Tidur yang Hangat", en: "A Warm Bedtime Routine" },
+      items: {
+        id: [
+          "Pakai urutan yang sama setiap malam: sikat gigi, wudhu, cerita, doa, lampu redup.",
+          "Satu cerita pendek sudah cukup, bahkan saat Ayah Bunda lelah.",
+          "Tutup dengan doa sebelum tidur dan satu hal yang disyukuri hari ini.",
+        ],
+        en: [
+          "Keep the same order every night: teeth, wudu, a story, du'a, lights down.",
+          "One short story is enough, even when you're tired.",
+          "End with the bedtime du'a and one thing you're grateful for today.",
+        ],
+      },
+    },
     cover: {
       focus: 350, bg: "bedroom", time: "night",
       props: [{ k: "books", x: 520 }],
@@ -960,6 +1110,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "When a parent travels, small routines, video calls and a simple job for the big sibling make missing them feel lighter.",
     },
     tags: ["abi", "kak adam", "rindu", "bepergian", "telepon video", "tanggung jawab"],
+    card: {
+      title: { id: "Saat Orang Tua Bepergian", en: "When a Parent Travels" },
+      items: {
+        id: [
+          "Buat kalender hitung mundur sampai orang tua pulang dan coret setiap pagi.",
+          "Jadwalkan telepon video di jam yang sama setiap hari.",
+          "Beri si kakak satu tanggung jawab kecil selama orang tua pergi.",
+        ],
+        en: [
+          "Make a countdown calendar until the parent returns and cross off each morning.",
+          "Schedule a video call at the same time every day.",
+          "Give the older child one small responsibility while the parent is away.",
+        ],
+      },
+    },
     cover: {
       focus: 300, bg: "street",
       props: [{ k: "heart", x: 470, y: 230, s: 0.6 }],
@@ -1051,6 +1216,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Our bodies are a trust from Allah. Moving together every morning keeps children healthy, close to their parents, and kind to the slower ones.",
     },
     tags: ["olahraga", "pagi", "sehat", "abi", "kak adam", "subuh"],
+    card: {
+      title: { id: "Bergerak Bersama Setiap Pagi", en: "Moving Together Every Morning" },
+      items: {
+        id: [
+          "Cukup 10 menit: jalan kaki, lompat-lompat, atau peregangan setelah Subuh.",
+          "Biarkan anak memilih gerakan berikutnya agar ia merasa ikut memimpin.",
+          "Ajarkan menyemangati yang lebih lambat: \"Ayo, sedikit lagi!\"",
+        ],
+        en: [
+          "Ten minutes is enough: a walk, jumping or stretching after Fajr.",
+          "Let your child choose the next move so they feel part of leading it.",
+          "Teach them to cheer on whoever is slower: \"Come on, nearly there!\"",
+        ],
+      },
+    },
     cover: {
       focus: 320, bg: "park",
       props: [{ k: "sun", x: 470, y: 130 }],
@@ -1142,6 +1322,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Praying together at home teaches children togetherness and tidiness — and that everyone has a place in the row.",
     },
     tags: ["sholat berjamaah", "saf", "abi", "kak adam", "si kembar", "ibadah"],
+    card: {
+      title: { id: "Sholat Berjamaah di Rumah", en: "Praying Together at Home" },
+      items: {
+        id: [
+          "Pilih satu waktu sholat untuk berjamaah setiap hari, misalnya Maghrib.",
+          "Beri anak peran: merapikan sajadah, mengumandangkan iqamah, atau mengingatkan saf lurus.",
+          "Rapatkan bahu dan kaki seperti gerbong kereta — anak senang melakukannya.",
+        ],
+        en: [
+          "Choose one prayer to pray together every day, such as Maghrib.",
+          "Give your child a role: laying out the mats, saying the iqamah, or checking the rows are straight.",
+          "Stand shoulder to shoulder like train carriages — children love it.",
+        ],
+      },
+    },
     cover: {
       focus: 330, bg: "living", time: "dusk",
       props: [{ k: "mat", x: 400 }, { k: "mat", x: 260 }],
@@ -1233,6 +1428,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Jealousy between siblings is normal. Name the feeling, share attention fairly, and help each child see their own gifts.",
     },
     tags: ["cemburu", "kakak adik", "adil", "kak adam", "piala", "abi"],
+    card: {
+      title: { id: "Saat Saudara Cemburu", en: "When Siblings Feel Jealous" },
+      items: {
+        id: [
+          "Akui perasaannya tanpa menghakimi: \"Kamu sedih karena kakak dapat piala, ya.\"",
+          "Luangkan waktu berdua dengan setiap anak, walau hanya 10 menit.",
+          "Sebutkan kelebihan masing-masing anak tanpa membandingkan.",
+        ],
+        en: [
+          "Name the feeling without judging: \"You're sad because your brother got a trophy.\"",
+          "Spend one-to-one time with each child, even just ten minutes.",
+          "Point out each child's strengths without comparing them.",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "living",
       props: [{ k: "heart", x: 340, y: 230, s: 0.5 }],
@@ -1323,6 +1533,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Charity isn't only money. Children learn to give through smiles, helping hands and sharing — starting from the example at home.",
     },
     tags: ["sedekah", "jumat", "berbagi", "kak adam", "kebaikan", "abi"],
+    card: {
+      title: { id: "Mengenalkan Sedekah", en: "Introducing Charity" },
+      items: {
+        id: [
+          "Siapkan kotak sedekah keluarga dan isi bersama setiap Jumat.",
+          "Tunjukkan bahwa sedekah bisa berupa senyum, tenaga, dan berbagi mainan.",
+          "Ajak anak ikut menyerahkan sedekahnya sendiri ke masjid atau tetangga.",
+        ],
+        en: [
+          "Set up a family charity box and fill it together every Friday.",
+          "Show that charity can be a smile, a helping hand or sharing a toy.",
+          "Let your child hand over the charity themselves, at the mosque or to a neighbour.",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "living",
       props: [{ k: "coins", x: 470, y: 330 }],
@@ -1414,6 +1639,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Children are keenest to learn the Qur'an from people they love — big siblings included. A little every day beats a lot now and then.",
     },
     tags: ["al-quran", "iqra", "huruf hijaiyah", "kak adam", "belajar", "abi"],
+    card: {
+      title: { id: "Belajar Al-Qur'an Setiap Hari", en: "A Little Qur'an Every Day" },
+      items: {
+        id: [
+          "Lima menit setiap hari lebih baik daripada satu jam seminggu sekali.",
+          "Libatkan kakak sebagai \"guru kecil\" untuk adiknya.",
+          "Pilih waktu yang sama setiap hari, misalnya setelah Maghrib.",
+        ],
+        en: [
+          "Five minutes a day beats an hour once a week.",
+          "Let an older sibling be a \"little teacher\" for the younger one.",
+          "Pick the same time every day, such as after Maghrib.",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "living",
       props: [{ k: "quran", x: 470, y: 340 }],
@@ -1505,6 +1745,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "A cancelled plan can become a new one that's just as fun. Teach children the du'a for rain and to welcome it as a mercy.",
     },
     tags: ["hujan", "tenis", "kecewa", "kak adam", "doa hujan", "abi"],
+    card: {
+      title: { id: "Saat Rencana Batal", en: "When Plans Change" },
+      items: {
+        id: [
+          "Beri nama perasaannya dulu: \"Kamu kecewa karena tenisnya batal.\"",
+          "Ajak membuat rencana pengganti bersama, supaya anak merasa ikut memutuskan.",
+          "Ucapkan doa saat hujan dan ingatkan bahwa hujan adalah rahmat.",
+        ],
+        en: [
+          "Name the feeling first: \"You're disappointed tennis was cancelled.\"",
+          "Make a new plan together so your child feels part of the decision.",
+          "Say the rain du'a and remember that rain is a mercy.",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "court", time: "rain",
       props: [{ k: "puddle", x: 480 }, { k: "umbrella", x: 300, y: 320 }],
@@ -1596,6 +1851,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "A gift for Mum doesn't need to be perfect. What makes it precious is the effort, the togetherness and the love inside.",
     },
     tags: ["umi", "ibu", "berbakti", "memasak", "abi", "kak adam"],
+    card: {
+      title: { id: "Hadiah untuk Ibu", en: "Gifts for Mum" },
+      items: {
+        id: [
+          "Buat sesuatu bersama untuk ibu: gambar, kartu, atau kue sederhana.",
+          "Terima hadiah anak dengan gembira, walau hasilnya tidak sempurna.",
+          "Ceritakan hadits tentang berbakti pada ibu: \"Ibumu, ibumu, ibumu.\"",
+        ],
+        en: [
+          "Make something for Mum together: a drawing, a card or a simple cake.",
+          "Receive your child's gift with joy, even if it isn't perfect.",
+          "Share the hadith on honouring mothers: \"Your mother, your mother, your mother.\"",
+        ],
+      },
+    },
     cover: {
       focus: 330, bg: "kitchen",
       props: [{ k: "oven", x: 520 }, { k: "flour", x: 440, y: 330 }],
@@ -1687,6 +1957,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Children find it easier to own up when parents greet the truth calmly. Honesty first, then put it right together.",
     },
     tags: ["jujur", "bohong", "kak adam", "kakak adik", "maaf", "abi"],
+    card: {
+      title: { id: "Menyambut Kejujuran Anak", en: "Welcoming Honesty" },
+      items: {
+        id: [
+          "Saat anak mengaku, tarik napas dulu dan ucapkan terima kasih karena sudah jujur.",
+          "Pisahkan kesalahan dan kejujuran: perbaiki kesalahannya bersama, puji kejujurannya.",
+          "Hindari pertanyaan menjebak seperti \"Kamu yang melakukannya, ya?\"",
+        ],
+        en: [
+          "When your child owns up, take a breath and thank them for being honest.",
+          "Separate the mistake from the honesty: fix the mistake together, praise the honesty.",
+          "Avoid trap questions like \"Was it you who did this?\"",
+        ],
+      },
+    },
     cover: {
       focus: 340, bg: "living",
       props: [{ k: "magnifier", x: 470 }, { k: "tennisball", x: 520 }],
@@ -1777,6 +2062,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Playing together without caring who wins is one of the best gifts parents can give — and a reason to be thankful.",
     },
     tags: ["tenis", "keluarga", "bermain", "abi", "kak adam", "bersyukur"],
+    card: {
+      title: { id: "Bermain Tanpa Memikirkan Menang", en: "Playing Just to Play" },
+      items: {
+        id: [
+          "Jadwalkan satu waktu bermain keluarga setiap pekan tanpa gawai.",
+          "Pilih permainan yang bisa dimainkan semua usia.",
+          "Tutup dengan bersyukur: \"Alhamdulillah, kita bisa bermain bersama.\"",
+        ],
+        en: [
+          "Schedule a weekly screen-free family game time.",
+          "Pick games that every age can play.",
+          "End with gratitude: \"Alhamdulillah, we got to play together.\"",
+        ],
+      },
+    },
     cover: {
       focus: 350, bg: "court",
       props: [{ k: "balloon", x: 350, y: 220 }, { k: "trophy", x: 560 }],
@@ -1868,6 +2168,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Doing it once isn't doing it every time. Real skill grows from small practice repeated daily — and from trusting that ease comes after hardship.",
     },
     tags: ["tenis", "forehand", "kak adam", "latihan", "istiqamah", "sabar"],
+    card: {
+      title: { id: "Latihan Sedikit Setiap Hari", en: "A Little Practice Every Day" },
+      items: {
+        id: [
+          "Pilih satu keterampilan dan latih sebentar setiap hari, misalnya 10 kali saja.",
+          "Catat di tabel sederhana agar anak melihat kemajuannya sendiri.",
+          "Saat terasa sulit, ingatkan janji Allah: bersama kesulitan ada kemudahan.",
+        ],
+        en: [
+          "Pick one skill and practise briefly every day — even just ten times.",
+          "Track it on a simple chart so your child can see their own progress.",
+          "When it's hard, remember Allah's promise: with hardship comes ease.",
+        ],
+      },
+    },
     cover: {
       focus: 390, bg: "park",
       props: [{ k: "wall", x: 510, s: 0.8 }, { k: "ballrebound", x: 280, y: 330, d: FH_HIT }, { k: "swoosh", x: 265, y: 330, d: FH_TRAIL }],
@@ -1959,6 +2274,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Small, unseen things — like footsteps — are often the key. Do things properly, right down to the smallest part.",
     },
     tags: ["tenis", "forehand", "langkah kaki", "kak adam", "sungguh-sungguh", "abi"],
+    card: {
+      title: { id: "Sungguh-Sungguh sampai Hal Kecil", en: "Doing Small Things Well" },
+      items: {
+        id: [
+          "Tunjukkan bagian kecil yang sering terlupa: merapikan sudut, menutup tutup botol.",
+          "Puji ketelitian anak, bukan hanya kecepatannya.",
+          "Bekerja rapi adalah bagian dari ihsan — beri contoh di rumah.",
+        ],
+        en: [
+          "Point out the small parts that get forgotten: tidying corners, closing lids.",
+          "Praise care and attention, not just speed.",
+          "Doing things well is part of ihsan — model it at home.",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "ladder", x: 400 }, { k: "footprints", x: 330, y: 432 }, { k: "ballrally", x: 440, y: 350 }],
@@ -2050,6 +2380,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Try your very hardest, then trust Allah. Welcome a win humbly — it came from practice and from His help.",
     },
     tags: ["tenis", "forehand", "pertandingan", "tawakal", "kak adam", "rendah hati"],
+    card: {
+      title: { id: "Berusaha lalu Bertawakal", en: "Try Hard, Then Trust Allah" },
+      items: {
+        id: [
+          "Sebelum lomba atau ujian, ajak anak berlatih sungguh-sungguh dulu.",
+          "Ajarkan doa hasbunallah wa ni'mal wakil saat cemas.",
+          "Saat menang, ajak bersyukur dengan rendah hati; saat kalah, ajak bersabar.",
+        ],
+        en: [
+          "Before a match or test, help your child prepare properly first.",
+          "Teach \"Hasbunallah wa ni'mal wakil\" for anxious moments.",
+          "When they win, give thanks humbly; when they lose, be patient together.",
+        ],
+      },
+    },
     cover: {
       focus: 390, bg: "court",
       props: [{ k: "ballfly", x: 370, y: 330, s: 1.2, d: FH_HIT }, { k: "swoosh", x: 345, y: 330, d: FH_TRAIL }, { k: "trophy", x: 580 }],
@@ -2141,6 +2486,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Learning a game's rules together makes children more patient and sporting. The score can be zero — but playing with love never is.",
     },
     tags: ["tenis", "skor", "berhitung", "kak adam", "keluarga", "sportif"],
+    card: {
+      title: { id: "Belajar Aturan Permainan", en: "Learning the Rules Together" },
+      items: {
+        id: [
+          "Pelajari aturan sebuah permainan bersama anak sebelum bermain.",
+          "Bergantian menjadi wasit agar anak belajar adil.",
+          "Ingatkan bahwa skor boleh nol, yang penting bermain dengan sportif dan saling sayang.",
+        ],
+        en: [
+          "Learn a game's rules together with your child before you play.",
+          "Take turns being the referee so your child learns fairness.",
+          "Remind them the score can be zero — what matters is playing fairly and kindly.",
+        ],
+      },
+    },
     cover: {
       focus: 360, bg: "court",
       props: [{ k: "scoreboard", x: 560 }, { k: "ballfly", x: 370, y: 330, d: FH_HIT }],
@@ -2231,6 +2591,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Small jobs done carefully and humbly are precious. Children learn that helping others is something to be proud of, even when nobody claps.",
     },
     tags: ["tenis", "penjaga bola", "menolong", "kak adam", "turnamen", "rendah hati"],
+    card: {
+      title: { id: "Bangga Menolong Orang Lain", en: "Proud to Help Others" },
+      items: {
+        id: [
+          "Beri anak peran membantu di acara keluarga atau masjid: membagikan air, merapikan sandal.",
+          "Ceritakan bahwa pekerjaan kecil yang ikhlas sangat berharga di sisi Allah.",
+          "Ucapkan terima kasih di depan orang lain saat anak menolong.",
+        ],
+        en: [
+          "Give your child a helping role at family or mosque events: handing out water, lining up sandals.",
+          "Tell them that small jobs done sincerely are precious to Allah.",
+          "Thank them in front of others when they help.",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "ballroll", x: 470 }, { k: "ballbasket", x: 600 }],
@@ -2322,6 +2697,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Honesty is tested most when nobody is watching. Praise children every time they choose honesty — especially when it costs them.",
     },
     tags: ["tenis", "jujur", "sportif", "kak adam", "pertandingan", "amanah"],
+    card: {
+      title: { id: "Jujur Walau Tak Ada yang Melihat", en: "Honest When No One Is Watching" },
+      items: {
+        id: [
+          "Ceritakan bahwa Allah selalu melihat, termasuk saat tidak ada orang lain.",
+          "Puji anak setiap kali ia memilih jujur, terutama saat itu membuatnya rugi.",
+          "Beri contoh: kembalikan uang kembalian yang berlebih di depan anak.",
+        ],
+        en: [
+          "Explain that Allah always sees, even when no one else does.",
+          "Praise your child every time they choose honesty, especially when it costs them.",
+          "Model it: return extra change in front of your child.",
+        ],
+      },
+    },
     cover: {
       focus: 400, bg: "court",
       props: [{ k: "ballmark", x: 520 }],
@@ -2413,6 +2803,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "A broken thing can teach a lot: patience, caring for your belongings, and thanking the people who help fix them.",
     },
     tags: ["tenis", "raket", "merawat barang", "kak adam", "berterima kasih", "sabar"],
+    card: {
+      title: { id: "Saat Barang Rusak", en: "When Something Breaks" },
+      items: {
+        id: [
+          "Tetap tenang dan ajak anak melihat apa yang bisa diperbaiki.",
+          "Ajarkan merawat barang sendiri: menyimpan di tempatnya, memakai dengan hati-hati.",
+          "Ajak berterima kasih kepada orang yang membantu memperbaiki.",
+        ],
+        en: [
+          "Stay calm and look together at what can be fixed.",
+          "Teach care for belongings: putting them away and using them gently.",
+          "Thank whoever helps fix it, together.",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "racketbroken", x: 480, y: 330 }],
@@ -2504,6 +2909,21 @@ export const FAMILY_BOOKS: PictureBook[] = [
       en: "Teamwork needs talking, trusting and cheering each other on. Children learn that a team that holds each other up beats a great player on their own.",
     },
     tags: ["tenis", "ganda", "kerja sama", "kak adam", "persahabatan", "tim"],
+    card: {
+      title: { id: "Belajar Bekerja Sama", en: "Learning to Work as a Team" },
+      items: {
+        id: [
+          "Beri tugas yang hanya bisa selesai berdua, seperti membawa keranjang atau menyusun puzzle.",
+          "Ajarkan kata-kata penyemangat untuk teman: \"Bagus!\" \"Ayo, kita bisa!\"",
+          "Setelah selesai, tanyakan: \"Apa yang membuat kalian berhasil?\"",
+        ],
+        en: [
+          "Give a job that needs two people, like carrying a basket or doing a puzzle.",
+          "Teach words of encouragement for a teammate: \"Nice one!\" \"We can do it!\"",
+          "Afterwards ask: \"What helped you succeed together?\"",
+        ],
+      },
+    },
     cover: {
       focus: 380, bg: "court",
       props: [{ k: "ballrally", x: 380, y: 320 }, { k: "trophy", x: 590 }],

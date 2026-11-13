@@ -12,6 +12,7 @@ import { MobileNav } from "@/components/MobileNav";
 import { ShareBar } from "@/components/ShareBar";
 import { BookmarkButton } from "@/components/BookmarkButton";
 import { BookReader } from "@/components/BookReader";
+import { notFuture } from "@/lib/dates";
 import { StoryArt } from "@/components/story-art/StoryArt";
 import { illusFor } from "@/lib/cerita/illus";
 import { getBookPages } from "@/lib/cerita/picture-books";
@@ -113,11 +114,6 @@ export default async function CatatanDetail({
         </nav>
 
         <header className="mb-8">
-          {isStory && (
-            <p className="mb-3 inline-flex items-center gap-1.5 rounded-full bg-clay-soft px-3 py-1 text-[12.5px] font-semibold normal-case-label text-clay">
-              <span aria-hidden>📖</span> {dict.catatan.bookInspo}
-            </p>
-          )}
           <div className="mb-4 flex flex-wrap items-center gap-2 text-[11px]">
             <span className="rounded-full bg-sage-soft px-2.5 py-0.5 font-semibold normal-case-label text-sage-deep">
               {dict.catatan.childChip[n.child]}
@@ -125,10 +121,14 @@ export default async function CatatanDetail({
             <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
               {isStory ? dict.catatan.kidsStory : narrator}
             </span>
-            <span className="text-whisper">
-              {formatDate(n.published, l)}
-            </span>
-            <span className="text-whisper">·</span>
+            {!isStory && (
+              <>
+                <span className="text-whisper">
+                  {formatDate(n.published, l)}
+                </span>
+                <span className="text-whisper">·</span>
+              </>
+            )}
             <span className="text-whisper">
               {n.readingTimeMin} {dict.blog.readingTime}
             </span>
@@ -329,7 +329,7 @@ export default async function CatatanDetail({
         <hr className="my-12 border-hairline" />
 
         {/* Other notes */}
-        <RelatedNotes currentSlug={n.slug} locale={l} />
+        <RelatedNotes currentSlug={n.slug} locale={l} story={isStory} tags={n.tags ?? []} />
       </main>
 
       <Footer locale={l} currentPath={`/cerita/${slug}`} />
@@ -355,7 +355,7 @@ export default async function CatatanDetail({
                   id: n.video,
                   name: n.title[l],
                   description: n.hook[l],
-                  uploadDate: n.published,
+                  uploadDate: notFuture(n.published),
                 }),
               ]
             : []),
@@ -368,19 +368,24 @@ export default async function CatatanDetail({
 function RelatedNotes({
   currentSlug,
   locale,
+  story = false,
+  tags = [],
 }: {
   currentSlug: string;
   locale: Locale;
+  story?: boolean;
+  tags?: string[];
 }) {
   const dict = getDictionary(locale);
-  const others = getAllCatatan()
-    .filter((n) => n.slug !== currentSlug)
-    .slice(0, 2);
+  const pool = getAllCatatan().filter((n) => n.slug !== currentSlug && (n.kind === "story") === story);
+  // stories: prefer ones sharing a tag, so "more stories" stays on topic
+  const score = (n: { tags?: string[] }) => (n.tags ?? []).filter((t) => tags.includes(t)).length;
+  const others = (story ? [...pool].sort((a, b) => score(b) - score(a)) : pool).slice(0, 2);
   if (others.length === 0) return null;
   return (
     <div>
       <p className="text-[12.5px] font-semibold normal-case-label text-whisper">
-        {locale === "id" ? "Catatan lain" : "Other notes"}
+        {story ? (locale === "id" ? "Cerita lainnya" : "More stories") : locale === "id" ? "Catatan lain" : "Other notes"}
       </p>
       <div className="mt-4 grid gap-4 sm:grid-cols-2">
         {others.map((o) => (

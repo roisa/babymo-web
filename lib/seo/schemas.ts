@@ -1,3 +1,4 @@
+import { notFuture } from "@/lib/dates";
 import { type Locale, absoluteUrl, siteUrl } from "../i18n/config";
 import type { BlogPost, Doa, Game, Hadith, ParentingSituation } from "../content/types";
 import { getDictionary } from "../i18n/dictionaries";
@@ -134,8 +135,8 @@ export function catatanSchema(
     headline: note.title[locale],
     description: note.hook[locale],
     inLanguage: locale === "id" ? "id-ID" : "en",
-    datePublished: note.published,
-    dateModified: note.published,
+    datePublished: notFuture(note.published),
+    dateModified: notFuture(note.published),
     author,
     publisher: { "@id": `${siteUrl}/#org` },
     mainEntityOfPage: absoluteUrl(locale, `/cerita/${note.slug}`),

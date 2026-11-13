@@ -32,8 +32,12 @@ export function CeritaCard({ note: n, locale: l }: { note: Catatan; locale: Loca
                 ? dict.catatan.byUmi
                 : dict.catatan.bySalman}
           </span>
-          <time dateTime={n.published}>{formatDate(n.published, l)}</time>
-          <span aria-hidden>·</span>
+          {n.kind !== "story" && (
+            <>
+              <time dateTime={n.published}>{formatDate(n.published, l)}</time>
+              <span aria-hidden>·</span>
+            </>
+          )}
           <span>
             {n.readingTimeMin} {dict.blog.readingTime}
           </span>
