@@ -36,13 +36,13 @@ const GROUPS: Group[] = [
   {
     id: "mulai", icon: "🚀", tone: "#FFE8B8",
     title: { id: "Memulai", en: "Getting started" },
-    blurb: { id: "Gratis, akun, usia, perangkat", en: "Price, accounts, ages, devices" },
+    blurb: { id: "Harga, akun, usia, perangkat", en: "Price, accounts, ages, devices" },
     faqs: [
       {
-        q: { id: "Apakah Baby Mo gratis?", en: "Is Baby Mo free?" },
+        q: { id: "Berapa harga Baby Mo?", en: "How much does Baby Mo cost?" },
         a: {
-          id: <p>Ya. Baby Mo gratis, tanpa iklan, dan tanpa pembelian dalam aplikasi. Label seperti &ldquo;PRO&rdquo; atau &ldquo;Juara&rdquo; di beberapa game hanyalah tingkat kesulitan, bukan fitur berbayar.</p>,
-          en: <p>Yes. Baby Mo is free, with no ads and no in-app purchases. Labels such as &ldquo;PRO&rdquo; or &ldquo;Champion&rdquo; in some games are just difficulty levels, not paid features.</p>,
+          id: <p>Baby Mo dibeli sekali di App Store; harganya tertera di halaman App Store untuk negara Anda. Setelah itu semua game terbuka: tanpa langganan, tanpa pembelian dalam aplikasi, dan tanpa iklan. Label seperti &ldquo;PRO&rdquo; atau &ldquo;Juara&rdquo; di beberapa game hanyalah tingkat kesulitan, bukan fitur berbayar.</p>,
+          en: <p>Baby Mo is a one-time purchase on the App Store; the price for your country is shown on its App Store page. After that every game is open: no subscription, no in-app purchases and no ads. Labels such as &ldquo;PRO&rdquo; or &ldquo;Champion&rdquo; in some games are just difficulty levels, not paid features.</p>,
         },
       },
       {

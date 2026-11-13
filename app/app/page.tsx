@@ -5,29 +5,32 @@ import { asset } from "@/lib/i18n/config";
 import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-pages";
 
 /**
- * babymo.id/app — the marketing page for the Baby Mo iPhone & iPad app
- * (the "Marketing URL" in App Store Connect). Every claim here is checked
- * against the app in the babymo-app repo and the privacy policy — keep it
- * that way when the app changes. Screenshots are real captures of the app
- * (public/app-store, versioned filenames because the service worker caches
- * images).
+ * babymo.id/app — the marketing page for the Baby Mo app (the "Marketing URL" in App Store
+ * Connect). Redesigned 13 Nov 2026 in the current iOS look: frosted "liquid glass" panels over a
+ * soft sky, large rounded titles, widget-style tiles, swipeable cards and settings-style toggles.
+ *
+ * Every claim is checked against the app (babymo-app) and the privacy policy — keep it that way.
+ * Baby Mo is a paid app: one purchase, no in-app purchases, no subscription, no ads. The price is
+ * never written here (Apple shows it per country on the App Store button/page).
+ * Screenshots are real captures from the App Store kit (public/app-store/v3, versioned folder
+ * because the service worker caches images).
  */
 
 export const metadata: Metadata = {
   title: "Baby Mo — Aplikasi Belajar Islam untuk Anak · Islamic learning app for kids",
   description:
-    "Baby Mo for iPhone and iPad: 12 Islamic games, daily du'as with Arabic audio, a step-by-step prayer and wudhu guide, the 28 hijaiyah letters, memory and matching games, prayer times and a bedtime routine for children aged 2–8. Free, no ads, no account, works offline.",
+    "Baby Mo for iPhone, iPad and Apple Watch: 19 Islamic games and activities, 25 du'as with real Arabic audio, wudhu and prayer guides, the 28 hijaiyah letters, kindness to animals, a bedtime routine and a Ramadan series — for children aged 2–8. One purchase, no ads, no account, works offline.",
   alternates: { canonical: "https://babymo.id/app/" },
   robots: { index: true, follow: true },
   openGraph: {
     title: "Baby Mo — Belajar Islam sambil bermain",
-    description: "12 game islami, doa harian dengan audio Arab, panduan sholat & wudhu, huruf hijaiyah, rutinitas tidur. Gratis, tanpa iklan, tanpa akun.",
+    description: "19 game & aktivitas islami, 25 doa dengan suara Arab, wudhu & sholat, huruf hijaiyah, Ramadan, dan Apple Watch. Sekali beli, tanpa iklan, tanpa akun.",
     url: "https://babymo.id/app/",
-    images: [{ url: "https://babymo.id/app-store/app-hub-v1.webp" }],
+    images: [{ url: "https://babymo.id/app-store/v3/id-01-home.webp" }],
   },
 };
 
-/* ───────────────────────── content ───────────────────────── */
+/* ───────────────────────── helpers ───────────────────────── */
 
 type Bi = { id: ReactNode; en: ReactNode };
 const B = ({ t }: { t: Bi }) => (
@@ -36,290 +39,311 @@ const B = ({ t }: { t: Bi }) => (
     <span data-l="en">{t.en}</span>
   </>
 );
+const V = "/app-store/v3/";
+/** A real app screenshot in both languages (only the current language is shown). */
+function Shot({ k, eager }: { k: string; eager?: boolean }) {
+  return (
+    <>
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img data-l="id" src={asset(`${V}id-${k}.webp`)} alt="" width={540} height={1174} loading={eager ? "eager" : "lazy"} />
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img data-l="en" src={asset(`${V}en-${k}.webp`)} alt="" width={540} height={1174} loading={eager ? "eager" : "lazy"} />
+    </>
+  );
+}
+function Phone({ k, eager, tilt }: { k: string; eager?: boolean; tilt?: number }) {
+  return (
+    <div className="phone" style={tilt ? { transform: `rotate(${tilt}deg)` } : undefined}>
+      <div className="scr"><Shot k={k} eager={eager} /></div>
+      <i className="isl" />
+    </div>
+  );
+}
+const Mo = ({ f, cls }: { f: string; cls?: string }) => (
+  // eslint-disable-next-line @next/next/no-img-element
+  <img className={cls} src={asset(`/baby-mo-poses/baby-mo-${f}.png`)} alt="" width={400} height={400} loading="lazy" />
+);
 
-const HERO_SLIDES: { src: string; t: Bi }[] = [
-  { src: "/app-store/app-hub-v1.webp", t: { id: "Beranda", en: "Home" } },
-  { src: "/app-store/app-doa-v1.webp", t: { id: "Doa Harian", en: "Daily du'as" } },
-  { src: "/app-store/app-sholat-v1.webp", t: { id: "Sholat Bareng Mo", en: "Pray with Mo" } },
-  { src: "/app-store/app-wudhu-v1.webp", t: { id: "Wudhu Bareng Mo", en: "Wudhu with Mo" } },
-  { src: "/app-store/app-dream-v1.webp", t: { id: "Dreamtime", en: "Dreamtime" } },
+/* ───────────────────────── content ───────────────────────── */
+
+const STATS: { n: string; c: string; t: Bi }[] = [
+  { n: "19", c: "#FF9F1C", t: { id: "game & aktivitas islami", en: "Islamic games & activities" } },
+  { n: "25", c: "#1FA35A", t: { id: "doa dengan suara Arab asli", en: "du'as with real Arabic audio" } },
+  { n: "28", c: "#2D8CFF", t: { id: "huruf hijaiyah", en: "hijaiyah letters" } },
+  { n: "2", c: "#8B6CF6", t: { id: "bahasa: Indonesia & Inggris", en: "languages: Indonesian & English" } },
+  { n: "0", c: "#FF5C7A", t: { id: "iklan, akun & pelacak", en: "ads, accounts & trackers" } },
 ];
 
-const STATS: { n: string; t: Bi }[] = [
-  { n: "12", t: { id: "game islami", en: "Islamic games" } },
-  { n: "6", t: { id: "doa harian + audio", en: "daily du'as + audio" } },
-  { n: "28", t: { id: "huruf hijaiyah", en: "hijaiyah letters" } },
-  { n: "10", t: { id: "langkah wudhu", en: "wudhu steps" } },
-  { n: "2", t: { id: "bahasa: ID & EN", en: "languages: ID & EN" } },
-  { n: "0", t: { id: "iklan, akun, pelacak", en: "ads, accounts, trackers" } },
-];
-
-const DAY: { time: Bi; icon: string; title: Bi; body: Bi; shot: string; tone: string }[] = [
-  {
-    time: { id: "Pagi", en: "Morning" }, icon: "🌅", tone: "#FFE8B8", shot: "/app-store/app-doa-v1.webp",
+/* "A day with Baby Mo" — swipeable cards, like the App Store's Today tab */
+const DAY: { when: Bi; tint: string; k: string; title: Bi; body: Bi }[] = [
+  { when: { id: "Pagi", en: "Morning" }, tint: "linear-gradient(160deg,#FFE7B3,#FFD1DC)", k: "03-doa",
     title: { id: "Doa bangun tidur", en: "The waking-up du'a" },
-    body: { id: "Mulai hari dengan Doa Harian: 6 doa dari bangun tidur, kamar mandi, makan, belajar, keluar rumah, sampai tidur — dengan suara Arab, latin, dan arti.", en: "Start the day with Daily Du'as: 6 du'as for waking up, the bathroom, eating, studying, leaving home and bedtime — with Arabic audio, transliteration and meaning." },
-  },
-  {
-    time: { id: "Siang", en: "Midday" }, icon: "🎮", tone: "#D9F2FF", shot: "/app-store/app-find-v1.webp",
-    title: { id: "Main sambil belajar", en: "Play and learn" },
-    body: { id: "Cari Baby Mo di kamar, ruang keluarga, sampai Pasar Ramadan. Memory Match dari 4 kartu (usia 2+) sampai 20 kartu (usia 5+).", en: "Find Baby Mo in his bedroom, the living room and even a Ramadan market. Memory Match grows from 4 cards (age 2+) to 20 cards (age 5+)." },
-  },
-  {
-    time: { id: "Sore", en: "Afternoon" }, icon: "🕌", tone: "#DDF5E6", shot: "/app-store/app-wudhu-v1.webp",
-    title: { id: "Wudhu & sholat bareng Mo", en: "Wudhu & prayer with Mo" },
-    body: { id: "Wudhu Bareng Mo mengajarkan 10 langkah wudhu plus niat dan doanya, lalu game mengurutkan. Sholat Bareng Mo memandu 7 langkah gerakan dan bacaan, dengan hitung mundur ke waktu sholat berikutnya.", en: "Wudhu with Mo teaches the 10 steps of wudhu with its intention and du'a, then a sorting game. Pray with Mo guides the 7 steps of the prayer, with a countdown to the next prayer time." },
-  },
-  {
-    time: { id: "Malam", en: "Night" }, icon: "🌙", tone: "#E6E0FF", shot: "/app-store/app-dream-v1.webp",
-    title: { id: "Dreamtime", en: "Dreamtime" },
-    body: { id: "Rutinitas tidur 4 langkah: gosok gigi, ganti baju, baca doa, lalu tidur — dipandu Baby Mo dengan suasana malam yang tenang.", en: "A 4-step bedtime routine: brush teeth, change clothes, read the du'a, then sleep — guided by Baby Mo in a calm night-time scene." },
-  },
+    body: { id: "Dengarkan suara Arab asli, kata menyala satu per satu, lalu ketuk tombol aksi bersama Mo.", en: "Hear the real Arabic, watch each word light up, then tap the action with Mo." } },
+  { when: { id: "Sebelum sholat", en: "Before prayer" }, tint: "linear-gradient(160deg,#CDEBFF,#D9F7EC)", k: "05-wudhu",
+    title: { id: "Wudhu bareng Mo", en: "Wudhu with Mo" },
+    body: { id: "10 langkah wudhu dengan niat dan doanya, lalu game mengurutkan.", en: "The 10 steps of wudhu with the intention and du'a, then a sorting game." } },
+  { when: { id: "Waktu sholat", en: "Prayer time" }, tint: "linear-gradient(160deg,#E2DAFF,#CDEBFF)", k: "04-sholat",
+    title: { id: "Sholat langkah demi langkah", en: "Prayer, step by step" },
+    body: { id: "7 langkah gerakan dan bacaan, plus jadwal sholat dan arah kiblat.", en: "7 steps of movements and recitations, plus prayer times and the Qibla." } },
+  { when: { id: "Siang", en: "Afternoon" }, tint: "linear-gradient(160deg,#FFE0C2,#FFF4C2)", k: "09-hewan",
+    title: { id: "Sayang hewan", en: "Kindness to animals" },
+    body: { id: "Beri makan dengan Bismillah, beri minum, bersihkan, dan elus pelan-pelan.", en: "Feed with Bismillah, give water, clean up and stroke gently." } },
+  { when: { id: "Sore", en: "Late afternoon" }, tint: "linear-gradient(160deg,#D5F5D0,#FFF0D6)", k: "10-kebun",
+    title: { id: "Berkebun bersama Ais", en: "Gardening with Ais" },
+    body: { id: "Tanam, siram, panen, lalu berbagi dengan tetangga.", en: "Plant, water, harvest, then share with the neighbours." } },
+  { when: { id: "Malam", en: "Night" }, tint: "linear-gradient(160deg,#2E2A78,#5B4FC9)", k: "11-dream",
+    title: { id: "Waktunya tidur", en: "Time for bed" },
+    body: { id: "4 langkah malam: gosok gigi, ganti baju, baca doa, lalu tidur.", en: "4 bedtime steps: brush teeth, change clothes, read the du'a, then sleep." } },
 ];
 
-const SHOWCASE: { shot: string; kicker: Bi; title: Bi; points: Bi[] }[] = [
-  {
-    shot: "/app-store/app-hub-v1.webp",
-    kicker: { id: "Beranda", en: "Home" },
-    title: { id: "Baby Mo menyapa si kecil dengan namanya", en: "Baby Mo greets your child by name" },
-    points: [
-      { id: "Ketik nama panggilan anak — tersimpan hanya di perangkat.", en: "Type your child's nickname — it stays on the device." },
-      { id: "Sapaan berubah mengikuti waktu: pagi, siang, sore, malam.", en: "The greeting changes with the time of day." },
-      { id: "Kumpulkan bintang dari setiap game.", en: "Collect stars from every game." },
-    ],
-  },
-  {
-    shot: "/app-store/app-sholat-v1.webp",
-    kicker: { id: "Sholat Bareng Mo", en: "Pray with Mo" },
-    title: { id: "Sholat langkah demi langkah", en: "Prayer, one step at a time" },
-    points: [
-      { id: "Panduan 7 langkah gerakan dan bacaan sholat.", en: "A 7-step guide to the prayer movements and recitations." },
-      { id: "Jadwal sholat hari ini dan arah kiblat — lokasi opsional, bisa pilih kota.", en: "Today's prayer times and the Qibla — location optional, or pick a city." },
-      { id: "Catatan progres dan streak untuk menyemangati.", en: "Progress and streaks to keep motivation up." },
-    ],
-  },
-  {
-    shot: "/app-store/app-huruf-v2.webp",
-    kicker: { id: "Huruf Hijaiyah", en: "Hijaiyah letters" },
-    title: { id: "Dari alif sampai ya, dengan suara", en: "From alif to ya, with sound" },
-    points: [
-      { id: "Huruf Hijaiyah: 28 huruf dalam 9 pelajaran bertahap — dengar suaranya, lalu kuis dan bintang.", en: "Hijaiyah Letters: 28 letters in 9 step-by-step lessons — hear each one, then a quiz and stars." },
-      { id: "Pulau Hijaiyah: jelajahi pulau kotak-kotak bersama Baby Mo dan temukan 28 huruf yang tersembunyi.", en: "Hijaiyah Island: explore a blocky island with Baby Mo and find the 28 hidden letters." },
-      { id: "Kata Islam: susun huruf menjadi kata Arab pertama.", en: "Islamic Words: put letters together into first Arabic words." },
-    ],
-  },
-  {
-    shot: "/app-store/app-memory-v1.webp",
-    kicker: { id: "Game seru", en: "Fun games" },
-    title: { id: "Game seru yang melatih ingatan", en: "Fun games that train young minds" },
-    points: [
-      { id: "Memory Match: 7 level, dari 4 kartu untuk balita sampai 20 kartu untuk juara.", en: "Memory Match: 7 levels, from 4 cards for toddlers to 20 cards for champions." },
-      { id: "Dua Journey: cocokkan doa dengan momennya, dalam 3 level.", en: "Dua Journey: match each du'a to its moment, across 3 levels." },
-      { id: "Puzzle Kalimat Thayyibah dan Cari Baby Mo — dari kamar sampai Pasar Ramadan.", en: "Kind Words puzzle and Find Baby Mo — from his bedroom to a Ramadan market." },
-    ],
-  },
+const LITTLE: { ic: string; t: Bi; d: Bi }[] = [
+  { ic: "👆", t: { id: "Tombol besar", en: "Big buttons" }, d: { id: "Pas untuk jari mungil.", en: "Made for small fingers." } },
+  { ic: "🔊", t: { id: "Suara dulu", en: "Sound first" }, d: { id: "Yang belum bisa membaca tetap bisa main.", en: "Pre-readers can play too." } },
+  { ic: "⭐", t: { id: "Bintang & stiker", en: "Stars & stickers" }, d: { id: "Pujian kecil, tanpa tekanan.", en: "Little praise, no pressure." } },
+  { ic: "🌗", t: { id: "Mode gelap", en: "Dark mode" }, d: { id: "Nyaman di malam hari.", en: "Easy on the eyes at night." } },
+  { ic: "✈️", t: { id: "Bisa offline", en: "Works offline" }, d: { id: "Mudik dan perjalanan aman.", en: "Perfect for trips." } },
+  { ic: "🗣️", t: { id: "ID & EN", en: "ID & EN" }, d: { id: "Ganti bahasa sekali ketuk.", en: "Switch language in one tap." } },
 ];
 
-const LITTLE: { icon: string; t: Bi; d: Bi }[] = [
-  { icon: "👆", t: { id: "Tombol besar", en: "Big buttons" }, d: { id: "Mudah ditekan jari mungil.", en: "Easy for small fingers." } },
-  { icon: "🔊", t: { id: "Suara lebih dulu", en: "Sound first" }, d: { id: "Anak yang belum bisa membaca tetap bisa bermain.", en: "Children who can't read yet can still play." } },
-  { icon: "⭐", t: { id: "Bintang hadiah", en: "Reward stars" }, d: { id: "Pujian kecil di setiap langkah, tanpa tekanan.", en: "Little praise at every step, no pressure." } },
-  { icon: "🌗", t: { id: "Mode gelap", en: "Dark mode" }, d: { id: "Nyaman untuk mata di malam hari.", en: "Easy on the eyes at night." } },
-  { icon: "✈️", t: { id: "Bisa offline", en: "Works offline" }, d: { id: "Cocok untuk perjalanan dan mudik.", en: "Great for car trips and travel." } },
-  { icon: "🇮🇩", t: { id: "Indonesia & Inggris", en: "Indonesian & English" }, d: { id: "Ganti bahasa dengan satu ketukan.", en: "Switch language in one tap." } },
+const AGES: { age: string; c: string; t: Bi; g: Bi }[] = [
+  { age: "2–3", c: "#FF9F1C", t: { id: "Kenalan & bermain", en: "Meet & play" }, g: { id: "Kenalan dengan Baby Mo, Cari Baby Mo, Memory Match mudah, Dreamtime", en: "Meet Baby Mo, Find Baby Mo, easy Memory Match, Dreamtime" } },
+  { age: "3–5", c: "#1FA35A", t: { id: "Doa & akhlak", en: "Du'as & good manners" }, g: { id: "Doa Harian, Dua Journey, Wudhu, Kalimat Thayyibah, Sahabat Hewan, Kebun Ais", en: "Daily Du'as, Dua Journey, Wudhu, Good Words, Animal Friends, Ais's Garden" } },
+  { age: "5–8", c: "#2D8CFF", t: { id: "Membaca & beribadah", en: "Reading & worship" }, g: { id: "Huruf Hijaiyah, Pulau Hijaiyah, Susun Huruf, Sholat Bareng Mo, Tasbih, Akademi Tenis", en: "Hijaiyah Letters, Hijaiyah Island, Build the Word, Pray with Mo, Tasbih, Tennis Academy" } },
 ];
 
-const AGES: { age: string; color: string; t: Bi; games: Bi }[] = [
-  { age: "2–3", color: "#FFB627", t: { id: "Kenalan & bermain", en: "Meet & play" }, games: { id: "Kenalan dengan Baby Mo (puzzle), Cari Baby Mo, Memory Match mudah, Dreamtime", en: "Meet Baby Mo (puzzle), Find Baby Mo, easy Memory Match, Dreamtime" } },
-  { age: "3–5", color: "#3FA57A", t: { id: "Doa & kebiasaan baik", en: "Du'as & good habits" }, games: { id: "Doa Harian, Dua Journey, Wudhu Bareng Mo, Puzzle Kalimat Thayyibah", en: "Daily Du'as, Dua Journey, Wudhu with Mo, Kind Words puzzle" } },
-  { age: "5–8", color: "#5AA9E6", t: { id: "Membaca & beribadah", en: "Reading & worship" }, games: { id: "Huruf Hijaiyah, Pulau Hijaiyah, Kata Islam, Sholat Bareng Mo, Memory Match level sulit", en: "Hijaiyah Letters, Hijaiyah Island, Islamic Words, Pray with Mo, harder Memory Match levels" } },
-];
-
-const NOS: Bi[] = [
+const OFF: Bi[] = [
   { id: "Iklan", en: "Ads" },
+  { id: "Pembelian dalam aplikasi", en: "In-app purchases" },
+  { id: "Langganan", en: "Subscriptions" },
   { id: "Akun & login", en: "Accounts & login" },
-  { id: "Pembelian dalam app", en: "In-app purchases" },
   { id: "Pelacakan & analitik", en: "Tracking & analytics" },
   { id: "Chat & fitur sosial", en: "Chat & social features" },
-  { id: "Data pribadi anak", en: "Children's personal data" },
 ];
 
 const FAQ: { q: Bi; a: Bi }[] = [
-  { q: { id: "Benar-benar gratis?", en: "Is it really free?" }, a: { id: "Ya. Tanpa iklan dan tanpa pembelian dalam aplikasi. Baby Mo dibuat untuk berbagi ilmu.", en: "Yes. No ads and no in-app purchases. Baby Mo is made to share knowledge." } },
-  { q: { id: "Data apa yang disimpan?", en: "What data is stored?" }, a: { id: "Hanya nama panggilan (jika diisi), bintang, progres, dan pengaturan — semuanya di perangkat Anda, tidak dikirim ke kami.", en: "Only the nickname (if you add one), stars, progress and settings — all on your device, never sent to us." } },
-  { q: { id: "Butuh internet?", en: "Does it need the internet?" }, a: { id: "Tidak untuk bermain. Internet hanya dipakai untuk menghitung jadwal sholat.", en: "Not to play. The internet is only used to calculate prayer times." } },
+  { q: { id: "Berapa harganya?", en: "How much does it cost?" },
+    a: { id: "Baby Mo dibeli sekali di App Store; harganya tertera di halaman App Store untuk negara Anda. Setelah itu semua game terbuka — tanpa langganan, tanpa pembelian dalam aplikasi, dan tanpa iklan.", en: "Baby Mo is a one-time purchase on the App Store; the price for your country is shown on its App Store page. After that every game is open — no subscription, no in-app purchases and no ads." } },
+  { q: { id: "Bisa dicoba dulu?", en: "Can we try it first?" },
+    a: { id: <>Bisa. Mainkan versi web di <a href="https://play.babymo.id/">play.babymo.id</a> langsung di browser.</>, en: <>Yes. Play the web version at <a href="https://play.babymo.id/">play.babymo.id</a> right in your browser.</> } },
+  { q: { id: "Data apa yang disimpan?", en: "What data is stored?" },
+    a: { id: "Hanya nama panggilan (jika diisi), bintang, progres, dan pengaturan — semuanya di perangkat Anda, tidak pernah dikirim ke kami.", en: "Only the nickname (if you add one), stars, progress and settings — all on your device, never sent to us." } },
+  { q: { id: "Butuh internet?", en: "Does it need the internet?" },
+    a: { id: "Tidak. Semua game, suara, dan jadwal sholat bekerja offline — jadwal sholat dihitung di perangkat dari kota pilihan Anda atau lokasi (opsional).", en: "No. All games, audio and prayer times work offline — prayer times are calculated on the device from the city you pick or your location (optional)." } },
+  { q: { id: "Perangkat apa saja?", en: "Which devices?" },
+    a: { id: "iPhone dan iPad dengan iOS 15 atau lebih baru, plus aplikasi Apple Watch (watchOS 10 atau lebih baru).", en: "iPhone and iPad with iOS 15 or later, plus an Apple Watch app (watchOS 10 or later)." } },
+  { q: { id: "Doanya dari mana?", en: "Where do the du'as come from?" },
+    a: { id: "Doa dan hadits disertai sumbernya. Teks Arab ditulis lengkap dengan harakat dan dibacakan dengan suara Arab asli.", en: "Du'as and hadith come with their sources. The Arabic is fully vowelled and read aloud with real Arabic audio." } },
 ];
 
 /* ───────────────────────── styles ───────────────────────── */
 
 const CSS = `
-:root{color-scheme:light dark;--bg:#FBFAF6;--bg2:#F3F7F2;--card:#FFFFFF;--ink:#14181A;--soft:#5B615C;--line:#E7E4DB;--green:#1E8C53;--green2:#2FB36F;--sky:#5AA9E6;--sun:#FFB627;--pink:#FF8FAD;--violet:#8B7CF6;--shadow:0 20px 50px -24px rgba(20,40,30,.35)}
-@media (prefers-color-scheme:dark){:root{--bg:#0F1312;--bg2:#141A18;--card:#1A201E;--ink:#EEF1EC;--soft:#A7AEA8;--line:#29312D;--green:#5CCB8C;--green2:#7AD9A2;--shadow:0 20px 50px -24px rgba(0,0,0,.8)}}
+:root{color-scheme:light dark;
+  --bg:#EEF2FB;--ink:#101426;--soft:#596079;--line:rgba(16,20,38,.08);
+  --glass:rgba(255,255,255,.58);--glass2:rgba(255,255,255,.78);--edge:rgba(255,255,255,.85);--hl:rgba(255,255,255,.95);
+  --green:#1FA35A;--blue:#2D8CFF;--sun:#FF9F1C;--pink:#FF5C7A;--violet:#8B6CF6;
+  --sh:0 18px 40px -22px rgba(30,40,90,.35);--r:30px}
+@media (prefers-color-scheme:dark){:root{--bg:#080B19;--ink:#F2F4FF;--soft:#A3A9C6;--line:rgba(255,255,255,.08);
+  --glass:rgba(32,37,70,.52);--glass2:rgba(40,46,86,.72);--edge:rgba(255,255,255,.14);--hl:rgba(255,255,255,.18);
+  --green:#4ED28A;--blue:#5AA8FF;--sh:0 18px 40px -22px rgba(0,0,0,.8)}}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--ink)}
-body{font-family:var(--f-body),-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+body{font-family:var(--f-body),-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 html[data-lang="id"] [data-l="en"],html[data-lang="en"] [data-l="id"]{display:none!important}
-a{color:var(--green)}
+a{color:var(--blue);text-decoration:none}
 img{max-width:100%}
-.wrap{max-width:1120px;margin:0 auto;padding:0 18px}
-.r{font-family:var(--f-round),var(--f-body),sans-serif}
-h1,h2,h3{font-family:var(--f-round),var(--f-body),sans-serif;letter-spacing:-.01em;margin:0}
-h2{font-size:clamp(28px,4.4vw,42px);line-height:1.08;font-weight:800}
-h3{font-size:21px;line-height:1.2;font-weight:700}
-.kick{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--green);margin-bottom:10px}
-.kick::before{content:"";width:18px;height:3px;border-radius:2px;background:currentColor}
-.lede{font-size:18px;color:var(--soft);max-width:36em;margin:12px 0 0}
-section{padding:72px 0}
+h1,h2,h3{font-family:var(--f-round),var(--f-body),sans-serif;margin:0;letter-spacing:-.02em}
+h2{font-size:clamp(32px,5vw,52px);line-height:1.04;font-weight:800}
+h3{font-size:22px;line-height:1.15;font-weight:800}
+.wrap{max-width:1160px;margin:0 auto;padding:0 max(18px,env(safe-area-inset-left))}
+section{padding:64px 0}
+.eyebrow{font-size:14px;font-weight:800;letter-spacing:.02em;color:var(--blue);margin-bottom:8px}
+.lede{font-size:19px;color:var(--soft);max-width:34em;margin:12px 0 0}
 .c{text-align:center}.c .lede{margin-left:auto;margin-right:auto}
 
-/* nav */
-.nav{position:sticky;top:0;z-index:20;backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);background:color-mix(in srgb,var(--bg) 78%,transparent);border-bottom:1px solid color-mix(in srgb,var(--line) 70%,transparent)}
-.nav .wrap{display:flex;align-items:center;gap:14px;height:62px}
-.brand{display:flex;align-items:center;gap:9px;text-decoration:none;color:var(--ink);font-family:var(--f-round);font-weight:800;font-size:20px}
-.brand img{width:36px;height:36px;border-radius:11px;background:#E8F4EC;object-fit:contain}
-.links{display:none;gap:4px;margin-left:auto}
-.links a{color:var(--ink);text-decoration:none;font-weight:600;font-size:15px;padding:8px 12px;border-radius:999px}
-.links a:hover{background:var(--bg2)}
-@media(min-width:860px){.links{display:flex}}
-.lang{display:flex;gap:4px;margin-left:auto;background:var(--bg2);padding:4px;border-radius:999px;border:1px solid var(--line)}
-@media(min-width:860px){.lang{margin-left:8px}}
-.lang button{font:inherit;font-size:13px;font-weight:800;padding:6px 12px;border-radius:999px;border:0;background:transparent;color:var(--soft);cursor:pointer}
-html[data-lang="id"] .lang [data-set-lang="id"],html[data-lang="en"] .lang [data-set-lang="en"]{background:var(--card);color:var(--ink);box-shadow:0 2px 8px -4px rgba(0,0,0,.3)}
+/* sky: soft colour fields behind everything (the glass refracts these) */
+.sky{position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;background:var(--bg)}
+.sky i{position:absolute;border-radius:50%;filter:blur(70px);opacity:.75}
+.sky .a{width:60vw;height:60vw;left:-18vw;top:-22vw;background:#9CCBFF}
+.sky .b{width:50vw;height:50vw;right:-16vw;top:6vw;background:#CDBBFF}
+.sky .c2{width:46vw;height:46vw;left:22vw;top:44vh;background:#B8F0D2}
+.sky .d{width:40vw;height:40vw;right:-10vw;bottom:-14vw;background:#FFD7B5}
+@media (prefers-color-scheme:dark){.sky i{opacity:.32}}
+
+/* liquid glass */
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(26px) saturate(1.8);backdrop-filter:blur(26px) saturate(1.8);
+  border:1px solid var(--edge);box-shadow:inset 0 1px 0 var(--hl),inset 0 -1px 0 rgba(255,255,255,.12),var(--sh);border-radius:var(--r)}
+
+/* floating tab-bar style nav */
+.nav{position:sticky;top:max(10px,env(safe-area-inset-top));z-index:30;padding:0 12px;margin-top:10px}
+.nav .bar{max-width:1060px;margin:0 auto;display:flex;align-items:center;gap:6px;padding:7px 7px 7px 12px;border-radius:999px}
+.brand{display:flex;align-items:center;gap:8px;color:var(--ink);font-family:var(--f-round);font-weight:800;font-size:19px}
+.brand img{width:34px;height:34px;border-radius:10px}
+.links{display:none;gap:2px;margin-left:auto}
+.links a{color:var(--ink);font-weight:700;font-size:15px;padding:8px 12px;border-radius:999px}
+.links a:hover{background:var(--glass2)}
+@media(min-width:900px){.links{display:flex}}
+.seg{display:flex;margin-left:auto;padding:3px;border-radius:999px;background:var(--line)}
+@media(min-width:900px){.seg{margin-left:6px}}
+.seg button{font:inherit;font-size:13px;font-weight:800;padding:6px 11px;border-radius:999px;border:0;background:transparent;color:var(--soft);cursor:pointer}
+html[data-lang="id"] .seg [data-set-lang="id"],html[data-lang="en"] .seg [data-set-lang="en"]{background:var(--glass2);color:var(--ink);box-shadow:0 2px 8px -3px rgba(0,0,0,.25)}
+.get{margin-left:6px;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--bg)!important;font-weight:800;font-size:15px;white-space:nowrap}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:56px 0 40px}
-.blob{position:absolute;border-radius:50%;filter:blur(60px);opacity:.55;pointer-events:none}
-.b1{width:520px;height:520px;background:#BDEBCF;top:-180px;left:-160px}
-.b2{width:420px;height:420px;background:#CFE6FF;top:40px;right:-140px}
-.b3{width:360px;height:360px;background:#FFE1EA;bottom:-180px;left:35%}
-@media (prefers-color-scheme:dark){.blob{opacity:.18}}
-.hero .wrap{position:relative;z-index:1}
-.hgrid{position:relative;display:grid;gap:40px;align-items:center}
-@media(min-width:900px){.hgrid{grid-template-columns:1.1fr .9fr}}
-.pill{display:inline-flex;align-items:center;gap:8px;padding:7px 14px 7px 8px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:700;font-size:14px;box-shadow:var(--shadow)}
-.pill b{background:var(--green);color:#fff;border-radius:999px;padding:2px 9px;font-size:12px}
-.hero h1{font-size:clamp(40px,7vw,72px);line-height:1.02;font-weight:800;margin:18px 0 0}
-.grad{background:linear-gradient(90deg,#1E8C53,#2FB3A0 45%,#5AA9E6);-webkit-background-clip:text;background-clip:text;color:transparent}
-.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 18px}
-.btn{display:inline-flex;align-items:center;gap:10px;min-height:56px;padding:10px 22px;border-radius:16px;font-weight:800;text-decoration:none;font-size:16px;border:1px solid var(--line);background:var(--card);color:var(--ink)!important;transition:transform .15s}
-.btn:hover{transform:translateY(-2px)}
-.btn.store{background:#0B0B0C;color:#fff!important;border-color:#0B0B0C}
-@media (prefers-color-scheme:dark){.btn.store{background:#fff;color:#0B0B0C!important;border-color:#fff}}
-.btn.store small{display:block;font-size:11px;font-weight:600;opacity:.75;line-height:1}
-.btn.store span.big{display:block;font-size:19px;line-height:1.1}
-.btn.store svg{width:26px;height:26px}
-.btn.soon{cursor:default}
-.btn.soon:hover{transform:none}
-.trust{display:flex;flex-wrap:wrap;gap:8px 18px;padding:0;margin:0;list-style:none;color:var(--soft);font-weight:700;font-size:15px}
-.trust li::before{content:"✓ ";color:var(--green);font-weight:900}
+.hero{padding:44px 0 30px}
+.hg{display:grid;gap:30px;align-items:center}
+@media(min-width:960px){.hg{grid-template-columns:1.05fr .95fr}}
+.chip{display:inline-flex;align-items:center;gap:8px;padding:6px 14px 6px 6px;border-radius:999px;font-weight:700;font-size:14px}
+.chip b{background:var(--green);color:#fff;border-radius:999px;padding:3px 10px;font-size:12px}
+.hero h1{font-size:clamp(46px,8.2vw,88px);line-height:.98;font-weight:800;margin:18px 0 0;letter-spacing:-.035em}
+.hero h1 .g{background:linear-gradient(95deg,#1FA35A 0%,#18B6A4 40%,#2D8CFF 75%,#8B6CF6 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.cta{display:flex;flex-wrap:wrap;gap:12px;margin:26px 0 16px}
+.btn{display:inline-flex;align-items:center;gap:10px;min-height:58px;padding:10px 22px;border-radius:18px;font-weight:800;font-size:17px;color:var(--ink)!important;transition:transform .2s}
+.btn:hover{transform:translateY(-2px) scale(1.01)}
+.btn.store{background:#000;color:#fff!important;border:0;box-shadow:0 14px 30px -14px rgba(0,0,0,.6)}
+@media (prefers-color-scheme:dark){.btn.store{background:#fff;color:#000!important}}
+.btn.store svg{width:28px;height:28px}
+.btn.store small{display:block;font-size:11px;font-weight:600;opacity:.8;line-height:1}
+.btn.store .big{display:block;font-size:20px;line-height:1.1}
+.btn.soon{cursor:default}.btn.soon:hover{transform:none}
+.trust{display:flex;flex-wrap:wrap;gap:8px;padding:0;margin:0;list-style:none}
+.trust li{font-size:14px;font-weight:800;padding:7px 12px;border-radius:999px;background:var(--glass);border:1px solid var(--edge)}
+.trust li::before{content:"✓ ";color:var(--green)}
 
-.stage{position:relative;justify-self:center;width:min(330px,78vw)}
-.phone{position:relative;border-radius:52px;background:linear-gradient(145deg,#2A2D33,#121417);padding:14px;box-shadow:0 50px 90px -34px rgba(10,30,20,.6),inset 0 0 0 2px #3A3D44,inset 0 0 0 6px #16181C}
-.screen{position:relative;width:100%;border-radius:39px;overflow:hidden;background:#F5F1FA;display:flex;flex-direction:column}
-.sbar{flex:0 0 auto;height:40px;display:flex;align-items:center;justify-content:space-between;padding:6px 26px 0;font:700 13px/1 var(--f-body),sans-serif;color:#14181A;background:#F5F1FA}
-.sbar .ico{display:flex;gap:5px;align-items:center}
-.sbar .bat{width:22px;height:11px;border:1.6px solid #14181A;border-radius:3px;position:relative}
-.sbar .bat::after{content:"";position:absolute;inset:1.5px 4px 1.5px 1.5px;background:#14181A;border-radius:1px}
-.island{position:absolute;top:24px;left:50%;transform:translateX(-50%);width:30%;height:22px;border-radius:14px;background:#0B0B0C;z-index:2}
-.view{position:relative;aspect-ratio:390/664;overflow:hidden;margin:0 6px 6px;border-radius:26px;background:#fff}
-.strip{display:flex;width:600%;height:100%;animation:slide 20s cubic-bezier(.7,0,.3,1) infinite}
-.strip img{width:calc(100% / 6);height:100%;object-fit:cover;object-position:top;display:block;flex:0 0 auto}
-.stage:hover .strip,.stage:hover .dots i,.stage:hover .cap>span{animation-play-state:paused}
-@keyframes slide{0%,16%{transform:translateX(0)}20%,36%{transform:translateX(-16.6667%)}40%,56%{transform:translateX(-33.3333%)}60%,76%{transform:translateX(-50%)}80%,96%{transform:translateX(-66.6667%)}100%{transform:translateX(-83.3333%)}}
-.dots{position:absolute;left:50%;bottom:-34px;transform:translateX(-50%);display:flex;gap:7px}
-.dots i{width:8px;height:8px;border-radius:99px;background:color-mix(in srgb,var(--ink) 22%,transparent);animation:dot 20s infinite}
-@keyframes dot{0%,16%{width:24px;background:var(--green)}20%,100%{width:8px}}
-.cap{position:absolute;left:0;right:0;bottom:-74px;height:30px;display:flex;justify-content:center}
-.cap>span{position:absolute;padding:5px 14px;border-radius:999px;background:var(--card);border:1px solid var(--line);font-weight:800;font-size:14px;color:var(--ink);white-space:nowrap;opacity:0;animation:cap 20s infinite}
-@keyframes cap{0%,15%{opacity:1;transform:none}19%,100%{opacity:0;transform:translateY(4px)}}
-.float{position:absolute;z-index:3;display:flex;align-items:center;gap:8px;padding:10px 14px;border-radius:16px;background:var(--card);border:1px solid var(--line);box-shadow:var(--shadow);font-weight:800;font-size:14px;white-space:nowrap;animation:bob 5s ease-in-out infinite}
-.float .ic{font-size:20px}
-.f1{top:26%;left:-30%}.f2{top:50%;right:-30%;animation-delay:-1.6s}.f3{bottom:12%;left:-26%;animation-delay:-3.2s}
-@media(max-width:900px){.f1{left:-16%}.f2{right:-16%}.f3{left:-12%}}
-@media(max-width:520px){.float{display:none}}
-.hero .stage{margin-bottom:84px}
-.mo-peek{position:absolute;width:44%;right:-16%;bottom:-6%;filter:drop-shadow(0 18px 18px rgba(0,0,0,.2));animation:bob 4s ease-in-out infinite}
-@keyframes bob{0%,100%{translate:0 0}50%{translate:0 -10px}}
-@media (prefers-reduced-motion:reduce){.float,.mo-peek,.strip,.dots i,.cap>span{animation:none}.dots i:first-child{width:24px;background:var(--green)}.cap>span:first-child{opacity:1}}
+/* hero stage: phone + widget-style floating cards + Mo */
+.stage{position:relative;justify-self:center;width:min(360px,82vw);padding:10px 0 30px}
+.phone{position:relative;border-radius:54px;padding:11px;background:linear-gradient(150deg,#3B3F48,#121419 60%,#2B2E36);
+  box-shadow:0 40px 80px -30px rgba(20,30,80,.55),inset 0 0 0 1.5px rgba(255,255,255,.18)}
+.phone .scr{border-radius:44px;overflow:hidden;aspect-ratio:540/1174;background:#DDE6F6}
+.phone .scr img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.phone .isl{position:absolute;top:22px;left:50%;transform:translateX(-50%);width:31%;height:24px;border-radius:14px;background:#000}
+.stage .phone{transform:rotate(-2deg)}
+.wid{position:absolute;z-index:3;padding:12px 14px;border-radius:24px;min-width:150px;animation:bob 6s ease-in-out infinite}
+.wid .k{font-size:12px;font-weight:800;color:var(--soft);text-transform:uppercase;letter-spacing:.05em}
+.wid .v{font-family:var(--f-round);font-weight:800;font-size:24px;line-height:1.1}
+.wid .s{font-size:13px;font-weight:700;color:var(--soft)}
+.w1{top:12%;left:-34%}.w2{top:46%;right:-30%;animation-delay:-2s}.w3{bottom:10%;left:-30%;animation-delay:-4s}
+.w1 .v{color:var(--green)}.w2 .v{color:var(--sun)}.w3 .ar{font-family:"Noto Naskh Arabic","Geeza Pro",serif;font-size:22px;line-height:1.5;direction:rtl}
+@media(max-width:960px){.w1{left:-12%}.w2{right:-10%}.w3{left:-10%}}
+@media(max-width:560px){.wid{min-width:0;padding:10px 12px;border-radius:20px}.wid .v{font-size:20px}.w1{left:-4%;top:-2%}.w2{right:-4%;top:40%}.w3{left:-4%;bottom:4%}}
+.stage .mo{position:absolute;z-index:4;right:-22%;bottom:-2%;width:46%;filter:drop-shadow(0 20px 20px rgba(20,30,80,.25));animation:bob 4.5s ease-in-out infinite}
+@media(max-width:560px){.stage .mo{right:-8%;width:40%}}
+@keyframes bob{50%{translate:0 -10px}}
 
-/* stats */
-.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:8px}
-@media(min-width:760px){.stats{grid-template-columns:repeat(6,1fr)}}
-.stat{background:var(--card);border:1px solid var(--line);border-radius:20px;padding:16px 14px;text-align:center}
-.stat b{display:block;font-family:var(--f-round);font-size:40px;line-height:1;font-weight:800}
-.stat:nth-child(1) b{color:var(--sun)}.stat:nth-child(2) b{color:var(--green)}.stat:nth-child(3) b{color:var(--sky)}.stat:nth-child(4) b{color:#2FB3A0}.stat:nth-child(5) b{color:var(--violet)}.stat:nth-child(6) b{color:var(--pink)}
-.stat span{display:block;color:var(--soft);font-size:14px;font-weight:600;margin-top:6px}
+/* stats: widget row */
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:36px}
+@media(min-width:780px){.stats{grid-template-columns:repeat(5,1fr)}}
+.stat{padding:18px;border-radius:26px}
+.stat b{display:block;font-family:var(--f-round);font-size:46px;line-height:1;font-weight:800}
+.stat span{display:block;color:var(--soft);font-size:15px;font-weight:700;margin-top:6px;line-height:1.3}
+.stats .stat:last-child{grid-column:1/-1}
+@media(min-width:780px){.stats .stat:last-child{grid-column:auto}}
 
-/* day timeline */
-.day{display:grid;gap:16px;margin-top:34px}
-@media(min-width:760px){.day{grid-template-columns:repeat(2,1fr)}}
-@media(min-width:1060px){.day{grid-template-columns:repeat(4,1fr)}}
-.slot{position:relative;background:var(--card);border:1px solid var(--line);border-radius:26px;overflow:hidden;display:flex;flex-direction:column}
-.slot .top{padding:18px 18px 0}
-.slot .when{display:inline-flex;align-items:center;gap:6px;font-weight:800;font-size:13px;padding:5px 11px;border-radius:999px;color:#14181A}
-.slot h3{margin:12px 0 6px}
-.slot p{color:var(--soft);font-size:15px;margin:0 0 16px}
-.slot .shot{margin-top:auto;height:210px;overflow:hidden;padding:0 26px}
-.slot .shot img{width:100%;border-radius:22px 22px 0 0;border:6px solid #16181C;border-bottom:0;display:block}
+/* today-style swipe cards */
+.rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px max(18px,calc((100vw - 1160px)/2 + 18px)) 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.rail::-webkit-scrollbar{display:none}
+.today{flex:0 0 min(300px,78vw);scroll-snap-align:center;border-radius:34px;overflow:hidden;position:relative;display:flex;flex-direction:column;
+  box-shadow:var(--sh);border:1px solid var(--edge);min-height:520px}
+.today .tx{padding:20px 20px 0;color:#151A33}
+.today.night .tx{color:#F4F1FF}
+.today .when{font-size:13px;font-weight:800;text-transform:uppercase;letter-spacing:.06em;opacity:.7}
+.today h3{font-size:26px;margin:6px 0 6px}
+.today p{margin:0;font-size:15px;font-weight:600;opacity:.8}
+.today .ph{margin-top:auto;padding:16px 34px 0}
+.today .ph .phone{border-radius:40px 40px 0 0;padding:9px 9px 0}
+.today .ph .phone .scr{border-radius:32px 32px 0 0;aspect-ratio:540/820}
+.today .ph .phone .isl{top:18px;height:18px}
+.hint{display:flex;justify-content:center;gap:8px;color:var(--soft);font-size:14px;font-weight:700}
 
-/* showcase */
-.show{display:grid;gap:40px;align-items:center;padding:28px 0}
-@media(min-width:880px){.show{grid-template-columns:1fr 1fr}.show.flip .shotbox{order:2}}
-.shotbox{position:relative;display:flex;justify-content:center;padding:34px 0;border-radius:32px;background:linear-gradient(160deg,var(--bg2),transparent)}
-.shotbox .mini{width:min(260px,70vw);border-radius:36px;background:#16181C;padding:9px;box-shadow:var(--shadow);transform:rotate(-3deg)}
-.show.flip .shotbox .mini{transform:rotate(3deg)}
-.shotbox .mini img{display:block;border-radius:28px;width:100%}
-.ticks{list-style:none;padding:0;margin:18px 0 0}
-.ticks li{position:relative;padding:10px 0 10px 38px;font-size:17px;border-bottom:1px dashed var(--line)}
-.ticks li:last-child{border:0}
-.ticks li::before{content:"✓";position:absolute;left:0;top:9px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:color-mix(in srgb,var(--green) 16%,transparent);color:var(--green);font-weight:900;font-size:14px}
+/* bento */
+.bento{display:grid;gap:16px;margin-top:34px}
+@media(min-width:860px){.bento{grid-template-columns:repeat(6,1fr)}}
+.tile{position:relative;overflow:hidden;padding:24px;border-radius:32px;min-height:260px}
+.tile h3{font-size:26px;margin-top:6px}
+.tile p{color:var(--soft);font-size:16px;margin:8px 0 0;max-width:30em}
+.tile .tag{font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+@media(min-width:860px){.t-dua{grid-column:span 4}.t-huruf{grid-column:span 2}.t-pray{grid-column:span 2}.t-kind{grid-column:span 4}.t-play{grid-column:span 3}.t-rama{grid-column:span 3}}
+.tile .mini{position:absolute;right:20px;bottom:-60px;width:180px;transform:rotate(6deg)}
+.tile .mini .phone{border-radius:34px;padding:7px}.tile .mini .phone .scr{border-radius:28px}.tile .mini .phone .isl{top:13px;height:14px}
+.t-dua{padding-right:220px}
+.t-kind{padding-right:220px}
+@media(max-width:560px){.t-dua,.t-kind{padding-right:24px;padding-bottom:250px}.tile .mini{right:50%;transform:translateX(50%) rotate(4deg);width:160px;bottom:-130px}.t-rama{padding-right:24px;padding-top:96px}}
+.ar-line{font-family:"Noto Naskh Arabic","Geeza Pro",serif;font-size:30px;direction:rtl;margin:14px 0 4px;line-height:1.7}
+.ar-line span{transition:color .3s}.ar-line .on{color:#E8A400}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.pills span{font-size:13px;font-weight:800;padding:6px 11px;border-radius:999px;background:var(--glass2);border:1px solid var(--edge)}
+.big-n{font-family:var(--f-round);font-weight:800;font-size:76px;line-height:1;margin-top:10px;background:linear-gradient(135deg,#2D8CFF,#8B6CF6);-webkit-background-clip:text;background-clip:text;color:transparent}
+.letters{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;margin-top:14px;direction:rtl}
+.letters i{font-style:normal;font-family:"Noto Naskh Arabic","Geeza Pro",serif;font-size:22px;display:grid;place-items:center;aspect-ratio:1;border-radius:12px;background:var(--glass2);border:1px solid var(--edge);color:var(--blue)}
+.tile .mo-c{position:absolute;right:-10px;bottom:-14px;width:150px}
+.t-pray{padding-bottom:150px}
+.t-rama{padding-right:120px;background:linear-gradient(150deg,rgba(42,36,112,.92),rgba(91,79,201,.88));color:#F4F1FF;border-color:rgba(255,255,255,.18)}
+.t-rama p{color:#D7D2FF}.t-rama .tag{color:#FFD86B}
+.moon{position:absolute;right:26px;top:22px;width:70px;height:70px;border-radius:50%;box-shadow:-16px 8px 0 0 #FFD86B;transform:rotate(-20deg)}
 
-/* little hands */
-.little{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));margin-top:30px}
-.lt{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px 16px;text-align:center}
-.lt .ic{font-size:34px;line-height:1}
-.lt h3{font-size:18px;margin:10px 0 4px}
-.lt p{color:var(--soft);font-size:14px;margin:0}
+/* watch */
+.watchband{border-radius:40px;padding:44px 24px;background:linear-gradient(150deg,#0E1230,#1A2160 55%,#24307A);color:#EEF1FF;overflow:hidden;position:relative}
+.watchband .eyebrow{color:#7FD3FF}.watchband .lede{color:#C5CBEA}
+.watches{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:30px;padding:6px 4px 16px;scrollbar-width:none}
+.watches::-webkit-scrollbar{display:none}
+.wt{flex:0 0 auto;scroll-snap-align:center;text-align:center}
+.wcase{width:180px;height:216px;border-radius:50px;padding:9px;background:linear-gradient(150deg,#4A4B55,#16171C 55%,#2B2C33);box-shadow:0 20px 40px -18px rgba(0,0,0,.7),inset 0 1px 1px rgba(255,255,255,.25);position:relative}
+.wcase::after{content:"";position:absolute;right:-6px;top:52px;width:8px;height:32px;border-radius:4px;background:linear-gradient(90deg,#6a6b75,#2a2b31)}
+.wcase img{width:100%;height:100%;object-fit:cover;border-radius:41px;display:block;background:#000}
+.wt span{display:block;margin-top:12px;font-weight:800;font-size:15px}
 
-/* ages */
+/* little hands + ages */
+.little{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));margin-top:30px}
+.lt{padding:20px;border-radius:26px}
+.lt .ic{font-size:30px;line-height:1}
+.lt h3{font-size:18px;margin:10px 0 2px}
+.lt p{margin:0;color:var(--soft);font-size:14px;font-weight:600}
 .ages{display:grid;gap:14px;margin-top:30px}
 @media(min-width:820px){.ages{grid-template-columns:repeat(3,1fr)}}
-.age{border-radius:26px;padding:22px;background:var(--card);border:1px solid var(--line);position:relative;overflow:hidden}
-.age .n{font-family:var(--f-round);font-weight:800;font-size:46px;line-height:1}
-.age .n small{font-size:18px;font-weight:700;color:var(--soft)}
-.age h3{margin:8px 0 6px}
-.age p{color:var(--soft);margin:0;font-size:15px}
-.age::after{content:"";position:absolute;right:-30px;top:-30px;width:110px;height:110px;border-radius:50%;background:var(--c);opacity:.16}
+.age{padding:24px;border-radius:30px}
+.age .n{font-family:var(--f-round);font-weight:800;font-size:52px;line-height:1}
+.age .n small{font-size:18px;color:var(--soft)}
+.age h3{margin:8px 0 4px}
+.age p{margin:0;color:var(--soft);font-size:15px;font-weight:600}
 
-/* parents */
-.parents{border-radius:36px;padding:40px 24px;background:linear-gradient(140deg,#0F3B27,#14533A 55%,#1E6F4D);color:#F2FAF5;position:relative;overflow:hidden}
-.parents h2{color:#fff}
-.parents .lede{color:#CFE8DA}
-.parents .kick{color:#9FE3BE}
-.nos{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));margin-top:26px}
-.no{display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:18px;padding:14px 16px;font-weight:700}
-.no i{font-style:normal;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:#FF6B6B;color:#fff;font-weight:900;flex:0 0 auto}
-.parents a{color:#9FE3BE}
-.parents .mo{position:absolute;right:-10px;bottom:-20px;width:170px;opacity:.95}
-@media(max-width:700px){.parents .mo{display:none}}
+/* settings-style privacy list */
+.split{display:grid;gap:22px;align-items:center}
+@media(min-width:900px){.split{grid-template-columns:1fr 1fr}}
+.list{border-radius:28px;overflow:hidden;padding:4px 0}
+.row{display:flex;align-items:center;gap:12px;padding:14px 18px;font-weight:700}
+.row+.row{border-top:1px solid var(--line)}
+.row .ico{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;color:#fff;font-size:15px;flex:0 0 auto}
+.row .sw{margin-left:auto;width:51px;height:31px;border-radius:999px;background:rgba(120,120,128,.24);position:relative;flex:0 0 auto}
+.row .sw::after{content:"";position:absolute;left:2px;top:2px;width:27px;height:27px;border-radius:50%;background:#fff;box-shadow:0 3px 8px rgba(0,0,0,.18)}
+.row .sw.on{background:#34C759}.row .sw.on::after{left:22px}
+.listhead{font-size:13px;font-weight:700;color:var(--soft);text-transform:uppercase;letter-spacing:.04em;padding:0 18px 8px}
 
-/* faq */
-.faq{display:grid;gap:12px;margin-top:26px}
-@media(min-width:880px){.faq{grid-template-columns:repeat(3,1fr)}}
-.qa{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:20px}
-.qa h3{font-size:18px;margin-bottom:6px}
-.qa p{margin:0;color:var(--soft);font-size:15px}
+/* price card */
+.price{border-radius:40px;padding:36px 26px;display:grid;gap:22px;align-items:center;position:relative;overflow:hidden}
+@media(min-width:900px){.price{grid-template-columns:1.1fr .9fr;padding:48px}}
+.price h2{font-size:clamp(34px,5vw,56px)}
+.inc{list-style:none;padding:0;margin:18px 0 0;display:grid;gap:10px}
+.inc li{display:flex;gap:10px;align-items:flex-start;font-weight:700}
+.inc li::before{content:"";flex:0 0 24px;height:24px;border-radius:50%;background:#34C759 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6.5 12.5l3.5 3.5 7.5-8' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/16px no-repeat;margin-top:1px}
+.price .mo-p{width:min(300px,70%);justify-self:center;filter:drop-shadow(0 24px 24px rgba(20,30,80,.25));animation:bob 4s ease-in-out infinite}
 
-/* final cta */
-.final{border-radius:36px;padding:44px 24px;text-align:center;background:linear-gradient(120deg,#FFF1C9,#FFE1EA 50%,#DDEEFF);color:#14181A;position:relative;overflow:hidden}
-.final h2{color:#14181A}
-.final p{color:#4A4F4B}
+/* faq: inset grouped disclosure list */
+.faq{border-radius:28px;overflow:hidden;margin-top:28px;max-width:820px;margin-left:auto;margin-right:auto}
+.faq details+details{border-top:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:18px 54px 18px 20px;font-weight:800;font-size:17px;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"";position:absolute;right:22px;top:50%;width:9px;height:9px;border-right:2.5px solid var(--soft);border-bottom:2.5px solid var(--soft);transform:translateY(-70%) rotate(45deg);transition:transform .25s}
+.faq details[open] summary::after{transform:translateY(-30%) rotate(225deg)}
+.faq details p{margin:0;padding:0 20px 18px;color:var(--soft);font-weight:600}
+
+/* final */
+.final{border-radius:44px;padding:48px 24px;text-align:center;position:relative;overflow:hidden}
+.final h2{font-size:clamp(34px,5.4vw,60px)}
 .final .cta{justify-content:center}
-.final .lede{margin-left:auto;margin-right:auto;text-align:center}
-.final img.jump{width:150px;margin:-10px auto 4px;display:block;animation:bob 3.4s ease-in-out infinite}
-
-footer{padding:36px 0 56px;color:var(--soft);font-size:14px;text-align:center}
-footer a{margin:0 8px;font-weight:600}
+.final .mo-f{width:160px;margin:-6px auto 6px;display:block;animation:bob 3.6s ease-in-out infinite}
+footer{padding:20px 0 60px;color:var(--soft);font-size:14px;text-align:center}
+footer a{margin:0 8px;font-weight:700}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
 `;
 
 const AppleLogo = () => (
@@ -345,6 +369,10 @@ function StoreButton() {
   );
 }
 
+const TryButton = () => (
+  <a className="btn glass" href="https://play.babymo.id/">🎮 <B t={{ id: "Coba di browser", en: "Try it in your browser" }} /></a>
+);
+
 /* ───────────────────────── page ───────────────────────── */
 
 export default function AppMarketingPage() {
@@ -355,51 +383,52 @@ export default function AppMarketingPage() {
       </head>
       <body>
         <style dangerouslySetInnerHTML={{ __html: CSS }} />
+        <div className="sky" aria-hidden="true"><i className="a" /><i className="b" /><i className="c2" /><i className="d" /></div>
 
         <nav className="nav" aria-label="Baby Mo">
-          <div className="wrap">
+          <div className="bar glass">
             <a className="brand" href={asset("/")}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={asset("/baby-mo-poses/baby-mo-ok.png")} alt="" width={36} height={36} />
+              <img src={asset("/app-store/v3/icon-128.png")} alt="" width={34} height={34} />
               Baby Mo
             </a>
             <div className="links">
               <a href="#hari"><B t={{ id: "Sehari bersama Mo", en: "A day with Mo" }} /></a>
               <a href="#fitur"><B t={{ id: "Fitur", en: "Features" }} /></a>
-              <a href="#usia"><B t={{ id: "Usia", en: "Ages" }} /></a>
+              <a href="#watch">Apple Watch</a>
               <a href="#orangtua"><B t={{ id: "Orang tua", en: "Parents" }} /></a>
-              <a href={asset("/support/")}><B t={{ id: "Bantuan", en: "Support" }} /></a>
+              <a href="#faq">FAQ</a>
             </div>
-            <div className="lang" role="group" aria-label="Bahasa / Language">
+            <div className="seg" role="group" aria-label="Bahasa / Language">
               <button type="button" data-set-lang="id" lang="id">ID</button>
               <button type="button" data-set-lang="en" lang="en">EN</button>
             </div>
+            <a className="get" href="#beli"><B t={{ id: "Dapatkan", en: "Get" }} /></a>
           </div>
         </nav>
 
         <main>
           {/* ── hero ── */}
           <header className="hero">
-            <div className="blob b1" /><div className="blob b2" /><div className="blob b3" />
-            <div className="wrap hgrid">
+            <div className="wrap hg">
               <div>
-                <span className="pill"><b><B t={{ id: "Baru", en: "New" }} /></b><B t={{ id: "Untuk iPhone & iPad", en: "For iPhone & iPad" }} /></span>
+                <span className="chip glass"><b><B t={{ id: "Baru", en: "New" }} /></b><B t={{ id: "iPhone · iPad · Apple Watch", en: "iPhone · iPad · Apple Watch" }} /></span>
                 <h1>
-                  <span data-l="id">Belajar Islam <span className="grad">sambil bermain</span> bersama Baby Mo</span>
-                  <span data-l="en">Learn about Islam <span className="grad">through play</span> with Baby Mo</span>
+                  <span data-l="id">Belajar Islam <span className="g">sambil bermain.</span></span>
+                  <span data-l="en">Learn Islam <span className="g">through play.</span></span>
                 </h1>
                 <p className="lede">
                   <B t={{
-                    id: "12 game islami, doa harian dengan suara Arab, panduan wudhu & sholat, huruf hijaiyah, game ingatan, dan rutinitas tidur — untuk anak 2–8 tahun, dimainkan bersama Ayah dan Bunda.",
-                    en: "12 Islamic games, daily du'as with Arabic audio, wudhu & prayer guides, the hijaiyah letters, memory games and a bedtime routine — for children aged 2–8, to enjoy together with their parents.",
+                    id: "Doa harian dengan suara Arab asli, wudhu dan sholat langkah demi langkah, huruf hijaiyah, sayang hewan, Ramadan, dan rutinitas tidur — 19 game & aktivitas bersama Baby Mo untuk anak 2–8 tahun.",
+                    en: "Daily du'as with real Arabic audio, wudhu and prayer step by step, the hijaiyah letters, kindness to animals, Ramadan and a bedtime routine — 19 games & activities with Baby Mo for children aged 2–8.",
                   }} />
                 </p>
                 <div className="cta">
                   <StoreButton />
-                  <a className="btn" href="https://play.babymo.id/">🎮 <B t={{ id: "Coba di browser", en: "Try it in your browser" }} /></a>
+                  <TryButton />
                 </div>
                 <ul className="trust">
-                  <li><B t={{ id: "Gratis", en: "Free" }} /></li>
+                  <li><B t={{ id: "Sekali beli", en: "One purchase" }} /></li>
                   <li><B t={{ id: "Tanpa iklan", en: "No ads" }} /></li>
                   <li><B t={{ id: "Tanpa akun", en: "No account" }} /></li>
                   <li><B t={{ id: "Bisa offline", en: "Works offline" }} /></li>
@@ -407,35 +436,30 @@ export default function AppMarketingPage() {
               </div>
 
               <div className="stage" aria-hidden="true">
-                <div className="phone">
-                  <div className="screen">
-                    <div className="sbar"><span>9:41</span><span className="ico">●●● <span className="bat" /></span></div>
-                    <div className="view">
-                      <div className="strip">
-                        {[...HERO_SLIDES, HERO_SLIDES[0]!].map((sl, i) => (
-                          // eslint-disable-next-line @next/next/no-img-element
-                          <img key={i} src={asset(sl.src)} alt="" width={390} height={844} loading={i === 0 ? "eager" : "lazy"} />
-                        ))}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="island" />
+                <Phone k="01-home" eager />
+                <div className="wid glass w1">
+                  <div className="k"><B t={{ id: "Sholat berikutnya", en: "Next prayer" }} /></div>
+                  <div className="v"><B t={{ id: "Ashar 14.58", en: "Asr 2:58" }} /></div>
+                  <div className="s"><B t={{ id: "Yuk wudhu bareng Mo", en: "Wudhu with Mo first" }} /></div>
                 </div>
-                <div className="dots">{HERO_SLIDES.map((sl, i) => <i key={sl.src} style={{ animationDelay: `${i * 4}s` }} />)}</div>
-                <div className="cap">{HERO_SLIDES.map((sl, i) => <span key={sl.src} style={{ animationDelay: `${i * 4}s` }}><B t={sl.t} /></span>)}</div>
-                <div className="float f1"><span className="ic">🔊</span><B t={{ id: "Suara Arab asli", en: "Real Arabic audio" }} /></div>
-                <div className="float f2"><span className="ic">⭐</span><B t={{ id: "+3 bintang!", en: "+3 stars!" }} /></div>
-                <div className="float f3"><span className="ic">🕌</span><B t={{ id: "Dzuhur · 12:00", en: "Dhuhr · 12:00" }} /></div>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="mo-peek" src={asset("/baby-mo-poses/baby-mo-pose-01.png")} alt="" width={200} height={200} />
+                <div className="wid glass w2">
+                  <div className="k"><B t={{ id: "Hari ini", en: "Today" }} /></div>
+                  <div className="v">⭐ +3</div>
+                  <div className="s"><B t={{ id: "Masya Allah!", en: "Masha Allah!" }} /></div>
+                </div>
+                <div className="wid glass w3">
+                  <div className="k"><B t={{ id: "Doa hari ini", en: "Du'a of the day" }} /></div>
+                  <div className="ar" lang="ar">بِسْمِ اللَّهِ</div>
+                </div>
+                <Mo f="pose-01" cls="mo" />
               </div>
             </div>
 
             <div className="wrap">
-              <div className="stats" style={{ marginTop: 48 }}>
+              <div className="stats">
                 {STATS.map((s) => (
-                  <div className="stat" key={s.n + String(s.t.en)}>
-                    <b>{s.n}</b>
+                  <div className="stat glass" key={s.n + String(s.t.en)}>
+                    <b style={{ color: s.c }}>{s.n}</b>
                     <span><B t={s.t} /></span>
                   </div>
                 ))}
@@ -443,159 +467,226 @@ export default function AppMarketingPage() {
             </div>
           </header>
 
-          {/* ── a day with Baby Mo ── */}
-          <section id="hari">
+          {/* ── a day with Baby Mo (swipe) ── */}
+          <section id="hari" style={{ paddingBottom: 30 }}>
             <div className="wrap">
-              <div className="c">
-                <div className="kick"><B t={{ id: "Sehari bersama Baby Mo", en: "A day with Baby Mo" }} /></div>
-                <h2><B t={{ id: "Dari doa pagi sampai doa tidur", en: "From the morning du'a to the bedtime du'a" }} /></h2>
-                <p className="lede"><B t={{ id: "Baby Mo menemani rutinitas si kecil sepanjang hari — singkat, lembut, dan menyenangkan.", en: "Baby Mo fits into your child's whole day — short, gentle and fun." }} /></p>
-              </div>
-              <div className="day">
-                {DAY.map((d) => (
-                  <article className="slot" key={d.shot}>
-                    <div className="top">
-                      <span className="when" style={{ background: d.tone }}>{d.icon} <B t={d.time} /></span>
-                      <h3><B t={d.title} /></h3>
-                      <p><B t={d.body} /></p>
-                    </div>
-                    <div className="shot">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={asset(d.shot)} alt="" width={390} height={664} loading="lazy" />
-                    </div>
-                  </article>
-                ))}
-              </div>
+              <div className="eyebrow"><B t={{ id: "Sehari bersama Baby Mo", en: "A day with Baby Mo" }} /></div>
+              <h2><B t={{ id: "Dari doa pagi sampai doa tidur.", en: "From the morning du'a to bedtime." }} /></h2>
+              <p className="lede"><B t={{ id: "Sesi singkat yang pas dengan rutinitas si kecil — lembut, seru, dan penuh makna.", en: "Short moments that fit your child's day — gentle, fun and meaningful." }} /></p>
             </div>
-          </section>
-
-          {/* ── showcase ── */}
-          <section id="fitur" style={{ paddingTop: 24 }}>
-            <div className="wrap">
-              <div className="c">
-                <div className="kick"><B t={{ id: "Di dalam aplikasi", en: "Inside the app" }} /></div>
-                <h2><B t={{ id: "Dibuat untuk tumbuh bersama si kecil", en: "Made to grow with your child" }} /></h2>
-              </div>
-              {SHOWCASE.map((s, i) => (
-                <div className={`show${i % 2 ? " flip" : ""}`} key={s.shot}>
-                  <div className="shotbox">
-                    <div className="mini">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img src={asset(s.shot)} alt="" width={390} height={664} loading="lazy" />
-                    </div>
+            <div className="rail" role="list">
+              {DAY.map((d) => (
+                <article role="listitem" className={`today${d.k === "11-dream" ? " night" : ""}`} key={d.k} style={{ background: d.tint }}>
+                  <div className="tx">
+                    <div className="when"><B t={d.when} /></div>
+                    <h3><B t={d.title} /></h3>
+                    <p><B t={d.body} /></p>
                   </div>
-                  <div>
-                    <div className="kick"><B t={s.kicker} /></div>
-                    <h2 style={{ fontSize: "clamp(26px,3.6vw,36px)" }}><B t={s.title} /></h2>
-                    <ul className="ticks">
-                      {s.points.map((p) => <li key={String(p.en)}><B t={p} /></li>)}
-                    </ul>
-                  </div>
-                </div>
+                  <div className="ph"><Phone k={d.k} /></div>
+                </article>
               ))}
             </div>
+            <div className="hint"><B t={{ id: "← geser →", en: "← swipe →" }} /></div>
           </section>
 
-          {/* ── little hands ── */}
-          <section style={{ paddingTop: 24 }}>
-            <div className="wrap c">
-              <div className="kick"><B t={{ id: "Ramah anak", en: "Child-friendly" }} /></div>
-              <h2><B t={{ id: "Dirancang untuk tangan mungil", en: "Designed for little hands" }} /></h2>
+          {/* ── bento features ── */}
+          <section id="fitur">
+            <div className="wrap">
+              <div className="c">
+                <div className="eyebrow"><B t={{ id: "Di dalam aplikasi", en: "Inside the app" }} /></div>
+                <h2><B t={{ id: "Semua yang dibutuhkan si kecil.", en: "Everything your little one needs." }} /></h2>
+              </div>
+              <div className="bento">
+                <div className="tile glass t-dua">
+                  <div className="tag" style={{ color: "var(--green)" }}><B t={{ id: "Doa Harian", en: "Daily Du'as" }} /></div>
+                  <h3><B t={{ id: "Dengar, lihat, ikuti.", en: "Hear it. See it. Say it." }} /></h3>
+                  <div className="ar-line" lang="ar"><span>سُبْحَانَ</span> <span className="on">الَّذِي</span> <span>سَخَّرَ</span> <span>لَنَا</span> <span>هَذَا</span></div>
+                  <p><B t={{ id: "14 doa harian dan 11 doa Ramadan dengan suara Arab asli. Kata menyala satu per satu, bisa diperlambat dan diulang 2×, lengkap dengan latin dan arti.", en: "14 daily du'as and 11 Ramadan du'as with real Arabic audio. Each word lights up as it's read; slow it down or repeat it twice, with transliteration and meaning." }} /></p>
+                  <div className="pills"><span>🔊 <B t={{ id: "Suara Arab asli", en: "Real Arabic audio" }} /></span><span>🐢 <B t={{ id: "Pelan 0,5×", en: "Slow 0.5×" }} /></span><span>🔁 2×</span></div>
+                  <div className="mini"><Phone k="03-doa" /></div>
+                </div>
+                <div className="tile glass t-huruf">
+                  <div className="tag" style={{ color: "var(--blue)" }}><B t={{ id: "Huruf Hijaiyah", en: "Hijaiyah letters" }} /></div>
+                  <div className="big-n">28</div>
+                  <h3><B t={{ id: "Dari alif sampai ya.", en: "From alif to ya." }} /></h3>
+                  <p><B t={{ id: "Dengar, tulis, lalu tangkap hurufnya. Jelajahi Pulau Hijaiyah 3D dan susun kata Arab pertama.", en: "Listen, trace, then catch the letters. Explore the 3D Hijaiyah Island and build first Arabic words." }} /></p>
+                  <div className="letters" lang="ar">{"ا ب ت ث ج ح خ".split(" ").map((l) => <i key={l}>{l}</i>)}</div>
+                </div>
+                <div className="tile glass t-pray">
+                  <div className="tag" style={{ color: "#18B6A4" }}><B t={{ id: "Wudhu & Sholat", en: "Wudhu & prayer" }} /></div>
+                  <h3><B t={{ id: "Ibadah, langkah demi langkah.", en: "Worship, one step at a time." }} /></h3>
+                  <p><B t={{ id: "10 langkah wudhu, 7 langkah sholat, jadwal sholat & kiblat, tasbih sebelum tidur, dan dzikir sesudah sholat.", en: "10 wudhu steps, 7 prayer steps, prayer times & Qibla, bedtime tasbih and dhikr after prayer." }} /></p>
+                  <Mo f="pose-05" cls="mo-c" />
+                </div>
+                <div className="tile glass t-kind">
+                  <div className="tag" style={{ color: "var(--sun)" }}><B t={{ id: "Akhlak", en: "Good manners" }} /></div>
+                  <h3><B t={{ id: "Sayang hewan, rajin berbagi.", en: "Kind to animals, happy to share." }} /></h3>
+                  <p><B t={{ id: "Rawat sahabat hewan Mo dengan Bismillah, berkebun bersama Ais lalu bagikan panennya, dan belajar 10 Kalimat Thayyibah lewat puzzle.", en: "Care for Mo's animal friends with Bismillah, garden with Ais and share the harvest, and learn 10 Good Words through puzzles." }} /></p>
+                  <div className="pills"><span>🐱 <B t={{ id: "Sahabat Hewan", en: "Animal Friends" }} /></span><span>🌱 <B t={{ id: "Kebun Ais", en: "Ais's Garden" }} /></span><span>🧩 <B t={{ id: "Kalimat Thayyibah", en: "Good Words" }} /></span></div>
+                  <div className="mini"><Phone k="09-hewan" /></div>
+                </div>
+                <div className="tile glass t-play">
+                  <div className="tag" style={{ color: "var(--pink)" }}><B t={{ id: "Main & bergerak", en: "Play & move" }} /></div>
+                  <h3><B t={{ id: "Seru, tapi tetap bermakna.", en: "Fun with a purpose." }} /></h3>
+                  <p><B t={{ id: "Akademi Tenis Kak Adam, Forehand Beat, Memory Match 7 level, Cari Baby Mo, dan album 40 stiker Baby Mo.", en: "Kak Adam's Tennis Academy, Forehand Beat, 7-level Memory Match, Find Baby Mo and a 40-sticker Baby Mo album." }} /></p>
+                  <div className="pills"><span>🎾 <B t={{ id: "Tenis", en: "Tennis" }} /></span><span>🃏 Memory</span><span>🔎 <B t={{ id: "Cari Mo", en: "Find Mo" }} /></span><span>📒 <B t={{ id: "Stiker", en: "Stickers" }} /></span></div>
+                </div>
+                <div className="tile glass t-rama">
+                  <i className="moon" aria-hidden="true" />
+                  <div className="tag"><B t={{ id: "Seri Ramadan", en: "Ramadan series" }} /></div>
+                  <h3><B t={{ id: "Siap menyambut Ramadan.", en: "Ready for Ramadan." }} /></h3>
+                  <p><B t={{ id: "Doa melihat hilal, niat puasa, berbuka, Lailatul Qadr, sampai takbir Idul Fitri — 11 doa Ramadan dengan suara.", en: "From seeing the new moon, the intention to fast and breaking the fast to Laylatul Qadr and the Eid takbir — 11 Ramadan du'as with audio." }} /></p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── apple watch ── */}
+          <section id="watch" style={{ paddingTop: 20 }}>
+            <div className="wrap">
+              <div className="watchband">
+                <div className="eyebrow">Apple Watch</div>
+                <h2 style={{ color: "#fff" }}><B t={{ id: "Baby Mo di pergelangan tangan.", en: "Baby Mo on the wrist." }} /></h2>
+                <p className="lede"><B t={{ id: "Doa dengan suara Mo, tasbih dengan getaran lembut di setiap hitungan, jadwal sholat, hitung mundur berbuka saat Ramadan, dan Mimi si kucing yang menunggu dirawat. Semua offline.", en: "Du'as in Mo's voice, a tasbih with a gentle tap on every count, prayer times, an iftar countdown in Ramadan, and Mimi the cat waiting to be cared for. All offline." }} /></p>
+                <div className="watches">
+                  {([
+                    ["home", { id: "Beranda", en: "Home" }],
+                    ["dua", { id: "Doa dengan suara Mo", en: "Du'as in Mo's voice" }],
+                    ["tasbih", { id: "Tasbih", en: "Tasbih" }],
+                    ["prayer", { id: "Jadwal sholat", en: "Prayer times" }],
+                    ["ramadan", { id: "Ramadan", en: "Ramadan" }],
+                    ["pet", { id: "Mimi si kucing", en: "Mimi the cat" }],
+                  ] as [string, Bi][]).map(([k, t]) => (
+                    <div className="wt" key={k}>
+                      <div className="wcase">
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img data-l="id" src={asset(`${V}watch-id-${k}.webp`)} alt="" width={416} height={496} loading="lazy" />
+                        {/* eslint-disable-next-line @next/next/no-img-element */}
+                        <img data-l="en" src={asset(`${V}watch-en-${k}.webp`)} alt="" width={416} height={496} loading="lazy" />
+                      </div>
+                      <span><B t={t} /></span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* ── little hands + ages ── */}
+          <section>
+            <div className="wrap">
+              <div className="c">
+                <div className="eyebrow"><B t={{ id: "Ramah anak", en: "Child-friendly" }} /></div>
+                <h2><B t={{ id: "Dirancang untuk tangan mungil.", en: "Designed for little hands." }} /></h2>
+              </div>
               <div className="little">
                 {LITTLE.map((l) => (
-                  <div className="lt" key={String(l.t.en)}>
-                    <div className="ic" aria-hidden="true">{l.icon}</div>
+                  <div className="lt glass" key={String(l.t.en)}>
+                    <div className="ic" aria-hidden="true">{l.ic}</div>
                     <h3><B t={l.t} /></h3>
                     <p><B t={l.d} /></p>
                   </div>
                 ))}
               </div>
-            </div>
-          </section>
-
-          {/* ── ages ── */}
-          <section id="usia" style={{ paddingTop: 24 }}>
-            <div className="wrap">
-              <div className="c">
-                <div className="kick"><B t={{ id: "Panduan usia", en: "Age guide" }} /></div>
-                <h2><B t={{ id: "Mulai dari mana?", en: "Where to start?" }} /></h2>
-                <p className="lede"><B t={{ id: "Setiap game mencantumkan usia yang disarankan. Ini titik awal yang bagus:", en: "Every game shows a suggested age. Here's a good place to start:" }} /></p>
-              </div>
               <div className="ages">
                 {AGES.map((a) => (
-                  <div className="age" key={a.age} style={{ ["--c" as string]: a.color }}>
-                    <div className="n" style={{ color: a.color }}>{a.age} <small><B t={{ id: "tahun", en: "years" }} /></small></div>
+                  <div className="age glass" key={a.age}>
+                    <div className="n" style={{ color: a.c }}>{a.age} <small><B t={{ id: "tahun", en: "years" }} /></small></div>
                     <h3><B t={a.t} /></h3>
-                    <p><B t={a.games} /></p>
+                    <p><B t={a.g} /></p>
                   </div>
                 ))}
               </div>
             </div>
           </section>
 
-          {/* ── parents ── */}
-          <section id="orangtua" style={{ paddingTop: 24 }}>
-            <div className="wrap">
-              <div className="parents">
-                <div className="kick"><B t={{ id: "Untuk Ayah & Bunda", en: "For parents" }} /></div>
-                <h2><B t={{ id: "Yang tidak ada di Baby Mo", en: "What you won't find in Baby Mo" }} /></h2>
-                <p className="lede">
-                  <B t={{
-                    id: "Nama, bintang, dan progres si kecil tersimpan hanya di perangkat Anda. Doa dan hadits disertai sumbernya.",
-                    en: "Your child's name, stars and progress stay only on your device. Du'as and hadith come with their sources.",
-                  }} />
-                </p>
-                <div className="nos">
-                  {NOS.map((n) => <div className="no" key={String(n.en)}><i>✕</i><B t={n} /></div>)}
+          {/* ── parents: settings-style switches ── */}
+          <section id="orangtua" style={{ paddingTop: 20 }}>
+            <div className="wrap split">
+              <div>
+                <div className="eyebrow"><B t={{ id: "Untuk Ayah & Bunda", en: "For parents" }} /></div>
+                <h2><B t={{ id: "Tenang, semuanya sudah dimatikan.", en: "Relax — it's all switched off." }} /></h2>
+                <p className="lede"><B t={{ id: "Nama, bintang, dan progres si kecil tersimpan hanya di perangkat Anda. Tautan keluar dan berbagi dilindungi gerbang orang tua.", en: "Your child's name, stars and progress stay only on your device. External links and sharing sit behind a parental gate." }} /></p>
+                <p style={{ marginTop: 16 }}><a href={asset("/privacy/")}><B t={{ id: "Baca Kebijakan Privasi →", en: "Read the Privacy Policy →" }} /></a></p>
+              </div>
+              <div>
+                <div className="listhead"><B t={{ id: "Di Baby Mo", en: "In Baby Mo" }} /></div>
+                <div className="list glass">
+                  {OFF.map((o, i) => (
+                    <div className="row" key={String(o.en)}>
+                      <span className="ico" style={{ background: ["#FF3B30", "#FF9500", "#AF52DE", "#007AFF", "#5856D6", "#34C759"][i] }}>✕</span>
+                      <B t={o} /><span className="sw" aria-label="off" />
+                    </div>
+                  ))}
+                  <div className="row">
+                    <span className="ico" style={{ background: "#34C759" }}>✓</span>
+                    <B t={{ id: "Gerbang orang tua", en: "Parental gate" }} /><span className="sw on" aria-label="on" />
+                  </div>
                 </div>
-                <p style={{ marginTop: 22, marginBottom: 0 }}>
-                  <B t={{ id: <>Baca <a href={asset("/privacy/")}>Kebijakan Privasi</a> lengkap kami.</>, en: <>Read our full <a href={asset("/privacy/")}>Privacy Policy</a>.</> }} />
-                </p>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="mo" src={asset("/baby-mo-poses/baby-mo-thank-you.png")} alt="" width={170} height={170} />
               </div>
             </div>
           </section>
 
-          {/* ── more + faq ── */}
-          <section style={{ paddingTop: 24 }}>
+          {/* ── price ── */}
+          <section id="beli" style={{ paddingTop: 20 }}>
+            <div className="wrap">
+              <div className="price glass">
+                <div>
+                  <div className="eyebrow"><B t={{ id: "Harga", en: "Pricing" }} /></div>
+                  <h2><B t={{ id: "Sekali beli. Semuanya terbuka.", en: "One purchase. Everything unlocked." }} /></h2>
+                  <ul className="inc">
+                    <li><B t={{ id: "Semua 19 game & aktivitas, untuk iPhone dan iPad", en: "All 19 games & activities, on iPhone and iPad" }} /></li>
+                    <li><B t={{ id: "Aplikasi Apple Watch sudah termasuk", en: "The Apple Watch app is included" }} /></li>
+                    <li><B t={{ id: "Tanpa langganan, tanpa pembelian dalam aplikasi", en: "No subscription, no in-app purchases" }} /></li>
+                    <li><B t={{ id: "Tanpa iklan, tanpa akun, bisa offline", en: "No ads, no account, works offline" }} /></li>
+                  </ul>
+                  <div className="cta"><StoreButton /><TryButton /></div>
+                  <p style={{ margin: 0, color: "var(--soft)", fontSize: 14, fontWeight: 600 }}>
+                    <B t={{ id: "Harga untuk negara Anda tertera di halaman App Store.", en: "The price for your country is shown on the App Store page." }} />
+                  </p>
+                </div>
+                <Mo f="yeyy" cls="mo-p" />
+              </div>
+            </div>
+          </section>
+
+          {/* ── faq ── */}
+          <section id="faq" style={{ paddingTop: 20 }}>
             <div className="wrap">
               <div className="c">
-                <div className="kick"><B t={{ id: "Pertanyaan singkat", en: "Quick questions" }} /></div>
-                <h2><B t={{ id: "Yang sering ditanyakan", en: "Often asked" }} /></h2>
+                <div className="eyebrow"><B t={{ id: "Pertanyaan", en: "Questions" }} /></div>
+                <h2><B t={{ id: "Yang sering ditanyakan.", en: "Often asked." }} /></h2>
               </div>
-              <div className="faq">
+              <div className="faq glass">
                 {FAQ.map((f) => (
-                  <div className="qa" key={String(f.q.en)}>
-                    <h3><B t={f.q} /></h3>
+                  <details key={String(f.q.en)}>
+                    <summary><B t={f.q} /></summary>
                     <p><B t={f.a} /></p>
-                  </div>
+                  </details>
                 ))}
               </div>
-              <p className="c" style={{ marginTop: 18 }}>
-                <a href={asset("/support/")}><B t={{ id: "Lihat semua pertanyaan di halaman Bantuan →", en: "See all questions on the Support page →" }} /></a>
+              <p className="c" style={{ marginTop: 16 }}>
+                <a href={asset("/support/")}><B t={{ id: "Semua pertanyaan di halaman Bantuan →", en: "All questions on the Support page →" }} /></a>
               </p>
             </div>
           </section>
 
-          {/* ── final cta ── */}
-          <section style={{ paddingTop: 24 }}>
+          {/* ── final ── */}
+          <section style={{ paddingTop: 10 }}>
             <div className="wrap">
-              <div className="final">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img className="jump" src={asset("/baby-mo-poses/baby-mo-yeyy.png")} alt="" width={150} height={150} />
+              <div className="final glass">
+                <Mo f="pose-29" cls="mo-f" />
                 <h2><B t={{ id: "Yuk, mulai petualangan bersama Baby Mo!", en: "Start the adventure with Baby Mo!" }} /></h2>
-                <p className="lede" style={{ color: "#4A4F4B" }}>
+                <p className="lede">
                   <B t={{
-                    id: <>Dan di <a href={asset("/id/cerita/")}>babymo.id/cerita</a> ada lebih dari 150 buku cerita bergambar gratis — Ramadan, hari besar Islam, dan petualangan si kembar Mo &amp; Ais.</>,
-                    en: <>And at <a href={asset("/en/cerita/")}>babymo.id/cerita</a> there are more than 150 free picture books — Ramadan, Islamic celebrations and the adventures of the twins Mo &amp; Ais.</>,
+                    id: <>Dan di <a href={asset("/id/cerita/")}>babymo.id/cerita</a> ada lebih dari 150 buku cerita bergambar — Ramadan, hari besar Islam, dan petualangan si kembar Mo &amp; Ais.</>,
+                    en: <>And at <a href={asset("/en/cerita/")}>babymo.id/cerita</a> there are more than 150 picture books — Ramadan, Islamic celebrations and the adventures of the twins Mo &amp; Ais.</>,
                   }} />
                 </p>
-                <div className="cta">
-                  <StoreButton />
-                  <a className="btn" href="https://play.babymo.id/">🎮 <B t={{ id: "Coba di browser", en: "Try it in your browser" }} /></a>
-                </div>
-                <p style={{ fontSize: 14, margin: 0 }}><B t={{ id: "Untuk iPhone & iPad dengan iOS 15 atau lebih baru.", en: "For iPhone & iPad with iOS 15 or later." }} /></p>
+                <div className="cta"><StoreButton /><TryButton /></div>
+                <p style={{ fontSize: 14, margin: 0, color: "var(--soft)", fontWeight: 600 }}>
+                  <B t={{ id: "iPhone & iPad dengan iOS 15+ · Apple Watch dengan watchOS 10+", en: "iPhone & iPad with iOS 15+ · Apple Watch with watchOS 10+" }} />
+                </p>
               </div>
             </div>
           </section>
