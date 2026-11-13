@@ -22,7 +22,7 @@ export const GAME_GROUPS: {
       id: "Dari doa bangun tidur sampai gerakan sholat — belajar ibadah dengan suara, gambar, dan kuis.",
       en: "From the waking-up du'a to the movements of prayer — learning worship with sound, pictures and quizzes.",
     },
-    slugs: ["doa-harian", "dua-journey", "wudhu", "pray-with-mo", "streak-sholat-mo"],
+    slugs: ["doa-harian", "doa-ramadan", "dua-journey", "wudhu", "pray-with-mo", "tasbih", "streak-sholat-mo"],
   },
   {
     key: "arab",
@@ -32,17 +32,17 @@ export const GAME_GROUPS: {
       id: "Kenalan dengan huruf hijaiyah dan kata Arab pertama — sambil menjelajah dan menyusun.",
       en: "Meet the hijaiyah letters and first Arabic words — by exploring and building.",
     },
-    slugs: ["hijaiyah", "kata-islam"],
+    slugs: ["huruf-hijaiyah", "hijaiyah", "kata-islam"],
   },
   {
     key: "akhlak",
     emoji: "💖",
     title: { id: "Kenalan & Akhlak", en: "Meet Baby Mo & Good Character" },
     line: {
-      id: "Mulai dari berkenalan, lalu belajar ucapan-ucapan baik yang dicintai Allah.",
-      en: "Start by saying hello, then learn the good words Allah loves.",
+      id: "Berkenalan, belajar ucapan baik, menyayangi hewan, dan berbagi hasil kebun.",
+      en: "Say hello, learn good words, be kind to animals and share the harvest.",
     },
-    slugs: ["puzzle", "kata-baik"],
+    slugs: ["puzzle", "kata-baik", "sahabat-hewan", "kebun-ais"],
   },
   {
     key: "fokus",
@@ -59,10 +59,10 @@ export const GAME_GROUPS: {
     emoji: "🎵",
     title: { id: "Gerak & Santai", en: "Move & Wind Down" },
     line: {
-      id: "Satu untuk melompat mengikuti irama, satu untuk bersiap tidur dengan tenang.",
-      en: "One for jumping to the beat, one for getting calm before bed.",
+      id: "Latihan tenis bersama Kak Adam, melompat mengikuti irama, lalu bersiap tidur dengan tenang.",
+      en: "Tennis practice with Kak Adam, jumping to the beat, then getting calm before bed.",
     },
-    slugs: ["forehand-beat", "dreamtime"],
+    slugs: ["tenis-adam", "forehand-beat", "dreamtime"],
   },
 ];
 
@@ -82,8 +82,8 @@ export const GAME_PROMO: Record<
   "doa-harian": {
     hook: { id: "Doa dari pagi sampai malam, dengan suara Arab asli.", en: "Du'as from morning to night, in real Arabic audio." },
     pitch: {
-      id: "Enam doa harian — bangun tidur, kamar mandi, makan, belajar, keluar rumah, dan tidur — lengkap dengan audio, arti, dan kuis kecil.",
-      en: "Six daily du'as — waking up, the bathroom, eating, studying, leaving home and sleeping — with audio, meaning and a little quiz.",
+      id: "14 doa harian dari bangun tidur sampai tidur lagi — kata menyala satu per satu mengikuti suara Arab asli, bisa diperlambat dan diulang, lengkap dengan arti.",
+      en: "14 daily du'as from waking up to bedtime — each word lights up with the real Arabic audio, can be slowed down and repeated, with the meaning.",
     },
     ages: "3–7",
     skills: { id: ["Hafalan doa", "Mendengar"], en: ["Memorising du'as", "Listening"] },
@@ -186,5 +186,59 @@ export const GAME_PROMO: Record<
     },
     ages: "6+",
     skills: { id: ["Kebiasaan sholat", "Arah kiblat"], en: ["Prayer habit", "Qibla"] },
+  },
+  "huruf-hijaiyah": {
+    hook: { id: "Dari alif sampai ya, satu huruf satu suara.", en: "From alif to ya, one letter, one sound." },
+    pitch: {
+      id: "28 huruf hijaiyah dalam 9 pelajaran bertahap: dengar suaranya, tulis mengikuti titik, lalu tangkap hurufnya di balon dan kuis.",
+      en: "The 28 hijaiyah letters in 9 step-by-step lessons: hear each sound, trace it along the dots, then catch it in balloons and quizzes.",
+    },
+    ages: "4–8",
+    skills: { id: ["Huruf hijaiyah", "Menulis"], en: ["Hijaiyah letters", "Tracing"] },
+  },
+  "sahabat-hewan": {
+    hook: { id: "Hewan juga butuh disayang.", en: "Animals need love too." },
+    pitch: {
+      id: "Beri makan dengan Bismillah, beri minum, bersihkan, dan elus pelan-pelan. Ambil telur dan susu, lalu berbagi — sambil belajar adab kepada hewan.",
+      en: "Feed with Bismillah, give water, clean up and stroke gently. Collect eggs and milk, then share — while learning kindness to animals.",
+    },
+    ages: "3–7",
+    skills: { id: ["Kasih sayang", "Tanggung jawab"], en: ["Kindness", "Responsibility"] },
+  },
+  "kebun-ais": {
+    hook: { id: "Tanam hari ini, berbagi esok hari.", en: "Plant today, share tomorrow." },
+    pitch: {
+      id: "Berkebun bersama Ais: pilih benih, siram, cabut rumput, panen tomat dan stroberi, lalu bagikan kepada tetangga.",
+      en: "Garden with Ais: pick seeds, water, pull the weeds, harvest tomatoes and strawberries, then share them with the neighbours.",
+    },
+    ages: "3–7",
+    skills: { id: ["Sabar", "Berbagi"], en: ["Patience", "Sharing"] },
+  },
+  "tenis-adam": {
+    hook: { id: "Pukul bolanya bersama Kak Adam!", en: "Hit the ball with Kak Adam!" },
+    pitch: {
+      id: "Akademi tenis langkah demi langkah: tunggu pantulan, forehand, backhand dua tangan, servis, sampai menghitung skor — dengan bintang di setiap pelajaran.",
+      en: "A step-by-step tennis academy: wait for the bounce, forehand, two-handed backhand, serving and scoring — with stars for every lesson.",
+    },
+    ages: "4–8",
+    skills: { id: ["Koordinasi", "Sportivitas"], en: ["Coordination", "Sportsmanship"] },
+  },
+  "doa-ramadan": {
+    hook: { id: "Sambut Ramadan dengan doanya.", en: "Welcome Ramadan with its du'as." },
+    pitch: {
+      id: "11 doa Ramadan dengan suara Arab asli: melihat hilal, niat puasa, berbuka, Lailatul Qadr, zakat, sampai takbir Idul Fitri.",
+      en: "11 Ramadan du'as with real Arabic audio: seeing the crescent, the intention to fast, breaking the fast, Laylatul Qadr, zakat and the Eid takbir.",
+    },
+    ages: "3–8",
+    skills: { id: ["Doa Ramadan", "Puasa"], en: ["Ramadan du'as", "Fasting"] },
+  },
+  tasbih: {
+    hook: { id: "Tasbih sebelum tidur, manik demi manik.", en: "Bedtime tasbih, bead by bead." },
+    pitch: {
+      id: "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — ketuk untuk menghitung bersama Baby Mo, dengan versi singkat untuk si kecil.",
+      en: "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — tap to count along with Baby Mo, with a short version for little ones.",
+    },
+    ages: "3–8",
+    skills: { id: ["Dzikir", "Menghitung"], en: ["Dhikr", "Counting"] },
   },
 };

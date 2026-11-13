@@ -16,5 +16,6 @@ import { type Locale, basePath } from "../i18n/config";
 export function renderBody(body: string, locale: Locale): string {
   return body
     .replace(/href="\/_\//g, `href="${basePath}/${locale}/`)
-    .replace(/src="\/_img\//g, `src="${basePath}/`);
+    .replace(/src="\/_img\//g, `src="${basePath}/`)
+    .replace(/poster="\/_img\//g, `poster="${basePath}/`);
 }

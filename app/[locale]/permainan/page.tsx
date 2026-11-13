@@ -19,8 +19,8 @@ import { asset } from "@/lib/i18n/config";
 const HUB = "https://play.babymo.id/";
 
 const TRUST: Record<Locale, [string, string][]> = {
-  id: [["🆓", "Gratis selamanya"], ["🚫", "Tanpa iklan di dalam game"], ["🔒", "Tanpa daftar akun"], ["📶", "Bisa dimainkan offline"]],
-  en: [["🆓", "Free forever"], ["🚫", "No ads inside the games"], ["🔒", "No account needed"], ["📶", "Plays offline"]],
+  id: [["🎮", "Main langsung di browser"], ["🚫", "Tanpa iklan di dalam game"], ["🔒", "Tanpa daftar akun"], ["📱", "Juga di iPhone, iPad & Apple Watch"]],
+  en: [["🎮", "Play right in the browser"], ["🚫", "No ads inside the games"], ["🔒", "No account needed"], ["📱", "Also on iPhone, iPad & Apple Watch"]],
 };
 
 const PARENT: Record<Locale, [string, string][]> = {
@@ -38,15 +38,30 @@ const PARENT: Record<Locale, [string, string][]> = {
   ],
 };
 
-/** A real gameplay screenshot in a phone frame. */
-function PhoneShot({ slug, alt, className = "" }: { slug: string; alt: string; className?: string }) {
+/** A short looping promo video made from real gameplay screens (public/games/video,
+ *  9:16, muted). It only plays while on screen (see VIDEO_JS) and shows its poster otherwise. */
+function GameVideo({ slug, l, alt, className = "" }: { slug: string; l: Locale; alt: string; className?: string }) {
   return (
-    <span className={`phone-shot block ${className}`}>
-      {/* eslint-disable-next-line @next/next/no-img-element */}
-      <img src={asset(`/games/shots/${slug}.webp`)} alt={alt} width={540} height={1080} loading="lazy" decoding="async" className="block h-full w-full object-cover object-top" />
+    <span className={`game-video block overflow-hidden rounded-[22px] shadow-[0_16px_30px_-18px_rgba(30,60,110,.55)] ${className}`}>
+      <video
+        className="block aspect-[9/16] h-auto w-full object-cover"
+        src={asset(`/games/video/${l}-${slug}.mp4`)}
+        poster={asset(`/games/video/${l}-${slug}.webp`)}
+        muted
+        loop
+        playsInline
+        preload="none"
+        aria-label={alt}
+        data-autoplay=""
+      />
     </span>
   );
 }
+
+/* Play each video only while it is visible; respect reduced motion (poster stays). */
+const VIDEO_JS = `(function(){if(!('IntersectionObserver' in window))return;var rm=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;if(rm)return;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){var v=e.target;if(e.isIntersecting){var p=v.play();p&&p.catch&&p.catch(function(){})}else{v.pause()}})},{threshold:.35});
+document.querySelectorAll('video[data-autoplay]').forEach(function(v){io.observe(v)});})();`;
 
 /** Age + skills chips. */
 function GameMeta({ slug, l }: { slug: string; l: Locale }) {
@@ -108,8 +123,8 @@ export default async function GamesIndex({
           title={l === "id" ? "Ayo main bareng Baby Mo!" : "Let's play with Baby Mo!"}
           sub={
             l === "id"
-              ? `${games.length} game islami gratis untuk belajar doa, huruf Arab, dan akhlak baik — sambil tertawa.`
-              : `${games.length} free Islamic games for learning du'as, Arabic letters and good character — while laughing.`
+              ? `${games.length} game islami untuk belajar doa, huruf Arab, dan akhlak baik — gratis dimainkan di browser, sambil tertawa.`
+              : `${games.length} Islamic games for learning du'as, Arabic letters and good character — free to play in the browser, while laughing.`
           }
         >
           <a href={HUB} target="_blank" rel="noopener" className="sec-btn tap inline-flex items-center gap-2 rounded-full px-5 py-2.5 text-[14.5px] font-bold">
@@ -145,7 +160,7 @@ export default async function GamesIndex({
                   ▶ {l === "id" ? "Main sekarang" : "Play now"}
                 </a>
               </div>
-              <PhoneShot slug={spotlight.slug} alt={spotlight.title[l]} className="mx-auto w-[220px] rotate-3 sm:w-[240px]" />
+              <GameVideo slug={spotlight.slug} l={l} alt={spotlight.title[l]} className="mx-auto w-[230px] rotate-2 sm:w-[260px]" />
             </div>
           </section>
         )}
@@ -165,12 +180,10 @@ export default async function GamesIndex({
                   const pr = GAME_PROMO[g.slug];
                   return (
                     <li key={g.slug}>
-                      <a href={g.externalUrl} target="_blank" rel="noopener" className="game-card tap group flex h-full flex-col gap-4 rounded-[28px] bg-paper p-4 sm:flex-row sm:p-5">
+                      <a href={g.externalUrl} target="_blank" rel="noopener" className="game-card tap group flex h-full flex-row gap-4 rounded-[28px] bg-paper p-4 sm:p-5">
                         {/* Phone: a wide tinted "peek" box with the phone rising out of it.
                             sm+: the classic side-by-side phone (natural 9:16, never stretched). */}
-                        <span className="shot-peek relative block h-[188px] shrink-0 overflow-hidden rounded-[22px] sm:h-auto sm:w-[122px] sm:self-start sm:overflow-visible sm:rounded-none">
-                          <PhoneShot slug={g.slug} alt={g.title[l]} className="absolute left-1/2 top-5 w-[148px] -translate-x-1/2 sm:static sm:w-full sm:translate-x-0" />
-                        </span>
+                        <GameVideo slug={g.slug} l={l} alt={g.title[l]} className="w-[132px] shrink-0 self-start sm:w-[150px]" />
                         <span className="flex min-w-0 flex-col">
                           <span className="flex items-center gap-3">
                             <GameIcon slug={g.slug} className="h-11 w-11" />
@@ -193,6 +206,26 @@ export default async function GamesIndex({
             </section>
           );
         })}
+
+        {/* ── The app ── */}
+        <section className="mb-16 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#E8F4FF,#F1EAFF_55%,#E9FAF0)] p-6 sm:p-10" aria-labelledby="app-cta">
+          <div className="grid items-center gap-6 md:grid-cols-[1fr_auto]">
+            <div>
+              <p className="text-[13px] font-extrabold uppercase tracking-wide text-[#2D8CFF]">iPhone · iPad · Apple Watch</p>
+              <h2 id="app-cta" className="font-display mt-1 text-[28px] leading-tight text-ink sm:text-[34px]">
+                {l === "id" ? "Semua game ini juga ada di aplikasi Baby Mo." : "All these games are in the Baby Mo app too."}
+              </h2>
+              <p className="mt-2 max-w-xl text-[15.5px] leading-relaxed text-ink-soft">
+                {l === "id"
+                  ? "Bisa offline, tanpa iklan, tanpa akun — plus doa dengan suara Mo, tasbih, dan jadwal sholat di Apple Watch."
+                  : "Works offline, no ads, no account — plus du'as in Mo's voice, tasbih and prayer times on Apple Watch."}
+              </p>
+            </div>
+            <a href={asset("/app/")} className="tap inline-flex items-center gap-2 rounded-full bg-[#0B0B0C] px-6 py-3 text-[15.5px] font-bold text-white">
+              {l === "id" ? "Lihat aplikasinya" : "See the app"} →
+            </a>
+          </div>
+        </section>
 
         {/* ── For parents ── */}
         <ParentPanel locale={l} hint={l === "id" ? "Kenapa game Baby Mo aman untuk si kecil" : "Why Baby Mo games are safe for little ones"}>
@@ -306,6 +339,7 @@ export default async function GamesIndex({
           </li>
         </ul>
       </main>
+      <script dangerouslySetInnerHTML={{ __html: VIDEO_JS }} />
       <Footer locale={l} currentPath="/permainan" />
       <MobileNav locale={l} />
       <JsonLd

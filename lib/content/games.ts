@@ -17,8 +17,8 @@ export const games: Game[] = [
     emoji: "🤲",
     title: { id: "Doa Harian", en: "Daily Duas" },
     description: {
-      id: "Belajar 6 doa sehari-hari dengan cara menyenangkan.",
-      en: "Learn 6 daily duas in a playful format.",
+      id: "Belajar 14 doa sehari-hari dengan suara Arab asli.",
+      en: "Learn 14 daily du'as with real Arabic audio.",
     },
     externalUrl: "https://play.babymo.id/babymo-doa-harian.html",
     tags: ["doa", "edukasi"],
@@ -148,17 +148,89 @@ export const games: Game[] = [
     externalUrl: "https://play.babymo.id/babymo-companion/",
     tags: ["ibadah", "sholat", "rutinitas"],
   },
+  {
+    slug: "huruf-hijaiyah",
+    emoji: "🔤",
+    title: { id: "Huruf Hijaiyah", en: "Hijaiyah Letters" },
+    description: {
+      id: "28 huruf dalam 9 pelajaran: dengar, tulis, lalu tangkap hurufnya.",
+      en: "28 letters in 9 lessons: listen, trace, then catch the letters.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-hijaiyah-classic.html",
+    tags: ["hijaiyah", "huruf"],
+  },
+  {
+    slug: "sahabat-hewan",
+    emoji: "🐱",
+    title: { id: "Sahabat Hewan Mo", en: "Mo's Animal Friends" },
+    description: {
+      id: "Rawat kucing dan hewan ternak dengan Bismillah dan kasih sayang.",
+      en: "Care for the cat and farm animals with Bismillah and kindness.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-sahabat-hewan.html",
+    tags: ["akhlak", "hewan"],
+  },
+  {
+    slug: "kebun-ais",
+    emoji: "🌱",
+    title: { id: "Kebun Kecil Ais", en: "Ais's Little Garden" },
+    description: {
+      id: "Tanam, siram, panen, lalu berbagi bersama Ais.",
+      en: "Plant, water, harvest, then share with Ais.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-kebun-ais.html",
+    tags: ["akhlak", "berkebun"],
+  },
+  {
+    slug: "tenis-adam",
+    emoji: "🎾",
+    title: { id: "Akademi Tenis Kak Adam", en: "Kak Adam's Tennis Academy" },
+    description: {
+      id: "Latihan forehand, backhand, servis, dan skor bersama Kak Adam.",
+      en: "Practise forehand, backhand, serving and scoring with Kak Adam.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-tenis-adam.html",
+    tags: ["olahraga", "tenis"],
+  },
+  {
+    slug: "doa-ramadan",
+    emoji: "🌙",
+    title: { id: "Doa Ramadan", en: "Ramadan Du'as" },
+    description: {
+      id: "11 doa Ramadan dengan suara: hilal, niat puasa, berbuka, sampai takbir.",
+      en: "11 Ramadan du'as with audio: the crescent, the fast, iftar and the takbir.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-doa-harian.html?series=ramadan",
+    tags: ["doa", "ramadan"],
+  },
+  {
+    slug: "tasbih",
+    emoji: "📿",
+    title: { id: "Tasbih Sebelum Tidur", en: "Bedtime Tasbih" },
+    description: {
+      id: "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — manik demi manik.",
+      en: "Subhanallah 33, Alhamdulillah 33, Allahu akbar 34 — bead by bead.",
+    },
+    externalUrl: "https://play.babymo.id/babymo-doa-harian.html?doa=bedtime_tasbih",
+    tags: ["dzikir", "tidur"],
+  },
 ];
 
 // The app generates one branded OG card per game at /og/<file-stem>.jpg.
 // Derive it from the externalUrl so the two repos can't drift out of sync.
 function ogImageFor(externalUrl: string): string {
-  const trimmed = externalUrl.replace(/\/+$/, "");
+  const trimmed = externalUrl.replace(/[?#].*$/, "").replace(/\/+$/, "");
   const origin = trimmed.slice(0, trimmed.indexOf("/", "https://".length));
   const stem = trimmed.slice(trimmed.lastIndexOf("/") + 1).replace(/\.html$/, "");
   return `${origin}/og/${stem}.jpg`;
 }
 
+/** Games without an /og card in the app use their promo-video poster (public/games/video). */
+const POSTER_OG = new Set(["wudhu", "huruf-hijaiyah", "sahabat-hewan", "kebun-ais", "tenis-adam"]);
+
 export function getAllGames(): Game[] {
-  return games.map((g) => ({ ...g, image: g.image ?? ogImageFor(g.externalUrl) }));
+  return games.map((g) => ({
+    ...g,
+    image: g.image ?? (POSTER_OG.has(g.slug) ? `https://babymo.id/games/video/id-${g.slug}.webp` : ogImageFor(g.externalUrl)),
+  }));
 }

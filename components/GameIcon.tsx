@@ -9,8 +9,10 @@ import { asset } from "@/lib/i18n/config";
 const KNOWN = new Set([
   "puzzle", "doa-harian", "dua-journey", "kata-islam", "dreamtime", "hijaiyah",
   "cari-baby-mo", "memory-match", "forehand-beat", "kata-baik", "pray-with-mo",
-  "streak-sholat-mo", "wudhu",
+  "streak-sholat-mo", "wudhu", "huruf-hijaiyah", "sahabat-hewan", "kebun-ais", "tenis-adam", "doa-ramadan",
 ]);
+/** slugs whose icon file has a different name */
+const FILE: Record<string, string> = { tasbih: "tasbih-malam" };
 
 export function GameIcon({
   slug,
@@ -21,7 +23,7 @@ export function GameIcon({
   className?: string;
   alt?: string;
 }) {
-  const file = KNOWN.has(slug) ? slug : "puzzle";
+  const file = FILE[slug] ?? (KNOWN.has(slug) ? slug : "puzzle");
   return (
     <img
       src={asset(`/icons/games/${file}.svg`)}
