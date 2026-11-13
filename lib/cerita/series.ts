@@ -239,6 +239,28 @@ export const SERIES: StorySeries[] = [
       "hadiah-isra-miraj",
     ],
   },
+  {
+    key: "ais-berani",
+    age: "3–6",
+    emoji: "🦁",
+    title: { id: "Ais Berani", en: "Brave Ais" },
+    blurb: {
+      id: "Baby Ais belajar menghadapi perasaan besar bersama Umi — marah, takut gelap, hari pertama di TK, dan saat sedang sakit.",
+      en: "Baby Ais learns to handle big feelings with Umi — anger, fear of the dark, the first day at kindergarten, and being ill.",
+    },
+    books: ["ais-marah-sekali", "ais-dan-kamar-yang-gelap", "hari-pertama-ais-di-tk", "ais-demam"],
+  },
+  {
+    key: "kebiasaan-baik",
+    age: "2–5",
+    emoji: "🌟",
+    title: { id: "Kebiasaan Baik Si Kembar", en: "The Twins' Good Habits" },
+    blurb: {
+      id: "Rutinitas sehari-hari yang jadi seru: ke kamar mandi sendiri, sikat gigi, membereskan mainan, tidur di kasur sendiri, waktu layar, dan tiga kata ajaib.",
+      en: "Everyday routines made fun: the bathroom by yourself, brushing teeth, tidying toys, sleeping in your own bed, screen time and three magic words.",
+    },
+    books: ["mo-bisa-ke-kamar-mandi-sendiri", "gigi-mo-dan-kuman-nakal", "mainan-pulang-ke-rumahnya", "kasur-baru-baby-mo", "tablet-boleh-istirahat", "tiga-kata-ajaib"],
+  },
 ];
 
 export interface SeriesPlace {

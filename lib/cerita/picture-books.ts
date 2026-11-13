@@ -9,6 +9,7 @@ import { MORE_BOOKS } from "./picture-books-more";
 import { RAMADAN_BOOKS } from "./picture-books-ramadan";
 import { RAMADAN_BOOKS_2 } from "./picture-books-ramadan-2";
 import { EID_BOOKS } from "./picture-books-eid";
+import { HABIT_BOOKS } from "./picture-books-habits";
 
 /**
  * Full picture books: every page is one big illustration with a short bit
@@ -356,6 +357,7 @@ const BOOKS: PictureBook[] = [
   ...RAMADAN_BOOKS,
   ...RAMADAN_BOOKS_2,
   ...EID_BOOKS,
+  ...HABIT_BOOKS,
 ];
 
 /* ───────── helpers ───────── */
