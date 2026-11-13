@@ -7,12 +7,12 @@
  * the App Store privacy answers before shipping.
  */
 
-export const PRIVACY_UPDATED = { id: "10 November 2026", en: "10 November 2026" } as const;
+export const PRIVACY_UPDATED = { id: "13 November 2026", en: "13 November 2026" } as const;
 export const PRIVACY_EMAIL = "roisa.mscdr@icloud.com";
 
 export const PRIVACY_HTML = {
   en: `
-<p class="lead">Baby Mo is a free Islamic learning world for young children and their families: the website <strong>babymo.id</strong>, the games at <strong>play.babymo.id</strong>, and the <strong>Baby Mo</strong> app for iPhone and iPad. This policy explains, in plain words, what happens to information when your family uses Baby Mo.</p>
+<p class="lead">Baby Mo is an Islamic learning world for young children and their families: the website <strong>babymo.id</strong>, the games at <strong>play.babymo.id</strong>, and the <strong>Baby Mo</strong> app for iPhone, iPad and Apple Watch. This policy explains, in plain words, what happens to information when your family uses Baby Mo.</p>
 
 <div class="summary">
   <p><strong>In short</strong></p>
@@ -73,7 +73,7 @@ export const PRIVACY_HTML = {
 <h2>7. Deleting data</h2>
 <p>Because information is stored on your device, you can delete it yourself at any time:</p>
 <ul>
-  <li><strong>iPhone/iPad app:</strong> delete the Baby Mo app — all its saved data is removed with it.</li>
+  <li><strong>iPhone, iPad and Apple Watch app:</strong> delete the Baby Mo app — all its saved data is removed with it.</li>
   <li><strong>Websites:</strong> clear the site data for babymo.id and play.babymo.id in your browser settings (for example in Safari: Settings → Safari → Advanced → Website Data).</li>
 </ul>
 <p>You can also email us at <a href="mailto:${PRIVACY_EMAIL}?subject=Data%20deletion%20request">${PRIVACY_EMAIL}</a> with the subject <em>"Data deletion request"</em>. We will reply within 14 days and delete any information we hold about you or your child, such as emails you have sent us. Parents can also ask us what information, if any, we hold.</p>
@@ -88,10 +88,10 @@ Website: <a href="https://babymo.id">babymo.id</a></p>
 
 <h2>10. Changes to this policy</h2>
 <p>If we change how Baby Mo handles information, we will update this page and the date below before the change takes effect. We will never start collecting children's personal information without first updating this policy.</p>
-<p class="updated">Last updated: ${"8 November 2026"}</p>
+<p class="updated">Last updated: ${"13 November 2026"}</p>
 `,
   id: `
-<p class="lead">Baby Mo adalah dunia belajar Islam gratis untuk anak usia dini dan keluarganya: situs <strong>babymo.id</strong>, permainan di <strong>play.babymo.id</strong>, dan aplikasi <strong>Baby Mo</strong> untuk iPhone dan iPad. Kebijakan ini menjelaskan dengan bahasa sederhana apa yang terjadi pada informasi saat keluarga Anda menggunakan Baby Mo.</p>
+<p class="lead">Baby Mo adalah dunia belajar Islam untuk anak usia dini dan keluarganya: situs <strong>babymo.id</strong>, permainan di <strong>play.babymo.id</strong>, dan aplikasi <strong>Baby Mo</strong> untuk iPhone, iPad, dan Apple Watch. Kebijakan ini menjelaskan dengan bahasa sederhana apa yang terjadi pada informasi saat keluarga Anda menggunakan Baby Mo.</p>
 
 <div class="summary">
   <p><strong>Singkatnya</strong></p>
@@ -152,7 +152,7 @@ Website: <a href="https://babymo.id">babymo.id</a></p>
 <h2>7. Menghapus data</h2>
 <p>Karena informasi tersimpan di perangkat Anda, Anda dapat menghapusnya sendiri kapan saja:</p>
 <ul>
-  <li><strong>Aplikasi iPhone/iPad:</strong> hapus aplikasi Baby Mo — semua data tersimpannya ikut terhapus.</li>
+  <li><strong>Aplikasi iPhone, iPad, dan Apple Watch:</strong> hapus aplikasi Baby Mo — semua data tersimpannya ikut terhapus.</li>
   <li><strong>Situs web:</strong> hapus data situs babymo.id dan play.babymo.id di pengaturan browser (misalnya di Safari: Pengaturan → Safari → Lanjutan → Data Situs Web).</li>
 </ul>
 <p>Anda juga dapat mengirim email ke <a href="mailto:${PRIVACY_EMAIL}?subject=Permintaan%20hapus%20data">${PRIVACY_EMAIL}</a> dengan subjek <em>"Permintaan hapus data"</em>. Kami akan membalas dalam 14 hari dan menghapus informasi apa pun yang kami simpan tentang Anda atau anak Anda, seperti email yang pernah Anda kirim. Orang tua juga dapat menanyakan informasi apa, jika ada, yang kami simpan.</p>
@@ -167,6 +167,6 @@ Situs: <a href="https://babymo.id">babymo.id</a></p>
 
 <h2>10. Perubahan kebijakan</h2>
 <p>Jika kami mengubah cara Baby Mo menangani informasi, kami akan memperbarui halaman ini beserta tanggal di bawah sebelum perubahan berlaku. Kami tidak akan pernah mulai mengumpulkan informasi pribadi anak tanpa terlebih dahulu memperbarui kebijakan ini.</p>
-<p class="updated">Terakhir diperbarui: ${"8 November 2026"}</p>
+<p class="updated">Terakhir diperbarui: ${"13 November 2026"}</p>
 `,
 } as const;
