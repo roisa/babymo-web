@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import type { Locale } from "@/lib/i18n/config";
 import { getStickers } from "@/lib/cerita/stickers";
+import { shelfStore } from "@/lib/cerita/shelf-store";
 
 type Chip = { key: string; label: string };
 
@@ -16,7 +17,9 @@ export function ShelfFilters({ locale, chars, series, total }: { locale: Locale;
   const [ser, setSer] = useState<string>("all");
   const [unread, setUnread] = useState(false);
   const [shown, setShown] = useState(total);
+  const [limit, setLimit] = useState(shelfStore.get().limit);
   const id = locale === "id";
+  useEffect(() => shelfStore.sub(() => setLimit(shelfStore.get().limit)), []);
 
   useEffect(() => {
     let read: Record<string, number> = {};
@@ -26,17 +29,23 @@ export function ShelfFilters({ locale, chars, series, total }: { locale: Locale;
       /* storage blocked */
     }
     let n = 0;
+    let over = 0;
+    // with no filter on, show the shelf a dozen books at a time
+    const paged = who === "all" && ser === "all" && !unread;
     document.querySelectorAll<HTMLElement>("[data-shelf-item]").forEach((el) => {
       const ok =
         (who === "all" || (el.dataset.chars ?? "").split(" ").includes(who)) &&
         (ser === "all" || el.dataset.series === ser) &&
         (!unread || !read[el.dataset.shelfItem ?? ""]);
-      el.hidden = !ok;
       if (ok) n++;
+      const cut = ok && paged && n > limit;
+      if (cut) over++;
+      el.hidden = !ok || cut;
       if (read[el.dataset.shelfItem ?? ""]) el.classList.add("is-read");
     });
     setShown(n);
-  }, [who, ser, unread]);
+    shelfStore.set({ hiddenByLimit: over });
+  }, [who, ser, unread, limit]);
 
   const chip = (active: boolean) =>
     `shelf-chip${active ? " is-on" : ""}`;

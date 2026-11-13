@@ -25,7 +25,7 @@ import { getDoaBySlug } from "@/lib/content/doa";
 import { getHadithBySlug } from "@/lib/content/hadith";
 import { getParentingBySlug } from "@/lib/content/parenting";
 import { labelize } from "@/lib/labelize";
-import { seriesOf } from "@/lib/cerita/series";
+import { seriesOf, ageOf } from "@/lib/cerita/series";
 
 export async function generateStaticParams() {
   const out: { locale: string; slug: string }[] = [];
@@ -121,6 +121,11 @@ export default async function CatatanDetail({
             <span className="rounded-full bg-brave-soft px-2.5 py-0.5 font-semibold normal-case-label text-brave-deep">
               {isStory ? dict.catatan.kidsStory : narrator}
             </span>
+            {isStory && (
+              <span className="rounded-full bg-sun-soft px-2.5 py-0.5 font-semibold normal-case-label text-sun-deep">
+                👶 {l === "id" ? `${ageOf(slug)} th` : `ages ${ageOf(slug)}`}
+              </span>
+            )}
             {!isStory && (
               <>
                 <span className="text-whisper">
