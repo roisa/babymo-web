@@ -1,3 +1,4 @@
+import { notFuture } from "@/lib/dates";
 import type { MetadataRoute } from "next";
 import { locales, siteUrl } from "@/lib/i18n/config";
 import { getAllDoa } from "@/lib/content/doa";
@@ -180,7 +181,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     for (const n of getAllCatatan()) {
       out.push({
         url: url(locale, `/cerita/${n.slug}`),
-        lastModified: new Date(n.published),
+        lastModified: new Date(notFuture(n.published)),
         changeFrequency: "monthly",
         priority: 0.75,
         alternates: {

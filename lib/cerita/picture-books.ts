@@ -63,6 +63,21 @@ const BOOKS: PictureBook[] = [
       en: "Planting with children teaches patience and wonder together: we take care, and Allah makes it grow.",
     },
     tags: ["menanam", "sabar", "bunga", "ciptaan allah", "kebun"],
+    card: {
+      title: { id: "Menanam Bersama Anak", en: "Planting with Your Child" },
+      items: {
+        id: [
+          "Tanam biji yang cepat tumbuh (kacang hijau, bunga matahari) di pot kecil milik anak sendiri.",
+          "Buat jadwal menyiram sederhana dan tempel di dekat pot. Biarkan anak yang mencentangnya.",
+          "Saat tunas muncul, ajak berkata \"Masya Allah\" dan tanyakan: \"Siapa yang membuatnya tumbuh?\"",
+        ],
+        en: [
+          "Plant fast-growing seeds (mung beans, sunflowers) in a little pot that belongs to your child.",
+          "Make a simple watering chart by the pot and let your child tick it off.",
+          "When the shoot appears, say \"Masha Allah\" together and ask: \"Who made it grow?\"",
+        ],
+      },
+    },
     cover: { bg: "garden", props: [{ k: "bloom", x: 520 }, { k: "butterfly", x: 470, y: 120 }], mo: [{ pose: "wow", x: 330 }], fx: ["sparkle"] },
     pages: [
       {
@@ -149,6 +164,21 @@ const BOOKS: PictureBook[] = [
       en: "Rain is a good time to make du'a. Teach children to see rain as a mercy, not just something that stops play.",
     },
     tags: ["hujan", "doa", "pelangi", "katak", "alam"],
+    card: {
+      title: { id: "Saat Hujan Turun", en: "When It Rains" },
+      items: {
+        id: [
+          "Hafalkan doa saat hujan bersama: Allahumma shayyiban nafi'an. Ucapkan setiap kali hujan turun.",
+          "Jadikan hujan waktu bermain di dalam: menggambar pelangi, mendengar suara hujan, atau membaca buku.",
+          "Setelah hujan reda, ajak keluar mencari genangan, cacing, atau pelangi — dan bersyukur bersama.",
+        ],
+        en: [
+          "Learn the rain du'a together: Allahumma shayyiban nafi'an. Say it every time it rains.",
+          "Make rain indoor time: draw a rainbow, listen to the drops, or read a book.",
+          "When it stops, go out looking for puddles, worms or a rainbow — and say Alhamdulillah together.",
+        ],
+      },
+    },
     cover: { bg: "garden", props: [{ k: "rainbow", x: 400, y: 230 }, { k: "puddle", x: 560 }, { k: "frog", x: 560, y: 400, s: 0.8 }], mo: [{ pose: "pose-41", x: 360 }], fx: ["sparkle"] },
     pages: [
       {
@@ -235,6 +265,21 @@ const BOOKS: PictureBook[] = [
       en: "Let children join in real chores, then help them see the job through. Pride comes from a finished task.",
     },
     tags: ["menolong", "abi", "mobil", "tanggung jawab", "gelembung"],
+    card: {
+      title: { id: "Anak Ikut Pekerjaan Rumah", en: "Real Chores for Little Hands" },
+      items: {
+        id: [
+          "Pilih tugas sungguhan yang aman: menyiram tanaman, melipat lap, mencuci sandal sendiri.",
+          "Kerjakan berdampingan sampai selesai, jangan diambil alih. Hasil yang kurang rapi tidak apa-apa.",
+          "Tutup dengan pujian yang spesifik: \"Kamu menyelesaikannya sampai bersih. Terima kasih sudah menolong.\"",
+        ],
+        en: [
+          "Pick real, safe jobs: watering plants, folding cloths, washing their own sandals.",
+          "Work side by side until it's finished — don't take over. Imperfect is fine.",
+          "End with specific praise: \"You finished it until it was clean. Thank you for helping.\"",
+        ],
+      },
+    },
     cover: { bg: "street", props: [{ k: "carshiny", x: 550, s: 1.45 }, { k: "minirainbow", x: 300, y: 250 }], mo: [{ pose: "yeyy", x: 300 }], fx: ["bubbles"] },
     pages: [
       {
