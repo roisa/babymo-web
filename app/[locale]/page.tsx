@@ -13,6 +13,7 @@ import { getDictionary } from "@/lib/i18n/dictionaries";
 import { buildMetadata } from "@/lib/seo/metadata";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import AppStoreBadge from "@/components/AppStoreBadge";
 import { MobileNav } from "@/components/MobileNav";
 import { JsonLd } from "@/components/JsonLd";
 import { Reveal } from "@/components/Reveal";
@@ -134,6 +135,14 @@ export default async function HomePage({
                   >
                     {l === "id" ? "Kenalan dengan Baby Mo" : "Meet Baby Mo"}
                   </Link>
+                </div>
+                {/* The Baby Mo app — live on the App Store */}
+                <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2">
+                  <AppStoreBadge lang={l} className="magnet tap" />
+                  <a href={asset("/app/")} className="tap text-[13.5px] font-semibold leading-snug text-whisper hover:text-ink">
+                    <span className="block text-ink">{l === "id" ? "Aplikasi Baby Mo" : "The Baby Mo app"}</span>
+                    iPhone · iPad · Apple Watch →
+                  </a>
                 </div>
               </div>
 
