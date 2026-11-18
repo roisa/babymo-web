@@ -9,8 +9,8 @@
  * switch it (no JavaScript → both languages show).
  */
 
-/** Set when the app is live, e.g. "https://apps.apple.com/app/id1234567890". */
-export const APP_STORE_URL: string | null = null;
+/** The live App Store page. No country in the path, so Apple opens each visitor's own storefront. */
+export const APP_STORE_URL: string | null = "https://apps.apple.com/app/baby-mo-islamic-kids-games/id6831891898";
 
 export const SUPPORT_EMAIL = "hello@babymo.id";
 export const INSTAGRAM_URL = "https://www.instagram.com/babymo.official";

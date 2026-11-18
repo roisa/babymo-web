@@ -15,6 +15,7 @@ import { AppIcon } from "@/components/AppIcon";
 import { ParentPanel } from "@/components/ParentPanel";
 import { GAME_GROUPS, GAME_PROMO } from "@/lib/content/game-promo";
 import { asset } from "@/lib/i18n/config";
+import AppStoreBadge from "@/components/AppStoreBadge";
 
 const HUB = "https://play.babymo.id/";
 
@@ -208,7 +209,7 @@ export default async function GamesIndex({
         })}
 
         {/* ── The app ── */}
-        <section className="mb-16 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#E8F4FF,#F1EAFF_55%,#E9FAF0)] p-6 sm:p-10" aria-labelledby="app-cta">
+        <section className="mb-16 overflow-hidden rounded-[32px] bg-[linear-gradient(135deg,#E8F4FF,#F1EAFF_55%,#E9FAF0)] p-6 dark:bg-[linear-gradient(135deg,#16263A,#231D38_55%,#152A20)] sm:p-10" aria-labelledby="app-cta">
           <div className="grid items-center gap-6 md:grid-cols-[1fr_auto]">
             <div>
               <p className="text-[13px] font-extrabold uppercase tracking-wide text-[#2D8CFF]">iPhone · iPad · Apple Watch</p>
@@ -221,9 +222,12 @@ export default async function GamesIndex({
                   : "Works offline, no ads, no account — plus du'as in Mo's voice, tasbih and prayer times on Apple Watch."}
               </p>
             </div>
-            <a href={asset("/app/")} className="tap inline-flex items-center gap-2 rounded-full bg-[#0B0B0C] px-6 py-3 text-[15.5px] font-bold text-white">
-              {l === "id" ? "Lihat aplikasinya" : "See the app"} →
-            </a>
+            <div className="flex flex-col items-start gap-3 md:items-center">
+              <AppStoreBadge lang={l} className="tap" />
+              <a href={asset("/app/")} className="tap text-[14.5px] font-bold text-[#2D8CFF] underline-offset-4 hover:underline">
+                {l === "id" ? "Lihat aplikasinya" : "See the app"} →
+              </a>
+            </div>
           </div>
         </section>
 
