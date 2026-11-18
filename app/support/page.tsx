@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { asset } from "@/lib/i18n/config";
+import AppStoreBadge from "@/components/AppStoreBadge";
 import { INSTAGRAM_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-pages";
 
 /**
@@ -402,6 +403,7 @@ export default function SupportPage() {
                 <span data-l="id">Jawaban cepat untuk pertanyaan <b className="c1">Ayah</b> dan <b className="c2">Bunda</b> — tentang <b className="c3">game</b>, <b className="c4">suara</b>, <b className="c5">jadwal sholat</b>, dan <b className="c6">privasi</b>.</span>
                 <span data-l="en">Quick answers for <b className="c1">mums</b> and <b className="c2">dads</b> — about <b className="c3">games</b>, <b className="c4">sound</b>, <b className="c5">prayer times</b> and <b className="c6">privacy</b>.</span>
               </p>
+              <div style={{ margin: "14px 0 4px" }}><AppStoreBadge /></div>
               <div className="tags" aria-hidden="true">
                 <span className="tag t1">🔊 <B t={{ id: "Suara", en: "Sound" }} /></span>
                 <span className="tag t2">🕌 <B t={{ id: "Sholat", en: "Prayer" }} /></span>
