@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
 import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { LISTING } from "@/lib/content/app-store-kit";
 import { asset } from "@/lib/i18n/config";
@@ -15,27 +17,23 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
-const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10"];
-const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun"];
-const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids"];
+const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun", "13-ramadan", "14-memory"];
+const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids", "Ramadan theme (1.1)", "Build the Word (1.1)"];
 
-/* Images retaken on 11 Nov 2026 (seventh retake, games build babymo-games-v198): new Game Hub (big Baby Mo, du'a hands icon),
-   Duas tab with the Ramadan Du'as series, redesigned du'a pages, Wudhu step pages, Dreamtime start and Pray with Mo scenery
-   (babymo-app #199–#252); banners 01, 02, 08 and 10 use the original high-quality Baby Mo render (render 1). The version before this retake stays
-   downloadable as "versi lama" (public/app-store-kit/prev/). */
-const CHANGED = new Set(["01", "02", "08", "09", "10", "01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "11-dream"]);
+/* Version 1.1 (19 Nov 2026, games build babymo-games-v294): two new banners (11 Ramadan theme, 12 Build the Word),
+   two new plain screenshots (13 Ramadan home, 14 Memory Match home) and retakes of 11 Dreamtime and 12 Build the Word
+   (new illustrated start screens, babymo-app #333–#338). Retaken images keep a "versi lama" link (public/app-store-kit/prev/).
+   Apple takes up to 10 images per device, so banners 11 and 12 replace two of 01–10 (suggested: 04 and 09). */
+const CHANGED = new Set(["11-dream", "12-susun"]);
+const ADDED = new Set(["11", "12", "13-ramadan", "14-memory"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "New Game Hub (big Baby Mo, du'a hands icon); Baby Mo arms-wide pose (render 1)",
-  "02": "New du'a page (scene header, centred title, tap button, reading speed); Baby Mo du'a pose (render 1)",
-  "08": "Pray with Mo with mosque scenery; Baby Mo hands-clasped pose (render 1)",
-  "09": "New Wudhu step page (courtyard scene, step title plate)",
-  "10": "New illustrated Dreamtime start screen; Baby Mo with a checklist (render 1)",
-  "01-home": "New Game Hub: big Baby Mo, du'a hands icon",
-  "02-doa-tab": "Duas tab with the new Ramadan Du'as series card",
-  "03-doa": "New du'a page: scene header, centred title, tap button, Normal / Slow / Slower",
-  "04-sholat": "Pray with Mo with mosque scenery",
-  "05-wudhu": "New Wudhu step page with courtyard scene",
-  "11-dream": "New illustrated Dreamtime start screen",
+  "11": "Ramadan theme: lanterns, \"Ramadan day N\" card and Eid countdown (shown in the app every Ramadan)",
+  "12": "Build the Word: 106 Arabic words in 12 categories",
+  "11-dream": "New Dreamtime start screen: night-sky steps",
+  "12-susun": "New Build the Word home: tree, hills and mosque, word categories",
+  "13-ramadan": "Game Hub in Ramadan: lanterns, Ramadan day card, Mo's Ramadan greeting",
+  "14-memory": "New Memory Match home: Mo on the hill with the cards",
 };
 /* Apple Watch (iOS Build 12): the watch app ships inside the same iPhone
    archive, so App Store Connect also shows an Apple Watch screenshot tab.
@@ -88,7 +86,7 @@ for (const lang of ["id", "en"] as const) {
     size: "2853 × 2007 px",
     note: "Use these instead of the portrait Duo set if you prefer landscape (upload one orientation per language). " +
       (lang === "id" ? "Upload these to the Indonesian localization." : "Upload these to the English (U.S.) localization."),
-    files: SHOTS.map((k, i) => ({ src: `app-store-kit/banners/duol-${lang}-${k}.jpg`, thumb: `app-store-kit/thumbs/duol-${lang}-${k}.webp`, name: `${k} ${BANNER_NAMES[i]}` })),
+    files: SHOTS.slice(0, 10).map((k, i) => ({ src: `app-store-kit/banners/duol-${lang}-${k}.jpg`, thumb: `app-store-kit/thumbs/duol-${lang}-${k}.webp`, name: `${k} ${BANNER_NAMES[i]}` })),
   });
 }
 
@@ -116,7 +114,7 @@ const FACTS: { label: string; value: string; where: string; note?: string }[] = 
   { label: "Primary language", value: "Indonesian", where: "App Information", note: "Add English (U.S.) as a second localization." },
   { label: "Bundle ID", value: "id.babymo.app", where: "App Information (from Xcode)" },
   { label: "SKU", value: "babymo-ios-001", where: "New App form (any unique code you like)" },
-  { label: "Version", value: "1.0", where: "Version (MARKETING_VERSION in Xcode)" },
+  { label: "Version", value: "1.1", where: "Version (MARKETING_VERSION in Xcode; build number goes up by one)" },
   { label: "Primary category", value: "Education", where: "App Information → Category" },
   { label: "Secondary category", value: "Games — subcategories: Family, Educational", where: "App Information → Category" },
   { label: "Support URL", value: "https://babymo.id/support/", where: "Version → Support URL (required)" },
@@ -283,6 +281,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
+          <p className="lead"><b>Version 1.1 (19 Nov 2026):</b> new banners <b>11 Ramadan theme</b> and <b>12 Build the Word</b>, new plain screenshots <b>13 Ramadan home</b> and <b>14 Memory Match</b>, and fresh captures of <b>11 Dreamtime</b> and <b>12 Build the Word</b> (marked 🆕 or ✨ below). Apple shows at most <b>10 images per device</b>, so to use the new banners, remove two of 01–10 in App Store Connect (we suggest 04 Hijaiyah Island and 09 Wudhu) and drag 11 and 12 into the first three places if you want them in search results. The landscape Duo set stays at 01–10.</p>
           <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape, plus a <b>landscape</b> Duo banner set (2853 × 2007) further down: the app runs upright, so those show two real portrait game screens side by side. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
@@ -297,7 +296,9 @@ export default function AppStoreKit() {
                     <img src={asset("/" + f.thumb)} alt={f.name} loading="lazy" />
                     <a href={asset("/" + f.src)} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
                     {(() => { const k = f.src.split("/").pop()!.replace(/\.jpg$/, "").split("-").slice(2).join("-");
-                      return CHANGED.has(k) && !f.src.includes("/duo-") ? (<>
+                      if (f.src.includes("/duol-")) return null;
+                      return ADDED.has(k) ? <span className="new">🆕 Versi 1.1: {CHANGE_NOTE[k]}</span>
+                        : CHANGED.has(k) && existsSync(join(process.cwd(), "public", "app-store-kit", "prev", f.src.replace("app-store-kit/", ""))) ? (<>
                         <span className="new">✨ Baru: {CHANGE_NOTE[k]}</span>
                         <a className="old" href={asset("/app-store-kit/prev/" + f.src.replace("app-store-kit/", ""))} download>↩ versi lama</a>
                       </>) : null; })()}
