@@ -21,17 +21,30 @@ const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11",
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun", "13-ramadan", "14-memory"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids", "Ramadan theme (1.1)", "Build the Word (1.1)"];
 
-/* Version 1.1 (19 Nov 2026, games build babymo-games-v294): two new banners (11 Ramadan theme, 12 Build the Word),
-   two new plain screenshots (13 Ramadan home, 14 Memory Match home) and retakes of 11 Dreamtime and 12 Build the Word
-   (new illustrated start screens, babymo-app #333–#338). Retaken images keep a "versi lama" link (public/app-store-kit/prev/).
+/* Version 1.1 (19 Nov 2026): two new banners (11 Ramadan theme, 12 Build the Word) and two new plain screenshots
+   (13 Ramadan home, 14 Memory Match home). Then every image was retaken from the latest games build
+   (babymo-games-v296) and only the ones that really changed were replaced: the new du'a page, Wudhu tips spoken by Mo,
+   the tennis court, animal name tags, the glowing garden bed and the new how-to icons (babymo-app #274–#315).
+   Each replaced image keeps a "versi lama" link to the version before (public/app-store-kit/prev/).
    Apple takes up to 10 images per device, so banners 11 and 12 replace two of 01–10 (suggested: 04 and 09). */
-const CHANGED = new Set(["11-dream", "12-susun"]);
+const CHANGED = new Set(["02", "04", "05", "06", "09", "01-home", "03-doa", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun"]);
 const ADDED = new Set(["11", "12", "13-ramadan", "14-memory"]);
 const CHANGE_NOTE: Record<string, string> = {
+  "02": "New du'a page: Read Along with Mo button, new tap button and star sticker",
+  "04": "Hijaiyah Island with the new how-to icons and glass panels",
+  "05": "Tennis court with the players' bench and the tidier lesson screen",
+  "06": "Animal Friends: name tags under the animals' feet, new icons",
+  "09": "Wudhu step tip now spoken by Baby Mo",
   "11": "Ramadan theme: lanterns, \"Ramadan day N\" card and Eid countdown (shown in the app every Ramadan)",
   "12": "Build the Word: 106 Arabic words in 12 categories",
-  "11-dream": "New Dreamtime start screen: night-sky steps",
-  "12-susun": "New Build the Word home: tree, hills and mosque, word categories",
+  "01-home": "Latest Game Hub",
+  "03-doa": "New du'a page: Read Along with Mo button, new tap button and star sticker",
+  "05-wudhu": "Wudhu step tip now spoken by Baby Mo",
+  "06-huruf": "Hijaiyah Letters with the new icons and glass panels",
+  "07-pulau": "Hijaiyah Island with the new how-to icons and glass panels",
+  "08-tenis": "Tennis court with the players' bench and the tidier lesson screen",
+  "09-hewan": "Animal Friends: name tags under the animals' feet, new icons",
+  "10-kebun": "Ais's Garden: the selected bed glows, new icons",
   "13-ramadan": "Game Hub in Ramadan: lanterns, Ramadan day card, Mo's Ramadan greeting",
   "14-memory": "New Memory Match home: Mo on the hill with the cards",
 };
@@ -281,7 +294,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead"><b>Version 1.1 (19 Nov 2026):</b> new banners <b>11 Ramadan theme</b> and <b>12 Build the Word</b>, new plain screenshots <b>13 Ramadan home</b> and <b>14 Memory Match</b>, and fresh captures of <b>11 Dreamtime</b> and <b>12 Build the Word</b> (marked 🆕 or ✨ below). Apple shows at most <b>10 images per device</b>, so to use the new banners, remove two of 01–10 in App Store Connect (we suggest 04 Hijaiyah Island and 09 Wudhu) and drag 11 and 12 into the first three places if you want them in search results. The landscape Duo set stays at 01–10.</p>
+          <p className="lead"><b>Retaken 19 Nov 2026 from the latest app (games build v296):</b> every image was captured again and only those that changed were replaced — banners 02, 04, 05, 06 and 09 and plain screenshots 01, 03, 05, 06, 07, 08, 09 and 10 (marked ✨, each with a “↩ versi lama” link), plus the landscape Duo banners 02–04. Everything else already matched the app. <b>Version 1.1:</b> new banners <b>11 Ramadan theme</b> and <b>12 Build the Word</b>, new plain screenshots <b>13 Ramadan home</b> and <b>14 Memory Match</b>, and fresh captures of <b>11 Dreamtime</b> and <b>12 Build the Word</b> (marked 🆕 or ✨ below). Apple shows at most <b>10 images per device</b>, so to use the new banners, remove two of 01–10 in App Store Connect (we suggest 04 Hijaiyah Island and 09 Wudhu) and drag 11 and 12 into the first three places if you want them in search results. The landscape Duo set stays at 01–10.</p>
           <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape, plus a <b>landscape</b> Duo banner set (2853 × 2007) further down: the app runs upright, so those show two real portrait game screens side by side. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
             <section className="group" id={g.id} key={g.id}>
