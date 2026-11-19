@@ -58,9 +58,10 @@ const WATCH_SCREENS: { key: string; name: string }[] = [
   { key: "dua", name: "02 Du'a player (riding)" },
   { key: "tasbih", name: "03 Tasbih" },
   { key: "prayer", name: "04 Prayer times" },
-  { key: "ramadan", name: "05 Ramadan" },
-  { key: "pet", name: "06 Mimi the pet" },
-  { key: "duas", name: "07 All du'as" },
+  { key: "qibla", name: "05 Qibla with Mo" },
+  { key: "ramadan", name: "06 Ramadan + practice fast" },
+  { key: "pet", name: "07 Mimi the pet" },
+  { key: "duas", name: "08 All du'as" },
 ];
 
 type Group = { id: string; title: string; size: string; note: string; files: { src: string; thumb: string; name: string }[] };
@@ -178,7 +179,7 @@ const CHECK: { t: string; d: string }[] = [
   { t: "Fill in App Review contact details", d: "Your name, phone number and email in App Review Information. Paste the review notes from the section above." },
   { t: "Upload the header and search-results artwork", d: "Product Page Information → Header and Search Results, for both languages. Use the 16:9 header (or the 21:9 one) and the 3:2 search image from the section above." },
   { t: "Upload screenshots for iPhone (medium display) and iPad 13\"", d: "Both are required because the app runs on iPad too: iPhone 1206 × 2622, iPad 2064 × 2752 (2048 × 2732 as a fallback). Up to 10 per device and language." },
-  { t: "Upload Apple Watch screenshots", d: "Build 12 ships the watch app in the same archive, so App Store Connect adds an Apple Watch tab: 416 × 496 px, up to 10 per language. Use the two banner sets from the Apple Watch section above (ID and EN, order 01 → 07)." },
+  { t: "Upload Apple Watch screenshots", d: "The watch app ships in the same archive, so App Store Connect adds an Apple Watch tab: 416 × 496 px, up to 10 per language. Use the two banner sets from the Apple Watch section above (ID and EN, order 01 → 08)." },
   { t: "Complete Age Rating and App Privacy", d: "Use the answers below. The rating should come out as 4+." },
   { t: "Choose manual release", d: "Version Release → Manually release this version, so you can launch when babymo.id/app is ready (set APP_STORE_URL then)." },
 ];
@@ -324,7 +325,7 @@ export default function AppStoreKit() {
           ))}
 
           <h2 id="watch">Apple Watch screenshots</h2>
-          <p className="lead">iOS Build 13 ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih with wrist-motion counting, prayer times, Ramadan, Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. Like the iPhone sets there are <b>caption banners</b> (upload these) and <b>plain captures</b> (for the website and social posts) — all exactly <b>416 × 496 px PNG</b>, captured on the Apple Watch Series 11 (46mm) simulator; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 07. Retake after a watch-app change with <code>scripts/generate-watch-banners.py</code>.</p>
+          <p className="lead">iOS v1.2 (build 22) ships the <b>Baby Mo watch app</b> in the same archive (du&apos;as in Mo&apos;s voice, tasbih with wrist-motion counting, prayer times, Qibla with Mo, Wake up with Mo, the Ramadan practice fast and Mimi the pet), so App Store Connect shows an <b>Apple Watch</b> screenshot tab: it needs at least one image, up to 10 per language. Like the iPhone sets there are <b>caption banners</b> (upload these) and <b>plain captures</b> (for the website and social posts) — all exactly <b>416 × 496 px PNG</b>, captured on the Apple Watch Series 11 (46mm) simulator; Apple scales them for smaller watches. Upload the ID set to the Indonesian localization and the EN set to English (U.S.), in the order 01 → 08. <b>Retaken 19 Nov 2026 for v1.2:</b> new Qibla with Mo screen (gold dial when facing the Kaaba) and the Ramadan screen now shows the practice-fast du&apos;a buttons. Retake after a watch-app change with <code>scripts/generate-watch-banners.py</code>.</p>
           {(["banner", "plain"] as const).map((kind) =>
             (["id", "en"] as const).map((lang) => (
               <section className="group" id={`watch-${kind}-${lang}`} key={`watch-${kind}-${lang}`}>

@@ -38,6 +38,7 @@ CAPTIONS = {
     "ramadan": {"id": ("Teman ", "Ramadan"),            "en": ("Your ", "Ramadan buddy")},
     "pet":     {"id": ("Rawat ", "Mimi"),               "en": ("Care for ", "Mimi")},
     "duas":    {"id": ("5 momen ", "doa harian"),       "en": ("5 du'a ", "moments")},
+    "qibla":   {"id": ("Cari arah ", "kiblat"),          "en": ("Find the ", "Qibla")},
 }
 
 def gradient(w, h, top, bot):
