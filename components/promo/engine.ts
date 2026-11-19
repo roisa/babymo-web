@@ -1,12 +1,16 @@
 /**
  * Promo Studio drawing kit. Every template draws on a canvas in "design
  * units": the frame is always 1080 wide and 1920 tall (9:16 Reels / Story /
- * Shorts) or 1080 tall (1:1 feed). The caller scales the context to the real
+ * Shorts), 1350 tall (4:5 feed) or 1080 tall (1:1 feed). The 4:5 and 1:1 sizes
+ * share one layout (fractions of H), so every template works in all three. The caller scales the context to the real
  * canvas size, so the same template renders a small live thumbnail and a
  * full-HD export.
  */
 
-export type Fmt = "story" | "square";
+export type Fmt = "story" | "feed" | "square";
+/** Where the video sends people: the App Store app (default) or the free web games. */
+export type Target = "app" | "web";
+export const FMT_H: Record<Fmt, number> = { story: 1920, feed: 1350, square: 1080 };
 export type Lang = "id" | "en";
 
 export interface PromoGame {
@@ -50,6 +54,8 @@ export interface SceneText {
 export interface Assets {
   mo: Record<string, HTMLImageElement>;
   logo: HTMLImageElement;
+  /** Apple Watch screens (watch-<lang>-<key>.png from the App Store Kit) */
+  watch: Record<string, HTMLImageElement>;
 }
 
 export interface Scene {
@@ -60,6 +66,7 @@ export interface Scene {
   d: number;
   p: number;
   fmt: Fmt;
+  target: Target;
   lang: Lang;
   game: PromoGame;
   games: PromoGame[];
@@ -399,7 +406,7 @@ export function endCard(s: Scene, k: number, pose = "yeyy") {
   const moSize = s.fmt === "story" ? 520 : 360;
   mo(s, pose, W / 2, cy - moSize * 0.55 - (1 - e) * 80, moSize * e);
   text(s, s.text.cta, W / 2, cy + 20, { size: s.fmt === "story" ? 84 : 64, alpha: clamp(k * 2 - 0.3), maxW: W - 160 });
-  pill(s, s.text.url, W / 2, cy + (s.fmt === "story" ? 290 : 220), s.fmt === "story" ? 50 : 40, {
+  ctaLink(s, W / 2, cy + (s.fmt === "story" ? 290 : 220), s.fmt === "story" ? 50 : 40, {
     alpha: clamp(k * 2 - 0.6),
     scale: 1 + Math.sin(s.t * 6) * 0.03,
   });
@@ -426,6 +433,157 @@ export function confetti(s: Scene, k: number, seed = 3, n = 60) {
 /** Typewriter: returns the visible slice of str at progress k */
 export function typed(str: string, k: number) {
   return str.slice(0, Math.round(str.length * clamp(k)));
+}
+
+/* ───────── App Store button + seasonal art ───────── */
+
+const APPLE = typeof Path2D === "undefined" ? null : new Path2D(
+  "M16.37 12.3c-.02-2.22 1.82-3.29 1.9-3.34-1.04-1.52-2.65-1.72-3.22-1.75-1.36-.14-2.67.81-3.36.81-.7 0-1.76-.79-2.9-.77-1.49.02-2.87.87-3.64 2.2-1.56 2.7-.4 6.68 1.11 8.87.74 1.07 1.62 2.27 2.77 2.23 1.12-.05 1.54-.72 2.89-.72 1.34 0 1.73.72 2.9.7 1.2-.02 1.96-1.08 2.69-2.16.85-1.24 1.2-2.45 1.21-2.51-.03-.01-2.33-.89-2.35-3.56ZM14.17 5.78c.61-.75 1.03-1.78.92-2.81-.88.04-1.96.6-2.59 1.33-.57.65-1.07 1.71-.94 2.72.99.08 2-.5 2.61-1.24Z",
+);
+
+/** Black “Download on the App Store” button. size = height of the big line. Returns its width. */
+export function appBadge(s: Scene, cx: number, cy: number, size: number, o: { alpha?: number; scale?: number } = {}) {
+  const { ctx } = s;
+  const small = s.lang === "id" ? "Unduh di" : "Download on the";
+  ctx.save();
+  ctx.globalAlpha = o.alpha ?? 1;
+  ctx.translate(cx, cy);
+  ctx.scale(o.scale ?? 1, o.scale ?? 1);
+  ctx.font = font(s, size, 700);
+  const bw = ctx.measureText("App Store").width;
+  ctx.font = font(s, size * 0.45, 600);
+  const sw = ctx.measureText(small).width;
+  const logo = size * 1.25, pad = size * 0.55, gap = size * 0.35;
+  const w = pad * 2 + logo + gap + Math.max(bw, sw), h = size * 2.05;
+  ctx.shadowColor = "rgba(0,0,0,0.35)";
+  ctx.shadowBlur = size * 0.6;
+  ctx.shadowOffsetY = size * 0.2;
+  rr(ctx, -w / 2, -h / 2, w, h, h * 0.24);
+  ctx.fillStyle = "#000";
+  ctx.fill();
+  ctx.shadowColor = "transparent";
+  ctx.lineWidth = Math.max(2, size * 0.04);
+  ctx.strokeStyle = "rgba(255,255,255,0.35)";
+  ctx.stroke();
+  if (APPLE) {
+    ctx.save();
+    ctx.translate(-w / 2 + pad, -logo / 2);
+    ctx.scale(logo / 24, logo / 24);
+    ctx.fillStyle = "#fff";
+    ctx.fill(APPLE);
+    ctx.restore();
+  }
+  const tx = -w / 2 + pad + logo + gap;
+  ctx.fillStyle = "#fff";
+  ctx.textAlign = "left";
+  ctx.textBaseline = "alphabetic";
+  ctx.font = font(s, size * 0.45, 600);
+  ctx.fillText(small, tx, -size * 0.28);
+  ctx.font = font(s, size, 700);
+  ctx.fillText("App Store", tx, size * 0.72);
+  ctx.restore();
+  return w;
+}
+
+/** The call-to-action link: the App Store button (+ a small search hint) for the app, or a pill with the web address. */
+export function ctaLink(s: Scene, cx: number, cy: number, size: number, o: { alpha?: number; scale?: number } = {}) {
+  if (s.target === "web") return pill(s, s.text.url, cx, cy, size, o);
+  const w = appBadge(s, cx, cy, size * 1.25, o);
+  if (s.text.url) text(s, s.text.url, cx, cy + size * 1.75, { size: size * 0.62, weight: 700, color: s.pal.soft, alpha: o.alpha ?? 1, maxW: s.W - 160 });
+  return w;
+}
+
+/** A hanging lantern (fanous). x,y = hook point; len = string length; size = body height. */
+export function lantern(s: Scene, x: number, y: number, len: number, size: number, glass: string, phase = 0) {
+  const { ctx } = s;
+  const sw = Math.sin(s.t * 1.6 + phase) * 0.08;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(sw);
+  ctx.strokeStyle = "#E2A93A";
+  ctx.lineWidth = size * 0.03;
+  ctx.beginPath();
+  ctx.moveTo(0, 0);
+  ctx.lineTo(0, len);
+  ctx.stroke();
+  ctx.translate(0, len);
+  const w = size * 0.56;
+  const glow = ctx.createRadialGradient(0, size * 0.5, 0, 0, size * 0.5, size * 0.9);
+  glow.addColorStop(0, hexA(glass, 0.55 + 0.2 * Math.sin(s.t * 3 + phase)));
+  glow.addColorStop(1, hexA(glass, 0));
+  ctx.fillStyle = glow;
+  ctx.fillRect(-size, -size * 0.3, size * 2, size * 1.8);
+  ctx.fillStyle = "#F2B33D";
+  ctx.beginPath(); // cap
+  ctx.moveTo(-w * 0.55, size * 0.18); ctx.quadraticCurveTo(0, -size * 0.12, w * 0.55, size * 0.18); ctx.closePath(); ctx.fill();
+  const body = ctx.createLinearGradient(0, size * 0.2, 0, size * 0.85);
+  body.addColorStop(0, "#FFF8D8");
+  body.addColorStop(1, glass);
+  ctx.fillStyle = body;
+  ctx.beginPath(); // glass body (slightly tapered)
+  ctx.moveTo(-w / 2, size * 0.2); ctx.lineTo(w / 2, size * 0.2); ctx.lineTo(w * 0.38, size * 0.82); ctx.lineTo(-w * 0.38, size * 0.82); ctx.closePath(); ctx.fill();
+  ctx.strokeStyle = "#B87A12";
+  ctx.lineWidth = size * 0.035;
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0, size * 0.2); ctx.lineTo(0, size * 0.82);
+  ctx.moveTo(-w * 0.25, size * 0.2); ctx.lineTo(-w * 0.19, size * 0.82);
+  ctx.moveTo(w * 0.25, size * 0.2); ctx.lineTo(w * 0.19, size * 0.82);
+  ctx.stroke();
+  ctx.fillStyle = "#F2B33D";
+  ctx.beginPath(); // bottom point
+  ctx.moveTo(-w * 0.38, size * 0.82); ctx.lineTo(w * 0.38, size * 0.82); ctx.lineTo(0, size * 1.02); ctx.closePath(); ctx.fill();
+  ctx.restore();
+}
+
+/** Crescent moon with a soft glow */
+export function crescent(s: Scene, x: number, y: number, r: number, color = "#FFD86B") {
+  const { ctx } = s;
+  ctx.save();
+  const g = ctx.createRadialGradient(x, y, r * 0.4, x, y, r * 2.2);
+  g.addColorStop(0, hexA(color, 0.35));
+  g.addColorStop(1, hexA(color, 0));
+  ctx.fillStyle = g;
+  ctx.fillRect(x - r * 2.2, y - r * 2.2, r * 4.4, r * 4.4);
+  ctx.beginPath();
+  ctx.arc(x, y, r, 0, Math.PI * 2);
+  ctx.arc(x + r * 0.42, y - r * 0.22, r * 0.86, 0, Math.PI * 2, true);
+  ctx.fillStyle = color;
+  ctx.fill("evenodd");
+  ctx.restore();
+}
+
+/** Woven ketupat with ribbon tails. x,y = top point; size = diamond height. */
+export function ketupat(s: Scene, x: number, y: number, size: number, ribbon = "#F2C94C", phase = 0) {
+  const { ctx } = s;
+  const h = size / 2;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.rotate(Math.sin(s.t * 1.4 + phase) * 0.07);
+  ctx.strokeStyle = ribbon;
+  ctx.lineWidth = size * 0.07;
+  ctx.lineCap = "round";
+  ctx.beginPath();
+  ctx.moveTo(0, size); ctx.quadraticCurveTo(-h * 0.3, size * 1.35, -h * 0.55, size * 1.75);
+  ctx.moveTo(0, size); ctx.quadraticCurveTo(h * 0.3, size * 1.35, h * 0.55, size * 1.75);
+  ctx.stroke();
+  ctx.beginPath();
+  ctx.moveTo(0, 0); ctx.lineTo(h, h); ctx.lineTo(0, size); ctx.lineTo(-h, h); ctx.closePath();
+  ctx.fillStyle = "#8CC63F";
+  ctx.fill();
+  ctx.save();
+  ctx.clip();
+  ctx.strokeStyle = "rgba(46,125,50,0.75)";
+  ctx.lineWidth = size * 0.035;
+  for (let i = -3; i <= 3; i++) {
+    ctx.beginPath(); ctx.moveTo(-h + i * h * 0.35, 0); ctx.lineTo(h + i * h * 0.35, size); ctx.stroke();
+    ctx.beginPath(); ctx.moveTo(h + i * h * 0.35, 0); ctx.lineTo(-h + i * h * 0.35, size); ctx.stroke();
+  }
+  ctx.restore();
+  ctx.strokeStyle = "#2E7D32";
+  ctx.lineWidth = size * 0.04;
+  ctx.stroke();
+  ctx.restore();
 }
 
 /** Layout helper: y position as a fraction of the frame height, adjusted for square */

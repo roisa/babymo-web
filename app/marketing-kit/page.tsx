@@ -166,7 +166,7 @@ export default function MarketingKit() {
           <div className="bar">
             <button className="btn pri" data-zip="all" type="button">⬇ Download all designs &amp; Reels (ZIP)</button>
             <a className="btn" href={APP_URL}>App Store page ↗</a>
-            <a className="btn" href={asset("/id/studio/")}>Promo Studio (make more videos) ↗</a>
+            <a className="btn" href={asset("/id/studio/")}>🎬 Promo Studio ↗</a>
             <a className="btn" href={asset("/app-store-kit/")}>App Store Kit ↗</a>
           </div>
           <nav className="toc" aria-label="Sections">
@@ -227,7 +227,7 @@ export default function MarketingKit() {
           </table></div>
 
           <h2 id="reels">Reel scripts</h2>
-          <p className="lead">Ten short videos (10–15 s). The first two seconds decide everything: start with the hook on screen. Film real moments (hands-only shots are fine), screen-record the app, or use the ready Reels and the Promo Studio below.</p>
+          <p className="lead">Ten short videos (10–15 s). The first two seconds decide everything: start with the hook on screen. Film real moments (hands-only shots are fine), screen-record the app, or use the ready Reels below. <b>🎬 Studio</b> opens the Promo Studio with that script already set up (game, template, hook text and App Store ending): choose 9:16, 4:5 or 1:1 and download the video.</p>
           <div className="cards">
             {REEL_SCRIPTS.map((r) => (
               <div className="card" key={r.id}>
@@ -237,6 +237,10 @@ export default function MarketingKit() {
                 <ol className="scenes">{r.scenes.map((s, i) => <li key={i}>{s}</li>)}</ol>
                 <p><b>On-screen text:</b> {r.text.id} <span className="muted">· {r.text.en}</span></p>
                 <p className="muted"><b>Use:</b> {r.asset}</p>
+                <div className="bar" style={{ marginTop: 10 }}>
+                  <a className="btn copy" href={asset(`/id/studio/?preset=${r.id}&lang=id`)}>🎬 Studio · ID</a>
+                  <a className="btn copy" href={asset(`/en/studio/?preset=${r.id}&lang=en`)}>🎬 Studio · EN</a>
+                </div>
                 <CopyBlock id={`${r.id}-cid`} label="CAPTION · ID" text={`${r.cap.id}\n\n${r.tags.id}`} />
                 <CopyBlock id={`${r.id}-cen`} label="CAPTION · EN" text={`${r.cap.en}\n\n${r.tags.en}`} />
               </div>
@@ -276,7 +280,7 @@ export default function MarketingKit() {
               </div>
             </section>
           ))}
-          <div className="note"><b>More videos:</b> the <a href={asset("/id/studio/")}>Promo Studio</a> makes animated Reels/Stories for any game in a few clicks (20 templates, your own text, colours and length). The plain 9-second gameplay clips for every game are on each game&apos;s page under <a href={asset("/id/permainan/")}>babymo.id/permainan</a>. For Eid greetings, use a Promo Studio template with the text “Selamat Idul Fitri, mohon maaf lahir dan batin”.</div>
+          <div className="note"><b>More videos:</b> the <a href={asset("/id/studio/")}>Promo Studio</a> makes animated Reels, Stories and feed videos (9:16, 4:5, 1:1) for any game in a few clicks: 24 templates including <a href={asset("/id/studio/?preset=r7")}>Ramadan hari ke-…</a>, <a href={asset("/id/studio/?preset=eid")}>Selamat Idul Fitri</a>, <a href={asset("/id/studio/?preset=r6")}>Apple Watch</a> and <a href={asset("/id/studio/?preset=r5")}>doa di mobil (CarPlay)</a>. It ends with the App Store button by default (switch to “web games” only for play.babymo.id posts). The plain 9-second gameplay clips for every game are on each game&apos;s page under <a href={asset("/id/permainan/")}>babymo.id/permainan</a>.</div>
 
           <h2 id="captions">Captions for the posts</h2>
           <p className="lead">One caption per design, in both languages. Add 3–6 hashtags from the Reel scripts above; more is not better.</p>
