@@ -354,7 +354,7 @@ export const TARGETS: { icon: string; k: string; target: string; stretch: string
 
 export const FOUNDATION: { t: string; done?: boolean; note?: string }[] = [
   { t: "babymo.id: App Store button instead of “Coming soon”", done: true, note: "Home, /app, /support and the games page" },
-  { t: "Make game & du'a counts consistent everywhere", note: "App Store description and review notes still say 15 games and “free”" },
+  { t: "Make game & du'a counts consistent everywhere", done: true, note: "App Store description and review notes: 19 games, paid, one purchase (20 Nov)" },
   { t: "Retake the App Store screenshots from the latest app", done: true, note: "App Store Kit, 19 Nov" },
   { t: "Instagram, TikTok and YouTube profiles ready", note: "Bio, highlight covers, link in bio (see Designs)" },
   { t: "First 10 gameplay Reels", done: true, note: "8 ready-made + Promo Studio presets" },
