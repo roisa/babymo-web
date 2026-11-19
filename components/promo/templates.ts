@@ -10,6 +10,10 @@ import {
   bg,
   brand,
   chip,
+  ctaLink,
+  ketupat,
+  lantern,
+  type Target,
   clamp,
   confetti,
   endCard,
@@ -286,7 +290,7 @@ export const TEMPLATES: Template[] = [
     id: "checklist",
     emoji: "✅",
     name: { id: "Ceklis Orang Tua", en: "Parent Checklist" },
-    desc: { id: "Alasan orang tua tenang: gratis, tanpa iklan, offline, aman.", en: "Why parents relax: free, no ads, offline, kid-safe." },
+    desc: { id: "Alasan orang tua tenang: tanpa iklan, offline, aman.", en: "Why parents relax: no ads, offline, kid-safe." },
     kind: "single",
     dur: 9,
     palette: "mint",
@@ -933,17 +937,261 @@ export const TEMPLATES: Template[] = [
         ctx.restore();
       }
       text(s, s.text.headline, W / 2, cy + (isStory(s) ? 260 : 200), { size: isStory(s) ? 80 : 60, reveal: seg(p, 0.3, 0.55) });
-      pill(s, s.text.url, W / 2, cy + (isStory(s) ? 470 : 370), isStory(s) ? 52 : 40, { alpha: seg(p, 0.5, 0.6), scale: 1 + Math.sin(s.t * 6) * 0.03 });
+      ctaLink(s, W / 2, cy + (isStory(s) ? 470 : 370), isStory(s) ? 52 : 40, { alpha: seg(p, 0.5, 0.6), scale: 1 + Math.sin(s.t * 6) * 0.03 });
       mo(s, "yeyy", W * 0.8, H * (isStory(s) ? 0.76 : 0.82), isStory(s) ? 320 : 220, seg(p, 0.55, 0.65));
       brand(s, W / 2, H - 120, 70, 0);
       confetti(s, seg(p, 0.25, 0.75), 2, 40);
     },
   },
+  /* 21 ─────────────────────────────────────────── Ramadan day */
+  {
+    id: "ramadan-day",
+    emoji: "🌙",
+    name: { id: "Ramadan Hari ke-…", en: "Ramadan Day …" },
+    desc: { id: "Lentera, bulan sabit, dan “Ramadan hari ke-N” — ganti angkanya setiap hari.", en: "Lanterns, a crescent and “Ramadan day N” — change the number every day." },
+    kind: "single",
+    dur: 10,
+    palette: "night",
+    copy: (l) => ({
+      headline: L(l, "Ramadan hari ke-1", "Ramadan day 1"),
+      sub: L(l, "Doa hari ini: doa berbuka puasa", "Today's du'a: breaking the fast"),
+      cta: CTA[l],
+    }),
+    draw(s) {
+      const { W, p, ctx } = s;
+      bg(s, { deco: "stars", seed: 11 });
+      // rope + lanterns across the top
+      const top = isStory(s) ? 150 : 40;
+      ctx.save();
+      ctx.strokeStyle = "#E2A93A";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(-20, top);
+      ctx.quadraticCurveTo(W / 2, top + (isStory(s) ? 120 : 80), W + 20, top);
+      ctx.stroke();
+      ctx.restore();
+      const cols = ["#FF8A5B", "#F0609E", "#2FC2AE", "#FFB21E", "#8B6CF6"];
+      const xs = [0.12, 0.31, 0.5, 0.69, 0.88];
+      xs.forEach((fx, i) => {
+        const sag = (isStory(s) ? 120 : 80) * (1 - Math.pow(2 * fx - 1, 2)) * 0.5;
+        const k = outBack(seg(p, 0.02 + i * 0.04, 0.2 + i * 0.04));
+        lantern(s, fx * W, top + sag, (i % 2 ? 50 : 20) * k, (isStory(s) ? 120 : 90) * k, cols[i]!, i);
+      });
+      const hy = Y(s, 0.27, 0.27);
+      text(s, s.text.headline, W / 2, hy, { size: isStory(s) ? 96 : 70, reveal: seg(p, 0.08, 0.3), color: "#FFE9A8", maxW: W - 200 });
+      if (s.text.sub) chip(s, s.text.sub, W / 2, hy + (isStory(s) ? 250 : 180), isStory(s) ? 38 : 30, seg(p, 0.25, 0.35));
+      const ph = PH(s, 860, 520);
+      const rise = outCubic(seg(p, 0.2, 0.45));
+      phone(s, s.game.shot, W / 2, Y(s, 0.68, 0.74) + (1 - rise) * 600, ph, 0, rise, seg(p, 0.45, 0.8) * 0.4);
+      mo(s, "thank-you", W * 0.16, Y(s, 0.84, 0.86), isStory(s) ? 300 : 220, seg(p, 0.35, 0.45));
+      endCard(s, seg(p, 0.82, 0.92), "yes");
+    },
+  },
+  /* 22 ─────────────────────────────────────────── Eid */
+  {
+    id: "idul-fitri",
+    emoji: "🎉",
+    name: { id: "Selamat Idul Fitri", en: "Eid Mubarak" },
+    desc: { id: "Ketupat bergoyang, confetti, dan ucapan lebaran.", en: "Swinging ketupat, confetti and an Eid greeting." },
+    kind: "multi",
+    dur: 9,
+    palette: "mint",
+    copy: (l) => ({
+      headline: L(l, "Selamat Hari Raya Idul Fitri", "Eid Mubarak!"),
+      sub: L(l, "Mohon maaf lahir dan batin 🤲", "May Allah accept from us and from you 🤲"),
+      cta: CTA[l],
+    }),
+    draw(s) {
+      const { W, p, ctx } = s;
+      bg(s, { seed: 5 });
+      const top = isStory(s) ? 140 : 30;
+      ctx.save();
+      ctx.strokeStyle = "#2E9E4F";
+      ctx.lineWidth = 4;
+      ctx.beginPath();
+      ctx.moveTo(-20, top);
+      ctx.quadraticCurveTo(W / 2, top + 90, W + 20, top);
+      ctx.stroke();
+      ctx.restore();
+      const rib = ["#F2C94C", "#FF8A5B", "#F0609E"];
+      [0.1, 0.26, 0.42, 0.58, 0.74, 0.9].forEach((fx, i) => {
+        const sag = 90 * (1 - Math.pow(2 * fx - 1, 2)) * 0.5;
+        const k = outBack(seg(p, i * 0.03, 0.15 + i * 0.03));
+        if (k > 0) ketupat(s, fx * W, top + sag, (isStory(s) ? 100 : 76) * k, rib[i % 3]!, i);
+      });
+      const hy = Y(s, 0.25, 0.3);
+      text(s, s.text.headline, W / 2, hy, { size: isStory(s) ? 104 : 76, reveal: seg(p, 0.1, 0.35), color: s.pal.accent, maxW: W - 160 });
+      text(s, s.text.sub, W / 2, hy + (isStory(s) ? 270 : 200), { size: isStory(s) ? 52 : 40, weight: 700, alpha: seg(p, 0.3, 0.42), color: s.pal.soft, maxW: W - 200 });
+      const k = outBack(seg(p, 0.3, 0.5));
+      mo(s, "yeyy", W / 2, Y(s, 0.68, 0.75), (isStory(s) ? 620 : 420) * k);
+      confetti(s, seg(p, 0.35, 0.8), 9, 70);
+      endCard(s, seg(p, 0.84, 0.94), "yes");
+    },
+  },
+  /* 23 ─────────────────────────────────────────── Apple Watch */
+  {
+    id: "apple-watch",
+    emoji: "⌚",
+    name: { id: "Baby Mo di Apple Watch", en: "Baby Mo on Apple Watch" },
+    desc: { id: "Layar asli jam tangan berganti: beranda, tasbih, jadwal sholat.", en: "Real watch screens flip by: home, tasbih, prayer times." },
+    kind: "multi",
+    dur: 10,
+    palette: "ocean",
+    copy: (l) => ({
+      headline: L(l, "Doa & tasbih di pergelangan tangan ⌚", "Du'as & tasbih on your wrist ⌚"),
+      sub: L(l, "Doa · Tasbih · Jadwal sholat · Mimi si kucing", "Du'as · Tasbih · Prayer times · Mimi the cat"),
+      cta: CTA[l],
+    }),
+    draw(s) {
+      const { W, p, ctx } = s;
+      bg(s, { seed: 13 });
+      const hy = Y(s, 0.12, 0.08);
+      text(s, s.text.headline, W / 2, hy, { size: isStory(s) ? 84 : 62, reveal: seg(p, 0.02, 0.2), maxW: W - 160 });
+      if (isStory(s)) {
+        const items = s.text.sub.split("·").map((x) => x.trim()).filter(Boolean);
+        items.forEach((it, i) => chip(s, it, W / 2, hy + 230 + i * 74, 34, seg(p, 0.15 + i * 0.05, 0.25 + i * 0.05)));
+      } else if (s.text.sub) chip(s, s.text.sub, W / 2, hy + 170, 28, seg(p, 0.15, 0.25));
+      // watch
+      const wh = PH(s, 720, 520), ww = wh * 0.86, cx = W / 2, cy = Y(s, 0.66, 0.68);
+      const k = outBack(seg(p, 0.1, 0.32));
+      ctx.save();
+      ctx.translate(cx, cy);
+      ctx.scale(k, k);
+      ctx.fillStyle = "#3A3F47"; // band
+      rr(ctx, -ww * 0.36, -wh * 0.72, ww * 0.72, wh * 1.44, ww * 0.16);
+      ctx.fill();
+      ctx.shadowColor = "rgba(20,30,60,0.4)";
+      ctx.shadowBlur = 50;
+      ctx.shadowOffsetY = 20;
+      rr(ctx, -ww / 2, -wh / 2, ww, wh, ww * 0.3);
+      ctx.fillStyle = "#111";
+      ctx.fill();
+      ctx.shadowColor = "transparent";
+      ctx.fillStyle = "#2A2F36"; // crown
+      rr(ctx, ww / 2 - 4, -wh * 0.18, ww * 0.06, wh * 0.16, 8);
+      ctx.fill();
+      const keys = ["home", "tasbih", "prayer", "pet"];
+      const per = 0.72 / keys.length;
+      const sw = ww * 0.86, sh = wh * 0.86;
+      ctx.save();
+      rr(ctx, -sw / 2, -sh / 2, sw, sh, sw * 0.24);
+      ctx.clip();
+      keys.forEach((key, i) => {
+        const im = s.a.watch[`${s.lang}-${key}`];
+        const a = clamp(seg(p, 0.12 + i * per, 0.16 + i * per)) * (i === keys.length - 1 ? 1 : 1 - seg(p, 0.12 + (i + 1) * per, 0.16 + (i + 1) * per));
+        if (im && im.naturalWidth && a > 0) {
+          ctx.globalAlpha = a;
+          ctx.drawImage(im, -sw / 2, -sh / 2, sw, sh);
+        }
+      });
+      ctx.restore();
+      ctx.restore();
+      mo(s, "wow", W * 0.15, Y(s, 0.86, 0.86), isStory(s) ? 280 : 200, seg(p, 0.3, 0.4));
+      endCard(s, seg(p, 0.85, 0.95), "yeyy");
+    },
+  },
+  /* 24 ─────────────────────────────────────────── CarPlay du'a */
+  {
+    id: "carplay-dua",
+    emoji: "🚗",
+    name: { id: "Doa di Mobil (CarPlay)", en: "Du'a in the Car (CarPlay)" },
+    desc: { id: "Layar mobil, tombol Doa Baby Mo, gelombang suara, dan cara memasangnya.", en: "A car screen, the Baby Mo Du'a button, sound waves and how to set it up." },
+    kind: "multi",
+    dur: 10,
+    palette: "night",
+    copy: (l) => ({
+      headline: L(l, "Setiap masuk mobil, Mo memimpin doa 🚗", "Every drive starts with Mo's du'a 🚗"),
+      sub: L(l, "Pintasan → Otomatisasi → CarPlay → Doa Baby Mo", "Shortcuts → Automation → CarPlay → Baby Mo Du'a"),
+      cta: CTA[l],
+    }),
+    draw(s) {
+      const { W, p, ctx, pal } = s;
+      bg(s, { deco: "stars", seed: 21 });
+      const hy = Y(s, 0.12, 0.07);
+      text(s, s.text.headline, W / 2, hy, { size: isStory(s) ? 84 : 60, reveal: seg(p, 0.02, 0.2), color: pal.ink, maxW: W - 160 });
+      // dashboard screen
+      const k = outCubic(seg(p, 0.12, 0.32));
+      const dw = W - 120, dh = PH(s, 620, 430), cx = W / 2, cy = Y(s, 0.5, 0.56) + (1 - k) * 200;
+      ctx.save();
+      ctx.globalAlpha = k;
+      ctx.shadowColor = "rgba(0,0,0,0.5)";
+      ctx.shadowBlur = 50;
+      rr(ctx, cx - dw / 2, cy - dh / 2, dw, dh, 48);
+      ctx.fillStyle = "#0B0F19";
+      ctx.fill();
+      ctx.shadowColor = "transparent";
+      // status bar + dock
+      ctx.fillStyle = "#1C2333";
+      rr(ctx, cx - dw / 2 + 24, cy - dh / 2 + 24, 120, dh - 48, 28);
+      ctx.fill();
+      ["#34C759", "#FF9500", "#0A84FF"].forEach((c, i) => {
+        rr(ctx, cx - dw / 2 + 48, cy - dh / 2 + 60 + i * (dh * 0.24), 72, 72, 18);
+        ctx.fillStyle = c;
+        ctx.fill();
+      });
+      // Baby Mo du'a card
+      const bx = cx - dw / 2 + 180, bw = dw - 210, by = cy - dh / 2 + 34, bh = dh - 68;
+      rr(ctx, bx, by, bw, bh, 32);
+      const g = ctx.createLinearGradient(bx, by, bx + bw, by + bh);
+      g.addColorStop(0, "#2B1F6B");
+      g.addColorStop(1, "#3D2A86");
+      ctx.fillStyle = g;
+      ctx.fill();
+      if (s.a.logo.naturalWidth) ctx.drawImage(s.a.logo, bx + 36, by + 36, 120, 120);
+      ctx.fillStyle = "#FFE9A8";
+      ctx.font = font(s, isStory(s) ? 52 : 40, 800);
+      ctx.textAlign = "left";
+      ctx.textBaseline = "top";
+      ctx.fillText(s.lang === "id" ? "Doa Baby Mo" : "Baby Mo Du'a", bx + 180, by + 50);
+      ctx.fillStyle = "#C3C9DA";
+      ctx.font = font(s, isStory(s) ? 32 : 26, 700);
+      ctx.fillText(s.lang === "id" ? "Doa naik kendaraan" : "Du'a for travelling", bx + 180, by + 116);
+      // sound waves
+      const bars = 22, wx = bx + 40, ww2 = bw - 80, wy = by + bh * 0.68;
+      for (let i = 0; i < bars; i++) {
+        const amp = (0.25 + 0.75 * Math.abs(Math.sin(s.t * 6 + i * 0.7))) * seg(p, 0.3, 0.4) * (1 - seg(p, 0.8, 0.85));
+        const h = 18 + amp * bh * 0.32;
+        ctx.fillStyle = hexA("#FFD86B", 0.9);
+        rr(ctx, wx + (i * ww2) / bars, wy - h / 2, ww2 / bars - 8, h, 6);
+        ctx.fill();
+      }
+      ctx.restore();
+      chip(s, s.text.sub, W / 2, cy + dh / 2 + (isStory(s) ? 90 : 60), isStory(s) ? 32 : 26, seg(p, 0.45, 0.55));
+      mo(s, "thank-you", W * 0.18, Y(s, 0.86, 0.9), isStory(s) ? 300 : 200, seg(p, 0.5, 0.6));
+      endCard(s, seg(p, 0.85, 0.95), "yeyy");
+    },
+  },
 ];
 
-export function captionFor(t: Template, g: PromoGame, lang: Lang, url: string) {
-  const name = t.kind === "single" ? g.name : "Baby Mo";
+export function captionFor(t: Template, g: PromoGame, lang: Lang, url: string, target: Target = "app") {
+  const lead = t.kind === "single" ? `${g.emoji} ${g.name} — ${g.hook}` : "";
+  if (target === "app") {
+    if (lang === "id")
+      return `${lead || "🌙 Baby Mo: teman kecil belajar Islam"}\n\n19 game untuk belajar doa, sholat, wudhu, dan huruf hijaiyah — tanpa iklan, tanpa akun, bisa offline. Untuk anak 2–8 tahun.\n👉 Cari “Baby Mo” di App Store (iPhone & iPad)\n\n#BabyMo #parentingislami #anakmuslim #doaanak #belajarislam`;
+    return `${lead || "🌙 Baby Mo: a little friend for learning Islam"}\n\n19 games for du'as, prayer, wudu and Arabic letters — no ads, no accounts, works offline. For ages 2–8.\n👉 Search “Baby Mo” on the App Store (iPhone & iPad)\n\n#BabyMo #MuslimKids #IslamicParenting #DuaForKids`;
+  }
   if (lang === "id")
-    return `${t.kind === "single" ? `${g.emoji} ${g.name} — ${g.hook}` : "🎮 Game Islami gratis untuk si kecil!"}\n\nMain gratis, tanpa iklan di dalam game, bisa offline. Cocok untuk anak 2–8 tahun.\n👉 ${url}\n\n#BabyMo #GameAnakMuslim #BelajarIslam #AnakSholeh #ParentingIslami #${name.replace(/[^A-Za-z0-9]/g, "")}`;
-  return `${t.kind === "single" ? `${g.emoji} ${g.name} — ${g.hook}` : "🎮 Free Islamic games for little ones!"}\n\nFree, no ads inside the games, works offline. Made for ages 2–8.\n👉 ${url}\n\n#BabyMo #MuslimKids #IslamicLearning #KidsGames #MuslimParenting #${name.replace(/[^A-Za-z0-9]/g, "")}`;
+    return `${lead || "🎮 Game Islami gratis untuk si kecil!"}\n\nMain gratis di browser, tanpa iklan di dalam game. Cocok untuk anak 2–8 tahun.\n👉 ${url}\n\n#BabyMo #GameAnakMuslim #BelajarIslam`;
+  return `${lead || "🎮 Free Islamic games for little ones!"}\n\nFree to play in the browser, no ads inside the games. Made for ages 2–8.\n👉 ${url}\n\n#BabyMo #MuslimKids #IslamicLearning #KidsGames`;
+}
+
+/** Default call to action for the App Store app */
+export const CTA_APP = { id: "Unduh Baby Mo sekarang!", en: "Get Baby Mo now!" };
+/** Default small line under the App Store button */
+export const SEARCH_HINT = { id: "Cari “Baby Mo” di App Store", en: "Search “Baby Mo” on the App Store" };
+
+/* The web-game templates talk about “gratis / free”. When a video promotes the app (paid, price
+   shown by Apple per country), these lines are replaced and the CTA points to the App Store. */
+const APP_COPY: Record<string, (l: Lang, g: PromoGame, all: PromoGame[]) => Partial<Copy>> = {
+  "icon-grid": (l, _g, all) => ({ headline: L(l, `${all.length} game Islami dalam satu app`, `${all.length} Islamic games in one app`) }),
+  carousel: (l) => ({ sub: L(l, "Tanpa iklan, tanpa akun, bisa offline", "No ads, no accounts, works offline") }),
+  checklist: (l) => ({ sub: L(l, "Tanpa iklan\nTanpa akun\nBisa dimainkan offline\nKonten Islami, aman untuk anak", "No ads\nNo accounts\nWorks offline\nIslamic, kid-safe content") }),
+  ticker: (l) => ({ headline: L(l, "TANPA IKLAN • TANPA AKUN • ISLAMI • SERU", "NO ADS • NO ACCOUNTS • ISLAMIC • FUN") }),
+};
+
+/** The template's default text for a target */
+export function copyFor(t: Template, lang: Lang, g: PromoGame, all: PromoGame[], target: Target): Copy {
+  const c = t.copy(lang, g, all);
+  if (target === "web") return c;
+  return { ...c, cta: c.cta === CTA[lang] ? CTA_APP[lang] : c.cta, ...(APP_COPY[t.id]?.(lang, g, all) ?? {}) };
 }

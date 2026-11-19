@@ -10,7 +10,7 @@ import { PromoStudio, type GameSrc } from "@/components/promo/PromoStudio";
 
 /**
  * Promo Studio — a team tool (not in the menu, not indexed) for making
- * Reels / Story / Shorts promos of Baby Mo games: 20 animated templates,
+ * Reels / Story / Shorts / feed promos of the Baby Mo app (or the web games): 24 animated templates,
  * editable text/colours/length, and one-click video + cover downloads.
  */
 export function generateStaticParams() {
@@ -39,7 +39,7 @@ export default async function StudioPage({ params }: { params: Promise<{ locale:
     name: { id: g.title.id, en: g.title.en },
     hook: GAME_PROMO[g.slug]?.hook ?? { id: g.description.id, en: g.description.en },
     url: g.externalUrl,
-    shot: `/games/shots/${g.slug}.webp`,
+    shot: { id: `/games/shots/id/${g.slug}.webp`, en: `/games/shots/en/${g.slug}.webp` },
     icon: `/icons/games/${g.slug}.svg`,
   }));
   const id = l === "id";
@@ -52,8 +52,8 @@ export default async function StudioPage({ params }: { params: Promise<{ locale:
           <h1 className="mt-1 font-serif text-3xl font-medium tracking-tight text-ink sm:text-4xl">Promo Studio 🎬</h1>
           <p className="mt-2 text-base leading-relaxed text-whisper">
             {id
-              ? "20 template video animasi untuk Reels, Story, dan Shorts. Pilih template, ganti game, teks, warna, dan durasi — lalu unduh videonya (1080p), cover PNG, dan caption siap pakai. Tambahkan musik trending langsung di aplikasi saat posting."
-              : "20 animated video templates for Reels, Stories and Shorts. Pick one, change the game, text, colours and length — then download the video (1080p), a cover PNG and a ready caption. Add trending audio in the app when you post."}
+              ? "24 template video animasi untuk Reels, Story, Shorts, dan feed (9:16, 4:5, 1:1) — termasuk Ramadan, Idul Fitri, Apple Watch, dan doa di mobil. Pilih “Siap pakai” dari Marketing Kit atau template mana pun, ganti game, teks, warna, dan durasi, lalu unduh videonya (1080p), cover PNG, dan caption. Default-nya mengajak unduh di App Store; mode game web tetap tersedia."
+              : "24 animated templates for Reels, Stories, Shorts and the feed (9:16, 4:5, 1:1) — including Ramadan, Eid, Apple Watch and the in-car du'a. Start from a ready-made preset from the Marketing Kit or any template, change the game, text, colours and length, then download the video (1080p), a cover PNG and a caption. By default it points to the App Store; the web-games mode is still there."}
           </p>
         </header>
         <PromoStudio locale={l} games={games} />

@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { asset } from "@/lib/i18n/config";
 import {
+  FMT_H,
   PALETTES,
   type Assets,
   type Fmt,
@@ -10,8 +11,10 @@ import {
   type PromoGame,
   type Scene,
   type SceneText,
+  type Target,
 } from "./engine";
-import { TEMPLATES, captionFor, type Template } from "./templates";
+import { SEARCH_HINT, TEMPLATES, captionFor, copyFor, type Copy, type Template } from "./templates";
+import { PRESETS, type Preset } from "./presets";
 
 export interface GameSrc {
   slug: string;
@@ -19,7 +22,8 @@ export interface GameSrc {
   name: Record<Lang, string>;
   hook: Record<Lang, string>;
   url: string;
-  shot: string;
+  /** real screen of the game per language */
+  shot: Record<Lang, string>;
   icon: string;
 }
 
@@ -28,12 +32,22 @@ interface Settings {
   palette: string;
   dur: number;
   showMo: boolean;
+  /** a ready-made preset (its text replaces the template's default text) */
+  preset?: string;
   /** text edits; undefined = template default */
   text?: Partial<SceneText>;
 }
 
 const POSES = ["idea", "yeyy", "wow", "run", "thank-you", "yes", "ok", "pose-12", "pose-20"];
-const DEFAULT_URL = "play.babymo.id";
+const WEB_URL = "play.babymo.id";
+const WATCH_KEYS = ["home", "tasbih", "prayer", "pet"];
+const defaultUrl = (target: Target, lang: Lang) => (target === "app" ? SEARCH_HINT[lang] : WEB_URL);
+/** default text: the preset's (if any), else the template's for this target */
+function defaultCopy(tpl: Template, st: { preset?: string }, lang: Lang, game: PromoGame, games: PromoGame[], target: Target): Copy {
+  const c = copyFor(tpl, lang, game, games, target);
+  const pr = st.preset ? PRESETS.find((x) => x.id === st.preset) : undefined;
+  return { ...c, ...(pr?.headline ? { headline: pr.headline[lang] } : {}), ...(pr?.sub ? { sub: pr.sub[lang] } : {}) };
+}
 
 function loadImg(src: string): Promise<HTMLImageElement> {
   return new Promise((res) => {
@@ -46,7 +60,7 @@ function loadImg(src: string): Promise<HTMLImageElement> {
 }
 
 function useStudioAssets(games: GameSrc[]) {
-  const [state, setState] = useState<{ assets: Assets; imgs: Record<string, { shot: HTMLImageElement; icon: HTMLImageElement }>; font: string } | null>(null);
+  const [state, setState] = useState<{ assets: Assets; imgs: Record<string, { shot: Record<Lang, HTMLImageElement>; icon: HTMLImageElement }>; font: string } | null>(null);
   useEffect(() => {
     let alive = true;
     (async () => {
@@ -61,14 +75,20 @@ function useStudioAssets(games: GameSrc[]) {
       ]);
       const mo: Record<string, HTMLImageElement> = {};
       POSES.forEach((p, i) => (mo[p] = moImgs[i]!));
-      const imgs: Record<string, { shot: HTMLImageElement; icon: HTMLImageElement }> = {};
+      const watch: Record<string, HTMLImageElement> = {};
+      await Promise.all(
+        (["id", "en"] as const).flatMap((l) =>
+          WATCH_KEYS.map(async (k) => (watch[`${l}-${k}`] = await loadImg(asset(`/app-store-kit/watch/watch-${l}-${k}.png`)))),
+        ),
+      );
+      const imgs: Record<string, { shot: Record<Lang, HTMLImageElement>; icon: HTMLImageElement }> = {};
       await Promise.all(
         games.map(async (g) => {
-          const [shot, icon] = await Promise.all([loadImg(asset(g.shot)), loadImg(asset(g.icon))]);
-          imgs[g.slug] = { shot, icon };
+          const [shotId, shotEn, icon] = await Promise.all([loadImg(asset(g.shot.id)), loadImg(asset(g.shot.en)), loadImg(asset(g.icon))]);
+          imgs[g.slug] = { shot: { id: shotId, en: shotEn }, icon };
         }),
       );
-      if (alive) setState({ assets: { logo: logo!, mo }, imgs, font: family });
+      if (alive) setState({ assets: { logo: logo!, mo, watch }, imgs, font: family });
     })();
     return () => {
       alive = false;
@@ -103,6 +123,7 @@ function download(blob: Blob, name: string) {
 export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: GameSrc[] }) {
   const [lang, setLang] = useState<Lang>(locale);
   const [fmt, setFmt] = useState<Fmt>("story");
+  const [target, setTarget] = useState<Target>("app");
   const [filter, setFilter] = useState<"all" | "single" | "multi">("all");
   const [openId, setOpenId] = useState<string | null>(null);
   const [settings, setSettings] = useState<Record<string, Settings>>({});
@@ -119,7 +140,7 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
             name: g.name[l],
             hook: g.hook[l],
             url: g.url,
-            shot: loaded.imgs[g.slug]!.shot,
+            shot: loaded.imgs[g.slug]!.shot[l],
             icon: loaded.imgs[g.slug]!.icon,
           }))
         : [],
@@ -138,25 +159,46 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
     [settings, gameSrc],
   );
 
+  const openPreset = useCallback(
+    (pr: Preset) => {
+      const tpl = TEMPLATES.find((t) => t.id === pr.template);
+      if (!tpl) return;
+      setSettings((m) => ({ ...m, [tpl.id]: { game: pr.game, palette: pr.palette ?? tpl.palette, dur: tpl.dur, showMo: true, preset: pr.id } }));
+      setOpenId(tpl.id);
+    },
+    [],
+  );
+  // deep link from the Marketing Kit: ?preset=r3&lang=en&fmt=feed&target=web
+  useEffect(() => {
+    if (!loaded) return;
+    const q = new URLSearchParams(window.location.search);
+    const l = q.get("lang"), f = q.get("fmt"), tg = q.get("target"), pr = PRESETS.find((x) => x.id === q.get("preset"));
+    if (l === "id" || l === "en") setLang(l);
+    if (f === "story" || f === "feed" || f === "square") setFmt(f);
+    if (tg === "app" || tg === "web") setTarget(tg);
+    if (pr) openPreset(pr);
+  }, [loaded, openPreset]);
+
   const sceneFor = useCallback(
     (tpl: Template, st: Settings, ctx: CanvasRenderingContext2D, t: number, f: Fmt): Scene | null => {
       if (!loaded || !games.length) return null;
       const game = games.find((g) => g.slug === st.game) ?? games[0]!;
-      const def = tpl.copy(lang, game, games);
+      const def = defaultCopy(tpl, st, lang, game, games, target);
       const text: SceneText = {
         headline: st.text?.headline ?? def.headline,
         sub: st.text?.sub ?? def.sub,
         cta: st.text?.cta ?? def.cta,
-        url: st.text?.url ?? DEFAULT_URL,
+        url: st.text?.url ?? defaultUrl(target, lang),
       };
       return {
         ctx,
         W: 1080,
-        H: f === "story" ? 1920 : 1080,
+        H: FMT_H[f],
         t,
         d: st.dur,
         p: Math.min(1, t / st.dur),
         fmt: f,
+        target,
         lang,
         game,
         games,
@@ -167,7 +209,7 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
         a: loaded.assets,
       };
     },
-    [loaded, games, lang],
+    [loaded, games, lang, target],
   );
 
   const drawTo = useCallback(
@@ -194,11 +236,20 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
       {/* Toolbar */}
       <div className="sticky top-[60px] z-30 -mx-5 mb-6 flex flex-wrap items-center gap-2 border-b border-hairline bg-paper/90 px-5 py-3 backdrop-blur sm:-mx-8 sm:px-8">
         <Seg
+          value={target}
+          onChange={(v) => setTarget(v as Target)}
+          options={[
+            ["app", T("Promosi: App Store", "Promote: App Store")],
+            ["web", T("Promosi: game web", "Promote: web games")],
+          ]}
+        />
+        <Seg
           value={fmt}
           onChange={(v) => setFmt(v as Fmt)}
           options={[
-            ["story", "9:16 Reels / Story / Shorts"],
-            ["square", "1:1 Feed"],
+            ["story", "9:16 Reels / Story"],
+            ["feed", "4:5 Feed"],
+            ["square", "1:1"],
           ]}
         />
         <Seg
@@ -220,10 +271,29 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
         />
       </div>
 
+      {target === "web" && (
+        <p className="mb-4 rounded-2xl bg-sun-soft p-3 text-sm text-ink">
+          {T("Mode game web: video mengajak main gratis di play.babymo.id. Untuk promosi aplikasi, pilih “Promosi: App Store” (tanpa kata gratis).", "Web-games mode: the video invites people to play free at play.babymo.id. To promote the app, choose “Promote: App Store” (no “free”).")}
+        </p>
+      )}
+
+      {loaded && (
+        <section className="mb-6" aria-label={T("Siap pakai", "Ready-made")}>
+          <p className="mb-2 text-xs font-bold uppercase tracking-wide text-whisper">{T("Siap pakai dari Marketing Kit", "Ready-made from the Marketing Kit")}</p>
+          <div className="flex flex-wrap gap-2">
+            {PRESETS.map((pr) => (
+              <button key={pr.id} type="button" onClick={() => openPreset(pr)} className="rounded-full border border-hairline bg-paper px-3 py-2 text-sm font-semibold text-ink shadow-sm hover:border-sage">
+                {TEMPLATES.find((t) => t.id === pr.template)?.emoji} {pr.name[locale]}
+              </button>
+            ))}
+          </div>
+        </section>
+      )}
+
       {!loaded && <p className="py-20 text-center text-whisper">{T("Memuat gambar game…", "Loading game art…")}</p>}
 
       {loaded && (
-        <ul className={`grid gap-4 ${fmt === "story" ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5" : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4"}`}>
+        <ul className={`grid gap-4 ${fmt === "square" ? "grid-cols-2 sm:grid-cols-3 lg:grid-cols-4" : "grid-cols-2 sm:grid-cols-3 lg:grid-cols-5"}`}>
           {list.map(({ t, i }) => (
             <li key={t.id}>
               <button
@@ -249,10 +319,11 @@ export function PromoStudio({ locale, games: gameSrc }: { locale: Lang; games: G
 
       {open >= 0 && loaded && (
         <Editor
-          key={TEMPLATES[open]!.id + fmt + lang}
+          key={TEMPLATES[open]!.id + fmt + lang + target}
           tpl={TEMPLATES[open]!}
           index={open}
           fmt={fmt}
+          target={target}
           lang={lang}
           uiLang={locale}
           games={games}
@@ -314,8 +385,8 @@ function Thumb({ fmt, draw }: { fmt: Fmt; draw: (c: HTMLCanvasElement, t: number
     <canvas
       ref={ref}
       width={270}
-      height={fmt === "story" ? 480 : 270}
-      className={`block w-full bg-paper-2 ${fmt === "story" ? "aspect-[9/16]" : "aspect-square"}`}
+      height={Math.round((270 * FMT_H[fmt]) / 1080)}
+      className={`block w-full bg-paper-2 ${fmt === "story" ? "aspect-[9/16]" : fmt === "feed" ? "aspect-[4/5]" : "aspect-square"}`}
     />
   );
 }
@@ -324,6 +395,7 @@ function Editor({
   tpl,
   index,
   fmt,
+  target,
   lang,
   uiLang,
   games,
@@ -337,6 +409,7 @@ function Editor({
   tpl: Template;
   index: number;
   fmt: Fmt;
+  target: Target;
   lang: Lang;
   uiLang: Lang;
   games: PromoGame[];
@@ -359,12 +432,12 @@ function Editor({
   stRef.current = st;
 
   const game = games.find((g) => g.slug === st.game) ?? games[0]!;
-  const def = tpl.copy(lang, game, games);
+  const def = defaultCopy(tpl, st, lang, game, games, target);
   const txt: SceneText = {
     headline: st.text?.headline ?? def.headline,
     sub: st.text?.sub ?? def.sub,
     cta: st.text?.cta ?? def.cta,
-    url: st.text?.url ?? DEFAULT_URL,
+    url: st.text?.url ?? defaultUrl(target, lang),
   };
   const edit = (k: keyof SceneText, v: string) => setSt({ ...st, text: { ...st.text, [k]: v } });
 
@@ -397,8 +470,8 @@ function Editor({
     return () => cancelAnimationFrame(raf);
   }, [playing, busy, drawTo, tpl, fmt]);
 
-  const H = fmt === "story" ? 1920 : 1080;
-  const base = `babymo-${String(index + 1).padStart(2, "0")}-${tpl.id}${tpl.kind === "single" ? `-${st.game}` : ""}-${fmt === "story" ? "9x16" : "1x1"}-${lang}`;
+  const H = FMT_H[fmt];
+  const base = `babymo-${String(index + 1).padStart(2, "0")}-${tpl.id}${tpl.kind === "single" ? `-${st.game}` : ""}-${fmt === "story" ? "9x16" : fmt === "feed" ? "4x5" : "1x1"}-${target}-${lang}`;
 
   const exportVideo = async () => {
     const mime = pickMime();
@@ -450,7 +523,7 @@ function Editor({
     c.toBlob((b) => b && download(b, `${base}-cover.png`), "image/png");
   };
 
-  const caption = captionFor(tpl, game, lang, txt.url);
+  const caption = captionFor(tpl, game, lang, txt.url, target);
   const copyCaption = async () => {
     try {
       await navigator.clipboard.writeText(caption);
@@ -486,9 +559,9 @@ function Editor({
           <canvas
             ref={ref}
             width={540}
-            height={fmt === "story" ? 960 : 540}
-            className={`rounded-2xl bg-paper shadow-xl ${fmt === "story" ? "h-[46vh] md:h-[78vh]" : "h-[40vh] md:h-[60vh]"} aspect-auto w-auto`}
-            style={{ aspectRatio: fmt === "story" ? "9 / 16" : "1 / 1" }}
+            height={Math.round(H / 2)}
+            className={`rounded-2xl bg-paper shadow-xl ${fmt === "story" ? "h-[46vh] md:h-[78vh]" : fmt === "feed" ? "h-[44vh] md:h-[70vh]" : "h-[40vh] md:h-[60vh]"} aspect-auto w-auto`}
+            style={{ aspectRatio: fmt === "story" ? "9 / 16" : fmt === "feed" ? "4 / 5" : "1 / 1" }}
         />
           {safe && fmt === "story" && (
             <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl">
@@ -564,7 +637,7 @@ function Editor({
               <input value={txt.cta} onChange={(e) => edit("cta", e.target.value)} className={field} />
             </label>
             <label className="grid gap-1 text-xs font-semibold text-whisper">
-              {T("Alamat", "Link")}
+              {target === "app" ? T("Teks di bawah tombol App Store", "Line under the App Store button") : T("Alamat", "Link")}
               <input value={txt.url} onChange={(e) => edit("url", e.target.value)} className={field} />
             </label>
           </div>
@@ -594,7 +667,7 @@ function Editor({
             <input type="checkbox" checked={st.showMo} onChange={(e) => setSt({ ...st, showMo: e.target.checked })} className="h-5 w-5 accent-[var(--color-sage)]" />
             {T("Tampilkan Baby Mo", "Show Baby Mo")}
           </label>
-          <button type="button" onClick={() => setSt({ game: st.game, palette: tpl.palette, dur: tpl.dur, showMo: true })} className="justify-self-start text-xs font-semibold text-sage-deep hover:underline">
+          <button type="button" onClick={() => setSt({ game: st.game, palette: tpl.palette, dur: tpl.dur, showMo: true, preset: st.preset })} className="justify-self-start text-xs font-semibold text-sage-deep hover:underline">
             ↺ {T("Kembalikan teks & warna awal", "Reset text & colours")}
           </button>
         </div>
