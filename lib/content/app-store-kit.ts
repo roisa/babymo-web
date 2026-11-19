@@ -11,8 +11,8 @@ export const LISTING = {
   "lim": 30
  },
  "promo": {
-  "id": "Baru! Sahabat Hewan Mo dan Kebun Kecil Ais, 14 doa harian, dan latihan tenis baru. 15 game islami — tanpa iklan, tanpa akun, bisa tanpa internet.",
-  "en": "New! Mo's Animal Friends, Ais's Little Garden, 14 daily du'as and new tennis drills. 15 Islamic games — no ads, no account, works offline.",
+  "id": "Baru: tema Ramadan dengan lentera dan hitungan menuju Idul Fitri, plus 106 kata Arab untuk disusun. 19 game islami — tanpa iklan, tanpa akun, bisa offline.",
+  "en": "New: a Ramadan theme with lanterns and a countdown to Eid, plus 106 Arabic words to build. 19 Islamic games — no ads, no account, works offline.",
   "lim": 170
  },
  "keywords": {
