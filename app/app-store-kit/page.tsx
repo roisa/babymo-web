@@ -134,11 +134,11 @@ const FACTS: { label: string; value: string; where: string; note?: string }[] = 
   { label: "Marketing URL", value: "https://babymo.id/app/", where: "Version → Marketing URL" },
   { label: "Privacy Policy URL", value: "https://babymo.id/privacy/", where: "App Privacy → Privacy Policy URL" },
   { label: "Copyright", value: "2026 Ibra Creative", where: "Version → Copyright", note: "Apple adds the © sign." },
-  { label: "Price", value: "Free (Rp 0)", where: "Pricing and Availability", note: "Availability: all countries, or start with Indonesia, Malaysia, Singapore and Brunei." },
+  { label: "Price", value: "Paid — one-time purchase (choose the price tier in App Store Connect)", where: "Pricing and Availability", note: "No subscriptions or in-app purchases. Apple shows the local price in each country, so never write the price in screenshots, the description or posts. Availability: all countries (China mainland off), EU once the DSA trader status is approved." },
   { label: "Sign-in required for review", value: "No — the app has no accounts", where: "App Review Information → Sign-In Information (uncheck)" },
 ];
 
-const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2–8 with 15 games: daily du'as, prayer and wudhu guides, Arabic letters, a letter-hunt island, a tennis-learning game, caring for farm animals and a little garden. There are no accounts, ads, in-app purchases, chat or social features.
+const REVIEW_NOTES = `Baby Mo is a paid Islamic learning app (one-time purchase) for children aged 2–8 with 19 games: daily and Ramadan du'as, prayer and wudhu guides, Arabic letters and 106 Arabic words, a letter-hunt island, a tennis-learning game, caring for farm animals and a little garden. There are no accounts, ads, subscriptions, in-app purchases, chat or social features.
 
 • No login is needed: open the app and choose a language.
 • Location is optional and only used for prayer times and the Qibla compass in the Prayer tab. If permission is denied, the user can pick a city by hand. Prayer times and the Qibla are calculated on the device; no location or other data ever leaves the device.
@@ -146,6 +146,8 @@ const REVIEW_NOTES = `Baby Mo is a free Islamic learning app for children aged 2
 • Arabic read-aloud plays recordings bundled with the app (the device's speech voice is a fallback). There are no analytics or third-party SDKs, and every link out of the app and every share option is behind a parental gate (a maths question for grown-ups).
 • All games work offline.
 • The archive includes a small Apple Watch app: five daily du'as in the same recorded voice, a tasbih counter, on-device prayer times (the parent picks a city by hand — the watch never uses location), Ramadan countdowns and a simple pet check-in. Like the iPhone app it is fully offline, has no accounts and collects no data.
+• “Baby Mo Du'a” is also a Shortcuts action: it plays the travel du'a from the bundled recordings, and a parent can add it to a CarPlay automation. It sends nothing off the device.
+• During Ramadan (Umm al-Qura calendar on the device) the home screen shows a Ramadan look; it switches on and off by itself.
 
 Privacy policy: https://babymo.id/privacy/ · Support: https://babymo.id/support/`;
 
