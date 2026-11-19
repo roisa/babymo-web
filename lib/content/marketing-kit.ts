@@ -221,3 +221,51 @@ export const KPIS: string[] = [
   "Weekly: pick the best Reel, make two variations of its hook, re-post on TikTok and Shorts.",
   "Monthly: ratings and reviews in App Store Connect; reply to every review kindly.",
 ];
+
+/** Every Baby Mo link the team needs, in one place. Team-only pages are noindex and not linked from the site. */
+export const LINKS: { group: string; note?: string; items: { name: string; url: string }[] }[] = [
+  { group: "Team only", note: "Not linked from the site and hidden from search engines, but anyone with the link can open them: share inside the team only.", items: [
+    { name: "Marketing Kit (this page)", url: "https://babymo.id/marketing-kit/" },
+    { name: "Promo Studio · ID", url: "https://babymo.id/id/studio/" },
+    { name: "Promo Studio · EN", url: "https://babymo.id/en/studio/" },
+    { name: "Studio with a preset open (r1–r10 or eid)", url: "https://babymo.id/id/studio/?preset=r7" },
+    { name: "App Store Kit", url: "https://babymo.id/app-store-kit/" },
+    { name: "Element Library", url: "https://babymo.id/id/elemen/" },
+    { name: "Pose Library", url: "https://babymo.id/id/pose/" },
+    { name: "Voice recording page", url: "https://play.babymo.id/tools/rekam-suara.html" },
+    { name: "Story recording page", url: "https://play.babymo.id/tools/rekam-cerita.html" },
+    { name: "Listening page (all voice clips)", url: "https://play.babymo.id/tools/dengar-suara.html" },
+  ] },
+  { group: "The app", items: [
+    { name: "App Store page", url: "https://apps.apple.com/app/baby-mo-islamic-kids-games/id6831891898" },
+    { name: "App page on babymo.id (Marketing URL)", url: "https://babymo.id/app/" },
+    { name: "Support (Support URL)", url: "https://babymo.id/support/" },
+    { name: "Privacy policy", url: "https://babymo.id/privacy/" },
+    { name: "App Store Connect", url: "https://appstoreconnect.apple.com" },
+  ] },
+  { group: "Website & games", items: [
+    { name: "babymo.id home", url: "https://babymo.id/" },
+    { name: "Game hub (play in the browser)", url: "https://play.babymo.id/" },
+    { name: "Games page (19 games + clips)", url: "https://babymo.id/id/permainan/" },
+    { name: "Story books", url: "https://babymo.id/id/cerita/" },
+    { name: "Daily du'as", url: "https://babymo.id/id/doa/" },
+    { name: "Learn", url: "https://babymo.id/id/learn/" },
+    { name: "For parents", url: "https://babymo.id/id/orangtua/" },
+    { name: "Blog", url: "https://babymo.id/id/blog/" },
+    { name: "Lockscreen wallpapers", url: "https://babymo.id/id/unduh/" },
+    { name: "Kids activity sheet maker", url: "https://babymo.id/id/apps/kids-activity/" },
+    { name: "Videos & moments", url: "https://babymo.id/id/watch/" },
+    { name: "Team & scholar reviewers", url: "https://babymo.id/id/tim/" },
+    { name: "Contact", url: "https://babymo.id/id/kontak/" },
+  ] },
+  { group: "Social & contact", items: [
+    { name: "Instagram", url: "https://www.instagram.com/babymo.official" },
+    { name: "TikTok", url: "https://www.tiktok.com/@babymo.official" },
+    { name: "YouTube", url: "https://www.youtube.com/@babymo.official" },
+    { name: "Email · hello@babymo.id", url: "mailto:hello@babymo.id" },
+  ] },
+  { group: "Code (GitHub)", items: [
+    { name: "babymo-app (app + play.babymo.id)", url: "https://github.com/roisa/babymo-app" },
+    { name: "babymo-web (babymo.id)", url: "https://github.com/roisa/babymo-web" },
+  ] },
+];
