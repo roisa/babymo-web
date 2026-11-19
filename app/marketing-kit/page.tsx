@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { asset } from "@/lib/i18n/config";
 import {
-  ADS, APP_ID, APP_URL, CALENDAR, CHANNELS, KPIS, MESSAGES, PERSONAS, POSITIONING, POST_CAPTIONS,
+  ADS, APP_ID, APP_URL, CALENDAR, LINKS, CHANNELS, KPIS, MESSAGES, PERSONAS, POSITIONING, POST_CAPTIONS,
   REEL_SCRIPTS, RULES_DO, RULES_DONT, SEARCH_KEYWORDS, STORY_SETS, TEMPLATES, TONE, type Bi,
 } from "@/lib/content/marketing-kit";
 
@@ -105,6 +105,10 @@ ul.rules{margin:8px 0 0;padding-left:20px}ul.rules li{margin:5px 0}
 .builder{display:grid;gap:10px;margin-top:10px}@media(min-width:760px){.builder{grid-template-columns:1fr 1fr}}
 .builder label{display:flex;flex-direction:column;gap:4px;font-weight:800;font-size:14px}
 .builder input{font:inherit;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:var(--bg);color:var(--ink);min-height:44px}
+.links{list-style:none;padding:0;margin:8px 0 0;display:grid;grid-template-columns:minmax(0,1fr);gap:6px}
+.links li{display:flex;align-items:center;gap:8px;justify-content:space-between;border-top:1px solid var(--line);padding-top:6px;min-width:0}
+.links li .copy{flex:0 0 auto}
+.links a{flex:1 1 auto;min-width:0;font-weight:800;color:var(--ink);text-decoration:none}.links a small{display:block;font-weight:600;font-size:12.5px;color:var(--accent);overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:999px;font-weight:800;opacity:0;transition:opacity .2s;pointer-events:none}
 .toast.on{opacity:1}
 `;
@@ -170,10 +174,29 @@ export default function MarketingKit() {
             <a className="btn" href={asset("/app-store-kit/")}>App Store Kit ↗</a>
           </div>
           <nav className="toc" aria-label="Sections">
-            <a href="#why">Positioning</a><a href="#who">Audience</a><a href="#where">Channels</a><a href="#when">Calendar</a>
+            <a href="#links">Links</a><a href="#why">Positioning</a><a href="#who">Audience</a><a href="#where">Channels</a><a href="#when">Calendar</a>
             <a href="#reels">Reel scripts</a><a href="#stories">Story sets</a><a href="#designs">Designs &amp; Reels</a><a href="#captions">Captions</a>
             <a href="#ads">Ads</a><a href="#outreach">Outreach</a><a href="#rules">Rules</a><a href="#measure">Measure</a>
           </nav>
+
+          <h2 id="links">Links</h2>
+          <p className="lead">Every Baby Mo page and tool in one place. Tap Copy to share a link.</p>
+          <div className="cards">
+            {LINKS.map((g, gi) => (
+              <div className="card" key={g.group}>
+                <h3>{g.group}</h3>
+                {g.note ? <p className="muted">{g.note}</p> : null}
+                <ul className="links">
+                  {g.items.map((it, i) => (
+                    <li key={it.url}>
+                      <a href={it.url} target="_blank" rel="noopener">{it.name}<small id={`ln-${gi}-${i}`}>{it.url.replace(/^mailto:/, "")}</small></a>
+                      <button className="btn copy" type="button" data-copy={`ln-${gi}-${i}`} aria-label={`Copy ${it.name}`}>Copy</button>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
 
           <h2 id="why">Positioning</h2>
           <div className="card">
