@@ -45,6 +45,9 @@ export const PERSONAS: { name: string; who: string; cares: string; msg: string; 
   { name: "Malaysia · Singapura · Brunei", who: "Muslim parents who read Indonesian or English",
     cares: "Same values, iPhone-heavy markets, strong Ramadan & Raya moments",
     msg: "Use the EN set or ID set; Ramadan and Raya content works best", where: "Instagram, TikTok, Facebook", lang: "ID / EN" },
+  { name: "Muslim homeschooling families", who: "Parents teaching at home in Indonesia, Malaysia, the UK, the US and Australia",
+    cares: "Structured, interactive Islamic material to add to their own lessons",
+    msg: "“Wudu, salah steps, 28 Arabic letters and 106 Arabic words — ready-made, offline, no ads.”", where: "Homeschool Facebook and Telegram groups, Instagram homeschool hashtags, co-op newsletters", lang: "ID / EN" },
   { name: "Muslim families abroad", who: "English-speaking Muslim parents in the UK, US, Australia, Canada and the Gulf",
     cares: "Keeping Islamic identity at home; few child-friendly Islamic apps without ads",
     msg: "“Islamic learning games with no ads and no accounts — in English and Indonesian.”", where: "Instagram, Facebook groups for Muslim mums, Islamic school newsletters", lang: "EN" },
@@ -269,3 +272,104 @@ export const LINKS: { group: string; note?: string; items: { name: string; url: 
     { name: "babymo-web (babymo.id)", url: "https://github.com/roisa/babymo-web" },
   ] },
 ];
+
+/* ───────── Growth strategy (redesign, 20 Nov 2026) ───────── */
+
+export const GOALS: Bi[] = [
+  { id: "Pengguna nyata", en: "Real users" },
+  { id: "Lebih banyak pembelian", en: "More purchases" },
+  { id: "Jangkauan global", en: "Global reach" },
+  { id: "Brand jangka panjang", en: "A long-term brand" },
+];
+
+export const BIG_PICTURE: Bi = {
+  id: "Menjadikan Baby Mo brand belajar Islam untuk anak yang dicintai keluarga Muslim di seluruh dunia — lewat tiga langkah: ditemukan, dipercaya, dibeli.",
+  en: "Turn Baby Mo into a loved global Islamic learning brand for children through three steps: discovery, trust and conversion.",
+};
+export const FUNNEL: { icon: string; t: Bi; d: Bi; how: Bi }[] = [
+  { icon: "🔍", t: { id: "Ditemukan", en: "Discovery" }, d: { id: "Orang tua mengenal Baby Mo di TikTok, Instagram, YouTube, Google, dan App Store.", en: "Parents discover Baby Mo on TikTok, Instagram, YouTube, Google and the App Store." },
+    how: { id: "Reels harian, kreator, artikel SEO, Apple Search Ads", en: "Daily Reels, creators, SEO articles, Apple Search Ads" } },
+  { icon: "💚", t: { id: "Dipercaya", en: "Trust" }, d: { id: "Orang tua paham nilainya dan merasa tenang.", en: "Parents understand the value and feel confident." },
+    how: { id: "Tanpa iklan & akun, testimoni nyata, ustadz reviewer, guru", en: "No ads or accounts, real testimonials, scholar reviewers, teachers" } },
+  { icon: "🛒", t: { id: "Dibeli", en: "Conversion" }, d: { id: "Orang tua mengunduh, anak bermain, keluarga merekomendasikan.", en: "Parents download, children play, families recommend." },
+    how: { id: "Halaman App Store yang kuat, link kampanye, ulasan, rekomendasi", en: "A strong App Store page, campaign links, reviews, word of mouth" } },
+];
+
+export const CORE_MESSAGE = {
+  line: { id: "Tangan kecil. Cinta besar untuk Islam.", en: "Little hands. Big love for Islam." } as Bi,
+  sub: { id: "Dunia belajar Islam yang ceria untuk Muslim kecil.", en: "A joyful Islamic learning world for little Muslims." } as Bi,
+  pillars: [
+    { icon: "🤲", t: { id: "Doa", en: "Du'as" } }, { icon: "🕌", t: { id: "Sholat", en: "Salah" } }, { icon: "💧", t: { id: "Wudhu", en: "Wudu" } },
+    { icon: "ا", t: { id: "Hijaiyah", en: "Hijaiyah" } }, { icon: "🎮", t: { id: "Game", en: "Games" } },
+  ] as { icon: string; t: Bi }[],
+  promise: { id: "Tanpa iklan. Tanpa langganan. Cukup sekali beli.", en: "No ads. No subscriptions. Just one purchase." } as Bi,
+};
+
+export const IDEAL = {
+  name: "Bunda Aisyah",
+  photoNote: "Our ideal buyer (a composite, not a real person)",
+  facts: [
+    ["Who", "Muslim mum, 29–36, two children aged 3 and 6, works part-time, lives in Jakarta, Bandung, Surabaya or Kuala Lumpur"],
+    ["Devices", "iPhone for herself, a family iPad at home; her husband has an Apple Watch"],
+    ["Day", "School run, work, maghrib together; the iPad comes out after dinner and on long drives"],
+    ["Wants", "Children who love their du'as and salah, screen time she doesn't feel guilty about, learning in Indonesian and Arabic"],
+    ["Worries", "Ads, YouTube autoplay, strangers in chat, apps that need an account, content that isn't checked"],
+    ["Follows", "Islamic-parenting and Montessori-at-home accounts, mums' WhatsApp groups, her child's TK/TPA teacher"],
+    ["Buys when", "She sees her child (or a friend's child) enjoy it, a trusted creator or teacher recommends it, and the page clearly says no ads and no accounts"],
+    ["Says", "“Akhirnya ada game yang bikin anak semangat baca doa, dan aku tenang karena tanpa iklan.”"],
+  ] as [string, string][],
+};
+
+/** 90-day plan. Day 1 = Monday 23 Nov 2026 (the week 1.1 goes live); day 90 = 20 Feb 2027, early Ramadan. */
+export const PHASES: { days: string; dates: string; t: string; color: string; icon: string; tasks: string[] }[] = [
+  { days: "Days 1–7", dates: "23–29 Nov 2026", t: "Foundation", color: "#2D8CFF", icon: "🧱", tasks: [
+    "Fix the last listing inconsistencies (game counts, “Free” in the kit)", "Upload the 1.1 screenshots and promo text", "Set up Instagram highlights, bios and the link in bio", "Create campaign links for every channel" ] },
+  { days: "Days 8–30", dates: "30 Nov – 22 Dec", t: "Awareness", color: "#F06A1D", icon: "📣", tasks: [
+    "Post 1–2 Reels a day (scripts r1–r4, r8)", "Contact 50 micro-creators; send promo codes to 20", "Join 10 parenting / homeschool communities and help first", "Publish 4 SEO articles; start Apple Search Ads small" ] },
+  { days: "Days 31–60", dates: "23 Dec – 21 Jan 2027", t: "Conversion", color: "#12A15A", icon: "💚", tasks: [
+    "Double down on the 3 best Reels; school-holiday content", "Collaborate with 10 parenting creators", "A/B test App Store screenshots (Product Page Optimization)", "Share real parent and teacher testimonials (with consent)" ] },
+  { days: "Days 61–90", dates: "22 Jan – 20 Feb 2027", t: "Scale", color: "#6D3FD0", icon: "🚀", tasks: [
+    "Ramadan campaign: countdown from Nisfu Sya'ban, theme reveal, daily stories", "Raise the budget only on channels with paying users", "Start a referral / creator programme", "Publish more SEO articles; plan the next app update" ] },
+];
+
+export const SERIES: { k: string; t: string; d: Bi; color: string }[] = [
+  { k: "A", t: "The Muslim Parenting Moment", color: "#E64980", d: { id: "Momen nyata di rumah: doa sebelum tidur, sholat bareng, perjalanan. Hook relatable untuk orang tua.", en: "Real moments at home: bedtime du'a, praying together, the drive to school. Relatable hooks for parents." } },
+  { k: "B", t: "Learn with Baby Mo", color: "#2D8CFF", d: { id: "Satu hal kecil per video: satu doa, satu huruf, satu langkah wudhu — langsung dari app.", en: "One small thing per video: one du'a, one letter, one wudu step — straight from the app." } },
+  { k: "C", t: "Little Muslim Habits", color: "#12A15A", d: { id: "Kebiasaan baik: salam, berbagi, merawat hewan, menanam — bareng Mo, Ais, dan Kak Adam.", en: "Good habits: salam, sharing, caring for animals, gardening — with Mo, Ais and Kak Adam." } },
+  { k: "D", t: "Meet Baby Mo's World", color: "#F59F00", d: { id: "Karakter dan dunia Baby Mo: keluarga, pulau hijaiyah, kebun, akademi tenis.", en: "The characters and world: the family, Hijaiyah Island, the garden, the tennis academy." } },
+  { k: "E", t: "Why Parents Choose Baby Mo", color: "#6D3FD0", d: { id: "Kepercayaan: tanpa iklan, tanpa akun, offline, ditinjau ustadz, testimoni orang tua.", en: "Trust: no ads, no accounts, offline, scholar-reviewed, parent testimonials." } },
+];
+
+/** 90-day targets. Ours are set for a paid app; the reference board's 10% conversion is ambitious for a paid app, so the stretch goal keeps it. */
+export const TARGETS: { icon: string; k: string; target: string; stretch: string; note: string }[] = [
+  { icon: "👀", k: "Product page views", target: "15,000", stretch: "25,000", note: "App Store Connect → Analytics" },
+  { icon: "⬇️", k: "Purchases (first-time downloads)", target: "600", stretch: "1,000", note: "App Analytics, by source and campaign" },
+  { icon: "%", k: "Page-view → purchase conversion", target: "4%", stretch: "10%", note: "Paid kids apps usually convert 2–6%; better screenshots and reviews lift it" },
+  { icon: "⭐", k: "Ratings (average ≥ 4.7)", target: "50", stretch: "100", note: "Ask gently in follow-ups, never inside the kids' area" },
+  { icon: "🎬", k: "Short-form videos posted", target: "120", stretch: "180", note: "1–2 a day across Reels, TikTok and Shorts" },
+  { icon: "🤝", k: "Creator collaborations", target: "10", stretch: "20", note: "Micro-creators 5k–50k followers" },
+  { icon: "📝", k: "SEO articles on babymo.id", target: "12", stretch: "20", note: "e.g. “cara mengajarkan doa ke anak”, “Islamic games for kids”" },
+  { icon: "🌍", k: "Countries with paying customers", target: "5", stretch: "10", note: "ID, MY, SG, BN + one English market" },
+];
+
+export const FOUNDATION: { t: string; done?: boolean; note?: string }[] = [
+  { t: "babymo.id: App Store button instead of “Coming soon”", done: true, note: "Home, /app, /support and the games page" },
+  { t: "Make game & du'a counts consistent everywhere", note: "App Store description and review notes still say 15 games and “free”" },
+  { t: "Retake the App Store screenshots from the latest app", done: true, note: "App Store Kit, 19 Nov" },
+  { t: "Instagram, TikTok and YouTube profiles ready", note: "Bio, highlight covers, link in bio (see Designs)" },
+  { t: "First 10 gameplay Reels", done: true, note: "8 ready-made + Promo Studio presets" },
+  { t: "Contact the first 20 parenting creators" },
+  { t: "Campaign links in App Store Analytics", note: "Builder in Measure" },
+  { t: "Indonesian & English landing pages", done: true, note: "babymo.id/app switches ID/EN" },
+  { t: "Collect real user feedback", note: "Support page + a short form for creators and teachers" },
+];
+
+export const VISION: { t: string; now?: boolean }[] = [
+  { t: "Baby Mo Games", now: true }, { t: "Baby Mo Stories", now: true }, { t: "Baby Mo Watch", now: true },
+  { t: "Baby Mo Ramadan Adventures" }, { t: "Baby Mo Books (print)" }, { t: "Baby Mo Learning Activities (printables)" }, { t: "Baby Mo Merchandise" },
+];
+
+export const THE_GOAL: Bi = {
+  id: "Bukan sekadar banyak unduhan, tapi komunitas orang tua di seluruh dunia yang mencintai dan merekomendasikan Baby Mo.",
+  en: "Not just more downloads, but a growing global community of parents who love and recommend Baby Mo.",
+};
