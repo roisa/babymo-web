@@ -12,7 +12,7 @@ import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
  * Every claim is checked against the app (babymo-app) and the privacy policy — keep it that way.
  * Baby Mo is a paid app: one purchase, no in-app purchases, no subscription, no ads. The price is
  * never written here (Apple shows it per country on the App Store button/page).
- * Screenshots are real captures from the App Store kit (public/app-store/v4, versioned folder
+ * Screenshots are real captures from the App Store kit (public/app-store/v5, versioned folder
  * because the service worker caches images).
  */
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Baby Mo — Belajar Islam sambil bermain",
     description: "19 game & aktivitas islami, 25 doa dengan suara Arab, wudhu & sholat, huruf hijaiyah, Ramadan, dan Apple Watch. Sekali beli, tanpa iklan, tanpa akun.",
     url: "https://babymo.id/app/",
-    images: [{ url: "https://babymo.id/app-store/v4/id-01-home.webp" }],
+    images: [{ url: "https://babymo.id/app-store/v5/id-01-home.webp" }],
   },
 };
 
@@ -39,7 +39,7 @@ const B = ({ t }: { t: Bi }) => (
     <span data-l="en">{t.en}</span>
   </>
 );
-const V = "/app-store/v4/";
+const V = "/app-store/v5/";
 /** A real app screenshot in both languages (only the current language is shown). */
 function Shot({ k, eager }: { k: string; eager?: boolean }) {
   return (
@@ -409,7 +409,7 @@ export default function AppMarketingPage() {
           <div className="bar glass">
             <a className="brand" href={asset("/")}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={asset("/app-store/v4/icon-128.png")} alt="" width={34} height={34} />
+              <img src={asset("/app-store/v5/icon-128.png")} alt="" width={34} height={34} />
               Baby Mo
             </a>
             <div className="links">
@@ -585,14 +585,15 @@ export default function AppMarketingPage() {
               <div className="watchband">
                 <div className="eyebrow">Apple Watch</div>
                 <h2 style={{ color: "#fff" }}><B t={{ id: "Baby Mo di pergelangan tangan.", en: "Baby Mo on the wrist." }} /></h2>
-                <p className="lede"><B t={{ id: "Doa dengan suara Mo, tasbih dengan getaran lembut di setiap hitungan, jadwal sholat, hitung mundur berbuka saat Ramadan, dan Mimi si kucing yang menunggu dirawat. Semua offline.", en: "Du'as in Mo's voice, a tasbih with a gentle tap on every count, prayer times, an iftar countdown in Ramadan, and Mimi the cat waiting to be cared for. All offline." }} /></p>
+                <p className="lede"><B t={{ id: "Doa dengan suara Mo, tasbih dengan getaran lembut di setiap hitungan, jadwal sholat, arah kiblat bareng Mo, alarm pagi dengan doa bangun tidur, puasa latihan Ramadan dengan lentera, dan Mimi si kucing yang menunggu dirawat. Plus “Doa sekarang” di Smart Stack. Semua offline, tanpa akun.", en: "Du'as in Mo's voice, tasbih with a gentle tap on every count, prayer times, Qibla with Mo, a morning alarm with the waking-up du'a, the Ramadan practice fast with lanterns, and Mimi the cat waiting to be cared for. Plus “Du'a now” in the Smart Stack. All offline, no account." }} /></p>
                 <div className="watches">
                   {([
                     ["home", { id: "Beranda", en: "Home" }],
                     ["dua", { id: "Doa dengan suara Mo", en: "Du'as in Mo's voice" }],
                     ["tasbih", { id: "Tasbih", en: "Tasbih" }],
                     ["prayer", { id: "Jadwal sholat", en: "Prayer times" }],
-                    ["ramadan", { id: "Ramadan", en: "Ramadan" }],
+                    ["qibla", { id: "Arah kiblat bareng Mo", en: "Qibla with Mo" }],
+                    ["ramadan", { id: "Ramadan & puasa latihan", en: "Ramadan & practice fast" }],
                     ["pet", { id: "Mimi si kucing", en: "Mimi the cat" }],
                   ] as [string, Bi][]).map(([k, t]) => (
                     <div className="wt" key={k}>
