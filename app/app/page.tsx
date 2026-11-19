@@ -12,7 +12,7 @@ import { APP_STORE_URL, LANG_SCRIPT, SUPPORT_EMAIL } from "@/lib/content/store-p
  * Every claim is checked against the app (babymo-app) and the privacy policy — keep it that way.
  * Baby Mo is a paid app: one purchase, no in-app purchases, no subscription, no ads. The price is
  * never written here (Apple shows it per country on the App Store button/page).
- * Screenshots are real captures from the App Store kit (public/app-store/v3, versioned folder
+ * Screenshots are real captures from the App Store kit (public/app-store/v4, versioned folder
  * because the service worker caches images).
  */
 
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: "Baby Mo — Belajar Islam sambil bermain",
     description: "19 game & aktivitas islami, 25 doa dengan suara Arab, wudhu & sholat, huruf hijaiyah, Ramadan, dan Apple Watch. Sekali beli, tanpa iklan, tanpa akun.",
     url: "https://babymo.id/app/",
-    images: [{ url: "https://babymo.id/app-store/v3/id-01-home.webp" }],
+    images: [{ url: "https://babymo.id/app-store/v4/id-01-home.webp" }],
   },
 };
 
@@ -39,7 +39,7 @@ const B = ({ t }: { t: Bi }) => (
     <span data-l="en">{t.en}</span>
   </>
 );
-const V = "/app-store/v3/";
+const V = "/app-store/v4/";
 /** A real app screenshot in both languages (only the current language is shown). */
 function Shot({ k, eager }: { k: string; eager?: boolean }) {
   return (
@@ -75,6 +75,19 @@ const STATS: { n: string; c: string; t: Bi }[] = [
 ];
 
 /* "A day with Baby Mo" — swipeable cards, like the App Store's Today tab */
+/* "New in 1.1": real screens from the latest build (v4). */
+const NEW: { k: string; tint: string; tag: Bi; title: Bi; body: Bi }[] = [
+  { k: "13-ramadan", tint: "linear-gradient(160deg,#E6DCFF,#FFE9C7)", tag: { id: "Tema Ramadan", en: "Ramadan theme" },
+    title: { id: "Ramadan lebih meriah.", en: "A joyful Ramadan." },
+    body: { id: "Setiap Ramadan, Baby Mo berhias sendiri: lentera, kartu “Ramadan hari ke-…”, dan hitungan hari menuju Idul Fitri.", en: "Every Ramadan, Baby Mo dresses up by itself: lanterns, a “Ramadan day …” card and a countdown to Eid." } },
+  { k: "12-susun", tint: "linear-gradient(160deg,#D6F0FF,#E3F8DA)", tag: { id: "Susun Huruf", en: "Build the Word" },
+    title: { id: "106 kata Arab.", en: "106 Arabic words." },
+    body: { id: "12 kategori — keluarga, hewan, buah, warna, sampai hewan laut — dengan tingkat Mudah, Sedang, Sulit dan album stiker.", en: "12 categories — family, animals, fruit, colours, even sea animals — with Easy, Medium and Hard levels and a sticker album." } },
+  { k: "14-memory", tint: "linear-gradient(160deg,#DDF6E6,#FFF1CC)", tag: { id: "Tampilan baru", en: "Fresh look" },
+    title: { id: "Halaman depan yang hidup.", en: "Lively new home screens." },
+    body: { id: "Memory Match, Sahabat Hewan, Kebun Ais, dan Akademi Tenis kini punya halaman depan bergambar yang baru.", en: "Memory Match, Animal Friends, Ais's Garden and the Tennis Academy have new illustrated home screens." } },
+];
+
 const DAY: { when: Bi; tint: string; k: string; title: Bi; body: Bi }[] = [
   { when: { id: "Pagi", en: "Morning" }, tint: "linear-gradient(160deg,#FFE7B3,#FFD1DC)", k: "03-doa",
     title: { id: "Doa bangun tidur", en: "The waking-up du'a" },
@@ -242,6 +255,13 @@ html[data-lang="id"] .seg [data-set-lang="id"],html[data-lang="en"] .seg [data-s
 /* today-style swipe cards */
 .rail{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:24px max(18px,calc((100vw - 1160px)/2 + 18px)) 30px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
 .rail::-webkit-scrollbar{display:none}
+.newgrid{display:grid;gap:16px;margin-top:22px;grid-template-columns:minmax(0,1fr)}
+@media(min-width:820px){.newgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.newc{position:relative;border-radius:34px;overflow:hidden;padding:24px 24px 0;display:flex;flex-direction:column;color:#152230;min-width:0}
+.newc .tag{font-size:13px;font-weight:800;letter-spacing:.02em;color:#5B4FC9}
+.newc h3{font-size:24px;margin:6px 0 6px;line-height:1.1}.newc p{margin:0 0 18px;color:#3E4A5C;font-size:15.5px;line-height:1.5}
+.newc .ph{margin-top:auto;padding:0 18px}.newc .ph .phone{border-radius:40px 40px 0 0;padding:9px 9px 0}
+.newc .ph .phone .scr{border-radius:32px 32px 0 0;aspect-ratio:540/760}.newc .ph .phone .isl{top:18px;height:18px}
 .today{flex:0 0 min(300px,78vw);scroll-snap-align:center;border-radius:34px;overflow:hidden;position:relative;display:flex;flex-direction:column;
   box-shadow:var(--sh);border:1px solid var(--edge);min-height:520px}
 .today .tx{padding:20px 20px 0;color:#151A33}
@@ -389,7 +409,7 @@ export default function AppMarketingPage() {
           <div className="bar glass">
             <a className="brand" href={asset("/")}>
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={asset("/app-store/v3/icon-128.png")} alt="" width={34} height={34} />
+              <img src={asset("/app-store/v4/icon-128.png")} alt="" width={34} height={34} />
               Baby Mo
             </a>
             <div className="links">
@@ -489,6 +509,24 @@ export default function AppMarketingPage() {
             <div className="hint"><B t={{ id: "← geser →", en: "← swipe →" }} /></div>
           </section>
 
+          {/* ── new in 1.1 ── */}
+          <section id="baru" style={{ paddingTop: 30, paddingBottom: 30 }}>
+            <div className="wrap">
+              <div className="eyebrow"><B t={{ id: "Baru di versi 1.1", en: "New in version 1.1" }} /></div>
+              <h2><B t={{ id: "Makin seru, makin bermakna.", en: "More fun, more meaning." }} /></h2>
+              <div className="newgrid">
+                {NEW.map((n) => (
+                  <article className="newc" key={n.k} style={{ background: n.tint }}>
+                    <div className="tag"><B t={n.tag} /></div>
+                    <h3><B t={n.title} /></h3>
+                    <p><B t={n.body} /></p>
+                    <div className="ph"><Phone k={n.k} /></div>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+
           {/* ── bento features ── */}
           <section id="fitur">
             <div className="wrap">
@@ -509,7 +547,7 @@ export default function AppMarketingPage() {
                   <div className="tag" style={{ color: "var(--blue)" }}><B t={{ id: "Huruf Hijaiyah", en: "Hijaiyah letters" }} /></div>
                   <div className="big-n">28</div>
                   <h3><B t={{ id: "Dari alif sampai ya.", en: "From alif to ya." }} /></h3>
-                  <p><B t={{ id: "Dengar, tulis, lalu tangkap hurufnya. Jelajahi Pulau Hijaiyah 3D dan susun kata Arab pertama.", en: "Listen, trace, then catch the letters. Explore the 3D Hijaiyah Island and build first Arabic words." }} /></p>
+                  <p><B t={{ id: "Dengar, tulis, lalu tangkap hurufnya. Jelajahi Pulau Hijaiyah 3D dan susun 106 kata Arab.", en: "Listen, trace, then catch the letters. Explore the 3D Hijaiyah Island and build 106 Arabic words." }} /></p>
                   <div className="letters" lang="ar">{"ا ب ت ث ج ح خ".split(" ").map((l) => <i key={l}>{l}</i>)}</div>
                 </div>
                 <div className="tile glass t-pray">
