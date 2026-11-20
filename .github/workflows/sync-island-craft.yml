@@ -1,0 +1,35 @@
+name: Sync BabyMo Craft (island-craft)
+
+# babymo.id/island-craft/ is the island-craft game's published site (its gh-pages branch), copied into this
+# site's gh-pages branch. deploy.yml copies it on every full deploy; this refreshes only that folder between
+# deploys (hourly, or by hand: Actions → Sync BabyMo Craft → Run workflow), so a game update shows up within
+# the hour without rebuilding the whole site. Nothing outside island-craft/ is touched.
+
+on:
+  schedule:
+    - cron: "17 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Copy the game's published site into gh-pages/island-craft
+        env:
+          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          git clone -q --depth 1 --branch gh-pages "https://x-access-token:${TOKEN}@github.com/${REPO}" site
+          git clone -q --depth 1 --branch gh-pages https://github.com/roisa/island-craft.git game
+          GAME_SHA="$(git -C game rev-parse --short HEAD)"
+          rm -rf game/.git game/CNAME game/.nojekyll
+          rm -rf site/island-craft && mkdir -p site/island-craft && cp -R game/. site/island-craft/
+          cd site
+          git add -A island-craft
+          if git diff --cached --quiet; then echo "BabyMo Craft is already up to date"; exit 0; fi
+          git -c user.name="github-actions[bot]" -c user.email="41898282+github-actions[bot]@users.noreply.github.com" commit -qm "Sync BabyMo Craft ($GAME_SHA)"
+          git push -q origin gh-pages
+          echo "Updated babymo.id/island-craft/ to island-craft $GAME_SHA"

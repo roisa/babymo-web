@@ -39,6 +39,16 @@ jobs:
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
         run: npm run build
 
+      # BabyMo Craft (the island-craft game) lives at babymo.id/island-craft/: its own published site
+      # (the island-craft repo's gh-pages branch) copied in as it is. sync-island-craft.yml refreshes it
+      # hourly between deploys.
+      - name: Add BabyMo Craft at /island-craft/
+        run: |
+          git clone -q --depth 1 --branch gh-pages https://github.com/roisa/island-craft.git /tmp/island-craft
+          rm -rf /tmp/island-craft/.git /tmp/island-craft/CNAME /tmp/island-craft/.nojekyll
+          mkdir -p out/island-craft
+          cp -R /tmp/island-craft/. out/island-craft/
+
       - name: Stamp .nojekyll + CNAME on output
         run: |
           touch out/.nojekyll
