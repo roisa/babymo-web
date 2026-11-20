@@ -3,7 +3,7 @@ import { STORE_FONT_VARS } from "@/lib/content/store-fonts";
 import { asset } from "@/lib/i18n/config";
 import {
   ADS, APP_ID, APP_URL, BIG_PICTURE, CALENDAR, CORE_MESSAGE, FOUNDATION, FUNNEL, GOALS, IDEAL, LINKS, PHASES, SERIES, TARGETS, THE_GOAL, VISION, CHANNELS, KPIS, MESSAGES, PERSONAS, POSITIONING, POST_CAPTIONS,
-  REEL_SCRIPTS, RULES_DO, RULES_DONT, SEARCH_KEYWORDS, STORY_SETS, TEMPLATES, TONE, type Bi,
+  REEL_SCRIPTS, RULES_DO, RULES_DONT, SEARCH_KEYWORDS, STORY_SETS, TEMPLATES, TIKTOK, TIKTOK_FIXES, TIKTOK_POSTING, TIKTOK_RISKS, TONE, type Bi,
 } from "@/lib/content/marketing-kit";
 
 /**
@@ -11,7 +11,8 @@ import {
  * sky hero with Mo, Ais and Kak Adam, coloured section pills): the big picture, core message, ideal buyer,
  * 90-day plan, targets, foundation checklist, content engine, who we talk to,
  * what we say, when, and ready-made stories, posts, carousels, banners, highlight covers and
- * Reels (Bahasa Indonesia + English) made from real app screens and the original Baby Mo renders.
+ * Reels (Bahasa Indonesia + English) made from real app screens and the original Baby Mo renders, and three
+ * TikTok videos (real 1080p app footage with the app's own sound, public/marketing-kit/tiktok/).
  * Not linked from the site and not indexed. Images live in public/marketing-kit/.
  */
 export const metadata: Metadata = {
@@ -48,7 +49,7 @@ for (const lang of ["id", "en"] as const) {
     note: "Upload in order 1 → 7 as one carousel post. Carousels get saved and shared: ask “Which reason matters most to you?”.",
     files: Array.from({ length: 7 }, (_, i) => f("carousel", `carousel-${lang}-${i + 1}`, "jpg", `Slide ${i + 1}`)) });
   GROUPS.push({ id: `reels-${lang}`, title: `Reels ready to post · ${L}`, size: "1080 × 1920 · MP4 · 12 s (9 s gameplay + 3 s App Store end card) · silent", cls: "tall",
-    note: "Real gameplay with the App Store end card. They are silent on purpose: add a soft sound or Mo's voice in the Instagram/TikTok editor, and keep one no-music version. Captions and hooks are in “Reel scripts”.",
+    note: "Real gameplay with the App Store end card, for Instagram/Facebook. They are silent: add a soft sound or Mo's voice in the Instagram editor, and keep one no-music version. For TikTok use the three TikTok videos above. Captions and hooks are in “Reel scripts”.",
     files: REELS.map((r) => f("reels", `reel-${lang}-${r.k}`, "mp4", r.n, true)) });
 }
 GROUPS.push({ id: "banners", title: "Banners & ads · both languages", size: "1200 × 628 · 1080 × 1080 · 1640 × 624 · JPG", cls: "wide",
@@ -182,6 +183,9 @@ h3{font-size:19px}
 /* existing blocks */
 .ghead{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;margin-bottom:12px}
 .ghead p{margin:2px 0 0;color:var(--soft);font-size:14px;max-width:70ch}
+.tt .ttv{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:10px 0}
+.tt figure{margin:0;min-width:0}.tt video{width:100%;aspect-ratio:9/16;border-radius:14px;background:#000;display:block;border:1px solid var(--line)}
+.tt figcaption{font-size:12.5px;line-height:1.45;margin-top:6px;color:var(--soft)}.tt figcaption a{font-weight:800;text-decoration:none}
 .grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(118px,1fr))}
 .grid.post{grid-template-columns:repeat(auto-fill,minmax(150px,1fr))}.grid.wide{grid-template-columns:repeat(auto-fill,minmax(230px,1fr))}
 .tile{display:flex;flex-direction:column;gap:6px;min-width:0;position:relative}
@@ -316,7 +320,7 @@ export default function MarketingKit() {
 
           <nav className="toc" aria-label="Sections">
             <a href="#big">Big picture</a><a href="#message">Message</a><a href="#who">Audience</a><a href="#plan">90-day plan</a><a href="#targets">Targets</a>
-            <a href="#foundation">Foundation</a><a href="#content">Content engine</a><a href="#designs">Designs &amp; Reels</a><a href="#captions">Captions</a>
+            <a href="#foundation">Foundation</a><a href="#content">Content engine</a><a href="#tiktok">TikTok</a><a href="#designs">Designs &amp; Reels</a><a href="#captions">Captions</a>
             <a href="#buyers">Get buyers</a><a href="#calendar">Calendar</a><a href="#rules">Rules</a><a href="#measure">Measure</a><a href="#vision">Vision</a><a href="#links">Links</a>
           </nav>
 
@@ -462,6 +466,46 @@ export default function MarketingKit() {
                   <ol className="scenes">{s.frames.map((fr, i) => <li key={i}>{fr.id}<br /><span className="muted">{fr.en}</span></li>)}</ol>
                 </div>
               ))}
+            </div>
+          </section>
+
+          <section className="sec" id="tiktok">
+            <Sh c="#111111" icon="🎵" t="TikTok" small="3 videos, ready to upload" />
+            <p className="lead">The Studio videos and the 12 s Reels were made for Instagram. On TikTok they would likely be held back (shown to very few people) or flagged as unlabelled ads. These three are made for TikTok, with what changed and how to post.</p>
+            <div className="cards">
+              <div className="card no">
+                <h3>✕ Why the Studio videos and Reels can fail on TikTok</h3>
+                <ul className="rules">{TIKTOK_RISKS.map((r) => <li key={r.t}><b>{r.t}.</b> {r.d}</li>)}</ul>
+              </div>
+              <div className="card yes">
+                <h3>✓ What the new videos do instead</h3>
+                <ul className="rules">{TIKTOK_FIXES.map((x) => <li key={x}>{x}</li>)}</ul>
+              </div>
+            </div>
+            <div className="cards three" style={{ marginTop: 14 }}>
+              {TIKTOK.map((v) => (
+                <div className="card tt" key={v.k}>
+                  <h3>{v.title}</h3>
+                  <div className="ttv">
+                    {(["id", "en"] as const).map((l) => (
+                      <figure key={l}>
+                        <video src={asset(`/marketing-kit/tiktok/${v.files[l]}.mp4`)} poster={asset(`/marketing-kit/thumbs/${v.files[l]}.webp`)} controls playsInline preload="none" />
+                        <figcaption>
+                          <b>{l === "id" ? "Bahasa Indonesia" : "English"}</b> · {v.len[l]}<br />
+                          <a href={asset(`/marketing-kit/tiktok/${v.files[l]}.mp4`)} download>⬇ MP4</a> · <a href={asset(`/marketing-kit/tiktok/${v.files[l]}-cover.jpg`)} download>⬇ Cover</a>
+                        </figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                  <p className="muted">{v.what}</p>
+                  <CopyBlock id={`tt-${v.k}-id`} label="CAPTION · ID" text={`${v.cap.id}\n\n${v.tags.id}`} />
+                  <CopyBlock id={`tt-${v.k}-en`} label="CAPTION · EN" text={`${v.cap.en}\n\n${v.tags.en}`} />
+                </div>
+              ))}
+            </div>
+            <div className="card" style={{ marginTop: 14 }}>
+              <h3>Before you press Post</h3>
+              <ol className="scenes">{TIKTOK_POSTING.map((x) => <li key={x}>{x}</li>)}</ol>
             </div>
           </section>
 

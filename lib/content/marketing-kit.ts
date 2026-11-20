@@ -373,3 +373,58 @@ export const THE_GOAL: Bi = {
   id: "Bukan sekadar banyak unduhan, tapi komunitas orang tua di seluruh dunia yang mencintai dan merekomendasikan Baby Mo.",
   en: "Not just more downloads, but a growing global community of parents who love and recommend Baby Mo.",
 };
+
+/** TikTok: what can get the Studio/Reels videos held back, and three videos made for TikTok. */
+export const TIKTOK_RISKS: { t: string; d: string }[] = [
+  { t: "Silent audio track", d: "The 12 s Reels carry a silent track (−91 dB). TikTok's For You feed favours videos with real sound; silent clips get very little reach." },
+  { t: "Looks like an ad", d: "Phone mockup, App Store badge and a “Download” pill read as an ad. Posted as an ordinary video without the commercial-content label, TikTok can limit or remove it." },
+  { t: "Text where TikTok's own buttons sit", d: "The “Unduh di App Store” pill sits in the bottom strip that TikTok covers with the caption and username." },
+  { t: "Soft picture", d: "The gameplay clips were recorded at 540 × 960 and scaled up. TikTok rates sharp 1080p video higher." },
+  { t: "No hook in the first second", d: "They open on a static title. Viewers decide in about one second, and early swipe-aways stop the video being shown to more people." },
+];
+export const TIKTOK_FIXES: string[] = [
+  "Real app footage at full 1080 × 1920, 30 fps (recorded in slow motion so it stays smooth), H.264 + AAC, about 5 MB each.",
+  "Real sound: Mo's greeting, the du'a and wudhu voices from the app, placed exactly where the app plays them, plus soft tap sounds. No music. Loudness about −14 LUFS, which is what TikTok expects.",
+  "Speaks to parents with a hook in the first second, in TikTok-style captions inside the safe area: clear of the top bar, the right-hand buttons and the caption strip.",
+  "Looks like a parent's screen recording, not an ad. Brand only in the last 3 s: Baby Mo + “Cari ‘Baby Mo’ di App Store”. No badge graphic, no price, no link.",
+  "17–22 s: long enough to finish the moment, short enough that most people watch to the end.",
+];
+export const TIKTOK_POSTING: string[] = [
+  "Use a TikTok Business account. Business accounts can add the App Store link in the bio (TikTok doesn't make links in captions clickable).",
+  "Before posting: More options → turn on “Content disclosure” → “Your brand”. It's our own app, so TikTok asks for this. Labelled videos still reach the For You feed.",
+  "Turn on “AI-generated content” too: Mo's voice and the du'a recitation in the app are synthesised voices, and TikTok asks for a label on AI audio.",
+  "Upload the MP4 as it is, without the TikTok editor's filters. Keep the original sound. If you add a sound, use only TikTok's Commercial Music Library, keep it under the voices, and post a no-music version too.",
+  "Pick the cover: use the cover JPG or the first frame (it has the hook).",
+  "Paste the caption below. Write to parents, not children: TikTok is 13+. Don't use #fyp spam. 3–5 specific hashtags work better.",
+  "Post one video a day, 18:00–21:00 WIB. Reply to every comment in the first hour, and pin a comment such as “Cari Baby Mo di App Store 🍃”.",
+  "Don't post the same file twice, and don't reupload Instagram Reels that carry an Instagram watermark.",
+];
+export const TIKTOK: { k: string; title: string; files: { id: string; en: string }; len: { id: string; en: string }; what: string; cap: Bi; tags: Bi }[] = [
+  {
+    k: "doa", title: "Doa bangun tidur · Waking-up du'a", files: { id: "tiktok-id-doa-bangun-tidur", en: "tiktok-en-waking-up-dua" }, len: { id: "17.8 s", en: "17.8 s" },
+    what: "Hook “Ayah Bunda, coba ini pas si kecil bangun tidur” → tap the clock, Mo wakes up → Mo reads the du'a and each word lights up → a star → end card.",
+    cap: {
+      id: "Bangun tidur, langsung doa bareng Mo ☀️🤲\nKetuk jamnya, Mo bangun, lalu Mo bacakan doa bangun tidur pelan-pelan, kata demi kata. Si kecil tinggal ikut.\n\nAda 14 doa harian di Baby Mo: makan, tidur, keluar rumah, dan lainnya. Cari “Baby Mo” di App Store.",
+      en: "Start the morning with a du'a ☀️🤲\nTap the clock, Mo wakes up and reads the waking-up du'a slowly, word by word, so little ones can follow along.\n\n14 daily du'as in Baby Mo: eating, sleeping, leaving home and more. Search “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#doaharian #anakmuslim #parentingislami #belajarsambilbermain #babymo", en: "#muslimkids #duaforkids #islamicparenting #muslimmom #babymo" },
+  },
+  {
+    k: "wudhu", title: "Belajar wudhu · Learn wudu", files: { id: "tiktok-id-belajar-wudhu", en: "tiktok-en-learn-wudu" }, len: { id: "22.1 s", en: "22.2 s" },
+    what: "Hook “Belajar urutan wudhu tanpa ceramah panjang” → Mo shows step 1 → the child taps 3× and Mo washes (hands, mouth, nose) with Mo counting → end card.",
+    cap: {
+      id: "Belajar wudhu tanpa ceramah panjang 💧\nMo contohkan tiap langkah, si kecil ketuk untuk membasuh 3×. Dari niat sampai doa sesudah wudhu, 10 langkah.\n\nPas buat persiapan sholat pertama si kecil. Cari “Baby Mo” di App Store.",
+      en: "Learning wudu without a long lecture 💧\nMo shows each step and your child taps to wash 3 times. From the intention to the du'a after wudu, 10 steps.\n\nGreat before their first prayers. Search “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#belajarwudhu #wudhuanak #anakmuslim #pendidikananakislam #babymo", en: "#wudu #muslimkids #islamicparenting #muslimhomeschool #babymo" },
+  },
+  {
+    k: "sholat", title: "Semangat sholat · Prayer streak", files: { id: "tiktok-id-semangat-sholat", en: "tiktok-en-prayer-streak" }, len: { id: "17.2 s", en: "17.2 s" },
+    what: "Hook “Biar si kecil semangat sholat 5 waktu” → “I prayed Asr” → “MasyaAllah!”, the streak goes to 7 → search “Makkah” in the new world city list → local prayer times → end card.",
+    cap: {
+      id: "Biar si kecil semangat sholat 5 waktu 🕌🔥\nSelesai sholat, si kecil centang sendiri dan streak-nya bertambah. Jadwal sholat otomatis sesuai kotamu, di Indonesia maupun luar negeri 🌍\n\nCari “Baby Mo” di App Store.",
+      en: "Helping little ones love their 5 daily prayers 🕌🔥\nAfter praying, they tick it themselves and the streak grows. Prayer times follow your city, wherever you live 🌍\n\nSearch “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#sholatanak #anaksholeh #parentingislami #muslimkids #babymo", en: "#muslimkids #salah #islamicparenting #muslimfamily #babymo" },
+  },
+];
