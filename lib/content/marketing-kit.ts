@@ -454,4 +454,13 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
     },
     tags: { id: "#rutinitastidur #anakmuslim #parentingislami #doatidur #babymo", en: "#bedtimeroutine #muslimkids #islamicparenting #momlife #babymo" },
   },
+  {
+    k: "mo-tamu", title: "Kalau ada tamu datang · When guests come over (animation)", files: { id: "tiktok-id-mo-tamu", en: "tiktok-en-mo-tamu" }, len: { id: "23 s", en: "23 s" },
+    what: "Pure fun, no app on screen: ding-dong, Mo peeks from behind the wall, Bunda says “Ayo salam, Mo!”, Mo turns his back, too shy (“hihi”), takes a deep breath, “Bismillah”, says “Assalamu'alaikum!” with his hand on his chest, the guest says “MasyaAllah, sopan banget!”, Mo answers “Jazakallah khairan!” (lip-synced), whispers “Psst… tadi Mo deg-degan banget” (heartbeat), jumps “Tapi Mo berhasil!”, claps and runs off to play. Only a small Baby Mo chip at the end — a brand-building video, not a sales one.",
+    cap: {
+      id: "Anak kalau ada tamu datang… 😂🙈\nNgintip dulu, malu dulu, tarik napas… baru berani salam 💪\nYang penting berhasil! 🎉\n\nSi kecil di rumah tipe yang mana, Bun? Pemalu atau langsung salam? 👇",
+      en: "Kids when guests come over… 😂🙈\nPeek first, be shy first, deep breath… then the brave salam 💪\nHe did it! 🎉\n\nIs your little one the shy type or the instant-salam type? 👇",
+    },
+    tags: { id: "#anakmuslim #adabislami #parentingislami #anakpemalu #babymo", en: "#muslimkids #islamicmanners #muslimparenting #shykids #babymo" },
+  },
 ];
