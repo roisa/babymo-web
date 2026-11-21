@@ -436,4 +436,13 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
     },
     tags: { id: "#doaharian #anakmuslim #animasianak #parentingislami #babymo", en: "#muslimkids #duaforkids #islamicparenting #kidsanimation #babymo" },
   },
+  {
+    k: "mo-3-syarat", title: "3 syarat Mo sebelum main HP · Mo's 3 rules (animation)", files: { id: "tiktok-id-mo-3-syarat", en: "tiktok-en-mo-3-syarat" }, len: { id: "26.2 s", en: "26.2 s" },
+    what: "Funny Baby Mo animation (render 3): Mo pops up behind the hill, jumps in, “Sstt…” → 1 wash hands (“Ups! Sudah basah!”), 2 Bismillah, 3 play something smart (the real Sahabat Hewan game on his tablet) → ⏰ time's up, Mo hugs the tablet (“Bentar lagiii…”), wobbles, has an idea (“Oke, besok lagi!”), gets a star, waves and walks off. Relatable for parents; ask in the comments what their own rules are.",
+    cap: {
+      id: "Anak minta HP? Coba pakai 3 syarat Mo 😂📱\n1. Cuci tangan dulu\n2. Baca Bismillah\n3. Main yang bikin pinter\n…dan kalau waktunya habis, ya habis 😇\n\nSyarat main HP di rumah kamu apa, Bun? Tulis di komentar 👇\n\nCari “Baby Mo” di App Store.",
+      en: "Kid asking for the phone? Try Mo's 3 rules 😂📱\n1. Wash hands first\n2. Say Bismillah\n3. Play something smart\n…and when time's up, it's up 😇\n\nWhat are the phone rules in your house? Tell us in the comments 👇\n\nSearch “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#parentingislami #anakmuslim #screentimeanak #ibuibu #babymo", en: "#muslimparenting #muslimkids #screentime #momlife #babymo" },
+  },
 ];
