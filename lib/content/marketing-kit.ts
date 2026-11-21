@@ -445,4 +445,13 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
     },
     tags: { id: "#parentingislami #anakmuslim #screentimeanak #ibuibu #babymo", en: "#muslimparenting #muslimkids #screentime #momlife #babymo" },
   },
+  {
+    k: "mo-tidur", title: "Mo vs. waktu tidur · Mo vs. bedtime (animation)", files: { id: "tiktok-id-mo-tidur", en: "tiktok-en-mo-tidur" }, len: { id: "28.4 s", en: "28.4 s" },
+    what: "Funny Baby Mo animation (render 3): Bunda's message “Mo, waktunya tidur!” → Mo skids in, “Hah? Mo belum ngantuk!” (eyes droop… snap open), yawns anyway, “Satu cerita lagi yaa…”, checks his watch “Kan baru jam 7, Bun!”, spins “Mo masih kuat!”, yawns again → says “Selamat malam! Yuk belajar doa malam” (lip-synced) → the real bedtime game on the phone → doa sebelum tidur → falls asleep hugging his pillow as day turns to a starry night. Every parent knows these excuses.",
+    cap: {
+      id: "Alasan anak kalau disuruh tidur: 😂\n“Belum ngantuk!” “Satu cerita lagi!” “Kan baru jam 7!”\nUntung ada Mo: 4 langkah malam + doa sebelum tidur, terus… zzz 😴🌙\n\nAlasan favorit si kecil di rumah apa, Bun? 👇\n\nCari “Baby Mo” di App Store.",
+      en: "Kids' bedtime excuses: 😂\n“I'm not sleepy!” “One more story!” “It's only 7!”\nThen Mo: 4 bedtime steps + the bedtime du'a, and… zzz 😴🌙\n\nWhat's your little one's favourite excuse? 👇\n\nSearch “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#rutinitastidur #anakmuslim #parentingislami #doatidur #babymo", en: "#bedtimeroutine #muslimkids #islamicparenting #momlife #babymo" },
+  },
 ];
