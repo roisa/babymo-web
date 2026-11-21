@@ -427,4 +427,13 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
     },
     tags: { id: "#sholatanak #anaksholeh #parentingislami #muslimkids #babymo", en: "#muslimkids #salah #islamicparenting #muslimfamily #babymo" },
   },
+  {
+    k: "mo-pagi", title: "Pagi bareng Mo · Mo's morning (animation)", files: { id: "tiktok-id-mo-pagi", en: "tiktok-en-mo-pagi" }, len: { id: "23.5 s", en: "23.5 s" },
+    what: "Baby Mo animation (render 3): Mo peeks in, stretches and yawns, says “Selamat pagi! Yuk mulai dengan doa pagi” (lip-synced), shows Bunda's phone with the real du'a screen → zoom into the app, Mo reads the du'a → “Alhamdulillah! Masya Allah”, claps and waves. Brand only as a small card at the end.",
+    cap: {
+      id: "Pagi-pagi Mo udah semangat ☀️\nBangun, ngulet, lalu doa bangun tidur bareng Mo. Kata demi kata, pelan-pelan, si kecil tinggal ikut 🤲\n\nCari “Baby Mo” di App Store.",
+      en: "Mo's morning, no fuss ☀️\nWake up, big stretch, then the waking-up du'a with Mo, slowly, word by word, so little ones can follow along 🤲\n\nSearch “Baby Mo” on the App Store.",
+    },
+    tags: { id: "#doaharian #anakmuslim #animasianak #parentingislami #babymo", en: "#muslimkids #duaforkids #islamicparenting #kidsanimation #babymo" },
+  },
 ];
