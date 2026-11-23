@@ -464,8 +464,8 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
     tags: { id: "#anakmuslim #adabislami #parentingislami #anakpemalu #babymo", en: "#muslimkids #islamicmanners #muslimparenting #shykids #babymo" },
   },
   {
-    k: "mo-alasan", title: "Menilai alasan anak biar nggak tidur · Rating my kid's bedtime excuses (family animation)", files: { id: "tiktok-id-mo-alasan", en: "tiktok-en-mo-alasan" }, len: { id: "28 s", en: "28 s" },
-    what: "Comedy with the whole family: Mo in pyjamas gives five excuses (thirsty, teddy is scared, the moon is looking at him, “not sleepy” mid-yawn, forgot to say goodnight to the fish) and Umi stamps a score on each, 3/10 to 10/10. Ais is already asleep in the corner. Plot twist: Abi fell asleep first on the sofa. Ends with Mo asleep and “Bismillah… akhirnya tidur”. No app on screen, only a small Baby Mo chip.",
+    k: "mo-alasan", title: "Menilai alasan anak biar nggak tidur · Rating my kid's bedtime excuses (animation)", files: { id: "tiktok-id-mo-alasan", en: "tiktok-en-mo-alasan" }, len: { id: "24 s", en: "24 s" },
+    what: "Only Baby Mo on screen, in his star pyjamas, against a soft blurred bedroom: five excuses (thirsty, teddy is scared, the moon is looking at him, “not sleepy” mid-yawn, forgot to say goodnight to the fish), each scored with a gold stamp “Nilai dari Umi” from 3/10 to 10/10. Plot twist: he falls asleep standing, mid-excuse. Ends “Bismillah… akhirnya tidur”. No app on screen, only a small Baby Mo chip.",
     cap: {
       id: "Menilai alasan anakku biar NGGAK tidur 😤🌙\nNomor 5 juara sih… 🐟\nPlot twist di akhir 😴\n\nAlasan paling kreatif si kecil di rumah apa, Bun? Tulis di komen 👇",
       en: "Rating my kid's excuses to NOT sleep 😤🌙\nNumber 5 is undefeated… 🐟\nWait for the plot twist 😴\n\nWhat's the most creative bedtime excuse in your house? 👇",
@@ -474,7 +474,7 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
   },
   {
     k: "cari-mo", title: "Bisa nemu Baby Mo dalam 3 detik? · Find Baby Mo in 3 seconds (interactive)", files: { id: "tiktok-id-cari-mo", en: "tiktok-en-cari-mo" }, len: { id: "23 s", en: "23 s" },
-    what: "A look-and-find game for kids and parents to play together: three rounds with a 3-2-1 countdown, then the answer is circled. Round 1: Mo behind the carnival table. Round 2: the twins trap, Ais is circled in red “itu Ais 😆”. Round 3: find Abi at the beach. Round 4: “find Umi's car keys”, with no answer shown, so viewers comment. Made from the Cari Baby Mo game's world and the family poses.",
+    what: "A look-and-find game kids and parents play together, with only Baby Mo hidden in the scene: behind the carnival table, peeking out of a tent, then peeking behind the beach table, each with a 3-2-1 countdown and the answer circled. Round 4: “find Umi's car keys”, with no answer shown, so viewers comment.",
     cap: {
       id: "Cuma 3 detik… bisa nemu Baby Mo? 👀⏱️\nRonde 2 hati-hati ya 😆\nRonde 4 belum ada yang bisa…\n\nKetemu kunci mobil Umi? Komen di mana! 🔑👇",
       en: "Only 3 seconds… can you find Baby Mo? 👀⏱️\nCareful in round 2 😆\nNobody has solved round 4 yet…\n\nFound Umi's car keys? Comment where! 🔑👇",
@@ -483,7 +483,7 @@ export const TIKTOK: { k: string; title: string; files: { id: string; en: string
   },
   {
     k: "kata-umi", title: "Kata Umi & Abi vs yang Mo dengar · What Umi & Abi say vs what Mo hears (meme)", files: { id: "tiktok-id-kata-umi", en: "tiktok-en-kata-umi" }, len: { id: "22 s", en: "22 s" },
-    what: "A split-screen meme: Umi or Abi says something on top, and Mo's version pops in below. “Gosok gigi” becomes a foam-beard party, “beresin mainan” is one car then collapsing (Ais giggles), “kasih Abi 5 menit” turns into a blanket tent with a flag, and “ayo sholat” has Mo and Ais already on their mats: “…yang ini langsung nurut 🥹”. Warm ending, no app on screen.",
+    what: "Full-screen meme, only Baby Mo on screen: a speech bubble shows what Umi or Abi says, a “…” beat, then Mo pops in as “what Mo hears”. “Gosok gigi” becomes a foam-beard party, “beresin mainan” is one car then collapsing, “kasih Abi 5 menit” becomes a blanket tent and a flag, and “ayo sholat” has Mo already on his mat: “…yang ini langsung nurut 🥹”. Warm ending, no app on screen.",
     cap: {
       id: "Kata Umi & Abi vs yang Mo dengar 😂\nSampai yang terakhir… langsung nurut 🥹🕌\n\nDi rumah kalimat mana yang paling sering “nggak kedengeran”? 👇",
       en: "What Umi & Abi say vs what Mo hears 😂\nUntil the last one… they actually listen 🥹🕌\n\nWhich line never gets heard in your house? 👇",

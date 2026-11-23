@@ -471,7 +471,7 @@ export default function MarketingKit() {
 
           <section className="sec" id="tiktok">
             <Sh c="#111111" icon="🎵" t="TikTok" small="10 videos, ready to upload" />
-            <p className="lead">The Studio videos and the 12 s Reels were made for Instagram. On TikTok they would likely be held back (shown to very few people) or flagged as unlabelled ads. These are made for TikTok: three real-app videos, four Baby Mo animations (“Pagi bareng Mo”, “3 syarat Mo”, “Mo vs. waktu tidur” and “Kalau ada tamu datang”, made from the render-3 poses) and three family videos with Umi, Abi and Ais (“Menilai alasan anak”, “Cari Baby Mo dalam 3 detik” and “Kata Umi & Abi vs yang Mo dengar”), with what changed and how to post.</p>
+            <p className="lead">The Studio videos and the 12 s Reels were made for Instagram. On TikTok they would likely be held back (shown to very few people) or flagged as unlabelled ads. These are made for TikTok: three real-app videos, four Baby Mo animations (“Pagi bareng Mo”, “3 syarat Mo”, “Mo vs. waktu tidur” and “Kalau ada tamu datang”, made from the render-3 poses) and three Baby Mo-only videos (“Menilai alasan anak”, “Cari Baby Mo dalam 3 detik” and “Kata Umi & Abi vs yang Mo dengar”), with what changed and how to post.</p>
             <div className="cards">
               <div className="card no">
                 <h3>✕ Why the Studio videos and Reels can fail on TikTok</h3>
