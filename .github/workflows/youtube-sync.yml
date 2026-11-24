@@ -47,6 +47,15 @@ jobs:
           npm ci
           npm run build
 
+      # This job publishes the whole site too, so it must bring BabyMo Craft along (babymo.id/island-craft/),
+      # exactly as deploy.yml does; otherwise each daily YouTube refresh would wipe the game off the site.
+      - name: Add BabyMo Craft at /island-craft/
+        run: |
+          git clone -q --depth 1 --branch gh-pages https://github.com/roisa/island-craft.git /tmp/island-craft
+          rm -rf /tmp/island-craft/.git /tmp/island-craft/CNAME /tmp/island-craft/.nojekyll
+          mkdir -p out/island-craft
+          cp -R /tmp/island-craft/. out/island-craft/
+
       - name: Stamp .nojekyll + CNAME on output
         run: |
           touch out/.nojekyll
