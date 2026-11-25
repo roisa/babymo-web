@@ -17,6 +17,7 @@ export const metadata: Metadata = {
   robots: { index: false, follow: false },
 };
 
+const V = "?v=13c";   // bump when images are replaced under the same name
 const SHOTS = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15"];
 const RAW = ["01-home", "02-doa-tab", "03-doa", "04-sholat", "05-wudhu", "06-huruf", "07-pulau", "08-tenis", "09-hewan", "10-kebun", "11-dream", "12-susun", "13-ramadan", "14-memory", "15-pray", "16-warnai", "17-katabaik"];
 const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Island", "Tennis", "Animal Friends (new)", "Ais's Garden (new)", "Prayer", "Wudhu", "Safe for kids", "Ramadan theme (1.1)", "Build the Word (1.1)", "Play time & prayer (1.3)", "Colour Mo (1.3)", "Good Words (1.3)"];
@@ -27,21 +28,10 @@ const BANNER_NAMES = ["Home", "Daily du'as", "Hijaiyah letters", "Hijaiyah Islan
    home screens, so plain 11 and 14 and banner 10 (which shows Dreamtime) are new, and banner 01 now says 19 games.
    Each replaced image keeps a "versi lama" link to the version before (public/app-store-kit/prev/).
    Apple takes up to 10 images per device, so the new banners replace some of 01–12 (see the suggested order). */
-const CHANGED = new Set(["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "11-dream", "14-memory"]);
+const CHANGED = new Set([...SHOTS.slice(0, 12), ...RAW.slice(0, 14)]);
 const ADDED = new Set(["13", "14", "15", "15-pray", "16-warnai", "17-katabaik"]);
 const CHANGE_NOTE: Record<string, string> = {
-  "01": "Now says 19 Islamic games; the whole phone fits in the frame",
-  "10": "The phone shows the new Dreamtime home; the whole phone fits in the frame",
-  "02": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "03": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "04": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "05": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "06": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "07": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "08": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "09": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "11": "The whole phone now fits in the frame (no cut-off screen edge)",
-  "12": "The whole phone now fits in the frame (no cut-off screen edge)",
+  "01": "Retaken from the 1.3 app, whole phone in the frame, now says 19 games",
   "13": "Play time & prayer: the \"Time to pray\" card, break timer and daily limit for parents",
   "14": "Colour Mo: 40 colouring pages with the magic crayon",
   "15": "Good Words: 40 good words, 24 instruments, a song on the result card",
@@ -51,6 +41,7 @@ const CHANGE_NOTE: Record<string, string> = {
   "16-warnai": "Colouring Mo with the magic crayon (Meet Baby Mo)",
   "17-katabaik": "Good Words result: the Arabic, its meaning and the word's instrument",
 };
+for (const k of [...SHOTS, ...RAW]) if (!CHANGE_NOTE[k]) CHANGE_NOTE[k] = /^\d\d$/.test(k) ? "Retaken from the 1.3 app, whole phone in the frame" : "Retaken from the 1.3 app";
 /* Apple Watch (iOS Build 12): the watch app ships inside the same iPhone
    archive, so App Store Connect also shows an Apple Watch screenshot tab.
    Captured 12 Nov 2026 on the Apple Watch Series 11 (46mm) simulator —
@@ -285,7 +276,7 @@ export default function AppStoreKit() {
         <main className="w">
           <div className="top">
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={asset("/app-store-kit/app-icon-1024.png")} alt="Baby Mo app icon" width={84} height={84} />
+            <img src={asset("/app-store-kit/app-icon-1024.png") + V} alt="Baby Mo app icon" width={84} height={84} />
             <div>
               <h1>Baby Mo · App Store Kit</h1>
               <p className="lead">Everything for the App Store Connect submission: screenshots at Apple&apos;s sizes, caption banners, and every listing field ready to copy. All facts are checked against the app.</p>
@@ -293,7 +284,7 @@ export default function AppStoreKit() {
           </div>
           <div className="bar">
             <button className="btn pri" data-zip="all" type="button">⬇ Download everything (ZIP)</button>
-            <a className="btn" href={asset("/app-store-kit/app-icon-1024.png")} download="baby-mo-app-icon-1024.png">App icon 1024 px</a>
+            <a className="btn" href={asset("/app-store-kit/app-icon-1024.png") + V} download="baby-mo-app-icon-1024.png">App icon 1024 px</a>
           </div>
           <nav className="toc" aria-label="Sections">
             <a href="#screens">Screenshots</a><a href="#watch">Apple Watch</a><a href="#creative">Header &amp; search</a><a href="#listing">Listing text</a><a href="#history">What&apos;s New by version</a><a href="#info">App information</a>
@@ -301,7 +292,7 @@ export default function AppStoreKit() {
           </nav>
 
           <h2 id="screens">Screenshots &amp; banners</h2>
-          <p className="lead"><b>Version 1.3 (25 Nov 2026, games build v401):</b> every scene was captured again and only what changed was replaced — every portrait banner now shows the <b>whole phone</b> inside the frame (before, the phone ran off the bottom edge and cut off the screen), banner <b>01</b> now says 19 games, banner <b>10</b> shows the new Dreamtime, and plain screenshots <b>11 Dreamtime</b> and <b>14 Memory Match</b> (marked ✨, each with a “↩ versi lama” link). New: banners <b>13 Play time &amp; prayer</b>, <b>14 Colour Mo</b> and <b>15 Good Words</b>, and plain screenshots <b>15 Time to pray</b>, <b>16 Colouring Mo</b> and <b>17 Good Words</b> (marked 🆕). Apple shows at most <b>10 images per device</b>; for 1.3 we suggest this order: <b>01, 13, 14, 02, 15, 08, 03, 12, 06, 10</b> (the first three show in search results). The landscape Duo set stays at 01–10. The app icon download above is the new square icon.</p>
+          <p className="lead"><b>Version 1.3 (25 Nov 2026, games build v401):</b> <b>every</b> screenshot and banner was captured again from the current app, on every device and in both languages (marked ✨, each with a “↩ versi lama” link to the 1.2 image). Every portrait banner shows the <b>whole phone</b> inside the frame, so no screen edge is cut off. New: banners <b>13 Play time &amp; prayer</b>, <b>14 Colour Mo</b> and <b>15 Good Words</b>, and plain screenshots <b>15 Time to pray</b>, <b>16 Colouring Mo</b> and <b>17 Good Words</b> (marked 🆕). Apple shows at most <b>10 images per device</b>; for 1.3 we suggest this order: <b>01, 13, 14, 02, 15, 08, 03, 12, 06, 10</b> (the first three show in search results). The app icon download above is the new square icon. If a picture still looks old, reload the page.</p>
           <p className="lead"><b>Retaken 19 Nov 2026 from the latest app (games build v296):</b> every image was captured again and only those that changed were replaced — banners 02, 04, 05, 06 and 09 and plain screenshots 01, 03, 05, 06, 07, 08, 09 and 10 (marked ✨, each with a “↩ versi lama” link), plus the landscape Duo banners 02–04. Everything else already matched the app. <b>Version 1.1:</b> new banners <b>11 Ramadan theme</b> and <b>12 Build the Word</b>, new plain screenshots <b>13 Ramadan home</b> and <b>14 Memory Match</b>, and fresh captures of <b>11 Dreamtime</b> and <b>12 Build the Word</b> (marked 🆕 or ✨ below). Apple shows at most <b>10 images per device</b>, so to use the new banners, remove two of 01–10 in App Store Connect (we suggest 04 Hijaiyah Island and 09 Wudhu) and drag 11 and 12 into the first three places if you want them in search results. The landscape Duo set stays at 01–10.</p>
           <p className="lead">App Store Connect needs at least one image (up to 10) for <b>iPhone with Dynamic Island (medium display)</b> — 1206 × 2622 px — and for <b>iPad 13&quot; display</b> — 2064 × 2752 px — because the app also runs on iPad. Apple scales them for the other devices. App Store Connect now also shows an <b>iPhone Duo</b> tab — 2007 × 2853 px; the Duo set below (added 13 Nov 2026) has the same banners and screenshots, laid out for that taller shape, plus a <b>landscape</b> Duo banner set (2853 × 2007) further down: the app runs upright, so those show two real portrait game screens side by side. Each file is a plain JPG, RGB, no transparency. Upload the banners in order 01 → 10; the first three show in search results. <b>Retaken a seventh time 11 Nov 2026</b> with the latest games build (new Game Hub, Ramadan Du&apos;as series on the Duas tab, new du&apos;a pages, Wudhu step pages, Dreamtime start, Pray with Mo scenery, Baby Mo on the banners in the original high-quality render (12 Nov)): images marked ✨ Baru changed (banners 01, 02, 08, 09, 10; plain screenshots 01, 02, 03, 04, 05, 11) and each keeps a “↩ versi lama” link to the version before this retake; everything else matches the current app and is unchanged. Banners, header and search artwork and the promo text no longer make price claims (no “Gratis / Free”), since Apple discourages price information in screenshots and metadata. Refreshed November 2026 with the latest build: 19 games, 14 daily du&apos;as plus 11 Ramadan du&apos;as, Sahabat Hewan Mo and Kebun Kecil Ais.</p>
           {groups.map((g) => (
@@ -314,8 +305,8 @@ export default function AppStoreKit() {
                 {g.files.map((f) => (
                   <div className="tile" key={f.src}>
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={asset("/" + f.thumb)} alt={f.name} loading="lazy" />
-                    <a href={asset("/" + f.src)} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
+                    <img src={asset("/" + f.thumb) + V} alt={f.name} loading="lazy" />
+                    <a href={asset("/" + f.src) + V} download data-file={f.src.split("/").pop()}>⬇ {f.name}</a>
                     {(() => { const k = f.src.split("/").pop()!.replace(/\.jpg$/, "").split("-").slice(2).join("-");
                       if (f.src.includes("/duol-")) return null;
                       return ADDED.has(k) ? <span className="new">🆕 Versi 1.3: {CHANGE_NOTE[k]}</span>
